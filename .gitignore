@@ -1,0 +1,46 @@
+# --- Python / Flask ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+.venv/
+venv/
+env/
+instance/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+htmlcov/
+.coverage
+.coverage.*
+
+# --- Database (never commit real or local data) ---
+*.db
+*.sqlite
+*.sqlite3
+*.db-wal
+*.db-shm
+
+# --- Application-generated output (never commit exports/backups) ---
+exports/
+backups/
+*.bak
+
+# --- Environment / secrets ---
+.env
+.env.*
+*.local
+
+# --- Editor / IDE ---
+.vscode/
+.idea/
+*.swp
+
+# --- OS cruft ---
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- Logs ---
+*.log
+logs/
