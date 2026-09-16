@@ -1,6 +1,9 @@
 """Identity & access. See docs/11-security-architecture.md SEC-001/SEC-004."""
 
+from typing import cast
+
 from app.extensions import Base, db
+from app.models.lookup import LookupEngineeringDomain, Role
 
 
 class User(Base):
@@ -18,8 +21,16 @@ class User(Base):
     failed_login_count = db.Column(db.Integer, nullable=False, default=0)
     locked_until = db.Column(db.Text)
 
-    role = db.relationship("Role")
-    engineering_domains = db.relationship("UserEngineeringDomain", backref="user")
+    # cast(...) rather than a bare `: Role = db.relationship(...)` annotation:
+    # db.relationship()'s declared return type is RelationshipProperty[Any],
+    # which mypy won't accept as assignable to a narrower annotation without
+    # the full SQLAlchemy 2.0 Mapped[]/mapped_column() declarative style
+    # (a larger rewrite than this project's models otherwise use). cast()
+    # tells mypy the runtime-accurate type wherever code dots into it.
+    role: Role = cast(Role, db.relationship("Role"))
+    engineering_domains: list["UserEngineeringDomain"] = cast(
+        "list[UserEngineeringDomain]", db.relationship("UserEngineeringDomain", backref="user")
+    )
 
 
 class UserEngineeringDomain(Base):
@@ -31,6 +42,8 @@ class UserEngineeringDomain(Base):
         db.Integer, db.ForeignKey("lookup_engineering_domain.id"), nullable=False
     )
 
-    engineering_domain = db.relationship("LookupEngineeringDomain")
+    engineering_domain: LookupEngineeringDomain = cast(
+        LookupEngineeringDomain, db.relationship("LookupEngineeringDomain")
+    )
 
     __table_args__ = (db.UniqueConstraint("user_id", "engineering_domain_id"),)

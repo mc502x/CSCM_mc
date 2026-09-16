@@ -1,9 +1,18 @@
 """Centralized JSON error handlers for the API surface."""
 
 from flask import Flask, jsonify
+from flask_wtf.csrf import CSRFError
 
 
 def register_error_handlers(app: Flask) -> None:
+    @app.errorhandler(CSRFError)
+    def csrf_error(err):
+        return jsonify(error="csrf_error", message=err.description), 400
+
+    @app.errorhandler(400)
+    def bad_request(err):
+        return jsonify(error="bad_request", message=str(err)), 400
+
     @app.errorhandler(404)
     def not_found(_err):
         return jsonify(error="not_found", message="Resource not found"), 404

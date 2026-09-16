@@ -4,7 +4,7 @@ Flask backend for the Controller Status Code Management Tool. See the root [../R
 
 ## Status
 
-Foundation scaffold only (EPIC-01 FEAT-01.1/01.2, `docs/17-implementation-backlog.md`): application factory, health endpoint, the full v2 SQLAlchemy model set, and the baseline Alembic migration applying `docs/artifacts/schema.sql`. Auth, RBAC, the numbering/review/approval services, and the UI have not been built yet — see `docs/18-claude-code-implementation-guide.md` §8 for the coding order.
+EPIC-01 Foundation complete (`docs/17-implementation-backlog.md`): application factory, health endpoint, the full v2 SQLAlchemy model set, the baseline Alembic migration applying `docs/artifacts/schema.sql`, session-based authentication with account lockout and rate limiting (FR-001–FR-004), CSRF protection, and RBAC/user administration (FR-010–FR-014, `US-009` engineering domain tags, `US-011`/`US-012` password change/reset). The numbering/review/approval workflow services and the UI have not been built yet — see `docs/18-claude-code-implementation-guide.md` §8 for the coding order.
 
 ## Setup
 
@@ -19,10 +19,11 @@ cp .env.example .env     # then edit SECRET_KEY for anything beyond local dev
 
 ```bash
 flask db upgrade      # creates instance/cscm.db from the baseline migration + seed data
+flask create-admin    # bootstraps the first Administrator account (prompts, or pass --username/--email/--full-name/--password)
 flask run
 ```
 
-`GET /api/v1/health` should return `{"status": "ok"}`.
+`GET /api/v1/health` should return `{"status": "ok"}`. Log in with `POST /api/v1/auth/login`; every other state-changing request needs an `X-CSRFToken` header fetched from `GET /api/v1/auth/csrf-token` first (see `app/api/v1/auth_routes.py`).
 
 ## Testing
 

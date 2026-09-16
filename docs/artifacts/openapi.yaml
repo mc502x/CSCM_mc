@@ -109,6 +109,35 @@ paths:
             application/json:
               schema: { $ref: '#/components/schemas/User' }
 
+  /users/me/change-password:
+    post:
+      tags: [Users]
+      summary: Change own password (FR-013)
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/PasswordChange' }
+      responses:
+        '204': { description: Password changed }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '422': { $ref: '#/components/responses/ValidationError' }
+
+  /users/{userId}/force-reset-password:
+    parameters: [{ $ref: '#/components/parameters/UserId' }]
+    post:
+      tags: [Users]
+      summary: Force-reset a user's password (Administrator only, FR-014)
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/PasswordReset' }
+      responses:
+        '204': { description: Password reset }
+        '403': { $ref: '#/components/responses/Forbidden' }
+        '422': { $ref: '#/components/responses/ValidationError' }
+
   /status-codes:
     get:
       tags: [StatusCodes]
@@ -590,6 +619,17 @@ components:
     UserList:
       type: object
       properties: { items: { type: array, items: { $ref: '#/components/schemas/User' } }, total: { type: integer }, page: { type: integer }, page_size: { type: integer } }
+    PasswordChange:
+      type: object
+      required: [current_password, new_password]
+      properties:
+        current_password: { type: string, format: password }
+        new_password: { type: string, format: password }
+    PasswordReset:
+      type: object
+      required: [new_password]
+      properties:
+        new_password: { type: string, format: password }
     LookupValue:
       type: object
       properties:
