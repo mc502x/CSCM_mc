@@ -4,7 +4,7 @@ Flask backend for the Controller Status Code Management Tool. See the root [../R
 
 ## Status
 
-EPIC-01 Foundation complete (`docs/17-implementation-backlog.md`): application factory, health endpoint, the full v2 SQLAlchemy model set, the baseline Alembic migration applying `docs/artifacts/schema.sql`, session-based authentication with account lockout and rate limiting (FR-001–FR-004), CSRF protection, and RBAC/user administration (FR-010–FR-014, `US-009` engineering domain tags, `US-011`/`US-012` password change/reset). The numbering/review/approval workflow services and the UI have not been built yet — see `docs/18-claude-code-implementation-guide.md` §8 for the coding order.
+EPIC-01–04 complete (`docs/17-implementation-backlog.md`): application factory, health endpoint, the full v2 SQLAlchemy model set, the baseline Alembic migration applying `docs/artifacts/schema.sql`, session-based authentication with account lockout and rate limiting (FR-001–FR-004), CSRF protection, RBAC/user administration (FR-010–FR-014), Status Code creation with field/cross-field validation (FR-020–FR-029), atomic Functional Group/Subgroup identifier allocation (FR-021, `docs/07-database-design.md` §7a), sandbox codes (FR-053–FR-056), Cross-Domain Sign-Off (FR-027–FR-029), and the full submit → dual-review → Chief-Engineer-approval workflow with segregation-of-duties enforcement (FR-030–FR-039, BR-004/BR-005). Not yet built: Release Management (EPIC-06), Deprecation/Archival (EPIC-08), exports, the audit-log API, and the server-rendered UI — see `docs/18-claude-code-implementation-guide.md` §8 for the coding order.
 
 ## Setup
 

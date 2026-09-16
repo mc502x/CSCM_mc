@@ -1,5 +1,7 @@
 """Reference/lookup vocabularies. Table shapes mirror docs/artifacts/schema.sql exactly."""
 
+from typing import cast
+
 from app.extensions import Base, db
 
 
@@ -32,7 +34,10 @@ class LookupFunctionalSystemGroup(Base):
     is_active = db.Column(db.Integer, nullable=False, default=1)
     sort_order = db.Column(db.Integer, nullable=False, default=0)
 
-    subgroups = db.relationship("LookupFunctionalSubgroup", backref="functional_system_group")
+    subgroups: list["LookupFunctionalSubgroup"] = cast(
+        "list[LookupFunctionalSubgroup]",
+        db.relationship("LookupFunctionalSubgroup", back_populates="functional_system_group"),
+    )
 
 
 class LookupFunctionalSubgroup(Base):
@@ -52,6 +57,11 @@ class LookupFunctionalSubgroup(Base):
     sub_range_end = db.Column(db.Integer, nullable=False)
     is_active = db.Column(db.Integer, nullable=False, default=1)
     sort_order = db.Column(db.Integer, nullable=False, default=0)
+
+    functional_system_group: "LookupFunctionalSystemGroup" = cast(
+        "LookupFunctionalSystemGroup",
+        db.relationship("LookupFunctionalSystemGroup", back_populates="subgroups"),
+    )
 
     __table_args__ = (db.UniqueConstraint("functional_system_group_id", "code"),)
 

@@ -1,9 +1,27 @@
 """Core governed entities. See docs/04-domain-model.md and docs/07-database-design.md.
 CHECK constraints and triggers enforcing lifecycle/sandbox rules live in
 docs/artifacts/schema.sql and are applied by the schema migration, not
-duplicated here (defense-in-depth is DB-layer + service-layer, not ORM-layer)."""
+duplicated here (defense-in-depth is DB-layer + service-layer, not ORM-layer).
+
+Relationships use explicit cast(...) annotations (see app/models/user.py for
+why) wherever service/route code dots into them."""
+
+from typing import cast
 
 from app.extensions import Base, db
+from app.models.lookup import (
+    LookupAccessRights,
+    LookupAlarmBehaviour,
+    LookupAvailabilityGroup,
+    LookupBrakeProgram,
+    LookupFunctionalSubgroup,
+    LookupFunctionalSystemGroup,
+    LookupOperationalState,
+    LookupResetProgram,
+    LookupStatusCategory,
+    LookupTurbinePlatform,
+)
+from app.models.user import User
 
 
 class StatusCode(Base):
@@ -20,14 +38,21 @@ class StatusCode(Base):
     owner_id = db.Column(db.Integer, db.ForeignKey("user.id"), nullable=False)
     created_at = db.Column(db.Text, nullable=False)
 
-    functional_system_group = db.relationship("LookupFunctionalSystemGroup")
-    functional_subgroup = db.relationship("LookupFunctionalSubgroup")
-    owner = db.relationship("User")
-    revisions = db.relationship(
-        "StatusCodeRevision",
-        backref="status_code",
-        foreign_keys="StatusCodeRevision.status_code_id",
-        order_by="StatusCodeRevision.revision_number",
+    functional_system_group: LookupFunctionalSystemGroup = cast(
+        LookupFunctionalSystemGroup, db.relationship("LookupFunctionalSystemGroup")
+    )
+    functional_subgroup: LookupFunctionalSubgroup | None = cast(
+        "LookupFunctionalSubgroup | None", db.relationship("LookupFunctionalSubgroup")
+    )
+    owner: User = cast(User, db.relationship("User"))
+    revisions: list["StatusCodeRevision"] = cast(
+        "list[StatusCodeRevision]",
+        db.relationship(
+            "StatusCodeRevision",
+            back_populates="status_code",
+            foreign_keys="StatusCodeRevision.status_code_id",
+            order_by="StatusCodeRevision.revision_number",
+        ),
     )
 
 
@@ -78,14 +103,35 @@ class StatusCodeRevision(Base):
     deprecated_reason = db.Column(db.Text)
     superseded_by_status_code_id = db.Column(db.Integer, db.ForeignKey("status_code.id"))
 
-    status_category = db.relationship("LookupStatusCategory")
-    availability_group = db.relationship("LookupAvailabilityGroup")
-    brake_program = db.relationship("LookupBrakeProgram")
-    reset_program = db.relationship("LookupResetProgram")
-    operational_state = db.relationship("LookupOperationalState")
-    access_rights = db.relationship("LookupAccessRights")
-    alarm_behaviour = db.relationship("LookupAlarmBehaviour")
-    platforms = db.relationship("StatusCodeRevisionPlatform", backref="revision")
+    status_code: StatusCode = cast(
+        StatusCode,
+        db.relationship("StatusCode", back_populates="revisions", foreign_keys=[status_code_id]),
+    )
+    status_category: LookupStatusCategory = cast(
+        LookupStatusCategory, db.relationship("LookupStatusCategory")
+    )
+    availability_group: LookupAvailabilityGroup = cast(
+        LookupAvailabilityGroup, db.relationship("LookupAvailabilityGroup")
+    )
+    brake_program: LookupBrakeProgram = cast(
+        LookupBrakeProgram, db.relationship("LookupBrakeProgram")
+    )
+    reset_program: LookupResetProgram = cast(
+        LookupResetProgram, db.relationship("LookupResetProgram")
+    )
+    operational_state: LookupOperationalState = cast(
+        LookupOperationalState, db.relationship("LookupOperationalState")
+    )
+    access_rights: LookupAccessRights = cast(
+        LookupAccessRights, db.relationship("LookupAccessRights")
+    )
+    alarm_behaviour: LookupAlarmBehaviour = cast(
+        LookupAlarmBehaviour, db.relationship("LookupAlarmBehaviour")
+    )
+    platforms: list["StatusCodeRevisionPlatform"] = cast(
+        "list[StatusCodeRevisionPlatform]",
+        db.relationship("StatusCodeRevisionPlatform", back_populates="revision"),
+    )
 
     __table_args__ = (db.UniqueConstraint("status_code_id", "revision_number"),)
 
@@ -101,6 +147,12 @@ class StatusCodeRevisionPlatform(Base):
         db.Integer, db.ForeignKey("lookup_turbine_platform.id"), nullable=False
     )
 
-    turbine_platform = db.relationship("LookupTurbinePlatform")
+    revision: StatusCodeRevision = cast(
+        StatusCodeRevision,
+        db.relationship("StatusCodeRevision", back_populates="platforms"),
+    )
+    turbine_platform: LookupTurbinePlatform = cast(
+        LookupTurbinePlatform, db.relationship("LookupTurbinePlatform")
+    )
 
     __table_args__ = (db.UniqueConstraint("status_code_revision_id", "turbine_platform_id"),)

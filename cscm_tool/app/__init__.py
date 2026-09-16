@@ -12,11 +12,29 @@ from app.extensions import csrf, db, migrate
 
 
 @event.listens_for(Engine, "connect")
-def _enable_sqlite_foreign_keys(dbapi_connection, connection_record):
-    """Every connection must enforce FKs; SQLite defaults this off per-connection."""
+def _configure_sqlite_connection(dbapi_connection, connection_record):
+    """Every connection must enforce FKs; SQLite defaults this off per-connection.
+    Also disables pysqlite's own implicit BEGIN so the `begin` listener below
+    can issue BEGIN IMMEDIATE instead — see docs/07-database-design.md §7a
+    and docs/08-system-architecture.md §8 (WAL-mode read concurrency)."""
     cursor = dbapi_connection.cursor()
     cursor.execute("PRAGMA foreign_keys = ON")
+    cursor.execute("PRAGMA journal_mode = WAL")
     cursor.close()
+    dbapi_connection.isolation_level = None
+
+
+@event.listens_for(Engine, "begin")
+def _begin_immediate(conn):
+    """Every transaction acquires SQLite's write lock upfront (BEGIN IMMEDIATE)
+    rather than deferring it, which is what makes concurrent identifier
+    allocation (docs/07-database-design.md §7a) race-safe instead of prone to
+    the classic SQLite "two readers both upgrading to writers" deadlock.
+    Applying this to every transaction (not only the allocation path) is the
+    standard SQLAlchemy-recommended pattern for SQLite; see
+    https://docs.sqlalchemy.org/en/20/dialects/sqlite.html#serializable-isolation-savepoints-transactional-ddl.
+    """
+    conn.exec_driver_sql("BEGIN IMMEDIATE")
 
 
 def create_app(config_name: str | None = None) -> Flask:

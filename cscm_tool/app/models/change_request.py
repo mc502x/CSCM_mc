@@ -1,7 +1,12 @@
 """Change Request workflow: submission, dual review, Chief Engineer approval,
 Cross-Domain Sign-Off. See docs/05-governance-handbook.md §7-8."""
 
+from typing import cast
+
 from app.extensions import Base, db
+from app.models.lookup import LookupEngineeringDomain
+from app.models.status_code import StatusCodeRevision
+from app.models.user import User
 
 
 class ChangeRequest(Base):
@@ -19,14 +24,21 @@ class ChangeRequest(Base):
     chief_engineer_decided_at = db.Column(db.Text)
     chief_engineer_decided_by = db.Column(db.Integer, db.ForeignKey("user.id"))
 
-    revision = db.relationship(
-        "StatusCodeRevision", backref=db.backref("change_request", uselist=False)
+    revision: StatusCodeRevision = cast(
+        StatusCodeRevision,
+        db.relationship("StatusCodeRevision", backref=db.backref("change_request", uselist=False)),
     )
-    requester = db.relationship("User", foreign_keys=[requested_by])
-    comments = db.relationship(
-        "ReviewComment", backref="change_request", order_by="ReviewComment.created_at"
+    requester: User = cast(User, db.relationship("User", foreign_keys=[requested_by]))
+    comments: list["ReviewComment"] = cast(
+        "list[ReviewComment]",
+        db.relationship(
+            "ReviewComment", back_populates="change_request", order_by="ReviewComment.created_at"
+        ),
     )
-    domain_signoffs = db.relationship("DomainSignoff", backref="change_request")
+    domain_signoffs: list["DomainSignoff"] = cast(
+        "list[DomainSignoff]",
+        db.relationship("DomainSignoff", back_populates="change_request"),
+    )
 
 
 class ReviewComment(Base):
@@ -39,7 +51,10 @@ class ReviewComment(Base):
     decision = db.Column(db.Text)  # REVIEWER_APPROVE | REVIEWER_REJECT | ADMIN_APPROVE | ...
     created_at = db.Column(db.Text, nullable=False)
 
-    author = db.relationship("User")
+    author: User = cast(User, db.relationship("User"))
+    change_request: ChangeRequest = cast(
+        ChangeRequest, db.relationship("ChangeRequest", back_populates="comments")
+    )
 
 
 class DomainSignoff(Base):
@@ -53,7 +68,12 @@ class DomainSignoff(Base):
     signed_off_by = db.Column(db.Integer, db.ForeignKey("user.id"), nullable=False)
     signed_off_at = db.Column(db.Text, nullable=False)
 
-    engineering_domain = db.relationship("LookupEngineeringDomain")
-    signed_off_by_user = db.relationship("User")
+    engineering_domain: LookupEngineeringDomain = cast(
+        LookupEngineeringDomain, db.relationship("LookupEngineeringDomain")
+    )
+    signed_off_by_user: User = cast(User, db.relationship("User"))
+    change_request: ChangeRequest = cast(
+        ChangeRequest, db.relationship("ChangeRequest", back_populates="domain_signoffs")
+    )
 
     __table_args__ = (db.UniqueConstraint("change_request_id", "engineering_domain_id"),)

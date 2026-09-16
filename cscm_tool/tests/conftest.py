@@ -56,7 +56,11 @@ def make_user(app):
 
     counter = {"n": 0}
 
-    def _make(role_code: str = "ENGINEER", password: str = "a genuinely long passphrase"):
+    def _make(
+        role_code: str = "ENGINEER",
+        password: str = "a genuinely long passphrase",
+        engineering_domains: list[str] | None = None,
+    ):
         counter["n"] += 1
         with app.app_context():
             from app.extensions import db
@@ -67,6 +71,7 @@ def make_user(app):
                 full_name=f"Test {role_code.title()} {counter['n']}",
                 role_code=role_code,
                 password=password,
+                engineering_domain_codes=engineering_domains,
                 actor=None,
             )
             # Force-load what tests read off this object, then detach it —
