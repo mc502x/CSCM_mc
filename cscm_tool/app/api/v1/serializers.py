@@ -2,6 +2,7 @@
 
 import json
 
+from app.models.audit import AuditLogEntry
 from app.models.change_request import ChangeRequest, DomainSignoff, ReviewComment
 from app.models.release import Release
 from app.models.status_code import StatusCodeRevision
@@ -93,6 +94,21 @@ def release_payload(release: Release) -> dict:
         "published_by": release.published_by,
         "published_at": release.published_at,
         "item_count": len(release.items),
+    }
+
+
+def audit_log_entry_payload(entry: AuditLogEntry) -> dict:
+    return {
+        "id": entry.id,
+        "entity_type": entry.entity_type,
+        "entity_id": entry.entity_id,
+        "action": entry.action,
+        "actor_id": entry.actor_id,
+        "occurred_at": entry.occurred_at,
+        "before_value": json.loads(entry.before_value) if entry.before_value else None,
+        "after_value": json.loads(entry.after_value) if entry.after_value else None,
+        "ip_address": entry.ip_address,
+        "request_id": entry.request_id,
     }
 
 

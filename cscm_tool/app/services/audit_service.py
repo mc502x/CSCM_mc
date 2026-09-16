@@ -17,6 +17,36 @@ class AuditService:
     _repo = AuditRepository()
 
     @staticmethod
+    def search(
+        actor_user,
+        *,
+        entity_type: str | None = None,
+        entity_id: int | None = None,
+        actor_id: int | None = None,
+        date_from: str | None = None,
+        date_to: str | None = None,
+        page: int = 1,
+        page_size: int = 50,
+    ) -> tuple[list[AuditLogEntry], int]:
+        """FR-071: Administrator has full access. Reviewer/Chief Engineer
+        get the "scoped" subset per 11-security-architecture.md §3 — this
+        codebase reads that as their own actions only (actor_id forced to
+        themselves), since the docs do not further define the scope and
+        this is the narrowest, most defensible reading: they can always see
+        what they personally did, never another actor's entries."""
+        if actor_user.role_code in ("REVIEWER", "CHIEF_ENGINEER"):
+            actor_id = actor_user.id
+        return AuditService._repo.search(
+            entity_type=entity_type,
+            entity_id=entity_id,
+            actor_id=actor_id,
+            date_from=date_from,
+            date_to=date_to,
+            page=page,
+            page_size=page_size,
+        )
+
+    @staticmethod
     def log(
         entity_type: str,
         entity_id: int,

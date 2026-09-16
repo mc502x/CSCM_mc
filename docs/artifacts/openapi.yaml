@@ -572,6 +572,52 @@ paths:
               schema:
                 type: array
                 items: { $ref: '#/components/schemas/LookupValue' }
+    post:
+      tags: [Lookups]
+      summary: >
+        Add a new value to a controlled vocabulary (Administrator only, US-091).
+        Rejected for functional-system-groups, a fixed structural set
+        (docs/05-governance-handbook.md §2).
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/LookupValueCreate' }
+      responses:
+        '201':
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/LookupValue' }
+        '422': { $ref: '#/components/responses/ValidationError' }
+
+  /lookups/{vocabulary}/{valueId}:
+    parameters:
+      - name: vocabulary
+        in: path
+        required: true
+        schema:
+          type: string
+          enum: [functional-system-groups, functional-subgroups, turbine-platforms,
+                 engineering-domains, status-categories, availability-groups,
+                 brake-programs, reset-programs, operational-states, access-rights,
+                 alarm-behaviours]
+      - { name: valueId, in: path, required: true, schema: { type: integer } }
+    patch:
+      tags: [Lookups]
+      summary: >
+        Update a vocabulary value's label/description/active flag/sort order (Administrator
+        only). Numeric ranges are immutable through this endpoint (BR-001).
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/LookupValueUpdate' }
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/LookupValue' }
+        '404': { $ref: '#/components/responses/NotFound' }
 
   /status-codes/next-available:
     get:
@@ -692,9 +738,28 @@ components:
         id: { type: integer }
         code: { type: string }
         label: { type: string }
+        is_active: { type: boolean }
         range_start: { type: integer, nullable: true }
         range_end: { type: integer, nullable: true }
         functional_system_group: { type: string, nullable: true, description: "Present for functional-subgroups only" }
+    LookupValueCreate:
+      type: object
+      required: [code, label]
+      properties:
+        code: { type: string }
+        label: { type: string }
+        description: { type: string }
+        sort_order: { type: integer }
+        functional_system_group: { type: string, description: "Required when vocabulary=functional-subgroups" }
+        sub_range_start: { type: integer, description: "Required when vocabulary=functional-subgroups" }
+        sub_range_end: { type: integer, description: "Required when vocabulary=functional-subgroups" }
+    LookupValueUpdate:
+      type: object
+      properties:
+        label: { type: string }
+        description: { type: string }
+        is_active: { type: boolean }
+        sort_order: { type: integer }
     StatusCodeRevision:
       type: object
       properties:
