@@ -238,3 +238,55 @@ def test_withdraw_forbidden_for_non_author(app, client, make_user):
     _login_as(client, other_engineer)
     response = client.post(f"/api/v1/change-requests/{cr_id}/withdraw")
     assert response.status_code == 403
+
+
+def test_withdraw_revision_type_restores_prior_current_revision(app, client, make_user):
+    """Regression test: withdrawing a REVISION-type CR must restore the
+    status code's prior revision to is_current=1 (create_revision's
+    copy-on-write had flipped it off), or the code becomes invisible
+    everywhere (no current revision to join on)."""
+    engineer = make_user("ENGINEER")
+    controls_engineer = make_user("ENGINEER", engineering_domains=["CONTROLS"])
+    reviewer = make_user("REVIEWER")
+    admin = make_user("ADMINISTRATOR")
+    chief_engineer = make_user("CHIEF_ENGINEER")
+
+    cr_id = _full_submit(app, client, engineer, controls_engineer)
+    _login_as(client, reviewer)
+    client.post(f"/api/v1/change-requests/{cr_id}/reviewer-signoff", json={"decision": "APPROVE"})
+    _login_as(client, admin)
+    client.post(f"/api/v1/change-requests/{cr_id}/admin-signoff", json={"decision": "APPROVE"})
+    _login_as(client, chief_engineer)
+    client.post(
+        f"/api/v1/change-requests/{cr_id}/chief-engineer-decide", json={"decision": "APPROVE"}
+    )
+
+    _login_as(client, admin)
+    with app.app_context():
+        cr = db.session.query(ChangeRequest).filter(ChangeRequest.id == cr_id).one()
+        revision_id = cr.status_code_revision_id
+        status_code_id = cr.revision.status_code_id
+    release = client.post(
+        "/api/v1/releases", json={"name": "R", "version_label": f"v-{status_code_id}"}
+    ).get_json()
+    client.put(
+        f"/api/v1/releases/{release['id']}/items", json={"status_code_revision_ids": [revision_id]}
+    )
+    assert client.post(f"/api/v1/releases/{release['id']}/publish").status_code == 200
+
+    _login_as(client, engineer)
+    new_revision = client.post(
+        f"/api/v1/status-codes/{status_code_id}/revisions",
+        json=_valid_payload(title="Converter Grid Undervoltage Trip (revised)"),
+    ).get_json()
+    new_cr_id = _cr_id_for_revision(app, new_revision["id"])
+
+    response = client.post(f"/api/v1/change-requests/{new_cr_id}/withdraw")
+    assert response.status_code == 200
+
+    detail = client.get(f"/api/v1/status-codes/{status_code_id}")
+    assert detail.status_code == 200
+    body = detail.get_json()
+    assert body["is_current"] is True
+    assert body["revision_number"] == 1
+    assert body["lifecycle_status"] == "RELEASED"

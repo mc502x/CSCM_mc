@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}Approval Queue — CSCM Tool{% endblock %}
+{% block content %}
+<div class="page-header"><h1>Approval Queue</h1></div>
+<div class="card">
+  {% if crs %}
+  <table>
+    <thead><tr><th>Identifier</th><th>Title</th><th>Functional Group</th><th>Reviewer</th><th>Administrator</th><th></th></tr></thead>
+    <tbody>
+      {% for cr in crs %}
+      <tr>
+        <td>{{ cr.revision.status_code.status_code_identifier }}</td>
+        <td>{{ cr.revision.title }}</td>
+        <td>{{ cr.revision.status_code.functional_system_group.code }}</td>
+        <td>User #{{ cr.revision.reviewer_signoff_by }}</td>
+        <td>User #{{ cr.revision.admin_signoff_by }}</td>
+        <td><a href="{{ url_for('ui.change_request_detail', cr_id=cr.id) }}">Decide</a></td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% else %}
+  <div class="table-empty">Nothing is awaiting your approval.</div>
+  {% endif %}
+</div>
+{% endblock %}

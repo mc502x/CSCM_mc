@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% import "_macros.html" as macros %}
+{% block title %}Status Codes — CSCM Tool{% endblock %}
+{% block content %}
+<div class="page-header">
+  <h1>Status Codes</h1>
+  {% if current_user.role_code in ('ENGINEER', 'ADMINISTRATOR') %}
+  <a class="btn btn--primary" href="{{ url_for('ui.status_code_new') }}">New Status Code</a>
+  {% endif %}
+</div>
+
+<div class="card">
+  <form method="get" class="form-row" style="align-items:end">
+    <div class="field" style="margin-bottom:0">
+      <label for="q">Search</label>
+      <input type="search" id="q" name="q" value="{{ request.args.get('q', '') }}" placeholder="Identifier, title, description">
+    </div>
+    <div class="field" style="margin-bottom:0">
+      <label for="functional_system_group">Functional System Group</label>
+      <select id="functional_system_group" name="functional_system_group">
+        <option value="">(any)</option>
+        {% for g in groups %}
+        <option value="{{ g.code }}" {{ 'selected' if request.args.get('functional_system_group') == g.code }}>{{ g.code }} — {{ g.label }}</option>
+        {% endfor %}
+      </select>
+    </div>
+    <div class="field" style="margin-bottom:0">
+      <label for="lifecycle_status">Lifecycle</label>
+      <select id="lifecycle_status" name="lifecycle_status">
+        <option value="">(any)</option>
+        {% for s in ['DRAFT','REVIEW','PENDING_APPROVAL','APPROVED','RELEASED','DEPRECATED','ARCHIVED'] %}
+        <option value="{{ s }}" {{ 'selected' if request.args.get('lifecycle_status') == s }}>{{ s.replace('_',' ')|title }}</option>
+        {% endfor %}
+      </select>
+    </div>
+    {% if current_user.role_code == 'ADMINISTRATOR' %}
+    <div class="field" style="margin-bottom:0">
+      <label><input type="checkbox" name="is_sandbox" value="true" {{ 'checked' if request.args.get('is_sandbox') == 'true' }}> Sandbox only</label>
+    </div>
+    {% endif %}
+    <div class="field" style="margin-bottom:0"><button class="btn" type="submit">Filter</button></div>
+  </form>
+</div>
+
+<div class="card">
+  {% if items %}
+  <table>
+    <thead><tr><th>Identifier</th><th>Title</th><th>Group</th><th>State</th><th>Platforms</th></tr></thead>
+    <tbody>
+      {% for r in items %}
+      <tr onclick="window.location='{{ url_for('ui.status_code_detail', status_code_id=r.status_code_id) }}'" style="cursor:pointer">
+        <td>{{ r.status_code_identifier or 'Not yet assigned' }}{% if r.is_sandbox %} {{ macros.sandbox_badge() }}{% endif %}</td>
+        <td>{{ r.title }}</td>
+        <td>{{ r.functional_system_group }}</td>
+        <td>{{ macros.lifecycle_badge(r.lifecycle_status) }}</td>
+        <td>{% for p in r.turbine_platforms %}<span class="chip">{{ p }}</span>{% endfor %}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  <div class="muted" style="margin-top:10px">{{ total }} result{{ 's' if total != 1 }}</div>
+  {% else %}
+  <div class="table-empty">No status codes match these filters.</div>
+  {% endif %}
+</div>
+{% endblock %}

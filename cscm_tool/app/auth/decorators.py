@@ -6,7 +6,7 @@ import hashlib
 from datetime import UTC, datetime
 from functools import wraps
 
-from flask import current_app, g, jsonify, session
+from flask import abort, current_app, g, jsonify, redirect, request, session, url_for
 from werkzeug.local import LocalProxy
 
 from app.auth.providers import AuthenticatedUser
@@ -90,6 +90,35 @@ def require_role(*roles: str):
             user = _load_current_user()
             if user is not None and user.role_code not in roles:
                 return jsonify(error="forbidden", message="Insufficient role"), 403
+            return view(*args, **kwargs)
+
+        return wrapper
+
+    return decorator
+
+
+def login_required_web(view):
+    """UI-blueprint equivalent of login_required: redirects to the login
+    page instead of returning a JSON 401, since a browser navigating to a
+    protected page should see a login form, not an API error body."""
+
+    @wraps(view)
+    def wrapper(*args, **kwargs):
+        if _load_current_user() is None:
+            return redirect(url_for("ui.login", next=request.path))
+        return view(*args, **kwargs)
+
+    return wrapper
+
+
+def require_role_web(*roles: str):
+    def decorator(view):
+        @wraps(view)
+        @login_required_web
+        def wrapper(*args, **kwargs):
+            user = _load_current_user()
+            if user is not None and user.role_code not in roles:
+                abort(403)
             return view(*args, **kwargs)
 
         return wrapper

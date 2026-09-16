@@ -57,8 +57,10 @@ def create_app(config_name: str | None = None) -> Flask:
 
     from app import models  # noqa: F401  (registers ORM tables on db.metadata)
     from app.api.v1 import api_v1_bp
+    from app.ui import ui_bp
 
     app.register_blueprint(api_v1_bp, url_prefix="/api/v1")
+    app.register_blueprint(ui_bp)
 
     from app.cli import register_cli_commands
 

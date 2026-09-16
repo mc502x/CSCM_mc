@@ -1,0 +1,7 @@
+{% macro lifecycle_badge(status) -%}
+<span class="badge badge--{{ status }}">{{ status.replace('_', ' ')|title }}</span>
+{%- endmacro %}
+
+{% macro sandbox_badge() -%}
+<span class="badge badge--sandbox">SANDBOX</span>
+{%- endmacro %}

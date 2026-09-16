@@ -5,7 +5,7 @@ diagrams in docs/08-system-architecture.md §5.1-5.3."""
 from app.domain.errors import InvalidTransitionError, SegregationOfDutiesViolation
 from app.extensions import db
 from app.models.change_request import ChangeRequest
-from app.models.status_code import StatusCodeRevisionPlatform
+from app.models.status_code import StatusCodeRevision, StatusCodeRevisionPlatform
 from app.repositories.change_request_repository import ChangeRequestRepository
 from app.services.audit_service import AuditService
 from app.services.domain_signoff_service import DomainSignoffService
@@ -222,8 +222,9 @@ class ChangeRequestService:
         NEW-type CR never allocated one), so nothing is actually consumed —
         the orphaned row is harmless and invisible to search (which joins on
         a current revision that no longer exists). A withdrawn REVISION-type
-        CR against an existing code simply leaves that code's prior
-        `is_current` revision untouched."""
+        (or DEPRECATION-type) CR against an existing code restores that
+        code's prior revision to is_current=1, since opening the withdrawn
+        revision (copy-on-write in _build_revision) had flipped it off."""
         cr = ChangeRequestService._repo.get_or_404(cr_id)
         revision = cr.revision
 
@@ -234,6 +235,17 @@ class ChangeRequestService:
                 f"Cannot withdraw a CR in state {revision.lifecycle_status}"
             )
 
+        prior_revision = None
+        if revision.revision_number > 1:
+            prior_revision = (
+                db.session.query(StatusCodeRevision)
+                .filter(
+                    StatusCodeRevision.status_code_id == revision.status_code_id,
+                    StatusCodeRevision.revision_number == revision.revision_number - 1,
+                )
+                .one_or_none()
+            )
+
         AuditService.log("ChangeRequest", cr.id, "WITHDRAW", actor=actor)
 
         ChangeRequestService._repo.delete_with_children(cr)
@@ -241,4 +253,9 @@ class ChangeRequestService:
             StatusCodeRevisionPlatform.status_code_revision_id == revision.id
         ).delete()
         db.session.delete(revision)
+        if prior_revision is not None:
+            # ux_revision_current_per_code allows only one is_current=1 row
+            # per status_code; flush the deletion above before restoring it.
+            db.session.flush()
+            prior_revision.is_current = 1
         db.session.commit()
