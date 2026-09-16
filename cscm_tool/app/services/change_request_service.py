@@ -162,7 +162,11 @@ class ChangeRequestService:
         if decision == "APPROVE":
             revision.chief_engineer_approved_by = actor.id
             revision.chief_engineer_approval_date = utcnow_iso()
-            revision.lifecycle_status = "APPROVED"
+            # DEPRECATION-type CRs (docs/05-governance-handbook.md §5:
+            # Released -> Deprecated via the full cycle) land on DEPRECATED
+            # rather than APPROVED — deprecation is a terminal decision, not
+            # a step toward Release.
+            revision.lifecycle_status = "DEPRECATED" if cr.cr_type == "DEPRECATION" else "APPROVED"
             cr.state = "APPROVED"
         else:
             ChangeRequestService._repo.clear_review_signoffs(revision)
@@ -180,6 +184,21 @@ class ChangeRequestService:
             before={"lifecycle_status": "PENDING_APPROVAL"},
             after={"lifecycle_status": revision.lifecycle_status},
         )
+        if decision == "APPROVE" and cr.cr_type == "DEPRECATION":
+            # Distinct DEPRECATE entry (docs/12-audit-compliance.md §2) is
+            # the timestamp source StatusCodeService.archive() relies on for
+            # the minimum-retention-period check (BR-006) — there is no
+            # deprecated_at column on status_code_revision.
+            AuditService.log(
+                "StatusCodeRevision",
+                revision.id,
+                "DEPRECATE",
+                actor=actor,
+                after={
+                    "deprecated_reason": revision.deprecated_reason,
+                    "superseded_by_status_code_id": revision.superseded_by_status_code_id,
+                },
+            )
         db.session.commit()
         return cr
 

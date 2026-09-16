@@ -6,7 +6,7 @@ from flask import jsonify, request
 from app.api.v1 import api_v1_bp
 from app.api.v1.serializers import revision_payload
 from app.auth.decorators import current_user, login_required, require_role
-from app.domain.errors import DomainError, NotFoundError
+from app.domain.errors import DomainError, InvalidTransitionError, NotFoundError
 from app.services.status_code_service import StatusCodeService, ValidationFailed
 
 
@@ -55,6 +55,62 @@ def create_status_code():
         return jsonify(error="forbidden", message=str(exc)), 403
 
     return jsonify(revision_payload(revision)), 201
+
+
+@api_v1_bp.post("/status-codes/<int:status_code_id>/deprecation-requests")
+@require_role("ADMINISTRATOR", "ENGINEER")
+def create_deprecation_request(status_code_id: int):
+    """FR-050: Released -> Deprecated via the full dual-review +
+    Chief-Engineer-approval cycle (docs/05-governance-handbook.md §5)."""
+    body = request.get_json(silent=True) or {}
+    try:
+        revision = StatusCodeService.create_deprecation_request(
+            status_code_id,
+            body.get("reason", ""),
+            body.get("superseded_by_status_code_id"),
+            current_user,
+        )
+    except NotFoundError:
+        return jsonify(error="not_found", message="Status code not found"), 404
+    except InvalidTransitionError as exc:
+        return jsonify(error="conflict", message=str(exc)), 409
+    except ValidationFailed as exc:
+        return _validation_error_response(exc)
+
+    return jsonify(revision_payload(revision)), 201
+
+
+@api_v1_bp.post("/status-codes/<int:status_code_id>/archive")
+@require_role("ADMINISTRATOR")
+def archive_status_code(status_code_id: int):
+    """FR-051/BR-006: direct Administrator action, no CR."""
+    try:
+        revision = StatusCodeService.archive(status_code_id, current_user)
+    except NotFoundError:
+        return jsonify(error="not_found", message="Status code not found"), 404
+    except InvalidTransitionError as exc:
+        return jsonify(error="conflict", message=str(exc)), 409
+    except DomainError as exc:
+        return jsonify(error="validation_error", message=str(exc)), 422
+
+    return jsonify(revision_payload(revision)), 200
+
+
+@api_v1_bp.post("/status-codes/<int:status_code_id>/reinstate")
+@require_role("ADMINISTRATOR")
+def reinstate_status_code(status_code_id: int):
+    """Deprecated -> Released, exceptional (docs/05-governance-handbook.md §5)."""
+    body = request.get_json(silent=True) or {}
+    try:
+        revision = StatusCodeService.reinstate(status_code_id, body.get("reason", ""), current_user)
+    except NotFoundError:
+        return jsonify(error="not_found", message="Status code not found"), 404
+    except InvalidTransitionError as exc:
+        return jsonify(error="conflict", message=str(exc)), 409
+    except ValidationFailed as exc:
+        return _validation_error_response(exc)
+
+    return jsonify(revision_payload(revision)), 200
 
 
 @api_v1_bp.get("/status-codes/next-available")

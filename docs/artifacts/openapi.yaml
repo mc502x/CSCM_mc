@@ -208,6 +208,62 @@ paths:
         '204': { description: Deleted; a SANDBOX_DELETE audit entry with a full before-state snapshot is written }
         '403': { description: Not a sandbox record, or actor is not Administrator }
 
+  /status-codes/{statusCodeId}/deprecation-requests:
+    parameters: [{ $ref: '#/components/parameters/StatusCodeId' }]
+    post:
+      tags: [StatusCodes]
+      summary: >
+        Initiate deprecation of a Released Status Code (FR-050). Opens a copy-on-write Draft
+        revision carrying the reason, wrapped in a cr_type=DEPRECATION Change Request that goes
+        through the same submit/dual-review/Chief-Engineer-approval cycle as any other CR;
+        approval lands on DEPRECATED rather than APPROVED (docs/05-governance-handbook.md §5).
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/DeprecationRequestCreate' }
+      responses:
+        '201':
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/StatusCodeRevision' }
+        '409': { description: Not Released, or an open revision already exists (BR-003) }
+        '422': { $ref: '#/components/responses/ValidationError' }
+
+  /status-codes/{statusCodeId}/archive:
+    parameters: [{ $ref: '#/components/parameters/StatusCodeId' }]
+    post:
+      tags: [StatusCodes]
+      summary: >
+        Archive a Deprecated Status Code (FR-051, Administrator only, direct action — no CR).
+        Rejected until the minimum retention period as Deprecated has elapsed (BR-006).
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/StatusCodeRevision' }
+        '409': { description: Not Deprecated, or retention period not yet elapsed }
+
+  /status-codes/{statusCodeId}/reinstate:
+    parameters: [{ $ref: '#/components/parameters/StatusCodeId' }]
+    post:
+      tags: [StatusCodes]
+      summary: >
+        Reinstate a Deprecated Status Code back to Released (exceptional, Administrator only,
+        direct action — no CR — docs/05-governance-handbook.md §5).
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/ReinstateRequest' }
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/StatusCodeRevision' }
+        '409': { description: Not Deprecated }
+        '422': { $ref: '#/components/responses/ValidationError' }
+
   /status-codes/{statusCodeId}/revisions:
     parameters: [{ $ref: '#/components/parameters/StatusCodeId' }]
     get:
@@ -706,6 +762,17 @@ components:
     StatusCodeRevisionUpdate:
       type: object
       properties: { expected_updated_at: { type: string, format: date-time } }
+    DeprecationRequestCreate:
+      type: object
+      required: [reason]
+      properties:
+        reason: { type: string, description: "10-2000 chars" }
+        superseded_by_status_code_id: { type: integer, nullable: true }
+    ReinstateRequest:
+      type: object
+      required: [reason]
+      properties:
+        reason: { type: string, description: "10-2000 chars" }
     StatusCodeList:
       type: object
       properties:

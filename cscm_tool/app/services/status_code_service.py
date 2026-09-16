@@ -5,6 +5,8 @@ sandbox creation deliberately does not (docs/08-system-architecture.md §5.4
 sequence diagram shows no ChangeRequest in the sandbox create/delete path —
 sandbox codes bypass the governance workflow entirely by design)."""
 
+from datetime import UTC, datetime, timedelta
+
 from app.domain.errors import (
     DomainError,
     InvalidTransitionError,
@@ -12,6 +14,7 @@ from app.domain.errors import (
     SegregationOfDutiesViolation,
 )
 from app.extensions import db
+from app.models.audit import AuditLogEntry
 from app.models.change_request import ChangeRequest
 from app.models.lookup import (
     LookupAccessRights,
@@ -30,10 +33,11 @@ from app.repositories.status_code_repository import StatusCodeRepository
 from app.services.audit_service import AuditService
 from app.services.lookup_service import LookupService
 from app.services.numbering_service import NumberingService
-from app.services.validation import validate_revision_fields
-from app.utils import utcnow_iso
+from app.services.validation import validate_deprecation_reason, validate_revision_fields
+from app.utils import parse_iso, utcnow_iso
 
 VIEWER_VISIBLE_STATES = ("APPROVED", "RELEASED", "DEPRECATED", "ARCHIVED")
+MINIMUM_DEPRECATED_RETENTION_DAYS = 180  # BR-006, docs/05-governance-handbook.md §11
 
 
 class ValidationFailed(DomainError):
@@ -111,6 +115,176 @@ class StatusCodeService:
         )
         db.session.commit()
         return revision
+
+    @staticmethod
+    def create_deprecation_request(
+        status_code_id: int,
+        reason: str,
+        superseded_by_status_code_id: int | None,
+        actor_user,
+    ) -> StatusCodeRevision:
+        """FR-050/BR-005 (Released -> Deprecated via full cycle,
+        docs/05-governance-handbook.md §5): copy-on-write a new Draft
+        revision carrying the deprecation reason, wrapped in a
+        cr_type=DEPRECATION ChangeRequest. Goes through the same
+        submit/dual-review/Chief-Engineer-approval machinery as any other
+        CR; ChangeRequestService.chief_engineer_decide routes a DEPRECATION
+        CR's approval to DEPRECATED instead of APPROVED."""
+        status_code = StatusCodeService._repo.get_or_404(status_code_id)
+        current = StatusCodeService._repo.get_current_revision(status_code_id)
+        if current is None or current.lifecycle_status != "RELEASED":
+            raise InvalidTransitionError("Only a Released Status Code can be deprecated.")
+        if StatusCodeService._repo.get_open_revision(status_code_id) is not None:
+            raise InvalidTransitionError(
+                "An open Draft/Review/PendingApproval revision already exists (BR-003)."
+            )
+
+        field_errors = validate_deprecation_reason(reason)
+        if field_errors:
+            raise ValidationFailed(field_errors)
+        if superseded_by_status_code_id is not None:
+            if superseded_by_status_code_id == status_code_id:
+                raise ValidationFailed(
+                    [
+                        {
+                            "field": "superseded_by_status_code_id",
+                            "message": "A code cannot supersede itself.",
+                        }
+                    ]
+                )
+            if db.session.get(StatusCode, superseded_by_status_code_id) is None:
+                raise ValidationFailed(
+                    [
+                        {
+                            "field": "superseded_by_status_code_id",
+                            "message": "Referenced Status Code does not exist.",
+                        }
+                    ]
+                )
+
+        current.is_current = 0
+        db.session.flush()  # see the matching comment in _build_revision
+
+        now = utcnow_iso()
+        next_number = max(r.revision_number for r in status_code.revisions) + 1
+        revision = StatusCodeRevision(
+            status_code_id=status_code.id,
+            revision_number=next_number,
+            is_current=1,
+            title=current.title,
+            description=current.description,
+            status_category_id=current.status_category_id,
+            availability_group_id=current.availability_group_id,
+            brake_program_id=current.brake_program_id,
+            reset_program_id=current.reset_program_id,
+            software_version=current.software_version,
+            operational_state_id=current.operational_state_id,
+            access_rights_id=current.access_rights_id,
+            delay_before_alarm_seconds=current.delay_before_alarm_seconds,
+            delay_before_reset_seconds=current.delay_before_reset_seconds,
+            alarm_behaviour_id=current.alarm_behaviour_id,
+            owner_id=current.owner_id,
+            lifecycle_status="DRAFT",
+            created_by=actor_user.id,
+            created_at=now,
+            deprecated_reason=reason,
+            superseded_by_status_code_id=superseded_by_status_code_id,
+        )
+        db.session.add(revision)
+        db.session.flush()
+        for platform in current.platforms:
+            db.session.add(
+                StatusCodeRevisionPlatform(
+                    status_code_revision_id=revision.id,
+                    turbine_platform_id=platform.turbine_platform_id,
+                )
+            )
+
+        cr = ChangeRequest(
+            status_code_revision_id=revision.id,
+            cr_type="DEPRECATION",
+            requested_by=actor_user.id,
+            justification=reason,
+            state="DRAFT",
+        )
+        db.session.add(cr)
+
+        AuditService.log(
+            "StatusCode",
+            status_code.id,
+            "CREATE",
+            actor=actor_user,
+            after={"cr_type": "DEPRECATION", "deprecated_reason": reason},
+        )
+        db.session.commit()
+        return revision
+
+    @staticmethod
+    def archive(status_code_id: int, actor_user) -> StatusCodeRevision:
+        """FR-051/BR-006: Administrator-only, direct action (no CR — not a
+        content decision, so it doesn't go through dual review), only once
+        the minimum retention period has elapsed since deprecation. There is
+        no deprecated_at column (docs/artifacts/schema.sql), so the
+        DEPRECATE audit_log_entry is the authoritative timestamp source —
+        consistent with the audit trail being the compliance record of
+        truth (docs/12-audit-compliance.md §1)."""
+        current = StatusCodeService._repo.get_current_revision(status_code_id)
+        if current is None or current.lifecycle_status != "DEPRECATED":
+            raise InvalidTransitionError("Only a Deprecated Status Code can be archived.")
+
+        deprecated_at = (
+            db.session.query(AuditLogEntry)
+            .filter(
+                AuditLogEntry.entity_type == "StatusCodeRevision",
+                AuditLogEntry.entity_id == current.id,
+                AuditLogEntry.action == "DEPRECATE",
+            )
+            .order_by(AuditLogEntry.occurred_at.desc())
+            .first()
+        )
+        if deprecated_at is None:
+            raise DomainError("No DEPRECATE audit entry found; cannot verify retention period.")
+
+        elapsed = datetime.now(UTC) - parse_iso(deprecated_at.occurred_at)
+        if elapsed < timedelta(days=MINIMUM_DEPRECATED_RETENTION_DAYS):
+            raise DomainError(
+                f"Minimum {MINIMUM_DEPRECATED_RETENTION_DAYS}-day retention period as "
+                f"Deprecated has not elapsed ({elapsed.days} days so far)."
+            )
+
+        current.lifecycle_status = "ARCHIVED"
+        AuditService.log(
+            "StatusCodeRevision",
+            current.id,
+            "ARCHIVE",
+            actor=actor_user,
+            after={"retention_days_elapsed": elapsed.days},
+        )
+        db.session.commit()
+        return current
+
+    @staticmethod
+    def reinstate(status_code_id: int, reason: str, actor_user) -> StatusCodeRevision:
+        """Deprecated -> Released, exceptional (docs/05-governance-handbook.md
+        §5): Administrator-only, direct action, mandatory reason."""
+        current = StatusCodeService._repo.get_current_revision(status_code_id)
+        if current is None or current.lifecycle_status != "DEPRECATED":
+            raise InvalidTransitionError("Only a Deprecated Status Code can be reinstated.")
+
+        field_errors = validate_deprecation_reason(reason)
+        if field_errors:
+            raise ValidationFailed(field_errors)
+
+        current.lifecycle_status = "RELEASED"
+        AuditService.log(
+            "StatusCodeRevision",
+            current.id,
+            "REINSTATE",
+            actor=actor_user,
+            after={"reason": reason},
+        )
+        db.session.commit()
+        return current
 
     @staticmethod
     def create_sandbox(data: dict, actor_user) -> StatusCodeRevision:
@@ -293,6 +467,17 @@ class StatusCodeService:
             if existing is None:
                 raise NotFoundError(f"Status Code {status_code_id} not found")
             status_code = existing
+            # BR-002: at most one is_current=1 revision per code — flip the
+            # old one off in the same transaction as the new one is created,
+            # or ux_revision_current_per_code rejects the insert.
+            old_current = StatusCodeService._repo.get_current_revision(status_code_id)
+            if old_current is not None:
+                old_current.is_current = 0
+                # Flush this UPDATE before the new row is INSERTed below:
+                # ux_revision_current_per_code is a partial unique index
+                # checked per-statement, and SQLAlchemy's unit-of-work does
+                # not otherwise guarantee this UPDATE runs before that INSERT.
+                db.session.flush()
 
         revision = StatusCodeRevision(
             status_code_id=status_code.id,
