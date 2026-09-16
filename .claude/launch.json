@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "cscm-tool-dev",
+      "runtimeExecutable": "Z:\\CSCM_mc\\cscm_tool\\.venv\\Scripts\\python.exe",
+      "runtimeArgs": ["Z:\\CSCM_mc\\cscm_tool\\dev_server.py"],
+      "port": 5000
+    }
+  ]
+}

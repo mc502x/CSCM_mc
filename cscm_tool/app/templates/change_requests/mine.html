@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}My Change Requests — CSCM Tool{% endblock %}
+{% block content %}
+<div class="page-header"><h1>My Change Requests</h1></div>
+<div class="card">
+  {% if crs %}
+  <table>
+    <thead><tr><th>Type</th><th>State</th><th>Justification</th><th>Submitted</th><th></th></tr></thead>
+    <tbody>
+      {% for cr in crs %}
+      <tr>
+        <td>{{ cr.cr_type }}</td>
+        <td>{{ cr.state }}</td>
+        <td>{{ cr.justification or '—' }}</td>
+        <td>{{ cr.submitted_at or '—' }}</td>
+        <td><a href="{{ url_for('ui.change_request_detail', cr_id=cr.id) }}">View</a></td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% else %}
+  <div class="table-empty">You have no change requests yet.</div>
+  {% endif %}
+</div>
+{% endblock %}

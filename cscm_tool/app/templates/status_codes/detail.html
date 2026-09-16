@@ -1,0 +1,127 @@
+{% extends "base.html" %}
+{% import "_macros.html" as macros %}
+{% block title %}{{ revision.status_code_identifier or 'Draft' }} — CSCM Tool{% endblock %}
+{% block content %}
+<div class="page-header">
+  <div>
+    <h1>
+      {{ revision.status_code_identifier or 'Not yet assigned' }}
+      {% if revision.is_sandbox %} {{ macros.sandbox_badge() }}{% endif %}
+      {{ macros.lifecycle_badge(revision.lifecycle_status) }}
+    </h1>
+    <div class="muted">{{ revision.title }} &middot; {{ revision.functional_system_group }}
+      {% if revision.functional_subgroup %} / {{ revision.functional_subgroup }}{% endif %}
+      {% for p in revision.turbine_platforms %} <span class="chip">{{ p }}</span>{% endfor %}
+    </div>
+  </div>
+  <div class="btn-row">
+    {% if open_cr %}
+      <a class="btn btn--primary" href="{{ url_for('ui.change_request_detail', cr_id=open_cr.id) }}">View Change Request</a>
+    {% elif revision.lifecycle_status == 'RELEASED' and current_user.role_code in ('ENGINEER', 'ADMINISTRATOR') %}
+      <form method="post" action="{{ url_for('ui.status_code_new_revision', status_code_id=revision.status_code_id) }}" style="display:inline">
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+        <button class="btn" type="submit">Open New Revision</button>
+      </form>
+    {% endif %}
+    {% if revision.lifecycle_status == 'DRAFT' and not revision.is_sandbox and current_user.role_code in ('ENGINEER', 'ADMINISTRATOR') %}
+      <a class="btn" href="{{ url_for('ui.status_code_edit', status_code_id=revision.status_code_id) }}">Edit Draft</a>
+    {% endif %}
+  </div>
+</div>
+
+<div class="tabs">
+  <a href="?tab=current" class="{{ 'is-active' if tab == 'current' }}">Current</a>
+  <a href="?tab=history" class="{{ 'is-active' if tab == 'history' }}">History ({{ history|length }})</a>
+  <a href="?tab=actions" class="{{ 'is-active' if tab == 'actions' }}">Actions</a>
+</div>
+
+{% if tab == 'current' %}
+<div class="card">
+  <dl class="kv">
+    <dt>Status Category</dt><dd>{{ revision.status_category }}</dd>
+    <dt>Availability Group</dt><dd>{{ revision.availability_group }}</dd>
+    <dt>Brake Program</dt><dd>{{ revision.brake_program }}</dd>
+    <dt>Reset Program</dt><dd>{{ revision.reset_program }}</dd>
+    <dt>Operational State</dt><dd>{{ revision.operational_state }}</dd>
+    <dt>Alarm Behaviour</dt><dd>{{ revision.alarm_behaviour }}</dd>
+    <dt>Access Rights</dt>
+    <dd>{{ revision.access_rights }}{% if not revision.admin_signoff_at %}<span class="proposed-badge">Proposed</span>{% endif %}</dd>
+    <dt>Software Version</dt><dd>{{ revision.software_version }}</dd>
+    <dt>Delay Before Alarm</dt><dd>{{ revision.delay_before_alarm_seconds }}s</dd>
+    <dt>Delay Before Reset</dt><dd>{{ revision.delay_before_reset_seconds }}s</dd>
+    <dt>Description</dt><dd>{{ revision.description }}</dd>
+    <dt>Owner</dt><dd>User #{{ revision.owner_id }}</dd>
+    <dt>Effective Date</dt><dd>{{ revision.effective_date or '—' }}</dd>
+    {% if revision.deprecated_reason %}
+    <dt>Deprecation Reason</dt><dd>{{ revision.deprecated_reason }}</dd>
+    {% endif %}
+  </dl>
+</div>
+{% elif tab == 'history' %}
+<div class="card">
+  <table>
+    <thead><tr><th>Rev #</th><th>State</th><th>Title</th><th>Created</th></tr></thead>
+    <tbody>
+      {% for r in history %}
+      <tr><td>{{ r.revision_number }}{% if r.is_current %} (current){% endif %}</td><td>{{ macros.lifecycle_badge(r.lifecycle_status) }}</td><td>{{ r.title }}</td><td>{{ r.created_at }}</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% else %}
+<div class="card">
+  <h2>Deprecation / Archival</h2>
+  {% if revision.lifecycle_status == 'RELEASED' and current_user.role_code in ('ADMINISTRATOR', 'ENGINEER') and not open_cr %}
+  <form method="post" action="{{ url_for('ui.status_code_deprecate', status_code_id=revision.status_code_id) }}">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    <div class="field">
+      <label for="reason">Deprecation reason</label>
+      <textarea id="reason" name="reason" required minlength="10" maxlength="2000"></textarea>
+    </div>
+    <div class="field">
+      <label for="superseded_by_status_code_id">Superseded by Status Code id (optional)</label>
+      <input type="number" id="superseded_by_status_code_id" name="superseded_by_status_code_id">
+    </div>
+    <div class="hint" style="margin-bottom:10px">Opens a Draft that must go through the full dual-review and Chief Engineer approval cycle before it takes effect.</div>
+    <button class="btn btn--danger" type="submit">Initiate Deprecation</button>
+  </form>
+  {% endif %}
+
+  {% if revision.lifecycle_status == 'DEPRECATED' and current_user.role_code == 'ADMINISTRATOR' %}
+  <form method="post" action="{{ url_for('ui.status_code_archive', status_code_id=revision.status_code_id) }}" style="margin-bottom:16px">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    <button class="btn" type="submit">Archive (requires 180-day retention elapsed)</button>
+  </form>
+  <form method="post" action="{{ url_for('ui.status_code_reinstate', status_code_id=revision.status_code_id) }}">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    <div class="field">
+      <label for="reinstate_reason">Reinstatement reason</label>
+      <textarea id="reinstate_reason" name="reason" required minlength="10" maxlength="2000"></textarea>
+    </div>
+    <button class="btn" type="submit">Reinstate to Released</button>
+  </form>
+  {% endif %}
+
+  {% if revision.is_sandbox and current_user.role_code == 'ADMINISTRATOR' %}
+  <h2 style="margin-top:24px">Delete Permanently</h2>
+  <p class="muted">This is the one truly irreversible action in the system. Type the identifier to confirm.</p>
+  <form method="post" action="{{ url_for('ui.status_code_delete', status_code_id=revision.status_code_id) }}">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    <div class="field">
+      <input type="text" id="confirm_identifier" placeholder="Type {{ revision.status_code_identifier }} to confirm">
+    </div>
+    <button class="btn btn--danger" type="submit" id="confirm_delete_btn">Delete Permanently</button>
+  </form>
+  <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    initTypedConfirm('confirm_identifier', 'confirm_delete_btn', {{ revision.status_code_identifier | tojson }});
+  });
+  </script>
+  {% endif %}
+
+  {% if not (revision.lifecycle_status in ('RELEASED', 'DEPRECATED') or revision.is_sandbox) %}
+  <p class="muted">No deprecation/archival/deletion actions are available for this record's current state.</p>
+  {% endif %}
+</div>
+{% endif %}
+{% endblock %}

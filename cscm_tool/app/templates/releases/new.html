@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}New Release — CSCM Tool{% endblock %}
+{% block content %}
+<div class="page-header"><h1>New Release</h1></div>
+<div class="card" style="max-width:480px">
+  <form method="post">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    <div class="field">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required>
+    </div>
+    <div class="field">
+      <label for="version_label">Version Label</label>
+      <input type="text" id="version_label" name="version_label" required placeholder="2026.1">
+    </div>
+    <div class="field">
+      <label for="description">Description</label>
+      <textarea id="description" name="description"></textarea>
+    </div>
+    <div class="field">
+      <label for="scope_functional_system_group">Scope: Functional System Group (optional)</label>
+      <select id="scope_functional_system_group" name="scope_functional_system_group">
+        <option value="">(all groups)</option>
+        {% for g in groups %}
+        <option value="{{ g.code }}">{{ g.code }} — {{ g.label }}</option>
+        {% endfor %}
+      </select>
+    </div>
+    <button class="btn btn--primary" type="submit">Create Release</button>
+  </form>
+</div>
+{% endblock %}

@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block title %}Dashboard — CSCM Tool{% endblock %}
+{% block content %}
+<div class="page-header"><h1>Dashboard</h1></div>
+
+<div class="grid">
+  {% if 'my_open_crs' in stats %}
+  <a class="card" href="{{ url_for('ui.my_change_requests') }}">
+    <h2>My Open Change Requests</h2>
+    <div style="font-size:28px;font-weight:700">{{ stats.my_open_crs }}</div>
+  </a>
+  {% endif %}
+
+  {% if 'pending_domain_requests' in stats %}
+  <a class="card" href="{{ url_for('ui.my_change_requests') }}">
+    <h2>Awaiting Cross-Domain Sign-Off</h2>
+    <div style="font-size:28px;font-weight:700">{{ stats.pending_domain_requests }}</div>
+    <div class="muted">Draft CRs of mine blocked on a domain sign-off</div>
+  </a>
+  {% endif %}
+
+  {% if 'awaiting_reviewer_signoff' in stats %}
+  <a class="card" href="{{ url_for('ui.review_queue') }}">
+    <h2>Awaiting Reviewer Sign-Off</h2>
+    <div style="font-size:28px;font-weight:700">{{ stats.awaiting_reviewer_signoff }}</div>
+  </a>
+  {% endif %}
+
+  {% if 'awaiting_admin_signoff' in stats %}
+  <a class="card" href="{{ url_for('ui.review_queue') }}">
+    <h2>Awaiting Administrator Sign-Off</h2>
+    <div style="font-size:28px;font-weight:700">{{ stats.awaiting_admin_signoff }}</div>
+  </a>
+  {% endif %}
+
+  {% if 'awaiting_approval' in stats %}
+  <a class="card" href="{{ url_for('ui.approval_queue') }}">
+    <h2>Awaiting Chief Engineer Approval</h2>
+    <div style="font-size:28px;font-weight:700">{{ stats.awaiting_approval }}</div>
+  </a>
+  {% endif %}
+
+  <a class="card" href="{{ url_for('ui.status_code_list') }}">
+    <h2>Browse Status Codes</h2>
+    <div class="muted">Search and filter all governed status codes</div>
+  </a>
+
+  <a class="card" href="{{ url_for('ui.release_list') }}">
+    <h2>Releases</h2>
+    <div class="muted">Browse published and in-progress releases</div>
+  </a>
+</div>
+{% endblock %}

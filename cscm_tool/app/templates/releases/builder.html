@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block title %}Release Builder — {{ release.name }} — CSCM Tool{% endblock %}
+{% block content %}
+<div class="page-header">
+  <h1>Release Builder &middot; {{ release.name }} ({{ release.version_label }})</h1>
+  <a class="btn" href="{{ url_for('ui.release_detail', release_id=release.id) }}">View Release</a>
+</div>
+
+<div class="card">
+  <p class="muted">Select the Approved, non-sandbox revisions to include, then Save. Publishing is immutable — a correction requires a new Release.</p>
+  <form method="post">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    <table>
+      <thead><tr><th></th><th>Identifier</th><th>Title</th><th>Functional Group</th></tr></thead>
+      <tbody>
+        {% for c in candidates %}
+        <tr>
+          <td><input type="checkbox" name="revision_ids" value="{{ c.id }}" {{ 'checked' if c.id in included_ids }}></td>
+          <td>{{ c.status_code_identifier }}</td>
+          <td>{{ c.title }}</td>
+          <td>{{ c.functional_system_group }}</td>
+        </tr>
+        {% endfor %}
+        {% if not candidates %}
+        <tr><td colspan="4" class="table-empty">No Approved candidates match this Release's scope.</td></tr>
+        {% endif %}
+      </tbody>
+    </table>
+    <div class="form-actions">
+      <button class="btn btn--primary" type="submit">Save Candidate Set</button>
+    </div>
+  </form>
+</div>
+
+<div class="card">
+  <h2>Publish</h2>
+  <p class="muted">Publishing transitions every included revision from Approved to Released and locks this Release permanently.</p>
+  <form method="post" action="{{ url_for('ui.release_publish', release_id=release.id) }}" onsubmit="return confirm('Publish this Release? This cannot be undone.')">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    <button class="btn btn--danger" type="submit" {{ 'disabled' if not included_ids }}>Publish Release</button>
+  </form>
+</div>
+{% endblock %}
