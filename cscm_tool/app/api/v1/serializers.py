@@ -1,6 +1,9 @@
 """Shared response payload builders matching docs/artifacts/openapi.yaml schemas."""
 
+import json
+
 from app.models.change_request import ChangeRequest, DomainSignoff, ReviewComment
+from app.models.release import Release
 from app.models.status_code import StatusCodeRevision
 
 
@@ -74,6 +77,22 @@ def pending_domain_signoff_payload(domain_code: str) -> dict:
         "signed_off_by": None,
         "signed_off_at": None,
         "status": "REQUIRED_PENDING",
+    }
+
+
+def release_payload(release: Release) -> dict:
+    return {
+        "id": release.id,
+        "name": release.name,
+        "version_label": release.version_label,
+        "description": release.description,
+        "scope_filter": json.loads(release.scope_filter or "{}"),
+        "status": release.status,
+        "created_by": release.created_by,
+        "created_at": release.created_at,
+        "published_by": release.published_by,
+        "published_at": release.published_at,
+        "item_count": len(release.items),
     }
 
 

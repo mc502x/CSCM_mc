@@ -1,7 +1,10 @@
 """Release management. See docs/05-governance-handbook.md and schema.sql
 trg_prevent_sandbox_release / trg_prevent_release_item_delete triggers."""
 
+from typing import cast
+
 from app.extensions import Base, db
+from app.models.status_code import StatusCodeRevision
 
 
 class Release(Base):
@@ -18,7 +21,9 @@ class Release(Base):
     published_by = db.Column(db.Integer, db.ForeignKey("user.id"))
     published_at = db.Column(db.Text)
 
-    items = db.relationship("ReleaseItem", backref="release")
+    items: list["ReleaseItem"] = cast(
+        "list[ReleaseItem]", db.relationship("ReleaseItem", back_populates="release")
+    )
 
 
 class ReleaseItem(Base):
@@ -30,4 +35,5 @@ class ReleaseItem(Base):
         db.Integer, db.ForeignKey("status_code_revision.id"), nullable=False, unique=True
     )
 
-    revision = db.relationship("StatusCodeRevision")
+    release: Release = cast(Release, db.relationship("Release", back_populates="items"))
+    revision: StatusCodeRevision = cast(StatusCodeRevision, db.relationship("StatusCodeRevision"))
