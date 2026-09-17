@@ -15,6 +15,9 @@ class Config:
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     SQLALCHEMY_ENGINE_OPTIONS = {"connect_args": {"check_same_thread": False}}
 
+    # SEC-024: library import (EPIC-14) uploads are size- and type-limited.
+    MAX_CONTENT_LENGTH = 20 * 1024 * 1024  # 20 MB
+
     # SEC-002: session cookie attributes
     SESSION_COOKIE_HTTPONLY = True
     SESSION_COOKIE_SECURE = True

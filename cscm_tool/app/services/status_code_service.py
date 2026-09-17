@@ -51,10 +51,15 @@ class StatusCodeService:
     _repo = StatusCodeRepository()
 
     @staticmethod
-    def create_draft(data: dict, actor_user) -> StatusCodeRevision:
+    def create_draft(
+        data: dict, actor_user, *, import_job_id: int | None = None
+    ) -> StatusCodeRevision:
         """FR-020: Engineer or Administrator creates a new Status Code as a
         Draft revision. No identifier is assigned (FR-021); a wrapping
-        ChangeRequest (cr_type=NEW) is created alongside it (FR-030)."""
+        ChangeRequest is created alongside it (FR-030) — cr_type=IMPORT
+        when called from ImportService (FR-048a-c), cr_type=NEW otherwise.
+        Either way the CR goes through the identical submit/dual-review/
+        Chief-Engineer-approval cycle (05-governance-handbook.md §6b)."""
         revision = StatusCodeService._build_revision(
             data, actor_user, is_sandbox=False, status_code_id=None, revision_number=1
         )
@@ -62,9 +67,10 @@ class StatusCodeService:
 
         cr = ChangeRequest(
             status_code_revision_id=revision.id,
-            cr_type="NEW",
+            cr_type="IMPORT" if import_job_id else "NEW",
             requested_by=actor_user.id,
             justification=data.get("justification"),
+            import_job_id=import_job_id,
             state="DRAFT",
         )
         db.session.add(cr)

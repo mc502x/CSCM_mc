@@ -17,13 +17,12 @@ from app.ui import ui_bp
 @ui_bp.route("/change-requests/mine")
 @login_required_web
 def my_change_requests():
-    crs = (
-        db.session.query(ChangeRequest)
-        .filter(ChangeRequest.requested_by == current_user.id)
-        .order_by(ChangeRequest.id.desc())
-        .all()
-    )
-    return render_template("change_requests/mine.html", crs=crs)
+    query = db.session.query(ChangeRequest).filter(ChangeRequest.requested_by == current_user.id)
+    import_job_id = request.args.get("import_job_id", type=int)
+    if import_job_id:
+        query = query.filter(ChangeRequest.import_job_id == import_job_id)
+    crs = query.order_by(ChangeRequest.id.desc()).all()
+    return render_template("change_requests/mine.html", crs=crs, import_job_id=import_job_id)
 
 
 @ui_bp.route("/change-requests/review-queue")

@@ -31,6 +31,9 @@
         {% if current_user.role_code == 'ADMINISTRATOR' %}
         <a href="{{ url_for('ui.status_code_new_sandbox') }}">New Sandbox Code</a>
         {% endif %}
+        {% if current_user.role_code in ('ENGINEER', 'ADMINISTRATOR') %}
+        <a href="{{ url_for('ui.import_new') }}" class="{{ 'is-active' if request.endpoint and request.endpoint.startswith('ui.import') }}">Library Import</a>
+        {% endif %}
       </div>
       <div class="sidebar__group">
         <div class="sidebar__title">Workflow</div>

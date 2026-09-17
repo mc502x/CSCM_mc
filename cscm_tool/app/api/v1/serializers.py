@@ -4,6 +4,7 @@ import json
 
 from app.models.audit import AuditLogEntry
 from app.models.change_request import ChangeRequest, DomainSignoff, ReviewComment
+from app.models.import_job import ImportJob
 from app.models.release import Release
 from app.models.status_code import StatusCodeRevision
 
@@ -172,4 +173,20 @@ def change_request_payload(cr: ChangeRequest) -> dict:
         "chief_engineer_decided_by": cr.chief_engineer_decided_by,
         "comments": [review_comment_payload(c) for c in cr.comments],
         "domain_signoffs": [domain_signoff_payload(d) for d in cr.domain_signoffs],
+    }
+
+
+def import_job_payload(job: ImportJob) -> dict:
+    return {
+        "id": job.id,
+        "requested_by": job.requested_by,
+        "source_format": job.source_format,
+        "source_file_reference": job.source_file_reference,
+        "row_count": job.row_count,
+        "status": job.status,
+        "created_count": job.created_count,
+        "error_count": job.error_count,
+        "error_report_reference": job.error_report_reference,
+        "created_at": job.created_at,
+        "completed_at": job.completed_at,
     }

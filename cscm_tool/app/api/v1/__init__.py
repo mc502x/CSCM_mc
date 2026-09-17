@@ -11,6 +11,7 @@ from app.api.v1 import (  # noqa: E402,F401
     domain_signoff_routes,
     export_routes,
     health_routes,
+    import_routes,
     lookup_routes,
     release_routes,
     revision_routes,

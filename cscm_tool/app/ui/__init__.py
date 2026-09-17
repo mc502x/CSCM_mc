@@ -25,6 +25,7 @@ from app.ui import (  # noqa: E402,F401
     change_request_views,
     dashboard_views,
     export_views,
+    import_views,
     release_views,
     status_code_views,
 )

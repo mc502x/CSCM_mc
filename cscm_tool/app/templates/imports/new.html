@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}Library Import — CSCM Tool{% endblock %}
+{% block content %}
+<div class="page-header"><h1>Library Import</h1></div>
+
+<div class="card" style="max-width:560px">
+  <p class="muted">Upload a CSV or XLSX file — one row per status code, column headers matching the field names used elsewhere in CSCM Tool (Functional System Group/Subgroup and the audience-access fields by their code, e.g. "WCNV", "Converter", "SCADA User").</p>
+  <form method="post" enctype="multipart/form-data">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    <div class="field">
+      <label for="file">File (.csv or .xlsx)</label>
+      <input type="file" id="file" name="file" accept=".csv,.xlsx" required>
+    </div>
+    <button class="btn btn--primary" type="submit">Upload and Import</button>
+  </form>
+  <div class="hint" style="margin-top:10px">Every row that passes validation becomes an ordinary Draft, subject to the full Cross-Domain Sign-Off, dual-review, and Chief Engineer approval cycle before it can be Released — import is a faster data-entry path, never a governance bypass.</div>
+</div>
+{% endblock %}

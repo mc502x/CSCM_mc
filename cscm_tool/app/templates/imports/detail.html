@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %}Import Job #{{ job.id }} — CSCM Tool{% endblock %}
+{% block content %}
+<div class="page-header"><h1>Import Job #{{ job.id }}</h1></div>
+
+<div class="card" style="max-width:560px">
+  <dl class="kv">
+    <dt>Source</dt><dd>{{ job.source_format }}</dd>
+    <dt>Status</dt><dd>{{ job.status }}</dd>
+    <dt>Rows</dt><dd>{{ job.row_count }}</dd>
+    <dt>Created</dt><dd>{{ job.created_count }}</dd>
+    <dt>Failed</dt><dd>{{ job.error_count }}</dd>
+    <dt>Started</dt><dd>{{ job.created_at }}</dd>
+    <dt>Completed</dt><dd>{{ job.completed_at or '—' }}</dd>
+  </dl>
+
+  {% if job.status == 'COMPLETE' %}
+  <p class="muted">
+    {{ job.created_count }} of {{ job.row_count }} row{{ 's' if job.row_count != 1 }} imported as Drafts
+    {%- if job.error_count %}, {{ job.error_count }} failed validation{% endif %}.
+    Imported rows are ordinary Drafts — they still require Cross-Domain Sign-Off, dual review, and Chief Engineer approval before Release.
+  </p>
+  <div class="btn-row">
+    {% if job.error_count %}
+    <a class="btn" href="{{ url_for('ui.import_errors', import_job_id=job.id) }}">Download Error Report</a>
+    {% endif %}
+    {% if job.created_count %}
+    <a class="btn btn--primary" href="{{ url_for('ui.my_change_requests', import_job_id=job.id) }}">View Imported Drafts</a>
+    {% endif %}
+  </div>
+  {% endif %}
+</div>
+{% endblock %}

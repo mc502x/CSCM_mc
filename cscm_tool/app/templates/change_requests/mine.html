@@ -2,6 +2,9 @@
 {% block title %}My Change Requests — CSCM Tool{% endblock %}
 {% block content %}
 <div class="page-header"><h1>My Change Requests</h1></div>
+{% if import_job_id %}
+<div class="flash flash--info">Showing only Drafts created by Import Job #{{ import_job_id }}. <a href="{{ url_for('ui.my_change_requests') }}">Show all</a></div>
+{% endif %}
 <div class="card">
   {% if crs %}
   <table>
