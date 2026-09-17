@@ -1,0 +1,50 @@
+# CSCM Tool — Application
+
+Flask backend for the Controller Status Code Management Tool. See the root [../README.md](../README.md) and the [../docs/](../docs/00-INDEX.md) package for the full requirements/design basis this code implements.
+
+## Status
+
+All backend epics (EPIC-01–04, EPIC-06, EPIC-08–10; `docs/17-implementation-backlog.md`) and the full server-rendered UI are complete: application factory, health endpoint, the full v2 SQLAlchemy model set, the baseline Alembic migration applying `docs/artifacts/schema.sql`, session-based authentication with account lockout and rate limiting (FR-001–FR-004), CSRF protection, RBAC/user administration (FR-010–FR-014), Status Code creation with field/cross-field validation (FR-020–FR-029), atomic Functional Group/Subgroup identifier allocation (FR-021, `docs/07-database-design.md` §7a), sandbox codes (FR-053–FR-056), Cross-Domain Sign-Off (FR-027–FR-029), the full submit → dual-review → Chief-Engineer-approval workflow with segregation-of-duties enforcement (FR-030–FR-039, BR-004/BR-005), Release Management (build/candidates/items/publish, CSV/JSON/PDF catalogue export, Administrator-only full-database backup — FR-040–FR-048, SEC-015), Deprecation/Archival (FR-050–FR-052, BR-006), controlled-vocabulary administration (US-091), and the audit-log search API with Administrator/Reviewer/Chief-Engineer scoping (FR-070–FR-071).
+
+The UI (`docs/10-ui-ux-specification.md`) is server-rendered Jinja2 with vanilla JS/CSS — no CDN, no frontend framework (`docs/11-security-architecture.md` §12) — and reuses the same service layer as the JSON API for every action, all 18 screens (S1–S18: dashboard, status code list/detail/create/edit, sandbox create + typed-confirmation delete, my/review/approval CR queues, CR detail/decision, release list/builder/detail, user/lookup/audit-log administration, export center, account settings).
+
+## Setup
+
+```bash
+python -m venv .venv
+.venv/Scripts/activate   # .venv/bin/activate on Linux/macOS
+pip install -r requirements.txt
+cp .env.example .env     # then edit SECRET_KEY for anything beyond local dev
+```
+
+## Running
+
+```bash
+flask db upgrade      # creates instance/cscm.db from the baseline migration + seed data
+flask create-admin    # bootstraps the first Administrator account (prompts, or pass --username/--email/--full-name/--password)
+flask run
+```
+
+`GET /api/v1/health` should return `{"status": "ok"}`. Log in with `POST /api/v1/auth/login`; every other state-changing request needs an `X-CSRFToken` header fetched from `GET /api/v1/auth/csrf-token` first (see `app/api/v1/auth_routes.py`).
+
+## Testing
+
+```bash
+pytest
+```
+
+Every test gets a fresh in-memory SQLite database migrated through the same Alembic revision used everywhere else (`tests/conftest.py`), per `docs/15-development-standards.md` §7.
+
+## Code quality gates (docs/15-development-standards.md §2, §8)
+
+```bash
+black app tests migrations/versions wsgi.py
+ruff check app tests migrations/versions wsgi.py
+mypy app wsgi.py
+bandit -r app
+pip-audit
+```
+
+## Database migrations
+
+The initial migration (`migrations/versions/9dc07a07a48b_*.py`) applies `docs/artifacts/schema.sql` verbatim rather than relying on Alembic autogenerate, so its CHECK constraints, partial indexes, and triggers are exactly what's documented. Any schema change after this baseline must still be its own reversible Alembic migration, and be reflected in the same PR in `docs/06-data-dictionary.md`, `docs/07-database-design.md`, and `docs/artifacts/schema.sql`.

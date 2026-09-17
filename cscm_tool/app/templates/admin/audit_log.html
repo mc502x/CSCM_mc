@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block title %}Audit Log — CSCM Tool{% endblock %}
+{% block content %}
+<div class="page-header"><h1>Audit Log</h1></div>
+
+{% if current_user.role_code != 'ADMINISTRATOR' %}
+<div class="flash flash--info">Scoped view: showing only actions you performed.</div>
+{% endif %}
+
+<div class="card">
+  <form method="get" class="form-row" style="align-items:end">
+    <div class="field" style="margin-bottom:0"><label for="entity_type">Entity Type</label><input type="text" id="entity_type" name="entity_type" value="{{ request.args.get('entity_type', '') }}" placeholder="StatusCode, User, Release..."></div>
+    <div class="field" style="margin-bottom:0"><label for="entity_id">Entity ID</label><input type="number" id="entity_id" name="entity_id" value="{{ request.args.get('entity_id', '') }}"></div>
+    {% if current_user.role_code == 'ADMINISTRATOR' %}
+    <div class="field" style="margin-bottom:0"><label for="actor_id">Actor ID</label><input type="number" id="actor_id" name="actor_id" value="{{ request.args.get('actor_id', '') }}"></div>
+    {% endif %}
+    <div class="field" style="margin-bottom:0"><label for="date_from">From</label><input type="text" id="date_from" name="date_from" value="{{ request.args.get('date_from', '') }}" placeholder="2026-01-01"></div>
+    <div class="field" style="margin-bottom:0"><label for="date_to">To</label><input type="text" id="date_to" name="date_to" value="{{ request.args.get('date_to', '') }}" placeholder="2026-12-31"></div>
+    <div class="field" style="margin-bottom:0"><button class="btn" type="submit">Filter</button></div>
+  </form>
+</div>
+
+<div class="card">
+  {% if entries %}
+  <table>
+    <thead><tr><th>When</th><th>Actor</th><th>Entity</th><th>Action</th><th>Details</th></tr></thead>
+    <tbody>
+      {% for e in entries %}
+      <tr>
+        <td>{{ e.occurred_at }}</td>
+        <td>{{ 'User #' ~ e.actor_id if e.actor_id else 'system' }}</td>
+        <td>{{ e.entity_type }} #{{ e.entity_id }}</td>
+        <td>{{ e.action }}</td>
+        <td>
+          {% if e.before_value %}<div class="muted">before: {{ e.before_value }}</div>{% endif %}
+          {% if e.after_value %}<div class="muted">after: {{ e.after_value }}</div>{% endif %}
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  <div class="muted" style="margin-top:10px">{{ total }} total</div>
+  {% else %}
+  <div class="table-empty">No matching audit entries.</div>
+  {% endif %}
+</div>
+{% endblock %}

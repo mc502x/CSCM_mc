@@ -109,6 +109,35 @@ paths:
             application/json:
               schema: { $ref: '#/components/schemas/User' }
 
+  /users/me/change-password:
+    post:
+      tags: [Users]
+      summary: Change own password (FR-013)
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/PasswordChange' }
+      responses:
+        '204': { description: Password changed }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '422': { $ref: '#/components/responses/ValidationError' }
+
+  /users/{userId}/force-reset-password:
+    parameters: [{ $ref: '#/components/parameters/UserId' }]
+    post:
+      tags: [Users]
+      summary: Force-reset a user's password (Administrator only, FR-014)
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/PasswordReset' }
+      responses:
+        '204': { description: Password reset }
+        '403': { $ref: '#/components/responses/Forbidden' }
+        '422': { $ref: '#/components/responses/ValidationError' }
+
   /status-codes:
     get:
       tags: [StatusCodes]
@@ -178,6 +207,62 @@ paths:
       responses:
         '204': { description: Deleted; a SANDBOX_DELETE audit entry with a full before-state snapshot is written }
         '403': { description: Not a sandbox record, or actor is not Administrator }
+
+  /status-codes/{statusCodeId}/deprecation-requests:
+    parameters: [{ $ref: '#/components/parameters/StatusCodeId' }]
+    post:
+      tags: [StatusCodes]
+      summary: >
+        Initiate deprecation of a Released Status Code (FR-050). Opens a copy-on-write Draft
+        revision carrying the reason, wrapped in a cr_type=DEPRECATION Change Request that goes
+        through the same submit/dual-review/Chief-Engineer-approval cycle as any other CR;
+        approval lands on DEPRECATED rather than APPROVED (docs/05-governance-handbook.md §5).
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/DeprecationRequestCreate' }
+      responses:
+        '201':
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/StatusCodeRevision' }
+        '409': { description: Not Released, or an open revision already exists (BR-003) }
+        '422': { $ref: '#/components/responses/ValidationError' }
+
+  /status-codes/{statusCodeId}/archive:
+    parameters: [{ $ref: '#/components/parameters/StatusCodeId' }]
+    post:
+      tags: [StatusCodes]
+      summary: >
+        Archive a Deprecated Status Code (FR-051, Administrator only, direct action — no CR).
+        Rejected until the minimum retention period as Deprecated has elapsed (BR-006).
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/StatusCodeRevision' }
+        '409': { description: Not Deprecated, or retention period not yet elapsed }
+
+  /status-codes/{statusCodeId}/reinstate:
+    parameters: [{ $ref: '#/components/parameters/StatusCodeId' }]
+    post:
+      tags: [StatusCodes]
+      summary: >
+        Reinstate a Deprecated Status Code back to Released (exceptional, Administrator only,
+        direct action — no CR — docs/05-governance-handbook.md §5).
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/ReinstateRequest' }
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/StatusCodeRevision' }
+        '409': { description: Not Deprecated }
+        '422': { $ref: '#/components/responses/ValidationError' }
 
   /status-codes/{statusCodeId}/revisions:
     parameters: [{ $ref: '#/components/parameters/StatusCodeId' }]
@@ -487,6 +572,52 @@ paths:
               schema:
                 type: array
                 items: { $ref: '#/components/schemas/LookupValue' }
+    post:
+      tags: [Lookups]
+      summary: >
+        Add a new value to a controlled vocabulary (Administrator only, US-091).
+        Rejected for functional-system-groups, a fixed structural set
+        (docs/05-governance-handbook.md §2).
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/LookupValueCreate' }
+      responses:
+        '201':
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/LookupValue' }
+        '422': { $ref: '#/components/responses/ValidationError' }
+
+  /lookups/{vocabulary}/{valueId}:
+    parameters:
+      - name: vocabulary
+        in: path
+        required: true
+        schema:
+          type: string
+          enum: [functional-system-groups, functional-subgroups, turbine-platforms,
+                 engineering-domains, status-categories, availability-groups,
+                 brake-programs, reset-programs, operational-states, access-rights,
+                 alarm-behaviours]
+      - { name: valueId, in: path, required: true, schema: { type: integer } }
+    patch:
+      tags: [Lookups]
+      summary: >
+        Update a vocabulary value's label/description/active flag/sort order (Administrator
+        only). Numeric ranges are immutable through this endpoint (BR-001).
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/LookupValueUpdate' }
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/LookupValue' }
+        '404': { $ref: '#/components/responses/NotFound' }
 
   /status-codes/next-available:
     get:
@@ -590,15 +721,45 @@ components:
     UserList:
       type: object
       properties: { items: { type: array, items: { $ref: '#/components/schemas/User' } }, total: { type: integer }, page: { type: integer }, page_size: { type: integer } }
+    PasswordChange:
+      type: object
+      required: [current_password, new_password]
+      properties:
+        current_password: { type: string, format: password }
+        new_password: { type: string, format: password }
+    PasswordReset:
+      type: object
+      required: [new_password]
+      properties:
+        new_password: { type: string, format: password }
     LookupValue:
       type: object
       properties:
         id: { type: integer }
         code: { type: string }
         label: { type: string }
+        is_active: { type: boolean }
         range_start: { type: integer, nullable: true }
         range_end: { type: integer, nullable: true }
         functional_system_group: { type: string, nullable: true, description: "Present for functional-subgroups only" }
+    LookupValueCreate:
+      type: object
+      required: [code, label]
+      properties:
+        code: { type: string }
+        label: { type: string }
+        description: { type: string }
+        sort_order: { type: integer }
+        functional_system_group: { type: string, description: "Required when vocabulary=functional-subgroups" }
+        sub_range_start: { type: integer, description: "Required when vocabulary=functional-subgroups" }
+        sub_range_end: { type: integer, description: "Required when vocabulary=functional-subgroups" }
+    LookupValueUpdate:
+      type: object
+      properties:
+        label: { type: string }
+        description: { type: string }
+        is_active: { type: boolean }
+        sort_order: { type: integer }
     StatusCodeRevision:
       type: object
       properties:
@@ -666,6 +827,17 @@ components:
     StatusCodeRevisionUpdate:
       type: object
       properties: { expected_updated_at: { type: string, format: date-time } }
+    DeprecationRequestCreate:
+      type: object
+      required: [reason]
+      properties:
+        reason: { type: string, description: "10-2000 chars" }
+        superseded_by_status_code_id: { type: integer, nullable: true }
+    ReinstateRequest:
+      type: object
+      required: [reason]
+      properties:
+        reason: { type: string, description: "10-2000 chars" }
     StatusCodeList:
       type: object
       properties:

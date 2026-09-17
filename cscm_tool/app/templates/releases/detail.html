@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}{{ release.name }} — CSCM Tool{% endblock %}
+{% block content %}
+<div class="page-header">
+  <h1>{{ release.name }} <span class="badge badge--{{ 'RELEASED' if release.status == 'PUBLISHED' else 'DRAFT' }}">{{ release.status }}</span></h1>
+  {% if release.status == 'BUILDING' and current_user.role_code == 'ADMINISTRATOR' %}
+  <a class="btn btn--primary" href="{{ url_for('ui.release_builder', release_id=release.id) }}">Edit Candidates</a>
+  {% endif %}
+</div>
+
+<div class="card">
+  <dl class="kv">
+    <dt>Version Label</dt><dd>{{ release.version_label }}</dd>
+    <dt>Description</dt><dd>{{ release.description or '—' }}</dd>
+    <dt>Scope Filter</dt><dd>{{ release.scope_filter }}</dd>
+    <dt>Item Count</dt><dd>{{ release.item_count }}</dd>
+    <dt>Published</dt><dd>{{ release.published_at or 'Not yet published' }}</dd>
+  </dl>
+</div>
+
+{% if release.status == 'PUBLISHED' %}
+<div class="card">
+  <h2>Export</h2>
+  <div class="btn-row">
+    <a class="btn" href="{{ url_for('api_v1.export_release', release_id=release.id, format='csv') }}">Export CSV</a>
+    <a class="btn" href="{{ url_for('api_v1.export_release', release_id=release.id, format='json') }}">Export JSON</a>
+    <a class="btn" href="{{ url_for('api_v1.export_release', release_id=release.id, format='pdf') }}">Export PDF</a>
+  </div>
+</div>
+{% endif %}
+{% endblock %}

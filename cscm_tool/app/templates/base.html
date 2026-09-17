@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}CSCM Tool{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/app.css') }}">
+  <script src="{{ url_for('static', filename='js/app.js') }}" defer></script>
+</head>
+<body>
+{% if current_user %}
+  <div class="topbar">
+    <div class="topbar__brand">CSCM Tool</div>
+    <div class="topbar__user">
+      <span>{{ current_user.full_name }} &middot; {{ current_user.role_code }}</span>
+      <a href="{{ url_for('ui.account_settings') }}">Account</a>
+      <form method="post" action="{{ url_for('ui.logout') }}" style="margin:0">
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+        <button class="btn" type="submit">Log out</button>
+      </form>
+    </div>
+  </div>
+  <div class="layout">
+    <nav class="sidebar">
+      <div class="sidebar__group">
+        <a href="{{ url_for('ui.dashboard') }}" class="{{ 'is-active' if request.endpoint == 'ui.dashboard' }}">Dashboard</a>
+        <a href="{{ url_for('ui.status_code_list') }}" class="{{ 'is-active' if request.endpoint and request.endpoint.startswith('ui.status_code') }}">Status Codes</a>
+        {% if current_user.role_code in ('ENGINEER', 'ADMINISTRATOR') %}
+        <a href="{{ url_for('ui.status_code_new') }}">New Status Code</a>
+        {% endif %}
+        {% if current_user.role_code == 'ADMINISTRATOR' %}
+        <a href="{{ url_for('ui.status_code_new_sandbox') }}">New Sandbox Code</a>
+        {% endif %}
+      </div>
+      <div class="sidebar__group">
+        <div class="sidebar__title">Workflow</div>
+        {% if current_user.role_code != 'VIEWER' %}
+        <a href="{{ url_for('ui.my_change_requests') }}" class="{{ 'is-active' if request.endpoint == 'ui.my_change_requests' }}">My Change Requests</a>
+        {% endif %}
+        {% if current_user.role_code in ('REVIEWER', 'ADMINISTRATOR') %}
+        <a href="{{ url_for('ui.review_queue') }}" class="{{ 'is-active' if request.endpoint == 'ui.review_queue' }}">Review Queue</a>
+        {% endif %}
+        {% if current_user.role_code == 'CHIEF_ENGINEER' %}
+        <a href="{{ url_for('ui.approval_queue') }}" class="{{ 'is-active' if request.endpoint == 'ui.approval_queue' }}">Approval Queue</a>
+        {% endif %}
+      </div>
+      <div class="sidebar__group">
+        <div class="sidebar__title">Releases</div>
+        <a href="{{ url_for('ui.release_list') }}" class="{{ 'is-active' if request.endpoint and request.endpoint.startswith('ui.release') }}">Releases</a>
+        <a href="{{ url_for('ui.export_center') }}" class="{{ 'is-active' if request.endpoint == 'ui.export_center' }}">Export Center</a>
+      </div>
+      {% if current_user.role_code == 'ADMINISTRATOR' %}
+      <div class="sidebar__group">
+        <div class="sidebar__title">Administration</div>
+        <a href="{{ url_for('ui.user_list') }}" class="{{ 'is-active' if request.endpoint == 'ui.user_list' }}">Users</a>
+        <a href="{{ url_for('ui.lookup_admin') }}" class="{{ 'is-active' if request.endpoint == 'ui.lookup_admin' }}">Lookups</a>
+        <a href="{{ url_for('ui.audit_log') }}" class="{{ 'is-active' if request.endpoint == 'ui.audit_log' }}">Audit Log</a>
+      </div>
+      {% elif current_user.role_code in ('REVIEWER', 'CHIEF_ENGINEER') %}
+      <div class="sidebar__group">
+        <div class="sidebar__title">Administration</div>
+        <a href="{{ url_for('ui.audit_log') }}" class="{{ 'is-active' if request.endpoint == 'ui.audit_log' }}">Audit Log</a>
+      </div>
+      {% endif %}
+    </nav>
+    <main class="main">
+      {% include "_flashes.html" %}
+      {% block content %}{% endblock %}
+    </main>
+  </div>
+{% else %}
+  {% block guest_content %}{% endblock %}
+{% endif %}
+</body>
+</html>

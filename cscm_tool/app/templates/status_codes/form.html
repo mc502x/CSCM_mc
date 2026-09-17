@@ -1,0 +1,166 @@
+{% extends "base.html" %}
+{% block title %}{{ 'Edit Draft' if revision else ('New Sandbox Status Code' if is_sandbox else 'New Status Code') }} — CSCM Tool{% endblock %}
+{% block content %}
+<div class="page-header">
+  <h1>{{ 'Edit Draft' if revision else ('New Sandbox Status Code' if is_sandbox else 'New Status Code') }}</h1>
+</div>
+
+{% if is_sandbox %}
+<div class="banner banner--sandbox">Sandbox status code — never numbered from a real range, never released, deletable.</div>
+{% endif %}
+
+{% if not revision %}
+<div class="card">
+  <span class="muted">Status Code Identifier:</span> <strong>{{ 'StCd-T#####' if is_sandbox else 'Not yet assigned — fixed on Submit for Review' }}</strong>
+</div>
+{% endif %}
+
+<form method="post">
+  <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+
+  <fieldset>
+    <legend>Classification</legend>
+    <div class="form-row">
+      <div class="field">
+        <label for="functional_system_group">Functional System Group</label>
+        <select id="functional_system_group" name="functional_system_group" required {{ 'disabled' if revision }}>
+          <option value="">(select)</option>
+          {% for g in choices.functional_system_group %}
+          <option value="{{ g.code }}" {{ 'selected' if revision and revision.functional_system_group == g.code }}>{{ g.code }} — {{ g.label }} ({{ g.range_start }}-{{ g.range_end }})</option>
+          {% endfor %}
+        </select>
+        {% if revision %}
+        <input type="hidden" name="functional_system_group" value="{{ revision.functional_system_group }}">
+        <div class="hint">Immutable once allocated (BR-001).</div>
+        {% endif %}
+        {% if is_sandbox %}
+        <div class="hint">Classification only — a Sandbox code's identifier is still drawn from the isolated StCd-T##### band, never from this group's numeric range.</div>
+        {% endif %}
+      </div>
+      {% if not is_sandbox %}
+      <div class="field">
+        <label for="functional_subgroup">Functional Subgroup (optional)</label>
+        <select id="functional_subgroup" name="functional_subgroup" data-selected="{{ revision.functional_subgroup if revision else '' }}" {{ 'disabled' if revision }}></select>
+        {% if revision %}<input type="hidden" name="functional_subgroup" value="{{ revision.functional_subgroup or '' }}">{% endif %}
+      </div>
+      {% endif %}
+    </div>
+    <div class="field">
+      <label>Turbine Platform (at least one required before Submit for Review)</label>
+      <div class="checkbox-list">
+        {% for p in choices.turbine_platform %}
+        <label><input type="checkbox" name="turbine_platforms" value="{{ p.code }}" {{ 'checked' if revision and p.code in revision.turbine_platforms }}> {{ p.code }}</label>
+        {% endfor %}
+      </div>
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <legend>Description</legend>
+    <div class="field">
+      <label for="title">Title</label>
+      <input type="text" id="title" name="title" required maxlength="120" value="{{ revision.title if revision else '' }}">
+    </div>
+    <div class="field">
+      <label for="description">Description</label>
+      <textarea id="description" name="description" required minlength="10" maxlength="4000">{{ revision.description if revision else '' }}</textarea>
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <legend>Classification (continued)</legend>
+    <div class="form-row">
+      <div class="field">
+        <label for="status_category">Status Category</label>
+        <select id="status_category" name="status_category" required>
+          {% for v in choices.status_category %}
+          <option value="{{ v.code }}" {{ 'selected' if revision and revision.status_category == v.code }}>{{ v.label }}</option>
+          {% endfor %}
+        </select>
+      </div>
+      <div class="field">
+        <label for="availability_group">Availability Group</label>
+        <select id="availability_group" name="availability_group" required>
+          {% for v in choices.availability_group %}
+          <option value="{{ v.code }}" {{ 'selected' if revision and revision.availability_group == v.code }}>{{ v.label }}</option>
+          {% endfor %}
+        </select>
+      </div>
+      <div class="field">
+        <label for="brake_program">Brake Program</label>
+        <select id="brake_program" name="brake_program" required>
+          {% for v in choices.brake_program %}
+          <option value="{{ v.code }}" {{ 'selected' if (revision and revision.brake_program == v.code) or (not revision and v.code == 'BP-NONE') }}>{{ v.label }}</option>
+          {% endfor %}
+        </select>
+      </div>
+      <div class="field">
+        <label for="reset_program">Reset Program</label>
+        <select id="reset_program" name="reset_program" required>
+          {% for v in choices.reset_program %}
+          <option value="{{ v.code }}" {{ 'selected' if revision and revision.reset_program == v.code }}>{{ v.label }}</option>
+          {% endfor %}
+        </select>
+      </div>
+      <div class="field">
+        <label for="operational_state">Operational State</label>
+        <select id="operational_state" name="operational_state" required>
+          {% for v in choices.operational_state %}
+          <option value="{{ v.code }}" {{ 'selected' if revision and revision.operational_state == v.code }}>{{ v.label }}</option>
+          {% endfor %}
+        </select>
+      </div>
+      <div class="field">
+        <label for="alarm_behaviour">Alarm Behaviour</label>
+        <select id="alarm_behaviour" name="alarm_behaviour" required>
+          {% for v in choices.alarm_behaviour %}
+          <option value="{{ v.code }}" {{ 'selected' if revision and revision.alarm_behaviour == v.code }}>{{ v.label }}</option>
+          {% endfor %}
+        </select>
+      </div>
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <legend>Access Rights <span class="proposed-badge">Proposed — confirmed by Administrator at review</span></legend>
+    <div class="field">
+      <select id="access_rights" name="access_rights" required>
+        {% for v in choices.access_rights %}
+        <option value="{{ v.code }}" {{ 'selected' if (revision and revision.access_rights == v.code) or (not revision and v.code == 'SERVICE') }}>{{ v.label }}</option>
+        {% endfor %}
+      </select>
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <legend>Technical Parameters</legend>
+    <div class="form-row">
+      <div class="field">
+        <label for="software_version">Software Version</label>
+        <input type="text" id="software_version" name="software_version" required placeholder="4.12.0" value="{{ revision.software_version if revision else '' }}">
+      </div>
+      <div class="field">
+        <label for="delay_before_alarm_seconds">Delay Before Alarm (seconds)</label>
+        <input type="number" id="delay_before_alarm_seconds" name="delay_before_alarm_seconds" min="0" max="3600" value="{{ revision.delay_before_alarm_seconds if revision else 0 }}">
+      </div>
+      <div class="field">
+        <label for="delay_before_reset_seconds">Delay Before Reset (seconds)</label>
+        <input type="number" id="delay_before_reset_seconds" name="delay_before_reset_seconds" min="0" max="86400" value="{{ revision.delay_before_reset_seconds if revision else 0 }}">
+      </div>
+    </div>
+  </fieldset>
+
+  <div class="form-actions">
+    <a class="btn" href="javascript:history.back()">Cancel</a>
+    <button class="btn btn--primary" type="submit">{{ 'Save Draft' if revision else ('Create Sandbox Code' if is_sandbox else 'Save as Draft') }}</button>
+  </div>
+</form>
+
+{% if not is_sandbox %}
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  initSubgroupDependency('functional_system_group', 'functional_subgroup');
+});
+</script>
+{% endif %}
+{% endblock %}

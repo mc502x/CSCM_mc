@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block title %}Export Center — CSCM Tool{% endblock %}
+{% block content %}
+<div class="page-header"><h1>Export Center</h1></div>
+
+<div class="card">
+  <h2>Catalogue Export</h2>
+  <p class="muted">Published Releases only. Pick a Release to export its Released contents in CSV, JSON, or PDF.</p>
+  {% if releases %}
+  <table>
+    <thead><tr><th>Release</th><th>Version</th><th></th></tr></thead>
+    <tbody>
+      {% for r in releases %}
+      <tr>
+        <td>{{ r.name }}</td>
+        <td>{{ r.version_label }}</td>
+        <td class="btn-row">
+          <a class="btn" href="{{ url_for('api_v1.export_release', release_id=r.id, format='csv') }}">CSV</a>
+          <a class="btn" href="{{ url_for('api_v1.export_release', release_id=r.id, format='json') }}">JSON</a>
+          <a class="btn" href="{{ url_for('api_v1.export_release', release_id=r.id, format='pdf') }}">PDF</a>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% else %}
+  <div class="table-empty">No published Releases yet.</div>
+  {% endif %}
+</div>
+
+{% if current_user.role_code == 'ADMINISTRATOR' %}
+<div class="card">
+  <h2>Full-Database Export</h2>
+  <p class="muted">Raw SQLite backup of the complete governed dataset. Handle per data-at-rest access-control requirements — this file carries the same sensitivity as the live database.</p>
+  <a class="btn btn--danger" href="{{ url_for('api_v1.export_full_database') }}">Download Full Database Backup</a>
+</div>
+{% endif %}
+{% endblock %}
