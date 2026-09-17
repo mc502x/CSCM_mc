@@ -210,8 +210,10 @@ legend { font-weight: 700; padding: 0 6px; }
 .banner--sandbox { background: #fbe9e7; color: var(--color-danger); border: 1px solid #f0b4ac; }
 
 /* Responsive: sidebar collapses at tablet width, main content takes full
-   width; mobile padding reduces to 16-20px (docs/10-ui-ux-specification.md §7). */
-@media (max-width: 1024px) {
+   width; mobile padding reduces to 16-20px (docs/10-ui-ux-specification.md §7).
+   768px is standard tablet-portrait width; desktop (this app's primary
+   target, per the same section) stays well clear of this breakpoint. */
+@media (max-width: 768px) {
   .sidebar { display: none; }
   .main { margin-left: 0; padding: 20px; padding-top: 84px; }
   .form-row { grid-template-columns: 1fr; }
