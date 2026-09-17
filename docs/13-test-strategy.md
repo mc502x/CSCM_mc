@@ -12,8 +12,8 @@ Minimum coverage target unchanged: 80% on `service/` and `validation/`. Required
 - Dual sign-off logic: recording the first sign-off leaves state at `REVIEW`; recording the second (either order) atomically advances to `PENDING_APPROVAL`; a reject from either sign-off returns to `DRAFT` and clears both sign-off columns.
 - Chief Engineer approval: segregation-of-duties check against all three of author, Reviewer sign-off, Administrator sign-off.
 - Cross-Domain Sign-Off gating: Submit-for-Review blocked while any required domain lacks a `DomainSignoff`; unblocked once all present.
-- Restricted-field handling: Engineer-proposed `access_rights_id` is not authoritative until `admin_signoff_at` is set.
-- Cross-field rules (unchanged from v1): Safety category × Alarm Behaviour; Auto reset × delay > 0; Emergency Brake × Fault/Safety category.
+- Restricted-field handling: each Engineer-proposed audience-access field (development/sales/tcc/service/turbine-operator-package/grid-operator/service-partner/customer, corrected 2026-09-17) is not authoritative until `admin_signoff_at` is set.
+- Field-format rules (corrected 2026-09-17, replacing the retired Safety-category/Alarm-Behaviour and Auto-reset/delay cross-field rules, neither of which the real data model supports): `set_delay`/`reset_delay` match the `^\*?\d+(\.\d+)?\s?(ms|s|min|MIN|h|d)$` pattern; `status_category` is restricted to `ERROR`/`WARNING`/`INFO`; Functional Subgroup must belong to the selected Functional System Group; at least one Turbine Platform is selected.
 - Sandbox delete: only permitted when `is_sandbox = true`; blocked for every other record, with the DB trigger as a second line of defense.
 
 ## 3. Integration Tests
@@ -27,7 +27,7 @@ Minimum coverage target unchanged: 80% on `service/` and `validation/`. Required
 
 ## 4. System (API) Tests
 
-- Full request/response contract conformance against `artifacts/openapi.yaml` v2.0.0.
+- Full request/response contract conformance against `artifacts/openapi.yaml` v3.0.0.
 - Authorization matrix: five roles × every endpoint, including the three decision endpoints' segregation-of-duties checks and the sandbox-only-delete / Administrator-only-full-export restrictions.
 - Identifier lifecycle via API: `status_code_identifier` is `null` in every response while Draft; becomes non-null only after `POST .../submit`; `GET /status-codes/next-available` never reserves a number (two sequential calls without an intervening submit return the same preview).
 - Cross-Domain Sign-Off: a Submit attempt with an outstanding required domain returns 422 with a field error naming the missing domain; a matching-domain Engineer's `POST .../domain-signoffs` call from a non-matching domain returns 403.
@@ -43,7 +43,7 @@ Unchanged mechanism from v1 (`bandit`, `pip-audit` in CI; ZAP baseline pre-relea
 
 ## 7. User Acceptance Test Scenarios
 
-- UAT-01: Engineer creates a new Status Code under Converter/Grid Interface (WCNV), sees no fixed identifier while Draft, submits for Review, and confirms an `StCd-01xxx` identifier appears immediately after submission.
+- UAT-01: Engineer creates a new Status Code under Converter & Grid Interface (WCNV), sees no fixed identifier while Draft, submits for Review, and confirms an `StCd-01xxx` identifier appears immediately after submission.
 - UAT-02: Reviewer and Administrator each sign off independently (in either order); the CR reaches PendingApproval automatically after the second sign-off, with no separate action required.
 - UAT-03: Chief Engineer approves; the revision reaches Approved; Engineer sees the updated status on My Change Requests.
 - UAT-04: Reviewer rejects with a comment; Engineer sees the comment, edits, resubmits; confirms the Administrator's prior sign-off (if any) was cleared and must be re-given.
@@ -53,6 +53,9 @@ Unchanged mechanism from v1 (`bandit`, `pip-audit` in CI; ZAP baseline pre-relea
 - UAT-08: Administrator creates a sandbox Status Code, exercises it through Draft/Review/PendingApproval for training purposes, confirms it can never be added to a real Release, and permanently deletes it, then confirms via Audit Log Search that both the creation and deletion are retained with a full snapshot.
 - UAT-09: Any user attempts (via UI and via direct API call) to sign off or approve their own submission at each of the three decision points and is blocked in every case.
 - UAT-10: Administrator performs a full-database export; confirms no other role can reach that action.
+- UAT-11 (new 2026-09-17): Engineer uploads a CSV library file; confirms every valid row becomes a Draft requiring the full sign-off/approval cycle (none land as Approved/Released), and the error report correctly lists rows that failed validation.
+- UAT-12 (new 2026-09-17): Engineer attempts to create a Status Code without selecting a Functional Subgroup; confirms Submit is blocked. Administrator creates a new Functional Subgroup in a reserved block, then successfully overlaps-tests a conflicting range and receives a clear, non-destructive error (the form retains the entered name).
+- UAT-13 (new 2026-09-17): Engineer deliberately submits an incomplete New Status Code form; confirms the resulting validation error leaves every already-entered field intact (no reset), and confirms every classification dropdown shows an inline description for its selected option.
 
 ## 8. Full Test Matrix
 
@@ -62,8 +65,8 @@ Unchanged mechanism from v1 (`bandit`, `pip-audit` in CI; ZAP baseline pre-relea
 | TC-002 | Unit | Lifecycle | All invalid transitions rejected (exhaustive pairwise) | P1 |
 | TC-003 | Unit | Validation | Each mandatory field rejects null/empty | P1 |
 | TC-004 | Unit | Numbering | Identifier format `^StCd-\d{5}$` / `^StCd-T\d{5}$` enforced | P1 |
-| TC-005 | Unit | Validation | Safety category blocks Self-Clearing/Silent alarm behaviour | P1 |
-| TC-006 | Unit | Validation | Auto reset requires delay_before_reset_seconds > 0 | P2 |
+| TC-005 | Unit | Validation | `set_delay`/`reset_delay` reject a value not matching the unit pattern (e.g. `10minutes`, `abc`) | P1 |
+| TC-006 | Unit | Validation | `status_category` rejects any value outside ERROR/WARNING/INFO | P1 |
 | TC-007 | Unit | Numbering | Sequential allocation per Functional System Group range | P1 |
 | TC-008 | Unit | Numbering | Sequential allocation per Functional Subgroup sub-band, independent of siblings | P1 |
 | TC-009 | Unit | SoD | Reviewer sign-off by requester raises domain error | P1 |
@@ -93,7 +96,14 @@ Unchanged mechanism from v1 (`bandit`, `pip-audit` in CI; ZAP baseline pre-relea
 | TC-027 | Security | Injection | SQL injection probe on search filter has no effect | P1 |
 | TC-028 | Security | CSRF | State-changing request without CSRF token rejected | P1 |
 | TC-029 | Security | No-Cloud | CI grep check fails the build on any cloud-SDK import | P1 |
-| TC-030 | UAT | End-to-end | UAT-01 through UAT-10 (§7) | P1 |
+| TC-030 | UAT | End-to-end | UAT-01 through UAT-13 (§7) | P1 |
+| TC-031 | Unit | Validation | Status Code create rejected (422) with no functional_subgroup | P1 |
+| TC-032 | Integration | Lookups | New subgroup insert rejected on sub-range overlap (trigger + service layer) | P1 |
+| TC-033 | System | Import | Import job creates Drafts only; none reach Approved/Released without normal sign-offs | P1 |
+| TC-034 | System | Import | Invalid rows produce a downloadable error report and create nothing | P1 |
+| TC-035 | System | Export | XLSX export produces the same flat row set as CSV/JSON for the same scope | P2 |
+| TC-036 | System | UI/UX | A rejected (422) form submission never clears previously entered field values | P1 |
+| TC-037 | Integration | Lookups | New Functional System Group insert rejected on range overlap (trigger + service layer) | P1 |
 
 ## 9. Test Environments
 

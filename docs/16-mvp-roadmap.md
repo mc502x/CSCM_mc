@@ -14,13 +14,13 @@
 
 **Explicit exclusions:** on-prem AD/ADFS SSO itself (the hook is built, the integration is not — FR-005), live external integrations, bulk legacy import, configurable approval chains beyond the fixed Reviewer+Administrator+Chief-Engineer model, mobile-optimized layout, localization.
 
-**Known placeholder pending real input before go-live:** the Functional Subgroup taxonomy is seeded generically (06-data-dictionary.md §9a) and must be replaced with Controls Engineering's real list — this is a data change, not a code change, and does not block development, only final production numbering accuracy.
+**Resolved since v2.0:** the real Functional Subgroup taxonomy has been supplied and is seeded directly (06-data-dictionary.md §9a) — no longer a placeholder. The `15000–15999` range is likewise resolved: confirmed as deliberate free capacity (alongside `10000–10999`, `14000–14999`, `16000–16999`), not an unclassified gap — no further action needed on it.
 
 **Exit criteria:**
 - All P1 test cases in 13-test-strategy.md §8 pass.
 - At least one full UAT pass signed off (13-test-strategy.md §7, §10), including the dual-review, Chief Engineer approval, Cross-Domain Sign-Off, and sandbox-delete scenarios specifically.
 - Security checklist executed with no unresolved High/Critical findings, including the no-cloud verification checklist (11-security-architecture.md §12).
-- Real Functional Subgroup taxonomy loaded, replacing the placeholder.
+- ~~The `15000–15999` range classified into (or added as) a Functional System Group~~ — resolved: confirmed free/reserved capacity, no classification needed.
 - Technical Publications team has successfully produced one manual section sourced from a CSCM Tool export end-to-end.
 
 ## 3. Phase 2 — Enterprise Integration (On-Premises Only)
@@ -51,7 +51,7 @@ Unchanged in substance from v1 (16-mvp-roadmap.md v1 §4): evaluate PostgreSQL m
 | Audit trail (incl. sandbox-delete snapshot) | Critical, compliance requirement | Low-Medium | P0 |
 | Search/browse/filter | High | Low | P1 |
 | Release management + publish (sandbox-exclusion enforced) | Critical | Medium-High | P0 |
-| Catalogue export (CSV/JSON/PDF) | High | Medium | P1 |
+| Catalogue export (CSV/JSON/XLSX/PDF) | High | Medium | P1 |
 | Full-database export (Administrator only) | Medium — explicit new requirement, narrow scope | Low | P1 |
 | Sandbox status codes (create/delete) | Medium — explicit new requirement | Low-Medium | P1 |
 | Deprecation/Archival | Medium | Low | P1 |
@@ -63,7 +63,7 @@ Unchanged in substance from v1 (16-mvp-roadmap.md v1 §4): evaluate PostgreSQL m
 
 | Risk | Likelihood | Impact | Mitigation |
 |---|---|---|---|
-| Real Functional Subgroup taxonomy arrives late or changes after development starts | High (currently a placeholder) | Medium — subgroup is data, not schema, so impact is limited to a seed-data update, not a rework | Schema already supports arbitrary subgroup data per group (06-data-dictionary.md §9a); track as an explicit Phase 1 exit-criteria item (§2), not a blocker to starting development |
+| *(retired 2026-09-17)* The `15000–15999` range remains unclassified | — | — | Resolved: confirmed free/reserved capacity alongside `10000–10999`, `14000–14999`, `16000–16999`; an Administrator can assign a new Functional System Group into any of them later via FR-048g without a schema change |
 | Legacy status code data creates pressure to bulk-import, undermining governance-first principle | High | High | Unchanged from v1: one-time, human-reviewed re-entry through the real workflow, never a bulk import feature |
 | Identifier-allocation contention under concurrent submission within one popular Functional Group | Low-Medium | Low (SQLite `BEGIN IMMEDIATE` serializes correctly; worst case is added latency, not incorrect numbers) | Performance-tested explicitly (TC-025); repository pattern keeps PostgreSQL migration available if contention proves material |
 | Dual-review-plus-approval sequence slows throughput versus the original single-Reviewer model | Medium | Medium — undermines the "faster manual production" value proposition if turnaround degrades materially | Track sign-off and approval turnaround KPIs separately from week one; Administrator can still reassign Reviewer load |
@@ -89,5 +89,12 @@ Unchanged in substance from v1 (16-mvp-roadmap.md v1 §4): evaluate PostgreSQL m
 | EPIC-11 REST API Hardening & OpenAPI Conformance | M |
 | EPIC-12 Security Hardening, Compliance & No-Cloud Verification | M |
 | EPIC-13 Non-functional: Performance, Deployment, Monitoring | M |
+| EPIC-14 Library Import (new 2026-09-17) | M |
+| EPIC-15 OneTool Shell Integration & UX Fixes (new 2026-09-17: no-data-loss-on-failure, inline field help, design system adoption) | M |
+| EPIC-16 Subgroup & Group Administration (new 2026-09-17) | S |
 
 Sizing scale unchanged: S ≈ 1 sprint, M ≈ 2 sprints, L ≈ 3–4 sprints, small (2–4 engineer) team; see 18-claude-code-implementation-guide.md §7 for sequencing.
+
+## 8. Corrections Log (2026-09-17)
+
+Grounded against a real 897-row export of the live status code library and the legacy tool's screenshot, this update corrects several assumptions made without real data: Functional Subgroup is mandatory, not optional; subgroup names and the WTUR nine-way split replace an earlier, incorrect hand-typed summary; `status_category`/`available_group`/`alarm`/delay fields/reset-and-brake programs all use different real types than originally assumed; the single Access Rights enum is replaced by eight independent audience fields; CSV/XLSX library import is now in scope (reversing the original "no bulk import" position) but still requires full governance per row; export formats gain XLSX; and the UI adopts the OneTool shared design system for its visual shell while keeping its own authentication. See 06-data-dictionary.md's provenance note and 19-glossary.md for the full corrected vocabulary.

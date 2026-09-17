@@ -1,6 +1,6 @@
 # 09. API Specification — CSCM Tool
 
-Full machine-readable contract: [artifacts/openapi.yaml](artifacts/openapi.yaml) (OpenAPI 3.0.3, v2.0.0). This document explains the conventions that apply across every endpoint.
+Full machine-readable contract: [artifacts/openapi.yaml](artifacts/openapi.yaml) (OpenAPI 3.0.3, v3.0.0 — field set corrected 2026-09-17 against a real export of the live status code library). This document explains the conventions that apply across every endpoint.
 
 ## 1. Versioning
 
@@ -40,7 +40,21 @@ Unchanged in shape from v1 (09-api-specification.md v1 §4): JSON bodies, ISO-86
 
 ## 6. Pagination, Filtering, Sorting
 
-Unchanged in mechanism from v1 (`page`/`page_size` envelope, `sort` with `-` prefix). New filters on `GET /status-codes`: `functional_system_group`, `functional_subgroup`, `turbine_platform`, `is_sandbox` (defaults to `false`, so sandbox records never appear in default search results — matching their exclusion from catalogues). Full-text search (`q`) now covers `status_code_identifier` instead of the retired `code_number`.
+Unchanged in mechanism from v1 (`page`/`page_size` envelope, `sort` with `-` prefix). Filters on `GET /status-codes`: `functional_system_group`, `functional_subgroup`, `turbine_platform`, `is_sandbox` (defaults to `false`, so sandbox records never appear in default search results — matching their exclusion from catalogues). Full-text search (`q`) covers `status_code_identifier`, `title`, `description`.
+
+## 6a. Mandatory Fields on Creation (corrected 2026-09-17)
+
+`POST /status-codes` requires both `functional_system_group` **and** `functional_subgroup` — the prior contract treated the subgroup as optional; real production data confirmed every status code carries one, so `StatusCodeCreate` now lists it in `required` (`artifacts/openapi.yaml`). A request omitting it returns 422, the same as any other missing mandatory field.
+
+## 6b. Library Import
+
+`POST /imports` accepts a CSV or XLSX file (`multipart/form-data`) and returns an `ImportJob` immediately (202 Accepted) while validation and Draft creation happen asynchronously. `GET /imports/{id}` polls status; `created_count`/`error_count` report progress, and `GET /imports/{id}/errors` downloads a per-row error report once the job completes. Every successfully validated row produces a normal Draft `ChangeRequest` (`cr_type=IMPORT`) that must still pass Cross-Domain Sign-Off, both Review sign-offs, and Chief Engineer approval — import never creates an Approved or Released record directly (05-governance-handbook.md §6b).
+
+## 6c. Subgroup & Group Administration
+
+`POST /lookups/functional-subgroups` (Administrator only) creates a new Functional Subgroup within an existing Functional System Group. The service layer validates the proposed `sub_range_start`/`sub_range_end` against every existing subgroup in that group and returns 409 with the conflicting subgroup's name on overlap; a non-overlapping request succeeds even without hundreds-digit alignment (06-data-dictionary.md §9a.1).
+
+`POST /lookups/functional-system-groups` (Administrator only, new 2026-09-17) creates a brand-new Functional System Group into any currently free numeric range (`10000–10999`, `14000–14999`, `15000–15999`, `16000–16999`), validated for non-overlap against every existing group the same way (06-data-dictionary.md §9.1). No schema change is ever required for either operation.
 
 ## 7. Endpoint Summary
 
@@ -66,6 +80,11 @@ Unchanged in mechanism from v1 (`page`/`page_size` envelope, `sort` with `-` pre
 | POST | `/change-requests/{id}/chief-engineer-decide` | PendingApproval → Approved/Draft | Chief Engineer (not requester/reviewer/admin on this CR) |
 | POST | `/change-requests/{id}/withdraw` | Cancel own open CR | Engineer (own CR) |
 | GET/POST | `/change-requests/{id}/domain-signoffs` | List/record Cross-Domain Sign-Offs | Engineer (matching domain) |
+| GET/POST | `/imports` | List import jobs / upload a CSV or XLSX library file | Engineer, Administrator |
+| GET | `/imports/{id}` | Import job status | Engineer, Administrator |
+| GET | `/imports/{id}/errors` | Per-row import error report | Engineer, Administrator |
+| POST | `/lookups/functional-subgroups` | Create a new Functional Subgroup, non-overlap validated | Administrator |
+| POST | `/lookups/functional-system-groups` | Create a brand-new Functional System Group into a free range, non-overlap validated | Administrator |
 | GET/POST | `/releases` | List/create releases | Viewer (GET), Administrator (POST) |
 | GET | `/releases/{id}` | Release detail | Viewer |
 | GET | `/releases/{id}/candidates` | Approved, non-sandbox candidates | Administrator |

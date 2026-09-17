@@ -21,7 +21,7 @@
 
 ### 1.3 Status Code Creation & Editing
 
-- **FR-020** The system shall allow an Engineer or Administrator to create a new Status Code by specifying a Functional System Group (required) and Functional Subgroup (optional) and all mandatory attributes defined in 06-data-dictionary.md.
+- **FR-020** The system shall allow an Engineer or Administrator to create a new Status Code by specifying a Functional System Group and a Functional Subgroup — **both mandatory, corrected 2026-09-17: Functional Subgroup is never optional** — and all mandatory attributes defined in 06-data-dictionary.md.
 - **FR-021** The system shall NOT assign a fixed Status Code Identifier while a code is in Draft. It may offer a non-binding preview of the likely next identifier for display purposes only (`GET /status-codes/next-available`); the identifier is allocated exactly once, atomically, at the Draft→Review transition (05-governance-handbook.md §2, 07-database-design.md §7a).
 - **FR-021a** The system shall allow an Administrator to override the automatically allocated identifier for a documented migration/reservation case, with the reason logged.
 - **FR-022** The system shall reject creation or save of a Status Code Revision if any mandatory attribute is missing, malformed, or fails cross-field validation rules (06-data-dictionary.md "Validation" column).
@@ -29,7 +29,7 @@
 - **FR-023a** The system shall require at least one Turbine Platform to be selected before a revision can be submitted for Review.
 - **FR-024** The system shall allow an Engineer to save an in-progress Status Code as Draft an unlimited number of times without triggering workflow transitions.
 - **FR-025** The system shall NOT allow direct in-place editing of a Status Code Revision that is in Review, PendingApproval, Approved, Released, Deprecated, or Archived state; any change requires creating a new Draft revision from the current one (copy-on-write).
-- **FR-025a** The system shall treat `access_rights_id` as a restricted field: an Engineer may propose a value while the revision is in Draft, but it is not authoritative until confirmed or overridden by the Administrator's Review sign-off (06-data-dictionary.md §2, SEC-013).
+- **FR-025a** The system shall treat each of the eight audience-access fields (corrected 2026-09-17: Development, Sales, TCC, Service, Turbine Operator Package, Grid Operator, Service Partner, Customer — replaces the single `access_rights_id`) as a restricted field: an Engineer may propose values while the revision is in Draft, but none is authoritative until confirmed or overridden by the Administrator's Review sign-off (06-data-dictionary.md §2d, SEC-013).
 - **FR-026** The system shall allow an Engineer to withdraw/cancel a Draft, Review, or PendingApproval Change Request before it reaches Approved.
 
 ### 1.3a Cross-Domain Sign-Off
@@ -58,7 +58,7 @@
 - **FR-042** The system shall allow an Administrator to include/exclude individual candidate revisions before publishing.
 - **FR-043** The system shall, upon publishing a Release, transition all included revisions from Approved to Released, stamp Effective Date, and mark the Release as immutable.
 - **FR-044** The system shall prevent modification of a published Release's contents; a correction requires a new Release.
-- **FR-045** The system shall allow export of any Release, or of the current set of all Released status codes, in CSV, JSON, and PDF formats, per the role-scoped catalogue-export matrix (11-security-architecture.md §3).
+- **FR-045** The system shall allow export of any Release, or of the current set of all Released status codes, in CSV, JSON, XLSX, and PDF formats (XLSX added 2026-09-17), all as flat, table-shaped output (one row per status code), per the role-scoped catalogue-export matrix (11-security-architecture.md §3).
 - **FR-046** The system shall allow export of a Draft/ad-hoc filtered working set, distinctly labeled "Not for distribution — unapproved data," restricted to Engineer/Reviewer/Administrator/Chief Engineer roles.
 - **FR-047** The system shall allow an Administrator, and only an Administrator, to generate a full raw database export/backup, distinct from catalogue export (08-system-architecture.md §6, SEC-015).
 - **FR-048** The system shall prevent a sandbox-flagged revision from ever being added to a Release candidate list or included in a published Release, enforced independently at the service layer and the database layer (07-database-design.md §5).
@@ -68,6 +68,20 @@
 - **FR-050** The system shall allow an Administrator (or Engineer via CR, subject to the full three-decision-point cycle) to initiate deprecation of a Released Status Code, requiring a mandatory reason and an optional superseding identifier reference.
 - **FR-051** The system shall allow an Administrator to archive a Deprecated Status Code after the configured minimum retention period has elapsed (05-governance-handbook.md §11); Archived codes become read-only.
 - **FR-052** The system shall prevent deletion of any non-sandbox Status Code or Revision at any lifecycle state; removal from active use is only possible via Deprecated/Archived states.
+
+### 1.5a Library Import (new 2026-09-17 — reverses the prior "no bulk import" position)
+
+- **FR-048a** The system shall allow an Engineer or Administrator to upload a CSV or XLSX file of status codes for bulk import.
+- **FR-048b** The system shall validate every imported row against the same rules as manual entry (06-data-dictionary.md), creating a Draft `StatusCode`/`StatusCodeRevision`/`ChangeRequest` for every row that passes and recording every row that fails in a downloadable error report; a failing row creates nothing.
+- **FR-048c** The system shall require every imported row to pass through the full governance cycle (Cross-Domain Sign-Off where applicable, both Review sign-offs, Chief Engineer approval) before it can be Released — import is a faster data-entry path, never a governance bypass (confirmed explicitly by the business; 05-governance-handbook.md §6b).
+- **FR-048d** The system shall preserve any legacy/source numbering supplied in the import file as `legacy_reference_number` for traceability, distinct from and never confused with the governed `StCd` identifier.
+
+### 1.5b Subgroup Administration (new 2026-09-17)
+
+- **FR-048e** The system shall allow an Administrator to create a new Functional Subgroup within any Functional System Group, specifying a name and a numeric sub-range.
+- **FR-048f** The system shall reject a proposed subgroup sub-range that overlaps any existing subgroup in the same Functional System Group (409), naming the conflicting subgroup, enforced at both the service layer and the database layer (07-database-design.md §5).
+- **FR-048g** (new 2026-09-17) The system shall allow an Administrator to create a brand-new Functional System Group, specifying a code (prefix), label, and a numeric range, into any currently free range (confirmed reserved: `10000–10999`, `14000–14999`, `15000–15999`, `16000–16999` — 05-governance-handbook.md §2), without requiring a schema change.
+- **FR-048h** (new 2026-09-17) The system shall reject a proposed Functional System Group range that overlaps any existing group's range (409), naming the conflicting group, enforced at both the service layer and the database layer (07-database-design.md §5).
 
 ### 1.6a Sandbox Status Codes
 
@@ -119,7 +133,7 @@ Unchanged from v1: layered structure per 15-development-standards.md, business l
 Unchanged from v1, extended: 100% of state-changing actions (now including three decision points and sandbox create/delete) produce a corresponding audit log entry; retention ≥ 7 years, with the explicit sandbox-delete exception documented in 12-audit-compliance.md §3.
 
 ### 2.7 Usability — NFR-007
-Unchanged from v1: core workflows completable by a trained user without external documentation; desktop-primary responsive layout down to 1024px.
+Core workflows completable by a trained user without external documentation; desktop-primary responsive layout, now `max-width: 1280px` per the OneTool design system (10-ui-ux-specification.md §0). Two requirements added 2026-09-17, direct responses to documented legacy-tool complaints: **NFR-007a** no form in the application may discard already-entered data as a result of a validation failure, network retry, or session event — a failed submission returns field-level errors only, never a reset form (10-ui-ux-specification.md §4 S5, §9). **NFR-007b** every lookup-backed field must surface its selected value's description as inline help text, so a user is never left choosing between unexplained options (10-ui-ux-specification.md §5).
 
 ### 2.8 Deployment Independence — NFR-008 (new in v2)
 The system shall be deployable and fully operable on an isolated internal network with no outbound internet connectivity whatsoever — no feature in MVP scope may require reaching an external service to function. This is stricter than "no cloud dependency" alone: it is a testable claim (14-deployment-architecture.md §1) that the application continues to operate correctly with egress blocked entirely.
@@ -137,7 +151,10 @@ The system shall be deployable and fully operable on an isolated internal networ
 - **BR-009** Viewers have read-only access to Approved, Released, Deprecated, and Archived data; Draft, Review, and PendingApproval-state data is visible only to Engineer, Reviewer, Administrator, and Chief Engineer roles.
 - **BR-010** A sandbox-flagged Status Code may never be included in a Release, and is the only category of record that may be permanently deleted, and then only by an Administrator.
 - **BR-011** Submit-for-Review is blocked while any Engineering-Domain-owned field lacks coverage from either the originating Engineer's own domain tags or a recorded `DomainSignoff`.
-- **BR-012** The `access_rights_id` field is not authoritative until confirmed by the Administrator's Review sign-off, regardless of what value the originating Engineer proposed.
+- **BR-012** Each of the eight audience-access fields (corrected 2026-09-17; replaces the single `access_rights_id`) is not authoritative until confirmed by the Administrator's Review sign-off, regardless of what value the originating Engineer proposed.
+- **BR-013** A Status Code must have exactly one Functional Subgroup at all times; Functional Subgroup is never optional (corrected 2026-09-17).
+- **BR-014** A new Functional Subgroup's sub-range must not overlap any existing subgroup within the same Functional System Group.
+- **BR-015** Every row imported via the library import feature must pass through the full Change Request lifecycle before Release; import creates Drafts only, never Approved or Released records directly.
 
 ## 4. Constraints
 
@@ -146,7 +163,7 @@ The system shall be deployable and fully operable on an isolated internal networ
 - **C-003** Backend framework is fixed to Python/Flask; frontend is server-rendered HTML/CSS/vanilla JavaScript, no external CDN dependency (11-security-architecture.md §12).
 - **C-004** The application must run in the target on-premises deployment environment described in 14-deployment-architecture.md.
 - **C-004a** No public cloud (SaaS/PaaS/IaaS) component may be introduced at any phase without an explicit, separate decision to relax C-004 (new in v2 — see 00-INDEX.md "Deployment Principle").
-- **C-005** No bulk import feature exists in MVP; any legacy data migration is a one-time, human-reviewed project activity outside the application's feature set.
+- **C-005** *(superseded 2026-09-17 — retained for history)* The original position was that no bulk import feature would exist in MVP. The business has since explicitly requested CSV/XLSX library import (FR-048a–d) to support the legacy migration; the constraint now is that import must never bypass governance (FR-048c), not that import must not exist.
 
 ## 5. Assumptions
 
@@ -155,5 +172,5 @@ The system shall be deployable and fully operable on an isolated internal networ
 - **A-003** Status code catalogues across all nine Functional System Groups remain in the low tens of thousands of revisions over the system's MVP lifetime, consistent with NFR-001's sizing.
 - **A-004** Technical Publications and any future SCADA/documentation-generation consumers will integrate against the versioned REST API or scheduled exports, over the internal network only; no direct database access will be granted to external systems.
 - **A-005** The organization has an existing password/credential policy that CSCM Tool's password rules (11-security-architecture.md §4) can align with.
-- **A-006** The real Functional Subgroup taxonomy will be supplied by Controls Engineering before production go-live; the placeholder seeded in this package (06-data-dictionary.md §9a) is structurally sufficient for development and testing in the meantime.
+- **A-006** The real Functional Subgroup taxonomy, supplied 2026-09-15 and seeded directly (06-data-dictionary.md §9a), is treated as authoritative; any further changes Controls Engineering makes before go-live remain a data-only update. The `10000–10999`, `14000–14999`, `15000–15999`, and `16000–16999` ranges are confirmed free/reserved capacity, not an outstanding classification gap.
 - **A-007** Chief Engineer is a distinct, sufficiently-staffed role in the organization such that the added approval step does not become a single-person bottleneck; this should be validated against actual staffing before go-live (16-mvp-roadmap.md §6 risk).

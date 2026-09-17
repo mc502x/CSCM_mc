@@ -9,7 +9,7 @@ MVP persistence is **SQLite** (single file, per C-001 in 03-srs.md), accessed ex
 The logical model mirrors 04-domain-model.md. Key v2 decisions (delta from the original Controller-Type-based design):
 
 - **Functional System Group replaces Controller Type entirely.** `status_code.functional_system_group_id` is now the sole classification and numbering axis; there is no `controller_type` column anywhere in the schema. `lookup_functional_system_group` carries the numeric range (`range_start`/`range_end`) that drives allocation (§7a).
-- **Functional Subgroup is a child lookup, not a separate table per group.** One `lookup_functional_subgroup` table, FK'd to its parent group, holding a sub-range — this lets the placeholder taxonomy (06-data-dictionary.md §9a) be replaced later with a pure data change, never a schema migration.
+- **Functional Subgroup is a child lookup, not a separate table per group.** One `lookup_functional_subgroup` table, FK'd to its parent group, holding a sub-range — this lets subgroups (the real taxonomy is seeded per 06-data-dictionary.md §9a) be added or amended later with a pure data change, never a schema migration. Unassigned hundred-blocks within a group's range are intentional reserved capacity, not gaps to be closed.
 - **The identifier is nullable until Review.** `status_code.status_code_identifier` is `NULL` throughout Draft and is set exactly once, atomically, at the Draft→Review transition (07-database-design.md §7a) — this is why it is a plain `UNIQUE` column rather than `NOT NULL UNIQUE`: SQLite's `UNIQUE` constraint allows multiple `NULL`s by design, which is exactly the behavior needed (many concurrent Drafts, all with `NULL` identifiers, one real identifier per code from Review onward).
 - **Turbine Platform is genuinely M:N.** `status_code_revision_platform` is a true join table (unlike the single-valued lookups), because a revision can legitimately apply to more than one platform.
 - **Dual review is modeled as two nullable sign-off columns plus a role-tagged comment log**, not a generic "approvals" table — `reviewer_signoff_by/at` and `admin_signoff_by/at` are both on `status_code_revision` directly so the "has this revision cleared Review" check is a simple two-column NULL check, while `review_comment.decision` carries the full role-tagged history for audit purposes.
@@ -25,9 +25,10 @@ See [artifacts/schema.sql](artifacts/schema.sql) for full DDL. Summary of tables
 | `role` | 5-row role lookup (Administrator, Engineer, Reviewer, Chief Engineer, Viewer) |
 | `lookup_engineering_domain` | Engineer specialty tags, drives Cross-Domain Sign-Off |
 | `lookup_functional_system_group` | 9-row numbering band lookup |
-| `lookup_functional_subgroup` | Placeholder sub-band lookup, child of the above |
+| `lookup_functional_subgroup` | Real sub-band lookup (22 seeded subgroups), child of the above, with reserved capacity for more |
 | `lookup_turbine_platform` | Multi-select platform lookup (2XM/3XM/4XM, extensible) |
-| `lookup_status_category`, `lookup_availability_group`, `lookup_brake_program`, `lookup_reset_program`, `lookup_operational_state`, `lookup_access_rights`, `lookup_alarm_behaviour` | Governed controlled vocabularies (unchanged from v1) |
+| `lookup_available_group` | Soft-validated numeric availability codes, labels TBD (corrected 2026-09-17) |
+| `lookup_development_access`, `lookup_sales_access`, `lookup_tcc_access`, `lookup_service_access`, `lookup_top_access`, `lookup_grid_operator_access`, `lookup_service_partner_access`, `lookup_customer_access` | Eight independent audience-access vocabularies, real observed values (corrected 2026-09-17, replaces the single `lookup_access_rights`) |
 | `user`, `user_engineering_domain` | Accounts and their domain tags |
 | `status_code` | Governed identity, nullable identifier, sandbox flag |
 | `status_code_revision` | Versioned governed content, dual-review + Chief Engineer approval columns |
@@ -53,6 +54,12 @@ Surrogate `INTEGER PRIMARY KEY` throughout; foreign keys enforced (`PRAGMA forei
 | `trg_prevent_release_item_delete` | Published Release contents are immutable |
 | `trg_prevent_sandbox_release` | A sandbox-flagged revision can never be inserted into `release_item` — hard-blocks the one dangerous path a sandbox code could otherwise take |
 | `trg_prevent_nonsandbox_delete` | `DELETE FROM status_code` is rejected unless `is_sandbox = 1` — the single, narrow exception to the no-hard-delete rule (05-governance-handbook.md §12) is enforced at the database layer, not only in application code |
+| `trg_prevent_subgroup_overlap` | A new `lookup_functional_subgroup` row is rejected if its sub-range overlaps an existing subgroup in the same group (06-data-dictionary.md §9a.1) |
+| `trg_prevent_group_overlap` (new 2026-09-17) | A new `lookup_functional_system_group` row is rejected if its range overlaps an existing group's range — lets an Administrator assign a whole new group into `10000–10999`/`14000–14999`/`15000–15999`/`16000–16999` safely (06-data-dictionary.md §9.1) |
+
+## 5a. Hub Controller Groups & Non-Unique Prefixes (new 2026-09-17)
+
+A real export of the Hub Controller status code library (`HC Status Code Number.xlsx`, 264 rows, range 11000–13999) revealed that Hub Controller content is **not** folded into the existing nine Main Controller groups — it gets three entirely new, numerically distinct groups (`WTUR` 11000–11999, `WROT` 12000–12999, `WPPD` 13000–13999), confirmed by the business as intentional and structurally identical to the existing model (each subdivides into real subgroups the same way, 06-data-dictionary.md §9a). The one design consequence: `WTUR` and `WROT` are each now deliberately reused across two different groups (one Main Controller, one Hub Controller), so `lookup_functional_system_group.code` **is no longer a unique key on its own** — uniqueness moved to `(code, range_start)`. Every seed-data join and every application-layer lookup of a group must resolve by `(code, range_start)` or by `id`, never by `code` alone; `artifacts/schema.sql`'s subgroup seed INSERT was rewritten with an explicit `group_range_start` disambiguator for exactly this reason.
 
 ## 6. Soft-Delete Strategy
 

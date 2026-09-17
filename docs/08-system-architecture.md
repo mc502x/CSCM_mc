@@ -40,6 +40,10 @@ CSCM Tool (MVP) is a **monolithic, server-rendered web application**: Python/Fla
    └ ─ ─ ─ ─ ─ ─ ─ ─ ─ ┘  └ ─ ─ ─ ─ ─ ─ ─ ─ ─ ┘   └ ─ ─ ─ ─ ─ ─ ─ ─ ─ ┘
 ```
 
+## 1a. Presentation Layer & OneTool Shell (new 2026-09-17)
+
+CSCM Tool's UI renders inside the shared OneTool platform shell (top bar, sidebar, navigation), per the OneTool design system supplied by the central tools team (10-ui-ux-specification.md §0). This affects only the `presentation`/`ui` component below — the shared shell is markup/CSS/JS that CSCM Tool includes and themes to, not a service CSCM Tool calls. **Authentication remains entirely CSCM Tool's own** (confirmed decision): the `auth` component is unaffected by this integration; only the visual chrome is shared, never identity, session, or credentials.
+
 ## 2. Component Diagram
 
 | Component | Responsibility | Depends on |
@@ -49,7 +53,7 @@ CSCM Tool (MVP) is a **monolithic, server-rendered web application**: Python/Fla
 | `service` | Business rules, lifecycle transitions, numbering allocation, dual-review/Chief-Engineer-approval orchestration, Cross-Domain Sign-Off gating, validation, audit writes | `repository` |
 | `repository` | Data access abstraction (one repository class per aggregate) | `models` (SQLAlchemy), DB connection |
 | `auth` | Session management, password hashing, RBAC decorators (5 roles), pluggable on-premises auth provider interface | `service.user` |
-| `export` | CSV/JSON/PDF catalogue export (all roles per matrix) + full-database export/backup (Administrator only) | `service.release`, `service.status_code` |
+| `export` | CSV/JSON/XLSX/PDF catalogue export (all roles per matrix) + full-database export/backup (Administrator only) | `service.release`, `service.status_code` |
 | `audit` | Central audit-log writer used by all services | `repository.audit` |
 
 Full detail and code layout: 18-claude-code-implementation-guide.md.
@@ -174,7 +178,7 @@ CSCM Tool's own on-premises SQLite database **is** the Master Database — there
 
 | Consumer | Mechanism | Scope | Role Required |
 |---|---|---|---|
-| Technical Publications / manuals | Administrator- or role-scoped catalogue export (CSV/JSON/PDF) of Approved/Released status codes | Approved/Released only, per role matrix | Per 11-security-architecture.md §3 (all roles except sandbox-only data) |
+| Technical Publications / manuals | Administrator- or role-scoped catalogue export (CSV/JSON/XLSX/PDF) of Approved/Released status codes | Approved/Released only, per role matrix | Per 11-security-architecture.md §3 (all roles except sandbox-only data) |
 | Disaster recovery / migration | Full database export/backup | Entire database | **Administrator only** (FR-047, 04-domain-model.md §2.17) |
 | Future documentation-generation tools, SCADA, software repositories (Phase 2+) | REST API pull, internal corporate network only, never internet-exposed, never a cloud endpoint | Released catalogues only | Scoped API token, Administrator-issued |
 

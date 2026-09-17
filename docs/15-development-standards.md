@@ -14,7 +14,7 @@ cscm_tool/
 │   ├── repositories/          # repository pattern implementations
 │   ├── services/               # business logic / workflow / validation
 │   ├── auth/                  # auth providers (on-prem only), RBAC decorators
-│   ├── export/                # CSV/JSON/PDF + full-database export
+│   ├── export/                # CSV/JSON/XLSX/PDF + full-database export
 │   ├── audit/                 # audit log writer
 │   ├── templates/             # Jinja2 templates
 │   └── static/                # CSS/JS (no external/CDN sources — 11-security-architecture.md §12)
@@ -26,6 +26,10 @@ cscm_tool/
 ├── docs/                      # this documentation package
 └── config.py
 ```
+
+## 1a. OneTool Design System Compliance (new 2026-09-17)
+
+All UI code (templates, CSS, JS) must use the shared OneTool design tokens, typography (Manrope/Inter), and component treatments (10-ui-ux-specification.md §0) rather than introducing new colors, fonts, or button/card styles. Before any UI PR is merged: render inside the shared shell with the CSCM Tool nav item active, and verify desktop, collapsed-sidebar, tablet, keyboard-only, loading, error, and empty states, per the design system's own integration checklist. Authentication (`app/auth/`) is explicitly out of scope for this integration — it stays CSCM Tool's own.
 
 ## 2. Coding Standards
 
@@ -60,7 +64,7 @@ Unchanged in mechanism from v1 (§5): all schema changes via reversible Alembic 
 - **Glossary discipline (new in v2):** any PR that introduces, renames, or retires a term, role, lifecycle state, or domain concept must update [19-glossary.md](19-glossary.md) in the same PR — the glossary is treated as a required artifact, not optional polish, per the explicit instruction that it "be kept updated with every change."
 - **Paragraph formatting:** prose paragraphs in every document under `docs/` are written as a single continuous source line (no manual mid-paragraph line breaks); only tables, code blocks, and list items may span multiple source lines. This applies to new and edited content alike — an edit that reintroduces hard-wrapped paragraphs should be corrected before merge.
 - Code comments explain **why**, not **what**; no commented-out code is committed.
-- Every service-layer public method has a docstring stating its pre/postconditions and which FR/BR it implements, e.g. `"""Records the Administrator sign-off. Enforces BR-005 and may confirm a restricted field. See FR-033a."""`.
+- Every service-layer public method has a docstring stating its pre/postconditions and which FR/BR it implements, e.g. `"""Records the Administrator sign-off. Enforces BR-005 and may confirm a restricted field. See FR-034."""`.
 
 ## 7. Testing Standards
 

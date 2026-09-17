@@ -1,13 +1,15 @@
 # Controller Status Code Management Tool (CSCM Tool)
 ## Software Delivery Documentation Package
 
-**Document Set Version:** 2.0
-**Date:** 2026-09-15
-**Status:** Baseline for Development (v2 — functional-group numbering, dual-review/Chief Engineer approval, on-premises only)
+**Document Set Version:** 3.0
+**Date:** 2026-09-17
+**Status:** Baseline for Development (v3 — real field model grounded in the live library export, Hub Controller groups, mandatory subgroups, library import, OneTool visual integration)
 
-This package is the complete, self-contained requirements and design basis for building the CSCM Tool without additional requirements gathering. It is intended to be read as a set; cross-references between documents use document numbers (e.g. "see 07-database-design.md"). Version 2.0 supersedes v1.0: Controller Type (Main/Hub) numbering has been replaced by Functional System Group numbering, the identifier format is now `StCd-XXXXX`, a Chief Engineer role and a dual-review-then-approve workflow have been introduced, Turbine Platform multi-select and platform-variant handling have been added, sandbox/test status codes are now supported, and every document has been checked for on-premises-only deployment (no cloud infrastructure).
+This package is the complete, self-contained requirements and design basis for building the CSCM Tool without additional requirements gathering. It is intended to be read as a set; cross-references between documents use document numbers (e.g. "see 07-database-design.md"). **Version history:** v1.0 → v2.0 replaced Controller Type (Main/Hub) numbering with Functional System Group numbering, introduced the `StCd-XXXXX` identifier format, the Chief Engineer role, the dual-review-then-approve workflow, Turbine Platform multi-select, sandbox/test status codes, and on-premises-only deployment. v2.0 → v3.0 (2026-09-17) grounded the entire attribute set in a real 897-row export of the live status code library (correcting Status Category, Available Group, Alarm, delay fields, and replacing the single Access Rights enum with eight independent audience fields), made Functional Subgroup mandatory, added three Hub Controller Functional System Groups (11000–13999) alongside the nine Main Controller ones, added CSV/XLSX library import (fully governed, not a bypass), added Administrator-created subgroups and whole new Functional System Groups, added XLSX to export formats, and adopted the OneTool shared design system for the UI shell while keeping CSCM Tool's own authentication.
 
-**Open items still pending your input (see individual documents for TBD markers):** the real Functional Subgroup taxonomy per Functional System Group (currently placeholder), and the full attribute example status code you referenced but which did not reach this session — both are flagged inline wherever they affect a document.
+**Open items still pending your input:** (1) the exact meaning of `Covert` across several audience-access vocabularies is unconfirmed (06-data-dictionary.md §9d); (2) the descriptive labels for Available Group codes and the eight numeric Program Reference fields are not available from the source export and need Controls Engineering input (06-data-dictionary.md §2c, §9c). The single-file `StCd_4960.st` example is superseded — the 2026-09-17 update grounds the entire data dictionary in a real 897-row export of the live library instead, which is more complete than one example file would have been. `10000–10999`, `14000–14999`, `15000–15999`, and `16000–16999` are confirmed free/reserved capacity for future Functional System Groups — no longer an open item.
+
+**Field-model correction (2026-09-17):** the attribute set, Functional Subgroup names, and several field types in this package were corrected against a real export of the live status code library and a legacy-tool screenshot. Functional Subgroup is now mandatory (never optional); see 16-mvp-roadmap.md §8 "Corrections Log" and 06-data-dictionary.md's provenance note for the full list. CSV/XLSX library import is now in scope (reversing the earlier "no bulk import" position, still fully governed per row — 05-governance-handbook.md §6b), and the UI adopts the shared OneTool design system for its visual shell while keeping its own authentication (10-ui-ux-specification.md §0).
 
 ## Document Set
 
@@ -48,7 +50,7 @@ Full definitions live in [19-glossary.md](19-glossary.md); this is the quick-ref
 - **Status Code Identifier (StCd)** — `StCd-XXXXX`, a five-digit zero-padded number equal to the code's position within its Functional System Group's numeric range, e.g. `StCd-01232`. Not assigned until Draft → Review.
 - **Status Code Revision** — a specific versioned instance of a Status Code's attributes, carrying its own lifecycle state.
 - **Functional System Group** — the classification and numbering axis (replaces the former Controller Type field). Nine groups; see 05-governance-handbook.md §2.
-- **Functional Subgroup** — sub-division of a Functional System Group owning a numeric sub-band (placeholder taxonomy, TBD — see 06-data-dictionary.md §9a).
+- **Functional Subgroup** — sub-division of a Functional System Group owning a numeric sub-band, **mandatory on every Status Code, never optional**; real taxonomy seeded, with deliberate reserved blocks for future additions and Administrator-created new subgroups (06-data-dictionary.md §9a).
 - **Turbine Platform** — multi-select classification (minimum `2XM`, `3XM`, `4XM`).
 - **Change Request (CR)** — a proposal to create a new Status Code or revise an existing one, routed through the dual-review-then-approval workflow.
 - **Release** — a named, dated, immutable bundle of Released status code revisions exported as a catalogue.
@@ -69,15 +71,24 @@ Full definitions live in [19-glossary.md](19-glossary.md); this is the quick-ref
 
 | Range | Functional System Group | Prefix |
 |---|---|---|
-| 1000–1999 | Converter / Grid Interface | WCNV |
-| 2000–2999 | Generator | WGEN |
-| 3000–3999 | Meteorology / Environment / Nacelle Monitoring | WNAC |
-| 4000–4999 | Pitch System / Hub | WROT |
-| 5000–5999 | Tower / Oscillation Monitoring | WTOW |
-| 6000–6999 | Transformer / MV Switchgear | WTRF |
-| 7000–7999 | Drive Train / Gearbox / Hydraulic System / Rotor Brake | WTRM |
+| 1000–1999 | Converter & Grid Interface | WCNV |
+| 2000–2999 | Generator System | WGEN |
+| 3000–3999 | Meteorology & Nacelle Environment | WNAC |
+| 4000–4999 | Rotor & Pitch System | WROT |
+| 5000–5999 | Tower & Structure | WTOW |
+| 6000–6999 | Transformer & MV System | WTRF |
+| 7000–7999 | Drivetrain & Gearbox | WTRM |
 | 8000–8999 | Yaw System | WYAW |
-| 9000–9999 | Turbine Control / Safety / Operational States / SCADA | WTUR |
+| 9000–9999 | Turbine Control & Operation | WTUR |
+| 10000–10999 | *(free — reserved for a new Functional System Group)* | — |
+| 11000–11999 | Hub Controller Control System | WTUR *(reused — different range from 9000–9999)* |
+| 12000–12999 | Hub Controller Rotor & Pitch | WROT *(reused — different range from 4000–4999)* |
+| 13000–13999 | Wind Farm / Plant Dispatch | WPPD |
+| 14000–14999 | *(free — reserved for a new Functional System Group)* | — |
+| 15000–15999 | *(free — reserved for a new Functional System Group)* | — |
+| 16000–16999 | *(free — reserved for a new Functional System Group)* | — |
+
+Each group subdivides into real Functional Subgroups owning numeric sub-bands, with deliberate reserved (unassigned) blocks for future growth — see 05-governance-handbook.md §2 and 06-data-dictionary.md §9a for the full subgroup list (38 subgroups across 12 groups as of 2026-09-17). `code` (the prefix) is unique together with `range_start`, not on its own — `WTUR` and `WROT` each identify two different groups, one Main Controller and one Hub Controller.
 
 ## Requirement Identifier Conventions
 

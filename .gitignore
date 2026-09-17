@@ -10,7 +10,6 @@ instance/
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
-.hypothesis/
 htmlcov/
 .coverage
 .coverage.*
@@ -30,7 +29,6 @@ backups/
 # --- Environment / secrets ---
 .env
 .env.*
-!.env.example
 *.local
 
 # --- Editor / IDE ---
@@ -46,3 +44,9 @@ desktop.ini
 # --- Logs ---
 *.log
 logs/
+
+# --- Git ---
+git/
+.git/
+
+.obsidian/

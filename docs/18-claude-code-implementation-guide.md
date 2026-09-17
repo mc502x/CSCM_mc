@@ -46,6 +46,8 @@ cscm_tool/
 │   │   ├── release_service.py
 │   │   ├── lookup_service.py
 │   │   ├── export_service.py          # catalogue + full-database export
+│   │   ├── import_service.py          # CSV/XLSX library import -> Draft CRs (new)
+│   │   ├── subgroup_admin_service.py  # new-subgroup creation, overlap validation (new)
 │   │   ├── audit_service.py
 │   │   └── validation.py
 │   │
@@ -79,17 +81,20 @@ cscm_tool/
 │   ├── export/
 │   │   ├── csv_exporter.py
 │   │   ├── json_exporter.py
+│   │   ├── xlsx_exporter.py
 │   │   ├── pdf_exporter.py
 │   │   └── full_database_exporter.py  # SQLite Online Backup API wrapper, Administrator only
 │   │
 │   ├── templates/
 │   ├── static/                        # local-only assets, no CDN references (11-security-architecture.md §12)
+│   │   ├── css/onetool-tokens.css     # OneTool design tokens (10-ui-ux-specification.md §0), vendored locally
+│   │   └── vendor/manrope, inter, material-symbols/  # self-hosted fonts/icons, per the no-CDN rule
 │   └── errors.py
 │
 ├── migrations/
 ├── tests/{unit,integration,system}/
 ├── docs/
-├── seed_data/lookup_seed.sql          # matches artifacts/schema.sql's seed inserts, incl. placeholder subgroups
+├── seed_data/lookup_seed.sql          # matches artifacts/schema.sql's seed inserts, incl. the real Functional Subgroup taxonomy
 ├── requirements.txt
 ├── pyproject.toml
 ├── wsgi.py
@@ -245,11 +250,11 @@ class ChangeRequestService:
 
 ## 6. Database Migration Strategy
 
-Unchanged in mechanism from v1 §6 (Alembic baseline from `artifacts/schema.sql`, hand-reviewed autogenerate for `CHECK`/triggers/partial indexes, `PRAGMA foreign_keys = ON` on every connection). New note: the placeholder Functional Subgroup data (06-data-dictionary.md §9a) is seeded by the same baseline migration as every other lookup, so replacing it with the real taxonomy later is a **data migration** (an `UPDATE`/re-seed script), never a schema migration — call this out explicitly in that future migration's docstring so nobody mistakes it for a breaking change.
+Unchanged in mechanism from v1 §6 (Alembic baseline from `artifacts/schema.sql`, hand-reviewed autogenerate for `CHECK`/triggers/partial indexes, `PRAGMA foreign_keys = ON` on every connection). New note: the real Functional Subgroup data (06-data-dictionary.md §9a) is seeded by the same baseline migration as every other lookup; any future addition (a new subgroup into a currently-reserved hundred-block, or a whole new Functional System Group into one of the confirmed free ranges — `10000–10999`, `14000–14999`, `15000–15999`, `16000–16999`) is a **data migration** (an `INSERT`/re-seed script), never a schema migration — call this out explicitly in that future migration's docstring so nobody mistakes it for a breaking change.
 
 ## 7. Testing Framework
 
-Unchanged in mechanism from v1 §7 (`pytest`, `pytest-cov`, role-scoped authenticated-client fixtures — now five: `engineer_client`, `reviewer_client`, `administrator_client`, `chief_engineer_client`, `viewer_client`, plus fixtures for Engineers tagged with specific Engineering Domains for Cross-Domain Sign-Off tests). `schemathesis` (or equivalent) against `artifacts/openapi.yaml` v2.0.0. `bandit -r app/` and `pip-audit`, plus the new no-cloud-import grep check (13-test-strategy.md §6, TC-029) wired into the same CI stage.
+Unchanged in mechanism from v1 §7 (`pytest`, `pytest-cov`, role-scoped authenticated-client fixtures — now five: `engineer_client`, `reviewer_client`, `administrator_client`, `chief_engineer_client`, `viewer_client`, plus fixtures for Engineers tagged with specific Engineering Domains for Cross-Domain Sign-Off tests). `schemathesis` (or equivalent) against `artifacts/openapi.yaml` v3.0.0. `bandit -r app/` and `pip-audit`, plus the new no-cloud-import grep check (13-test-strategy.md §6, TC-029) wired into the same CI stage.
 
 ## 8. Suggested Coding Order
 
@@ -271,4 +276,7 @@ Updated sequencing reflecting the new epics (17-implementation-backlog.md depend
 14. Audit search/reporting UI/API, extended to the Chief Engineer role (EPIC-10's consumer-facing half).
 15. Fill in remaining OpenAPI-contract gaps, `schemathesis` conformance (EPIC-11).
 16. Security headers, CSRF, `bandit`/`pip-audit`, manual OWASP + no-cloud checklist sign-off (EPIC-12).
-17. Performance testing (incl. identifier-allocation contention, TC-025), deployment scripts, backup/restore drill, monitoring (EPIC-13), immediately preceding go-live — at which point the placeholder Functional Subgroup data must be replaced with Controls Engineering's real taxonomy (16-mvp-roadmap.md §2 exit criterion).
+17. Performance testing (incl. identifier-allocation contention, TC-025), deployment scripts, backup/restore drill, monitoring (EPIC-13), immediately preceding go-live.
+18. `import_service.py` and the Library Import UI/API (EPIC-14), reusing the validation logic already built in step 6 — an import row and a manually typed Draft go through the exact same validators.
+19. `subgroup_admin_service.py` and its group-level counterpart (EPIC-16) — straightforward once the lookup administration screens from step 13 exist; the group-level "create a new Functional System Group into a free range" capability (FR-048g/h) is the lowest-priority piece of this epic and can slip past MVP if time is tight.
+20. OneTool shell integration and the two explicit UX fixes — no-data-loss-on-failure and inline lookup descriptions (EPIC-15) — applied as a pass across every existing form, not a new module; do this once the forms it touches are stable, to avoid rework.

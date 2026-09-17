@@ -6,7 +6,7 @@ CSCM Tool is the master system of record for wind turbine Main Controller and Hu
 
 ## 2. Goals
 
-1. Provide one authoritative, versioned record per status code, classified and numbered by Functional System Group (and, optionally, Functional Subgroup) rather than an arbitrary series.
+1. Provide one authoritative, versioned record per status code, classified and numbered by Functional System Group and Functional Subgroup — both mandatory — rather than an arbitrary series.
 2. Enforce a mandatory, three-decision-point review/approval workflow before any code becomes Released.
 3. Preserve complete, immutable revision history for every status code.
 4. Provide release management so a specific, named, dated snapshot of approved codes can be exported and referenced by manuals, SCADA configuration, and future integrations.
@@ -45,7 +45,7 @@ Technical writer, service technician, or other stakeholder who looks up current 
 ## 5. User Journeys
 
 ### 5.1 Engineer creates a new status code
-1. Engineer logs in, navigates to "New Status Code," selects Functional System Group (e.g. Converter/Grid Interface) and, optionally, Functional Subgroup, plus at least one Turbine Platform. No identifier is shown yet.
+1. Engineer logs in, navigates to "New Status Code," selects Functional System Group (e.g. Converter & Grid Interface) and Functional Subgroup (e.g. Converter) — both mandatory — plus at least one Turbine Platform. No identifier is shown yet.
 2. Engineer completes all mandatory attributes; validation blocks submission until the record is complete and internally consistent.
 3. If fields owned by a domain the Engineer does not hold are still unset, the system flags them and lets the Engineer request sign-off from a colleague holding that domain.
 4. Once complete, Engineer submits for Review; the system allocates a fixed `StCd-XXXXX` identifier at that moment, not before.
@@ -63,7 +63,7 @@ Technical writer, service technician, or other stakeholder who looks up current 
 ### 5.4 Administrator builds and publishes a Release
 1. Administrator creates a Release scoped by Functional System Group/Subgroup, reviews the Approved (non-sandbox) candidate list, confirms the set, and publishes.
 2. Publishing atomically transitions included revisions to Released, stamps Effective Date, and locks the Release's contents.
-3. Administrator exports the Release catalogue (CSV/JSON/PDF) for Technical Publications.
+3. Administrator exports the Release catalogue (CSV/JSON/XLSX/PDF) for Technical Publications.
 
 ### 5.5 Viewer looks up a status code
 Unchanged from the original journey: search, view current Released definition and history, export a filtered read-only catalogue.
@@ -78,9 +78,9 @@ Unchanged in outcome, now routed through the full three-decision-point cycle whe
 
 ## 6. Functional Scope
 
-**In scope (MVP):** status code CRUD via the governed three-decision-point Change Request workflow; Functional System Group/Subgroup classification and numbering (`StCd-XXXXX`, allocated at Draft→Review, not before); Turbine Platform multi-select; Cross-Domain Sign-Off; full attribute set per 06-data-dictionary.md; seven-state lifecycle with enforced valid transitions; revision history and field-level diffing; role-based access control across five roles; sandbox status codes (create/delete, Administrator-only); Release management (build, publish, lock, export); search/filter/sort; full audit trail; session-based authentication and internal user management; catalogue export (role-scoped) and full-database export (Administrator-only); REST API covering all core resources, internal-network-only.
+**In scope (MVP):** status code CRUD via the governed three-decision-point Change Request workflow; Functional System Group **and mandatory** Subgroup classification and numbering (`StCd-XXXXX`, allocated at Draft→Review, not before); Administrator-created new subgroups, non-overlap validated; Turbine Platform multi-select; Cross-Domain Sign-Off; full attribute set per 06-data-dictionary.md (corrected 2026-09-17 against a real library export); seven-state lifecycle with enforced valid transitions; revision history and field-level diffing; role-based access control across five roles; sandbox status codes (create/delete, Administrator-only); CSV/XLSX library import producing governed Drafts (05-governance-handbook.md §6b); Release management (build, publish, lock, export); search/filter/sort; full audit trail; session-based authentication and internal user management; catalogue export (CSV/JSON/XLSX/PDF, role-scoped) and full-database export (Administrator-only); REST API covering all core resources, internal-network-only; OneTool shared design system for the visual shell (10-ui-ux-specification.md §0), with CSCM Tool retaining its own authentication.
 
-**Out of scope (MVP):** on-premises Active Directory/ADFS SSO integration itself (the `AuthProvider` hook is built; the integration is not); live/automated push integration to documentation generation tools, code repositories, or SCADA systems; multi-language localization; multi-OEM/multi-tenant data partitioning; mobile native applications; configurable/multi-stage approval chains beyond the fixed Reviewer+Administrator+Chief-Engineer model; the final Functional Subgroup taxonomy (placeholder until Controls Engineering supplies it — a data-only gap, not a feature gap); any public-cloud component of any kind, at any phase.
+**Out of scope (MVP):** on-premises Active Directory/ADFS SSO integration itself (the `AuthProvider` hook is built; the integration is not); live/automated push integration to documentation generation tools, code repositories, or SCADA systems; multi-language localization; multi-OEM/multi-tenant data partitioning; mobile native applications; configurable/multi-stage approval chains beyond the fixed Reviewer+Administrator+Chief-Engineer model; any public-cloud component of any kind, at any phase.
 
 ## 7. Out-of-Scope Items (Explicit Exclusions)
 
@@ -89,7 +89,7 @@ Unchanged in outcome, now routed through the full three-decision-point cycle whe
 | Cloud-hosted SSO (e.g. Azure AD) | Explicitly excluded by the no-cloud-infrastructure requirement; the future SSO path is on-premises Active Directory/ADFS only (16-mvp-roadmap.md, 11-security-architecture.md §2) |
 | Automated SCADA tag sync | Requires SCADA-side integration work outside CSCM Tool's control; API contract only in MVP, internal-network-only |
 | Configurable/multi-stage approval chains | The fixed Reviewer→Administrator (parallel)→Chief Engineer model is sufficient for current governance need |
-| Bulk import of legacy status codes | Explicitly against the "codes are created in CSCM Tool, not imported from documents" principle; any legacy reconciliation is a one-time, human-reviewed project activity, not a product feature |
+| *(removed 2026-09-17)* Bulk import was previously excluded here on principle | The business explicitly requested CSV/XLSX library import; it is now in scope (§6), on the condition that every imported row still passes the full governance cycle before Release (05-governance-handbook.md §6b) — the "codes are governed in CSCM Tool, not imported pre-approved" principle survives, the "no import mechanism at all" position does not |
 | Real-time collaborative editing | Not required; optimistic concurrency control is sufficient |
 | Public-cloud infrastructure of any kind | Hard deployment constraint (00-INDEX.md "Deployment Principle"); every environment is on-premises |
 

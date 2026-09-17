@@ -10,19 +10,32 @@ The Status Code Identifier is `StCd-XXXXX`: a five-digit, zero-padded number, e.
 
 | Range | Functional System Group | Prefix (display only) |
 |---|---|---|
-| 1000–1999 | Converter / Grid Interface | WCNV |
-| 2000–2999 | Generator | WGEN |
-| 3000–3999 | Meteorology / Environment / Nacelle Monitoring | WNAC |
-| 4000–4999 | Pitch System / Hub | WROT |
-| 5000–5999 | Tower / Oscillation Monitoring | WTOW |
-| 6000–6999 | Transformer / MV Switchgear | WTRF |
-| 7000–7999 | Drive Train / Gearbox / Hydraulic System / Rotor Brake | WTRM |
+| 1000–1999 | Converter & Grid Interface | WCNV |
+| 2000–2999 | Generator System | WGEN |
+| 3000–3999 | Meteorology & Nacelle Environment | WNAC |
+| 4000–4999 | Rotor & Pitch System | WROT |
+| 5000–5999 | Tower & Structure | WTOW |
+| 6000–6999 | Transformer & MV System | WTRF |
+| 7000–7999 | Drivetrain & Gearbox | WTRM |
 | 8000–8999 | Yaw System | WYAW |
-| 9000–9999 | Turbine Control / Safety / Operational States / SCADA | WTUR |
+| 9000–9999 | Turbine Control & Operation | WTUR |
+| 10000–10999 | *free — reserved for a new group* | — |
+| 11000–11999 | Hub Controller Control System | WTUR |
+| 12000–12999 | Hub Controller Rotor & Pitch | WROT |
+| 13000–13999 | Wind Farm / Plant Dispatch | WPPD |
+| 14000–14999 | *free — reserved for a new group* | — |
+| 15000–15999 | *free — reserved for a new group* | — |
+| 16000–16999 | *free — reserved for a new group* | — |
 
-**Subgroups (placeholder, TBD):** each Functional System Group is further divided into Functional Subgroups, each owning a numeric sub-band within the group's range. The real subgroup taxonomy has not yet been provided; this package seeds three generically-named placeholder subgroups per group (`Subgroup 1/2/3 (TBD)`), splitting each 1000-number range into three roughly equal sub-bands, purely so the data model, dropdowns, and allocation logic are structurally complete and testable. **This placeholder must be replaced with the real subgroup list from Controls Engineering before go-live** — replacing it is a data change (lookup table rows), not a schema change (06-data-dictionary.md §9a).
+**Prefix reuse (added 2026-09-17):** `WTUR` and `WROT` each identify two numerically distinct groups — one Main Controller, one Hub Controller — confirmed explicitly by the business as intentional (same thematic domain, separate status code range per controller's software). The prefix is a display/cross-reference label only; the numeric range is always the authoritative identifier of which group a code belongs to (06-data-dictionary.md §9).
 
-**Allocation rule:** the identifier is **not** assigned at Draft creation. An Engineer creating a new Status Code selects a Functional System Group (required) and, optionally, a Functional Subgroup via dropdown; the Draft is worked on with no fixed number (displayed as "TBD — assigned on submission"). Only at the moment the Change Request is submitted for Review (Draft → Review) does the system atomically allocate the next free number: within the selected Subgroup's sub-band if one was chosen, otherwise the next free number anywhere in the Functional System Group's range not already claimed by a subgroup-scoped allocation. This satisfies the requirement that in-progress codes never carry a fixed number.
+**Reserved capacity (confirmed 2026-09-17):** `10000–10999`, `14000–14999`, `15000–15999`, and `16000–16999` are explicitly free — no Functional System Group occupies them yet, and none is required to. This includes the `15000–15999` range previously found in the live 4XM codebase, which turned out to be exactly this kind of reserved space, not a code-classification gap needing resolution. An Administrator can assign a whole new Functional System Group (and its subgroups) into any of these ranges later, following the same non-overlap validation as adding a subgroup (§9a.1 of 06-data-dictionary.md) — a pure data change, never a schema migration.
+
+**Subgroups (mandatory — corrected 2026-09-17):** every Functional System Group is divided into Functional Subgroups, and every Status Code must belong to exactly one — Functional Subgroup is **never optional**, confirmed against a real export where all 897 live status codes carry one. Most subgroups own a 100-number sub-band aligned to the hundreds digit of the identifier (e.g. `StCd-010xx`, 01000–01099, is the Converter subgroup within Converter & Grid Interface); within Turbine Control & Operation, six subgroups share the `099xx` hundred-block in finer ten-number sub-bands instead. The real taxonomy, corrected 2026-09-17 against the authoritative row-level export (superseding an earlier hand-typed summary that used the wrong subgroup names — the exact issue flagged by the business), is seeded in full: 06-data-dictionary.md §9a, `artifacts/schema.sql`.
+
+Not every block within a group is currently assigned to a named subgroup — e.g. `011xx` and `045xx`–`049xx` within Rotor & Pitch System are unassigned. This is deliberate reserved capacity, not a gap to close: an Administrator can create a new Functional Subgroup at any time, in any Functional System Group, choosing any sub-range that does not overlap an existing one (validated by the service layer and, as a backstop, a database trigger — 07-database-design.md §5). No hundreds-digit alignment is enforced — the WTUR ten-number sub-bands prove narrower ranges are legitimate — but the UI suggests the next hundred-aligned free block as a sane default. Adding a subgroup, like adding a Functional System Group (subject to resolving the open `15000–15999` item above), is a pure lookup-table data change, never a schema migration or a renumbering of existing codes. A code that already exists inside a currently-unassigned block (e.g. legacy `StCd-04960`, found in the live 4XM codebase, sitting in the unassigned `049xx` block) predates this taxonomy and needs formal reclassification once a covering subgroup exists — the mandatory-subgroup rule applies to newly created codes; it does not retroactively invalidate legacy data.
+
+**Allocation rule:** the identifier is **not** assigned at Draft creation. An Engineer creating a new Status Code selects a Functional System Group and a Functional Subgroup via dropdown — **both required, the subgroup is never optional** — and the Draft is worked on with no fixed number (displayed as "TBD — assigned on submission"). Only at the moment the Change Request is submitted for Review (Draft → Review) does the system atomically allocate the next free number within the selected Subgroup's sub-band. This satisfies the requirement that in-progress codes never carry a fixed number.
 
 Numbers are never reused, even if a code is later Archived. Gaps are expected wherever a Draft is abandoned before submission (its number was never allocated in the first place — it never had one). An Administrator may allocate an out-of-sequence number only for a documented migration/reservation case, recorded and audited as a manual override.
 
@@ -68,7 +81,7 @@ Any transition not listed is prohibited by the system.
 
 ## 6. Status Code Creation Process
 
-1. Engineer (or Administrator) initiates "New Status Code," selects Functional System Group and, optionally, Functional Subgroup via dropdown (§2). No identifier is shown yet.
+1. Engineer (or Administrator) initiates "New Status Code," selects Functional System Group and Functional Subgroup via dropdown — both required (§2). No identifier is shown yet.
 2. System creates a `StatusCode` (identifier `NULL`, `functional_system_group_id`/`functional_subgroup_id` set) + first `StatusCodeRevision` + a `ChangeRequest` (`cr_type = NEW`), all in **Draft**.
 3. Engineer completes mandatory attributes; system validates continuously.
 4. If the originating Engineer's tagged Engineering Domain(s) do not cover every domain-owned field on the revision, the Draft is flagged "awaiting domain input" and cannot be submitted until each missing domain is signed off (§6a).
@@ -80,6 +93,10 @@ Any transition not listed is prohibited by the system.
 ## 6a. Cross-Domain Sign-Off
 
 Some Functional System Groups require input from more than one Engineering Domain (e.g. a Generator-group code created by an Electrical engineer may still need Controls-domain parameters — delay/alarm/reset behavior — that the originating engineer cannot authoritatively provide). Each field in 06-data-dictionary.md is tagged with an owning Engineering Domain. When a Draft's originating Engineer lacks a domain tag required by one or more of its fields, the system marks those domains as "pending" and blocks Submit-for-Review until a `DomainSignoff` exists for each pending domain, recorded by an Engineer who holds that domain. This is a completeness gate, not a content judgment — it does not replace Review.
+
+## 6b. Library Import
+
+New capability (2026-09-17): an Engineer or Administrator may import a CSV or XLSX file of status codes (e.g. a legacy library such as the 897-row export used to ground this taxonomy) instead of creating codes one at a time through the UI. **Import is a faster data-entry path, not a governance bypass, confirmed explicitly by the business:** every row that passes field validation becomes an ordinary `StatusCode`/`StatusCodeRevision`/`ChangeRequest` triple in **Draft**, exactly as if an Engineer had typed it in — it still requires Cross-Domain Sign-Off where applicable, both Review sign-offs, and Chief Engineer approval before it can ever be Released. A row that fails validation is skipped and reported in the import job's error report (06-data-dictionary.md §5); it never partially creates a record. The source file's legacy numbering (e.g. the old "Status Code Number" column) is preserved on each created code as `legacy_reference_number` for traceability, and is never mistaken for the governed `StCd` identifier, which is still allocated only at Draft→Review (§2) — including for imported rows.
 
 ## 7. Review Sign-Off Rules
 

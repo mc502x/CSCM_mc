@@ -30,19 +30,21 @@ This document governs the **business audit trail** (`audit_log_entry`), the comp
 | `CATALOGUE_EXPORT` | ExportJob | Any catalogue export generated | requester, scope, format |
 | `FULL_DATABASE_EXPORT` | ExportJob | Administrator generates a full raw database export/backup | requester (always Administrator), timestamp, file reference |
 | `LOOKUP_CHANGE` | Lookup* (incl. Functional Group/Subgroup/Platform/Domain) | Controlled vocabulary value added/deactivated | before/after, actor |
+| `SUBGROUP_CREATE` | FunctionalSubgroup | Administrator creates a new Functional Subgroup (new 2026-09-17) | group, code, label, sub-range, actor |
+| `IMPORT_STARTED` / `IMPORT_COMPLETED` / `IMPORT_FAILED` | ImportJob | Library import lifecycle (new 2026-09-17) | requester, row_count, created_count, error_count |
 | `USER_CREATE` / `USER_UPDATE` / `USER_DEACTIVATE` / `ROLE_CHANGE` / `DOMAIN_TAG_CHANGE` | User | Administration action | before/after, actor |
 | `LOGIN_SUCCESS` / `LOGIN_FAILURE` / `LOGOUT` / `ACCOUNT_LOCKED` | User (session) | Authentication event | outcome, reason |
 | `PASSWORD_CHANGE` / `PASSWORD_RESET` | User | Credential change | actor (self or Administrator) |
 
 ## 3. Retention Rules
 
-| Data | Minimum Retention | Rationale |
-|---|---|---|
-| `audit_log_entry` rows | 7 years, never purged by the application, **including every `SANDBOX_CREATE`/`SANDBOX_DELETE` pair** even after the underlying sandbox record is gone | 05-governance-handbook.md §12 makes the audit trail the only surviving evidence of a deleted sandbox record |
-| Archived Status Codes and all revisions/CRs/comments/domain sign-offs | 7 years from archival, never hard-deleted | Unchanged from v1 |
-| Published Releases | Indefinite, immutable | Unchanged from v1 |
-| Sandbox Status Codes themselves | **No minimum retention** — this is the one entity category explicitly exempted from retention, since it is designed to be created and deleted freely by an Administrator for testing (05-governance-handbook.md §12) | The audit trail, not the record, is what is retained |
-| Application/security logs | 1 year | Unchanged from v1 |
+| Data                                                                  | Minimum Retention                                                                                                                                                                                                    | Rationale                                                                                                   |
+| --------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| `audit_log_entry` rows                                                | 7 years, never purged by the application, **including every `SANDBOX_CREATE`/`SANDBOX_DELETE` pair** even after the underlying sandbox record is gone                                                                | 05-governance-handbook.md §12 makes the audit trail the only surviving evidence of a deleted sandbox record |
+| Archived Status Codes and all revisions/CRs/comments/domain sign-offs | 7 years from archival, never hard-deleted                                                                                                                                                                            | Unchanged from v1                                                                                           |
+| Published Releases                                                    | Indefinite, immutable                                                                                                                                                                                                | Unchanged from v1                                                                                           |
+| Sandbox Status Codes themselves                                       | **No minimum retention** — this is the one entity category explicitly exempted from retention, since it is designed to be created and deleted freely by an Administrator for testing (05-governance-handbook.md §12) | The audit trail, not the record, is what is retained                                                        |
+| Application/security logs                                             | 1 year                                                                                                                                                                                                               | Unchanged from v1                                                                                           |
 
 No feature provides deletion of `audit_log_entry` rows, non-sandbox Status Codes, or published Releases.
 

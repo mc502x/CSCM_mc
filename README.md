@@ -4,14 +4,16 @@ Governed system of record for Senvion 4XM/3XM/2XM wind turbine Main Controller a
 
 ## Status
 
-This repository currently holds the **v2.0 software delivery documentation package** (`docs/`) — the complete requirements, architecture, and design basis for the application. Implementation has not started yet. See [docs/00-INDEX.md](docs/00-INDEX.md) for the full document set and [docs/18-claude-code-implementation-guide.md](docs/18-claude-code-implementation-guide.md) for the build plan.
+This repository currently holds the **v3.0 software delivery documentation package** (`docs/`) — the complete requirements, architecture, and design basis for the application, grounded in a real 897-row export of the live status code library and a 264-row Hub Controller export. Implementation has not started yet. See [docs/00-INDEX.md](docs/00-INDEX.md) for the full document set and version history, and [docs/18-claude-code-implementation-guide.md](docs/18-claude-code-implementation-guide.md) for the build plan.
 
 ## Quick Facts
 
 - **Identifier format:** `StCd-XXXXX` (five digits), assigned only when a Change Request is submitted for Review — never while still in Draft.
-- **Classification & numbering:** by Functional System Group (Converter/Grid Interface, Generator, Meteorology/Nacelle, Pitch/Hub, Tower, Transformer/Switchgear, Drive Train, Yaw, Turbine Control/Safety/SCADA), each with a fixed numeric range — see [docs/05-governance-handbook.md](docs/05-governance-handbook.md).
+- **Classification & numbering:** by Functional System Group and mandatory Functional Subgroup — 12 groups total: nine Main Controller groups (1000–9999) plus three Hub Controller groups (11000–13999, `WTUR`/`WROT` intentionally reused with different ranges, `WPPD` new) — see [docs/05-governance-handbook.md](docs/05-governance-handbook.md). `10000–10999`, `14000–14999`, `15000–15999`, and `16000–16999` are confirmed free capacity for future groups; an Administrator can assign a new group or subgroup into any free range without a schema change.
 - **Roles:** Administrator (Product Owner / Component Owner Controls Software), Engineer, Reviewer (Sub-PO for Status Codes), Chief Engineer, Viewer.
-- **Lifecycle:** Draft → Review (dual sign-off) → PendingApproval → Approved (Chief Engineer) → Released → Deprecated → Archived.
+- **Lifecycle:** Draft → Review (dual sign-off: Reviewer + Administrator) → PendingApproval → Approved (Chief Engineer) → Released → Deprecated → Archived.
+- **Library import:** CSV/XLSX upload creates Draft Change Requests only — every imported row still passes the full governance cycle before Release.
+- **UI:** shares the OneTool platform's visual shell (top bar, sidebar, design tokens); CSCM Tool keeps its own login and credential store.
 - **Deployment:** fully on-premises. No public cloud component anywhere in the design.
 
 ## Repository Layout
@@ -24,9 +26,11 @@ cscm_tool/             Application source (Flask backend, server-rendered UI) �
 
 ## Open Items Before Production Go-Live
 
-- **Functional Subgroup taxonomy** is currently a structural placeholder pending the real list from Controls Engineering (`docs/06-data-dictionary.md` §9a).
-- **A `15000–15999` status code range exists in the live 4XM codebase** (`Yogi/2XM/#15000-15999`) that is not yet represented in the documented Functional System Group table and needs classification.
-- **A representative real status code example** (`StCd_4960.st`) is referenced but not yet reviewed against the data dictionary's attribute set.
+- The exact meaning of `Covert` across several audience-access vocabularies (Sales, TCC, Service, etc.) is unconfirmed (`docs/06-data-dictionary.md` §9d).
+- Descriptive labels for the 23 Available Group codes and the eight numeric Program Reference fields (Brake Program, Yaw Program, etc.) are not available from the source exports and need Controls Engineering input (`docs/06-data-dictionary.md` §2c, §9c).
+- Whether `software_version` belongs on `StatusCodeRevision` or on `Release` is still open (`docs/06-data-dictionary.md` §2).
+
+Resolved since the last README update: the Functional Subgroup taxonomy is real and seeded (27 Main + 11 Hub = 38 subgroups); `15000–15999` and its neighboring free ranges are confirmed reserved capacity, not a classification gap.
 
 ## Contributing
 

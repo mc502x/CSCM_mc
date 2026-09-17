@@ -11,6 +11,7 @@ CSCM Tool holds engineering-governed data with compliance/audit obligations (05-
 - **SEC-003** Idle session timeout 30 minutes; absolute session lifetime 12 hours.
 - **SEC-004** Account lockout: 5 consecutive failed attempts locks the account for 15 minutes.
 - **SEC-005** The authentication subsystem sits behind the `AuthProvider` interface (08-system-architecture.md §7) so a future SSO integration is additive. **The future SSO target is on-premises Active Directory (LDAP/Kerberos) or on-prem ADFS/SAML federation — not a cloud identity provider such as Azure AD.** This corrects the original stack assumption and is a hard requirement flowing from the no-cloud-infrastructure constraint; no OIDC/cloud-IdP code path may be introduced at any phase without an explicit, separate decision to relax that constraint.
+- **SEC-006** (new 2026-09-17) CSCM Tool's integration with the shared OneTool platform (10-ui-ux-specification.md §0) is **visual only** — shared top bar, sidebar, design tokens, and component treatments. It shares no authentication, session, or credential mechanism with OneTool: `SessionPasswordAuthProvider` (and, later, the on-prem AD/ADFS provider above) remains CSCM Tool's sole identity source. No code path may accept a OneTool-issued session or token as proof of CSCM Tool identity without an explicit, separate decision to relax this boundary — confirmed explicitly by the business, not a default worth quietly reconsidering during implementation.
 
 ## 3. Authorization — Role-Based Access Control
 
@@ -35,13 +36,13 @@ Five fixed roles: Administrator, Engineer, Reviewer, Chief Engineer, Viewer (00-
 | Manage Users/Roles/Engineering Domain tags | ✓ | — | — | — | — |
 | Manage all Lookup Vocabularies (incl. Functional Group/Subgroup/Platform) | ✓ | — (propose only) | — | — | — |
 | View Audit Log | ✓ | — | ✓ (scoped) | ✓ (scoped) | — |
-| Export catalogue (CSV/JSON/PDF) | ✓ | ✓ | ✓ | ✓ | ✓ (Approved/Released only) |
+| Export catalogue (CSV/JSON/XLSX/PDF) | ✓ | ✓ | ✓ | ✓ | ✓ (Approved/Released only) |
 | Export full database | ✓ | — | — | — | — |
 
 - **SEC-010** Authorization checks live in the service layer, not only route decorators/UI conditionals.
 - **SEC-011** Segregation-of-duties is a hard server-side check at all three decision points (§3 of 09-api-specification.md): Reviewer sign-off, Administrator sign-off, and Chief Engineer approval each independently reject if the actor matches the CR's author or, for the Chief Engineer step, either of the two prior sign-offs.
 - **SEC-012** Principle of least privilege: default role on new user creation is Viewer.
-- **SEC-013** Restricted-field enforcement: `access_rights_id` on a revision may be written by an Engineer only while the revision is in `DRAFT`; the value only becomes authoritative once stamped by the Administrator's sign-off action, which is the sole path by which `admin_signoff_at` becomes non-null (06-data-dictionary.md §2, "restricted field"). This is enforced in the service layer, not merely a UI convention.
+- **SEC-013** Restricted-field enforcement: each of the eight audience-access fields (corrected 2026-09-17 — replaces the single `access_rights_id`: `development_access`, `sales_access`, `tcc_access`, `service_access`, `turbine_operator_package_access`, `grid_operator_access`, `service_partner_access`, `customer_access`) on a revision may be written by an Engineer only while the revision is in `DRAFT`; none becomes authoritative until stamped by the Administrator's sign-off action, which is the sole path by which `admin_signoff_at` becomes non-null (06-data-dictionary.md §2d, "restricted field"). This is enforced in the service layer, not merely a UI convention.
 - **SEC-014** `DELETE /status-codes/{id}` is authorized only when both `actor.role == ADMINISTRATOR` **and** `status_code.is_sandbox == true`; the second condition is additionally enforced by a database trigger (`trg_prevent_nonsandbox_delete`, 07-database-design.md §5) as defense in depth against a service-layer bug.
 - **SEC-015** `GET /exports/full-database` is authorized only for `actor.role == ADMINISTRATOR`; no other role, including Chief Engineer, may reach it.
 
@@ -55,7 +56,13 @@ Unchanged in mechanism from v1: server-side session store, immediate revocation 
 
 ## 6. Input Validation
 
-Unchanged in mechanism from v1 (SEC-020–SEC-024: server-side authoritative validation, parameterized queries only, Jinja2 auto-escaping never bypassed on user-supplied content, CSV formula-injection sanitization on export). The Cross-Domain Sign-Off text fields and comment fields (`review_comment.comment_text`) follow the same output-encoding rule as Title/Description.
+- **SEC-020** All input is validated server-side against the rules in 06-data-dictionary.md regardless of client-side validation state (client-side validation is a UX convenience only, never a trust boundary).
+- **SEC-021** Parameterized queries / ORM bound parameters exclusively — no string-concatenated SQL anywhere in the codebase, enforced via code review checklist (15-development-standards.md).
+- **SEC-022** All user-supplied text rendered in HTML (Title, Description, comments, justifications, the eight audience-access field labels) is output-encoded by the templating engine's auto-escaping (Jinja2 default autoescape must remain enabled; raw/`|safe` filters are prohibited on user-supplied content).
+- **SEC-023** File export generation (CSV/XLSX/PDF) sanitizes any field that could trigger CSV formula injection (leading `=`, `+`, `-`, `@` characters are prefixed with a single quote or tab on export).
+- **SEC-024** Any future file-upload feature must go through file-type allow-listing, size limits, and storage outside the web root before it ships. The library import feature (05-governance-handbook.md §6b) is the first such feature: uploaded CSV/XLSX files are validated for MIME type and size before parsing, and the raw upload is never executed or served back to a browser.
+
+The Cross-Domain Sign-Off text fields and comment fields (`review_comment.comment_text`) follow the same output-encoding rule (SEC-022) as Title/Description.
 
 ## 7. Transport & Data Protection
 

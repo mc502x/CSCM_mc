@@ -30,7 +30,7 @@ Unchanged in structure from v1 (14-deployment-architecture.md v1 §3): CI builds
 
 CSCM Tool's production database is the Master Database (08-system-architecture.md §6) — there is no external master system it synchronizes with. Two, and only two, ways data leaves the system, both Administrator-gated:
 
-1. **Catalogue export** (CSV/JSON/PDF) — role-scoped per 11-security-architecture.md §3, generated on demand, never automatic/scheduled in MVP, used by Technical Publications and other downstream consumers.
+1. **Catalogue export** (CSV/JSON/XLSX/PDF) — role-scoped per 11-security-architecture.md §3, generated on demand, never automatic/scheduled in MVP, used by Technical Publications and other downstream consumers.
 2. **Full-database export/backup** — Administrator-only (SEC-015), a raw SQLite backup file, used for disaster recovery, environment migration, or handing a complete dataset to an authorized downstream consumer under separate organizational process. This is distinct from the nightly backup procedure (§6) in that it is a manually-triggered, audited (`FULL_DATABASE_EXPORT`, 12-audit-compliance.md §2), on-demand action rather than a scheduled operational job — though it uses the same underlying SQLite Online Backup mechanism.
 
 No system pushes data into CSCM Tool; all status codes are authored inside the application by design (01-executive-summary.md §1).

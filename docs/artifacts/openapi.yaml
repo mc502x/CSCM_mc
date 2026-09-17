@@ -4,8 +4,9 @@ info:
   description: >
     Controller Status Code Management Tool REST API. Versioned at /api/v1. All endpoints
     require an authenticated session (see /auth/login) except where noted. Runs on the
-    internal on-premises network only. See docs/09-api-specification.md for narrative detail.
-  version: "2.0.0"
+    internal on-premises network only. Field set grounded in a real export of the live
+    status code library (2026-09-17). See docs/09-api-specification.md for narrative detail.
+  version: "3.0.0"
 servers:
   - url: /api/v1
 security:
@@ -17,6 +18,7 @@ tags:
   - name: Revisions
   - name: ChangeRequests
   - name: DomainSignoffs
+  - name: Import
   - name: Releases
   - name: Lookups
   - name: AuditLog
@@ -109,39 +111,10 @@ paths:
             application/json:
               schema: { $ref: '#/components/schemas/User' }
 
-  /users/me/change-password:
-    post:
-      tags: [Users]
-      summary: Change own password (FR-013)
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema: { $ref: '#/components/schemas/PasswordChange' }
-      responses:
-        '204': { description: Password changed }
-        '401': { $ref: '#/components/responses/Unauthorized' }
-        '422': { $ref: '#/components/responses/ValidationError' }
-
-  /users/{userId}/force-reset-password:
-    parameters: [{ $ref: '#/components/parameters/UserId' }]
-    post:
-      tags: [Users]
-      summary: Force-reset a user's password (Administrator only, FR-014)
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema: { $ref: '#/components/schemas/PasswordReset' }
-      responses:
-        '204': { description: Password reset }
-        '403': { $ref: '#/components/responses/Forbidden' }
-        '422': { $ref: '#/components/responses/ValidationError' }
-
   /status-codes:
     get:
       tags: [StatusCodes]
-      summary: List/search status codes (current revision per code)
+      summary: List/search status codes (current revision per code). Sandbox records excluded unless is_sandbox=true is passed explicitly.
       parameters:
         - { $ref: '#/components/parameters/Page' }
         - { $ref: '#/components/parameters/PageSize' }
@@ -176,8 +149,9 @@ paths:
     post:
       tags: [StatusCodes]
       summary: >
-        Create a new Status Code (Draft; no identifier assigned yet) or a Sandbox Status Code
-        (is_sandbox=true, Administrator only, draws from the isolated StCd-T##### band)
+        Create a new Status Code (Draft; no identifier assigned yet — functional_subgroup is
+        mandatory, never optional) or a Sandbox Status Code (is_sandbox=true, Administrator
+        only, draws from the isolated StCd-T##### band)
       requestBody:
         required: true
         content:
@@ -189,6 +163,7 @@ paths:
             application/json:
               schema: { $ref: '#/components/schemas/StatusCodeRevision' }
         '403': { $ref: '#/components/responses/Forbidden' }
+        '422': { $ref: '#/components/responses/ValidationError' }
 
   /status-codes/{statusCodeId}:
     parameters: [{ $ref: '#/components/parameters/StatusCodeId' }]
@@ -207,62 +182,6 @@ paths:
       responses:
         '204': { description: Deleted; a SANDBOX_DELETE audit entry with a full before-state snapshot is written }
         '403': { description: Not a sandbox record, or actor is not Administrator }
-
-  /status-codes/{statusCodeId}/deprecation-requests:
-    parameters: [{ $ref: '#/components/parameters/StatusCodeId' }]
-    post:
-      tags: [StatusCodes]
-      summary: >
-        Initiate deprecation of a Released Status Code (FR-050). Opens a copy-on-write Draft
-        revision carrying the reason, wrapped in a cr_type=DEPRECATION Change Request that goes
-        through the same submit/dual-review/Chief-Engineer-approval cycle as any other CR;
-        approval lands on DEPRECATED rather than APPROVED (docs/05-governance-handbook.md §5).
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema: { $ref: '#/components/schemas/DeprecationRequestCreate' }
-      responses:
-        '201':
-          content:
-            application/json:
-              schema: { $ref: '#/components/schemas/StatusCodeRevision' }
-        '409': { description: Not Released, or an open revision already exists (BR-003) }
-        '422': { $ref: '#/components/responses/ValidationError' }
-
-  /status-codes/{statusCodeId}/archive:
-    parameters: [{ $ref: '#/components/parameters/StatusCodeId' }]
-    post:
-      tags: [StatusCodes]
-      summary: >
-        Archive a Deprecated Status Code (FR-051, Administrator only, direct action — no CR).
-        Rejected until the minimum retention period as Deprecated has elapsed (BR-006).
-      responses:
-        '200':
-          content:
-            application/json:
-              schema: { $ref: '#/components/schemas/StatusCodeRevision' }
-        '409': { description: Not Deprecated, or retention period not yet elapsed }
-
-  /status-codes/{statusCodeId}/reinstate:
-    parameters: [{ $ref: '#/components/parameters/StatusCodeId' }]
-    post:
-      tags: [StatusCodes]
-      summary: >
-        Reinstate a Deprecated Status Code back to Released (exceptional, Administrator only,
-        direct action — no CR — docs/05-governance-handbook.md §5).
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema: { $ref: '#/components/schemas/ReinstateRequest' }
-      responses:
-        '200':
-          content:
-            application/json:
-              schema: { $ref: '#/components/schemas/StatusCodeRevision' }
-        '409': { description: Not Deprecated }
-        '422': { $ref: '#/components/responses/ValidationError' }
 
   /status-codes/{statusCodeId}/revisions:
     parameters: [{ $ref: '#/components/parameters/StatusCodeId' }]
@@ -308,7 +227,7 @@ paths:
     parameters: [{ name: revisionId, in: path, required: true, schema: { type: integer } }]
     patch:
       tags: [Revisions]
-      summary: Edit a Draft revision's fields (Engineer, own CR only)
+      summary: Edit a Draft revision's fields (Engineer, own CR only). Never resets other fields on a validation failure — a rejected request changes nothing; the client keeps its unsaved edits.
       requestBody:
         content:
           application/json:
@@ -319,6 +238,7 @@ paths:
             application/json:
               schema: { $ref: '#/components/schemas/StatusCodeRevision' }
         '409': { description: Optimistic concurrency conflict, or revision not in DRAFT }
+        '422': { $ref: '#/components/responses/ValidationError' }
 
   /change-requests:
     get:
@@ -382,7 +302,7 @@ paths:
       tags: [ChangeRequests]
       summary: >
         Administrator (Product Owner) sign-off. Not the requester. Second of two required
-        Review sign-offs; also confirms/overrides restricted fields (e.g. access_rights).
+        Review sign-offs; also confirms/overrides the eight restricted audience-access fields.
         Recording the second sign-off (either order) atomically advances Review -> PendingApproval.
       requestBody:
         content:
@@ -448,6 +368,62 @@ paths:
             application/json:
               schema: { $ref: '#/components/schemas/DomainSignoff' }
         '403': { description: Actor does not hold the named domain }
+
+  /imports:
+    get:
+      tags: [Import]
+      summary: List import jobs
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items: { $ref: '#/components/schemas/ImportJob' }
+    post:
+      tags: [Import]
+      summary: >
+        Upload a CSV or XLSX status code library file. Every row that passes validation
+        becomes a normal Draft Change Request (cr_type=IMPORT) subject to the full
+        dual-review-then-Chief-Engineer-approval cycle — import is a faster data-entry
+        path, never a governance bypass (05-governance-handbook.md §6b).
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              required: [file]
+              properties:
+                file: { type: string, format: binary }
+      responses:
+        '202':
+          description: Import job accepted, processing asynchronously
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/ImportJob' }
+
+  /imports/{importJobId}:
+    parameters: [{ name: importJobId, in: path, required: true, schema: { type: integer } }]
+    get:
+      tags: [Import]
+      summary: Get import job status, including created/error counts
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/ImportJob' }
+
+  /imports/{importJobId}/errors:
+    parameters: [{ name: importJobId, in: path, required: true, schema: { type: integer } }]
+    get:
+      tags: [Import]
+      summary: Download the per-row error report for a completed import job
+      responses:
+        '200':
+          description: File stream (CSV)
+          content:
+            application/octet-stream: {}
 
   /releases:
     get:
@@ -526,10 +502,10 @@ paths:
   /releases/{releaseId}/export:
     parameters:
       - { name: releaseId, in: path, required: true, schema: { type: integer } }
-      - { name: format, in: query, required: true, schema: { type: string, enum: [csv, json, pdf] } }
+      - { name: format, in: query, required: true, schema: { type: string, enum: [csv, json, xlsx, pdf] } }
     get:
       tags: [Exports]
-      summary: Export a release catalogue (role-scoped, per 11-security-architecture.md §3)
+      summary: Export a release catalogue as a flat table (role-scoped, per 11-security-architecture.md §3). All formats, including JSON, are flat row-per-status-code, not nested.
       responses:
         '200':
           description: File stream
@@ -555,16 +531,16 @@ paths:
         schema:
           type: string
           enum: [functional-system-groups, functional-subgroups, turbine-platforms,
-                 engineering-domains, status-categories, availability-groups,
-                 brake-programs, reset-programs, operational-states, access-rights,
-                 alarm-behaviours]
+                 engineering-domains, available-groups, development-access, sales-access,
+                 tcc-access, service-access, turbine-operator-package-access,
+                 grid-operator-access, service-partner-access, customer-access]
       - name: functional_system_group
         in: query
         description: Required when vocabulary=functional-subgroups, to scope the returned subgroups
         schema: { type: string }
     get:
       tags: [Lookups]
-      summary: List active values of a controlled vocabulary
+      summary: List active values of a controlled vocabulary. Each value includes its description field, surfaced by the UI as inline help text next to every dropdown option (addresses "no explanations given on options").
       responses:
         '200':
           content:
@@ -572,60 +548,70 @@ paths:
               schema:
                 type: array
                 items: { $ref: '#/components/schemas/LookupValue' }
+
+  /lookups/functional-system-groups:
     post:
       tags: [Lookups]
       summary: >
-        Add a new value to a controlled vocabulary (Administrator only, US-091).
-        Rejected for functional-system-groups, a fixed structural set
-        (docs/05-governance-handbook.md §2).
+        Create a brand-new Functional System Group (Administrator only), into any currently
+        free range (10000-10999, 14000-14999, 15000-15999, 16000-16999 as of 2026-09-17).
+        The proposed range must not overlap any existing group; validated at the service
+        layer with a helpful error naming the conflicting group, and as a backstop by a
+        database trigger (07-database-design.md §5).
       requestBody:
         required: true
         content:
           application/json:
-            schema: { $ref: '#/components/schemas/LookupValueCreate' }
+            schema:
+              type: object
+              required: [code, label, range_start, range_end]
+              properties:
+                code: { type: string, example: WNEW }
+                label: { type: string, example: New Subsystem }
+                range_start: { type: integer, example: 15000 }
+                range_end: { type: integer, example: 15999 }
       responses:
         '201':
           content:
             application/json:
               schema: { $ref: '#/components/schemas/LookupValue' }
-        '422': { $ref: '#/components/responses/ValidationError' }
+        '409': { description: Proposed range overlaps an existing Functional System Group }
 
-  /lookups/{vocabulary}/{valueId}:
-    parameters:
-      - name: vocabulary
-        in: path
-        required: true
-        schema:
-          type: string
-          enum: [functional-system-groups, functional-subgroups, turbine-platforms,
-                 engineering-domains, status-categories, availability-groups,
-                 brake-programs, reset-programs, operational-states, access-rights,
-                 alarm-behaviours]
-      - { name: valueId, in: path, required: true, schema: { type: integer } }
-    patch:
+  /lookups/functional-subgroups:
+    post:
       tags: [Lookups]
       summary: >
-        Update a vocabulary value's label/description/active flag/sort order (Administrator
-        only). Numeric ranges are immutable through this endpoint (BR-001).
+        Create a new Functional Subgroup (Administrator only). The proposed sub-range must
+        not overlap any existing subgroup in the same Functional System Group; validated at
+        the service layer with a helpful error naming the conflicting subgroup, and as a
+        backstop by a database trigger (07-database-design.md §5).
       requestBody:
         required: true
         content:
           application/json:
-            schema: { $ref: '#/components/schemas/LookupValueUpdate' }
+            schema:
+              type: object
+              required: [functional_system_group, code, label, sub_range_start, sub_range_end]
+              properties:
+                functional_system_group: { type: string, example: WROT }
+                code: { type: string, example: 045xx }
+                label: { type: string, example: Pitch Actuator Diagnostics }
+                sub_range_start: { type: integer, example: 4500 }
+                sub_range_end: { type: integer, example: 4599 }
       responses:
-        '200':
+        '201':
           content:
             application/json:
               schema: { $ref: '#/components/schemas/LookupValue' }
-        '404': { $ref: '#/components/responses/NotFound' }
+        '409': { description: Proposed sub-range overlaps an existing subgroup }
 
   /status-codes/next-available:
     get:
       tags: [StatusCodes]
-      summary: Preview (non-binding) the next available identifier for a Functional Group [+ Subgroup], for UI display only — not allocated until Submit for Review
+      summary: Preview (non-binding) the next available identifier for a Functional Group + Subgroup, for UI display only — not allocated until Submit for Review
       parameters:
         - { name: functional_system_group, in: query, required: true, schema: { type: string } }
-        - { name: functional_subgroup, in: query, schema: { type: string } }
+        - { name: functional_subgroup, in: query, required: true, schema: { type: string } }
       responses:
         '200':
           content:
@@ -671,7 +657,7 @@ components:
     Unauthorized: { description: Not authenticated, content: { application/json: { schema: { $ref: '#/components/schemas/Error' } } } }
     Forbidden: { description: Not authorized, content: { application/json: { schema: { $ref: '#/components/schemas/Error' } } } }
     NotFound: { description: Not found, content: { application/json: { schema: { $ref: '#/components/schemas/Error' } } } }
-    ValidationError: { description: Validation failed, content: { application/json: { schema: { $ref: '#/components/schemas/ValidationErrorBody' } } } }
+    ValidationError: { description: "Validation failed. Field-level errors only — the client's already-entered data is never discarded by this response (addresses 'when creating fails, all information is resetted')", content: { application/json: { schema: { $ref: '#/components/schemas/ValidationErrorBody' } } } }
 
   schemas:
     LifecycleStatus:
@@ -721,45 +707,16 @@ components:
     UserList:
       type: object
       properties: { items: { type: array, items: { $ref: '#/components/schemas/User' } }, total: { type: integer }, page: { type: integer }, page_size: { type: integer } }
-    PasswordChange:
-      type: object
-      required: [current_password, new_password]
-      properties:
-        current_password: { type: string, format: password }
-        new_password: { type: string, format: password }
-    PasswordReset:
-      type: object
-      required: [new_password]
-      properties:
-        new_password: { type: string, format: password }
     LookupValue:
       type: object
       properties:
         id: { type: integer }
         code: { type: string }
         label: { type: string }
-        is_active: { type: boolean }
+        description: { type: string, nullable: true, description: "Surfaced by the UI as inline help text next to the option" }
         range_start: { type: integer, nullable: true }
         range_end: { type: integer, nullable: true }
         functional_system_group: { type: string, nullable: true, description: "Present for functional-subgroups only" }
-    LookupValueCreate:
-      type: object
-      required: [code, label]
-      properties:
-        code: { type: string }
-        label: { type: string }
-        description: { type: string }
-        sort_order: { type: integer }
-        functional_system_group: { type: string, description: "Required when vocabulary=functional-subgroups" }
-        sub_range_start: { type: integer, description: "Required when vocabulary=functional-subgroups" }
-        sub_range_end: { type: integer, description: "Required when vocabulary=functional-subgroups" }
-    LookupValueUpdate:
-      type: object
-      properties:
-        label: { type: string }
-        description: { type: string }
-        is_active: { type: boolean }
-        sort_order: { type: integer }
     StatusCodeRevision:
       type: object
       properties:
@@ -767,24 +724,45 @@ components:
         status_code_id: { type: integer }
         status_code_identifier: { type: string, nullable: true, example: StCd-01232, description: "NULL while Draft" }
         functional_system_group: { type: string, example: WCNV }
-        functional_subgroup: { type: string, nullable: true }
+        functional_subgroup: { type: string, description: "Mandatory, never null from Draft onward" }
         turbine_platforms: { type: array, items: { type: string }, example: [2XM, 3XM] }
         is_sandbox: { type: boolean }
         platform_variant_of_status_code_id: { type: integer, nullable: true }
+        legacy_reference_number: { type: string, nullable: true }
         revision_number: { type: integer }
         is_current: { type: boolean }
         title: { type: string }
         description: { type: string }
-        status_category: { type: string }
-        availability_group: { type: string }
-        brake_program: { type: string }
-        reset_program: { type: string }
-        software_version: { type: string }
-        operational_state: { type: string }
-        access_rights: { type: string, description: "Engineer-proposed until admin-signoff confirms it" }
-        delay_before_alarm_seconds: { type: integer }
-        delay_before_reset_seconds: { type: integer }
-        alarm_behaviour: { type: string }
+        software_version: { type: string, nullable: true, example: "1.1.1.4.2MW" }
+        status_category: { type: string, enum: [ERROR, WARNING, INFO] }
+        available_group: { type: integer, example: 27 }
+        alarm_flag: { type: boolean }
+        set_delay: { type: string, example: 10ms }
+        reset_delay: { type: string, example: 2min }
+        up_down_counter: { type: boolean }
+        trigger_snapshot: { type: boolean }
+        loadless_spinning_permitted: { type: boolean }
+        number_of_times_repeated: { type: integer, nullable: true }
+        repeated_over_the_course: { type: string, nullable: true, example: 1d }
+        status_code_for_repeated_error: { type: integer, nullable: true, description: "Opaque reference to a separate code pool, not an StCd" }
+        yaw_program: { type: integer }
+        manual_reset_program: { type: integer }
+        auto_reset_program: { type: integer }
+        converter_reactive_power_program: { type: integer }
+        brake_program: { type: integer }
+        umrichterprogramm_gsc: { type: integer }
+        umrichterprogramm_msc: { type: integer }
+        yaw_bearing_lubrication_program: { type: integer }
+        development_access: { type: string, nullable: true }
+        sales_access: { type: string, nullable: true }
+        tcc_access: { type: string, nullable: true }
+        service_access: { type: string, nullable: true }
+        turbine_operator_package_access: { type: string, nullable: true }
+        grid_operator_access: { type: string, nullable: true }
+        service_partner_access: { type: string, nullable: true }
+        customer_access: { type: string, nullable: true, description: "Engineer-proposed until admin-signoff confirms it, like all eight access fields" }
+        logical_node: { type: string, description: "Derived, read-only — always the parent Functional System Group's prefix" }
+        node_value: { type: integer, description: "Derived, read-only — always the parent Functional System Group's sort_order" }
         owner_id: { type: integer }
         lifecycle_status: { $ref: '#/components/schemas/LifecycleStatus' }
         created_by: { type: integer }
@@ -800,25 +778,43 @@ components:
         superseded_by_status_code_id: { type: integer, nullable: true }
     StatusCodeCreate:
       type: object
-      required: [functional_system_group, title, description, status_category, availability_group,
-                 reset_program, software_version, operational_state, alarm_behaviour, turbine_platforms]
+      required: [functional_system_group, functional_subgroup, title, description, status_category,
+                 available_group, set_delay, reset_delay, turbine_platforms]
       properties:
         functional_system_group: { type: string, example: WCNV }
-        functional_subgroup: { type: string, nullable: true }
+        functional_subgroup: { type: string, description: "Mandatory — never optional", example: Converter }
         is_sandbox: { type: boolean, default: false, description: "Administrator only" }
         turbine_platforms: { type: array, items: { type: string }, minItems: 1 }
         title: { type: string }
         description: { type: string }
-        status_category: { type: string }
-        availability_group: { type: string }
-        brake_program: { type: string, default: BP-NONE }
-        reset_program: { type: string }
-        software_version: { type: string }
-        operational_state: { type: string }
-        access_rights: { type: string, default: SERVICE, description: "Engineer-proposed; confirmed at admin-signoff" }
-        delay_before_alarm_seconds: { type: integer, default: 0 }
-        delay_before_reset_seconds: { type: integer, default: 0 }
-        alarm_behaviour: { type: string }
+        software_version: { type: string, nullable: true }
+        status_category: { type: string, enum: [ERROR, WARNING, INFO] }
+        available_group: { type: integer }
+        alarm_flag: { type: boolean, default: false }
+        set_delay: { type: string, example: 10ms }
+        reset_delay: { type: string, example: 2min }
+        up_down_counter: { type: boolean, default: false }
+        trigger_snapshot: { type: boolean, default: false }
+        loadless_spinning_permitted: { type: boolean, default: false }
+        number_of_times_repeated: { type: integer, nullable: true }
+        repeated_over_the_course: { type: string, nullable: true }
+        status_code_for_repeated_error: { type: integer, nullable: true }
+        yaw_program: { type: integer, default: 0 }
+        manual_reset_program: { type: integer, default: 0 }
+        auto_reset_program: { type: integer, default: 0 }
+        converter_reactive_power_program: { type: integer, default: 0 }
+        brake_program: { type: integer, default: 0 }
+        umrichterprogramm_gsc: { type: integer, default: 0 }
+        umrichterprogramm_msc: { type: integer, default: 0 }
+        yaw_bearing_lubrication_program: { type: integer, default: 0 }
+        development_access: { type: string, nullable: true }
+        sales_access: { type: string, nullable: true }
+        tcc_access: { type: string, nullable: true }
+        service_access: { type: string, nullable: true }
+        turbine_operator_package_access: { type: string, nullable: true }
+        grid_operator_access: { type: string, nullable: true }
+        service_partner_access: { type: string, nullable: true }
+        customer_access: { type: string, nullable: true }
     StatusCodeRevisionCreate:
       allOf:
         - { $ref: '#/components/schemas/StatusCodeCreate' }
@@ -826,18 +822,9 @@ components:
           properties: { justification: { type: string } }
     StatusCodeRevisionUpdate:
       type: object
-      properties: { expected_updated_at: { type: string, format: date-time } }
-    DeprecationRequestCreate:
-      type: object
-      required: [reason]
+      description: Any subset of editable StatusCodeCreate fields, plus optimistic concurrency token
       properties:
-        reason: { type: string, description: "10-2000 chars" }
-        superseded_by_status_code_id: { type: integer, nullable: true }
-    ReinstateRequest:
-      type: object
-      required: [reason]
-      properties:
-        reason: { type: string, description: "10-2000 chars" }
+        expected_updated_at: { type: string, format: date-time }
     StatusCodeList:
       type: object
       properties:
@@ -875,9 +862,10 @@ components:
       properties:
         id: { type: integer }
         status_code_revision_id: { type: integer }
-        cr_type: { type: string, enum: [NEW, REVISION, DEPRECATION] }
+        cr_type: { type: string, enum: [NEW, REVISION, DEPRECATION, IMPORT] }
         requested_by: { type: integer }
         justification: { type: string, nullable: true }
+        import_job_id: { type: integer, nullable: true }
         state: { type: string, enum: [DRAFT, REVIEW, PENDING_APPROVAL, APPROVED, REJECTED, WITHDRAWN] }
         submitted_at: { type: string, format: date-time, nullable: true }
         chief_engineer_decided_at: { type: string, format: date-time, nullable: true }
@@ -902,6 +890,20 @@ components:
         total: { type: integer }
         page: { type: integer }
         page_size: { type: integer }
+    ImportJob:
+      type: object
+      properties:
+        id: { type: integer }
+        requested_by: { type: integer }
+        source_format: { type: string, enum: [CSV, XLSX] }
+        source_file_reference: { type: string }
+        row_count: { type: integer }
+        status: { type: string, enum: [PENDING, VALIDATING, COMPLETE, FAILED] }
+        created_count: { type: integer }
+        error_count: { type: integer }
+        error_report_reference: { type: string, nullable: true }
+        created_at: { type: string, format: date-time }
+        completed_at: { type: string, format: date-time, nullable: true }
     Release:
       type: object
       properties:
