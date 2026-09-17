@@ -1,0 +1,12 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "cscm-tool-dev",
+      "runtimeExecutable": "cscm_tool/.venv/Scripts/python.exe",
+      "runtimeArgs": ["-m", "flask", "run"],
+      "port": 5000,
+      "cwd": "cscm_tool"
+    }
+  ]
+}

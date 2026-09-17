@@ -38,23 +38,56 @@
 {% if tab == 'current' %}
 <div class="card">
   <dl class="kv">
+    <dt>Logical Node</dt><dd>{{ revision.logical_node }} <span class="muted">(node value {{ revision.node_value }})</span></dd>
+    <dt>Legacy Reference Number</dt><dd>{{ revision.legacy_reference_number or '—' }}</dd>
     <dt>Status Category</dt><dd>{{ revision.status_category }}</dd>
-    <dt>Availability Group</dt><dd>{{ revision.availability_group }}</dd>
-    <dt>Brake Program</dt><dd>{{ revision.brake_program }}</dd>
-    <dt>Reset Program</dt><dd>{{ revision.reset_program }}</dd>
-    <dt>Operational State</dt><dd>{{ revision.operational_state }}</dd>
-    <dt>Alarm Behaviour</dt><dd>{{ revision.alarm_behaviour }}</dd>
-    <dt>Access Rights</dt>
-    <dd>{{ revision.access_rights }}{% if not revision.admin_signoff_at %}<span class="proposed-badge">Proposed</span>{% endif %}</dd>
-    <dt>Software Version</dt><dd>{{ revision.software_version }}</dd>
-    <dt>Delay Before Alarm</dt><dd>{{ revision.delay_before_alarm_seconds }}s</dd>
-    <dt>Delay Before Reset</dt><dd>{{ revision.delay_before_reset_seconds }}s</dd>
+    <dt>Available Group</dt><dd>{{ revision.available_group }}</dd>
+    <dt>Software Version</dt><dd>{{ revision.software_version or '—' }}</dd>
+    <dt>Alarm</dt><dd>{{ 'Yes' if revision.alarm_flag else 'No' }}</dd>
+    <dt>Set Delay</dt><dd>{{ revision.set_delay }}</dd>
+    <dt>Reset Delay</dt><dd>{{ revision.reset_delay }}</dd>
+    <dt>Up/Down Counter</dt><dd>{{ 'Yes' if revision.up_down_counter else 'No' }}</dd>
+    <dt>Trigger Snapshot</dt><dd>{{ 'Yes' if revision.trigger_snapshot else 'No' }}</dd>
+    <dt>Loadless Spinning Permitted</dt><dd>{{ 'Yes' if revision.loadless_spinning_permitted else 'No' }}</dd>
     <dt>Description</dt><dd>{{ revision.description }}</dd>
     <dt>Owner</dt><dd>User #{{ revision.owner_id }}</dd>
     <dt>Effective Date</dt><dd>{{ revision.effective_date or '—' }}</dd>
     {% if revision.deprecated_reason %}
     <dt>Deprecation Reason</dt><dd>{{ revision.deprecated_reason }}</dd>
     {% endif %}
+  </dl>
+
+  {% if revision.number_of_times_repeated or revision.repeated_over_the_course or revision.status_code_for_repeated_error %}
+  <h2>Repeated-Error Escalation</h2>
+  <dl class="kv">
+    <dt>Number of Times Repeated</dt><dd>{{ revision.number_of_times_repeated or '—' }}</dd>
+    <dt>Repeated Over the Course</dt><dd>{{ revision.repeated_over_the_course or '—' }}</dd>
+    <dt>Status Code for Repeated Error</dt><dd>{{ revision.status_code_for_repeated_error if revision.status_code_for_repeated_error is not none else '—' }}</dd>
+  </dl>
+  {% endif %}
+
+  <h2>Program References <span class="muted">(advanced, controller firmware programs)</span></h2>
+  <dl class="kv">
+    <dt>Yaw Program</dt><dd>{{ revision.yaw_program }}</dd>
+    <dt>Manual Reset Program</dt><dd>{{ revision.manual_reset_program }}</dd>
+    <dt>Auto Reset Program</dt><dd>{{ revision.auto_reset_program }}</dd>
+    <dt>Converter Reactive Power Program</dt><dd>{{ revision.converter_reactive_power_program }}</dd>
+    <dt>Brake Program</dt><dd>{{ revision.brake_program }}</dd>
+    <dt>Umrichterprogramm GSC</dt><dd>{{ revision.umrichterprogramm_gsc }}</dd>
+    <dt>Umrichterprogramm MSC</dt><dd>{{ revision.umrichterprogramm_msc }}</dd>
+    <dt>Yaw Bearing Lubrication Program</dt><dd>{{ revision.yaw_bearing_lubrication_program }}</dd>
+  </dl>
+
+  <h2>Audience Access {% if not revision.admin_signoff_at %}<span class="proposed-badge">Proposed</span>{% endif %}</h2>
+  <dl class="kv">
+    <dt>Development</dt><dd>{{ revision.development_access or '—' }}</dd>
+    <dt>Sales</dt><dd>{{ revision.sales_access or '—' }}</dd>
+    <dt>TCC</dt><dd>{{ revision.tcc_access or '—' }}</dd>
+    <dt>Service</dt><dd>{{ revision.service_access or '—' }}</dd>
+    <dt>Turbine Operator Package</dt><dd>{{ revision.turbine_operator_package_access or '—' }}</dd>
+    <dt>Grid Operator</dt><dd>{{ revision.grid_operator_access or '—' }}</dd>
+    <dt>Service Partner</dt><dd>{{ revision.service_partner_access or '—' }}</dd>
+    <dt>Customer</dt><dd>{{ revision.customer_access or '—' }}</dd>
   </dl>
 </div>
 {% elif tab == 'history' %}

@@ -22,8 +22,8 @@ def list_status_codes():
     items, total = StatusCodeService.search(
         current_user,
         q=request.args.get("q"),
-        functional_system_group_code=request.args.get("functional_system_group"),
-        functional_subgroup_code=request.args.get("functional_subgroup"),
+        functional_system_group_id=request.args.get("functional_system_group", type=int),
+        functional_subgroup_id=request.args.get("functional_subgroup", type=int),
         turbine_platform_code=request.args.get("turbine_platform"),
         lifecycle_status=request.args.get("lifecycle_status"),
         is_sandbox=request.args.get("is_sandbox", "false").lower() == "true",
@@ -116,16 +116,20 @@ def reinstate_status_code(status_code_id: int):
 @api_v1_bp.get("/status-codes/next-available")
 @login_required
 def next_available_identifier():
-    group_code = request.args.get("functional_system_group")
-    if not group_code:
+    """v3: both ids required — Functional Subgroup is mandatory, never
+    optional (docs/artifacts/openapi.yaml)."""
+    group_id = request.args.get("functional_system_group", type=int)
+    subgroup_id = request.args.get("functional_subgroup", type=int)
+    if not group_id or not subgroup_id:
         return (
-            jsonify(error="validation_error", message="functional_system_group is required"),
+            jsonify(
+                error="validation_error",
+                message="functional_system_group and functional_subgroup are required",
+            ),
             422,
         )
     try:
-        preview = StatusCodeService.preview_next_identifier(
-            group_code, request.args.get("functional_subgroup")
-        )
+        preview = StatusCodeService.preview_next_identifier(group_id, subgroup_id)
     except ValueError as exc:
         return jsonify(error="validation_error", message=str(exc)), 422
     except DomainError as exc:

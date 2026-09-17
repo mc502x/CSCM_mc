@@ -16,9 +16,10 @@ class ChangeRequest(Base):
     status_code_revision_id = db.Column(
         db.Integer, db.ForeignKey("status_code_revision.id"), nullable=False, unique=True
     )
-    cr_type = db.Column(db.Text, nullable=False)  # NEW | REVISION | DEPRECATION
+    cr_type = db.Column(db.Text, nullable=False)  # NEW | REVISION | DEPRECATION | IMPORT
     requested_by = db.Column(db.Integer, db.ForeignKey("user.id"), nullable=False)
     justification = db.Column(db.Text)
+    import_job_id = db.Column(db.Integer, db.ForeignKey("import_job.id"))
     state = db.Column(db.Text, nullable=False, default="DRAFT")
     submitted_at = db.Column(db.Text)
     chief_engineer_decided_at = db.Column(db.Text)

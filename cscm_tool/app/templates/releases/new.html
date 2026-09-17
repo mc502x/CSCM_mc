@@ -22,7 +22,7 @@
       <select id="scope_functional_system_group" name="scope_functional_system_group">
         <option value="">(all groups)</option>
         {% for g in groups %}
-        <option value="{{ g.code }}">{{ g.code }} — {{ g.label }}</option>
+        <option value="{{ g.id }}">{{ g.code }} — {{ g.label }} ({{ g.range_start }}-{{ g.range_end }})</option>
         {% endfor %}
       </select>
     </div>

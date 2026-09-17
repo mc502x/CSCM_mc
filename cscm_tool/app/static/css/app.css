@@ -110,6 +110,9 @@ input[type=text], input[type=password], input[type=number], input[type=search], 
 textarea { min-height: 80px; }
 fieldset { border: 1px solid var(--color-border); border-radius: var(--radius); margin-bottom: 16px; padding: 14px; }
 legend { font-weight: 700; padding: 0 6px; }
+.fieldset-collapsible { border: 1px solid var(--color-border); border-radius: var(--radius); margin-bottom: 16px; padding: 14px; }
+.fieldset-collapsible summary { font-weight: 700; cursor: pointer; }
+.fieldset-collapsible[open] summary { margin-bottom: 10px; }
 .checkbox-list label { font-weight: 400; display: inline-flex; align-items: center; gap: 6px; margin-right: 14px; }
 
 .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }

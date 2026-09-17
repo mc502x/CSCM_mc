@@ -3,28 +3,43 @@
 import pytest
 
 from app.extensions import db
-from app.models.lookup import LookupFunctionalSystemGroup
+from app.models.lookup import LookupFunctionalSubgroup, LookupFunctionalSystemGroup
 from app.services.numbering_service import CapacityExhaustedError, NumberingService
+
+
+def _get_group(code: str, range_start: int) -> LookupFunctionalSystemGroup:
+    """v3: `code` alone is no longer unique (WTUR/WROT are each reused for a
+    second, numerically distinct Hub Controller group) — always disambiguate
+    by range_start too (see app/services/lookup_service.py)."""
+    return (
+        db.session.query(LookupFunctionalSystemGroup)
+        .filter(
+            LookupFunctionalSystemGroup.code == code,
+            LookupFunctionalSystemGroup.range_start == range_start,
+        )
+        .one()
+    )
+
+
+def _any_subgroup_id(group_id: int) -> int:
+    return (
+        db.session.query(LookupFunctionalSubgroup)
+        .filter(LookupFunctionalSubgroup.functional_system_group_id == group_id)
+        .first()
+        .id
+    )
 
 
 def test_first_allocation_in_a_group_starts_at_range_start(app):
     with app.app_context():
-        group = (
-            db.session.query(LookupFunctionalSystemGroup)
-            .filter(LookupFunctionalSystemGroup.code == "WCNV")
-            .one()
-        )
+        group = _get_group("WCNV", 1000)
         identifier = NumberingService.allocate_next_identifier(group.id, None)
         assert identifier == "StCd-01000"
 
 
 def test_allocation_increments_and_persists(app):
     with app.app_context():
-        group = (
-            db.session.query(LookupFunctionalSystemGroup)
-            .filter(LookupFunctionalSystemGroup.code == "WGEN")
-            .one()
-        )
+        group = _get_group("WGEN", 2000)
         first = NumberingService.allocate_next_identifier(group.id, None)
         _persist_status_code(group.id, first)
 
@@ -34,11 +49,7 @@ def test_allocation_increments_and_persists(app):
 
 def test_capacity_exhaustion_raises(app):
     with app.app_context():
-        group = (
-            db.session.query(LookupFunctionalSystemGroup)
-            .filter(LookupFunctionalSystemGroup.code == "WROT")
-            .one()
-        )
+        group = _get_group("WROT", 4000)
         # Fabricate an identifier at the top of the range to force exhaustion
         # without actually allocating 1000 codes.
         _persist_status_code(group.id, f"StCd-{group.range_end:05d}")
@@ -77,6 +88,7 @@ def _persist_status_code(group_id: int, identifier: str) -> None:
         StatusCode(
             status_code_identifier=identifier,
             functional_system_group_id=group_id,
+            functional_subgroup_id=_any_subgroup_id(group_id),
             owner_id=owner.id,
             created_at=utcnow_iso(),
         )

@@ -11,14 +11,14 @@
   <form method="post">
     <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
     <table>
-      <thead><tr><th></th><th>Identifier</th><th>Title</th><th>Functional Group</th></tr></thead>
+      <thead><tr><th></th><th>Identifier</th><th>Title</th><th>Functional Group / Subgroup</th></tr></thead>
       <tbody>
         {% for c in candidates %}
         <tr>
           <td><input type="checkbox" name="revision_ids" value="{{ c.id }}" {{ 'checked' if c.id in included_ids }}></td>
           <td>{{ c.status_code_identifier }}</td>
           <td>{{ c.title }}</td>
-          <td>{{ c.functional_system_group }}</td>
+          <td>{{ c.functional_system_group }} / {{ c.functional_subgroup }}</td>
         </tr>
         {% endfor %}
         {% if not candidates %}

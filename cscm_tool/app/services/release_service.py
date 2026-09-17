@@ -72,13 +72,16 @@ class ReleaseService:
             .join(StatusCode, StatusCode.id == StatusCodeRevision.status_code_id)
             .filter(StatusCodeRevision.lifecycle_status == "APPROVED", StatusCode.is_sandbox == 0)
         )
-        group_code = scope.get("functional_system_group")
-        if group_code:
-            group = LookupService.get_by_code(LookupFunctionalSystemGroup, group_code)
+        # v3: scoped by surrogate id, not `code` — see
+        # app/services/lookup_service.py module docstring for why a
+        # Functional System Group's code alone is no longer unambiguous.
+        group_id = scope.get("functional_system_group")
+        if group_id:
+            group = LookupService.get_by_id(LookupFunctionalSystemGroup, group_id)
             query = query.filter(StatusCode.functional_system_group_id == group.id)
-        subgroup_code = scope.get("functional_subgroup")
-        if subgroup_code:
-            subgroup = LookupService.get_by_code(LookupFunctionalSubgroup, subgroup_code)
+        subgroup_id = scope.get("functional_subgroup")
+        if subgroup_id:
+            subgroup = LookupService.get_by_id(LookupFunctionalSubgroup, subgroup_id)
             query = query.filter(StatusCode.functional_subgroup_id == subgroup.id)
 
         claimed_elsewhere = {

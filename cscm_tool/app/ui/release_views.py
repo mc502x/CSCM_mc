@@ -23,8 +23,8 @@ def release_new():
     if request.method == "POST":
         name = request.form.get("name", "")
         version_label = request.form.get("version_label", "")
-        scope_group = request.form.get("scope_functional_system_group") or None
-        scope_filter = {"functional_system_group": scope_group} if scope_group else {}
+        scope_group_id = request.form.get("scope_functional_system_group", type=int)
+        scope_filter = {"functional_system_group": scope_group_id} if scope_group_id else {}
         if not name or not version_label:
             flash("Name and version label are required.", "error")
         else:

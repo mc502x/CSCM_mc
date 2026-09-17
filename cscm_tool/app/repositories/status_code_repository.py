@@ -4,11 +4,7 @@ resolution (BR-002/BR-003)."""
 from sqlalchemy import or_
 
 from app.extensions import db
-from app.models.lookup import (
-    LookupFunctionalSubgroup,
-    LookupFunctionalSystemGroup,
-    LookupTurbinePlatform,
-)
+from app.models.lookup import LookupTurbinePlatform
 from app.models.status_code import StatusCode, StatusCodeRevision, StatusCodeRevisionPlatform
 from app.repositories.base import BaseRepository
 
@@ -42,8 +38,8 @@ class StatusCodeRepository(BaseRepository[StatusCode]):
         self,
         *,
         q: str | None = None,
-        functional_system_group_code: str | None = None,
-        functional_subgroup_code: str | None = None,
+        functional_system_group_id: int | None = None,
+        functional_subgroup_id: int | None = None,
         turbine_platform_code: str | None = None,
         lifecycle_status: str | None = None,
         is_sandbox: bool = False,
@@ -71,16 +67,16 @@ class StatusCodeRepository(BaseRepository[StatusCode]):
                     StatusCodeRevision.description.ilike(like),
                 )
             )
-        if functional_system_group_code:
-            query = query.join(
-                LookupFunctionalSystemGroup,
-                LookupFunctionalSystemGroup.id == StatusCode.functional_system_group_id,
-            ).filter(LookupFunctionalSystemGroup.code == functional_system_group_code)
-        if functional_subgroup_code:
-            query = query.join(
-                LookupFunctionalSubgroup,
-                LookupFunctionalSubgroup.id == StatusCode.functional_subgroup_id,
-            ).filter(LookupFunctionalSubgroup.code == functional_subgroup_code)
+        # v3: filtered by surrogate id, not `code` — a Functional System
+        # Group's code is no longer unique (WTUR/WROT are each reused for a
+        # second, numerically distinct Hub Controller group), so filtering
+        # by bare code would silently blend two unrelated ranges together.
+        if functional_system_group_id is not None:
+            query = query.filter(
+                StatusCode.functional_system_group_id == functional_system_group_id
+            )
+        if functional_subgroup_id is not None:
+            query = query.filter(StatusCode.functional_subgroup_id == functional_subgroup_id)
         if turbine_platform_code:
             query = (
                 query.join(

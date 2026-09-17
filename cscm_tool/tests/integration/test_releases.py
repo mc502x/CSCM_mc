@@ -10,30 +10,29 @@ def _login_as(client, user, password="a genuinely long passphrase"):
     return resp
 
 
-def _valid_payload(**overrides):
+def _valid_payload(group_id, subgroup_id, **overrides):
     payload = {
-        "functional_system_group": "WCNV",
+        "functional_system_group": group_id,
+        "functional_subgroup": subgroup_id,
         "turbine_platforms": ["3XM"],
         "title": "Converter Grid Undervoltage Trip",
         "description": "Triggered when converter DC-link voltage falls below threshold.",
-        "status_category": "FAULT",
-        "availability_group": "A",
-        "reset_program": "MANUAL",
-        "software_version": "4.12.0",
-        "operational_state": "STOPPED",
-        "alarm_behaviour": "SELF_CLEARING",
+        "status_category": "ERROR",
+        "available_group": 27,
+        "set_delay": "10ms",
+        "reset_delay": "2min",
     }
     payload.update(overrides)
     return payload
 
 
 def _approve_a_status_code(
-    app, client, engineer, controls_engineer, reviewer, admin, chief_engineer
+    app, client, wcnv_ids, engineer, controls_engineer, reviewer, admin, chief_engineer
 ):
     """Drives one status code all the way to APPROVED and returns its
     current revision id."""
     _login_as(client, engineer)
-    created = client.post("/api/v1/status-codes", json=_valid_payload()).get_json()
+    created = client.post("/api/v1/status-codes", json=_valid_payload(*wcnv_ids)).get_json()
     revision_id = created["id"]
 
     with app.app_context():
@@ -84,9 +83,9 @@ def test_non_admin_cannot_create_release(client, make_user):
     assert response.status_code == 403
 
 
-def test_full_release_lifecycle(app, client, make_user):
+def test_full_release_lifecycle(app, client, make_user, wcnv_ids):
     cast = _make_cast(make_user)
-    revision_id = _approve_a_status_code(app, client, **cast)
+    revision_id = _approve_a_status_code(app, client, wcnv_ids, **cast)
 
     _login_as(client, cast["admin"])
     release = client.post(
@@ -94,7 +93,7 @@ def test_full_release_lifecycle(app, client, make_user):
         json={
             "name": "Q1 Release",
             "version_label": "2026.1",
-            "scope_filter": {"functional_system_group": "WCNV"},
+            "scope_filter": {"functional_system_group": wcnv_ids[0]},
         },
     ).get_json()
     assert release["status"] == "BUILDING"
@@ -118,9 +117,9 @@ def test_full_release_lifecycle(app, client, make_user):
     assert released_revision["effective_date"] is not None
 
 
-def test_cannot_change_items_after_publish(app, client, make_user):
+def test_cannot_change_items_after_publish(app, client, make_user, wcnv_ids):
     cast = _make_cast(make_user)
-    revision_id = _approve_a_status_code(app, client, **cast)
+    revision_id = _approve_a_status_code(app, client, wcnv_ids, **cast)
 
     _login_as(client, cast["admin"])
     release = client.post(
@@ -139,10 +138,12 @@ def test_cannot_change_items_after_publish(app, client, make_user):
     assert response.status_code == 409
 
 
-def test_sandbox_revision_rejected_from_release_items(client, make_user):
+def test_sandbox_revision_rejected_from_release_items(client, make_user, wcnv_ids):
     admin = make_user("ADMINISTRATOR")
     _login_as(client, admin)
-    sandbox = client.post("/api/v1/status-codes", json=_valid_payload(is_sandbox=True)).get_json()
+    sandbox = client.post(
+        "/api/v1/status-codes", json=_valid_payload(*wcnv_ids, is_sandbox=True)
+    ).get_json()
 
     release = client.post(
         "/api/v1/releases", json={"name": "Sandbox Test", "version_label": "2026.9"}
@@ -154,9 +155,9 @@ def test_sandbox_revision_rejected_from_release_items(client, make_user):
     assert response.status_code == 422
 
 
-def test_csv_export_of_a_release(app, client, make_user):
+def test_csv_export_of_a_release(app, client, make_user, wcnv_ids):
     cast = _make_cast(make_user)
-    revision_id = _approve_a_status_code(app, client, **cast)
+    revision_id = _approve_a_status_code(app, client, wcnv_ids, **cast)
 
     _login_as(client, cast["admin"])
     release = client.post(

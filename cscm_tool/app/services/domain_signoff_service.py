@@ -17,18 +17,30 @@ def user_domain_codes(user: User) -> frozenset[str]:
     return frozenset(ued.engineering_domain.code for ued in user.engineering_domains)
 
 
-# Fields with an "Any" owner (docs/06-data-dictionary.md §2a) never gate
-# Submit-for-Review. access_rights_id is Administrator-confirmed governance,
-# not Engineer-domain-gated (SEC-013), so it is deliberately absent here too.
+# Fields with an "Any" owner (title, description, status_category,
+# available_group — docs/06-data-dictionary.md §2a) never gate
+# Submit-for-Review. The eight audience-access fields (§2d) are
+# Administrator-confirmed governance, not Engineer-domain-gated (SEC-013),
+# so they are deliberately absent here too. Only the dict *keys* are
+# functionally load-bearing (required_domains below); the tuples document
+# which fields drive that requirement.
 FIELDS_OWNED_BY_DOMAIN: dict[str, tuple[str, ...]] = {
     "CONTROLS": (
+        "set_delay",
+        "reset_delay",
+        "up_down_counter",
+        "trigger_snapshot",
+        "number_of_times_repeated",
+        "repeated_over_the_course",
+        "status_code_for_repeated_error",
+        "yaw_program",
+        "manual_reset_program",
+        "auto_reset_program",
+        "converter_reactive_power_program",
         "brake_program",
-        "reset_program",
-        "software_version",
-        "operational_state",
-        "delay_before_alarm_seconds",
-        "delay_before_reset_seconds",
-        "alarm_behaviour",
+        "umrichterprogramm_gsc",
+        "umrichterprogramm_msc",
+        "yaw_bearing_lubrication_program",
     ),
 }
 

@@ -9,7 +9,7 @@ from app.domain.errors import NotFoundError
 from app.services.export_service import ExportService
 from app.services.release_service import ReleaseService
 
-_VALID_FORMATS = {"csv", "json", "pdf"}
+_VALID_FORMATS = {"csv", "json", "xlsx", "pdf"}
 
 
 @api_v1_bp.get("/releases/<int:release_id>/export")
@@ -17,7 +17,10 @@ _VALID_FORMATS = {"csv", "json", "pdf"}
 def export_release(release_id: int):
     export_format = (request.args.get("format") or "").lower()
     if export_format not in _VALID_FORMATS:
-        return jsonify(error="validation_error", message="format must be csv, json, or pdf"), 422
+        return (
+            jsonify(error="validation_error", message="format must be csv, json, xlsx, or pdf"),
+            422,
+        )
     try:
         release = ReleaseService.get(release_id)
     except NotFoundError:

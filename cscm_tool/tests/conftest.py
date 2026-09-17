@@ -85,6 +85,33 @@ def make_user(app):
 
 
 @pytest.fixture()
+def wcnv_ids(app):
+    """(functional_system_group_id, functional_subgroup_id) for WCNV's
+    "Converter" subgroup (010xx, range 1000-1999) — resolved dynamically by
+    code rather than hardcoded, since v3 assigns ids by seed insertion order
+    (docs/artifacts/schema.sql) and functional_system_group.code is no
+    longer globally unique (see app/services/lookup_service.py)."""
+    with app.app_context():
+        from app.extensions import db
+        from app.models.lookup import LookupFunctionalSubgroup, LookupFunctionalSystemGroup
+
+        group = (
+            db.session.query(LookupFunctionalSystemGroup)
+            .filter(LookupFunctionalSystemGroup.code == "WCNV")
+            .one()
+        )
+        subgroup = (
+            db.session.query(LookupFunctionalSubgroup)
+            .filter(
+                LookupFunctionalSubgroup.functional_system_group_id == group.id,
+                LookupFunctionalSubgroup.code == "010xx",
+            )
+            .one()
+        )
+        return group.id, subgroup.id
+
+
+@pytest.fixture()
 def login(client):
     """Factory fixture: login(username, password) -> test response."""
 

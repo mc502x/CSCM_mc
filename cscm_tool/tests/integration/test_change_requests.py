@@ -11,18 +11,17 @@ def _login_as(client, user, password="a genuinely long passphrase"):
     return resp
 
 
-def _valid_payload(**overrides):
+def _valid_payload(group_id, subgroup_id, **overrides):
     payload = {
-        "functional_system_group": "WCNV",
+        "functional_system_group": group_id,
+        "functional_subgroup": subgroup_id,
         "turbine_platforms": ["3XM"],
         "title": "Converter Grid Undervoltage Trip",
         "description": "Triggered when converter DC-link voltage falls below threshold.",
-        "status_category": "FAULT",
-        "availability_group": "A",
-        "reset_program": "MANUAL",
-        "software_version": "4.12.0",
-        "operational_state": "STOPPED",
-        "alarm_behaviour": "SELF_CLEARING",
+        "status_category": "ERROR",
+        "available_group": 27,
+        "set_delay": "10ms",
+        "reset_delay": "2min",
     }
     payload.update(overrides)
     return payload
@@ -38,19 +37,19 @@ def _cr_id_for_revision(app, revision_id: int) -> int:
         return cr.id
 
 
-def _create_and_fully_domain_signed_cr(app, client, engineer):
+def _create_and_fully_domain_signed_cr(app, client, engineer, wcnv_ids):
     """The default Engineer holds no Engineering Domain, so every
     CONTROLS-owned field is pending (docs/06-data-dictionary.md §2a) until a
     CONTROLS-tagged Engineer signs off. Returns the CR id, submit-ready."""
     _login_as(client, engineer)
-    created = client.post("/api/v1/status-codes", json=_valid_payload()).get_json()
+    created = client.post("/api/v1/status-codes", json=_valid_payload(*wcnv_ids)).get_json()
     cr_id = _cr_id_for_revision(app, created["id"])
     return cr_id
 
 
-def test_submit_blocked_until_domain_signoff_complete(app, client, make_user):
+def test_submit_blocked_until_domain_signoff_complete(app, client, make_user, wcnv_ids):
     engineer = make_user("ENGINEER")
-    cr_id = _create_and_fully_domain_signed_cr(app, client, engineer)
+    cr_id = _create_and_fully_domain_signed_cr(app, client, engineer, wcnv_ids)
 
     blocked = client.post(f"/api/v1/change-requests/{cr_id}/submit")
     assert blocked.status_code == 422
@@ -69,10 +68,10 @@ def test_submit_blocked_until_domain_signoff_complete(app, client, make_user):
     assert submitted.get_json()["state"] == "REVIEW"
 
 
-def test_domain_signoff_rejects_user_without_that_domain(app, client, make_user):
+def test_domain_signoff_rejects_user_without_that_domain(app, client, make_user, wcnv_ids):
     engineer = make_user("ENGINEER")
     other_engineer = make_user("ENGINEER")  # holds no domains either
-    cr_id = _create_and_fully_domain_signed_cr(app, client, engineer)
+    cr_id = _create_and_fully_domain_signed_cr(app, client, engineer, wcnv_ids)
 
     _login_as(client, other_engineer)
     response = client.post(
@@ -82,8 +81,8 @@ def test_domain_signoff_rejects_user_without_that_domain(app, client, make_user)
     assert response.status_code == 403
 
 
-def _full_submit(app, client, engineer, controls_engineer):
-    cr_id = _create_and_fully_domain_signed_cr(app, client, engineer)
+def _full_submit(app, client, engineer, controls_engineer, wcnv_ids):
+    cr_id = _create_and_fully_domain_signed_cr(app, client, engineer, wcnv_ids)
     _login_as(client, controls_engineer)
     client.post(
         f"/api/v1/change-requests/{cr_id}/domain-signoffs",
@@ -95,11 +94,11 @@ def _full_submit(app, client, engineer, controls_engineer):
     return cr_id
 
 
-def test_author_cannot_sign_off_own_cr(app, client, make_user):
+def test_author_cannot_sign_off_own_cr(app, client, make_user, wcnv_ids):
     engineer = make_user("ENGINEER")
     controls_engineer = make_user("ENGINEER", engineering_domains=["CONTROLS"])
     reviewer = make_user("REVIEWER")
-    cr_id = _full_submit(app, client, engineer, controls_engineer)
+    cr_id = _full_submit(app, client, engineer, controls_engineer, wcnv_ids)
 
     _login_as(client, engineer)
     response = client.post(
@@ -116,12 +115,12 @@ def test_author_cannot_sign_off_own_cr(app, client, make_user):
     assert ok.status_code == 200
 
 
-def test_dual_signoff_in_either_order_reaches_pending_approval(app, client, make_user):
+def test_dual_signoff_in_either_order_reaches_pending_approval(app, client, make_user, wcnv_ids):
     engineer = make_user("ENGINEER")
     controls_engineer = make_user("ENGINEER", engineering_domains=["CONTROLS"])
     reviewer = make_user("REVIEWER")
     admin = make_user("ADMINISTRATOR")
-    cr_id = _full_submit(app, client, engineer, controls_engineer)
+    cr_id = _full_submit(app, client, engineer, controls_engineer, wcnv_ids)
 
     _login_as(client, admin)
     r1 = client.post(f"/api/v1/change-requests/{cr_id}/admin-signoff", json={"decision": "APPROVE"})
@@ -136,11 +135,11 @@ def test_dual_signoff_in_either_order_reaches_pending_approval(app, client, make
     assert r2.get_json()["state"] == "PENDING_APPROVAL"
 
 
-def test_rejection_returns_to_draft_and_clears_signoffs(app, client, make_user):
+def test_rejection_returns_to_draft_and_clears_signoffs(app, client, make_user, wcnv_ids):
     engineer = make_user("ENGINEER")
     controls_engineer = make_user("ENGINEER", engineering_domains=["CONTROLS"])
     reviewer = make_user("REVIEWER")
-    cr_id = _full_submit(app, client, engineer, controls_engineer)
+    cr_id = _full_submit(app, client, engineer, controls_engineer, wcnv_ids)
 
     _login_as(client, reviewer)
     rejected = client.post(
@@ -151,11 +150,11 @@ def test_rejection_returns_to_draft_and_clears_signoffs(app, client, make_user):
     assert rejected.get_json()["state"] == "DRAFT"
 
 
-def test_reviewer_rejection_without_comment_is_rejected(app, client, make_user):
+def test_reviewer_rejection_without_comment_is_rejected(app, client, make_user, wcnv_ids):
     engineer = make_user("ENGINEER")
     controls_engineer = make_user("ENGINEER", engineering_domains=["CONTROLS"])
     reviewer = make_user("REVIEWER")
-    cr_id = _full_submit(app, client, engineer, controls_engineer)
+    cr_id = _full_submit(app, client, engineer, controls_engineer, wcnv_ids)
 
     _login_as(client, reviewer)
     response = client.post(
@@ -164,13 +163,13 @@ def test_reviewer_rejection_without_comment_is_rejected(app, client, make_user):
     assert response.status_code == 422
 
 
-def test_chief_engineer_cannot_be_a_prior_signer(app, client, make_user):
+def test_chief_engineer_cannot_be_a_prior_signer(app, client, make_user, wcnv_ids):
     engineer = make_user("ENGINEER")
     controls_engineer = make_user("ENGINEER", engineering_domains=["CONTROLS"])
     reviewer = make_user("REVIEWER")
     admin = make_user("ADMINISTRATOR")
     chief_engineer = make_user("CHIEF_ENGINEER")
-    cr_id = _full_submit(app, client, engineer, controls_engineer)
+    cr_id = _full_submit(app, client, engineer, controls_engineer, wcnv_ids)
 
     _login_as(client, reviewer)
     client.post(f"/api/v1/change-requests/{cr_id}/reviewer-signoff", json={"decision": "APPROVE"})
@@ -187,13 +186,13 @@ def test_chief_engineer_cannot_be_a_prior_signer(app, client, make_user):
     assert approved.get_json()["state"] == "APPROVED"
 
 
-def test_full_happy_path_to_approved(app, client, make_user):
+def test_full_happy_path_to_approved(app, client, make_user, wcnv_ids):
     engineer = make_user("ENGINEER")
     controls_engineer = make_user("ENGINEER", engineering_domains=["CONTROLS"])
     reviewer = make_user("REVIEWER")
     admin = make_user("ADMINISTRATOR")
     chief_engineer = make_user("CHIEF_ENGINEER")
-    cr_id = _full_submit(app, client, engineer, controls_engineer)
+    cr_id = _full_submit(app, client, engineer, controls_engineer, wcnv_ids)
 
     _login_as(client, reviewer)
     assert (
@@ -216,10 +215,10 @@ def test_full_happy_path_to_approved(app, client, make_user):
     assert final.get_json()["state"] == "APPROVED"
 
 
-def test_withdraw_removes_abandoned_new_draft(app, client, make_user):
+def test_withdraw_removes_abandoned_new_draft(app, client, make_user, wcnv_ids):
     engineer = make_user("ENGINEER")
     _login_as(client, engineer)
-    created = client.post("/api/v1/status-codes", json=_valid_payload()).get_json()
+    created = client.post("/api/v1/status-codes", json=_valid_payload(*wcnv_ids)).get_json()
     cr_id = _cr_id_for_revision(app, created["id"])
 
     response = client.post(f"/api/v1/change-requests/{cr_id}/withdraw")
@@ -228,11 +227,11 @@ def test_withdraw_removes_abandoned_new_draft(app, client, make_user):
     assert client.get(f"/api/v1/status-codes/{created['status_code_id']}").status_code == 404
 
 
-def test_withdraw_forbidden_for_non_author(app, client, make_user):
+def test_withdraw_forbidden_for_non_author(app, client, make_user, wcnv_ids):
     engineer = make_user("ENGINEER")
     other_engineer = make_user("ENGINEER")
     _login_as(client, engineer)
-    created = client.post("/api/v1/status-codes", json=_valid_payload()).get_json()
+    created = client.post("/api/v1/status-codes", json=_valid_payload(*wcnv_ids)).get_json()
     cr_id = _cr_id_for_revision(app, created["id"])
 
     _login_as(client, other_engineer)
@@ -240,7 +239,7 @@ def test_withdraw_forbidden_for_non_author(app, client, make_user):
     assert response.status_code == 403
 
 
-def test_withdraw_revision_type_restores_prior_current_revision(app, client, make_user):
+def test_withdraw_revision_type_restores_prior_current_revision(app, client, make_user, wcnv_ids):
     """Regression test: withdrawing a REVISION-type CR must restore the
     status code's prior revision to is_current=1 (create_revision's
     copy-on-write had flipped it off), or the code becomes invisible
@@ -251,7 +250,7 @@ def test_withdraw_revision_type_restores_prior_current_revision(app, client, mak
     admin = make_user("ADMINISTRATOR")
     chief_engineer = make_user("CHIEF_ENGINEER")
 
-    cr_id = _full_submit(app, client, engineer, controls_engineer)
+    cr_id = _full_submit(app, client, engineer, controls_engineer, wcnv_ids)
     _login_as(client, reviewer)
     client.post(f"/api/v1/change-requests/{cr_id}/reviewer-signoff", json={"decision": "APPROVE"})
     _login_as(client, admin)
@@ -277,7 +276,7 @@ def test_withdraw_revision_type_restores_prior_current_revision(app, client, mak
     _login_as(client, engineer)
     new_revision = client.post(
         f"/api/v1/status-codes/{status_code_id}/revisions",
-        json=_valid_payload(title="Converter Grid Undervoltage Trip (revised)"),
+        json=_valid_payload(*wcnv_ids, title="Converter Grid Undervoltage Trip (revised)"),
     ).get_json()
     new_cr_id = _cr_id_for_revision(app, new_revision["id"])
 

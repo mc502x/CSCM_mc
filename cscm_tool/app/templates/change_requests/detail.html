@@ -56,14 +56,22 @@
   <h2>Revision Fields</h2>
   <dl class="kv">
     <dt>Status Category</dt><dd>{{ revision.status_category }}</dd>
-    <dt>Availability Group</dt><dd>{{ revision.availability_group }}</dd>
-    <dt>Brake Program</dt><dd>{{ revision.brake_program }}</dd>
-    <dt>Reset Program</dt><dd>{{ revision.reset_program }}</dd>
-    <dt>Operational State</dt><dd>{{ revision.operational_state }}</dd>
-    <dt>Alarm Behaviour</dt><dd>{{ revision.alarm_behaviour }}</dd>
-    <dt>Access Rights</dt><dd>{{ revision.access_rights }}{% if not revision.admin_signoff_at %}<span class="proposed-badge">Proposed</span>{% endif %}</dd>
-    <dt>Software Version</dt><dd>{{ revision.software_version }}</dd>
+    <dt>Available Group</dt><dd>{{ revision.available_group }}</dd>
+    <dt>Alarm</dt><dd>{{ 'Yes' if revision.alarm_flag else 'No' }}</dd>
+    <dt>Set Delay</dt><dd>{{ revision.set_delay }}</dd>
+    <dt>Reset Delay</dt><dd>{{ revision.reset_delay }}</dd>
+    <dt>Software Version</dt><dd>{{ revision.software_version or '—' }}</dd>
     <dt>Description</dt><dd>{{ revision.description }}</dd>
+    <dt>Audience Access</dt>
+    <dd>
+      Development: {{ revision.development_access or '—' }}, Sales: {{ revision.sales_access or '—' }},
+      TCC: {{ revision.tcc_access or '—' }}, Service: {{ revision.service_access or '—' }},
+      Turbine Operator Package: {{ revision.turbine_operator_package_access or '—' }},
+      Grid Operator: {{ revision.grid_operator_access or '—' }},
+      Service Partner: {{ revision.service_partner_access or '—' }},
+      Customer: {{ revision.customer_access or '—' }}
+      {% if not revision.admin_signoff_at %}<span class="proposed-badge">Proposed</span>{% endif %}
+    </dd>
     {% if cr.justification %}<dt>Justification</dt><dd>{{ cr.justification }}</dd>{% endif %}
   </dl>
 </div>

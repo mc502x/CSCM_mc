@@ -20,7 +20,7 @@
       <select id="functional_system_group" name="functional_system_group">
         <option value="">(any)</option>
         {% for g in groups %}
-        <option value="{{ g.code }}" {{ 'selected' if request.args.get('functional_system_group') == g.code }}>{{ g.code }} — {{ g.label }}</option>
+        <option value="{{ g.id }}" {{ 'selected' if request.args.get('functional_system_group')|string == g.id|string }}>{{ g.code }} — {{ g.label }} ({{ g.range_start }}-{{ g.range_end }})</option>
         {% endfor %}
       </select>
     </div>
@@ -45,13 +45,13 @@
 <div class="card">
   {% if items %}
   <table>
-    <thead><tr><th>Identifier</th><th>Title</th><th>Group</th><th>State</th><th>Platforms</th></tr></thead>
+    <thead><tr><th>Identifier</th><th>Title</th><th>Group / Subgroup</th><th>State</th><th>Platforms</th></tr></thead>
     <tbody>
       {% for r in items %}
       <tr onclick="window.location='{{ url_for('ui.status_code_detail', status_code_id=r.status_code_id) }}'" style="cursor:pointer">
         <td>{{ r.status_code_identifier or 'Not yet assigned' }}{% if r.is_sandbox %} {{ macros.sandbox_badge() }}{% endif %}</td>
         <td>{{ r.title }}</td>
-        <td>{{ r.functional_system_group }}</td>
+        <td>{{ r.functional_system_group }} ({{ r.functional_system_group_range_start }}-{{ r.functional_system_group_range_end }}) / {{ r.functional_subgroup }}</td>
         <td>{{ macros.lifecycle_badge(r.lifecycle_status) }}</td>
         <td>{% for p in r.turbine_platforms %}<span class="chip">{{ p }}</span>{% endfor %}</td>
       </tr>

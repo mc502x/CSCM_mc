@@ -1,4 +1,13 @@
-"""S3 List/Search, S4 Detail, S5/S5a New, S6 Edit Draft."""
+"""S3 List/Search, S4 Detail, S5/S5a New, S6 Edit Draft.
+
+v3 (2026-09-17): field set rewritten for the real data model
+(docs/06-data-dictionary.md). NFR-007a ("no data loss on validation
+failure", the single highest-priority legacy-tool complaint): a rejected
+Save/Submit never re-renders a blank form — `_form_to_data()`'s output is
+already shaped exactly like the template's prefill dict (see
+`_revision_to_form_values` for the read path producing the same shape), so
+every view passes the just-submitted `data` back to the template as
+`values` on failure instead of falling back to an empty form."""
 
 from flask import flash, redirect, render_template, request, url_for
 
@@ -14,45 +23,88 @@ from app.services.lookup_service import LookupService
 from app.services.status_code_service import StatusCodeService, ValidationFailed
 from app.ui import ui_bp
 
-_VOCAB_FIELDS = {
-    "status_category": "status-categories",
-    "availability_group": "availability-groups",
-    "brake_program": "brake-programs",
-    "reset_program": "reset-programs",
-    "operational_state": "operational-states",
-    "access_rights": "access-rights",
-    "alarm_behaviour": "alarm-behaviours",
+_ACCESS_VOCAB_FIELDS = {
+    "development_access": "development-access",
+    "sales_access": "sales-access",
+    "tcc_access": "tcc-access",
+    "service_access": "service-access",
+    "turbine_operator_package_access": "turbine-operator-package-access",
+    "grid_operator_access": "grid-operator-access",
+    "service_partner_access": "service-partner-access",
+    "customer_access": "customer-access",
 }
+
+_PROGRAM_FIELDS = (
+    "yaw_program",
+    "manual_reset_program",
+    "auto_reset_program",
+    "converter_reactive_power_program",
+    "brake_program",
+    "umrichterprogramm_gsc",
+    "umrichterprogramm_msc",
+    "yaw_bearing_lubrication_program",
+)
 
 
 def _lookup_choices():
     choices = {}
-    for field, vocabulary in _VOCAB_FIELDS.items():
+    for field, vocabulary in _ACCESS_VOCAB_FIELDS.items():
         choices[field] = LookupService.list_vocabulary(vocabulary)
     choices["functional_system_group"] = LookupService.list_vocabulary("functional-system-groups")
     choices["turbine_platform"] = LookupService.list_vocabulary("turbine-platforms")
+    choices["available_group"] = LookupService.list_vocabulary("available-groups")
     return choices
 
 
+def _int_or_none(value):
+    return int(value) if value not in (None, "") else None
+
+
 def _form_to_data(form) -> dict:
-    return {
-        "functional_system_group": form.get("functional_system_group"),
-        "functional_subgroup": form.get("functional_subgroup") or None,
+    """Shaped to match both what StatusCodeService expects AND what the
+    template reads back for prefill (see module docstring) — Functional
+    System Group/Subgroup and the eight audience-access fields are all
+    submitted as surrogate ids (see app/services/lookup_service.py for why),
+    under the same plain key name the service consumes."""
+    data = {
+        "functional_system_group": _int_or_none(form.get("functional_system_group")),
+        "functional_subgroup": _int_or_none(form.get("functional_subgroup")),
         "turbine_platforms": form.getlist("turbine_platforms"),
         "title": form.get("title", ""),
         "description": form.get("description", ""),
+        "software_version": form.get("software_version") or None,
         "status_category": form.get("status_category"),
-        "availability_group": form.get("availability_group"),
-        "brake_program": form.get("brake_program", "BP-NONE"),
-        "reset_program": form.get("reset_program"),
-        "software_version": form.get("software_version", ""),
-        "operational_state": form.get("operational_state"),
-        "access_rights": form.get("access_rights", "SERVICE"),
-        "delay_before_alarm_seconds": int(form.get("delay_before_alarm_seconds") or 0),
-        "delay_before_reset_seconds": int(form.get("delay_before_reset_seconds") or 0),
-        "alarm_behaviour": form.get("alarm_behaviour"),
+        "available_group": _int_or_none(form.get("available_group")),
+        "alarm_flag": form.get("alarm_flag") == "on",
+        "set_delay": form.get("set_delay", ""),
+        "reset_delay": form.get("reset_delay", ""),
+        "up_down_counter": form.get("up_down_counter") == "on",
+        "trigger_snapshot": form.get("trigger_snapshot") == "on",
+        "loadless_spinning_permitted": form.get("loadless_spinning_permitted") == "on",
+        "number_of_times_repeated": _int_or_none(form.get("number_of_times_repeated")),
+        "repeated_over_the_course": form.get("repeated_over_the_course") or None,
+        "status_code_for_repeated_error": _int_or_none(form.get("status_code_for_repeated_error")),
+        "legacy_reference_number": form.get("legacy_reference_number") or None,
         "justification": form.get("justification") or None,
     }
+    for field in _PROGRAM_FIELDS:
+        data[field] = _int_or_none(form.get(field)) or 0
+    for field in _ACCESS_VOCAB_FIELDS:
+        data[field] = _int_or_none(form.get(field))
+    return data
+
+
+def _revision_to_form_values(payload: dict) -> dict:
+    """The read-path counterpart to `_form_to_data`: reshapes a
+    revision_payload() dict into the same plain-key shape (ids, not codes)
+    so an Edit Draft form and a rejected Save/Submit form prefill
+    identically from the template's point of view."""
+    values = dict(payload)
+    values["functional_system_group"] = payload["functional_system_group_id"]
+    values["functional_subgroup"] = payload["functional_subgroup_id"]
+    for field in _ACCESS_VOCAB_FIELDS:
+        values[field] = payload[f"{field}_id"]
+    return values
 
 
 @ui_bp.route("/status-codes")
@@ -62,7 +114,7 @@ def status_code_list():
     items, total = StatusCodeService.search(
         current_user,
         q=request.args.get("q") or None,
-        functional_system_group_code=request.args.get("functional_system_group") or None,
+        functional_system_group_id=request.args.get("functional_system_group", type=int),
         lifecycle_status=request.args.get("lifecycle_status") or None,
         is_sandbox=request.args.get("is_sandbox") == "true",
         page=page,
@@ -81,8 +133,10 @@ def status_code_list():
 @ui_bp.route("/status-codes/new", methods=["GET", "POST"])
 @require_role_web("ADMINISTRATOR", "ENGINEER")
 def status_code_new():
+    values = {}
     if request.method == "POST":
         data = _form_to_data(request.form)
+        values = data
         try:
             revision = StatusCodeService.create_draft(data, current_user)
         except ValidationFailed as exc:
@@ -97,15 +151,17 @@ def status_code_new():
             )
 
     return render_template(
-        "status_codes/form.html", choices=_lookup_choices(), is_sandbox=False, revision=None
+        "status_codes/form.html", choices=_lookup_choices(), is_sandbox=False, values=values
     )
 
 
 @ui_bp.route("/status-codes/new-sandbox", methods=["GET", "POST"])
 @require_role_web("ADMINISTRATOR")
 def status_code_new_sandbox():
+    values = {}
     if request.method == "POST":
         data = _form_to_data(request.form)
+        values = data
         try:
             revision = StatusCodeService.create_sandbox(data, current_user)
         except ValidationFailed as exc:
@@ -120,7 +176,7 @@ def status_code_new_sandbox():
             )
 
     return render_template(
-        "status_codes/form.html", choices=_lookup_choices(), is_sandbox=True, revision=None
+        "status_codes/form.html", choices=_lookup_choices(), is_sandbox=True, values=values
     )
 
 
@@ -161,8 +217,10 @@ def status_code_edit(status_code_id):
         flash("Only a Draft revision may be edited.", "error")
         return redirect(url_for("ui.status_code_detail", status_code_id=status_code_id))
 
+    values = _revision_to_form_values(revision_payload(revision))
     if request.method == "POST":
         data = _form_to_data(request.form)
+        values = data
         try:
             StatusCodeService.update_draft(revision.id, data, current_user)
         except ValidationFailed as exc:
@@ -180,7 +238,8 @@ def status_code_edit(status_code_id):
         "status_codes/form.html",
         choices=_lookup_choices(),
         is_sandbox=False,
-        revision=revision_payload(revision),
+        values=values,
+        editing=True,
     )
 
 
@@ -193,27 +252,7 @@ def status_code_new_revision(status_code_id):
         flash("Status code not found.", "error")
         return redirect(url_for("ui.status_code_list"))
 
-    data = {
-        "functional_system_group": revision.status_code.functional_system_group.code,
-        "functional_subgroup": (
-            revision.status_code.functional_subgroup.code
-            if revision.status_code.functional_subgroup
-            else None
-        ),
-        "turbine_platforms": sorted(p.turbine_platform.code for p in revision.platforms),
-        "title": revision.title,
-        "description": revision.description,
-        "status_category": revision.status_category.code,
-        "availability_group": revision.availability_group.code,
-        "brake_program": revision.brake_program.code,
-        "reset_program": revision.reset_program.code,
-        "software_version": revision.software_version,
-        "operational_state": revision.operational_state.code,
-        "access_rights": revision.access_rights.code,
-        "delay_before_alarm_seconds": revision.delay_before_alarm_seconds,
-        "delay_before_reset_seconds": revision.delay_before_reset_seconds,
-        "alarm_behaviour": revision.alarm_behaviour.code,
-    }
+    data = _revision_to_form_values(revision_payload(revision))
     try:
         new_revision = StatusCodeService.create_revision(status_code_id, data, current_user)
     except InvalidTransitionError as exc:

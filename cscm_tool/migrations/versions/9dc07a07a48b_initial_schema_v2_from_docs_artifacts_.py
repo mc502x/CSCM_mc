@@ -1,4 +1,4 @@
-"""initial schema (v2, from docs/artifacts/schema.sql)
+"""initial schema (v3, from docs/artifacts/schema.sql)
 
 This migration applies docs/artifacts/schema.sql verbatim rather than relying
 on Alembic autogenerate: that file is the hand-reviewed source of truth for
@@ -8,6 +8,13 @@ docs/18-claude-code-implementation-guide.md §6). Any future schema change
 must still go through its own reversible Alembic migration on top of this
 baseline, and be reflected in the same PR in docs/06-data-dictionary.md,
 docs/07-database-design.md, and docs/artifacts/schema.sql (docs/15-development-standards.md §5).
+
+Updated 2026-09-17 for the v3 field-model correction (docs/00-INDEX.md):
+reads schema.sql fresh from disk at upgrade time, so no migration content
+change was needed beyond the downgrade table list below — the previously
+merged v2 database has no real production data to preserve, so this
+baseline is simply re-pointed at the corrected schema rather than layering
+an incremental ALTER-heavy migration on top of an already-wrong model.
 
 Revision ID: 9dc07a07a48b
 Revises:
@@ -37,18 +44,21 @@ _TABLES_NEWEST_FIRST = [
     "domain_signoff",
     "review_comment",
     "change_request",
+    "import_job",
     "status_code_revision_platform",
     "status_code_revision",
     "status_code",
     "user_engineering_domain",
     "user",
-    "lookup_alarm_behaviour",
-    "lookup_access_rights",
-    "lookup_operational_state",
-    "lookup_reset_program",
-    "lookup_brake_program",
-    "lookup_availability_group",
-    "lookup_status_category",
+    "lookup_customer_access",
+    "lookup_service_partner_access",
+    "lookup_grid_operator_access",
+    "lookup_top_access",
+    "lookup_service_access",
+    "lookup_tcc_access",
+    "lookup_sales_access",
+    "lookup_development_access",
+    "lookup_available_group",
     "lookup_turbine_platform",
     "lookup_functional_subgroup",
     "lookup_functional_system_group",

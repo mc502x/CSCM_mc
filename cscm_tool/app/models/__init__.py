@@ -4,17 +4,20 @@ Alembic autogenerate or create_all() runs."""
 from app.models.audit import AuditLogEntry  # noqa: F401
 from app.models.change_request import ChangeRequest, DomainSignoff, ReviewComment  # noqa: F401
 from app.models.export_job import ExportJob  # noqa: F401
+from app.models.import_job import ImportJob  # noqa: F401
 from app.models.lookup import (  # noqa: F401
-    LookupAccessRights,
-    LookupAlarmBehaviour,
-    LookupAvailabilityGroup,
-    LookupBrakeProgram,
+    LookupAvailableGroup,
+    LookupCustomerAccess,
+    LookupDevelopmentAccess,
     LookupEngineeringDomain,
     LookupFunctionalSubgroup,
     LookupFunctionalSystemGroup,
-    LookupOperationalState,
-    LookupResetProgram,
-    LookupStatusCategory,
+    LookupGridOperatorAccess,
+    LookupSalesAccess,
+    LookupServiceAccess,
+    LookupServicePartnerAccess,
+    LookupTccAccess,
+    LookupTopAccess,
     LookupTurbinePlatform,
     Role,
 )
