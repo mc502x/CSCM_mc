@@ -2,8 +2,10 @@
 
 import json
 
+from app.domain.authz import require_roles
 from app.domain.errors import DomainError, InvalidTransitionError
 from app.extensions import db
+from app.models.export_job import ExportJob
 from app.models.lookup import LookupFunctionalSubgroup, LookupFunctionalSystemGroup
 from app.models.release import Release, ReleaseItem
 from app.models.status_code import StatusCode, StatusCodeRevision
@@ -25,6 +27,7 @@ class ReleaseService:
     @staticmethod
     def create(data: dict, actor) -> Release:
         """FR-040."""
+        require_roles(actor, "ADMINISTRATOR")
         release = Release(
             name=data["name"],
             version_label=data["version_label"],
@@ -72,13 +75,16 @@ class ReleaseService:
             .join(StatusCode, StatusCode.id == StatusCodeRevision.status_code_id)
             .filter(StatusCodeRevision.lifecycle_status == "APPROVED", StatusCode.is_sandbox == 0)
         )
-        group_code = scope.get("functional_system_group")
-        if group_code:
-            group = LookupService.get_by_code(LookupFunctionalSystemGroup, group_code)
+        # v3: scoped by surrogate id, not `code` — see
+        # app/services/lookup_service.py module docstring for why a
+        # Functional System Group's code alone is no longer unambiguous.
+        group_id = scope.get("functional_system_group")
+        if group_id:
+            group = LookupService.get_by_id(LookupFunctionalSystemGroup, group_id)
             query = query.filter(StatusCode.functional_system_group_id == group.id)
-        subgroup_code = scope.get("functional_subgroup")
-        if subgroup_code:
-            subgroup = LookupService.get_by_code(LookupFunctionalSubgroup, subgroup_code)
+        subgroup_id = scope.get("functional_subgroup")
+        if subgroup_id:
+            subgroup = LookupService.get_by_id(LookupFunctionalSubgroup, subgroup_id)
             query = query.filter(StatusCode.functional_subgroup_id == subgroup.id)
 
         claimed_elsewhere = {
@@ -92,6 +98,7 @@ class ReleaseService:
         """FR-042: pre-publish only. Sandbox/non-Approved revisions are
         rejected here (service layer) and, for sandbox specifically, also
         by trg_prevent_sandbox_release (defense in depth)."""
+        require_roles(actor, "ADMINISTRATOR")
         release = ReleaseService._repo.get_or_404(release_id)
         if release.status != "BUILDING":
             raise InvalidTransitionError("Cannot change items on a published Release (BR-007).")
@@ -122,12 +129,41 @@ class ReleaseService:
         return release
 
     @staticmethod
+    def delete(release_id: int, actor) -> None:
+        """BR-008: an Administrator may delete a Release only before it is
+        published; its candidate revisions are untouched (still Approved)."""
+        require_roles(actor, "ADMINISTRATOR")
+        release = ReleaseService._repo.get_or_404(release_id)
+        if release.status != "BUILDING":
+            raise InvalidTransitionError("A published Release can never be deleted (BR-007).")
+        AuditService.log(
+            "Release",
+            release.id,
+            "RELEASE_DELETE",
+            actor=actor,
+            before={
+                "name": release.name,
+                "version_label": release.version_label,
+                "status_code_revision_ids": sorted(
+                    item.status_code_revision_id for item in release.items
+                ),
+            },
+        )
+        db.session.query(ExportJob).filter(ExportJob.release_id == release.id).update(
+            {ExportJob.release_id: None}
+        )
+        db.session.query(ReleaseItem).filter(ReleaseItem.release_id == release.id).delete()
+        db.session.delete(release)
+        db.session.commit()
+
+    @staticmethod
     def publish(release_id: int, actor) -> Release:
         """FR-043: atomically transitions every included revision
         Approved -> Released, stamps effective_date, marks the Release
         immutable. FR-044/BR-007: a published Release can never be
         unpublished or have its items changed (trg_prevent_release_item_delete
         is defense in depth for the latter)."""
+        require_roles(actor, "ADMINISTRATOR")
         release = ReleaseService._repo.get_or_404(release_id)
         if release.status != "BUILDING":
             raise InvalidTransitionError("Release is already published.")

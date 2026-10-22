@@ -64,6 +64,19 @@ def set_release_items(release_id: int):
     return jsonify(release_payload(release)), 200
 
 
+@api_v1_bp.delete("/releases/<int:release_id>")
+@require_role("ADMINISTRATOR")
+def delete_release(release_id: int):
+    """BR-008: pre-publish delete only."""
+    try:
+        ReleaseService.delete(release_id, current_user)
+    except NotFoundError:
+        return jsonify(error="not_found", message="Release not found"), 404
+    except InvalidTransitionError as exc:
+        return jsonify(error="conflict", message=str(exc)), 409
+    return "", 204
+
+
 @api_v1_bp.post("/releases/<int:release_id>/publish")
 @require_role("ADMINISTRATOR")
 def publish_release(release_id: int):

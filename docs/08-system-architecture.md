@@ -199,3 +199,5 @@ class AuthProvider(Protocol):
 ## 8. Scalability, Caching, Backup Strategy
 
 Unchanged in mechanism from v1 (08-system-architecture.md v1 §8–§10): MVP sizing targets, SQLite WAL-mode read concurrency, in-process lookup caching, nightly SQLite Online Backup API snapshots. All infrastructure referenced there is local/on-premises; no external or cloud storage target is introduced by this update.
+
+**Transaction modes (added 2026-10-21, NFR-004):** only writers take the SQLite write lock up front (`BEGIN IMMEDIATE`, required for race-safe identifier allocation, 07-database-design.md §7a). Read-only requests — `GET`/`HEAD`/`OPTIONS` not marked with `@writes_on_get` (`app/db_modes.py`; the export endpoints are, because they record an `ExportJob` and an audit entry) — use a deferred `BEGIN`, so in WAL mode readers neither block nor are blocked by a writer. Taking the write lock for every transaction serialised the whole application and produced `database is locked` errors with 50 concurrent users; `busy_timeout` is 15 s so writers queue instead of failing fast. Covered by `tests/performance/test_performance.py`.

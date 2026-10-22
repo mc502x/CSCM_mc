@@ -6,7 +6,7 @@ from app.auth.decorators import current_user, login_required_web
 from app.extensions import db
 from app.models.change_request import ChangeRequest, DomainSignoff
 from app.models.status_code import StatusCodeRevision
-from app.services.domain_signoff_service import DomainSignoffService, user_domain_codes
+from app.services.domain_signoff_service import DomainSignoffService
 from app.ui import ui_bp
 
 
@@ -26,22 +26,7 @@ def dashboard():
         )
 
     if current_user.role_code == "ENGINEER":
-        pending_domain_requests = 0
-        open_crs = (
-            db.session.query(ChangeRequest)
-            .join(
-                StatusCodeRevision, ChangeRequest.status_code_revision_id == StatusCodeRevision.id
-            )
-            .filter(
-                ChangeRequest.state == "DRAFT",
-                StatusCodeRevision.lifecycle_status == "DRAFT",
-            )
-            .all()
-        )
-        for cr in open_crs:
-            requester_domains = user_domain_codes(cr.requester)
-            if DomainSignoffService.pending_domains(cr, requester_domains):
-                pending_domain_requests += 1
+        pending_domain_requests = len(DomainSignoffService.open_requests_for(current_user.id))
         stats["pending_domain_requests"] = pending_domain_requests
 
         signed_by_me = (

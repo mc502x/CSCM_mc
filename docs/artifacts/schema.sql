@@ -58,7 +58,7 @@ INSERT INTO role (id, code, label) VALUES
 
 CREATE TABLE lookup_engineering_domain (
     id INTEGER PRIMARY KEY, code TEXT NOT NULL UNIQUE, label TEXT NOT NULL,
-    is_active INTEGER NOT NULL DEFAULT 1, sort_order INTEGER NOT NULL DEFAULT 0
+    description TEXT, is_active INTEGER NOT NULL DEFAULT 1, sort_order INTEGER NOT NULL DEFAULT 0
 );
 INSERT INTO lookup_engineering_domain (code, label, sort_order) VALUES
     ('CONTROLS','Controls Engineering',1), ('ELECTRICAL','Electrical Engineering',2),
@@ -75,7 +75,7 @@ INSERT INTO lookup_engineering_domain (code, label, sort_order) VALUES
 CREATE TABLE lookup_functional_system_group (
     id INTEGER PRIMARY KEY, code TEXT NOT NULL, label TEXT NOT NULL,
     range_start INTEGER NOT NULL, range_end INTEGER NOT NULL,
-    is_active INTEGER NOT NULL DEFAULT 1, sort_order INTEGER NOT NULL DEFAULT 0,
+    description TEXT, is_active INTEGER NOT NULL DEFAULT 1, sort_order INTEGER NOT NULL DEFAULT 0,
     UNIQUE (code, range_start),
     CHECK (range_end > range_start)
 );
@@ -104,7 +104,7 @@ CREATE TABLE lookup_functional_subgroup (
     functional_system_group_id INTEGER NOT NULL REFERENCES lookup_functional_system_group(id),
     code TEXT NOT NULL, label TEXT NOT NULL,
     sub_range_start INTEGER NOT NULL, sub_range_end INTEGER NOT NULL,
-    is_active INTEGER NOT NULL DEFAULT 1, sort_order INTEGER NOT NULL DEFAULT 0,
+    description TEXT, is_active INTEGER NOT NULL DEFAULT 1, sort_order INTEGER NOT NULL DEFAULT 0,
     UNIQUE (functional_system_group_id, code),
     CHECK (sub_range_end > sub_range_start)
 );
@@ -161,7 +161,7 @@ FROM v JOIN lookup_functional_system_group g
 
 CREATE TABLE lookup_turbine_platform (
     id INTEGER PRIMARY KEY, code TEXT NOT NULL UNIQUE, label TEXT NOT NULL,
-    is_active INTEGER NOT NULL DEFAULT 1, sort_order INTEGER NOT NULL DEFAULT 0
+    description TEXT, is_active INTEGER NOT NULL DEFAULT 1, sort_order INTEGER NOT NULL DEFAULT 0
 );
 INSERT INTO lookup_turbine_platform (code, label, sort_order) VALUES
     ('2XM','2XM Platform',1), ('3XM','3XM Platform',2), ('4XM','4XM Platform',3);
@@ -171,7 +171,7 @@ INSERT INTO lookup_turbine_platform (code, label, sort_order) VALUES
 -- set for validation, not a hard-enforced enum, since new codes may appear.
 CREATE TABLE lookup_available_group (
     id INTEGER PRIMARY KEY, code INTEGER NOT NULL UNIQUE, label TEXT,
-    is_active INTEGER NOT NULL DEFAULT 1, sort_order INTEGER NOT NULL DEFAULT 0
+    description TEXT, is_active INTEGER NOT NULL DEFAULT 1, sort_order INTEGER NOT NULL DEFAULT 0
 );
 INSERT INTO lookup_available_group (code, sort_order)
 WITH v(value) AS (
@@ -183,39 +183,39 @@ SELECT value, ROW_NUMBER() OVER (ORDER BY value) FROM v;
 -- Eight independent audience/access lookups, real observed values
 -- (docs/06-data-dictionary.md §2d, §9d). Casing/typo variants from the raw
 -- export ("See Only" vs "See only", "ProfessionaProfessional") normalized.
-CREATE TABLE lookup_development_access (id INTEGER PRIMARY KEY, code TEXT NOT NULL UNIQUE, label TEXT NOT NULL, is_active INTEGER NOT NULL DEFAULT 1, sort_order INTEGER NOT NULL DEFAULT 0);
+CREATE TABLE lookup_development_access (id INTEGER PRIMARY KEY, code TEXT NOT NULL UNIQUE, label TEXT NOT NULL, description TEXT, is_active INTEGER NOT NULL DEFAULT 1, sort_order INTEGER NOT NULL DEFAULT 0);
 INSERT INTO lookup_development_access (code, label, sort_order) VALUES
     ('SCADA_USER','SCADA User',1), ('DEPARTMENT','Department',2), ('OPERATION_CONTROL','Operation Control',3), ('SEE_ONLY','See only',4);
 
-CREATE TABLE lookup_sales_access (id INTEGER PRIMARY KEY, code TEXT NOT NULL UNIQUE, label TEXT NOT NULL, is_active INTEGER NOT NULL DEFAULT 1, sort_order INTEGER NOT NULL DEFAULT 0);
+CREATE TABLE lookup_sales_access (id INTEGER PRIMARY KEY, code TEXT NOT NULL UNIQUE, label TEXT NOT NULL, description TEXT, is_active INTEGER NOT NULL DEFAULT 1, sort_order INTEGER NOT NULL DEFAULT 0);
 INSERT INTO lookup_sales_access (code, label, sort_order) VALUES
     ('SALES','Sales',1), ('COVERT','Covert',2), ('SEE_ONLY','See only',3);
 
-CREATE TABLE lookup_tcc_access (id INTEGER PRIMARY KEY, code TEXT NOT NULL UNIQUE, label TEXT NOT NULL, is_active INTEGER NOT NULL DEFAULT 1, sort_order INTEGER NOT NULL DEFAULT 0);
+CREATE TABLE lookup_tcc_access (id INTEGER PRIMARY KEY, code TEXT NOT NULL UNIQUE, label TEXT NOT NULL, description TEXT, is_active INTEGER NOT NULL DEFAULT 1, sort_order INTEGER NOT NULL DEFAULT 0);
 INSERT INTO lookup_tcc_access (code, label, sort_order) VALUES
     ('TELENOTDIENST','Telenotdienst',1), ('TELENOTDIENST_READ','Telenotdienst-read',2), ('PMS_DISPATCHER','PMS Dispatcher',3), ('SEE_ONLY','See only',4);
 
-CREATE TABLE lookup_service_access (id INTEGER PRIMARY KEY, code TEXT NOT NULL UNIQUE, label TEXT NOT NULL, is_active INTEGER NOT NULL DEFAULT 1, sort_order INTEGER NOT NULL DEFAULT 0);
+CREATE TABLE lookup_service_access (id INTEGER PRIMARY KEY, code TEXT NOT NULL UNIQUE, label TEXT NOT NULL, description TEXT, is_active INTEGER NOT NULL DEFAULT 1, sort_order INTEGER NOT NULL DEFAULT 0);
 INSERT INTO lookup_service_access (code, label, sort_order) VALUES
     ('COMMISSIONING','Commissioning',1), ('SERVICE_AND_MAINTENANCE','Service and Maintenance',2), ('SEE_ONLY','See only',3);
 
-CREATE TABLE lookup_top_access (id INTEGER PRIMARY KEY, code TEXT NOT NULL UNIQUE, label TEXT NOT NULL, is_active INTEGER NOT NULL DEFAULT 1, sort_order INTEGER NOT NULL DEFAULT 0);
+CREATE TABLE lookup_top_access (id INTEGER PRIMARY KEY, code TEXT NOT NULL UNIQUE, label TEXT NOT NULL, description TEXT, is_active INTEGER NOT NULL DEFAULT 1, sort_order INTEGER NOT NULL DEFAULT 0);
 INSERT INTO lookup_top_access (code, label, sort_order) VALUES
     ('PREVENTIVE_MAINTENANCE','Preventive Maintenance',1), ('TROUBLESHOOTING','Troubleshooting',2),
     ('TROUBLESHOOTING_ADVANCED','Troubleshooting Advanced',3), ('COVERT','Covert',4), ('SEE_ONLY','See only',5);
 
-CREATE TABLE lookup_grid_operator_access (id INTEGER PRIMARY KEY, code TEXT NOT NULL UNIQUE, label TEXT NOT NULL, is_active INTEGER NOT NULL DEFAULT 1, sort_order INTEGER NOT NULL DEFAULT 0);
+CREATE TABLE lookup_grid_operator_access (id INTEGER PRIMARY KEY, code TEXT NOT NULL UNIQUE, label TEXT NOT NULL, description TEXT, is_active INTEGER NOT NULL DEFAULT 1, sort_order INTEGER NOT NULL DEFAULT 0);
 INSERT INTO lookup_grid_operator_access (code, label, sort_order) VALUES
     ('COVERT','Covert',1), ('SEE_ONLY','See only',2);
 
-CREATE TABLE lookup_service_partner_access (id INTEGER PRIMARY KEY, code TEXT NOT NULL UNIQUE, label TEXT NOT NULL, is_active INTEGER NOT NULL DEFAULT 1, sort_order INTEGER NOT NULL DEFAULT 0);
+CREATE TABLE lookup_service_partner_access (id INTEGER PRIMARY KEY, code TEXT NOT NULL UNIQUE, label TEXT NOT NULL, description TEXT, is_active INTEGER NOT NULL DEFAULT 1, sort_order INTEGER NOT NULL DEFAULT 0);
 INSERT INTO lookup_service_partner_access (code, label, sort_order) VALUES
     ('SERVICE_PARTNER','Service Partner',1), ('EXT_SERVICE_PROVIDER','Ext. Service Provider',2),
     ('CUSTOMER_AFTER_WARRANTY_PROFESSIONAL','Customer after warranty Professional',3),
     ('CUSTOMER_AFTER_WARRANTY_ADVANCED','Customer after warranty Advanced',4),
     ('COVERT','Covert',5), ('SEE_ONLY','See only',6);
 
-CREATE TABLE lookup_customer_access (id INTEGER PRIMARY KEY, code TEXT NOT NULL UNIQUE, label TEXT NOT NULL, is_active INTEGER NOT NULL DEFAULT 1, sort_order INTEGER NOT NULL DEFAULT 0);
+CREATE TABLE lookup_customer_access (id INTEGER PRIMARY KEY, code TEXT NOT NULL UNIQUE, label TEXT NOT NULL, description TEXT, is_active INTEGER NOT NULL DEFAULT 1, sort_order INTEGER NOT NULL DEFAULT 0);
 INSERT INTO lookup_customer_access (code, label, sort_order) VALUES
     ('STANDARD','Standard',1), ('ADVANCED','Advanced',2), ('PROFESSIONAL','Professional',3),
     ('PREMIUM','Premium',4), ('COVERT','Covert',5), ('SEE_ONLY','See only',6);
@@ -237,6 +237,16 @@ CREATE TABLE user (
     failed_login_count  INTEGER NOT NULL DEFAULT 0,
     locked_until        TEXT
 );
+
+-- 11-security-architecture.md §4: a new password may not repeat any of the last 5
+-- passwords. Holds the hashes of previous passwords (never plaintext).
+CREATE TABLE user_password_history (
+    id              INTEGER PRIMARY KEY,
+    user_id         INTEGER NOT NULL REFERENCES user(id),
+    password_hash   TEXT NOT NULL,
+    retired_at      TEXT NOT NULL DEFAULT (strftime('%Y-%m-%dT%H:%M:%fZ','now'))
+);
+CREATE INDEX ix_pwhist_user ON user_password_history (user_id, id);
 
 CREATE TABLE user_engineering_domain (
     id INTEGER PRIMARY KEY,
@@ -378,6 +388,7 @@ CREATE TABLE change_request (
     submitted_at                TEXT,
     chief_engineer_decided_at   TEXT,
     chief_engineer_decided_by   INTEGER REFERENCES user(id),
+    assigned_reviewer_id        INTEGER REFERENCES user(id),   -- FR-039: optional Reviewer assignment, Administrator-managed
     CHECK (chief_engineer_decided_by IS NULL OR chief_engineer_decided_by <> requested_by)
 );
 CREATE INDEX ix_cr_state ON change_request (state);
@@ -404,6 +415,20 @@ CREATE TABLE domain_signoff (
     signed_off_at                TEXT NOT NULL DEFAULT (strftime('%Y-%m-%dT%H:%M:%fZ','now')),
     UNIQUE (change_request_id, engineering_domain_id)
 );
+
+-- FR-028: the originating Engineer's explicit request for a domain sign-off,
+-- optionally directed at one named Engineer holding that domain. Surfaces on
+-- the target's Dashboard / My Change Requests (10-ui-ux-specification.md §6).
+CREATE TABLE domain_signoff_request (
+    id                          INTEGER PRIMARY KEY,
+    change_request_id           INTEGER NOT NULL REFERENCES change_request(id),
+    engineering_domain_id       INTEGER NOT NULL REFERENCES lookup_engineering_domain(id),
+    requested_by                INTEGER NOT NULL REFERENCES user(id),
+    target_user_id              INTEGER REFERENCES user(id),
+    created_at                  TEXT NOT NULL DEFAULT (strftime('%Y-%m-%dT%H:%M:%fZ','now')),
+    UNIQUE (change_request_id, engineering_domain_id)
+);
+CREATE INDEX ix_dsr_target ON domain_signoff_request (target_user_id);
 
 CREATE TABLE release (
     id                  INTEGER PRIMARY KEY,
@@ -491,6 +516,19 @@ WHEN (
 ) = 1
 BEGIN
     SELECT RAISE(ABORT, 'Sandbox status codes can never be added to a Release');
+END;
+
+-- FR-072/FR-073: the audit trail is append-only at the database layer.
+CREATE TRIGGER trg_audit_no_update
+BEFORE UPDATE ON audit_log_entry
+BEGIN
+    SELECT RAISE(ABORT, 'audit_log_entry is append-only');
+END;
+
+CREATE TRIGGER trg_audit_no_delete
+BEFORE DELETE ON audit_log_entry
+BEGIN
+    SELECT RAISE(ABORT, 'audit_log_entry is append-only');
 END;
 
 CREATE TRIGGER trg_prevent_nonsandbox_delete

@@ -4,6 +4,8 @@ service-method transaction (no intermediate commit before or after) —
 race-safety comes from the `begin` event listener in app/__init__.py making
 every transaction BEGIN IMMEDIATE, not from anything in this module itself."""
 
+import re
+
 from sqlalchemy import text
 
 from app.domain.errors import DomainError
@@ -11,6 +13,7 @@ from app.extensions import db
 from app.models.lookup import LookupFunctionalSubgroup, LookupFunctionalSystemGroup
 
 _REAL_PREFIX_LEN = len("StCd-")
+_REAL_IDENTIFIER_RE = re.compile(r"^StCd-\d{5}$")
 _SANDBOX_PREFIX_LEN = len("StCd-T")
 _SANDBOX_RANGE_START = 0
 _SANDBOX_RANGE_END = 99999
@@ -73,6 +76,30 @@ class NumberingService:
                 "Sandbox identifier band StCd-T00000..T99999 is exhausted."
             )
         return f"StCd-T{next_number:05d}"
+
+    @staticmethod
+    def validate_manual_identifier(
+        identifier: str, functional_system_group_id: int, functional_subgroup_id: int | None
+    ) -> str:
+        """FR-021a: an Administrator-chosen out-of-sequence identifier must
+        be well-formed, fall inside the subgroup's sub-band, and not already
+        be allocated (BR-001, numbers are never reused)."""
+        if not _REAL_IDENTIFIER_RE.match(identifier or ""):
+            raise ValueError("Identifier override must match StCd-NNNNN (five digits).")
+        number = int(identifier[_REAL_PREFIX_LEN:])
+        range_start, range_end = _resolve_range(functional_system_group_id, functional_subgroup_id)
+        if not range_start <= number <= range_end:
+            raise ValueError(
+                f"Identifier override {identifier} lies outside the permitted range "
+                f"StCd-{range_start:05d}..StCd-{range_end:05d}."
+            )
+        taken = db.session.execute(
+            text("SELECT 1 FROM status_code WHERE status_code_identifier = :i"),
+            {"i": identifier},
+        ).first()
+        if taken is not None:
+            raise ValueError(f"Identifier {identifier} is already allocated.")
+        return identifier
 
     @staticmethod
     def preview_next_identifier(

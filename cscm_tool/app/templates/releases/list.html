@@ -13,7 +13,7 @@
     <thead><tr><th>Name</th><th>Version</th><th>Status</th><th>Items</th><th>Published</th></tr></thead>
     <tbody>
       {% for r in releases %}
-      <tr onclick="window.location='{{ url_for('ui.release_detail', release_id=r.id) }}'" style="cursor:pointer">
+      <tr data-href="{{ url_for('ui.release_detail', release_id=r.id) }}" class="row-link">
         <td>{{ r.name }}</td>
         <td>{{ r.version_label }}</td>
         <td>{{ r.status }}</td>

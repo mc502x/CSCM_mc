@@ -13,18 +13,17 @@ def _login_as(client, user, password="a genuinely long passphrase"):
     return resp
 
 
-def _valid_payload(**overrides):
+def _valid_payload(group_id, subgroup_id, **overrides):
     payload = {
-        "functional_system_group": "WCNV",
+        "functional_system_group": group_id,
+        "functional_subgroup": subgroup_id,
         "turbine_platforms": ["3XM"],
         "title": "Converter Grid Undervoltage Trip",
         "description": "Triggered when converter DC-link voltage falls below threshold.",
-        "status_category": "FAULT",
-        "availability_group": "A",
-        "reset_program": "MANUAL",
-        "software_version": "4.12.0",
-        "operational_state": "STOPPED",
-        "alarm_behaviour": "SELF_CLEARING",
+        "status_category": "ERROR",
+        "available_group": 27,
+        "set_delay": "10ms",
+        "reset_delay": "2min",
     }
     payload.update(overrides)
     return payload
@@ -40,11 +39,11 @@ def _make_cast(make_user):
     }
 
 
-def _get_released_status_code(app, client, cast):
+def _get_released_status_code(app, client, cast, wcnv_ids):
     """Drives a status code all the way to RELEASED via a full CR +
     Release-publish cycle, and returns its status_code_id."""
     _login_as(client, cast["engineer"])
-    created = client.post("/api/v1/status-codes", json=_valid_payload()).get_json()
+    created = client.post("/api/v1/status-codes", json=_valid_payload(*wcnv_ids)).get_json()
     status_code_id = created["status_code_id"]
     revision_id = created["id"]
 
@@ -87,17 +86,17 @@ def _get_released_status_code(app, client, cast):
     return status_code_id
 
 
-def test_second_revision_does_not_violate_current_uniqueness(app, client, make_user):
+def test_second_revision_does_not_violate_current_uniqueness(app, client, make_user, wcnv_ids):
     """Regression test: create_revision must flip the old current revision's
     is_current flag off before inserting the new one, or
     ux_revision_current_per_code rejects the insert."""
     cast = _make_cast(make_user)
-    status_code_id = _get_released_status_code(app, client, cast)
+    status_code_id = _get_released_status_code(app, client, cast, wcnv_ids)
 
     _login_as(client, cast["engineer"])
     response = client.post(
         f"/api/v1/status-codes/{status_code_id}/revisions",
-        json=_valid_payload(title="Converter Grid Undervoltage Trip (revised)"),
+        json=_valid_payload(*wcnv_ids, title="Converter Grid Undervoltage Trip (revised)"),
     )
     assert response.status_code == 201
     assert response.get_json()["is_current"] is True
@@ -108,10 +107,10 @@ def test_second_revision_does_not_violate_current_uniqueness(app, client, make_u
     assert current_flags.count(True) == 1
 
 
-def test_deprecation_requires_released_state(client, make_user):
+def test_deprecation_requires_released_state(client, make_user, wcnv_ids):
     engineer = make_user("ENGINEER")
     _login_as(client, engineer)
-    created = client.post("/api/v1/status-codes", json=_valid_payload()).get_json()
+    created = client.post("/api/v1/status-codes", json=_valid_payload(*wcnv_ids)).get_json()
 
     response = client.post(
         f"/api/v1/status-codes/{created['status_code_id']}/deprecation-requests",
@@ -120,9 +119,9 @@ def test_deprecation_requires_released_state(client, make_user):
     assert response.status_code == 409
 
 
-def test_full_deprecation_cycle(app, client, make_user):
+def test_full_deprecation_cycle(app, client, make_user, wcnv_ids):
     cast = _make_cast(make_user)
-    status_code_id = _get_released_status_code(app, client, cast)
+    status_code_id = _get_released_status_code(app, client, cast, wcnv_ids)
     # Getting to RELEASED and then through the whole deprecation cycle adds
     # up to more login calls than the IP rate limit allows within one
     # 5-minute window (docs/11-security-architecture.md §5) — realistic in
@@ -172,9 +171,9 @@ def test_full_deprecation_cycle(app, client, make_user):
     assert body["deprecated_reason"] == "Superseded by revised undervoltage threshold logic."
 
 
-def test_archive_blocked_before_retention_period_elapses(app, client, make_user):
+def test_archive_blocked_before_retention_period_elapses(app, client, make_user, wcnv_ids):
     cast = _make_cast(make_user)
-    status_code_id = _get_released_status_code(app, client, cast)
+    status_code_id = _get_released_status_code(app, client, cast, wcnv_ids)
 
     # Directly move the revision to DEPRECATED with a DEPRECATE audit entry
     # timestamped "now" to isolate the retention check from the full CR cycle.
@@ -190,8 +189,10 @@ def test_archive_blocked_before_retention_period_elapses(app, client, make_user)
             )
             .one()
         )
-        revision.lifecycle_status = "DEPRECATED"
-        revision.deprecated_reason = "Test deprecation."
+        # Bulk UPDATE on purpose: skips the CR cycle the lifecycle guard enforces.
+        db.session.query(StatusCodeRevision).filter(StatusCodeRevision.id == revision.id).update(
+            {"lifecycle_status": "DEPRECATED", "deprecated_reason": "Test deprecation."}
+        )
         AuditService.log("StatusCodeRevision", revision.id, "DEPRECATE", actor=None)
         db.session.commit()
 
@@ -202,9 +203,9 @@ def test_archive_blocked_before_retention_period_elapses(app, client, make_user)
     assert response.status_code == 422
 
 
-def test_archive_succeeds_after_retention_period(app, client, make_user):
+def test_archive_succeeds_after_retention_period(app, client, make_user, wcnv_ids):
     cast = _make_cast(make_user)
-    status_code_id = _get_released_status_code(app, client, cast)
+    status_code_id = _get_released_status_code(app, client, cast, wcnv_ids)
 
     with app.app_context():
         from app.models.status_code import StatusCodeRevision
@@ -219,8 +220,10 @@ def test_archive_succeeds_after_retention_period(app, client, make_user):
             )
             .one()
         )
-        revision.lifecycle_status = "DEPRECATED"
-        revision.deprecated_reason = "Test deprecation."
+        # Bulk UPDATE on purpose: skips the CR cycle the lifecycle guard enforces.
+        db.session.query(StatusCodeRevision).filter(StatusCodeRevision.id == revision.id).update(
+            {"lifecycle_status": "DEPRECATED", "deprecated_reason": "Test deprecation."}
+        )
         entry = AuditService.log("StatusCodeRevision", revision.id, "DEPRECATE", actor=None)
         entry.occurred_at = format_iso(datetime.now(UTC) - timedelta(days=200))
         db.session.commit()
@@ -231,9 +234,9 @@ def test_archive_succeeds_after_retention_period(app, client, make_user):
     assert response.get_json()["lifecycle_status"] == "ARCHIVED"
 
 
-def test_reinstate_deprecated_code(app, client, make_user):
+def test_reinstate_deprecated_code(app, client, make_user, wcnv_ids):
     cast = _make_cast(make_user)
-    status_code_id = _get_released_status_code(app, client, cast)
+    status_code_id = _get_released_status_code(app, client, cast, wcnv_ids)
 
     with app.app_context():
         from app.models.status_code import StatusCodeRevision
@@ -246,8 +249,10 @@ def test_reinstate_deprecated_code(app, client, make_user):
             )
             .one()
         )
-        revision.lifecycle_status = "DEPRECATED"
-        revision.deprecated_reason = "Test deprecation."
+        # Bulk UPDATE on purpose: skips the CR cycle the lifecycle guard enforces.
+        db.session.query(StatusCodeRevision).filter(StatusCodeRevision.id == revision.id).update(
+            {"lifecycle_status": "DEPRECATED", "deprecated_reason": "Test deprecation."}
+        )
         db.session.commit()
 
     _login_as(client, cast["admin"])

@@ -36,6 +36,8 @@ See [artifacts/schema.sql](artifacts/schema.sql) for full DDL. Summary of tables
 | `change_request` | Workflow carrier for a revision |
 | `review_comment` | Role-tagged comments/decisions on a CR |
 | `domain_signoff` | Cross-Domain Sign-Off records |
+| `user_password_history` | Hashes of retired passwords for the last-5 reuse rule |
+| `domain_signoff_request` | Originating Engineer's request for a domain sign-off, optionally addressed to a named Engineer (FR-028) |
 | `release`, `release_item` | Named, versioned export bundle and membership |
 | `audit_log_entry` | Immutable action log |
 | `export_job` | Export generation record, tagged CATALOGUE vs FULL_DATABASE |
@@ -53,6 +55,7 @@ Surrogate `INTEGER PRIMARY KEY` throughout; foreign keys enforced (`PRAGMA forei
 | `trg_prevent_edit_locked_revision` | No in-place edit of Approved/Released/Archived revisions |
 | `trg_prevent_release_item_delete` | Published Release contents are immutable |
 | `trg_prevent_sandbox_release` | A sandbox-flagged revision can never be inserted into `release_item` — hard-blocks the one dangerous path a sandbox code could otherwise take |
+| `trg_audit_no_update` / `trg_audit_no_delete` (new 2026-10-21) | `audit_log_entry` is append-only at the database layer — any UPDATE or DELETE aborts, so not even a defect or direct SQL access through the application connection can rewrite history (FR-072, FR-073) |
 | `trg_prevent_nonsandbox_delete` | `DELETE FROM status_code` is rejected unless `is_sandbox = 1` — the single, narrow exception to the no-hard-delete rule (05-governance-handbook.md §12) is enforced at the database layer, not only in application code |
 | `trg_prevent_subgroup_overlap` | A new `lookup_functional_subgroup` row is rejected if its sub-range overlaps an existing subgroup in the same group (06-data-dictionary.md §9a.1) |
 | `trg_prevent_group_overlap` (new 2026-09-17) | A new `lookup_functional_system_group` row is rejected if its range overlaps an existing group's range — lets an Administrator assign a whole new group into `10000–10999`/`14000–14999`/`15000–15999`/`16000–16999` safely (06-data-dictionary.md §9.1) |

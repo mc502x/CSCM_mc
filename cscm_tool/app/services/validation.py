@@ -1,15 +1,25 @@
 """Field-level and cross-field validation, per docs/06-data-dictionary.md
 and its "Validation" column (FR-022, FR-027). Operates on the raw request
-payload (string lookup codes, not yet resolved to FK ids) since that is the
-natural point to validate before NumberingService/LookupService touch the
-database. Returns a list of {"field", "message"} dicts; empty means valid."""
+payload (string lookup codes/ids, not yet resolved to FK ids) since that is
+the natural point to validate before NumberingService/LookupService touch
+the database. Returns a list of {"field", "message"} dicts; empty means
+valid.
+
+v3 (2026-09-17): the old Safety-category/Alarm-Behaviour and Auto-reset/
+delay cross-field rules are retired — docs/13-test-strategy.md is explicit
+that "neither...the real data model supports" them, since status_category,
+alarm, and reset are now a 3-value enum, a plain boolean, and eight numeric
+program-reference fields respectively, none of which carry the old
+semantics those rules depended on. available_group and the eight program
+reference fields are soft-validated only (a currently-observed set that can
+legitimately grow — docs/06-data-dictionary.md §2c, §9c) and are
+deliberately NOT hard-validated here."""
 
 import re
 
-_SOFTWARE_VERSION_RE = re.compile(r"^\d+\.\d+(\.\d+)?$")
-
-_SAFETY_ALLOWED_ALARM_BEHAVIOURS = {"LATCHING", "ESCALATING"}
-_EMERGENCY_BRAKE_ALLOWED_CATEGORIES = {"FAULT", "SAFETY"}
+_DELAY_RE = re.compile(r"^\*?\d+(\.\d+)?\s?(ms|s|min|MIN|h|d)$")
+_REPEAT_WINDOW_RE = re.compile(r"^\d+(\.\d+)?\s?(s|min|h|d)$")
+_STATUS_CATEGORIES = {"ERROR", "WARNING", "INFO"}
 
 
 def validate_revision_fields(data: dict) -> list[dict]:
@@ -28,62 +38,48 @@ def validate_revision_fields(data: dict) -> list[dict]:
     if title and description and title == description:
         errors.append({"field": "title", "message": "Title must not equal Description."})
 
-    software_version = data.get("software_version") or ""
-    if not _SOFTWARE_VERSION_RE.match(software_version):
-        errors.append(
-            {
-                "field": "software_version",
-                "message": "Software version must look like '4.12' or '4.12.0'.",
-            }
-        )
-
-    delay_before_alarm_seconds = data.get("delay_before_alarm_seconds", 0)
-    if not (0 <= delay_before_alarm_seconds <= 3600):
-        errors.append(
-            {"field": "delay_before_alarm_seconds", "message": "Must be between 0 and 3600."}
-        )
-
-    delay_before_reset_seconds = data.get("delay_before_reset_seconds", 0)
-    if not (0 <= delay_before_reset_seconds <= 86400):
-        errors.append(
-            {"field": "delay_before_reset_seconds", "message": "Must be between 0 and 86400."}
-        )
-
-    alarm_behaviour = data.get("alarm_behaviour")
     status_category = data.get("status_category")
-
-    if alarm_behaviour == "ESCALATING" and delay_before_alarm_seconds <= 0:
+    if status_category not in _STATUS_CATEGORIES:
         errors.append(
             {
-                "field": "delay_before_alarm_seconds",
-                "message": "Required (> 0) when Alarm Behaviour is ESCALATING.",
+                "field": "status_category",
+                "message": "Status Category must be one of ERROR, WARNING, INFO.",
             }
         )
 
-    if data.get("reset_program") == "AUTO" and delay_before_reset_seconds <= 0:
+    set_delay = data.get("set_delay") or ""
+    if not _DELAY_RE.match(set_delay):
         errors.append(
             {
-                "field": "delay_before_reset_seconds",
-                "message": "Required (> 0) when Reset Program is AUTO.",
+                "field": "set_delay",
+                "message": "Set Delay must be a number with a unit, e.g. '10ms' or '2min'.",
             }
         )
 
-    if status_category == "SAFETY" and alarm_behaviour not in _SAFETY_ALLOWED_ALARM_BEHAVIOURS:
+    reset_delay = data.get("reset_delay") or ""
+    if not _DELAY_RE.match(reset_delay):
         errors.append(
             {
-                "field": "alarm_behaviour",
-                "message": "Must be LATCHING or ESCALATING when Status Category is SAFETY.",
+                "field": "reset_delay",
+                "message": "Reset Delay must be a number with a unit, e.g. '10ms' or '2min'.",
             }
         )
 
-    if (
-        data.get("brake_program") == "BP-4"
-        and status_category not in _EMERGENCY_BRAKE_ALLOWED_CATEGORIES
-    ):
+    number_of_times_repeated = data.get("number_of_times_repeated")
+    if number_of_times_repeated is not None and number_of_times_repeated < 1:
         errors.append(
             {
-                "field": "brake_program",
-                "message": "Emergency Brake (BP-4) requires Status Category FAULT or SAFETY.",
+                "field": "number_of_times_repeated",
+                "message": "Number of Times Repeated must be at least 1 when set.",
+            }
+        )
+
+    repeated_over_the_course = data.get("repeated_over_the_course")
+    if repeated_over_the_course and not _REPEAT_WINDOW_RE.match(repeated_over_the_course):
+        errors.append(
+            {
+                "field": "repeated_over_the_course",
+                "message": "Repeated Over the Course must be a number with a unit, e.g. '1d'.",
             }
         )
 

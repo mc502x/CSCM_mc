@@ -2,16 +2,41 @@
 {% block title %}My Change Requests — CSCM Tool{% endblock %}
 {% block content %}
 <div class="page-header"><h1>My Change Requests</h1></div>
+{% if import_job_id %}
+<div class="flash flash--info">Showing only Drafts created by Import Job #{{ import_job_id }}. <a href="{{ url_for('ui.my_change_requests') }}">Show all</a></div>
+{% endif %}
+{% if sign_requests %}
+<div class="card">
+  <h2>Sign-Off Requests For You</h2>
+  <table>
+    <thead><tr><th>Domain</th><th>Change Request</th><th>Title</th><th>Author</th><th>Requested</th><th></th></tr></thead>
+    <tbody>
+      {% for r in sign_requests %}
+      <tr>
+        <td>{{ r.engineering_domain.code }}</td>
+        <td>#{{ r.change_request_id }}</td>
+        <td>{{ r.change_request.revision.title }}</td>
+        <td>{{ user_label(r.change_request.requested_by) }}</td>
+        <td>{{ r.created_at }}</td>
+        <td><a href="{{ url_for('ui.change_request_detail', cr_id=r.change_request_id) }}">Review &amp; sign off</a></td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endif %}
 <div class="card">
   {% if crs %}
   <table>
-    <thead><tr><th>Type</th><th>State</th><th>Justification</th><th>Submitted</th><th></th></tr></thead>
+    <thead><tr><th>Identifier</th><th>Title</th><th>Type</th><th>State</th><th>Author</th><th>Submitted</th><th></th></tr></thead>
     <tbody>
       {% for cr in crs %}
       <tr>
+        <td>{{ cr.revision.status_code.status_code_identifier or 'Not yet assigned' }}</td>
+        <td>{{ cr.revision.title }}</td>
         <td>{{ cr.cr_type }}</td>
-        <td>{{ cr.state }}</td>
-        <td>{{ cr.justification or '—' }}</td>
+        <td>{{ cr.state|replace('_', ' ')|title }}</td>
+        <td>{{ user_label(cr.requested_by) }}</td>
         <td>{{ cr.submitted_at or '—' }}</td>
         <td><a href="{{ url_for('ui.change_request_detail', cr_id=cr.id) }}">View</a></td>
       </tr>

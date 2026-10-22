@@ -3,7 +3,11 @@
 from flask import jsonify, request
 
 from app.api.v1 import api_v1_bp
-from app.api.v1.serializers import domain_signoff_payload, pending_domain_signoff_payload
+from app.api.v1.serializers import (
+    domain_signoff_payload,
+    domain_signoff_request_payload,
+    pending_domain_signoff_payload,
+)
 from app.auth.decorators import current_user, require_role
 from app.domain.errors import DomainError
 from app.extensions import db
@@ -49,3 +53,36 @@ def create_domain_signoff(cr_id: int):
         return jsonify(error="validation_error", message=str(exc)), 422
 
     return jsonify(domain_signoff_payload(signoff)), 201
+
+
+@api_v1_bp.post("/change-requests/<int:cr_id>/domain-signoff-requests")
+@require_role("ENGINEER", "ADMINISTRATOR")
+def create_domain_signoff_request(cr_id: int):
+    """FR-028: body {"engineering_domain": "CONTROLS", "target_user_id": <int>|null}."""
+    cr = db.session.get(ChangeRequest, cr_id)
+    if cr is None:
+        return jsonify(error="not_found", message="Change request not found"), 404
+
+    body = request.get_json(silent=True) or {}
+    domain_code = body.get("engineering_domain")
+    if not domain_code:
+        return jsonify(error="validation_error", message="engineering_domain is required"), 422
+
+    try:
+        row = DomainSignoffService.request_signoff(
+            cr, domain_code, body.get("target_user_id"), current_user
+        )
+    except DomainError as exc:
+        return jsonify(error="forbidden", message=str(exc)), 403
+    except ValueError as exc:
+        return jsonify(error="validation_error", message=str(exc)), 422
+
+    return jsonify(domain_signoff_request_payload(row)), 201
+
+
+@api_v1_bp.get("/domain-signoff-requests")
+@require_role("ENGINEER")
+def list_my_domain_signoff_requests():
+    """FR-028: open requests awaiting the current Engineer."""
+    open_requests = DomainSignoffService.open_requests_for(current_user.id)
+    return jsonify([domain_signoff_request_payload(r) for r in open_requests])

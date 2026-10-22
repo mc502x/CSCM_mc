@@ -16,19 +16,24 @@ class ChangeRequest(Base):
     status_code_revision_id = db.Column(
         db.Integer, db.ForeignKey("status_code_revision.id"), nullable=False, unique=True
     )
-    cr_type = db.Column(db.Text, nullable=False)  # NEW | REVISION | DEPRECATION
+    cr_type = db.Column(db.Text, nullable=False)  # NEW | REVISION | DEPRECATION | IMPORT
     requested_by = db.Column(db.Integer, db.ForeignKey("user.id"), nullable=False)
     justification = db.Column(db.Text)
+    import_job_id = db.Column(db.Integer, db.ForeignKey("import_job.id"))
     state = db.Column(db.Text, nullable=False, default="DRAFT")
     submitted_at = db.Column(db.Text)
     chief_engineer_decided_at = db.Column(db.Text)
     chief_engineer_decided_by = db.Column(db.Integer, db.ForeignKey("user.id"))
+    assigned_reviewer_id = db.Column(db.Integer, db.ForeignKey("user.id"))  # FR-039
 
     revision: StatusCodeRevision = cast(
         StatusCodeRevision,
         db.relationship("StatusCodeRevision", backref=db.backref("change_request", uselist=False)),
     )
     requester: User = cast(User, db.relationship("User", foreign_keys=[requested_by]))
+    assigned_reviewer: User | None = cast(
+        "User | None", db.relationship("User", foreign_keys=[assigned_reviewer_id])
+    )
     comments: list["ReviewComment"] = cast(
         "list[ReviewComment]",
         db.relationship(
@@ -74,6 +79,31 @@ class DomainSignoff(Base):
     signed_off_by_user: User = cast(User, db.relationship("User"))
     change_request: ChangeRequest = cast(
         ChangeRequest, db.relationship("ChangeRequest", back_populates="domain_signoffs")
+    )
+
+    __table_args__ = (db.UniqueConstraint("change_request_id", "engineering_domain_id"),)
+
+
+class DomainSignoffRequest(Base):
+    """FR-028: the originating Engineer's request for a domain sign-off."""
+
+    __tablename__ = "domain_signoff_request"
+
+    id = db.Column(db.Integer, primary_key=True)
+    change_request_id = db.Column(db.Integer, db.ForeignKey("change_request.id"), nullable=False)
+    engineering_domain_id = db.Column(
+        db.Integer, db.ForeignKey("lookup_engineering_domain.id"), nullable=False
+    )
+    requested_by = db.Column(db.Integer, db.ForeignKey("user.id"), nullable=False)
+    target_user_id = db.Column(db.Integer, db.ForeignKey("user.id"))
+    created_at = db.Column(db.Text, nullable=False)
+
+    engineering_domain: LookupEngineeringDomain = cast(
+        LookupEngineeringDomain, db.relationship("LookupEngineeringDomain")
+    )
+    change_request: ChangeRequest = cast(ChangeRequest, db.relationship("ChangeRequest"))
+    target_user: User | None = cast(
+        "User | None", db.relationship("User", foreign_keys=[target_user_id])
     )
 
     __table_args__ = (db.UniqueConstraint("change_request_id", "engineering_domain_id"),)

@@ -1,5 +1,11 @@
 <!doctype html>
 <html lang="en">
+<!-- OneTool shell integration (EPIC-15, docs/10-ui-ux-specification.md §0):
+     visual shell only (top bar/sidebar/tokens/components) -- CSCM Tool
+     keeps its own login and session (11-security-architecture.md SEC-006).
+     Built from the tokens/rules quoted directly in the UI-UX spec text;
+     ONETOOL_UI_DESIGN.md itself is not present in this repo, so this is
+     not guaranteed pixel-exact to the real design system. -->
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -30,6 +36,9 @@
         {% endif %}
         {% if current_user.role_code == 'ADMINISTRATOR' %}
         <a href="{{ url_for('ui.status_code_new_sandbox') }}">New Sandbox Code</a>
+        {% endif %}
+        {% if current_user.role_code in ('ENGINEER', 'ADMINISTRATOR') %}
+        <a href="{{ url_for('ui.import_new') }}" class="{{ 'is-active' if request.endpoint and request.endpoint.startswith('ui.import') }}">Library Import</a>
         {% endif %}
       </div>
       <div class="sidebar__group">

@@ -4,7 +4,7 @@ Governed system of record for Senvion 4XM/3XM/2XM wind turbine Main Controller a
 
 ## Status
 
-This repository currently holds the **v3.0 software delivery documentation package** (`docs/`) — the complete requirements, architecture, and design basis for the application, grounded in a real 897-row export of the live status code library and a 264-row Hub Controller export. Implementation has not started yet. See [docs/00-INDEX.md](docs/00-INDEX.md) for the full document set and version history, and [docs/18-claude-code-implementation-guide.md](docs/18-claude-code-implementation-guide.md) for the build plan.
+This repository holds the **v3.0 software delivery documentation package** (`docs/`) — requirements, architecture and design basis, grounded in a real 897-row export of the live status code library and a 264-row Hub Controller export — and the **implementation** (`cscm_tool/`), which covers every Phase 1 requirement. [docs/20-traceability-matrix.md](docs/20-traceability-matrix.md) maps each requirement to its code and automated test (319 tests passing) and lists the few items that still need a person or the production environment (UAT sign-off, lookup wording from Controls Engineering, deployment checks). See [docs/00-INDEX.md](docs/00-INDEX.md) for the full document set and [docs/18-claude-code-implementation-guide.md](docs/18-claude-code-implementation-guide.md) for the build plan.
 
 ## Quick Facts
 
@@ -21,7 +21,7 @@ This repository currently holds the **v3.0 software delivery documentation packa
 ```
 docs/                 Software delivery documentation package (start at docs/00-INDEX.md)
   artifacts/           Executable SQL schema and OpenAPI contract
-cscm_tool/             Application source (Flask backend, server-rendered UI) — not yet created
+cscm_tool/             Application source (Flask backend, server-rendered UI) and test suite
 ```
 
 ## Open Items Before Production Go-Live

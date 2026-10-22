@@ -32,30 +32,88 @@
 <div class="tabs">
   <a href="?tab=current" class="{{ 'is-active' if tab == 'current' }}">Current</a>
   <a href="?tab=history" class="{{ 'is-active' if tab == 'history' }}">History ({{ history|length }})</a>
+  {% if current_user.role_code != 'VIEWER' %}<a href="?tab=decisions" class="{{ 'is-active' if tab == 'decisions' }}">Decisions &amp; Comments ({{ decisions|length }})</a>{% endif %}
   <a href="?tab=actions" class="{{ 'is-active' if tab == 'actions' }}">Actions</a>
 </div>
 
 {% if tab == 'current' %}
 <div class="card">
   <dl class="kv">
+    <dt>Logical Node</dt><dd>{{ revision.logical_node }} <span class="muted">(node value {{ revision.node_value }})</span></dd>
+    <dt>Legacy Reference Number</dt><dd>{{ revision.legacy_reference_number or '—' }}</dd>
     <dt>Status Category</dt><dd>{{ revision.status_category }}</dd>
-    <dt>Availability Group</dt><dd>{{ revision.availability_group }}</dd>
-    <dt>Brake Program</dt><dd>{{ revision.brake_program }}</dd>
-    <dt>Reset Program</dt><dd>{{ revision.reset_program }}</dd>
-    <dt>Operational State</dt><dd>{{ revision.operational_state }}</dd>
-    <dt>Alarm Behaviour</dt><dd>{{ revision.alarm_behaviour }}</dd>
-    <dt>Access Rights</dt>
-    <dd>{{ revision.access_rights }}{% if not revision.admin_signoff_at %}<span class="proposed-badge">Proposed</span>{% endif %}</dd>
-    <dt>Software Version</dt><dd>{{ revision.software_version }}</dd>
-    <dt>Delay Before Alarm</dt><dd>{{ revision.delay_before_alarm_seconds }}s</dd>
-    <dt>Delay Before Reset</dt><dd>{{ revision.delay_before_reset_seconds }}s</dd>
+    <dt>Available Group</dt><dd>{{ revision.available_group }}</dd>
+    <dt>Software Version</dt><dd>{{ revision.software_version or '—' }}</dd>
+    <dt>Alarm</dt><dd>{{ 'Yes' if revision.alarm_flag else 'No' }}</dd>
+    <dt>Set Delay</dt><dd>{{ revision.set_delay }}</dd>
+    <dt>Reset Delay</dt><dd>{{ revision.reset_delay }}</dd>
+    <dt>Up/Down Counter</dt><dd>{{ 'Yes' if revision.up_down_counter else 'No' }}</dd>
+    <dt>Trigger Snapshot</dt><dd>{{ 'Yes' if revision.trigger_snapshot else 'No' }}</dd>
+    <dt>Loadless Spinning Permitted</dt><dd>{{ 'Yes' if revision.loadless_spinning_permitted else 'No' }}</dd>
     <dt>Description</dt><dd>{{ revision.description }}</dd>
-    <dt>Owner</dt><dd>User #{{ revision.owner_id }}</dd>
+    <dt>Owner</dt><dd>{{ user_label(revision.owner_id) }}</dd>
     <dt>Effective Date</dt><dd>{{ revision.effective_date or '—' }}</dd>
     {% if revision.deprecated_reason %}
     <dt>Deprecation Reason</dt><dd>{{ revision.deprecated_reason }}</dd>
     {% endif %}
   </dl>
+
+  {% if revision.number_of_times_repeated or revision.repeated_over_the_course or revision.status_code_for_repeated_error %}
+  <h2>Repeated-Error Escalation</h2>
+  <dl class="kv">
+    <dt>Number of Times Repeated</dt><dd>{{ revision.number_of_times_repeated or '—' }}</dd>
+    <dt>Repeated Over the Course</dt><dd>{{ revision.repeated_over_the_course or '—' }}</dd>
+    <dt>Status Code for Repeated Error</dt><dd>{{ revision.status_code_for_repeated_error if revision.status_code_for_repeated_error is not none else '—' }}</dd>
+  </dl>
+  {% endif %}
+
+  <h2>Program References <span class="muted">(advanced, controller firmware programs)</span></h2>
+  <dl class="kv">
+    <dt>Yaw Program</dt><dd>{{ revision.yaw_program }}</dd>
+    <dt>Manual Reset Program</dt><dd>{{ revision.manual_reset_program }}</dd>
+    <dt>Auto Reset Program</dt><dd>{{ revision.auto_reset_program }}</dd>
+    <dt>Converter Reactive Power Program</dt><dd>{{ revision.converter_reactive_power_program }}</dd>
+    <dt>Brake Program</dt><dd>{{ revision.brake_program }}</dd>
+    <dt>Umrichterprogramm GSC</dt><dd>{{ revision.umrichterprogramm_gsc }}</dd>
+    <dt>Umrichterprogramm MSC</dt><dd>{{ revision.umrichterprogramm_msc }}</dd>
+    <dt>Yaw Bearing Lubrication Program</dt><dd>{{ revision.yaw_bearing_lubrication_program }}</dd>
+  </dl>
+
+  <h2>Audience Access {% if not revision.admin_signoff_at %}<span class="proposed-badge">Proposed</span>{% endif %}</h2>
+  <dl class="kv">
+    <dt>Development</dt><dd>{{ revision.development_access or '—' }}</dd>
+    <dt>Sales</dt><dd>{{ revision.sales_access or '—' }}</dd>
+    <dt>TCC</dt><dd>{{ revision.tcc_access or '—' }}</dd>
+    <dt>Service</dt><dd>{{ revision.service_access or '—' }}</dd>
+    <dt>Turbine Operator Package</dt><dd>{{ revision.turbine_operator_package_access or '—' }}</dd>
+    <dt>Grid Operator</dt><dd>{{ revision.grid_operator_access or '—' }}</dd>
+    <dt>Service Partner</dt><dd>{{ revision.service_partner_access or '—' }}</dd>
+    <dt>Customer</dt><dd>{{ revision.customer_access or '—' }}</dd>
+  </dl>
+</div>
+{% elif tab == 'decisions' and current_user.role_code != 'VIEWER' %}
+<div class="card">
+  <h2>Decisions &amp; Comments</h2>
+  <p class="muted">Every comment and decision on every change request of this status code, oldest first. Comments of withdrawn requests are kept in the Audit Log (action WITHDRAW).</p>
+  {% if decisions %}
+  <table>
+    <thead><tr><th>When</th><th>Change request</th><th>Revision</th><th>Who</th><th>Decision</th><th>Comment</th></tr></thead>
+    <tbody>
+      {% for d in decisions %}
+      <tr>
+        <td>{{ d.when }}</td>
+        <td><a href="{{ url_for('ui.change_request_detail', cr_id=d.cr_id) }}">#{{ d.cr_id }}</a> {{ d.cr_type|title }}</td>
+        <td>#{{ d.revision_number }}</td>
+        <td>{{ user_label(d.author_id) }}</td>
+        <td>{{ d.decision|decision_label }}</td>
+        <td>{{ d.comment }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% else %}
+  <div class="table-empty">No comments or decisions yet.</div>
+  {% endif %}
 </div>
 {% elif tab == 'history' %}
 <div class="card">
@@ -68,6 +126,22 @@
     </tbody>
   </table>
 </div>
+{% if history|length > 1 %}
+<div class="card">
+  <h2>Compare Revisions</h2>
+  <form method="get" class="form-row" style="align-items:end">
+    <input type="hidden" name="tab" value="history">
+    <div class="field" style="margin-bottom:0"><label for="a">From revision</label>
+      <select id="a" name="a">{% for r in history %}<option value="{{ r.revision_number }}" {{ 'selected' if rev_a == r.revision_number }}>#{{ r.revision_number }}</option>{% endfor %}</select></div>
+    <div class="field" style="margin-bottom:0"><label for="b">To revision</label>
+      <select id="b" name="b">{% for r in history %}<option value="{{ r.revision_number }}" {{ 'selected' if rev_b == r.revision_number }}>#{{ r.revision_number }}</option>{% endfor %}</select></div>
+    <div class="field" style="margin-bottom:0"><button class="btn" type="submit">Compare</button></div>
+  </form>
+  {% if diff %}
+  {{ macros.field_diff(diff.field_changes) }}
+  {% endif %}
+</div>
+{% endif %}
 {% else %}
 <div class="card">
   <h2>Deprecation / Archival</h2>
@@ -108,15 +182,10 @@
   <form method="post" action="{{ url_for('ui.status_code_delete', status_code_id=revision.status_code_id) }}">
     <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
     <div class="field">
-      <input type="text" id="confirm_identifier" placeholder="Type {{ revision.status_code_identifier }} to confirm">
+      <input type="text" id="confirm_identifier" data-typed-confirm="confirm_delete_btn" data-expected="{{ revision.status_code_identifier }}" placeholder="Type {{ revision.status_code_identifier }} to confirm">
     </div>
     <button class="btn btn--danger" type="submit" id="confirm_delete_btn">Delete Permanently</button>
   </form>
-  <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    initTypedConfirm('confirm_identifier', 'confirm_delete_btn', {{ revision.status_code_identifier | tojson }});
-  });
-  </script>
   {% endif %}
 
   {% if not (revision.lifecycle_status in ('RELEASED', 'DEPRECATED') or revision.is_sandbox) %}

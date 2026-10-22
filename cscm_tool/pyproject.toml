@@ -23,6 +23,8 @@ check_untyped_defs = true
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+junit_family = "xunit1"  # lets record_property measurements reach the test report
+markers = ["performance: NFR-001 / TC-024 / TC-025 load tests (deselect with -m \"not performance\")"]
 
 [tool.coverage.run]
 source = ["app"]

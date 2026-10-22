@@ -1,5 +1,10 @@
 from app.extensions import db
-from app.models.change_request import ChangeRequest, DomainSignoff, ReviewComment
+from app.models.change_request import (
+    ChangeRequest,
+    DomainSignoff,
+    DomainSignoffRequest,
+    ReviewComment,
+)
 from app.repositories.base import BaseRepository
 from app.utils import utcnow_iso
 
@@ -18,6 +23,7 @@ class ChangeRequestRepository(BaseRepository[ChangeRequest]):
             created_at=utcnow_iso(),
         )
         db.session.add(comment)
+        db.session.flush()  # the audit entry cites comment.id
         return comment
 
     def clear_review_signoffs(self, revision) -> None:
@@ -31,4 +37,7 @@ class ChangeRequestRepository(BaseRepository[ChangeRequest]):
         app/services/change_request_service.py for why this is safe."""
         db.session.query(ReviewComment).filter(ReviewComment.change_request_id == cr.id).delete()
         db.session.query(DomainSignoff).filter(DomainSignoff.change_request_id == cr.id).delete()
+        db.session.query(DomainSignoffRequest).filter(
+            DomainSignoffRequest.change_request_id == cr.id
+        ).delete()
         db.session.delete(cr)

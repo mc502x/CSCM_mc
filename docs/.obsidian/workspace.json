@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "16-mvp-roadmap.md",
+                "file": "11-security-architecture.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "16-mvp-roadmap"
+              "title": "11-security-architecture"
             }
           }
         ]
@@ -55,7 +55,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "epic",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -79,8 +79,7 @@
               "title": "Lesezeichen"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -191,10 +190,38 @@
   },
   "active": "07a9556762422355",
   "lastOpenFiles": [
+    "artifacts/test-run-history.json",
+    "artifacts/New Statuscode for sharing (recreated).xlsx",
+    "Unbenannt.canvas",
+    "24-test-report.md",
+    "23-user-manual.md",
+    "22-software-description.md",
+    "21-improvement-ideas.md",
+    "20-traceability-matrix.md",
+    "12-audit-compliance.md",
+    "14-deployment-architecture.md",
+    "15-development-standards.md",
+    "16-mvp-roadmap.md",
+    "17-implementation-backlog.md",
+    "04-domain-model.md",
+    "05-governance-handbook.md",
+    "03-srs.md",
+    "07-database-design.md",
+    "08-system-architecture.md",
+    "10-ui-ux-specification.md",
+    "09-api-specification.md",
+    "19-glossary.md",
+    "23-user-manual.md.tmp.5584.b460def9c58b",
+    "sed7qWcq1",
+    "22-software-description.md.tmp.5584.545feafa944e",
+    "21-improvement-ideas.md.tmp.5584.b5969208b163",
+    "20-traceability-matrix.md.tmp.5584.dca29385b32e",
+    "18-claude-code-implementation-guide.md",
+    "20-traceability-matrix.md.tmp.5584.97df7a6c3279",
+    "00-INDEX.md",
+    "06-data-dictionary.md",
+    "01-executive-summary.md",
     "artifacts/openapi.yaml.tmp.12204.49c3d87fa01a",
-    "artifacts/openapi.yaml.tmp.12204.6ef53824f8e7",
-    "artifacts/openapi.yaml.tmp.12204.70ad90e82714",
-    "artifacts/openapi.yaml.tmp.12204.7b126f393bac",
-    "18-claude-code-implementation-guide.md"
+    "artifacts/openapi.yaml.tmp.12204.6ef53824f8e7"
   ]
 }

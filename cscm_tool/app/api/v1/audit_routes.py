@@ -24,6 +24,7 @@ def search_audit_log():
         entity_type=request.args.get("entity_type"),
         entity_id=request.args.get("entity_id", type=int),
         actor_id=request.args.get("actor_id", type=int),
+        action=request.args.get("action") or None,
         date_from=request.args.get("date_from"),
         date_to=request.args.get("date_to"),
         page=page,

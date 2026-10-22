@@ -7,6 +7,7 @@ sandbox codes bypass the governance workflow entirely by design)."""
 
 from datetime import UTC, datetime, timedelta
 
+from app.domain.authz import require_roles
 from app.domain.errors import (
     DomainError,
     InvalidTransitionError,
@@ -17,15 +18,16 @@ from app.extensions import db
 from app.models.audit import AuditLogEntry
 from app.models.change_request import ChangeRequest
 from app.models.lookup import (
-    LookupAccessRights,
-    LookupAlarmBehaviour,
-    LookupAvailabilityGroup,
-    LookupBrakeProgram,
+    LookupCustomerAccess,
+    LookupDevelopmentAccess,
     LookupFunctionalSubgroup,
     LookupFunctionalSystemGroup,
-    LookupOperationalState,
-    LookupResetProgram,
-    LookupStatusCategory,
+    LookupGridOperatorAccess,
+    LookupSalesAccess,
+    LookupServiceAccess,
+    LookupServicePartnerAccess,
+    LookupTccAccess,
+    LookupTopAccess,
     LookupTurbinePlatform,
 )
 from app.models.status_code import StatusCode, StatusCodeRevision, StatusCodeRevisionPlatform
@@ -50,10 +52,16 @@ class StatusCodeService:
     _repo = StatusCodeRepository()
 
     @staticmethod
-    def create_draft(data: dict, actor_user) -> StatusCodeRevision:
+    def create_draft(
+        data: dict, actor_user, *, import_job_id: int | None = None
+    ) -> StatusCodeRevision:
         """FR-020: Engineer or Administrator creates a new Status Code as a
         Draft revision. No identifier is assigned (FR-021); a wrapping
-        ChangeRequest (cr_type=NEW) is created alongside it (FR-030)."""
+        ChangeRequest is created alongside it (FR-030) — cr_type=IMPORT
+        when called from ImportService (FR-048a-c), cr_type=NEW otherwise.
+        Either way the CR goes through the identical submit/dual-review/
+        Chief-Engineer-approval cycle (05-governance-handbook.md §6b)."""
+        require_roles(actor_user, "ADMINISTRATOR", "ENGINEER")
         revision = StatusCodeService._build_revision(
             data, actor_user, is_sandbox=False, status_code_id=None, revision_number=1
         )
@@ -61,9 +69,10 @@ class StatusCodeService:
 
         cr = ChangeRequest(
             status_code_revision_id=revision.id,
-            cr_type="NEW",
+            cr_type="IMPORT" if import_job_id else "NEW",
             requested_by=actor_user.id,
             justification=data.get("justification"),
+            import_job_id=import_job_id,
             state="DRAFT",
         )
         db.session.add(cr)
@@ -82,6 +91,7 @@ class StatusCodeService:
     def create_revision(status_code_id: int, data: dict, actor_user) -> StatusCodeRevision:
         """Opens a new Draft revision (copy-on-write) against an existing
         code (FR-025). BR-003: rejected if an open revision already exists."""
+        require_roles(actor_user, "ADMINISTRATOR", "ENGINEER")
         status_code = StatusCodeService._repo.get_or_404(status_code_id)
         if StatusCodeService._repo.get_open_revision(status_code_id) is not None:
             raise InvalidTransitionError(
@@ -130,6 +140,7 @@ class StatusCodeService:
         submit/dual-review/Chief-Engineer-approval machinery as any other
         CR; ChangeRequestService.chief_engineer_decide routes a DEPRECATION
         CR's approval to DEPRECATED instead of APPROVED."""
+        require_roles(actor_user, "ADMINISTRATOR", "ENGINEER")
         status_code = StatusCodeService._repo.get_or_404(status_code_id)
         current = StatusCodeService._repo.get_current_revision(status_code_id)
         if current is None or current.lifecycle_status != "RELEASED":
@@ -173,16 +184,34 @@ class StatusCodeService:
             is_current=1,
             title=current.title,
             description=current.description,
-            status_category_id=current.status_category_id,
-            availability_group_id=current.availability_group_id,
-            brake_program_id=current.brake_program_id,
-            reset_program_id=current.reset_program_id,
             software_version=current.software_version,
-            operational_state_id=current.operational_state_id,
-            access_rights_id=current.access_rights_id,
-            delay_before_alarm_seconds=current.delay_before_alarm_seconds,
-            delay_before_reset_seconds=current.delay_before_reset_seconds,
-            alarm_behaviour_id=current.alarm_behaviour_id,
+            status_category=current.status_category,
+            available_group=current.available_group,
+            alarm_flag=current.alarm_flag,
+            set_delay=current.set_delay,
+            reset_delay=current.reset_delay,
+            up_down_counter=current.up_down_counter,
+            trigger_snapshot=current.trigger_snapshot,
+            loadless_spinning_permitted=current.loadless_spinning_permitted,
+            number_of_times_repeated=current.number_of_times_repeated,
+            repeated_over_the_course=current.repeated_over_the_course,
+            status_code_for_repeated_error=current.status_code_for_repeated_error,
+            yaw_program=current.yaw_program,
+            manual_reset_program=current.manual_reset_program,
+            auto_reset_program=current.auto_reset_program,
+            converter_reactive_power_program=current.converter_reactive_power_program,
+            brake_program=current.brake_program,
+            umrichterprogramm_gsc=current.umrichterprogramm_gsc,
+            umrichterprogramm_msc=current.umrichterprogramm_msc,
+            yaw_bearing_lubrication_program=current.yaw_bearing_lubrication_program,
+            development_access_id=current.development_access_id,
+            sales_access_id=current.sales_access_id,
+            tcc_access_id=current.tcc_access_id,
+            service_access_id=current.service_access_id,
+            turbine_operator_package_access_id=current.turbine_operator_package_access_id,
+            grid_operator_access_id=current.grid_operator_access_id,
+            service_partner_access_id=current.service_partner_access_id,
+            customer_access_id=current.customer_access_id,
             owner_id=current.owner_id,
             lifecycle_status="DRAFT",
             created_by=actor_user.id,
@@ -228,6 +257,7 @@ class StatusCodeService:
         DEPRECATE audit_log_entry is the authoritative timestamp source —
         consistent with the audit trail being the compliance record of
         truth (docs/12-audit-compliance.md §1)."""
+        require_roles(actor_user, "ADMINISTRATOR")
         current = StatusCodeService._repo.get_current_revision(status_code_id)
         if current is None or current.lifecycle_status != "DEPRECATED":
             raise InvalidTransitionError("Only a Deprecated Status Code can be archived.")
@@ -267,6 +297,7 @@ class StatusCodeService:
     def reinstate(status_code_id: int, reason: str, actor_user) -> StatusCodeRevision:
         """Deprecated -> Released, exceptional (docs/05-governance-handbook.md
         §5): Administrator-only, direct action, mandatory reason."""
+        require_roles(actor_user, "ADMINISTRATOR")
         current = StatusCodeService._repo.get_current_revision(status_code_id)
         if current is None or current.lifecycle_status != "DEPRECATED":
             raise InvalidTransitionError("Only a Deprecated Status Code can be reinstated.")
@@ -324,6 +355,7 @@ class StatusCodeService:
         docs/artifacts/schema.sql to back that check — so it is accepted
         (for forward API compatibility) but not currently enforced. Adding
         real optimistic concurrency needs its own schema migration."""
+        require_roles(actor_user, "ADMINISTRATOR", "ENGINEER")
         revision = db.session.get(StatusCodeRevision, revision_id)
         if revision is None:
             raise NotFoundError(f"Revision {revision_id} not found")
@@ -356,7 +388,12 @@ class StatusCodeService:
 
     @staticmethod
     def get_current_revision(status_code_id: int, actor_user) -> StatusCodeRevision:
-        revision = StatusCodeService._repo.get_current_revision(status_code_id)
+        if actor_user.role_code == "VIEWER":
+            revision = StatusCodeService._repo.get_latest_revision_in_states(
+                status_code_id, VIEWER_VISIBLE_STATES
+            )
+        else:
+            revision = StatusCodeService._repo.get_current_revision(status_code_id)
         if revision is None or not StatusCodeService._is_visible(revision, actor_user):
             raise NotFoundError(f"Status Code {status_code_id} not found")
         return revision
@@ -375,15 +412,17 @@ class StatusCodeService:
 
     @staticmethod
     def preview_next_identifier(
-        functional_system_group_code: str, functional_subgroup_code: str | None
+        functional_system_group_id: int, functional_subgroup_id: int
     ) -> str:
-        group = LookupService.get_by_code(LookupFunctionalSystemGroup, functional_system_group_code)
-        subgroup_id = None
-        if functional_subgroup_code:
-            subgroup_id = LookupService.get_by_code(
-                LookupFunctionalSubgroup, functional_subgroup_code
-            ).id
-        return NumberingService.preview_next_identifier(group.id, subgroup_id)
+        """FR-021/US-023. v3: Functional Subgroup is mandatory (never
+        optional), so both ids are required here, matching
+        docs/artifacts/openapi.yaml's now-required `functional_subgroup`
+        query parameter on GET /status-codes/next-available."""
+        group = LookupService.get_by_id(LookupFunctionalSystemGroup, functional_system_group_id)
+        subgroup = LookupService.get_by_id(LookupFunctionalSubgroup, functional_subgroup_id)
+        if subgroup.functional_system_group_id != group.id:
+            raise ValueError("Subgroup does not belong to the selected Functional System Group.")
+        return NumberingService.preview_next_identifier(group.id, subgroup.id)
 
     @staticmethod
     def delete_sandbox(status_code_id: int, actor_user) -> None:
@@ -391,6 +430,7 @@ class StatusCodeService:
         SANDBOX_DELETE audit entry with a full pre-delete snapshot in the
         same transaction. trg_prevent_nonsandbox_delete is defense-in-depth
         if this service-layer check is ever bypassed."""
+        require_roles(actor_user, "ADMINISTRATOR")
         status_code = StatusCodeService._repo.get_or_404(status_code_id)
         if not status_code.is_sandbox:
             raise DomainError("Only sandbox status codes may be deleted (FR-055).")
@@ -434,28 +474,39 @@ class StatusCodeService:
         if field_errors:
             raise ValidationFailed(field_errors)
 
-        group = LookupService.get_by_code(
-            LookupFunctionalSystemGroup, data["functional_system_group"]
-        )
-        subgroup = None
-        subgroup_code = data.get("functional_subgroup")
-        if subgroup_code:
-            subgroup = LookupService.get_by_code(LookupFunctionalSubgroup, subgroup_code)
-            if subgroup.functional_system_group_id != group.id:
-                raise ValidationFailed(
-                    [
-                        {
-                            "field": "functional_subgroup",
-                            "message": "Subgroup does not belong to the selected Functional Group.",
-                        }
-                    ]
-                )
+        try:
+            group = LookupService.get_by_id(
+                LookupFunctionalSystemGroup, data.get("functional_system_group")
+            )
+        except ValueError as exc:
+            raise ValidationFailed(
+                [{"field": "functional_system_group", "message": str(exc)}]
+            ) from exc
+
+        # BR-013: mandatory, never optional (corrected 2026-09-17) — every
+        # one of the 897 rows in the real export carries a subgroup.
+        try:
+            subgroup = LookupService.get_by_id(
+                LookupFunctionalSubgroup, data.get("functional_subgroup")
+            )
+        except ValueError as exc:
+            raise ValidationFailed([{"field": "functional_subgroup", "message": str(exc)}]) from exc
+        if subgroup.functional_system_group_id != group.id:
+            raise ValidationFailed(
+                [
+                    {
+                        "field": "functional_subgroup",
+                        "message": "Subgroup does not belong to the selected Functional Group.",
+                    }
+                ]
+            )
 
         now = utcnow_iso()
         if status_code_id is None:
             status_code = StatusCode(
                 functional_system_group_id=group.id,
-                functional_subgroup_id=subgroup.id if subgroup else None,
+                functional_subgroup_id=subgroup.id,
+                legacy_reference_number=data.get("legacy_reference_number"),
                 is_sandbox=1 if is_sandbox else 0,
                 owner_id=actor_user.id,
                 created_at=now,
@@ -498,32 +549,101 @@ class StatusCodeService:
 def _apply_revision_fields(revision: StatusCodeRevision, data: dict) -> None:
     revision.title = data["title"]
     revision.description = data["description"]
-    revision.status_category_id = LookupService.get_by_code(
-        LookupStatusCategory, data["status_category"]
-    ).id
-    revision.availability_group_id = LookupService.get_by_code(
-        LookupAvailabilityGroup, data["availability_group"]
-    ).id
-    revision.brake_program_id = LookupService.get_by_code(
-        LookupBrakeProgram, data.get("brake_program", "BP-NONE")
-    ).id
-    revision.reset_program_id = LookupService.get_by_code(
-        LookupResetProgram, data["reset_program"]
-    ).id
-    revision.software_version = data["software_version"]
-    revision.operational_state_id = LookupService.get_by_code(
-        LookupOperationalState, data["operational_state"]
-    ).id
-    # SEC-013/FR-025a: Engineer-proposed here; only authoritative once the
-    # Administrator's Review sign-off confirms it (see change_request_service).
-    revision.access_rights_id = LookupService.get_by_code(
-        LookupAccessRights, data.get("access_rights", "SERVICE")
-    ).id
-    revision.delay_before_alarm_seconds = data.get("delay_before_alarm_seconds", 0)
-    revision.delay_before_reset_seconds = data.get("delay_before_reset_seconds", 0)
-    revision.alarm_behaviour_id = LookupService.get_by_code(
-        LookupAlarmBehaviour, data["alarm_behaviour"]
-    ).id
+    revision.software_version = data.get("software_version") or None
+    revision.status_category = data["status_category"]
+    revision.available_group = data["available_group"]
+    revision.alarm_flag = 1 if data.get("alarm_flag") else 0
+    revision.set_delay = data["set_delay"]
+    revision.reset_delay = data["reset_delay"]
+    revision.up_down_counter = 1 if data.get("up_down_counter") else 0
+    revision.trigger_snapshot = 1 if data.get("trigger_snapshot") else 0
+    revision.loadless_spinning_permitted = 1 if data.get("loadless_spinning_permitted") else 0
+
+    revision.number_of_times_repeated = data.get("number_of_times_repeated")
+    revision.repeated_over_the_course = data.get("repeated_over_the_course") or None
+    revision.status_code_for_repeated_error = data.get("status_code_for_repeated_error")
+
+    revision.yaw_program = data.get("yaw_program", 0)
+    revision.manual_reset_program = data.get("manual_reset_program", 0)
+    revision.auto_reset_program = data.get("auto_reset_program", 0)
+    revision.converter_reactive_power_program = data.get("converter_reactive_power_program", 0)
+    revision.brake_program = data.get("brake_program", 0)
+    revision.umrichterprogramm_gsc = data.get("umrichterprogramm_gsc", 0)
+    revision.umrichterprogramm_msc = data.get("umrichterprogramm_msc", 0)
+    revision.yaw_bearing_lubrication_program = data.get("yaw_bearing_lubrication_program", 0)
+
+    # FR-025a/SEC-013/BR-012: eight restricted fields, Engineer-proposed here,
+    # only authoritative once the Administrator's Review sign-off confirms
+    # them (see change_request_service._dual_signoff — admin_signoff_at
+    # becoming non-null IS the confirmation, no field-specific code needed
+    # there). All eight are optional (nullable FKs).
+    revision.development_access_id = _resolve_access(
+        LookupDevelopmentAccess, data.get("development_access")
+    )
+    revision.sales_access_id = _resolve_access(LookupSalesAccess, data.get("sales_access"))
+    revision.tcc_access_id = _resolve_access(LookupTccAccess, data.get("tcc_access"))
+    revision.service_access_id = _resolve_access(LookupServiceAccess, data.get("service_access"))
+    revision.turbine_operator_package_access_id = _resolve_access(
+        LookupTopAccess, data.get("turbine_operator_package_access")
+    )
+    revision.grid_operator_access_id = _resolve_access(
+        LookupGridOperatorAccess, data.get("grid_operator_access")
+    )
+    revision.service_partner_access_id = _resolve_access(
+        LookupServicePartnerAccess, data.get("service_partner_access")
+    )
+    revision.customer_access_id = _resolve_access(LookupCustomerAccess, data.get("customer_access"))
+
+
+ACCESS_FIELDS = (
+    "development_access",
+    "sales_access",
+    "tcc_access",
+    "service_access",
+    "turbine_operator_package_access",
+    "grid_operator_access",
+    "service_partner_access",
+    "customer_access",
+)
+
+_ACCESS_MODELS = {
+    "development_access": LookupDevelopmentAccess,
+    "sales_access": LookupSalesAccess,
+    "tcc_access": LookupTccAccess,
+    "service_access": LookupServiceAccess,
+    "turbine_operator_package_access": LookupTopAccess,
+    "grid_operator_access": LookupGridOperatorAccess,
+    "service_partner_access": LookupServicePartnerAccess,
+    "customer_access": LookupCustomerAccess,
+}
+
+
+def apply_access_overrides(revision: StatusCodeRevision, overrides: dict) -> tuple[dict, dict]:
+    """FR-034 / SEC-013: the Administrator's Review sign-off may confirm or
+    override the eight restricted audience-access fields. `overrides` maps a
+    field name to a lookup id (or ""/None to clear it); fields not named are
+    left as the Engineer proposed. Returns (before, after) for only the
+    fields that actually changed, for the audit trail."""
+    unknown = set(overrides) - set(ACCESS_FIELDS)
+    if unknown:
+        raise ValueError(f"Unknown audience-access field(s): {', '.join(sorted(unknown))}")
+    before: dict = {}
+    after: dict = {}
+    for name, raw in overrides.items():
+        new_id = _resolve_access(_ACCESS_MODELS[name], raw)
+        attr = f"{name}_id"
+        old_id = getattr(revision, attr)
+        if new_id != old_id:
+            before[name] = old_id
+            after[name] = new_id
+            setattr(revision, attr, new_id)
+    return before, after
+
+
+def _resolve_access(model, value_id) -> int | None:
+    if value_id is None or value_id == "":
+        return None
+    return LookupService.get_by_id(model, value_id).id
 
 
 def _set_platforms(revision: StatusCodeRevision, platform_codes: list[str]) -> None:
@@ -543,7 +663,7 @@ def _revision_snapshot(revision: StatusCodeRevision) -> dict:
     return {
         "title": revision.title,
         "description": revision.description,
-        "status_category": revision.status_category.code,
+        "status_category": revision.status_category,
         "lifecycle_status": revision.lifecycle_status,
         "turbine_platforms": sorted(p.turbine_platform.code for p in revision.platforms),
     }

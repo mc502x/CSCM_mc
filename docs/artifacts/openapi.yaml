@@ -55,6 +55,34 @@ paths:
       responses:
         '204': { description: Logged out }
 
+  /auth/csrf-token:
+    get:
+      tags: [Auth]
+      summary: Fetch the CSRF token to send as X-CSRFToken on every state-changing request
+      security: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  csrf_token: { type: string }
+
+  /health:
+    get:
+      tags: [Auth]
+      summary: Liveness probe (no authentication)
+      security: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status: { type: string, example: ok }
+
   /auth/me:
     get:
       tags: [Auth]
@@ -110,6 +138,40 @@ paths:
           content:
             application/json:
               schema: { $ref: '#/components/schemas/User' }
+
+  /users/me/change-password:
+    post:
+      tags: [Users]
+      summary: Change own password (policy enforced; other sessions are invalidated; FR-013)
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [current_password, new_password]
+              properties:
+                current_password: { type: string }
+                new_password: { type: string }
+      responses:
+        '204': { description: Password changed }
+        '422': { $ref: '#/components/responses/ValidationError' }
+
+  /users/{userId}/force-reset-password:
+    parameters: [{ $ref: '#/components/parameters/UserId' }]
+    post:
+      tags: [Users]
+      summary: Force a password reset for a user (Administrator only; invalidates their sessions; FR-014)
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [new_password]
+              properties:
+                new_password: { type: string }
+      responses:
+        '204': { description: Password reset }
+        '422': { $ref: '#/components/responses/ValidationError' }
 
   /status-codes:
     get:
@@ -182,6 +244,63 @@ paths:
       responses:
         '204': { description: Deleted; a SANDBOX_DELETE audit entry with a full before-state snapshot is written }
         '403': { description: Not a sandbox record, or actor is not Administrator }
+
+  /status-codes/{statusCodeId}/deprecation-requests:
+    parameters: [{ $ref: '#/components/parameters/StatusCodeId' }]
+    post:
+      tags: [StatusCodes]
+      summary: >
+        Open a Deprecation change request against a Released code (Administrator or Engineer).
+        Runs the full dual-review + Chief Engineer approval cycle (FR-050). Reason is mandatory.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [reason]
+              properties:
+                reason: { type: string }
+                superseded_by_status_code_id: { type: integer, nullable: true }
+      responses:
+        '201':
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/StatusCodeRevision' }
+        '409': { description: Code is not Released, or an open revision already exists }
+        '422': { $ref: '#/components/responses/ValidationError' }
+
+  /status-codes/{statusCodeId}/archive:
+    parameters: [{ $ref: '#/components/parameters/StatusCodeId' }]
+    post:
+      tags: [StatusCodes]
+      summary: Archive a Deprecated code once the minimum retention period has elapsed (Administrator only; FR-051, BR-006)
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/StatusCodeRevision' }
+        '409': { description: Code is not Deprecated }
+        '422': { description: Retention period has not yet elapsed }
+
+  /status-codes/{statusCodeId}/reinstate:
+    parameters: [{ $ref: '#/components/parameters/StatusCodeId' }]
+    post:
+      tags: [StatusCodes]
+      summary: Reinstate a Deprecated code to Released (Administrator only; exception path, reason required)
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [reason]
+              properties:
+                reason: { type: string }
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/StatusCodeRevision' }
+        '409': { description: Code is not Deprecated }
 
   /status-codes/{statusCodeId}/revisions:
     parameters: [{ $ref: '#/components/parameters/StatusCodeId' }]
@@ -272,12 +391,26 @@ paths:
       tags: [ChangeRequests]
       summary: >
         Submit Draft for Review (Draft -> Review). Atomically allocates the StCd-XXXXX
-        identifier. Blocked (422) if required Cross-Domain Sign-Offs are incomplete.
+        identifier (once: a CR rejected back to Draft and resubmitted keeps it). Blocked (422)
+        if required Cross-Domain Sign-Offs are incomplete. An Administrator may supply
+        `identifier_override` plus a documented `override_reason` for a migration/reservation
+        case (FR-021a); the override is validated (format, sub-band, not already allocated)
+        and audited as IDENTIFIER_OVERRIDE.
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                identifier_override: { type: string, example: StCd-01234 }
+                override_reason: { type: string }
       responses:
         '200':
           content:
             application/json:
               schema: { $ref: '#/components/schemas/ChangeRequest' }
+        '403': { description: Non-Administrator attempted an identifier override }
         '422': { $ref: '#/components/responses/ValidationError' }
 
   /change-requests/{crId}/reviewer-signoff:
@@ -307,12 +440,13 @@ paths:
       requestBody:
         content:
           application/json:
-            schema: { $ref: '#/components/schemas/SignoffDecision' }
+            schema: { $ref: '#/components/schemas/AdminSignoffDecision' }
       responses:
         '200':
           content:
             application/json:
               schema: { $ref: '#/components/schemas/ChangeRequest' }
+        '422': { $ref: '#/components/responses/ValidationError' }
 
   /change-requests/{crId}/chief-engineer-decide:
     parameters: [{ name: crId, in: path, required: true, schema: { type: integer } }]
@@ -338,6 +472,84 @@ paths:
       summary: Withdraw own Draft/Review/PendingApproval CR
       responses:
         '200': { description: Withdrawn }
+
+  /change-requests/{crId}/comments:
+    parameters: [{ name: crId, in: path, required: true, schema: { type: integer } }]
+    post:
+      tags: [ChangeRequests]
+      summary: Add a comment without a decision, at any stage (Reviewer, Administrator, Chief Engineer; FR-038)
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [comment]
+              properties:
+                comment: { type: string, minLength: 1, maxLength: 4000 }
+      responses:
+        '201':
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/ChangeRequest' }
+        '422': { $ref: '#/components/responses/ValidationError' }
+
+  /change-requests/{crId}/reviewer-assignment:
+    parameters: [{ name: crId, in: path, required: true, schema: { type: integer } }]
+    put:
+      tags: [ChangeRequests]
+      summary: >
+        Assign, reassign or (reviewer_id null) unassign the Reviewer (Administrator only; FR-039).
+        Once assigned, only that Reviewer may sign off. Not allowed after the Reviewer has signed.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                reviewer_id: { type: integer, nullable: true }
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/ChangeRequest' }
+        '409': { description: CR no longer awaiting Reviewer sign-off }
+        '422': { $ref: '#/components/responses/ValidationError' }
+
+  /change-requests/{crId}/domain-signoff-requests:
+    parameters: [{ name: crId, in: path, required: true, schema: { type: integer } }]
+    post:
+      tags: [DomainSignoffs]
+      summary: >
+        The originating Engineer requests a pending domain's sign-off, optionally from one named
+        Engineer holding that domain (FR-028). Surfaces on the target's Dashboard / My Change Requests.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [engineering_domain]
+              properties:
+                engineering_domain: { type: string, example: CONTROLS }
+                target_user_id: { type: integer, nullable: true }
+      responses:
+        '201':
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/DomainSignoffRequest' }
+        '403': { description: Actor is not the originating Engineer }
+        '422': { $ref: '#/components/responses/ValidationError' }
+
+  /domain-signoff-requests:
+    get:
+      tags: [DomainSignoffs]
+      summary: Open domain sign-off requests awaiting the current Engineer (addressed to them, or open to their domains)
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items: { $ref: '#/components/schemas/DomainSignoffRequest' }
 
   /change-requests/{crId}/domain-signoffs:
     parameters: [{ name: crId, in: path, required: true, schema: { type: integer } }]
@@ -459,6 +671,12 @@ paths:
           content:
             application/json:
               schema: { $ref: '#/components/schemas/Release' }
+    delete:
+      tags: [Releases]
+      summary: Delete an unpublished Release (Administrator only; BR-008). A published Release can never be deleted.
+      responses:
+        '204': { description: Deleted }
+        '409': { description: Release is already published }
 
   /releases/{releaseId}/candidates:
     parameters: [{ name: releaseId, in: path, required: true, schema: { type: integer } }]
@@ -512,6 +730,42 @@ paths:
           content:
             application/octet-stream: {}
 
+  /exports/released:
+    parameters:
+      - { name: format, in: query, required: true, schema: { type: string, enum: [csv, json, xlsx, pdf] } }
+      - { name: functional_system_group, in: query, schema: { type: integer } }
+      - { name: functional_subgroup, in: query, schema: { type: integer } }
+      - { name: turbine_platform, in: query, schema: { type: string } }
+    get:
+      tags: [Exports]
+      summary: Export the current set of all Released (non-sandbox) status codes as a flat table (any authenticated role; FR-045)
+      responses:
+        '200':
+          description: File stream
+          content:
+            application/octet-stream: {}
+
+  /exports/working-set:
+    parameters:
+      - { name: format, in: query, required: true, schema: { type: string, enum: [csv, json, xlsx, pdf] } }
+      - { name: q, in: query, schema: { type: string } }
+      - { name: functional_system_group, in: query, schema: { type: integer } }
+      - { name: functional_subgroup, in: query, schema: { type: integer } }
+      - { name: turbine_platform, in: query, schema: { type: string } }
+      - { name: lifecycle_status, in: query, schema: { type: string } }
+    get:
+      tags: [Exports]
+      summary: >
+        Ad-hoc filtered working set in any lifecycle state (never sandbox), for Engineer, Reviewer,
+        Administrator and Chief Engineer only (FR-046). Every row carries a `distribution_notice`
+        column "Not for distribution - unapproved data"; the file name and PDF banner repeat it.
+      responses:
+        '200':
+          description: File stream
+          content:
+            application/octet-stream: {}
+        '403': { description: Viewer role }
+
   /exports/full-database:
     get:
       tags: [Exports]
@@ -548,6 +802,50 @@ paths:
               schema:
                 type: array
                 items: { $ref: '#/components/schemas/LookupValue' }
+    post:
+      tags: [Lookups]
+      summary: Add a value to a simple controlled vocabulary (Administrator only; functional groups/subgroups have their own endpoints)
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [code, label]
+              properties:
+                code: { type: string }
+                label: { type: string }
+                description: { type: string, nullable: true }
+      responses:
+        '201':
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/LookupValue' }
+        '409': { description: Duplicate code }
+        '422': { $ref: '#/components/responses/ValidationError' }
+
+  /lookups/{vocabulary}/{valueId}:
+    parameters:
+      - { name: vocabulary, in: path, required: true, schema: { type: string } }
+      - { name: valueId, in: path, required: true, schema: { type: integer } }
+    patch:
+      tags: [Lookups]
+      summary: Relabel, describe (inline-help text), (de)activate or reorder a vocabulary value (Administrator only; values are never deleted)
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                label: { type: string }
+                description: { type: string, nullable: true }
+                is_active: { type: boolean }
+                sort_order: { type: integer }
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/LookupValue' }
+        '404': { $ref: '#/components/responses/NotFound' }
 
   /lookups/functional-system-groups:
     post:
@@ -632,6 +930,7 @@ paths:
         - { name: entity_type, in: query, schema: { type: string } }
         - { name: entity_id, in: query, schema: { type: integer } }
         - { name: actor_id, in: query, schema: { type: integer } }
+        - { name: action, in: query, schema: { type: string }, description: "Exact action code, e.g. REVIEWER_SIGNOFF, COMMENT, WITHDRAW" }
         - { name: date_from, in: query, schema: { type: string, format: date-time } }
         - { name: date_to, in: query, schema: { type: string, format: date-time } }
       responses:
@@ -689,12 +988,12 @@ components:
         last_login_at: { type: string, format: date-time, nullable: true }
     UserCreate:
       type: object
-      required: [username, email, full_name, role, password]
+      required: [username, email, full_name, password]
       properties:
         username: { type: string }
         email: { type: string }
         full_name: { type: string }
-        role: { type: string, enum: [ADMINISTRATOR, ENGINEER, REVIEWER, CHIEF_ENGINEER, VIEWER] }
+        role: { type: string, enum: [ADMINISTRATOR, ENGINEER, REVIEWER, CHIEF_ENGINEER, VIEWER], default: VIEWER, description: Least privilege by default (SEC-012) }
         engineering_domains: { type: array, items: { type: string } }
         password: { type: string }
     UserUpdate:
@@ -714,6 +1013,8 @@ components:
         code: { type: string }
         label: { type: string }
         description: { type: string, nullable: true, description: "Surfaced by the UI as inline help text next to the option" }
+        is_active: { type: boolean }
+        functional_system_group_id: { type: integer, nullable: true, description: "Present for functional-subgroups only" }
         range_start: { type: integer, nullable: true }
         range_end: { type: integer, nullable: true }
         functional_system_group: { type: string, nullable: true, description: "Present for functional-subgroups only" }
@@ -753,6 +1054,21 @@ components:
         umrichterprogramm_gsc: { type: integer }
         umrichterprogramm_msc: { type: integer }
         yaw_bearing_lubrication_program: { type: integer }
+        access_confirmed: { type: boolean, description: "True once the Administrator's Review sign-off has confirmed (or overridden) the eight audience-access fields" }
+        functional_system_group_id: { type: integer }
+        functional_subgroup_id: { type: integer }
+        functional_system_group_label: { type: string }
+        functional_system_group_range_start: { type: integer }
+        functional_system_group_range_end: { type: integer }
+        functional_subgroup_label: { type: string }
+        development_access_id: { type: integer, nullable: true }
+        sales_access_id: { type: integer, nullable: true }
+        tcc_access_id: { type: integer, nullable: true }
+        service_access_id: { type: integer, nullable: true }
+        turbine_operator_package_access_id: { type: integer, nullable: true }
+        grid_operator_access_id: { type: integer, nullable: true }
+        service_partner_access_id: { type: integer, nullable: true }
+        customer_access_id: { type: integer, nullable: true }
         development_access: { type: string, nullable: true }
         sales_access: { type: string, nullable: true }
         tcc_access: { type: string, nullable: true }
@@ -849,6 +1165,29 @@ components:
       properties:
         decision: { type: string, enum: [APPROVE, REJECT] }
         comment: { type: string }
+    AdminSignoffDecision:
+      allOf:
+        - $ref: '#/components/schemas/SignoffDecision'
+        - type: object
+          properties:
+            access_overrides:
+              type: object
+              description: >
+                FR-034 / SEC-013: confirm-or-override the eight Engineer-proposed audience-access
+                fields. Keys are field names (development_access, sales_access, tcc_access,
+                service_access, turbine_operator_package_access, grid_operator_access,
+                service_partner_access, customer_access); values are lookup ids, or null to clear.
+                Applied only on APPROVE; fields not named stay as proposed.
+              additionalProperties: { type: integer, nullable: true }
+    DomainSignoffRequest:
+      type: object
+      properties:
+        id: { type: integer }
+        change_request_id: { type: integer }
+        engineering_domain: { type: string }
+        requested_by: { type: integer }
+        target_user_id: { type: integer, nullable: true }
+        created_at: { type: string, format: date-time }
     DomainSignoff:
       type: object
       properties:
@@ -870,6 +1209,7 @@ components:
         submitted_at: { type: string, format: date-time, nullable: true }
         chief_engineer_decided_at: { type: string, format: date-time, nullable: true }
         chief_engineer_decided_by: { type: integer, nullable: true }
+        assigned_reviewer_id: { type: integer, nullable: true }
         comments: { type: array, items: { $ref: '#/components/schemas/ReviewComment' } }
         domain_signoffs: { type: array, items: { $ref: '#/components/schemas/DomainSignoff' } }
     ReviewComment:

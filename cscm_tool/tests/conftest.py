@@ -15,6 +15,21 @@ from app.services.user_service import UserService
 MIGRATIONS_DIR = Path(__file__).resolve().parents[1] / "migrations"
 
 
+def pytest_collection_modifyitems(config, items):
+    """CSCM_TEST_ORDER=reverse|shuffle[:SEED] re-orders the run to prove the
+    tests are independent of one another (scripts/generate_test_report.py
+    uses it for repeat runs). Default: file order."""
+    import os
+    import random
+
+    mode = os.environ.get("CSCM_TEST_ORDER", "")
+    if mode == "reverse":
+        items.reverse()
+    elif mode.startswith("shuffle"):
+        seed = int(mode.partition(":")[2] or 1)
+        random.Random(seed).shuffle(items)
+
+
 @pytest.fixture(autouse=True)
 def _reset_rate_limiter():
     """The rate limiter is in-process global state (app/auth/rate_limit.py);
@@ -82,6 +97,33 @@ def make_user(app):
             return user
 
     return _make
+
+
+@pytest.fixture()
+def wcnv_ids(app):
+    """(functional_system_group_id, functional_subgroup_id) for WCNV's
+    "Converter" subgroup (010xx, range 1000-1999) — resolved dynamically by
+    code rather than hardcoded, since v3 assigns ids by seed insertion order
+    (docs/artifacts/schema.sql) and functional_system_group.code is no
+    longer globally unique (see app/services/lookup_service.py)."""
+    with app.app_context():
+        from app.extensions import db
+        from app.models.lookup import LookupFunctionalSubgroup, LookupFunctionalSystemGroup
+
+        group = (
+            db.session.query(LookupFunctionalSystemGroup)
+            .filter(LookupFunctionalSystemGroup.code == "WCNV")
+            .one()
+        )
+        subgroup = (
+            db.session.query(LookupFunctionalSubgroup)
+            .filter(
+                LookupFunctionalSubgroup.functional_system_group_id == group.id,
+                LookupFunctionalSubgroup.code == "010xx",
+            )
+            .one()
+        )
+        return group.id, subgroup.id
 
 
 @pytest.fixture()

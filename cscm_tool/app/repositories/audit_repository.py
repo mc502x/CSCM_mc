@@ -12,6 +12,7 @@ class AuditRepository(BaseRepository[AuditLogEntry]):
         entity_type: str | None = None,
         entity_id: int | None = None,
         actor_id: int | None = None,
+        action: str | None = None,
         date_from: str | None = None,
         date_to: str | None = None,
         page: int = 1,
@@ -24,6 +25,8 @@ class AuditRepository(BaseRepository[AuditLogEntry]):
             query = query.filter(AuditLogEntry.entity_id == entity_id)
         if actor_id is not None:
             query = query.filter(AuditLogEntry.actor_id == actor_id)
+        if action:
+            query = query.filter(AuditLogEntry.action == action)
         if date_from:
             query = query.filter(AuditLogEntry.occurred_at >= date_from)
         if date_to:

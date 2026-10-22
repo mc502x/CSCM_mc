@@ -7,7 +7,7 @@ from flask import jsonify, request
 
 from app.api.v1 import api_v1_bp
 from app.api.v1.serializers import change_request_payload
-from app.auth.decorators import current_user, login_required, require_role
+from app.auth.decorators import current_user, require_role
 from app.domain.errors import (
     DomainError,
     InvalidTransitionError,
@@ -28,7 +28,7 @@ def _decision_error_response(exc: Exception):
 
 
 @api_v1_bp.get("/change-requests")
-@login_required
+@require_role("ADMINISTRATOR", "ENGINEER", "REVIEWER", "CHIEF_ENGINEER")  # BR-009: never Viewers
 def list_change_requests():
     page = request.args.get("page", 1, type=int)
     page_size = min(request.args.get("page_size", 50, type=int), 200)
@@ -52,7 +52,7 @@ def list_change_requests():
 
 
 @api_v1_bp.get("/change-requests/<int:cr_id>")
-@login_required
+@require_role("ADMINISTRATOR", "ENGINEER", "REVIEWER", "CHIEF_ENGINEER")  # BR-009: never Viewers
 def get_change_request(cr_id: int):
     cr = db.session.get(ChangeRequest, cr_id)
     if cr is None:
@@ -63,8 +63,14 @@ def get_change_request(cr_id: int):
 @api_v1_bp.post("/change-requests/<int:cr_id>/submit")
 @require_role("ADMINISTRATOR", "ENGINEER")
 def submit(cr_id: int):
+    body = request.get_json(silent=True) or {}
     try:
-        cr = ChangeRequestService.submit(cr_id, current_user)
+        cr = ChangeRequestService.submit(
+            cr_id,
+            current_user,
+            identifier_override=body.get("identifier_override"),
+            override_reason=body.get("override_reason"),
+        )
     except NotFoundError:
         return jsonify(error="not_found", message="Change request not found"), 404
     except SegregationOfDutiesViolation as exc:
@@ -99,7 +105,11 @@ def admin_signoff(cr_id: int):
     body = request.get_json(silent=True) or {}
     try:
         cr = ChangeRequestService.admin_signoff(
-            cr_id, current_user, body.get("decision", ""), body.get("comment")
+            cr_id,
+            current_user,
+            body.get("decision", ""),
+            body.get("comment"),
+            access_overrides=body.get("access_overrides"),
         )
     except NotFoundError:
         return jsonify(error="not_found", message="Change request not found"), 404
@@ -117,6 +127,36 @@ def chief_engineer_decide(cr_id: int):
         cr = ChangeRequestService.chief_engineer_decide(
             cr_id, current_user, body.get("decision", ""), body.get("comment")
         )
+    except NotFoundError:
+        return jsonify(error="not_found", message="Change request not found"), 404
+    except (SegregationOfDutiesViolation, InvalidTransitionError, ValueError) as exc:
+        return _decision_error_response(exc)
+
+    return jsonify(change_request_payload(cr)), 200
+
+
+@api_v1_bp.post("/change-requests/<int:cr_id>/comments")
+@require_role("REVIEWER", "ADMINISTRATOR", "CHIEF_ENGINEER")
+def add_comment(cr_id: int):
+    """FR-038: comment without a decision, at any stage."""
+    body = request.get_json(silent=True) or {}
+    try:
+        cr = ChangeRequestService.add_comment(cr_id, current_user, body.get("comment", ""))
+    except NotFoundError:
+        return jsonify(error="not_found", message="Change request not found"), 404
+    except ValueError as exc:
+        return jsonify(error="validation_error", message=str(exc)), 422
+
+    return jsonify(change_request_payload(cr)), 201
+
+
+@api_v1_bp.put("/change-requests/<int:cr_id>/reviewer-assignment")
+@require_role("ADMINISTRATOR")
+def assign_reviewer(cr_id: int):
+    """FR-039: body {"reviewer_id": <int>|null}; null unassigns."""
+    body = request.get_json(silent=True) or {}
+    try:
+        cr = ChangeRequestService.assign_reviewer(cr_id, body.get("reviewer_id"), current_user)
     except NotFoundError:
         return jsonify(error="not_found", message="Change request not found"), 404
     except (SegregationOfDutiesViolation, InvalidTransitionError, ValueError) as exc:

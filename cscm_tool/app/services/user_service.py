@@ -1,13 +1,16 @@
 """User & RBAC administration. FR-010-FR-014, SEC-012, US-009/US-011/US-012."""
 
 from app.auth.password import hash_password, validate_password_policy, verify_password
+from app.domain.authz import require_roles
 from app.domain.errors import LastAdministratorError, PasswordPolicyError
 from app.extensions import db
 from app.models.lookup import Role
-from app.models.user import User
+from app.models.user import User, UserPasswordHistory
 from app.repositories.user_repository import UserRepository
 from app.services.audit_service import AuditService
 from app.utils import utcnow_iso
+
+PASSWORD_HISTORY_DEPTH = 5  # 11-security-architecture.md §4
 
 
 class UserService:
@@ -40,7 +43,11 @@ class UserService:
         if violations:
             raise PasswordPolicyError(violations)
 
-        role = db.session.query(Role).filter(Role.code == role_code).first()
+        role = (
+            db.session.query(Role).filter(Role.code == role_code).first()
+            if isinstance(role_code, str)
+            else None
+        )
         if role is None:
             raise ValueError(f"Unknown role code: {role_code}")
 
@@ -82,6 +89,7 @@ class UserService:
         is_active: bool | None = None,
         actor,
     ) -> User:
+        require_roles(actor, "ADMINISTRATOR")
         user = UserService._repo.get_or_404(user_id)
 
         if full_name is not None and full_name != user.full_name:
@@ -97,7 +105,11 @@ class UserService:
             )
 
         if role_code is not None and role_code != user.role.code:
-            role = db.session.query(Role).filter(Role.code == role_code).first()
+            role = (
+                db.session.query(Role).filter(Role.code == role_code).first()
+                if isinstance(role_code, str)
+                else None
+            )
             if role is None:
                 raise ValueError(f"Unknown role code: {role_code}")
             if (
@@ -154,25 +166,56 @@ class UserService:
         return user
 
     @staticmethod
+    def _check_not_reused(user: User, new_password: str) -> list[str]:
+        """Policy: a new password may not repeat any of the last
+        PASSWORD_HISTORY_DEPTH passwords (the current one plus the newest retired ones)."""
+        retired = (
+            db.session.query(UserPasswordHistory)
+            .filter(UserPasswordHistory.user_id == user.id)
+            .order_by(UserPasswordHistory.id.desc())
+            .limit(PASSWORD_HISTORY_DEPTH - 1)
+            .all()
+        )
+        previous = [user.password_hash, *(row.password_hash for row in retired)]
+        if any(verify_password(new_password, h) for h in previous):
+            return [f"Password must differ from your last {PASSWORD_HISTORY_DEPTH} passwords."]
+        return []
+
+    @staticmethod
+    def _replace_password(user: User, new_password: str) -> None:
+        """Retire the current hash into the history, then store the new one."""
+        db.session.add(
+            UserPasswordHistory(
+                user_id=user.id, password_hash=user.password_hash, retired_at=utcnow_iso()
+            )
+        )
+        user.password_hash = hash_password(new_password)
+
+    @staticmethod
     def change_own_password(user: User, current_password: str, new_password: str) -> None:
         """FR-013: self password change, own password policy enforced."""
         if not verify_password(current_password, user.password_hash):
             raise ValueError("Current password is incorrect.")
-        violations = validate_password_policy(new_password)
+        violations = validate_password_policy(new_password) + UserService._check_not_reused(
+            user, new_password
+        )
         if violations:
             raise PasswordPolicyError(violations)
-        user.password_hash = hash_password(new_password)
+        UserService._replace_password(user, new_password)
         AuditService.log("User", user.id, "PASSWORD_CHANGE", actor=user)
         db.session.commit()
 
     @staticmethod
     def force_reset_password(user_id: int, new_password: str, actor) -> None:
         """FR-014: Administrator-forced reset for any user."""
+        require_roles(actor, "ADMINISTRATOR")
         user = UserService._repo.get_or_404(user_id)
-        violations = validate_password_policy(new_password)
+        violations = validate_password_policy(new_password) + UserService._check_not_reused(
+            user, new_password
+        )
         if violations:
             raise PasswordPolicyError(violations)
-        user.password_hash = hash_password(new_password)
+        UserService._replace_password(user, new_password)
         user.failed_login_count = 0
         user.locked_until = None
         AuditService.log("User", user.id, "PASSWORD_RESET", actor=actor)

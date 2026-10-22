@@ -7,6 +7,7 @@ from app.api.v1 import api_v1_bp
 from app.api.v1.serializers import revision_payload
 from app.auth.decorators import current_user, login_required, require_role
 from app.domain.errors import DomainError, InvalidTransitionError, NotFoundError
+from app.services.revision_diff_service import RevisionDiffService
 from app.services.status_code_service import StatusCodeService, ValidationFailed
 
 
@@ -22,8 +23,8 @@ def list_status_codes():
     items, total = StatusCodeService.search(
         current_user,
         q=request.args.get("q"),
-        functional_system_group_code=request.args.get("functional_system_group"),
-        functional_subgroup_code=request.args.get("functional_subgroup"),
+        functional_system_group_id=request.args.get("functional_system_group", type=int),
+        functional_subgroup_id=request.args.get("functional_subgroup", type=int),
         turbine_platform_code=request.args.get("turbine_platform"),
         lifecycle_status=request.args.get("lifecycle_status"),
         is_sandbox=request.args.get("is_sandbox", "false").lower() == "true",
@@ -114,18 +115,22 @@ def reinstate_status_code(status_code_id: int):
 
 
 @api_v1_bp.get("/status-codes/next-available")
-@login_required
+@require_role("ADMINISTRATOR", "ENGINEER")
 def next_available_identifier():
-    group_code = request.args.get("functional_system_group")
-    if not group_code:
+    """v3: both ids required — Functional Subgroup is mandatory, never
+    optional (docs/artifacts/openapi.yaml)."""
+    group_id = request.args.get("functional_system_group", type=int)
+    subgroup_id = request.args.get("functional_subgroup", type=int)
+    if not group_id or not subgroup_id:
         return (
-            jsonify(error="validation_error", message="functional_system_group is required"),
+            jsonify(
+                error="validation_error",
+                message="functional_system_group and functional_subgroup are required",
+            ),
             422,
         )
     try:
-        preview = StatusCodeService.preview_next_identifier(
-            group_code, request.args.get("functional_subgroup")
-        )
+        preview = StatusCodeService.preview_next_identifier(group_id, subgroup_id)
     except ValueError as exc:
         return jsonify(error="validation_error", message=str(exc)), 422
     except DomainError as exc:
@@ -167,6 +172,18 @@ def delete_sandbox_status_code(status_code_id: int):
 def list_revisions(status_code_id: int):
     revisions = StatusCodeService.list_revision_history(status_code_id, current_user)
     return jsonify([revision_payload(r) for r in revisions])
+
+
+@api_v1_bp.get("/status-codes/<int:status_code_id>/revisions/<int:rev_a>/diff/<int:rev_b>")
+@login_required
+def diff_revisions(status_code_id: int, rev_a: int, rev_b: int):
+    """FR-064: field-level diff between two revision numbers of one code."""
+    try:
+        return jsonify(
+            RevisionDiffService.diff_revisions(status_code_id, rev_a, rev_b, current_user)
+        )
+    except NotFoundError:
+        return jsonify(error="not_found", message="Revision not found"), 404
 
 
 @api_v1_bp.post("/status-codes/<int:status_code_id>/revisions")

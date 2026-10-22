@@ -23,8 +23,8 @@ def release_new():
     if request.method == "POST":
         name = request.form.get("name", "")
         version_label = request.form.get("version_label", "")
-        scope_group = request.form.get("scope_functional_system_group") or None
-        scope_filter = {"functional_system_group": scope_group} if scope_group else {}
+        scope_group_id = request.form.get("scope_functional_system_group", type=int)
+        scope_filter = {"functional_system_group": scope_group_id} if scope_group_id else {}
         if not name or not version_label:
             flash("Name and version label are required.", "error")
         else:
@@ -86,6 +86,21 @@ def release_builder(release_id):
         candidates=[revision_payload(c) for c in candidates],
         included_ids=included_ids,
     )
+
+
+@ui_bp.route("/releases/<int:release_id>/delete", methods=["POST"])
+@require_role_web("ADMINISTRATOR")
+def release_delete(release_id):
+    try:
+        ReleaseService.delete(release_id, current_user)
+    except NotFoundError:
+        flash("Release not found.", "error")
+    except InvalidTransitionError as exc:
+        flash(str(exc), "error")
+        return redirect(url_for("ui.release_detail", release_id=release_id))
+    else:
+        flash("Release deleted.", "success")
+    return redirect(url_for("ui.release_list"))
 
 
 @ui_bp.route("/releases/<int:release_id>/publish", methods=["POST"])
