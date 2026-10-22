@@ -2,8 +2,10 @@
 
 import json
 
+from app.domain.authz import require_roles
 from app.domain.errors import DomainError, InvalidTransitionError
 from app.extensions import db
+from app.models.export_job import ExportJob
 from app.models.lookup import LookupFunctionalSubgroup, LookupFunctionalSystemGroup
 from app.models.release import Release, ReleaseItem
 from app.models.status_code import StatusCode, StatusCodeRevision
@@ -25,6 +27,7 @@ class ReleaseService:
     @staticmethod
     def create(data: dict, actor) -> Release:
         """FR-040."""
+        require_roles(actor, "ADMINISTRATOR")
         release = Release(
             name=data["name"],
             version_label=data["version_label"],
@@ -95,6 +98,7 @@ class ReleaseService:
         """FR-042: pre-publish only. Sandbox/non-Approved revisions are
         rejected here (service layer) and, for sandbox specifically, also
         by trg_prevent_sandbox_release (defense in depth)."""
+        require_roles(actor, "ADMINISTRATOR")
         release = ReleaseService._repo.get_or_404(release_id)
         if release.status != "BUILDING":
             raise InvalidTransitionError("Cannot change items on a published Release (BR-007).")
@@ -125,12 +129,41 @@ class ReleaseService:
         return release
 
     @staticmethod
+    def delete(release_id: int, actor) -> None:
+        """BR-008: an Administrator may delete a Release only before it is
+        published; its candidate revisions are untouched (still Approved)."""
+        require_roles(actor, "ADMINISTRATOR")
+        release = ReleaseService._repo.get_or_404(release_id)
+        if release.status != "BUILDING":
+            raise InvalidTransitionError("A published Release can never be deleted (BR-007).")
+        AuditService.log(
+            "Release",
+            release.id,
+            "RELEASE_DELETE",
+            actor=actor,
+            before={
+                "name": release.name,
+                "version_label": release.version_label,
+                "status_code_revision_ids": sorted(
+                    item.status_code_revision_id for item in release.items
+                ),
+            },
+        )
+        db.session.query(ExportJob).filter(ExportJob.release_id == release.id).update(
+            {ExportJob.release_id: None}
+        )
+        db.session.query(ReleaseItem).filter(ReleaseItem.release_id == release.id).delete()
+        db.session.delete(release)
+        db.session.commit()
+
+    @staticmethod
     def publish(release_id: int, actor) -> Release:
         """FR-043: atomically transitions every included revision
         Approved -> Released, stamps effective_date, marks the Release
         immutable. FR-044/BR-007: a published Release can never be
         unpublished or have its items changed (trg_prevent_release_item_delete
         is defense in depth for the latter)."""
+        require_roles(actor, "ADMINISTRATOR")
         release = ReleaseService._repo.get_or_404(release_id)
         if release.status != "BUILDING":
             raise InvalidTransitionError("Release is already published.")

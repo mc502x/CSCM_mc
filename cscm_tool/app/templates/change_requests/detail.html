@@ -13,22 +13,47 @@
   <a class="btn" href="{{ url_for('ui.status_code_detail', status_code_id=revision.status_code_id) }}">View Status Code</a>
 </div>
 
+{% if revision.lifecycle_status == 'DRAFT' and cr.state != 'WITHDRAWN' %}
+<div class="flash flash--{{ 'success' if not pending_domains else 'info' }}">
+  {% if pending_domains %}
+  <strong>Still a Draft.</strong> Waiting for cross-domain sign-off from: {{ pending_domains|join(', ') }}. Nobody can review it until it is submitted.
+  {% elif cr.requested_by == current_user.id %}
+  <strong>Not yet submitted.</strong> All required sign-offs are in, but this is still a Draft &mdash; the Reviewer and Administrator only see it after you choose <em>Submit for Review</em> below.
+  {% else %}
+  <strong>Still a Draft.</strong> The author has to submit it for review before the Reviewer or Administrator can see it.
+  {% endif %}
+</div>
+{% endif %}
+
 <div class="card">
   <h2>Sign-Off Status</h2>
   <div class="signoff-strip">
     <div class="signoff-slot {{ 'signoff-slot--done' if revision.reviewer_signoff_by }}">
       <div class="signoff-slot__title">Reviewer</div>
-      {{ 'Signed by User #' ~ revision.reviewer_signoff_by if revision.reviewer_signoff_by else 'Pending' }}
+      {{ 'Signed by ' ~ user_label(revision.reviewer_signoff_by) if revision.reviewer_signoff_by else 'Pending' }}
     </div>
     <div class="signoff-slot {{ 'signoff-slot--done' if revision.admin_signoff_by }}">
       <div class="signoff-slot__title">Administrator</div>
-      {{ 'Signed by User #' ~ revision.admin_signoff_by if revision.admin_signoff_by else 'Pending' }}
+      {{ 'Signed by ' ~ user_label(revision.admin_signoff_by) if revision.admin_signoff_by else 'Pending' }}
     </div>
     <div class="signoff-slot {{ 'signoff-slot--done' if revision.chief_engineer_approved_by }}">
       <div class="signoff-slot__title">Chief Engineer</div>
-      {{ 'Decided by User #' ~ revision.chief_engineer_approved_by if revision.chief_engineer_approved_by else 'Pending' }}
+      {{ 'Decided by ' ~ user_label(revision.chief_engineer_approved_by) if revision.chief_engineer_approved_by else 'Pending' }}
     </div>
   </div>
+
+  <div class="muted" style="margin-bottom:12px">Author: <strong>{{ user_label(cr.requested_by) }}</strong> &middot; Assigned Reviewer:
+    {% if cr.assigned_reviewer %}{{ cr.assigned_reviewer.full_name }}{% else %}unassigned{% endif %}</div>
+  {% if current_user.role_code == 'ADMINISTRATOR' and revision.lifecycle_status in ('DRAFT', 'REVIEW') and not revision.reviewer_signoff_by %}
+  <form method="post" action="{{ url_for('ui.cr_assign_reviewer', cr_id=cr.id) }}" class="btn-row">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    <select name="reviewer_id" aria-label="Reviewer">
+      <option value="">(unassigned)</option>
+      {% for u in reviewers if u.id != cr.requested_by %}<option value="{{ u.id }}" {{ 'selected' if cr.assigned_reviewer_id == u.id }}>{{ u.full_name }}</option>{% endfor %}
+    </select>
+    <button class="btn" type="submit">Assign Reviewer</button>
+  </form>
+  {% endif %}
 
   {% if required_domains %}
   <h2>Cross-Domain Sign-Off</h2>
@@ -49,7 +74,34 @@
     <button class="btn btn--primary" type="submit">Sign Off This Domain</button>
   </form>
   {% endif %}
+  {% if pending_domains and cr.requested_by == current_user.id and revision.lifecycle_status == 'DRAFT' %}
+  <h3>Request a Sign-Off</h3>
+  {% for code in pending_domains %}
+  {% if not domain_holders[code] %}
+  <div class="flash flash--info">No active Engineer holds the <strong>{{ code }}</strong> domain yet. An Administrator must tag an Engineer with it (Administration &rarr; Users) before a sign-off can be requested.</div>
+  {% else %}
+  <form method="post" action="{{ url_for('ui.cr_request_domain_signoff', cr_id=cr.id) }}" class="btn-row">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    <input type="hidden" name="engineering_domain" value="{{ code }}">
+    <label for="target_{{ code }}">{{ code }}:</label>
+    <select id="target_{{ code }}" name="target_user_id">
+      <option value="">Any {{ code }} Engineer</option>
+      {% for u in domain_holders[code] %}<option value="{{ u.id }}">{{ u.full_name }}</option>{% endfor %}
+    </select>
+    <button class="btn" type="submit">Request</button>
+  </form>
   {% endif %}
+  {% endfor %}
+  {% if domain_requests %}
+  <div class="muted">Requested: {% for r in domain_requests %}{{ r.engineering_domain.code }}{% if r.target_user %} → {{ r.target_user.full_name }}{% endif %}{% if not loop.last %}, {% endif %}{% endfor %}</div>
+  {% endif %}
+  {% endif %}
+  {% endif %}
+</div>
+
+<div class="card">
+  <h2>Changes {% if diff.is_new_code %}<span class="muted">(new code)</span>{% else %}<span class="muted">vs. revision #{{ diff.baseline_revision_number }}</span>{% endif %}</h2>
+  {{ macros.field_diff(diff.field_changes) }}
 </div>
 
 <div class="card">
@@ -83,12 +135,19 @@
     <thead><tr><th>Author</th><th>Decision</th><th>Comment</th><th>When</th></tr></thead>
     <tbody>
       {% for c in cr.comments %}
-      <tr><td>User #{{ c.author_id }}</td><td>{{ c.decision or '—' }}</td><td>{{ c.comment_text }}</td><td>{{ c.created_at }}</td></tr>
+      <tr><td>{{ user_label(c.author_id) }}</td><td>{{ c.decision|decision_label }}</td><td>{{ c.comment_text }}</td><td>{{ c.created_at }}</td></tr>
       {% endfor %}
     </tbody>
   </table>
   {% else %}
   <div class="table-empty">No comments yet.</div>
+  {% endif %}
+  {% if current_user.role_code in ('REVIEWER', 'ADMINISTRATOR', 'CHIEF_ENGINEER') %}
+  <form method="post" action="{{ url_for('ui.cr_add_comment', cr_id=cr.id) }}" style="margin-top:12px">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    <div class="field"><label for="new_comment">Add a comment (no decision)</label><textarea id="new_comment" name="comment" required maxlength="4000"></textarea></div>
+    <button class="btn" type="submit">Add Comment</button>
+  </form>
   {% endif %}
 </div>
 
@@ -98,12 +157,18 @@
   {% if revision.lifecycle_status == 'DRAFT' and cr.requested_by == current_user.id and cr.state != 'WITHDRAWN' %}
   <form method="post" action="{{ url_for('ui.cr_submit', cr_id=cr.id) }}" style="display:inline-block;margin-right:8px">
     <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    {% if current_user.role_code == 'ADMINISTRATOR' %}
+    <details style="margin-bottom:10px"><summary>Override identifier (migration / reservation only)</summary>
+      <div class="field"><label for="identifier_override">Identifier</label><input type="text" id="identifier_override" name="identifier_override" placeholder="StCd-01234" pattern="StCd-[0-9]{5}"></div>
+      <div class="field"><label for="override_reason">Documented reason</label><input type="text" id="override_reason" name="override_reason"></div>
+    </details>
+    {% endif %}
     <button class="btn btn--primary" type="submit">Submit for Review</button>
   </form>
   {% endif %}
 
   {% if revision.lifecycle_status in ('DRAFT', 'REVIEW', 'PENDING_APPROVAL') and cr.requested_by == current_user.id %}
-  <form method="post" action="{{ url_for('ui.cr_withdraw', cr_id=cr.id) }}" style="display:inline-block;margin-bottom:14px" onsubmit="return confirm('Withdraw this change request?')">
+  <form method="post" action="{{ url_for('ui.cr_withdraw', cr_id=cr.id) }}" style="display:inline-block;margin-bottom:14px" data-confirm="Withdraw this change request?">
     <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
     <button class="btn" type="submit">Withdraw</button>
   </form>
@@ -123,6 +188,21 @@
   {% if revision.lifecycle_status == 'REVIEW' and current_user.role_code == 'ADMINISTRATOR' and not revision.admin_signoff_by and cr.requested_by != current_user.id %}
   <form method="post" action="{{ url_for('ui.cr_admin_signoff', cr_id=cr.id) }}">
     <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    <fieldset>
+      <legend>Confirm or override Audience Access</legend>
+      <div class="form-row">
+        {% for field, label, options in access_choices %}
+        <div class="field">
+          <label for="ov_{{ field }}">{{ label }}</label>
+          <select id="ov_{{ field }}" name="{{ field }}">
+            <option value="">(none)</option>
+            {% for v in options %}<option value="{{ v.id }}" {{ 'selected' if revision[field ~ '_id'] == v.id }}>{{ v.label }}</option>{% endfor %}
+          </select>
+        </div>
+        {% endfor %}
+      </div>
+      <div class="hint">Approving confirms these values; any change you make here is applied and audited. Rejecting ignores them.</div>
+    </fieldset>
     <div class="field"><label for="admin_comment">Comment (required for rejection)</label><textarea id="admin_comment" name="comment"></textarea></div>
     <div class="btn-row">
       <button class="btn btn--primary" type="submit" name="decision" value="APPROVE">Approve</button>

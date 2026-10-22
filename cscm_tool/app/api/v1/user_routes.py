@@ -37,7 +37,7 @@ def list_users():
 @require_role("ADMINISTRATOR")
 def create_user():
     body = request.get_json(silent=True) or {}
-    required = {"username", "email", "full_name", "role", "password"}
+    required = {"username", "email", "full_name", "password"}
     missing = required - body.keys()
     if missing:
         return (
@@ -50,7 +50,7 @@ def create_user():
             username=body["username"],
             email=body["email"],
             full_name=body["full_name"],
-            role_code=body["role"],
+            role_code=body.get("role") or "VIEWER",  # SEC-012: least privilege by default
             password=body["password"],
             engineering_domain_codes=body.get("engineering_domains"),
             actor=current_user,

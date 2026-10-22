@@ -19,6 +19,7 @@ class LookupEngineeringDomain(Base):
     id = db.Column(db.Integer, primary_key=True)
     code = db.Column(db.Text, nullable=False, unique=True)
     label = db.Column(db.Text, nullable=False)
+    description = db.Column(db.Text)  # NFR-007b inline help; NULL until supplied
     is_active = db.Column(db.Integer, nullable=False, default=1)
     sort_order = db.Column(db.Integer, nullable=False, default=0)
 
@@ -36,6 +37,7 @@ class LookupFunctionalSystemGroup(Base):
     label = db.Column(db.Text, nullable=False)
     range_start = db.Column(db.Integer, nullable=False)
     range_end = db.Column(db.Integer, nullable=False)
+    description = db.Column(db.Text)  # NFR-007b inline help; NULL until supplied
     is_active = db.Column(db.Integer, nullable=False, default=1)
     sort_order = db.Column(db.Integer, nullable=False, default=0)
 
@@ -62,6 +64,7 @@ class LookupFunctionalSubgroup(Base):
     label = db.Column(db.Text, nullable=False)
     sub_range_start = db.Column(db.Integer, nullable=False)
     sub_range_end = db.Column(db.Integer, nullable=False)
+    description = db.Column(db.Text)  # NFR-007b inline help; NULL until supplied
     is_active = db.Column(db.Integer, nullable=False, default=1)
     sort_order = db.Column(db.Integer, nullable=False, default=0)
 
@@ -79,6 +82,7 @@ class LookupTurbinePlatform(Base):
     id = db.Column(db.Integer, primary_key=True)
     code = db.Column(db.Text, nullable=False, unique=True)
     label = db.Column(db.Text, nullable=False)
+    description = db.Column(db.Text)  # NFR-007b inline help; NULL until supplied
     is_active = db.Column(db.Integer, nullable=False, default=1)
     sort_order = db.Column(db.Integer, nullable=False, default=0)
 
@@ -94,20 +98,22 @@ class LookupAvailableGroup(Base):
     id = db.Column(db.Integer, primary_key=True)
     code = db.Column(db.Integer, nullable=False, unique=True)
     label = db.Column(db.Text)
+    description = db.Column(db.Text)  # NFR-007b inline help; NULL until supplied
     is_active = db.Column(db.Integer, nullable=False, default=1)
     sort_order = db.Column(db.Integer, nullable=False, default=0)
 
 
 class _CodedLookup:
-    """Shared column shape for the single-table vocabularies below. None of
-    these tables carry a `description` column in v3 (docs/artifacts/
-    schema.sql) — NFR-007b's inline-help requirement falls back to a "not
-    yet available" message for every one of them until Controls Engineering
-    supplies real descriptions (10-ui-ux-specification.md §5)."""
+    """Shared column shape for the single-table vocabularies below.
+    `description` is NULL until Controls Engineering supplies real text (an
+    Administrator edits it in Lookup Administration); NFR-007b's inline help
+    falls back to a "not yet available" message while it is empty
+    (10-ui-ux-specification.md §5)."""
 
     id = db.Column(db.Integer, primary_key=True)
     code = db.Column(db.Text, nullable=False, unique=True)
     label = db.Column(db.Text, nullable=False)
+    description = db.Column(db.Text)  # NFR-007b inline help; NULL until supplied
     is_active = db.Column(db.Integer, nullable=False, default=1)
     sort_order = db.Column(db.Integer, nullable=False, default=0)
 

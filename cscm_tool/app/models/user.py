@@ -33,6 +33,17 @@ class User(Base):
     )
 
 
+class UserPasswordHistory(Base):
+    """Hash of a retired password, for the last-5 reuse block (SEC policy §4)."""
+
+    __tablename__ = "user_password_history"
+
+    id = db.Column(db.Integer, primary_key=True)
+    user_id = db.Column(db.Integer, db.ForeignKey("user.id"), nullable=False)
+    password_hash = db.Column(db.Text, nullable=False)
+    retired_at = db.Column(db.Text, nullable=False)
+
+
 class UserEngineeringDomain(Base):
     __tablename__ = "user_engineering_domain"
 

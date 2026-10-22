@@ -4,25 +4,81 @@ S10 Change Request Detail/Decision, S10a Domain Sign-Off (folded into S10)."""
 from flask import flash, redirect, render_template, request, url_for
 
 from app.api.v1.serializers import revision_payload
-from app.auth.decorators import current_user, login_required_web, require_role_web
+from app.auth.decorators import current_user, require_role_web
 from app.domain.errors import DomainError, InvalidTransitionError, SegregationOfDutiesViolation
 from app.extensions import db
-from app.models.change_request import ChangeRequest
+from app.models.change_request import ChangeRequest, DomainSignoffRequest
+from app.models.lookup import Role
 from app.models.status_code import StatusCodeRevision
+from app.models.user import User
 from app.services.change_request_service import ChangeRequestService
 from app.services.domain_signoff_service import DomainSignoffService, user_domain_codes
+from app.services.lookup_service import LookupService
+from app.services.revision_diff_service import RevisionDiffService
 from app.ui import ui_bp
+
+ACCESS_LABELS = (
+    ("development_access", "Development"),
+    ("sales_access", "Sales"),
+    ("tcc_access", "TCC"),
+    ("service_access", "Service"),
+    ("turbine_operator_package_access", "Turbine Operator Package"),
+    ("grid_operator_access", "Grid Operator"),
+    ("service_partner_access", "Service Partner"),
+    ("customer_access", "Customer"),
+)
+
+
+def _access_choices():
+    """Per-field (label, [lookup values]) for the Administrator's FR-034 override."""
+    from app.ui.status_code_views import _ACCESS_VOCAB_FIELDS
+
+    return [
+        (field, label, LookupService.list_vocabulary(_ACCESS_VOCAB_FIELDS[field]))
+        for field, label in ACCESS_LABELS
+    ]
+
+
+def _active_reviewers():
+    return (
+        db.session.query(User)
+        .join(Role, User.role_id == Role.id)
+        .filter(Role.code == "REVIEWER", User.is_active == 1)
+        .order_by(User.full_name)
+        .all()
+    )
+
+
+def cr_domain_requests(cr):
+    return (
+        db.session.query(DomainSignoffRequest)
+        .filter(DomainSignoffRequest.change_request_id == cr.id)
+        .all()
+    )
+
+
+def _domain_holders(pending_domains):
+    """domain code -> active Engineers holding it (targets for FR-028 requests)."""
+    return {code: DomainSignoffService.domain_holders(code) for code in pending_domains}
 
 
 @ui_bp.route("/change-requests/mine")
-@login_required_web
+@require_role_web("ADMINISTRATOR", "ENGINEER", "REVIEWER", "CHIEF_ENGINEER")
 def my_change_requests():
     query = db.session.query(ChangeRequest).filter(ChangeRequest.requested_by == current_user.id)
     import_job_id = request.args.get("import_job_id", type=int)
     if import_job_id:
         query = query.filter(ChangeRequest.import_job_id == import_job_id)
     crs = query.order_by(ChangeRequest.id.desc()).all()
-    return render_template("change_requests/mine.html", crs=crs, import_job_id=import_job_id)
+    sign_requests = []
+    if current_user.role_code == "ENGINEER":
+        sign_requests = DomainSignoffService.open_requests_for(current_user.id)
+    return render_template(
+        "change_requests/mine.html",
+        crs=crs,
+        import_job_id=import_job_id,
+        sign_requests=sign_requests,
+    )
 
 
 @ui_bp.route("/change-requests/review-queue")
@@ -52,7 +108,7 @@ def approval_queue():
 
 
 @ui_bp.route("/change-requests/<int:cr_id>")
-@login_required_web
+@require_role_web("ADMINISTRATOR", "ENGINEER", "REVIEWER", "CHIEF_ENGINEER")
 def change_request_detail(cr_id):
     cr = db.session.get(ChangeRequest, cr_id)
     if cr is None:
@@ -81,6 +137,11 @@ def change_request_detail(cr_id):
         pending_domains=sorted(pending_domains),
         can_sign_domain=sorted(my_domains & pending_domains),
         blocked_ce=blocked_ce,
+        diff=RevisionDiffService.diff_against_baseline(revision),
+        access_choices=_access_choices(),
+        reviewers=_active_reviewers(),
+        domain_requests=cr_domain_requests(cr),
+        domain_holders=_domain_holders(pending_domains),
     )
 
 
@@ -88,7 +149,12 @@ def change_request_detail(cr_id):
 @require_role_web("ADMINISTRATOR", "ENGINEER")
 def cr_submit(cr_id):
     try:
-        ChangeRequestService.submit(cr_id, current_user)
+        ChangeRequestService.submit(
+            cr_id,
+            current_user,
+            identifier_override=(request.form.get("identifier_override") or "").strip() or None,
+            override_reason=request.form.get("override_reason"),
+        )
     except (SegregationOfDutiesViolation, InvalidTransitionError, DomainError, ValueError) as exc:
         flash(str(exc), "error")
     else:
@@ -115,8 +181,14 @@ def cr_reviewer_signoff(cr_id):
 def cr_admin_signoff(cr_id):
     decision = request.form.get("decision", "")
     comment = request.form.get("comment") or None
+    # FR-034: every access field is submitted with its current/overridden value.
+    overrides = {
+        field: request.form.get(field, "") for field, _ in ACCESS_LABELS if field in request.form
+    }
     try:
-        ChangeRequestService.admin_signoff(cr_id, current_user, decision, comment)
+        ChangeRequestService.admin_signoff(
+            cr_id, current_user, decision, comment, access_overrides=overrides or None
+        )
     except (SegregationOfDutiesViolation, InvalidTransitionError, ValueError) as exc:
         flash(str(exc), "error")
     else:
@@ -135,6 +207,52 @@ def cr_chief_engineer_decide(cr_id):
         flash(str(exc), "error")
     else:
         flash("Chief Engineer decision recorded.", "success")
+    return redirect(url_for("ui.change_request_detail", cr_id=cr_id))
+
+
+@ui_bp.route("/change-requests/<int:cr_id>/comments", methods=["POST"])
+@require_role_web("REVIEWER", "ADMINISTRATOR", "CHIEF_ENGINEER")
+def cr_add_comment(cr_id):
+    try:
+        ChangeRequestService.add_comment(cr_id, current_user, request.form.get("comment", ""))
+    except ValueError as exc:
+        flash(str(exc), "error")
+    else:
+        flash("Comment added.", "success")
+    return redirect(url_for("ui.change_request_detail", cr_id=cr_id))
+
+
+@ui_bp.route("/change-requests/<int:cr_id>/reviewer-assignment", methods=["POST"])
+@require_role_web("ADMINISTRATOR")
+def cr_assign_reviewer(cr_id):
+    reviewer_id = request.form.get("reviewer_id", type=int)
+    try:
+        ChangeRequestService.assign_reviewer(cr_id, reviewer_id, current_user)
+    except (SegregationOfDutiesViolation, InvalidTransitionError, ValueError) as exc:
+        flash(str(exc), "error")
+    else:
+        flash("Reviewer assignment updated.", "success")
+    return redirect(url_for("ui.change_request_detail", cr_id=cr_id))
+
+
+@ui_bp.route("/change-requests/<int:cr_id>/domain-signoff-requests", methods=["POST"])
+@require_role_web("ENGINEER", "ADMINISTRATOR")
+def cr_request_domain_signoff(cr_id):
+    cr = db.session.get(ChangeRequest, cr_id)
+    if cr is None:
+        flash("Change request not found.", "error")
+        return redirect(url_for("ui.my_change_requests"))
+    try:
+        DomainSignoffService.request_signoff(
+            cr,
+            request.form.get("engineering_domain", ""),
+            request.form.get("target_user_id", type=int),
+            current_user,
+        )
+    except (DomainError, ValueError) as exc:
+        flash(str(exc), "error")
+    else:
+        flash("Sign-off requested.", "success")
     return redirect(url_for("ui.change_request_detail", cr_id=cr_id))
 
 

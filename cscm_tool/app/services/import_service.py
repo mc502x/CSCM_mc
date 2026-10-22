@@ -32,6 +32,7 @@ from typing import Any
 from flask import current_app
 from openpyxl import load_workbook
 
+from app.domain.authz import require_roles
 from app.domain.errors import DomainError
 from app.extensions import db
 from app.models.import_job import ImportJob
@@ -47,6 +48,7 @@ from app.models.lookup import (
     LookupTccAccess,
     LookupTopAccess,
 )
+from app.services.audit_service import AuditService
 from app.services.status_code_service import StatusCodeService, ValidationFailed
 from app.services.validation import validate_revision_fields
 from app.utils import utcnow_iso
@@ -218,6 +220,7 @@ def _read_xlsx_rows(content: bytes) -> list[dict]:
 class ImportService:
     @staticmethod
     def process_upload(filename: str, content: bytes, actor) -> ImportJob:
+        require_roles(actor, "ADMINISTRATOR", "ENGINEER")
         extension = (filename.rsplit(".", 1)[-1] if "." in filename else "").lower()
         source_format = ALLOWED_EXTENSIONS.get(extension)
         if source_format is None:
@@ -242,6 +245,13 @@ class ImportService:
         source_path = import_dir / f"source.{extension}"
         source_path.write_bytes(content)
         job.source_file_reference = str(source_path)
+        AuditService.log(
+            "ImportJob",
+            job.id,
+            "IMPORT_STARTED",
+            actor=actor,
+            after={"source_format": source_format, "row_count": len(rows)},
+        )
         db.session.commit()
 
         errors: list[tuple[int, str]] = []
@@ -262,6 +272,23 @@ class ImportService:
                     "; ".join(exc.messages) if isinstance(exc, ImportValidationError) else str(exc)
                 )
                 errors.append((index, message))
+            except Exception:
+                # Unexpected failure: the job is recorded as FAILED (never
+                # silently left VALIDATING) and the error still surfaces.
+                db.session.rollback()
+                job.status = "FAILED"
+                job.created_count = created_count
+                job.error_count = len(errors)
+                job.completed_at = utcnow_iso()
+                AuditService.log(
+                    "ImportJob",
+                    job.id,
+                    "IMPORT_FAILED",
+                    actor=actor,
+                    after={"created_count": created_count, "failed_at_row": index},
+                )
+                db.session.commit()
+                raise
             else:
                 created_count += 1
 
@@ -278,6 +305,17 @@ class ImportService:
                 writer.writerows(errors)
             job.error_report_reference = str(error_path)
 
+        AuditService.log(
+            "ImportJob",
+            job.id,
+            "IMPORT_COMPLETED",
+            actor=actor,
+            after={
+                "row_count": job.row_count,
+                "created_count": created_count,
+                "error_count": len(errors),
+            },
+        )
         db.session.commit()
         return job
 

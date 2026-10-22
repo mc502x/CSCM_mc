@@ -88,6 +88,21 @@ def release_builder(release_id):
     )
 
 
+@ui_bp.route("/releases/<int:release_id>/delete", methods=["POST"])
+@require_role_web("ADMINISTRATOR")
+def release_delete(release_id):
+    try:
+        ReleaseService.delete(release_id, current_user)
+    except NotFoundError:
+        flash("Release not found.", "error")
+    except InvalidTransitionError as exc:
+        flash(str(exc), "error")
+        return redirect(url_for("ui.release_detail", release_id=release_id))
+    else:
+        flash("Release deleted.", "success")
+    return redirect(url_for("ui.release_list"))
+
+
 @ui_bp.route("/releases/<int:release_id>/publish", methods=["POST"])
 @require_role_web("ADMINISTRATOR")
 def release_publish(release_id):

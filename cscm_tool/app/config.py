@@ -6,9 +6,14 @@ from datetime import timedelta
 
 basedir = os.path.abspath(os.path.dirname(os.path.dirname(__file__)))
 
+# The development-only fallback: create_app() refuses to start a production instance
+# that still uses it (and tests/system/test_production_config.py proves that).
+DEFAULT_SECRET_KEY = "dev-secret-key-change-me"  # nosec B105
+MIN_PRODUCTION_SECRET_LENGTH = 32
+
 
 class Config:
-    SECRET_KEY = os.environ.get("SECRET_KEY", "dev-secret-key-change-me")
+    SECRET_KEY = os.environ.get("SECRET_KEY", DEFAULT_SECRET_KEY)
     SQLALCHEMY_DATABASE_URI = os.environ.get(
         "DATABASE_URL", "sqlite:///" + os.path.join(basedir, "instance", "cscm.db")
     )

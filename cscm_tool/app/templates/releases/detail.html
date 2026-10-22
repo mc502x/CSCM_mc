@@ -4,7 +4,13 @@
 <div class="page-header">
   <h1>{{ release.name }} <span class="badge badge--{{ 'RELEASED' if release.status == 'PUBLISHED' else 'DRAFT' }}">{{ release.status }}</span></h1>
   {% if release.status == 'BUILDING' and current_user.role_code == 'ADMINISTRATOR' %}
-  <a class="btn btn--primary" href="{{ url_for('ui.release_builder', release_id=release.id) }}">Edit Candidates</a>
+  <div class="btn-row">
+    <a class="btn btn--primary" href="{{ url_for('ui.release_builder', release_id=release.id) }}">Edit Candidates</a>
+    <form method="post" action="{{ url_for('ui.release_delete', release_id=release.id) }}" data-confirm="Delete this unpublished Release?">
+      <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+      <button class="btn btn--danger" type="submit">Delete Release</button>
+    </form>
+  </div>
   {% endif %}
 </div>
 
@@ -24,6 +30,7 @@
   <div class="btn-row">
     <a class="btn" href="{{ url_for('api_v1.export_release', release_id=release.id, format='csv') }}">Export CSV</a>
     <a class="btn" href="{{ url_for('api_v1.export_release', release_id=release.id, format='json') }}">Export JSON</a>
+    <a class="btn" href="{{ url_for('api_v1.export_release', release_id=release.id, format='xlsx') }}">Export XLSX</a>
     <a class="btn" href="{{ url_for('api_v1.export_release', release_id=release.id, format='pdf') }}">Export PDF</a>
   </div>
 </div>

@@ -28,6 +28,10 @@ class LastAdministratorError(DomainError):
     pass
 
 
+class ForbiddenError(DomainError):
+    """The actor's role does not permit the operation (SEC-010)."""
+
+
 class SegregationOfDutiesViolation(DomainError):
     pass
 

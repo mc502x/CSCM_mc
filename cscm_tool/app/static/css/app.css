@@ -223,3 +223,15 @@ legend { font-weight: 700; padding: 0 6px; }
   .main { padding: 16px; padding-top: 80px; }
   .topbar { padding: 0 16px; }
 }
+
+.row-link { cursor: pointer; }
+
+.diff-table .diff-old { background: #fdecea; }
+.diff-table .diff-new { background: #e9f7ec; }
+
+.field-help { font-size: 12px; color: var(--muted, #6b7280); margin-top: 4px; min-height: 1em; }
+
+/* spacing for the stacked action forms on the change-request page */
+.card form.btn-row, .card > form { margin: 8px 0 14px; }
+.card h2 + .signoff-strip, .card .signoff-strip + h2, .card .signoff-strip + h3 { margin-top: 16px; }
+.card h3 { margin: 18px 0 8px; }

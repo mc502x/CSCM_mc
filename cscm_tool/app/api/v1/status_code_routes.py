@@ -7,6 +7,7 @@ from app.api.v1 import api_v1_bp
 from app.api.v1.serializers import revision_payload
 from app.auth.decorators import current_user, login_required, require_role
 from app.domain.errors import DomainError, InvalidTransitionError, NotFoundError
+from app.services.revision_diff_service import RevisionDiffService
 from app.services.status_code_service import StatusCodeService, ValidationFailed
 
 
@@ -114,7 +115,7 @@ def reinstate_status_code(status_code_id: int):
 
 
 @api_v1_bp.get("/status-codes/next-available")
-@login_required
+@require_role("ADMINISTRATOR", "ENGINEER")
 def next_available_identifier():
     """v3: both ids required — Functional Subgroup is mandatory, never
     optional (docs/artifacts/openapi.yaml)."""
@@ -171,6 +172,18 @@ def delete_sandbox_status_code(status_code_id: int):
 def list_revisions(status_code_id: int):
     revisions = StatusCodeService.list_revision_history(status_code_id, current_user)
     return jsonify([revision_payload(r) for r in revisions])
+
+
+@api_v1_bp.get("/status-codes/<int:status_code_id>/revisions/<int:rev_a>/diff/<int:rev_b>")
+@login_required
+def diff_revisions(status_code_id: int, rev_a: int, rev_b: int):
+    """FR-064: field-level diff between two revision numbers of one code."""
+    try:
+        return jsonify(
+            RevisionDiffService.diff_revisions(status_code_id, rev_a, rev_b, current_user)
+        )
+    except NotFoundError:
+        return jsonify(error="not_found", message="Revision not found"), 404
 
 
 @api_v1_bp.post("/status-codes/<int:status_code_id>/revisions")

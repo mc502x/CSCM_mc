@@ -6,13 +6,15 @@
 <div class="card">
   {% if crs %}
   <table>
-    <thead><tr><th>Identifier</th><th>Title</th><th>Type</th><th>Reviewer</th><th>Administrator</th><th></th></tr></thead>
+    <thead><tr><th>Identifier</th><th>Title</th><th>Author</th><th>Type</th><th>Assigned</th><th>Reviewer</th><th>Administrator</th><th></th></tr></thead>
     <tbody>
       {% for cr in crs %}
       <tr>
         <td>{{ cr.revision.status_code.status_code_identifier }}</td>
         <td>{{ cr.revision.title }}</td>
+        <td>{{ user_label(cr.requested_by) }}</td>
         <td>{{ cr.cr_type }}</td>
+        <td>{{ cr.assigned_reviewer.full_name if cr.assigned_reviewer else '—' }}</td>
         <td>{{ 'Signed' if cr.revision.reviewer_signoff_by else 'Pending' }}</td>
         <td>{{ 'Signed' if cr.revision.admin_signoff_by else 'Pending' }}</td>
         <td><a href="{{ url_for('ui.change_request_detail', cr_id=cr.id) }}">Review</a></td>

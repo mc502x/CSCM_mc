@@ -48,7 +48,7 @@
     <thead><tr><th>Identifier</th><th>Title</th><th>Group / Subgroup</th><th>State</th><th>Platforms</th></tr></thead>
     <tbody>
       {% for r in items %}
-      <tr onclick="window.location='{{ url_for('ui.status_code_detail', status_code_id=r.status_code_id) }}'" style="cursor:pointer">
+      <tr data-href="{{ url_for('ui.status_code_detail', status_code_id=r.status_code_id) }}" class="row-link">
         <td>{{ r.status_code_identifier or 'Not yet assigned' }}{% if r.is_sandbox %} {{ macros.sandbox_badge() }}{% endif %}</td>
         <td>{{ r.title }}</td>
         <td>{{ r.functional_system_group }} ({{ r.functional_system_group_range_start }}-{{ r.functional_system_group_range_end }}) / {{ r.functional_subgroup }}</td>

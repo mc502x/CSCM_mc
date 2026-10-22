@@ -39,6 +39,7 @@ EXPECTED_TABLES = {
     "change_request",
     "review_comment",
     "domain_signoff",
+    "domain_signoff_request",
     "release",
     "release_item",
     "audit_log_entry",
@@ -132,3 +133,53 @@ def test_only_sandbox_status_codes_can_be_deleted(app):
             )
             db.session.commit()
         db.session.rollback()
+
+
+def _alembic_cfg():
+    from pathlib import Path
+
+    from alembic.config import Config
+
+    migrations = Path(__file__).resolve().parents[2] / "migrations"
+    cfg = Config(str(migrations / "alembic.ini"))
+    cfg.set_main_option("script_location", str(migrations))
+    return cfg
+
+
+def _schema_objects():
+    inspector = inspect(db.session.connection())
+    triggers = {
+        row[0]
+        for row in db.session.execute(text("SELECT name FROM sqlite_master WHERE type = 'trigger'"))
+    }
+    result = {
+        "request_table": "domain_signoff_request" in inspector.get_table_names(),
+        "lookup_description": "description"
+        in {c["name"] for c in inspector.get_columns("lookup_sales_access")},
+        "assigned_reviewer": "assigned_reviewer_id"
+        in {c["name"] for c in inspector.get_columns("change_request")},
+        "audit_triggers": {"trg_audit_no_update", "trg_audit_no_delete"} <= triggers,
+        "password_history": "user_password_history" in inspector.get_table_names(),
+    }
+    db.session.remove()  # release the read transaction before Alembic opens its own
+    return result
+
+
+def test_second_migration_is_reversible_and_idempotent(app):
+    """A database already at the earlier baseline is brought up to date by the
+    follow-on migration; on a fresh database (which got everything from the
+    baseline) it is a no-op."""
+    from alembic import command
+
+    with app.app_context():
+        assert all(_schema_objects().values())
+
+        command.downgrade(_alembic_cfg(), "9dc07a07a48b")
+        old = _schema_objects()
+        assert not old["request_table"] and not old["lookup_description"]
+        assert not old["audit_triggers"] and not old["password_history"]
+
+        command.upgrade(_alembic_cfg(), "head")
+        assert all(_schema_objects().values())
+        command.upgrade(_alembic_cfg(), "head")  # idempotent re-run
+        assert all(_schema_objects().values())

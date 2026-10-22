@@ -7,10 +7,17 @@ from fpdf import FPDF
 _MAX_CELL_CHARS = 24
 
 
-def build_pdf(rows: list[dict]) -> bytes:
+def build_pdf(rows: list[dict], notice: str | None = None) -> bytes:
     pdf = FPDF(orientation="L", unit="mm", format="A4")
     pdf.set_auto_page_break(auto=True, margin=10)
     pdf.add_page()
+
+    if notice:
+        pdf.set_font("Helvetica", style="B", size=10)
+        pdf.set_text_color(180, 0, 0)
+        pdf.cell(0, 8, notice)
+        pdf.ln(10)
+        pdf.set_text_color(0, 0, 0)
 
     if not rows:
         pdf.set_font("Helvetica", size=10)

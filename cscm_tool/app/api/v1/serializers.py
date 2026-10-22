@@ -62,6 +62,7 @@ def revision_payload(revision: StatusCodeRevision) -> dict:
         "umrichterprogramm_msc": revision.umrichterprogramm_msc,
         "yaw_bearing_lubrication_program": revision.yaw_bearing_lubrication_program,
         # SEC-013/FR-025a: Engineer-proposed until admin_signoff_at is set.
+        "access_confirmed": revision.admin_signoff_at is not None,
         "development_access": _access_code(revision.development_access),
         "development_access_id": revision.development_access_id,
         "sales_access": _access_code(revision.sales_access),
@@ -171,6 +172,7 @@ def change_request_payload(cr: ChangeRequest) -> dict:
         "submitted_at": cr.submitted_at,
         "chief_engineer_decided_at": cr.chief_engineer_decided_at,
         "chief_engineer_decided_by": cr.chief_engineer_decided_by,
+        "assigned_reviewer_id": cr.assigned_reviewer_id,
         "comments": [review_comment_payload(c) for c in cr.comments],
         "domain_signoffs": [domain_signoff_payload(d) for d in cr.domain_signoffs],
     }
@@ -189,4 +191,15 @@ def import_job_payload(job: ImportJob) -> dict:
         "error_report_reference": job.error_report_reference,
         "created_at": job.created_at,
         "completed_at": job.completed_at,
+    }
+
+
+def domain_signoff_request_payload(row) -> dict:
+    return {
+        "id": row.id,
+        "change_request_id": row.change_request_id,
+        "engineering_domain": row.engineering_domain.code,
+        "requested_by": row.requested_by,
+        "target_user_id": row.target_user_id,
+        "created_at": row.created_at,
     }

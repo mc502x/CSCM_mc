@@ -7,6 +7,7 @@ sandbox codes bypass the governance workflow entirely by design)."""
 
 from datetime import UTC, datetime, timedelta
 
+from app.domain.authz import require_roles
 from app.domain.errors import (
     DomainError,
     InvalidTransitionError,
@@ -60,6 +61,7 @@ class StatusCodeService:
         when called from ImportService (FR-048a-c), cr_type=NEW otherwise.
         Either way the CR goes through the identical submit/dual-review/
         Chief-Engineer-approval cycle (05-governance-handbook.md §6b)."""
+        require_roles(actor_user, "ADMINISTRATOR", "ENGINEER")
         revision = StatusCodeService._build_revision(
             data, actor_user, is_sandbox=False, status_code_id=None, revision_number=1
         )
@@ -89,6 +91,7 @@ class StatusCodeService:
     def create_revision(status_code_id: int, data: dict, actor_user) -> StatusCodeRevision:
         """Opens a new Draft revision (copy-on-write) against an existing
         code (FR-025). BR-003: rejected if an open revision already exists."""
+        require_roles(actor_user, "ADMINISTRATOR", "ENGINEER")
         status_code = StatusCodeService._repo.get_or_404(status_code_id)
         if StatusCodeService._repo.get_open_revision(status_code_id) is not None:
             raise InvalidTransitionError(
@@ -137,6 +140,7 @@ class StatusCodeService:
         submit/dual-review/Chief-Engineer-approval machinery as any other
         CR; ChangeRequestService.chief_engineer_decide routes a DEPRECATION
         CR's approval to DEPRECATED instead of APPROVED."""
+        require_roles(actor_user, "ADMINISTRATOR", "ENGINEER")
         status_code = StatusCodeService._repo.get_or_404(status_code_id)
         current = StatusCodeService._repo.get_current_revision(status_code_id)
         if current is None or current.lifecycle_status != "RELEASED":
@@ -253,6 +257,7 @@ class StatusCodeService:
         DEPRECATE audit_log_entry is the authoritative timestamp source —
         consistent with the audit trail being the compliance record of
         truth (docs/12-audit-compliance.md §1)."""
+        require_roles(actor_user, "ADMINISTRATOR")
         current = StatusCodeService._repo.get_current_revision(status_code_id)
         if current is None or current.lifecycle_status != "DEPRECATED":
             raise InvalidTransitionError("Only a Deprecated Status Code can be archived.")
@@ -292,6 +297,7 @@ class StatusCodeService:
     def reinstate(status_code_id: int, reason: str, actor_user) -> StatusCodeRevision:
         """Deprecated -> Released, exceptional (docs/05-governance-handbook.md
         §5): Administrator-only, direct action, mandatory reason."""
+        require_roles(actor_user, "ADMINISTRATOR")
         current = StatusCodeService._repo.get_current_revision(status_code_id)
         if current is None or current.lifecycle_status != "DEPRECATED":
             raise InvalidTransitionError("Only a Deprecated Status Code can be reinstated.")
@@ -349,6 +355,7 @@ class StatusCodeService:
         docs/artifacts/schema.sql to back that check — so it is accepted
         (for forward API compatibility) but not currently enforced. Adding
         real optimistic concurrency needs its own schema migration."""
+        require_roles(actor_user, "ADMINISTRATOR", "ENGINEER")
         revision = db.session.get(StatusCodeRevision, revision_id)
         if revision is None:
             raise NotFoundError(f"Revision {revision_id} not found")
@@ -381,7 +388,12 @@ class StatusCodeService:
 
     @staticmethod
     def get_current_revision(status_code_id: int, actor_user) -> StatusCodeRevision:
-        revision = StatusCodeService._repo.get_current_revision(status_code_id)
+        if actor_user.role_code == "VIEWER":
+            revision = StatusCodeService._repo.get_latest_revision_in_states(
+                status_code_id, VIEWER_VISIBLE_STATES
+            )
+        else:
+            revision = StatusCodeService._repo.get_current_revision(status_code_id)
         if revision is None or not StatusCodeService._is_visible(revision, actor_user):
             raise NotFoundError(f"Status Code {status_code_id} not found")
         return revision
@@ -418,6 +430,7 @@ class StatusCodeService:
         SANDBOX_DELETE audit entry with a full pre-delete snapshot in the
         same transaction. trg_prevent_nonsandbox_delete is defense-in-depth
         if this service-layer check is ever bypassed."""
+        require_roles(actor_user, "ADMINISTRATOR")
         status_code = StatusCodeService._repo.get_or_404(status_code_id)
         if not status_code.is_sandbox:
             raise DomainError("Only sandbox status codes may be deleted (FR-055).")
@@ -580,6 +593,51 @@ def _apply_revision_fields(revision: StatusCodeRevision, data: dict) -> None:
         LookupServicePartnerAccess, data.get("service_partner_access")
     )
     revision.customer_access_id = _resolve_access(LookupCustomerAccess, data.get("customer_access"))
+
+
+ACCESS_FIELDS = (
+    "development_access",
+    "sales_access",
+    "tcc_access",
+    "service_access",
+    "turbine_operator_package_access",
+    "grid_operator_access",
+    "service_partner_access",
+    "customer_access",
+)
+
+_ACCESS_MODELS = {
+    "development_access": LookupDevelopmentAccess,
+    "sales_access": LookupSalesAccess,
+    "tcc_access": LookupTccAccess,
+    "service_access": LookupServiceAccess,
+    "turbine_operator_package_access": LookupTopAccess,
+    "grid_operator_access": LookupGridOperatorAccess,
+    "service_partner_access": LookupServicePartnerAccess,
+    "customer_access": LookupCustomerAccess,
+}
+
+
+def apply_access_overrides(revision: StatusCodeRevision, overrides: dict) -> tuple[dict, dict]:
+    """FR-034 / SEC-013: the Administrator's Review sign-off may confirm or
+    override the eight restricted audience-access fields. `overrides` maps a
+    field name to a lookup id (or ""/None to clear it); fields not named are
+    left as the Engineer proposed. Returns (before, after) for only the
+    fields that actually changed, for the audit trail."""
+    unknown = set(overrides) - set(ACCESS_FIELDS)
+    if unknown:
+        raise ValueError(f"Unknown audience-access field(s): {', '.join(sorted(unknown))}")
+    before: dict = {}
+    after: dict = {}
+    for name, raw in overrides.items():
+        new_id = _resolve_access(_ACCESS_MODELS[name], raw)
+        attr = f"{name}_id"
+        old_id = getattr(revision, attr)
+        if new_id != old_id:
+            before[name] = old_id
+            after[name] = new_id
+            setattr(revision, attr, new_id)
+    return before, after
 
 
 def _resolve_access(model, value_id) -> int | None:

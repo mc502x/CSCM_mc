@@ -19,6 +19,7 @@ sub_range_end, only code/label/description/is_active/sort_order."""
 
 from typing import Any
 
+from app.domain.authz import require_roles
 from app.domain.errors import DomainError, NotFoundError
 from app.extensions import db
 from app.models.lookup import LookupFunctionalSubgroup, LookupFunctionalSystemGroup
@@ -29,6 +30,7 @@ from app.services.lookup_service import VOCABULARY_MODELS, LookupService
 class LookupAdminService:
     @staticmethod
     def create_value(vocabulary: str, data: dict, actor) -> object:
+        require_roles(actor, "ADMINISTRATOR")
         model = VOCABULARY_MODELS.get(vocabulary)
         if model is None:
             raise ValueError(f"Unknown vocabulary: {vocabulary}")
@@ -76,6 +78,7 @@ class LookupAdminService:
         """FR-048g/h: Administrator-only, into any currently free range.
         Overlap is checked here (service layer, for a helpful named-conflict
         409) with trg_prevent_group_overlap as the database-layer backstop."""
+        require_roles(actor, "ADMINISTRATOR")
         code = data.get("code")
         label = data.get("label")
         range_start = data.get("range_start")
@@ -133,6 +136,7 @@ class LookupAdminService:
         module docstring for why). Overlap is checked here for a helpful
         named-conflict 409, with trg_prevent_subgroup_overlap as the
         database-layer backstop."""
+        require_roles(actor, "ADMINISTRATOR")
         group_id = data.get("functional_system_group")
         code = data.get("code")
         label = data.get("label")
@@ -185,7 +189,7 @@ class LookupAdminService:
         AuditService.log(
             "Lookup",
             subgroup.id,
-            "LOOKUP_CHANGE",
+            "SUBGROUP_CREATE",
             actor=actor,
             after={
                 "vocabulary": "functional-subgroups",
@@ -201,6 +205,7 @@ class LookupAdminService:
 
     @staticmethod
     def update_value(vocabulary: str, value_id: int, data: dict, actor) -> object:
+        require_roles(actor, "ADMINISTRATOR")
         model = VOCABULARY_MODELS.get(vocabulary)
         if model is None:
             raise ValueError(f"Unknown vocabulary: {vocabulary}")
@@ -213,7 +218,11 @@ class LookupAdminService:
         # VOCABULARY_MODELS dispatch only gives mypy the common Base type —
         # same trade-off already accepted in lookup_service.py.
         value: Any = found
-        before = {"label": value.label, "is_active": bool(value.is_active)}
+        before = {
+            "label": value.label,
+            "description": getattr(value, "description", None),
+            "is_active": bool(value.is_active),
+        }
 
         if "label" in data:
             value.label = data["label"]
@@ -230,7 +239,11 @@ class LookupAdminService:
             "LOOKUP_CHANGE",
             actor=actor,
             before=before,
-            after={"label": value.label, "is_active": bool(value.is_active)},
+            after={
+                "label": value.label,
+                "description": getattr(value, "description", None),
+                "is_active": bool(value.is_active),
+            },
         )
         db.session.commit()
         return value

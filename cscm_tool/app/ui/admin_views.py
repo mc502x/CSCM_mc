@@ -186,6 +186,7 @@ def functional_subgroup_new():
 def lookup_value_update(vocabulary, value_id):
     data = {
         "label": request.form.get("label"),
+        "description": request.form.get("description") or None,
         "is_active": request.form.get("is_active") == "on",
     }
     try:
@@ -208,6 +209,7 @@ def audit_log():
         entity_type=request.args.get("entity_type") or None,
         entity_id=request.args.get("entity_id", type=int),
         actor_id=request.args.get("actor_id", type=int),
+        action=request.args.get("action") or None,
         date_from=request.args.get("date_from") or None,
         date_to=request.args.get("date_to") or None,
         page=page,

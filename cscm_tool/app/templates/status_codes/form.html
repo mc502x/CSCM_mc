@@ -14,7 +14,7 @@
   <span class="muted">Status Code Identifier:</span> <strong>{{ 'StCd-T#####' if is_sandbox else 'Not yet assigned — fixed on Submit for Review' }}</strong>
 </div>
 
-<form method="post">
+<form method="post" data-subgroup-dependency="functional_system_group,functional_subgroup">
   <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
 
   <fieldset>
@@ -22,12 +22,13 @@
     <div class="form-row">
       <div class="field">
         <label for="functional_system_group">Functional System Group</label>
-        <select id="functional_system_group" name="functional_system_group" required {{ 'disabled' if editing }}>
+        <select id="functional_system_group" name="functional_system_group" required data-help="help_functional_system_group" {{ 'disabled' if editing }}>
           <option value="">(select)</option>
           {% for g in choices.functional_system_group %}
-          <option value="{{ g.id }}" title="{{ g.label }}" {{ 'selected' if values.get('functional_system_group')|string == g.id|string }}>{{ g.code }} — {{ g.label }} ({{ g.range_start }}-{{ g.range_end }})</option>
+          <option value="{{ g.id }}" data-description="{{ g.description or g.label }}" {{ 'selected' if values.get('functional_system_group')|string == g.id|string }}>{{ g.code }} — {{ g.label }} ({{ g.range_start }}-{{ g.range_end }})</option>
           {% endfor %}
         </select>
+        <div class="field-help" id="help_functional_system_group" aria-live="polite"></div>
         {% if editing %}
         <input type="hidden" name="functional_system_group" value="{{ values.get('functional_system_group') }}">
         <div class="hint">Immutable once allocated (BR-001).</div>
@@ -38,9 +39,10 @@
       </div>
       <div class="field">
         <label for="functional_subgroup">Functional Subgroup</label>
-        <select id="functional_subgroup" name="functional_subgroup" required data-selected="{{ values.get('functional_subgroup') or '' }}" {{ 'disabled' if editing }}>
+        <select id="functional_subgroup" name="functional_subgroup" required data-selected="{{ values.get('functional_subgroup') or '' }}" data-help="help_functional_subgroup" {{ 'disabled' if editing }}>
           <option value="">Select a Functional System Group first</option>
         </select>
+        <div class="field-help" id="help_functional_subgroup" aria-live="polite"></div>
         {% if editing %}<input type="hidden" name="functional_subgroup" value="{{ values.get('functional_subgroup') or '' }}">{% endif %}
       </div>
     </div>
@@ -84,13 +86,13 @@
       </div>
       <div class="field">
         <label for="available_group">Available Group</label>
-        <select id="available_group" name="available_group" required title="Description not yet available — confirm with Controls Engineering">
+        <select id="available_group" name="available_group" required data-help="help_available_group">
           <option value="">(select)</option>
           {% for v in choices.available_group %}
-          <option value="{{ v.code }}" {{ 'selected' if values.get('available_group')|string == v.code|string }}>{{ v.code }}{% if v.label %} — {{ v.label }}{% endif %}</option>
+          <option value="{{ v.code }}" data-description="{{ v.description or '' }}" {{ 'selected' if values.get('available_group')|string == v.code|string }}>{{ v.code }}{% if v.label %} — {{ v.label }}{% endif %}</option>
           {% endfor %}
         </select>
-        <div class="hint">Description not yet available for every code — confirm with Controls Engineering.</div>
+        <div class="field-help" id="help_available_group" aria-live="polite"></div>
       </div>
       <div class="field">
         <label for="software_version">Software Version (optional)</label>
@@ -163,26 +165,22 @@
       ] %}
       <div class="field">
         <label for="{{ field }}">{{ label }}</label>
-        <select id="{{ field }}" name="{{ field }}" title="Description not yet available — confirm with Controls Engineering">
+        <select id="{{ field }}" name="{{ field }}" data-help="help_{{ field }}">
           <option value="">(none)</option>
           {% for v in choices[field] %}
-          <option value="{{ v.id }}" {{ 'selected' if values.get(field)|string == v.id|string }}>{{ v.label }}</option>
+          <option value="{{ v.id }}" data-description="{{ v.description or '' }}" {{ 'selected' if values.get(field)|string == v.id|string }}>{{ v.label }}</option>
           {% endfor %}
         </select>
+        <div class="field-help" id="help_{{ field }}" aria-live="polite"></div>
       </div>
       {% endfor %}
     </div>
   </fieldset>
 
   <div class="form-actions">
-    <a class="btn" href="javascript:history.back()">Cancel</a>
+    <a class="btn" href="#" data-history-back>Cancel</a>
     <button class="btn btn--primary" type="submit">{{ 'Save Draft' if editing else ('Create Sandbox Code' if is_sandbox else 'Save as Draft') }}</button>
   </div>
 </form>
 
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-  initSubgroupDependency('functional_system_group', 'functional_subgroup');
-});
-</script>
 {% endblock %}

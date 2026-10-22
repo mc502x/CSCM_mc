@@ -19,7 +19,9 @@ from app.domain.errors import (
     NotFoundError,
     SegregationOfDutiesViolation,
 )
+from app.services.change_request_service import ChangeRequestService
 from app.services.lookup_service import LookupService
+from app.services.revision_diff_service import RevisionDiffService
 from app.services.status_code_service import StatusCodeService, ValidationFailed
 from app.ui import ui_bp
 
@@ -195,12 +197,29 @@ def status_code_detail(status_code_id):
     if revision.lifecycle_status in ("DRAFT", "REVIEW", "PENDING_APPROVAL"):
         open_cr = getattr(revision, "change_request", None)
 
+    decisions = []
+    if current_user.role_code != "VIEWER":
+        decisions = ChangeRequestService.decision_history(status_code_id, current_user)
+
+    diff = None
+    rev_a = request.args.get("a", type=int)
+    rev_b = request.args.get("b", type=int)
+    if tab == "history" and rev_a and rev_b:
+        try:
+            diff = RevisionDiffService.diff_revisions(status_code_id, rev_a, rev_b, current_user)
+        except NotFoundError:
+            flash("Revision not found.", "error")
+
     return render_template(
         "status_codes/detail.html",
         revision=revision_payload(revision),
         history=[revision_payload(r) for r in history],
         tab=tab,
         open_cr=open_cr,
+        diff=diff,
+        decisions=decisions,
+        rev_a=rev_a,
+        rev_b=rev_b,
     )
 
 

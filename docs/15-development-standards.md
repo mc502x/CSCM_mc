@@ -85,3 +85,5 @@ Unchanged in mechanism from v1 (§10), with the glossary-update requirement (§6
 ## 11. Definition of Done
 
 Unchanged in structure from v1 (§11): approved PR merged, acceptance criteria demonstrated, tests passing at coverage target, relevant documentation **and glossary** updated to match actual behavior, no known High/Critical security findings, deployed and smoke-tested in Staging at least once before counting toward a release milestone.
+
+**Living artefacts (added 2026-10-21).** Any change to the software also updates, in the same PR: the test report — regenerate it with `python cscm_tool/scripts/generate_test_report.py` (runs the full suite, coverage and the static gates, and appends to the run history; never edit `24-test-report.md` by hand); the traceability matrix `20-traceability-matrix.md` when a requirement's code or evidence moves (the report flags matrix citations that no longer resolve to a test); and, when behaviour visible to users or integrators changes, the software description `22-software-description.md`, the user manual `23-user-manual.md` and `artifacts/openapi.yaml`. A PR whose report verdict is not PASS is not done.

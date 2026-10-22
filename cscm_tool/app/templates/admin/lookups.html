@@ -6,7 +6,7 @@
 <div class="card">
   <form method="get" class="field" style="max-width:320px">
     <label for="vocabulary">Vocabulary</label>
-    <select id="vocabulary" name="vocabulary" onchange="this.form.submit()">
+    <select id="vocabulary" name="vocabulary" data-autosubmit>
       {% for v in vocabularies %}
       <option value="{{ v }}" {{ 'selected' if v == vocabulary }}>{{ v }}</option>
       {% endfor %}
@@ -16,7 +16,7 @@
   <form method="get" class="field" style="max-width:420px;margin-top:10px">
     <input type="hidden" name="vocabulary" value="functional-subgroups">
     <label for="functional_system_group">Functional System Group</label>
-    <select id="functional_system_group" name="functional_system_group" onchange="this.form.submit()">
+    <select id="functional_system_group" name="functional_system_group" data-autosubmit>
       {% for g in groups %}
       <option value="{{ g.id }}" {{ 'selected' if selected_group_id == g.id }}>{{ g.code }} — {{ g.label }} ({{ g.range_start }}-{{ g.range_end }})</option>
       {% endfor %}
@@ -49,6 +49,7 @@
             <form method="post" action="{{ url_for('ui.lookup_value_update', vocabulary=vocabulary, value_id=v.id) }}" style="margin-top:8px">
               <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
               <div class="field"><label>Label</label><input type="text" name="label" value="{{ v.label }}"></div>
+              <div class="field"><label>Description (shown as inline help)</label><textarea name="description" maxlength="1000">{{ v.description or '' }}</textarea></div>
               <div class="field"><label><input type="checkbox" name="is_active" {{ 'checked' if v.is_active }}> Active</label></div>
               <button class="btn btn--primary" type="submit">Save</button>
             </form>

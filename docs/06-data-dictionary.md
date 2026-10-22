@@ -121,7 +121,10 @@ Unchanged from the prior revision. At least one Turbine Platform must be selecte
 
 ## 4. `change_request`, `review_comment`, `domain_signoff`
 
-Unchanged in shape from the prior revision (05-governance-handbook.md §7–§8 for the dual-review-then-Chief-Engineer-approval sequence these tables support).
+Unchanged in shape from the prior revision (05-governance-handbook.md §7–§8 for the dual-review-then-Chief-Engineer-approval sequence these tables support), with two additions (2026-10-21):
+
+- `change_request.assigned_reviewer_id` (INTEGER, nullable, FK → `user`) — FR-039. An Administrator may assign, reassign, or unassign the Reviewer while the CR is in Draft/Review and the Reviewer has not yet signed; once set, only that Reviewer may record the Reviewer sign-off. The author can never be assigned (BR-005).
+- `domain_signoff_request` (new table: `id`, `change_request_id`, `engineering_domain_id`, `requested_by`, `target_user_id` nullable, `created_at`; unique on CR + domain) — FR-028. The originating Engineer's explicit request for a pending domain's sign-off, optionally addressed to one Engineer holding that domain. It surfaces on the target's Dashboard and My Change Requests until a `domain_signoff` exists for that domain; an unaddressed request is visible to every Engineer holding the domain.
 
 ## 5. `import_job` (new — library import)
 
@@ -148,6 +151,8 @@ Unchanged in shape from the prior revision.
 ## 7. `user` / `user_engineering_domain`
 
 Unchanged in shape from the prior revision.
+
+**`user_password_history`** (added 2026-10-21): `id`, `user_id` (FK → `user`), `password_hash` (Argon2id hash of a retired password, never plaintext), `retired_at`. Written whenever a user's password is changed or reset; a new password is rejected if it matches the current one or any of the 4 most recently retired ones (the last 5 passwords, `11-security-architecture.md` §4).
 
 ## 8. `audit_log_entry` / `export_job`
 
@@ -228,6 +233,8 @@ New capability (2026-09-17), mirroring §9a.1 one level up: an Administrator can
 ### 9a.1 Administrator-Created Subgroups
 
 New requirement (2026-09-17): an Administrator can create a new Functional Subgroup within any Functional System Group. The system validates the proposed `sub_range_start`/`sub_range_end` does not overlap any existing subgroup (active or inactive) in that group — overlap is rejected with a 409 (09-api-specification.md), and the Administrator must choose a genuinely free sub-range (typically one of the reserved blocks above). No alignment to hundreds-digit boundaries is enforced by the schema — the WTUR `099xx` sub-blocks above prove ten-number sub-ranges are legitimate — but the UI should visually suggest the next hundred-aligned free block as a sane default (10-ui-ux-specification.md).
+
+**Inline-help text (NFR-007b, 2026-10-21):** every `lookup_*` table carries a nullable `description` column. The UI shows the selected option's description under each lookup-backed dropdown, or an explicit "no description available yet" note while it is NULL. Administrators maintain descriptions in Lookup Administration (audited as `LOOKUP_CHANGE`); the real wording for the 23 Available Group codes and the audience-access values still has to come from Controls Engineering.
 
 ## 9b. `lookup_turbine_platform`
 

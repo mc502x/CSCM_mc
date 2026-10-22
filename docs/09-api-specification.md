@@ -74,12 +74,16 @@ Unchanged in mechanism from v1 (`page`/`page_size` envelope, `sort` with `-` pre
 | PATCH | `/revisions/{id}` | Edit a Draft revision | Engineer (own CR) |
 | GET | `/change-requests` | Review/approval queues / my submissions | Engineer/Reviewer/Administrator/Chief Engineer |
 | GET | `/change-requests/{id}` | CR detail | Engineer/Reviewer/Administrator/Chief Engineer |
-| POST | `/change-requests/{id}/submit` | Draft → Review; allocates identifier | Engineer (own CR) |
+| POST | `/change-requests/{id}/submit` | Draft → Review; allocates identifier once. Administrator may pass `identifier_override` + `override_reason` (FR-021a) | Engineer (own CR), Administrator |
 | POST | `/change-requests/{id}/reviewer-signoff` | 1 of 2 required Review sign-offs | Reviewer (not own CR) |
-| POST | `/change-requests/{id}/admin-signoff` | 2 of 2 required Review sign-offs | Administrator (not own CR) |
+| POST | `/change-requests/{id}/admin-signoff` | 2 of 2 required Review sign-offs; optional `access_overrides` confirms/overrides the eight audience-access fields (FR-034) | Administrator (not own CR) |
 | POST | `/change-requests/{id}/chief-engineer-decide` | PendingApproval → Approved/Draft | Chief Engineer (not requester/reviewer/admin on this CR) |
 | POST | `/change-requests/{id}/withdraw` | Cancel own open CR | Engineer (own CR) |
 | GET/POST | `/change-requests/{id}/domain-signoffs` | List/record Cross-Domain Sign-Offs | Engineer (matching domain) |
+| POST | `/change-requests/{id}/domain-signoff-requests` | Request a pending domain's sign-off, optionally from a named Engineer (FR-028) | Originating Engineer |
+| GET | `/domain-signoff-requests` | Open sign-off requests awaiting the current Engineer | Engineer |
+| POST | `/change-requests/{id}/comments` | Comment without a decision (FR-038) | Reviewer, Administrator, Chief Engineer |
+| PUT | `/change-requests/{id}/reviewer-assignment` | Assign/reassign/unassign the Reviewer (FR-039) | Administrator |
 | GET/POST | `/imports` | List import jobs / upload a CSV or XLSX library file | Engineer, Administrator |
 | GET | `/imports/{id}` | Import job status | Engineer, Administrator |
 | GET | `/imports/{id}/errors` | Per-row import error report | Engineer, Administrator |
@@ -87,13 +91,18 @@ Unchanged in mechanism from v1 (`page`/`page_size` envelope, `sort` with `-` pre
 | POST | `/lookups/functional-system-groups` | Create a brand-new Functional System Group into a free range, non-overlap validated | Administrator |
 | GET/POST | `/releases` | List/create releases | Viewer (GET), Administrator (POST) |
 | GET | `/releases/{id}` | Release detail | Viewer |
+| DELETE | `/releases/{id}` | Delete an unpublished Release (BR-008); published → 409 | Administrator |
 | GET | `/releases/{id}/candidates` | Approved, non-sandbox candidates | Administrator |
 | PUT | `/releases/{id}/items` | Set included revisions | Administrator |
 | POST | `/releases/{id}/publish` | Publish (atomic) | Administrator |
 | GET | `/releases/{id}/export` | Export catalogue | Per role matrix |
+| GET | `/exports/released` | Current set of all Released (non-sandbox) codes, flat table, optional group/subgroup/platform filters (FR-045) | Viewer and above |
+| GET | `/exports/working-set` | Ad-hoc filtered working set, any lifecycle state, labelled "Not for distribution - unapproved data" (FR-046) | Engineer, Reviewer, Administrator, Chief Engineer |
 | GET | `/exports/full-database` | Full raw database export/backup | **Administrator only** |
 | GET | `/lookups/{vocabulary}` | Controlled vocabulary values, incl. Functional Groups/Subgroups/Platforms/Domains | Viewer |
-| GET | `/audit-log` | Search audit trail | Administrator (Reviewer/Chief Engineer: scoped read) |
+| GET | `/audit-log` | Search audit trail; filters `entity_type`, `entity_id`, `actor_id`, `action`, `date_from`, `date_to` | Administrator (Reviewer/Chief Engineer: scoped read) |
+
+Export file names follow `cscm_<kind>[_<label>]_YYYY-MM-DD_HH-MM.<ext>` (generation time, UTC): `released`, `release_<version label>`, `working-set_NOT_FOR_DISTRIBUTION`, `full-database-backup`.
 
 ## 8. Idempotency & Concurrency
 

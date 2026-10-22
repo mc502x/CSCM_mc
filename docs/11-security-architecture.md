@@ -17,29 +17,29 @@ CSCM Tool holds engineering-governed data with compliance/audit obligations (05-
 
 Five fixed roles: Administrator, Engineer, Reviewer, Chief Engineer, Viewer (00-INDEX.md "Roles"). Permission matrix (✓ = allowed; blank = denied; enforced identically at UI and API):
 
-| Action | Administrator | Engineer | Reviewer | Chief Engineer | Viewer |
-|---|---|---|---|---|---|
-| View Approved/Released/Deprecated/Archived codes | ✓ | ✓ | ✓ | ✓ | ✓ |
-| View Draft/Review/PendingApproval-state codes | ✓ | ✓ | ✓ | ✓ | — |
-| Create Status Code / Change Request | ✓ | ✓ | — | — | — |
-| Create Sandbox Status Code | ✓ | — | — | — | — |
-| Delete Sandbox Status Code | ✓ | — | — | — | — |
-| Edit own Draft revision | ✓ | ✓ | — | — | — |
-| Provide Cross-Domain Sign-Off | — | ✓ (matching domain) | — | — | — |
-| Submit CR for Review (allocates identifier) | ✓ | ✓ (own CR) | — | — | — |
-| Reviewer sign-off (Review) | — | — | ✓ (not own CR) | — | — |
-| Administrator sign-off (Review) | ✓ (not own CR) | — | — | — | — |
-| Chief Engineer approval (PendingApproval) | — | — | — | ✓ (not requester/reviewer/admin on this CR) | — |
-| Build/Publish Release | ✓ | — | — | — | — |
-| Deprecate Released code | ✓ | ✓ (via full CR cycle) | — | — | — |
-| Archive Deprecated code | ✓ | — | — | — | — |
-| Manage Users/Roles/Engineering Domain tags | ✓ | — | — | — | — |
-| Manage all Lookup Vocabularies (incl. Functional Group/Subgroup/Platform) | ✓ | — (propose only) | — | — | — |
-| View Audit Log | ✓ | — | ✓ (scoped) | ✓ (scoped) | — |
-| Export catalogue (CSV/JSON/XLSX/PDF) | ✓ | ✓ | ✓ | ✓ | ✓ (Approved/Released only) |
-| Export full database | ✓ | — | — | — | — |
+| Action                                                                    | Administrator  | Engineer              | Reviewer       | Chief Engineer                              | Viewer                     |
+| ------------------------------------------------------------------------- | -------------- | --------------------- | -------------- | ------------------------------------------- | -------------------------- |
+| View Approved/Released/Deprecated/Archived codes                          | ✓              | ✓                     | ✓              | ✓                                           | ✓                          |
+| View Draft/Review/PendingApproval-state codes                             | ✓              | ✓                     | ✓              | ✓                                           | —                          |
+| Create Status Code / Change Request                                       | ✓              | ✓                     | —              | —                                           | —                          |
+| Create Sandbox Status Code                                                | ✓              | —                     | —              | —                                           | —                          |
+| Delete Sandbox Status Code                                                | ✓              | —                     | —              | —                                           | —                          |
+| Edit own Draft revision                                                   | ✓              | ✓                     | —              | —                                           | —                          |
+| Provide Cross-Domain Sign-Off                                             | —              | ✓ (matching domain)   | —              | —                                           | —                          |
+| Submit CR for Review (allocates identifier)                               | ✓              | ✓ (own CR)            | —              | —                                           | —                          |
+| Reviewer sign-off (Review)                                                | —              | —                     | ✓ (not own CR) | —                                           | —                          |
+| Administrator sign-off (Review)                                           | ✓ (not own CR) | —                     | —              | —                                           | —                          |
+| Chief Engineer approval (PendingApproval)                                 | —              | —                     | —              | ✓ (not requester/reviewer/admin on this CR) | —                          |
+| Build/Publish Release                                                     | ✓              | —                     | —              | —                                           | —                          |
+| Deprecate Released code                                                   | ✓              | ✓ (via full CR cycle) | —              | —                                           | —                          |
+| Archive Deprecated code                                                   | ✓              | —                     | —              | —                                           | —                          |
+| Manage Users/Roles/Engineering Domain tags                                | ✓              | —                     | —              | —                                           | —                          |
+| Manage all Lookup Vocabularies (incl. Functional Group/Subgroup/Platform) | ✓              | — (propose only)      | —              | —                                           | —                          |
+| View Audit Log                                                            | ✓              | —                     | ✓ (scoped)     | ✓ (scoped)                                  | —                          |
+| Export catalogue (CSV/JSON/XLSX/PDF)                                      | ✓              | ✓                     | ✓              | ✓                                           | ✓ (Approved/Released only) |
+| Export full database                                                      | ✓              | —                     | —              | —                                           | —                          |
 
-- **SEC-010** Authorization checks live in the service layer, not only route decorators/UI conditionals.
+- **SEC-010** Authorization checks live in the service layer, not only route decorators/UI conditionals. Implemented as `require_roles()` (`app/domain/authz.py`) at the top of every role-restricted service entry point, raising `ForbiddenError` (HTTP 403); `tests/integration/test_governance_extras.py` calls each service directly with a wrong-role actor.
 - **SEC-011** Segregation-of-duties is a hard server-side check at all three decision points (§3 of 09-api-specification.md): Reviewer sign-off, Administrator sign-off, and Chief Engineer approval each independently reject if the actor matches the CR's author or, for the Chief Engineer step, either of the two prior sign-offs.
 - **SEC-012** Principle of least privilege: default role on new user creation is Viewer.
 - **SEC-013** Restricted-field enforcement: each of the eight audience-access fields (corrected 2026-09-17 — replaces the single `access_rights_id`: `development_access`, `sales_access`, `tcc_access`, `service_access`, `turbine_operator_package_access`, `grid_operator_access`, `service_partner_access`, `customer_access`) on a revision may be written by an Engineer only while the revision is in `DRAFT`; none becomes authoritative until stamped by the Administrator's sign-off action, which is the sole path by which `admin_signoff_at` becomes non-null (06-data-dictionary.md §2d, "restricted field"). This is enforced in the service layer, not merely a UI convention.
@@ -61,6 +61,7 @@ Unchanged in mechanism from v1: server-side session store, immediate revocation 
 - **SEC-022** All user-supplied text rendered in HTML (Title, Description, comments, justifications, the eight audience-access field labels) is output-encoded by the templating engine's auto-escaping (Jinja2 default autoescape must remain enabled; raw/`|safe` filters are prohibited on user-supplied content).
 - **SEC-023** File export generation (CSV/XLSX/PDF) sanitizes any field that could trigger CSV formula injection (leading `=`, `+`, `-`, `@` characters are prefixed with a single quote or tab on export).
 - **SEC-024** Any future file-upload feature must go through file-type allow-listing, size limits, and storage outside the web root before it ships. The library import feature (05-governance-handbook.md §6b) is the first such feature: uploaded CSV/XLSX files are validated for MIME type and size before parsing, and the raw upload is never executed or served back to a browser.
+- **SEC-025** Every response carries standard security headers (`Content-Security-Policy` with self-only sources and no inline script, `X-Content-Type-Options: nosniff`, `X-Frame-Options: DENY`, `Referrer-Policy: same-origin`, `Cache-Control: no-store` outside `/static/`, and HSTS on HTTPS requests). Implemented in `app/security_headers.py`; templates therefore carry no inline `<script>` or `on*=` handlers (`tests/system/test_security_headers.py`).
 
 The Cross-Domain Sign-Off text fields and comment fields (`review_comment.comment_text`) follow the same output-encoding rule (SEC-022) as Title/Description.
 

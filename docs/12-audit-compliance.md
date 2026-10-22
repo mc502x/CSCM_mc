@@ -13,15 +13,19 @@ This document governs the **business audit trail** (`audit_log_entry`), the comp
 | `EDIT` | StatusCodeRevision | Draft field edit | before/after per changed field |
 | `DOMAIN_SIGNOFF` | ChangeRequest, DomainSignoff | Second Engineer completes a required domain's fields | engineering domain, signer identity, timestamp |
 | `SUBMIT_FOR_REVIEW` | ChangeRequest, StatusCode | Draft → Review; identifier allocated | actor, timestamp, allocated `status_code_identifier` |
-| `REVIEWER_SIGNOFF` | ChangeRequest, StatusCodeRevision | Reviewer (Sub-PO for StCd) sign-off, approve or reject | reviewer identity, decision, comment reference |
+| `REVIEWER_SIGNOFF` | ChangeRequest, StatusCodeRevision | Reviewer (Sub-PO for StCd) sign-off, approve or reject | reviewer identity, decision, comment id and text |
 | `ADMIN_SIGNOFF` | ChangeRequest, StatusCodeRevision | Administrator (Product Owner) sign-off, approve or reject; may confirm/override restricted fields | administrator identity, decision, comment reference, any restricted-field override |
 | *(system)* Review → PendingApproval | StatusCodeRevision | Both required sign-offs now present | logged as part of whichever sign-off action was second |
 | `CHIEF_ENGINEER_APPROVE` | ChangeRequest, StatusCodeRevision | PendingApproval → Approved | Chief Engineer identity, timestamp |
 | `CHIEF_ENGINEER_REJECT` | ChangeRequest, StatusCodeRevision | PendingApproval → Draft | Chief Engineer identity, mandatory comment reference |
-| `WITHDRAW` | ChangeRequest | Author cancels open CR | actor, timestamp |
-| `COMMENT` | ReviewComment | Comment added without a decision | comment content reference |
+| `DOMAIN_SIGNOFF_REQUEST` | ChangeRequest | Originating Engineer requests a domain sign-off (FR-028) | domain, optional target user |
+| `REVIEWER_ASSIGN` | ChangeRequest | Administrator assigns/reassigns/unassigns the Reviewer (FR-039) | before/after assigned reviewer |
+| `IDENTIFIER_OVERRIDE` | StatusCode | Administrator submits with a manual identifier (FR-021a) | identifier and mandatory documented reason |
+| `WITHDRAW` | ChangeRequest | Author cancels open CR | actor, timestamp, and a snapshot in `before_value` of the discussion that would otherwise be deleted with the CR (every comment/decision with author and time, domain sign-offs, title, identifier) |
+| `COMMENT` | ReviewComment | Comment added without a decision | comment id and full text |
 | `RELEASE_CREATE` | Release | New Release container created | scope filter (Functional Group/Subgroup), actor |
 | `RELEASE_ITEMS_SET` | Release | Candidate set confirmed/changed pre-publish | before/after item list |
+| `RELEASE_DELETE` | Release | Administrator deletes an unpublished Release (BR-008) | before: name, version, candidate revision ids |
 | `RELEASE_PUBLISH` | Release, StatusCodeRevision (per item) | Publish action | publisher identity, effective date, item count |
 | `DEPRECATE` | StatusCodeRevision | Released → Deprecated | reason, superseding code (if any), actor |
 | `REINSTATE` | StatusCodeRevision | Deprecated → Released (exception path) | reason, actor |

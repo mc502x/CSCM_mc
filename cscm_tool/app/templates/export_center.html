@@ -4,8 +4,30 @@
 <div class="page-header"><h1>Export Center</h1></div>
 
 <div class="card">
-  <h2>Catalogue Export</h2>
-  <p class="muted">Published Releases only. Pick a Release to export its Released contents in CSV, JSON, or PDF.</p>
+  <h2>All Released Status Codes</h2>
+  <p class="muted">The current set of every Released status code, independent of any single Release.</p>
+  <div class="btn-row">
+    {% for fmt in ('csv', 'json', 'xlsx', 'pdf') %}
+    <a class="btn" href="{{ url_for('api_v1.export_released', format=fmt) }}">{{ fmt|upper }}</a>
+    {% endfor %}
+  </div>
+</div>
+
+{% if current_user.role_code != 'VIEWER' %}
+<div class="card">
+  <h2>Working-Set Export <span class="badge badge--DRAFT">Not for distribution</span></h2>
+  <p class="muted">Every current status code in any lifecycle state, including unapproved Drafts. Every row and the file name carry a "Not for distribution — unapproved data" notice.</p>
+  <div class="btn-row">
+    {% for fmt in ('csv', 'json', 'xlsx', 'pdf') %}
+    <a class="btn" href="{{ url_for('api_v1.export_working_set', format=fmt) }}">{{ fmt|upper }}</a>
+    {% endfor %}
+  </div>
+</div>
+{% endif %}
+
+<div class="card">
+  <h2>Release Export</h2>
+  <p class="muted">Published Releases only. Pick a Release to export its Released contents.</p>
   {% if releases %}
   <table>
     <thead><tr><th>Release</th><th>Version</th><th></th></tr></thead>
@@ -17,6 +39,7 @@
         <td class="btn-row">
           <a class="btn" href="{{ url_for('api_v1.export_release', release_id=r.id, format='csv') }}">CSV</a>
           <a class="btn" href="{{ url_for('api_v1.export_release', release_id=r.id, format='json') }}">JSON</a>
+          <a class="btn" href="{{ url_for('api_v1.export_release', release_id=r.id, format='xlsx') }}">XLSX</a>
           <a class="btn" href="{{ url_for('api_v1.export_release', release_id=r.id, format='pdf') }}">PDF</a>
         </td>
       </tr>

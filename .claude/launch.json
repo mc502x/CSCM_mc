@@ -3,10 +3,10 @@
   "configurations": [
     {
       "name": "cscm-tool-dev",
-      "runtimeExecutable": "cscm_tool/.venv/Scripts/python.exe",
-      "runtimeArgs": ["-m", "flask", "run"],
+      "runtimeExecutable": "Z:/CSCM_mc/cscm_tool/.venv/Scripts/python.exe",
+      "runtimeArgs": ["Z:/CSCM_mc/cscm_tool/dev_server.py"],
       "port": 5000,
-      "cwd": "cscm_tool"
+      "cwd": "Z:/CSCM_mc/cscm_tool"
     }
   ]
 }

@@ -189,8 +189,10 @@ def test_archive_blocked_before_retention_period_elapses(app, client, make_user,
             )
             .one()
         )
-        revision.lifecycle_status = "DEPRECATED"
-        revision.deprecated_reason = "Test deprecation."
+        # Bulk UPDATE on purpose: skips the CR cycle the lifecycle guard enforces.
+        db.session.query(StatusCodeRevision).filter(StatusCodeRevision.id == revision.id).update(
+            {"lifecycle_status": "DEPRECATED", "deprecated_reason": "Test deprecation."}
+        )
         AuditService.log("StatusCodeRevision", revision.id, "DEPRECATE", actor=None)
         db.session.commit()
 
@@ -218,8 +220,10 @@ def test_archive_succeeds_after_retention_period(app, client, make_user, wcnv_id
             )
             .one()
         )
-        revision.lifecycle_status = "DEPRECATED"
-        revision.deprecated_reason = "Test deprecation."
+        # Bulk UPDATE on purpose: skips the CR cycle the lifecycle guard enforces.
+        db.session.query(StatusCodeRevision).filter(StatusCodeRevision.id == revision.id).update(
+            {"lifecycle_status": "DEPRECATED", "deprecated_reason": "Test deprecation."}
+        )
         entry = AuditService.log("StatusCodeRevision", revision.id, "DEPRECATE", actor=None)
         entry.occurred_at = format_iso(datetime.now(UTC) - timedelta(days=200))
         db.session.commit()
@@ -245,8 +249,10 @@ def test_reinstate_deprecated_code(app, client, make_user, wcnv_ids):
             )
             .one()
         )
-        revision.lifecycle_status = "DEPRECATED"
-        revision.deprecated_reason = "Test deprecation."
+        # Bulk UPDATE on purpose: skips the CR cycle the lifecycle guard enforces.
+        db.session.query(StatusCodeRevision).filter(StatusCodeRevision.id == revision.id).update(
+            {"lifecycle_status": "DEPRECATED", "deprecated_reason": "Test deprecation."}
+        )
         db.session.commit()
 
     _login_as(client, cast["admin"])

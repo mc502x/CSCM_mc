@@ -15,6 +15,21 @@ from app.services.user_service import UserService
 MIGRATIONS_DIR = Path(__file__).resolve().parents[1] / "migrations"
 
 
+def pytest_collection_modifyitems(config, items):
+    """CSCM_TEST_ORDER=reverse|shuffle[:SEED] re-orders the run to prove the
+    tests are independent of one another (scripts/generate_test_report.py
+    uses it for repeat runs). Default: file order."""
+    import os
+    import random
+
+    mode = os.environ.get("CSCM_TEST_ORDER", "")
+    if mode == "reverse":
+        items.reverse()
+    elif mode.startswith("shuffle"):
+        seed = int(mode.partition(":")[2] or 1)
+        random.Random(seed).shuffle(items)
+
+
 @pytest.fixture(autouse=True)
 def _reset_rate_limiter():
     """The rate limiter is in-process global state (app/auth/rate_limit.py);
