@@ -333,9 +333,13 @@ def test_arabic_is_right_to_left_but_identifiers_codes_and_numbers_stay_as_they_
     assert 'html[dir="rtl"] .sidebar' in css
 
 
-def test_a_partly_translated_page_still_shows_every_string(client, cast):
+def test_a_string_missing_from_a_catalogue_shows_in_english(client, cast, monkeypatch):
+    """Every language is complete (FR-167), but a string that is ever missing must still show."""
     login_as(client, cast["admin"])
     client.post("/language", data={"lang": "ka"})
+    monkeypatch.delitem(
+        CATALOGUES["ka"], 'Typos are tolerated: "convertor" still finds "converter".'
+    )
     page = client.get("/status-codes").get_data(as_text=True)
     assert "სტატუსის კოდები" in page  # translated
     assert "Typos are tolerated" in page  # not in the catalogue: the English text
@@ -360,7 +364,9 @@ def test_the_catalogues_agree_and_only_translate_real_strings():
     ten = [CATALOGUES[c] for c in CODES]
     assert all(set(t) == set(ten[0]) for t in ten)  # the ten share one set of strings
     assert set(ten[0]) <= set(CATALOGUES["fr"])  # ... which is part of the main one
-    known = _template_strings() | {r.label for r in ROLES.values()}
+    from app.translation_catalogue import screens
+
+    known = set(screens()) | _template_strings() | {r.label for r in ROLES.values()}
     assert [k for k in CATALOGUES["fr"] if k not in known] == []
     for language, catalogue in CATALOGUES.items():
         assert all(v.strip() for v in catalogue.values()), language

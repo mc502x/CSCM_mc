@@ -747,7 +747,10 @@ class StatusCodeService:
             .order_by(StatusCode.id)
             .all()
         )
-        prg = dict(db.session.execute(text("SELECT id, prg_idx FROM status_code")).all())
+        prg: dict[int, int | None] = {
+            row[0]: row[1]
+            for row in db.session.execute(text("SELECT id, prg_idx FROM status_code"))
+        }
         return [
             {
                 "id": sc.id,
@@ -807,7 +810,9 @@ class StatusCodeService:
                         {"i": code_id},
                     )
                     db.session.expire(status_code)
-                    db.session.execute(text("DELETE FROM status_code WHERE id = :i"), {"i": code_id})
+                    db.session.execute(
+                        text("DELETE FROM status_code WHERE id = :i"), {"i": code_id}
+                    )
                     AuditService.log(
                         "StatusCode",
                         code_id,

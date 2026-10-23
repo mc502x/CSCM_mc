@@ -1,11 +1,11 @@
 """delete users with history and withdrawn codes (schema v4.9)
 
-`user.deleted_at`: an account with history is erased (name, address, password) instead of refused,
-so nothing it did loses its author and the audit log is never touched (BR-025). The trigger that fixes
-the e-mail address lets the erasure through. `status_code.withdrawn_at`: set when the last revision of
-a code was withdrawn; only such a code can be deleted, and the delete trigger now says so (BR-026). A
-code that is already an empty shell is marked now. The DDL of the triggers comes from
-docs/artifacts/schema.sql (app/schema_sql.py).
+`user.deleted_at`: an account with history is erased (name, address, password) instead of
+refused, so nothing it did loses its author and the audit log is never touched (BR-025). The trigger
+that fixes the e-mail address lets the erasure through. `status_code.withdrawn_at`: set when the
+last revision of a code was withdrawn; only such a code can be deleted, and the delete trigger now
+says so (BR-026). A code that is already an empty shell is marked now. The DDL of the triggers comes
+from docs/artifacts/schema.sql (app/schema_sql.py).
 
 Revision ID: f2c4a6b8d015
 Revises: e1b3f5a7c904

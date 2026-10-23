@@ -262,11 +262,11 @@ class UserService:
         """Deletes an account (BR-025). Only an Administrator, never the own account, never the last
         active Administrator, and only with the Administrator's password again (SEC-026).
 
-        An account nothing points at is removed. An account with history is **erased**: name, address
-        and password go, it can no longer sign in, it disappears from every list and its user name
-        and address are free again - but the row stays, so nothing it did loses its author and the
-        audit log, which is never changed, still resolves every actor. Either way the audit entry
-        `USER_DELETE` keeps what the account held."""
+        An account nothing points at is removed. An account with history is **erased**: name,
+        address and password go, it can no longer sign in, it disappears from every list and its
+        user name and address are free again - but the row stays, so nothing it did loses its
+        author and the audit log, which is never changed, still resolves every actor. Either way
+        the audit entry `USER_DELETE` keeps what the account held."""
         require_roles(actor, "ADMINISTRATOR")
         user = UserService._repo.get_or_404(user_id)
         if user.id == actor.id:
@@ -299,7 +299,9 @@ class UserService:
             mode = "removed"
         else:
             # the reviewer assignments of the account end; what others assigned stays
-            db.session.execute(text("DELETE FROM language_reviewer WHERE user_id = :i"), {"i": user.id})
+            db.session.execute(
+                text("DELETE FROM language_reviewer WHERE user_id = :i"), {"i": user.id}
+            )
             db.session.execute(
                 text(
                     "UPDATE user SET username = :u, email = :e, full_name = 'Deleted user', "

@@ -2,8 +2,8 @@
 
 Adds terminology_term and terminology_translation (docs/03-srs.md FR-166) and loads the terms that
 ship with the tool (app/terminology_seed.py) with their translations as DRAFT proposals. The DDL
-comes from docs/artifacts/schema.sql (app/schema_sql.py); a table is created only when it is missing,
-and a term is loaded only when its code is not there yet.
+comes from docs/artifacts/schema.sql (app/schema_sql.py); a table is created only when it is
+missing, and a term is loaded only when its code is not there yet.
 
 Revision ID: e1b3f5a7c904
 Revises: d0a2e4f6b893
