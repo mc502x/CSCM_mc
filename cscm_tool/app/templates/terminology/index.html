@@ -1,0 +1,96 @@
+{% extends "base.html" %}
+{% block title %}{{ _('Terminology') }} — CSCM Tool{% endblock %}
+{% block content %}
+<div class="page-header">
+  <h1>{{ _('Terminology') }}</h1>
+  <div class="btn-row">
+    <a class="btn" href="{{ url_for('ui.terminology_export_xlsx') }}">{{ _('Export all (XLSX)') }}</a>
+    <a class="btn" href="{{ url_for('ui.terminology_export_csv') }}">{{ _('Export all (CSV)') }}</a>
+  </div>
+</div>
+
+<div class="card">
+  <p class="muted">{{ _('The technical nomenclature: the words of the controller and of the workflow (Status Code, Hub Controller, Set delay, Draft ...) in every language. It is kept apart from the interface translations. A technical colleague proposes a translation, a second person approves it; the interface and the manuals then use the same word everywhere.') }}</p>
+  <div class="table-scroll">
+  <table>
+    <caption class="visually-hidden">{{ _('Coverage per language') }}</caption>
+    <thead><tr><th scope="col">{{ _('Language') }}</th><th scope="col">{{ _('Approved') }}</th><th scope="col">{{ _('Draft') }}</th><th scope="col">{{ _('Missing') }}</th><th scope="col"></th></tr></thead>
+    <tbody>
+      {% for c in coverage %}
+      <tr>
+        <td>{{ label(c.code) }} <span class="muted">({{ names[c.code] }})</span></td>
+        <td>{{ c.approved }} / {{ c.total }}</td>
+        <td>{{ c.draft }}</td>
+        <td>{{ c.missing }}</td>
+        <td><div class="row-actions">
+          <a class="btn btn--primary" href="{{ url_for('ui.terminology_language', language=c.code) }}">{{ _('Open') }}</a>
+          <a class="btn" href="{{ url_for('ui.terminology_check', language=c.code) }}">{{ _('Check') }}</a>
+          <a class="btn" href="{{ url_for('ui.terminology_export_xlsx', language=c.code) }}">XLSX</a>
+        </div></td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  </div>
+</div>
+
+<div class="card">
+  <h2>{{ _('Terms') }}</h2>
+  <form method="get" class="btn-row">
+    <label for="q" class="visually-hidden">{{ _('Search') }}</label>
+    <input type="search" id="q" name="q" value="{{ f.q }}" placeholder="{{ _('search the term or its definition') }}">
+    <label for="category" class="visually-hidden">{{ _('Category') }}</label>
+    <select id="category" name="category"><option value="">{{ _('all categories') }}</option>{% for c in categories %}<option value="{{ c }}"{% if f.category == c %} selected{% endif %}>{{ c }}</option>{% endfor %}</select>
+    <button class="btn" type="submit">{{ _('Filter') }}</button>
+  </form>
+  <div class="table-scroll">
+  <table>
+    <caption class="visually-hidden">{{ _('Terms') }}</caption>
+    <thead><tr><th scope="col">{{ _('Term') }}</th><th scope="col">{{ _('Category') }}</th><th scope="col">{{ _('Meaning') }}</th><th scope="col"></th></tr></thead>
+    <tbody>
+      {% for t in terms %}
+      <tr{% if not t.is_active %} class="muted"{% endif %}>
+        <td><strong>{{ t.english }}</strong><div class="muted"><code>{{ t.code }}</code></div>{% if t.keep_english %}<span class="chip">{{ _('never translated') }}</span>{% endif %}{% if not t.is_active %}<span class="chip">{{ _('switched off') }}</span>{% endif %}</td>
+        <td>{{ t.category }}</td>
+        <td>{{ t.definition }}</td>
+        <td>
+          {% if manage %}
+          <details>
+            <summary class="btn" style="display:inline-block">{{ _('Edit') }}</summary>
+            <form method="post" action="{{ url_for('ui.terminology_term_update', term_id=t.id) }}" style="margin-top:8px">
+              <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+              <div class="field"><label for="e{{ t.id }}">{{ _('English') }}</label><input type="text" id="e{{ t.id }}" name="english" value="{{ t.english }}" maxlength="200" required></div>
+              <div class="field"><label for="c{{ t.id }}">{{ _('Category') }}</label><select id="c{{ t.id }}" name="category">{% for c in categories %}<option value="{{ c }}"{% if t.category == c %} selected{% endif %}>{{ c }}</option>{% endfor %}</select></div>
+              <div class="field"><label for="d{{ t.id }}">{{ _('Meaning') }}</label><textarea id="d{{ t.id }}" name="definition" rows="3" maxlength="1000">{{ t.definition }}</textarea></div>
+              <div class="field"><label><input type="checkbox" name="keep_english"{% if t.keep_english %} checked{% endif %}> {{ _('Never translated') }}</label></div>
+              <div class="field"><label><input type="checkbox" name="is_active"{% if t.is_active %} checked{% endif %}> {{ _('Active') }}</label></div>
+              <div class="hint">{{ _('Changing the English text reopens every approved translation of the term.') }}</div>
+              <button class="btn btn--primary" type="submit">{{ _('Save') }}</button>
+            </form>
+          </details>
+          {% endif %}
+        </td>
+      </tr>
+      {% else %}
+      <tr><td colspan="4" class="table-empty">{{ _('No term matches.') }}</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  </div>
+</div>
+
+{% if manage %}
+<div class="card" style="max-width:560px">
+  <h2>{{ _('Add a term') }}</h2>
+  <form method="post" action="{{ url_for('ui.terminology_term_new') }}">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    <div class="field"><label for="n_code">{{ _('Code') }}</label><input type="text" id="n_code" name="code" required maxlength="80" pattern="[a-z0-9][a-z0-9-]+" placeholder="set-delay"><div class="hint">{{ _('Lower-case letters, digits and hyphens; it never changes.') }}</div></div>
+    <div class="field"><label for="n_english">{{ _('English') }}</label><input type="text" id="n_english" name="english" required maxlength="200"></div>
+    <div class="field"><label for="n_category">{{ _('Category') }}</label><select id="n_category" name="category">{% for c in categories %}<option value="{{ c }}">{{ c }}</option>{% endfor %}</select></div>
+    <div class="field"><label for="n_definition">{{ _('Meaning') }}</label><textarea id="n_definition" name="definition" rows="3" maxlength="1000"></textarea><div class="hint">{{ _('Say what the term means, so that a translator who does not know the product can choose the right word.') }}</div></div>
+    <div class="field"><label><input type="checkbox" name="keep_english"> {{ _('Never translated') }}</label></div>
+    <button class="btn btn--primary" type="submit">{{ _('Add a term') }}</button>
+  </form>
+</div>
+{% endif %}
+{% endblock %}

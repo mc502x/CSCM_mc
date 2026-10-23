@@ -1229,3 +1229,37 @@ CREATE TABLE translation_override (
     UNIQUE (language_code, string_id)
 );
 
+
+-- ----------------------------------------------------------------------------
+-- Technical nomenclature (v4.8, FR-166): the terms of the controller and of the workflow with their
+-- translations, kept apart from the interface translations (translation_*). A translation is
+-- proposed (DRAFT) by one person and approved by another (APPROVED); a term marked keep_english is
+-- never translated.
+-- ----------------------------------------------------------------------------
+CREATE TABLE terminology_term (
+    id              INTEGER PRIMARY KEY,
+    code            TEXT NOT NULL UNIQUE CHECK (length(code) BETWEEN 2 AND 80),
+    category        TEXT NOT NULL CHECK (category IN ('PRODUCT','DATA','STATE','PROCESS','ROLE','AUDIENCE','KEEP')),
+    english         TEXT NOT NULL CHECK (length(trim(english)) BETWEEN 1 AND 200),
+    definition      TEXT NOT NULL DEFAULT '' CHECK (length(definition) <= 1000),
+    keep_english    INTEGER NOT NULL DEFAULT 0 CHECK (keep_english IN (0,1)),
+    is_active       INTEGER NOT NULL DEFAULT 1 CHECK (is_active IN (0,1)),
+    created_by      INTEGER REFERENCES user(id),
+    created_at      TEXT NOT NULL DEFAULT (strftime('%Y-%m-%dT%H:%M:%fZ','now')),
+    updated_at      TEXT NOT NULL DEFAULT (strftime('%Y-%m-%dT%H:%M:%fZ','now'))
+);
+
+CREATE TABLE terminology_translation (
+    id              INTEGER PRIMARY KEY,
+    term_id         INTEGER NOT NULL REFERENCES terminology_term(id),
+    language_code   TEXT NOT NULL REFERENCES lookup_language(code),
+    text            TEXT NOT NULL CHECK (length(trim(text)) BETWEEN 1 AND 200),
+    status          TEXT NOT NULL DEFAULT 'DRAFT' CHECK (status IN ('DRAFT','APPROVED')),
+    note            TEXT CHECK (note IS NULL OR length(note) <= 500),
+    proposed_by     INTEGER REFERENCES user(id),
+    proposed_at     TEXT NOT NULL DEFAULT (strftime('%Y-%m-%dT%H:%M:%fZ','now')),
+    approved_by     INTEGER REFERENCES user(id),
+    approved_at     TEXT,
+    UNIQUE (term_id, language_code),
+    CHECK ((status = 'APPROVED') = (approved_at IS NOT NULL))
+);

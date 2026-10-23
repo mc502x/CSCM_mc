@@ -58,6 +58,7 @@
         <a href="{{ url_for('ui.import_new') }}" class="{{ 'is-active' if ep.startswith('ui.import') }}">{{ _('Library Import') }}</a>
         <a href="{{ url_for('ui.st_import_new') }}" class="{{ 'is-active' if ep.startswith('ui.st_import') }}">{{ _('Import from .st files') }}</a>
         {% endif %}
+        <a href="{{ url_for('ui.terminology_index') }}" class="{{ 'is-active' if ep.startswith('ui.terminology') }}">{{ _('Terminology') }}</a>
         {% if translation_access %}
         <a href="{{ url_for('ui.translations_overview') }}" class="{{ 'is-active' if ep.startswith('ui.translation') }}">{{ _('Translations') }}</a>
         {% endif %}

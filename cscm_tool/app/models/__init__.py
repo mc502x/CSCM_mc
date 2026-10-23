@@ -53,6 +53,7 @@ from app.models.status_code import (  # noqa: F401
     StatusCodeRevision,
     StatusCodeRevisionPlatform,
 )
+from app.models.terminology import TerminologyTerm, TerminologyTranslation  # noqa: F401
 from app.models.translation import (  # noqa: F401
     LanguageReviewer,
     TranslationOverride,

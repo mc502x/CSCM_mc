@@ -141,5 +141,6 @@ from app.ui import (  # noqa: E402,F401
     publication_views,
     release_views,
     status_code_views,
+    terminology_views,
     translation_views,
 )

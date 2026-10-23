@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}{{ _('Terminology check') }} {{ title }} — CSCM Tool{% endblock %}
+{% block content %}
+<div class="page-header">
+  <h1>{{ _('Terminology check') }}: {{ title }}</h1>
+  <a class="btn" href="{{ url_for('ui.terminology_language', language=language) }}">{{ _('Back to the terms') }}</a>
+</div>
+<div class="card">
+  <p class="muted">{{ _('Interface strings that contain a term whose translation does not appear in the translation of the string. This is a hint, not a verdict: languages that inflect words change the ending, so check each line before you change anything.') }}</p>
+  <p><span class="chip">{{ findings|length }} {{ _('to look at') }}</span></p>
+  {% if findings %}
+  <div class="table-scroll">
+  <table>
+    <caption class="visually-hidden">{{ _('Findings') }}</caption>
+    <thead><tr><th scope="col">{{ _('Term') }}</th><th scope="col">{{ _('Expected') }}</th><th scope="col">{{ _('English string') }}</th><th scope="col">{{ _('Translation') }}</th></tr></thead>
+    <tbody>
+      {% for x in findings %}
+      <tr>
+        <td>{{ x.term }}</td>
+        <td lang="{{ language }}"{% if rtl %} dir="rtl" class="rtl-text"{% endif %}>{{ x.expected }} <span class="muted">({{ x.status|lower }})</span></td>
+        <td>{{ x.english }}<div class="muted"><code>{{ x.string_id }}</code></div></td>
+        <td lang="{{ language }}"{% if rtl %} dir="rtl" class="rtl-text"{% endif %}>{{ x.translation }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  </div>
+  {% else %}
+  <div class="table-empty">{{ _('Every string uses the translated terms.') }}</div>
+  {% endif %}
+</div>
+{% endblock %}

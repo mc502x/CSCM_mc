@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+{% block title %}{{ _('Terminology') }} {{ title }} — CSCM Tool{% endblock %}
+{% block content %}
+<div class="page-header">
+  <h1>{{ _('Terminology') }}: {{ title }}</h1>
+  <div class="btn-row">
+    <a class="btn" href="{{ url_for('ui.terminology_index') }}">{{ _('All languages') }}</a>
+    <a class="btn" href="{{ url_for('ui.terminology_check', language=language) }}">{{ _('Check against the interface') }}</a>
+    <a class="btn" href="{{ url_for('ui.terminology_export_xlsx', language=language) }}">XLSX</a>
+  </div>
+</div>
+
+<div class="card">
+  <form method="get" class="btn-row">
+    <label for="q" class="visually-hidden">{{ _('Search') }}</label>
+    <input type="search" id="q" name="q" value="{{ f.q }}" placeholder="{{ _('search the term or its definition') }}">
+    <label for="category" class="visually-hidden">{{ _('Category') }}</label>
+    <select id="category" name="category"><option value="">{{ _('all categories') }}</option>{% for c in categories %}<option value="{{ c }}"{% if f.category == c %} selected{% endif %}>{{ c }}</option>{% endfor %}</select>
+    <label for="state" class="visually-hidden">{{ _('State') }}</label>
+    <select id="state" name="state"><option value="">{{ _('any state') }}</option>{% for v, text in (('MISSING', _('missing')), ('DRAFT', _('draft')), ('APPROVED', _('approved')), ('KEEP', _('never translated'))) %}<option value="{{ v }}"{% if f.state == v %} selected{% endif %}>{{ text }}</option>{% endfor %}</select>
+    <button class="btn" type="submit">{{ _('Filter') }}</button>
+  </form>
+
+  <form method="post" action="{{ url_for('ui.terminology_save', language=language) }}">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    <input type="hidden" name="language" value="{{ language }}">
+    <input type="hidden" name="q" value="{{ f.q }}"><input type="hidden" name="category" value="{{ f.category }}"><input type="hidden" name="state" value="{{ f.state }}">
+    <div class="table-scroll">
+    <table class="review-table" id="terminology-rows">
+      <caption class="visually-hidden">{{ _('Terms of the language') }}</caption>
+      <thead><tr><th scope="col">{{ _('Term') }}</th><th scope="col">{{ _('Meaning') }}</th><th scope="col">{{ _('Translation') }}</th><th scope="col">{{ _('Note') }}</th><th scope="col">{{ _('State') }}</th><th scope="col"></th></tr></thead>
+      <tbody>
+        {% for r in rows %}
+        {% set t = r.term %}{% set tr = r.translation %}
+        <tr>
+          <td><strong>{{ t.english }}</strong><div class="muted"><code>{{ t.code }}</code> · {{ t.category }}</div></td>
+          <td class="muted">{{ t.definition }}</td>
+          <td>
+            {% if r.status == 'KEEP' %}<span class="chip">{{ _('never translated') }}</span>
+            {% else %}
+            <input type="hidden" name="term" value="{{ t.id }}">
+            <input type="text" name="t_{{ t.id }}" value="{{ tr.text if tr else '' }}" maxlength="200" lang="{{ language }}"{% if rtl %} dir="rtl" class="rtl-text"{% endif %} aria-label="{{ _('Translation of %(x)s', x=t.english) }}"{% if not propose %} readonly{% endif %}>
+            {% endif %}
+          </td>
+          <td>{% if r.status != 'KEEP' %}<input type="text" name="n_{{ t.id }}" value="{{ tr.note if tr and tr.note else '' }}" maxlength="500" aria-label="{{ _('Note on %(x)s', x=t.english) }}"{% if not propose %} readonly{% endif %}>{% endif %}</td>
+          <td>
+            <span class="chip review-state review-state--{{ {'APPROVED': 'reviewed', 'DRAFT': 'in-progress', 'MISSING': 'changed-since-the-review', 'KEEP': ''}[r.status] }}">{{ r.status|lower }}</span>
+            {% if r.proposer %}<div class="muted">{{ _('proposed by') }} {{ r.proposer }}</div>{% endif %}
+            {% if r.approver %}<div class="muted">{{ _('approved by') }} {{ r.approver }}</div>{% endif %}
+          </td>
+          <td>
+            {% if approve and tr and r.status == 'DRAFT' and tr.proposed_by != me %}
+            <div class="row-actions">
+              <button class="btn btn--primary" type="submit" formaction="{{ url_for('ui.terminology_approve', translation_id=tr.id) }}">{{ _('Approve') }}</button>
+              <button class="btn" type="submit" formaction="{{ url_for('ui.terminology_reject', translation_id=tr.id, term=t.id) }}">{{ _('Send back') }}</button>
+            </div>
+            {% elif approve and tr and r.status == 'DRAFT' %}<span class="muted">{{ _('Your own proposal: another person approves it.') }}</span>
+            {% elif approve and tr and r.status == 'APPROVED' %}
+            <button class="btn" type="submit" formaction="{{ url_for('ui.terminology_reject', translation_id=tr.id, term=t.id) }}">{{ _('Send back') }}</button>
+            {% endif %}
+          </td>
+        </tr>
+        {% else %}
+        <tr><td colspan="6" class="table-empty">{{ _('No term matches.') }}</td></tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    </div>
+    <div class="btn-row" style="margin-top:12px">
+      {% if propose %}<button class="btn btn--primary" type="submit">{{ _('Save translations') }}</button>{% endif %}
+      {% if approve %}<button class="btn" type="submit" formaction="{{ url_for('ui.terminology_approve_all', language=language) }}" data-confirm="{{ _('Approve every draft of this language that you did not propose yourself?') }}">{{ _('Approve all drafts of others') }}</button>{% endif %}
+      <span class="muted">{{ _('A saved translation is a draft until a second person approves it. Send back needs a note.') }}</span>
+    </div>
+  </form>
+</div>
+{% endblock %}
