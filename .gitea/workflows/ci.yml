@@ -1,0 +1,45 @@
+# Gitea Actions (GitHub-Actions-compatible) on the internal Git server. docs/14 section 4.
+# Needs a runner with Python 3.12 and, to avoid the internet, PIP_INDEX_URL pointing at the
+# internal package mirror (repository variable).
+name: ci
+on:
+  push:
+  pull_request:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    env:
+      PIP_INDEX_URL: ${{ vars.PIP_INDEX_URL }}
+    defaults:
+      run:
+        working-directory: cscm_tool
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install
+        run: python -m pip install -r requirements.txt
+      - name: Tests, quality gates, PostgreSQL-readiness ratchet
+        # scripts/ci.py = generate_test_report.py (pytest + coverage + black, ruff, mypy, bandit,
+        # pip-audit) followed by pg_readiness.py --check. Non-zero exit fails the build.
+        run: python scripts/ci.py --order shuffle:${{ github.run_number }}
+      - name: Keep the report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-report
+          path: docs/24-test-report.md
+
+  deploy-scripts:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Shell syntax and installer dry run
+        run: |
+          bash -n cscm_tool/deploy/linux/install.sh
+          PYTHON=python3 bash cscm_tool/deploy/linux/install.sh --dry-run
+          for unit in cscm_tool/deploy/linux/*.service cscm_tool/deploy/linux/*.timer; do
+            systemd-analyze verify --man=no "$unit" 2>&1 | grep -v "not found\|/opt/cscm" || true
+          done

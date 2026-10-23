@@ -4,6 +4,7 @@ System Group / Subgroup administration, EPIC-16), S16 Audit Log Search."""
 from flask import flash, redirect, render_template, request, url_for
 
 from app.auth.decorators import current_user, require_role_web
+from app.auth.roles import ROLE_CODES, USER_LIST_ROLES, assignable_roles, may_change_role
 from app.domain.errors import (
     DomainError,
     LastAdministratorError,
@@ -16,15 +17,78 @@ from app.services.lookup_service import VOCABULARY_MODELS, LookupService
 from app.services.user_service import UserService
 from app.ui import ui_bp
 
-_ROLES = ["ADMINISTRATOR", "ENGINEER", "REVIEWER", "CHIEF_ENGINEER", "VIEWER"]
+_ROLES = list(ROLE_CODES)
 
 
 @ui_bp.route("/admin/users")
-@require_role_web("ADMINISTRATOR")
+@require_role_web(*USER_LIST_ROLES)
 def user_list():
     users = UserService.list_users()
     domains = LookupService.list_vocabulary("engineering-domains")
-    return render_template("admin/users.html", users=users, roles=_ROLES, domains=domains)
+    actor_role = current_user.role_code
+    return render_template(
+        "admin/users.html",
+        users=users,
+        roles=_ROLES,
+        domains=domains,
+        is_admin=actor_role == "ADMINISTRATOR",
+        assignable=assignable_roles(actor_role),
+        may_change_role=lambda user: any(
+            may_change_role(actor_role, user.role.code, r) for r in assignable_roles(actor_role)
+        ),
+    )
+
+
+@ui_bp.route("/admin/users/<int:user_id>")
+@require_role_web(*USER_LIST_ROLES)
+def user_detail(user_id):
+    try:
+        user = UserService.get_user(user_id)
+        usage = UserService.usage(user_id)
+    except NotFoundError:
+        flash("User not found.", "error")
+        return redirect(url_for("ui.user_list"))
+    actor_role = current_user.role_code
+    return render_template(
+        "admin/user_detail.html",
+        user=user,
+        usage=usage,
+        roles=_ROLES,
+        domains=LookupService.list_vocabulary("engineering-domains"),
+        is_admin=actor_role == "ADMINISTRATOR",
+        is_self=user.id == current_user.id,
+        assignable=assignable_roles(actor_role),
+        may_change_role=any(
+            may_change_role(actor_role, user.role.code, r) for r in assignable_roles(actor_role)
+        ),
+    )
+
+
+@ui_bp.route("/admin/users/<int:user_id>/active", methods=["POST"])
+@require_role_web("ADMINISTRATOR")
+def user_set_active(user_id):
+    """The Deactivate / Activate buttons. A deactivated account cannot sign in and an open session
+    ends with its next request; nothing it did is lost."""
+    active = request.form.get("active") == "1"
+    try:
+        UserService.update_user(user_id, is_active=active, actor=current_user)
+    except (LastAdministratorError, DomainError, ValueError) as exc:
+        flash(str(exc), "error")
+    else:
+        flash("User activated." if active else "User deactivated.", "success")
+    return redirect(request.form.get("next") or url_for("ui.user_list"))
+
+
+@ui_bp.route("/admin/users/<int:user_id>/delete", methods=["POST"])
+@require_role_web("ADMINISTRATOR")
+def user_delete(user_id):
+    try:
+        UserService.delete_user(user_id, current_user, request.form.get("current_password"))
+    except (LastAdministratorError, DomainError, ValueError) as exc:
+        flash(str(exc), "error")
+        return redirect(url_for("ui.user_detail", user_id=user_id))
+    flash("User deleted.", "success")
+    return redirect(url_for("ui.user_list"))
 
 
 @ui_bp.route("/admin/users/new", methods=["POST"])
@@ -51,20 +115,23 @@ def user_new():
 
 
 @ui_bp.route("/admin/users/<int:user_id>/update", methods=["POST"])
-@require_role_web("ADMINISTRATOR")
+@require_role_web(*USER_LIST_ROLES)
 def user_update(user_id):
     try:
-        UserService.update_user(
-            user_id,
-            full_name=request.form.get("full_name") or None,
-            role_code=request.form.get("role") or None,
-            engineering_domain_codes=request.form.getlist("engineering_domains"),
-            is_active=request.form.get("is_active") == "on",
-            actor=current_user,
-        )
-    except LastAdministratorError as exc:
-        flash(str(exc), "error")
-    except ValueError as exc:
+        if current_user.role_code == "ADMINISTRATOR":
+            UserService.update_user(
+                user_id,
+                full_name=request.form.get("full_name") or None,
+                role_code=request.form.get("role") or None,
+                engineering_domain_codes=request.form.getlist("engineering_domains"),
+                is_active=request.form.get("is_active") == "on",
+                actor=current_user,
+            )
+        else:  # StCd Owner: the role is all they may change (BR-024)
+            UserService.update_user(
+                user_id, role_code=request.form.get("role") or None, actor=current_user
+            )
+    except (LastAdministratorError, DomainError, ValueError) as exc:
         flash(str(exc), "error")
     else:
         flash("User updated.", "success")

@@ -21,12 +21,14 @@ from typing import TypeVar
 from app.extensions import Base, db
 from app.models.lookup import (
     LookupAvailableGroup,
+    LookupControllerSoftwareVersion,
     LookupCustomerAccess,
     LookupDevelopmentAccess,
     LookupEngineeringDomain,
     LookupFunctionalSubgroup,
     LookupFunctionalSystemGroup,
     LookupGridOperatorAccess,
+    LookupLanguage,
     LookupSalesAccess,
     LookupServiceAccess,
     LookupServicePartnerAccess,
@@ -49,6 +51,8 @@ VOCABULARY_MODELS: dict[str, type[Base]] = {
     "grid-operator-access": LookupGridOperatorAccess,
     "service-partner-access": LookupServicePartnerAccess,
     "customer-access": LookupCustomerAccess,
+    "controller-software-versions": LookupControllerSoftwareVersion,
+    "languages": LookupLanguage,
 }
 
 LookupT = TypeVar("LookupT", bound=Base)

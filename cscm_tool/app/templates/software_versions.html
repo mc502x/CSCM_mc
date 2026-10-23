@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block title %}{{ _('Software Versions') }} — CSCM Tool{% endblock %}
+{% block content %}
+<div class="page-header"><h1>{{ _('Which codes exist in which software version') }}</h1></div>
+<div class="card">
+  <form method="get" class="form-row">
+    <div class="field">
+      <label for="version">{{ _('Software version') }}</label>
+      <select id="version" name="version"><option value="">—</option>{% for v in versions %}<option value="{{ v.code }}" {{ 'selected' if version == v.code }}>{{ v.code }}</option>{% endfor %}</select>
+    </div>
+    <div class="field">
+      <label for="compare_to">{{ _('Compare with (what changed)') }}</label>
+      <select id="compare_to" name="compare_to"><option value="">—</option>{% for v in versions %}<option value="{{ v.code }}" {{ 'selected' if other == v.code }}>{{ v.code }}</option>{% endfor %}</select>
+    </div>
+    <div class="field" style="align-self:end"><button class="btn" type="submit">{{ _('Show') }}</button></div>
+  </form>
+</div>
+{% if matrix %}
+<div class="card">
+  <h2>{{ matrix.count }} {{ _('codes apply to') }} {{ matrix.software_version }}</h2>
+  <table>
+    <thead><tr><th scope="col">{{ _('Code') }}</th><th scope="col">{{ _('Title') }}</th><th scope="col">{{ _('From') }}</th><th scope="col">{{ _('To') }}</th></tr></thead>
+    <tbody>{% for r in matrix['items'] %}<tr><td><a href="{{ url_for('ui.status_code_detail', status_code_id=r.status_code_id) }}">{{ r.status_code_identifier }}</a></td><td>{{ r.title }}</td><td>{{ r.applies_from or '—' }}</td><td>{{ r.applies_to or '—' }}</td></tr>{% endfor %}</tbody>
+  </table>
+</div>
+{% elif changes %}
+<div class="card">
+  <h2>{{ changes['from'] }} &rarr; {{ changes.to }}</h2>
+  <p>{{ changes.added|length }} {{ _('added') }}, {{ changes.removed|length }} {{ _('removed') }}, {{ changes.changed|length }} {{ _('changed') }}</p>
+  <h3>{{ _('Added') }}</h3>
+  <ul class="plain-list">{% for r in changes.added %}<li>{{ r.status_code_identifier }} — {{ r.title }}</li>{% else %}<li class="muted">{{ _('None.') }}</li>{% endfor %}</ul>
+  <h3>{{ _('Removed') }}</h3>
+  <ul class="plain-list">{% for r in changes.removed %}<li>{{ r.status_code_identifier }} — {{ r.title }}</li>{% else %}<li class="muted">{{ _('None.') }}</li>{% endfor %}</ul>
+  <h3>{{ _('Changed') }}</h3>
+  <ul class="plain-list">{% for r in changes.changed %}<li>{{ r.status_code_identifier }} — {{ r.title }} ({{ r.changes|length }} {{ _('field(s)') }})</li>{% else %}<li class="muted">{{ _('None.') }}</li>{% endfor %}</ul>
+</div>
+{% endif %}
+{% endblock %}

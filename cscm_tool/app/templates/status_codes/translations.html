@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% import "_macros.html" as macros %}
+{% block title %}{{ _('Translations') }} — CSCM Tool{% endblock %}
+{% block content %}
+<div class="page-header">
+  <div>
+    <h1>{{ _('Translations') }}: {{ revision.status_code.status_code_identifier or _('Not yet assigned') }}</h1>
+    <div class="muted">{{ revision.title }} — {{ _('source language text of revision') }} {{ target.revision_number if target else '—' }}</div>
+  </div>
+  <a class="btn" href="{{ url_for('ui.status_code_detail', status_code_id=revision.status_code_id) }}">{{ _('Back') }}</a>
+</div>
+{% if not target %}
+<div class="flash flash--info">{{ _('A code can be translated once its source text is Approved.') }}</div>
+{% else %}
+<p class="muted">{{ _('A translation is saved as a draft and approved by someone else - a light review, not the three-decision cycle. Exports in a language use approved translations only.') }}</p>
+{% for row in matrix %}
+<div class="card">
+  <h2>{{ row.label }} <span class="chip">{{ row.status|lower }}</span></h2>
+  {% if current_user.role_code in ('ENGINEER', 'ADMINISTRATOR') %}
+  <form method="post">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    <input type="hidden" name="language" value="{{ row.language }}">
+    <div class="field"><label for="t_title_{{ row.language }}">{{ _('Title') }}</label><input type="text" id="t_title_{{ row.language }}" name="title" maxlength="120" value="{{ row.title or '' }}" required></div>
+    <div class="field"><label for="t_desc_{{ row.language }}">{{ _('Description') }}</label><textarea id="t_desc_{{ row.language }}" name="description" maxlength="4000" required>{{ row.description or '' }}</textarea></div>
+    <div class="field"><label for="t_rem_{{ row.language }}">{{ _('Remedy / recommended action (optional)') }}</label><textarea id="t_rem_{{ row.language }}" name="remedy_text" maxlength="4000">{{ row.remedy_text or '' }}</textarea></div>
+    <div class="btn-row">
+      <button class="btn btn--primary" type="submit" name="action" value="save">{{ _('Save draft translation') }}</button>
+      <button class="btn btn--outline" type="submit" name="action" value="carry" formnovalidate>{{ _('Copy from previous revision') }}</button>
+    </div>
+  </form>
+  {% else %}
+  <dl class="kv"><dt>{{ _('Title') }}</dt><dd>{{ row.title or '—' }}</dd><dt>{{ _('Description') }}</dt><dd>{{ row.description or '—' }}</dd></dl>
+  {% endif %}
+  {% if row.status == 'DRAFT' and current_user.role_code in ('REVIEWER', 'ADMINISTRATOR') and row.translated_by != current_user.id %}
+  <form method="post" style="margin-top:8px">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    <input type="hidden" name="language" value="{{ row.language }}">
+    <button class="btn btn--primary" type="submit" name="action" value="approve">{{ _('Approve translation') }}</button>
+  </form>
+  {% endif %}
+</div>
+{% endfor %}
+{% endif %}
+{% endblock %}

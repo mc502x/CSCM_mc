@@ -5,10 +5,10 @@
   <h1>{{ release.name }} <span class="badge badge--{{ 'RELEASED' if release.status == 'PUBLISHED' else 'DRAFT' }}">{{ release.status }}</span></h1>
   {% if release.status == 'BUILDING' and current_user.role_code == 'ADMINISTRATOR' %}
   <div class="btn-row">
-    <a class="btn btn--primary" href="{{ url_for('ui.release_builder', release_id=release.id) }}">Edit Candidates</a>
-    <form method="post" action="{{ url_for('ui.release_delete', release_id=release.id) }}" data-confirm="Delete this unpublished Release?">
+    <a class="btn btn--primary" href="{{ url_for('ui.release_builder', release_id=release.id) }}">{{ _('Edit Candidates') }}</a>
+    <form method="post" action="{{ url_for('ui.release_delete', release_id=release.id) }}" data-confirm="{{ _('Delete this unpublished Release?') }}">
       <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
-      <button class="btn btn--danger" type="submit">Delete Release</button>
+      <button class="btn btn--danger" type="submit">{{ _('Delete Release') }}</button>
     </form>
   </div>
   {% endif %}
@@ -16,23 +16,87 @@
 
 <div class="card">
   <dl class="kv">
-    <dt>Version Label</dt><dd>{{ release.version_label }}</dd>
-    <dt>Description</dt><dd>{{ release.description or '—' }}</dd>
-    <dt>Scope Filter</dt><dd>{{ release.scope_filter }}</dd>
-    <dt>Item Count</dt><dd>{{ release.item_count }}</dd>
-    <dt>Published</dt><dd>{{ release.published_at or 'Not yet published' }}</dd>
+    <dt>{{ _('Version Label') }}</dt><dd>{{ release.version_label }}</dd>
+    <dt>{{ _('Description') }}</dt><dd>{{ release.description or '—' }}</dd>
+    <dt>{{ _('Scope Filter') }}</dt><dd>{{ release.scope_filter }}</dd>
+    <dt>{{ _('Target software versions') }}</dt><dd>{{ release.target_software_versions|join(', ') if release.target_software_versions else '—' }}</dd>
+    <dt>{{ _('Item Count') }}</dt><dd>{{ release.item_count }}</dd>
+    <dt>{{ _('Published') }}</dt><dd>{{ release.published_at or _('Not yet published') }}</dd>
   </dl>
 </div>
 
 {% if release.status == 'PUBLISHED' %}
 <div class="card">
-  <h2>Export</h2>
+  <h2>{{ _('Export') }}</h2>
   <div class="btn-row">
-    <a class="btn" href="{{ url_for('api_v1.export_release', release_id=release.id, format='csv') }}">Export CSV</a>
-    <a class="btn" href="{{ url_for('api_v1.export_release', release_id=release.id, format='json') }}">Export JSON</a>
-    <a class="btn" href="{{ url_for('api_v1.export_release', release_id=release.id, format='xlsx') }}">Export XLSX</a>
-    <a class="btn" href="{{ url_for('api_v1.export_release', release_id=release.id, format='pdf') }}">Export PDF</a>
+    <a class="btn" href="{{ url_for('api_v1.export_release', release_id=release.id, format='csv') }}">{{ _('Export CSV') }}</a>
+    <a class="btn" href="{{ url_for('api_v1.export_release', release_id=release.id, format='json') }}">{{ _('Export JSON') }}</a>
+    <a class="btn" href="{{ url_for('api_v1.export_release', release_id=release.id, format='xlsx') }}">{{ _('Export XLSX') }}</a>
+    <a class="btn" href="{{ url_for('api_v1.export_release', release_id=release.id, format='pdf') }}">{{ _('Export PDF') }}</a>
   </div>
 </div>
+
+<div class="card">
+  <h2>{{ _('Shaped export') }}</h2>
+  <p class="muted">{{ _('Pick a profile (columns and labels), an audience, a language or a software version. Every file comes with a manifest of SHA-256 hashes; "bundle" packs both into one ZIP.') }}</p>
+  <form method="get" action="{{ url_for('ui.release_shaped_export', release_id=release.id) }}" class="form-row">
+    <div class="field">
+      <label for="x_profile">{{ _('Profile') }}</label>
+      <select id="x_profile" name="profile"><option value="">({{ _('all columns') }})</option>{% for p in profiles %}<option value="{{ p.code }}">{{ p.name }}</option>{% endfor %}</select>
+    </div>
+    <div class="field">
+      <label for="x_audience">{{ _('Audience') }}</label>
+      <select id="x_audience" name="audience"><option value="">({{ _('everyone') }})</option>{% for code, (_attr, label) in audiences.items() %}<option value="{{ code }}">{{ label }}</option>{% endfor %}</select>
+    </div>
+    <div class="field">
+      <label for="x_language">{{ _('Language') }}</label>
+      <select id="x_language" name="language"><option value="">({{ _('source language') }})</option>{% for l in content_languages if not l.is_source %}<option value="{{ l.code }}">{{ l.label }}</option>{% endfor %}</select>
+    </div>
+    <div class="field">
+      <label for="x_version">{{ _('Software version') }}</label>
+      <select id="x_version" name="software_version"><option value="">({{ _('all') }})</option>{% for v in versions %}<option value="{{ v.code }}">{{ v.code }}</option>{% endfor %}</select>
+    </div>
+    <div class="field">
+      <label for="x_format">{{ _('Format') }}</label>
+      <select id="x_format" name="format"><option value="csv">CSV</option><option value="xlsx">XLSX</option><option value="pdf">PDF</option><option value="json">JSON</option></select>
+    </div>
+    <div class="field checkbox-list" style="align-self:end">
+      <label><input type="checkbox" name="bundle"> {{ _('ZIP with manifest') }}</label>
+      <label><input type="checkbox" name="strict_language"> {{ _('only translated codes') }}</label>
+    </div>
+    <div class="field" style="align-self:end"><button class="btn btn--primary" type="submit">{{ _('Export') }}</button></div>
+  </form>
+</div>
+
+<div class="card">
+  <h2>{{ _('Release notes and offline lookup') }}</h2>
+  <div class="btn-row">
+    <a class="btn" href="{{ url_for('ui.release_notes_download', release_id=release.id, format='md') }}">{{ _('Release notes (Markdown)') }}</a>
+    <a class="btn" href="{{ url_for('ui.release_notes_download', release_id=release.id, format='pdf') }}">{{ _('Release notes (PDF)') }}</a>
+    <a class="btn" href="{{ url_for('ui.release_notes_download', release_id=release.id, format='csv') }}">{{ _('Release notes (CSV)') }}</a>
+    <a class="btn" href="{{ url_for('ui.release_offline_bundle_download', release_id=release.id) }}">{{ _('Offline lookup (HTML)') }}</a>
+    <a class="btn" href="{{ url_for('ui.release_offline_bundle_download', release_id=release.id, bundle='on') }}">{{ _('Offline lookup + manifest (ZIP)') }}</a>
+  </div>
+  <p class="muted">{{ _('Release notes list what was added, changed (field by field) and deprecated since the previous Release. The offline page is one self-contained HTML file for use at the turbine without a connection.') }}</p>
+</div>
+
+{% if history %}
+<div class="card">
+  <h2>{{ _('Recorded exports') }}</h2>
+  <table>
+    <caption class="visually-hidden">{{ _('Exports of this Release') }}</caption>
+    <thead><tr><th scope="col">#</th><th scope="col">{{ _('Type') }}</th><th scope="col">{{ _('Rows') }}</th><th scope="col">SHA-256</th><th scope="col">{{ _('When') }}</th><th scope="col">{{ _('By') }}</th><th scope="col"></th></tr></thead>
+    <tbody>
+      {% for j in history %}
+      <tr>
+        <td>{{ j.id }}</td><td>{{ j.export_type }} {{ j.profile_code or '' }} {{ j.audience or '' }} {{ j.language_code or '' }}</td><td>{{ j.row_count if j.row_count is not none else '—' }}</td>
+        <td><code title="{{ j.sha256 }}">{{ (j.sha256 or '')[:16] }}…</code></td><td>{{ j.created_at }}</td><td>{{ user_label(j.requested_by) }}</td>
+        <td><a href="{{ url_for('api_v1.export_manifest', job_id=j.id) }}">{{ _('manifest') }}</a></td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endif %}
 {% endif %}
 {% endblock %}

@@ -41,6 +41,19 @@ def configure_logging(app: Flask) -> None:
         handler.setFormatter(JsonFormatter())
         handler._cscm = True  # type: ignore[attr-defined]
         logger.addHandler(handler)
+    log_file = app.config.get("LOG_FILE")
+    if log_file and not any(getattr(h, "_cscm_file", False) for h in logger.handlers):
+        # I-21: a rotating file a log shipper can tail (the same JSON lines as stderr).
+        from logging.handlers import RotatingFileHandler
+        from pathlib import Path
+
+        Path(log_file).parent.mkdir(parents=True, exist_ok=True)
+        file_handler = RotatingFileHandler(
+            log_file, maxBytes=10 * 1024 * 1024, backupCount=5, encoding="utf-8"
+        )
+        file_handler.setFormatter(JsonFormatter())
+        file_handler._cscm_file = True  # type: ignore[attr-defined]
+        logger.addHandler(file_handler)
     logger.setLevel(logging.INFO)
     logger.propagate = True  # lets pytest's caplog observe the records
 
@@ -52,6 +65,10 @@ def configure_logging(app: Flask) -> None:
     def _log_request(response: Response) -> Response:
         started = g.get("request_started")
         user = g.get("current_user")
+        if started:
+            from app.observability import observe_request
+
+            observe_request(request.method, response.status_code, time.perf_counter() - started)
         logger.info(
             "request",
             extra={

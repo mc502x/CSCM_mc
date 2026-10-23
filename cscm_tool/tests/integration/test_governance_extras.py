@@ -262,5 +262,5 @@ def test_whole_lifecycle_works_with_all_outbound_network_blocked(
     for fmt in ("csv", "json", "xlsx", "pdf"):
         assert client.get(f"/api/v1/exports/released?format={fmt}").status_code == 200
     login_as(client, cast["admin"])
-    assert client.get("/api/v1/exports/full-database").status_code == 200
+    assert client.post("/api/v1/exports/full-database").status_code == 200
     assert client.get("/exports").status_code in (200, 302)

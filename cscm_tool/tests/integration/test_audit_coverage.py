@@ -46,8 +46,8 @@ def test_each_lifecycle_action_is_audited_exactly_once(app, client, make_user, w
         "CATALOGUE_EXPORT",
     ):
         assert counts[action] == 1, (action, counts)
-    # 6 users created in make_cast, none of them audited with an actor id of None being dropped
-    assert counts["USER_CREATE"] == 6
+    # 7 users created in make_cast, none of them audited with an actor id of None being dropped
+    assert counts["USER_CREATE"] == 7
     assert counts["LOGIN_SUCCESS"] >= 5
 
 

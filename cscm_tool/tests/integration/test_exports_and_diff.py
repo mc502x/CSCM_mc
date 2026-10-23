@@ -289,7 +289,7 @@ def test_export_file_names_carry_a_timestamp(app, client, make_user, wcnv_ids):
     assert re.fullmatch(rf"cscm_released_{stamp}\.csv", released), released
     working = name(client.get("/api/v1/exports/working-set?format=xlsx"))
     assert re.fullmatch(rf"cscm_working-set_NOT_FOR_DISTRIBUTION_{stamp}\.xlsx", working), working
-    backup = name(client.get("/api/v1/exports/full-database"))
+    backup = name(client.post("/api/v1/exports/full-database"))
     assert re.fullmatch(rf"cscm_full-database-backup_{stamp}\.db", backup), backup
     release_id = client.get("/api/v1/releases").get_json()[0]["id"]
     per_release = name(client.get(f"/api/v1/releases/{release_id}/export?format=pdf"))

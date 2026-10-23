@@ -35,6 +35,14 @@ class ChangeRequestRepository(BaseRepository[ChangeRequest]):
     def delete_with_children(self, cr: ChangeRequest) -> None:
         """Used only by withdraw() on an abandoned CR — see
         app/services/change_request_service.py for why this is safe."""
+        from app.models.change_request import CrChecklistConfirmation, FieldComment
+        from app.models.operations import Notification
+
+        db.session.query(FieldComment).filter(FieldComment.change_request_id == cr.id).delete()
+        db.session.query(CrChecklistConfirmation).filter(
+            CrChecklistConfirmation.change_request_id == cr.id
+        ).delete()
+        db.session.query(Notification).filter(Notification.change_request_id == cr.id).delete()
         db.session.query(ReviewComment).filter(ReviewComment.change_request_id == cr.id).delete()
         db.session.query(DomainSignoff).filter(DomainSignoff.change_request_id == cr.id).delete()
         db.session.query(DomainSignoffRequest).filter(

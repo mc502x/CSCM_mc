@@ -26,6 +26,22 @@ class Release(Base):
     )
 
 
+class ReleaseTargetVersion(Base):
+    """I-07: the controller software versions a Release is published for."""
+
+    __tablename__ = "release_target_version"
+
+    id = db.Column(db.Integer, primary_key=True)
+    release_id = db.Column(db.Integer, db.ForeignKey("release.id"), nullable=False)
+    software_version_id = db.Column(
+        db.Integer, db.ForeignKey("lookup_controller_software_version.id"), nullable=False
+    )
+
+    software_version = db.relationship("LookupControllerSoftwareVersion")
+
+    __table_args__ = (db.UniqueConstraint("release_id", "software_version_id"),)
+
+
 class ReleaseItem(Base):
     __tablename__ = "release_item"
 

@@ -2,11 +2,11 @@
 
 ## 1. Test Levels
 
-Unchanged in structure from v1 (13-test-strategy.md v1 §1): Unit, Integration, System (API), Performance, Security, UAT — same tooling (`pytest`, temp-file SQLite, Flask test client, `locust`/`pytest-benchmark`, `bandit`/`pip-audit`/ZAP baseline).
+Unit, Integration, System (API), Performance, Security, UAT — tooling: `pytest`, in-memory or file SQLite, the Flask test client, `schemathesis`/`hypothesis` for contract and property tests, timing tests without coverage tracing for performance, `black`/`ruff`/`mypy`/`bandit`/`pip-audit` as gates. Since v4 the suite is verified three ways (§11) and every requirement id must be accounted for (§12).
 
 ## 2. Unit Tests
 
-Minimum coverage target unchanged: 80% on `service/` and `validation/`. Required areas, updated for v2:
+Minimum coverage target: 80% on `service/` and `validation/`. Required areas, updated for v2:
 - Lifecycle transition validator: every legal transition in the 7-state model (05-governance-handbook.md §5) succeeds; every illegal transition (exhaustive pairwise) raises the correct domain exception.
 - Identifier allocation: sequential within a Functional System Group's range; sequential within a Functional Subgroup's sub-band when selected; independence between groups; capacity-exhaustion behavior (07-database-design.md §7a); sandbox codes never draw from a real range.
 - Dual sign-off logic: recording the first sign-off leaves state at `REVIEW`; recording the second (either order) atomically advances to `PENDING_APPROVAL`; a reject from either sign-off returns to `DRAFT` and clears both sign-off columns.
@@ -18,7 +18,7 @@ Minimum coverage target unchanged: 80% on `service/` and `validation/`. Required
 
 ## 3. Integration Tests
 
-- Repository layer against real (temp-file) SQLite: uniqueness of `status_code_identifier`, partial unique indexes (`is_current`, one-open-CR now spanning three states), all four triggers (`trg_prevent_edit_locked_revision`, `trg_prevent_release_item_delete`, `trg_prevent_sandbox_release`, `trg_prevent_nonsandbox_delete`).
+- Repository layer against real (temp-file) SQLite: uniqueness of `status_code_identifier`, partial unique indexes (`is_current`, one-open-CR now spanning three states), all eight triggers (`trg_prevent_edit_locked_revision`, `trg_prevent_release_item_delete`, `trg_prevent_sandbox_release`, `trg_prevent_nonsandbox_delete`, `trg_prevent_subgroup_overlap`, `trg_prevent_group_overlap`, `trg_audit_no_update`, `trg_audit_no_delete`) and the four FTS triggers.
 - Full Change Request lifecycle: Draft → (domain sign-offs) → Review (identifier allocated) → (dual sign-off) → PendingApproval → Chief Engineer Approve → Approved → Release publish → Released.
 - Atomic Release publish, including the sandbox-exclusion guarantee: attempt to add a sandbox revision to a Release candidate set and assert it is never offered as a candidate and, if forced via direct repository call in a test, is rejected by the trigger.
 - Concurrent identifier allocation: two simulated concurrent submissions within the same Functional Subgroup never receive the same number (07-database-design.md §7a).
@@ -27,19 +27,19 @@ Minimum coverage target unchanged: 80% on `service/` and `validation/`. Required
 
 ## 4. System (API) Tests
 
-- Full request/response contract conformance against `artifacts/openapi.yaml` v3.0.0.
-- Authorization matrix: five roles × every endpoint, including the three decision endpoints' segregation-of-duties checks and the sandbox-only-delete / Administrator-only-full-export restrictions.
+- Full request/response contract conformance against `artifacts/openapi.yaml` v4.0.0 (143 operations; every operation of the code is in the contract and every unauthenticated call is 401, except the documented public routes).
+- Authorization matrix: six roles × every endpoint, including the three decision endpoints' segregation-of-duties checks and the sandbox-only-delete / Administrator-only-full-export restrictions.
 - Identifier lifecycle via API: `status_code_identifier` is `null` in every response while Draft; becomes non-null only after `POST .../submit`; `GET /status-codes/next-available` never reserves a number (two sequential calls without an intervening submit return the same preview).
 - Cross-Domain Sign-Off: a Submit attempt with an outstanding required domain returns 422 with a field error naming the missing domain; a matching-domain Engineer's `POST .../domain-signoffs` call from a non-matching domain returns 403.
-- Export correctness: catalogue export never includes sandbox-flagged records even if explicitly requested; `GET /exports/full-database` returns 403 for every non-Administrator role.
+- Export correctness: catalogue export never includes sandbox-flagged records even if explicitly requested; `POST /exports/full-database` returns 403 for every non-Administrator role.
 
 ## 5. Performance Tests
 
-Unchanged targets from v1 (13-test-strategy.md v1 §5): p95 500ms search, p95 200ms single-record read, 5s CSV/JSON export, 15s PDF export, 50 concurrent users — re-validated against a synthetic dataset now distributed across all nine Functional System Groups to confirm identifier allocation contention does not create a hot-row bottleneck under concurrent submission load within a single popular group.
+Targets: p95 500ms search, p95 200ms single-record read, 5s CSV/JSON export, 15s PDF export, 50 concurrent users — re-validated against a synthetic dataset now distributed across all nine Functional System Groups to confirm identifier allocation contention does not create a hot-row bottleneck under concurrent submission load within a single popular group.
 
 ## 6. Security Tests
 
-Unchanged mechanism from v1 (`bandit`, `pip-audit` in CI; ZAP baseline pre-release; manual OWASP checklist). Added: a specific manual check that no outbound network call in the codebase targets a public-cloud endpoint (11-security-architecture.md §12 "No-Cloud Verification Checklist") — grep-based CI check for known cloud SDK imports (e.g. `azure.*`, `boto3`, `google.cloud`) failing the build if found, since this is now a hard architectural constraint, not a preference.
+`bandit` and `pip-audit` in CI (§11 gates); ZAP baseline pre-release; manual OWASP checklist. Since v4 also: the route inventory (every route declares its access and the declared role list is what each of the five roles actually gets), step-up, token and webhook tests, audience leakage tests, attachment hardening and the no-egress lifecycle test. Added: a specific manual check that no outbound network call in the codebase targets a public-cloud endpoint (11-security-architecture.md §12 "No-Cloud Verification Checklist") — grep-based CI check for known cloud SDK imports (e.g. `azure.*`, `boto3`, `google.cloud`) failing the build if found, since this is now a hard architectural constraint, not a preference.
 
 ## 7. User Acceptance Test Scenarios
 
@@ -104,11 +104,83 @@ Unchanged mechanism from v1 (`bandit`, `pip-audit` in CI; ZAP baseline pre-relea
 | TC-035 | System | Export | XLSX export produces the same flat row set as CSV/JSON for the same scope | P2 |
 | TC-036 | System | UI/UX | A rejected (422) form submission never clears previously entered field values | P1 |
 | TC-037 | Integration | Lookups | New Functional System Group insert rejected on range overlap (trigger + service layer) | P1 |
+| TC-038 | Integration | Security / SoD | Step-up password required and audited on every sensitive action; delegation grants decision actions only and keeps segregation of duties (`test_step_up_and_delegation`) | P1 |
+| TC-039 | Integration | Data integrity | Stale Draft save refused with 409; reference, duplicate and where-used warnings; platform variants; planned dates; remedy fields; capacity hint (`test_content_integrity`) | P1 |
+| TC-040 | Integration | Review aids | Field comments, review checklist, evidence attachments (hardening), change sets, reviewer balancing (`test_review_aids`) | P1 |
+| TC-041 | Integration | Workflow | SLA ageing in business days, stalled requests, notices and reminders (idempotent), KPIs (`test_sla_and_notifications`) | P2 |
+| TC-042 | Integration | Publication | Profiles and wrapped PDF, audience scoping, manifests / bundles / verification, release notes, software versions, translations, offline bundle (`test_publication`) | P1 |
+| TC-043 | Integration | Import | Template, dry run, update mode, reconciliation, error reports, background job on a real file database (`test_import_toolkit`) | P1 |
+| TC-044 | Integration | Operations | Audit hash chain (edit / remove / truncate detected, key, archive), verified backups and restore, CLI jobs, readiness, metrics gating, log file (`test_audit_chain_and_ops`) | P1 |
+| TC-045 | Integration | Migration | Upgrade of a v3 database keeps data, hashes old audit rows, fills the index, matches a fresh schema, downgrades (`test_schema_upgrade`) | P1 |
+| TC-046 | Integration | Integration / reports | API tokens, change feed with ETag, signed webhooks, saved searches, fleet feedback, catalogue health, KPIs, Hub-to-Main consolidation (`test_integrations_and_reports`) | P2 |
+| TC-047 | Integration | Search / help | Ranked, typo-tolerant search and its substring fallback; help content complete and consistent with the glossary (`test_search_and_help`) | P2 |
+| TC-048 | System | AuthZ | Route inventory: every route declares access, anonymous callers are refused, declared roles equal enforced roles for all six roles (`test_route_inventory`) | P1 |
+| TC-049 | System | i18n / a11y | German catalogue complete; contrast ≥ 4.5 : 1; landmarks, labels, headings, table scope on every page in both languages (`test_i18n`, `test_accessibility`) | P2 |
+| TC-050 | System | Multi-process | Two server processes share the login rate limit and survive 16 concurrent writes (`test_multiprocess`, `unit/test_rate_limit`) | P1 |
+| TC-051 | System | Deployment | Installer syntax and dry runs, systemd units, settings written are settings read, production entry point starts and refuses a weak key, CI definitions, PostgreSQL ratchet (`test_deploy_artifacts`) | P2 |
+| TC-052 | System | Documentation | The documents agree with the code: endpoint table, schema counts, audit codes, glossary, requirement ids, links (`test_docs_consistency`) | P1 |
+| TC-053 | Integration | Status code import | The six real `.st` programs (three Main, three Hub) are read, previewed with multi-select, imported as Drafts with reserved numbers in one change set, issued exactly the reserved number at Submit, the legacy → new mapping is listed and exported, staged uploads are private and expire (`test_st_import`) | P0 |
+| TC-054 | Integration | Roles and languages | The StCd Owner role and its limits (only an Administrator creates users; the owner moves users between Viewer, Engineer and Reviewer and nothing else), role colours, the language names (letters left, flag right), the drawn flags, French / Hindi / Georgian / Arabic pages with English fallback and right-to-left Arabic, catalogue integrity (`test_roles_and_languages`) | P1 |
+| TC-055 | Integration | User administration | View, activate / deactivate and delete users: only an unused account is deleted, the password is asked again, an account with history is refused and deactivated, the StCd Owner has no such buttons (`test_user_administration`) | P1 |
+| TC-056 | Integration | Withdraw and re-import | Several change requests withdrawn at once with a result each; a withdrawn import Draft gives its number back, a withdrawn code with an identifier keeps it and is restored; changed programs update the Draft or open a revision (`test_withdraw_and_reimport`) | P1 |
+| TC-057 | System | Translations | The translation document equals the generator output; ids and fingerprints are stable; every language's review sheet is complete (review, missing, checklist), right to left where needed (`test_translations_doc`) | P1 |
+| TC-058 | Integration | E-mail and Windows sign-in | The e-mail address cannot be changed (service, API, database trigger); Windows identity matched by e-mail or `DOMAIN\name`, accepted only from a trusted proxy, no auto-creation, deactivated accounts refused, password routes off in `windows` mode, the developer simulation uses the same path and is refused in production (`test_email_and_windows_signin`) | P1 |
+| TC-059 | Integration | Translation review | Assigned reviewers only, managers assign and decide; save validations (a change needs a proposal, placeholders, length), completion rule, XLSX download and upload, no self-decision and final decisions, an accepted proposal shown at once and removable, missing translations proposed, right to left, audit entries (`test_translation_review`) | P1 |
+| TC-060 | Integration | PDF in every script | Each of the twelve script families gets its own font, Latin needs none, Arabic is told from Urdu, right-to-left cells are right-aligned, shaping is switched on only for the cells that need it, every character of every translation is covered by a bundled font, the fonts and their licence are bundled, a 1,500-row Latin export stays fast (`test_pdf_scripts`); the rendered pages were looked at | P1 |
+
+## 8a. v4 Test Suites
+
+| Module (`tests/…`) | Cases | Requirements |
+|---|---|---|
+| `integration/test_step_up_and_delegation.py` | 16 | FR-125, FR-126, SEC-026, BR-017, BR-022 |
+| `integration/test_content_integrity.py` | 16 | FR-090 … FR-094, FR-109, FR-131, FR-141 |
+| `integration/test_review_aids.py` | 17 | FR-124, FR-127 … FR-130 |
+| `integration/test_sla_and_notifications.py` | 16 | FR-120 … FR-123 |
+| `integration/test_publication.py` | 25 | FR-100 … FR-111, BR-016, BR-018, BR-021 |
+| `integration/test_import_toolkit.py` | 20 | FR-048i … FR-048n |
+| `integration/test_st_import.py` | 29 | FR-048o … FR-048w, BR-023, SEC-031 |
+| `integration/test_roles_and_languages.py` | 19 | FR-156, FR-157, BR-024, SEC-032 |
+| `integration/test_user_administration.py` | 10 | FR-158, BR-025, SEC-032, AUD-076 |
+| `integration/test_withdraw_and_reimport.py` | 9 | FR-159, FR-160, FR-048x, BR-026 |
+| `integration/test_audit_chain_and_ops.py` | 27 | FR-150 … FR-153, AUD-072 … AUD-075, SEC-029 |
+| `integration/test_schema_upgrade.py` | 16 | upgrade, AUD-074 back-fill, BR-016, D-06 |
+| `integration/test_prg_idx_and_user_groups.py` | 9 | schema v4.1: PrgIdx_GUi, Main/Hub fields, user-group levels (no FR yet) |
+| `integration/test_integrations_and_reports.py` | 32 | FR-140 … FR-147, SEC-027, SEC-028 |
+| `integration/test_search_and_help.py` | 16 | FR-148, FR-154 |
+| `system/test_route_inventory.py` | 8 | SEC-010, FR-081 |
+| `system/test_i18n.py`, `system/test_accessibility.py` | 11 + 8 | FR-155, NFR-010 |
+| `system/test_multiprocess.py` | 4 | NFR-009 |
+| `system/test_deploy_artifacts.py` | 22 | NFR-013, NFR-014 |
+| `system/test_docs_consistency.py` | 17 | TC-052 |
+| `system/test_translations_doc.py` | 8 | FR-161 |
+| `integration/test_email_and_windows_signin.py` | 16 | FR-162, FR-163, SEC-033 |
+| `integration/test_translation_review.py` | 14 | FR-164, AUD-077 |
+| `integration/test_pdf_scripts.py` | 9 | FR-165, FR-157 |
+
+The authoritative, always-current counts are in `24-test-report.md` (generated).
+
+**Shared fixtures (v4).** `StepUpClient` answers the password prompt for the acting user so the many tests about *other* behaviour do not each repeat it (`raw_client` / `no_step_up=True` for the tests about the prompt itself); `file_app` is an application on a real SQLite file (background import, backups, upgrade, multi-process); every `app` gets its own instance directory (attachments, import files, the audit anchor); `CSCM_TEST_ORDER` reorders the run and `CSCM_TEST_DB=file` puts the whole suite on a file database. A frozen copy of the v3 schema (`fixtures/schema_d6f8b0c2e4a3.sql`) is the upgrade source.
 
 ## 9. Test Environments
 
-Unchanged from v1 (§9): local, CI, staging, production, all on-premises per the deployment constraint.
+Local, CI, staging, production, all on-premises per the deployment constraint. CI is defined for the internal Git server (`.gitea/workflows/ci.yml`, `.gitlab-ci.yml`, both calling `scripts/ci.py`).
 
 ## 10. Definition of "Test Complete" for a Release
 
-Unchanged in structure from v1 (§10): all P1 cases pass, coverage threshold met, security checklist clean, at least one full UAT pass signed off.
+All P1 cases pass in all three verification runs (§11), coverage threshold met, the five static gates clean, every defined requirement accounted for (§12), the documentation consistency test green, security checklist clean, at least one full UAT pass signed off.
+
+## 11. Verification Runs: Three Methodologies *(v4)*
+
+A change is verified three times, each in a way that can expose a different class of defect. `python scripts/generate_test_report.py [options]` runs one methodology, appends it to `artifacts/test-run-history.json` and regenerates `24-test-report.md`.
+
+| # | Methodology | Command | What it can catch that the others cannot |
+|---|---|---|---|
+| 1 | **Sequential functional run + static gates.** The complete suite in file order with line coverage, then `black`, `ruff`, `mypy`, `bandit`, `pip-audit`; the load tests run afterwards without coverage tracing. | `scripts/generate_test_report.py` | Functional regressions, type errors, insecure constructs, vulnerable runtime packages, coverage loss |
+| 2 | **Order-independence and property testing.** The same suite in a *reversed* or *shuffled* order (seeded, reproducible), including the `schemathesis` / `hypothesis` tests that generate requests from the OpenAPI contract. | `scripts/generate_test_report.py --order reverse` and `--order shuffle:<seed>` | Hidden coupling between tests, leaked global state (rate limiter, caches, instance files), contract violations on inputs nobody wrote by hand |
+| 3 | **Real database file and real processes.** Every test on a SQLite *file* in WAL mode instead of memory; inside the suite, two Waitress processes against one file, a background import thread, the upgrade of a frozen v3 database, the installer dry runs and the production entry point. | `scripts/generate_test_report.py --db file` | Locking and visibility problems that only appear with several connections or processes, migration and upgrade defects, packaging defects, file-handling and path errors |
+
+Additionally, `scripts/ci.py` (CI) runs methodology 1 plus the PostgreSQL ratchet, and `--fast` stops at the first failure for a developer's inner loop.
+
+## 12. Requirement Accounting and Documentation Checks *(v4)*
+
+`24-test-report.md` §6a states, for every requirement id *defined* in the specification (FR, NFR, BR in `03-srs.md`, SEC in `11-security-architecture.md`, AUD in `12-audit-compliance.md`), whether it is cited by a test, covered per the traceability matrix, or marked there as out of scope or needing a person. **No id may be left unaccounted for.** `tests/system/test_docs_consistency.py` additionally fails when: the endpoint table of `09-api-specification.md` differs from the code; table, trigger or operation counts quoted in the documents differ from the database or the contract; the application can write an audit action code that `12-audit-compliance.md` does not list; a term the help content defines is missing from the glossary; an id cited in a document is not defined anywhere; a link between documents points to a file or heading that does not exist; or a document set version differs between the index and the documents.

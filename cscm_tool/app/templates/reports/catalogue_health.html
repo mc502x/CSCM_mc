@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% block title %}{{ _('Catalogue Health') }} — CSCM Tool{% endblock %}
+{% block content %}
+<div class="page-header"><h1>{{ _('Catalogue health') }}</h1><span class="muted">{{ report.generated_at }}</span></div>
+
+<div class="card">
+  <h2>{{ _('Number-range capacity') }}</h2>
+  {% if report.capacity_alerts %}
+  <div class="flash flash--error" role="alert"><strong>{{ report.capacity_alerts|length }} {{ _('subgroup(s) are running out of numbers:') }}</strong>
+    {% for c in report.capacity_alerts %}{{ c.functional_system_group }}/{{ c.functional_subgroup }} ({{ c.remaining }} {{ _('left') }}){% if not loop.last %}, {% endif %}{% endfor %}
+  </div>
+  {% endif %}
+  <p class="controller-legend"><span class="controller-chip controller-chip--mc">MC</span> {{ _('Main Controller') }} <span class="controller-chip controller-chip--hc">HC</span> {{ _('Hub Controller') }}</p>
+  <table>
+    <caption class="visually-hidden">{{ _('Capacity per subgroup') }}</caption>
+    <thead><tr><th scope="col">{{ _('Group') }}</th><th scope="col">{{ _('Subgroup') }}</th><th scope="col">{{ _('Range') }}</th><th scope="col">{{ _('Used') }}</th><th scope="col">{{ _('Left') }}</th><th scope="col">{{ _('Left %') }}</th><th scope="col">{{ _('Status') }}</th></tr></thead>
+    <tbody>
+      {% for c in report.capacity %}
+      <tr class="controller-row controller-row--{{ c.controller|lower }}">
+        <td><span class="controller-chip controller-chip--{{ c.controller|lower }}">{{ c.controller }}</span> {{ c.functional_system_group }}</td><td>{{ c.label }} ({{ c.functional_subgroup }})</td>
+        <td>{{ c.range_start }}–{{ c.range_end }}</td><td>{{ c.allocated }}</td><td>{{ c.remaining }}</td>
+        <td><progress max="100" value="{{ c.percent_remaining }}" aria-label="{{ c.percent_remaining }} %"></progress> {{ c.percent_remaining }}</td>
+        <td>{% if c.exhausted %}<span class="sla sla--red">{{ _('exhausted') }}</span>{% elif c.alert %}<span class="sla sla--amber">{{ _('low') }}</span>{% else %}<span class="sla sla--ok">{{ _('ok') }}</span>{% endif %}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+<div class="card">
+  <h2>{{ _('Missing expected data') }} <span class="muted">({{ report.missing_data.checked }} {{ _('approved or released codes checked') }})</span></h2>
+  <table>
+    <thead><tr><th scope="col">{{ _('Missing') }}</th><th scope="col">{{ _('Codes') }}</th><th scope="col">{{ _('Examples') }}</th></tr></thead>
+    <tbody>
+      {% for name, f in report.missing_data.fields.items() %}
+      <tr><td>{{ name.replace('_', ' ') }}</td><td>{{ f.count }}</td><td>{{ f.examples[:8]|join(', ') }}</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+<div class="card">
+  <h2>{{ _('Probable inconsistencies') }}</h2>
+  {% if report.inconsistencies %}
+  <table>
+    <thead><tr><th scope="col">{{ _('Finding') }}</th><th scope="col">{{ _('Codes') }}</th><th scope="col">{{ _('Examples') }}</th></tr></thead>
+    <tbody>{% for i in report.inconsistencies %}<tr><td>{{ i.description }}</td><td>{{ i.count }}</td><td>{{ i.examples[:8]|join(', ') }}</td></tr>{% endfor %}</tbody>
+  </table>
+  {% else %}
+  <div class="table-empty">{{ _('None found.') }}</div>
+  {% endif %}
+</div>
+
+<div class="card">
+  <h2>{{ _('Unused numbers inside a band') }}</h2>
+  <p class="muted">{{ _('Numbers are never reused, so a gap is lost capacity - listed for information.') }}</p>
+  {% if report.unused_numbers %}
+  <table>
+    <thead><tr><th scope="col">{{ _('Subgroup') }}</th><th scope="col">{{ _('Gaps') }}</th><th scope="col">{{ _('Examples') }}</th></tr></thead>
+    <tbody>{% for u in report.unused_numbers %}<tr><td>{{ u.functional_system_group }}/{{ u.functional_subgroup }}</td><td>{{ u.gap_count }}</td><td>{{ u.examples[:8]|join(', ') }}</td></tr>{% endfor %}</tbody>
+  </table>
+  {% else %}
+  <div class="table-empty">{{ _('None.') }}</div>
+  {% endif %}
+</div>
+
+<div class="card">
+  <h2>{{ _('Planned in the next') }} {{ report.upcoming.window_days }} {{ _('days') }}</h2>
+  <h3>{{ _('Deprecations') }}</h3>
+  <ul class="plain-list">{% for d in report.upcoming.deprecations %}<li>{{ d.planned_deprecation_date }} — {{ d.status_code_identifier }} {{ d.title }}</li>{% else %}<li class="muted">{{ _('None.') }}</li>{% endfor %}</ul>
+  <h3>{{ _('Effective dates') }}</h3>
+  <ul class="plain-list">{% for d in report.upcoming.effective %}<li>{{ d.planned_effective_date }} — {{ d.status_code_identifier or _('Not yet assigned') }} {{ d.title }}</li>{% else %}<li class="muted">{{ _('None.') }}</li>{% endfor %}</ul>
+</div>
+{% endblock %}

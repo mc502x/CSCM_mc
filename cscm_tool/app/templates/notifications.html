@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block title %}{{ _('Notices') }} — CSCM Tool{% endblock %}
+{% block content %}
+<div class="page-header">
+  <h1>{{ _('Notices') }}</h1>
+  {% if notices %}
+  <form method="post" action="{{ url_for('ui.notifications_read') }}">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    <button class="btn" type="submit">{{ _('Mark all as read') }}</button>
+  </form>
+  {% endif %}
+</div>
+<div class="card">
+  {% if notices %}
+  <ul class="plain-list">
+    {% for n in notices %}
+    <li class="{{ 'notice-unread' if not n.read_at }}">
+      <strong>{{ n.created_at }}</strong> — {{ n.message }}
+      {% if n.link %}<a href="{{ n.link }}">{{ _('Open') }}</a>{% endif %}
+      {% if not n.read_at %}
+      <form method="post" action="{{ url_for('ui.notifications_read') }}" class="inline-form">
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+        <input type="hidden" name="notification_id" value="{{ n.id }}">
+        <button class="btn btn--outline" type="submit">{{ _('Mark as read') }}</button>
+      </form>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+  <div class="table-empty">{{ _('You have no notices.') }}</div>
+  {% endif %}
+</div>
+{% endblock %}

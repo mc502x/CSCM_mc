@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block title %}{{ _('Success Metrics') }} — CSCM Tool{% endblock %}
+{% block content %}
+<div class="page-header"><h1>{{ _('Success metrics') }}</h1><span class="muted">{{ kpis.generated_at }}</span></div>
+<p class="muted">{{ _('The targets the business case promises, measured from the timestamps the tool already keeps. Business days are Monday to Friday.') }}</p>
+
+{% macro tile(title, summary, unit) %}
+<div class="card kpi">
+  <h2>{{ title }}</h2>
+  {% if summary.sample_size %}
+  <div class="kpi__value {{ 'kpi--ok' if summary.meets_target else 'kpi--bad' }}">{{ summary.median_days }} <span class="kpi__unit">{{ unit }}</span></div>
+  <div>{{ _('median of') }} {{ summary.sample_size }} &middot; p90 {{ summary.p90_days }} &middot; {{ _('target') }} &le; {{ summary.target_days }} &mdash; <strong>{{ _('met') if summary.meets_target else _('NOT met') }}</strong></div>
+  {% else %}
+  <div class="muted">{{ _('No data yet.') }}</div>
+  {% endif %}
+</div>
+{% endmacro %}
+
+<div class="grid">
+  {{ tile(_('Submission to approval (all time)'), kpis.approval_time.all_time, _('business days')) }}
+  {{ tile(_('Submission to approval (last 90 days)'), kpis.approval_time.last_90_days, _('business days')) }}
+  {{ tile(_('Cross-domain sign-off (all time)'), kpis.cross_domain_turnaround.all_time, _('business days')) }}
+  {{ tile(_('Cross-domain sign-off (last 90 days)'), kpis.cross_domain_turnaround.last_90_days, _('business days')) }}
+</div>
+
+<div class="card">
+  <h2>{{ _('Audit trail completeness of Released codes') }}</h2>
+  {% if kpis.audit_trail.percent is none %}
+  <div class="muted">{{ _('No Released codes yet.') }}</div>
+  {% else %}
+  <div class="kpi__value {{ 'kpi--ok' if kpis.audit_trail.percent == 100 else 'kpi--bad' }}">{{ kpis.audit_trail.percent }} %</div>
+  <div>{{ kpis.audit_trail.complete }} {{ _('of') }} {{ kpis.audit_trail.released_revisions }} {{ _('Released revisions have the full trail: submit, both review sign-offs, approval and publish.') }}</div>
+  {% if kpis.audit_trail.incomplete_examples %}<div class="muted">{{ _('Incomplete, e.g.') }} {{ kpis.audit_trail.incomplete_examples|join(', ') }}</div>{% endif %}
+  {% endif %}
+</div>
+
+<div class="card">
+  <h2>{{ _('Waiting for a decision') }}: {{ kpis.queues.waiting_total }} <span class="muted">({{ kpis.queues.amber }} {{ _('slow') }}, {{ kpis.queues.red }} {{ _('overdue') }})</span></h2>
+  <table>
+    <thead><tr><th scope="col">{{ _('Age') }}</th><th scope="col">{{ _('Review') }}</th><th scope="col">{{ _('Approval') }}</th></tr></thead>
+    <tbody>
+      {% for bucket, n in kpis.queues.by_stage.review.items() %}
+      <tr><td>{{ bucket }}</td><td>{{ n }}</td><td>{{ kpis.queues.by_stage.approval[bucket] }}</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+<div class="card">
+  <h2>{{ _('Codes without an active owner') }}: {{ kpis.unknown_owner.count }}</h2>
+  {% if kpis.unknown_owner.examples %}<div class="muted">{{ kpis.unknown_owner.examples[:15]|join(', ') }}</div>{% endif %}
+</div>
+{% endblock %}

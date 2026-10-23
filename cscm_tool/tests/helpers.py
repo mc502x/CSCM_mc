@@ -51,6 +51,7 @@ def make_cast(make_user):
         "admin": make_user("ADMINISTRATOR"),
         "chief_engineer": make_user("CHIEF_ENGINEER"),
         "viewer": make_user("VIEWER"),
+        "stcd_owner": make_user("STCD_OWNER"),
     }
 
 

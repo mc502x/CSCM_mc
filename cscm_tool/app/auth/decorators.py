@@ -27,8 +27,8 @@ def _load_current_user() -> AuthenticatedUser | None:
 
     user_id = session.get("user_id")
     if user_id is None:
-        g.current_user = None
-        return None
+        g.current_user = _token_principal()
+        return g.current_user
 
     login_at = session.get("login_at")
     last_activity_at = session.get("last_activity_at")
@@ -65,6 +65,32 @@ def _load_current_user() -> AuthenticatedUser | None:
     return g.current_user
 
 
+def allow_token(scope: str):
+    """Marks a GET endpoint as callable with an API token holding `scope` (I-29). Apply it
+    directly under the route decorator; it only records the scope on the view function."""
+
+    def decorator(view):
+        view._token_scope = scope
+        return view
+
+    return decorator
+
+
+def _token_principal() -> AuthenticatedUser | None:
+    """A Viewer-level principal for `Authorization: Bearer cscm_...` on a token-enabled GET
+    endpoint; None for everything else (so tokens can never reach a write or any other route)."""
+    header = request.headers.get("Authorization", "")
+    if request.method != "GET" or not header.startswith("Bearer "):
+        return None
+    view = current_app.view_functions.get(request.endpoint or "")
+    scope = getattr(view, "_token_scope", None)
+    if scope is None:
+        return None
+    from app.services.integration_service import ApiTokenService
+
+    return ApiTokenService.authenticate(header[7:].strip(), scope)
+
+
 current_user: AuthenticatedUser = LocalProxy(_load_current_user)  # type: ignore[assignment]
 
 
@@ -75,6 +101,7 @@ def login_required(view):
             return jsonify(error="unauthorized", message="Authentication required"), 401
         return view(*args, **kwargs)
 
+    wrapper.access = ("login", ())  # type: ignore[attr-defined]  # read by tests/system/test_route_inventory.py
     return wrapper
 
 
@@ -92,6 +119,26 @@ def require_role(*roles: str):
                 return jsonify(error="forbidden", message="Insufficient role"), 403
             return view(*args, **kwargs)
 
+        wrapper.access = ("roles", roles)  # type: ignore[attr-defined]
+        return wrapper
+
+    return decorator
+
+
+def require_role_or_delegate(*roles: str):
+    """Like `require_role`, but a user covering for someone who holds one of `roles`
+    (I-16) is admitted too. Used only on the decision actions."""
+
+    def decorator(view):
+        @wraps(view)
+        @login_required
+        def wrapper(*args, **kwargs):
+            user = _load_current_user()
+            if user is not None and not any(user.can_act_as(r) for r in roles):
+                return jsonify(error="forbidden", message="Insufficient role"), 403
+            return view(*args, **kwargs)
+
+        wrapper.access = ("roles", roles)  # type: ignore[attr-defined]
         return wrapper
 
     return decorator
@@ -108,7 +155,24 @@ def login_required_web(view):
             return redirect(url_for("ui.login", next=request.path))
         return view(*args, **kwargs)
 
+    wrapper.access = ("login", ())  # type: ignore[attr-defined]
     return wrapper
+
+
+def require_role_or_delegate_web(*roles: str):
+    def decorator(view):
+        @wraps(view)
+        @login_required_web
+        def wrapper(*args, **kwargs):
+            user = _load_current_user()
+            if user is not None and not any(user.can_act_as(r) for r in roles):
+                abort(403)
+            return view(*args, **kwargs)
+
+        wrapper.access = ("roles", roles)  # type: ignore[attr-defined]
+        return wrapper
+
+    return decorator
 
 
 def require_role_web(*roles: str):
@@ -121,6 +185,7 @@ def require_role_web(*roles: str):
                 abort(403)
             return view(*args, **kwargs)
 
+        wrapper.access = ("roles", roles)  # type: ignore[attr-defined]
         return wrapper
 
     return decorator

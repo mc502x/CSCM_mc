@@ -2,15 +2,45 @@
 (docs/15-development-standards.md §7), migrated via the same Alembic
 migration used in every other environment."""
 
+import os
+import re
 from pathlib import Path
 
 import pytest
 from alembic import command
 from alembic.config import Config as AlembicConfig
+from flask.testing import FlaskClient
 
 from app import create_app
 from app.auth.rate_limit import reset_for_testing
 from app.services.user_service import UserService
+
+# Every test user is created with this password (tests/helpers.py repeats it).
+TEST_PASSWORD = "a genuinely long passphrase"
+_STEP_UP_PATH = re.compile(
+    r"/(reviewer-signoff|admin-signoff|chief-engineer-decide|publish|decisions)$"
+    r"|/exports/full-database$"
+)
+
+
+class StepUpClient(FlaskClient):
+    """Test client that answers the I-17 re-authentication prompt for the actor, so the
+    many tests about *other* behaviour do not each have to repeat the password. A test
+    that is about the prompt itself passes `no_step_up=True` or uses the `raw_client`
+    fixture. Without this the requests below would be refused with 403 step_up_required."""
+
+    def open(self, *args, no_step_up: bool = False, **kwargs):
+        path = args[0] if args and isinstance(args[0], str) else ""
+        method = (kwargs.get("method") or "GET").upper()
+        if not no_step_up and method == "POST" and _STEP_UP_PATH.search(path.split("?")[0]):
+            if isinstance(kwargs.get("json"), dict):
+                kwargs["json"] = {"current_password": TEST_PASSWORD, **kwargs["json"]}
+            elif kwargs.get("json") is None and "data" not in kwargs:
+                kwargs["json"] = {"current_password": TEST_PASSWORD}
+            elif isinstance(kwargs.get("data"), dict):
+                kwargs["data"] = {"current_password": TEST_PASSWORD, **kwargs["data"]}
+        return super().open(*args, **kwargs)
+
 
 MIGRATIONS_DIR = Path(__file__).resolve().parents[1] / "migrations"
 
@@ -40,7 +70,7 @@ def _reset_rate_limiter():
 
 
 @pytest.fixture()
-def app():
+def app(tmp_path):
     """The migration runs inside its own app-context push/pop, deliberately
     NOT held open for the whole test: Flask reuses an already-active app
     context (and its `g`) for requests dispatched while one is on the
@@ -50,17 +80,69 @@ def app():
     in-memory SQLite connection itself survives the pop regardless — it is
     held by the SQLAlchemy engine on the Flask app object, not by any
     particular app context (docs/15-development-standards.md §7)."""
-    application = create_app("testing")
+    # CSCM_TEST_DB=file runs the whole suite on a real SQLite *file* (WAL, several connections)
+    # instead of an in-memory database: the third verification methodology of
+    # docs/13-test-strategy.md section 11. scripts/generate_test_report.py --db file sets it.
+    overrides = None
+    if os.environ.get("CSCM_TEST_DB") == "file":
+        overrides = {"SQLALCHEMY_DATABASE_URI": f"sqlite:///{(tmp_path / 'suite.db').as_posix()}"}
+    application = create_app("testing", overrides)
+    application.test_client_class = StepUpClient
+    # Files the application keeps next to the database (attachments, import files, the audit
+    # anchor) go to a per-test directory: a shared one would let a previous test's anchor make
+    # this test's shorter audit log look truncated.
+    application.instance_path = str(tmp_path / "instance")
+    Path(application.instance_path).mkdir(exist_ok=True)
     with application.app_context():
         alembic_cfg = AlembicConfig(str(MIGRATIONS_DIR / "alembic.ini"))
         alembic_cfg.set_main_option("script_location", str(MIGRATIONS_DIR))
         command.upgrade(alembic_cfg, "head")
     yield application
+    if overrides:  # a file database: release the file so the temp directory can be removed
+        with application.app_context():
+            from app.extensions import db
+
+            db.session.remove()
+            db.engine.dispose()
+
+
+@pytest.fixture()
+def file_app(tmp_path):
+    """An app on a real SQLite *file* (several connections, threads or processes can share it):
+    for the backup, background-import, multi-process and migration tests."""
+    database = tmp_path / "cscm.db"
+    application = create_app(
+        "testing",
+        {
+            "SQLALCHEMY_DATABASE_URI": f"sqlite:///{database.as_posix()}",
+            "IMPORT_ASYNC_INLINE": False,
+            "BACKUP_DIR": str(tmp_path / "backups"),
+        },
+    )
+    application.test_client_class = StepUpClient
+    application.instance_path = str(tmp_path / "instance")
+    Path(application.instance_path).mkdir(exist_ok=True)
+    with application.app_context():
+        alembic_cfg = AlembicConfig(str(MIGRATIONS_DIR / "alembic.ini"))
+        alembic_cfg.set_main_option("script_location", str(MIGRATIONS_DIR))
+        command.upgrade(alembic_cfg, "head")
+    yield application
+    with application.app_context():
+        from app.extensions import db
+
+        db.session.remove()
+        db.engine.dispose()
 
 
 @pytest.fixture()
 def client(app):
     return app.test_client()
+
+
+@pytest.fixture()
+def raw_client(app):
+    """A client that never answers the step-up prompt for the test (see StepUpClient)."""
+    return FlaskClient(app, app.response_class, use_cookies=True)
 
 
 @pytest.fixture()
@@ -102,7 +184,7 @@ def make_user(app):
 @pytest.fixture()
 def wcnv_ids(app):
     """(functional_system_group_id, functional_subgroup_id) for WCNV's
-    "Converter" subgroup (010xx, range 1000-1999) — resolved dynamically by
+    "Converter" subgroup (010xx, sub-band 1000-1199) — resolved dynamically by
     code rather than hardcoded, since v3 assigns ids by seed insertion order
     (docs/artifacts/schema.sql) and functional_system_group.code is no
     longer globally unique (see app/services/lookup_service.py)."""

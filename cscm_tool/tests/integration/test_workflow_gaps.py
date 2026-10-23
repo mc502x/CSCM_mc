@@ -91,12 +91,12 @@ def test_identifier_override_rejects_out_of_range_malformed_and_duplicate(
     app, client, make_user, wcnv_ids
 ):
     cast = make_cast(make_user)
-    # First code takes StCd-01000 by normal allocation (WCNV "Converter" sub-band 1000-1099).
+    # First code takes StCd-01000 by normal allocation (WCNV "Converter" sub-band 1000-1199).
     drive_to_review(app, client, cast, wcnv_ids)
 
     _, cr_id = create_draft(app, client, cast, wcnv_ids, who="admin", title="Second Converter Trip")
     domain_sign(client, cast, cr_id)
-    for bad in ("StCd-05000", "01900", "StCd-1900", "StCd-01000"):
+    for bad in ("StCd-01200", "StCd-05000", "01900", "StCd-1900", "StCd-01000"):
         response = submit(
             client, cast, cr_id, who="admin", identifier_override=bad, override_reason="x reason"
         )

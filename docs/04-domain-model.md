@@ -5,7 +5,7 @@
 | Entity | Description | Ownership |
 |---|---|---|
 | `User` | A named system account, tagged with a Role and (for Engineers) one or more Engineering Domains | Administration |
-| `Role` | Fixed enumeration: Administrator, Engineer, Reviewer, Chief Engineer, Viewer | Administration |
+| `Role` | Fixed enumeration: Administrator, StCd Owner, Engineer, Reviewer, Chief Engineer, Viewer | Administration |
 | `EngineeringDomain` | Lookup of engineering specialties (Controls, Electrical, Mechanical, Grid, Safety, ...) | Administration |
 | `FunctionalSystemGroup` | Lookup of the nine numbering bands (05-governance-handbook.md §2) | Governance |
 | `FunctionalSubgroup` | Lookup of sub-bands within a Functional System Group (real taxonomy seeded; **mandatory** on every StatusCode, never optional) | Governance |
@@ -23,7 +23,21 @@
 | Eight `*Access` lookups | Independent audience-visibility vocabularies — Development, Sales, TCC, Service, Turbine Operator Package, Grid Operator, Service Partner, Customer (06-data-dictionary.md §2d, §9d) | Governance |
 | `ImportJob` | Record of a CSV/XLSX library import; produces Draft Change Requests, never bypasses governance | System / Engineering |
 | `AuditLogEntry` | Immutable record of a state-changing action | System |
-| `ExportJob` | Record of a generated export (catalogue or full-database), formats CSV/JSON/XLSX/PDF | System |
+| `ExportJob` | Record of a generated export (catalogue, release notes, offline bundle or full database): formats CSV/JSON/XLSX/PDF/HTML/MD/ZIP, with SHA-256, size, row count, profile, audience, language, software version and manifest (v4) | System |
+| `ControllerSoftwareVersion` *(v4)* | Ordered lookup of controller software versions; a revision declares a from/to range, a Release targets versions | Governance |
+| `Language` / `RevisionTranslation` *(v4)* | Content languages (English source, German) and the per-revision translation with its own status | Governance / Technical Publications |
+| `ExportProfile` *(v4)* | Administrator-managed column set with header labels, default audience and language | Governance |
+| `ChangeSet` *(v4)* | Group of change requests that ship with one controller software release | Engineering / Governance |
+| `Delegation` *(v4)* | Out-of-office cover for a decision role for a date range | Governance |
+| `Notification` *(v4)* | In-app notice (optionally mailed) for the holder of the next decision | System |
+| `CrAttachment` *(v4)* | Evidence file on a change request | Engineering |
+| `FieldComment`, `ReviewChecklistItem`, `CrChecklistConfirmation` *(v4)* | Field-level review comments; configurable review checklist and the confirmations stored with a sign-off | Governance |
+| `SavedSearch` *(v4)* | A user's named filter-and-column view | User |
+| `ApiToken`, `Webhook`, `WebhookDelivery` *(v4)* | Machine access: scoped read-only tokens; signed release webhooks and their delivery log | Administration |
+| `OccurrenceImport`, `CodeOccurrence` *(v4)* | Fleet-feedback occurrence counts per code and period | Administration / Chief Engineer |
+| `HubMcMapping` *(v4)* | Link from a Hub Controller code to its Main Controller replacement | Engineering |
+| `AppSetting` *(v4)* | Administrator-managed settings (SLA thresholds, auto-assignment, capacity alert) | Administration |
+| `LoginAttempt` *(v4)* | Rate-limit counters shared by all worker processes | System |
 
 ## 2. Entity Definitions
 
@@ -51,11 +65,12 @@ Represents the durable identity of a governed code. Attributes: `id`, `status_co
 ### 2.8 `StatusCodeRevision`
 The versioned, governed record. Full field-by-field detail lives in 06-data-dictionary.md §2–§2e (grounded in a real 897-row export of the live library, 2026-09-17) — this section summarizes the categories rather than repeating every field, to avoid the two documents drifting apart:
 - Identity/linkage: `id`, `status_code_id` (FK), `revision_number`, `is_current`.
-- Descriptive/classification: `title`, `description`, `software_version` (nullable — open item, may belong on `Release` instead, see 06-data-dictionary.md), `status_category` (`ERROR`/`WARNING`/`INFO`), `available_group` (numeric, soft-validated — §2.15), `alarm_flag` (boolean, not a behaviour enum), `set_delay`/`reset_delay` (free text with unit).
+- Descriptive/classification: `title`, `description`, `software_version` (nullable free text, kept for legacy rows; since v4 the governed form is the range `applies_from_version_id`/`applies_to_version_id`, decision D-01), `status_category` (`ERROR`/`WARNING`/`INFO`), `available_group` (numeric, soft-validated — §2.15), `alarm_flag` (boolean, not a behaviour enum), `set_delay`/`reset_delay` (free text with unit).
 - Behavioural flags: `up_down_counter`, `trigger_snapshot`, `loadless_spinning_permitted`.
 - Repeated-error escalation (all optional together): `number_of_times_repeated`, `repeated_over_the_course`, `status_code_for_repeated_error` (opaque numeric reference to a separate, unrelated code pool — confirmed 2026-09-17, **not** a foreign key to `StatusCode`).
 - Program references (numeric, externally defined by controller firmware, soft-validated — §2.15): `yaw_program`, `manual_reset_program`, `auto_reset_program`, `converter_reactive_power_program`, `brake_program`, `umrichterprogramm_gsc`, `umrichterprogramm_msc`, `yaw_bearing_lubrication_program`.
 - Audience/access (governance-restricted, eight independent fields — see §2.9): `development_access`, `sales_access`, `tcc_access`, `service_access`, `turbine_operator_package_access`, `grid_operator_access`, `service_partner_access`, `customer_access`.
+- v4 content and control fields: `remedy_text`, `affected_component`, `related_status_codes`, `standard_references` (all optional, "Any" owner), `planned_effective_date`, `planned_deprecation_date`, and the concurrency pair `row_version` (increases on every save) / `updated_at` (FR-090).
 - Technical addressing (derived, read-only, not stored — §2e of 06-data-dictionary.md): `logical_node`, `node_value`.
 - Governance/workflow: `owner_id`, `lifecycle_status` (7-state enum, 05-governance-handbook.md §4), `created_by`, `created_at`, `reviewer_signoff_by`/`_at`, `admin_signoff_by`/`_at`, `chief_engineer_approved_by`/`_date`, `effective_date`, `deprecated_reason`, `superseded_by_status_code_id`.
 - **Cardinality:** many `StatusCodeRevision` : one `StatusCode` (N:1). One `StatusCodeRevision` : one `ChangeRequest` (1:1). One `StatusCodeRevision` : many `TurbinePlatform` (M:N via `status_code_revision_platform`). One `StatusCodeRevision` : zero-or-one `ReleaseItem`.
@@ -65,10 +80,10 @@ The versioned, governed record. Full field-by-field detail lives in 06-data-dict
 The eight audience/access fields (§2.8) may each be set by the authoring Engineer as a **proposed** value but are not authoritative until the Administrator's mandatory Review sign-off (§2.12) confirms or overrides them — enforced at the service layer, not merely a UI convention (11-security-architecture.md §3). This replaces the single `access_rights_id` restricted field from the prior revision with eight independently-restricted fields, following the same propose-by-Engineer/confirm-by-Administrator-at-sign-off pattern.
 
 ### 2.10 `PlatformVariantLink`
-Represented as the nullable self-referential `platform_variant_of_status_code_id` on `StatusCode` (not a separate join table, since it is a simple pointer, not M:N): when a code is renamed or functionally regenerated for a different Turbine Platform rather than simply extended to cover it, the new `StatusCode` is created as an **independent record** with its own `StCd` identifier, optionally pointing back to the originating code via this field, purely for navigability — it carries no lifecycle or approval semantics of its own (05-governance-handbook.md §2a).
+Represented as the nullable self-referential `platform_variant_of_status_code_id` on `StatusCode` (not a separate join table, since it is a simple pointer, not M:N): when a code is renamed or functionally regenerated for a different Turbine Platform rather than simply extended to cover it, the new `StatusCode` is created as an **independent record** with its own `StCd` identifier, optionally pointing back to the originating code via this field, purely for navigability — it carries no lifecycle or approval semantics of its own (05-governance-handbook.md §2a). Since v4 the link is created by *Create platform variant* (FR-094): a Draft copy of the latest decided revision for another platform, with the family shown on both detail pages.
 
 ### 2.11 `ChangeRequest`
-Attributes: `id`, `status_code_revision_id` (FK, 1:1), `cr_type` (`NEW` | `REVISION` | `DEPRECATION`), `requested_by`, `justification`, `state` (mirrors the revision's lifecycle for Draft/Review/PendingApproval/Approved), `submitted_at`, `chief_engineer_decided_at`, `chief_engineer_decided_by`. **Cardinality:** 1:1 with `StatusCodeRevision`; 1:N with `ReviewComment`; 1:N with `DomainSignoff`.
+Attributes: `id`, `status_code_revision_id` (FK, 1:1), `cr_type` (`NEW` | `REVISION` | `DEPRECATION`), `requested_by`, `justification`, `state` (mirrors the revision's lifecycle for Draft/Review/PendingApproval/Approved), `submitted_at`, `chief_engineer_decided_at`, `chief_engineer_decided_by`, `assigned_reviewer_id` (nullable), `change_set_id` (nullable, v4), `import_job_id` (nullable). **Cardinality:** 1:1 with `StatusCodeRevision`; 1:N with `ReviewComment`; 1:N with `DomainSignoff`.
 
 ### 2.12 `ReviewComment`
 Attributes: `id`, `change_request_id`, `author_id`, `comment_text`, `decision` (`REVIEWER_APPROVE` | `REVIEWER_REJECT` | `ADMIN_APPROVE` | `ADMIN_REJECT` | `CHIEF_ENGINEER_APPROVE` | `CHIEF_ENGINEER_REJECT` | `NULL` for a plain comment), `created_at`. The `decision` enum's role-tagging is what lets the system verify both required Review sign-offs came from the correct, distinct roles (05-governance-handbook.md §7) rather than the same role acting twice.
@@ -77,7 +92,7 @@ Attributes: `id`, `change_request_id`, `author_id`, `comment_text`, `decision` (
 Attributes: `id`, `change_request_id` (FK), `engineering_domain_id` (FK), `signed_off_by` (FK → User, must hold that domain), `signed_off_at`. A Change Request may only be submitted for Review once every domain tagged as required on its revision (derived from which domain-owned fields are still at their unset/default value — 06-data-dictionary.md §2a) has a corresponding `DomainSignoff` row (05-governance-handbook.md §6a).
 
 ### 2.14 `Release` / `ReleaseItem`
-Unchanged in structure from v1 (07-database-design.md), scoped now by Functional System Group / Subgroup instead of Controller Type in `scope_filter`.
+Scoped by Functional System Group / Subgroup in `scope_filter` (07-database-design.md). Since v4 a `Release` also has zero or more `ReleaseTargetVersion` rows (the controller software versions it is published for; immutable after publish) and its candidate list is limited to revisions whose version range includes a target (BR-021).
 
 ### 2.15 Lookup & Reference Entities
 Corrected 2026-09-17 against real data — replaces the prior revision's `StatusCategory`/`AvailabilityGroup`/`BrakeProgram`/`ResetProgram`/`OperationalState`/`AccessRights`/`AlarmBehaviour` set entirely:
@@ -87,13 +102,13 @@ Corrected 2026-09-17 against real data — replaces the prior revision's `Status
 - The eight program-reference fields (`brake_program`, `yaw_program`, etc.) are **not** lookup-backed at all — they are numeric passthroughs to a controller-firmware-defined table CSCM Tool does not own (06-data-dictionary.md §2c).
 
 ### 2.16 `AuditLogEntry`
-Unchanged shape. Notable addition: a `SANDBOX_DELETE` action captures the full pre-delete `StatusCode`/`StatusCodeRevision` snapshot in `before_value`, since this is the one case where the audited entity itself ceases to exist (12-audit-compliance.md §2).
+Since v4 every row also carries `prev_hash` and `entry_hash`, forming a chain in insertion order (AUD-074, 12-audit-compliance.md §6). Notable addition: a `SANDBOX_DELETE` action captures the full pre-delete `StatusCode`/`StatusCodeRevision` snapshot in `before_value`, since this is the one case where the audited entity itself ceases to exist (12-audit-compliance.md §2).
 
 ### 2.17 `ExportJob`
-Attributes unchanged, plus `export_scope_type` (`CATALOGUE` | `FULL_DATABASE`) — `FULL_DATABASE` exports are restricted to the Administrator role (08-system-architecture.md §6, FR-047). `export_type` now also accepts `XLSX` alongside `CSV`/`JSON`/`PDF`/`SQLITE_BACKUP` (new 2026-09-17).
+Attributes as before, plus (v4) `sha256`, `size_bytes`, `row_count`, `profile_code`, `audience`, `language_code`, `software_version_code` and the JSON `manifest`; `export_scope_type` is `CATALOGUE` | `FULL_DATABASE` | `RELEASE_NOTES` | `OFFLINE_BUNDLE` — `FULL_DATABASE` exports are restricted to the Administrator role (08-system-architecture.md §6, FR-047). `export_type` now also accepts `XLSX` alongside `CSV`/`JSON`/`PDF`/`SQLITE_BACKUP` (new 2026-09-17).
 
 ### 2.18 `ImportJob`
-New entity (2026-09-17). Attributes: `id`, `requested_by`, `source_format` (`CSV`|`XLSX`), `source_file_reference`, `row_count`, `status`, `created_count`, `error_count`, `error_report_reference`, `created_at`, `completed_at`. **Cardinality:** one `ImportJob` produces zero-or-more `ChangeRequest` rows (via `change_request.import_job_id`, tagged `cr_type = IMPORT`), each following the identical Draft-through-Approval path as a manually authored Change Request (05-governance-handbook.md §6b) — import creates work for the normal governance pipeline, it does not create a parallel one.
+New entity (2026-09-17). Attributes: `id`, `requested_by`, `source_format` (`CSV`|`XLSX`), `source_file_reference`, `row_count`, `status`, `created_count`, `error_count`, `error_report_reference`, `error_report_xlsx_reference`, `created_at`, `completed_at`; v4 adds `processed_count`, `warning_count` and `import_mode` (`CREATE` | `UPDATE`) and the status values `PENDING` / `VALIDATING` / `COMPLETE` / `FAILED` for background processing. **Cardinality:** one `ImportJob` produces zero-or-more `ChangeRequest` rows (via `change_request.import_job_id`, tagged `cr_type = IMPORT`), each following the identical Draft-through-Approval path as a manually authored Change Request (05-governance-handbook.md §6b) — import creates work for the normal governance pipeline, it does not create a parallel one.
 
 ## 3. UML-Style Textual Class Diagram
 
@@ -195,6 +210,16 @@ New entity (2026-09-17). Attributes: `id`, `requested_by`, `source_format` (`CSV
 | ChangeRequest → ReviewComment | 1 : N |
 | ChangeRequest → DomainSignoff | 1 : N |
 | Release → ReleaseItem | 1 : N |
+| Release → ControllerSoftwareVersion (targets) | M : N (v4, `release_target_version`) |
+| StatusCodeRevision → ControllerSoftwareVersion (from / to) | N : 0..1 each (v4) |
+| StatusCodeRevision → RevisionTranslation | 1 : N, at most one per language (v4) |
+| ChangeSet → ChangeRequest | 1 : N (v4) |
+| ChangeRequest → CrAttachment / FieldComment / CrChecklistConfirmation | 1 : N each (v4) |
+| User → Delegation (as delegator / as delegate) | 1 : N each (v4) |
+| User → Notification / SavedSearch / ApiToken | 1 : N each (v4) |
+| Webhook → WebhookDelivery | 1 : N (v4) |
+| OccurrenceImport → CodeOccurrence | 1 : N (v4) |
+| StatusCode (Hub) → StatusCode (Main) via HubMcMapping | 1 : 0..1 (v4) |
 
 ## 6. Business Ownership Matrix
 
@@ -208,3 +233,10 @@ New entity (2026-09-17). Attributes: `id`, `requested_by`, `source_format` (`CSV
 | AuditLogEntry | System (immutable, with the sandbox-delete exception noted in §2.16) | Quality/Compliance (consumer) |
 | ExportJob | System | Administrator (full-database), all roles per matrix (catalogue) |
 | ImportJob | Engineering (initiates) | Governance (every resulting Draft still goes through the full review pipeline) |
+| ExportProfile / ControllerSoftwareVersion / Language / ReviewChecklistItem / AppSetting | Governance (Administrator) | Technical Publications (profiles, languages) |
+| RevisionTranslation | Technical Publications / Engineering (translate) | Reviewer or Administrator (approve) |
+| ChangeSet / CrAttachment / FieldComment | Engineering | Governance |
+| Delegation | The delegating decision maker | Administrator (may create or revoke for anyone) |
+| ApiToken / Webhook | Administrator | Integration teams (consumers) |
+| OccurrenceImport / CodeOccurrence | Chief Engineer / Administrator | Operations / SCADA (data source) |
+| HubMcMapping | Engineering | Governance (the resulting MC Draft is an ordinary CR) |

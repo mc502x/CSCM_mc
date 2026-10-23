@@ -3,8 +3,11 @@
 from flask import jsonify, request
 
 from app.api.v1 import api_v1_bp
+from app.api.v1._errors import error_response
+from app.auth import windows
 from app.auth.decorators import current_user, login_required, require_role
-from app.domain.errors import LastAdministratorError, PasswordPolicyError
+from app.auth.roles import USER_LIST_ROLES
+from app.domain.errors import DomainError, LastAdministratorError, PasswordPolicyError
 from app.models.user import User
 from app.services.user_service import UserService
 
@@ -25,7 +28,7 @@ def _user_payload(user: User) -> dict:
 
 
 @api_v1_bp.get("/users")
-@require_role("ADMINISTRATOR")
+@require_role(*USER_LIST_ROLES)
 def list_users():
     users = UserService.list_users()
     return jsonify(
@@ -71,13 +74,13 @@ def create_user():
 
 
 @api_v1_bp.get("/users/<int:user_id>")
-@require_role("ADMINISTRATOR")
+@require_role(*USER_LIST_ROLES)
 def get_user(user_id: int):
     return jsonify(_user_payload(UserService.get_user(user_id))), 200
 
 
 @api_v1_bp.patch("/users/<int:user_id>")
-@require_role("ADMINISTRATOR")
+@require_role(*USER_LIST_ROLES)
 def update_user(user_id: int):
     body = request.get_json(silent=True) or {}
     try:
@@ -87,19 +90,55 @@ def update_user(user_id: int):
             role_code=body.get("role"),
             engineering_domain_codes=body.get("engineering_domains"),
             is_active=body.get("is_active"),
+            email=body.get("email"),
             actor=current_user,
         )
     except LastAdministratorError as exc:
         return jsonify(error="last_administrator", message=str(exc)), 422
+    except DomainError as exc:  # BR-024: an StCd Owner outside the three roles
+        return error_response(exc)
     except ValueError as exc:
         return jsonify(error="validation_error", message=str(exc)), 422
 
     return jsonify(_user_payload(user)), 200
 
 
+@api_v1_bp.get("/users/<int:user_id>/usage")
+@require_role(*USER_LIST_ROLES)
+def user_usage(user_id: int):
+    """What the user has done in the tool and whether the account can be deleted (BR-025)."""
+    try:
+        return jsonify(UserService.usage(user_id)), 200
+    except DomainError as exc:
+        return error_response(exc)
+
+
+@api_v1_bp.post("/users/<int:user_id>/delete")
+@require_role("ADMINISTRATOR")
+def delete_user(user_id: int):
+    """Delete an account that was never used. Needs the Administrator's own password
+    (`current_password`). A user with history gets 409: deactivate instead (`PATCH` with
+    `is_active=false`)."""
+    body = request.get_json(silent=True) or {}
+    try:
+        UserService.delete_user(user_id, current_user, body.get("current_password"))
+    except LastAdministratorError as exc:
+        return jsonify(error="last_administrator", message=str(exc)), 422
+    except DomainError as exc:
+        return error_response(exc)
+    return "", 204
+
+
 @api_v1_bp.post("/users/me/change-password")
 @login_required
 def change_own_password():
+    if not windows.password_login_allowed():
+        return (
+            jsonify(
+                error="password_login_disabled", message="Your password is managed in Windows."
+            ),
+            403,
+        )
     body = request.get_json(silent=True) or {}
     current_password = body.get("current_password")
     new_password = body.get("new_password")

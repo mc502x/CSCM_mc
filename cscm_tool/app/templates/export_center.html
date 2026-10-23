@@ -1,22 +1,39 @@
 {% extends "base.html" %}
-{% block title %}Export Center — CSCM Tool{% endblock %}
+{% import "_macros.html" as macros %}
+{% block title %}{{ _('Export Center') }} — CSCM Tool{% endblock %}
 {% block content %}
-<div class="page-header"><h1>Export Center</h1></div>
+<div class="page-header"><h1>{{ _('Export Center') }}</h1></div>
 
 <div class="card">
-  <h2>All Released Status Codes</h2>
-  <p class="muted">The current set of every Released status code, independent of any single Release.</p>
+  <h2>{{ _('All Released Status Codes') }}</h2>
+  <p class="muted">{{ _('The current set of every Released status code, independent of any single Release.') }}</p>
   <div class="btn-row">
     {% for fmt in ('csv', 'json', 'xlsx', 'pdf') %}
     <a class="btn" href="{{ url_for('api_v1.export_released', format=fmt) }}">{{ fmt|upper }}</a>
     {% endfor %}
   </div>
+  <form method="get" action="{{ url_for('api_v1.export_released') }}" class="form-row" style="margin-top:12px">
+    <div class="field">
+      <label for="r_profile">{{ _('Profile') }}</label>
+      <select id="r_profile" name="profile"><option value="">({{ _('all columns') }})</option>{% for p in profiles %}<option value="{{ p.code }}">{{ p.name }}</option>{% endfor %}</select>
+    </div>
+    <div class="field">
+      <label for="r_audience">{{ _('Audience') }}</label>
+      <select id="r_audience" name="audience"><option value="">({{ _('everyone') }})</option>{% for code, (_attr, label) in audiences.items() %}<option value="{{ code }}">{{ label }}</option>{% endfor %}</select>
+    </div>
+    <div class="field">
+      <label for="r_format">{{ _('Format') }}</label>
+      <select id="r_format" name="format"><option value="csv">CSV</option><option value="xlsx">XLSX</option><option value="pdf">PDF</option><option value="json">JSON</option></select>
+    </div>
+    <div class="field checkbox-list" style="align-self:end"><label><input type="checkbox" name="bundle" value="true"> {{ _('ZIP with manifest') }}</label></div>
+    <div class="field" style="align-self:end"><button class="btn btn--primary" type="submit">{{ _('Export') }}</button></div>
+  </form>
 </div>
 
 {% if current_user.role_code != 'VIEWER' %}
 <div class="card">
-  <h2>Working-Set Export <span class="badge badge--DRAFT">Not for distribution</span></h2>
-  <p class="muted">Every current status code in any lifecycle state, including unapproved Drafts. Every row and the file name carry a "Not for distribution — unapproved data" notice.</p>
+  <h2>{{ _('Working-Set Export') }} <span class="badge badge--DRAFT">{{ _('Not for distribution') }}</span></h2>
+  <p class="muted">{{ _('Every current status code in any lifecycle state, including unapproved Drafts. Every row and the file name carry a "Not for distribution — unapproved data" notice.') }}</p>
   <div class="btn-row">
     {% for fmt in ('csv', 'json', 'xlsx', 'pdf') %}
     <a class="btn" href="{{ url_for('api_v1.export_working_set', format=fmt) }}">{{ fmt|upper }}</a>
@@ -26,15 +43,16 @@
 {% endif %}
 
 <div class="card">
-  <h2>Release Export</h2>
-  <p class="muted">Published Releases only. Pick a Release to export its Released contents.</p>
+  <h2>{{ _('Release Export') }}</h2>
+  <p class="muted">{{ _('Published Releases only. Pick a Release to export its Released contents; the Release page offers profiles, audiences, languages, release notes and the offline lookup page.') }}</p>
   {% if releases %}
   <table>
-    <thead><tr><th>Release</th><th>Version</th><th></th></tr></thead>
+    <caption class="visually-hidden">{{ _('Published releases') }}</caption>
+    <thead><tr><th scope="col">{{ _('Release') }}</th><th scope="col">{{ _('Version') }}</th><th scope="col"></th></tr></thead>
     <tbody>
       {% for r in releases %}
       <tr>
-        <td>{{ r.name }}</td>
+        <td><a href="{{ url_for('ui.release_detail', release_id=r.id) }}">{{ r.name }}</a></td>
         <td>{{ r.version_label }}</td>
         <td class="btn-row">
           <a class="btn" href="{{ url_for('api_v1.export_release', release_id=r.id, format='csv') }}">CSV</a>
@@ -47,15 +65,30 @@
     </tbody>
   </table>
   {% else %}
-  <div class="table-empty">No published Releases yet.</div>
+  <div class="table-empty">{{ _('No published Releases yet.') }}</div>
   {% endif %}
+</div>
+
+<div class="card">
+  <h2>{{ _('Verify a file') }}</h2>
+  <p class="muted">{{ _('Check that a file you received is exactly what this system produced (and, with its MANIFEST.json, that nothing was changed).') }}</p>
+  <form method="post" action="{{ url_for('ui.export_verify') }}" enctype="multipart/form-data" class="form-row">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    <div class="field"><label for="v_file">{{ _('Exported file') }}</label><input type="file" id="v_file" name="file" required></div>
+    <div class="field"><label for="v_manifest">{{ _('MANIFEST.json (optional)') }}</label><input type="file" id="v_manifest" name="manifest" accept=".json"></div>
+    <div class="field" style="align-self:end"><button class="btn" type="submit">{{ _('Verify') }}</button></div>
+  </form>
 </div>
 
 {% if current_user.role_code == 'ADMINISTRATOR' %}
 <div class="card">
-  <h2>Full-Database Export</h2>
-  <p class="muted">Raw SQLite backup of the complete governed dataset. Handle per data-at-rest access-control requirements — this file carries the same sensitivity as the live database.</p>
-  <a class="btn btn--danger" href="{{ url_for('api_v1.export_full_database') }}">Download Full Database Backup</a>
+  <h2>{{ _('Full-Database Export') }}</h2>
+  <p class="muted">{{ _('Raw SQLite backup of the complete governed dataset. Handle per data-at-rest access-control requirements — this file carries the same sensitivity as the live database.') }}</p>
+  <form method="post" action="{{ url_for('ui.export_full_database') }}">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    {{ macros.password_field('fulldb_pw') }}
+    <button class="btn btn--danger" type="submit">{{ _('Download Full Database Backup') }}</button>
+  </form>
 </div>
 {% endif %}
 {% endblock %}

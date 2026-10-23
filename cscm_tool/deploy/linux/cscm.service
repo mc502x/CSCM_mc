@@ -1,0 +1,26 @@
+[Unit]
+Description=CSCM Tool (Controller Status Code Management)
+After=network.target
+Documentation=file:///opt/cscm/app/README.md
+
+[Service]
+Type=simple
+User=cscm
+Group=cscm
+WorkingDirectory=/opt/cscm/app
+EnvironmentFile=/etc/cscm/cscm.env
+ExecStart=/opt/cscm/venv/bin/python scripts/serve.py
+Restart=on-failure
+RestartSec=5
+# Hardening: the service needs its own data, backup and log directories and nothing else.
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/lib/cscm /var/backups/cscm /var/log/cscm
+CapabilityBoundingSet=
+RestrictAddressFamilies=AF_INET AF_INET6 AF_UNIX
+SystemCallFilter=@system-service
+
+[Install]
+WantedBy=multi-user.target

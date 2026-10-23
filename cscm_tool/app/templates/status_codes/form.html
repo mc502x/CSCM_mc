@@ -1,29 +1,75 @@
 {% extends "base.html" %}
 {% import "_macros.html" as macros %}
-{% block title %}{{ 'Edit Draft' if editing else ('New Sandbox Status Code' if is_sandbox else 'New Status Code') }} — CSCM Tool{% endblock %}
+{% set page_title = _('Edit Draft') if editing else (_('New Sandbox Status Code') if is_sandbox else _('New Status Code')) %}
+{% block title %}{{ page_title }} — CSCM Tool{% endblock %}
+{% macro notes(name) %}
+{% if field_comments and field_comments.get(name) %}
+<div class="field-note" role="note">
+  {% for c in field_comments[name] %}
+  <div><strong>{{ _('Reviewer comment') }}:</strong> {{ c.comment_text }} <span class="muted">— {{ user_label(c.author_id) }}</span>
+    <form method="post" action="{{ url_for('ui.field_comment_resolve', comment_id=c.id) }}" class="inline-form">
+      <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+      <button class="btn btn--outline" type="submit">{{ _('Mark resolved') }}</button>
+    </form>
+  </div>
+  {% endfor %}
+</div>
+{% endif %}
+{% endmacro %}
 {% block content %}
 <div class="page-header">
-  <h1>{{ 'Edit Draft' if editing else ('New Sandbox Status Code' if is_sandbox else 'New Status Code') }}</h1>
+  <h1>{{ page_title }}</h1>
 </div>
 
 {% if is_sandbox %}
-<div class="banner banner--sandbox">Sandbox status code — never numbered from a real range, never released, deletable.</div>
+<div class="banner banner--sandbox">{{ _('Sandbox status code — never numbered from a real range, never released, deletable.') }}</div>
+{% endif %}
+
+{% if conflict %}
+<div class="flash flash--error" role="alert" id="conflict-banner">
+  <strong>{{ conflict.message }}</strong>
+  {% if conflict.differences %}
+  <table class="diff-table">
+    <caption class="visually-hidden">{{ _('Your entries compared with the stored values') }}</caption>
+    <thead><tr><th scope="col">{{ _('Field') }}</th><th scope="col">{{ _('Your entry') }}</th><th scope="col">{{ _('Stored now') }}</th></tr></thead>
+    <tbody>
+      {% for d in conflict.differences %}
+      <tr><td>{{ d.field }}</td><td class="diff-new">{{ d.mine if d.mine is not none else '—' }}</td><td class="diff-old">{{ d.current if d.current is not none else '—' }}</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% endif %}
+  <div>{{ _('Saving again keeps your entries and replaces the stored values.') }}</div>
+</div>
+{% endif %}
+
+{% if editing and field_comments %}
+<div class="card">
+  <h2>{{ _('Open review comments') }}</h2>
+  <ul class="plain-list">
+    {% for field, comments in field_comments.items() %}{% for c in comments %}
+    <li><strong>{{ field }}</strong>: {{ c.comment_text }} <span class="muted">— {{ user_label(c.author_id) }}</span></li>
+    {% endfor %}{% endfor %}
+  </ul>
+</div>
 {% endif %}
 
 <div class="card">
-  <span class="muted">Status Code Identifier:</span> <strong>{{ 'StCd-T#####' if is_sandbox else 'Not yet assigned — fixed on Submit for Review' }}</strong>
+  <span class="muted">{{ _('Status Code Identifier') }}:</span> <strong>{{ 'StCd-T#####' if is_sandbox else _('Not yet assigned — fixed on Submit for Review') }}</strong>
+  <div id="capacity-hint" class="hint" aria-live="polite"></div>
 </div>
 
 <form method="post" data-subgroup-dependency="functional_system_group,functional_subgroup">
   <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+  {% if editing %}<input type="hidden" name="row_version" value="{{ row_version }}">{% endif %}
 
   <fieldset>
-    <legend>Classification</legend>
+    <legend>{{ _('Classification') }}</legend>
     <div class="form-row">
       <div class="field">
-        <label for="functional_system_group">Functional System Group</label>
+        <label for="functional_system_group">{{ _('Functional System Group') }}</label>
         <select id="functional_system_group" name="functional_system_group" required data-help="help_functional_system_group" {{ 'disabled' if editing }}>
-          <option value="">(select)</option>
+          <option value="">({{ _('select') }})</option>
           {% for g in choices.functional_system_group %}
           <option value="{{ g.id }}" data-description="{{ g.description or g.label }}" {{ 'selected' if values.get('functional_system_group')|string == g.id|string }}>{{ g.code }} — {{ g.label }} ({{ g.range_start }}-{{ g.range_end }})</option>
           {% endfor %}
@@ -31,114 +77,177 @@
         <div class="field-help" id="help_functional_system_group" aria-live="polite"></div>
         {% if editing %}
         <input type="hidden" name="functional_system_group" value="{{ values.get('functional_system_group') }}">
-        <div class="hint">Immutable once allocated (BR-001).</div>
+        <div class="hint">{{ _('Immutable once allocated (BR-001).') }}</div>
         {% endif %}
         {% if is_sandbox %}
-        <div class="hint">Classification only — a Sandbox code's identifier is still drawn from the isolated StCd-T##### band, never from this group's numeric range.</div>
+        <div class="hint">{{ _("Classification only — a Sandbox code's identifier is still drawn from the isolated StCd-T##### band, never from this group's numeric range.") }}</div>
         {% endif %}
       </div>
       <div class="field">
-        <label for="functional_subgroup">Functional Subgroup</label>
-        <select id="functional_subgroup" name="functional_subgroup" required data-selected="{{ values.get('functional_subgroup') or '' }}" data-help="help_functional_subgroup" {{ 'disabled' if editing }}>
-          <option value="">Select a Functional System Group first</option>
+        <label for="functional_subgroup">{{ _('Functional Subgroup') }}</label>
+        <select id="functional_subgroup" name="functional_subgroup" required data-selected="{{ values.get('functional_subgroup') or '' }}" data-help="help_functional_subgroup" {% if not editing %}data-capacity-hint="capacity-hint"{% endif %} {{ 'disabled' if editing }}>
+          <option value="">{{ _('Select a Functional System Group first') }}</option>
         </select>
         <div class="field-help" id="help_functional_subgroup" aria-live="polite"></div>
         {% if editing %}<input type="hidden" name="functional_subgroup" value="{{ values.get('functional_subgroup') or '' }}">{% endif %}
       </div>
     </div>
     <div class="field">
-      <label>Turbine Platform (at least one required before Submit for Review)</label>
-      <div class="checkbox-list">
+      <label id="platform-label">{{ _('Turbine Platform (at least one required before Submit for Review)') }}</label>
+      <div class="checkbox-list" role="group" aria-labelledby="platform-label">
         {% for p in choices.turbine_platform %}
         <label><input type="checkbox" name="turbine_platforms" value="{{ p.code }}" {{ 'checked' if p.code in (values.get('turbine_platforms') or []) }}> {{ p.code }}</label>
         {% endfor %}
       </div>
+      {{ notes('turbine_platforms') }}
     </div>
     <div class="field">
-      <label for="legacy_reference_number">Legacy Reference Number (optional)</label>
+      <label for="legacy_reference_number">{{ _('Legacy Reference Number (optional)') }}</label>
       <input type="text" id="legacy_reference_number" name="legacy_reference_number" value="{{ values.get('legacy_reference_number') or '' }}">
-      <div class="hint">The pre-migration status code number, if any — for traceability only, never the governed StCd identifier.</div>
+      <div class="hint">{{ _('The pre-migration status code number, if any — for traceability only, never the governed StCd identifier.') }}</div>
+      {{ notes('legacy_reference_number') }}
     </div>
   </fieldset>
 
   <fieldset>
-    <legend>Description</legend>
+    <legend>{{ _('Description') }}</legend>
     <div class="field">
-      <label for="title">Title</label>
-      <input type="text" id="title" name="title" required maxlength="120" value="{{ values.get('title') or '' }}">
+      <label for="title">{{ _('Title') }}</label>
+      <input type="text" id="title" name="title" required maxlength="120" value="{{ values.get('title') or '' }}" {% if not editing %}data-similar-hint="similar-hint"{% endif %}>
+      <div id="similar-hint" class="hint" aria-live="polite"></div>
+      {{ notes('title') }}
     </div>
     <div class="field">
-      <label for="description">Description</label>
+      <label for="description">{{ _('Description') }}</label>
       <textarea id="description" name="description" required minlength="10" maxlength="4000">{{ values.get('description') or '' }}</textarea>
+      {{ notes('description') }}
     </div>
   </fieldset>
 
   <fieldset>
-    <legend>Status &amp; Timing</legend>
+    <legend>{{ _('Troubleshooting') }}</legend>
+    <div class="field">
+      <label for="remedy_text">{{ _('Remedy / recommended action (optional)') }}</label>
+      <textarea id="remedy_text" name="remedy_text" maxlength="4000">{{ values.get('remedy_text') or '' }}</textarea>
+      <div class="hint">{{ _('What service staff should do. Feeds the service manual.') }}</div>
+      {{ notes('remedy_text') }}
+    </div>
     <div class="form-row">
       <div class="field">
-        <label for="status_category">Status Category</label>
+        <label for="affected_component">{{ _('Affected component (optional)') }}</label>
+        <input type="text" id="affected_component" name="affected_component" maxlength="200" value="{{ values.get('affected_component') or '' }}">
+        {{ notes('affected_component') }}
+      </div>
+      <div class="field">
+        <label for="related_status_codes">{{ _('Related codes (optional)') }}</label>
+        <input type="text" id="related_status_codes" name="related_status_codes" maxlength="500" placeholder="StCd-01234, StCd-01250" value="{{ values.get('related_status_codes') or '' }}">
+        {{ notes('related_status_codes') }}
+      </div>
+    </div>
+    <div class="field">
+      <label for="standard_references">{{ _('Standard references (optional)') }}</label>
+      <input type="text" id="standard_references" name="standard_references" maxlength="1000" value="{{ values.get('standard_references') or '' }}">
+      {{ notes('standard_references') }}
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <legend>{{ _('Status & Timing') }}</legend>
+    <div class="form-row">
+      <div class="field">
+        <label for="status_category">{{ _('Status Category') }}</label>
         <select id="status_category" name="status_category" required>
           {% for v in ['ERROR', 'WARNING', 'INFO'] %}
           <option value="{{ v }}" {{ 'selected' if values.get('status_category') == v }}>{{ v.title() }}</option>
           {% endfor %}
         </select>
+        {{ notes('status_category') }}
       </div>
       <div class="field">
-        <label for="available_group">Available Group</label>
+        <label for="available_group">{{ _('Available Group') }}</label>
         <select id="available_group" name="available_group" required data-help="help_available_group">
-          <option value="">(select)</option>
+          <option value="">({{ _('select') }})</option>
           {% for v in choices.available_group %}
           <option value="{{ v.code }}" data-description="{{ v.description or '' }}" {{ 'selected' if values.get('available_group')|string == v.code|string }}>{{ v.code }}{% if v.label %} — {{ v.label }}{% endif %}</option>
           {% endfor %}
         </select>
         <div class="field-help" id="help_available_group" aria-live="polite"></div>
+        {{ notes('available_group') }}
       </div>
       <div class="field">
-        <label for="software_version">Software Version (optional)</label>
+        <label for="software_version">{{ _('Software Version (optional)') }}</label>
         <input type="text" id="software_version" name="software_version" placeholder="1.1.1.4.2MW" value="{{ values.get('software_version') or '' }}">
+        {{ notes('software_version') }}
       </div>
     </div>
     <div class="form-row">
       <div class="field">
-        <label for="set_delay">Set Delay</label>
-        <input type="text" id="set_delay" name="set_delay" required placeholder="10ms" value="{{ values.get('set_delay') or '' }}">
-        <div class="hint">A number with a unit: ms, s, min, h, or d (e.g. "10ms", "2min").</div>
+        <label for="applies_from_version">{{ _('Applies from software version (optional)') }}</label>
+        <select id="applies_from_version" name="applies_from_version">
+          <option value="">({{ _('first') }})</option>
+          {% for v in choices.software_versions %}<option value="{{ v.id }}" {{ 'selected' if values.get('applies_from_version')|string == v.id|string }}>{{ v.code }}</option>{% endfor %}
+        </select>
+        {{ notes('applies_from_version') }}
       </div>
       <div class="field">
-        <label for="reset_delay">Reset Delay</label>
+        <label for="applies_to_version">{{ _('Applies up to software version (optional)') }}</label>
+        <select id="applies_to_version" name="applies_to_version">
+          <option value="">({{ _('latest') }})</option>
+          {% for v in choices.software_versions %}<option value="{{ v.id }}" {{ 'selected' if values.get('applies_to_version')|string == v.id|string }}>{{ v.code }}</option>{% endfor %}
+        </select>
+        {{ notes('applies_to_version') }}
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="field">
+        <label for="set_delay">{{ _('Set Delay') }}</label>
+        <input type="text" id="set_delay" name="set_delay" required placeholder="10ms" value="{{ values.get('set_delay') or '' }}">
+        <div class="hint">{{ _('A number with a unit: ms, s, min, h, or d (e.g. "10ms", "2min").') }}</div>
+        {{ notes('set_delay') }}
+      </div>
+      <div class="field">
+        <label for="reset_delay">{{ _('Reset Delay') }}</label>
         <input type="text" id="reset_delay" name="reset_delay" required placeholder="2min" value="{{ values.get('reset_delay') or '' }}">
+        {{ notes('reset_delay') }}
       </div>
     </div>
     <div class="field checkbox-list">
-      <label><input type="checkbox" name="alarm_flag" {{ 'checked' if values.get('alarm_flag') }}> Alarm</label>
-      <label><input type="checkbox" name="up_down_counter" {{ 'checked' if values.get('up_down_counter') }}> Up/Down Counter</label>
-      <label><input type="checkbox" name="trigger_snapshot" {{ 'checked' if values.get('trigger_snapshot') }}> Trigger Snapshot</label>
-      <label><input type="checkbox" name="loadless_spinning_permitted" {{ 'checked' if values.get('loadless_spinning_permitted') }}> Loadless Spinning Permitted</label>
+      <label><input type="checkbox" name="alarm_flag" {{ 'checked' if values.get('alarm_flag') }}> {{ _('Alarm') }}</label>
+      <label><input type="checkbox" name="up_down_counter" {{ 'checked' if values.get('up_down_counter') }}> {{ _('Up/Down Counter') }}</label>
+      <label><input type="checkbox" name="trigger_snapshot" {{ 'checked' if values.get('trigger_snapshot') }}> {{ _('Trigger Snapshot') }}</label>
+      <label><input type="checkbox" name="loadless_spinning_permitted" {{ 'checked' if values.get('loadless_spinning_permitted') }}> {{ _('Loadless Spinning Permitted') }}</label>
+      {{ notes('alarm_flag') }}
+    </div>
+    <div class="form-row">
+      <div class="field"><label for="planned_effective_date">{{ _('Planned effective date (optional)') }}</label><input type="text" id="planned_effective_date" name="planned_effective_date" placeholder="2027-03-31" value="{{ values.get('planned_effective_date') or '' }}">{{ notes('planned_effective_date') }}</div>
+      <div class="field"><label for="planned_deprecation_date">{{ _('Planned deprecation date (optional)') }}</label><input type="text" id="planned_deprecation_date" name="planned_deprecation_date" placeholder="2028-01-31" value="{{ values.get('planned_deprecation_date') or '' }}">{{ notes('planned_deprecation_date') }}</div>
     </div>
   </fieldset>
 
   <details class="fieldset-collapsible">
-    <summary>Repeated-Error Escalation (optional)</summary>
+    <summary>{{ _('Repeated-Error Escalation (optional)') }}</summary>
     <div class="form-row">
       <div class="field">
-        <label for="number_of_times_repeated">Number of Times Repeated</label>
+        <label for="number_of_times_repeated">{{ _('Number of Times Repeated') }}</label>
         <input type="number" id="number_of_times_repeated" name="number_of_times_repeated" min="1" value="{{ values.get('number_of_times_repeated') or '' }}">
+        {{ notes('number_of_times_repeated') }}
       </div>
       <div class="field">
-        <label for="repeated_over_the_course">Repeated Over the Course</label>
+        <label for="repeated_over_the_course">{{ _('Repeated Over the Course') }}</label>
         <input type="text" id="repeated_over_the_course" name="repeated_over_the_course" placeholder="1d" value="{{ values.get('repeated_over_the_course') or '' }}">
+        {{ notes('repeated_over_the_course') }}
       </div>
       <div class="field">
-        <label for="status_code_for_repeated_error">Status Code for Repeated Error</label>
+        <label for="status_code_for_repeated_error">{{ _('Status Code for Repeated Error') }}</label>
         <input type="number" id="status_code_for_repeated_error" name="status_code_for_repeated_error" value="{{ values.get('status_code_for_repeated_error') if values.get('status_code_for_repeated_error') is not none else '' }}">
-        <div class="hint">Reference number in the separate escalation code pool — not a CSCM Tool status code.</div>
+        <div class="hint">{{ _('Reference number in the separate escalation code pool — not a CSCM Tool status code.') }}</div>
+        {{ notes('status_code_for_repeated_error') }}
       </div>
     </div>
   </details>
 
   <details class="fieldset-collapsible">
-    <summary>Program References — Advanced, controller firmware programs</summary>
+    <summary>{{ _('Program References — Advanced, controller firmware programs') }}</summary>
     <div class="form-row">
       {% for field, label in [
         ('yaw_program', 'Yaw Program'), ('manual_reset_program', 'Manual Reset Program'),
@@ -149,13 +258,14 @@
       <div class="field">
         <label for="{{ field }}">{{ label }}</label>
         <input type="number" id="{{ field }}" name="{{ field }}" value="{{ values.get(field, 0) }}">
+        {{ notes(field) }}
       </div>
       {% endfor %}
     </div>
   </details>
 
   <fieldset>
-    <legend>Audience Access <span class="proposed-badge">Proposed — confirmed by Administrator at review</span></legend>
+    <legend>{{ _('Audience Access') }} <span class="proposed-badge">{{ _('Proposed — confirmed by Administrator at review') }}</span></legend>
     <div class="form-row">
       {% for field, label in [
         ('development_access', 'Development'), ('sales_access', 'Sales'), ('tcc_access', 'TCC'),
@@ -166,20 +276,21 @@
       <div class="field">
         <label for="{{ field }}">{{ label }}</label>
         <select id="{{ field }}" name="{{ field }}" data-help="help_{{ field }}">
-          <option value="">(none)</option>
+          <option value="">({{ _('none') }})</option>
           {% for v in choices[field] %}
           <option value="{{ v.id }}" data-description="{{ v.description or '' }}" {{ 'selected' if values.get(field)|string == v.id|string }}>{{ v.label }}</option>
           {% endfor %}
         </select>
         <div class="field-help" id="help_{{ field }}" aria-live="polite"></div>
+        {{ notes(field) }}
       </div>
       {% endfor %}
     </div>
   </fieldset>
 
   <div class="form-actions">
-    <a class="btn" href="#" data-history-back>Cancel</a>
-    <button class="btn btn--primary" type="submit">{{ 'Save Draft' if editing else ('Create Sandbox Code' if is_sandbox else 'Save as Draft') }}</button>
+    <a class="btn" href="#" data-history-back>{{ _('Cancel') }}</a>
+    <button class="btn btn--primary" type="submit">{{ _('Save Draft') if editing else (_('Create Sandbox Code') if is_sandbox else _('Save as Draft')) }}</button>
   </div>
 </form>
 

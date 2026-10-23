@@ -29,9 +29,9 @@
   <table>
     <thead>
       <tr>
-        <th>Code</th><th>Label</th>
-        {% if vocabulary in ('functional-system-groups', 'functional-subgroups') %}<th>Range</th>{% endif %}
-        <th>Active</th><th></th>
+        <th scope="col">Code</th><th scope="col">Label</th>
+        {% if vocabulary in ('functional-system-groups', 'functional-subgroups') %}<th scope="col">Range</th>{% endif %}
+        <th scope="col">Active</th><th scope="col"></th>
       </tr>
     </thead>
     <tbody>
@@ -48,8 +48,8 @@
             <summary class="btn" style="display:inline-block">Edit</summary>
             <form method="post" action="{{ url_for('ui.lookup_value_update', vocabulary=vocabulary, value_id=v.id) }}" style="margin-top:8px">
               <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
-              <div class="field"><label>Label</label><input type="text" name="label" value="{{ v.label }}"></div>
-              <div class="field"><label>Description (shown as inline help)</label><textarea name="description" maxlength="1000">{{ v.description or '' }}</textarea></div>
+              <div class="field"><label>Label</label><input type="text" name="label" value="{{ v.label }}" aria-label="Label of {{ v.code }}"></div>
+              <div class="field"><label>Description (shown as inline help)</label><textarea name="description" maxlength="1000" aria-label="Description of {{ v.code }}">{{ v.description or '' }}</textarea></div>
               <div class="field"><label><input type="checkbox" name="is_active" {{ 'checked' if v.is_active }}> Active</label></div>
               <button class="btn btn--primary" type="submit">Save</button>
             </form>

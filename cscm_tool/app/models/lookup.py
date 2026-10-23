@@ -40,6 +40,7 @@ class LookupFunctionalSystemGroup(Base):
     description = db.Column(db.Text)  # NFR-007b inline help; NULL until supplied
     is_active = db.Column(db.Integer, nullable=False, default=1)
     sort_order = db.Column(db.Integer, nullable=False, default=0)
+    controller_type = db.Column(db.Text, nullable=False, default="MAIN")  # I-36: MAIN | HUB
 
     subgroups: list["LookupFunctionalSubgroup"] = cast(
         "list[LookupFunctionalSubgroup]",
@@ -118,35 +119,56 @@ class _CodedLookup:
     sort_order = db.Column(db.Integer, nullable=False, default=0)
 
 
-class LookupDevelopmentAccess(_CodedLookup, Base):
+class _AudienceLookup(_CodedLookup):
+    """The eight audience-access vocabularies add one data flag (I-03, decision D-02):
+    does this value let the audience *see* the code? 'Covert' seeds to 0."""
+
+    audience_visible = db.Column(db.Integer, nullable=False, default=1)
+
+
+class LookupControllerSoftwareVersion(_CodedLookup, Base):
+    """I-07: ordered by sort_order; a revision applies from/to a version (inclusive)."""
+
+    __tablename__ = "lookup_controller_software_version"
+
+
+class LookupLanguage(_CodedLookup, Base):
+    """I-15: content languages; the source language is the one stored on the revision."""
+
+    __tablename__ = "lookup_language"
+
+    is_source = db.Column(db.Integer, nullable=False, default=0)
+
+
+class LookupDevelopmentAccess(_AudienceLookup, Base):
     __tablename__ = "lookup_development_access"
 
 
-class LookupSalesAccess(_CodedLookup, Base):
+class LookupSalesAccess(_AudienceLookup, Base):
     __tablename__ = "lookup_sales_access"
 
 
-class LookupTccAccess(_CodedLookup, Base):
+class LookupTccAccess(_AudienceLookup, Base):
     __tablename__ = "lookup_tcc_access"
 
 
-class LookupServiceAccess(_CodedLookup, Base):
+class LookupServiceAccess(_AudienceLookup, Base):
     __tablename__ = "lookup_service_access"
 
 
-class LookupTopAccess(_CodedLookup, Base):
+class LookupTopAccess(_AudienceLookup, Base):
     """Turbine Operator Package access (docs/06-data-dictionary.md §9d.5)."""
 
     __tablename__ = "lookup_top_access"
 
 
-class LookupGridOperatorAccess(_CodedLookup, Base):
+class LookupGridOperatorAccess(_AudienceLookup, Base):
     __tablename__ = "lookup_grid_operator_access"
 
 
-class LookupServicePartnerAccess(_CodedLookup, Base):
+class LookupServicePartnerAccess(_AudienceLookup, Base):
     __tablename__ = "lookup_service_partner_access"
 
 
-class LookupCustomerAccess(_CodedLookup, Base):
+class LookupCustomerAccess(_AudienceLookup, Base):
     __tablename__ = "lookup_customer_access"

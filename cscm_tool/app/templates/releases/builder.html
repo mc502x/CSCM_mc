@@ -1,43 +1,68 @@
 {% extends "base.html" %}
-{% block title %}Release Builder — {{ release.name }} — CSCM Tool{% endblock %}
+{% import "_macros.html" as macros %}
+{% block title %}{{ _('Release Builder') }} — {{ release.name }} — CSCM Tool{% endblock %}
 {% block content %}
 <div class="page-header">
-  <h1>Release Builder &middot; {{ release.name }} ({{ release.version_label }})</h1>
-  <a class="btn" href="{{ url_for('ui.release_detail', release_id=release.id) }}">View Release</a>
+  <h1>{{ _('Release Builder') }} &middot; {{ release.name }} ({{ release.version_label }})</h1>
+  <a class="btn" href="{{ url_for('ui.release_detail', release_id=release.id) }}">{{ _('View Release') }}</a>
 </div>
 
+{% if future_dated %}
+<div class="flash flash--info" role="status">
+  <strong>{{ _('Planned in the future:') }}</strong>
+  {% for rid, w in future_dated.items() %}{{ w.status_code_identifier }} ({{ w.planned_effective_date }}){% if not loop.last %}, {% endif %}{% endfor %}.
+  {{ _('You can still publish; this is a warning only.') }}
+</div>
+{% endif %}
+
+{% if versions %}
 <div class="card">
-  <p class="muted">Select the Approved, non-sandbox revisions to include, then Save. Publishing is immutable — a correction requires a new Release.</p>
+  <h2>{{ _('Target software versions') }}</h2>
+  <form method="post" action="{{ url_for('ui.release_target_versions', release_id=release.id) }}">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    <div class="checkbox-list">
+      {% for v in versions %}<label><input type="checkbox" name="software_versions" value="{{ v.code }}" {{ 'checked' if v.code in release.target_software_versions }}> {{ v.code }}</label>{% endfor %}
+    </div>
+    <button class="btn" type="submit">{{ _('Save targets') }}</button>
+  </form>
+</div>
+{% endif %}
+
+<div class="card">
+  <p class="muted">{{ _('Select the Approved, non-sandbox revisions to include, then Save. Publishing is immutable — a correction requires a new Release.') }}</p>
   <form method="post">
     <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
     <table>
-      <thead><tr><th></th><th>Identifier</th><th>Title</th><th>Functional Group / Subgroup</th></tr></thead>
+      <caption class="visually-hidden">{{ _('Candidate revisions') }}</caption>
+      <thead><tr><th><span class="visually-hidden">{{ _('Include') }}</span></th><th scope="col">{{ _('Identifier') }}</th><th scope="col">{{ _('Title') }}</th><th scope="col">{{ _('Functional Group / Subgroup') }}</th><th scope="col">{{ _('Planned effective') }}</th></tr></thead>
       <tbody>
         {% for c in candidates %}
         <tr>
-          <td><input type="checkbox" name="revision_ids" value="{{ c.id }}" {{ 'checked' if c.id in included_ids }}></td>
+          <td><input type="checkbox" name="revision_ids" value="{{ c.id }}" {{ 'checked' if c.id in included_ids }} aria-label="{{ c.status_code_identifier }}"></td>
           <td>{{ c.status_code_identifier }}</td>
           <td>{{ c.title }}</td>
           <td>{{ c.functional_system_group }} / {{ c.functional_subgroup }}</td>
+          <td>{{ c.planned_effective_date or '—' }}</td>
         </tr>
         {% endfor %}
         {% if not candidates %}
-        <tr><td colspan="4" class="table-empty">No Approved candidates match this Release's scope.</td></tr>
+        <tr><td colspan="5" class="table-empty">{{ _("No Approved candidates match this Release's scope.") }}</td></tr>
         {% endif %}
       </tbody>
     </table>
     <div class="form-actions">
-      <button class="btn btn--primary" type="submit">Save Candidate Set</button>
+      <button class="btn btn--primary" type="submit">{{ _('Save Candidate Set') }}</button>
     </div>
   </form>
 </div>
 
 <div class="card">
-  <h2>Publish</h2>
-  <p class="muted">Publishing transitions every included revision from Approved to Released and locks this Release permanently.</p>
-  <form method="post" action="{{ url_for('ui.release_publish', release_id=release.id) }}" data-confirm="Publish this Release? This cannot be undone.">
+  <h2>{{ _('Publish') }}</h2>
+  <p class="muted">{{ _('Publishing transitions every included revision from Approved to Released and locks this Release permanently.') }}</p>
+  <form method="post" action="{{ url_for('ui.release_publish', release_id=release.id) }}" data-confirm="{{ _('Publish this Release? This cannot be undone.') }}">
     <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
-    <button class="btn btn--danger" type="submit" {{ 'disabled' if not included_ids }}>Publish Release</button>
+    {{ macros.password_field('publish_pw') }}
+    <button class="btn btn--danger" type="submit" {{ 'disabled' if not included_ids }}>{{ _('Publish Release') }}</button>
   </form>
 </div>
 {% endblock %}

@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block title %}{{ _('Help') }} — CSCM Tool{% endblock %}
+{% block content %}
+<div class="page-header"><h1>{{ _('Help') }}</h1></div>
+
+<div class="card">
+  <h2>{{ _('Quick start for your role') }}: {{ current_user.role_code.replace('_', ' ')|title }}</h2>
+  <ol>
+    {% for title, text in quick_start.get(current_user.role_code, []) %}<li><strong>{{ title }}.</strong> {{ text }}</li>{% endfor %}
+  </ol>
+  <p class="muted">{{ _('The full manual is docs/23-user-manual.md in the project folder; the glossary below is the same one the tooltips use.') }}</p>
+</div>
+
+<div class="card">
+  <h2>{{ _('Quick start for the other roles') }}</h2>
+  {% for role, steps in quick_start.items() if role != current_user.role_code %}
+  <h3>{{ role.replace('_', ' ')|title }}</h3>
+  <ol>{% for title, text in steps %}<li><strong>{{ title }}.</strong> {{ text }}</li>{% endfor %}</ol>
+  {% endfor %}
+</div>
+
+<div class="card">
+  <h2>{{ _('Lifecycle states') }}</h2>
+  <dl class="kv">{% for state, text in state_glossary.items() %}<dt>{{ state.replace('_', ' ')|title }}</dt><dd>{{ text }}</dd>{% endfor %}</dl>
+</div>
+
+<div class="card">
+  <h2>{{ _('What happens next on a change request') }}</h2>
+  <dl class="kv">{% for state, text in next_steps.items() %}<dt>{{ state.replace('_', ' ')|title }}</dt><dd>{{ text }}</dd>{% endfor %}</dl>
+</div>
+
+<div class="card">
+  <h2>{{ _('Roles') }}</h2>
+  <dl class="kv">{% for role, text in role_glossary.items() %}<dt>{{ role.replace('_', ' ')|title }}</dt><dd>{{ text }}</dd>{% endfor %}</dl>
+</div>
+
+<div class="card">
+  <h2>{{ _('Terms') }}</h2>
+  <dl class="kv">{% for term, text in terms.items() %}<dt>{{ term.replace('-', ' ')|title }}</dt><dd>{{ text }}</dd>{% endfor %}</dl>
+</div>
+{% endblock %}

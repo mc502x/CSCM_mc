@@ -1,13 +1,14 @@
 {% extends "base.html" %}
 {% import "_macros.html" as macros %}
-{% block title %}{{ revision.status_code_identifier or 'Draft' }} — CSCM Tool{% endblock %}
+{% block title %}{{ revision.status_code_identifier or _('Draft') }} — CSCM Tool{% endblock %}
 {% block content %}
 <div class="page-header">
   <div>
     <h1>
-      {{ revision.status_code_identifier or 'Not yet assigned' }}
+      {{ revision.status_code_identifier or _('Not yet assigned') }}
       {% if revision.is_sandbox %} {{ macros.sandbox_badge() }}{% endif %}
       {{ macros.lifecycle_badge(revision.lifecycle_status) }}
+      {% if is_hub %}<span class="chip" title="{{ _('Hub Controller group') }}">HC</span>{% endif %}
     </h1>
     <div class="muted">{{ revision.title }} &middot; {{ revision.functional_system_group }}
       {% if revision.functional_subgroup %} / {{ revision.functional_subgroup }}{% endif %}
@@ -16,58 +17,73 @@
   </div>
   <div class="btn-row">
     {% if open_cr %}
-      <a class="btn btn--primary" href="{{ url_for('ui.change_request_detail', cr_id=open_cr.id) }}">View Change Request</a>
+      <a class="btn btn--primary" href="{{ url_for('ui.change_request_detail', cr_id=open_cr.id) }}">{{ _('View Change Request') }}</a>
     {% elif revision.lifecycle_status == 'RELEASED' and current_user.role_code in ('ENGINEER', 'ADMINISTRATOR') %}
-      <form method="post" action="{{ url_for('ui.status_code_new_revision', status_code_id=revision.status_code_id) }}" style="display:inline">
+      <form method="post" action="{{ url_for('ui.status_code_new_revision', status_code_id=revision.status_code_id) }}" class="inline-form">
         <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
-        <button class="btn" type="submit">Open New Revision</button>
+        <button class="btn" type="submit">{{ _('Open New Revision') }}</button>
       </form>
     {% endif %}
     {% if revision.lifecycle_status == 'DRAFT' and not revision.is_sandbox and current_user.role_code in ('ENGINEER', 'ADMINISTRATOR') %}
-      <a class="btn" href="{{ url_for('ui.status_code_edit', status_code_id=revision.status_code_id) }}">Edit Draft</a>
+      <a class="btn" href="{{ url_for('ui.status_code_edit', status_code_id=revision.status_code_id) }}">{{ _('Edit Draft') }}</a>
     {% endif %}
   </div>
 </div>
 
-<div class="tabs">
-  <a href="?tab=current" class="{{ 'is-active' if tab == 'current' }}">Current</a>
-  <a href="?tab=history" class="{{ 'is-active' if tab == 'history' }}">History ({{ history|length }})</a>
-  {% if current_user.role_code != 'VIEWER' %}<a href="?tab=decisions" class="{{ 'is-active' if tab == 'decisions' }}">Decisions &amp; Comments ({{ decisions|length }})</a>{% endif %}
-  <a href="?tab=actions" class="{{ 'is-active' if tab == 'actions' }}">Actions</a>
+<div class="tabs" role="tablist">
+  <a href="?tab=current" class="{{ 'is-active' if tab == 'current' }}">{{ _('Current') }}</a>
+  <a href="?tab=history" class="{{ 'is-active' if tab == 'history' }}">{{ _('History') }} ({{ history|length }})</a>
+  {% if current_user.role_code != 'VIEWER' %}<a href="?tab=decisions" class="{{ 'is-active' if tab == 'decisions' }}">{{ _('Decisions & Comments') }} ({{ decisions|length }})</a>{% endif %}
+  <a href="?tab=actions" class="{{ 'is-active' if tab == 'actions' }}">{{ _('Actions') }}</a>
 </div>
 
 {% if tab == 'current' %}
+{{ macros.warning_list(reference_warnings) }}
 <div class="card">
   <dl class="kv">
-    <dt>Logical Node</dt><dd>{{ revision.logical_node }} <span class="muted">(node value {{ revision.node_value }})</span></dd>
-    <dt>Legacy Reference Number</dt><dd>{{ revision.legacy_reference_number or '—' }}</dd>
-    <dt>Status Category</dt><dd>{{ revision.status_category }}</dd>
-    <dt>Available Group</dt><dd>{{ revision.available_group }}</dd>
-    <dt>Software Version</dt><dd>{{ revision.software_version or '—' }}</dd>
-    <dt>Alarm</dt><dd>{{ 'Yes' if revision.alarm_flag else 'No' }}</dd>
-    <dt>Set Delay</dt><dd>{{ revision.set_delay }}</dd>
-    <dt>Reset Delay</dt><dd>{{ revision.reset_delay }}</dd>
-    <dt>Up/Down Counter</dt><dd>{{ 'Yes' if revision.up_down_counter else 'No' }}</dd>
-    <dt>Trigger Snapshot</dt><dd>{{ 'Yes' if revision.trigger_snapshot else 'No' }}</dd>
-    <dt>Loadless Spinning Permitted</dt><dd>{{ 'Yes' if revision.loadless_spinning_permitted else 'No' }}</dd>
-    <dt>Description</dt><dd>{{ revision.description }}</dd>
-    <dt>Owner</dt><dd>{{ user_label(revision.owner_id) }}</dd>
-    <dt>Effective Date</dt><dd>{{ revision.effective_date or '—' }}</dd>
+    <dt>{{ _('Logical Node') }}</dt><dd>{{ revision.logical_node }} <span class="muted">({{ _('node value') }} {{ revision.node_value }})</span></dd>
+    <dt>{{ _('Legacy Reference Number') }}</dt><dd>{{ revision.legacy_reference_number or '—' }}</dd>
+    <dt>{{ _('Status Category') }}</dt><dd>{{ revision.status_category }}</dd>
+    <dt>{{ _('Available Group') }}</dt><dd>{{ revision.available_group }}</dd>
+    <dt>{{ _('Software Version') }}</dt><dd>{{ revision.software_version or '—' }}</dd>
+    <dt>{{ _('Applies to software versions') }}</dt><dd>{{ revision.applies_from_version or _('first') }} &ndash; {{ revision.applies_to_version or _('latest') }}</dd>
+    <dt>{{ _('Alarm') }}</dt><dd>{{ _('Yes') if revision.alarm_flag else _('No') }}</dd>
+    <dt>{{ _('Set Delay') }}</dt><dd>{{ revision.set_delay }}</dd>
+    <dt>{{ _('Reset Delay') }}</dt><dd>{{ revision.reset_delay }}</dd>
+    <dt>{{ _('Up/Down Counter') }}</dt><dd>{{ _('Yes') if revision.up_down_counter else _('No') }}</dd>
+    <dt>{{ _('Trigger Snapshot') }}</dt><dd>{{ _('Yes') if revision.trigger_snapshot else _('No') }}</dd>
+    <dt>{{ _('Loadless Spinning Permitted') }}</dt><dd>{{ _('Yes') if revision.loadless_spinning_permitted else _('No') }}</dd>
+    <dt>{{ _('Description') }}</dt><dd>{{ revision.description }}</dd>
+    <dt>{{ _('Owner') }}</dt><dd>{{ user_label(revision.owner_id) }}</dd>
+    <dt>{{ _('Effective Date') }}</dt><dd>{{ revision.effective_date or '—' }}</dd>
+    {% if revision.planned_effective_date or revision.planned_deprecation_date %}
+    <dt>{{ _('Planned dates') }}</dt><dd>{{ _('effective') }} {{ revision.planned_effective_date or '—' }}; {{ _('deprecation') }} {{ revision.planned_deprecation_date or '—' }}</dd>
+    {% endif %}
     {% if revision.deprecated_reason %}
-    <dt>Deprecation Reason</dt><dd>{{ revision.deprecated_reason }}</dd>
+    <dt>{{ _('Deprecation Reason') }}</dt><dd>{{ revision.deprecated_reason }}</dd>
     {% endif %}
   </dl>
 
-  {% if revision.number_of_times_repeated or revision.repeated_over_the_course or revision.status_code_for_repeated_error %}
-  <h2>Repeated-Error Escalation</h2>
+  {% if revision.remedy_text or revision.affected_component or revision.related_status_codes or revision.standard_references %}
+  <h2>{{ _('Troubleshooting') }}</h2>
   <dl class="kv">
-    <dt>Number of Times Repeated</dt><dd>{{ revision.number_of_times_repeated or '—' }}</dd>
-    <dt>Repeated Over the Course</dt><dd>{{ revision.repeated_over_the_course or '—' }}</dd>
-    <dt>Status Code for Repeated Error</dt><dd>{{ revision.status_code_for_repeated_error if revision.status_code_for_repeated_error is not none else '—' }}</dd>
+    <dt>{{ _('Remedy') }}</dt><dd class="pre-wrap">{{ revision.remedy_text or '—' }}</dd>
+    <dt>{{ _('Affected component') }}</dt><dd>{{ revision.affected_component or '—' }}</dd>
+    <dt>{{ _('Related codes') }}</dt><dd>{{ revision.related_status_codes or '—' }}</dd>
+    <dt>{{ _('Standards') }}</dt><dd>{{ revision.standard_references or '—' }}</dd>
   </dl>
   {% endif %}
 
-  <h2>Program References <span class="muted">(advanced, controller firmware programs)</span></h2>
+  {% if revision.number_of_times_repeated or revision.repeated_over_the_course or revision.status_code_for_repeated_error %}
+  <h2>{{ _('Repeated-Error Escalation') }}</h2>
+  <dl class="kv">
+    <dt>{{ _('Number of Times Repeated') }}</dt><dd>{{ revision.number_of_times_repeated or '—' }}</dd>
+    <dt>{{ _('Repeated Over the Course') }}</dt><dd>{{ revision.repeated_over_the_course or '—' }}</dd>
+    <dt>{{ _('Status Code for Repeated Error') }}</dt><dd>{{ revision.status_code_for_repeated_error if revision.status_code_for_repeated_error is not none else '—' }}</dd>
+  </dl>
+  {% endif %}
+
+  <h2>{{ _('Program References') }} <span class="muted">({{ _('advanced, controller firmware programs') }})</span></h2>
   <dl class="kv">
     <dt>Yaw Program</dt><dd>{{ revision.yaw_program }}</dd>
     <dt>Manual Reset Program</dt><dd>{{ revision.manual_reset_program }}</dd>
@@ -79,7 +95,7 @@
     <dt>Yaw Bearing Lubrication Program</dt><dd>{{ revision.yaw_bearing_lubrication_program }}</dd>
   </dl>
 
-  <h2>Audience Access {% if not revision.admin_signoff_at %}<span class="proposed-badge">Proposed</span>{% endif %}</h2>
+  <h2>{{ macros.term('audience-access', _('Audience Access')) }} {% if not revision.admin_signoff_at %}<span class="proposed-badge">{{ _('Proposed') }}</span>{% endif %}</h2>
   <dl class="kv">
     <dt>Development</dt><dd>{{ revision.development_access or '—' }}</dd>
     <dt>Sales</dt><dd>{{ revision.sales_access or '—' }}</dd>
@@ -91,13 +107,56 @@
     <dt>Customer</dt><dd>{{ revision.customer_access or '—' }}</dd>
   </dl>
 </div>
+
+{% if where_used %}
+<div class="card">
+  <h2>{{ _('Where used') }}</h2>
+  <p class="muted">{{ _('Other codes that refer to this one. Review them before deprecating it.') }}</p>
+  <table>
+    <thead><tr><th scope="col">{{ _('Code') }}</th><th scope="col">{{ _('Title') }}</th><th scope="col">{{ _('Relation') }}</th><th scope="col">{{ _('State') }}</th></tr></thead>
+    <tbody>
+      {% for u in where_used %}
+      <tr>
+        <td><a href="{{ url_for('ui.status_code_detail', status_code_id=u.status_code_id) }}">{{ u.status_code_identifier or _('Not yet assigned') }}</a></td>
+        <td>{{ u.title }}</td>
+        <td>{{ u.relation.replace('_', ' ')|lower }}</td>
+        <td>{{ macros.lifecycle_badge(u.lifecycle_status) }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endif %}
+
+{% if family %}
+<div class="card">
+  <h2>{{ _('Platform variants') }}</h2>
+  <ul class="plain-list">
+    {% for m in family %}
+    <li><a href="{{ url_for('ui.status_code_detail', status_code_id=m.status_code_id) }}">{{ m.status_code_identifier or _('Not yet assigned') }}</a> — {{ m.title }}
+      {% for p in m.turbine_platforms %}<span class="chip">{{ p }}</span>{% endfor %} {{ macros.lifecycle_badge(m.lifecycle_status) }}</li>
+    {% endfor %}
+  </ul>
+</div>
+{% endif %}
+
+{% if translations and not revision.is_sandbox %}
+<div class="card">
+  <h2>{{ _('Translations') }}</h2>
+  <ul class="plain-list">
+    {% for t in translations %}<li>{{ t.label }}: <strong>{{ t.status|lower }}</strong></li>{% endfor %}
+  </ul>
+  <a class="btn" href="{{ url_for('ui.status_code_translations', status_code_id=revision.status_code_id) }}">{{ _('Manage translations') }}</a>
+</div>
+{% endif %}
+
 {% elif tab == 'decisions' and current_user.role_code != 'VIEWER' %}
 <div class="card">
-  <h2>Decisions &amp; Comments</h2>
-  <p class="muted">Every comment and decision on every change request of this status code, oldest first. Comments of withdrawn requests are kept in the Audit Log (action WITHDRAW).</p>
+  <h2>{{ _('Decisions & Comments') }}</h2>
+  <p class="muted">{{ _('Every comment and decision on every change request of this status code, oldest first. Comments of withdrawn requests are kept in the Audit Log (action WITHDRAW).') }}</p>
   {% if decisions %}
   <table>
-    <thead><tr><th>When</th><th>Change request</th><th>Revision</th><th>Who</th><th>Decision</th><th>Comment</th></tr></thead>
+    <thead><tr><th scope="col">{{ _('When') }}</th><th scope="col">{{ _('Change request') }}</th><th scope="col">{{ _('Revision') }}</th><th scope="col">{{ _('Who') }}</th><th scope="col">{{ _('Decision') }}</th><th scope="col">{{ _('Comment') }}</th></tr></thead>
     <tbody>
       {% for d in decisions %}
       <tr>
@@ -112,30 +171,30 @@
     </tbody>
   </table>
   {% else %}
-  <div class="table-empty">No comments or decisions yet.</div>
+  <div class="table-empty">{{ _('No comments or decisions yet.') }}</div>
   {% endif %}
 </div>
 {% elif tab == 'history' %}
 <div class="card">
   <table>
-    <thead><tr><th>Rev #</th><th>State</th><th>Title</th><th>Created</th></tr></thead>
+    <thead><tr><th scope="col">{{ _('Rev #') }}</th><th scope="col">{{ _('State') }}</th><th scope="col">{{ _('Title') }}</th><th scope="col">{{ _('Created') }}</th></tr></thead>
     <tbody>
       {% for r in history %}
-      <tr><td>{{ r.revision_number }}{% if r.is_current %} (current){% endif %}</td><td>{{ macros.lifecycle_badge(r.lifecycle_status) }}</td><td>{{ r.title }}</td><td>{{ r.created_at }}</td></tr>
+      <tr><td>{{ r.revision_number }}{% if r.is_current %} ({{ _('current') }}){% endif %}</td><td>{{ macros.lifecycle_badge(r.lifecycle_status) }}</td><td>{{ r.title }}</td><td>{{ r.created_at }}</td></tr>
       {% endfor %}
     </tbody>
   </table>
 </div>
 {% if history|length > 1 %}
 <div class="card">
-  <h2>Compare Revisions</h2>
+  <h2>{{ _('Compare Revisions') }}</h2>
   <form method="get" class="form-row" style="align-items:end">
     <input type="hidden" name="tab" value="history">
-    <div class="field" style="margin-bottom:0"><label for="a">From revision</label>
+    <div class="field" style="margin-bottom:0"><label for="a">{{ _('From revision') }}</label>
       <select id="a" name="a">{% for r in history %}<option value="{{ r.revision_number }}" {{ 'selected' if rev_a == r.revision_number }}>#{{ r.revision_number }}</option>{% endfor %}</select></div>
-    <div class="field" style="margin-bottom:0"><label for="b">To revision</label>
+    <div class="field" style="margin-bottom:0"><label for="b">{{ _('To revision') }}</label>
       <select id="b" name="b">{% for r in history %}<option value="{{ r.revision_number }}" {{ 'selected' if rev_b == r.revision_number }}>#{{ r.revision_number }}</option>{% endfor %}</select></div>
-    <div class="field" style="margin-bottom:0"><button class="btn" type="submit">Compare</button></div>
+    <div class="field" style="margin-bottom:0"><button class="btn" type="submit">{{ _('Compare') }}</button></div>
   </form>
   {% if diff %}
   {{ macros.field_diff(diff.field_changes) }}
@@ -144,53 +203,112 @@
 {% endif %}
 {% else %}
 <div class="card">
-  <h2>Deprecation / Archival</h2>
+  <h2>{{ _('Deprecation / Archival') }}</h2>
   {% if revision.lifecycle_status == 'RELEASED' and current_user.role_code in ('ADMINISTRATOR', 'ENGINEER') and not open_cr %}
   <form method="post" action="{{ url_for('ui.status_code_deprecate', status_code_id=revision.status_code_id) }}">
     <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    {% if dependants %}
+    <div class="flash flash--info" role="status">
+      <strong>{{ dependants|length }} {{ _('other code(s) still refer to this one:') }}</strong>
+      <ul class="plain-list">{% for d in dependants %}<li>{{ d.status_code_identifier or _('Not yet assigned') }} — {{ d.title }} ({{ d.relation.replace('_', ' ')|lower }})</li>{% endfor %}</ul>
+      <label class="inline-check"><input type="checkbox" name="acknowledge_dependants" required> {{ _('I have reviewed these dependants') }}</label>
+    </div>
+    {% endif %}
     <div class="field">
-      <label for="reason">Deprecation reason</label>
+      <label for="reason">{{ _('Deprecation reason') }}</label>
       <textarea id="reason" name="reason" required minlength="10" maxlength="2000"></textarea>
     </div>
     <div class="field">
-      <label for="superseded_by_status_code_id">Superseded by Status Code id (optional)</label>
+      <label for="superseded_by_status_code_id">{{ _('Superseded by Status Code id (optional)') }}</label>
       <input type="number" id="superseded_by_status_code_id" name="superseded_by_status_code_id">
     </div>
-    <div class="hint" style="margin-bottom:10px">Opens a Draft that must go through the full dual-review and Chief Engineer approval cycle before it takes effect.</div>
-    <button class="btn btn--danger" type="submit">Initiate Deprecation</button>
+    <div class="hint" style="margin-bottom:10px">{{ _('Opens a Draft that must go through the full dual-review and Chief Engineer approval cycle before it takes effect.') }}</div>
+    <button class="btn btn--danger" type="submit">{{ _('Initiate Deprecation') }}</button>
   </form>
   {% endif %}
 
   {% if revision.lifecycle_status == 'DEPRECATED' and current_user.role_code == 'ADMINISTRATOR' %}
   <form method="post" action="{{ url_for('ui.status_code_archive', status_code_id=revision.status_code_id) }}" style="margin-bottom:16px">
     <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
-    <button class="btn" type="submit">Archive (requires 180-day retention elapsed)</button>
+    <button class="btn" type="submit">{{ _('Archive (requires 180-day retention elapsed)') }}</button>
   </form>
   <form method="post" action="{{ url_for('ui.status_code_reinstate', status_code_id=revision.status_code_id) }}">
     <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
     <div class="field">
-      <label for="reinstate_reason">Reinstatement reason</label>
+      <label for="reinstate_reason">{{ _('Reinstatement reason') }}</label>
       <textarea id="reinstate_reason" name="reason" required minlength="10" maxlength="2000"></textarea>
     </div>
-    <button class="btn" type="submit">Reinstate to Released</button>
+    <button class="btn" type="submit">{{ _('Reinstate to Released') }}</button>
   </form>
   {% endif %}
 
   {% if revision.is_sandbox and current_user.role_code == 'ADMINISTRATOR' %}
-  <h2 style="margin-top:24px">Delete Permanently</h2>
-  <p class="muted">This is the one truly irreversible action in the system. Type the identifier to confirm.</p>
+  <h2 style="margin-top:24px">{{ _('Delete Permanently') }}</h2>
+  <p class="muted">{{ _('This is the one truly irreversible action in the system. Type the identifier to confirm.') }}</p>
   <form method="post" action="{{ url_for('ui.status_code_delete', status_code_id=revision.status_code_id) }}">
     <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
     <div class="field">
-      <input type="text" id="confirm_identifier" data-typed-confirm="confirm_delete_btn" data-expected="{{ revision.status_code_identifier }}" placeholder="Type {{ revision.status_code_identifier }} to confirm">
+      <input type="text" id="confirm_identifier" data-typed-confirm="confirm_delete_btn" data-expected="{{ revision.status_code_identifier }}" placeholder="Type {{ revision.status_code_identifier }} to confirm" aria-label="{{ _('Type the identifier to confirm') }}">
     </div>
-    <button class="btn btn--danger" type="submit" id="confirm_delete_btn">Delete Permanently</button>
+    <button class="btn btn--danger" type="submit" id="confirm_delete_btn">{{ _('Delete Permanently') }}</button>
   </form>
   {% endif %}
 
   {% if not (revision.lifecycle_status in ('RELEASED', 'DEPRECATED') or revision.is_sandbox) %}
-  <p class="muted">No deprecation/archival/deletion actions are available for this record's current state.</p>
+  <p class="muted">{{ _("No deprecation/archival/deletion actions are available for this record's current state.") }}</p>
   {% endif %}
 </div>
+
+{% if not revision.is_sandbox and current_user.role_code in ('ENGINEER', 'ADMINISTRATOR') and revision.lifecycle_status in ('RELEASED', 'APPROVED', 'DEPRECATED') %}
+<div class="card">
+  <h2>{{ _('Platform variant') }}</h2>
+  <p class="muted">{{ _('Copy this code for another turbine platform. The copy is a new Draft that links back here and goes through the normal review.') }}</p>
+  <form method="post" action="{{ url_for('ui.status_code_platform_variant', status_code_id=revision.status_code_id) }}" class="form-row">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    <div class="field">
+      <label for="variant_platform">{{ _('Create variant for') }}</label>
+      <select id="variant_platform" name="turbine_platform">
+        {% for p in platforms if p.code not in revision.turbine_platforms %}<option value="{{ p.code }}">{{ p.code }}</option>{% endfor %}
+      </select>
+    </div>
+    <div class="field" style="align-self:end"><button class="btn" type="submit">{{ _('Create variant') }}</button></div>
+  </form>
+</div>
+{% endif %}
+
+{% if is_hub and current_user.role_code in ('ENGINEER', 'ADMINISTRATOR') and revision.lifecycle_status in ('RELEASED', 'APPROVED') %}
+<div class="card">
+  <h2>{{ _('Create Main Controller draft from this Hub code') }}</h2>
+  <p class="muted">{{ _('Copies the descriptive fields into a new Draft in a Main Controller group (a new number is allocated at submit; this code\'s identifier is kept as the legacy reference).') }}</p>
+  <form method="post" action="{{ url_for('ui.hub_create_mc_draft', hub_status_code_id=revision.status_code_id) }}" class="form-row" data-subgroup-dependency="mc_group,mc_subgroup">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    <div class="field">
+      <label for="mc_group">{{ _('Main Controller group') }}</label>
+      <select id="mc_group" name="functional_system_group" required>
+        <option value="">({{ _('select') }})</option>
+        {% for g in main_groups if g.controller_type == 'MAIN' %}<option value="{{ g.id }}">{{ g.code }} — {{ g.label }}</option>{% endfor %}
+      </select>
+    </div>
+    <div class="field">
+      <label for="mc_subgroup">{{ _('Functional Subgroup') }}</label>
+      <select id="mc_subgroup" name="functional_subgroup" required><option value="">{{ _('Select a Functional System Group first') }}</option></select>
+    </div>
+    <div class="field" style="align-self:end"><button class="btn" type="submit">{{ _('Create MC draft') }}</button></div>
+  </form>
+</div>
+{% endif %}
+
+{% if current_user.role_code == 'ADMINISTRATOR' and not revision.is_sandbox and revision.lifecycle_status != 'ARCHIVED' %}
+<div class="card">
+  <h2>{{ _('Planned dates') }}</h2>
+  <p class="muted">{{ _('Informative only: a future effective date makes the release builder warn; nothing changes state on its own.') }}</p>
+  <form method="post" action="{{ url_for('ui.status_code_planned_dates', status_code_id=revision.status_code_id) }}" class="form-row">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    <div class="field"><label for="planned_effective_date">{{ _('Planned effective date') }}</label><input type="text" id="planned_effective_date" name="planned_effective_date" placeholder="2027-03-31" value="{{ revision.planned_effective_date or '' }}"></div>
+    <div class="field"><label for="planned_deprecation_date">{{ _('Planned deprecation date') }}</label><input type="text" id="planned_deprecation_date" name="planned_deprecation_date" placeholder="2028-01-31" value="{{ revision.planned_deprecation_date or '' }}"></div>
+    <div class="field" style="align-self:end"><button class="btn" type="submit">{{ _('Save planned dates') }}</button></div>
+  </form>
+</div>
+{% endif %}
 {% endif %}
 {% endblock %}

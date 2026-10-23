@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}{{ _('Migration progress') }} — CSCM Tool{% endblock %}
+{% block content %}
+<div class="page-header"><h1>{{ _('Legacy library migration progress') }}</h1></div>
+<div class="card">
+  <dl class="kv">
+    <dt>{{ _('Imported (legacy numbers on file)') }}</dt><dd><strong>{{ report.imported_total }}</strong></dd>
+    {% for state, n in report.by_state.items() %}<dt>{{ state.replace('_', ' ')|title }}</dt><dd>{{ n }}</dd>{% endfor %}
+    {% if report.expected_total is defined %}
+    <dt>{{ _('Expected') }}</dt><dd>{{ report.expected_total }}</dd>
+    <dt>{{ _('Still missing') }}</dt><dd><strong>{{ report.missing_count }}</strong>{% if report.percent_imported is not none %} ({{ report.percent_imported }} % {{ _('imported') }}){% endif %}</dd>
+    {% endif %}
+  </dl>
+  {% if report.missing %}
+  <h2>{{ _('Missing legacy numbers') }}</h2>
+  <p class="pre-wrap">{{ report.missing[:200]|join(', ') }}{% if report.missing|length > 200 %} … ({{ report.missing|length }}){% endif %}</p>
+  {% endif %}
+</div>
+<div class="card" style="max-width:640px">
+  <h2>{{ _('Compare with the legacy master list') }}</h2>
+  <form method="post" enctype="multipart/form-data">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    <div class="field"><label for="file">{{ _('Master list (.csv/.xlsx with a legacy_reference_number column)') }}</label><input type="file" id="file" name="file" accept=".csv,.xlsx"></div>
+    <div class="field"><label for="expected_total">{{ _('...or just the expected number of rows') }}</label><input type="number" id="expected_total" name="expected_total" min="1" placeholder="1161"></div>
+    <button class="btn btn--primary" type="submit">{{ _('Compare') }}</button>
+  </form>
+</div>
+<div class="card">
+  <h2>{{ _('Recent import jobs') }}</h2>
+  <table>
+    <thead><tr><th scope="col">#</th><th scope="col">{{ _('Mode') }}</th><th scope="col">{{ _('Status') }}</th><th scope="col">{{ _('Rows') }}</th><th scope="col">{{ _('Imported') }}</th><th scope="col">{{ _('Errors') }}</th><th scope="col">{{ _('Started') }}</th></tr></thead>
+    <tbody>{% for j in report.jobs %}<tr><td><a href="{{ url_for('ui.import_detail', import_job_id=j.id) }}">{{ j.id }}</a></td><td>{{ j.mode }}</td><td>{{ j.status }}</td><td>{{ j.rows }}</td><td>{{ j.imported }}</td><td>{{ j.errors }}</td><td>{{ j.created_at }}</td></tr>{% endfor %}</tbody>
+  </table>
+</div>
+{% endblock %}

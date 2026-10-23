@@ -7,22 +7,40 @@ Save/Submit never re-renders a blank form — `_form_to_data()`'s output is
 already shaped exactly like the template's prefill dict (see
 `_revision_to_form_values` for the read path producing the same shape), so
 every view passes the just-submitted `data` back to the template as
-`values` on failure instead of falling back to an empty form."""
+`values` on failure instead of falling back to an empty form.
+
+v4 (docs/21-improvement-ideas.md): the edit form carries the Draft's `row_version` so a
+stale save is refused with the user's entries intact (I-01); saves report soft warnings
+(I-04, I-12); the list takes more filters, a column chooser and saved searches (I-26); the
+detail page shows where-used (I-04), the platform family (I-25), planned dates (I-27) and
+the translation status (I-15)."""
 
 from flask import flash, redirect, render_template, request, url_for
 
 from app.api.v1.serializers import revision_payload
 from app.auth.decorators import current_user, login_required_web, require_role_web
 from app.domain.errors import (
+    ConcurrentModificationError,
     DomainError,
     InvalidTransitionError,
     NotFoundError,
     SegregationOfDutiesViolation,
 )
 from app.services.change_request_service import ChangeRequestService
+from app.services.field_review_service import FieldReviewService
 from app.services.lookup_service import LookupService
+from app.services.reference_service import ReferenceService
 from app.services.revision_diff_service import RevisionDiffService
+from app.services.saved_search_service import (
+    COLUMNS,
+    DEFAULT_COLUMNS,
+    SORTABLE,
+    SavedSearchService,
+    clean_definition,
+    query_string,
+)
 from app.services.status_code_service import StatusCodeService, ValidationFailed
+from app.services.translation_service import TranslationService
 from app.ui import ui_bp
 
 _ACCESS_VOCAB_FIELDS = {
@@ -47,6 +65,15 @@ _PROGRAM_FIELDS = (
     "yaw_bearing_lubrication_program",
 )
 
+_TEXT_FIELDS_V4 = (
+    "remedy_text",
+    "affected_component",
+    "related_status_codes",
+    "standard_references",
+    "planned_effective_date",
+    "planned_deprecation_date",
+)
+
 
 def _lookup_choices():
     choices = {}
@@ -55,6 +82,7 @@ def _lookup_choices():
     choices["functional_system_group"] = LookupService.list_vocabulary("functional-system-groups")
     choices["turbine_platform"] = LookupService.list_vocabulary("turbine-platforms")
     choices["available_group"] = LookupService.list_vocabulary("available-groups")
+    choices["software_versions"] = LookupService.list_vocabulary("controller-software-versions")
     return choices
 
 
@@ -88,11 +116,17 @@ def _form_to_data(form) -> dict:
         "status_code_for_repeated_error": _int_or_none(form.get("status_code_for_repeated_error")),
         "legacy_reference_number": form.get("legacy_reference_number") or None,
         "justification": form.get("justification") or None,
+        "applies_from_version": _int_or_none(form.get("applies_from_version")),
+        "applies_to_version": _int_or_none(form.get("applies_to_version")),
     }
+    for field in _TEXT_FIELDS_V4:
+        data[field] = (form.get(field) or "").strip() or None
     for field in _PROGRAM_FIELDS:
         data[field] = _int_or_none(form.get(field)) or 0
     for field in _ACCESS_VOCAB_FIELDS:
         data[field] = _int_or_none(form.get(field))
+    if form.get("row_version"):
+        data["expected_row_version"] = form.get("row_version")
     return data
 
 
@@ -104,34 +138,110 @@ def _revision_to_form_values(payload: dict) -> dict:
     values = dict(payload)
     values["functional_system_group"] = payload["functional_system_group_id"]
     values["functional_subgroup"] = payload["functional_subgroup_id"]
+    values["applies_from_version"] = payload["applies_from_version_id"]
+    values["applies_to_version"] = payload["applies_to_version_id"]
     for field in _ACCESS_VOCAB_FIELDS:
         values[field] = payload[f"{field}_id"]
     return values
 
 
+def _flash_warnings(revision) -> None:
+    for warning in StatusCodeService.warnings_for(revision):
+        flash(warning["message"], "info")
+
+
+def _flash_validation(exc: ValidationFailed) -> None:
+    for err in exc.field_errors:
+        flash(f"{err['field']}: {err['message']}", "error")
+
+
+# ---------------------------------------------------------------- list (S3, I-26)
 @ui_bp.route("/status-codes")
 @login_required_web
 def status_code_list():
     page = request.args.get("page", 1, type=int)
+    sort = request.args.get("sort") or None
+    if sort and sort.lstrip("-") not in SORTABLE:
+        sort = None
     items, total = StatusCodeService.search(
         current_user,
         q=request.args.get("q") or None,
         functional_system_group_id=request.args.get("functional_system_group", type=int),
+        functional_subgroup_id=request.args.get("functional_subgroup", type=int),
+        turbine_platform_code=request.args.get("turbine_platform") or None,
         lifecycle_status=request.args.get("lifecycle_status") or None,
+        status_category=request.args.get("status_category") or None,
         is_sandbox=request.args.get("is_sandbox") == "true",
         page=page,
         page_size=50,
+        sort=sort,
     )
-    groups = LookupService.list_vocabulary("functional-system-groups")
+    columns = clean_definition({"columns": request.args.get("cols")})["columns"]
+    filters = {
+        k: v
+        for k, v in request.args.items()
+        if k
+        in (
+            "q",
+            "functional_system_group",
+            "functional_subgroup",
+            "turbine_platform",
+            "lifecycle_status",
+            "status_category",
+            "sort",
+            "is_sandbox",
+        )
+        and v
+    }
     return render_template(
         "status_codes/list.html",
         items=[revision_payload(r) for r in items],
         total=total,
         page=page,
-        groups=groups,
+        groups=LookupService.list_vocabulary("functional-system-groups"),
+        platforms=LookupService.list_vocabulary("turbine-platforms"),
+        columns=columns,
+        all_columns=COLUMNS,
+        default_columns=DEFAULT_COLUMNS,
+        saved=SavedSearchService.list_for(current_user),
+        share_query=query_string({"filters": filters, "columns": columns}),
+        saved_definition=SavedSearchService.definition_of,
+        saved_query=lambda row: query_string(SavedSearchService.definition_of(row)),
     )
 
 
+@ui_bp.route("/saved-searches", methods=["POST"])
+@login_required_web
+def saved_search_create():
+    definition = {
+        "filters": {
+            k: v for k, v in request.form.items() if k not in ("csrf_token", "name", "cols") and v
+        },
+        "columns": request.form.get("cols"),
+    }
+    try:
+        SavedSearchService.save(current_user, request.form.get("name", ""), definition)
+    except (DomainError, ValueError) as exc:
+        flash(str(exc), "error")
+    else:
+        flash("Search saved.", "success")
+    filters: dict[str, str] = dict(definition["filters"])  # type: ignore[arg-type]
+    return redirect(url_for("ui.status_code_list", **filters))  # type: ignore[arg-type]
+
+
+@ui_bp.route("/saved-searches/<int:search_id>/delete", methods=["POST"])
+@login_required_web
+def saved_search_delete(search_id):
+    try:
+        SavedSearchService.delete(current_user, search_id)
+    except (DomainError, ValueError) as exc:
+        flash(str(exc), "error")
+    else:
+        flash("Saved search removed.", "success")
+    return redirect(url_for("ui.status_code_list"))
+
+
+# ---------------------------------------------------------------- create (S5, S5a)
 @ui_bp.route("/status-codes/new", methods=["GET", "POST"])
 @require_role_web("ADMINISTRATOR", "ENGINEER")
 def status_code_new():
@@ -142,12 +252,12 @@ def status_code_new():
         try:
             revision = StatusCodeService.create_draft(data, current_user)
         except ValidationFailed as exc:
-            for err in exc.field_errors:
-                flash(f"{err['field']}: {err['message']}", "error")
+            _flash_validation(exc)
         except (KeyError, ValueError) as exc:
             flash(str(exc), "error")
         else:
             flash("Draft created.", "success")
+            _flash_warnings(revision)
             return redirect(
                 url_for("ui.status_code_detail", status_code_id=revision.status_code_id)
             )
@@ -167,8 +277,7 @@ def status_code_new_sandbox():
         try:
             revision = StatusCodeService.create_sandbox(data, current_user)
         except ValidationFailed as exc:
-            for err in exc.field_errors:
-                flash(f"{err['field']}: {err['message']}", "error")
+            _flash_validation(exc)
         except (KeyError, ValueError) as exc:
             flash(str(exc), "error")
         else:
@@ -182,6 +291,7 @@ def status_code_new_sandbox():
     )
 
 
+# ---------------------------------------------------------------- detail (S4)
 @ui_bp.route("/status-codes/<int:status_code_id>")
 @login_required_web
 def status_code_detail(status_code_id):
@@ -210,6 +320,26 @@ def status_code_detail(status_code_id):
         except NotFoundError:
             flash("Revision not found.", "error")
 
+    where_used = []
+    if current_user.role_code != "VIEWER" and not revision.status_code.is_sandbox:
+        where_used = ReferenceService.where_used(status_code_id)
+    family = []
+    if not revision.status_code.is_sandbox:
+        for member in StatusCodeService.family(status_code_id):
+            if member.id == status_code_id:
+                continue
+            try:
+                member_revision = StatusCodeService.get_current_revision(member.id, current_user)
+            except NotFoundError:
+                continue
+            family.append(revision_payload(member_revision))
+    translations = []
+    decided = StatusCodeService._repo.get_latest_revision_in_states(
+        status_code_id, ("RELEASED", "APPROVED", "DEPRECATED")
+    )
+    if decided is not None and not revision.status_code.is_sandbox:
+        translations = TranslationService.status_matrix(decided.id, current_user)
+
     return render_template(
         "status_codes/detail.html",
         revision=revision_payload(revision),
@@ -220,9 +350,24 @@ def status_code_detail(status_code_id):
         decisions=decisions,
         rev_a=rev_a,
         rev_b=rev_b,
+        where_used=where_used,
+        family=family,
+        translations=translations,
+        reference_warnings=(
+            ReferenceService.warnings_for_revision(revision)
+            if current_user.role_code != "VIEWER"
+            else []
+        ),
+        platforms=LookupService.list_vocabulary("turbine-platforms"),
+        dependants=[
+            d for d in where_used if d["lifecycle_status"] not in ("DEPRECATED", "ARCHIVED")
+        ],
+        is_hub=revision.status_code.functional_system_group.controller_type == "HUB",
+        main_groups=LookupService.list_vocabulary("functional-system-groups"),
     )
 
 
+# ---------------------------------------------------------------- edit (S6, I-01, I-23)
 @ui_bp.route("/status-codes/<int:status_code_id>/edit", methods=["GET", "POST"])
 @require_role_web("ADMINISTRATOR", "ENGINEER")
 def status_code_edit(status_code_id):
@@ -237,28 +382,48 @@ def status_code_edit(status_code_id):
         return redirect(url_for("ui.status_code_detail", status_code_id=status_code_id))
 
     values = _revision_to_form_values(revision_payload(revision))
+    conflict = None
     if request.method == "POST":
         data = _form_to_data(request.form)
         values = data
         try:
-            StatusCodeService.update_draft(revision.id, data, current_user)
+            saved = StatusCodeService.update_draft(revision.id, data, current_user)
+        except ConcurrentModificationError as exc:
+            # I-01: keep the user's entries, show what is stored now and what differs.
+            current = revision_payload(revision)
+            mine = {k: v for k, v in data.items() if k in current}
+            differing = [
+                {"field": k, "mine": mine[k], "current": current[k]}
+                for k in mine
+                if k not in ("justification",) and mine[k] != current.get(k)
+            ]
+            conflict = {
+                "message": str(exc),
+                "current_row_version": exc.current_row_version,
+                "differences": differing,
+            }
+            # the next save is against the version the user has now seen
+            values = {**data, "expected_row_version": exc.current_row_version}
         except ValidationFailed as exc:
-            for err in exc.field_errors:
-                flash(f"{err['field']}: {err['message']}", "error")
-        except SegregationOfDutiesViolation as exc:
-            flash(str(exc), "error")
-        except (KeyError, ValueError) as exc:
+            _flash_validation(exc)
+        except (SegregationOfDutiesViolation, KeyError, ValueError) as exc:
             flash(str(exc), "error")
         else:
             flash("Draft saved.", "success")
+            _flash_warnings(saved)
             return redirect(url_for("ui.status_code_detail", status_code_id=status_code_id))
 
+    cr = getattr(revision, "change_request", None)
     return render_template(
         "status_codes/form.html",
         choices=_lookup_choices(),
         is_sandbox=False,
         values=values,
         editing=True,
+        conflict=conflict,
+        row_version=(values.get("expected_row_version") or revision.row_version),
+        field_comments=FieldReviewService.open_comments_by_field(cr.id) if cr else {},
+        revision_id=revision.id,
     )
 
 
@@ -282,6 +447,44 @@ def status_code_new_revision(status_code_id):
     return redirect(url_for("ui.status_code_detail", status_code_id=status_code_id))
 
 
+@ui_bp.route("/status-codes/<int:status_code_id>/platform-variant", methods=["POST"])
+@require_role_web("ADMINISTRATOR", "ENGINEER")
+def status_code_platform_variant(status_code_id):
+    """I-25."""
+    try:
+        variant = StatusCodeService.create_platform_variant(
+            status_code_id, request.form.get("turbine_platform", ""), current_user
+        )
+    except ValidationFailed as exc:
+        _flash_validation(exc)
+    except (DomainError, ValueError) as exc:
+        flash(str(exc), "error")
+    else:
+        flash("Platform variant created as a Draft; it goes through the normal review.", "success")
+        return redirect(url_for("ui.status_code_detail", status_code_id=variant.status_code_id))
+    return redirect(url_for("ui.status_code_detail", status_code_id=status_code_id, tab="actions"))
+
+
+@ui_bp.route("/status-codes/<int:status_code_id>/planned-dates", methods=["POST"])
+@require_role_web("ADMINISTRATOR")
+def status_code_planned_dates(status_code_id):
+    """I-27."""
+    try:
+        StatusCodeService.set_planned_dates(
+            status_code_id,
+            request.form.get("planned_effective_date") or None,
+            request.form.get("planned_deprecation_date") or None,
+            current_user,
+        )
+    except ValidationFailed as exc:
+        _flash_validation(exc)
+    except (DomainError, ValueError) as exc:
+        flash(str(exc), "error")
+    else:
+        flash("Planned dates saved.", "success")
+    return redirect(url_for("ui.status_code_detail", status_code_id=status_code_id, tab="actions"))
+
+
 @ui_bp.route("/status-codes/<int:status_code_id>/deprecate", methods=["POST"])
 @require_role_web("ADMINISTRATOR", "ENGINEER")
 def status_code_deprecate(status_code_id):
@@ -289,17 +492,20 @@ def status_code_deprecate(status_code_id):
     superseded_by = request.form.get("superseded_by_status_code_id") or None
     try:
         StatusCodeService.create_deprecation_request(
-            status_code_id, reason, int(superseded_by) if superseded_by else None, current_user
+            status_code_id,
+            reason,
+            int(superseded_by) if superseded_by else None,
+            current_user,
+            acknowledge_dependants=request.form.get("acknowledge_dependants") == "on",
         )
     except InvalidTransitionError as exc:
         flash(str(exc), "error")
     except ValidationFailed as exc:
-        for err in exc.field_errors:
-            flash(f"{err['field']}: {err['message']}", "error")
+        _flash_validation(exc)
     else:
         flash("Deprecation request opened; it must go through Review and Approval.", "success")
 
-    return redirect(url_for("ui.status_code_detail", status_code_id=status_code_id))
+    return redirect(url_for("ui.status_code_detail", status_code_id=status_code_id, tab="actions"))
 
 
 @ui_bp.route("/status-codes/<int:status_code_id>/archive", methods=["POST"])
@@ -323,8 +529,7 @@ def status_code_reinstate(status_code_id):
     except InvalidTransitionError as exc:
         flash(str(exc), "error")
     except ValidationFailed as exc:
-        for err in exc.field_errors:
-            flash(f"{err['field']}: {err['message']}", "error")
+        _flash_validation(exc)
     else:
         flash("Status code reinstated to Released.", "success")
     return redirect(url_for("ui.status_code_detail", status_code_id=status_code_id))

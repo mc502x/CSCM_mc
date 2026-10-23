@@ -1,29 +1,43 @@
 {% extends "base.html" %}
+{% from "_role.html" import role_badge with context %}
 {% block title %}User Management — CSCM Tool{% endblock %}
 {% block content %}
 <div class="page-header"><h1>User Management</h1></div>
 
 <div class="card">
+  <h2>Roles</h2>
+  <p>
+    {% for r in roles %}{{ role_badge(r) }} {% endfor %}
+  </p>
+  <p class="hint">
+    {% if is_admin %}Colour = level, red is the highest. You may create users and give every role.
+    {% else %}Colour = level, red is the highest. As StCd Owner you may move a user between Viewer, Engineer and Reviewer; creating users and every other role needs an Administrator.{% endif %}
+  </p>
+</div>
+
+<div class="card">
   <h2>Existing Users</h2>
   <table>
-    <thead><tr><th>Username</th><th>Full Name</th><th>Role</th><th>Domains</th><th>Active</th><th>Actions</th></tr></thead>
+    <thead><tr><th scope="col">Username</th><th scope="col">Full Name</th><th scope="col">Role</th><th scope="col">Domains</th><th scope="col">Active</th><th scope="col">Actions</th></tr></thead>
     <tbody>
       {% for u in users %}
-      <tr>
+      <tr class="role-row role-row--{{ role_info(u.role.code).css }}">
         <td>{{ u.username }}</td>
         <td>{{ u.full_name }}</td>
-        <td>{{ u.role.code }}</td>
+        <td>{{ role_badge(u.role.code) }}</td>
         <td>{% for d in u.engineering_domains %}<span class="chip">{{ d.engineering_domain.code }}</span>{% endfor %}</td>
         <td>{{ 'Yes' if u.is_active else 'No' }}</td>
-        <td>
+        <td><div class="row-actions">
+          <a class="btn" href="{{ url_for('ui.user_detail', user_id=u.id) }}">View</a>
+          {% if is_admin %}
           <details>
             <summary class="btn" style="display:inline-block">Edit</summary>
             <form method="post" action="{{ url_for('ui.user_update', user_id=u.id) }}" style="margin-top:8px">
               <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
-              <div class="field"><label>Full name</label><input type="text" name="full_name" value="{{ u.full_name }}"></div>
+              <div class="field"><label>Full name</label><input type="text" name="full_name" value="{{ u.full_name }}" aria-label="Full name of {{ u.username }}"></div>
               <div class="field"><label>Role</label>
-                <select name="role">
-                  {% for r in roles %}<option value="{{ r }}" {{ 'selected' if u.role.code == r }}>{{ r }}</option>{% endfor %}
+                <select name="role" aria-label="Role of {{ u.username }}">
+                  {% for r in roles %}<option value="{{ r }}" {{ 'selected' if u.role.code == r }}>{{ role_info(r).label }}</option>{% endfor %}
                 </select>
               </div>
               <div class="field checkbox-list">
@@ -37,17 +51,35 @@
             </form>
             <form method="post" action="{{ url_for('ui.user_reset_password', user_id=u.id) }}" style="margin-top:8px">
               <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
-              <div class="field"><label>Force-reset password</label><input type="password" name="new_password" minlength="12" placeholder="New password (12+ chars)"></div>
+              <div class="field"><label>Force-reset password</label><input type="password" name="new_password" minlength="12" placeholder="New password (12+ chars)" aria-label="New password for {{ u.username }}" autocomplete="new-password"></div>
               <button class="btn" type="submit">Reset Password</button>
             </form>
           </details>
-        </td>
+          <form method="post" action="{{ url_for('ui.user_set_active', user_id=u.id) }}" class="inline-form">
+            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+            <input type="hidden" name="active" value="{{ '0' if u.is_active else '1' }}">
+            <button class="btn" type="submit"{% if u.id == current_user.id and u.is_active %} disabled title="You cannot deactivate yourself here"{% endif %}>{{ 'Deactivate' if u.is_active else 'Activate' }}</button>
+          </form>
+          {% if u.id != current_user.id %}<a class="btn btn--danger" href="{{ url_for('ui.user_detail', user_id=u.id) }}#delete">Delete</a>{% endif %}
+          {% elif may_change_role(u) %}
+          <form method="post" action="{{ url_for('ui.user_update', user_id=u.id) }}" class="btn-row">
+            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+            <select name="role" aria-label="Role of {{ u.username }}">
+              {% for r in assignable %}<option value="{{ r }}" {{ 'selected' if u.role.code == r }}>{{ role_info(r).label }}</option>{% endfor %}
+            </select>
+            <button class="btn btn--primary" type="submit">Set role</button>
+          </form>
+          {% else %}
+          <span class="muted">Administrator only</span>
+          {% endif %}
+        </div></td>
       </tr>
       {% endfor %}
     </tbody>
   </table>
 </div>
 
+{% if is_admin %}
 <div class="card" style="max-width:480px">
   <h2>Create User</h2>
   <form method="post" action="{{ url_for('ui.user_new') }}">
@@ -57,7 +89,7 @@
     <div class="field"><label for="full_name">Full name</label><input type="text" id="full_name" name="full_name" required></div>
     <div class="field"><label for="role">Role</label>
       <select id="role" name="role">
-        {% for r in roles %}<option value="{{ r }}" {{ 'selected' if r == 'VIEWER' }}>{{ r }}</option>{% endfor %}
+        {% for r in roles %}<option value="{{ r }}" {{ 'selected' if r == 'VIEWER' }}>{{ role_info(r).label }}</option>{% endfor %}
       </select>
       <div class="hint">Least-privilege default: Viewer (SEC-012).</div>
     </div>
@@ -71,4 +103,5 @@
     <button class="btn btn--primary" type="submit">Create User</button>
   </form>
 </div>
+{% endif %}
 {% endblock %}

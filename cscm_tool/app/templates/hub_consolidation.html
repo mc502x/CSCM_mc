@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% import "_macros.html" as macros %}
+{% block title %}{{ _('Hub Consolidation') }} — CSCM Tool{% endblock %}
+{% block content %}
+<div class="page-header"><h1>{{ _('Hub Controller to Main Controller consolidation') }}</h1></div>
+<p class="muted">{{ _('If the Hub Controller leaves the hardware setup, its codes are defined anew on the Main Controller side. Create an MC draft from an HC code on its detail page (Actions); this report shows how far each has come. Nothing is renumbered.') }}</p>
+
+<div class="card">
+  <form method="get" class="form-row">
+    <div class="field">
+      <label for="group">{{ _('Hub group') }}</label>
+      <select id="group" name="group" data-autosubmit>
+        <option value="">({{ _('all') }})</option>
+        {% for g in hub_groups %}<option value="{{ g.id }}" {{ 'selected' if selected_group == g.id }}>{{ g.code }} {{ g.range_start }} — {{ g.label }}</option>{% endfor %}
+      </select>
+    </div>
+  </form>
+  <p>
+    {% for state, n in report.tally.items() %}<span class="chip">{{ state.replace('_', ' ')|title }}: {{ n }}</span>{% endfor %}
+    {% if report.ready_to_retire %}<strong>{{ _('Every Hub code is deprecated - the group can be deactivated under Lookups.') }}</strong>{% endif %}
+  </p>
+  {% if report['items'] %}
+  <table>
+    <caption class="visually-hidden">{{ _('Hub codes and their replacements') }}</caption>
+    <thead><tr><th scope="col">{{ _('Hub code') }}</th><th scope="col">{{ _('Title') }}</th><th scope="col">{{ _('Legacy no.') }}</th><th scope="col">{{ _('Replacement') }}</th><th scope="col">{{ _('State') }}</th></tr></thead>
+    <tbody>
+      {% for item in report['items'] %}
+      <tr>
+        <td><a href="{{ url_for('ui.status_code_detail', status_code_id=item.hub_status_code_id) }}">{{ item.hub_identifier or _('Not yet assigned') }}</a> {{ macros.lifecycle_badge(item.hub_lifecycle) }}</td>
+        <td>{{ item.hub_title }}</td>
+        <td>{{ item.legacy_reference_number or '—' }}</td>
+        <td>{% if item.mc_status_code_id %}<a href="{{ url_for('ui.status_code_detail', status_code_id=item.mc_status_code_id) }}">{{ item.mc_identifier or _('draft') }}</a> {{ macros.lifecycle_badge(item.mc_lifecycle) if item.mc_lifecycle }}{% else %}—{% endif %}</td>
+        <td>{{ item.state.replace('_', ' ')|title }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% else %}
+  <div class="table-empty">{{ _('No Hub Controller codes yet.') }}</div>
+  {% endif %}
+</div>
+
+{% if current_user.role_code == 'ADMINISTRATOR' and hub_groups %}
+<div class="card">
+  <h2>{{ _('Deprecate replaced Hub codes') }}</h2>
+  <p class="muted">{{ _('Opens a deprecation request for every Released Hub code of the group whose Main Controller replacement is Released. Each request still needs review and approval.') }}</p>
+  <form method="post" action="{{ url_for('ui.hub_bulk_deprecate') }}" class="btn-row" data-confirm="{{ _('Open deprecation requests for all replaced Hub codes of this group?') }}">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    <label for="dep_group" class="visually-hidden">{{ _('Hub group') }}</label>
+    <select id="dep_group" name="functional_system_group">{% for g in hub_groups %}<option value="{{ g.id }}" {{ 'selected' if selected_group == g.id }}>{{ g.code }} {{ g.range_start }}</option>{% endfor %}</select>
+    <button class="btn btn--danger" type="submit">{{ _('Open deprecation requests') }}</button>
+  </form>
+</div>
+{% endif %}
+{% endblock %}

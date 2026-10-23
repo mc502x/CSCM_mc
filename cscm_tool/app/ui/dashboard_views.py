@@ -69,4 +69,19 @@ def dashboard():
             .count()
         )
 
+    if current_user.role_code != "VIEWER":
+        from app.services.notification_service import NotificationService
+
+        stats["unread_notices"] = NotificationService.unread_count(current_user.id)
+    if current_user.role_code in ("ADMINISTRATOR", "CHIEF_ENGINEER", "REVIEWER"):
+        from app.services.health_report_service import HealthReportService
+        from app.services.sla_service import SlaService
+
+        stalled = SlaService.stalled()
+        stats["stalled_requests"] = len(stalled)
+        stats["overdue_requests"] = sum(1 for _cr, info in stalled if info["level"] == "red")
+        stats["capacity_alerts"] = len(
+            [c for c in HealthReportService.capacity() if c["alert"] or c["exhausted"]]
+        )
+
     return render_template("dashboard.html", stats=stats)

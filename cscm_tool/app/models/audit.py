@@ -17,5 +17,7 @@ class AuditLogEntry(Base):
     after_value = db.Column(db.Text)
     ip_address = db.Column(db.Text)
     request_id = db.Column(db.Text, nullable=False)
+    prev_hash = db.Column(db.Text)  # I-18, set by app.audit_chain before flush
+    entry_hash = db.Column(db.Text)
 
     actor = db.relationship("User")

@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block title %}{{ _('Translations') }} — CSCM Tool{% endblock %}
+{% block content %}
+<div class="page-header"><h1>{{ _('Translations') }}</h1></div>
+
+<div class="card">
+  <p class="muted">Native speakers check the interface text of their language here. A reviewer answers every string with <strong>OK</strong>, <strong>CHANGE</strong> (and a proposal) or <strong>UNCLEAR</strong>, then completes the review; an Administrator or StCd Owner decides on the proposals, and an accepted proposal is shown by the application at once. How this fits together is in <code>docs/26-translations.md</code>.</p>
+  {% if rows %}
+  <div class="table-scroll">
+  <table>
+    <caption class="visually-hidden">Languages</caption>
+    <thead><tr><th scope="col">Language</th><th scope="col">Translated</th><th scope="col">Review</th><th scope="col">Reviewers</th><th scope="col">Open proposals</th><th scope="col">Accepted changes</th><th scope="col">Actions</th></tr></thead>
+    <tbody>
+      {% for r in rows %}
+      <tr>
+        <td>{{ label(r.code) }} <span class="muted">({{ names[r.code] }})</span>{% if r.rtl %} <span class="chip">right to left</span>{% endif %}</td>
+        <td>{{ r.translated }} / {{ r.total }} ({{ r.share }} %)</td>
+        <td><span class="chip review-state review-state--{{ r.state|replace(' ', '-') }}">{{ r.state }}</span>{% if r.last_completed %}<div class="muted">{{ r.last_completed.completed_at[:10] }}</div>{% endif %}</td>
+        <td>{% for p in r.reviewers %}{{ p.name }}{% if not loop.last %}, {% endif %}{% else %}<span class="muted">nobody assigned</span>{% endfor %}</td>
+        <td>{{ r.pending }}</td>
+        <td>{{ r.overrides }}</td>
+        <td>
+          <div class="row-actions">
+            {% if r.can_review %}<a class="btn btn--primary" href="{{ url_for('ui.translation_review', language=r.code) }}">{{ 'Continue review' if r.my_open else 'Review' }}</a>{% endif %}
+            {% if manager %}<a class="btn" href="{{ url_for('ui.translation_decisions', language=r.code) }}">Decisions and reviewers</a>{% endif %}
+            {% if r.can_review or manager %}<a class="btn" href="{{ url_for('ui.translation_sheet', language=r.code) }}">Sheet (XLSX)</a>{% endif %}
+          </div>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  </div>
+  {% else %}
+  <div class="table-empty">You are not assigned to review a language. An Administrator or StCd Owner can assign you.</div>
+  {% endif %}
+</div>
+{% endblock %}

@@ -1,32 +1,41 @@
 {% extends "base.html" %}
-{% block title %}New Release — CSCM Tool{% endblock %}
+{% block title %}{{ _('New Release') }} — CSCM Tool{% endblock %}
 {% block content %}
-<div class="page-header"><h1>New Release</h1></div>
+<div class="page-header"><h1>{{ _('New Release') }}</h1></div>
 <div class="card" style="max-width:480px">
   <form method="post">
     <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
     <div class="field">
-      <label for="name">Name</label>
+      <label for="name">{{ _('Name') }}</label>
       <input type="text" id="name" name="name" required>
     </div>
     <div class="field">
-      <label for="version_label">Version Label</label>
+      <label for="version_label">{{ _('Version Label') }}</label>
       <input type="text" id="version_label" name="version_label" required placeholder="2026.1">
     </div>
     <div class="field">
-      <label for="description">Description</label>
+      <label for="description">{{ _('Description') }}</label>
       <textarea id="description" name="description"></textarea>
     </div>
     <div class="field">
-      <label for="scope_functional_system_group">Scope: Functional System Group (optional)</label>
+      <label for="scope_functional_system_group">{{ _('Scope: Functional System Group (optional)') }}</label>
       <select id="scope_functional_system_group" name="scope_functional_system_group">
-        <option value="">(all groups)</option>
+        <option value="">({{ _('all groups') }})</option>
         {% for g in groups %}
         <option value="{{ g.id }}">{{ g.code }} — {{ g.label }} ({{ g.range_start }}-{{ g.range_end }})</option>
         {% endfor %}
       </select>
     </div>
-    <button class="btn btn--primary" type="submit">Create Release</button>
+    {% if versions %}
+    <div class="field">
+      <label id="tv-label">{{ _('Controller software versions this Release is for (optional)') }}</label>
+      <div class="checkbox-list" role="group" aria-labelledby="tv-label">
+        {% for v in versions %}<label><input type="checkbox" name="target_software_versions" value="{{ v.code }}"> {{ v.code }}</label>{% endfor %}
+      </div>
+      <div class="hint">{{ _('When set, only codes that apply to one of these versions are offered as candidates.') }}</div>
+    </div>
+    {% endif %}
+    <button class="btn btn--primary" type="submit">{{ _('Create Release') }}</button>
   </form>
 </div>
 {% endblock %}

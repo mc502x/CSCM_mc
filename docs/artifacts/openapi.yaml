@@ -3,10 +3,12 @@ info:
   title: CSCM Tool API
   description: >
     Controller Status Code Management Tool REST API. Versioned at /api/v1. All endpoints
-    require an authenticated session (see /auth/login) except where noted. Runs on the
+    require an authenticated session (see /auth/login) except where noted; a few read-only endpoints also accept
+    a scoped API token (`Authorization: Bearer cscm_...`, I-29). Sign-offs, approvals, publishing and the
+    full-database export need the caller's password again (`current_password`, I-17). Runs on the
     internal on-premises network only. Field set grounded in a real export of the live
     status code library (2026-09-17). See docs/09-api-specification.md for narrative detail.
-  version: "3.0.0"
+  version: "4.0.0"
 servers:
   - url: /api/v1
 security:
@@ -23,8 +25,40 @@ tags:
   - name: Lookups
   - name: AuditLog
   - name: Exports
+  - name: Review
+  - name: Evidence
+  - name: ChangeSets
+  - name: Delegation
+  - name: Notifications
+  - name: Settings
+  - name: Reports
+  - name: Operations
+  - name: SoftwareVersions
+  - name: Translations
+  - name: SavedSearches
+  - name: Integrations
+  - name: Hub
 
 paths:
+  /auth/windows:
+    post:
+      tags: [Auth]
+      security: []
+      summary: >
+        Sign in with the Windows identity the authenticating gateway supplies (v4.7, FR-163): the header
+        WINDOWS_AUTH_HEADER (default X-Remote-User) holding name@domain or DOMAIN\name, believed only from
+        a trusted proxy (WINDOWS_AUTH_TRUSTED_PROXIES). The account is found by e-mail address (UPN) or user
+        name; nobody is created. No body. 401 when there is no identity or no active account, 403 when
+        AUTH_MODE is password only. With AUTH_MODE=windows the password endpoints answer 403.
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/User' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '403': { description: The Windows sign-in is not enabled }
+        '429': { description: Too many attempts }
+
   /auth/login:
     post:
       tags: [Auth]
@@ -46,6 +80,7 @@ paths:
             application/json:
               schema: { $ref: '#/components/schemas/User' }
         '401': { $ref: '#/components/responses/Unauthorized' }
+        '403': { description: Passwords are disabled (AUTH_MODE=windows) }
         '423': { description: Account locked }
 
   /auth/logout:
@@ -183,7 +218,10 @@ paths:
         - { $ref: '#/components/parameters/Sort' }
         - name: q
           in: query
-          description: Full-text search across status_code_identifier, title, description
+          description: >
+            Search across status_code_identifier, title, description. Substring matches always count; with the
+            SQLite FTS5 index (I-31) results are ranked by relevance and a misspelt word still finds its
+            close neighbours ("convertor" finds "converter").
           schema: { type: string }
         - name: functional_system_group
           in: query
@@ -203,6 +241,9 @@ paths:
         - name: owner_id
           in: query
           schema: { type: integer }
+        - name: status_category
+          in: query
+          schema: { type: string, enum: [ERROR, WARNING, INFO] }
       responses:
         '200':
           content:
@@ -261,6 +302,7 @@ paths:
               properties:
                 reason: { type: string }
                 superseded_by_status_code_id: { type: integer, nullable: true }
+                acknowledge_dependants: { type: boolean, default: false, description: "Required (422) when other live codes still refer to this one - see /status-codes/{id}/where-used (I-04)" }
       responses:
         '201':
           content:
@@ -581,6 +623,57 @@ paths:
               schema: { $ref: '#/components/schemas/DomainSignoff' }
         '403': { description: Actor does not hold the named domain }
 
+  /users/{userId}/usage:
+    parameters: [{ name: userId, in: path, required: true, schema: { type: integer } }]
+    get:
+      tags: [Users]
+      summary: What the account has done in the tool (the rows of every other table that point at it) and whether it can be deleted (Administrator, StCd Owner; BR-025)
+      responses:
+        '200': { description: Usage, content: { application/json: { schema: { $ref: '#/components/schemas/UserUsage' } } } }
+        '404': { description: User not found }
+
+  /users/{userId}/delete:
+    parameters: [{ name: userId, in: path, required: true, schema: { type: integer } }]
+    post:
+      tags: [Users]
+      summary: >
+        Delete an account that was never used (Administrator, with the Administrator's own password).
+        An account with history is refused with 409 - deactivate it instead (PATCH is_active=false) -
+        so the audit trail stays attributable (BR-025). Never the own account.
+      requestBody:
+        required: true
+        content: { application/json: { schema: { type: object, required: [current_password], properties: { current_password: { type: string } } } } }
+      responses:
+        '204': { description: Deleted }
+        '403': { description: Not an Administrator, the own account, or the password is missing or wrong }
+        '404': { description: User not found }
+        '409': { description: The account has history; deactivate it instead }
+        '422': { description: The last active Administrator cannot be deleted }
+
+  /change-requests/withdraw:
+    post:
+      tags: [ChangeRequests]
+      summary: >
+        Withdraw several of your own open change requests in one call (FR-159). Each goes through the
+        single-request rules and has its own audit entry; one that cannot be withdrawn is reported in
+        its result and the others go on. A withdrawn Draft is deleted; a code left without any revision
+        that never received its identifier gives its reserved number and legacy number back (BR-026).
+      requestBody:
+        required: true
+        content: { application/json: { schema: { type: object, required: [cr_ids], properties: { cr_ids: { type: array, items: { type: integer }, minItems: 1 } } } } }
+      responses:
+        '200':
+          description: One result per request
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  results: { type: array, items: { type: object, properties: { cr_id: { type: integer }, ok: { type: boolean }, message: { type: string } } } }
+                  withdrawn: { type: integer }
+                  failed: { type: integer }
+        '422': { description: cr_ids missing or not a list of ids }
+
   /imports:
     get:
       tags: [Import]
@@ -608,9 +701,17 @@ paths:
               required: [file]
               properties:
                 file: { type: string, format: binary }
+                mode: { type: string, enum: [CREATE, UPDATE], default: CREATE, description: "UPDATE matches rows on legacy_reference_number within the Functional System Group and revises the code instead of creating a duplicate (I-05)" }
+                dry_run: { type: boolean, default: false, description: "Validate only: 200 with the per-row report, nothing is created (I-05)" }
+                async: { type: boolean, default: false, description: "Force background processing; files above IMPORT_ASYNC_ROW_THRESHOLD rows get it automatically (I-32)" }
       responses:
+        '200':
+          description: Dry-run report (dry_run=true)
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/ImportDryRun' }
         '202':
-          description: Import job accepted, processing asynchronously
+          description: Import job accepted (small files are already COMPLETE; large ones are processed in the background - poll GET /imports/{id})
           content:
             application/json:
               schema: { $ref: '#/components/schemas/ImportJob' }
@@ -630,7 +731,8 @@ paths:
     parameters: [{ name: importJobId, in: path, required: true, schema: { type: integer } }]
     get:
       tags: [Import]
-      summary: Download the per-row error report for a completed import job
+      summary: Download the per-row error report (row, column, value, problem, how to fix) for a completed import job (CSV, or XLSX with format=xlsx)
+      parameters: [{ name: format, in: query, schema: { type: string, enum: [csv, xlsx], default: csv } }]
       responses:
         '200':
           description: File stream (CSV)
@@ -710,7 +812,12 @@ paths:
     parameters: [{ name: releaseId, in: path, required: true, schema: { type: integer } }]
     post:
       tags: [Releases]
-      summary: Publish the release (atomic; Administrator only)
+      summary: >
+        Publish the release (atomic; Administrator only). Needs `current_password` (I-17). The response carries
+        `warnings` for items whose planned effective date is still in the future (I-27); they never block.
+      requestBody:
+        required: true
+        content: { application/json: { schema: { type: object, required: [current_password], properties: { current_password: { type: string, format: password } } } } }
       responses:
         '200':
           content:
@@ -721,6 +828,12 @@ paths:
     parameters:
       - { name: releaseId, in: path, required: true, schema: { type: integer } }
       - { name: format, in: query, required: true, schema: { type: string, enum: [csv, json, xlsx, pdf] } }
+      - { name: profile, in: query, schema: { type: string }, description: "Export profile code (I-02): fixes columns, order, header labels, language and a default audience" }
+      - { name: audience, in: query, schema: { type: string, enum: [development, sales, tcc, service, turbine_operator_package, grid_operator, service_partner, customer] }, description: "Only codes whose confirmed access value lets this audience see them; other audiences' and internal columns are dropped (I-03)" }
+      - { name: language, in: query, schema: { type: string }, description: "Approved translations (I-15); untranslated rows fall back to the source language and say so in content_language" }
+      - { name: strict_language, in: query, schema: { type: boolean }, description: "With language: omit codes that have no approved translation" }
+      - { name: software_version, in: query, schema: { type: string }, description: "Only codes that apply to this controller software version (I-07)" }
+      - { name: bundle, in: query, schema: { type: boolean }, description: "Return a ZIP with the file and MANIFEST.json (SHA-256 of every file, optional HMAC signature, I-06)" }
     get:
       tags: [Exports]
       summary: Export a release catalogue as a flat table (role-scoped, per 11-security-architecture.md §3). All formats, including JSON, are flat row-per-status-code, not nested.
@@ -736,8 +849,15 @@ paths:
       - { name: functional_system_group, in: query, schema: { type: integer } }
       - { name: functional_subgroup, in: query, schema: { type: integer } }
       - { name: turbine_platform, in: query, schema: { type: string } }
+      - { name: profile, in: query, schema: { type: string }, description: "Export profile code (I-02): fixes columns, order, header labels, language and a default audience" }
+      - { name: audience, in: query, schema: { type: string, enum: [development, sales, tcc, service, turbine_operator_package, grid_operator, service_partner, customer] }, description: "Only codes whose confirmed access value lets this audience see them; other audiences' and internal columns are dropped (I-03)" }
+      - { name: language, in: query, schema: { type: string }, description: "Approved translations (I-15); untranslated rows fall back to the source language and say so in content_language" }
+      - { name: strict_language, in: query, schema: { type: boolean }, description: "With language: omit codes that have no approved translation" }
+      - { name: software_version, in: query, schema: { type: string }, description: "Only codes that apply to this controller software version (I-07)" }
+      - { name: bundle, in: query, schema: { type: boolean }, description: "Return a ZIP with the file and MANIFEST.json (SHA-256 of every file, optional HMAC signature, I-06)" }
     get:
       tags: [Exports]
+      security: [{ sessionCookie: [] }, { bearerToken: [] }]
       summary: Export the current set of all Released (non-sandbox) status codes as a flat table (any authenticated role; FR-045)
       responses:
         '200':
@@ -753,6 +873,10 @@ paths:
       - { name: functional_subgroup, in: query, schema: { type: integer } }
       - { name: turbine_platform, in: query, schema: { type: string } }
       - { name: lifecycle_status, in: query, schema: { type: string } }
+      - { name: profile, in: query, schema: { type: string } }
+      - { name: language, in: query, schema: { type: string } }
+      - { name: software_version, in: query, schema: { type: string } }
+      - { name: bundle, in: query, schema: { type: boolean } }
     get:
       tags: [Exports]
       summary: >
@@ -767,15 +891,20 @@ paths:
         '403': { description: Viewer role }
 
   /exports/full-database:
-    get:
+    post:
       tags: [Exports]
-      summary: Export a full raw database backup (Administrator only)
+      summary: >
+        Export a full raw database backup (Administrator only). A POST that carries `current_password` (I-17),
+        so the download needs a fresh confirmation; it used to be a GET.
+      requestBody:
+        required: true
+        content: { application/json: { schema: { type: object, required: [current_password], properties: { current_password: { type: string, format: password } } } } }
       responses:
         '200':
           description: File stream (SQLite backup file)
           content:
             application/octet-stream: {}
-        '403': { description: Actor is not Administrator }
+        '403': { description: Actor is not Administrator, or the step-up password is missing or wrong }
 
   /lookups/{vocabulary}:
     parameters:
@@ -918,6 +1047,7 @@ paths:
                 type: object
                 properties:
                   preview_identifier: { type: string, example: StCd-01233 }
+                  capacity: { type: object, description: "I-19: range_start, range_end, total, allocated, highest_allocated, remaining, percent_remaining of the subgroup's number band" }
                   note: { type: string, example: "Not allocated until Submit for Review; another submission may claim this number first." }
 
   /audit-log:
@@ -941,9 +1071,806 @@ paths:
                 type: array
                 items: { $ref: '#/components/schemas/AuditLogEntry' }
 
+  # ======================================================================================
+  # v4 (2026-10-22) - improvement pack I-01..I-36, docs/21-improvement-ideas.md
+  # ======================================================================================
+
+  /health/ready:
+    get:
+      tags: [Operations]
+      summary: >
+        Readiness probe (no authentication, I-21): database reachable, schema at the expected Alembic
+        head, newest audit rows chain correctly, last verified backup recent (I-09). 200 when ready
+        (status ok or degraded), 503 when not.
+      security: []
+      responses:
+        '200': { description: Ready, content: { application/json: { schema: { $ref: '#/components/schemas/Readiness' } } } }
+        '503': { description: Not ready, content: { application/json: { schema: { $ref: '#/components/schemas/Readiness' } } } }
+
+  /status-codes/similar:
+    get:
+      tags: [StatusCodes]
+      summary: Existing codes of a subgroup with a similar title ("did you mean to revise ...?", I-12). Engineer, Administrator.
+      parameters:
+        - { name: functional_subgroup, in: query, required: true, schema: { type: integer } }
+        - { name: title, in: query, required: true, schema: { type: string } }
+        - { name: exclude, in: query, schema: { type: integer }, description: Status code id to leave out }
+      responses:
+        '200': { description: Similar codes, content: { application/json: { schema: { type: object, properties: { items: { type: array, items: { $ref: '#/components/schemas/SimilarCode' } } } } } } }
+        '422': { $ref: '#/components/responses/ValidationError' }
+
+  /status-codes/{statusCodeId}/where-used:
+    parameters: [{ $ref: '#/components/parameters/StatusCodeId' }]
+    get:
+      tags: [StatusCodes]
+      summary: Every other code whose current revision refers to this one (repeated-error pointer, related codes, supersession, platform variant) - I-04. Not available to Viewers.
+      responses:
+        '200': { description: Dependants, content: { application/json: { schema: { type: object, properties: { items: { type: array, items: { $ref: '#/components/schemas/WhereUsedEntry' } } } } } } }
+        '404': { $ref: '#/components/responses/NotFound' }
+
+  /status-codes/{statusCodeId}/family:
+    parameters: [{ $ref: '#/components/parameters/StatusCodeId' }]
+    get:
+      tags: [StatusCodes]
+      summary: The code and its platform variants (I-25)
+      responses:
+        '200': { description: Family members, root first, content: { application/json: { schema: { type: object, properties: { items: { type: array, items: { $ref: '#/components/schemas/FamilyMember' } } } } } } }
+
+  /status-codes/{statusCodeId}/platform-variants:
+    parameters: [{ $ref: '#/components/parameters/StatusCodeId' }]
+    post:
+      tags: [StatusCodes]
+      summary: Copy the latest decided revision into a new Draft for another turbine platform, linked to the source (I-25). Engineer, Administrator.
+      requestBody:
+        required: true
+        content: { application/json: { schema: { type: object, required: [turbine_platform], properties: { turbine_platform: { type: string, example: 4XM } } } } }
+      responses:
+        '201': { description: The new Draft revision, content: { application/json: { schema: { $ref: '#/components/schemas/StatusCodeRevision' } } } }
+        '409': { description: Source has no Approved/Released revision }
+        '422': { $ref: '#/components/responses/ValidationError' }
+
+  /status-codes/{statusCodeId}/planned-dates:
+    parameters: [{ $ref: '#/components/parameters/StatusCodeId' }]
+    put:
+      tags: [StatusCodes]
+      summary: Set planned effective / deprecation dates on the current revision (I-27, Administrator). Audited as PLANNED_DATES_SET.
+      requestBody:
+        required: true
+        content: { application/json: { schema: { type: object, properties: { planned_effective_date: { type: string, format: date, nullable: true }, planned_deprecation_date: { type: string, format: date, nullable: true } } } } }
+      responses:
+        '200': { description: Updated revision, content: { application/json: { schema: { $ref: '#/components/schemas/StatusCodeRevision' } } } }
+        '422': { $ref: '#/components/responses/ValidationError' }
+
+  /status-codes/{statusCodeId}/mc-drafts:
+    parameters: [{ $ref: '#/components/parameters/StatusCodeId' }]
+    post:
+      tags: [Hub]
+      summary: Create a Main Controller Draft from a Hub Controller code (I-36). The new MC number is allocated at submit; the HC identifier becomes the legacy reference.
+      requestBody:
+        required: true
+        content: { application/json: { schema: { type: object, required: [functional_system_group, functional_subgroup], properties: { functional_system_group: { type: integer }, functional_subgroup: { type: integer } } } } }
+      responses:
+        '201': { description: The new Draft revision, content: { application/json: { schema: { $ref: '#/components/schemas/StatusCodeRevision' } } } }
+        '409': { description: Already mapped, or the Hub code is not Approved/Released }
+        '422': { $ref: '#/components/responses/ValidationError' }
+
+  /hub-consolidation/mapping:
+    get:
+      tags: [Hub]
+      summary: Every Hub Controller code with its Main Controller replacement and how far that is (I-36)
+      parameters: [{ name: group, in: query, schema: { type: integer }, description: Hub Functional System Group id }]
+      responses:
+        '200': { description: Mapping report, content: { application/json: { schema: { $ref: '#/components/schemas/HubMappingReport' } } } }
+
+  /hub-consolidation/deprecation-requests:
+    post:
+      tags: [Hub]
+      summary: Open a deprecation request for every Released Hub code of a group whose MC replacement is Released (I-36, Administrator). Each is an ordinary DEPRECATION CR.
+      requestBody:
+        required: true
+        content: { application/json: { schema: { type: object, required: [functional_system_group], properties: { functional_system_group: { type: integer } } } } }
+      responses:
+        '200': { description: Created and skipped codes, content: { application/json: { schema: { type: object, properties: { created: { type: array, items: { type: string } }, skipped: { type: array, items: { type: object, properties: { hub_identifier: { type: string }, reason: { type: string } } } } } } } } }
+
+  /change-requests/stalled:
+    get:
+      tags: [ChangeRequests]
+      summary: Requests waiting past their amber/red SLA threshold (I-08, Administrator)
+      responses:
+        '200': { description: Stalled requests and the thresholds, content: { application/json: { schema: { type: object, properties: { items: { type: array, items: { $ref: '#/components/schemas/StalledRequest' } }, thresholds: { type: object } } } } } }
+
+  /change-requests/{crId}/sla:
+    parameters: [{ $ref: '#/components/parameters/CrId' }]
+    get:
+      tags: [ChangeRequests]
+      summary: How long the request has waited at its stage, in business days, and its SLA level (I-08)
+      responses:
+        '200': { description: SLA info or null when not waiting, content: { application/json: { schema: { type: object, properties: { sla: { $ref: '#/components/schemas/SlaInfo' } } } } } }
+
+  /change-requests/{crId}/reviewer-assignment/auto:
+    parameters: [{ $ref: '#/components/parameters/CrId' }]
+    post:
+      tags: [ChangeRequests]
+      summary: Assign the least-loaded available Reviewer (I-30, Administrator). Reviewers who are out of office are skipped.
+      responses:
+        '200': { description: Updated change request, content: { application/json: { schema: { $ref: '#/components/schemas/ChangeRequest' } } } }
+        '422': { $ref: '#/components/responses/ValidationError' }
+
+  /reviewers/workload:
+    get:
+      tags: [ChangeRequests]
+      summary: Open reviews per active, available Reviewer (I-30, Administrator)
+      responses:
+        '200': { description: Workload, content: { application/json: { schema: { type: object, properties: { items: { type: array, items: { type: object, properties: { user_id: { type: integer }, full_name: { type: string }, open_reviews: { type: integer } } } } } } } } }
+
+  /change-requests/{crId}/field-comments:
+    parameters: [{ $ref: '#/components/parameters/CrId' }]
+    get:
+      tags: [Review]
+      summary: Comments attached to single fields of the revision (I-23). Not available to Viewers.
+      responses:
+        '200': { description: Field comments, content: { application/json: { schema: { type: object, properties: { items: { type: array, items: { $ref: '#/components/schemas/FieldComment' } } } } } } }
+    post:
+      tags: [Review]
+      summary: Comment on one field while the CR is in Review or Pending Approval (I-23). Reviewer, Administrator, Chief Engineer (or a delegate).
+      requestBody:
+        required: true
+        content: { application/json: { schema: { type: object, required: [field, comment], properties: { field: { type: string, example: set_delay }, comment: { type: string } } } } }
+      responses:
+        '201': { description: Created, content: { application/json: { schema: { $ref: '#/components/schemas/FieldComment' } } } }
+        '409': { description: CR is not in Review / Pending Approval }
+        '422': { $ref: '#/components/responses/ValidationError' }
+
+  /field-comments/{commentId}/resolve:
+    parameters: [{ name: commentId, in: path, required: true, schema: { type: integer } }]
+    post:
+      tags: [Review]
+      summary: Mark a field comment resolved (the commenter, the CR author or an Administrator)
+      responses:
+        '200': { description: Resolved comment, content: { application/json: { schema: { $ref: '#/components/schemas/FieldComment' } } } }
+
+  /review-checklist-items:
+    get:
+      tags: [Review]
+      summary: Active review-checklist items (I-23); Administrators may add include_inactive=true
+      parameters: [{ name: include_inactive, in: query, schema: { type: boolean } }]
+      responses:
+        '200': { description: Items, content: { application/json: { schema: { type: object, properties: { items: { type: array, items: { $ref: '#/components/schemas/ChecklistItem' } } } } } } }
+    post:
+      tags: [Review]
+      summary: Add a checklist item for one Functional System Group or all (Administrator)
+      requestBody:
+        required: true
+        content: { application/json: { schema: { type: object, required: [text], properties: { text: { type: string }, functional_system_group: { type: integer, nullable: true }, sort_order: { type: integer } } } } }
+      responses:
+        '201': { description: Created, content: { application/json: { schema: { $ref: '#/components/schemas/ChecklistItem' } } } }
+
+  /review-checklist-items/{itemId}:
+    parameters: [{ name: itemId, in: path, required: true, schema: { type: integer } }]
+    patch:
+      tags: [Review]
+      summary: Edit or (de)activate a checklist item (Administrator)
+      requestBody:
+        content: { application/json: { schema: { type: object, properties: { text: { type: string }, is_active: { type: boolean }, sort_order: { type: integer } } } } }
+      responses:
+        '200': { description: Updated, content: { application/json: { schema: { $ref: '#/components/schemas/ChecklistItem' } } } }
+
+  /change-requests/{crId}/review-checklist:
+    parameters: [{ $ref: '#/components/parameters/CrId' }]
+    get:
+      tags: [Review]
+      summary: The checklist items that apply to the CR and the confirmations already recorded (I-23)
+      responses:
+        '200': { description: Items and confirmations, content: { application/json: { schema: { type: object, properties: { items: { type: array, items: { $ref: '#/components/schemas/ChecklistItem' } }, confirmations: { type: array, items: { type: object, properties: { checklist_item_id: { type: integer }, item_text: { type: string }, confirmed_by: { type: integer }, confirmed_at: { type: string, format: date-time } } } } } } } } }
+
+  /change-requests/{crId}/attachments:
+    parameters: [{ $ref: '#/components/parameters/CrId' }]
+    get:
+      tags: [Evidence]
+      summary: Evidence attached to the CR (I-13). Working roles only.
+      responses:
+        '200': { description: Attachments, content: { application/json: { schema: { type: object, properties: { items: { type: array, items: { $ref: '#/components/schemas/Attachment' } } } } } } }
+    post:
+      tags: [Evidence]
+      summary: >
+        Attach evidence (author or Administrator, CR open). Allow-listed types (pdf, png, jpg, txt, log, md, csv, xlsx, docx),
+        content-checked against the type, at most 10 MB and 20 files per CR (SEC-024). Stored outside the web root.
+      requestBody:
+        required: true
+        content: { multipart/form-data: { schema: { type: object, required: [file], properties: { file: { type: string, format: binary }, description: { type: string } } } } }
+      responses:
+        '201': { description: Attached, content: { application/json: { schema: { $ref: '#/components/schemas/Attachment' } } } }
+        '422': { $ref: '#/components/responses/ValidationError' }
+
+  /attachments/{attachmentId}:
+    parameters: [{ name: attachmentId, in: path, required: true, schema: { type: integer } }]
+    get:
+      tags: [Evidence]
+      summary: Download evidence as an attachment (never rendered in the browser). Working roles only.
+      responses:
+        '200': { description: File stream, headers: { X-Content-SHA256: { schema: { type: string } } }, content: { application/octet-stream: {} } }
+    delete:
+      tags: [Evidence]
+      summary: Remove evidence while the CR is still a Draft (uploader or Administrator)
+      responses:
+        '204': { description: Removed }
+
+  /change-sets:
+    get:
+      tags: [ChangeSets]
+      summary: Change sets - groups of CRs shipping with one controller software release (I-11)
+      responses:
+        '200': { description: Change sets, content: { application/json: { schema: { type: object, properties: { items: { type: array, items: { $ref: '#/components/schemas/ChangeSet' } } } } } } }
+    post:
+      tags: [ChangeSets]
+      summary: Create a change set (Administrator, Engineer, Chief Engineer)
+      requestBody:
+        required: true
+        content: { application/json: { schema: { type: object, required: [name], properties: { name: { type: string }, description: { type: string }, target_software_version: { type: string, nullable: true } } } } }
+      responses:
+        '201': { description: Created, content: { application/json: { schema: { $ref: '#/components/schemas/ChangeSet' } } } }
+
+  /change-sets/{changeSetId}:
+    parameters: [{ $ref: '#/components/parameters/ChangeSetId' }]
+    get:
+      tags: [ChangeSets]
+      summary: A change set with its CRs, their states and SLA levels
+      responses:
+        '200': { description: Overview, content: { application/json: { schema: { $ref: '#/components/schemas/ChangeSetOverview' } } } }
+
+  /change-sets/{changeSetId}/change-requests:
+    parameters: [{ $ref: '#/components/parameters/ChangeSetId' }]
+    post:
+      tags: [ChangeSets]
+      summary: Add an open CR to the set (its author or an Administrator)
+      requestBody:
+        required: true
+        content: { application/json: { schema: { type: object, required: [change_request_id], properties: { change_request_id: { type: integer } } } } }
+      responses:
+        '200': { description: Updated set, content: { application/json: { schema: { $ref: '#/components/schemas/ChangeSet' } } } }
+
+  /change-sets/{changeSetId}/change-requests/{crId}:
+    parameters: [{ $ref: '#/components/parameters/ChangeSetId' }, { $ref: '#/components/parameters/CrId' }]
+    delete:
+      tags: [ChangeSets]
+      summary: Take a CR out of the set
+      responses:
+        '204': { description: Removed }
+
+  /change-sets/{changeSetId}/close:
+    parameters: [{ $ref: '#/components/parameters/ChangeSetId' }]
+    post:
+      tags: [ChangeSets]
+      summary: Close the set (Administrator)
+      responses:
+        '200': { description: Closed, content: { application/json: { schema: { $ref: '#/components/schemas/ChangeSet' } } } }
+
+  /change-sets/{changeSetId}/decisions:
+    parameters: [{ $ref: '#/components/parameters/ChangeSetId' }]
+    post:
+      tags: [ChangeSets]
+      summary: >
+        Decide several CRs of the set in one sitting. Each CR is decided by its own single-CR service call:
+        its own segregation-of-duties check, comment and audit entry. The password is verified once (I-17).
+      requestBody:
+        required: true
+        content: { application/json: { schema: { $ref: '#/components/schemas/BulkDecision' } } }
+      responses:
+        '200': { description: One result per CR, content: { application/json: { schema: { type: object, properties: { results: { type: array, items: { type: object, properties: { cr_id: { type: integer }, ok: { type: boolean }, message: { type: string } } } } } } } } }
+        '403': { description: Step-up password missing or wrong }
+
+  /delegations:
+    get:
+      tags: [Delegation]
+      summary: Delegations you gave or received (Administrators see all). include_inactive=true adds ended and revoked ones.
+      parameters: [{ name: include_inactive, in: query, schema: { type: boolean } }]
+      responses:
+        '200': { description: Delegations, content: { application/json: { schema: { type: object, properties: { items: { type: array, items: { $ref: '#/components/schemas/Delegation' } } } } } } }
+    post:
+      tags: [Delegation]
+      summary: >
+        Name a delegate for a date range (I-16). Reviewer, Administrator and Chief Engineer delegate their own
+        decision role; an Administrator may create one for anybody. The delegate acts as themselves; the
+        audit shows both and segregation of duties still applies to the delegate.
+      requestBody:
+        required: true
+        content: { application/json: { schema: { type: object, required: [delegate_id, valid_from, valid_to], properties: { delegator_id: { type: integer, description: Defaults to the caller }, delegate_id: { type: integer }, valid_from: { type: string, format: date }, valid_to: { type: string, format: date } } } } }
+      responses:
+        '201': { description: Created, content: { application/json: { schema: { $ref: '#/components/schemas/Delegation' } } } }
+        '422': { $ref: '#/components/responses/ValidationError' }
+
+  /delegations/{delegationId}:
+    parameters: [{ name: delegationId, in: path, required: true, schema: { type: integer } }]
+    delete:
+      tags: [Delegation]
+      summary: Revoke a delegation (the delegator or an Administrator)
+      responses:
+        '204': { description: Revoked }
+
+  /notifications:
+    get:
+      tags: [Notifications]
+      summary: Your in-app notices (I-08), newest first
+      parameters: [{ name: unread, in: query, schema: { type: boolean } }]
+      responses:
+        '200': { description: Notices and the unread count, content: { application/json: { schema: { type: object, properties: { items: { type: array, items: { $ref: '#/components/schemas/Notification' } }, unread: { type: integer } } } } } }
+
+  /notifications/read-all:
+    post:
+      tags: [Notifications]
+      summary: Mark all your notices as read
+      responses:
+        '200': { description: Count updated, content: { application/json: { schema: { type: object, properties: { updated: { type: integer } } } } } }
+
+  /notifications/{notificationId}/read:
+    parameters: [{ name: notificationId, in: path, required: true, schema: { type: integer } }]
+    post:
+      tags: [Notifications]
+      summary: Mark one notice as read
+      responses:
+        '200': { description: Updated, content: { application/json: { schema: { $ref: '#/components/schemas/Notification' } } } }
+
+  /settings:
+    get:
+      tags: [Settings]
+      summary: Administrator-managed settings (SLA thresholds, reviewer auto-assignment, capacity alert level) with defaults
+      responses:
+        '200': { description: Settings, content: { application/json: { schema: { type: object, properties: { items: { type: array, items: { $ref: '#/components/schemas/Setting' } } } } } } }
+    put:
+      tags: [Settings]
+      summary: Change settings (Administrator). Every value is validated; amber must not exceed red.
+      requestBody:
+        required: true
+        content: { application/json: { schema: { type: object, additionalProperties: { type: string }, example: { 'sla.review.amber_days': '2' } } } }
+      responses:
+        '200': { description: All settings, content: { application/json: { schema: { type: object, properties: { items: { type: array, items: { $ref: '#/components/schemas/Setting' } } } } } } }
+        '422': { $ref: '#/components/responses/ValidationError' }
+
+  /reports/catalogue-health:
+    get:
+      tags: [Reports]
+      summary: Catalogue health and number-range capacity forecast (I-19). Administrator, Reviewer, Chief Engineer.
+      responses:
+        '200': { description: Report, content: { application/json: { schema: { $ref: '#/components/schemas/CatalogueHealth' } } } }
+
+  /reports/kpis:
+    get:
+      tags: [Reports]
+      summary: The business-case KPIs - approval time, cross-domain turnaround, audit-trail completeness, queue ages, ownerless codes (I-10). Administrator, Chief Engineer.
+      responses:
+        '200': { description: KPIs, content: { application/json: { schema: { type: object } } } }
+
+  /reports/occurrences:
+    get:
+      tags: [Reports]
+      summary: Codes that never fire and the most frequent ones, from imported occurrence counts (I-28). Administrator, Chief Engineer.
+      parameters:
+        - { name: top, in: query, schema: { type: integer, default: 20 } }
+        - { name: min_periods, in: query, schema: { type: integer, default: 1 } }
+      responses:
+        '200': { description: Report, content: { application/json: { schema: { type: object } } } }
+
+  /occurrence-imports:
+    get:
+      tags: [Reports]
+      summary: Imported occurrence batches (I-28)
+      responses:
+        '200': { description: Batches, content: { application/json: { schema: { type: object, properties: { items: { type: array, items: { $ref: '#/components/schemas/OccurrenceImport' } } } } } } }
+    post:
+      tags: [Reports]
+      summary: >
+        Import occurrence counts per status code for a period (I-28): CSV/XLSX with the columns
+        status_code_identifier and occurrences, aggregated and anonymised. Administrator, Chief Engineer.
+      requestBody:
+        required: true
+        content: { multipart/form-data: { schema: { type: object, required: [file, source_label, period_start, period_end], properties: { file: { type: string, format: binary }, source_label: { type: string }, period_start: { type: string, format: date }, period_end: { type: string, format: date } } } } }
+      responses:
+        '201': { description: Imported, content: { application/json: { schema: { $ref: '#/components/schemas/OccurrenceImport' } } } }
+        '422': { $ref: '#/components/responses/ValidationError' }
+
+  /operations/backup-status:
+    get:
+      tags: [Operations]
+      summary: State and age of the last verified backup (I-09, Administrator)
+      responses:
+        '200': { description: Backup status, content: { application/json: { schema: { type: object } } } }
+
+  /operations/audit-verify:
+    post:
+      tags: [Operations]
+      summary: Walk the audit-log hash chain now (I-18, Administrator). `ok:false` names the first bad row.
+      responses:
+        '200': { description: Verification result, content: { application/json: { schema: { $ref: '#/components/schemas/AuditChainResult' } } } }
+
+  /imports/template:
+    get:
+      tags: [Import]
+      summary: Download the import template - exact headers (CSV) or headers, instructions and the lookup codes (XLSX) (I-05)
+      parameters: [{ name: format, in: query, schema: { type: string, enum: [csv, xlsx], default: xlsx } }]
+      responses:
+        '200': { description: File stream, content: { application/octet-stream: {} } }
+
+  /imports/reconciliation:
+    get:
+      tags: [Import]
+      summary: Migration progress - legacy rows imported, in review, approved, released, retired and (with expected_total) still missing (I-05)
+      parameters: [{ name: expected_total, in: query, schema: { type: integer } }]
+      responses:
+        '200': { description: Reconciliation report, content: { application/json: { schema: { type: object } } } }
+    post:
+      tags: [Import]
+      summary: Same report with the legacy master list uploaded so the missing legacy numbers are named
+      requestBody:
+        required: true
+        content: { multipart/form-data: { schema: { type: object, required: [file], properties: { file: { type: string, format: binary, description: "CSV/XLSX with a legacy_reference_number column" } } } } }
+      responses:
+        '200': { description: Reconciliation report, content: { application/json: { schema: { type: object } } } }
+
+  /imports/st/preview:
+    post:
+      tags: [Import]
+      summary: >
+        Status code import from generated StCd_<n>.st programs, step 1 (v4.2): upload several
+        files or a ZIP; nothing is created. Every program is listed with its state (ready,
+        exists, blocked), its legacy -> new number, the subgroup its number lies in and its
+        problems; the `token` is the staged upload for step 2. Hub Controller programs carry the
+        legacy HC number; the new number comes from the numbering table (proposal 1 or 2).
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              required: [files]
+              properties:
+                files: { type: array, items: { type: string, format: binary }, description: "StCd_<n>.st files, or one .zip holding them" }
+                controller: { type: string, enum: [auto, MC, HC], default: auto, description: "auto: a file number from 10000 up is a Hub Controller program" }
+                hc_proposal: { type: integer, enum: [1, 2], default: 1, description: "Which new Hub number becomes the identifier: 1 = five-digit, 2 = inside the Main scheme" }
+                default_category: { type: string, enum: [ERROR, WARNING, INFO], default: ERROR, description: "The files carry no status category; this one is set on every Draft" }
+                platforms: { type: string, description: "Turbine platform codes, comma separated (default: all active platforms)" }
+      responses:
+        '200':
+          description: Preview
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/StImportPreview' }
+        '422': { description: No usable file, or an invalid option }
+
+  /imports/st:
+    post:
+      tags: [Import]
+      summary: >
+        Status code import from generated StCd_<n>.st programs, step 2 (v4.2): create the Drafts
+        for the chosen programs of a preview. Each becomes an ordinary Draft status code with its
+        change request (cr_type=IMPORT), keeps its number as a reservation (the identifier issued
+        at Submit for Review is exactly that number), and all of them join one new change set.
+        Import is a faster data-entry path, never a governance bypass (FR-048c).
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [token]
+              properties:
+                token: { type: string, description: "From the preview" }
+                selected: { type: array, nullable: true, items: { type: string }, description: "Item keys to import; omitted or null = every item that is ready" }
+                change_set_name: { type: string, description: "Default: ST import <job> (<date>)" }
+                async: { type: boolean, default: false, description: "Force background processing; more than IMPORT_ASYNC_ROW_THRESHOLD programs get it automatically" }
+      responses:
+        '202':
+          description: Import job accepted (`change_set_id` names the batch change set)
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/ImportJob' }
+        '404': { description: The preview is unknown or has expired }
+        '422': { description: Nothing selected, or a selected program is no longer ready }
+
+  /status-codes/{statusCodeId}/import-source:
+    parameters: [{ name: statusCodeId, in: path, required: true, schema: { type: integer } }]
+    get:
+      tags: [Import]
+      summary: Where an imported status code came from - file, SHA-256, program and every attribute parsed from it, including those without a catalogue column yet (v4.2)
+      responses:
+        '200': { description: Provenance, content: { application/json: { schema: { type: object } } } }
+        '404': { description: The code was not imported from a program file }
+
+  /legacy-mapping:
+    get:
+      tags: [Import]
+      summary: >
+        Legacy number -> new identifier for every code that carries a legacy number (v4.2).
+        Legacy to new only: the new library is larger than the old one, so there is no reverse
+        lookup; `summary.new_without_legacy` counts the codes with no legacy number.
+      parameters:
+        - { name: controller, in: query, schema: { type: string, enum: [MC, HC] } }
+        - { name: q, in: query, schema: { type: string }, description: "Matches legacy number, identifier or title" }
+        - { name: state, in: query, schema: { type: string, enum: [issued, reserved, pending] }, description: "issued = identifier assigned; reserved = number held by an imported Draft; pending = no number yet" }
+      responses:
+        '200': { description: Mapping, content: { application/json: { schema: { $ref: '#/components/schemas/LegacyMapping' } } } }
+        '422': { description: Invalid filter }
+
+  /legacy-mapping/export:
+    get:
+      tags: [Import]
+      summary: The legacy -> new mapping as CSV (default) or XLSX, with the filters of the list (v4.2)
+      parameters:
+        - { name: format, in: query, schema: { type: string, enum: [csv, xlsx], default: csv } }
+        - { name: controller, in: query, schema: { type: string, enum: [MC, HC] } }
+        - { name: q, in: query, schema: { type: string } }
+        - { name: state, in: query, schema: { type: string, enum: [issued, reserved, pending] } }
+      responses:
+        '200': { description: File stream, content: { application/octet-stream: {} } }
+        '422': { description: Invalid format }
+
+  /export-profiles:
+    get:
+      tags: [Exports]
+      summary: Export profiles - Administrator-managed column sets (I-02). include_inactive=true is honoured for Administrators.
+      parameters: [{ name: include_inactive, in: query, schema: { type: boolean } }]
+      responses:
+        '200': { description: Profiles, content: { application/json: { schema: { type: object, properties: { items: { type: array, items: { $ref: '#/components/schemas/ExportProfile' } } } } } } }
+    post:
+      tags: [Exports]
+      summary: Create an export profile (Administrator). Columns are export field names with a header label.
+      requestBody:
+        required: true
+        content: { application/json: { schema: { $ref: '#/components/schemas/ExportProfileInput' } } }
+      responses:
+        '201': { description: Created, content: { application/json: { schema: { $ref: '#/components/schemas/ExportProfile' } } } }
+        '422': { $ref: '#/components/responses/ValidationError' }
+
+  /export-profiles/{profileId}:
+    parameters: [{ name: profileId, in: path, required: true, schema: { type: integer } }]
+    patch:
+      tags: [Exports]
+      summary: Change or deactivate an export profile (Administrator)
+      requestBody:
+        content: { application/json: { schema: { $ref: '#/components/schemas/ExportProfileInput' } } }
+      responses:
+        '200': { description: Updated, content: { application/json: { schema: { $ref: '#/components/schemas/ExportProfile' } } } }
+
+  /audiences:
+    get:
+      tags: [Exports]
+      summary: The eight audiences an export can be scoped to (I-03)
+      responses:
+        '200': { description: Audiences, content: { application/json: { schema: { type: object, properties: { items: { type: array, items: { type: object, properties: { code: { type: string }, label: { type: string } } } } } } } } }
+
+  /releases/{releaseId}/notes:
+    parameters: [{ $ref: '#/components/parameters/ReleaseId' }]
+    get:
+      tags: [Exports]
+      summary: Release notes - added / changed (field-level diff) / deprecated against the previous published Release (I-06). A BUILDING release is previewable by Administrators only.
+      parameters:
+        - { name: format, in: query, schema: { type: string, enum: [md, csv, pdf, json], default: json } }
+        - { name: bundle, in: query, schema: { type: boolean }, description: ZIP with MANIFEST.json }
+      responses:
+        '200': { description: File stream, headers: { X-Content-SHA256: { schema: { type: string } } }, content: { application/octet-stream: {} } }
+
+  /releases/{releaseId}/offline-bundle:
+    parameters: [{ $ref: '#/components/parameters/ReleaseId' }]
+    get:
+      tags: [Exports]
+      summary: One self-contained HTML lookup page for the Release, for use at the turbine without connectivity (I-24). Same audience/language/software_version/bundle parameters as the export.
+      parameters:
+        - { name: audience, in: query, schema: { type: string } }
+        - { name: language, in: query, schema: { type: string } }
+        - { name: software_version, in: query, schema: { type: string } }
+        - { name: bundle, in: query, schema: { type: boolean } }
+      responses:
+        '200': { description: HTML file or ZIP, headers: { X-Content-SHA256: { schema: { type: string } } }, content: { application/octet-stream: {} } }
+        '409': { description: Release is not published }
+
+  /releases/{releaseId}/exports:
+    parameters: [{ $ref: '#/components/parameters/ReleaseId' }]
+    get:
+      tags: [Exports]
+      summary: Every export recorded for the Release with its SHA-256 (I-06). Working roles.
+      responses:
+        '200': { description: Export jobs, content: { application/json: { schema: { type: object, properties: { items: { type: array, items: { $ref: '#/components/schemas/ExportRecord' } } } } } } }
+
+  /releases/{releaseId}/target-versions:
+    parameters: [{ $ref: '#/components/parameters/ReleaseId' }]
+    put:
+      tags: [Releases]
+      summary: Set the controller software versions a Release is published for (I-07, Administrator, before publish only)
+      requestBody:
+        required: true
+        content: { application/json: { schema: { type: object, required: [software_versions], properties: { software_versions: { type: array, items: { type: string } } } } } }
+      responses:
+        '200': { description: Targets, content: { application/json: { schema: { type: object, properties: { release_id: { type: integer }, software_versions: { type: array, items: { type: string } } } } } } }
+        '409': { description: Release already published }
+
+  /exports/{jobId}/manifest:
+    parameters: [{ name: jobId, in: path, required: true, schema: { type: integer } }]
+    get:
+      tags: [Exports]
+      summary: The manifest recorded for an export (I-06). Working roles.
+      responses:
+        '200': { description: Manifest JSON, content: { application/json: { schema: { $ref: '#/components/schemas/Manifest' } } } }
+        '404': { $ref: '#/components/responses/NotFound' }
+
+  /exports/verify:
+    post:
+      tags: [Exports]
+      summary: Is this file one the system produced (I-06)? Upload `file` and optionally its MANIFEST.json as `manifest`. Reports the SHA-256, the matching recorded exports and the manifest check (file listed, signature valid/invalid/unsigned).
+      requestBody:
+        required: true
+        content: { multipart/form-data: { schema: { type: object, required: [file], properties: { file: { type: string, format: binary }, manifest: { type: string, format: binary } } } } }
+      responses:
+        '200': { description: Verification, content: { application/json: { schema: { $ref: '#/components/schemas/VerifyResult' } } } }
+
+  /software-versions/matrix:
+    get:
+      tags: [SoftwareVersions]
+      summary: Which Released codes apply to a controller software version (I-07)
+      parameters: [{ name: version, in: query, required: true, schema: { type: string } }]
+      responses:
+        '200': { description: Matrix, content: { application/json: { schema: { type: object } } } }
+        '404': { $ref: '#/components/responses/NotFound' }
+
+  /software-versions/changes:
+    get:
+      tags: [SoftwareVersions]
+      summary: What was added, removed and changed between two software versions (I-07)
+      parameters:
+        - { name: from, in: query, required: true, schema: { type: string } }
+        - { name: to, in: query, required: true, schema: { type: string } }
+      responses:
+        '200': { description: Changes, content: { application/json: { schema: { type: object } } } }
+
+  /revisions/{revisionId}/translations:
+    parameters: [{ name: revisionId, in: path, required: true, schema: { type: integer } }]
+    get:
+      tags: [Translations]
+      summary: Translation status per language - MISSING, DRAFT or APPROVED (I-15). Viewers see approved text only.
+      responses:
+        '200': { description: Status matrix, content: { application/json: { schema: { type: object, properties: { items: { type: array, items: { $ref: '#/components/schemas/TranslationStatus' } } } } } } }
+
+  /revisions/{revisionId}/translations/{language}:
+    parameters:
+      - { name: revisionId, in: path, required: true, schema: { type: integer } }
+      - { name: language, in: path, required: true, schema: { type: string, example: de } }
+    put:
+      tags: [Translations]
+      summary: Save a translation as a DRAFT (Engineer, Administrator; source text must be Approved). Editing an approved translation sends it back to DRAFT.
+      requestBody:
+        required: true
+        content: { application/json: { schema: { type: object, required: [title, description], properties: { title: { type: string }, description: { type: string }, remedy_text: { type: string, nullable: true } } } } }
+      responses:
+        '200': { description: Saved, content: { application/json: { schema: { $ref: '#/components/schemas/Translation' } } } }
+        '409': { description: Source revision not yet Approved }
+
+  /revisions/{revisionId}/translations/{language}/approve:
+    parameters:
+      - { name: revisionId, in: path, required: true, schema: { type: integer } }
+      - { name: language, in: path, required: true, schema: { type: string } }
+    post:
+      tags: [Translations]
+      summary: Approve a translation - a light review by a Reviewer or Administrator other than the translator (I-15)
+      responses:
+        '200': { description: Approved, content: { application/json: { schema: { $ref: '#/components/schemas/Translation' } } } }
+        '403': { description: Translator cannot approve their own text }
+
+  /revisions/{revisionId}/translations/carry-over:
+    parameters: [{ name: revisionId, in: path, required: true, schema: { type: integer } }]
+    post:
+      tags: [Translations]
+      summary: Copy the previous revision's translations as DRAFTs for languages this revision lacks
+      responses:
+        '200': { description: Languages copied, content: { application/json: { schema: { type: object, properties: { copied_languages: { type: array, items: { type: string } } } } } } }
+
+  /translations/worklist:
+    get:
+      tags: [Translations]
+      summary: Current Approved/Released codes still lacking an approved translation in a language (I-15)
+      parameters: [{ name: language, in: query, required: true, schema: { type: string } }]
+      responses:
+        '200': { description: Worklist, content: { application/json: { schema: { type: object, properties: { items: { type: array, items: { type: object } } } } } } }
+
+  /saved-searches:
+    get:
+      tags: [SavedSearches]
+      summary: Your saved status-code searches and the columns the list can show (I-26)
+      responses:
+        '200': { description: Saved searches, content: { application/json: { schema: { type: object, properties: { items: { type: array, items: { $ref: '#/components/schemas/SavedSearch' } }, available_columns: { type: array, items: { type: object } }, default_columns: { type: array, items: { type: string } } } } } } }
+    post:
+      tags: [SavedSearches]
+      summary: Save the filters and visible columns under a name (saving under an existing name replaces it)
+      requestBody:
+        required: true
+        content: { application/json: { schema: { type: object, required: [name], properties: { name: { type: string }, filters: { type: object }, columns: { type: array, items: { type: string } } } } } }
+      responses:
+        '201': { description: Saved, content: { application/json: { schema: { $ref: '#/components/schemas/SavedSearch' } } } }
+
+  /saved-searches/{searchId}:
+    parameters: [{ name: searchId, in: path, required: true, schema: { type: integer } }]
+    delete:
+      tags: [SavedSearches]
+      summary: Remove one of your saved searches
+      responses:
+        '204': { description: Removed }
+
+  /api-tokens:
+    get:
+      tags: [Integrations]
+      summary: Machine API tokens (I-29, Administrator). The secret is never shown again.
+      responses:
+        '200': { description: Tokens, content: { application/json: { schema: { type: object, properties: { items: { type: array, items: { $ref: '#/components/schemas/ApiToken' } }, available_scopes: { type: array, items: { type: object } } } } } } }
+    post:
+      tags: [Integrations]
+      summary: >
+        Create a scoped, expiring token (max 365 days). It authenticates as `Authorization: Bearer cscm_...` on the
+        read-only endpoints that declare its scope, with Viewer-level visibility; it can never write.
+      requestBody:
+        required: true
+        content: { application/json: { schema: { type: object, required: [name, scopes], properties: { name: { type: string }, scopes: { type: array, items: { type: string, enum: ['catalogue:read', 'changes:read'] } }, expires_in_days: { type: integer, default: 90 } } } } }
+      responses:
+        '201': { description: Created; `token` is shown exactly once, content: { application/json: { schema: { $ref: '#/components/schemas/ApiTokenCreated' } } } }
+
+  /api-tokens/{tokenId}:
+    parameters: [{ name: tokenId, in: path, required: true, schema: { type: integer } }]
+    delete:
+      tags: [Integrations]
+      summary: Revoke a token (Administrator)
+      responses:
+        '204': { description: Revoked }
+
+  /webhooks:
+    get:
+      tags: [Integrations]
+      summary: Webhooks fired on release.published (I-29, Administrator)
+      responses:
+        '200': { description: Webhooks, content: { application/json: { schema: { type: object, properties: { items: { type: array, items: { $ref: '#/components/schemas/Webhook' } } } } } } }
+    post:
+      tags: [Integrations]
+      summary: >
+        Register a webhook. The target must resolve to a private/loopback address. Deliveries carry
+        `X-CSCM-Signature: sha256=<HMAC-SHA-256 of the body with the secret>`; redirects are not followed.
+      requestBody:
+        required: true
+        content: { application/json: { schema: { type: object, required: [name, url], properties: { name: { type: string }, url: { type: string }, events: { type: array, items: { type: string, enum: [release.published] } } } } } }
+      responses:
+        '201': { description: Created; `secret` is shown exactly once, content: { application/json: { schema: { $ref: '#/components/schemas/WebhookCreated' } } } }
+        '422': { $ref: '#/components/responses/ValidationError' }
+
+  /webhooks/{webhookId}:
+    parameters: [{ name: webhookId, in: path, required: true, schema: { type: integer } }]
+    patch:
+      tags: [Integrations]
+      summary: Pause or resume a webhook
+      requestBody:
+        content: { application/json: { schema: { type: object, properties: { is_active: { type: boolean } } } } }
+      responses:
+        '200': { description: Updated, content: { application/json: { schema: { $ref: '#/components/schemas/Webhook' } } } }
+
+  /webhooks/{webhookId}/deliveries:
+    parameters: [{ name: webhookId, in: path, required: true, schema: { type: integer } }]
+    get:
+      tags: [Integrations]
+      summary: Recent deliveries of a webhook with their outcome
+      responses:
+        '200': { description: Deliveries, content: { application/json: { schema: { type: object, properties: { items: { type: array, items: { type: object } } } } } } }
+
+  /changes:
+    get:
+      tags: [Integrations]
+      summary: >
+        Change feed - releases, deprecations, reinstatements and archivals in audit order (I-29). Poll with the previous
+        `next_since_id`; ETag / If-None-Match supported (304). Session or an API token with scope changes:read.
+      security: [{ sessionCookie: [] }, { bearerToken: [] }]
+      parameters:
+        - { name: since_id, in: query, schema: { type: integer, default: 0 } }
+        - { name: limit, in: query, schema: { type: integer, default: 100, maximum: 500 } }
+      responses:
+        '200': { description: Events, headers: { ETag: { schema: { type: string } } }, content: { application/json: { schema: { $ref: '#/components/schemas/ChangeFeed' } } } }
+        '304': { description: Not modified }
+
 components:
   securitySchemes:
     sessionCookie: { type: apiKey, in: cookie, name: cscm_session }
+    bearerToken: { type: http, scheme: bearer, description: "Scoped, expiring API token (I-29); read-only endpoints that declare its scope" }
 
   parameters:
     Page: { name: page, in: query, schema: { type: integer, minimum: 1, default: 1 } }
@@ -951,6 +1878,9 @@ components:
     Sort: { name: sort, in: query, schema: { type: string } }
     UserId: { name: userId, in: path, required: true, schema: { type: integer } }
     StatusCodeId: { name: statusCodeId, in: path, required: true, schema: { type: integer } }
+    CrId: { name: crId, in: path, required: true, schema: { type: integer } }
+    ChangeSetId: { name: changeSetId, in: path, required: true, schema: { type: integer } }
+    ReleaseId: { name: releaseId, in: path, required: true, schema: { type: integer } }
 
   responses:
     Unauthorized: { description: Not authenticated, content: { application/json: { schema: { $ref: '#/components/schemas/Error' } } } }
@@ -1092,6 +2022,19 @@ components:
         effective_date: { type: string, format: date-time, nullable: true }
         deprecated_reason: { type: string, nullable: true }
         superseded_by_status_code_id: { type: integer, nullable: true }
+        row_version: { type: integer, description: "I-01: increases on every Draft edit; send it back as expected_row_version" }
+        updated_at: { type: string, format: date-time, nullable: true }
+        remedy_text: { type: string, nullable: true, description: "I-14: recommended action for service staff" }
+        affected_component: { type: string, nullable: true }
+        related_status_codes: { type: string, nullable: true, example: "StCd-01234, StCd-01250" }
+        standard_references: { type: string, nullable: true }
+        applies_from_version: { type: string, nullable: true, description: "I-07: first controller software version this revision applies to (code; null = open)" }
+        applies_from_version_id: { type: integer, nullable: true }
+        applies_to_version: { type: string, nullable: true }
+        applies_to_version_id: { type: integer, nullable: true }
+        planned_effective_date: { type: string, format: date, nullable: true, description: "I-27" }
+        planned_deprecation_date: { type: string, format: date, nullable: true }
+        warnings: { type: array, items: { $ref: '#/components/schemas/Warning' }, description: "Present on create/edit responses: soft findings that never block (I-04, I-12)" }
     StatusCodeCreate:
       type: object
       required: [functional_system_group, functional_subgroup, title, description, status_category,
@@ -1131,6 +2074,14 @@ components:
         grid_operator_access: { type: string, nullable: true }
         service_partner_access: { type: string, nullable: true }
         customer_access: { type: string, nullable: true }
+        remedy_text: { type: string, nullable: true, maxLength: 4000 }
+        affected_component: { type: string, nullable: true, maxLength: 200 }
+        related_status_codes: { type: string, nullable: true, maxLength: 500, description: "Identifiers like StCd-01234 separated by commas" }
+        standard_references: { type: string, nullable: true, maxLength: 1000 }
+        applies_from_version: { type: string, nullable: true, description: "Controller software version code or id" }
+        applies_to_version: { type: string, nullable: true }
+        planned_effective_date: { type: string, format: date, nullable: true }
+        planned_deprecation_date: { type: string, format: date, nullable: true }
     StatusCodeRevisionCreate:
       allOf:
         - { $ref: '#/components/schemas/StatusCodeCreate' }
@@ -1138,8 +2089,13 @@ components:
           properties: { justification: { type: string } }
     StatusCodeRevisionUpdate:
       type: object
-      description: Any subset of editable StatusCodeCreate fields, plus optimistic concurrency token
+      description: >
+        The editable StatusCodeCreate fields (a full representation, as before), plus the optimistic
+        concurrency tokens (I-01). Send `expected_row_version` (and/or `expected_updated_at`) from the revision you
+        loaded: if somebody saved in between the response is 409 `conflict` with `current_row_version` and `current`
+        (the stored revision) so the client can merge; nothing is overwritten. Omit both for the old last-write-wins behaviour.
       properties:
+        expected_row_version: { type: integer }
         expected_updated_at: { type: string, format: date-time }
     StatusCodeList:
       type: object
@@ -1161,10 +2117,12 @@ components:
             properties: { field: { type: string }, old_value: {}, new_value: {} }
     SignoffDecision:
       type: object
-      required: [decision]
+      required: [decision, current_password]
       properties:
         decision: { type: string, enum: [APPROVE, REJECT] }
         comment: { type: string }
+        current_password: { type: string, format: password, description: "The caller's own password, re-entered for this action (I-17, SEC-026). 403 step_up_required / step_up_failed otherwise; a wrong one counts toward account lockout." }
+        checklist_confirmed: { type: array, items: { type: integer }, description: "Reviewer sign-off APPROVE only: ids of the review-checklist items confirmed (all applicable ones are required, I-23)" }
     AdminSignoffDecision:
       allOf:
         - $ref: '#/components/schemas/SignoffDecision'
@@ -1212,6 +2170,7 @@ components:
         assigned_reviewer_id: { type: integer, nullable: true }
         comments: { type: array, items: { $ref: '#/components/schemas/ReviewComment' } }
         domain_signoffs: { type: array, items: { $ref: '#/components/schemas/DomainSignoff' } }
+        warnings: { type: array, items: { $ref: '#/components/schemas/Warning' }, description: "Submit response only (I-04, I-12)" }
     ReviewComment:
       type: object
       properties:
@@ -1230,12 +2189,19 @@ components:
         total: { type: integer }
         page: { type: integer }
         page_size: { type: integer }
+    UserUsage:
+      type: object
+      properties:
+        user_id: { type: integer }
+        references: { type: object, additionalProperties: { type: integer }, description: "table.column -> rows that point at the account" }
+        reference_total: { type: integer }
+        deletable: { type: boolean, description: "true only when nothing but the account's own rows exist (BR-025)" }
     ImportJob:
       type: object
       properties:
         id: { type: integer }
         requested_by: { type: integer }
-        source_format: { type: string, enum: [CSV, XLSX] }
+        source_format: { type: string, enum: [CSV, XLSX, ST] }
         source_file_reference: { type: string }
         row_count: { type: integer }
         status: { type: string, enum: [PENDING, VALIDATING, COMPLETE, FAILED] }
@@ -1244,6 +2210,104 @@ components:
         error_report_reference: { type: string, nullable: true }
         created_at: { type: string, format: date-time }
         completed_at: { type: string, format: date-time, nullable: true }
+        import_mode: { type: string, enum: [CREATE, UPDATE] }
+        processed_count: { type: integer, description: "Rows handled so far (I-32)" }
+        warning_count: { type: integer }
+        progress_percent: { type: integer }
+        error_report_xlsx_available: { type: boolean }
+        change_set_id: { type: integer, nullable: true, description: "The batch change set of a status code import from .st programs (v4.2)" }
+    StImportPreview:
+      type: object
+      properties:
+        token: { type: string }
+        options: { type: object }
+        summary:
+          type: object
+          properties:
+            files: { type: integer }
+            programs: { type: integer }
+            ready: { type: integer }
+            changed: { type: integer }
+            restorable: { type: integer }
+            exists: { type: integer }
+            blocked: { type: integer }
+            warnings: { type: integer }
+            with_legacy: { type: integer }
+            without_legacy: { type: integer, description: "Programs with no legacy number - the new set is larger than the old one" }
+        items:
+          type: array
+          items:
+            type: object
+            properties:
+              key: { type: string }
+              file: { type: string }
+              line: { type: integer }
+              program_number: { type: integer, description: "StCd_<n> as written in the file (the legacy number for a Hub program)" }
+              controller: { type: string, enum: [MC, HC] }
+              identifier: { type: string, nullable: true, description: "The new identifier the code will be issued" }
+              legacy_number: { type: integer, nullable: true }
+              name: { type: string }
+              group: { type: string, nullable: true }
+              subgroup: { type: string, nullable: true }
+              prg_idx: { type: integer, nullable: true }
+              state: { type: string, enum: [ready, changed, restorable, exists, blocked], description: "ready = new; changed = differs from the code in the catalogue (update the Draft or open a new revision); restorable = the code's change request was withdrawn (open a new Draft on the same number); exists = unchanged; blocked = problems" }
+              action: { type: string, enum: [create, update, revise, restore], nullable: true }
+              changes: { type: array, items: { type: string }, description: "Fields in which a changed program differs from the catalogue" }
+              issues: { type: array, items: { type: object, properties: { column: { type: string }, message: { type: string } } } }
+              warnings: { type: array, items: { type: string } }
+              existing: { type: object, nullable: true }
+        file_errors: { type: array, items: { type: object } }
+        notes: { type: array, items: { type: string } }
+        expires_hours: { type: integer }
+    LegacyMapping:
+      type: object
+      properties:
+        summary:
+          type: object
+          properties:
+            codes_total: { type: integer }
+            with_legacy_number: { type: integer }
+            new_without_legacy: { type: integer }
+            by_controller: { type: object }
+            identifier_issued: { type: integer }
+            identifier_reserved: { type: integer }
+            identifier_pending: { type: integer }
+        entries:
+          type: array
+          items:
+            type: object
+            properties:
+              status_code_id: { type: integer }
+              controller: { type: string, enum: [MC, HC] }
+              legacy_number: { type: string }
+              new_identifier: { type: string, nullable: true }
+              identifier_state: { type: string, enum: [issued, reserved, pending] }
+              title: { type: string }
+              lifecycle_state: { type: string }
+              group: { type: string }
+              subgroup: { type: string }
+    ImportDryRun:
+      type: object
+      properties:
+        mode: { type: string, enum: [CREATE, UPDATE] }
+        source_format: { type: string }
+        row_count: { type: integer }
+        would_create: { type: integer }
+        would_update: { type: integer }
+        unchanged: { type: integer }
+        error_count: { type: integer }
+        warning_count: { type: integer }
+        ok: { type: boolean }
+        rows:
+          type: array
+          items:
+            type: object
+            properties:
+              row: { type: integer }
+              action: { type: string, enum: [create, update, skip, error] }
+              errors: { type: array, items: { type: object, properties: { column: { type: string }, value: { type: string }, message: { type: string }, hint: { type: string } } } }
+              warnings: { type: array, items: { type: string } }
+              status_code_identifier: { type: string, nullable: true }
     Release:
       type: object
       properties:
@@ -1258,6 +2322,8 @@ components:
         published_by: { type: integer, nullable: true }
         published_at: { type: string, format: date-time, nullable: true }
         item_count: { type: integer }
+        target_software_versions: { type: array, items: { type: string }, description: "I-07" }
+        warnings: { type: array, items: { $ref: '#/components/schemas/Warning' }, description: "Publish response only: planned effective dates still in the future (I-27)" }
     ReleaseCreate:
       type: object
       required: [name, version_label]
@@ -1266,6 +2332,7 @@ components:
         version_label: { type: string }
         description: { type: string }
         scope_filter: { type: object }
+        target_software_versions: { type: array, items: { type: string } }
     AuditLogEntry:
       type: object
       properties:
@@ -1279,3 +2346,385 @@ components:
         after_value: { type: object, nullable: true }
         ip_address: { type: string, nullable: true }
         request_id: { type: string }
+    # ---------------------------------------------------------------------------- v4 (2026-10-22)
+    Readiness:
+      type: object
+      properties:
+        status: { type: string, enum: [ok, degraded, unavailable] }
+        checks: { type: object, description: "database, schema, audit_chain, backup - each with a `state`" }
+    SimilarCode:
+      type: object
+      properties:
+        status_code_id: { type: integer }
+        status_code_identifier: { type: string, nullable: true }
+        title: { type: string }
+        lifecycle_status: { $ref: '#/components/schemas/LifecycleStatus' }
+        score: { type: number, description: "0..1 text similarity of the titles" }
+    Warning:
+      type: object
+      description: A soft finding that never blocks a save - possible duplicate (I-12) or an unresolvable / deprecated reference (I-04)
+      properties:
+        type: { type: string, enum: [POSSIBLE_DUPLICATE, UNKNOWN_REFERENCE, DEPRECATED_REFERENCE, ARCHIVED_REFERENCE, SELF_REFERENCE, FUTURE_EFFECTIVE_DATE] }
+        field: { type: string }
+        message: { type: string }
+    WhereUsedEntry:
+      type: object
+      properties:
+        status_code_id: { type: integer }
+        status_code_identifier: { type: string, nullable: true }
+        title: { type: string }
+        lifecycle_status: { $ref: '#/components/schemas/LifecycleStatus' }
+        relation: { type: string, enum: [REPEATED_ERROR, SUPERSEDED_BY, RELATED, PLATFORM_VARIANT] }
+    FamilyMember:
+      type: object
+      properties:
+        status_code_id: { type: integer }
+        status_code_identifier: { type: string, nullable: true }
+        title: { type: string }
+        turbine_platforms: { type: array, items: { type: string } }
+        lifecycle_status: { $ref: '#/components/schemas/LifecycleStatus' }
+        platform_variant_of_status_code_id: { type: integer, nullable: true }
+    HubMappingReport:
+      type: object
+      properties:
+        total: { type: integer }
+        tally: { type: object, description: "OPEN, MAPPED_DRAFT, MAPPED_LIVE, HUB_RETIRED counts" }
+        ready_to_retire: { type: boolean }
+        items:
+          type: array
+          items:
+            type: object
+            properties:
+              hub_status_code_id: { type: integer }
+              hub_identifier: { type: string, nullable: true }
+              hub_title: { type: string }
+              hub_lifecycle: { type: string }
+              legacy_reference_number: { type: string, nullable: true }
+              mc_status_code_id: { type: integer, nullable: true }
+              mc_identifier: { type: string, nullable: true }
+              mc_lifecycle: { type: string, nullable: true }
+              state: { type: string, enum: [OPEN, MAPPED_DRAFT, MAPPED_LIVE, HUB_RETIRED] }
+    SlaInfo:
+      type: object
+      nullable: true
+      properties:
+        stage: { type: string, enum: [review, approval] }
+        entered_at: { type: string, format: date-time }
+        age_days: { type: integer, description: "Business days (Mon-Fri) waited at this stage" }
+        level: { type: string, enum: [ok, amber, red] }
+        amber_days: { type: integer }
+        red_days: { type: integer }
+    StalledRequest:
+      allOf:
+        - { $ref: '#/components/schemas/SlaInfo' }
+        - type: object
+          properties:
+            change_request_id: { type: integer }
+            title: { type: string }
+            assigned_reviewer_id: { type: integer, nullable: true }
+    FieldComment:
+      type: object
+      properties:
+        id: { type: integer }
+        change_request_id: { type: integer }
+        field: { type: string }
+        author_id: { type: integer }
+        comment_text: { type: string }
+        created_at: { type: string, format: date-time }
+        resolved_by: { type: integer, nullable: true }
+        resolved_at: { type: string, format: date-time, nullable: true }
+    ChecklistItem:
+      type: object
+      properties:
+        id: { type: integer }
+        functional_system_group_id: { type: integer, nullable: true, description: "NULL = applies to every group" }
+        text: { type: string }
+        is_active: { type: boolean }
+        sort_order: { type: integer }
+    Attachment:
+      type: object
+      properties:
+        id: { type: integer }
+        change_request_id: { type: integer }
+        filename: { type: string }
+        content_type: { type: string }
+        size_bytes: { type: integer }
+        sha256: { type: string }
+        description: { type: string, nullable: true }
+        uploaded_by: { type: integer }
+        uploaded_at: { type: string, format: date-time }
+    ChangeSet:
+      type: object
+      properties:
+        id: { type: integer }
+        name: { type: string }
+        description: { type: string, nullable: true }
+        target_software_version: { type: string, nullable: true }
+        status: { type: string, enum: [OPEN, CLOSED] }
+        created_by: { type: integer }
+        created_at: { type: string, format: date-time }
+        closed_at: { type: string, format: date-time, nullable: true }
+        change_request_ids: { type: array, items: { type: integer } }
+    ChangeSetOverview:
+      allOf:
+        - { $ref: '#/components/schemas/ChangeSet' }
+        - type: object
+          properties:
+            tally: { type: object, description: "CRs per lifecycle state" }
+            items:
+              type: array
+              items:
+                type: object
+                properties:
+                  change_request_id: { type: integer }
+                  status_code_identifier: { type: string, nullable: true }
+                  title: { type: string }
+                  state: { type: string }
+                  sla: { $ref: '#/components/schemas/SlaInfo' }
+    BulkDecision:
+      type: object
+      required: [step, decision, current_password]
+      properties:
+        step: { type: string, enum: [reviewer, admin, chief-engineer] }
+        decision: { type: string, enum: [APPROVE, REJECT] }
+        comment: { type: string }
+        current_password: { type: string, format: password }
+        change_request_ids: { type: array, items: { type: integer }, description: "Omit to decide every CR of the set that waits for this step" }
+    Delegation:
+      type: object
+      properties:
+        id: { type: integer }
+        delegator_id: { type: integer }
+        delegate_id: { type: integer }
+        role: { type: string, enum: [REVIEWER, ADMINISTRATOR, CHIEF_ENGINEER] }
+        valid_from: { type: string, format: date }
+        valid_to: { type: string, format: date }
+        created_by: { type: integer }
+        created_at: { type: string, format: date-time }
+        revoked_at: { type: string, format: date-time, nullable: true }
+    Notification:
+      type: object
+      properties:
+        id: { type: integer }
+        kind: { type: string, example: SLA_REMINDER }
+        message: { type: string }
+        link: { type: string, nullable: true }
+        change_request_id: { type: integer, nullable: true }
+        created_at: { type: string, format: date-time }
+        read_at: { type: string, format: date-time, nullable: true }
+    Setting:
+      type: object
+      properties:
+        key: { type: string, example: 'sla.review.amber_days' }
+        value: { type: string }
+        default: { type: string }
+        description: { type: string }
+    CatalogueHealth:
+      type: object
+      properties:
+        generated_at: { type: string }
+        capacity: { type: array, items: { $ref: '#/components/schemas/CapacityRow' } }
+        capacity_alerts: { type: array, items: { $ref: '#/components/schemas/CapacityRow' } }
+        missing_data: { type: object }
+        inconsistencies: { type: array, items: { type: object } }
+        unused_numbers: { type: array, items: { type: object } }
+        upcoming: { type: object }
+    CapacityRow:
+      type: object
+      properties:
+        functional_system_group: { type: string }
+        controller: { type: string, enum: [MC, HC], description: "Main Controller or Hub Controller group (the health page colours them blue and light blue)" }
+        functional_subgroup: { type: string }
+        label: { type: string }
+        range_start: { type: integer }
+        range_end: { type: integer }
+        total: { type: integer }
+        allocated: { type: integer }
+        remaining: { type: integer }
+        percent_remaining: { type: number }
+        alert: { type: boolean }
+        exhausted: { type: boolean }
+    OccurrenceImport:
+      type: object
+      properties:
+        id: { type: integer }
+        source_label: { type: string }
+        period_start: { type: string, format: date }
+        period_end: { type: string, format: date }
+        imported_by: { type: integer }
+        imported_at: { type: string, format: date-time }
+        matched_codes: { type: integer }
+        unmatched_rows: { type: integer }
+    AuditChainResult:
+      type: object
+      properties:
+        ok: { type: boolean }
+        checked: { type: integer }
+        head_hash: { type: string, nullable: true }
+        first_bad_id: { type: integer, nullable: true }
+        reason: { type: string }
+        verified_at: { type: string, format: date-time }
+    ExportProfile:
+      type: object
+      properties:
+        id: { type: integer }
+        code: { type: string, example: SERVICE_MANUAL }
+        name: { type: string }
+        description: { type: string, nullable: true }
+        columns:
+          type: array
+          items: { type: object, properties: { field: { type: string }, label: { type: string } } }
+        language: { type: string, nullable: true }
+        audience: { type: string, nullable: true }
+        title_page: { type: boolean }
+        pdf_orientation: { type: string, enum: [L, P] }
+        is_active: { type: boolean }
+    ExportProfileInput:
+      type: object
+      properties:
+        code: { type: string }
+        name: { type: string }
+        description: { type: string }
+        columns:
+          type: array
+          items: { type: object, required: [field, label], properties: { field: { type: string }, label: { type: string } } }
+        language: { type: string, nullable: true }
+        audience: { type: string, nullable: true }
+        title_page: { type: boolean }
+        pdf_orientation: { type: string, enum: [L, P] }
+        is_active: { type: boolean }
+    ExportRecord:
+      type: object
+      properties:
+        id: { type: integer }
+        export_type: { type: string }
+        scope_type: { type: string }
+        sha256: { type: string, nullable: true }
+        size_bytes: { type: integer, nullable: true }
+        row_count: { type: integer, nullable: true }
+        profile: { type: string, nullable: true }
+        audience: { type: string, nullable: true }
+        language: { type: string, nullable: true }
+        software_version: { type: string, nullable: true }
+        requested_by: { type: integer }
+        created_at: { type: string, format: date-time }
+    Manifest:
+      type: object
+      description: "What an export is, with the SHA-256 of every file. `signature` is an HMAC-SHA-256 when MANIFEST_SIGNING_KEY is configured, else null."
+      properties:
+        manifest_version: { type: integer }
+        kind: { type: string, enum: [catalogue, release-notes, offline-bundle] }
+        generated_at: { type: string, format: date-time }
+        generated_by: { type: object }
+        release: { type: object, nullable: true }
+        scope: { type: object }
+        format: { type: string }
+        profile: { type: string, nullable: true }
+        audience: { type: string, nullable: true }
+        language: { type: string, nullable: true }
+        software_version: { type: string, nullable: true }
+        row_count: { type: integer }
+        files:
+          type: array
+          items: { type: object, properties: { name: { type: string }, sha256: { type: string }, size_bytes: { type: integer } } }
+        content_digest: { type: string, description: "SHA-256 of the data rows, independent of the file format" }
+        algorithm: { type: string, example: SHA-256 }
+        signature: { type: object, nullable: true }
+    VerifyResult:
+      type: object
+      properties:
+        sha256: { type: string }
+        recorded: { type: boolean }
+        export_job_ids: { type: array, items: { type: integer } }
+        manifest:
+          type: object
+          properties:
+            file_sha256: { type: string }
+            file_listed: { type: boolean }
+            file_name_matches: { type: boolean }
+            signature: { type: string, enum: [valid, invalid, unsigned, no-key] }
+            ok: { type: boolean }
+    TranslationStatus:
+      type: object
+      properties:
+        language: { type: string }
+        label: { type: string }
+        status: { type: string, enum: [MISSING, DRAFT, APPROVED] }
+        title: { type: string, nullable: true }
+        description: { type: string, nullable: true }
+        remedy_text: { type: string, nullable: true }
+        translated_by: { type: integer, nullable: true }
+        approved_by: { type: integer, nullable: true }
+    Translation:
+      type: object
+      properties:
+        revision_id: { type: integer }
+        language: { type: string }
+        status: { type: string, enum: [DRAFT, APPROVED] }
+        title: { type: string }
+        description: { type: string }
+        remedy_text: { type: string, nullable: true }
+        translated_by: { type: integer }
+        translated_at: { type: string, format: date-time }
+        approved_by: { type: integer, nullable: true }
+        approved_at: { type: string, format: date-time, nullable: true }
+    SavedSearch:
+      type: object
+      properties:
+        id: { type: integer }
+        name: { type: string }
+        filters: { type: object }
+        columns: { type: array, items: { type: string } }
+        query_string: { type: string, description: "Append to /status-codes to reproduce the view (shareable link)" }
+        created_at: { type: string, format: date-time }
+    ApiToken:
+      type: object
+      properties:
+        id: { type: integer }
+        name: { type: string }
+        token_prefix: { type: string }
+        scopes: { type: array, items: { type: string } }
+        expires_at: { type: string, format: date-time }
+        last_used_at: { type: string, format: date-time, nullable: true }
+        revoked_at: { type: string, format: date-time, nullable: true }
+        created_at: { type: string, format: date-time }
+    ApiTokenCreated:
+      allOf:
+        - { $ref: '#/components/schemas/ApiToken' }
+        - type: object
+          properties:
+            token: { type: string, description: "The secret - shown exactly once" }
+    Webhook:
+      type: object
+      properties:
+        id: { type: integer }
+        name: { type: string }
+        url: { type: string }
+        events: { type: array, items: { type: string } }
+        is_active: { type: boolean }
+        last_delivery_at: { type: string, format: date-time, nullable: true }
+        last_status: { type: string, nullable: true }
+        created_at: { type: string, format: date-time }
+    WebhookCreated:
+      allOf:
+        - { $ref: '#/components/schemas/Webhook' }
+        - type: object
+          properties:
+            secret: { type: string, description: "Signing secret - shown exactly once" }
+    ChangeFeed:
+      type: object
+      properties:
+        items:
+          type: array
+          items:
+            type: object
+            properties:
+              id: { type: integer }
+              event: { type: string, enum: [code.released, code.deprecated, code.reinstated, code.archived] }
+              occurred_at: { type: string, format: date-time }
+              status_code_identifier: { type: string, nullable: true }
+              title: { type: string }
+              revision_number: { type: integer }
+              release: { type: object, nullable: true }
+        next_since_id: { type: integer }
+        has_more: { type: boolean }

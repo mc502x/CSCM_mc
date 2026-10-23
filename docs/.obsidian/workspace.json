@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "4ec52f531b7e29cc",
+        "id": "7cf25b26c3180054",
         "type": "tabs",
         "children": [
           {
-            "id": "07a9556762422355",
+            "id": "1753e6cfd434a8d0",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "11-security-architecture.md",
+                "file": "23-user-manual.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "11-security-architecture"
+              "title": "23-user-manual"
             }
           }
         ]
@@ -188,40 +188,44 @@
       "bases:Neue Base erstellen": false
     }
   },
-  "active": "07a9556762422355",
+  "active": "1753e6cfd434a8d0",
   "lastOpenFiles": [
-    "artifacts/test-run-history.json",
-    "artifacts/New Statuscode for sharing (recreated).xlsx",
-    "Unbenannt.canvas",
+    "sedQMliFb",
+    "02-prd.md",
+    "01-executive-summary.md",
+    "26-translations.md",
+    "18-claude-code-implementation-guide.md",
+    "sedM8ZnzO",
+    "sedZay9sH",
+    "13-test-strategy.md.tmp.18940.9350d2be14e3",
+    "sedBJkomt",
+    "sedKyzQLF",
+    "sedVCkAIV",
+    "sed4dNG2p",
+    "sedf8sEzG",
+    "sedT6rr21",
+    "sedHnVw1F",
+    "04-domain-model.md",
     "24-test-report.md",
-    "23-user-manual.md",
+    "25-hc-integration-concept.md",
     "22-software-description.md",
     "21-improvement-ideas.md",
+    "13-test-strategy.md",
+    "00-INDEX.md",
+    "10-ui-ux-specification.md",
+    "03-srs.md",
+    "06-data-dictionary.md",
+    "05-governance-handbook.md",
+    "11-security-architecture.md",
+    "23-user-manual.md",
+    "19-glossary.md",
+    "07-database-design.md",
+    "09-api-specification.md",
+    "15-development-standards.md",
     "20-traceability-matrix.md",
+    "Unbenannt.canvas",
     "12-audit-compliance.md",
     "14-deployment-architecture.md",
-    "15-development-standards.md",
-    "16-mvp-roadmap.md",
-    "17-implementation-backlog.md",
-    "04-domain-model.md",
-    "05-governance-handbook.md",
-    "03-srs.md",
-    "07-database-design.md",
-    "08-system-architecture.md",
-    "10-ui-ux-specification.md",
-    "09-api-specification.md",
-    "19-glossary.md",
-    "23-user-manual.md.tmp.5584.b460def9c58b",
-    "sed7qWcq1",
-    "22-software-description.md.tmp.5584.545feafa944e",
-    "21-improvement-ideas.md.tmp.5584.b5969208b163",
-    "20-traceability-matrix.md.tmp.5584.dca29385b32e",
-    "18-claude-code-implementation-guide.md",
-    "20-traceability-matrix.md.tmp.5584.97df7a6c3279",
-    "00-INDEX.md",
-    "06-data-dictionary.md",
-    "01-executive-summary.md",
-    "artifacts/openapi.yaml.tmp.12204.49c3d87fa01a",
-    "artifacts/openapi.yaml.tmp.12204.6ef53824f8e7"
+    "16-mvp-roadmap.md"
   ]
 }

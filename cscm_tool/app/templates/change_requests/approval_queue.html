@@ -1,11 +1,13 @@
 {% extends "base.html" %}
-{% block title %}Approval Queue — CSCM Tool{% endblock %}
+{% import "_macros.html" as macros %}
+{% block title %}{{ _('Approval Queue') }} — CSCM Tool{% endblock %}
 {% block content %}
-<div class="page-header"><h1>Approval Queue</h1></div>
+<div class="page-header"><h1>{{ _('Approval Queue') }}</h1></div>
 <div class="card">
   {% if crs %}
   <table>
-    <thead><tr><th>Identifier</th><th>Title</th><th>Functional Group</th><th>Author</th><th>Reviewer</th><th>Administrator</th><th></th></tr></thead>
+    <caption class="visually-hidden">{{ _('Change requests waiting for approval') }}</caption>
+    <thead><tr><th scope="col">{{ _('Identifier') }}</th><th scope="col">{{ _('Title') }}</th><th scope="col">{{ _('Functional Group') }}</th><th scope="col">{{ _('Author') }}</th><th scope="col">{{ _('Reviewer') }}</th><th scope="col">{{ _('Administrator') }}</th><th scope="col">{{ _('Waiting') }}</th><th scope="col"></th></tr></thead>
     <tbody>
       {% for cr in crs %}
       <tr>
@@ -15,13 +17,14 @@
         <td>{{ user_label(cr.requested_by) }}</td>
         <td>{{ user_label(cr.revision.reviewer_signoff_by) }}</td>
         <td>{{ user_label(cr.revision.admin_signoff_by) }}</td>
-        <td><a href="{{ url_for('ui.change_request_detail', cr_id=cr.id) }}">Decide</a></td>
+        <td>{{ macros.sla_badge(slas[cr.id]) }}</td>
+        <td><a href="{{ url_for('ui.change_request_detail', cr_id=cr.id) }}">{{ _('Decide') }}</a></td>
       </tr>
       {% endfor %}
     </tbody>
   </table>
   {% else %}
-  <div class="table-empty">Nothing is awaiting your approval.</div>
+  <div class="table-empty">{{ _('Nothing is awaiting your approval.') }}</div>
   {% endif %}
 </div>
 {% endblock %}

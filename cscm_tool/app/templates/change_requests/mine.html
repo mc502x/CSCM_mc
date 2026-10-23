@@ -1,7 +1,8 @@
 {% extends "base.html" %}
-{% block title %}My Change Requests — CSCM Tool{% endblock %}
+{% import "_macros.html" as macros %}
+{% block title %}{{ _('My Change Requests') }} — CSCM Tool{% endblock %}
 {% block content %}
-<div class="page-header"><h1>My Change Requests</h1></div>
+<div class="page-header"><h1>{{ _('My Change Requests') }}</h1></div>
 {% if import_job_id %}
 <div class="flash flash--info">Showing only Drafts created by Import Job #{{ import_job_id }}. <a href="{{ url_for('ui.my_change_requests') }}">Show all</a></div>
 {% endif %}
@@ -27,15 +28,20 @@
 {% endif %}
 <div class="card">
   {% if crs %}
+  {% set can_withdraw = current_user.role_code in ('ADMINISTRATOR', 'ENGINEER') %}
+  <form method="post" action="{{ url_for('ui.cr_withdraw_selected') }}" data-confirm="{{ _('Withdraw the ticked change requests? A withdrawn Draft is deleted; its number is only kept if it was already issued.') }}">
+  <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
   <table>
-    <thead><tr><th>Identifier</th><th>Title</th><th>Type</th><th>State</th><th>Author</th><th>Submitted</th><th></th></tr></thead>
+    <thead><tr>{% if can_withdraw %}<th scope="col"><input type="checkbox" data-check-all="cr-row-check" aria-label="{{ _('Select all') }}"></th>{% endif %}<th>{{ _('Identifier') }}</th><th>{{ _('Title') }}</th><th>{{ _('Type') }}</th><th>{{ _('State') }}</th><th>{{ _('Waiting') }}</th><th>{{ _('Author') }}</th><th>{{ _('Submitted') }}</th><th></th></tr></thead>
     <tbody>
       {% for cr in crs %}
       <tr>
+        {% if can_withdraw %}<td><input type="checkbox" class="cr-row-check" name="cr_id" value="{{ cr.id }}" aria-label="{{ _('Select') }} #{{ cr.id }}"{% if cr.requested_by != current_user.id or cr.revision.lifecycle_status not in ('DRAFT', 'REVIEW', 'PENDING_APPROVAL') %} disabled{% endif %}></td>{% endif %}
         <td>{{ cr.revision.status_code.status_code_identifier or 'Not yet assigned' }}</td>
         <td>{{ cr.revision.title }}</td>
         <td>{{ cr.cr_type }}</td>
         <td>{{ cr.state|replace('_', ' ')|title }}</td>
+        <td>{{ macros.sla_badge(slas[cr.id]) }}</td>
         <td>{{ user_label(cr.requested_by) }}</td>
         <td>{{ cr.submitted_at or '—' }}</td>
         <td><a href="{{ url_for('ui.change_request_detail', cr_id=cr.id) }}">View</a></td>
@@ -43,6 +49,8 @@
       {% endfor %}
     </tbody>
   </table>
+  {% if can_withdraw %}<div class="btn-row" style="margin-top:12px"><button class="btn btn--danger" type="submit">{{ _('Withdraw selected') }}</button></div>{% endif %}
+  </form>
   {% else %}
   <div class="table-empty">You have no change requests yet.</div>
   {% endif %}

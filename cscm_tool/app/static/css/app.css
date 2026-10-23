@@ -109,7 +109,7 @@ a:hover { text-decoration: underline; }
 .sidebar a { display: block; padding: 10px 16px; color: var(--color-text); min-height: 44px; box-sizing: border-box; }
 .sidebar a.is-active { background: var(--color-bg); color: var(--color-primary); font-weight: 600; }
 
-.main { flex: 1; margin-left: 256px; padding: 32px; padding-top: 96px; max-width: 1280px; }
+.main { flex: 1; margin-left: 256px; padding: 32px; padding-top: 96px; max-width: 1280px; min-width: 0; }
 
 .page-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 18px; flex-wrap: wrap; gap: 10px; }
 .page-header h1 { margin: 0; font-size: 20px; }
@@ -134,6 +134,23 @@ tr:hover td { background: var(--color-bg); }
 .badge--DEPRECATED { background: var(--badge-deprecated-bg); color: var(--badge-deprecated-fg); }
 .badge--ARCHIVED { background: var(--badge-archived-bg); color: var(--badge-archived-fg); }
 .badge--sandbox { background: #fbe9e7; color: var(--color-danger); border: 1px solid #f0b4ac; }
+
+/* Roles: the colour is the level - red is the highest (app/auth/roles.py). White text on every fill
+   keeps the contrast at 4.5:1 or better. */
+.role-badge { display: inline-block; padding: 2px 10px; border-radius: 999px; font-size: 12px; font-weight: 700; color: #fff; letter-spacing: .02em; }
+.role-badge--administrator { background: #b71c1c; }
+.role-badge--stcd-owner { background: #6a1b9a; }
+.role-badge--chief-engineer { background: #8a5a00; }
+.role-badge--reviewer { background: #1565c0; }
+.role-badge--engineer { background: #2e7d32; }
+.role-badge--viewer { background: #546e7a; }
+.role-badge--unknown { background: #455a64; }
+.role-row--administrator td:first-child { border-left: 4px solid #b71c1c; }
+.role-row--stcd-owner td:first-child { border-left: 4px solid #6a1b9a; }
+.role-row--chief-engineer td:first-child { border-left: 4px solid #8a5a00; }
+.role-row--reviewer td:first-child { border-left: 4px solid #1565c0; }
+.role-row--engineer td:first-child { border-left: 4px solid #2e7d32; }
+.role-row--viewer td:first-child { border-left: 4px solid #546e7a; }
 
 .chip { display: inline-block; padding: 1px 8px; border-radius: 999px; background: var(--color-bg); border: 1px solid var(--color-border); font-size: 12px; margin-right: 4px; }
 
@@ -235,3 +252,125 @@ legend { font-weight: 700; padding: 0 6px; }
 .card form.btn-row, .card > form { margin: 8px 0 14px; }
 .card h2 + .signoff-strip, .card .signoff-strip + h2, .card .signoff-strip + h3 { margin-top: 16px; }
 .card h3 { margin: 18px 0 8px; }
+
+/* ---------------------------------------------------------------------------
+   v4 additions (docs/21-improvement-ideas.md): accessibility (I-22), SLA badges
+   (I-08), notices, progress, KPI tiles. Every foreground/background pair below
+   is checked for WCAG 2.1 AA contrast (>= 4.5:1) by tests/system/test_accessibility.py.
+   ------------------------------------------------------------------------- */
+:root {
+  --sla-ok-bg: #e3f3ea;     --sla-ok-fg: #14532d;
+  --sla-amber-bg: #fff3cd;  --sla-amber-fg: #664d03;
+  --sla-red-bg: #fbe9e7;    --sla-red-fg: #8f1310;
+  --focus-ring: #002e6d;
+}
+
+.visually-hidden {
+  position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+}
+.skip-link {
+  position: absolute; left: 8px; top: -60px; z-index: 100; padding: 10px 14px;
+  background: var(--color-primary); color: #fff; border-radius: var(--radius);
+}
+.skip-link:focus { top: 8px; }
+main:focus { outline: none; }
+
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible,
+textarea:focus-visible, summary:focus-visible, abbr:focus-visible {
+  outline: 3px solid var(--focus-ring); outline-offset: 2px;
+}
+
+.inline-form { display: inline-block; margin: 0; }
+.plain-list { list-style: none; margin: 6px 0; padding: 0; }
+.plain-list li { padding: 3px 0; }
+.pre-wrap { white-space: pre-wrap; }
+.stat { font-size: 28px; font-weight: 700; }
+.inline-check { display: inline-flex; align-items: center; gap: 6px; font-weight: 400; margin-right: 12px; min-height: 32px; }
+.share-row { margin-top: 10px; }
+.share-row input { font-family: monospace; }
+
+.sla { display: inline-block; padding: 1px 8px; border-radius: 999px; font-size: 12px; font-weight: 600; }
+.sla--ok { background: var(--sla-ok-bg); color: var(--sla-ok-fg); }
+.sla--amber { background: var(--sla-amber-bg); color: var(--sla-amber-fg); }
+.sla--red { background: var(--sla-red-bg); color: var(--sla-red-fg); }
+
+.bell { color: var(--color-text); font-weight: 600; }
+.bell__count { background: var(--color-danger); color: #fff; border-radius: 999px; padding: 0 7px; font-size: 12px; }
+.notice-unread { font-weight: 600; }
+
+abbr[title], abbr.term { text-decoration: underline dotted; cursor: help; }
+abbr.badge { text-decoration: none; }
+
+.field-note { background: var(--sla-amber-bg); color: var(--sla-amber-fg); border-radius: var(--radius); padding: 6px 10px; margin-top: 4px; font-size: 12px; }
+.secret { background: #f1f5f9; color: var(--color-text); padding: 8px; border-radius: var(--radius); overflow-x: auto; user-select: all; }
+
+progress { width: 160px; height: 10px; vertical-align: middle; }
+.kpi__value { font-size: 32px; font-weight: 700; }
+.kpi__unit { font-size: 14px; font-weight: 400; color: var(--color-muted); }
+.kpi--ok { color: var(--sla-ok-fg); }
+.kpi--bad { color: var(--sla-red-fg); }
+.pager { display: flex; gap: 12px; align-items: center; margin-top: 10px; }
+.login-title { margin: 0 0 12px; font-size: 20px; font-family: var(--ot-font-heading); }
+.diff-table caption { text-align: left; }
+
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+
+/* Language menu (top bar): a <details> list of buttons, no script. The flag is drawn SVG on the right
+   of the name; the two letters of the country are on the left. */
+.lang-menu { position: relative; }
+.lang-menu summary { list-style: none; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; min-height: 40px; padding: 0 10px; border: 1px solid var(--color-border); border-radius: 6px; background: var(--color-surface); color: var(--color-text); }
+.lang-menu summary::-webkit-details-marker { display: none; }
+.lang-menu summary::after { content: "\25BE"; color: var(--color-muted); }
+.lang-menu ul { position: absolute; inset-inline-end: 0; top: 100%; z-index: 30; margin: 4px 0 0; padding: 4px 0; list-style: none; min-width: 200px; max-height: 70vh; overflow-y: auto; background: var(--color-surface); border: 1px solid var(--color-border); border-radius: 6px; box-shadow: 0 4px 12px rgba(26, 29, 33, 0.15); }
+.lang-menu button { display: flex; align-items: center; gap: 8px; width: 100%; min-height: 40px; padding: 0 12px; border: 0; background: none; font: inherit; color: var(--color-text); cursor: pointer; text-align: start; }
+.lang-menu button:hover, .lang-menu button[aria-current="true"] { background: var(--color-bg); font-weight: 600; }
+.lang-menu .lang-name { flex: 1; }
+.lang-code { font-weight: 700; font-size: 12px; color: var(--color-muted); min-width: 22px; }
+.flag { border: 1px solid var(--color-border); border-radius: 2px; vertical-align: middle; flex-shrink: 0; }
+
+/* Right-to-left (Arabic): the sidebar moves to the right, tables read from the right. Identifiers,
+   codes and numbers stay left-to-right inside the text (unicode-bidi: plaintext on table cells). */
+html[dir="rtl"] .sidebar { left: auto; right: 0; border-right: 0; border-left: 1px solid var(--color-border); }
+html[dir="rtl"] .main { margin-left: 0; margin-right: 256px; }
+html[dir="rtl"] th, html[dir="rtl"] td { text-align: right; }
+html[dir="rtl"] td { unicode-bidi: plaintext; }
+html[dir="rtl"] .role-row td:first-child { border-left: 0; }
+html[dir="rtl"] .role-row--administrator td:first-child { border-right: 4px solid #b71c1c; }
+html[dir="rtl"] .role-row--stcd-owner td:first-child { border-right: 4px solid #6a1b9a; }
+html[dir="rtl"] .role-row--chief-engineer td:first-child { border-right: 4px solid #8a5a00; }
+html[dir="rtl"] .role-row--reviewer td:first-child { border-right: 4px solid #1565c0; }
+html[dir="rtl"] .role-row--engineer td:first-child { border-right: 4px solid #2e7d32; }
+html[dir="rtl"] .role-row--viewer td:first-child { border-right: 4px solid #546e7a; }
+html[dir="rtl"] .chip { margin-right: 0; margin-left: 4px; }
+html[dir="rtl"] .checkbox-list label, html[dir="rtl"] .inline-check { margin-right: 0; margin-left: 14px; }
+html[dir="rtl"] .error-list { padding-left: 0; padding-right: 18px; }
+@media (max-width: 900px) { html[dir="rtl"] .main { margin-right: 0; } }
+
+/* Catalogue health: Main Controller rows blue, Hub Controller rows light blue. The chip text keeps a
+   contrast of 4.5:1 or better on its fill (white on #1565c0, dark blue on #b3e5fc). */
+.controller-chip { display: inline-block; padding: 1px 8px; border-radius: 999px; font-size: 12px; font-weight: 700; min-width: 24px; text-align: center; }
+.controller-chip--mc { background: #1565c0; color: #fff; }
+.controller-chip--hc { background: #b3e5fc; color: #0d3c61; border: 1px solid #4fc3f7; }
+.controller-row--mc td { background: #e8f0fb; }
+.controller-row--mc td:first-child { border-inline-start: 4px solid #1565c0; }
+.controller-row--hc td { background: #f1faff; }
+.controller-row--hc td:first-child { border-inline-start: 4px solid #4fc3f7; }
+.controller-row:hover td { filter: brightness(0.97); }
+.controller-legend { display: flex; gap: 10px; align-items: center; margin: 4px 0 10px; }
+
+/* A row of buttons in a table cell (user list): they sit side by side and wrap when the cell is narrow. */
+.row-actions { display: flex; flex-wrap: wrap; gap: 6px; align-items: flex-start; min-width: 200px; }
+.row-actions details { flex-basis: 100%; }
+
+/* Translation review: the cells of a right-to-left language read from the right. */
+.rtl-text { direction: rtl; text-align: right; unicode-bidi: plaintext; }
+.review-table textarea, .review-table input[type=text] { width: 100%; min-width: 160px; box-sizing: border-box; }
+.verdicts { border: 0; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 2px; }
+.verdicts label { font-weight: 400; display: inline-flex; align-items: center; gap: 4px; }
+.review-state--reviewed { background: #e6f4ea; }
+.review-state--in-progress { background: #fff4e0; }
+.review-state--changed-since-the-review { background: #fdecea; }
+
+/* Translation screens: a wide table scrolls inside its card instead of widening the page. */
+.table-scroll { overflow-x: auto; max-width: 100%; }

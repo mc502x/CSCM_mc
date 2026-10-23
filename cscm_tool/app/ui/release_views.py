@@ -4,7 +4,13 @@ from flask import flash, redirect, render_template, request, url_for
 
 from app.api.v1.serializers import release_payload, revision_payload
 from app.auth.decorators import current_user, login_required_web, require_role_web
-from app.domain.errors import DomainError, InvalidTransitionError, NotFoundError
+from app.domain.errors import (
+    AccountLockedError,
+    DomainError,
+    InvalidTransitionError,
+    NotFoundError,
+    StepUpRequiredError,
+)
 from app.services.lookup_service import LookupService
 from app.services.release_service import ReleaseService
 from app.ui import ui_bp
@@ -25,6 +31,7 @@ def release_new():
         version_label = request.form.get("version_label", "")
         scope_group_id = request.form.get("scope_functional_system_group", type=int)
         scope_filter = {"functional_system_group": scope_group_id} if scope_group_id else {}
+        target_versions = request.form.getlist("target_software_versions")
         if not name or not version_label:
             flash("Name and version label are required.", "error")
         else:
@@ -34,6 +41,7 @@ def release_new():
                     "version_label": version_label,
                     "description": request.form.get("description") or None,
                     "scope_filter": scope_filter,
+                    "target_software_versions": target_versions,
                 },
                 current_user,
             )
@@ -41,7 +49,11 @@ def release_new():
             return redirect(url_for("ui.release_builder", release_id=release.id))
 
     groups = LookupService.list_vocabulary("functional-system-groups")
-    return render_template("releases/new.html", groups=groups)
+    return render_template(
+        "releases/new.html",
+        groups=groups,
+        versions=LookupService.list_vocabulary("controller-software-versions"),
+    )
 
 
 @ui_bp.route("/releases/<int:release_id>")
@@ -52,7 +64,24 @@ def release_detail(release_id):
     except NotFoundError:
         flash("Release not found.", "error")
         return redirect(url_for("ui.release_list"))
-    return render_template("releases/detail.html", release=release_payload(release))
+    from app.services.audience_service import AUDIENCES
+    from app.services.export_profile_service import ExportProfileService
+    from app.services.export_service import ExportService
+    from app.services.software_version_service import SoftwareVersionService
+
+    return render_template(
+        "releases/detail.html",
+        release=release_payload(release),
+        profiles=ExportProfileService.list_all(),
+        audiences=AUDIENCES,
+        content_languages=LookupService.list_vocabulary("languages"),
+        versions=SoftwareVersionService.ordered(),
+        history=(
+            ExportService.history(release_id, limit=20)
+            if current_user.role_code != "VIEWER"
+            else []
+        ),
+    )
 
 
 @ui_bp.route("/releases/<int:release_id>/builder", methods=["GET", "POST"])
@@ -78,6 +107,8 @@ def release_builder(release_id):
             flash("Candidate set updated.", "success")
         return redirect(url_for("ui.release_builder", release_id=release_id))
 
+    from app.services.software_version_service import SoftwareVersionService
+
     candidates = ReleaseService.list_candidates(release_id)
     included_ids = {item.status_code_revision_id for item in release.items}
     return render_template(
@@ -85,6 +116,8 @@ def release_builder(release_id):
         release=release_payload(release),
         candidates=[revision_payload(c) for c in candidates],
         included_ids=included_ids,
+        future_dated={w["revision_id"]: w for w in ReleaseService.future_dated_items(release)},
+        versions=SoftwareVersionService.ordered(),
     )
 
 
@@ -107,10 +140,20 @@ def release_delete(release_id):
 @require_role_web("ADMINISTRATOR")
 def release_publish(release_id):
     try:
-        ReleaseService.publish(release_id, current_user)
-    except (InvalidTransitionError, DomainError) as exc:
+        release = ReleaseService.get(release_id)
+        warnings = ReleaseService.future_dated_items(release)
+        ReleaseService.publish(
+            release_id, current_user, reauth_password=request.form.get("current_password")
+        )
+    except (InvalidTransitionError, DomainError, StepUpRequiredError, AccountLockedError) as exc:
         flash(str(exc), "error")
         return redirect(url_for("ui.release_builder", release_id=release_id))
 
     flash("Release published.", "success")
+    for w in warnings:
+        flash(
+            f"{w['status_code_identifier']} has a planned effective date of "
+            f"{w['planned_effective_date']}, which is still in the future.",
+            "info",
+        )
     return redirect(url_for("ui.release_detail", release_id=release_id))

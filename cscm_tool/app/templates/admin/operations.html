@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block title %}{{ _('Operations') }} — CSCM Tool{% endblock %}
+{% block content %}
+<div class="page-header"><h1>{{ _('Operations') }}</h1></div>
+
+<div class="card">
+  <h2>{{ _('Backups') }}</h2>
+  {% if backup.state == 'not_configured' %}
+  <div class="flash flash--info">{{ _('No backup directory is configured (BACKUP_DIR). Schedule `flask backup-db` as described in the deployment guide.') }}</div>
+  {% else %}
+  <dl class="kv">
+    <dt>{{ _('State') }}</dt><dd><strong>{{ backup.state }}</strong></dd>
+    <dt>{{ _('Last verified backup') }}</dt><dd>{{ backup.last_success_at or '—' }} {% if backup.age_hours is defined %}({{ backup.age_hours }} h {{ _('ago') }}){% endif %}</dd>
+    <dt>{{ _('File') }}</dt><dd>{{ backup.last_file or '—' }}</dd>
+  </dl>
+  {% if last_backup %}
+  <p class="muted">{{ _('Last run') }}: {{ last_backup.last_attempt_at }} — integrity {{ 'ok' if last_backup.integrity_ok else 'FAILED' }}, restore test {{ 'ok' if last_backup.restore_ok else 'FAILED' }}, audit chain {{ 'ok' if last_backup.audit_chain_ok else 'FAILED' }}. {{ last_backup.generations|length }} {{ _('generations kept') }}.</p>
+  {% endif %}
+  {% endif %}
+</div>
+
+<div class="card">
+  <h2>{{ _('Database schema') }}</h2>
+  <dl class="kv">
+    <dt>{{ _('Current') }}</dt><dd><code>{{ migration.current }}</code></dd>
+    <dt>{{ _('Expected') }}</dt><dd><code>{{ migration.head }}</code></dd>
+    <dt>{{ _('State') }}</dt><dd>{{ _('up to date') if migration.ok else _('OUTDATED - run flask db upgrade') }}</dd>
+  </dl>
+</div>
+
+<div class="card">
+  <h2>{{ _('Audit log integrity') }}</h2>
+  <p class="muted">{{ _('Every audit entry carries a hash of its predecessor; a removed, reordered or edited entry breaks the chain.') }}</p>
+  {% if anchor %}<p>{{ _('Last verified') }}: {{ anchor.verified_at }} ({{ anchor.count }} {{ _('entries') }})</p>{% endif %}
+  {% if result %}
+  <div class="flash flash--{{ 'success' if result.ok else 'error' }}" role="status">
+    {% if result.ok %}{{ _('The audit chain is intact') }} ({{ result.checked }} {{ _('entries') }}).{% else %}{{ _('The audit chain is BROKEN') }}: {{ result.reason }} ({{ _('first bad entry') }} {{ result.first_bad_id }}).{% endif %}
+  </div>
+  {% endif %}
+  <form method="post" action="{{ url_for('ui.operations_audit_verify') }}">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    <button class="btn" type="submit">{{ _('Verify now') }}</button>
+  </form>
+</div>
+{% endblock %}

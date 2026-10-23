@@ -52,9 +52,15 @@ CSCM Tool's UI renders inside the shared OneTool platform shell (top bar, sideba
 | `api` (Flask Blueprint: `api_v1`) | JSON REST endpoints | `service` |
 | `service` | Business rules, lifecycle transitions, numbering allocation, dual-review/Chief-Engineer-approval orchestration, Cross-Domain Sign-Off gating, validation, audit writes | `repository` |
 | `repository` | Data access abstraction (one repository class per aggregate) | `models` (SQLAlchemy), DB connection |
-| `auth` | Session management, password hashing, RBAC decorators (5 roles), pluggable on-premises auth provider interface | `service.user` |
+| `auth` | Session management, password hashing, RBAC decorators (6 roles), pluggable on-premises auth provider interface | `service.user` |
 | `export` | CSV/JSON/XLSX/PDF catalogue export (all roles per matrix) + full-database export/backup (Administrator only) | `service.release`, `service.status_code` |
-| `audit` | Central audit-log writer used by all services | `repository.audit` |
+| `audit` | Central audit-log writer used by all services; since v4 also the hash chain hook, verification and archiving (`app/audit_chain.py`) | `repository.audit` |
+| `publication` *(v4)* | Export pipeline with profiles, audiences, languages, software versions, manifests, release notes, offline bundle (`export_service`, `manifest_service`, `audience_service`, `release_notes_service`, `translation_service`, `software_version_service`) | `service.release`, `service.status_code` |
+| `governance extensions` *(v4)* | Step-up, delegation, SLA ageing and notices, change sets, field comments and checklists, attachments, KPIs (`auth_service`, `delegation_service`, `sla_service`, `notification_service`, `change_set_service`, `field_review_service`, `attachment_service`, `kpi_service`) | `service.change_request`, `repository` |
+| `import` *(v4)* | Library import toolkit: template, dry run, update mode, reconciliation, error reports, background worker (`import_service`) | `service.status_code` |
+| `integration` *(v4)* | Scoped API tokens, change feed, webhooks, fleet-feedback import, Hub-to-Main consolidation (`integration_service`, `occurrence_service`, `hub_consolidation_service`) | `service`, `repository` |
+| `operations` *(v4)* | Backups with verified restore, readiness and metrics, health report, settings, logging, CLI jobs (`backup_service`, `observability`, `health_report_service`, `settings_service`, `cli`) | `repository`, OS scheduler |
+| `i18n` *(v4)* | English/German interface catalogue, help content (`app/i18n.py`, `app/i18n_de.py`, `app/help_content.py`) | `presentation` |
 
 Full detail and code layout: 18-claude-code-implementation-guide.md.
 
@@ -172,6 +178,14 @@ StatusCodeService -> Repository: DELETE FROM status_code WHERE id=:id   [DB trig
 Repository -> SQLite: COMMIT
 ```
 
+## 5a. Added Request Flows (v4)
+
+- **Step-up and delegation (FR-125, FR-126).** A decision route is guarded by `require_role_or_delegate`: the actor's role, or an active `delegation` for that role, admits the call; `AuthService.step_up` then verifies the password in the request body (once per request — a change-set decision reuses `g.step_up_verified`) and audits `STEP_UP_SUCCESS` / `STEP_UP_FAILURE`; only then does the service run its usual segregation-of-duties checks and write the audit entry naming actor and `on_behalf_of`.
+- **Export (FR-100 … FR-111).** `ExportService._prepare` selects revisions (release, released set or working set), applies the audience filter and software-version filter, resolves translations, and builds the rows with the profile's columns; `_render` produces CSV/JSON/XLSX/PDF; `manifest_service` hashes the file(s) and signs the manifest; `_record` stores the `export_job` (hash, size, rows, options, manifest) and an audit entry; with `bundle` the data file, `MANIFEST.json` and the release notes are zipped.
+- **Publish (FR-043, FR-106, FR-146).** Password check → state checks (Release still BUILDING, at least one item) → atomic transition of all items to Released with one audit entry each → commit → webhook dispatch *after* the commit (the candidate list, limited to the target versions, is built earlier by the release builder) (a delivery problem is recorded and never undoes or fails the publish).
+- **Import (FR-048i … FR-048n).** Upload → header check → per-row evaluation (rules of manual entry plus duplicate and legacy-number checks) → dry run stops here, otherwise rows are applied one transaction each (create, update in place, new revision, skip) → error report CSV/XLSX → job COMPLETE; above the row threshold the apply phase runs in a worker thread and the request returns 202.
+- **Audit write (FR-151).** Every `audit_log_entry` insert passes the `before_flush` hook, which reads the last stored `entry_hash` inside the same write transaction and chains the new rows in insertion order.
+
 ## 6. Master Database & Integration Architecture
 
 CSCM Tool's own on-premises SQLite database **is** the Master Database — there is no separate, external "master" system this application synchronizes with. The only ways data leaves the system:
@@ -180,9 +194,11 @@ CSCM Tool's own on-premises SQLite database **is** the Master Database — there
 |---|---|---|---|
 | Technical Publications / manuals | Administrator- or role-scoped catalogue export (CSV/JSON/XLSX/PDF) of Approved/Released status codes | Approved/Released only, per role matrix | Per 11-security-architecture.md §3 (all roles except sandbox-only data) |
 | Disaster recovery / migration | Full database export/backup | Entire database | **Administrator only** (FR-047, 04-domain-model.md §2.17) |
-| Future documentation-generation tools, SCADA, software repositories (Phase 2+) | REST API pull, internal corporate network only, never internet-exposed, never a cloud endpoint | Released catalogues only | Scoped API token, Administrator-issued |
+| Documentation-generation tools, SCADA, software repositories | REST API pull, internal corporate network only, never internet-exposed, never a cloud endpoint | Released catalogues only (Viewer-level visibility) | Scoped, expiring API token, Administrator-issued (FR-144, SEC-027) |
+| The same consumers, event-driven | `GET /changes` change feed (polling, ETag) and signed webhooks on `release.published` to private/loopback addresses | Release and lifecycle events | Token with scope `changes:read`; webhook secret (FR-145, FR-146, SEC-028) |
+| Monitoring | `GET /health`, `GET /health/ready` (unauthenticated, no business data), `GET /metrics` (allow-listed networks, optional bearer token) | Operational state only | Network allow-list (SEC-029) |
 
-No system pushes data **into** CSCM Tool in MVP or any planned phase — status codes are authored exclusively inside the application (this is the entire premise of the tool per 01-executive-summary.md §1), so there is no inbound "connect to Master DB" integration to build; the relevant integration surface is entirely outbound/export, exactly as summarized above.
+No system pushes data **into** CSCM Tool — status codes are authored exclusively inside the application (this is the entire premise of the tool per 01-executive-summary.md §1), so there is no inbound "connect to Master DB" integration to build; the relevant integration surface is outbound/export, as summarized above. The only data that enters other than by typing is *file uploads started by a person*: the legacy library import (FR-048a, which creates Drafts only, BR-015) and the anonymised occurrence counts of the fleet-feedback import (FR-143, which change no status code).
 
 ## 7. Authentication Provider Abstraction
 
@@ -198,6 +214,10 @@ class AuthProvider(Protocol):
 
 ## 8. Scalability, Caching, Backup Strategy
 
-Unchanged in mechanism from v1 (08-system-architecture.md v1 §8–§10): MVP sizing targets, SQLite WAL-mode read concurrency, in-process lookup caching, nightly SQLite Online Backup API snapshots. All infrastructure referenced there is local/on-premises; no external or cloud storage target is introduced by this update.
+MVP sizing targets, SQLite WAL-mode read concurrency, in-process lookup caching and nightly SQLite Online Backup API snapshots (now verified, see below). All infrastructure referenced there is local/on-premises; no external or cloud storage target is introduced by this update.
+
+**Multi-process operation (v4, NFR-009).** Waitress may run as several processes against the one SQLite file: anything that must be consistent between them lives in the database (the login rate limit in `login_attempt`, the audit chain read from the last stored row inside the write transaction, number allocation under `BEGIN IMMEDIATE`); the in-process metrics registry is per process and each process is scraped separately. Large imports run in a daemon thread of the process that received the upload (FR-048n); the job row, not the thread, is the source of truth for progress, so another process or a restart can report it. Behind a reverse proxy the real client address reaches the rate limit through `CSCM_TRUSTED_PROXY` (`scripts/serve.py`).
+
+**Backups, readiness and metrics (v4).** `flask backup-db` copies the live database with SQLite's online-backup API, proves the copy (integrity check, restore into a scratch database, row-count comparison, audit-chain check) and writes `backup_status.json`; `GET /health/ready` reads it together with the schema's Alembic head and the newest audit rows; `GET /metrics` exposes request, latency, lock-wait, queue and backup gauges (FR-150, FR-152, FR-153; procedures in 14-deployment-architecture.md §6–§8).
 
 **Transaction modes (added 2026-10-21, NFR-004):** only writers take the SQLite write lock up front (`BEGIN IMMEDIATE`, required for race-safe identifier allocation, 07-database-design.md §7a). Read-only requests — `GET`/`HEAD`/`OPTIONS` not marked with `@writes_on_get` (`app/db_modes.py`; the export endpoints are, because they record an `ExportJob` and an audit entry) — use a deferred `BEGIN`, so in WAL mode readers neither block nor are blocked by a writer. Taking the write lock for every transaction serialised the whole application and produced `database is locked` errors with 50 concurrent users; `busy_timeout` is 15 s so writers queue instead of failing fast. Covered by `tests/performance/test_performance.py`.

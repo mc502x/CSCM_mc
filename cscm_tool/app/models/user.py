@@ -20,6 +20,7 @@ class User(Base):
     last_login_at = db.Column(db.Text)
     failed_login_count = db.Column(db.Integer, nullable=False, default=0)
     locked_until = db.Column(db.Text)
+    ui_language = db.Column(db.Text, nullable=False, default="en")  # I-22
 
     # cast(...) rather than a bare `: Role = db.relationship(...)` annotation:
     # db.relationship()'s declared return type is RelationshipProperty[Any],

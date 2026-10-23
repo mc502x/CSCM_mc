@@ -78,9 +78,70 @@ def test_thirty_eight_functional_subgroups_seeded(app):
         assert db.session.query(LookupFunctionalSubgroup).count() == 38
 
 
-def test_five_roles_seeded(app):
+def test_six_roles_seeded(app):
     with app.app_context():
-        assert db.session.query(Role).count() == 5
+        assert db.session.query(Role).count() == 6
+        assert db.session.query(Role).filter_by(code="STCD_OWNER").one().id == 6
+
+
+def test_nineteen_languages_seeded_with_country_letters_left_and_the_flag_right(app):
+    from app.models.lookup import LookupLanguage
+
+    with app.app_context():
+        labels = {
+            lang.code: lang.label
+            for lang in db.session.query(LookupLanguage).order_by(LookupLanguage.sort_order)
+        }
+    # Arabic is followed by the ten languages of v4.5, in the order they were asked for
+    assert list(labels) == [
+        "en",
+        "de",
+        "fr",
+        "hi",
+        "ar",
+        "bn",
+        "mr",
+        "te",
+        "ta",
+        "gu",
+        "ur",
+        "kn",
+        "or",
+        "ml",
+        "pa",
+        "es",
+        "it",
+        "da",
+        "ka",
+    ]
+    india, pakistan = "\U0001f1ee\U0001f1f3", "\U0001f1f5\U0001f1f0"
+    expected = {
+        "en": ("GB", "English", "\U0001f1ec\U0001f1e7"),
+        "de": ("DE", "Deutsch", "\U0001f1e9\U0001f1ea"),
+        "fr": ("FR", "Fran\u00e7ais", "\U0001f1eb\U0001f1f7"),
+        "hi": ("IN", "Hindi", india),
+        "ka": ("GE", "Georgian", "\U0001f1ec\U0001f1ea"),
+        "ar": ("SA", "Arabic", "\U0001f1f8\U0001f1e6"),
+        "bn": ("IN", "Bengali", india),
+        "mr": ("IN", "Marathi", india),
+        "te": ("IN", "Telugu", india),
+        "ta": ("IN", "Tamil", india),
+        "gu": ("IN", "Gujarati", india),
+        "ur": ("PK", "Urdu", pakistan),
+        "kn": ("IN", "Kannada", india),
+        "or": ("IN", "Odia", india),
+        "ml": ("IN", "Malayalam", india),
+        "pa": ("IN", "Punjabi", india),
+        "es": ("ES", "Espa\u00f1ol", "\U0001f1ea\U0001f1f8"),
+        "it": ("IT", "Italiano", "\U0001f1ee\U0001f1f9"),
+        "da": ("DK", "Dansk", "\U0001f1e9\U0001f1f0"),
+    }
+    for code, (letters, name, flag) in expected.items():
+        assert labels[code].startswith(letters + " ") and labels[code].endswith(" " + flag), code
+        if code in ("en", "de", "fr", "es", "it", "da"):
+            assert name in labels[code]
+        else:
+            assert f"({name})" in labels[code]  # the native name plus the English one
 
 
 def test_three_turbine_platforms_seeded(app):
@@ -183,3 +244,77 @@ def test_second_migration_is_reversible_and_idempotent(app):
         assert all(_schema_objects().values())
         command.upgrade(_alembic_cfg(), "head")  # idempotent re-run
         assert all(_schema_objects().values())
+
+
+def test_first_subgroup_of_every_main_group_covers_the_first_200_numbers(app):
+    """Rule of 2026-10-22: e.g. Tower 5000-5199, Generator 2000-2199; the next
+    subgroup of each group begins after it and never overlaps."""
+    with app.app_context():
+        groups = (
+            db.session.query(LookupFunctionalSystemGroup)
+            .filter(LookupFunctionalSystemGroup.range_start < 10000)
+            .all()
+        )
+        assert len(groups) == 9
+        for group in groups:
+            subgroups = (
+                db.session.query(LookupFunctionalSubgroup)
+                .filter(LookupFunctionalSubgroup.functional_system_group_id == group.id)
+                .order_by(LookupFunctionalSubgroup.sub_range_start)
+                .all()
+            )
+            first = subgroups[0]
+            assert (first.sub_range_start, first.sub_range_end) == (
+                group.range_start,
+                group.range_start + 199,
+            ), group.code
+            for earlier, later in zip(subgroups, subgroups[1:], strict=False):
+                assert later.sub_range_start > earlier.sub_range_end, (group.code, later.code)
+
+
+def test_no_placeholder_group_is_seeded(app):
+    """Only the 12 real groups exist out of the box; free ranges stay free."""
+    with app.app_context():
+        codes = {g.code for g in db.session.query(LookupFunctionalSystemGroup).all()}
+        assert "WNEW" not in codes
+        assert db.session.query(LookupFunctionalSystemGroup).count() == 12
+
+
+def test_hub_sub_bands_are_aligned_to_the_hundreds_of_their_prefix(app):
+    """docs/05-governance-handbook.md section 2: `123xx` owns 12300-12399; a band shorter than a
+    hundred is named by its first ten (`1110x` 11100-11149, `1115x` 11150-11199). No code has a dash
+    or a letter after the x."""
+    import re
+
+    with app.app_context():
+        rows = (
+            db.session.query(LookupFunctionalSubgroup, LookupFunctionalSystemGroup)
+            .join(
+                LookupFunctionalSystemGroup,
+                LookupFunctionalSystemGroup.id
+                == LookupFunctionalSubgroup.functional_system_group_id,
+            )
+            .filter(LookupFunctionalSystemGroup.range_start >= 11000)
+            .all()
+        )
+        assert len(rows) == 11
+        for subgroup, group in rows:
+            match = re.match(r"^(\d{3,4})(x{1,2})$", subgroup.code)
+            assert match, subgroup.code
+            digits, free = match.groups()
+            expected_start = int(digits) * 10 ** len(free)
+            assert subgroup.sub_range_start == expected_start, subgroup.code
+            assert subgroup.sub_range_start >= group.range_start
+            assert subgroup.sub_range_end <= group.range_end
+            assert subgroup.sub_range_end > subgroup.sub_range_start
+
+
+def test_subgroup_codes_have_no_dash_and_no_letter_after_the_x(app):
+    import re
+
+    with app.app_context():
+        codes = [s.code for s in db.session.query(LookupFunctionalSubgroup).all()]
+    assert len(codes) == 38
+    assert all(re.fullmatch(r"\d{3,4}x{1,2}", c) for c in codes), codes
+    assert len(set(codes)) == len(codes)
+    assert {"0990x", "0993x", "0996x", "0999x", "110xx", "1110x", "1115x", "1205x"} <= set(codes)

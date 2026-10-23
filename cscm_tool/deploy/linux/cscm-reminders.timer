@@ -1,0 +1,9 @@
+[Unit]
+Description=Weekday morning CSCM Tool reminders
+
+[Timer]
+OnCalendar=Mon..Fri 07:30:00
+Persistent=true
+
+[Install]
+WantedBy=timers.target

@@ -4,8 +4,15 @@ S10 Change Request Detail/Decision, S10a Domain Sign-Off (folded into S10)."""
 from flask import flash, redirect, render_template, request, url_for
 
 from app.api.v1.serializers import revision_payload
-from app.auth.decorators import current_user, require_role_web
-from app.domain.errors import DomainError, InvalidTransitionError, SegregationOfDutiesViolation
+from app.auth.decorators import current_user, require_role_or_delegate_web, require_role_web
+from app.domain.errors import (
+    AccountLockedError,
+    DomainError,
+    ForbiddenError,
+    InvalidTransitionError,
+    SegregationOfDutiesViolation,
+    StepUpRequiredError,
+)
 from app.extensions import db
 from app.models.change_request import ChangeRequest, DomainSignoffRequest
 from app.models.lookup import Role
@@ -62,6 +69,14 @@ def _domain_holders(pending_domains):
     return {code: DomainSignoffService.domain_holders(code) for code in pending_domains}
 
 
+def _sla_map(crs) -> dict:
+    """cr id -> SLA info (I-08), thresholds read once for the whole queue."""
+    from app.services.sla_service import SlaService
+
+    thresholds = SlaService.thresholds()
+    return {cr.id: SlaService.info(cr, thresholds=thresholds) for cr in crs}
+
+
 @ui_bp.route("/change-requests/mine")
 @require_role_web("ADMINISTRATOR", "ENGINEER", "REVIEWER", "CHIEF_ENGINEER")
 def my_change_requests():
@@ -76,13 +91,24 @@ def my_change_requests():
     return render_template(
         "change_requests/mine.html",
         crs=crs,
+        slas=_sla_map(crs),
         import_job_id=import_job_id,
         sign_requests=sign_requests,
     )
 
 
+_DECISION_ERRORS = (
+    SegregationOfDutiesViolation,
+    InvalidTransitionError,
+    ValueError,
+    StepUpRequiredError,
+    AccountLockedError,
+    ForbiddenError,
+)
+
+
 @ui_bp.route("/change-requests/review-queue")
-@require_role_web("REVIEWER", "ADMINISTRATOR")
+@require_role_or_delegate_web("REVIEWER", "ADMINISTRATOR")
 def review_queue():
     crs = (
         db.session.query(ChangeRequest)
@@ -91,11 +117,11 @@ def review_queue():
         .order_by(ChangeRequest.id.asc())
         .all()
     )
-    return render_template("change_requests/review_queue.html", crs=crs)
+    return render_template("change_requests/review_queue.html", crs=crs, slas=_sla_map(crs))
 
 
 @ui_bp.route("/change-requests/approval-queue")
-@require_role_web("CHIEF_ENGINEER")
+@require_role_or_delegate_web("CHIEF_ENGINEER")
 def approval_queue():
     crs = (
         db.session.query(ChangeRequest)
@@ -104,7 +130,7 @@ def approval_queue():
         .order_by(ChangeRequest.id.asc())
         .all()
     )
-    return render_template("change_requests/approval_queue.html", crs=crs)
+    return render_template("change_requests/approval_queue.html", crs=crs, slas=_sla_map(crs))
 
 
 @ui_bp.route("/change-requests/<int:cr_id>")
@@ -128,9 +154,29 @@ def change_request_detail(cr_id):
 
     blocked_ce = {cr.requested_by, revision.reviewer_signoff_by, revision.admin_signoff_by}
 
+    can_comment = any(
+        current_user.can_act_as(r) for r in ("REVIEWER", "ADMINISTRATOR", "CHIEF_ENGINEER")
+    )
+    from app.help_content import NEXT_STEP
+    from app.services.attachment_service import AttachmentService
+    from app.services.change_set_service import ChangeSetService
+    from app.services.field_review_service import COMMENTABLE_FIELDS, FieldReviewService
+    from app.services.sla_service import SlaService
+    from app.services.status_code_service import StatusCodeService
+
     return render_template(
         "change_requests/detail.html",
         cr=cr,
+        sla=SlaService.info(cr),
+        next_step=NEXT_STEP.get(revision.lifecycle_status),
+        warnings=StatusCodeService.warnings_for(revision),
+        field_comments=FieldReviewService.list_field_comments(cr.id),
+        commentable_fields=COMMENTABLE_FIELDS,
+        can_comment=can_comment,
+        attachments=AttachmentService.list_for(cr.id, current_user),
+        checklist=FieldReviewService.items_for(cr),
+        confirmations=FieldReviewService.confirmations(cr.id),
+        change_sets=[s for s in ChangeSetService.list_all() if s.status == "OPEN"],
         revision=revision_payload(revision),
         required_domains=sorted(required_domains),
         signed_domains=signed_domains,
@@ -163,13 +209,20 @@ def cr_submit(cr_id):
 
 
 @ui_bp.route("/change-requests/<int:cr_id>/reviewer-signoff", methods=["POST"])
-@require_role_web("REVIEWER")
+@require_role_or_delegate_web("REVIEWER")
 def cr_reviewer_signoff(cr_id):
     decision = request.form.get("decision", "")
     comment = request.form.get("comment") or None
     try:
-        ChangeRequestService.reviewer_signoff(cr_id, current_user, decision, comment)
-    except (SegregationOfDutiesViolation, InvalidTransitionError, ValueError) as exc:
+        ChangeRequestService.reviewer_signoff(
+            cr_id,
+            current_user,
+            decision,
+            comment,
+            reauth_password=request.form.get("current_password"),
+            checklist_confirmed=request.form.getlist("checklist_confirmed", type=int),
+        )
+    except _DECISION_ERRORS as exc:
         flash(str(exc), "error")
     else:
         flash("Reviewer decision recorded.", "success")
@@ -177,7 +230,7 @@ def cr_reviewer_signoff(cr_id):
 
 
 @ui_bp.route("/change-requests/<int:cr_id>/admin-signoff", methods=["POST"])
-@require_role_web("ADMINISTRATOR")
+@require_role_or_delegate_web("ADMINISTRATOR")
 def cr_admin_signoff(cr_id):
     decision = request.form.get("decision", "")
     comment = request.form.get("comment") or None
@@ -187,9 +240,14 @@ def cr_admin_signoff(cr_id):
     }
     try:
         ChangeRequestService.admin_signoff(
-            cr_id, current_user, decision, comment, access_overrides=overrides or None
+            cr_id,
+            current_user,
+            decision,
+            comment,
+            access_overrides=overrides or None,
+            reauth_password=request.form.get("current_password"),
         )
-    except (SegregationOfDutiesViolation, InvalidTransitionError, ValueError) as exc:
+    except _DECISION_ERRORS as exc:
         flash(str(exc), "error")
     else:
         flash("Administrator decision recorded.", "success")
@@ -197,13 +255,19 @@ def cr_admin_signoff(cr_id):
 
 
 @ui_bp.route("/change-requests/<int:cr_id>/chief-engineer-decide", methods=["POST"])
-@require_role_web("CHIEF_ENGINEER")
+@require_role_or_delegate_web("CHIEF_ENGINEER")
 def cr_chief_engineer_decide(cr_id):
     decision = request.form.get("decision", "")
     comment = request.form.get("comment") or None
     try:
-        ChangeRequestService.chief_engineer_decide(cr_id, current_user, decision, comment)
-    except (SegregationOfDutiesViolation, InvalidTransitionError, ValueError) as exc:
+        ChangeRequestService.chief_engineer_decide(
+            cr_id,
+            current_user,
+            decision,
+            comment,
+            reauth_password=request.form.get("current_password"),
+        )
+    except _DECISION_ERRORS as exc:
         flash(str(exc), "error")
     else:
         flash("Chief Engineer decision recorded.", "success")
@@ -254,6 +318,23 @@ def cr_request_domain_signoff(cr_id):
     else:
         flash("Sign-off requested.", "success")
     return redirect(url_for("ui.change_request_detail", cr_id=cr_id))
+
+
+@ui_bp.route("/change-requests/withdraw-selected", methods=["POST"])
+@require_role_web("ADMINISTRATOR", "ENGINEER")
+def cr_withdraw_selected():
+    ids = [int(v) for v in request.form.getlist("cr_id") if v.isdigit()]
+    if not ids:
+        flash("Tick at least one change request to withdraw.", "error")
+        return redirect(url_for("ui.my_change_requests"))
+    results = ChangeRequestService.withdraw_many(ids, current_user)
+    done = sum(1 for r in results if r["ok"])
+    if done:
+        flash(f"{done} change request(s) withdrawn.", "success")
+    for r in results:
+        if not r["ok"]:
+            flash(f"#{r['cr_id']}: {r['message']}", "error")
+    return redirect(url_for("ui.my_change_requests"))
 
 
 @ui_bp.route("/change-requests/<int:cr_id>/withdraw", methods=["POST"])

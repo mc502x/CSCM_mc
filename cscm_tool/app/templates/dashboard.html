@@ -1,53 +1,76 @@
 {% extends "base.html" %}
-{% block title %}Dashboard — CSCM Tool{% endblock %}
+{% block title %}{{ _('Dashboard') }} — CSCM Tool{% endblock %}
 {% block content %}
-<div class="page-header"><h1>Dashboard</h1></div>
+<div class="page-header"><h1>{{ _('Dashboard') }}</h1></div>
 
 <div class="grid">
   {% if 'my_open_crs' in stats %}
   <a class="card" href="{{ url_for('ui.my_change_requests') }}">
-    <h2>My Open Change Requests</h2>
-    <div style="font-size:28px;font-weight:700">{{ stats.my_open_crs }}</div>
+    <h2>{{ _('My Open Change Requests') }}</h2>
+    <div class="stat">{{ stats.my_open_crs }}</div>
   </a>
   {% endif %}
 
   {% if 'pending_domain_requests' in stats %}
   <a class="card" href="{{ url_for('ui.my_change_requests') }}">
-    <h2>Awaiting Cross-Domain Sign-Off</h2>
-    <div style="font-size:28px;font-weight:700">{{ stats.pending_domain_requests }}</div>
-    <div class="muted">Draft CRs of mine blocked on a domain sign-off</div>
+    <h2>{{ _('Awaiting Cross-Domain Sign-Off') }}</h2>
+    <div class="stat">{{ stats.pending_domain_requests }}</div>
+    <div class="muted">{{ _('Draft CRs of mine blocked on a domain sign-off') }}</div>
   </a>
   {% endif %}
 
   {% if 'awaiting_reviewer_signoff' in stats %}
   <a class="card" href="{{ url_for('ui.review_queue') }}">
-    <h2>Awaiting Reviewer Sign-Off</h2>
-    <div style="font-size:28px;font-weight:700">{{ stats.awaiting_reviewer_signoff }}</div>
+    <h2>{{ _('Awaiting Reviewer Sign-Off') }}</h2>
+    <div class="stat">{{ stats.awaiting_reviewer_signoff }}</div>
   </a>
   {% endif %}
 
   {% if 'awaiting_admin_signoff' in stats %}
   <a class="card" href="{{ url_for('ui.review_queue') }}">
-    <h2>Awaiting Administrator Sign-Off</h2>
-    <div style="font-size:28px;font-weight:700">{{ stats.awaiting_admin_signoff }}</div>
+    <h2>{{ _('Awaiting Administrator Sign-Off') }}</h2>
+    <div class="stat">{{ stats.awaiting_admin_signoff }}</div>
   </a>
   {% endif %}
 
   {% if 'awaiting_approval' in stats %}
   <a class="card" href="{{ url_for('ui.approval_queue') }}">
-    <h2>Awaiting Chief Engineer Approval</h2>
-    <div style="font-size:28px;font-weight:700">{{ stats.awaiting_approval }}</div>
+    <h2>{{ _('Awaiting Chief Engineer Approval') }}</h2>
+    <div class="stat">{{ stats.awaiting_approval }}</div>
+  </a>
+  {% endif %}
+
+  {% if 'stalled_requests' in stats %}
+  <a class="card" href="{{ url_for('ui.stalled_requests') if current_user.role_code == 'ADMINISTRATOR' else (url_for('ui.review_queue') if current_user.role_code == 'REVIEWER' else url_for('ui.approval_queue')) }}">
+    <h2>{{ _('Stalled requests') }}</h2>
+    <div class="stat">{{ stats.stalled_requests }}</div>
+    <div class="muted">{{ stats.overdue_requests }} {{ _('overdue') }}</div>
+  </a>
+  {% endif %}
+
+  {% if 'capacity_alerts' in stats %}
+  <a class="card" href="{{ url_for('ui.catalogue_health') }}">
+    <h2>{{ _('Number ranges running out') }}</h2>
+    <div class="stat">{{ stats.capacity_alerts }}</div>
+  </a>
+  {% endif %}
+
+  {% if 'unread_notices' in stats %}
+  <a class="card" href="{{ url_for('ui.notifications') }}">
+    <h2>{{ _('Notices') }}</h2>
+    <div class="stat">{{ stats.unread_notices }}</div>
+    <div class="muted">{{ _('unread') }}</div>
   </a>
   {% endif %}
 
   <a class="card" href="{{ url_for('ui.status_code_list') }}">
-    <h2>Browse Status Codes</h2>
-    <div class="muted">Search and filter all governed status codes</div>
+    <h2>{{ _('Browse Status Codes') }}</h2>
+    <div class="muted">{{ _('Search and filter all governed status codes') }}</div>
   </a>
 
   <a class="card" href="{{ url_for('ui.release_list') }}">
-    <h2>Releases</h2>
-    <div class="muted">Browse published and in-progress releases</div>
+    <h2>{{ _('Releases') }}</h2>
+    <div class="muted">{{ _('Browse published and in-progress releases') }}</div>
   </a>
 </div>
 {% endblock %}

@@ -1,18 +1,40 @@
 {% extends "base.html" %}
-{% block title %}Library Import — CSCM Tool{% endblock %}
+{% block title %}{{ _('Library Import') }} — CSCM Tool{% endblock %}
 {% block content %}
-<div class="page-header"><h1>Library Import</h1></div>
+<div class="page-header">
+  <h1>{{ _('Library Import') }}</h1>
+  <div class="btn-row">
+    <a class="btn" href="{{ url_for('ui.st_import_new') }}">{{ _('Import from .st files') }}</a>
+    <a class="btn" href="{{ url_for('ui.legacy_mapping') }}">{{ _('Legacy mapping') }}</a>
+    <a class="btn" href="{{ url_for('ui.import_reconciliation') }}">{{ _('Migration progress') }}</a>
+  </div>
+</div>
 
-<div class="card" style="max-width:560px">
-  <p class="muted">Upload a CSV or XLSX file — one row per status code, column headers matching the field names used elsewhere in CSCM Tool (Functional System Group/Subgroup and the audience-access fields by their code, e.g. "WCNV", "Converter", "SCADA User").</p>
+<div class="card" style="max-width:640px">
+  <p class="muted">{{ _('Upload a CSV or XLSX file — one row per status code, column headers matching the field names used elsewhere in CSCM Tool (Functional System Group/Subgroup and the audience-access fields by their code, e.g. "WCNV", "Converter", "SCADA User").') }}</p>
+  <p>
+    {{ _('Start from the template:') }}
+    <a href="{{ url_for('ui.import_template', fmt='xlsx') }}">XLSX ({{ _('with instructions and lookup codes') }})</a> &middot;
+    <a href="{{ url_for('ui.import_template', fmt='csv') }}">CSV ({{ _('headers only') }})</a>
+  </p>
   <form method="post" enctype="multipart/form-data">
     <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
     <div class="field">
-      <label for="file">File (.csv or .xlsx)</label>
+      <label for="file">{{ _('File (.csv or .xlsx)') }}</label>
       <input type="file" id="file" name="file" accept=".csv,.xlsx" required>
     </div>
-    <button class="btn btn--primary" type="submit">Upload and Import</button>
+    <div class="field">
+      <label for="mode">{{ _('Mode') }}</label>
+      <select id="mode" name="mode">
+        <option value="CREATE">{{ _('Create new codes') }}</option>
+        <option value="UPDATE">{{ _('Update: revise codes already imported (matched on the legacy number)') }}</option>
+      </select>
+    </div>
+    <div class="btn-row">
+      <button class="btn" type="submit" name="action" value="validate">{{ _('Validate only (creates nothing)') }}</button>
+      <button class="btn btn--primary" type="submit" name="action" value="import">{{ _('Upload and Import') }}</button>
+    </div>
   </form>
-  <div class="hint" style="margin-top:10px">Every row that passes validation becomes an ordinary Draft, subject to the full Cross-Domain Sign-Off, dual-review, and Chief Engineer approval cycle before it can be Released — import is a faster data-entry path, never a governance bypass.</div>
+  <div class="hint" style="margin-top:10px">{{ _('Every row that passes validation becomes an ordinary Draft, subject to the full Cross-Domain Sign-Off, dual-review, and Chief Engineer approval cycle before it can be Released — import is a faster data-entry path, never a governance bypass.') }}</div>
 </div>
 {% endblock %}

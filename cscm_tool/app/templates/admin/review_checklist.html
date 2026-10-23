@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block title %}{{ _('Review Checklist') }} — CSCM Tool{% endblock %}
+{% block content %}
+<div class="page-header"><h1>{{ _('Review checklist') }}</h1></div>
+<p class="muted">{{ _('Items a Reviewer must confirm before approving. An item applies to one Functional System Group or to all. With no items nothing is required.') }}</p>
+<div class="card">
+  {% if items %}
+  <table>
+    <caption class="visually-hidden">{{ _('Checklist items') }}</caption>
+    <thead><tr><th scope="col">{{ _('Item') }}</th><th scope="col">{{ _('Applies to') }}</th><th scope="col">{{ _('Active') }}</th><th></th></tr></thead>
+    <tbody>
+      {% for i in items %}
+      <tr>
+        <td>{{ i.text }}</td>
+        <td>{% if i.functional_system_group_id %}{% for g in groups if g.id == i.functional_system_group_id %}{{ g.code }} {{ g.range_start }}{% endfor %}{% else %}{{ _('all groups') }}{% endif %}</td>
+        <td>{{ _('Yes') if i.is_active else _('No') }}</td>
+        <td><form method="post" action="{{ url_for('ui.review_checklist_toggle', item_id=i.id) }}" class="inline-form"><input type="hidden" name="csrf_token" value="{{ csrf_token() }}"><button class="btn btn--outline" type="submit">{{ _('Deactivate') if i.is_active else _('Activate') }}</button></form></td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% else %}
+  <div class="table-empty">{{ _('No checklist items configured.') }}</div>
+  {% endif %}
+</div>
+<div class="card" style="max-width:640px">
+  <h2>{{ _('Add an item') }}</h2>
+  <form method="post">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    <div class="field"><label for="text">{{ _('Text') }}</label><input type="text" id="text" name="text" required minlength="3" maxlength="300" placeholder="Delay values checked against the control logic"></div>
+    <div class="field">
+      <label for="functional_system_group">{{ _('Applies to') }}</label>
+      <select id="functional_system_group" name="functional_system_group">
+        <option value="">{{ _('all groups') }}</option>
+        {% for g in groups %}<option value="{{ g.id }}">{{ g.code }} {{ g.range_start }} — {{ g.label }}</option>{% endfor %}
+      </select>
+    </div>
+    <button class="btn btn--primary" type="submit">{{ _('Add') }}</button>
+  </form>
+</div>
+{% endblock %}

@@ -243,9 +243,9 @@ def test_uat_10_full_database_export_is_administrator_only(app, client, make_use
     cast = make_cast(make_user)
     for who in ("engineer", "reviewer", "chief_engineer", "viewer"):
         login_as(client, cast[who])
-        assert client.get("/api/v1/exports/full-database").status_code == 403
+        assert client.post("/api/v1/exports/full-database").status_code == 403
     login_as(client, cast["admin"])
-    response = client.get("/api/v1/exports/full-database")
+    response = client.post("/api/v1/exports/full-database")
     assert response.status_code == 200
     assert response.data[:16] == b"SQLite format 3\x00"
 
@@ -284,7 +284,8 @@ def test_uat_11_import_creates_only_governed_drafts_and_an_error_report(app, cli
     report = client.get(f"/api/v1/imports/{job['id']}/errors")
     assert report.status_code == 200
     lines = report.get_data(as_text=True).strip().splitlines()
-    assert lines[0] == "row,error" and lines[1].startswith(
+    # I-05e: one line per problem with row, column, value, error and a fix hint
+    assert lines[0] == "row,column,value,error,how_to_fix" and lines[1].startswith(
         "4,"
     )  # header is row 1; "Bad row" is row 4
 

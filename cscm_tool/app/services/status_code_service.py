@@ -7,8 +7,11 @@ sandbox codes bypass the governance workflow entirely by design)."""
 
 from datetime import UTC, datetime, timedelta
 
+from sqlalchemy import text
+
 from app.domain.authz import require_roles
 from app.domain.errors import (
+    ConcurrentModificationError,
     DomainError,
     InvalidTransitionError,
     NotFoundError,
@@ -18,6 +21,7 @@ from app.extensions import db
 from app.models.audit import AuditLogEntry
 from app.models.change_request import ChangeRequest
 from app.models.lookup import (
+    LookupControllerSoftwareVersion,
     LookupCustomerAccess,
     LookupDevelopmentAccess,
     LookupFunctionalSubgroup,
@@ -35,7 +39,12 @@ from app.repositories.status_code_repository import StatusCodeRepository
 from app.services.audit_service import AuditService
 from app.services.lookup_service import LookupService
 from app.services.numbering_service import NumberingService
-from app.services.validation import validate_deprecation_reason, validate_revision_fields
+from app.services.reference_service import ReferenceService
+from app.services.validation import (
+    split_identifier_list,
+    validate_deprecation_reason,
+    validate_revision_fields,
+)
 from app.utils import parse_iso, utcnow_iso
 
 VIEWER_VISIBLE_STATES = ("APPROVED", "RELEASED", "DEPRECATED", "ARCHIVED")
@@ -53,17 +62,34 @@ class StatusCodeService:
 
     @staticmethod
     def create_draft(
-        data: dict, actor_user, *, import_job_id: int | None = None
+        data: dict,
+        actor_user,
+        *,
+        import_job_id: int | None = None,
+        reserved_identifier: str | None = None,
+        prg_idx: int | None = None,
     ) -> StatusCodeRevision:
         """FR-020: Engineer or Administrator creates a new Status Code as a
         Draft revision. No identifier is assigned (FR-021); a wrapping
         ChangeRequest is created alongside it (FR-030) — cr_type=IMPORT
         when called from ImportService (FR-048a-c), cr_type=NEW otherwise.
         Either way the CR goes through the identical submit/dual-review/
-        Chief-Engineer-approval cycle (05-governance-handbook.md §6b)."""
+        Chief-Engineer-approval cycle (05-governance-handbook.md §6b).
+
+        `reserved_identifier` / `prg_idx` are only ever given by the status code import
+        (app/services/st_import_service.py): the number the generated program carries and its
+        PrgIdx_GUi. They are keyword arguments, not payload fields, so an API client cannot set
+        them.
+        """
         require_roles(actor_user, "ADMINISTRATOR", "ENGINEER")
         revision = StatusCodeService._build_revision(
-            data, actor_user, is_sandbox=False, status_code_id=None, revision_number=1
+            data,
+            actor_user,
+            is_sandbox=False,
+            status_code_id=None,
+            revision_number=1,
+            reserved_identifier=reserved_identifier,
+            prg_idx=prg_idx,
         )
         status_code = revision.status_code
 
@@ -132,6 +158,7 @@ class StatusCodeService:
         reason: str,
         superseded_by_status_code_id: int | None,
         actor_user,
+        acknowledge_dependants: bool = False,
     ) -> StatusCodeRevision:
         """FR-050/BR-005 (Released -> Deprecated via full cycle,
         docs/05-governance-handbook.md §5): copy-on-write a new Draft
@@ -139,7 +166,12 @@ class StatusCodeService:
         cr_type=DEPRECATION ChangeRequest. Goes through the same
         submit/dual-review/Chief-Engineer-approval machinery as any other
         CR; ChangeRequestService.chief_engineer_decide routes a DEPRECATION
-        CR's approval to DEPRECATED instead of APPROVED."""
+        CR's approval to DEPRECATED instead of APPROVED.
+
+        I-04: if other live codes still reference this one (repeated-error
+        pointer, related codes, supersession, platform variants) the requester
+        must acknowledge them (`acknowledge_dependants`); the list is recorded
+        in the audit entry."""
         require_roles(actor_user, "ADMINISTRATOR", "ENGINEER")
         status_code = StatusCodeService._repo.get_or_404(status_code_id)
         current = StatusCodeService._repo.get_current_revision(status_code_id)
@@ -172,6 +204,22 @@ class StatusCodeService:
                         }
                     ]
                 )
+
+        dependants = ReferenceService.where_used(status_code_id, live_only=True)
+        if dependants and not acknowledge_dependants:
+            listed = ", ".join(
+                d["status_code_identifier"] or f"#{d['status_code_id']}" for d in dependants[:8]
+            )
+            raise ValidationFailed(
+                [
+                    {
+                        "field": "acknowledge_dependants",
+                        "message": f"{len(dependants)} other code(s) still reference this one "
+                        f"({listed}{', ...' if len(dependants) > 8 else ''}); review them and "
+                        "acknowledge to continue (I-04).",
+                    }
+                ]
+            )
 
         current.is_current = 0
         db.session.flush()  # see the matching comment in _build_revision
@@ -218,6 +266,16 @@ class StatusCodeService:
             created_at=now,
             deprecated_reason=reason,
             superseded_by_status_code_id=superseded_by_status_code_id,
+            updated_at=now,
+            row_version=1,
+            remedy_text=current.remedy_text,
+            affected_component=current.affected_component,
+            related_status_codes=current.related_status_codes,
+            standard_references=current.standard_references,
+            applies_from_version_id=current.applies_from_version_id,
+            applies_to_version_id=current.applies_to_version_id,
+            planned_effective_date=current.planned_effective_date,
+            planned_deprecation_date=current.planned_deprecation_date,
         )
         db.session.add(revision)
         db.session.flush()
@@ -243,7 +301,11 @@ class StatusCodeService:
             status_code.id,
             "CREATE",
             actor=actor_user,
-            after={"cr_type": "DEPRECATION", "deprecated_reason": reason},
+            after={
+                "cr_type": "DEPRECATION",
+                "deprecated_reason": reason,
+                "acknowledged_dependants": [d["status_code_identifier"] for d in dependants],
+            },
         )
         db.session.commit()
         return revision
@@ -349,12 +411,10 @@ class StatusCodeService:
         explicit application-level check since the trigger doesn't cover
         it). Accepts the same field set as creation.
 
-        Note: docs/artifacts/openapi.yaml's StatusCodeRevisionUpdate schema
-        lists only `expected_updated_at` for optimistic concurrency, but
-        status_code_revision has no updated_at/version column in
-        docs/artifacts/schema.sql to back that check — so it is accepted
-        (for forward API compatibility) but not currently enforced. Adding
-        real optimistic concurrency needs its own schema migration."""
+        I-01 optimistic concurrency: a caller that sends `expected_row_version`
+        (and/or `expected_updated_at`) gets a ConcurrentModificationError when the
+        Draft was saved by someone else in between, instead of silently
+        overwriting their work. The edit forms always send it."""
         require_roles(actor_user, "ADMINISTRATOR", "ENGINEER")
         revision = db.session.get(StatusCodeRevision, revision_id)
         if revision is None:
@@ -366,6 +426,8 @@ class StatusCodeService:
                 "Only the owning Engineer or an Administrator may edit this Draft."
             )
 
+        StatusCodeService._check_not_stale(revision, data)
+
         field_errors = validate_revision_fields(data)
         if field_errors:
             raise ValidationFailed(field_errors)
@@ -374,6 +436,8 @@ class StatusCodeService:
         _apply_revision_fields(revision, data)
         if data.get("turbine_platforms") is not None:
             _set_platforms(revision, data["turbine_platforms"])
+        revision.row_version = (revision.row_version or 1) + 1
+        revision.updated_at = utcnow_iso()
 
         AuditService.log(
             "StatusCodeRevision",
@@ -385,6 +449,215 @@ class StatusCodeService:
         )
         db.session.commit()
         return revision
+
+    @staticmethod
+    def get_current_revision_by_id(revision_id: int) -> StatusCodeRevision | None:
+        return db.session.get(StatusCodeRevision, revision_id)
+
+    @staticmethod
+    def _check_not_stale(revision: StatusCodeRevision, data: dict) -> None:
+        expected_version = data.get("expected_row_version")
+        expected_updated_at = data.get("expected_updated_at")
+        stale = False
+        if expected_version not in (None, ""):
+            try:
+                stale = int(str(expected_version)) != (revision.row_version or 1)
+            except (TypeError, ValueError) as exc:
+                raise ValidationFailed(
+                    [{"field": "expected_row_version", "message": "Must be an integer."}]
+                ) from exc
+        if expected_updated_at and expected_updated_at != (
+            revision.updated_at or revision.created_at
+        ):
+            stale = True
+        if stale:
+            raise ConcurrentModificationError(
+                "This Draft was changed by someone else after you opened it (I-01). "
+                "Your entries are kept below; review the current values and save again.",
+                revision.row_version or 1,
+                revision.updated_at or revision.created_at,
+            )
+
+    @staticmethod
+    def warnings_for(revision: StatusCodeRevision) -> list[dict]:
+        """Soft findings that never block a save (I-04 references, I-12 duplicates)."""
+        from app.services.duplicate_service import DuplicateService
+
+        warnings = ReferenceService.warnings_for_revision(revision)
+        warnings.extend(DuplicateService.warnings_for_revision(revision))
+        return warnings
+
+    @staticmethod
+    def set_planned_dates(
+        status_code_id: int,
+        planned_effective_date: str | None,
+        planned_deprecation_date: str | None,
+        actor_user,
+    ) -> StatusCodeRevision:
+        """I-27: stamp planned dates on the current revision (Administrator only). They
+        are informative: the release builder warns about a future effective date and
+        the health report lists upcoming deprecations; nothing changes state on its own.
+        The columns are not covered by the locked-revision trigger, so this also works
+        on Approved and Released revisions; the change is audited."""
+        require_roles(actor_user, "ADMINISTRATOR")
+        revision = StatusCodeService._repo.get_current_revision(status_code_id)
+        if revision is None:
+            raise NotFoundError(f"Status Code {status_code_id} not found")
+        if revision.lifecycle_status == "ARCHIVED":
+            raise InvalidTransitionError("An archived revision cannot be changed.")
+        field_errors = validate_revision_fields(
+            {
+                "title": "x",
+                "description": "x" * 10 + "y",
+                "status_category": "INFO",
+                "set_delay": "1s",
+                "reset_delay": "1s",
+                "planned_effective_date": planned_effective_date,
+                "planned_deprecation_date": planned_deprecation_date,
+            }
+        )
+        field_errors = [e for e in field_errors if e["field"].startswith("planned_")]
+        if (
+            not field_errors
+            and planned_effective_date
+            and planned_deprecation_date
+            and planned_deprecation_date < planned_effective_date
+        ):
+            field_errors = [
+                {
+                    "field": "planned_deprecation_date",
+                    "message": "The planned deprecation cannot be before the planned "
+                    "effective date.",
+                }
+            ]
+        if field_errors:
+            raise ValidationFailed(field_errors)
+        before = {
+            "planned_effective_date": revision.planned_effective_date,
+            "planned_deprecation_date": revision.planned_deprecation_date,
+        }
+        revision.planned_effective_date = planned_effective_date or None
+        revision.planned_deprecation_date = planned_deprecation_date or None
+        AuditService.log(
+            "StatusCodeRevision",
+            revision.id,
+            "PLANNED_DATES_SET",
+            actor=actor_user,
+            before=before,
+            after={
+                "planned_effective_date": revision.planned_effective_date,
+                "planned_deprecation_date": revision.planned_deprecation_date,
+            },
+        )
+        db.session.commit()
+        return revision
+
+    @staticmethod
+    def create_platform_variant(
+        source_status_code_id: int, target_platform_code: str, actor_user
+    ) -> StatusCodeRevision:
+        """I-25: "create the 4XM variant of this 3XM code". Copies the latest decided
+        revision into a brand-new Draft code in the same group/subgroup, links it to
+        the source (`platform_variant_of_status_code_id`) and goes through the normal
+        governance cycle like any new code (CR type NEW)."""
+        require_roles(actor_user, "ADMINISTRATOR", "ENGINEER")
+        source = StatusCodeService._repo.get_or_404(source_status_code_id)
+        if source.is_sandbox:
+            raise DomainError("A sandbox code cannot have platform variants.")
+        base = StatusCodeService._repo.get_latest_revision_in_states(
+            source.id, ("RELEASED", "APPROVED", "DEPRECATED")
+        )
+        if base is None:
+            raise InvalidTransitionError(
+                "Only an Approved, Released or Deprecated code can be copied as a platform variant."
+            )
+        platform = LookupService.get_by_code(LookupTurbinePlatform, target_platform_code)
+        if platform.code in {p.turbine_platform.code for p in base.platforms}:
+            raise ValidationFailed(
+                [
+                    {
+                        "field": "turbine_platform",
+                        "message": f"The source code already applies to {platform.code}.",
+                    }
+                ]
+            )
+        family = StatusCodeService.family(source.id)
+        for member in family:
+            member_rev = StatusCodeService._repo.get_current_revision(member.id)
+            if member_rev and platform.code in {
+                p.turbine_platform.code for p in member_rev.platforms
+            }:
+                raise ValidationFailed(
+                    [
+                        {
+                            "field": "turbine_platform",
+                            "message": f"{platform.code} is already covered by "
+                            f"{member.status_code_identifier or 'a draft'} in this family.",
+                        }
+                    ]
+                )
+
+        data = revision_to_data(base)
+        data["turbine_platforms"] = [platform.code]
+        data["justification"] = (
+            f"Platform variant ({platform.code}) of {source.status_code_identifier}."
+        )
+        data["legacy_reference_number"] = None
+        revision = StatusCodeService._build_revision(
+            data, actor_user, is_sandbox=False, status_code_id=None, revision_number=1
+        )
+        revision.status_code.platform_variant_of_status_code_id = source.id
+        cr = ChangeRequest(
+            status_code_revision_id=revision.id,
+            cr_type="NEW",
+            requested_by=actor_user.id,
+            justification=data["justification"],
+            state="DRAFT",
+        )
+        db.session.add(cr)
+        AuditService.log(
+            "StatusCode",
+            revision.status_code.id,
+            "CREATE",
+            actor=actor_user,
+            after={
+                **_revision_snapshot(revision),
+                "platform_variant_of": source.status_code_identifier,
+            },
+        )
+        db.session.commit()
+        return revision
+
+    @staticmethod
+    def family(status_code_id: int) -> list[StatusCode]:
+        """I-25: every code in the platform-variant family of `status_code_id` (the root
+        and all variants), root first."""
+        code = StatusCodeService._repo.get_or_404(status_code_id)
+        seen = {code.id}
+        while (
+            code.platform_variant_of_status_code_id
+            and code.platform_variant_of_status_code_id not in seen
+        ):
+            code = StatusCodeService._repo.get_or_404(code.platform_variant_of_status_code_id)
+            seen.add(code.id)
+        root = code
+        members = [root]
+        frontier = [root.id]
+        visited = {root.id}
+        while frontier:
+            children = (
+                db.session.query(StatusCode)
+                .filter(StatusCode.platform_variant_of_status_code_id.in_(frontier))
+                .order_by(StatusCode.id)
+                .all()
+            )
+            frontier = []
+            for child in children:
+                if child.id not in visited:
+                    visited.add(child.id)
+                    members.append(child)
+                    frontier.append(child.id)
+        return members
 
     @staticmethod
     def get_current_revision(status_code_id: int, actor_user) -> StatusCodeRevision:
@@ -423,6 +696,15 @@ class StatusCodeService:
         if subgroup.functional_system_group_id != group.id:
             raise ValueError("Subgroup does not belong to the selected Functional System Group.")
         return NumberingService.preview_next_identifier(group.id, subgroup.id)
+
+    @staticmethod
+    def capacity(functional_system_group_id: int, functional_subgroup_id: int) -> dict:
+        """I-19: how full the subgroup's number band is (for the New Status Code hint)."""
+        group = LookupService.get_by_id(LookupFunctionalSystemGroup, functional_system_group_id)
+        subgroup = LookupService.get_by_id(LookupFunctionalSubgroup, functional_subgroup_id)
+        if subgroup.functional_system_group_id != group.id:
+            raise ValueError("Subgroup does not belong to the selected Functional System Group.")
+        return NumberingService.capacity(group.id, subgroup.id)
 
     @staticmethod
     def delete_sandbox(status_code_id: int, actor_user) -> None:
@@ -466,6 +748,8 @@ class StatusCodeService:
         is_sandbox: bool,
         status_code_id: int | None,
         revision_number: int,
+        reserved_identifier: str | None = None,
+        prg_idx: int | None = None,
     ) -> StatusCodeRevision:
         if is_sandbox and actor_user.role_code != "ADMINISTRATOR":
             raise SegregationOfDutiesViolation("Only an Administrator may create a sandbox code.")
@@ -507,12 +791,20 @@ class StatusCodeService:
                 functional_system_group_id=group.id,
                 functional_subgroup_id=subgroup.id,
                 legacy_reference_number=data.get("legacy_reference_number"),
+                reserved_identifier=reserved_identifier,
                 is_sandbox=1 if is_sandbox else 0,
                 owner_id=actor_user.id,
                 created_at=now,
             )
             db.session.add(status_code)
             db.session.flush()
+            if prg_idx is not None:
+                # status_code.prg_idx is the schema v4.1 column; its ORM mapping is not part of
+                # the model yet, so it is written directly (unique index and range CHECK apply).
+                db.session.execute(
+                    text("UPDATE status_code SET prg_idx = :p WHERE id = :i"),
+                    {"p": prg_idx, "i": status_code.id},
+                )
         else:
             existing = db.session.get(StatusCode, status_code_id)
             if existing is None:
@@ -538,6 +830,8 @@ class StatusCodeService:
             lifecycle_status="DRAFT",
             created_by=actor_user.id,
             created_at=now,
+            updated_at=now,
+            row_version=1,
         )
         _apply_revision_fields(revision, data)
         db.session.add(revision)
@@ -594,6 +888,19 @@ def _apply_revision_fields(revision: StatusCodeRevision, data: dict) -> None:
     )
     revision.customer_access_id = _resolve_access(LookupCustomerAccess, data.get("customer_access"))
 
+    # I-14 troubleshooting content, I-07 applicability, I-27 planned dates (all optional).
+    revision.remedy_text = data.get("remedy_text") or None
+    revision.affected_component = data.get("affected_component") or None
+    revision.related_status_codes = (
+        ", ".join(split_identifier_list(data.get("related_status_codes"))) or None
+    )
+    revision.standard_references = data.get("standard_references") or None
+    revision.applies_from_version_id = _resolve_version(data.get("applies_from_version"))
+    revision.applies_to_version_id = _resolve_version(data.get("applies_to_version"))
+    _check_version_order(revision)
+    revision.planned_effective_date = data.get("planned_effective_date") or None
+    revision.planned_deprecation_date = data.get("planned_deprecation_date") or None
+
 
 ACCESS_FIELDS = (
     "development_access",
@@ -640,6 +947,78 @@ def apply_access_overrides(revision: StatusCodeRevision, overrides: dict) -> tup
     return before, after
 
 
+def _resolve_version(value) -> int | None:
+    """A software version given as surrogate id or as its code (I-07)."""
+    if value is None or value == "":
+        return None
+    try:
+        if isinstance(value, str) and not value.strip().isdigit():
+            return LookupService.get_by_code(LookupControllerSoftwareVersion, value.strip()).id
+        return LookupService.get_by_id(LookupControllerSoftwareVersion, value).id
+    except ValueError as exc:
+        raise ValidationFailed([{"field": "applies_from_version", "message": str(exc)}]) from exc
+
+
+def _check_version_order(revision: StatusCodeRevision) -> None:
+    if revision.applies_from_version_id and revision.applies_to_version_id:
+        first = db.session.get(LookupControllerSoftwareVersion, revision.applies_from_version_id)
+        last = db.session.get(LookupControllerSoftwareVersion, revision.applies_to_version_id)
+        if first is not None and last is not None and first.sort_order > last.sort_order:
+            raise ValidationFailed(
+                [
+                    {
+                        "field": "applies_to_version",
+                        "message": "'Applies to' must not be older than 'applies from'.",
+                    }
+                ]
+            )
+
+
+def revision_to_data(revision: StatusCodeRevision) -> dict:
+    """The service-input dict that reproduces `revision` (used to copy a revision, I-25/I-36)."""
+    data = {
+        "functional_system_group": revision.status_code.functional_system_group_id,
+        "functional_subgroup": revision.status_code.functional_subgroup_id,
+        "turbine_platforms": sorted(p.turbine_platform.code for p in revision.platforms),
+        "title": revision.title,
+        "description": revision.description,
+        "software_version": revision.software_version,
+        "status_category": revision.status_category,
+        "available_group": revision.available_group,
+        "alarm_flag": bool(revision.alarm_flag),
+        "set_delay": revision.set_delay,
+        "reset_delay": revision.reset_delay,
+        "up_down_counter": bool(revision.up_down_counter),
+        "trigger_snapshot": bool(revision.trigger_snapshot),
+        "loadless_spinning_permitted": bool(revision.loadless_spinning_permitted),
+        "number_of_times_repeated": revision.number_of_times_repeated,
+        "repeated_over_the_course": revision.repeated_over_the_course,
+        "status_code_for_repeated_error": revision.status_code_for_repeated_error,
+        "remedy_text": revision.remedy_text,
+        "affected_component": revision.affected_component,
+        "related_status_codes": revision.related_status_codes,
+        "standard_references": revision.standard_references,
+        "applies_from_version": revision.applies_from_version_id,
+        "applies_to_version": revision.applies_to_version_id,
+        "planned_effective_date": None,
+        "planned_deprecation_date": None,
+    }
+    for field in (
+        "yaw_program",
+        "manual_reset_program",
+        "auto_reset_program",
+        "converter_reactive_power_program",
+        "brake_program",
+        "umrichterprogramm_gsc",
+        "umrichterprogramm_msc",
+        "yaw_bearing_lubrication_program",
+    ):
+        data[field] = getattr(revision, field)
+    for field in ACCESS_FIELDS:
+        data[field] = getattr(revision, f"{field}_id")
+    return data
+
+
 def _resolve_access(model, value_id) -> int | None:
     if value_id is None or value_id == "":
         return None
@@ -666,4 +1045,5 @@ def _revision_snapshot(revision: StatusCodeRevision) -> dict:
         "status_category": revision.status_category,
         "lifecycle_status": revision.lifecycle_status,
         "turbine_platforms": sorted(p.turbine_platform.code for p in revision.platforms),
+        "row_version": revision.row_version,
     }

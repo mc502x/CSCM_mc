@@ -25,6 +25,7 @@ class ChangeRequest(Base):
     chief_engineer_decided_at = db.Column(db.Text)
     chief_engineer_decided_by = db.Column(db.Integer, db.ForeignKey("user.id"))
     assigned_reviewer_id = db.Column(db.Integer, db.ForeignKey("user.id"))  # FR-039
+    change_set_id = db.Column(db.Integer, db.ForeignKey("change_set.id"))  # I-11
 
     revision: StatusCodeRevision = cast(
         StatusCodeRevision,
@@ -33,6 +34,9 @@ class ChangeRequest(Base):
     requester: User = cast(User, db.relationship("User", foreign_keys=[requested_by]))
     assigned_reviewer: User | None = cast(
         "User | None", db.relationship("User", foreign_keys=[assigned_reviewer_id])
+    )
+    change_set: "ChangeSet | None" = cast(
+        "ChangeSet | None", db.relationship("ChangeSet", back_populates="change_requests")
     )
     comments: list["ReviewComment"] = cast(
         "list[ReviewComment]",
@@ -107,3 +111,94 @@ class DomainSignoffRequest(Base):
     )
 
     __table_args__ = (db.UniqueConstraint("change_request_id", "engineering_domain_id"),)
+
+
+class ChangeSet(Base):
+    """I-11: groups the CRs that ship with one controller software release.
+    Presentation and queueing only - each CR keeps its own three decisions."""
+
+    __tablename__ = "change_set"
+
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.Text, nullable=False, unique=True)
+    description = db.Column(db.Text)
+    target_software_version_id = db.Column(
+        db.Integer, db.ForeignKey("lookup_controller_software_version.id")
+    )
+    status = db.Column(db.Text, nullable=False, default="OPEN")  # OPEN | CLOSED
+    created_by = db.Column(db.Integer, db.ForeignKey("user.id"), nullable=False)
+    created_at = db.Column(db.Text, nullable=False)
+    closed_at = db.Column(db.Text)
+
+    target_software_version = db.relationship("LookupControllerSoftwareVersion")
+    change_requests: list[ChangeRequest] = cast(
+        "list[ChangeRequest]",
+        db.relationship("ChangeRequest", back_populates="change_set", order_by="ChangeRequest.id"),
+    )
+
+
+class CrAttachment(Base):
+    """I-13: evidence on a change request. The bytes live outside the web root
+    (instance/attachments); this row is the metadata and the SHA-256."""
+
+    __tablename__ = "cr_attachment"
+
+    id = db.Column(db.Integer, primary_key=True)
+    change_request_id = db.Column(db.Integer, db.ForeignKey("change_request.id"), nullable=False)
+    filename = db.Column(db.Text, nullable=False)
+    content_type = db.Column(db.Text, nullable=False)
+    size_bytes = db.Column(db.Integer, nullable=False)
+    sha256 = db.Column(db.Text, nullable=False)
+    storage_path = db.Column(db.Text, nullable=False)
+    description = db.Column(db.Text)
+    uploaded_by = db.Column(db.Integer, db.ForeignKey("user.id"), nullable=False)
+    uploaded_at = db.Column(db.Text, nullable=False)
+
+    uploader: User = cast(User, db.relationship("User"))
+
+
+class FieldComment(Base):
+    """I-23: a review comment attached to one field of the revision."""
+
+    __tablename__ = "field_comment"
+
+    id = db.Column(db.Integer, primary_key=True)
+    change_request_id = db.Column(db.Integer, db.ForeignKey("change_request.id"), nullable=False)
+    field_name = db.Column(db.Text, nullable=False)
+    author_id = db.Column(db.Integer, db.ForeignKey("user.id"), nullable=False)
+    comment_text = db.Column(db.Text, nullable=False)
+    created_at = db.Column(db.Text, nullable=False)
+    resolved_by = db.Column(db.Integer, db.ForeignKey("user.id"))
+    resolved_at = db.Column(db.Text)
+
+    author: User = cast(User, db.relationship("User", foreign_keys=[author_id]))
+
+
+class ReviewChecklistItem(Base):
+    """I-23: one line of the review checklist, for one Functional System Group or all."""
+
+    __tablename__ = "review_checklist_item"
+
+    id = db.Column(db.Integer, primary_key=True)
+    functional_system_group_id = db.Column(
+        db.Integer, db.ForeignKey("lookup_functional_system_group.id")
+    )
+    text = db.Column(db.Text, nullable=False)
+    is_active = db.Column(db.Integer, nullable=False, default=1)
+    sort_order = db.Column(db.Integer, nullable=False, default=0)
+    created_at = db.Column(db.Text, nullable=False)
+
+
+class CrChecklistConfirmation(Base):
+    __tablename__ = "cr_checklist_confirmation"
+
+    id = db.Column(db.Integer, primary_key=True)
+    change_request_id = db.Column(db.Integer, db.ForeignKey("change_request.id"), nullable=False)
+    checklist_item_id = db.Column(
+        db.Integer, db.ForeignKey("review_checklist_item.id"), nullable=False
+    )
+    item_text = db.Column(db.Text, nullable=False)
+    confirmed_by = db.Column(db.Integer, db.ForeignKey("user.id"), nullable=False)
+    confirmed_at = db.Column(db.Text, nullable=False)
+
+    __table_args__ = (db.UniqueConstraint("change_request_id", "checklist_item_id"),)

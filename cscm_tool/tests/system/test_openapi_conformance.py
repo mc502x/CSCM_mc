@@ -108,7 +108,7 @@ def test_lookup_and_domain_request_payloads_match_contract(app, client, make_use
 
 
 def test_unauthenticated_requests_are_rejected_for_every_documented_operation(app, client):
-    skip = {"/auth/login", "/auth/csrf-token", "/health"}
+    skip = {"/auth/login", "/auth/windows", "/auth/csrf-token", "/health", "/health/ready"}
     failures = []
     for method, path in sorted(_spec_operations()):
         if path in skip:

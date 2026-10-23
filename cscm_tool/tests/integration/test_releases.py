@@ -180,9 +180,9 @@ def test_full_database_export_requires_administrator(client, make_user):
     admin = make_user("ADMINISTRATOR")
 
     _login_as(client, engineer)
-    assert client.get("/api/v1/exports/full-database").status_code == 403
+    assert client.post("/api/v1/exports/full-database").status_code == 403
 
     _login_as(client, admin)
-    response = client.get("/api/v1/exports/full-database")
+    response = client.post("/api/v1/exports/full-database")
     assert response.status_code == 200
     assert response.data[:16] == b"SQLite format 3\x00"

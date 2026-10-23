@@ -13,11 +13,11 @@ def _access_code(lookup) -> str | None:
     return lookup.code if lookup is not None else None
 
 
-def revision_payload(revision: StatusCodeRevision) -> dict:
+def revision_payload(revision: StatusCodeRevision, warnings: list[dict] | None = None) -> dict:
     status_code = revision.status_code
     group = status_code.functional_system_group
     subgroup = status_code.functional_subgroup
-    return {
+    payload = {
         "id": revision.id,
         "status_code_id": status_code.id,
         "status_code_identifier": status_code.status_code_identifier,
@@ -96,7 +96,30 @@ def revision_payload(revision: StatusCodeRevision) -> dict:
         "effective_date": revision.effective_date,
         "deprecated_reason": revision.deprecated_reason,
         "superseded_by_status_code_id": revision.superseded_by_status_code_id,
+        # I-01 optimistic concurrency token (send it back as expected_row_version)
+        "row_version": revision.row_version,
+        "updated_at": revision.updated_at,
+        # I-14 troubleshooting content
+        "remedy_text": revision.remedy_text,
+        "affected_component": revision.affected_component,
+        "related_status_codes": revision.related_status_codes,
+        "standard_references": revision.standard_references,
+        # I-07 applicability range (code of the software version; null = open-ended)
+        "applies_from_version": (
+            revision.applies_from_version.code if revision.applies_from_version else None
+        ),
+        "applies_from_version_id": revision.applies_from_version_id,
+        "applies_to_version": (
+            revision.applies_to_version.code if revision.applies_to_version else None
+        ),
+        "applies_to_version_id": revision.applies_to_version_id,
+        # I-27 planned dates
+        "planned_effective_date": revision.planned_effective_date,
+        "planned_deprecation_date": revision.planned_deprecation_date,
     }
+    if warnings is not None:
+        payload["warnings"] = warnings
+    return payload
 
 
 def review_comment_payload(comment: ReviewComment) -> dict:
@@ -129,6 +152,12 @@ def pending_domain_signoff_payload(domain_code: str) -> dict:
     }
 
 
+def _release_targets(release: Release):
+    from app.services.release_service import ReleaseService
+
+    return ReleaseService.target_versions(release)
+
+
 def release_payload(release: Release) -> dict:
     return {
         "id": release.id,
@@ -142,6 +171,7 @@ def release_payload(release: Release) -> dict:
         "published_by": release.published_by,
         "published_at": release.published_at,
         "item_count": len(release.items),
+        "target_software_versions": [v.code for v in _release_targets(release)],
     }
 
 
@@ -191,6 +221,17 @@ def import_job_payload(job: ImportJob) -> dict:
         "error_report_reference": job.error_report_reference,
         "created_at": job.created_at,
         "completed_at": job.completed_at,
+        # I-05 / I-12 / I-32
+        "import_mode": job.import_mode,
+        "processed_count": job.processed_count,
+        "warning_count": job.warning_count,
+        "progress_percent": (
+            100
+            if job.status in ("COMPLETE", "FAILED")
+            else round(100 * job.processed_count / job.row_count) if job.row_count else 0
+        ),
+        "error_report_xlsx_available": bool(job.error_report_xlsx_reference),
+        "change_set_id": job.change_set_id,  # v4.2: the batch change set of an ST import
     }
 
 
@@ -202,4 +243,83 @@ def domain_signoff_request_payload(row) -> dict:
         "requested_by": row.requested_by,
         "target_user_id": row.target_user_id,
         "created_at": row.created_at,
+    }
+
+
+def field_comment_payload(comment) -> dict:
+    return {
+        "id": comment.id,
+        "change_request_id": comment.change_request_id,
+        "field": comment.field_name,
+        "author_id": comment.author_id,
+        "comment_text": comment.comment_text,
+        "created_at": comment.created_at,
+        "resolved_by": comment.resolved_by,
+        "resolved_at": comment.resolved_at,
+    }
+
+
+def attachment_payload(attachment) -> dict:
+    return {
+        "id": attachment.id,
+        "change_request_id": attachment.change_request_id,
+        "filename": attachment.filename,
+        "content_type": attachment.content_type,
+        "size_bytes": attachment.size_bytes,
+        "sha256": attachment.sha256,
+        "description": attachment.description,
+        "uploaded_by": attachment.uploaded_by,
+        "uploaded_at": attachment.uploaded_at,
+    }
+
+
+def checklist_item_payload(item) -> dict:
+    return {
+        "id": item.id,
+        "functional_system_group_id": item.functional_system_group_id,
+        "text": item.text,
+        "is_active": bool(item.is_active),
+        "sort_order": item.sort_order,
+    }
+
+
+def change_set_payload(change_set) -> dict:
+    return {
+        "id": change_set.id,
+        "name": change_set.name,
+        "description": change_set.description,
+        "target_software_version": (
+            change_set.target_software_version.code if change_set.target_software_version else None
+        ),
+        "status": change_set.status,
+        "created_by": change_set.created_by,
+        "created_at": change_set.created_at,
+        "closed_at": change_set.closed_at,
+        "change_request_ids": [cr.id for cr in change_set.change_requests],
+    }
+
+
+def delegation_payload(delegation) -> dict:
+    return {
+        "id": delegation.id,
+        "delegator_id": delegation.delegator_id,
+        "delegate_id": delegation.delegate_id,
+        "role": delegation.role_code,
+        "valid_from": delegation.valid_from,
+        "valid_to": delegation.valid_to,
+        "created_by": delegation.created_by,
+        "created_at": delegation.created_at,
+        "revoked_at": delegation.revoked_at,
+    }
+
+
+def notification_payload(notice) -> dict:
+    return {
+        "id": notice.id,
+        "kind": notice.kind,
+        "message": notice.message,
+        "link": notice.link,
+        "change_request_id": notice.change_request_id,
+        "created_at": notice.created_at,
+        "read_at": notice.read_at,
     }

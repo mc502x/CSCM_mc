@@ -2,13 +2,15 @@
 
 ## Software Delivery Documentation Package
 
-**Document Set Version:** 3.0
-**Date:** 2026-09-17
-**Status:** Baseline for Development (v3 — real field model grounded in the live library export, Hub Controller groups, mandatory subgroups, library import, OneTool visual integration)
+**Document Set Version:** 4.0
+**Date:** 2026-10-23
+**Status:** Implemented baseline (v4 — the v3 field model plus the improvement pack I-01 … I-36 of `21-improvement-ideas.md`: concurrency control, import toolkit, audience- and profile-scoped publication with signed manifests, software-version binding, SLAs and delegation, step-up re-authentication, hash-chained audit log, verified backups, German UI, and operations tooling)
 
 This package is the complete, self-contained requirements and design basis for building the CSCM Tool without additional requirements gathering. It is intended to be read as a set; cross-references between documents use document numbers (e.g. "see 07-database-design.md"). **Version history:** v1.0 → v2.0 replaced Controller Type (Main/Hub) numbering with Functional System Group numbering, introduced the `StCd-XXXXX` identifier format, the Chief Engineer role, the dual-review-then-approve workflow, Turbine Platform multi-select, sandbox/test status codes, and on-premises-only deployment. v2.0 → v3.0 (2026-09-17) grounded the entire attribute set in a real 897-row export of the live status code library (correcting Status Category, Available Group, Alarm, delay fields, and replacing the single Access Rights enum with eight independent audience fields), made Functional Subgroup mandatory, added three Hub Controller Functional System Groups (11000–13999) alongside the nine Main Controller ones, added CSV/XLSX library import (fully governed, not a bypass), added Administrator-created subgroups and whole new Functional System Groups, added XLSX to export formats, and adopted the OneTool shared design system for the UI shell while keeping CSCM Tool's own authentication.
 
-**Open items still pending your input:** (1) the exact meaning of `Covert` across several audience-access vocabularies is unconfirmed (06-data-dictionary.md §9d); (2) the descriptive labels for Available Group codes and the eight numeric Program Reference fields are not available from the source export and need Controls Engineering input (06-data-dictionary.md §2c, §9c). The single-file `StCd\\\_4960.st` example is superseded — the 2026-09-17 update grounds the entire data dictionary in a real 897-row export of the live library instead, which is more complete than one example file would have been. `10000–10999`, `14000–14999`, `15000–15999`, and `16000–16999` are confirmed free/reserved capacity for future Functional System Groups — no longer an open item.
+**v4 (2026-10-23):** all 36 improvement ideas are implemented and specified: requirements FR-090 … FR-155, NFR-009 … NFR-014, BR-016 … BR-022 and decisions D-01 … D-08 in 03-srs.md; security controls SEC-026 … SEC-030 and audit requirements AUD-072 … AUD-075; schema v4 (07-database-design.md §12, `artifacts/schema.sql`) and API v4.0.0 (`artifacts/openapi.yaml`, 143 operations). **v4.2 (2026-10-23):** status codes can be imported from the generated `.st` programs, several at a time, with the legacy → new mapping (FR-048o … FR-048w, BR-023, SEC-031; schema v4.2). `21-improvement-ideas.md` now records what was built and lists the *next* improvements.
+
+**Open items still pending your input:** (1) the exact meaning of `Covert` across several audience-access vocabularies is unconfirmed (06-data-dictionary.md §9d) — the system treats it as *not visible* meanwhile (decision D-02); (2) the descriptive labels for Available Group codes and the eight numeric Program Reference fields are not available from the source export and need Controls Engineering input (06-data-dictionary.md §2c, §9c). The single-file `StCd\\\_4960.st` example is superseded — the 2026-09-17 update grounds the entire data dictionary in a real 897-row export of the live library instead, which is more complete than one example file would have been. `10000–10999`, `14000–14999`, `15000–15999`, and `16000–16999` are confirmed free/reserved capacity for future Functional System Groups — no longer an open item.
 
 **Field-model correction (2026-09-17):** the attribute set, Functional Subgroup names, and several field types in this package were corrected against a real export of the live status code library and a legacy-tool screenshot. Functional Subgroup is now mandatory (never optional); see 16-mvp-roadmap.md §8 "Corrections Log" and 06-data-dictionary.md's provenance note for the full list. CSV/XLSX library import is now in scope (reversing the earlier "no bulk import" position, still fully governed per row — 05-governance-handbook.md §6b), and the UI adopts the shared OneTool design system for its visual shell while keeping its own authentication (10-ui-ux-specification.md §0).
 
@@ -35,13 +37,23 @@ This package is the complete, self-contained requirements and design basis for b
 |17|Implementation Backlog|[17-implementation-backlog.md](17-implementation-backlog.md)|
 |18|Claude Code Implementation Guide|[18-claude-code-implementation-guide.md](18-claude-code-implementation-guide.md)|
 |19|Glossary (living document — update with every change)|[19-glossary.md](19-glossary.md)|
+|20|Traceability Matrix — spec vs. code vs. tests, no-cloud verification record|[20-traceability-matrix.md](20-traceability-matrix.md)|
+|21|Improvement Ideas — prioritised (HIGH / MEDIUM / LOW), mapped to epics|[21-improvement-ideas.md](21-improvement-ideas.md)|
+|22|Software Description|[22-software-description.md](22-software-description.md)|
+|23|User Manual|[23-user-manual.md](23-user-manual.md)|
+|24|Test Report (generated by `scripts/generate_test_report.py`)|[24-test-report.md](24-test-report.md)|
+|25|Concept — integrating Hub Controller codes into the 4xxx / 9xxx scheme (proposal)|[25-hc-integration-concept.md](25-hc-integration-concept.md)|
+|26|Translations — concept, review guide for native speakers and the generated catalogue of every translation|[26-translations.md](26-translations.md)|
 
 ## Supplementary Artifacts
 
 |Artifact|File|Referenced By|
 |-|-|-|
-|SQLite DDL|[artifacts/schema.sql](artifacts/schema.sql)|07-database-design.md|
-|OpenAPI 3.0 Specification|[artifacts/openapi.yaml](artifacts/openapi.yaml)|09-api-specification.md|
+|SQLite DDL (schema v4)|[artifacts/schema.sql](artifacts/schema.sql)|07-database-design.md|
+|Optional FTS5 search index DDL|[artifacts/schema-fts5.sql](artifacts/schema-fts5.sql)|07-database-design.md §12|
+|OpenAPI 3.0 Specification (v4.0.0)|[artifacts/openapi.yaml](artifacts/openapi.yaml)|09-api-specification.md|
+|Test run history (appended by the report generator)|[artifacts/test-run-history.json](artifacts/test-run-history.json)|24-test-report.md|
+|HC numbering proposal (mapping of all Hub Controller codes)|[artifacts/hc-numbering-proposal.xlsx](artifacts/hc-numbering-proposal.xlsx)|25-hc-integration-concept.md|
 
 ## Naming \& Terminology Baseline
 
@@ -54,7 +66,7 @@ Full definitions live in [19-glossary.md](19-glossary.md); this is the quick-ref
 * **Functional Subgroup** — sub-division of a Functional System Group owning a numeric sub-band, **mandatory on every Status Code, never optional**; real taxonomy seeded, with deliberate reserved blocks for future additions and Administrator-created new subgroups (06-data-dictionary.md §9a).
 * **Turbine Platform** — multi-select classification (minimum `2XM`, `3XM`, `4XM`).
 * **Change Request (CR)** — a proposal to create a new Status Code or revise an existing one, routed through the dual-review-then-approval workflow.
-* **Release** — a named, dated, immutable bundle of Released status code revisions exported as a catalogue.
+* **Release** — a named, dated, immutable bundle of Released status code revisions exported as a catalogue; it may target one or more controller software versions (v4).
 * **Lifecycle State** — one of `Draft`, `Review`, `PendingApproval`, `Approved`, `Released`, `Deprecated`, `Archived` (see 05-governance-handbook.md).
 * **Sandbox Status Code** — Administrator-only test record, deletable, never part of a Release.
 
@@ -62,7 +74,8 @@ Full definitions live in [19-glossary.md](19-glossary.md); this is the quick-ref
 
 |Role|Organizational Equivalent|
 |-|-|
-|Administrator|Product Owner Controls Software / Component Owner Controls Software|
+|Administrator|Product Owner Controls Software / Component Owner Controls Software (highest level)|
+|StCd Owner|Owner of the status code library: reads everything, moves users between Viewer, Engineer and Reviewer (v4.3)|
 |Engineer|Controls engineer or cross-functional engineer (tagged with an Engineering Domain)|
 |Reviewer|Sub-PO for Status Codes|
 |Chief Engineer|Final approval authority|
@@ -100,6 +113,8 @@ Each group subdivides into real Functional Subgroups owning numeric sub-bands, w
 |`BR-###`|Business Rule|03-srs.md, 05-governance-handbook.md|
 |`SEC-###`|Security Control|11-security-architecture.md|
 |`AUD-###`|Audit/Compliance Requirement|12-audit-compliance.md|
+|`D-##`|Decision taken for the improvement pack|03-srs.md §6|
+|`I-##`|Improvement idea|21-improvement-ideas.md|
 |`TC-###`|Test Case|13-test-strategy.md|
 |`EPIC-##` / `US-###`|Backlog Epic / User Story|17-implementation-backlog.md|
 

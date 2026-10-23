@@ -7,12 +7,13 @@
 | Phase 1 (MVP) | Core governance: create, dual-review, Chief Engineer approval, release, audit, sandbox testing | Production-ready system of record replacing document-first status code authoring, fully on-premises |
 | Phase 2 | Enterprise integration (on-premises only) | On-prem Active Directory/ADFS SSO, internal-network API tokens for external consumers, first live integration (documentation generation tool or SCADA), real Functional Subgroup taxonomy in place |
 | Phase 3 | Scale & automation | PostgreSQL migration (if warranted), webhook-based push integrations (internal network only), configurable/multi-stage workflows if governance needs grow further |
+| **v4 improvement pack** *(delivered 2026-10-23, between Phase 1 and Phase 2)* | Governance extensions, publication, operations — the 36 ideas of 21-improvement-ideas.md | Several Phase 2/3 items arrive early: internal API tokens, change feed and webhooks, PostgreSQL *readiness* (not the migration), multi-language content (see §2a) |
 
 ## 2. Phase 1 — MVP
 
 **Scope:** all FR/NFR/BR items in 03-srs.md, the full 7-state lifecycle with dual-review-then-Chief-Engineer-approval (05-governance-handbook.md), Functional System Group/Subgroup numbering with `StCd-XXXXX` identifiers, Turbine Platform multi-select, Cross-Domain Sign-Off, sandbox status codes, REST API (contract-complete, internal-consumer-only), UI, security controls, audit — all running entirely on-premises with no cloud component (14-deployment-architecture.md §1).
 
-**Explicit exclusions:** on-prem AD/ADFS SSO itself (the hook is built, the integration is not — FR-005), live external integrations, bulk legacy import, configurable approval chains beyond the fixed Reviewer+Administrator+Chief-Engineer model, mobile-optimized layout, localization.
+**Explicit exclusions:** on-prem AD/ADFS SSO itself (the hook is built, the integration is not — FR-005), live external integrations, configurable approval chains beyond the fixed Reviewer+Administrator+Chief-Engineer model, mobile-optimized layout. *(Bulk legacy import was excluded in v2 and is in scope since 2026-09-17; localization is partly in scope since v4 — see §2a.)*
 
 **Resolved since v2.0:** the real Functional Subgroup taxonomy has been supplied and is seeded directly (06-data-dictionary.md §9a) — no longer a placeholder. The `15000–15999` range is likewise resolved: confirmed as deliberate free capacity (alongside `10000–10999`, `14000–14999`, `16000–16999`), not an unclassified gap — no further action needed on it.
 
@@ -23,10 +24,16 @@
 - ~~The `15000–15999` range classified into (or added as) a Functional System Group~~ — resolved: confirmed free/reserved capacity, no classification needed.
 - Technical Publications team has successfully produced one manual section sourced from a CSCM Tool export end-to-end.
 
+## 2a. v4 Improvement Pack *(delivered)*
+
+All 36 ideas of 21-improvement-ideas.md are implemented, specified (03-srs.md §1.10–§1.15) and tested (13-test-strategy.md §8a). Mapping to the epics proposed there: **EPIC-17** Concurrency & Data Integrity (I-01, I-04, I-12, I-25); **EPIC-18** Release Integrity & Software-Version Traceability (I-06, I-07, I-24); **EPIC-19** Workflow SLAs, Notifications & Metrics (I-08, I-10, I-16); **EPIC-20** Audience-Scoped & Profile-Based Publication (I-02, I-03); **EPIC-22** Multilingual Content (I-15); **EPIC-23** Knowledge Enrichment & Evidence (I-13, I-14); **EPIC-24** Fleet Feedback Loop (I-28); **EPIC-25** Operations & Resilience (I-09, I-21, I-33, I-20) — EPIC-21 stays unused; plus extensions of EPIC-02, 04, 05, 06/08, 10, 11, 12, 13, 14, 15 and 16 (17-implementation-backlog.md).
+
+What this changes in the phasing below: "scoped API token issuance" (Phase 2) and "webhook-based push on Release publish" (Phase 3) already exist for the internal network (FR-144 … FR-146); bulk legacy import is no longer excluded (FR-048a, since 2026-09-17) and has a migration toolkit; localization is partially in scope (English/German interface and content, FR-110, FR-155); a verified backup, installers and CI exist (FR-150, NFR-013). **Still open** in Phase 2/3: the AD/ADFS provider, the PostgreSQL migration itself (only the inventory and ratchet exist, NFR-014), mobile layout beyond the responsive shell, and the business decisions listed in 21-improvement-ideas.md §B.6 (several are answered by the safest default of 03-srs.md §6).
+
 ## 3. Phase 2 — Enterprise Integration (On-Premises Only)
 
 - On-premises Active Directory (LDAP/Kerberos) or ADFS/SAML authentication provider (behind the existing `AuthProvider` interface, 08-system-architecture.md §7; FR-005), including group-to-role mapping policy — explicitly **not** a cloud identity provider.
-- Scoped API token issuance for machine consumers on the internal network only (09-api-specification.md §2).
+- ~~Scoped API token issuance for machine consumers on the internal network only~~ — delivered in v4 (FR-144, SEC-027); what remains is connecting the first real consumer.
 - Multi-role support for users if operational need is confirmed.
 - Revisit mobile/responsive scope if Viewer-role field usage on tablets/phones proves common.
 - Confirm the final Functional Subgroup taxonomy has been in stable production use and re-validate numbering-capacity headroom per group.
@@ -35,7 +42,7 @@
 
 ## 4. Phase 3 — Scale & Automation
 
-Unchanged in substance from v1 (16-mvp-roadmap.md v1 §4): evaluate PostgreSQL migration against observed volume/contention; webhook-based push notification on Release publish (internal network only — no cloud message broker); reassess whether the fixed Reviewer+Administrator+Chief-Engineer model remains sufficient only if governance complexity has genuinely grown.
+Evaluate PostgreSQL migration against observed volume/contention (the SQLite-specific code is inventoried and capped by `scripts/pg_readiness.py`, 07-database-design.md §12; **no PostgreSQL run exists yet**); webhook-based push notification on Release publish is delivered (FR-146, internal network only — no cloud message broker); reassess whether the fixed Reviewer+Administrator+Chief-Engineer model remains sufficient only if governance complexity has genuinely grown.
 
 ## 5. Priority Matrix (Phase 1 Internal Sequencing)
 
@@ -58,19 +65,27 @@ Unchanged in substance from v1 (16-mvp-roadmap.md v1 §4): evaluate PostgreSQL m
 | User/lookup administration (incl. Engineering Domain tags, Functional Group/Subgroup/Platform vocab) | High | Medium | P1 |
 | REST API (beyond internal UI needs) | Medium for MVP, High for future value | Medium | P1 |
 | Revision diff view | Medium | Low-Medium | P2 |
+| *(v4)* Backups with verified restore, step-up, concurrency control, audit hash chain | High — close real risks before go-live | Low-Medium | P0 for go-live |
+| *(v4)* Import toolkit, profiles / audiences / manifests, software versions | High — needed while the legacy library is migrated and for manuals | Medium | P1 |
+| *(v4)* SLAs, delegation, change sets, notices, KPIs | High — protects the throughput the business case promises | Medium | P1 |
+| *(v4)* Translations, offline bundle, fleet feedback, Hub consolidation, saved searches | Medium | Medium | P2 |
 
 ## 6. Risk Analysis
 
 | Risk | Likelihood | Impact | Mitigation |
 |---|---|---|---|
 | *(retired 2026-09-17)* The `15000–15999` range remains unclassified | — | — | Resolved: confirmed free/reserved capacity alongside `10000–10999`, `14000–14999`, `16000–16999`; an Administrator can assign a new Functional System Group into any of them later via FR-048g without a schema change |
-| Legacy status code data creates pressure to bulk-import, undermining governance-first principle | High | High | Unchanged from v1: one-time, human-reviewed re-entry through the real workflow, never a bulk import feature |
+| Legacy status code data creates pressure to bulk-import, undermining governance-first principle | High | High | Import exists but only creates Drafts that pass the whole cycle (BR-015); the dry run, update mode and reconciliation report (FR-048i … FR-048n) make the migration iterative without a governance bypass |
 | Identifier-allocation contention under concurrent submission within one popular Functional Group | Low-Medium | Low (SQLite `BEGIN IMMEDIATE` serializes correctly; worst case is added latency, not incorrect numbers) | Performance-tested explicitly (TC-025); repository pattern keeps PostgreSQL migration available if contention proves material |
 | Dual-review-plus-approval sequence slows throughput versus the original single-Reviewer model | Medium | Medium — undermines the "faster manual production" value proposition if turnaround degrades materially | Track sign-off and approval turnaround KPIs separately from week one; Administrator can still reassign Reviewer load |
 | Cross-Domain Sign-Off requests stall in practice (second Engineer unavailable) | Medium | Medium | Dashboard/queue visibility (S8/S10a in 10-ui-ux-specification.md) makes outstanding requests hard to miss; revisit if turnaround data shows a bottleneck |
 | Sandbox codes accidentally treated as production data by a downstream consumer | Low (system enforces exclusion structurally) | High if it occurred | `is_sandbox` excluded from default search, catalogue export, and Release candidates at the query/trigger level, not just UI convention (07-database-design.md §5) |
 | No-cloud constraint conflicts with a convenient off-the-shelf cloud service later in the project | Medium | Medium | Standing verification checklist (11-security-architecture.md §12) reviewed at every architecture decision point, not just at go-live |
 | Scope creep toward configurable workflows or SSO before Phase 1 ships | Medium | Medium | Explicit out-of-scope statement reinforced in sprint planning |
+| *(v4)* An integrity key (`AUDIT_HMAC_KEY`, `MANIFEST_SIGNING_KEY`) is lost, making the audit chain or old manifests unverifiable | Low | High | Keys generated by the installer, copied to the password safe at install time (14-deployment-architecture.md §4a); restore drill checks the chain |
+| *(v4)* Step-up and SLA reminders irritate users or are routed around | Medium | Low-Medium | Reminders are one notice per user and request per day; delegation exists for absences; thresholds are Administrator settings |
+| *(v4)* PostgreSQL migration is harder than assumed | Medium | Medium | Ratchet keeps SQLite-specific code from growing; the port is estimated from the inventory before it is started (NFR-014) |
+| *(v4)* A single SQLite file is a single point of failure | Low-Medium | High | Verified nightly backups, readiness shows backup age, quarterly restore drill (NFR-012) |
 
 ## 7. Effort Estimation (T-Shirt Sizing)
 
@@ -92,8 +107,16 @@ Unchanged in substance from v1 (16-mvp-roadmap.md v1 §4): evaluate PostgreSQL m
 | EPIC-14 Library Import (new 2026-09-17) | M |
 | EPIC-15 OneTool Shell Integration & UX Fixes (new 2026-09-17: no-data-loss-on-failure, inline field help, design system adoption) | M |
 | EPIC-16 Subgroup & Group Administration (new 2026-09-17) | S |
+| EPIC-17 Concurrency & Data Integrity *(v4, delivered)* | M |
+| EPIC-18 Release Integrity & Software-Version Traceability *(v4, delivered)* | L |
+| EPIC-19 Workflow SLAs, Notifications & Metrics *(v4, delivered)* | M |
+| EPIC-20 Audience-Scoped & Profile-Based Publication *(v4, delivered)* | M |
+| EPIC-22 Multilingual Content *(v4, delivered)* | L |
+| EPIC-23 Knowledge Enrichment & Evidence *(v4, delivered)* | M |
+| EPIC-24 Fleet Feedback Loop *(v4, delivered as a file import)* | M |
+| EPIC-25 Operations & Resilience *(v4, delivered)* | M |
 
-Sizing scale unchanged: S ≈ 1 sprint, M ≈ 2 sprints, L ≈ 3–4 sprints, small (2–4 engineer) team; see 18-claude-code-implementation-guide.md §7 for sequencing.
+Sizing scale: S ≈ 1 sprint, M ≈ 2 sprints, L ≈ 3–4 sprints, small (2–4 engineer) team; see 18-claude-code-implementation-guide.md §7 for sequencing.
 
 ## 8. Corrections Log (2026-09-17)
 

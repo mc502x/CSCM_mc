@@ -9,6 +9,7 @@ from app.api.v1.serializers import (
     pending_domain_signoff_payload,
 )
 from app.auth.decorators import current_user, require_role
+from app.auth.roles import OVERSIGHT_ROLES
 from app.domain.errors import DomainError
 from app.extensions import db
 from app.models.change_request import ChangeRequest
@@ -16,7 +17,7 @@ from app.services.domain_signoff_service import DomainSignoffService, user_domai
 
 
 @api_v1_bp.get("/change-requests/<int:cr_id>/domain-signoffs")
-@require_role("ADMINISTRATOR", "ENGINEER", "REVIEWER", "CHIEF_ENGINEER")
+@require_role(*OVERSIGHT_ROLES)
 def list_domain_signoffs(cr_id: int):
     cr = db.session.get(ChangeRequest, cr_id)
     if cr is None:

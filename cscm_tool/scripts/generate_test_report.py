@@ -3,6 +3,7 @@
     python scripts/generate_test_report.py                  # file order
     python scripts/generate_test_report.py --order reverse  # independence check
     python scripts/generate_test_report.py --order shuffle:7
+    python scripts/generate_test_report.py --db file        # every test on a real SQLite file
     python scripts/generate_test_report.py --skip-gates     # tests + coverage only
 
 It executes the full pytest suite (JUnit XML + coverage), the static quality
@@ -39,7 +40,7 @@ MATRIX = DOCS / "20-traceability-matrix.md"
 TESTS = APP_DIR / "tests"
 
 REQ_RE = re.compile(
-    r"\b(FR-\d{3}[a-z]?|BR-\d{3}|NFR-\d{3}[a-z]?|SEC-\d{3}|TC-\d{3}[a-z]?|UAT-\d{2}[a-z]?|US-\d{3})\b"
+    r"\b(FR-\d{3}[a-z]?|BR-\d{3}|NFR-\d{3}[a-z]?|SEC-\d{3}|AUD-\d{3}|TC-\d{3}[a-z]?|UAT-\d{2}[a-z]?|US-\d{3})\b"
 )
 
 
@@ -94,6 +95,61 @@ def refs_for(module_doc: str, test_name: str, test_doc: str) -> list[str]:
     return sorted(found)
 
 
+def matrix_status() -> dict[str, str]:
+    """requirement id -> status symbol (✅ covered, ➖ out of scope, 🧑 needs a person) from the
+    rows of docs/20-traceability-matrix.md (first cell = ids, second cell = status)."""
+    status: dict[str, str] = {}
+    if not MATRIX.exists():
+        return status
+    for line in MATRIX.read_text(encoding="utf-8").splitlines():
+        cells = [c.strip() for c in line.strip().strip("|").split("|")]
+        if len(cells) < 3 or not cells[0] or cells[0] in ("ID", "---"):
+            continue
+        symbol = next((c for c in ("✅", "➖", "🧑") if cells[1].startswith(c)), None)
+        if symbol is None:
+            continue
+        prefix = None
+        for token in re.findall(r"(?:(FR|NFR|BR|SEC|AUD)-)?(\d{3}[a-z]?)", cells[0]):
+            prefix = token[0] or prefix
+            if prefix:
+                status[f"{prefix}-{token[1]}"] = symbol
+    return status
+
+
+def requirement_coverage(index: dict[str, dict]) -> dict:
+    """Every FR/NFR/BR/SEC/AUD id *defined* in the specification documents, and how it is
+    accounted for: cited by a test (module docstring, test docstring or name), marked covered in
+    the traceability matrix, or marked there as out of scope / needing a person. `open` must be
+    empty - tests/system/test_docs_consistency.py enforces it."""
+    defined: set[str] = set()
+    srs = (DOCS / "03-srs.md").read_text(encoding="utf-8")
+    defined |= set(re.findall(r"\*\*((?:FR|BR)-\d{3}[a-z]?)\*\*", srs))
+    defined |= set(re.findall(r"^#{2,4} [^\n]*?\b(NFR-\d{3})\b", srs, re.M))
+    security = (DOCS / "11-security-architecture.md").read_text(encoding="utf-8")
+    defined |= set(re.findall(r"\*\*(SEC-\d{3})\*\*", security))
+    audit = (DOCS / "12-audit-compliance.md").read_text(encoding="utf-8")
+    defined |= set(re.findall(r"\*\*(AUD-\d{3})\*\*", audit))
+    cited: set[str] = set()
+    for entry in index.values():
+        cited |= set(REQ_RE.findall(entry["doc"]))
+        for test_name, doc in entry["tests"].items():
+            cited |= set(REQ_RE.findall(doc))
+            cited |= set(REQ_RE.findall(test_name.upper().replace("_", "-")))
+    stems = {c[:-1] if c[-1].islower() else c for c in cited}  # citing FR-048 covers FR-048a
+    matrix = matrix_status()
+    by_test = {d for d in defined if d in cited or d in stems}
+    by_matrix = {d for d in defined - by_test if matrix.get(d) == "✅"}
+    manual = {d for d in defined - by_test - by_matrix if matrix.get(d) in ("➖", "🧑")}
+    open_ = sorted(defined - by_test - by_matrix - manual)
+    return {
+        "defined": sorted(defined),
+        "by_test": sorted(by_test),
+        "by_matrix": sorted(by_matrix),
+        "manual": sorted(manual),
+        "open": open_,
+    }
+
+
 # --------------------------------------------------------------------------- pytest run
 def _parse_junit(junit: Path) -> tuple[list[dict], float]:
     cases: list[dict] = []
@@ -122,7 +178,7 @@ def _parse_junit(junit: Path) -> tuple[list[dict], float]:
     return cases, float(root.get("time") or sum(c["time"] for c in cases))
 
 
-def run_pytest(order: str) -> tuple[list[dict], dict, float, str]:
+def run_pytest(order: str, db: str = "memory") -> tuple[list[dict], dict, float, str]:
     """Runs the suite in two processes. The functional suite runs with coverage;
     the timing-based performance tests run afterwards in a fresh process WITHOUT
     coverage tracing (which slows pure-Python code ~2-3x and would measure the
@@ -133,7 +189,10 @@ def run_pytest(order: str) -> tuple[list[dict], dict, float, str]:
         junit = Path(tmp) / "junit.xml"
         perf_junit = Path(tmp) / "perf.xml"
         cov = Path(tmp) / "coverage.json"
-        env = {"CSCM_TEST_ORDER": "" if order == "file" else order}
+        env = {
+            "CSCM_TEST_ORDER": "" if order == "file" else order,
+            "CSCM_TEST_DB": "file" if db == "file" else "",
+        }
         base = [sys.executable, "-m", "pytest", "-p", "no:cacheprovider", "-q"]
 
         main_proc = run(
@@ -271,7 +330,16 @@ def fmt_pct(value: float) -> str:
 
 
 def write_report(
-    cases, coverage, total_time, pytest_tail, gates, order, index, history, matrix_check
+    cases,
+    coverage,
+    total_time,
+    pytest_tail,
+    gates,
+    order,
+    index,
+    history,
+    matrix_check,
+    req_coverage,
 ) -> None:
     now = datetime.now(UTC)
     commit = git("rev-parse", "--short", "HEAD") or "unknown"
@@ -395,6 +463,25 @@ def write_report(
     )
     w("")
 
+    # requirement coverage
+    rc = req_coverage
+    w("## 6a. Requirement coverage")
+    w("")
+    sentence = (
+        f"The specification defines **{len(rc['defined'])}** requirement ids (FR, NFR, BR in "
+        "`03-srs.md`, SEC in `11-security-architecture.md`, AUD in `12-audit-compliance.md`). "
+        f"**{len(rc['by_test'])}** are cited by at least one test (module docstring, test "
+        f"docstring or test name); **{len(rc['by_matrix'])}** more are marked covered, with the "
+        "tests named, in `20-traceability-matrix.md`; "
+        f"**{len(rc['manual'])}** are marked there as out of scope or needing a person"
+    )
+    if rc["manual"]:
+        sentence += " (" + ", ".join(f"`{m}`" for m in rc["manual"]) + ")"
+    sentence += f". **{len(rc['open'])} are not accounted for**"
+    sentence += (": " + ", ".join(f"`{m}`" for m in rc["open"]) + ".") if rc["open"] else "."
+    w(sentence)
+    w("")
+
     # failures
     failed = [c for c in cases if c["status"] == "failed"]
     w("## 7. Failures")
@@ -468,14 +555,21 @@ def main() -> int:
         description=__doc__, formatter_class=argparse.RawTextHelpFormatter
     )
     parser.add_argument("--order", default="file", help="file | reverse | shuffle[:SEED]")
+    parser.add_argument(
+        "--db",
+        default="memory",
+        choices=("memory", "file"),
+        help="memory (default) or file: run every test on a real SQLite file (methodology 3)",
+    )
     parser.add_argument("--skip-gates", action="store_true")
     parser.add_argument(
         "--no-history", action="store_true", help="do not append to the run history"
     )
     args = parser.parse_args()
 
-    print(f"Running test suite (order: {args.order}) ...", flush=True)
-    cases, coverage, total_time, tail = run_pytest(args.order)
+    label = args.order if args.db == "memory" else f"{args.order}+filedb"
+    print(f"Running test suite (order: {label}) ...", flush=True)
+    cases, coverage, total_time, tail = run_pytest(args.order, args.db)
     print(f"  {tail}", flush=True)
     gates = [] if args.skip_gates else run_gates()
     for g in gates:
@@ -498,7 +592,7 @@ def main() -> int:
                 "date": f"{datetime.now(UTC):%Y-%m-%d %H:%M}",
                 "commit": (git("rev-parse", "--short", "HEAD") or "unknown")
                 + ("*" if git("status", "--porcelain", "--", "cscm_tool", "docs") else ""),
-                "order": args.order,
+                "order": label,
                 "total": len(cases),
                 "passed": counts["passed"],
                 "failed": counts["failed"],
@@ -512,7 +606,18 @@ def main() -> int:
         HISTORY.parent.mkdir(parents=True, exist_ok=True)
         HISTORY.write_text(json.dumps(history, indent=2) + "\n", encoding="utf-8", newline="\n")
 
-    write_report(cases, coverage, total_time, tail, gates, args.order, index, history, matrix_check)
+    write_report(
+        cases,
+        coverage,
+        total_time,
+        tail,
+        gates,
+        label,
+        index,
+        history,
+        matrix_check,
+        requirement_coverage(index),
+    )
     print(f"Report written to {REPORT.relative_to(REPO)}")
     failed_gate = any(g["ok"] is False for g in gates)
     return 1 if counts["failed"] or failed_gate else 0

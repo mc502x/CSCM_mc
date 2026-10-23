@@ -19,20 +19,26 @@ CSCM Tool inverts the current document-first workflow: status codes are created,
 | Safe test capability | Administrators can create and permanently delete sandbox status codes for testing and training without ever touching production numbering or manuals. |
 | Foundation for automation | REST API and structured export formats enable future, strictly on-premises integration with documentation generation, software repositories, and SCADA systems, without re-architecting the data model. |
 | Fully on-premises operation | No public cloud component anywhere in the system, including authentication — a hard deployment constraint, not a default. |
+| Trustworthy hand-over (v4) | Every export carries a manifest with SHA-256 hashes (optionally signed), can be limited to an audience, a language and a controller software version, and can be verified later without the database; release notes show what changed since the previous Release. |
+| Operable by the owning team (v4) | Verified nightly backups, a tamper-evident audit log, readiness and metrics endpoints, SLA ageing with reminders, delegation for absences, and one-script installation keep the single-file system safe to run on-premises. |
 
 ## 4. Success Metrics
 
-| Metric | Target (post-MVP, first 2 quarters of production use) |
-|---|---|
-| % of status codes with unknown/undocumented owner | 0% |
-| Duplicate identifiers created | 0 (enforced by uniqueness constraint and atomic allocation; see 07-database-design.md) |
-| Median time from Change Request submission to Approved (through all three decision points) | ≤ 7 business days |
-| % of Released status codes with complete audit trail from Draft, including both sign-offs and the Chief Engineer approval | 100% |
-| Manual technical-writing rework caused by status code inconsistency | Reduced by ≥ 80% vs. baseline |
-| Export catalogue adoption | 100% of new manual editions sourced from a CSCM Tool export within 2 releases of go-live |
-| Cross-Domain Sign-Off turnaround (when required) | ≤ 3 business days |
-| System availability (production) | ≥ 99.5% monthly, per NFR-002 (03-srs.md) |
+| Metric                                                                                                                    | Target (post-MVP, first 2 quarters of production use)                                    |
+| ------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| % of status codes with unknown/undocumented owner                                                                         | 0%                                                                                       |
+| Duplicate identifiers created                                                                                             | 0 (enforced by uniqueness constraint and atomic allocation; see 07-database-design.md)   |
+| Median time from Change Request submission to Approved (through all three decision points)                                | ≤ 7 business days                                                                        |
+| % of Released status codes with complete audit trail from Draft, including both sign-offs and the Chief Engineer approval | 100%                                                                                     |
+| Manual technical-writing rework caused by status code inconsistency                                                       | Reduced by ≥ 80% vs. baseline                                                            |
+| Export catalogue adoption                                                                                                 | 100% of new manual editions sourced from a CSCM Tool export within 2 releases of go-live |
+| Cross-Domain Sign-Off turnaround (when required)                                                                          | ≤ 3 business days                                                                        |
+| System availability (production)                                                                                          | ≥ 99.5% monthly, per NFR-002 (03-srs.md)                                                 |
+
+Since v4 the first four process metrics (unknown owners, approval time, cross-domain turnaround, audit-trail completeness) are **measured by the application itself** on the Success Metrics page (FR-123) from timestamps it already stores, instead of by a separate report.
 
 ## 5. Scope Boundary (Summary)
 
 In scope for MVP: status code lifecycle management with Functional System Group/Subgroup-based numbering, Turbine Platform multi-select classification, Cross-Domain Sign-Off, the three-decision-point approval workflow, revision history, release management, sandbox test codes, catalogue export (role-scoped) and full-database export (Administrator-only), role-based access control across five roles, full audit logging, and an internal-network-only REST API — all running on local, on-premises infrastructure with no cloud component. Out of scope for MVP: on-premises Active Directory/ADFS SSO integration itself (the hook is built, not wired up), automated push integration to documentation generation tools/software repositories/SCADA systems, multi-tenant/multi-OEM support. See 02-prd.md §6 for the complete scope statement.
+
+**v4 addition to scope (2026-10-23):** the improvement pack of 21-improvement-ideas.md is part of the implemented baseline: governance extensions (change sets, delegation, step-up, field comments, review checklists), publication (profiles, audiences, manifests, software versions, translations, offline bundle), import toolkit, insight (health report, fleet feedback, saved searches), integration (API tokens, change feed, webhooks, Hub-to-Main consolidation) and operations (backups, audit chain, readiness, metrics, installers, CI). Requirements: 03-srs.md §1.10–§1.15.

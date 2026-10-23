@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block title %}{{ _('Delegation') }} — CSCM Tool{% endblock %}
+{% block content %}
+<div class="page-header"><h1>{{ _('Delegation and out-of-office cover') }}</h1></div>
+<p class="muted">{{ _('Name a colleague who may take your decisions while you are away. They act as themselves: the audit trail shows both of you, and the segregation-of-duties rules apply to them personally. Only the decision actions are covered - nothing else you can do.') }}</p>
+
+<div class="card">
+  <h2>{{ _('Active and planned delegations') }}</h2>
+  {% if delegations %}
+  <table>
+    <caption class="visually-hidden">{{ _('Delegations') }}</caption>
+    <thead><tr><th scope="col">{{ _('From') }}</th><th scope="col">{{ _('Covered by') }}</th><th scope="col">{{ _('Role') }}</th><th scope="col">{{ _('Valid') }}</th><th scope="col"></th></tr></thead>
+    <tbody>
+      {% for d in delegations %}
+      <tr>
+        <td>{{ d.delegator.full_name }}</td><td>{{ d.delegate.full_name }}</td><td>{{ d.role_code }}</td>
+        <td>{{ d.valid_from }} &ndash; {{ d.valid_to }}</td>
+        <td>{% if not d.revoked_at and (current_user.id == d.delegator_id or current_user.role_code == 'ADMINISTRATOR') %}
+          <form method="post" action="{{ url_for('ui.delegation_revoke', delegation_id=d.id) }}" class="inline-form"><input type="hidden" name="csrf_token" value="{{ csrf_token() }}"><button class="btn btn--outline" type="submit">{{ _('Revoke') }}</button></form>{% endif %}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% else %}
+  <div class="table-empty">{{ _('No delegations.') }}</div>
+  {% endif %}
+</div>
+
+<div class="card" style="max-width:560px">
+  <h2>{{ _('New delegation') }}</h2>
+  <form method="post">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    <div class="field">
+      <label for="delegate_id">{{ _('Covering colleague') }}</label>
+      <select id="delegate_id" name="delegate_id" required>
+        {% for u in candidates %}<option value="{{ u.id }}">{{ u.full_name }} ({{ u.role.code }})</option>{% endfor %}
+      </select>
+    </div>
+    <div class="form-row">
+      <div class="field"><label for="valid_from">{{ _('From') }}</label><input type="text" id="valid_from" name="valid_from" value="{{ today }}" required></div>
+      <div class="field"><label for="valid_to">{{ _('Until (inclusive)') }}</label><input type="text" id="valid_to" name="valid_to" value="{{ default_end }}" required></div>
+    </div>
+    <button class="btn btn--primary" type="submit">{{ _('Create delegation') }}</button>
+  </form>
+</div>
+{% endblock %}

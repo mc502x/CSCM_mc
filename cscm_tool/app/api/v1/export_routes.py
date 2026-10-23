@@ -4,9 +4,11 @@
 from flask import Response, jsonify, request
 
 from app.api.v1 import api_v1_bp
-from app.auth.decorators import current_user, login_required, require_role
+from app.api.v1._errors import error_response
+from app.api.v1.publication_routes import export_options_from_request, file_response
+from app.auth.decorators import allow_token, current_user, login_required, require_role
 from app.db_modes import writes_on_get
-from app.domain.errors import NotFoundError
+from app.domain.errors import AccountLockedError, DomainError, NotFoundError, StepUpRequiredError
 from app.services.export_service import ExportService
 from app.services.release_service import ReleaseService
 
@@ -15,9 +17,12 @@ WORKING_SET_NOTICE = "Not for distribution - unapproved data"
 
 
 @api_v1_bp.get("/releases/<int:release_id>/export")
+@allow_token("catalogue:read")
 @writes_on_get
 @login_required
 def export_release(release_id: int):
+    """FR-045. Optional profile, audience, language, strict_language, software_version
+    (I-02/I-03/I-15/I-07) and bundle=true (ZIP with MANIFEST.json, I-06)."""
     export_format = (request.args.get("format") or "").lower()
     if export_format not in _VALID_FORMATS:
         return (
@@ -29,19 +34,19 @@ def export_release(release_id: int):
     except NotFoundError:
         return jsonify(error="not_found", message="Release not found"), 404
 
-    revisions = [item.revision for item in release.items]
-    content, mimetype, filename = ExportService.export_catalogue(
-        revisions,
-        export_format,
-        current_user,
-        release_id=release_id,
-        name_label=release.version_label,
-    )
-    return Response(
-        content,
-        mimetype=mimetype,
-        headers={"Content-Disposition": f"attachment; filename={filename}"},
-    )
+    try:
+        options = export_options_from_request()
+        result = ExportService.export_catalogue(
+            [item.revision for item in release.items],
+            export_format,
+            current_user,
+            release_id=release_id,
+            name_label=release.version_label,
+            options=options,
+        )
+    except (DomainError, ValueError) as exc:
+        return error_response(exc)
+    return file_response(result)
 
 
 def _format_or_error():
@@ -54,21 +59,14 @@ def _format_or_error():
     return export_format, None
 
 
-def _file_response(content, mimetype, filename):
-    return Response(
-        content,
-        mimetype=mimetype,
-        headers={"Content-Disposition": f"attachment; filename={filename}"},
-    )
-
-
 @api_v1_bp.get("/exports/released")
+@allow_token("catalogue:read")
 @writes_on_get
 @login_required
 def export_released():
     """FR-045: the current set of all Released codes (any role; Released data
     is visible to Viewers, BR-009). Optional functional_system_group,
-    functional_subgroup, turbine_platform filters."""
+    functional_subgroup, turbine_platform filters, plus the shaping parameters."""
     export_format, error = _format_or_error()
     if error:
         return error
@@ -77,15 +75,19 @@ def export_released():
         "functional_subgroup_id": request.args.get("functional_subgroup", type=int),
         "turbine_platform_code": request.args.get("turbine_platform") or None,
     }
-    revisions = ExportService.released_revisions(**filters)
-    return _file_response(
-        *ExportService.export_catalogue(
+    try:
+        options = export_options_from_request()
+        revisions = ExportService.released_revisions(**filters)
+        result = ExportService.export_catalogue(
             revisions,
             export_format,
             current_user,
             scope={"scope": "released", **{k: v for k, v in filters.items() if v is not None}},
+            options=options,
         )
-    )
+    except (DomainError, ValueError) as exc:
+        return error_response(exc)
+    return file_response(result)
 
 
 @api_v1_bp.get("/exports/working-set")
@@ -104,23 +106,34 @@ def export_working_set():
         "turbine_platform_code": request.args.get("turbine_platform") or None,
         "lifecycle_status": request.args.get("lifecycle_status") or None,
     }
-    revisions = ExportService.working_set_revisions(current_user, **filters)
-    return _file_response(
-        *ExportService.export_catalogue(
+    try:
+        options = export_options_from_request(allow_audience=False)
+        revisions = ExportService.working_set_revisions(current_user, **filters)
+        result = ExportService.export_catalogue(
             revisions,
             export_format,
             current_user,
             scope={"scope": "working-set", **{k: v for k, v in filters.items() if v is not None}},
             notice=WORKING_SET_NOTICE,
+            options=options,
         )
-    )
+    except (DomainError, ValueError) as exc:
+        return error_response(exc)
+    return file_response(result)
 
 
-@api_v1_bp.get("/exports/full-database")
-@writes_on_get
+@api_v1_bp.post("/exports/full-database")
 @require_role("ADMINISTRATOR")
 def export_full_database():
-    content, mimetype, filename = ExportService.export_full_database(current_user)
+    """I-17: a POST carrying `current_password`, so the download needs a fresh confirmation."""
+    body = request.get_json(silent=True) or {}
+    try:
+        content, mimetype, filename = ExportService.export_full_database(
+            current_user,
+            reauth_password=body.get("current_password") or request.form.get("current_password"),
+        )
+    except (StepUpRequiredError, AccountLockedError) as exc:
+        return error_response(exc)
     return Response(
         content,
         mimetype=mimetype,

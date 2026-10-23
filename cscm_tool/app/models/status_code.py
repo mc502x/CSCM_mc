@@ -18,6 +18,7 @@ from typing import cast
 
 from app.extensions import Base, db
 from app.models.lookup import (
+    LookupControllerSoftwareVersion,
     LookupCustomerAccess,
     LookupDevelopmentAccess,
     LookupFunctionalSubgroup,
@@ -47,6 +48,8 @@ class StatusCode(Base):
     is_sandbox = db.Column(db.Integer, nullable=False, default=0)
     platform_variant_of_status_code_id = db.Column(db.Integer, db.ForeignKey("status_code.id"))
     legacy_reference_number = db.Column(db.Text)
+    # v4.2: the number an imported StCd_<n>.st program carries; issued unchanged at Submit
+    reserved_identifier = db.Column(db.Text)
     owner_id = db.Column(db.Integer, db.ForeignKey("user.id"), nullable=False)
     created_at = db.Column(db.Text, nullable=False)
 
@@ -136,6 +139,21 @@ class StatusCodeRevision(Base):
     deprecated_reason = db.Column(db.Text)
     superseded_by_status_code_id = db.Column(db.Integer, db.ForeignKey("status_code.id"))
 
+    row_version = db.Column(db.Integer, nullable=False, default=1)  # I-01
+    updated_at = db.Column(db.Text)  # I-01
+    remedy_text = db.Column(db.Text)  # I-14
+    affected_component = db.Column(db.Text)  # I-14
+    related_status_codes = db.Column(db.Text)  # I-14, comma separated identifiers
+    standard_references = db.Column(db.Text)  # I-14
+    applies_from_version_id = db.Column(
+        db.Integer, db.ForeignKey("lookup_controller_software_version.id")
+    )  # I-07
+    applies_to_version_id = db.Column(
+        db.Integer, db.ForeignKey("lookup_controller_software_version.id")
+    )  # I-07
+    planned_effective_date = db.Column(db.Text)  # I-27
+    planned_deprecation_date = db.Column(db.Text)  # I-27
+
     status_code: StatusCode = cast(
         StatusCode,
         db.relationship("StatusCode", back_populates="revisions", foreign_keys=[status_code_id]),
@@ -163,6 +181,14 @@ class StatusCodeRevision(Base):
     )
     customer_access: LookupCustomerAccess | None = cast(
         "LookupCustomerAccess | None", db.relationship("LookupCustomerAccess")
+    )
+    applies_from_version: LookupControllerSoftwareVersion | None = cast(
+        "LookupControllerSoftwareVersion | None",
+        db.relationship("LookupControllerSoftwareVersion", foreign_keys=[applies_from_version_id]),
+    )
+    applies_to_version: LookupControllerSoftwareVersion | None = cast(
+        "LookupControllerSoftwareVersion | None",
+        db.relationship("LookupControllerSoftwareVersion", foreign_keys=[applies_to_version_id]),
     )
     platforms: list["StatusCodeRevisionPlatform"] = cast(
         "list[StatusCodeRevisionPlatform]",

@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}{{ _('New change set') }} — CSCM Tool{% endblock %}
+{% block content %}
+<div class="page-header"><h1>{{ _('New change set') }}</h1></div>
+<div class="card" style="max-width:560px">
+  <form method="post">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    <div class="field"><label for="name">{{ _('Name') }}</label><input type="text" id="name" name="name" required maxlength="120" placeholder="Controller software 4.2"></div>
+    <div class="field"><label for="description">{{ _('Description (optional)') }}</label><textarea id="description" name="description"></textarea></div>
+    <div class="field">
+      <label for="target_software_version">{{ _('Target software version (optional)') }}</label>
+      <select id="target_software_version" name="target_software_version">
+        <option value="">—</option>
+        {% for v in versions %}<option value="{{ v.code }}">{{ v.code }}</option>{% endfor %}
+      </select>
+    </div>
+    <button class="btn btn--primary" type="submit">{{ _('Create change set') }}</button>
+  </form>
+</div>
+{% endblock %}

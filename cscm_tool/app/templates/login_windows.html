@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}{{ _('Sign in with Windows') }} — CSCM Tool{% endblock %}
+{% block guest_content %}
+<div class="login-shell">
+  <div class="card login-card">
+    <h1 class="login-title">CSCM Tool</h1>
+    {% include "_flashes.html" %}
+    <h2>{{ _('Sign in with Windows') }}</h2>
+    {% if simulated %}
+    <div class="flash flash--info" role="note"><strong>{{ _('Simulation.') }}</strong> {{ _('In a deployment the browser hands over your Windows identity and you are signed in without this page. Here, type the identity the Windows gateway would have supplied.') }}</div>
+    <form method="post" action="{{ url_for('ui.login_windows_simulate') }}">
+      <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+      <input type="hidden" name="next" value="{{ request.args.get('next') or '' }}">
+      <div class="field">
+        <label for="identity">{{ _('Windows identity') }}</label>
+        <input type="text" id="identity" name="identity" list="known-identities" required autofocus placeholder="name@corp.example or CORP\name" autocomplete="off">
+        <datalist id="known-identities">{% for e in emails %}<option value="{{ e }}">{% endfor %}</datalist>
+        <div class="hint">{{ _('The e-mail address of the account is the user principal name; a name with a Windows domain in front needs WINDOWS_AUTH_EMAIL_DOMAIN or a matching user name.') }}</div>
+      </div>
+      <button class="btn btn--primary" type="submit" style="width:100%">{{ _('Sign in as this Windows user') }}</button>
+    </form>
+    {% else %}
+    <p>{{ _('No Windows identity reached the application. Open it through the organisation address, from a computer signed in to the company network.') }}</p>
+    {% endif %}
+    <p style="margin-top:12px"><a href="{{ url_for('ui.login', password=1) }}">{{ _('Back to the log-in page') }}</a></p>
+  </div>
+</div>
+{% endblock %}

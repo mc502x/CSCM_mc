@@ -7,12 +7,16 @@ from flask import jsonify, request
 
 from app.api.v1 import api_v1_bp
 from app.api.v1.serializers import change_request_payload
-from app.auth.decorators import current_user, require_role
+from app.auth.decorators import current_user, require_role, require_role_or_delegate
+from app.auth.roles import OVERSIGHT_ROLES
 from app.domain.errors import (
+    AccountLockedError,
     DomainError,
+    ForbiddenError,
     InvalidTransitionError,
     NotFoundError,
     SegregationOfDutiesViolation,
+    StepUpRequiredError,
 )
 from app.extensions import db
 from app.models.change_request import ChangeRequest
@@ -20,7 +24,13 @@ from app.services.change_request_service import ChangeRequestService
 
 
 def _decision_error_response(exc: Exception):
-    if isinstance(exc, SegregationOfDutiesViolation):
+    if isinstance(exc, StepUpRequiredError):
+        # I-17: not a role problem - the actor must confirm with their password.
+        code = "step_up_failed" if exc.wrong_password else "step_up_required"
+        return jsonify(error=code, message=str(exc)), 403
+    if isinstance(exc, AccountLockedError):
+        return jsonify(error="account_locked", message=str(exc)), 403
+    if isinstance(exc, SegregationOfDutiesViolation | ForbiddenError):
         return jsonify(error="forbidden", message=str(exc)), 403
     if isinstance(exc, InvalidTransitionError):
         return jsonify(error="conflict", message=str(exc)), 409
@@ -28,7 +38,7 @@ def _decision_error_response(exc: Exception):
 
 
 @api_v1_bp.get("/change-requests")
-@require_role("ADMINISTRATOR", "ENGINEER", "REVIEWER", "CHIEF_ENGINEER")  # BR-009: never Viewers
+@require_role(*OVERSIGHT_ROLES)  # BR-009: never Viewers
 def list_change_requests():
     page = request.args.get("page", 1, type=int)
     page_size = min(request.args.get("page_size", 50, type=int), 200)
@@ -52,7 +62,7 @@ def list_change_requests():
 
 
 @api_v1_bp.get("/change-requests/<int:cr_id>")
-@require_role("ADMINISTRATOR", "ENGINEER", "REVIEWER", "CHIEF_ENGINEER")  # BR-009: never Viewers
+@require_role(*OVERSIGHT_ROLES)  # BR-009: never Viewers
 def get_change_request(cr_id: int):
     cr = db.session.get(ChangeRequest, cr_id)
     if cr is None:
@@ -80,27 +90,45 @@ def submit(cr_id: int):
     except (DomainError, ValueError) as exc:
         return jsonify(error="validation_error", message=str(exc)), 422
 
-    return jsonify(change_request_payload(cr)), 200
+    from app.services.status_code_service import StatusCodeService
+
+    payload = change_request_payload(cr)
+    payload["warnings"] = StatusCodeService.warnings_for(cr.revision)
+    return jsonify(payload), 200
 
 
 @api_v1_bp.post("/change-requests/<int:cr_id>/reviewer-signoff")
-@require_role("REVIEWER")
+@require_role_or_delegate("REVIEWER")
 def reviewer_signoff(cr_id: int):
+    """I-17: body must carry `current_password`. I-23: `checklist_confirmed` lists the
+    review-checklist item ids the Reviewer confirms (required when items apply)."""
     body = request.get_json(silent=True) or {}
     try:
         cr = ChangeRequestService.reviewer_signoff(
-            cr_id, current_user, body.get("decision", ""), body.get("comment")
+            cr_id,
+            current_user,
+            body.get("decision", ""),
+            body.get("comment"),
+            reauth_password=body.get("current_password"),
+            checklist_confirmed=body.get("checklist_confirmed"),
         )
     except NotFoundError:
         return jsonify(error="not_found", message="Change request not found"), 404
-    except (SegregationOfDutiesViolation, InvalidTransitionError, ValueError) as exc:
+    except (
+        SegregationOfDutiesViolation,
+        InvalidTransitionError,
+        ValueError,
+        StepUpRequiredError,
+        AccountLockedError,
+        ForbiddenError,
+    ) as exc:
         return _decision_error_response(exc)
 
     return jsonify(change_request_payload(cr)), 200
 
 
 @api_v1_bp.post("/change-requests/<int:cr_id>/admin-signoff")
-@require_role("ADMINISTRATOR")
+@require_role_or_delegate("ADMINISTRATOR")
 def admin_signoff(cr_id: int):
     body = request.get_json(silent=True) or {}
     try:
@@ -110,26 +138,45 @@ def admin_signoff(cr_id: int):
             body.get("decision", ""),
             body.get("comment"),
             access_overrides=body.get("access_overrides"),
+            reauth_password=body.get("current_password"),
         )
     except NotFoundError:
         return jsonify(error="not_found", message="Change request not found"), 404
-    except (SegregationOfDutiesViolation, InvalidTransitionError, ValueError) as exc:
+    except (
+        SegregationOfDutiesViolation,
+        InvalidTransitionError,
+        ValueError,
+        StepUpRequiredError,
+        AccountLockedError,
+        ForbiddenError,
+    ) as exc:
         return _decision_error_response(exc)
 
     return jsonify(change_request_payload(cr)), 200
 
 
 @api_v1_bp.post("/change-requests/<int:cr_id>/chief-engineer-decide")
-@require_role("CHIEF_ENGINEER")
+@require_role_or_delegate("CHIEF_ENGINEER")
 def chief_engineer_decide(cr_id: int):
     body = request.get_json(silent=True) or {}
     try:
         cr = ChangeRequestService.chief_engineer_decide(
-            cr_id, current_user, body.get("decision", ""), body.get("comment")
+            cr_id,
+            current_user,
+            body.get("decision", ""),
+            body.get("comment"),
+            reauth_password=body.get("current_password"),
         )
     except NotFoundError:
         return jsonify(error="not_found", message="Change request not found"), 404
-    except (SegregationOfDutiesViolation, InvalidTransitionError, ValueError) as exc:
+    except (
+        SegregationOfDutiesViolation,
+        InvalidTransitionError,
+        ValueError,
+        StepUpRequiredError,
+        AccountLockedError,
+        ForbiddenError,
+    ) as exc:
         return _decision_error_response(exc)
 
     return jsonify(change_request_payload(cr)), 200
@@ -163,6 +210,23 @@ def assign_reviewer(cr_id: int):
         return _decision_error_response(exc)
 
     return jsonify(change_request_payload(cr)), 200
+
+
+@api_v1_bp.post("/change-requests/withdraw")
+@require_role("ADMINISTRATOR", "ENGINEER")
+def withdraw_many():
+    """Withdraw several of your own open change requests: `{cr_ids: [...]}`. 200 with one result per
+    request; a request that cannot be withdrawn is reported in its result and the others go on."""
+    body = request.get_json(silent=True) or {}
+    cr_ids = body.get("cr_ids")
+    if not (isinstance(cr_ids, list) and cr_ids and all(isinstance(i, int) for i in cr_ids)):
+        return jsonify(error="validation_error", message="cr_ids must be a list of ids"), 422
+    results = ChangeRequestService.withdraw_many(cr_ids, current_user)
+    return jsonify(
+        results=results,
+        withdrawn=sum(1 for r in results if r["ok"]),
+        failed=sum(1 for r in results if not r["ok"]),
+    )
 
 
 @api_v1_bp.post("/change-requests/<int:cr_id>/withdraw")

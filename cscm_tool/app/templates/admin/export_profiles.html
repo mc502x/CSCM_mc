@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% block title %}{{ _('Export Profiles') }} — CSCM Tool{% endblock %}
+{% block content %}
+<div class="page-header"><h1>{{ _('Export profiles') }}</h1></div>
+<p class="muted">{{ _('A profile fixes the columns, their order and header labels, and optionally a default audience and language. Profiles are data: change them here, no deployment needed.') }}</p>
+
+{% for p in profiles %}
+<div class="card">
+  <h2>{{ p.name }} <code>{{ p.code }}</code> {% if not p.is_active %}<span class="chip">{{ _('inactive') }}</span>{% endif %}</h2>
+  <form method="post" action="{{ url_for('ui.export_profile_update', profile_id=p.id) }}">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    <div class="form-row">
+      <div class="field"><label for="name_{{ p.id }}">{{ _('Name') }}</label><input type="text" id="name_{{ p.id }}" name="name" value="{{ p.name }}" required></div>
+      <div class="field">
+        <label for="aud_{{ p.id }}">{{ _('Default audience') }}</label>
+        <select id="aud_{{ p.id }}" name="audience"><option value="">—</option>{% for code, (_attr, label) in audiences.items() %}<option value="{{ code }}" {{ 'selected' if p.audience == code }}>{{ label }}</option>{% endfor %}</select>
+      </div>
+      <div class="field">
+        <label for="lang_{{ p.id }}">{{ _('Language') }}</label>
+        <select id="lang_{{ p.id }}" name="language"><option value="">{{ _('source language') }}</option>{% for l in content_languages %}<option value="{{ l.code }}" {{ 'selected' if p.language_code == l.code }}>{{ l.label }}</option>{% endfor %}</select>
+      </div>
+      <div class="field">
+        <label for="orient_{{ p.id }}">{{ _('PDF orientation') }}</label>
+        <select id="orient_{{ p.id }}" name="pdf_orientation"><option value="L" {{ 'selected' if p.pdf_orientation == 'L' }}>{{ _('landscape') }}</option><option value="P" {{ 'selected' if p.pdf_orientation == 'P' }}>{{ _('portrait') }}</option></select>
+      </div>
+    </div>
+    <div class="field">
+      <label for="cols_{{ p.id }}">{{ _('Columns (one per line: field | header label)') }}</label>
+      <textarea id="cols_{{ p.id }}" name="columns" rows="8">{{ columns_text(p) }}</textarea>
+    </div>
+    <div class="checkbox-list">
+      <label><input type="checkbox" name="title_page" {{ 'checked' if p.title_page }}> {{ _('PDF title page') }}</label>
+      <label><input type="checkbox" name="is_active" {{ 'checked' if p.is_active }}> {{ _('Active') }}</label>
+    </div>
+    <button class="btn" type="submit">{{ _('Save profile') }}</button>
+  </form>
+</div>
+{% endfor %}
+
+<div class="card">
+  <h2>{{ _('New profile') }}</h2>
+  <form method="post">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    <div class="form-row">
+      <div class="field"><label for="code">{{ _('Code') }}</label><input type="text" id="code" name="code" required pattern="[A-Za-z0-9_]{2,40}"></div>
+      <div class="field"><label for="name">{{ _('Name') }}</label><input type="text" id="name" name="name" required maxlength="80"></div>
+    </div>
+    <div class="field"><label for="description">{{ _('Description (optional)') }}</label><input type="text" id="description" name="description"></div>
+    <div class="form-row">
+      <div class="field"><label for="audience">{{ _('Default audience') }}</label><select id="audience" name="audience"><option value="">—</option>{% for code, (_attr, label) in audiences.items() %}<option value="{{ code }}">{{ label }}</option>{% endfor %}</select></div>
+      <div class="field"><label for="language">{{ _('Language') }}</label><select id="language" name="language"><option value="">{{ _('source language') }}</option>{% for l in content_languages %}<option value="{{ l.code }}">{{ l.label }}</option>{% endfor %}</select></div>
+    </div>
+    <div class="field">
+      <label for="columns">{{ _('Columns (one per line: field | header label)') }}</label>
+      <textarea id="columns" name="columns" rows="6" required placeholder="status_code_identifier | Status code&#10;title | Title"></textarea>
+      <div class="hint">{{ _('Available fields') }}: {{ fields|join(', ') }}</div>
+    </div>
+    <div class="checkbox-list"><label><input type="checkbox" name="title_page" checked> {{ _('PDF title page') }}</label></div>
+    <input type="hidden" name="pdf_orientation" value="L">
+    <button class="btn btn--primary" type="submit">{{ _('Create profile') }}</button>
+  </form>
+</div>
+{% endblock %}
