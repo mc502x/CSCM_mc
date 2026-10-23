@@ -29,7 +29,7 @@
   --ot-muted: #5f6b7a;     /* not quoted in the spec text -- inferred */
 
   --ot-font-heading: 'Manrope', -apple-system, "Segoe UI", system-ui, sans-serif;
-  --ot-font-body: 'Inter', -apple-system, "Segoe UI", system-ui, sans-serif;
+  --ot-font-body: 'Inter', 'CSCM Noto', -apple-system, "Segoe UI", system-ui, sans-serif;
 
   --color-bg: var(--ot-background);
   --color-surface: var(--ot-surface-raised);
@@ -374,3 +374,17 @@ html[dir="rtl"] .error-list { padding-left: 0; padding-right: 18px; }
 
 /* Translation screens: a wide table scrolls inside its card instead of widening the page. */
 .table-scroll { overflow-x: auto; max-width: 100%; }
+
+/* Scripts the system may lack: the Noto fonts that also print the PDF (SIL Open Font License,
+   app/static/fonts/OFL.txt). A browser downloads one only when a page contains its script. */
+@font-face { font-family: "CSCM Noto"; src: url("../fonts/NotoSansDevanagari-Regular.ttf") format("truetype"); unicode-range: U+0900-097F,U+A8E0-A8FF,U+1CD0-1CFF; font-display: swap; }
+@font-face { font-family: "CSCM Noto"; src: url("../fonts/NotoSansBengali-Regular.ttf") format("truetype"); unicode-range: U+0980-09FF; font-display: swap; }
+@font-face { font-family: "CSCM Noto"; src: url("../fonts/NotoSansGurmukhi-Regular.ttf") format("truetype"); unicode-range: U+0A00-0A7F; font-display: swap; }
+@font-face { font-family: "CSCM Noto"; src: url("../fonts/NotoSansGujarati-Regular.ttf") format("truetype"); unicode-range: U+0A80-0AFF; font-display: swap; }
+@font-face { font-family: "CSCM Noto"; src: url("../fonts/NotoSansOriya-Regular.ttf") format("truetype"); unicode-range: U+0B00-0B7F; font-display: swap; }
+@font-face { font-family: "CSCM Noto"; src: url("../fonts/NotoSansTamil-Regular.ttf") format("truetype"); unicode-range: U+0B80-0BFF; font-display: swap; }
+@font-face { font-family: "CSCM Noto"; src: url("../fonts/NotoSansTelugu-Regular.ttf") format("truetype"); unicode-range: U+0C00-0C7F; font-display: swap; }
+@font-face { font-family: "CSCM Noto"; src: url("../fonts/NotoSansKannada-Regular.ttf") format("truetype"); unicode-range: U+0C80-0CFF; font-display: swap; }
+@font-face { font-family: "CSCM Noto"; src: url("../fonts/NotoSansMalayalam-Regular.ttf") format("truetype"); unicode-range: U+0D00-0D7F; font-display: swap; }
+@font-face { font-family: "CSCM Noto"; src: url("../fonts/NotoSansGeorgian-Regular.ttf") format("truetype"); unicode-range: U+10A0-10FF,U+1C90-1CBF,U+2D00-2D2F; font-display: swap; }
+@font-face { font-family: "CSCM Noto"; src: url("../fonts/NotoNaskhArabic-Regular.ttf") format("truetype"); unicode-range: U+0600-06FF,U+0750-077F,U+08A0-08FF,U+FB50-FDFF,U+FE70-FEFF; font-display: swap; }

@@ -12,7 +12,7 @@ Noto Sans; a cell that contains Devanagari, Bengali, Gurmukhi, Gujarati, Odia, T
 Kannada, Malayalam, Georgian or Arabic-script text additionally gets the Noto font of that script
 (Noto Nastaliq Urdu for Urdu, Noto Naskh Arabic for Arabic), is shaped with HarfBuzz (conjuncts,
 vowel signs, joining forms) and, for Arabic and Urdu, laid out right to left and right-aligned. The
-fonts are under app/export/fonts/ with their licence (SIL Open Font License), so a deployment needs
+fonts are under app/static/fonts/ with their licence (SIL Open Font License), so a deployment needs
 no font installation and no internet. Plain Latin cells skip the shaping engine and stay fast."""
 
 import functools
@@ -31,7 +31,7 @@ except ImportError:  # pragma: no cover - uharfbuzz is in requirements.txt
     SHAPING_AVAILABLE = False
 
 _log = logging.getLogger(__name__)
-FONT_DIR = Path(__file__).resolve().parent / "fonts"
+FONT_DIR = Path(__file__).resolve().parents[1] / "static" / "fonts"  # also served to browsers
 BASE_FONT = "base"
 # font key -> file; the key is also the family name registered with fpdf2
 FONT_FILES = {
