@@ -405,7 +405,7 @@ def test_right_to_left_languages_are_shown_right_to_left_in_the_review(client, c
     assert 'class="rtl-text"' not in client.get("/translations/fr").get_data(as_text=True)
 
 
-def test_an_account_that_reviews_has_history_and_cannot_be_deleted(client, cast):
+def test_an_account_that_reviews_has_history_in_the_usage_report(client, cast):
     _assign(client, cast)
     login_as(client, cast["admin"])
     usage = client.get(f"/api/v1/users/{cast['viewer'].id}/usage").get_json()

@@ -5,6 +5,8 @@ already in the catalogue can update the Draft or open a new revision (docs/03-sr
 FR-048x, BR-026).
 
 TC-056. Requirements: FR-159, FR-160, FR-048x, BR-026, BR-001, FR-026.
+
+A withdrawn code that keeps its number can be deleted by an Administrator (BR-026, S48).
 """
 
 import io
@@ -19,6 +21,7 @@ from app.models.audit import AuditLogEntry
 from app.models.change_request import ChangeRequest
 from app.models.status_code import StatusCode
 from tests.helpers import (
+    PASSWORD,
     cr_id_for_revision,
     decide,
     domain_sign,
@@ -213,6 +216,87 @@ def test_a_withdrawn_code_that_has_its_identifier_keeps_it_and_can_be_restored(a
         assert code.status_code_identifier == "StCd-01001"
         cr = db.session.query(ChangeRequest).one()
         assert cr.import_job_id and cr.change_set_id
+
+
+def _withdrawn_issued_code(app, client, cast):
+    login_as(client, cast["engineer"])
+    _import(client)
+    code_id, revision_id = _only_code(app)
+    cr_id = _cr_of(app, revision_id)
+    domain_sign(client, cast, cr_id)
+    assert submit(client, cast, cr_id).status_code == 200
+    assert (
+        client.post("/api/v1/change-requests/withdraw", json={"cr_ids": [cr_id]}).status_code == 200
+    )
+    return code_id
+
+
+def test_a_withdrawn_code_is_listed_and_an_administrator_deletes_it_and_imports_again(
+    app, client, cast
+):
+    from app.audit_chain import AuditChainService
+
+    code_id = _withdrawn_issued_code(app, client, cast)
+    login_as(client, cast["admin"])
+    page = client.get("/admin/withdrawn-codes").get_data(as_text=True)
+    assert "StCd-01001" in page and "3005" in page and "Delete selected" in page
+
+    wrong = client.post(
+        "/admin/withdrawn-codes/delete",
+        data={"ids": [code_id], "current_password": "not the password"},
+        follow_redirects=True,
+    )
+    assert "withdrawn code(s) deleted" not in wrong.get_data(as_text=True)
+    with app.app_context():
+        assert db.session.get(StatusCode, code_id) is not None  # a wrong password deletes nothing
+
+    done = client.post(
+        "/admin/withdrawn-codes/delete",
+        data={"ids": [code_id], "current_password": PASSWORD},
+        follow_redirects=True,
+    )
+    assert "1 withdrawn code(s) deleted." in done.get_data(as_text=True)
+    with app.app_context():
+        assert db.session.get(StatusCode, code_id) is None
+        entry = db.session.query(AuditLogEntry).filter_by(action="WITHDRAWN_CODE_DELETE").one()
+        before = json.loads(entry.before_value)
+        assert before["status_code_identifier"] == "StCd-01001"
+        assert before["legacy_reference_number"] == "3005"
+        assert AuditChainService.verify(update_anchor=False)["ok"] is True
+
+    # the program imports again as a new code: nothing blocks it any more
+    login_as(client, cast["engineer"])
+    preview = _preview(client, [("StCd_1001.st", _read("StCd_1001.st"))])
+    assert _item(preview)["state"] == "ready"
+    assert client.post("/api/v1/imports/st", json={"token": preview["token"]}).status_code == 202
+
+
+def test_a_restored_code_is_no_shell_and_the_database_refuses_a_delete_around_the_service(
+    app, client, cast
+):
+    from sqlalchemy.exc import IntegrityError
+
+    code_id = _withdrawn_issued_code(app, client, cast)
+    assert client.get("/admin/withdrawn-codes").status_code in (302, 403)  # not for an engineer
+
+    preview = _preview(client, [("StCd_1001.st", _read("StCd_1001.st"))])
+    item = _item(preview)
+    client.post("/api/v1/imports/st", json={"token": preview["token"], "selected": [item["key"]]})
+
+    login_as(client, cast["admin"])
+    assert "No withdrawn codes." in client.get("/admin/withdrawn-codes").get_data(as_text=True)
+    done = client.post(
+        "/admin/withdrawn-codes/delete",
+        data={"ids": [code_id], "current_password": PASSWORD},
+        follow_redirects=True,
+    )
+    assert "Not deleted" in done.get_data(as_text=True)
+    with app.app_context():
+        assert db.session.get(StatusCode, code_id) is not None
+        with pytest.raises(IntegrityError):  # trg_prevent_nonsandbox_delete
+            db.session.execute(text("DELETE FROM status_code WHERE id = :i"), {"i": code_id})
+            db.session.commit()
+        db.session.rollback()
 
 
 # ------------------------------------------------------------------------------ update / revise

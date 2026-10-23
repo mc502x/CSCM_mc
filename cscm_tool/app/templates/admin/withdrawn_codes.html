@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block title %}{{ _('Withdrawn Codes') }} — CSCM Tool{% endblock %}
+{% block content %}
+<div class="page-header"><h1>{{ _('Withdrawn Codes') }}</h1></div>
+<p class="muted">{{ _('A code whose change request was withdrawn stays as an empty shell: it keeps its number, legacy number and PrgIdx_GUi, so the same program or row cannot be imported again. Delete it here to free them. Deleting is final and is written to the audit log.') }}</p>
+
+<div class="card">
+  {% if codes %}
+  <form method="post" action="{{ url_for('ui.withdrawn_codes_delete') }}" data-confirm="Delete the selected withdrawn codes for good? This cannot be undone.">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    <div class="table-scroll">
+    <table>
+      <caption class="visually-hidden">{{ _('Withdrawn Codes') }}</caption>
+      <thead><tr><th scope="col">{{ _('Select') }}</th><th scope="col">{{ _('Identifier') }}</th><th scope="col">{{ _('Legacy Reference Number') }}</th><th scope="col">PrgIdx_GUi</th><th scope="col">{{ _('Group') }} / {{ _('Subgroup') }}</th><th scope="col">{{ _('Withdrawn on') }}</th></tr></thead>
+      <tbody>
+        {% for c in codes %}
+        <tr>
+          <td><input type="checkbox" name="ids" value="{{ c.id }}" aria-label="{{ c.identifier or c.id }}"></td>
+          <td>{{ c.identifier or '—' }}</td>
+          <td>{{ c.legacy_reference_number or '—' }}</td>
+          <td>{{ c.prg_idx or '—' }}</td>
+          <td>{{ c.group }} / {{ c.subgroup }}</td>
+          <td>{{ c.withdrawn_at }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    </div>
+    <div class="field" style="max-width:360px;margin-top:12px"><label for="current_password">{{ _('Your password') }}</label><input type="password" id="current_password" name="current_password" autocomplete="current-password" required></div>
+    <button class="btn btn--danger" type="submit">{{ _('Delete selected') }}</button>
+  </form>
+  {% else %}
+  <div class="table-empty">{{ _('No withdrawn codes.') }}</div>
+  {% endif %}
+</div>
+{% endblock %}

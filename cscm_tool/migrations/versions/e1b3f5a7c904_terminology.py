@@ -1,4 +1,4 @@
-"""technical nomenclature (schema v4.8)
+"""technical nomenclature (schema v4.9)
 
 Adds terminology_term and terminology_translation (docs/03-srs.md FR-166) and loads the terms that
 ship with the tool (app/terminology_seed.py) with their translations as DRAFT proposals. The DDL

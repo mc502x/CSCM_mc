@@ -1,6 +1,7 @@
 """Viewing, deactivating and deleting users (docs/03-srs.md FR-158, BR-025, SEC-032). An account that
-was never used can be deleted; one with history can only be deactivated, so the audit trail stays
-attributable. Only an Administrator, with the password again.
+was never used is removed; one with history is erased (name, address and password go, the row stays),
+so everything it did keeps its author and the audit log is never touched. Only an Administrator, with
+the password again.
 
 TC-055. Requirements: FR-158, BR-025, SEC-032, FR-012, AUD-076.
 """
@@ -67,32 +68,76 @@ def test_an_account_that_was_never_used_can_be_deleted_and_the_deletion_is_audit
         assert entry.actor_id == cast["admin"].id
 
 
-def test_an_account_with_history_cannot_be_deleted_only_deactivated(app, client, cast, wcnv_ids):
+AUDIT_ROWS = (
+    "SELECT id, action, actor_id, before_value, after_value, entry_hash "
+    "FROM audit_log_entry ORDER BY id"
+)
+
+
+def test_an_account_with_history_is_erased_and_the_audit_log_is_untouched(
+    app, client, cast, wcnv_ids
+):
+    from sqlalchemy import text
+
+    from app.audit_chain import AuditChainService
+
     login_as(client, cast["engineer"])
     created = client.post("/api/v1/status-codes", json=valid_payload(*wcnv_ids))
     assert created.status_code == 201
     engineer_id = cast["engineer"].id
+    username = cast["engineer"].username
 
     login_as(client, cast["admin"])
     usage = client.get(f"/api/v1/users/{engineer_id}/usage").get_json()
     assert usage["deletable"] is False and usage["reference_total"] > 0
     assert any(k.startswith("change_request.") for k in usage["references"])
-    refused = _delete(client, engineer_id)
-    assert (
-        refused.status_code == 409
-        and "Deactivate the account instead" in refused.get_json()["message"]
-    )
     with app.app_context():
-        assert db.session.get(User, engineer_id) is not None
+        before = [tuple(r) for r in db.session.execute(text(AUDIT_ROWS))]
 
-    deactivated = client.patch(f"/api/v1/users/{engineer_id}", json={"is_active": False})
-    assert deactivated.status_code == 200 and deactivated.get_json()["is_active"] is False
+    assert _delete(client, engineer_id).status_code == 204  # no longer refused
+
+    with app.app_context():
+        tomb = db.session.get(User, engineer_id)
+        assert tomb is not None and tomb.deleted_at and not tomb.is_active
+        assert tomb.username == f"deleted-{engineer_id}" and tomb.full_name == "Deleted user"
+        assert tomb.email.endswith("@deleted.invalid") and tomb.engineering_domains == []
+        # the audit log: every old row is exactly as it was, and the chain still verifies
+        after = [tuple(r) for r in db.session.execute(text(AUDIT_ROWS))]
+        assert after[: len(before)] == before and len(after) == len(before) + 1
+        entry = db.session.query(AuditLogEntry).filter_by(action="USER_DELETE").one()
+        snapshot = json.loads(entry.before_value)
+        assert snapshot["username"] == username and snapshot["role"] == "ENGINEER"
+        assert json.loads(entry.after_value)["mode"] == "erased"
+        assert AuditChainService.verify(update_anchor=False)["ok"] is True
+        # what the account created still has its author
+        owner = db.session.execute(
+            text("SELECT owner_id FROM status_code WHERE id = :i"), {"i": created.get_json()["id"]}
+        ).scalar()
+        assert owner == engineer_id
+
+    # gone for every list and call; the user name and the address can be used again
+    listed = client.get("/api/v1/users").get_json()
+    items = listed["items"] if isinstance(listed, dict) else listed
+    assert engineer_id not in [u["id"] for u in items]
+    assert client.get(f"/api/v1/users/{engineer_id}/usage").status_code == 404
+    assert client.patch(f"/api/v1/users/{engineer_id}", json={"is_active": True}).status_code == 404
+    again = client.post(
+        "/api/v1/users",
+        json={
+            "username": username,
+            "email": f"{username}@example.com",
+            "full_name": "Somebody else",
+            "password": "a genuinely long passphrase",
+            "role": "VIEWER",
+            "engineering_domains": [],
+        },
+    )
+    assert again.status_code == 201, again.get_json()
     client.post("/api/v1/auth/logout")
     login = client.post(
-        "/api/v1/auth/login",
-        json={"username": cast["engineer"].username, "password": PASSWORD},
+        "/api/v1/auth/login", json={"username": f"deleted-{engineer_id}", "password": PASSWORD}
     )
-    assert login.status_code in (401, 403)  # the account cannot sign in any more
+    assert login.status_code in (401, 403)  # the erased account cannot sign in
 
 
 def test_a_deactivated_account_can_be_activated_again(client, cast):
@@ -166,8 +211,8 @@ def test_the_detail_page_shows_history_and_the_buttons_follow_it(client, cast, w
     client.post("/api/v1/status-codes", json=valid_payload(*wcnv_ids))
     login_as(client, cast["admin"])
     used = client.get(f"/admin/users/{cast['engineer'].id}").get_data(as_text=True)
-    assert "change_request.requested_by" in used and "Delete user" not in used
-    assert "cannot be deleted" in used or "Not possible" in used
+    assert "change_request.requested_by" in used and "Delete user" in used
+    assert "has history" in used and "erases its name" in used
 
 
 def test_the_buttons_deactivate_activate_and_delete_through_the_screens(app, client, cast):

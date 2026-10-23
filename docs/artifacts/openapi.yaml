@@ -627,7 +627,7 @@ paths:
     parameters: [{ name: userId, in: path, required: true, schema: { type: integer } }]
     get:
       tags: [Users]
-      summary: What the account has done in the tool (the rows of every other table that point at it) and whether it can be deleted (Administrator, StCd Owner; BR-025)
+      summary: What the account has done in the tool (the rows of every other table that point at it) and whether a delete removes the account or erases it (Administrator, StCd Owner; BR-025)
       responses:
         '200': { description: Usage, content: { application/json: { schema: { $ref: '#/components/schemas/UserUsage' } } } }
         '404': { description: User not found }
@@ -637,9 +637,10 @@ paths:
     post:
       tags: [Users]
       summary: >
-        Delete an account that was never used (Administrator, with the Administrator's own password).
-        An account with history is refused with 409 - deactivate it instead (PATCH is_active=false) -
-        so the audit trail stays attributable (BR-025). Never the own account.
+        Delete an account (Administrator, with the Administrator's own password). An account that
+        nothing points at is removed; one with history is erased (name, address and password go, the
+        row stays so that everything it did keeps its author) and the audit log is never changed
+        (BR-025). Never the own account, never the last active Administrator.
       requestBody:
         required: true
         content: { application/json: { schema: { type: object, required: [current_password], properties: { current_password: { type: string } } } } }
@@ -647,7 +648,6 @@ paths:
         '204': { description: Deleted }
         '403': { description: Not an Administrator, the own account, or the password is missing or wrong }
         '404': { description: User not found }
-        '409': { description: The account has history; deactivate it instead }
         '422': { description: The last active Administrator cannot be deleted }
 
   /change-requests/withdraw:

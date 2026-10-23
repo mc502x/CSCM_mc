@@ -230,37 +230,37 @@ What remains: (a) **no translation but the shipped ones is reviewed by a native 
 
 <!-- translations:start -->
 
-The interface has **1093 strings** (every text a template wraps in `_()`, the role names and the help texts). English is the source; the other languages are listed below. A string without a translation is shown in English.
+The interface has **1103 strings** (every text a template wraps in `_()`, the role names and the help texts). English is the source; the other languages are listed below. A string without a translation is shown in English.
 
 ### 9.1 Coverage
 
 | Language | Code | Direction | Translated | Share | Fingerprint |
 |---|---|---|---|---|---|
 | GB English 🇬🇧 | `en` | ltr | source | — | — |
-| DE Deutsch 🇩🇪 (German) | `de` | ltr | 1093 | 100 % | `114e09756156` |
-| FR Français 🇫🇷 (French) | `fr` | ltr | 1092 | 99 % | `27fba6aa50b0` |
-| IN हिन्दी 🇮🇳 (Hindi) | `hi` | ltr | 1092 | 99 % | `44be95f802b6` |
-| SA العربية 🇸🇦 (Arabic) | `ar` | rtl | 1092 | 99 % | `4cf6f7d4d37e` |
-| IN বাংলা 🇮🇳 (Bengali) | `bn` | ltr | 1092 | 99 % | `fa6ab9b1ef78` |
-| IN मराठी 🇮🇳 (Marathi) | `mr` | ltr | 1092 | 99 % | `7cdc9119607c` |
-| IN తెలుగు 🇮🇳 (Telugu) | `te` | ltr | 1092 | 99 % | `629db0978c54` |
-| IN தமிழ் 🇮🇳 (Tamil) | `ta` | ltr | 1092 | 99 % | `5c51edcf78b8` |
-| IN ગુજરાતી 🇮🇳 (Gujarati) | `gu` | ltr | 1092 | 99 % | `19e461814e74` |
-| PK اردو 🇵🇰 (Urdu) | `ur` | rtl | 1092 | 99 % | `746d8acaa071` |
-| IN ಕನ್ನಡ 🇮🇳 (Kannada) | `kn` | ltr | 1092 | 99 % | `a4d3be1412f7` |
-| IN ଓଡ଼ିଆ 🇮🇳 (Odia) | `or` | ltr | 1092 | 99 % | `fbcc7041908b` |
-| IN മലയാളം 🇮🇳 (Malayalam) | `ml` | ltr | 1092 | 99 % | `f505ed48bab8` |
-| IN ਪੰਜਾਬੀ 🇮🇳 (Punjabi) | `pa` | ltr | 1092 | 99 % | `a352c4c6e599` |
-| ES Español 🇪🇸 (Spanish) | `es` | ltr | 1092 | 99 % | `8e96de5336a3` |
-| IT Italiano 🇮🇹 (Italian) | `it` | ltr | 1092 | 99 % | `38bd2bcbba76` |
-| DK Dansk 🇩🇰 (Danish) | `da` | ltr | 1092 | 99 % | `dfe9248b8abe` |
-| GE ქართული 🇬🇪 (Georgian) | `ka` | ltr | 1092 | 99 % | `22c763ce6f18` |
+| DE Deutsch 🇩🇪 (German) | `de` | ltr | 1103 | 100 % | `01d04d7dd584` |
+| FR Français 🇫🇷 (French) | `fr` | ltr | 1102 | 99 % | `701e49e7f14a` |
+| IN हिन्दी 🇮🇳 (Hindi) | `hi` | ltr | 1102 | 99 % | `162e1655da7c` |
+| SA العربية 🇸🇦 (Arabic) | `ar` | rtl | 1102 | 99 % | `50c1f4a0fafe` |
+| IN বাংলা 🇮🇳 (Bengali) | `bn` | ltr | 1102 | 99 % | `01c33e150b24` |
+| IN मराठी 🇮🇳 (Marathi) | `mr` | ltr | 1102 | 99 % | `a5524f07643e` |
+| IN తెలుగు 🇮🇳 (Telugu) | `te` | ltr | 1102 | 99 % | `fa7d77bc1496` |
+| IN தமிழ் 🇮🇳 (Tamil) | `ta` | ltr | 1102 | 99 % | `1db3aa22735c` |
+| IN ગુજરાતી 🇮🇳 (Gujarati) | `gu` | ltr | 1102 | 99 % | `976aecbc66c0` |
+| PK اردو 🇵🇰 (Urdu) | `ur` | rtl | 1102 | 99 % | `743e38c2845a` |
+| IN ಕನ್ನಡ 🇮🇳 (Kannada) | `kn` | ltr | 1102 | 99 % | `cb6e8d551790` |
+| IN ଓଡ଼ିଆ 🇮🇳 (Odia) | `or` | ltr | 1102 | 99 % | `e1fb235c9547` |
+| IN മലയാളം 🇮🇳 (Malayalam) | `ml` | ltr | 1102 | 99 % | `dc853fb69c4f` |
+| IN ਪੰਜਾਬੀ 🇮🇳 (Punjabi) | `pa` | ltr | 1102 | 99 % | `bda2e76bc910` |
+| ES Español 🇪🇸 (Spanish) | `es` | ltr | 1102 | 99 % | `d67f6c883509` |
+| IT Italiano 🇮🇹 (Italian) | `it` | ltr | 1102 | 99 % | `c74a71f7d05d` |
+| DK Dansk 🇩🇰 (Danish) | `da` | ltr | 1102 | 99 % | `da6817ea4471` |
+| GE ქართული 🇬🇪 (Georgian) | `ka` | ltr | 1102 | 99 % | `424efc9c70ef` |
 
 The fingerprint is a short hash of the language's catalogue as shipped in the code (string ids and translations). Whether a language has been reviewed, by whom and when, and which proposals were accepted since, is kept in the application (Translations in the sidebar), not in this file.
 
 ### 9.2 DE Deutsch 🇩🇪 — German
 
-1093 of 1093 strings translated; direction left to right.
+1103 of 1103 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -363,6 +363,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S8ad830` | base, detail, overview | Translations | Übersetzungen |
 | `S1b9aeb` | base, dashboard | unread | ungelesen |
 | `S57f2b1` | base | Users | Benutzer |
+| `S9fa05a` | base, withdrawn_codes | Withdrawn Codes | Zurückgezogene Codes |
 | `Sd7a484` | base | Workflow | Ablauf |
 | `S5a4692` | base | You are covering for a colleague | Sie vertreten eine Kollegin / einen Kollegen |
 | `S8e9c15` | builder | Candidate revisions | Kandidaten-Revisionen |
@@ -393,7 +394,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S4105cf` | catalogue_health | exhausted | erschöpft |
 | `S57e8be` | catalogue_health | Finding | Befund |
 | `S1150a1` | catalogue_health | Gaps | Lücken |
-| `S171a06` | catalogue_health | Group | Gruppe |
+| `S171a06` | catalogue_health, withdrawn_codes | Group | Gruppe |
 | `Sb4aadc` | catalogue_health, legacy_mapping | Hub Controller | Nabensteuerung |
 | `S8ae1c3` | catalogue_health | Left | Übrig |
 | `S12c0f1` | catalogue_health | left | übrig |
@@ -412,7 +413,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sfe5310` | catalogue_health | Probable inconsistencies | Wahrscheinliche Unstimmigkeiten |
 | `Sa16c5b` | catalogue_health, lookups | Range | Bereich |
 | `Sbae7d5` | catalogue_health, detail, list | Status | Status |
-| `Sfe07e9` | catalogue_health | Subgroup | Untergruppe |
+| `Sfe07e9` | catalogue_health, withdrawn_codes | Subgroup | Untergruppe |
 | `S75a804` | catalogue_health | subgroup(s) are running out of numbers: | Untergruppe(n) gehen die Nummern aus: |
 | `S5fec4f` | catalogue_health | Unused numbers inside a band | Ungenutzte Nummern innerhalb eines Bereichs |
 | `S02c0e4` | catalogue_health | Used | Belegt |
@@ -567,7 +568,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S92d001` | detail | Item Count | Anzahl Einträge |
 | `S7d2a7b` | detail | Justification | Begründung |
 | `S1481d0` | detail, form | latest | neueste |
-| `S693272` | detail | Legacy Reference Number | Alt-Referenznummer |
+| `S693272` | detail, withdrawn_codes | Legacy Reference Number | Alt-Referenznummer |
 | `S43d5c5` | detail, form | Loadless Spinning Permitted | Lastfreies Drehen erlaubt |
 | `S193786` | detail | Logical Node | Logischer Knoten |
 | `S578b78` | detail | Main Controller group | Hauptsteuerungs-Gruppe |
@@ -648,7 +649,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sd0edfb` | detail | Sales | Vertrieb |
 | `Sda38c6` | detail | Save planned dates | Geplante Daten speichern |
 | `S13c61c` | detail | Scope Filter | Umfangsfilter |
-| `S859822` | detail, mine | Select | Auswählen |
+| `S859822` | detail, mine, withdrawn_codes | Select | Auswählen |
 | `S81448f` | detail, form | select | auswählen |
 | `S535bd8` | detail, form | Select a Functional System Group first | Wählen Sie zuerst eine Funktionssystemgruppe |
 | `S329cb8` | detail | Service | Service |
@@ -830,10 +831,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sa55a27` | help, index | Terms | Begriffe |
 | `S689b33` | help | The full manual is docs/23-user-manual.md in the project folder; the glossary below is the same one the tooltips use. | Das vollständige Handbuch ist docs/23-user-manual.md im Projektordner; das Glossar unten ist dasselbe, das die Tooltips verwenden. |
 | `S439914` | help | What happens next on a change request | Wie es bei einem Änderungsantrag weitergeht |
+| `S6d29d9` | help and messages | %(n)s withdrawn code(s) deleted. | %(n)s zurückgezogene(r) Code(s) gelöscht. |
 | `Sb08e6c` | help and messages | A Reviewer and an Administrator each sign off (in any order). If either rejects, it goes back to the author. | Ein Prüfer und ein Administrator geben jeweils frei (in beliebiger Reihenfolge). Lehnt einer ab, geht der Antrag zurück an den Autor. |
 | `S2f1bed` | help and messages | An Administrator includes the revision in a Release and publishes it; then it is Released. | Ein Administrator nimmt die Revision in ein Release auf und veröffentlicht es; dann ist sie veröffentlicht. |
+| `Sd856bd` | help and messages | Not deleted (it has a revision again or is still referenced): %(x)s | Nicht gelöscht (er hat wieder eine Revision oder wird noch referenziert): %(x)s |
+| `S34b903` | help and messages | Not possible: the account has history (see above). Deactivate it instead; the person can no longer sign in and everything they did stays attributable. | Nicht möglich: Das Konto hat einen Verlauf (siehe oben). Deaktivieren Sie es stattdessen; die Person kann sich dann nicht mehr anmelden, und alles, was sie getan hat, bleibt zuordenbar. |
 | `Sce489f` | help and messages | The author gets any required cross-domain sign-offs, then submits the change request for review. | Der Autor holt die erforderlichen fachübergreifenden Freigaben ein und reicht den Änderungsantrag dann zur Prüfung ein. |
 | `S1cdbdd` | help and messages | The Chief Engineer approves or rejects. Approval makes the revision Approved (or Deprecated for a deprecation request). | Der Chefingenieur genehmigt oder lehnt ab. Die Genehmigung macht die Revision freigegeben (bei einem Außerbetriebnahme-Antrag: außer Betrieb). |
+| `Scff3a3` | help and messages | User deleted; its name and address are erased, what it did stays attributable. | Benutzer gelöscht; Name und Adresse sind gelöscht, was er getan hat, bleibt zuordenbar. |
 | `Secfb3f` | hub_consolidation | Deprecate replaced Hub codes | Ersetzte Hub-Codes außer Betrieb nehmen |
 | `S0e7766` | hub_consolidation, language | draft | Entwurf |
 | `S4e7cfe` | hub_consolidation | Every Hub code is deprecated - the group can be deactivated under Lookups. | Alle Hub-Codes sind außer Betrieb genommen – die Gruppe kann unter Auswahllisten deaktiviert werden. |
@@ -1106,6 +1111,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sa2ca0f` | message: status_code_service | An archived revision cannot be changed. | Eine archivierte Revision kann nicht geändert werden. |
 | `Sa57433` | message: status_code_service | An open Draft/Review/PendingApproval revision already exists (BR-003). | Es existiert bereits eine offene Revision im Zustand Entwurf, Prüfung oder Genehmigung ausstehend (BR-003). |
 | `S64463a` | message: status_code_service | No DEPRECATE audit entry found; cannot verify retention period. | Kein DEPRECATE-Audit-Eintrag gefunden; die Aufbewahrungsfrist kann nicht geprüft werden. |
+| `Sf4e488` | message: status_code_service | Nothing selected: tick at least one withdrawn code. | Nichts ausgewählt: Haken Sie mindestens einen zurückgezogenen Code an. |
 | `S94fede` | message: status_code_service | Only a Deprecated Status Code can be archived. | Nur ein veralteter Statuscode kann archiviert werden. |
 | `S96a1e5` | message: status_code_service | Only a Deprecated Status Code can be reinstated. | Nur ein veralteter Statuscode kann wieder in Kraft gesetzt werden. |
 | `S9211d8` | message: status_code_service | Only a Draft revision may be edited in place (FR-025). | Nur eine Revision im Zustand Entwurf darf direkt bearbeitet werden (FR-025). |
@@ -1333,15 +1339,15 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S441e73` | user_detail | Engineering domains | Ingenieurdisziplinen |
 | `Seeb692` | user_detail, users | Full name | Vollständiger Name |
 | `S263733` | user_detail | Last sign-in | Letzte Anmeldung |
-| `S34b903` | user_detail | Not possible: the account has history (see above). Deactivate it instead; the person can no longer sign in and everything they did stays attributable. | Nicht möglich: Das Konto hat einen Verlauf (siehe oben). Deaktivieren Sie es stattdessen; die Person kann sich dann nicht mehr anmelden, und alles, was sie getan hat, bleibt zuordenbar. |
 | `S57e34a` | user_detail | Nothing: the account has never been used, so it can be deleted. | Nichts: Das Konto wurde nie benutzt und kann daher gelöscht werden. |
 | `S441acb` | user_detail, users | Role of %(x)s | Rolle von %(x)s |
 | `Sc761ae` | user_detail, users | Set role | Rolle setzen |
+| `S6ad9e8` | user_detail | The account has history (see above). Deleting it erases its name, address and password and removes it from the lists; what it did stays in the audit log and in the records, shown as a deleted user. Deactivating keeps the name. | Das Konto hat eine Historie (siehe oben). Beim Löschen werden Name, Adresse und Passwort gelöscht und das Konto aus den Listen entfernt; was es getan hat, bleibt im Audit-Log und in den Datensätzen, als gelöschter Benutzer angezeigt. Beim Deaktivieren bleibt der Name erhalten. |
 | `S44c2c4` | user_detail | These rows point at the account. They are history that must stay attributable, so the account can be deactivated but not deleted. | Diese Zeilen verweisen auf das Konto. Sie sind Verlauf, der zuordenbar bleiben muss; das Konto kann daher deaktiviert, aber nicht gelöscht werden. |
 | `Sdbc1fc` | user_detail | What this account has done | Was dieses Konto getan hat |
 | `S525f61` | user_detail | Where | Wo |
 | `Sd9f654` | user_detail, users | You cannot deactivate yourself here | Sie können sich hier nicht selbst deaktivieren |
-| `S26d745` | user_detail | Your password | Ihr Passwort |
+| `S26d745` | user_detail, withdrawn_codes | Your password | Ihr Passwort |
 | `S3b803b` | users | Administrator only | Nur Administrator |
 | `Scc6146` | users | Colour = level, red is the highest. As StCd Owner you may move a user between Viewer, Engineer and Reviewer; creating users and every other role needs an Administrator. | Farbe = Stufe, Rot ist die höchste. Als StCd-Eigner können Sie einen Benutzer zwischen Betrachter, Ingenieur und Prüfer verschieben; das Anlegen von Benutzern und jede andere Rolle erfordern einen Administrator. |
 | `Sd02137` | users | Colour = level, red is the highest. You may create users and give every role. | Farbe = Stufe, Rot ist die höchste. Sie können Benutzer anlegen und jede Rolle vergeben. |
@@ -1357,10 +1363,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sbcf8f1` | users | New password for %(x)s | Neues Passwort für %(x)s |
 | `S3fb75e` | users | Reset Password | Passwort zurücksetzen |
 | `S5ca6e5` | users | User Management | Benutzerverwaltung |
+| `Scfb147` | withdrawn_codes | A code whose change request was withdrawn stays as an empty shell: it keeps its number, legacy number and PrgIdx_GUi, so the same program or row cannot be imported again. Delete it here to free them. Deleting is final and is written to the audit log. | Ein Code, dessen Änderungsantrag zurückgezogen wurde, bleibt als leere Hülle zurück: Er behält seine Nummer, Altnummer und PrgIdx_GUi, sodass dasselbe Programm oder dieselbe Zeile nicht erneut importiert werden kann. Löschen Sie ihn hier, um sie freizugeben. Das Löschen ist endgültig und wird im Audit-Log festgehalten. |
+| `S8516a7` | withdrawn_codes | Delete selected | Ausgewählte löschen |
+| `Sdfeb06` | withdrawn_codes | No withdrawn codes. | Keine zurückgezogenen Codes. |
+| `S87ec0b` | withdrawn_codes | Withdrawn on | Zurückgezogen am |
 
 ### 9.3 FR Français 🇫🇷 — French
 
-1092 of 1093 strings translated; direction left to right.
+1102 of 1103 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -1462,6 +1472,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S8ad830` | base, detail, overview | Translations | Traductions |
 | `S1b9aeb` | base, dashboard | unread | non lues |
 | `S57f2b1` | base | Users | Utilisateurs |
+| `S9fa05a` | base, withdrawn_codes | Withdrawn Codes | Codes retirés |
 | `Sd7a484` | base | Workflow | Flux de travail |
 | `S5a4692` | base | You are covering for a colleague | Vous remplacez un collègue |
 | `S8e9c15` | builder | Candidate revisions | Révisions candidates |
@@ -1492,7 +1503,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S4105cf` | catalogue_health | exhausted | épuisé |
 | `S57e8be` | catalogue_health | Finding | Constat |
 | `S1150a1` | catalogue_health | Gaps | Trous |
-| `S171a06` | catalogue_health | Group | Groupe |
+| `S171a06` | catalogue_health, withdrawn_codes | Group | Groupe |
 | `Sb4aadc` | catalogue_health, legacy_mapping | Hub Controller | Contrôleur de moyeu |
 | `S8ae1c3` | catalogue_health | Left | Restants |
 | `S12c0f1` | catalogue_health | left | restants |
@@ -1511,7 +1522,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sfe5310` | catalogue_health | Probable inconsistencies | Incohérences probables |
 | `Sa16c5b` | catalogue_health, lookups | Range | Plage |
 | `Sbae7d5` | catalogue_health, detail, list | Status | Statut |
-| `Sfe07e9` | catalogue_health | Subgroup | Sous-groupe |
+| `Sfe07e9` | catalogue_health, withdrawn_codes | Subgroup | Sous-groupe |
 | `S75a804` | catalogue_health | subgroup(s) are running out of numbers: | sous-groupe(s) manquent bientôt de numéros : |
 | `S5fec4f` | catalogue_health | Unused numbers inside a band | Numéros inutilisés dans une bande |
 | `S02c0e4` | catalogue_health | Used | Utilisés |
@@ -1666,7 +1677,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S92d001` | detail | Item Count | Nombre d'éléments |
 | `S7d2a7b` | detail | Justification | Justification |
 | `S1481d0` | detail, form | latest | dernière |
-| `S693272` | detail | Legacy Reference Number | Ancien numéro de référence |
+| `S693272` | detail, withdrawn_codes | Legacy Reference Number | Ancien numéro de référence |
 | `S43d5c5` | detail, form | Loadless Spinning Permitted | Rotation à vide autorisée |
 | `S193786` | detail | Logical Node | Nœud logique |
 | `S578b78` | detail | Main Controller group | Groupe du contrôleur principal |
@@ -1747,7 +1758,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sd0edfb` | detail | Sales | Ventes |
 | `Sda38c6` | detail | Save planned dates | Enregistrer les dates prévues |
 | `S13c61c` | detail | Scope Filter | Filtre de périmètre |
-| `S859822` | detail, mine | Select | Sélectionner |
+| `S859822` | detail, mine, withdrawn_codes | Select | Sélectionner |
 | `S81448f` | detail, form | select | choisir |
 | `S535bd8` | detail, form | Select a Functional System Group first | Choisissez d'abord un groupe de systèmes fonctionnels |
 | `S329cb8` | detail | Service | Service |
@@ -1929,10 +1940,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sa55a27` | help, index | Terms | Termes |
 | `S689b33` | help | The full manual is docs/23-user-manual.md in the project folder; the glossary below is the same one the tooltips use. | Le manuel complet est docs/23-user-manual.md dans le dossier du projet ; le glossaire ci-dessous est celui des info-bulles. |
 | `S439914` | help | What happens next on a change request | Ce qui se passe ensuite pour une demande de modification |
+| `S6d29d9` | help and messages | %(n)s withdrawn code(s) deleted. | %(n)s code(s) retiré(s) supprimé(s). |
 | `Sb08e6c` | help and messages | A Reviewer and an Administrator each sign off (in any order). If either rejects, it goes back to the author. | Un relecteur et un administrateur valident chacun (dans n'importe quel ordre). Si l'un des deux rejette, elle retourne à l'auteur. |
 | `S2f1bed` | help and messages | An Administrator includes the revision in a Release and publishes it; then it is Released. | Un administrateur inclut la révision dans une version et la publie ; elle est alors Publiée. |
+| `Sd856bd` | help and messages | Not deleted (it has a revision again or is still referenced): %(x)s | Non supprimé (il a de nouveau une révision ou il est encore référencé) : %(x)s |
+| `S34b903` | help and messages | Not possible: the account has history (see above). Deactivate it instead; the person can no longer sign in and everything they did stays attributable. | Impossible : le compte a un historique (voir ci-dessus). Désactivez-le plutôt ; la personne ne peut plus se connecter et tout ce qu'elle a fait reste attribuable. |
 | `Sce489f` | help and messages | The author gets any required cross-domain sign-offs, then submits the change request for review. | L'auteur obtient les validations inter-domaines requises, puis soumet la demande de modification pour relecture. |
 | `S1cdbdd` | help and messages | The Chief Engineer approves or rejects. Approval makes the revision Approved (or Deprecated for a deprecation request). | L'ingénieur en chef approuve ou rejette. L'approbation fait passer la révision à Approuvé (ou Obsolète pour une demande d'obsolescence). |
+| `Scff3a3` | help and messages | User deleted; its name and address are erased, what it did stays attributable. | Utilisateur supprimé ; son nom et son adresse sont effacés, ce qu'il a fait reste attribuable. |
 | `Secfb3f` | hub_consolidation | Deprecate replaced Hub codes | Déclarer obsolètes les codes de moyeu remplacés |
 | `S0e7766` | hub_consolidation, language | draft | brouillon |
 | `S4e7cfe` | hub_consolidation | Every Hub code is deprecated - the group can be deactivated under Lookups. | Tous les codes de moyeu sont obsolètes - le groupe peut être désactivé sous Listes de valeurs. |
@@ -2205,6 +2220,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sa2ca0f` | message: status_code_service | An archived revision cannot be changed. | Une révision archivée ne peut pas être modifiée. |
 | `Sa57433` | message: status_code_service | An open Draft/Review/PendingApproval revision already exists (BR-003). | Une révision ouverte en brouillon, relecture ou attente d'approbation existe déjà (BR-003). |
 | `S64463a` | message: status_code_service | No DEPRECATE audit entry found; cannot verify retention period. | Aucune entrée d'audit DEPRECATE trouvée ; impossible de vérifier la durée de conservation. |
+| `Sf4e488` | message: status_code_service | Nothing selected: tick at least one withdrawn code. | Rien de sélectionné : cochez au moins un code retiré. |
 | `S94fede` | message: status_code_service | Only a Deprecated Status Code can be archived. | Seul un code de statut obsolète peut être archivé. |
 | `S96a1e5` | message: status_code_service | Only a Deprecated Status Code can be reinstated. | Seul un code de statut obsolète peut être rétabli. |
 | `S9211d8` | message: status_code_service | Only a Draft revision may be edited in place (FR-025). | Seule une révision en brouillon peut être modifiée sur place (FR-025). |
@@ -2432,15 +2448,15 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S441e73` | user_detail | Engineering domains | Domaines d'ingénierie |
 | `Seeb692` | user_detail, users | Full name | Nom complet |
 | `S263733` | user_detail | Last sign-in | Dernière connexion |
-| `S34b903` | user_detail | Not possible: the account has history (see above). Deactivate it instead; the person can no longer sign in and everything they did stays attributable. | Impossible : le compte a un historique (voir ci-dessus). Désactivez-le plutôt ; la personne ne peut plus se connecter et tout ce qu'elle a fait reste attribuable. |
 | `S57e34a` | user_detail | Nothing: the account has never been used, so it can be deleted. | Rien : le compte n'a jamais été utilisé, il peut donc être supprimé. |
 | `S441acb` | user_detail, users | Role of %(x)s | Rôle de %(x)s |
 | `Sc761ae` | user_detail, users | Set role | Définir le rôle |
+| `S6ad9e8` | user_detail | The account has history (see above). Deleting it erases its name, address and password and removes it from the lists; what it did stays in the audit log and in the records, shown as a deleted user. Deactivating keeps the name. | Le compte a un historique (voir ci-dessus). La suppression efface son nom, son adresse et son mot de passe et le retire des listes ; ce qu'il a fait reste dans le journal d'audit et dans les enregistrements, affiché comme utilisateur supprimé. Désactiver conserve le nom. |
 | `S44c2c4` | user_detail | These rows point at the account. They are history that must stay attributable, so the account can be deactivated but not deleted. | Ces lignes pointent vers le compte. C'est un historique qui doit rester attribuable ; le compte peut donc être désactivé mais pas supprimé. |
 | `Sdbc1fc` | user_detail | What this account has done | Ce que ce compte a fait |
 | `S525f61` | user_detail | Where | Où |
 | `Sd9f654` | user_detail, users | You cannot deactivate yourself here | Vous ne pouvez pas vous désactiver ici |
-| `S26d745` | user_detail | Your password | Votre mot de passe |
+| `S26d745` | user_detail, withdrawn_codes | Your password | Votre mot de passe |
 | `S3b803b` | users | Administrator only | Administrateur uniquement |
 | `Scc6146` | users | Colour = level, red is the highest. As StCd Owner you may move a user between Viewer, Engineer and Reviewer; creating users and every other role needs an Administrator. | Couleur = niveau, le rouge est le plus élevé. En tant que responsable StCd, vous pouvez faire passer un utilisateur entre Lecteur, Ingénieur et Relecteur ; créer des utilisateurs et attribuer tout autre rôle nécessite un administrateur. |
 | `Sd02137` | users | Colour = level, red is the highest. You may create users and give every role. | Couleur = niveau, le rouge est le plus élevé. Vous pouvez créer des utilisateurs et attribuer tous les rôles. |
@@ -2456,10 +2472,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sbcf8f1` | users | New password for %(x)s | Nouveau mot de passe pour %(x)s |
 | `S3fb75e` | users | Reset Password | Réinitialiser le mot de passe |
 | `S5ca6e5` | users | User Management | Gestion des utilisateurs |
+| `Scfb147` | withdrawn_codes | A code whose change request was withdrawn stays as an empty shell: it keeps its number, legacy number and PrgIdx_GUi, so the same program or row cannot be imported again. Delete it here to free them. Deleting is final and is written to the audit log. | Un code dont la demande de modification a été retirée reste comme une coquille vide : il garde son numéro, son ancien numéro et son PrgIdx_GUi, si bien que le même programme ou la même ligne ne peut plus être importé. Supprimez-le ici pour les libérer. La suppression est définitive et inscrite dans le journal d'audit. |
+| `S8516a7` | withdrawn_codes | Delete selected | Supprimer la sélection |
+| `Sdfeb06` | withdrawn_codes | No withdrawn codes. | Aucun code retiré. |
+| `S87ec0b` | withdrawn_codes | Withdrawn on | Retiré le |
 
 ### 9.4 IN हिन्दी 🇮🇳 — Hindi
 
-1092 of 1093 strings translated; direction left to right.
+1102 of 1103 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -2561,6 +2581,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S8ad830` | base, detail, overview | Translations | अनुवाद |
 | `S1b9aeb` | base, dashboard | unread | अपठित |
 | `S57f2b1` | base | Users | उपयोगकर्ता |
+| `S9fa05a` | base, withdrawn_codes | Withdrawn Codes | वापस लिए गए कोड |
 | `Sd7a484` | base | Workflow | कार्यप्रवाह |
 | `S5a4692` | base | You are covering for a colleague | आप एक सहकर्मी की जगह काम कर रहे हैं |
 | `S8e9c15` | builder | Candidate revisions | उम्मीदवार संशोधन |
@@ -2591,7 +2612,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S4105cf` | catalogue_health | exhausted | समाप्त |
 | `S57e8be` | catalogue_health | Finding | निष्कर्ष |
 | `S1150a1` | catalogue_health | Gaps | रिक्त स्थान |
-| `S171a06` | catalogue_health | Group | समूह |
+| `S171a06` | catalogue_health, withdrawn_codes | Group | समूह |
 | `Sb4aadc` | catalogue_health, legacy_mapping | Hub Controller | हब नियंत्रक |
 | `S8ae1c3` | catalogue_health | Left | शेष |
 | `S12c0f1` | catalogue_health | left | शेष |
@@ -2610,7 +2631,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sfe5310` | catalogue_health | Probable inconsistencies | संभावित असंगतियाँ |
 | `Sa16c5b` | catalogue_health, lookups | Range | सीमा |
 | `Sbae7d5` | catalogue_health, detail, list | Status | स्थिति |
-| `Sfe07e9` | catalogue_health | Subgroup | उपसमूह |
+| `Sfe07e9` | catalogue_health, withdrawn_codes | Subgroup | उपसमूह |
 | `S75a804` | catalogue_health | subgroup(s) are running out of numbers: | उपसमूह में संख्याएँ खत्म हो रही हैं: |
 | `S5fec4f` | catalogue_health | Unused numbers inside a band | बैंड के भीतर अप्रयुक्त संख्याएँ |
 | `S02c0e4` | catalogue_health | Used | उपयोग हुए |
@@ -2765,7 +2786,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S92d001` | detail | Item Count | मदों की संख्या |
 | `S7d2a7b` | detail | Justification | औचित्य |
 | `S1481d0` | detail, form | latest | नवीनतम |
-| `S693272` | detail | Legacy Reference Number | पुराना संदर्भ क्रमांक |
+| `S693272` | detail, withdrawn_codes | Legacy Reference Number | पुराना संदर्भ क्रमांक |
 | `S43d5c5` | detail, form | Loadless Spinning Permitted | बिना लोड के घूमना अनुमत |
 | `S193786` | detail | Logical Node | लॉजिकल नोड |
 | `S578b78` | detail | Main Controller group | मुख्य नियंत्रक समूह |
@@ -2846,7 +2867,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sd0edfb` | detail | Sales | बिक्री |
 | `Sda38c6` | detail | Save planned dates | नियोजित तिथियाँ सहेजें |
 | `S13c61c` | detail | Scope Filter | दायरा फ़िल्टर |
-| `S859822` | detail, mine | Select | चुनें |
+| `S859822` | detail, mine, withdrawn_codes | Select | चुनें |
 | `S81448f` | detail, form | select | चुनें |
 | `S535bd8` | detail, form | Select a Functional System Group first | पहले कार्यात्मक प्रणाली समूह चुनें |
 | `S329cb8` | detail | Service | सर्विस |
@@ -3028,10 +3049,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sa55a27` | help, index | Terms | शब्द |
 | `S689b33` | help | The full manual is docs/23-user-manual.md in the project folder; the glossary below is the same one the tooltips use. | पूरा मैनुअल प्रोजेक्ट फ़ोल्डर में docs/23-user-manual.md है; नीचे की शब्दावली वही है जो टूलटिप में उपयोग होती है। |
 | `S439914` | help | What happens next on a change request | परिवर्तन अनुरोध पर आगे क्या होता है |
+| `S6d29d9` | help and messages | %(n)s withdrawn code(s) deleted. | %(n)s वापस लिए गए कोड हटाए गए। |
 | `Sb08e6c` | help and messages | A Reviewer and an Administrator each sign off (in any order). If either rejects, it goes back to the author. | एक समीक्षक और एक प्रशासक प्रत्येक साइन ऑफ करते हैं (किसी भी क्रम में)। यदि कोई अस्वीकार करे, तो वह लेखक के पास लौट जाता है। |
 | `S2f1bed` | help and messages | An Administrator includes the revision in a Release and publishes it; then it is Released. | एक प्रशासक संशोधन को रिलीज़ में शामिल कर प्रकाशित करता है; तब वह जारी हो जाता है। |
+| `Sd856bd` | help and messages | Not deleted (it has a revision again or is still referenced): %(x)s | हटाया नहीं गया (उसका फिर से संशोधन है या उसका अब भी संदर्भ है): %(x)s |
+| `S34b903` | help and messages | Not possible: the account has history (see above). Deactivate it instead; the person can no longer sign in and everything they did stays attributable. | संभव नहीं: खाते का इतिहास है (ऊपर देखें)। इसके बजाय उसे निष्क्रिय करें; व्यक्ति अब साइन इन नहीं कर सकता और उसने जो भी किया वह उत्तरदायी बना रहता है। |
 | `Sce489f` | help and messages | The author gets any required cross-domain sign-offs, then submits the change request for review. | लेखक आवश्यक अंतर-डोमेन साइन-ऑफ लेता है, फिर परिवर्तन अनुरोध को समीक्षा के लिए जमा करता है। |
 | `S1cdbdd` | help and messages | The Chief Engineer approves or rejects. Approval makes the revision Approved (or Deprecated for a deprecation request). | मुख्य अभियंता अनुमोदित या अस्वीकृत करता है। अनुमोदन से संशोधन अनुमोदित (या अप्रचलन अनुरोध के लिए अप्रचलित) हो जाता है। |
+| `Scff3a3` | help and messages | User deleted; its name and address are erased, what it did stays attributable. | उपयोगकर्ता हटा दिया गया; उसका नाम और पता मिटा दिया गया है, उसने जो किया वह अब भी आरोपित रहता है। |
 | `Secfb3f` | hub_consolidation | Deprecate replaced Hub codes | प्रतिस्थापित हब कोड अप्रचलित घोषित करें |
 | `S0e7766` | hub_consolidation, language | draft | मसौदा |
 | `S4e7cfe` | hub_consolidation | Every Hub code is deprecated - the group can be deactivated under Lookups. | हर हब कोड अप्रचलित है - समूह को लुकअप में निष्क्रिय किया जा सकता है। |
@@ -3304,6 +3329,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sa2ca0f` | message: status_code_service | An archived revision cannot be changed. | संग्रहित संशोधन को बदला नहीं जा सकता। |
 | `Sa57433` | message: status_code_service | An open Draft/Review/PendingApproval revision already exists (BR-003). | मसौदा/समीक्षा/अनुमोदन-लंबित अवस्था में एक खुला संशोधन पहले से है (BR-003)। |
 | `S64463a` | message: status_code_service | No DEPRECATE audit entry found; cannot verify retention period. | कोई DEPRECATE ऑडिट प्रविष्टि नहीं मिली; प्रतिधारण अवधि सत्यापित नहीं की जा सकती। |
+| `Sf4e488` | message: status_code_service | Nothing selected: tick at least one withdrawn code. | कुछ चुना नहीं गया: कम से कम एक वापस लिए गए कोड पर निशान लगाएँ। |
 | `S94fede` | message: status_code_service | Only a Deprecated Status Code can be archived. | केवल अप्रचलित स्थिति कोड को संग्रहित किया जा सकता है। |
 | `S96a1e5` | message: status_code_service | Only a Deprecated Status Code can be reinstated. | केवल अप्रचलित स्थिति कोड को पुनर्स्थापित किया जा सकता है। |
 | `S9211d8` | message: status_code_service | Only a Draft revision may be edited in place (FR-025). | केवल मसौदा संशोधन को सीधे संपादित किया जा सकता है (FR-025)। |
@@ -3531,15 +3557,15 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S441e73` | user_detail | Engineering domains | अभियांत्रिकी डोमेन |
 | `Seeb692` | user_detail, users | Full name | पूरा नाम |
 | `S263733` | user_detail | Last sign-in | अंतिम साइन-इन |
-| `S34b903` | user_detail | Not possible: the account has history (see above). Deactivate it instead; the person can no longer sign in and everything they did stays attributable. | संभव नहीं: खाते का इतिहास है (ऊपर देखें)। इसके बजाय उसे निष्क्रिय करें; व्यक्ति अब साइन इन नहीं कर सकता और उसने जो भी किया वह उत्तरदायी बना रहता है। |
 | `S57e34a` | user_detail | Nothing: the account has never been used, so it can be deleted. | कुछ नहीं: खाते का कभी उपयोग नहीं हुआ, इसलिए उसे हटाया जा सकता है। |
 | `S441acb` | user_detail, users | Role of %(x)s | %(x)s की भूमिका |
 | `Sc761ae` | user_detail, users | Set role | भूमिका तय करें |
+| `S6ad9e8` | user_detail | The account has history (see above). Deleting it erases its name, address and password and removes it from the lists; what it did stays in the audit log and in the records, shown as a deleted user. Deactivating keeps the name. | खाते का इतिहास है (ऊपर देखें)। हटाने पर उसका नाम, पता और पासवर्ड मिट जाते हैं और वह सूचियों से हट जाता है; उसने जो किया वह ऑडिट लॉग और रिकॉर्ड में हटाए गए उपयोगकर्ता के रूप में दिखता रहता है। निष्क्रिय करने पर नाम बना रहता है। |
 | `S44c2c4` | user_detail | These rows point at the account. They are history that must stay attributable, so the account can be deactivated but not deleted. | ये पंक्तियाँ खाते की ओर इशारा करती हैं। यह इतिहास है जो उत्तरदायी बना रहना चाहिए, इसलिए खाता निष्क्रिय किया जा सकता है पर हटाया नहीं जा सकता। |
 | `Sdbc1fc` | user_detail | What this account has done | इस खाते ने क्या किया है |
 | `S525f61` | user_detail | Where | कहाँ |
 | `Sd9f654` | user_detail, users | You cannot deactivate yourself here | आप यहाँ स्वयं को निष्क्रिय नहीं कर सकते |
-| `S26d745` | user_detail | Your password | आपका पासवर्ड |
+| `S26d745` | user_detail, withdrawn_codes | Your password | आपका पासवर्ड |
 | `S3b803b` | users | Administrator only | केवल प्रशासक |
 | `Scc6146` | users | Colour = level, red is the highest. As StCd Owner you may move a user between Viewer, Engineer and Reviewer; creating users and every other role needs an Administrator. | रंग = स्तर, लाल सबसे ऊँचा है। StCd स्वामी के रूप में आप किसी उपयोगकर्ता को दर्शक, अभियंता और समीक्षक के बीच बदल सकते हैं; उपयोगकर्ता बनाने और हर अन्य भूमिका के लिए प्रशासक चाहिए। |
 | `Sd02137` | users | Colour = level, red is the highest. You may create users and give every role. | रंग = स्तर, लाल सबसे ऊँचा है। आप उपयोगकर्ता बना सकते हैं और हर भूमिका दे सकते हैं। |
@@ -3555,10 +3581,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sbcf8f1` | users | New password for %(x)s | %(x)s के लिए नया पासवर्ड |
 | `S3fb75e` | users | Reset Password | पासवर्ड रीसेट करें |
 | `S5ca6e5` | users | User Management | उपयोगकर्ता प्रबंधन |
+| `Scfb147` | withdrawn_codes | A code whose change request was withdrawn stays as an empty shell: it keeps its number, legacy number and PrgIdx_GUi, so the same program or row cannot be imported again. Delete it here to free them. Deleting is final and is written to the audit log. | जिस कोड का परिवर्तन अनुरोध वापस ले लिया गया है, वह खाली खोल के रूप में रहता है: वह अपना नंबर, पुराना नंबर और PrgIdx_GUi रखता है, इसलिए वही प्रोग्राम या पंक्ति दोबारा आयात नहीं की जा सकती। उन्हें मुक्त करने के लिए इसे यहाँ हटाएँ। हटाना अंतिम है और ऑडिट लॉग में दर्ज होता है। |
+| `S8516a7` | withdrawn_codes | Delete selected | चयनित हटाएँ |
+| `Sdfeb06` | withdrawn_codes | No withdrawn codes. | कोई वापस लिया गया कोड नहीं। |
+| `S87ec0b` | withdrawn_codes | Withdrawn on | वापस लिया गया |
 
 ### 9.5 SA العربية 🇸🇦 — Arabic
 
-1092 of 1093 strings translated; direction right to left.
+1102 of 1103 strings translated; direction right to left.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -3660,6 +3690,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S8ad830` | base, detail, overview | Translations | الترجمات |
 | `S1b9aeb` | base, dashboard | unread | غير مقروءة |
 | `S57f2b1` | base | Users | المستخدمون |
+| `S9fa05a` | base, withdrawn_codes | Withdrawn Codes | الرموز المسحوبة |
 | `Sd7a484` | base | Workflow | سير العمل |
 | `S5a4692` | base | You are covering for a colleague | أنت تنوب عن زميل |
 | `S8e9c15` | builder | Candidate revisions | المراجعات المرشحة |
@@ -3690,7 +3721,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S4105cf` | catalogue_health | exhausted | نفد |
 | `S57e8be` | catalogue_health | Finding | النتيجة |
 | `S1150a1` | catalogue_health | Gaps | فجوات |
-| `S171a06` | catalogue_health | Group | المجموعة |
+| `S171a06` | catalogue_health, withdrawn_codes | Group | المجموعة |
 | `Sb4aadc` | catalogue_health, legacy_mapping | Hub Controller | وحدة تحكم المحور |
 | `S8ae1c3` | catalogue_health | Left | المتبقي |
 | `S12c0f1` | catalogue_health | left | متبقٍ |
@@ -3709,7 +3740,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sfe5310` | catalogue_health | Probable inconsistencies | تناقضات محتملة |
 | `Sa16c5b` | catalogue_health, lookups | Range | النطاق |
 | `Sbae7d5` | catalogue_health, detail, list | Status | الحالة |
-| `Sfe07e9` | catalogue_health | Subgroup | المجموعة الفرعية |
+| `Sfe07e9` | catalogue_health, withdrawn_codes | Subgroup | المجموعة الفرعية |
 | `S75a804` | catalogue_health | subgroup(s) are running out of numbers: | مجموعة فرعية/مجموعات فرعية توشك أرقامها على النفاد: |
 | `S5fec4f` | catalogue_health | Unused numbers inside a band | أرقام غير مستخدمة داخل نطاق |
 | `S02c0e4` | catalogue_health | Used | المستخدم |
@@ -3864,7 +3895,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S92d001` | detail | Item Count | عدد البنود |
 | `S7d2a7b` | detail | Justification | المبرّر |
 | `S1481d0` | detail, form | latest | الأحدث |
-| `S693272` | detail | Legacy Reference Number | الرقم المرجعي القديم |
+| `S693272` | detail, withdrawn_codes | Legacy Reference Number | الرقم المرجعي القديم |
 | `S43d5c5` | detail, form | Loadless Spinning Permitted | الدوران دون حمل مسموح |
 | `S193786` | detail | Logical Node | العقدة المنطقية |
 | `S578b78` | detail | Main Controller group | مجموعة وحدة التحكم الرئيسية |
@@ -3945,7 +3976,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sd0edfb` | detail | Sales | المبيعات |
 | `Sda38c6` | detail | Save planned dates | حفظ التواريخ المخطط لها |
 | `S13c61c` | detail | Scope Filter | مرشح النطاق |
-| `S859822` | detail, mine | Select | تحديد |
+| `S859822` | detail, mine, withdrawn_codes | Select | تحديد |
 | `S81448f` | detail, form | select | اختر |
 | `S535bd8` | detail, form | Select a Functional System Group first | اختر مجموعة نظام وظيفي أولًا |
 | `S329cb8` | detail | Service | الخدمة |
@@ -4127,10 +4158,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sa55a27` | help, index | Terms | المصطلحات |
 | `S689b33` | help | The full manual is docs/23-user-manual.md in the project folder; the glossary below is the same one the tooltips use. | الدليل الكامل هو docs/23-user-manual.md في مجلد المشروع؛ والمسرد أدناه هو نفسه المستخدم في التلميحات. |
 | `S439914` | help | What happens next on a change request | ما يحدث بعد ذلك لطلب التغيير |
+| `S6d29d9` | help and messages | %(n)s withdrawn code(s) deleted. | تم حذف %(n)s من الرموز المسحوبة. |
 | `Sb08e6c` | help and messages | A Reviewer and an Administrator each sign off (in any order). If either rejects, it goes back to the author. | يوقّع مراجع ومسؤول كلٌّ على حدة (بأي ترتيب). إن رفض أحدهما عاد إلى المؤلف. |
 | `S2f1bed` | help and messages | An Administrator includes the revision in a Release and publishes it; then it is Released. | يضمّن المسؤول المراجعة في إصدار وينشره؛ فتصبح منشورة. |
+| `Sd856bd` | help and messages | Not deleted (it has a revision again or is still referenced): %(x)s | لم يُحذف (لديه مراجعة من جديد أو لا يزال مُشاراً إليه): %(x)s |
+| `S34b903` | help and messages | Not possible: the account has history (see above). Deactivate it instead; the person can no longer sign in and everything they did stays attributable. | غير ممكن: للحساب سجل (انظر أعلاه). عطّله بدلًا من ذلك؛ فلا يستطيع الشخص تسجيل الدخول ويبقى كل ما فعله منسوبًا. |
 | `Sce489f` | help and messages | The author gets any required cross-domain sign-offs, then submits the change request for review. | يحصل المؤلف على الاعتمادات متعددة المجالات المطلوبة ثم يقدّم طلب التغيير للمراجعة. |
 | `S1cdbdd` | help and messages | The Chief Engineer approves or rejects. Approval makes the revision Approved (or Deprecated for a deprecation request). | يوافق كبير المهندسين أو يرفض. تجعل الموافقة المراجعة معتمدة (أو متقادمة لطلب تقادم). |
+| `Scff3a3` | help and messages | User deleted; its name and address are erased, what it did stays attributable. | تم حذف المستخدم؛ مُسح اسمه وعنوانه، وما فعله يبقى منسوباً إليه. |
 | `Secfb3f` | hub_consolidation | Deprecate replaced Hub codes | وسم رموز المحور المستبدلة كمتقادمة |
 | `S0e7766` | hub_consolidation, language | draft | مسودة |
 | `S4e7cfe` | hub_consolidation | Every Hub code is deprecated - the group can be deactivated under Lookups. | كل رموز المحور متقادمة - يمكن تعطيل المجموعة من قوائم القيم. |
@@ -4403,6 +4438,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sa2ca0f` | message: status_code_service | An archived revision cannot be changed. | لا يمكن تغيير مراجعة مؤرشفة. |
 | `Sa57433` | message: status_code_service | An open Draft/Review/PendingApproval revision already exists (BR-003). | توجد بالفعل مراجعة مفتوحة في حالة مسودة/مراجعة/بانتظار الموافقة (BR-003). |
 | `S64463a` | message: status_code_service | No DEPRECATE audit entry found; cannot verify retention period. | لم يُعثر على سجل تدقيق DEPRECATE؛ لا يمكن التحقق من مدة الاحتفاظ. |
+| `Sf4e488` | message: status_code_service | Nothing selected: tick at least one withdrawn code. | لم يُحدَّد شيء: ضع علامة على رمز مسحوب واحد على الأقل. |
 | `S94fede` | message: status_code_service | Only a Deprecated Status Code can be archived. | لا يمكن أرشفة إلا رمز حالة متقادم. |
 | `S96a1e5` | message: status_code_service | Only a Deprecated Status Code can be reinstated. | لا يمكن إعادة العمل إلا برمز حالة متقادم. |
 | `S9211d8` | message: status_code_service | Only a Draft revision may be edited in place (FR-025). | لا يمكن تحرير مباشر إلا لمراجعة في حالة مسودة (FR-025). |
@@ -4630,15 +4666,15 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S441e73` | user_detail | Engineering domains | المجالات الهندسية |
 | `Seeb692` | user_detail, users | Full name | الاسم الكامل |
 | `S263733` | user_detail | Last sign-in | آخر تسجيل دخول |
-| `S34b903` | user_detail | Not possible: the account has history (see above). Deactivate it instead; the person can no longer sign in and everything they did stays attributable. | غير ممكن: للحساب سجل (انظر أعلاه). عطّله بدلًا من ذلك؛ فلا يستطيع الشخص تسجيل الدخول ويبقى كل ما فعله منسوبًا. |
 | `S57e34a` | user_detail | Nothing: the account has never been used, so it can be deleted. | لا شيء: لم يُستخدم الحساب قط، لذا يمكن حذفه. |
 | `S441acb` | user_detail, users | Role of %(x)s | دور %(x)s |
 | `Sc761ae` | user_detail, users | Set role | تعيين الدور |
+| `S6ad9e8` | user_detail | The account has history (see above). Deleting it erases its name, address and password and removes it from the lists; what it did stays in the audit log and in the records, shown as a deleted user. Deactivating keeps the name. | للحساب سجل (انظر أعلاه). يؤدي حذفه إلى مسح اسمه وعنوانه وكلمة مروره وإزالته من القوائم؛ وما فعله يبقى في سجل التدقيق وفي السجلات، ويظهر كمستخدم محذوف. أما التعطيل فيُبقي الاسم. |
 | `S44c2c4` | user_detail | These rows point at the account. They are history that must stay attributable, so the account can be deactivated but not deleted. | تشير هذه الصفوف إلى الحساب. وهي سجل يجب أن يبقى منسوبًا، لذا يمكن تعطيل الحساب لكن لا يمكن حذفه. |
 | `Sdbc1fc` | user_detail | What this account has done | ما قام به هذا الحساب |
 | `S525f61` | user_detail | Where | أين |
 | `Sd9f654` | user_detail, users | You cannot deactivate yourself here | لا يمكنك تعطيل نفسك هنا |
-| `S26d745` | user_detail | Your password | كلمة مرورك |
+| `S26d745` | user_detail, withdrawn_codes | Your password | كلمة مرورك |
 | `S3b803b` | users | Administrator only | للمسؤول فقط |
 | `Scc6146` | users | Colour = level, red is the highest. As StCd Owner you may move a user between Viewer, Engineer and Reviewer; creating users and every other role needs an Administrator. | اللون = المستوى، والأحمر هو الأعلى. بصفتك مالك StCd يمكنك نقل مستخدم بين مشاهد ومهندس ومراجع؛ أما إنشاء المستخدمين وكل دور آخر فيحتاجان إلى مسؤول. |
 | `Sd02137` | users | Colour = level, red is the highest. You may create users and give every role. | اللون = المستوى، والأحمر هو الأعلى. يمكنك إنشاء مستخدمين ومنح كل دور. |
@@ -4654,10 +4690,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sbcf8f1` | users | New password for %(x)s | كلمة مرور جديدة لـ %(x)s |
 | `S3fb75e` | users | Reset Password | إعادة تعيين كلمة المرور |
 | `S5ca6e5` | users | User Management | إدارة المستخدمين |
+| `Scfb147` | withdrawn_codes | A code whose change request was withdrawn stays as an empty shell: it keeps its number, legacy number and PrgIdx_GUi, so the same program or row cannot be imported again. Delete it here to free them. Deleting is final and is written to the audit log. | الرمز الذي سُحب طلب تغييره يبقى هيكلاً فارغاً: يحتفظ برقمه ورقمه القديم وPrgIdx_GUi، فلا يمكن استيراد البرنامج أو الصف نفسه مرة أخرى. احذفه هنا لتحريرها. الحذف نهائي ويُسجَّل في سجل التدقيق. |
+| `S8516a7` | withdrawn_codes | Delete selected | حذف المحدد |
+| `Sdfeb06` | withdrawn_codes | No withdrawn codes. | لا توجد رموز مسحوبة. |
+| `S87ec0b` | withdrawn_codes | Withdrawn on | تاريخ السحب |
 
 ### 9.6 IN বাংলা 🇮🇳 — Bengali
 
-1092 of 1093 strings translated; direction left to right.
+1102 of 1103 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -4759,6 +4799,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S8ad830` | base, detail, overview | Translations | অনুবাদ |
 | `S1b9aeb` | base, dashboard | unread | অপঠিত |
 | `S57f2b1` | base | Users | ব্যবহারকারী |
+| `S9fa05a` | base, withdrawn_codes | Withdrawn Codes | প্রত্যাহার করা কোড |
 | `Sd7a484` | base | Workflow | কর্মপ্রবাহ |
 | `S5a4692` | base | You are covering for a colleague | আপনি একজন সহকর্মীর জায়গায় কাজ করছেন |
 | `S8e9c15` | builder | Candidate revisions | প্রার্থী সংশোধন |
@@ -4789,7 +4830,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S4105cf` | catalogue_health | exhausted | নিঃশেষিত |
 | `S57e8be` | catalogue_health | Finding | পর্যবেক্ষণ |
 | `S1150a1` | catalogue_health | Gaps | ফাঁক |
-| `S171a06` | catalogue_health | Group | গ্রুপ |
+| `S171a06` | catalogue_health, withdrawn_codes | Group | গ্রুপ |
 | `Sb4aadc` | catalogue_health, legacy_mapping | Hub Controller | হাব নিয়ন্ত্রক |
 | `S8ae1c3` | catalogue_health | Left | বাকি |
 | `S12c0f1` | catalogue_health | left | বাকি |
@@ -4808,7 +4849,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sfe5310` | catalogue_health | Probable inconsistencies | সম্ভাব্য অসঙ্গতি |
 | `Sa16c5b` | catalogue_health, lookups | Range | পরিসর |
 | `Sbae7d5` | catalogue_health, detail, list | Status | অবস্থা |
-| `Sfe07e9` | catalogue_health | Subgroup | উপগ্রুপ |
+| `Sfe07e9` | catalogue_health, withdrawn_codes | Subgroup | উপগ্রুপ |
 | `S75a804` | catalogue_health | subgroup(s) are running out of numbers: | উপগ্রুপের সংখ্যা ফুরিয়ে আসছে: |
 | `S5fec4f` | catalogue_health | Unused numbers inside a band | ব্যান্ডের ভেতরে অব্যবহৃত নম্বর |
 | `S02c0e4` | catalogue_health | Used | ব্যবহৃত |
@@ -4963,7 +5004,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S92d001` | detail | Item Count | আইটেমের সংখ্যা |
 | `S7d2a7b` | detail | Justification | যুক্তি |
 | `S1481d0` | detail, form | latest | সর্বশেষ |
-| `S693272` | detail | Legacy Reference Number | পুরোনো রেফারেন্স নম্বর |
+| `S693272` | detail, withdrawn_codes | Legacy Reference Number | পুরোনো রেফারেন্স নম্বর |
 | `S43d5c5` | detail, form | Loadless Spinning Permitted | লোড ছাড়া ঘোরা অনুমোদিত |
 | `S193786` | detail | Logical Node | লজিক্যাল নোড |
 | `S578b78` | detail | Main Controller group | প্রধান নিয়ন্ত্রক গ্রুপ |
@@ -5044,7 +5085,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sd0edfb` | detail | Sales | বিক্রয় |
 | `Sda38c6` | detail | Save planned dates | পরিকল্পিত তারিখ সংরক্ষণ করুন |
 | `S13c61c` | detail | Scope Filter | পরিধি ফিল্টার |
-| `S859822` | detail, mine | Select | বাছুন |
+| `S859822` | detail, mine, withdrawn_codes | Select | বাছুন |
 | `S81448f` | detail, form | select | বাছুন |
 | `S535bd8` | detail, form | Select a Functional System Group first | আগে একটি কার্যকরী সিস্টেম গ্রুপ বাছুন |
 | `S329cb8` | detail | Service | সার্ভিস |
@@ -5226,10 +5267,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sa55a27` | help, index | Terms | পরিভাষা |
 | `S689b33` | help | The full manual is docs/23-user-manual.md in the project folder; the glossary below is the same one the tooltips use. | সম্পূর্ণ ম্যানুয়াল প্রকল্প ফোল্ডারে docs/23-user-manual.md; নিচের শব্দকোষ টুলটিপে ব্যবহৃত শব্দকোষের মতোই। |
 | `S439914` | help | What happens next on a change request | পরিবর্তন অনুরোধে এরপর কী হয় |
+| `S6d29d9` | help and messages | %(n)s withdrawn code(s) deleted. | %(n)s টি প্রত্যাহার করা কোড মুছে ফেলা হয়েছে। |
 | `Sb08e6c` | help and messages | A Reviewer and an Administrator each sign off (in any order). If either rejects, it goes back to the author. | একজন পর্যালোচক ও একজন প্রশাসক প্রত্যেকে সাইন অফ করেন (যেকোনো ক্রমে)। কেউ প্রত্যাখ্যান করলে এটি লেখকের কাছে ফিরে যায়। |
 | `S2f1bed` | help and messages | An Administrator includes the revision in a Release and publishes it; then it is Released. | একজন প্রশাসক সংশোধনটি একটি রিলিজে অন্তর্ভুক্ত করে প্রকাশ করেন; তখন এটি প্রকাশিত হয়। |
+| `Sd856bd` | help and messages | Not deleted (it has a revision again or is still referenced): %(x)s | মোছা হয়নি (এর আবার সংশোধন আছে বা এখনও উল্লেখ আছে): %(x)s |
+| `S34b903` | help and messages | Not possible: the account has history (see above). Deactivate it instead; the person can no longer sign in and everything they did stays attributable. | সম্ভব নয়: অ্যাকাউন্টের ইতিহাস আছে (উপরে দেখুন)। এর পরিবর্তে নিষ্ক্রিয় করুন; ব্যক্তিটি আর সাইন ইন করতে পারবেন না এবং তিনি যা করেছেন তা দায়বদ্ধ থাকবে। |
 | `Sce489f` | help and messages | The author gets any required cross-domain sign-offs, then submits the change request for review. | লেখক প্রয়োজনীয় আন্তঃডোমেইন সাইন-অফ নেন, তারপর পরিবর্তন অনুরোধ পর্যালোচনার জন্য জমা দেন। |
 | `S1cdbdd` | help and messages | The Chief Engineer approves or rejects. Approval makes the revision Approved (or Deprecated for a deprecation request). | প্রধান প্রকৌশলী অনুমোদন বা প্রত্যাখ্যান করেন। অনুমোদন সংশোধনকে অনুমোদিত (বা অপ্রচলন অনুরোধে অপ্রচলিত) করে। |
+| `Scff3a3` | help and messages | User deleted; its name and address are erased, what it did stays attributable. | ব্যবহারকারী মুছে ফেলা হয়েছে; তার নাম ও ঠিকানা মুছে ফেলা হয়েছে, সে যা করেছে তা আরোপযোগ্য থাকে। |
 | `Secfb3f` | hub_consolidation | Deprecate replaced Hub codes | প্রতিস্থাপিত হাব কোড অপ্রচলিত ঘোষণা করুন |
 | `S0e7766` | hub_consolidation, language | draft | খসড়া |
 | `S4e7cfe` | hub_consolidation | Every Hub code is deprecated - the group can be deactivated under Lookups. | প্রতিটি হাব কোড অপ্রচলিত - গ্রুপটি লুকআপে নিষ্ক্রিয় করা যায়। |
@@ -5502,6 +5547,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sa2ca0f` | message: status_code_service | An archived revision cannot be changed. | সংরক্ষণাগারভুক্ত সংশোধন বদলানো যায় না। |
 | `Sa57433` | message: status_code_service | An open Draft/Review/PendingApproval revision already exists (BR-003). | খসড়া/পর্যালোচনা/অনুমোদন-মুলতুবি অবস্থায় একটি খোলা সংশোধন ইতিমধ্যে আছে (BR-003)। |
 | `S64463a` | message: status_code_service | No DEPRECATE audit entry found; cannot verify retention period. | কোনো DEPRECATE অডিট এন্ট্রি পাওয়া যায়নি; সংরক্ষণ কাল যাচাই করা যায় না। |
+| `Sf4e488` | message: status_code_service | Nothing selected: tick at least one withdrawn code. | কিছু নির্বাচিত হয়নি: অন্তত একটি প্রত্যাহার করা কোড টিক দিন। |
 | `S94fede` | message: status_code_service | Only a Deprecated Status Code can be archived. | শুধু অপ্রচলিত স্ট্যাটাস কোড সংরক্ষণাগারে রাখা যায়। |
 | `S96a1e5` | message: status_code_service | Only a Deprecated Status Code can be reinstated. | শুধু অপ্রচলিত স্ট্যাটাস কোড পুনঃস্থাপন করা যায়। |
 | `S9211d8` | message: status_code_service | Only a Draft revision may be edited in place (FR-025). | শুধু খসড়া সংশোধন সরাসরি সম্পাদনা করা যায় (FR-025)। |
@@ -5729,15 +5775,15 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S441e73` | user_detail | Engineering domains | প্রকৌশল ডোমেইন |
 | `Seeb692` | user_detail, users | Full name | পুরো নাম |
 | `S263733` | user_detail | Last sign-in | সর্বশেষ সাইন-ইন |
-| `S34b903` | user_detail | Not possible: the account has history (see above). Deactivate it instead; the person can no longer sign in and everything they did stays attributable. | সম্ভব নয়: অ্যাকাউন্টের ইতিহাস আছে (উপরে দেখুন)। এর পরিবর্তে নিষ্ক্রিয় করুন; ব্যক্তিটি আর সাইন ইন করতে পারবেন না এবং তিনি যা করেছেন তা দায়বদ্ধ থাকবে। |
 | `S57e34a` | user_detail | Nothing: the account has never been used, so it can be deleted. | কিছুই নেই: অ্যাকাউন্টটি কখনো ব্যবহৃত হয়নি, তাই মুছে ফেলা যায়। |
 | `S441acb` | user_detail, users | Role of %(x)s | %(x)s-এর ভূমিকা |
 | `Sc761ae` | user_detail, users | Set role | ভূমিকা নির্ধারণ |
+| `S6ad9e8` | user_detail | The account has history (see above). Deleting it erases its name, address and password and removes it from the lists; what it did stays in the audit log and in the records, shown as a deleted user. Deactivating keeps the name. | অ্যাকাউন্টের ইতিহাস আছে (উপরে দেখুন)। মুছলে এর নাম, ঠিকানা ও পাসওয়ার্ড মুছে যায় এবং তালিকা থেকে সরে যায়; সে যা করেছে তা অডিট লগ ও রেকর্ডে মুছে ফেলা ব্যবহারকারী হিসেবে থাকে। নিষ্ক্রিয় করলে নাম থাকে। |
 | `S44c2c4` | user_detail | These rows point at the account. They are history that must stay attributable, so the account can be deactivated but not deleted. | এই সারিগুলো অ্যাকাউন্টের দিকে নির্দেশ করে। এটি ইতিহাস যা দায়বদ্ধ থাকতে হবে, তাই অ্যাকাউন্ট নিষ্ক্রিয় করা যায় কিন্তু মুছে ফেলা যায় না। |
 | `Sdbc1fc` | user_detail | What this account has done | এই অ্যাকাউন্ট কী করেছে |
 | `S525f61` | user_detail | Where | কোথায় |
 | `Sd9f654` | user_detail, users | You cannot deactivate yourself here | আপনি এখানে নিজেকে নিষ্ক্রিয় করতে পারবেন না |
-| `S26d745` | user_detail | Your password | আপনার পাসওয়ার্ড |
+| `S26d745` | user_detail, withdrawn_codes | Your password | আপনার পাসওয়ার্ড |
 | `S3b803b` | users | Administrator only | শুধু প্রশাসক |
 | `Scc6146` | users | Colour = level, red is the highest. As StCd Owner you may move a user between Viewer, Engineer and Reviewer; creating users and every other role needs an Administrator. | রং = স্তর, লাল সবচেয়ে উঁচু। StCd মালিক হিসেবে আপনি একজন ব্যবহারকারীকে দর্শক, প্রকৌশলী ও পর্যালোচকের মধ্যে সরাতে পারেন; ব্যবহারকারী তৈরি এবং অন্য সব ভূমিকার জন্য প্রশাসক লাগে। |
 | `Sd02137` | users | Colour = level, red is the highest. You may create users and give every role. | রং = স্তর, লাল সবচেয়ে উঁচু। আপনি ব্যবহারকারী তৈরি করতে এবং প্রতিটি ভূমিকা দিতে পারেন। |
@@ -5753,10 +5799,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sbcf8f1` | users | New password for %(x)s | %(x)s-এর জন্য নতুন পাসওয়ার্ড |
 | `S3fb75e` | users | Reset Password | পাসওয়ার্ড রিসেট করুন |
 | `S5ca6e5` | users | User Management | ব্যবহারকারী ব্যবস্থাপনা |
+| `Scfb147` | withdrawn_codes | A code whose change request was withdrawn stays as an empty shell: it keeps its number, legacy number and PrgIdx_GUi, so the same program or row cannot be imported again. Delete it here to free them. Deleting is final and is written to the audit log. | যে কোডের পরিবর্তন অনুরোধ প্রত্যাহার করা হয়েছে সেটি খালি খোলস হিসেবে থেকে যায়: এটি তার নম্বর, পুরনো নম্বর ও PrgIdx_GUi ধরে রাখে, ফলে একই প্রোগ্রাম বা সারি আবার আমদানি করা যায় না। এগুলি মুক্ত করতে এখানে মুছে ফেলুন। মোছা চূড়ান্ত এবং অডিট লগে লেখা হয়। |
+| `S8516a7` | withdrawn_codes | Delete selected | নির্বাচিতগুলি মুছুন |
+| `Sdfeb06` | withdrawn_codes | No withdrawn codes. | প্রত্যাহার করা কোনো কোড নেই। |
+| `S87ec0b` | withdrawn_codes | Withdrawn on | প্রত্যাহারের তারিখ |
 
 ### 9.7 IN मराठी 🇮🇳 — Marathi
 
-1092 of 1093 strings translated; direction left to right.
+1102 of 1103 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -5858,6 +5908,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S8ad830` | base, detail, overview | Translations | भाषांतरे |
 | `S1b9aeb` | base, dashboard | unread | न वाचलेले |
 | `S57f2b1` | base | Users | वापरकर्ते |
+| `S9fa05a` | base, withdrawn_codes | Withdrawn Codes | मागे घेतलेले कोड |
 | `Sd7a484` | base | Workflow | कार्यप्रवाह |
 | `S5a4692` | base | You are covering for a colleague | तुम्ही सहकाऱ्याच्या जागी काम करत आहात |
 | `S8e9c15` | builder | Candidate revisions | उमेदवार सुधारणा |
@@ -5888,7 +5939,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S4105cf` | catalogue_health | exhausted | संपले |
 | `S57e8be` | catalogue_health | Finding | निष्कर्ष |
 | `S1150a1` | catalogue_health | Gaps | फटी |
-| `S171a06` | catalogue_health | Group | गट |
+| `S171a06` | catalogue_health, withdrawn_codes | Group | गट |
 | `Sb4aadc` | catalogue_health, legacy_mapping | Hub Controller | हब नियंत्रक |
 | `S8ae1c3` | catalogue_health | Left | उरलेले |
 | `S12c0f1` | catalogue_health | left | उरलेले |
@@ -5907,7 +5958,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sfe5310` | catalogue_health | Probable inconsistencies | संभाव्य विसंगती |
 | `Sa16c5b` | catalogue_health, lookups | Range | श्रेणी |
 | `Sbae7d5` | catalogue_health, detail, list | Status | स्थिती |
-| `Sfe07e9` | catalogue_health | Subgroup | उपगट |
+| `Sfe07e9` | catalogue_health, withdrawn_codes | Subgroup | उपगट |
 | `S75a804` | catalogue_health | subgroup(s) are running out of numbers: | उपगटांचे क्रमांक संपत आहेत: |
 | `S5fec4f` | catalogue_health | Unused numbers inside a band | पट्ट्यातील न वापरलेले क्रमांक |
 | `S02c0e4` | catalogue_health | Used | वापरलेले |
@@ -6062,7 +6113,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S92d001` | detail | Item Count | घटकांची संख्या |
 | `S7d2a7b` | detail | Justification | समर्थन |
 | `S1481d0` | detail, form | latest | नवीनतम |
-| `S693272` | detail | Legacy Reference Number | जुना संदर्भ क्रमांक |
+| `S693272` | detail, withdrawn_codes | Legacy Reference Number | जुना संदर्भ क्रमांक |
 | `S43d5c5` | detail, form | Loadless Spinning Permitted | भाराशिवाय फिरणे अनुमत |
 | `S193786` | detail | Logical Node | लॉजिकल नोड |
 | `S578b78` | detail | Main Controller group | मुख्य नियंत्रक गट |
@@ -6143,7 +6194,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sd0edfb` | detail | Sales | विक्री |
 | `Sda38c6` | detail | Save planned dates | नियोजित तारखा जतन करा |
 | `S13c61c` | detail | Scope Filter | व्याप्ती फिल्टर |
-| `S859822` | detail, mine | Select | निवडा |
+| `S859822` | detail, mine, withdrawn_codes | Select | निवडा |
 | `S81448f` | detail, form | select | निवडा |
 | `S535bd8` | detail, form | Select a Functional System Group first | आधी कार्यात्मक प्रणाली गट निवडा |
 | `S329cb8` | detail | Service | सेवा |
@@ -6325,10 +6376,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sa55a27` | help, index | Terms | संज्ञा |
 | `S689b33` | help | The full manual is docs/23-user-manual.md in the project folder; the glossary below is the same one the tooltips use. | संपूर्ण नियमावली प्रकल्प फोल्डरमध्ये docs/23-user-manual.md आहे; खालील शब्दकोश टूलटिपमध्ये वापरलेलाच आहे. |
 | `S439914` | help | What happens next on a change request | बदल विनंतीचे पुढे काय होते |
+| `S6d29d9` | help and messages | %(n)s withdrawn code(s) deleted. | %(n)s मागे घेतलेले कोड हटवले. |
 | `Sb08e6c` | help and messages | A Reviewer and an Administrator each sign off (in any order). If either rejects, it goes back to the author. | एक पुनरावलोकक आणि एक प्रशासक प्रत्येकी साइन ऑफ करतात (कोणत्याही क्रमाने). कोणीही नाकारल्यास ती लेखकाकडे परत जाते. |
 | `S2f1bed` | help and messages | An Administrator includes the revision in a Release and publishes it; then it is Released. | प्रशासक सुधारणा प्रकाशनात समाविष्ट करून प्रकाशित करतो; तेव्हा ती प्रकाशित होते. |
+| `Sd856bd` | help and messages | Not deleted (it has a revision again or is still referenced): %(x)s | हटवले नाही (त्याला पुन्हा सुधारणा आहे किंवा अजून संदर्भ आहे): %(x)s |
+| `S34b903` | help and messages | Not possible: the account has history (see above). Deactivate it instead; the person can no longer sign in and everything they did stays attributable. | शक्य नाही: खात्याचा इतिहास आहे (वर पहा). त्याऐवजी निष्क्रिय करा; ती व्यक्ती आता साइन इन करू शकत नाही आणि तिने जे केले ते जबाबदार राहते. |
 | `Sce489f` | help and messages | The author gets any required cross-domain sign-offs, then submits the change request for review. | लेखक आवश्यक आंतर-क्षेत्र साइन-ऑफ मिळवतो, मग बदल विनंती पुनरावलोकनासाठी सादर करतो. |
 | `S1cdbdd` | help and messages | The Chief Engineer approves or rejects. Approval makes the revision Approved (or Deprecated for a deprecation request). | मुख्य अभियंता मंजूर किंवा नाकारतो. मंजुरीमुळे सुधारणा मंजूर होते (किंवा कालबाह्यता विनंतीसाठी कालबाह्य). |
+| `Scff3a3` | help and messages | User deleted; its name and address are erased, what it did stays attributable. | वापरकर्ता हटवला; त्याचे नाव आणि पत्ता पुसला आहे, त्याने जे केले ते श्रेय देता येण्याजोगे राहते. |
 | `Secfb3f` | hub_consolidation | Deprecate replaced Hub codes | बदललेले हब कोड कालबाह्य घोषित करा |
 | `S0e7766` | hub_consolidation, language | draft | मसुदा |
 | `S4e7cfe` | hub_consolidation | Every Hub code is deprecated - the group can be deactivated under Lookups. | प्रत्येक हब कोड कालबाह्य आहे - गट लुकअपमध्ये निष्क्रिय करता येतो. |
@@ -6601,6 +6656,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sa2ca0f` | message: status_code_service | An archived revision cannot be changed. | संग्रहित सुधारणा बदलता येत नाही. |
 | `Sa57433` | message: status_code_service | An open Draft/Review/PendingApproval revision already exists (BR-003). | मसुदा/पुनरावलोकन/मंजुरी-प्रलंबित स्थितीत एक खुली सुधारणा आधीच आहे (BR-003). |
 | `S64463a` | message: status_code_service | No DEPRECATE audit entry found; cannot verify retention period. | कोणतीही DEPRECATE ऑडिट नोंद सापडली नाही; धारणा कालावधी सत्यापित करता येत नाही. |
+| `Sf4e488` | message: status_code_service | Nothing selected: tick at least one withdrawn code. | काही निवडले नाही: किमान एका मागे घेतलेल्या कोडवर खूण करा. |
 | `S94fede` | message: status_code_service | Only a Deprecated Status Code can be archived. | फक्त कालबाह्य स्थिती कोड संग्रहित करता येतो. |
 | `S96a1e5` | message: status_code_service | Only a Deprecated Status Code can be reinstated. | फक्त कालबाह्य स्थिती कोड पुनर्स्थापित करता येतो. |
 | `S9211d8` | message: status_code_service | Only a Draft revision may be edited in place (FR-025). | फक्त मसुदा सुधारणा जागेवर संपादित करता येते (FR-025). |
@@ -6828,15 +6884,15 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S441e73` | user_detail | Engineering domains | अभियांत्रिकी क्षेत्रे |
 | `Seeb692` | user_detail, users | Full name | पूर्ण नाव |
 | `S263733` | user_detail | Last sign-in | शेवटचे साइन-इन |
-| `S34b903` | user_detail | Not possible: the account has history (see above). Deactivate it instead; the person can no longer sign in and everything they did stays attributable. | शक्य नाही: खात्याचा इतिहास आहे (वर पहा). त्याऐवजी निष्क्रिय करा; ती व्यक्ती आता साइन इन करू शकत नाही आणि तिने जे केले ते जबाबदार राहते. |
 | `S57e34a` | user_detail | Nothing: the account has never been used, so it can be deleted. | काहीही नाही: खाते कधीच वापरले गेलेले नाही, म्हणून ते हटवता येते. |
 | `S441acb` | user_detail, users | Role of %(x)s | %(x)s ची भूमिका |
 | `Sc761ae` | user_detail, users | Set role | भूमिका ठरवा |
+| `S6ad9e8` | user_detail | The account has history (see above). Deleting it erases its name, address and password and removes it from the lists; what it did stays in the audit log and in the records, shown as a deleted user. Deactivating keeps the name. | खात्याचा इतिहास आहे (वर पहा). हटवल्यास त्याचे नाव, पत्ता आणि पासवर्ड पुसले जातात आणि ते याद्यांतून काढले जाते; त्याने जे केले ते ऑडिट लॉग आणि नोंदींमध्ये हटवलेला वापरकर्ता म्हणून दिसत राहते. निष्क्रिय केल्यास नाव राहते. |
 | `S44c2c4` | user_detail | These rows point at the account. They are history that must stay attributable, so the account can be deactivated but not deleted. | या ओळी खात्याकडे निर्देश करतात. हा इतिहास आहे जो जबाबदार राहिला पाहिजे, म्हणून खाते निष्क्रिय करता येते पण हटवता येत नाही. |
 | `Sdbc1fc` | user_detail | What this account has done | या खात्याने काय केले आहे |
 | `S525f61` | user_detail | Where | कुठे |
 | `Sd9f654` | user_detail, users | You cannot deactivate yourself here | तुम्ही येथे स्वतःला निष्क्रिय करू शकत नाही |
-| `S26d745` | user_detail | Your password | तुमचा पासवर्ड |
+| `S26d745` | user_detail, withdrawn_codes | Your password | तुमचा पासवर्ड |
 | `S3b803b` | users | Administrator only | फक्त प्रशासक |
 | `Scc6146` | users | Colour = level, red is the highest. As StCd Owner you may move a user between Viewer, Engineer and Reviewer; creating users and every other role needs an Administrator. | रंग = स्तर, लाल सर्वोच्च आहे. StCd मालक म्हणून तुम्ही वापरकर्त्याला दर्शक, अभियंता आणि पुनरावलोकक यांच्यात हलवू शकता; वापरकर्ते तयार करणे आणि इतर प्रत्येक भूमिकेसाठी प्रशासक लागतो. |
 | `Sd02137` | users | Colour = level, red is the highest. You may create users and give every role. | रंग = स्तर, लाल सर्वोच्च आहे. तुम्ही वापरकर्ते तयार करू शकता आणि प्रत्येक भूमिका देऊ शकता. |
@@ -6852,10 +6908,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sbcf8f1` | users | New password for %(x)s | %(x)s साठी नवीन पासवर्ड |
 | `S3fb75e` | users | Reset Password | पासवर्ड रीसेट करा |
 | `S5ca6e5` | users | User Management | वापरकर्ता व्यवस्थापन |
+| `Scfb147` | withdrawn_codes | A code whose change request was withdrawn stays as an empty shell: it keeps its number, legacy number and PrgIdx_GUi, so the same program or row cannot be imported again. Delete it here to free them. Deleting is final and is written to the audit log. | ज्या कोडची बदल विनंती मागे घेतली आहे तो रिकामे कवच म्हणून राहतो: तो आपला क्रमांक, जुना क्रमांक आणि PrgIdx_GUi राखतो, म्हणून तोच प्रोग्राम किंवा ओळ पुन्हा आयात करता येत नाही. ते मोकळे करण्यासाठी येथे हटवा. हटवणे अंतिम आहे आणि ऑडिट लॉगमध्ये नोंदवले जाते. |
+| `S8516a7` | withdrawn_codes | Delete selected | निवडलेले हटवा |
+| `Sdfeb06` | withdrawn_codes | No withdrawn codes. | मागे घेतलेला कोणताही कोड नाही. |
+| `S87ec0b` | withdrawn_codes | Withdrawn on | मागे घेतल्याची तारीख |
 
 ### 9.8 IN తెలుగు 🇮🇳 — Telugu
 
-1092 of 1093 strings translated; direction left to right.
+1102 of 1103 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -6957,6 +7017,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S8ad830` | base, detail, overview | Translations | అనువాదాలు |
 | `S1b9aeb` | base, dashboard | unread | చదవనివి |
 | `S57f2b1` | base | Users | వినియోగదారులు |
+| `S9fa05a` | base, withdrawn_codes | Withdrawn Codes | ఉపసంహరించిన కోడ్‌లు |
 | `Sd7a484` | base | Workflow | వర్క్‌ఫ్లో |
 | `S5a4692` | base | You are covering for a colleague | మీరు ఒక సహోద్యోగి స్థానంలో పనిచేస్తున్నారు |
 | `S8e9c15` | builder | Candidate revisions | అభ్యర్థి పునర్విమర్శలు |
@@ -6987,7 +7048,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S4105cf` | catalogue_health | exhausted | అయిపోయింది |
 | `S57e8be` | catalogue_health | Finding | కనుగొన్నది |
 | `S1150a1` | catalogue_health | Gaps | ఖాళీలు |
-| `S171a06` | catalogue_health | Group | గ్రూప్ |
+| `S171a06` | catalogue_health, withdrawn_codes | Group | గ్రూప్ |
 | `Sb4aadc` | catalogue_health, legacy_mapping | Hub Controller | హబ్ కంట్రోలర్ |
 | `S8ae1c3` | catalogue_health | Left | మిగిలినవి |
 | `S12c0f1` | catalogue_health | left | మిగిలినవి |
@@ -7006,7 +7067,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sfe5310` | catalogue_health | Probable inconsistencies | సంభావ్య అసంగతులు |
 | `Sa16c5b` | catalogue_health, lookups | Range | పరిధి |
 | `Sbae7d5` | catalogue_health, detail, list | Status | స్థితి |
-| `Sfe07e9` | catalogue_health | Subgroup | సబ్‌గ్రూప్ |
+| `Sfe07e9` | catalogue_health, withdrawn_codes | Subgroup | సబ్‌గ్రూప్ |
 | `S75a804` | catalogue_health | subgroup(s) are running out of numbers: | సబ్‌గ్రూప్‌లకు సంఖ్యలు అయిపోతున్నాయి: |
 | `S5fec4f` | catalogue_health | Unused numbers inside a band | బ్యాండ్‌లో వాడని సంఖ్యలు |
 | `S02c0e4` | catalogue_health | Used | వాడినవి |
@@ -7161,7 +7222,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S92d001` | detail | Item Count | అంశాల సంఖ్య |
 | `S7d2a7b` | detail | Justification | సమర్థన |
 | `S1481d0` | detail, form | latest | తాజా |
-| `S693272` | detail | Legacy Reference Number | పాత రిఫరెన్స్ సంఖ్య |
+| `S693272` | detail, withdrawn_codes | Legacy Reference Number | పాత రిఫరెన్స్ సంఖ్య |
 | `S43d5c5` | detail, form | Loadless Spinning Permitted | లోడ్ లేకుండా తిరగడం అనుమతించబడింది |
 | `S193786` | detail | Logical Node | లాజికల్ నోడ్ |
 | `S578b78` | detail | Main Controller group | ప్రధాన కంట్రోలర్ గ్రూప్ |
@@ -7242,7 +7303,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sd0edfb` | detail | Sales | అమ్మకాలు |
 | `Sda38c6` | detail | Save planned dates | ప్రణాళిక చేసిన తేదీలను సేవ్ చేయండి |
 | `S13c61c` | detail | Scope Filter | పరిధి ఫిల్టర్ |
-| `S859822` | detail, mine | Select | ఎంచుకోండి |
+| `S859822` | detail, mine, withdrawn_codes | Select | ఎంచుకోండి |
 | `S81448f` | detail, form | select | ఎంచుకోండి |
 | `S535bd8` | detail, form | Select a Functional System Group first | ముందుగా ఫంక్షనల్ సిస్టమ్ గ్రూప్ ఎంచుకోండి |
 | `S329cb8` | detail | Service | సర్వీస్ |
@@ -7424,10 +7485,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sa55a27` | help, index | Terms | పదాలు |
 | `S689b33` | help | The full manual is docs/23-user-manual.md in the project folder; the glossary below is the same one the tooltips use. | పూర్తి మాన్యువల్ ప్రాజెక్ట్ ఫోల్డర్‌లో docs/23-user-manual.md; క్రింది పదకోశం టూల్‌టిప్‌లు ఉపయోగించేదే. |
 | `S439914` | help | What happens next on a change request | మార్పు అభ్యర్థనపై తర్వాత ఏం జరుగుతుంది |
+| `S6d29d9` | help and messages | %(n)s withdrawn code(s) deleted. | %(n)s ఉపసంహరించిన కోడ్‌లు తొలగించబడ్డాయి. |
 | `Sb08e6c` | help and messages | A Reviewer and an Administrator each sign off (in any order). If either rejects, it goes back to the author. | ఒక సమీక్షకుడు మరియు ఒక నిర్వాహకుడు ఒక్కొక్కరు సైన్ ఆఫ్ చేస్తారు (ఏ క్రమంలోనైనా). ఎవరైనా తిరస్కరిస్తే అది రచయితకు తిరిగి వెళ్తుంది. |
 | `S2f1bed` | help and messages | An Administrator includes the revision in a Release and publishes it; then it is Released. | నిర్వాహకుడు పునర్విమర్శను విడుదలలో చేర్చి ప్రచురిస్తారు; అప్పుడు అది విడుదల చేసినదవుతుంది. |
+| `Sd856bd` | help and messages | Not deleted (it has a revision again or is still referenced): %(x)s | తొలగించలేదు (దానికి మళ్లీ సవరణ ఉంది లేదా ఇంకా సూచన ఉంది): %(x)s |
+| `S34b903` | help and messages | Not possible: the account has history (see above). Deactivate it instead; the person can no longer sign in and everything they did stays attributable. | సాధ్యం కాదు: ఖాతాకు చరిత్ర ఉంది (పైన చూడండి). బదులుగా నిష్క్రియం చేయండి; ఆ వ్యక్తి ఇక సైన్ ఇన్ చేయలేరు మరియు వారు చేసినదంతా బాధ్యతతో నిలిచి ఉంటుంది. |
 | `Sce489f` | help and messages | The author gets any required cross-domain sign-offs, then submits the change request for review. | రచయిత అవసరమైన క్రాస్-డొమైన్ సైన్-ఆఫ్‌లు పొంది, తర్వాత మార్పు అభ్యర్థనను సమీక్ష కోసం సమర్పిస్తారు. |
 | `S1cdbdd` | help and messages | The Chief Engineer approves or rejects. Approval makes the revision Approved (or Deprecated for a deprecation request). | చీఫ్ ఇంజనీర్ ఆమోదిస్తారు లేదా తిరస్కరిస్తారు. ఆమోదం పునర్విమర్శను ఆమోదించినదిగా (లేదా వాడుకలో లేని అభ్యర్థనకు వాడుకలో లేనిదిగా) చేస్తుంది. |
+| `Scff3a3` | help and messages | User deleted; its name and address are erased, what it did stays attributable. | వినియోగదారు తొలగించబడ్డారు; వారి పేరు, చిరునామా తుడిచివేయబడ్డాయి, వారు చేసినది ఆపాదించదగినదిగా ఉంటుంది. |
 | `Secfb3f` | hub_consolidation | Deprecate replaced Hub codes | ప్రత్యామ్నాయం ఉన్న హబ్ కోడ్‌లను వాడుకలో లేనివిగా ప్రకటించండి |
 | `S0e7766` | hub_consolidation, language | draft | ముసాయిదా |
 | `S4e7cfe` | hub_consolidation | Every Hub code is deprecated - the group can be deactivated under Lookups. | ప్రతి హబ్ కోడ్ వాడుకలో లేనిది - గ్రూప్‌ను లుకప్‌లలో నిష్క్రియం చేయవచ్చు. |
@@ -7700,6 +7765,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sa2ca0f` | message: status_code_service | An archived revision cannot be changed. | ఆర్కైవ్ చేసిన పునర్విమర్శను మార్చలేరు. |
 | `Sa57433` | message: status_code_service | An open Draft/Review/PendingApproval revision already exists (BR-003). | ముసాయిదా/సమీక్ష/ఆమోదం-పెండింగ్ స్థితిలో తెరిచిన పునర్విమర్శ ఇప్పటికే ఉంది (BR-003). |
 | `S64463a` | message: status_code_service | No DEPRECATE audit entry found; cannot verify retention period. | DEPRECATE ఆడిట్ నమోదు కనబడలేదు; నిలుపుదల కాలాన్ని ధృవీకరించలేరు. |
+| `Sf4e488` | message: status_code_service | Nothing selected: tick at least one withdrawn code. | ఏదీ ఎంచుకోలేదు: కనీసం ఒక ఉపసంహరించిన కోడ్‌ను టిక్ చేయండి. |
 | `S94fede` | message: status_code_service | Only a Deprecated Status Code can be archived. | వాడుకలో లేని స్థితి కోడ్‌ను మాత్రమే ఆర్కైవ్ చేయవచ్చు. |
 | `S96a1e5` | message: status_code_service | Only a Deprecated Status Code can be reinstated. | వాడుకలో లేని స్థితి కోడ్‌ను మాత్రమే పునఃస్థాపించవచ్చు. |
 | `S9211d8` | message: status_code_service | Only a Draft revision may be edited in place (FR-025). | ముసాయిదా పునర్విమర్శను మాత్రమే అక్కడికక్కడే సవరించవచ్చు (FR-025). |
@@ -7927,15 +7993,15 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S441e73` | user_detail | Engineering domains | ఇంజనీరింగ్ డొమైన్‌లు |
 | `Seeb692` | user_detail, users | Full name | పూర్తి పేరు |
 | `S263733` | user_detail | Last sign-in | చివరి సైన్-ఇన్ |
-| `S34b903` | user_detail | Not possible: the account has history (see above). Deactivate it instead; the person can no longer sign in and everything they did stays attributable. | సాధ్యం కాదు: ఖాతాకు చరిత్ర ఉంది (పైన చూడండి). బదులుగా నిష్క్రియం చేయండి; ఆ వ్యక్తి ఇక సైన్ ఇన్ చేయలేరు మరియు వారు చేసినదంతా బాధ్యతతో నిలిచి ఉంటుంది. |
 | `S57e34a` | user_detail | Nothing: the account has never been used, so it can be deleted. | ఏదీ లేదు: ఖాతా ఎప్పుడూ ఉపయోగించబడలేదు, కాబట్టి దాన్ని తొలగించవచ్చు. |
 | `S441acb` | user_detail, users | Role of %(x)s | %(x)s పాత్ర |
 | `Sc761ae` | user_detail, users | Set role | పాత్రను సెట్ చేయండి |
+| `S6ad9e8` | user_detail | The account has history (see above). Deleting it erases its name, address and password and removes it from the lists; what it did stays in the audit log and in the records, shown as a deleted user. Deactivating keeps the name. | ఖాతాకు చరిత్ర ఉంది (పైన చూడండి). తొలగిస్తే దాని పేరు, చిరునామా, పాస్‌వర్డ్ తుడిచివేయబడి జాబితాల నుండి తొలగించబడుతుంది; అది చేసినది ఆడిట్ లాగ్‌లో, రికార్డులలో తొలగించిన వినియోగదారుగా కనిపిస్తుంది. నిష్క్రియం చేస్తే పేరు ఉంటుంది. |
 | `S44c2c4` | user_detail | These rows point at the account. They are history that must stay attributable, so the account can be deactivated but not deleted. | ఈ వరుసలు ఖాతాను సూచిస్తాయి. ఇవి బాధ్యత వహించాల్సిన చరిత్ర, కాబట్టి ఖాతాను నిష్క్రియం చేయవచ్చు కానీ తొలగించలేరు. |
 | `Sdbc1fc` | user_detail | What this account has done | ఈ ఖాతా ఏం చేసింది |
 | `S525f61` | user_detail | Where | ఎక్కడ |
 | `Sd9f654` | user_detail, users | You cannot deactivate yourself here | మీరు ఇక్కడ మిమ్మల్ని నిష్క్రియం చేయలేరు |
-| `S26d745` | user_detail | Your password | మీ పాస్‌వర్డ్ |
+| `S26d745` | user_detail, withdrawn_codes | Your password | మీ పాస్‌వర్డ్ |
 | `S3b803b` | users | Administrator only | నిర్వాహకుడు మాత్రమే |
 | `Scc6146` | users | Colour = level, red is the highest. As StCd Owner you may move a user between Viewer, Engineer and Reviewer; creating users and every other role needs an Administrator. | రంగు = స్థాయి, ఎరుపు అత్యధికం. StCd యజమానిగా మీరు వినియోగదారుని వీక్షకుడు, ఇంజనీర్, సమీక్షకుడు మధ్య మార్చవచ్చు; వినియోగదారులను సృష్టించడం మరియు ప్రతి ఇతర పాత్రకు నిర్వాహకుడు అవసరం. |
 | `Sd02137` | users | Colour = level, red is the highest. You may create users and give every role. | రంగు = స్థాయి, ఎరుపు అత్యధికం. మీరు వినియోగదారులను సృష్టించవచ్చు మరియు ప్రతి పాత్రను ఇవ్వవచ్చు. |
@@ -7951,10 +8017,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sbcf8f1` | users | New password for %(x)s | %(x)s కోసం కొత్త పాస్‌వర్డ్ |
 | `S3fb75e` | users | Reset Password | పాస్‌వర్డ్ రీసెట్ చేయండి |
 | `S5ca6e5` | users | User Management | వినియోగదారుల నిర్వహణ |
+| `Scfb147` | withdrawn_codes | A code whose change request was withdrawn stays as an empty shell: it keeps its number, legacy number and PrgIdx_GUi, so the same program or row cannot be imported again. Delete it here to free them. Deleting is final and is written to the audit log. | మార్పు అభ్యర్థన ఉపసంహరించిన కోడ్ ఖాళీ గూడుగా మిగులుతుంది: అది తన సంఖ్య, పాత సంఖ్య, PrgIdx_GUi ను ఉంచుకుంటుంది, అందువల్ల అదే ప్రోగ్రామ్ లేదా అడ్డు వరస మళ్లీ దిగుమతి కాదు. వాటిని విడిపించడానికి ఇక్కడ తొలగించండి. తొలగింపు తుది నిర్ణయం మరియు ఆడిట్ లాగ్‌లో నమోదవుతుంది. |
+| `S8516a7` | withdrawn_codes | Delete selected | ఎంచుకున్నవి తొలగించండి |
+| `Sdfeb06` | withdrawn_codes | No withdrawn codes. | ఉపసంహరించిన కోడ్‌లు లేవు. |
+| `S87ec0b` | withdrawn_codes | Withdrawn on | ఉపసంహరించిన తేదీ |
 
 ### 9.9 IN தமிழ் 🇮🇳 — Tamil
 
-1092 of 1093 strings translated; direction left to right.
+1102 of 1103 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -8056,6 +8126,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S8ad830` | base, detail, overview | Translations | மொழிபெயர்ப்புகள் |
 | `S1b9aeb` | base, dashboard | unread | படிக்காதவை |
 | `S57f2b1` | base | Users | பயனர்கள் |
+| `S9fa05a` | base, withdrawn_codes | Withdrawn Codes | திரும்பப் பெற்ற குறியீடுகள் |
 | `Sd7a484` | base | Workflow | பணிப்பாய்வு |
 | `S5a4692` | base | You are covering for a colleague | நீங்கள் ஒரு சக ஊழியருக்குப் பதிலாகச் செயல்படுகிறீர்கள் |
 | `S8e9c15` | builder | Candidate revisions | வேட்பாளர் திருத்தங்கள் |
@@ -8086,7 +8157,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S4105cf` | catalogue_health | exhausted | தீர்ந்தது |
 | `S57e8be` | catalogue_health | Finding | கண்டுபிடிப்பு |
 | `S1150a1` | catalogue_health | Gaps | இடைவெளிகள் |
-| `S171a06` | catalogue_health | Group | குழு |
+| `S171a06` | catalogue_health, withdrawn_codes | Group | குழு |
 | `Sb4aadc` | catalogue_health, legacy_mapping | Hub Controller | ஹப் கட்டுப்படுத்தி |
 | `S8ae1c3` | catalogue_health | Left | மீதம் |
 | `S12c0f1` | catalogue_health | left | மீதி |
@@ -8105,7 +8176,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sfe5310` | catalogue_health | Probable inconsistencies | சாத்தியமான முரண்பாடுகள் |
 | `Sa16c5b` | catalogue_health, lookups | Range | வரம்பு |
 | `Sbae7d5` | catalogue_health, detail, list | Status | நிலை |
-| `Sfe07e9` | catalogue_health | Subgroup | துணைக் குழு |
+| `Sfe07e9` | catalogue_health, withdrawn_codes | Subgroup | துணைக் குழு |
 | `S75a804` | catalogue_health | subgroup(s) are running out of numbers: | துணைக் குழு(க்கள்) எண்கள் தீர்ந்து வருகின்றன: |
 | `S5fec4f` | catalogue_health | Unused numbers inside a band | பட்டைக்குள் பயன்படுத்தப்படாத எண்கள் |
 | `S02c0e4` | catalogue_health | Used | பயன்படுத்தியவை |
@@ -8260,7 +8331,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S92d001` | detail | Item Count | உருப்படிகளின் எண்ணிக்கை |
 | `S7d2a7b` | detail | Justification | நியாயப்படுத்தல் |
 | `S1481d0` | detail, form | latest | சமீபத்திய |
-| `S693272` | detail | Legacy Reference Number | பழைய குறிப்பு எண் |
+| `S693272` | detail, withdrawn_codes | Legacy Reference Number | பழைய குறிப்பு எண் |
 | `S43d5c5` | detail, form | Loadless Spinning Permitted | சுமையின்றிச் சுழல்வது அனுமதிக்கப்பட்டது |
 | `S193786` | detail | Logical Node | தருக்க முனை |
 | `S578b78` | detail | Main Controller group | முதன்மைக் கட்டுப்படுத்தி குழு |
@@ -8341,7 +8412,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sd0edfb` | detail | Sales | விற்பனை |
 | `Sda38c6` | detail | Save planned dates | திட்டமிட்ட தேதிகளைச் சேமி |
 | `S13c61c` | detail | Scope Filter | வரம்பு வடிகட்டி |
-| `S859822` | detail, mine | Select | தேர்ந்தெடு |
+| `S859822` | detail, mine, withdrawn_codes | Select | தேர்ந்தெடு |
 | `S81448f` | detail, form | select | தேர்ந்தெடு |
 | `S535bd8` | detail, form | Select a Functional System Group first | முதலில் செயல்பாட்டு அமைப்புக் குழுவைத் தேர்ந்தெடுங்கள் |
 | `S329cb8` | detail | Service | சேவை |
@@ -8523,10 +8594,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sa55a27` | help, index | Terms | சொற்கள் |
 | `S689b33` | help | The full manual is docs/23-user-manual.md in the project folder; the glossary below is the same one the tooltips use. | முழு கையேடு திட்டக் கோப்புறையில் docs/23-user-manual.md; கீழுள்ள சொற்களஞ்சியம் கருவிக்குறிப்புகள் பயன்படுத்துவதே. |
 | `S439914` | help | What happens next on a change request | மாற்றக் கோரிக்கைக்கு அடுத்து என்ன நடக்கும் |
+| `S6d29d9` | help and messages | %(n)s withdrawn code(s) deleted. | %(n)s திரும்பப் பெற்ற குறியீடுகள் நீக்கப்பட்டன. |
 | `Sb08e6c` | help and messages | A Reviewer and an Administrator each sign off (in any order). If either rejects, it goes back to the author. | ஒரு மதிப்பாய்வாளரும் ஒரு நிர்வாகியும் ஒவ்வொருவரும் கையொப்பமிடுகிறார்கள் (எந்த வரிசையிலும்). யாராவது நிராகரித்தால் அது ஆசிரியரிடம் திரும்பும். |
 | `S2f1bed` | help and messages | An Administrator includes the revision in a Release and publishes it; then it is Released. | நிர்வாகி திருத்தத்தை வெளியீட்டில் சேர்த்து வெளியிடுகிறார்; அப்போது அது வெளியிடப்பட்டதாகிறது. |
+| `Sd856bd` | help and messages | Not deleted (it has a revision again or is still referenced): %(x)s | நீக்கப்படவில்லை (அதற்கு மீண்டும் திருத்தம் உள்ளது அல்லது இன்னும் குறிப்பிடப்படுகிறது): %(x)s |
+| `S34b903` | help and messages | Not possible: the account has history (see above). Deactivate it instead; the person can no longer sign in and everything they did stays attributable. | சாத்தியமில்லை: கணக்குக்கு வரலாறு உள்ளது (மேலே பார்க்கவும்). அதற்குப் பதிலாகச் செயலிழக்கச் செய்யுங்கள்; அந்த நபர் இனி உள்நுழைய முடியாது, அவர் செய்தவை அனைத்தும் பொறுப்புடன் இருக்கும். |
 | `Sce489f` | help and messages | The author gets any required cross-domain sign-offs, then submits the change request for review. | ஆசிரியர் தேவையான துறைகள் கடந்த கையொப்பங்களைப் பெற்று, பின்னர் மாற்றக் கோரிக்கையை மதிப்பாய்வுக்குச் சமர்ப்பிக்கிறார். |
 | `S1cdbdd` | help and messages | The Chief Engineer approves or rejects. Approval makes the revision Approved (or Deprecated for a deprecation request). | தலைமைப் பொறியாளர் அங்கீகரிக்கிறார் அல்லது நிராகரிக்கிறார். அங்கீகாரம் திருத்தத்தை அங்கீகரிக்கப்பட்டதாக (அல்லது வழக்கொழிவுக் கோரிக்கைக்கு வழக்கொழிந்ததாக) மாற்றும். |
+| `Scff3a3` | help and messages | User deleted; its name and address are erased, what it did stays attributable. | பயனர் நீக்கப்பட்டார்; அவர் பெயரும் முகவரியும் அழிக்கப்பட்டன, அவர் செய்தவை அவருக்குரியவையாகவே இருக்கும். |
 | `Secfb3f` | hub_consolidation | Deprecate replaced Hub codes | மாற்றப்பட்ட ஹப் குறியீடுகளை வழக்கொழிந்ததாக அறிவி |
 | `S0e7766` | hub_consolidation, language | draft | வரைவு |
 | `S4e7cfe` | hub_consolidation | Every Hub code is deprecated - the group can be deactivated under Lookups. | ஒவ்வொரு ஹப் குறியீடும் வழக்கொழிந்தது - குழுவைத் தேடல் பட்டியல்களில் செயலிழக்கச் செய்யலாம். |
@@ -8799,6 +8874,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sa2ca0f` | message: status_code_service | An archived revision cannot be changed. | காப்பகப்படுத்தப்பட்ட திருத்தத்தை மாற்ற முடியாது. |
 | `Sa57433` | message: status_code_service | An open Draft/Review/PendingApproval revision already exists (BR-003). | வரைவு/மதிப்பாய்வு/ஒப்புதல் நிலுவை நிலையில் ஒரு திறந்த திருத்தம் ஏற்கனவே உள்ளது (BR-003). |
 | `S64463a` | message: status_code_service | No DEPRECATE audit entry found; cannot verify retention period. | DEPRECATE தணிக்கைப் பதிவு கிடைக்கவில்லை; தக்கவைப்புக் காலத்தைச் சரிபார்க்க முடியாது. |
+| `Sf4e488` | message: status_code_service | Nothing selected: tick at least one withdrawn code. | எதுவும் தேர்ந்தெடுக்கப்படவில்லை: குறைந்தது ஒரு திரும்பப் பெற்ற குறியீட்டைக் குறிக்கவும். |
 | `S94fede` | message: status_code_service | Only a Deprecated Status Code can be archived. | வழக்கொழிந்த நிலைக் குறியீட்டை மட்டுமே காப்பகப்படுத்த முடியும். |
 | `S96a1e5` | message: status_code_service | Only a Deprecated Status Code can be reinstated. | வழக்கொழிந்த நிலைக் குறியீட்டை மட்டுமே மீட்டெடுக்க முடியும். |
 | `S9211d8` | message: status_code_service | Only a Draft revision may be edited in place (FR-025). | வரைவுத் திருத்தத்தை மட்டுமே இடத்திலேயே திருத்த முடியும் (FR-025). |
@@ -9026,15 +9102,15 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S441e73` | user_detail | Engineering domains | பொறியியல் துறைகள் |
 | `Seeb692` | user_detail, users | Full name | முழுப் பெயர் |
 | `S263733` | user_detail | Last sign-in | கடைசி உள்நுழைவு |
-| `S34b903` | user_detail | Not possible: the account has history (see above). Deactivate it instead; the person can no longer sign in and everything they did stays attributable. | சாத்தியமில்லை: கணக்குக்கு வரலாறு உள்ளது (மேலே பார்க்கவும்). அதற்குப் பதிலாகச் செயலிழக்கச் செய்யுங்கள்; அந்த நபர் இனி உள்நுழைய முடியாது, அவர் செய்தவை அனைத்தும் பொறுப்புடன் இருக்கும். |
 | `S57e34a` | user_detail | Nothing: the account has never been used, so it can be deleted. | எதுவும் இல்லை: கணக்கு ஒருபோதும் பயன்படுத்தப்படவில்லை, எனவே நீக்கலாம். |
 | `S441acb` | user_detail, users | Role of %(x)s | %(x)s இன் பங்கு |
 | `Sc761ae` | user_detail, users | Set role | பங்கை அமை |
+| `S6ad9e8` | user_detail | The account has history (see above). Deleting it erases its name, address and password and removes it from the lists; what it did stays in the audit log and in the records, shown as a deleted user. Deactivating keeps the name. | கணக்கிற்கு வரலாறு உள்ளது (மேலே பார்க்க). நீக்கினால் அதன் பெயர், முகவரி, கடவுச்சொல் அழிக்கப்பட்டுப் பட்டியல்களிலிருந்து நீங்கும்; அது செய்தவை தணிக்கைப் பதிவிலும் பதிவுகளிலும் நீக்கப்பட்ட பயனராகத் தெரியும். செயலிழக்கச் செய்தால் பெயர் இருக்கும். |
 | `S44c2c4` | user_detail | These rows point at the account. They are history that must stay attributable, so the account can be deactivated but not deleted. | இந்த வரிசைகள் கணக்கைச் சுட்டுகின்றன. இது பொறுப்புடன் இருக்க வேண்டிய வரலாறு, எனவே கணக்கைச் செயலிழக்கச் செய்யலாம் ஆனால் நீக்க முடியாது. |
 | `Sdbc1fc` | user_detail | What this account has done | இந்தக் கணக்கு என்ன செய்தது |
 | `S525f61` | user_detail | Where | எங்கே |
 | `Sd9f654` | user_detail, users | You cannot deactivate yourself here | இங்கே உங்களை நீங்களே செயலிழக்கச் செய்ய முடியாது |
-| `S26d745` | user_detail | Your password | உங்கள் கடவுச்சொல் |
+| `S26d745` | user_detail, withdrawn_codes | Your password | உங்கள் கடவுச்சொல் |
 | `S3b803b` | users | Administrator only | நிர்வாகி மட்டும் |
 | `Scc6146` | users | Colour = level, red is the highest. As StCd Owner you may move a user between Viewer, Engineer and Reviewer; creating users and every other role needs an Administrator. | நிறம் = நிலை, சிவப்பு மிக உயர்ந்தது. StCd உரிமையாளராக நீங்கள் ஒரு பயனரைப் பார்வையாளர், பொறியாளர், மதிப்பாய்வாளர் இடையே நகர்த்தலாம்; பயனர்களை உருவாக்க, மற்ற ஒவ்வொரு பங்குக்கும் நிர்வாகி தேவை. |
 | `Sd02137` | users | Colour = level, red is the highest. You may create users and give every role. | நிறம் = நிலை, சிவப்பு மிக உயர்ந்தது. நீங்கள் பயனர்களை உருவாக்கலாம், ஒவ்வொரு பங்கையும் வழங்கலாம். |
@@ -9050,10 +9126,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sbcf8f1` | users | New password for %(x)s | %(x)s க்கான புதிய கடவுச்சொல் |
 | `S3fb75e` | users | Reset Password | கடவுச்சொல்லை மீட்டமை |
 | `S5ca6e5` | users | User Management | பயனர் மேலாண்மை |
+| `Scfb147` | withdrawn_codes | A code whose change request was withdrawn stays as an empty shell: it keeps its number, legacy number and PrgIdx_GUi, so the same program or row cannot be imported again. Delete it here to free them. Deleting is final and is written to the audit log. | மாற்றக் கோரிக்கை திரும்பப் பெறப்பட்ட குறியீடு வெற்று ஓடாக இருக்கும்: அது தன் எண், பழைய எண், PrgIdx_GUi ஆகியவற்றை வைத்திருக்கும்; அதனால் அதே நிரல் அல்லது வரியை மீண்டும் இறக்குமதி செய்ய முடியாது. அவற்றை விடுவிக்க இங்கே நீக்கவும். நீக்குதல் இறுதியானது; தணிக்கைப் பதிவில் எழுதப்படும். |
+| `S8516a7` | withdrawn_codes | Delete selected | தேர்ந்தெடுத்தவற்றை நீக்கு |
+| `Sdfeb06` | withdrawn_codes | No withdrawn codes. | திரும்பப் பெற்ற குறியீடுகள் இல்லை. |
+| `S87ec0b` | withdrawn_codes | Withdrawn on | திரும்பப் பெற்ற நாள் |
 
 ### 9.10 IN ગુજરાતી 🇮🇳 — Gujarati
 
-1092 of 1093 strings translated; direction left to right.
+1102 of 1103 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -9155,6 +9235,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S8ad830` | base, detail, overview | Translations | અનુવાદો |
 | `S1b9aeb` | base, dashboard | unread | વણવાંચેલા |
 | `S57f2b1` | base | Users | વપરાશકર્તાઓ |
+| `S9fa05a` | base, withdrawn_codes | Withdrawn Codes | પાછા ખેંચેલા કોડ |
 | `Sd7a484` | base | Workflow | કાર્યપ્રવાહ |
 | `S5a4692` | base | You are covering for a colleague | તમે એક સહકર્મીની જગ્યાએ કામ કરી રહ્યા છો |
 | `S8e9c15` | builder | Candidate revisions | ઉમેદવાર સુધારા |
@@ -9185,7 +9266,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S4105cf` | catalogue_health | exhausted | ખલાસ |
 | `S57e8be` | catalogue_health | Finding | તારણ |
 | `S1150a1` | catalogue_health | Gaps | ખાલી જગ્યાઓ |
-| `S171a06` | catalogue_health | Group | જૂથ |
+| `S171a06` | catalogue_health, withdrawn_codes | Group | જૂથ |
 | `Sb4aadc` | catalogue_health, legacy_mapping | Hub Controller | હબ નિયંત્રક |
 | `S8ae1c3` | catalogue_health | Left | બાકી |
 | `S12c0f1` | catalogue_health | left | બાકી |
@@ -9204,7 +9285,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sfe5310` | catalogue_health | Probable inconsistencies | સંભવિત અસંગતતાઓ |
 | `Sa16c5b` | catalogue_health, lookups | Range | શ્રેણી |
 | `Sbae7d5` | catalogue_health, detail, list | Status | સ્થિતિ |
-| `Sfe07e9` | catalogue_health | Subgroup | પેટાજૂથ |
+| `Sfe07e9` | catalogue_health, withdrawn_codes | Subgroup | પેટાજૂથ |
 | `S75a804` | catalogue_health | subgroup(s) are running out of numbers: | પેટાજૂથના નંબર ખૂટી રહ્યા છે: |
 | `S5fec4f` | catalogue_health | Unused numbers inside a band | પટ્ટાની અંદર ન વપરાયેલા નંબર |
 | `S02c0e4` | catalogue_health | Used | વપરાયેલ |
@@ -9359,7 +9440,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S92d001` | detail | Item Count | બાબતોની સંખ્યા |
 | `S7d2a7b` | detail | Justification | સમર્થન |
 | `S1481d0` | detail, form | latest | નવીનતમ |
-| `S693272` | detail | Legacy Reference Number | જૂનો સંદર્ભ નંબર |
+| `S693272` | detail, withdrawn_codes | Legacy Reference Number | જૂનો સંદર્ભ નંબર |
 | `S43d5c5` | detail, form | Loadless Spinning Permitted | ભાર વગર ફરવું માન્ય |
 | `S193786` | detail | Logical Node | લૉજિકલ નોડ |
 | `S578b78` | detail | Main Controller group | મુખ્ય નિયંત્રક જૂથ |
@@ -9440,7 +9521,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sd0edfb` | detail | Sales | વેચાણ |
 | `Sda38c6` | detail | Save planned dates | આયોજિત તારીખો સાચવો |
 | `S13c61c` | detail | Scope Filter | વ્યાપ ફિલ્ટર |
-| `S859822` | detail, mine | Select | પસંદ કરો |
+| `S859822` | detail, mine, withdrawn_codes | Select | પસંદ કરો |
 | `S81448f` | detail, form | select | પસંદ કરો |
 | `S535bd8` | detail, form | Select a Functional System Group first | પહેલાં કાર્યાત્મક સિસ્ટમ જૂથ પસંદ કરો |
 | `S329cb8` | detail | Service | સર્વિસ |
@@ -9622,10 +9703,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sa55a27` | help, index | Terms | શબ્દો |
 | `S689b33` | help | The full manual is docs/23-user-manual.md in the project folder; the glossary below is the same one the tooltips use. | સંપૂર્ણ માર્ગદર્શિકા પ્રોજેક્ટ ફોલ્ડરમાં docs/23-user-manual.md છે; નીચેનો શબ્દકોશ ટૂલટિપમાં વપરાય છે તે જ છે. |
 | `S439914` | help | What happens next on a change request | ફેરફાર વિનંતીનું આગળ શું થાય છે |
+| `S6d29d9` | help and messages | %(n)s withdrawn code(s) deleted. | %(n)s પાછા ખેંચેલા કોડ કાઢી નાખ્યા. |
 | `Sb08e6c` | help and messages | A Reviewer and an Administrator each sign off (in any order). If either rejects, it goes back to the author. | એક સમીક્ષક અને એક સંચાલક દરેક સાઇન ઑફ કરે છે (કોઈપણ ક્રમમાં). કોઈ નામંજૂર કરે તો તે લેખક પાસે પાછી જાય છે. |
 | `S2f1bed` | help and messages | An Administrator includes the revision in a Release and publishes it; then it is Released. | સંચાલક સુધારાને રિલીઝમાં સમાવી પ્રકાશિત કરે છે; ત્યારે તે પ્રકાશિત થાય છે. |
+| `Sd856bd` | help and messages | Not deleted (it has a revision again or is still referenced): %(x)s | કાઢ્યો નથી (તેની ફરી સુધારણા છે અથવા હજી સંદર્ભ છે): %(x)s |
+| `S34b903` | help and messages | Not possible: the account has history (see above). Deactivate it instead; the person can no longer sign in and everything they did stays attributable. | શક્ય નથી: એકાઉન્ટનો ઇતિહાસ છે (ઉપર જુઓ). તેના બદલે નિષ્ક્રિય કરો; વ્યક્તિ હવે સાઇન ઇન કરી શકશે નહીં અને તેણે જે કર્યું તે જવાબદાર રહે છે. |
 | `Sce489f` | help and messages | The author gets any required cross-domain sign-offs, then submits the change request for review. | લેખક જરૂરી આંતર-ક્ષેત્ર સાઇન-ઑફ મેળવે છે, પછી ફેરફાર વિનંતી સમીક્ષા માટે સબમિટ કરે છે. |
 | `S1cdbdd` | help and messages | The Chief Engineer approves or rejects. Approval makes the revision Approved (or Deprecated for a deprecation request). | મુખ્ય ઇજનેર મંજૂર અથવા નામંજૂર કરે છે. મંજૂરી સુધારાને મંજૂર (અથવા અપ્રચલન વિનંતી માટે અપ્રચલિત) બનાવે છે. |
+| `Scff3a3` | help and messages | User deleted; its name and address are erased, what it did stays attributable. | વપરાશકર્તા કાઢી નાખ્યો; તેનું નામ અને સરનામું ભૂંસાયા છે, તેણે જે કર્યું તે આરોપણીય રહે છે. |
 | `Secfb3f` | hub_consolidation | Deprecate replaced Hub codes | બદલાયેલા હબ કોડ અપ્રચલિત જાહેર કરો |
 | `S0e7766` | hub_consolidation, language | draft | મુસદ્દો |
 | `S4e7cfe` | hub_consolidation | Every Hub code is deprecated - the group can be deactivated under Lookups. | દરેક હબ કોડ અપ્રચલિત છે - જૂથ લુકઅપમાં નિષ્ક્રિય કરી શકાય. |
@@ -9898,6 +9983,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sa2ca0f` | message: status_code_service | An archived revision cannot be changed. | આર્કાઇવ કરેલો સુધારો બદલી શકાતો નથી. |
 | `Sa57433` | message: status_code_service | An open Draft/Review/PendingApproval revision already exists (BR-003). | મુસદ્દો/સમીક્ષા/મંજૂરી-બાકી સ્થિતિમાં એક ખુલ્લો સુધારો પહેલેથી છે (BR-003). |
 | `S64463a` | message: status_code_service | No DEPRECATE audit entry found; cannot verify retention period. | કોઈ DEPRECATE ઑડિટ નોંધ મળી નથી; જાળવણી સમય ચકાસી શકાતો નથી. |
+| `Sf4e488` | message: status_code_service | Nothing selected: tick at least one withdrawn code. | કશું પસંદ કર્યું નથી: ઓછામાં ઓછા એક પાછા ખેંચેલા કોડ પર નિશાન કરો. |
 | `S94fede` | message: status_code_service | Only a Deprecated Status Code can be archived. | ફક્ત અપ્રચલિત સ્ટેટસ કોડ આર્કાઇવ કરી શકાય. |
 | `S96a1e5` | message: status_code_service | Only a Deprecated Status Code can be reinstated. | ફક્ત અપ્રચલિત સ્ટેટસ કોડ પુનઃસ્થાપિત કરી શકાય. |
 | `S9211d8` | message: status_code_service | Only a Draft revision may be edited in place (FR-025). | ફક્ત મુસદ્દા સુધારાને સ્થળ પર સંપાદિત કરી શકાય (FR-025). |
@@ -10125,15 +10211,15 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S441e73` | user_detail | Engineering domains | ઇજનેરી ક્ષેત્રો |
 | `Seeb692` | user_detail, users | Full name | પૂરું નામ |
 | `S263733` | user_detail | Last sign-in | છેલ્લું સાઇન-ઇન |
-| `S34b903` | user_detail | Not possible: the account has history (see above). Deactivate it instead; the person can no longer sign in and everything they did stays attributable. | શક્ય નથી: એકાઉન્ટનો ઇતિહાસ છે (ઉપર જુઓ). તેના બદલે નિષ્ક્રિય કરો; વ્યક્તિ હવે સાઇન ઇન કરી શકશે નહીં અને તેણે જે કર્યું તે જવાબદાર રહે છે. |
 | `S57e34a` | user_detail | Nothing: the account has never been used, so it can be deleted. | કંઈ નહીં: એકાઉન્ટ ક્યારેય વપરાયું નથી, તેથી તેને કાઢી શકાય. |
 | `S441acb` | user_detail, users | Role of %(x)s | %(x)s ની ભૂમિકા |
 | `Sc761ae` | user_detail, users | Set role | ભૂમિકા નક્કી કરો |
+| `S6ad9e8` | user_detail | The account has history (see above). Deleting it erases its name, address and password and removes it from the lists; what it did stays in the audit log and in the records, shown as a deleted user. Deactivating keeps the name. | ખાતાનો ઇતિહાસ છે (ઉપર જુઓ). કાઢી નાખવાથી તેનું નામ, સરનામું અને પાસવર્ડ ભૂંસાય છે અને તે યાદીઓમાંથી દૂર થાય છે; તેણે જે કર્યું તે ઓડિટ લૉગ અને રેકોર્ડમાં કાઢી નાખેલા વપરાશકર્તા તરીકે દેખાય છે. નિષ્ક્રિય કરવાથી નામ રહે છે. |
 | `S44c2c4` | user_detail | These rows point at the account. They are history that must stay attributable, so the account can be deactivated but not deleted. | આ પંક્તિઓ એકાઉન્ટ તરફ નિર્દેશ કરે છે. તે ઇતિહાસ છે જે જવાબદાર રહેવો જોઈએ, તેથી એકાઉન્ટ નિષ્ક્રિય કરી શકાય પણ કાઢી શકાય નહીં. |
 | `Sdbc1fc` | user_detail | What this account has done | આ એકાઉન્ટે શું કર્યું છે |
 | `S525f61` | user_detail | Where | ક્યાં |
 | `Sd9f654` | user_detail, users | You cannot deactivate yourself here | તમે અહીં પોતાને નિષ્ક્રિય કરી શકતા નથી |
-| `S26d745` | user_detail | Your password | તમારો પાસવર્ડ |
+| `S26d745` | user_detail, withdrawn_codes | Your password | તમારો પાસવર્ડ |
 | `S3b803b` | users | Administrator only | ફક્ત સંચાલક |
 | `Scc6146` | users | Colour = level, red is the highest. As StCd Owner you may move a user between Viewer, Engineer and Reviewer; creating users and every other role needs an Administrator. | રંગ = સ્તર, લાલ સૌથી ઊંચો છે. StCd માલિક તરીકે તમે વપરાશકર્તાને દર્શક, ઇજનેર અને સમીક્ષક વચ્ચે ખસેડી શકો છો; વપરાશકર્તાઓ બનાવવા અને અન્ય દરેક ભૂમિકા માટે સંચાલક જોઈએ. |
 | `Sd02137` | users | Colour = level, red is the highest. You may create users and give every role. | રંગ = સ્તર, લાલ સૌથી ઊંચો છે. તમે વપરાશકર્તાઓ બનાવી શકો છો અને દરેક ભૂમિકા આપી શકો છો. |
@@ -10149,10 +10235,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sbcf8f1` | users | New password for %(x)s | %(x)s માટે નવો પાસવર્ડ |
 | `S3fb75e` | users | Reset Password | પાસવર્ડ રીસેટ કરો |
 | `S5ca6e5` | users | User Management | વપરાશકર્તા સંચાલન |
+| `Scfb147` | withdrawn_codes | A code whose change request was withdrawn stays as an empty shell: it keeps its number, legacy number and PrgIdx_GUi, so the same program or row cannot be imported again. Delete it here to free them. Deleting is final and is written to the audit log. | જે કોડની ફેરફાર વિનંતી પાછી ખેંચાઈ છે તે ખાલી કવચ તરીકે રહે છે: તે પોતાનો નંબર, જૂનો નંબર અને PrgIdx_GUi રાખે છે, તેથી એ જ પ્રોગ્રામ કે પંક્તિ ફરી આયાત થઈ શકતી નથી. તેમને મુક્ત કરવા અહીં કાઢી નાખો. કાઢી નાખવું અંતિમ છે અને ઓડિટ લૉગમાં નોંધાય છે. |
+| `S8516a7` | withdrawn_codes | Delete selected | પસંદ કરેલા કાઢી નાખો |
+| `Sdfeb06` | withdrawn_codes | No withdrawn codes. | પાછો ખેંચાયેલો કોઈ કોડ નથી. |
+| `S87ec0b` | withdrawn_codes | Withdrawn on | પાછું ખેંચ્યાની તારીખ |
 
 ### 9.11 PK اردو 🇵🇰 — Urdu
 
-1092 of 1093 strings translated; direction right to left.
+1102 of 1103 strings translated; direction right to left.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -10254,6 +10344,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S8ad830` | base, detail, overview | Translations | تراجم |
 | `S1b9aeb` | base, dashboard | unread | غیر پڑھے ہوئے |
 | `S57f2b1` | base | Users | صارفین |
+| `S9fa05a` | base, withdrawn_codes | Withdrawn Codes | واپس لیے گئے کوڈ |
 | `Sd7a484` | base | Workflow | ورک فلو |
 | `S5a4692` | base | You are covering for a colleague | آپ ایک ساتھی کی جگہ کام کر رہے ہیں |
 | `S8e9c15` | builder | Candidate revisions | امیدوار ترامیم |
@@ -10284,7 +10375,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S4105cf` | catalogue_health | exhausted | ختم |
 | `S57e8be` | catalogue_health | Finding | نتیجہ |
 | `S1150a1` | catalogue_health | Gaps | خلا |
-| `S171a06` | catalogue_health | Group | گروپ |
+| `S171a06` | catalogue_health, withdrawn_codes | Group | گروپ |
 | `Sb4aadc` | catalogue_health, legacy_mapping | Hub Controller | ہب کنٹرولر |
 | `S8ae1c3` | catalogue_health | Left | باقی |
 | `S12c0f1` | catalogue_health | left | باقی |
@@ -10303,7 +10394,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sfe5310` | catalogue_health | Probable inconsistencies | ممکنہ عدم مطابقتیں |
 | `Sa16c5b` | catalogue_health, lookups | Range | حد |
 | `Sbae7d5` | catalogue_health, detail, list | Status | حالت |
-| `Sfe07e9` | catalogue_health | Subgroup | ذیلی گروپ |
+| `Sfe07e9` | catalogue_health, withdrawn_codes | Subgroup | ذیلی گروپ |
 | `S75a804` | catalogue_health | subgroup(s) are running out of numbers: | ذیلی گروپ کے نمبر ختم ہو رہے ہیں: |
 | `S5fec4f` | catalogue_health | Unused numbers inside a band | پٹی کے اندر غیر استعمال شدہ نمبر |
 | `S02c0e4` | catalogue_health | Used | استعمال شدہ |
@@ -10458,7 +10549,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S92d001` | detail | Item Count | اشیاء کی تعداد |
 | `S7d2a7b` | detail | Justification | جواز |
 | `S1481d0` | detail, form | latest | تازہ ترین |
-| `S693272` | detail | Legacy Reference Number | پرانا حوالہ نمبر |
+| `S693272` | detail, withdrawn_codes | Legacy Reference Number | پرانا حوالہ نمبر |
 | `S43d5c5` | detail, form | Loadless Spinning Permitted | بغیر بوجھ گھومنا مجاز |
 | `S193786` | detail | Logical Node | منطقی نوڈ |
 | `S578b78` | detail | Main Controller group | مرکزی کنٹرولر گروپ |
@@ -10539,7 +10630,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sd0edfb` | detail | Sales | سیلز |
 | `Sda38c6` | detail | Save planned dates | منصوبہ بند تاریخیں محفوظ کریں |
 | `S13c61c` | detail | Scope Filter | دائرے کا فلٹر |
-| `S859822` | detail, mine | Select | منتخب کریں |
+| `S859822` | detail, mine, withdrawn_codes | Select | منتخب کریں |
 | `S81448f` | detail, form | select | منتخب کریں |
 | `S535bd8` | detail, form | Select a Functional System Group first | پہلے فنکشنل سسٹم گروپ منتخب کریں |
 | `S329cb8` | detail | Service | سروس |
@@ -10721,10 +10812,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sa55a27` | help, index | Terms | اصطلاحات |
 | `S689b33` | help | The full manual is docs/23-user-manual.md in the project folder; the glossary below is the same one the tooltips use. | مکمل دستی منصوبے کے فولڈر میں docs/23-user-manual.md ہے؛ نیچے کی لغت وہی ہے جو ٹول ٹپس میں استعمال ہوتی ہے۔ |
 | `S439914` | help | What happens next on a change request | تبدیلی کی درخواست پر آگے کیا ہوتا ہے |
+| `S6d29d9` | help and messages | %(n)s withdrawn code(s) deleted. | %(n)s واپس لیے گئے کوڈ حذف ہو گئے۔ |
 | `Sb08e6c` | help and messages | A Reviewer and an Administrator each sign off (in any order). If either rejects, it goes back to the author. | ایک جائزہ کار اور ایک منتظم ہر ایک سائن آف کرتا ہے (کسی بھی ترتیب سے)۔ اگر کوئی مسترد کرے تو وہ مصنف کے پاس واپس جاتی ہے۔ |
 | `S2f1bed` | help and messages | An Administrator includes the revision in a Release and publishes it; then it is Released. | منتظم ترمیم کو ریلیز میں شامل کر کے شائع کرتا ہے؛ تب وہ جاری شدہ ہو جاتی ہے۔ |
+| `Sd856bd` | help and messages | Not deleted (it has a revision again or is still referenced): %(x)s | حذف نہیں ہوا (اس کی دوبارہ ترمیم ہے یا اب بھی حوالہ موجود ہے): %(x)s |
+| `S34b903` | help and messages | Not possible: the account has history (see above). Deactivate it instead; the person can no longer sign in and everything they did stays attributable. | ممکن نہیں: اکاؤنٹ کی تاریخ ہے (اوپر دیکھیں)۔ اس کے بجائے غیر فعال کریں؛ وہ شخص اب سائن اِن نہیں کر سکتا اور اس نے جو کیا وہ قابلِ نسبت رہتا ہے۔ |
 | `Sce489f` | help and messages | The author gets any required cross-domain sign-offs, then submits the change request for review. | مصنف مطلوبہ بین الشعبہ سائن آف حاصل کرتا ہے، پھر تبدیلی کی درخواست جائزے کے لیے جمع کراتا ہے۔ |
 | `S1cdbdd` | help and messages | The Chief Engineer approves or rejects. Approval makes the revision Approved (or Deprecated for a deprecation request). | چیف انجینئر منظور یا مسترد کرتا ہے۔ منظوری ترمیم کو منظور شدہ (یا متروکیت کی درخواست کے لیے متروک) بنا دیتی ہے۔ |
+| `Scff3a3` | help and messages | User deleted; its name and address are erased, what it did stays attributable. | صارف حذف ہو گیا؛ اس کا نام اور پتا مٹا دیا گیا، جو اس نے کیا وہ اسی کے نام رہتا ہے۔ |
 | `Secfb3f` | hub_consolidation | Deprecate replaced Hub codes | تبدیل شدہ ہب کوڈ کو متروک قرار دیں |
 | `S0e7766` | hub_consolidation, language | draft | مسودہ |
 | `S4e7cfe` | hub_consolidation | Every Hub code is deprecated - the group can be deactivated under Lookups. | ہر ہب کوڈ متروک ہے - گروپ کو تلاش کی فہرستوں میں غیر فعال کیا جا سکتا ہے۔ |
@@ -10997,6 +11092,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sa2ca0f` | message: status_code_service | An archived revision cannot be changed. | آرکائیو شدہ ترمیم تبدیل نہیں کی جا سکتی۔ |
 | `Sa57433` | message: status_code_service | An open Draft/Review/PendingApproval revision already exists (BR-003). | مسودہ/جائزہ/منظوری-زیرِ التواء حالت میں ایک کھلی ترمیم پہلے سے موجود ہے (BR-003)۔ |
 | `S64463a` | message: status_code_service | No DEPRECATE audit entry found; cannot verify retention period. | کوئی DEPRECATE آڈٹ اندراج نہیں ملا؛ برقراری کی مدت کی تصدیق نہیں ہو سکتی۔ |
+| `Sf4e488` | message: status_code_service | Nothing selected: tick at least one withdrawn code. | کچھ منتخب نہیں: کم از کم ایک واپس لیے گئے کوڈ پر نشان لگائیں۔ |
 | `S94fede` | message: status_code_service | Only a Deprecated Status Code can be archived. | صرف متروک اسٹیٹس کوڈ آرکائیو کیا جا سکتا ہے۔ |
 | `S96a1e5` | message: status_code_service | Only a Deprecated Status Code can be reinstated. | صرف متروک اسٹیٹس کوڈ بحال کیا جا سکتا ہے۔ |
 | `S9211d8` | message: status_code_service | Only a Draft revision may be edited in place (FR-025). | صرف مسودہ ترمیم کو موقع پر ایڈٹ کیا جا سکتا ہے (FR-025)۔ |
@@ -11224,15 +11320,15 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S441e73` | user_detail | Engineering domains | انجینئرنگ ڈومینز |
 | `Seeb692` | user_detail, users | Full name | پورا نام |
 | `S263733` | user_detail | Last sign-in | آخری سائن اِن |
-| `S34b903` | user_detail | Not possible: the account has history (see above). Deactivate it instead; the person can no longer sign in and everything they did stays attributable. | ممکن نہیں: اکاؤنٹ کی تاریخ ہے (اوپر دیکھیں)۔ اس کے بجائے غیر فعال کریں؛ وہ شخص اب سائن اِن نہیں کر سکتا اور اس نے جو کیا وہ قابلِ نسبت رہتا ہے۔ |
 | `S57e34a` | user_detail | Nothing: the account has never been used, so it can be deleted. | کچھ نہیں: اکاؤنٹ کبھی استعمال نہیں ہوا، اس لیے اسے حذف کیا جا سکتا ہے۔ |
 | `S441acb` | user_detail, users | Role of %(x)s | %(x)s کا کردار |
 | `Sc761ae` | user_detail, users | Set role | کردار مقرر کریں |
+| `S6ad9e8` | user_detail | The account has history (see above). Deleting it erases its name, address and password and removes it from the lists; what it did stays in the audit log and in the records, shown as a deleted user. Deactivating keeps the name. | اکاؤنٹ کی تاریخ ہے (اوپر دیکھیں)۔ حذف کرنے سے اس کا نام، پتا اور پاس ورڈ مٹ جاتے ہیں اور وہ فہرستوں سے ہٹ جاتا ہے؛ جو اس نے کیا وہ آڈٹ لاگ اور ریکارڈ میں حذف شدہ صارف کے طور پر دکھایا جاتا ہے۔ غیر فعال کرنے سے نام رہتا ہے۔ |
 | `S44c2c4` | user_detail | These rows point at the account. They are history that must stay attributable, so the account can be deactivated but not deleted. | یہ سطریں اکاؤنٹ کی طرف اشارہ کرتی ہیں۔ یہ تاریخ ہے جو قابلِ نسبت رہنی چاہیے، اس لیے اکاؤنٹ غیر فعال ہو سکتا ہے مگر حذف نہیں۔ |
 | `Sdbc1fc` | user_detail | What this account has done | اس اکاؤنٹ نے کیا کیا ہے |
 | `S525f61` | user_detail | Where | کہاں |
 | `Sd9f654` | user_detail, users | You cannot deactivate yourself here | آپ یہاں خود کو غیر فعال نہیں کر سکتے |
-| `S26d745` | user_detail | Your password | آپ کا پاس ورڈ |
+| `S26d745` | user_detail, withdrawn_codes | Your password | آپ کا پاس ورڈ |
 | `S3b803b` | users | Administrator only | صرف منتظم |
 | `Scc6146` | users | Colour = level, red is the highest. As StCd Owner you may move a user between Viewer, Engineer and Reviewer; creating users and every other role needs an Administrator. | رنگ = سطح، سرخ سب سے اعلیٰ ہے۔ StCd مالک کے طور پر آپ کسی صارف کو ناظر، انجینئر اور جائزہ کار کے درمیان منتقل کر سکتے ہیں؛ صارفین بنانے اور ہر دوسرے کردار کے لیے منتظم درکار ہے۔ |
 | `Sd02137` | users | Colour = level, red is the highest. You may create users and give every role. | رنگ = سطح، سرخ سب سے اعلیٰ ہے۔ آپ صارفین بنا سکتے ہیں اور ہر کردار دے سکتے ہیں۔ |
@@ -11248,10 +11344,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sbcf8f1` | users | New password for %(x)s | %(x)s کے لیے نیا پاس ورڈ |
 | `S3fb75e` | users | Reset Password | پاس ورڈ ری سیٹ کریں |
 | `S5ca6e5` | users | User Management | صارفین کا انتظام |
+| `Scfb147` | withdrawn_codes | A code whose change request was withdrawn stays as an empty shell: it keeps its number, legacy number and PrgIdx_GUi, so the same program or row cannot be imported again. Delete it here to free them. Deleting is final and is written to the audit log. | جس کوڈ کی تبدیلی کی درخواست واپس لی گئی وہ خالی خول کے طور پر رہتا ہے: وہ اپنا نمبر، پرانا نمبر اور PrgIdx_GUi رکھتا ہے، اس لیے وہی پروگرام یا سطر دوبارہ درآمد نہیں ہو سکتی۔ انہیں آزاد کرنے کے لیے اسے یہاں حذف کریں۔ حذف کرنا حتمی ہے اور آڈٹ لاگ میں درج ہوتا ہے۔ |
+| `S8516a7` | withdrawn_codes | Delete selected | منتخب حذف کریں |
+| `Sdfeb06` | withdrawn_codes | No withdrawn codes. | کوئی واپس لیا گیا کوڈ نہیں۔ |
+| `S87ec0b` | withdrawn_codes | Withdrawn on | واپسی کی تاریخ |
 
 ### 9.12 IN ಕನ್ನಡ 🇮🇳 — Kannada
 
-1092 of 1093 strings translated; direction left to right.
+1102 of 1103 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -11353,6 +11453,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S8ad830` | base, detail, overview | Translations | ಅನುವಾದಗಳು |
 | `S1b9aeb` | base, dashboard | unread | ಓದದಿರುವ |
 | `S57f2b1` | base | Users | ಬಳಕೆದಾರರು |
+| `S9fa05a` | base, withdrawn_codes | Withdrawn Codes | ಹಿಂಪಡೆದ ಕೋಡ್‌ಗಳು |
 | `Sd7a484` | base | Workflow | ವರ್ಕ್‌ಫ್ಲೋ |
 | `S5a4692` | base | You are covering for a colleague | ನೀವು ಸಹೋದ್ಯೋಗಿಯ ಬದಲಿಗೆ ಕೆಲಸ ಮಾಡುತ್ತಿದ್ದೀರಿ |
 | `S8e9c15` | builder | Candidate revisions | ಅಭ್ಯರ್ಥಿ ಪರಿಷ್ಕರಣೆಗಳು |
@@ -11383,7 +11484,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S4105cf` | catalogue_health | exhausted | ಮುಗಿದಿದೆ |
 | `S57e8be` | catalogue_health | Finding | ಕಂಡುಕೊಂಡದ್ದು |
 | `S1150a1` | catalogue_health | Gaps | ಅಂತರಗಳು |
-| `S171a06` | catalogue_health | Group | ಗುಂಪು |
+| `S171a06` | catalogue_health, withdrawn_codes | Group | ಗುಂಪು |
 | `Sb4aadc` | catalogue_health, legacy_mapping | Hub Controller | ಹಬ್ ನಿಯಂತ್ರಕ |
 | `S8ae1c3` | catalogue_health | Left | ಉಳಿದ |
 | `S12c0f1` | catalogue_health | left | ಉಳಿದಿದೆ |
@@ -11402,7 +11503,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sfe5310` | catalogue_health | Probable inconsistencies | ಸಂಭವನೀಯ ಅಸಂಗತತೆಗಳು |
 | `Sa16c5b` | catalogue_health, lookups | Range | ವ್ಯಾಪ್ತಿ |
 | `Sbae7d5` | catalogue_health, detail, list | Status | ಸ್ಥಿತಿ |
-| `Sfe07e9` | catalogue_health | Subgroup | ಉಪಗುಂಪು |
+| `Sfe07e9` | catalogue_health, withdrawn_codes | Subgroup | ಉಪಗುಂಪು |
 | `S75a804` | catalogue_health | subgroup(s) are running out of numbers: | ಉಪಗುಂಪು(ಗಳಲ್ಲಿ) ಸಂಖ್ಯೆಗಳು ಮುಗಿಯುತ್ತಿವೆ: |
 | `S5fec4f` | catalogue_health | Unused numbers inside a band | ಪಟ್ಟಿಯೊಳಗೆ ಬಳಸದ ಸಂಖ್ಯೆಗಳು |
 | `S02c0e4` | catalogue_health | Used | ಬಳಸಿದ |
@@ -11557,7 +11658,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S92d001` | detail | Item Count | ಅಂಶಗಳ ಸಂಖ್ಯೆ |
 | `S7d2a7b` | detail | Justification | ಸಮರ್ಥನೆ |
 | `S1481d0` | detail, form | latest | ಇತ್ತೀಚಿನ |
-| `S693272` | detail | Legacy Reference Number | ಹಳೆಯ ಉಲ್ಲೇಖ ಸಂಖ್ಯೆ |
+| `S693272` | detail, withdrawn_codes | Legacy Reference Number | ಹಳೆಯ ಉಲ್ಲೇಖ ಸಂಖ್ಯೆ |
 | `S43d5c5` | detail, form | Loadless Spinning Permitted | ಹೊರೆರಹಿತ ತಿರುಗುವಿಕೆ ಅನುಮತಿಸಲಾಗಿದೆ |
 | `S193786` | detail | Logical Node | ತಾರ್ಕಿಕ ನೋಡ್ |
 | `S578b78` | detail | Main Controller group | ಮುಖ್ಯ ನಿಯಂತ್ರಕ ಗುಂಪು |
@@ -11638,7 +11739,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sd0edfb` | detail | Sales | ಮಾರಾಟ |
 | `Sda38c6` | detail | Save planned dates | ಯೋಜಿತ ದಿನಾಂಕಗಳನ್ನು ಉಳಿಸಿ |
 | `S13c61c` | detail | Scope Filter | ವ್ಯಾಪ್ತಿ ಫಿಲ್ಟರ್ |
-| `S859822` | detail, mine | Select | ಆಯ್ಕೆಮಾಡಿ |
+| `S859822` | detail, mine, withdrawn_codes | Select | ಆಯ್ಕೆಮಾಡಿ |
 | `S81448f` | detail, form | select | ಆಯ್ಕೆಮಾಡಿ |
 | `S535bd8` | detail, form | Select a Functional System Group first | ಮೊದಲು ಕ್ರಿಯಾತ್ಮಕ ವ್ಯವಸ್ಥೆ ಗುಂಪನ್ನು ಆಯ್ಕೆಮಾಡಿ |
 | `S329cb8` | detail | Service | ಸೇವೆ |
@@ -11820,10 +11921,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sa55a27` | help, index | Terms | ಪದಗಳು |
 | `S689b33` | help | The full manual is docs/23-user-manual.md in the project folder; the glossary below is the same one the tooltips use. | ಸಂಪೂರ್ಣ ಕೈಪಿಡಿ ಯೋಜನಾ ಫೋಲ್ಡರ್‌ನಲ್ಲಿ docs/23-user-manual.md ಆಗಿದೆ; ಕೆಳಗಿನ ಪದಕೋಶ ಟೂಲ್‌ಟಿಪ್‌ಗಳು ಬಳಸುವುದೇ. |
 | `S439914` | help | What happens next on a change request | ಬದಲಾವಣೆ ವಿನಂತಿಯಲ್ಲಿ ಮುಂದೆ ಏನಾಗುತ್ತದೆ |
+| `S6d29d9` | help and messages | %(n)s withdrawn code(s) deleted. | %(n)s ಹಿಂಪಡೆದ ಕೋಡ್‌ಗಳನ್ನು ಅಳಿಸಲಾಗಿದೆ. |
 | `Sb08e6c` | help and messages | A Reviewer and an Administrator each sign off (in any order). If either rejects, it goes back to the author. | ಒಬ್ಬ ಪರಿಶೀಲಕ ಮತ್ತು ಒಬ್ಬ ನಿರ್ವಾಹಕ ಪ್ರತಿಯೊಬ್ಬರೂ ಸಹಿ ಮಾಡುತ್ತಾರೆ (ಯಾವುದೇ ಕ್ರಮದಲ್ಲಿ). ಯಾರಾದರೂ ತಿರಸ್ಕರಿಸಿದರೆ ಅದು ಲೇಖಕರಿಗೆ ಹಿಂತಿರುಗುತ್ತದೆ. |
 | `S2f1bed` | help and messages | An Administrator includes the revision in a Release and publishes it; then it is Released. | ನಿರ್ವಾಹಕರು ಪರಿಷ್ಕರಣೆಯನ್ನು ಬಿಡುಗಡೆಗೆ ಸೇರಿಸಿ ಪ್ರಕಟಿಸುತ್ತಾರೆ; ನಂತರ ಅದು ಬಿಡುಗಡೆಯಾದದ್ದು. |
+| `Sd856bd` | help and messages | Not deleted (it has a revision again or is still referenced): %(x)s | ಅಳಿಸಲಿಲ್ಲ (ಅದಕ್ಕೆ ಮತ್ತೆ ಪರಿಷ್ಕರಣೆ ಇದೆ ಅಥವಾ ಇನ್ನೂ ಉಲ್ಲೇಖವಿದೆ): %(x)s |
+| `S34b903` | help and messages | Not possible: the account has history (see above). Deactivate it instead; the person can no longer sign in and everything they did stays attributable. | ಸಾಧ್ಯವಿಲ್ಲ: ಖಾತೆಗೆ ಇತಿಹಾಸವಿದೆ (ಮೇಲೆ ನೋಡಿ). ಬದಲಿಗೆ ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಿ; ವ್ಯಕ್ತಿ ಇನ್ನು ಸೈನ್ ಇನ್ ಮಾಡಲಾರರು ಮತ್ತು ಅವರು ಮಾಡಿದ್ದೆಲ್ಲವೂ ಗುರುತಿಸಬಹುದಾದಂತೆಯೇ ಉಳಿಯುತ್ತದೆ. |
 | `Sce489f` | help and messages | The author gets any required cross-domain sign-offs, then submits the change request for review. | ಲೇಖಕರು ಅಗತ್ಯ ಅಂತರ-ಡೊಮೇನ್ ಸಹಿಗಳನ್ನು ಪಡೆದು, ನಂತರ ಬದಲಾವಣೆ ವಿನಂತಿಯನ್ನು ಪರಿಶೀಲನೆಗೆ ಸಲ್ಲಿಸುತ್ತಾರೆ. |
 | `S1cdbdd` | help and messages | The Chief Engineer approves or rejects. Approval makes the revision Approved (or Deprecated for a deprecation request). | ಮುಖ್ಯ ಎಂಜಿನಿಯರ್ ಅನುಮೋದಿಸುತ್ತಾರೆ ಅಥವಾ ತಿರಸ್ಕರಿಸುತ್ತಾರೆ. ಅನುಮೋದನೆಯು ಪರಿಷ್ಕರಣೆಯನ್ನು ಅನುಮೋದಿತ (ಅಥವಾ ಹಳತಾಗಿಸುವ ವಿನಂತಿಗೆ ಹಳತಾದ) ಮಾಡುತ್ತದೆ. |
+| `Scff3a3` | help and messages | User deleted; its name and address are erased, what it did stays attributable. | ಬಳಕೆದಾರರನ್ನು ಅಳಿಸಲಾಗಿದೆ; ಅವರ ಹೆಸರು ಮತ್ತು ವಿಳಾಸ ಅಳಿಸಲ್ಪಟ್ಟಿವೆ, ಅವರು ಮಾಡಿದ್ದು ಆರೋಪಿಸಬಹುದಾದಂತೆ ಉಳಿಯುತ್ತದೆ. |
 | `Secfb3f` | hub_consolidation | Deprecate replaced Hub codes | ಬದಲಾಯಿಸಿದ ಹಬ್ ಕೋಡ್‌ಗಳನ್ನು ಹಳತಾಗಿಸಿ |
 | `S0e7766` | hub_consolidation, language | draft | ಕರಡು |
 | `S4e7cfe` | hub_consolidation | Every Hub code is deprecated - the group can be deactivated under Lookups. | ಪ್ರತಿ ಹಬ್ ಕೋಡ್ ಹಳತಾಗಿದೆ - ಗುಂಪನ್ನು ಲುಕ್‌ಅಪ್‌ಗಳಲ್ಲಿ ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಬಹುದು. |
@@ -12096,6 +12201,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sa2ca0f` | message: status_code_service | An archived revision cannot be changed. | ಆರ್ಕೈವ್ ಮಾಡಿದ ಪರಿಷ್ಕರಣೆಯನ್ನು ಬದಲಿಸಲಾಗದು. |
 | `Sa57433` | message: status_code_service | An open Draft/Review/PendingApproval revision already exists (BR-003). | ತೆರೆದ ಕರಡು/ಪರಿಶೀಲನೆ/ಅನುಮೋದನೆ-ಬಾಕಿ ಪರಿಷ್ಕರಣೆ ಈಗಾಗಲೇ ಇದೆ (BR-003). |
 | `S64463a` | message: status_code_service | No DEPRECATE audit entry found; cannot verify retention period. | DEPRECATE ಲೆಕ್ಕಪರಿಶೋಧನಾ ದಾಖಲೆ ಸಿಗಲಿಲ್ಲ; ಉಳಿಸಿಕೊಳ್ಳುವ ಅವಧಿ ಪರಿಶೀಲಿಸಲಾಗದು. |
+| `Sf4e488` | message: status_code_service | Nothing selected: tick at least one withdrawn code. | ಏನೂ ಆಯ್ಕೆಯಾಗಿಲ್ಲ: ಕನಿಷ್ಠ ಒಂದು ಹಿಂಪಡೆದ ಕೋಡ್ ಗುರುತಿಸಿ. |
 | `S94fede` | message: status_code_service | Only a Deprecated Status Code can be archived. | ಹಳತಾದ ಸ್ಥಿತಿ ಕೋಡ್ ಅನ್ನು ಮಾತ್ರ ಆರ್ಕೈವ್ ಮಾಡಬಹುದು. |
 | `S96a1e5` | message: status_code_service | Only a Deprecated Status Code can be reinstated. | ಹಳತಾದ ಸ್ಥಿತಿ ಕೋಡ್ ಅನ್ನು ಮಾತ್ರ ಮರುಸ್ಥಾಪಿಸಬಹುದು. |
 | `S9211d8` | message: status_code_service | Only a Draft revision may be edited in place (FR-025). | ಕರಡು ಪರಿಷ್ಕರಣೆಯನ್ನು ಮಾತ್ರ ಅಲ್ಲೇ ಸಂಪಾದಿಸಬಹುದು (FR-025). |
@@ -12323,15 +12429,15 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S441e73` | user_detail | Engineering domains | ಎಂಜಿನಿಯರಿಂಗ್ ಡೊಮೇನ್‌ಗಳು |
 | `Seeb692` | user_detail, users | Full name | ಪೂರ್ಣ ಹೆಸರು |
 | `S263733` | user_detail | Last sign-in | ಕೊನೆಯ ಸೈನ್-ಇನ್ |
-| `S34b903` | user_detail | Not possible: the account has history (see above). Deactivate it instead; the person can no longer sign in and everything they did stays attributable. | ಸಾಧ್ಯವಿಲ್ಲ: ಖಾತೆಗೆ ಇತಿಹಾಸವಿದೆ (ಮೇಲೆ ನೋಡಿ). ಬದಲಿಗೆ ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಿ; ವ್ಯಕ್ತಿ ಇನ್ನು ಸೈನ್ ಇನ್ ಮಾಡಲಾರರು ಮತ್ತು ಅವರು ಮಾಡಿದ್ದೆಲ್ಲವೂ ಗುರುತಿಸಬಹುದಾದಂತೆಯೇ ಉಳಿಯುತ್ತದೆ. |
 | `S57e34a` | user_detail | Nothing: the account has never been used, so it can be deleted. | ಏನೂ ಇಲ್ಲ: ಖಾತೆಯನ್ನು ಎಂದೂ ಬಳಸಿಲ್ಲ, ಆದ್ದರಿಂದ ಅದನ್ನು ಅಳಿಸಬಹುದು. |
 | `S441acb` | user_detail, users | Role of %(x)s | %(x)s ನ ಪಾತ್ರ |
 | `Sc761ae` | user_detail, users | Set role | ಪಾತ್ರ ಹೊಂದಿಸಿ |
+| `S6ad9e8` | user_detail | The account has history (see above). Deleting it erases its name, address and password and removes it from the lists; what it did stays in the audit log and in the records, shown as a deleted user. Deactivating keeps the name. | ಖಾತೆಗೆ ಇತಿಹಾಸವಿದೆ (ಮೇಲೆ ನೋಡಿ). ಅಳಿಸಿದರೆ ಅದರ ಹೆಸರು, ವಿಳಾಸ ಮತ್ತು ಪಾಸ್‌ವರ್ಡ್ ಅಳಿಸಲ್ಪಟ್ಟು ಪಟ್ಟಿಗಳಿಂದ ತೆಗೆಯಲ್ಪಡುತ್ತದೆ; ಅದು ಮಾಡಿದ್ದು ಲೆಕ್ಕಪರಿಶೋಧನಾ ಲಾಗ್ ಮತ್ತು ದಾಖಲೆಗಳಲ್ಲಿ ಅಳಿಸಿದ ಬಳಕೆದಾರರಾಗಿ ತೋರುತ್ತದೆ. ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಿದರೆ ಹೆಸರು ಉಳಿಯುತ್ತದೆ. |
 | `S44c2c4` | user_detail | These rows point at the account. They are history that must stay attributable, so the account can be deactivated but not deleted. | ಈ ಸಾಲುಗಳು ಖಾತೆಯನ್ನು ಸೂಚಿಸುತ್ತವೆ. ಇದು ಗುರುತಿಸಬಹುದಾದಂತೆಯೇ ಉಳಿಯಬೇಕಾದ ಇತಿಹಾಸ, ಆದ್ದರಿಂದ ಖಾತೆಯನ್ನು ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಬಹುದು ಆದರೆ ಅಳಿಸಲಾಗದು. |
 | `Sdbc1fc` | user_detail | What this account has done | ಈ ಖಾತೆ ಏನು ಮಾಡಿದೆ |
 | `S525f61` | user_detail | Where | ಎಲ್ಲಿ |
 | `Sd9f654` | user_detail, users | You cannot deactivate yourself here | ನೀವು ಇಲ್ಲಿ ನಿಮ್ಮನ್ನು ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಲಾಗದು |
-| `S26d745` | user_detail | Your password | ನಿಮ್ಮ ಪಾಸ್‌ವರ್ಡ್ |
+| `S26d745` | user_detail, withdrawn_codes | Your password | ನಿಮ್ಮ ಪಾಸ್‌ವರ್ಡ್ |
 | `S3b803b` | users | Administrator only | ನಿರ್ವಾಹಕರಿಗೆ ಮಾತ್ರ |
 | `Scc6146` | users | Colour = level, red is the highest. As StCd Owner you may move a user between Viewer, Engineer and Reviewer; creating users and every other role needs an Administrator. | ಬಣ್ಣ = ಮಟ್ಟ, ಕೆಂಪು ಅತ್ಯುನ್ನತ. StCd ಮಾಲೀಕರಾಗಿ ನೀವು ಬಳಕೆದಾರರನ್ನು ವೀಕ್ಷಕ, ಎಂಜಿನಿಯರ್ ಮತ್ತು ಪರಿಶೀಲಕರ ನಡುವೆ ಸರಿಸಬಹುದು; ಬಳಕೆದಾರರನ್ನು ರಚಿಸಲು ಮತ್ತು ಇತರ ಪ್ರತಿ ಪಾತ್ರಕ್ಕೂ ನಿರ್ವಾಹಕ ಬೇಕು. |
 | `Sd02137` | users | Colour = level, red is the highest. You may create users and give every role. | ಬಣ್ಣ = ಮಟ್ಟ, ಕೆಂಪು ಅತ್ಯುನ್ನತ. ನೀವು ಬಳಕೆದಾರರನ್ನು ರಚಿಸಬಹುದು ಮತ್ತು ಪ್ರತಿ ಪಾತ್ರವನ್ನು ನೀಡಬಹುದು. |
@@ -12347,10 +12453,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sbcf8f1` | users | New password for %(x)s | %(x)s ಗಾಗಿ ಹೊಸ ಪಾಸ್‌ವರ್ಡ್ |
 | `S3fb75e` | users | Reset Password | ಪಾಸ್‌ವರ್ಡ್ ಮರುಹೊಂದಿಸಿ |
 | `S5ca6e5` | users | User Management | ಬಳಕೆದಾರ ನಿರ್ವಹಣೆ |
+| `Scfb147` | withdrawn_codes | A code whose change request was withdrawn stays as an empty shell: it keeps its number, legacy number and PrgIdx_GUi, so the same program or row cannot be imported again. Delete it here to free them. Deleting is final and is written to the audit log. | ಬದಲಾವಣೆ ವಿನಂತಿ ಹಿಂಪಡೆದ ಕೋಡ್ ಖಾಲಿ ಚಿಪ್ಪಾಗಿ ಉಳಿಯುತ್ತದೆ: ಅದು ತನ್ನ ಸಂಖ್ಯೆ, ಹಳೆಯ ಸಂಖ್ಯೆ ಮತ್ತು PrgIdx_GUi ಅನ್ನು ಇಟ್ಟುಕೊಳ್ಳುತ್ತದೆ, ಆದ್ದರಿಂದ ಅದೇ ಪ್ರೋಗ್ರಾಂ ಅಥವಾ ಸಾಲನ್ನು ಮತ್ತೆ ಆಮದು ಮಾಡಲಾಗದು. ಅವನ್ನು ಮುಕ್ತಗೊಳಿಸಲು ಇಲ್ಲಿ ಅಳಿಸಿ. ಅಳಿಸುವಿಕೆ ಅಂತಿಮ ಮತ್ತು ಲೆಕ್ಕಪರಿಶೋಧನಾ ಲಾಗ್‌ನಲ್ಲಿ ದಾಖಲಾಗುತ್ತದೆ. |
+| `S8516a7` | withdrawn_codes | Delete selected | ಆಯ್ದವನ್ನು ಅಳಿಸಿ |
+| `Sdfeb06` | withdrawn_codes | No withdrawn codes. | ಹಿಂಪಡೆದ ಕೋಡ್‌ಗಳಿಲ್ಲ. |
+| `S87ec0b` | withdrawn_codes | Withdrawn on | ಹಿಂಪಡೆದ ದಿನಾಂಕ |
 
 ### 9.13 IN ଓଡ଼ିଆ 🇮🇳 — Odia
 
-1092 of 1093 strings translated; direction left to right.
+1102 of 1103 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -12452,6 +12562,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S8ad830` | base, detail, overview | Translations | ଅନୁବାଦ |
 | `S1b9aeb` | base, dashboard | unread | ଅପଠିତ |
 | `S57f2b1` | base | Users | ବ୍ୟବହାରକାରୀ |
+| `S9fa05a` | base, withdrawn_codes | Withdrawn Codes | ପ୍ରତ୍ୟାହୃତ କୋଡ୍ |
 | `Sd7a484` | base | Workflow | କାର୍ଯ୍ୟପ୍ରବାହ |
 | `S5a4692` | base | You are covering for a colleague | ଆପଣ ଜଣେ ସହକର୍ମୀଙ୍କ ବଦଳରେ କାମ କରୁଛନ୍ତି |
 | `S8e9c15` | builder | Candidate revisions | ପ୍ରାର୍ଥୀ ସଂସ୍କରଣ |
@@ -12482,7 +12593,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S4105cf` | catalogue_health | exhausted | ଶେଷ |
 | `S57e8be` | catalogue_health | Finding | ଉପଲବ୍ଧି |
 | `S1150a1` | catalogue_health | Gaps | ଫାଙ୍କ |
-| `S171a06` | catalogue_health | Group | ଗୋଷ୍ଠୀ |
+| `S171a06` | catalogue_health, withdrawn_codes | Group | ଗୋଷ୍ଠୀ |
 | `Sb4aadc` | catalogue_health, legacy_mapping | Hub Controller | ହବ୍ ନିୟନ୍ତ୍ରକ |
 | `S8ae1c3` | catalogue_health | Left | ବାକି |
 | `S12c0f1` | catalogue_health | left | ବାକି |
@@ -12501,7 +12612,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sfe5310` | catalogue_health | Probable inconsistencies | ସମ୍ଭାବ୍ୟ ଅସଙ୍ଗତି |
 | `Sa16c5b` | catalogue_health, lookups | Range | ପରିସର |
 | `Sbae7d5` | catalogue_health, detail, list | Status | ଅବସ୍ଥା |
-| `Sfe07e9` | catalogue_health | Subgroup | ଉପଗୋଷ୍ଠୀ |
+| `Sfe07e9` | catalogue_health, withdrawn_codes | Subgroup | ଉପଗୋଷ୍ଠୀ |
 | `S75a804` | catalogue_health | subgroup(s) are running out of numbers: | ଉପଗୋଷ୍ଠୀରେ ସଂଖ୍ୟା ଶେଷ ହେଉଛି: |
 | `S5fec4f` | catalogue_health | Unused numbers inside a band | ପଟ୍ଟି ଭିତରେ ଅବ୍ୟବହୃତ ସଂଖ୍ୟା |
 | `S02c0e4` | catalogue_health | Used | ବ୍ୟବହୃତ |
@@ -12656,7 +12767,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S92d001` | detail | Item Count | ବିନ୍ଦୁ ସଂଖ୍ୟା |
 | `S7d2a7b` | detail | Justification | ଯଥାର୍ଥତା |
 | `S1481d0` | detail, form | latest | ସାମ୍ପ୍ରତିକ |
-| `S693272` | detail | Legacy Reference Number | ପୁରୁଣା ସନ୍ଦର୍ଭ ସଂଖ୍ୟା |
+| `S693272` | detail, withdrawn_codes | Legacy Reference Number | ପୁରୁଣା ସନ୍ଦର୍ଭ ସଂଖ୍ୟା |
 | `S43d5c5` | detail, form | Loadless Spinning Permitted | ଭାରହୀନ ଘୂର୍ଣ୍ଣନ ଅନୁମତିପ୍ରାପ୍ତ |
 | `S193786` | detail | Logical Node | ତାର୍କିକ ନୋଡ୍ |
 | `S578b78` | detail | Main Controller group | ମୁଖ୍ୟ ନିୟନ୍ତ୍ରକ ଗୋଷ୍ଠୀ |
@@ -12737,7 +12848,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sd0edfb` | detail | Sales | ବିକ୍ରୟ |
 | `Sda38c6` | detail | Save planned dates | ଯୋଜନାବଦ୍ଧ ତାରିଖ ସଞ୍ଚୟ କରନ୍ତୁ |
 | `S13c61c` | detail | Scope Filter | ପରିସର ଫିଲ୍ଟର୍ |
-| `S859822` | detail, mine | Select | ବାଛନ୍ତୁ |
+| `S859822` | detail, mine, withdrawn_codes | Select | ବାଛନ୍ତୁ |
 | `S81448f` | detail, form | select | ବାଛନ୍ତୁ |
 | `S535bd8` | detail, form | Select a Functional System Group first | ପ୍ରଥମେ କାର୍ଯ୍ୟକ୍ଷମ ସିଷ୍ଟମ୍ ଗୋଷ୍ଠୀ ବାଛନ୍ତୁ |
 | `S329cb8` | detail | Service | ସେବା |
@@ -12919,10 +13030,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sa55a27` | help, index | Terms | ଶବ୍ଦ |
 | `S689b33` | help | The full manual is docs/23-user-manual.md in the project folder; the glossary below is the same one the tooltips use. | ସମ୍ପୂର୍ଣ୍ଣ ମାନୁଆଲ୍ ପ୍ରୋଜେକ୍ଟ ଫୋଲ୍ଡରରେ docs/23-user-manual.md; ତଳ ଶବ୍ଦାବଳୀ ଟୁଲଟିପ୍ ବ୍ୟବହାର କରୁଥିବା ସେହି ଶବ୍ଦାବଳୀ। |
 | `S439914` | help | What happens next on a change request | ପରିବର୍ତ୍ତନ ଅନୁରୋଧରେ ପରେ କ’ଣ ହୁଏ |
+| `S6d29d9` | help and messages | %(n)s withdrawn code(s) deleted. | %(n)s ପ୍ରତ୍ୟାହୃତ କୋଡ୍ ଲିଭାଯାଇଛି। |
 | `Sb08e6c` | help and messages | A Reviewer and an Administrator each sign off (in any order). If either rejects, it goes back to the author. | ଜଣେ ସମୀକ୍ଷକ ଓ ଜଣେ ପ୍ରଶାସକ ପ୍ରତ୍ୟେକେ ସ୍ୱାକ୍ଷର କରନ୍ତି (ଯେକୌଣସି କ୍ରମରେ)। ଯେକେହି ପ୍ରତ୍ୟାଖ୍ୟାନ କଲେ ଏହା ଲେଖକଙ୍କ ନିକଟକୁ ଫେରେ। |
 | `S2f1bed` | help and messages | An Administrator includes the revision in a Release and publishes it; then it is Released. | ପ୍ରଶାସକ ସଂସ୍କରଣକୁ ରିଲିଜ୍‌ରେ ଅନ୍ତର୍ଭୁକ୍ତ କରି ପ୍ରକାଶ କରନ୍ତି; ତା’ପରେ ଏହା ମୁକ୍ତ ହୁଏ। |
+| `Sd856bd` | help and messages | Not deleted (it has a revision again or is still referenced): %(x)s | ଲିଭାଯାଇନାହିଁ (ଏହାର ପୁଣି ସଂସ୍କରଣ ଅଛି ବା ଏବେ ବି ସୂଚିତ): %(x)s |
+| `S34b903` | help and messages | Not possible: the account has history (see above). Deactivate it instead; the person can no longer sign in and everything they did stays attributable. | ସମ୍ଭବ ନୁହେଁ: ଖାତାର ଇତିହାସ ଅଛି (ଉପରେ ଦେଖନ୍ତୁ)। ବଦଳରେ ନିଷ୍କ୍ରିୟ କରନ୍ତୁ; ବ୍ୟକ୍ତି ଆଉ ସାଇନ୍ ଇନ୍ କରିପାରିବେ ନାହିଁ ଏବଂ ସେମାନେ ଯାହା କରିଛନ୍ତି ତାହା ଚିହ୍ନଟଯୋଗ୍ୟ ରହେ। |
 | `Sce489f` | help and messages | The author gets any required cross-domain sign-offs, then submits the change request for review. | ଲେଖକ ଆବଶ୍ୟକ ଆନ୍ତଃ-ଡୋମେନ୍ ସ୍ୱାକ୍ଷର ପାଆନ୍ତି, ତା’ପରେ ପରିବର୍ତ୍ତନ ଅନୁରୋଧ ସମୀକ୍ଷା ପାଇଁ ଦାଖଲ କରନ୍ତି। |
 | `S1cdbdd` | help and messages | The Chief Engineer approves or rejects. Approval makes the revision Approved (or Deprecated for a deprecation request). | ମୁଖ୍ୟ ଇଞ୍ଜିନିୟର ଅନୁମୋଦନ ବା ପ୍ରତ୍ୟାଖ୍ୟାନ କରନ୍ତି। ଅନୁମୋଦନ ସଂସ୍କରଣକୁ ଅନୁମୋଦିତ (ବା ପ୍ରଚଳନ ବନ୍ଦ ଅନୁରୋଧ ପାଇଁ ପ୍ରଚଳନ ବନ୍ଦ) କରେ। |
+| `Scff3a3` | help and messages | User deleted; its name and address are erased, what it did stays attributable. | ଉପଯୋଗକର୍ତ୍ତା ଲିଭାଯାଇଛି; ତାଙ୍କ ନାମ ଓ ଠିକଣା ମାଡ଼ି ଦିଆଯାଇଛି, ସେ ଯାହା କରିଛନ୍ତି ତାହା ଚିହ୍ନଟଯୋଗ୍ୟ ରହେ। |
 | `Secfb3f` | hub_consolidation | Deprecate replaced Hub codes | ବଦଳାଯାଇଥିବା ହବ୍ କୋଡ୍ ପ୍ରଚଳନ ବନ୍ଦ କରନ୍ତୁ |
 | `S0e7766` | hub_consolidation, language | draft | ଖସଡ଼ା |
 | `S4e7cfe` | hub_consolidation | Every Hub code is deprecated - the group can be deactivated under Lookups. | ପ୍ରତ୍ୟେକ ହବ୍ କୋଡ୍ ପ୍ରଚଳନ ବନ୍ଦ - ଗୋଷ୍ଠୀକୁ ଲୁକଅପ୍‌ରେ ନିଷ୍କ୍ରିୟ କରାଯାଇପାରେ। |
@@ -13195,6 +13310,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sa2ca0f` | message: status_code_service | An archived revision cannot be changed. | ଆର୍କାଇଭ୍ ସଂସ୍କରଣ ବଦଳାଯାଇପାରିବ ନାହିଁ। |
 | `Sa57433` | message: status_code_service | An open Draft/Review/PendingApproval revision already exists (BR-003). | ଖୋଲା ଖସଡ଼ା/ସମୀକ୍ଷା/ଅନୁମୋଦନ-ବାକି ସଂସ୍କରଣ ପୂର୍ବରୁ ଅଛି (BR-003)। |
 | `S64463a` | message: status_code_service | No DEPRECATE audit entry found; cannot verify retention period. | କୌଣସି DEPRECATE ଅଡିଟ୍ ଏଣ୍ଟ୍ରି ମିଳିଲା ନାହିଁ; ଧାରଣ ଅବଧି ଯାଞ୍ଚ କରାଯାଇପାରିବ ନାହିଁ। |
+| `Sf4e488` | message: status_code_service | Nothing selected: tick at least one withdrawn code. | କିଛି ବଛାଯାଇନାହିଁ: ଅନ୍ତତଃ ଗୋଟିଏ ପ୍ରତ୍ୟାହୃତ କୋଡ୍ ଚିହ୍ନିତ କରନ୍ତୁ। |
 | `S94fede` | message: status_code_service | Only a Deprecated Status Code can be archived. | କେବଳ ପ୍ରଚଳନ ବନ୍ଦ ସ୍ଥିତି କୋଡ୍ ଆର୍କାଇଭ୍ କରାଯାଇପାରେ। |
 | `S96a1e5` | message: status_code_service | Only a Deprecated Status Code can be reinstated. | କେବଳ ପ୍ରଚଳନ ବନ୍ଦ ସ୍ଥିତି କୋଡ୍ ପୁନଃସ୍ଥାପନ କରାଯାଇପାରେ। |
 | `S9211d8` | message: status_code_service | Only a Draft revision may be edited in place (FR-025). | କେବଳ ଖସଡ଼ା ସଂସ୍କରଣ ସ୍ଥାନରେ ସମ୍ପାଦିତ ହୋଇପାରେ (FR-025)। |
@@ -13422,15 +13538,15 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S441e73` | user_detail | Engineering domains | ଇଞ୍ଜିନିୟରିଂ ଡୋମେନ୍ |
 | `Seeb692` | user_detail, users | Full name | ପୂର୍ଣ୍ଣ ନାମ |
 | `S263733` | user_detail | Last sign-in | ଶେଷ ସାଇନ୍-ଇନ୍ |
-| `S34b903` | user_detail | Not possible: the account has history (see above). Deactivate it instead; the person can no longer sign in and everything they did stays attributable. | ସମ୍ଭବ ନୁହେଁ: ଖାତାର ଇତିହାସ ଅଛି (ଉପରେ ଦେଖନ୍ତୁ)। ବଦଳରେ ନିଷ୍କ୍ରିୟ କରନ୍ତୁ; ବ୍ୟକ୍ତି ଆଉ ସାଇନ୍ ଇନ୍ କରିପାରିବେ ନାହିଁ ଏବଂ ସେମାନେ ଯାହା କରିଛନ୍ତି ତାହା ଚିହ୍ନଟଯୋଗ୍ୟ ରହେ। |
 | `S57e34a` | user_detail | Nothing: the account has never been used, so it can be deleted. | କିଛି ନାହିଁ: ଖାତା କେବେ ବ୍ୟବହୃତ ହୋଇନାହିଁ, ତେଣୁ ଏହାକୁ ଲିଭାଯାଇପାରେ। |
 | `S441acb` | user_detail, users | Role of %(x)s | %(x)s ର ଭୂମିକା |
 | `Sc761ae` | user_detail, users | Set role | ଭୂମିକା ସେଟ୍ କରନ୍ତୁ |
+| `S6ad9e8` | user_detail | The account has history (see above). Deleting it erases its name, address and password and removes it from the lists; what it did stays in the audit log and in the records, shown as a deleted user. Deactivating keeps the name. | ଖାତାର ଇତିହାସ ଅଛି (ଉପରେ ଦେଖନ୍ତୁ)। ଲିଭାଇଲେ ଏହାର ନାମ, ଠିକଣା ଓ ପାସୱାର୍ଡ ମାଡ଼ି ଦିଆଯାଏ ଓ ତାଲିକାରୁ ହଟାଯାଏ; ସେ ଯାହା କରିଛି ତାହା ଅଡିଟ୍ ଲଗ୍ ଓ ରେକର୍ଡରେ ଲିଭାଯାଇଥିବା ଉପଯୋଗକର୍ତ୍ତା ଭାବେ ଦେଖାଯାଏ। ନିଷ୍କ୍ରିୟ କଲେ ନାମ ରହେ। |
 | `S44c2c4` | user_detail | These rows point at the account. They are history that must stay attributable, so the account can be deactivated but not deleted. | ଏହି ଧାଡ଼ିଗୁଡ଼ିକ ଖାତାକୁ ସୂଚାଏ। ଏହା ଇତିହାସ ଯାହା ଚିହ୍ନଟଯୋଗ୍ୟ ରହିବା ଦରକାର, ତେଣୁ ଖାତା ନିଷ୍କ୍ରିୟ ହୋଇପାରେ କିନ୍ତୁ ଲିଭାଯାଇପାରିବ ନାହିଁ। |
 | `Sdbc1fc` | user_detail | What this account has done | ଏହି ଖାତା କ’ଣ କରିଛି |
 | `S525f61` | user_detail | Where | କେଉଁଠାରେ |
 | `Sd9f654` | user_detail, users | You cannot deactivate yourself here | ଆପଣ ଏଠାରେ ନିଜକୁ ନିଷ୍କ୍ରିୟ କରିପାରିବେ ନାହିଁ |
-| `S26d745` | user_detail | Your password | ଆପଣଙ୍କ ପାସୱାର୍ଡ |
+| `S26d745` | user_detail, withdrawn_codes | Your password | ଆପଣଙ୍କ ପାସୱାର୍ଡ |
 | `S3b803b` | users | Administrator only | କେବଳ ପ୍ରଶାସକ |
 | `Scc6146` | users | Colour = level, red is the highest. As StCd Owner you may move a user between Viewer, Engineer and Reviewer; creating users and every other role needs an Administrator. | ରଙ୍ଗ = ସ୍ତର, ଲାଲ ସର୍ବୋଚ୍ଚ। StCd ମାଲିକ ଭାବେ ଆପଣ ଉପଯୋଗକର୍ତ୍ତାଙ୍କୁ ଦର୍ଶକ, ଇଞ୍ଜିନିୟର ଓ ସମୀକ୍ଷକଙ୍କ ମଧ୍ୟରେ ସରାଇପାରିବେ; ଉପଯୋଗକର୍ତ୍ତା ତିଆରି ଓ ଅନ୍ୟ ପ୍ରତ୍ୟେକ ଭୂମିକା ପାଇଁ ପ୍ରଶାସକ ଦରକାର। |
 | `Sd02137` | users | Colour = level, red is the highest. You may create users and give every role. | ରଙ୍ଗ = ସ୍ତର, ଲାଲ ସର୍ବୋଚ୍ଚ। ଆପଣ ଉପଯୋଗକର୍ତ୍ତା ତିଆରି କରିପାରିବେ ଏବଂ ପ୍ରତ୍ୟେକ ଭୂମିକା ଦେଇପାରିବେ। |
@@ -13446,10 +13562,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sbcf8f1` | users | New password for %(x)s | %(x)s ପାଇଁ ନୂଆ ପାସୱାର୍ଡ |
 | `S3fb75e` | users | Reset Password | ପାସୱାର୍ଡ ରିସେଟ୍ କରନ୍ତୁ |
 | `S5ca6e5` | users | User Management | ଉପଯୋଗକର୍ତ୍ତା ପରିଚାଳନା |
+| `Scfb147` | withdrawn_codes | A code whose change request was withdrawn stays as an empty shell: it keeps its number, legacy number and PrgIdx_GUi, so the same program or row cannot be imported again. Delete it here to free them. Deleting is final and is written to the audit log. | ଯେଉଁ କୋଡ୍‌ର ପରିବର୍ତ୍ତନ ଅନୁରୋଧ ପ୍ରତ୍ୟାହାର ହୋଇଛି ତାହା ଖାଲି ଖୋଳପା ଭାବେ ରହେ: ଏହା ନିଜ ସଂଖ୍ୟା, ପୁରୁଣା ସଂଖ୍ୟା ଓ PrgIdx_GUi ରଖେ, ତେଣୁ ସେହି ପ୍ରୋଗ୍ରାମ୍ ବା ଧାଡ଼ି ପୁଣି ଆମଦାନି ହୋଇପାରିବ ନାହିଁ। ସେଗୁଡ଼ିକୁ ମୁକ୍ତ କରିବାକୁ ଏଠାରେ ଲିଭାନ୍ତୁ। ଲିଭାଇବା ଅନ୍ତିମ ଏବଂ ଅଡିଟ୍ ଲଗ୍‌ରେ ଲେଖାଯାଏ। |
+| `S8516a7` | withdrawn_codes | Delete selected | ବଛାଯାଇଥିବା ଲିଭାନ୍ତୁ |
+| `Sdfeb06` | withdrawn_codes | No withdrawn codes. | କୌଣସି ପ୍ରତ୍ୟାହୃତ କୋଡ୍ ନାହିଁ। |
+| `S87ec0b` | withdrawn_codes | Withdrawn on | ପ୍ରତ୍ୟାହାର ତାରିଖ |
 
 ### 9.14 IN മലയാളം 🇮🇳 — Malayalam
 
-1092 of 1093 strings translated; direction left to right.
+1102 of 1103 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -13551,6 +13671,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S8ad830` | base, detail, overview | Translations | വിവർത്തനങ്ങൾ |
 | `S1b9aeb` | base, dashboard | unread | വായിക്കാത്തവ |
 | `S57f2b1` | base | Users | ഉപയോക്താക്കൾ |
+| `S9fa05a` | base, withdrawn_codes | Withdrawn Codes | പിൻവലിച്ച കോഡുകൾ |
 | `Sd7a484` | base | Workflow | വർക്ക്ഫ്ലോ |
 | `S5a4692` | base | You are covering for a colleague | നിങ്ങൾ ഒരു സഹപ്രവർത്തകനു പകരം പ്രവർത്തിക്കുന്നു |
 | `S8e9c15` | builder | Candidate revisions | സ്ഥാനാർത്ഥി റിവിഷനുകൾ |
@@ -13581,7 +13702,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S4105cf` | catalogue_health | exhausted | തീർന്നു |
 | `S57e8be` | catalogue_health | Finding | കണ്ടെത്തൽ |
 | `S1150a1` | catalogue_health | Gaps | വിടവുകൾ |
-| `S171a06` | catalogue_health | Group | ഗ്രൂപ്പ് |
+| `S171a06` | catalogue_health, withdrawn_codes | Group | ഗ്രൂപ്പ് |
 | `Sb4aadc` | catalogue_health, legacy_mapping | Hub Controller | ഹബ് കൺട്രോളർ |
 | `S8ae1c3` | catalogue_health | Left | ബാക്കി |
 | `S12c0f1` | catalogue_health | left | ബാക്കി |
@@ -13600,7 +13721,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sfe5310` | catalogue_health | Probable inconsistencies | സാധ്യമായ പൊരുത്തക്കേടുകൾ |
 | `Sa16c5b` | catalogue_health, lookups | Range | പരിധി |
 | `Sbae7d5` | catalogue_health, detail, list | Status | നില |
-| `Sfe07e9` | catalogue_health | Subgroup | ഉപഗ്രൂപ്പ് |
+| `Sfe07e9` | catalogue_health, withdrawn_codes | Subgroup | ഉപഗ്രൂപ്പ് |
 | `S75a804` | catalogue_health | subgroup(s) are running out of numbers: | ഉപഗ്രൂപ്പ്(കളിൽ) നമ്പറുകൾ തീരുന്നു: |
 | `S5fec4f` | catalogue_health | Unused numbers inside a band | ബാൻഡിനുള്ളിൽ ഉപയോഗിക്കാത്ത നമ്പറുകൾ |
 | `S02c0e4` | catalogue_health | Used | ഉപയോഗിച്ചത് |
@@ -13755,7 +13876,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S92d001` | detail | Item Count | ഇനങ്ങളുടെ എണ്ണം |
 | `S7d2a7b` | detail | Justification | ന്യായീകരണം |
 | `S1481d0` | detail, form | latest | ഏറ്റവും പുതിയ |
-| `S693272` | detail | Legacy Reference Number | പഴയ റഫറൻസ് നമ്പർ |
+| `S693272` | detail, withdrawn_codes | Legacy Reference Number | പഴയ റഫറൻസ് നമ്പർ |
 | `S43d5c5` | detail, form | Loadless Spinning Permitted | ലോഡില്ലാത്ത കറക്കം അനുവദനീയം |
 | `S193786` | detail | Logical Node | ലോജിക്കൽ നോഡ് |
 | `S578b78` | detail | Main Controller group | മെയിൻ കൺട്രോളർ ഗ്രൂപ്പ് |
@@ -13836,7 +13957,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sd0edfb` | detail | Sales | വിൽപ്പന |
 | `Sda38c6` | detail | Save planned dates | ആസൂത്രിത തീയതികൾ സംരക്ഷിക്കുക |
 | `S13c61c` | detail | Scope Filter | വ്യാപ്തി ഫിൽട്ടർ |
-| `S859822` | detail, mine | Select | തിരഞ്ഞെടുക്കുക |
+| `S859822` | detail, mine, withdrawn_codes | Select | തിരഞ്ഞെടുക്കുക |
 | `S81448f` | detail, form | select | തിരഞ്ഞെടുക്കുക |
 | `S535bd8` | detail, form | Select a Functional System Group first | ആദ്യം ഫങ്ഷണൽ സിസ്റ്റം ഗ്രൂപ്പ് തിരഞ്ഞെടുക്കുക |
 | `S329cb8` | detail | Service | സേവനം |
@@ -14018,10 +14139,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sa55a27` | help, index | Terms | പദങ്ങൾ |
 | `S689b33` | help | The full manual is docs/23-user-manual.md in the project folder; the glossary below is the same one the tooltips use. | പൂർണ്ണ മാനുവൽ പ്രോജക്ട് ഫോൾഡറിലെ docs/23-user-manual.md ആണ്; താഴെയുള്ള പദാവലി ടൂൾടിപ്പുകൾ ഉപയോഗിക്കുന്നതുതന്നെ. |
 | `S439914` | help | What happens next on a change request | ഒരു മാറ്റ അഭ്യർത്ഥനയിൽ അടുത്തതായി എന്ത് സംഭവിക്കും |
+| `S6d29d9` | help and messages | %(n)s withdrawn code(s) deleted. | %(n)s പിൻവലിച്ച കോഡുകൾ ഇല്ലാതാക്കി. |
 | `Sb08e6c` | help and messages | A Reviewer and an Administrator each sign off (in any order). If either rejects, it goes back to the author. | ഒരു അവലോകകനും ഒരു അഡ്മിനിസ്ട്രേറ്ററും ഓരോരുത്തരും സൈൻ ഓഫ് ചെയ്യുന്നു (ഏത് ക്രമത്തിലും). ആരെങ്കിലും നിരസിച്ചാൽ അത് രചയിതാവിലേക്ക് മടങ്ങുന്നു. |
 | `S2f1bed` | help and messages | An Administrator includes the revision in a Release and publishes it; then it is Released. | അഡ്മിനിസ്ട്രേറ്റർ റിവിഷൻ റിലീസിൽ ഉൾപ്പെടുത്തി പ്രസിദ്ധീകരിക്കുന്നു; അപ്പോൾ അത് റിലീസ് ചെയ്തതാകുന്നു. |
+| `Sd856bd` | help and messages | Not deleted (it has a revision again or is still referenced): %(x)s | ഇല്ലാതാക്കിയില്ല (വീണ്ടും റിവിഷൻ ഉണ്ട് അല്ലെങ്കിൽ ഇപ്പോഴും പരാമർശിക്കപ്പെടുന്നു): %(x)s |
+| `S34b903` | help and messages | Not possible: the account has history (see above). Deactivate it instead; the person can no longer sign in and everything they did stays attributable. | സാധ്യമല്ല: അക്കൗണ്ടിന് ചരിത്രമുണ്ട് (മുകളിൽ കാണുക). പകരം നിഷ്ക്രിയമാക്കുക; വ്യക്തിക്ക് ഇനി സൈൻ ഇൻ ചെയ്യാനാവില്ല, അവർ ചെയ്തതെല്ലാം ആരോപിക്കാവുന്നതായി തുടരും. |
 | `Sce489f` | help and messages | The author gets any required cross-domain sign-offs, then submits the change request for review. | രചയിതാവ് ആവശ്യമായ ക്രോസ്-ഡൊമെയ്ൻ സൈൻ-ഓഫുകൾ നേടുന്നു, തുടർന്ന് മാറ്റ അഭ്യർത്ഥന അവലോകനത്തിനായി സമർപ്പിക്കുന്നു. |
 | `S1cdbdd` | help and messages | The Chief Engineer approves or rejects. Approval makes the revision Approved (or Deprecated for a deprecation request). | ചീഫ് എൻജിനീയർ അംഗീകരിക്കുകയോ നിരസിക്കുകയോ ചെയ്യുന്നു. അംഗീകാരം റിവിഷനെ അംഗീകരിച്ചതാക്കുന്നു (കാലഹരണപ്പെടുത്തൽ അഭ്യർത്ഥനയ്ക്ക് കാലഹരണപ്പെട്ടതാക്കുന്നു). |
+| `Scff3a3` | help and messages | User deleted; its name and address are erased, what it did stays attributable. | ഉപയോക്താവിനെ ഇല്ലാതാക്കി; പേരും വിലാസവും മായ്ച്ചു, അവർ ചെയ്തത് ആരോപിക്കാവുന്നതായി തുടരും. |
 | `Secfb3f` | hub_consolidation | Deprecate replaced Hub codes | മാറ്റിസ്ഥാപിച്ച ഹബ് കോഡുകൾ കാലഹരണപ്പെടുത്തുക |
 | `S0e7766` | hub_consolidation, language | draft | കരട് |
 | `S4e7cfe` | hub_consolidation | Every Hub code is deprecated - the group can be deactivated under Lookups. | എല്ലാ ഹബ് കോഡുകളും കാലഹരണപ്പെട്ടു - ലുക്കപ്പുകളിൽ ഗ്രൂപ്പ് നിഷ്ക്രിയമാക്കാം. |
@@ -14294,6 +14419,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sa2ca0f` | message: status_code_service | An archived revision cannot be changed. | ആർക്കൈവ് ചെയ്ത റിവിഷൻ മാറ്റാനാവില്ല. |
 | `Sa57433` | message: status_code_service | An open Draft/Review/PendingApproval revision already exists (BR-003). | തുറന്ന കരട്/അവലോകനം/അംഗീകാരം-തീർപ്പാകാത്ത റിവിഷൻ ഇതിനകം ഉണ്ട് (BR-003). |
 | `S64463a` | message: status_code_service | No DEPRECATE audit entry found; cannot verify retention period. | DEPRECATE ഓഡിറ്റ് രേഖ കണ്ടെത്തിയില്ല; നിലനിർത്തൽ കാലയളവ് പരിശോധിക്കാനാവില്ല. |
+| `Sf4e488` | message: status_code_service | Nothing selected: tick at least one withdrawn code. | ഒന്നും തിരഞ്ഞെടുത്തിട്ടില്ല: പിൻവലിച്ച ഒരു കോഡെങ്കിലും ടിക്ക് ചെയ്യുക. |
 | `S94fede` | message: status_code_service | Only a Deprecated Status Code can be archived. | കാലഹരണപ്പെട്ട സ്റ്റാറ്റസ് കോഡ് മാത്രമേ ആർക്കൈവ് ചെയ്യാനാകൂ. |
 | `S96a1e5` | message: status_code_service | Only a Deprecated Status Code can be reinstated. | കാലഹരണപ്പെട്ട സ്റ്റാറ്റസ് കോഡ് മാത്രമേ പുനഃസ്ഥാപിക്കാനാകൂ. |
 | `S9211d8` | message: status_code_service | Only a Draft revision may be edited in place (FR-025). | കരട് റിവിഷൻ മാത്രമേ നിലവിൽ എഡിറ്റ് ചെയ്യാനാകൂ (FR-025). |
@@ -14521,15 +14647,15 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S441e73` | user_detail | Engineering domains | എൻജിനീയറിങ് ഡൊമെയ്‌നുകൾ |
 | `Seeb692` | user_detail, users | Full name | മുഴുവൻ പേര് |
 | `S263733` | user_detail | Last sign-in | അവസാന സൈൻ-ഇൻ |
-| `S34b903` | user_detail | Not possible: the account has history (see above). Deactivate it instead; the person can no longer sign in and everything they did stays attributable. | സാധ്യമല്ല: അക്കൗണ്ടിന് ചരിത്രമുണ്ട് (മുകളിൽ കാണുക). പകരം നിഷ്ക്രിയമാക്കുക; വ്യക്തിക്ക് ഇനി സൈൻ ഇൻ ചെയ്യാനാവില്ല, അവർ ചെയ്തതെല്ലാം ആരോപിക്കാവുന്നതായി തുടരും. |
 | `S57e34a` | user_detail | Nothing: the account has never been used, so it can be deleted. | ഒന്നുമില്ല: അക്കൗണ്ട് ഒരിക്കലും ഉപയോഗിച്ചിട്ടില്ല, അതിനാൽ ഇല്ലാതാക്കാം. |
 | `S441acb` | user_detail, users | Role of %(x)s | %(x)s ന്റെ റോൾ |
 | `Sc761ae` | user_detail, users | Set role | റോൾ സജ്ജമാക്കുക |
+| `S6ad9e8` | user_detail | The account has history (see above). Deleting it erases its name, address and password and removes it from the lists; what it did stays in the audit log and in the records, shown as a deleted user. Deactivating keeps the name. | അക്കൗണ്ടിന് ചരിത്രമുണ്ട് (മുകളിൽ കാണുക). ഇല്ലാതാക്കിയാൽ അതിന്റെ പേര്, വിലാസം, പാസ്‌വേഡ് എന്നിവ മായ്ക്കപ്പെടുകയും പട്ടികകളിൽ നിന്ന് നീക്കപ്പെടുകയും ചെയ്യും; അത് ചെയ്തത് ഓഡിറ്റ് ലോഗിലും രേഖകളിലും ഇല്ലാതാക്കിയ ഉപയോക്താവായി കാണിക്കും. നിഷ്ക്രിയമാക്കിയാൽ പേര് നിലനിൽക്കും. |
 | `S44c2c4` | user_detail | These rows point at the account. They are history that must stay attributable, so the account can be deactivated but not deleted. | ഈ വരികൾ അക്കൗണ്ടിലേക്ക് ചൂണ്ടുന്നു. ആരോപിക്കാവുന്നതായി തുടരേണ്ട ചരിത്രമാണിത്, അതിനാൽ അക്കൗണ്ട് നിഷ്ക്രിയമാക്കാം, പക്ഷേ ഇല്ലാതാക്കാനാവില്ല. |
 | `Sdbc1fc` | user_detail | What this account has done | ഈ അക്കൗണ്ട് എന്തെല്ലാം ചെയ്തു |
 | `S525f61` | user_detail | Where | എവിടെ |
 | `Sd9f654` | user_detail, users | You cannot deactivate yourself here | നിങ്ങൾക്ക് ഇവിടെ സ്വയം നിഷ്ക്രിയമാക്കാനാവില്ല |
-| `S26d745` | user_detail | Your password | നിങ്ങളുടെ പാസ്‌വേഡ് |
+| `S26d745` | user_detail, withdrawn_codes | Your password | നിങ്ങളുടെ പാസ്‌വേഡ് |
 | `S3b803b` | users | Administrator only | അഡ്മിനിസ്ട്രേറ്റർ മാത്രം |
 | `Scc6146` | users | Colour = level, red is the highest. As StCd Owner you may move a user between Viewer, Engineer and Reviewer; creating users and every other role needs an Administrator. | നിറം = നില, ചുവപ്പ് ഏറ്റവും ഉയർന്നത്. StCd ഉടമയായി നിങ്ങൾക്ക് ഉപയോക്താവിനെ കാഴ്ചക്കാരൻ, എൻജിനീയർ, അവലോകകൻ എന്നിവയ്ക്കിടയിൽ മാറ്റാം; ഉപയോക്താക്കളെ സൃഷ്ടിക്കാനും മറ്റ് എല്ലാ റോളുകൾക്കും അഡ്മിനിസ്ട്രേറ്റർ വേണം. |
 | `Sd02137` | users | Colour = level, red is the highest. You may create users and give every role. | നിറം = നില, ചുവപ്പ് ഏറ്റവും ഉയർന്നത്. നിങ്ങൾക്ക് ഉപയോക്താക്കളെ സൃഷ്ടിക്കാനും ഓരോ റോളും നൽകാനും കഴിയും. |
@@ -14545,10 +14671,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sbcf8f1` | users | New password for %(x)s | %(x)s നുള്ള പുതിയ പാസ്‌വേഡ് |
 | `S3fb75e` | users | Reset Password | പാസ്‌വേഡ് റീസെറ്റ് ചെയ്യുക |
 | `S5ca6e5` | users | User Management | ഉപയോക്തൃ മാനേജ്മെന്റ് |
+| `Scfb147` | withdrawn_codes | A code whose change request was withdrawn stays as an empty shell: it keeps its number, legacy number and PrgIdx_GUi, so the same program or row cannot be imported again. Delete it here to free them. Deleting is final and is written to the audit log. | മാറ്റ അഭ്യർത്ഥന പിൻവലിച്ച കോഡ് ഒരു ശൂന്യമായ പുറന്തോടായി അവശേഷിക്കുന്നു: അത് അതിന്റെ നമ്പർ, പഴയ നമ്പർ, PrgIdx_GUi എന്നിവ നിലനിർത്തുന്നു, അതിനാൽ അതേ പ്രോഗ്രാമോ വരിയോ വീണ്ടും ഇറക്കുമതി ചെയ്യാനാവില്ല. അവ സ്വതന്ത്രമാക്കാൻ ഇവിടെ ഇല്ലാതാക്കുക. ഇല്ലാതാക്കൽ അന്തിമമാണ്, ഓഡിറ്റ് ലോഗിൽ രേഖപ്പെടുത്തും. |
+| `S8516a7` | withdrawn_codes | Delete selected | തിരഞ്ഞെടുത്തവ ഇല്ലാതാക്കുക |
+| `Sdfeb06` | withdrawn_codes | No withdrawn codes. | പിൻവലിച്ച കോഡുകളില്ല. |
+| `S87ec0b` | withdrawn_codes | Withdrawn on | പിൻവലിച്ച തീയതി |
 
 ### 9.15 IN ਪੰਜਾਬੀ 🇮🇳 — Punjabi
 
-1092 of 1093 strings translated; direction left to right.
+1102 of 1103 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -14650,6 +14780,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S8ad830` | base, detail, overview | Translations | ਅਨੁਵਾਦ |
 | `S1b9aeb` | base, dashboard | unread | ਨਾ-ਪੜ੍ਹੇ |
 | `S57f2b1` | base | Users | ਵਰਤੋਂਕਾਰ |
+| `S9fa05a` | base, withdrawn_codes | Withdrawn Codes | ਵਾਪਸ ਲਏ ਕੋਡ |
 | `Sd7a484` | base | Workflow | ਕਾਰਜ-ਪ੍ਰਵਾਹ |
 | `S5a4692` | base | You are covering for a colleague | ਤੁਸੀਂ ਇੱਕ ਸਾਥੀ ਦੀ ਥਾਂ ਕੰਮ ਕਰ ਰਹੇ ਹੋ |
 | `S8e9c15` | builder | Candidate revisions | ਉਮੀਦਵਾਰ ਸੋਧਾਂ |
@@ -14680,7 +14811,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S4105cf` | catalogue_health | exhausted | ਮੁੱਕ ਗਏ |
 | `S57e8be` | catalogue_health | Finding | ਖੋਜ |
 | `S1150a1` | catalogue_health | Gaps | ਖਾਲੀ ਥਾਵਾਂ |
-| `S171a06` | catalogue_health | Group | ਸਮੂਹ |
+| `S171a06` | catalogue_health, withdrawn_codes | Group | ਸਮੂਹ |
 | `Sb4aadc` | catalogue_health, legacy_mapping | Hub Controller | ਹੱਬ ਕੰਟਰੋਲਰ |
 | `S8ae1c3` | catalogue_health | Left | ਬਾਕੀ |
 | `S12c0f1` | catalogue_health | left | ਬਾਕੀ |
@@ -14699,7 +14830,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sfe5310` | catalogue_health | Probable inconsistencies | ਸੰਭਾਵੀ ਵਿਰੋਧਾਭਾਸ |
 | `Sa16c5b` | catalogue_health, lookups | Range | ਹੱਦ |
 | `Sbae7d5` | catalogue_health, detail, list | Status | ਸਥਿਤੀ |
-| `Sfe07e9` | catalogue_health | Subgroup | ਉਪ-ਸਮੂਹ |
+| `Sfe07e9` | catalogue_health, withdrawn_codes | Subgroup | ਉਪ-ਸਮੂਹ |
 | `S75a804` | catalogue_health | subgroup(s) are running out of numbers: | ਉਪ-ਸਮੂਹਾਂ ਵਿੱਚ ਨੰਬਰ ਮੁੱਕ ਰਹੇ ਹਨ: |
 | `S5fec4f` | catalogue_health | Unused numbers inside a band | ਪੱਟੀ ਅੰਦਰ ਅਣਵਰਤੇ ਨੰਬਰ |
 | `S02c0e4` | catalogue_health | Used | ਵਰਤੇ |
@@ -14854,7 +14985,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S92d001` | detail | Item Count | ਆਈਟਮਾਂ ਦੀ ਗਿਣਤੀ |
 | `S7d2a7b` | detail | Justification | ਵਾਜਬੀਅਤ |
 | `S1481d0` | detail, form | latest | ਤਾਜ਼ਾ |
-| `S693272` | detail | Legacy Reference Number | ਪੁਰਾਣਾ ਹਵਾਲਾ ਨੰਬਰ |
+| `S693272` | detail, withdrawn_codes | Legacy Reference Number | ਪੁਰਾਣਾ ਹਵਾਲਾ ਨੰਬਰ |
 | `S43d5c5` | detail, form | Loadless Spinning Permitted | ਬਿਨਾਂ ਭਾਰ ਘੁੰਮਣ ਦੀ ਆਗਿਆ |
 | `S193786` | detail | Logical Node | ਤਰਕਸ਼ੀਲ ਨੋਡ |
 | `S578b78` | detail | Main Controller group | ਮੁੱਖ ਕੰਟਰੋਲਰ ਸਮੂਹ |
@@ -14935,7 +15066,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sd0edfb` | detail | Sales | ਵਿਕਰੀ |
 | `Sda38c6` | detail | Save planned dates | ਯੋਜਨਾਬੱਧ ਮਿਤੀਆਂ ਸੁਰੱਖਿਅਤ ਕਰੋ |
 | `S13c61c` | detail | Scope Filter | ਦਾਇਰਾ ਫਿਲਟਰ |
-| `S859822` | detail, mine | Select | ਚੁਣੋ |
+| `S859822` | detail, mine, withdrawn_codes | Select | ਚੁਣੋ |
 | `S81448f` | detail, form | select | ਚੁਣੋ |
 | `S535bd8` | detail, form | Select a Functional System Group first | ਪਹਿਲਾਂ ਕਾਰਜਸ਼ੀਲ ਸਿਸਟਮ ਸਮੂਹ ਚੁਣੋ |
 | `S329cb8` | detail | Service | ਸੇਵਾ |
@@ -15117,10 +15248,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sa55a27` | help, index | Terms | ਸ਼ਬਦ |
 | `S689b33` | help | The full manual is docs/23-user-manual.md in the project folder; the glossary below is the same one the tooltips use. | ਪੂਰਾ ਮੈਨੂਅਲ ਪ੍ਰੋਜੈਕਟ ਫੋਲਡਰ ਵਿੱਚ docs/23-user-manual.md ਹੈ; ਹੇਠਲੀ ਸ਼ਬਦਾਵਲੀ ਉਹੀ ਹੈ ਜੋ ਟੂਲਟਿੱਪ ਵਰਤਦੇ ਹਨ। |
 | `S439914` | help | What happens next on a change request | ਤਬਦੀਲੀ ਬੇਨਤੀ ਉੱਤੇ ਅੱਗੇ ਕੀ ਹੁੰਦਾ ਹੈ |
+| `S6d29d9` | help and messages | %(n)s withdrawn code(s) deleted. | %(n)s ਵਾਪਸ ਲਏ ਕੋਡ ਮਿਟਾਏ ਗਏ। |
 | `Sb08e6c` | help and messages | A Reviewer and an Administrator each sign off (in any order). If either rejects, it goes back to the author. | ਇੱਕ ਸਮੀਖਿਅਕ ਅਤੇ ਇੱਕ ਪ੍ਰਸ਼ਾਸਕ ਹਰ ਇੱਕ ਦਸਤਖ਼ਤ ਕਰਦਾ ਹੈ (ਕਿਸੇ ਵੀ ਕ੍ਰਮ ਵਿੱਚ)। ਜੇ ਕੋਈ ਰੱਦ ਕਰੇ ਤਾਂ ਇਹ ਲੇਖਕ ਕੋਲ ਵਾਪਸ ਜਾਂਦੀ ਹੈ। |
 | `S2f1bed` | help and messages | An Administrator includes the revision in a Release and publishes it; then it is Released. | ਪ੍ਰਸ਼ਾਸਕ ਸੋਧ ਨੂੰ ਰਿਲੀਜ਼ ਵਿੱਚ ਸ਼ਾਮਲ ਕਰਕੇ ਪ੍ਰਕਾਸ਼ਿਤ ਕਰਦਾ ਹੈ; ਫਿਰ ਇਹ ਜਾਰੀ ਹੋ ਜਾਂਦੀ ਹੈ। |
+| `Sd856bd` | help and messages | Not deleted (it has a revision again or is still referenced): %(x)s | ਮਿਟਾਇਆ ਨਹੀਂ ਗਿਆ (ਇਸਦੀ ਦੁਬਾਰਾ ਸੋਧ ਹੈ ਜਾਂ ਅਜੇ ਹਵਾਲਾ ਹੈ): %(x)s |
+| `S34b903` | help and messages | Not possible: the account has history (see above). Deactivate it instead; the person can no longer sign in and everything they did stays attributable. | ਸੰਭਵ ਨਹੀਂ: ਖਾਤੇ ਦਾ ਇਤਿਹਾਸ ਹੈ (ਉੱਪਰ ਵੇਖੋ)। ਇਸਦੀ ਥਾਂ ਨਾ-ਸਰਗਰਮ ਕਰੋ; ਵਿਅਕਤੀ ਹੁਣ ਸਾਈਨ ਇਨ ਨਹੀਂ ਕਰ ਸਕਦਾ ਅਤੇ ਜੋ ਉਸਨੇ ਕੀਤਾ ਉਹ ਪਛਾਣਯੋਗ ਰਹਿੰਦਾ ਹੈ। |
 | `Sce489f` | help and messages | The author gets any required cross-domain sign-offs, then submits the change request for review. | ਲੇਖਕ ਲੋੜੀਂਦੇ ਅੰਤਰ-ਡੋਮੇਨ ਦਸਤਖ਼ਤ ਲੈਂਦਾ ਹੈ, ਫਿਰ ਤਬਦੀਲੀ ਬੇਨਤੀ ਸਮੀਖਿਆ ਲਈ ਜਮ੍ਹਾਂ ਕਰਦਾ ਹੈ। |
 | `S1cdbdd` | help and messages | The Chief Engineer approves or rejects. Approval makes the revision Approved (or Deprecated for a deprecation request). | ਮੁੱਖ ਇੰਜੀਨੀਅਰ ਮਨਜ਼ੂਰ ਜਾਂ ਰੱਦ ਕਰਦਾ ਹੈ। ਮਨਜ਼ੂਰੀ ਸੋਧ ਨੂੰ ਮਨਜ਼ੂਰ (ਜਾਂ ਬੰਦ ਕਰਨ ਦੀ ਬੇਨਤੀ ਲਈ ਬੰਦ) ਬਣਾ ਦਿੰਦੀ ਹੈ। |
+| `Scff3a3` | help and messages | User deleted; its name and address are erased, what it did stays attributable. | ਵਰਤੋਂਕਾਰ ਮਿਟਾਇਆ ਗਿਆ; ਉਸਦਾ ਨਾਮ ਅਤੇ ਪਤਾ ਮਿਟਾ ਦਿੱਤੇ ਗਏ, ਜੋ ਉਸਨੇ ਕੀਤਾ ਉਹ ਪਛਾਣਯੋਗ ਰਹਿੰਦਾ ਹੈ। |
 | `Secfb3f` | hub_consolidation | Deprecate replaced Hub codes | ਬਦਲੇ ਗਏ ਹੱਬ ਕੋਡ ਬੰਦ ਕਰੋ |
 | `S0e7766` | hub_consolidation, language | draft | ਖਰੜਾ |
 | `S4e7cfe` | hub_consolidation | Every Hub code is deprecated - the group can be deactivated under Lookups. | ਹਰ ਹੱਬ ਕੋਡ ਬੰਦ ਹੈ - ਸਮੂਹ ਨੂੰ ਲੁੱਕਅਪ ਵਿੱਚ ਨਾ-ਸਰਗਰਮ ਕੀਤਾ ਜਾ ਸਕਦਾ ਹੈ। |
@@ -15393,6 +15528,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sa2ca0f` | message: status_code_service | An archived revision cannot be changed. | ਆਰਕਾਈਵ ਕੀਤੀ ਸੋਧ ਬਦਲੀ ਨਹੀਂ ਜਾ ਸਕਦੀ। |
 | `Sa57433` | message: status_code_service | An open Draft/Review/PendingApproval revision already exists (BR-003). | ਖਰੜਾ/ਸਮੀਖਿਆ/ਮਨਜ਼ੂਰੀ-ਬਕਾਇਆ ਅਵਸਥਾ ਵਿੱਚ ਇੱਕ ਖੁੱਲ੍ਹੀ ਸੋਧ ਪਹਿਲਾਂ ਹੀ ਮੌਜੂਦ ਹੈ (BR-003)। |
 | `S64463a` | message: status_code_service | No DEPRECATE audit entry found; cannot verify retention period. | ਕੋਈ DEPRECATE ਆਡਿਟ ਐਂਟਰੀ ਨਹੀਂ ਮਿਲੀ; ਰੱਖ-ਰਖਾਅ ਮਿਆਦ ਦੀ ਪੁਸ਼ਟੀ ਨਹੀਂ ਹੋ ਸਕਦੀ। |
+| `Sf4e488` | message: status_code_service | Nothing selected: tick at least one withdrawn code. | ਕੁਝ ਚੁਣਿਆ ਨਹੀਂ: ਘੱਟੋ-ਘੱਟ ਇੱਕ ਵਾਪਸ ਲਏ ਕੋਡ ਉੱਤੇ ਨਿਸ਼ਾਨ ਲਾਓ। |
 | `S94fede` | message: status_code_service | Only a Deprecated Status Code can be archived. | ਸਿਰਫ਼ ਬੰਦ ਸਥਿਤੀ ਕੋਡ ਹੀ ਆਰਕਾਈਵ ਕੀਤਾ ਜਾ ਸਕਦਾ ਹੈ। |
 | `S96a1e5` | message: status_code_service | Only a Deprecated Status Code can be reinstated. | ਸਿਰਫ਼ ਬੰਦ ਸਥਿਤੀ ਕੋਡ ਹੀ ਬਹਾਲ ਕੀਤਾ ਜਾ ਸਕਦਾ ਹੈ। |
 | `S9211d8` | message: status_code_service | Only a Draft revision may be edited in place (FR-025). | ਸਿਰਫ਼ ਖਰੜਾ ਸੋਧ ਹੀ ਮੌਕੇ ਉੱਤੇ ਸੋਧੀ ਜਾ ਸਕਦੀ ਹੈ (FR-025)। |
@@ -15620,15 +15756,15 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S441e73` | user_detail | Engineering domains | ਇੰਜੀਨੀਅਰਿੰਗ ਡੋਮੇਨ |
 | `Seeb692` | user_detail, users | Full name | ਪੂਰਾ ਨਾਮ |
 | `S263733` | user_detail | Last sign-in | ਆਖਰੀ ਸਾਈਨ-ਇਨ |
-| `S34b903` | user_detail | Not possible: the account has history (see above). Deactivate it instead; the person can no longer sign in and everything they did stays attributable. | ਸੰਭਵ ਨਹੀਂ: ਖਾਤੇ ਦਾ ਇਤਿਹਾਸ ਹੈ (ਉੱਪਰ ਵੇਖੋ)। ਇਸਦੀ ਥਾਂ ਨਾ-ਸਰਗਰਮ ਕਰੋ; ਵਿਅਕਤੀ ਹੁਣ ਸਾਈਨ ਇਨ ਨਹੀਂ ਕਰ ਸਕਦਾ ਅਤੇ ਜੋ ਉਸਨੇ ਕੀਤਾ ਉਹ ਪਛਾਣਯੋਗ ਰਹਿੰਦਾ ਹੈ। |
 | `S57e34a` | user_detail | Nothing: the account has never been used, so it can be deleted. | ਕੁਝ ਨਹੀਂ: ਖਾਤਾ ਕਦੇ ਵਰਤਿਆ ਨਹੀਂ ਗਿਆ, ਇਸ ਲਈ ਇਸਨੂੰ ਮਿਟਾਇਆ ਜਾ ਸਕਦਾ ਹੈ। |
 | `S441acb` | user_detail, users | Role of %(x)s | %(x)s ਦੀ ਭੂਮਿਕਾ |
 | `Sc761ae` | user_detail, users | Set role | ਭੂਮਿਕਾ ਸੈੱਟ ਕਰੋ |
+| `S6ad9e8` | user_detail | The account has history (see above). Deleting it erases its name, address and password and removes it from the lists; what it did stays in the audit log and in the records, shown as a deleted user. Deactivating keeps the name. | ਖਾਤੇ ਦਾ ਇਤਿਹਾਸ ਹੈ (ਉੱਪਰ ਵੇਖੋ)। ਮਿਟਾਉਣ ਨਾਲ ਇਸਦਾ ਨਾਮ, ਪਤਾ ਅਤੇ ਪਾਸਵਰਡ ਮਿਟ ਜਾਂਦੇ ਹਨ ਅਤੇ ਇਹ ਸੂਚੀਆਂ ਵਿੱਚੋਂ ਹਟ ਜਾਂਦਾ ਹੈ; ਜੋ ਇਸਨੇ ਕੀਤਾ ਉਹ ਆਡਿਟ ਲੌਗ ਅਤੇ ਰਿਕਾਰਡਾਂ ਵਿੱਚ ਮਿਟਾਏ ਵਰਤੋਂਕਾਰ ਵਜੋਂ ਦਿਸਦਾ ਰਹਿੰਦਾ ਹੈ। ਨਾ-ਸਰਗਰਮ ਕਰਨ ਨਾਲ ਨਾਮ ਰਹਿੰਦਾ ਹੈ। |
 | `S44c2c4` | user_detail | These rows point at the account. They are history that must stay attributable, so the account can be deactivated but not deleted. | ਇਹ ਕਤਾਰਾਂ ਖਾਤੇ ਵੱਲ ਇਸ਼ਾਰਾ ਕਰਦੀਆਂ ਹਨ। ਇਹ ਇਤਿਹਾਸ ਹੈ ਜੋ ਪਛਾਣਯੋਗ ਰਹਿਣਾ ਚਾਹੀਦਾ ਹੈ, ਇਸ ਲਈ ਖਾਤਾ ਨਾ-ਸਰਗਰਮ ਹੋ ਸਕਦਾ ਹੈ ਪਰ ਮਿਟਾਇਆ ਨਹੀਂ ਜਾ ਸਕਦਾ। |
 | `Sdbc1fc` | user_detail | What this account has done | ਇਸ ਖਾਤੇ ਨੇ ਕੀ ਕੀਤਾ ਹੈ |
 | `S525f61` | user_detail | Where | ਕਿੱਥੇ |
 | `Sd9f654` | user_detail, users | You cannot deactivate yourself here | ਤੁਸੀਂ ਇੱਥੇ ਆਪਣੇ ਆਪ ਨੂੰ ਨਾ-ਸਰਗਰਮ ਨਹੀਂ ਕਰ ਸਕਦੇ |
-| `S26d745` | user_detail | Your password | ਤੁਹਾਡਾ ਪਾਸਵਰਡ |
+| `S26d745` | user_detail, withdrawn_codes | Your password | ਤੁਹਾਡਾ ਪਾਸਵਰਡ |
 | `S3b803b` | users | Administrator only | ਸਿਰਫ਼ ਪ੍ਰਸ਼ਾਸਕ |
 | `Scc6146` | users | Colour = level, red is the highest. As StCd Owner you may move a user between Viewer, Engineer and Reviewer; creating users and every other role needs an Administrator. | ਰੰਗ = ਪੱਧਰ, ਲਾਲ ਸਭ ਤੋਂ ਉੱਚਾ। StCd ਮਾਲਕ ਵਜੋਂ ਤੁਸੀਂ ਵਰਤੋਂਕਾਰ ਨੂੰ ਦਰਸ਼ਕ, ਇੰਜੀਨੀਅਰ ਅਤੇ ਸਮੀਖਿਅਕ ਵਿਚਕਾਰ ਲਿਜਾ ਸਕਦੇ ਹੋ; ਵਰਤੋਂਕਾਰ ਬਣਾਉਣ ਅਤੇ ਹਰ ਹੋਰ ਭੂਮਿਕਾ ਲਈ ਪ੍ਰਸ਼ਾਸਕ ਚਾਹੀਦਾ ਹੈ। |
 | `Sd02137` | users | Colour = level, red is the highest. You may create users and give every role. | ਰੰਗ = ਪੱਧਰ, ਲਾਲ ਸਭ ਤੋਂ ਉੱਚਾ। ਤੁਸੀਂ ਵਰਤੋਂਕਾਰ ਬਣਾ ਸਕਦੇ ਹੋ ਅਤੇ ਹਰ ਭੂਮਿਕਾ ਦੇ ਸਕਦੇ ਹੋ। |
@@ -15644,10 +15780,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sbcf8f1` | users | New password for %(x)s | %(x)s ਲਈ ਨਵਾਂ ਪਾਸਵਰਡ |
 | `S3fb75e` | users | Reset Password | ਪਾਸਵਰਡ ਰੀਸੈੱਟ ਕਰੋ |
 | `S5ca6e5` | users | User Management | ਵਰਤੋਂਕਾਰ ਪ੍ਰਬੰਧਨ |
+| `Scfb147` | withdrawn_codes | A code whose change request was withdrawn stays as an empty shell: it keeps its number, legacy number and PrgIdx_GUi, so the same program or row cannot be imported again. Delete it here to free them. Deleting is final and is written to the audit log. | ਜਿਸ ਕੋਡ ਦੀ ਤਬਦੀਲੀ ਬੇਨਤੀ ਵਾਪਸ ਲਈ ਗਈ ਉਹ ਖਾਲੀ ਖੋਲ ਵਜੋਂ ਰਹਿੰਦਾ ਹੈ: ਇਹ ਆਪਣਾ ਨੰਬਰ, ਪੁਰਾਣਾ ਨੰਬਰ ਅਤੇ PrgIdx_GUi ਰੱਖਦਾ ਹੈ, ਇਸ ਲਈ ਉਹੀ ਪ੍ਰੋਗਰਾਮ ਜਾਂ ਕਤਾਰ ਦੁਬਾਰਾ ਦਰਾਮਦ ਨਹੀਂ ਹੋ ਸਕਦੀ। ਇਨ੍ਹਾਂ ਨੂੰ ਆਜ਼ਾਦ ਕਰਨ ਲਈ ਇਸਨੂੰ ਇੱਥੇ ਮਿਟਾਓ। ਮਿਟਾਉਣਾ ਅੰਤਿਮ ਹੈ ਅਤੇ ਆਡਿਟ ਲੌਗ ਵਿੱਚ ਦਰਜ ਹੁੰਦਾ ਹੈ। |
+| `S8516a7` | withdrawn_codes | Delete selected | ਚੁਣੇ ਹੋਏ ਮਿਟਾਓ |
+| `Sdfeb06` | withdrawn_codes | No withdrawn codes. | ਕੋਈ ਵਾਪਸ ਲਿਆ ਕੋਡ ਨਹੀਂ। |
+| `S87ec0b` | withdrawn_codes | Withdrawn on | ਵਾਪਸ ਲੈਣ ਦੀ ਮਿਤੀ |
 
 ### 9.16 ES Español 🇪🇸 — Spanish
 
-1092 of 1093 strings translated; direction left to right.
+1102 of 1103 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -15749,6 +15889,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S8ad830` | base, detail, overview | Translations | Traducciones |
 | `S1b9aeb` | base, dashboard | unread | sin leer |
 | `S57f2b1` | base | Users | Usuarios |
+| `S9fa05a` | base, withdrawn_codes | Withdrawn Codes | Códigos retirados |
 | `Sd7a484` | base | Workflow | Flujo de trabajo |
 | `S5a4692` | base | You are covering for a colleague | Está sustituyendo a un compañero |
 | `S8e9c15` | builder | Candidate revisions | Revisiones candidatas |
@@ -15779,7 +15920,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S4105cf` | catalogue_health | exhausted | agotado |
 | `S57e8be` | catalogue_health | Finding | Hallazgo |
 | `S1150a1` | catalogue_health | Gaps | Huecos |
-| `S171a06` | catalogue_health | Group | Grupo |
+| `S171a06` | catalogue_health, withdrawn_codes | Group | Grupo |
 | `Sb4aadc` | catalogue_health, legacy_mapping | Hub Controller | Controlador del buje |
 | `S8ae1c3` | catalogue_health | Left | Restantes |
 | `S12c0f1` | catalogue_health | left | restantes |
@@ -15798,7 +15939,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sfe5310` | catalogue_health | Probable inconsistencies | Incoherencias probables |
 | `Sa16c5b` | catalogue_health, lookups | Range | Rango |
 | `Sbae7d5` | catalogue_health, detail, list | Status | Estado |
-| `Sfe07e9` | catalogue_health | Subgroup | Subgrupo |
+| `Sfe07e9` | catalogue_health, withdrawn_codes | Subgroup | Subgrupo |
 | `S75a804` | catalogue_health | subgroup(s) are running out of numbers: | subgrupo(s) se están quedando sin números: |
 | `S5fec4f` | catalogue_health | Unused numbers inside a band | Números sin usar dentro de una banda |
 | `S02c0e4` | catalogue_health | Used | Usados |
@@ -15953,7 +16094,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S92d001` | detail | Item Count | Número de elementos |
 | `S7d2a7b` | detail | Justification | Justificación |
 | `S1481d0` | detail, form | latest | última |
-| `S693272` | detail | Legacy Reference Number | Número de referencia anterior |
+| `S693272` | detail, withdrawn_codes | Legacy Reference Number | Número de referencia anterior |
 | `S43d5c5` | detail, form | Loadless Spinning Permitted | Giro sin carga permitido |
 | `S193786` | detail | Logical Node | Nodo lógico |
 | `S578b78` | detail | Main Controller group | Grupo del controlador principal |
@@ -16034,7 +16175,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sd0edfb` | detail | Sales | Ventas |
 | `Sda38c6` | detail | Save planned dates | Guardar fechas previstas |
 | `S13c61c` | detail | Scope Filter | Filtro de alcance |
-| `S859822` | detail, mine | Select | Seleccionar |
+| `S859822` | detail, mine, withdrawn_codes | Select | Seleccionar |
 | `S81448f` | detail, form | select | seleccionar |
 | `S535bd8` | detail, form | Select a Functional System Group first | Seleccione primero un grupo de sistemas funcionales |
 | `S329cb8` | detail | Service | Servicio |
@@ -16216,10 +16357,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sa55a27` | help, index | Terms | Términos |
 | `S689b33` | help | The full manual is docs/23-user-manual.md in the project folder; the glossary below is the same one the tooltips use. | El manual completo es docs/23-user-manual.md en la carpeta del proyecto; el glosario de abajo es el mismo que usan las descripciones emergentes. |
 | `S439914` | help | What happens next on a change request | Qué ocurre a continuación con una solicitud de cambio |
+| `S6d29d9` | help and messages | %(n)s withdrawn code(s) deleted. | %(n)s código(s) retirado(s) eliminado(s). |
 | `Sb08e6c` | help and messages | A Reviewer and an Administrator each sign off (in any order). If either rejects, it goes back to the author. | Un revisor y un administrador dan cada uno su conformidad (en cualquier orden). Si alguno rechaza, vuelve al autor. |
 | `S2f1bed` | help and messages | An Administrator includes the revision in a Release and publishes it; then it is Released. | Un administrador incluye la revisión en una versión y la publica; entonces pasa a Publicado. |
+| `Sd856bd` | help and messages | Not deleted (it has a revision again or is still referenced): %(x)s | No eliminado (vuelve a tener una revisión o aún se hace referencia a él): %(x)s |
+| `S34b903` | help and messages | Not possible: the account has history (see above). Deactivate it instead; the person can no longer sign in and everything they did stays attributable. | No es posible: la cuenta tiene historial (véase arriba). Desactívela en su lugar; la persona ya no podrá iniciar sesión y todo lo que hizo sigue siendo atribuible. |
 | `Sce489f` | help and messages | The author gets any required cross-domain sign-offs, then submits the change request for review. | El autor obtiene las conformidades entre ámbitos requeridas y luego envía la solicitud de cambio a revisión. |
 | `S1cdbdd` | help and messages | The Chief Engineer approves or rejects. Approval makes the revision Approved (or Deprecated for a deprecation request). | El ingeniero jefe aprueba o rechaza. La aprobación hace que la revisión pase a Aprobado (u Obsoleto en una solicitud de obsolescencia). |
+| `Scff3a3` | help and messages | User deleted; its name and address are erased, what it did stays attributable. | Usuario eliminado; su nombre y dirección se borran, lo que hizo sigue siendo atribuible. |
 | `Secfb3f` | hub_consolidation | Deprecate replaced Hub codes | Declarar obsoletos los códigos del buje sustituidos |
 | `S0e7766` | hub_consolidation, language | draft | borrador |
 | `S4e7cfe` | hub_consolidation | Every Hub code is deprecated - the group can be deactivated under Lookups. | Todos los códigos del buje están obsoletos: el grupo puede desactivarse en Listas de valores. |
@@ -16492,6 +16637,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sa2ca0f` | message: status_code_service | An archived revision cannot be changed. | Una revisión archivada no puede cambiarse. |
 | `Sa57433` | message: status_code_service | An open Draft/Review/PendingApproval revision already exists (BR-003). | Ya existe una revisión abierta en estado Borrador, Revisión o Pendiente de aprobación (BR-003). |
 | `S64463a` | message: status_code_service | No DEPRECATE audit entry found; cannot verify retention period. | No se encontró entrada de auditoría DEPRECATE; no puede verificarse el periodo de conservación. |
+| `Sf4e488` | message: status_code_service | Nothing selected: tick at least one withdrawn code. | Nada seleccionado: marque al menos un código retirado. |
 | `S94fede` | message: status_code_service | Only a Deprecated Status Code can be archived. | Solo un código de estado obsoleto puede archivarse. |
 | `S96a1e5` | message: status_code_service | Only a Deprecated Status Code can be reinstated. | Solo un código de estado obsoleto puede reponerse. |
 | `S9211d8` | message: status_code_service | Only a Draft revision may be edited in place (FR-025). | Solo una revisión en borrador puede editarse en el sitio (FR-025). |
@@ -16719,15 +16865,15 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S441e73` | user_detail | Engineering domains | Ámbitos de ingeniería |
 | `Seeb692` | user_detail, users | Full name | Nombre completo |
 | `S263733` | user_detail | Last sign-in | Último inicio de sesión |
-| `S34b903` | user_detail | Not possible: the account has history (see above). Deactivate it instead; the person can no longer sign in and everything they did stays attributable. | No es posible: la cuenta tiene historial (véase arriba). Desactívela en su lugar; la persona ya no podrá iniciar sesión y todo lo que hizo sigue siendo atribuible. |
 | `S57e34a` | user_detail | Nothing: the account has never been used, so it can be deleted. | Nada: la cuenta nunca se ha usado, así que puede eliminarse. |
 | `S441acb` | user_detail, users | Role of %(x)s | Rol de %(x)s |
 | `Sc761ae` | user_detail, users | Set role | Establecer rol |
+| `S6ad9e8` | user_detail | The account has history (see above). Deleting it erases its name, address and password and removes it from the lists; what it did stays in the audit log and in the records, shown as a deleted user. Deactivating keeps the name. | La cuenta tiene historial (véase arriba). Al eliminarla se borran su nombre, dirección y contraseña y desaparece de las listas; lo que hizo permanece en el registro de auditoría y en los registros, mostrado como usuario eliminado. Desactivarla conserva el nombre. |
 | `S44c2c4` | user_detail | These rows point at the account. They are history that must stay attributable, so the account can be deactivated but not deleted. | Estas filas apuntan a la cuenta. Son historial que debe seguir siendo atribuible, así que la cuenta puede desactivarse pero no eliminarse. |
 | `Sdbc1fc` | user_detail | What this account has done | Lo que ha hecho esta cuenta |
 | `S525f61` | user_detail | Where | Dónde |
 | `Sd9f654` | user_detail, users | You cannot deactivate yourself here | No puede desactivarse a sí mismo aquí |
-| `S26d745` | user_detail | Your password | Su contraseña |
+| `S26d745` | user_detail, withdrawn_codes | Your password | Su contraseña |
 | `S3b803b` | users | Administrator only | Solo administrador |
 | `Scc6146` | users | Colour = level, red is the highest. As StCd Owner you may move a user between Viewer, Engineer and Reviewer; creating users and every other role needs an Administrator. | Color = nivel, el rojo es el más alto. Como propietario de StCd puede mover a un usuario entre Lector, Ingeniero y Revisor; crear usuarios y cualquier otro rol requiere un administrador. |
 | `Sd02137` | users | Colour = level, red is the highest. You may create users and give every role. | Color = nivel, el rojo es el más alto. Puede crear usuarios y dar cualquier rol. |
@@ -16743,10 +16889,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sbcf8f1` | users | New password for %(x)s | Nueva contraseña para %(x)s |
 | `S3fb75e` | users | Reset Password | Restablecer contraseña |
 | `S5ca6e5` | users | User Management | Gestión de usuarios |
+| `Scfb147` | withdrawn_codes | A code whose change request was withdrawn stays as an empty shell: it keeps its number, legacy number and PrgIdx_GUi, so the same program or row cannot be imported again. Delete it here to free them. Deleting is final and is written to the audit log. | Un código cuya solicitud de cambio fue retirada queda como una carcasa vacía: conserva su número, su número antiguo y su PrgIdx_GUi, por lo que el mismo programa o la misma fila no puede importarse de nuevo. Elimínelo aquí para liberarlos. La eliminación es definitiva y queda registrada en el registro de auditoría. |
+| `S8516a7` | withdrawn_codes | Delete selected | Eliminar seleccionados |
+| `Sdfeb06` | withdrawn_codes | No withdrawn codes. | No hay códigos retirados. |
+| `S87ec0b` | withdrawn_codes | Withdrawn on | Retirado el |
 
 ### 9.17 IT Italiano 🇮🇹 — Italian
 
-1092 of 1093 strings translated; direction left to right.
+1102 of 1103 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -16848,6 +16998,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S8ad830` | base, detail, overview | Translations | Traduzioni |
 | `S1b9aeb` | base, dashboard | unread | non letti |
 | `S57f2b1` | base | Users | Utenti |
+| `S9fa05a` | base, withdrawn_codes | Withdrawn Codes | Codici ritirati |
 | `Sd7a484` | base | Workflow | Flusso di lavoro |
 | `S5a4692` | base | You are covering for a colleague | Stai sostituendo un collega |
 | `S8e9c15` | builder | Candidate revisions | Revisioni candidate |
@@ -16878,7 +17029,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S4105cf` | catalogue_health | exhausted | esaurito |
 | `S57e8be` | catalogue_health | Finding | Riscontro |
 | `S1150a1` | catalogue_health | Gaps | Vuoti |
-| `S171a06` | catalogue_health | Group | Gruppo |
+| `S171a06` | catalogue_health, withdrawn_codes | Group | Gruppo |
 | `Sb4aadc` | catalogue_health, legacy_mapping | Hub Controller | Controllore del mozzo |
 | `S8ae1c3` | catalogue_health | Left | Rimasti |
 | `S12c0f1` | catalogue_health | left | rimasti |
@@ -16897,7 +17048,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sfe5310` | catalogue_health | Probable inconsistencies | Probabili incoerenze |
 | `Sa16c5b` | catalogue_health, lookups | Range | Intervallo |
 | `Sbae7d5` | catalogue_health, detail, list | Status | Stato |
-| `Sfe07e9` | catalogue_health | Subgroup | Sottogruppo |
+| `Sfe07e9` | catalogue_health, withdrawn_codes | Subgroup | Sottogruppo |
 | `S75a804` | catalogue_health | subgroup(s) are running out of numbers: | sottogruppo/i stanno finendo i numeri: |
 | `S5fec4f` | catalogue_health | Unused numbers inside a band | Numeri inutilizzati all'interno di una banda |
 | `S02c0e4` | catalogue_health | Used | Usati |
@@ -17052,7 +17203,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S92d001` | detail | Item Count | Numero di elementi |
 | `S7d2a7b` | detail | Justification | Motivazione |
 | `S1481d0` | detail, form | latest | ultima |
-| `S693272` | detail | Legacy Reference Number | Numero di riferimento precedente |
+| `S693272` | detail, withdrawn_codes | Legacy Reference Number | Numero di riferimento precedente |
 | `S43d5c5` | detail, form | Loadless Spinning Permitted | Rotazione a vuoto consentita |
 | `S193786` | detail | Logical Node | Nodo logico |
 | `S578b78` | detail | Main Controller group | Gruppo del controllore principale |
@@ -17133,7 +17284,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sd0edfb` | detail | Sales | Vendite |
 | `Sda38c6` | detail | Save planned dates | Salva date pianificate |
 | `S13c61c` | detail | Scope Filter | Filtro di ambito |
-| `S859822` | detail, mine | Select | Seleziona |
+| `S859822` | detail, mine, withdrawn_codes | Select | Seleziona |
 | `S81448f` | detail, form | select | seleziona |
 | `S535bd8` | detail, form | Select a Functional System Group first | Selezioni prima un gruppo di sistemi funzionali |
 | `S329cb8` | detail | Service | Assistenza |
@@ -17315,10 +17466,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sa55a27` | help, index | Terms | Termini |
 | `S689b33` | help | The full manual is docs/23-user-manual.md in the project folder; the glossary below is the same one the tooltips use. | Il manuale completo è docs/23-user-manual.md nella cartella del progetto; il glossario qui sotto è lo stesso dei suggerimenti. |
 | `S439914` | help | What happens next on a change request | Che cosa succede dopo a una richiesta di modifica |
+| `S6d29d9` | help and messages | %(n)s withdrawn code(s) deleted. | %(n)s codice/i ritirato/i eliminato/i. |
 | `Sb08e6c` | help and messages | A Reviewer and an Administrator each sign off (in any order). If either rejects, it goes back to the author. | Un revisore e un amministratore danno ciascuno il benestare (in qualsiasi ordine). Se uno dei due rifiuta, la richiesta torna all'autore. |
 | `S2f1bed` | help and messages | An Administrator includes the revision in a Release and publishes it; then it is Released. | Un amministratore include la revisione in un rilascio e lo pubblica; allora diventa Rilasciata. |
+| `Sd856bd` | help and messages | Not deleted (it has a revision again or is still referenced): %(x)s | Non eliminato (ha di nuovo una revisione o è ancora referenziato): %(x)s |
+| `S34b903` | help and messages | Not possible: the account has history (see above). Deactivate it instead; the person can no longer sign in and everything they did stays attributable. | Non possibile: l'account ha uno storico (vedi sopra). Lo disattivi invece; la persona non può più accedere e tutto ciò che ha fatto resta attribuibile. |
 | `Sce489f` | help and messages | The author gets any required cross-domain sign-offs, then submits the change request for review. | L'autore ottiene i benestare interdisciplinari richiesti, poi invia la richiesta di modifica in revisione. |
 | `S1cdbdd` | help and messages | The Chief Engineer approves or rejects. Approval makes the revision Approved (or Deprecated for a deprecation request). | Il capo ingegnere approva o rifiuta. L'approvazione porta la revisione ad Approvato (oppure a Obsoleto per una richiesta di obsolescenza). |
+| `Scff3a3` | help and messages | User deleted; its name and address are erased, what it did stays attributable. | Utente eliminato; nome e indirizzo sono cancellati, ciò che ha fatto resta attribuibile. |
 | `Secfb3f` | hub_consolidation | Deprecate replaced Hub codes | Dichiara obsoleti i codici del mozzo sostituiti |
 | `S0e7766` | hub_consolidation, language | draft | bozza |
 | `S4e7cfe` | hub_consolidation | Every Hub code is deprecated - the group can be deactivated under Lookups. | Tutti i codici del mozzo sono obsoleti: il gruppo può essere disattivato negli elenchi di valori. |
@@ -17591,6 +17746,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sa2ca0f` | message: status_code_service | An archived revision cannot be changed. | Una revisione archiviata non può essere modificata. |
 | `Sa57433` | message: status_code_service | An open Draft/Review/PendingApproval revision already exists (BR-003). | Esiste già una revisione aperta in stato Bozza, Revisione o In attesa di approvazione (BR-003). |
 | `S64463a` | message: status_code_service | No DEPRECATE audit entry found; cannot verify retention period. | Nessuna voce di audit DEPRECATE trovata; impossibile verificare il periodo di conservazione. |
+| `Sf4e488` | message: status_code_service | Nothing selected: tick at least one withdrawn code. | Nulla selezionato: spunta almeno un codice ritirato. |
 | `S94fede` | message: status_code_service | Only a Deprecated Status Code can be archived. | Solo un codice di stato obsoleto può essere archiviato. |
 | `S96a1e5` | message: status_code_service | Only a Deprecated Status Code can be reinstated. | Solo un codice di stato obsoleto può essere ripristinato. |
 | `S9211d8` | message: status_code_service | Only a Draft revision may be edited in place (FR-025). | Solo una revisione in bozza può essere modificata direttamente (FR-025). |
@@ -17818,15 +17974,15 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S441e73` | user_detail | Engineering domains | Ambiti ingegneristici |
 | `Seeb692` | user_detail, users | Full name | Nome completo |
 | `S263733` | user_detail | Last sign-in | Ultimo accesso |
-| `S34b903` | user_detail | Not possible: the account has history (see above). Deactivate it instead; the person can no longer sign in and everything they did stays attributable. | Non possibile: l'account ha uno storico (vedi sopra). Lo disattivi invece; la persona non può più accedere e tutto ciò che ha fatto resta attribuibile. |
 | `S57e34a` | user_detail | Nothing: the account has never been used, so it can be deleted. | Niente: l'account non è mai stato usato, quindi può essere eliminato. |
 | `S441acb` | user_detail, users | Role of %(x)s | Ruolo di %(x)s |
 | `Sc761ae` | user_detail, users | Set role | Imposta ruolo |
+| `S6ad9e8` | user_detail | The account has history (see above). Deleting it erases its name, address and password and removes it from the lists; what it did stays in the audit log and in the records, shown as a deleted user. Deactivating keeps the name. | L'account ha una storia (vedi sopra). Eliminandolo si cancellano nome, indirizzo e password e lo si rimuove dagli elenchi; ciò che ha fatto resta nel registro di audit e nei record, mostrato come utente eliminato. Disattivarlo mantiene il nome. |
 | `S44c2c4` | user_detail | These rows point at the account. They are history that must stay attributable, so the account can be deactivated but not deleted. | Queste righe puntano all'account. Sono storico che deve restare attribuibile, quindi l'account può essere disattivato ma non eliminato. |
 | `Sdbc1fc` | user_detail | What this account has done | Che cosa ha fatto questo account |
 | `S525f61` | user_detail | Where | Dove |
 | `Sd9f654` | user_detail, users | You cannot deactivate yourself here | Non può disattivarsi da solo qui |
-| `S26d745` | user_detail | Your password | La sua password |
+| `S26d745` | user_detail, withdrawn_codes | Your password | La sua password |
 | `S3b803b` | users | Administrator only | Solo amministratore |
 | `Scc6146` | users | Colour = level, red is the highest. As StCd Owner you may move a user between Viewer, Engineer and Reviewer; creating users and every other role needs an Administrator. | Colore = livello, il rosso è il più alto. Come responsabile StCd può spostare un utente tra Osservatore, Ingegnere e Revisore; creare utenti e ogni altro ruolo richiede un amministratore. |
 | `Sd02137` | users | Colour = level, red is the highest. You may create users and give every role. | Colore = livello, il rosso è il più alto. Può creare utenti e assegnare ogni ruolo. |
@@ -17842,10 +17998,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sbcf8f1` | users | New password for %(x)s | Nuova password per %(x)s |
 | `S3fb75e` | users | Reset Password | Reimposta password |
 | `S5ca6e5` | users | User Management | Gestione utenti |
+| `Scfb147` | withdrawn_codes | A code whose change request was withdrawn stays as an empty shell: it keeps its number, legacy number and PrgIdx_GUi, so the same program or row cannot be imported again. Delete it here to free them. Deleting is final and is written to the audit log. | Un codice la cui richiesta di modifica è stata ritirata resta come guscio vuoto: conserva il suo numero, il vecchio numero e il PrgIdx_GUi, quindi lo stesso programma o la stessa riga non può essere importato di nuovo. Eliminalo qui per liberarli. L'eliminazione è definitiva e viene scritta nel registro di audit. |
+| `S8516a7` | withdrawn_codes | Delete selected | Elimina selezionati |
+| `Sdfeb06` | withdrawn_codes | No withdrawn codes. | Nessun codice ritirato. |
+| `S87ec0b` | withdrawn_codes | Withdrawn on | Ritirato il |
 
 ### 9.18 DK Dansk 🇩🇰 — Danish
 
-1092 of 1093 strings translated; direction left to right.
+1102 of 1103 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -17947,6 +18107,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S8ad830` | base, detail, overview | Translations | Oversættelser |
 | `S1b9aeb` | base, dashboard | unread | ulæste |
 | `S57f2b1` | base | Users | Brugere |
+| `S9fa05a` | base, withdrawn_codes | Withdrawn Codes | Tilbagetrukne koder |
 | `Sd7a484` | base | Workflow | Arbejdsgang |
 | `S5a4692` | base | You are covering for a colleague | Du vikarierer for en kollega |
 | `S8e9c15` | builder | Candidate revisions | Kandidatrevisioner |
@@ -17977,7 +18138,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S4105cf` | catalogue_health | exhausted | opbrugt |
 | `S57e8be` | catalogue_health | Finding | Fund |
 | `S1150a1` | catalogue_health | Gaps | Huller |
-| `S171a06` | catalogue_health | Group | Gruppe |
+| `S171a06` | catalogue_health, withdrawn_codes | Group | Gruppe |
 | `Sb4aadc` | catalogue_health, legacy_mapping | Hub Controller | Navstyring |
 | `S8ae1c3` | catalogue_health | Left | Tilbage |
 | `S12c0f1` | catalogue_health | left | tilbage |
@@ -17996,7 +18157,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sfe5310` | catalogue_health | Probable inconsistencies | Sandsynlige uoverensstemmelser |
 | `Sa16c5b` | catalogue_health, lookups | Range | Interval |
 | `Sbae7d5` | catalogue_health, detail, list | Status | Status |
-| `Sfe07e9` | catalogue_health | Subgroup | Undergruppe |
+| `Sfe07e9` | catalogue_health, withdrawn_codes | Subgroup | Undergruppe |
 | `S75a804` | catalogue_health | subgroup(s) are running out of numbers: | undergruppe(r) er ved at løbe tør for numre: |
 | `S5fec4f` | catalogue_health | Unused numbers inside a band | Ubrugte numre inden for et bånd |
 | `S02c0e4` | catalogue_health | Used | Brugt |
@@ -18151,7 +18312,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S92d001` | detail | Item Count | Antal poster |
 | `S7d2a7b` | detail | Justification | Begrundelse |
 | `S1481d0` | detail, form | latest | seneste |
-| `S693272` | detail | Legacy Reference Number | Gammelt referencenummer |
+| `S693272` | detail, withdrawn_codes | Legacy Reference Number | Gammelt referencenummer |
 | `S43d5c5` | detail, form | Loadless Spinning Permitted | Tomgangsdrejning tilladt |
 | `S193786` | detail | Logical Node | Logisk node |
 | `S578b78` | detail | Main Controller group | Hovedstyringsgruppe |
@@ -18232,7 +18393,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sd0edfb` | detail | Sales | Salg |
 | `Sda38c6` | detail | Save planned dates | Gem planlagte datoer |
 | `S13c61c` | detail | Scope Filter | Omfangsfilter |
-| `S859822` | detail, mine | Select | Vælg |
+| `S859822` | detail, mine, withdrawn_codes | Select | Vælg |
 | `S81448f` | detail, form | select | vælg |
 | `S535bd8` | detail, form | Select a Functional System Group first | Vælg først en funktionel systemgruppe |
 | `S329cb8` | detail | Service | Service |
@@ -18414,10 +18575,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sa55a27` | help, index | Terms | Begreber |
 | `S689b33` | help | The full manual is docs/23-user-manual.md in the project folder; the glossary below is the same one the tooltips use. | Den fulde manual er docs/23-user-manual.md i projektmappen; ordlisten nedenfor er den samme som i værktøjstip. |
 | `S439914` | help | What happens next on a change request | Hvad sker der derefter med en ændringsanmodning |
+| `S6d29d9` | help and messages | %(n)s withdrawn code(s) deleted. | %(n)s tilbagetrukne koder slettet. |
 | `Sb08e6c` | help and messages | A Reviewer and an Administrator each sign off (in any order). If either rejects, it goes back to the author. | En reviewer og en administrator underskriver hver (i vilkårlig rækkefølge). Afviser en af dem, går den tilbage til forfatteren. |
 | `S2f1bed` | help and messages | An Administrator includes the revision in a Release and publishes it; then it is Released. | En administrator medtager revisionen i en udgivelse og udgiver den; derefter er den Udgivet. |
+| `Sd856bd` | help and messages | Not deleted (it has a revision again or is still referenced): %(x)s | Ikke slettet (den har igen en revision eller henvises der stadig til): %(x)s |
+| `S34b903` | help and messages | Not possible: the account has history (see above). Deactivate it instead; the person can no longer sign in and everything they did stays attributable. | Ikke muligt: kontoen har historik (se ovenfor). Deaktivér den i stedet; personen kan ikke længere logge ind, og alt, vedkommende har gjort, kan stadig henføres. |
 | `Sce489f` | help and messages | The author gets any required cross-domain sign-offs, then submits the change request for review. | Forfatteren indhenter de nødvendige tværfaglige underskrifter og indsender derefter ændringsanmodningen til gennemgang. |
 | `S1cdbdd` | help and messages | The Chief Engineer approves or rejects. Approval makes the revision Approved (or Deprecated for a deprecation request). | Chefingeniøren godkender eller afviser. Godkendelsen gør revisionen Godkendt (eller Forældet ved en forældelsesanmodning). |
+| `Scff3a3` | help and messages | User deleted; its name and address are erased, what it did stays attributable. | Bruger slettet; navn og adresse er slettet, det brugeren har gjort, kan stadig henføres. |
 | `Secfb3f` | hub_consolidation | Deprecate replaced Hub codes | Erklær erstattede navkoder forældede |
 | `S0e7766` | hub_consolidation, language | draft | kladde |
 | `S4e7cfe` | hub_consolidation | Every Hub code is deprecated - the group can be deactivated under Lookups. | Alle navkoder er forældede - gruppen kan deaktiveres under Opslagslister. |
@@ -18690,6 +18855,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sa2ca0f` | message: status_code_service | An archived revision cannot be changed. | En arkiveret revision kan ikke ændres. |
 | `Sa57433` | message: status_code_service | An open Draft/Review/PendingApproval revision already exists (BR-003). | Der findes allerede en åben revision i tilstanden Kladde, Gennemgang eller Afventer godkendelse (BR-003). |
 | `S64463a` | message: status_code_service | No DEPRECATE audit entry found; cannot verify retention period. | Ingen DEPRECATE-auditpost fundet; opbevaringsperioden kan ikke verificeres. |
+| `Sf4e488` | message: status_code_service | Nothing selected: tick at least one withdrawn code. | Intet valgt: Sæt kryds ved mindst én tilbagetrukket kode. |
 | `S94fede` | message: status_code_service | Only a Deprecated Status Code can be archived. | Kun en forældet statuskode kan arkiveres. |
 | `S96a1e5` | message: status_code_service | Only a Deprecated Status Code can be reinstated. | Kun en forældet statuskode kan genindsættes. |
 | `S9211d8` | message: status_code_service | Only a Draft revision may be edited in place (FR-025). | Kun en revision i tilstanden Kladde må redigeres direkte (FR-025). |
@@ -18917,15 +19083,15 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S441e73` | user_detail | Engineering domains | Ingeniørfaglige discipliner |
 | `Seeb692` | user_detail, users | Full name | Fulde navn |
 | `S263733` | user_detail | Last sign-in | Seneste login |
-| `S34b903` | user_detail | Not possible: the account has history (see above). Deactivate it instead; the person can no longer sign in and everything they did stays attributable. | Ikke muligt: kontoen har historik (se ovenfor). Deaktivér den i stedet; personen kan ikke længere logge ind, og alt, vedkommende har gjort, kan stadig henføres. |
 | `S57e34a` | user_detail | Nothing: the account has never been used, so it can be deleted. | Intet: kontoen har aldrig været brugt, så den kan slettes. |
 | `S441acb` | user_detail, users | Role of %(x)s | Rolle for %(x)s |
 | `Sc761ae` | user_detail, users | Set role | Sæt rolle |
+| `S6ad9e8` | user_detail | The account has history (see above). Deleting it erases its name, address and password and removes it from the lists; what it did stays in the audit log and in the records, shown as a deleted user. Deactivating keeps the name. | Kontoen har en historik (se ovenfor). Sletning fjerner navn, adresse og adgangskode og tager den ud af listerne; det, den har gjort, bliver stående i auditloggen og i posterne, vist som en slettet bruger. Deaktivering bevarer navnet. |
 | `S44c2c4` | user_detail | These rows point at the account. They are history that must stay attributable, so the account can be deactivated but not deleted. | Disse rækker peger på kontoen. De er historik, der skal kunne henføres, så kontoen kan deaktiveres, men ikke slettes. |
 | `Sdbc1fc` | user_detail | What this account has done | Hvad denne konto har gjort |
 | `S525f61` | user_detail | Where | Hvor |
 | `Sd9f654` | user_detail, users | You cannot deactivate yourself here | Du kan ikke deaktivere dig selv her |
-| `S26d745` | user_detail | Your password | Din adgangskode |
+| `S26d745` | user_detail, withdrawn_codes | Your password | Din adgangskode |
 | `S3b803b` | users | Administrator only | Kun administrator |
 | `Scc6146` | users | Colour = level, red is the highest. As StCd Owner you may move a user between Viewer, Engineer and Reviewer; creating users and every other role needs an Administrator. | Farve = niveau, rød er højest. Som StCd-ejer kan du flytte en bruger mellem Læser, Ingeniør og Reviewer; oprettelse af brugere og alle andre roller kræver en administrator. |
 | `Sd02137` | users | Colour = level, red is the highest. You may create users and give every role. | Farve = niveau, rød er højest. Du kan oprette brugere og give enhver rolle. |
@@ -18941,10 +19107,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sbcf8f1` | users | New password for %(x)s | Ny adgangskode til %(x)s |
 | `S3fb75e` | users | Reset Password | Nulstil adgangskode |
 | `S5ca6e5` | users | User Management | Brugeradministration |
+| `Scfb147` | withdrawn_codes | A code whose change request was withdrawn stays as an empty shell: it keeps its number, legacy number and PrgIdx_GUi, so the same program or row cannot be imported again. Delete it here to free them. Deleting is final and is written to the audit log. | En kode, hvis ændringsanmodning er trukket tilbage, bliver stående som en tom skal: Den beholder sit nummer, sit gamle nummer og sin PrgIdx_GUi, så det samme program eller den samme række ikke kan importeres igen. Slet den her for at frigive dem. Sletningen er endelig og skrives i auditloggen. |
+| `S8516a7` | withdrawn_codes | Delete selected | Slet valgte |
+| `Sdfeb06` | withdrawn_codes | No withdrawn codes. | Ingen tilbagetrukne koder. |
+| `S87ec0b` | withdrawn_codes | Withdrawn on | Trukket tilbage den |
 
 ### 9.19 GE ქართული 🇬🇪 — Georgian
 
-1092 of 1093 strings translated; direction left to right.
+1102 of 1103 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -19046,6 +19216,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S8ad830` | base, detail, overview | Translations | თარგმანები |
 | `S1b9aeb` | base, dashboard | unread | წაუკითხავი |
 | `S57f2b1` | base | Users | მომხმარებლები |
+| `S9fa05a` | base, withdrawn_codes | Withdrawn Codes | გაუქმებული კოდები |
 | `Sd7a484` | base | Workflow | სამუშაო პროცესი |
 | `S5a4692` | base | You are covering for a colleague | თქვენ კოლეგას ცვლით |
 | `S8e9c15` | builder | Candidate revisions | კანდიდატი რევიზიები |
@@ -19076,7 +19247,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S4105cf` | catalogue_health | exhausted | ამოწურულია |
 | `S57e8be` | catalogue_health | Finding | დასკვნა |
 | `S1150a1` | catalogue_health | Gaps | ხვრელები |
-| `S171a06` | catalogue_health | Group | ჯგუფი |
+| `S171a06` | catalogue_health, withdrawn_codes | Group | ჯგუფი |
 | `Sb4aadc` | catalogue_health, legacy_mapping | Hub Controller | კერის კონტროლერი |
 | `S8ae1c3` | catalogue_health | Left | დარჩენილი |
 | `S12c0f1` | catalogue_health | left | დარჩენილი |
@@ -19095,7 +19266,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sfe5310` | catalogue_health | Probable inconsistencies | სავარაუდო შეუსაბამობები |
 | `Sa16c5b` | catalogue_health, lookups | Range | დიაპაზონი |
 | `Sbae7d5` | catalogue_health, detail, list | Status | სტატუსი |
-| `Sfe07e9` | catalogue_health | Subgroup | ქვეჯგუფი |
+| `Sfe07e9` | catalogue_health, withdrawn_codes | Subgroup | ქვეჯგუფი |
 | `S75a804` | catalogue_health | subgroup(s) are running out of numbers: | ქვეჯგუფს ნომრები ელევა: |
 | `S5fec4f` | catalogue_health | Unused numbers inside a band | გამოუყენებელი ნომრები ზოლის შიგნით |
 | `S02c0e4` | catalogue_health | Used | გამოყენებული |
@@ -19250,7 +19421,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S92d001` | detail | Item Count | ელემენტების რაოდენობა |
 | `S7d2a7b` | detail | Justification | დასაბუთება |
 | `S1481d0` | detail, form | latest | უახლესი |
-| `S693272` | detail | Legacy Reference Number | ძველი საცნობარო ნომერი |
+| `S693272` | detail, withdrawn_codes | Legacy Reference Number | ძველი საცნობარო ნომერი |
 | `S43d5c5` | detail, form | Loadless Spinning Permitted | დატვირთვის გარეშე ბრუნვა დაშვებულია |
 | `S193786` | detail | Logical Node | ლოგიკური კვანძი |
 | `S578b78` | detail | Main Controller group | მთავარი კონტროლერის ჯგუფი |
@@ -19331,7 +19502,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sd0edfb` | detail | Sales | გაყიდვები |
 | `Sda38c6` | detail | Save planned dates | დაგეგმილი თარიღების შენახვა |
 | `S13c61c` | detail | Scope Filter | ფარგლების ფილტრი |
-| `S859822` | detail, mine | Select | არჩევა |
+| `S859822` | detail, mine, withdrawn_codes | Select | არჩევა |
 | `S81448f` | detail, form | select | არჩევა |
 | `S535bd8` | detail, form | Select a Functional System Group first | ჯერ აირჩიეთ ფუნქციური სისტემური ჯგუფი |
 | `S329cb8` | detail | Service | სერვისი |
@@ -19513,10 +19684,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sa55a27` | help, index | Terms | ტერმინები |
 | `S689b33` | help | The full manual is docs/23-user-manual.md in the project folder; the glossary below is the same one the tooltips use. | სრული სახელმძღვანელო არის docs/23-user-manual.md პროექტის საქაღალდეში; ქვემოთ მოცემული ლექსიკონი ისაა, რასაც მინიშნებები იყენებს. |
 | `S439914` | help | What happens next on a change request | რა ხდება შემდეგ ცვლილების მოთხოვნასთან |
+| `S6d29d9` | help and messages | %(n)s withdrawn code(s) deleted. | წაიშალა %(n)s გაუქმებული კოდი. |
 | `Sb08e6c` | help and messages | A Reviewer and an Administrator each sign off (in any order). If either rejects, it goes back to the author. | მიმომხილველი და ადმინისტრატორი თითოეული ცალ-ცალკე აწერს ხელს (ნებისმიერი თანმიმდევრობით). თუ რომელიმე უარყოფს, ის ავტორს უბრუნდება. |
 | `S2f1bed` | help and messages | An Administrator includes the revision in a Release and publishes it; then it is Released. | ადმინისტრატორი რევიზიას რელიზში რთავს და აქვეყნებს; შემდეგ ის გამოშვებულია. |
+| `Sd856bd` | help and messages | Not deleted (it has a revision again or is still referenced): %(x)s | არ წაიშალა (მას ისევ აქვს რევიზია ან კვლავ მითითებულია): %(x)s |
+| `S34b903` | help and messages | Not possible: the account has history (see above). Deactivate it instead; the person can no longer sign in and everything they did stays attributable. | შეუძლებელია: ანგარიშს ისტორია აქვს (იხ. ზემოთ). გამორთეთ ის; პირი ვეღარ შევა და ყველაფერი, რაც გააკეთა, მიკუთვნებადი რჩება. |
 | `Sce489f` | help and messages | The author gets any required cross-domain sign-offs, then submits the change request for review. | ავტორი იღებს საჭირო ჯვარედინი სფეროების ხელმოწერებს, შემდეგ კი ცვლილების მოთხოვნას განხილვაზე წარადგენს. |
 | `S1cdbdd` | help and messages | The Chief Engineer approves or rejects. Approval makes the revision Approved (or Deprecated for a deprecation request). | მთავარი ინჟინერი ამტკიცებს ან უარყოფს. დამტკიცება რევიზიას დამტკიცებულად აქცევს (ან მოძველებულად მოძველების მოთხოვნისას). |
+| `Scff3a3` | help and messages | User deleted; its name and address are erased, what it did stays attributable. | მომხმარებელი წაიშალა; მისი სახელი და მისამართი წაშლილია, მისი ქმედებები კვლავ მიეკუთვნება. |
 | `Secfb3f` | hub_consolidation | Deprecate replaced Hub codes | შეცვლილი კერის კოდების მოძველებულად გამოცხადება |
 | `S0e7766` | hub_consolidation, language | draft | დრაფტი |
 | `S4e7cfe` | hub_consolidation | Every Hub code is deprecated - the group can be deactivated under Lookups. | ყველა კერის კოდი მოძველებულია - ჯგუფის გამორთვა შეიძლება საძიებო სიებში. |
@@ -19789,6 +19964,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sa2ca0f` | message: status_code_service | An archived revision cannot be changed. | დაარქივებული რევიზიის შეცვლა შეუძლებელია. |
 | `Sa57433` | message: status_code_service | An open Draft/Review/PendingApproval revision already exists (BR-003). | ღია რევიზია დრაფტის/განხილვის/დამტკიცების მოლოდინის მდგომარეობაში უკვე არსებობს (BR-003). |
 | `S64463a` | message: status_code_service | No DEPRECATE audit entry found; cannot verify retention period. | DEPRECATE აუდიტის ჩანაწერი ვერ მოიძებნა; შენახვის ვადის შემოწმება შეუძლებელია. |
+| `Sf4e488` | message: status_code_service | Nothing selected: tick at least one withdrawn code. | არაფერია არჩეული: მონიშნეთ მინიმუმ ერთი გაუქმებული კოდი. |
 | `S94fede` | message: status_code_service | Only a Deprecated Status Code can be archived. | დაარქივება შეიძლება მხოლოდ მოძველებული სტატუსის კოდის. |
 | `S96a1e5` | message: status_code_service | Only a Deprecated Status Code can be reinstated. | აღდგენა შეიძლება მხოლოდ მოძველებული სტატუსის კოდის. |
 | `S9211d8` | message: status_code_service | Only a Draft revision may be edited in place (FR-025). | ადგილზე რედაქტირება შეიძლება მხოლოდ დრაფტის რევიზიის (FR-025). |
@@ -20016,15 +20192,15 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S441e73` | user_detail | Engineering domains | საინჟინრო სფეროები |
 | `Seeb692` | user_detail, users | Full name | სრული სახელი |
 | `S263733` | user_detail | Last sign-in | ბოლო შესვლა |
-| `S34b903` | user_detail | Not possible: the account has history (see above). Deactivate it instead; the person can no longer sign in and everything they did stays attributable. | შეუძლებელია: ანგარიშს ისტორია აქვს (იხ. ზემოთ). გამორთეთ ის; პირი ვეღარ შევა და ყველაფერი, რაც გააკეთა, მიკუთვნებადი რჩება. |
 | `S57e34a` | user_detail | Nothing: the account has never been used, so it can be deleted. | არაფერი: ანგარიში არასდროს გამოყენებულა, ამიტომ მისი წაშლა შეიძლება. |
 | `S441acb` | user_detail, users | Role of %(x)s | %(x)s-ის როლი |
 | `Sc761ae` | user_detail, users | Set role | როლის დაყენება |
+| `S6ad9e8` | user_detail | The account has history (see above). Deleting it erases its name, address and password and removes it from the lists; what it did stays in the audit log and in the records, shown as a deleted user. Deactivating keeps the name. | ანგარიშს აქვს ისტორია (იხილეთ ზემოთ). წაშლისას იშლება მისი სახელი, მისამართი და პაროლი და ის ქრება სიებიდან; მისი ქმედებები რჩება აუდიტის ჟურნალსა და ჩანაწერებში, როგორც წაშლილი მომხმარებელი. დეაქტივაცია ინარჩუნებს სახელს. |
 | `S44c2c4` | user_detail | These rows point at the account. They are history that must stay attributable, so the account can be deactivated but not deleted. | ეს სტრიქონები ანგარიშზე მიუთითებს. ეს ისტორიაა, რომელიც მიკუთვნებადი უნდა დარჩეს, ამიტომ ანგარიშის დეაქტივაცია შეიძლება, მაგრამ წაშლა - არა. |
 | `Sdbc1fc` | user_detail | What this account has done | რა გააკეთა ამ ანგარიშმა |
 | `S525f61` | user_detail | Where | სად |
 | `Sd9f654` | user_detail, users | You cannot deactivate yourself here | აქ საკუთარ თავს ვერ გამორთავთ |
-| `S26d745` | user_detail | Your password | თქვენი პაროლი |
+| `S26d745` | user_detail, withdrawn_codes | Your password | თქვენი პაროლი |
 | `S3b803b` | users | Administrator only | მხოლოდ ადმინისტრატორი |
 | `Scc6146` | users | Colour = level, red is the highest. As StCd Owner you may move a user between Viewer, Engineer and Reviewer; creating users and every other role needs an Administrator. | ფერი = დონე, წითელი ყველაზე მაღალია. StCd-ის მფლობელის სახით შეგიძლიათ მომხმარებელი გადაიყვანოთ მაყურებელს, ინჟინერსა და მიმომხილველს შორის; მომხმარებლების შექმნა და ყველა სხვა როლი ადმინისტრატორს მოითხოვს. |
 | `Sd02137` | users | Colour = level, red is the highest. You may create users and give every role. | ფერი = დონე, წითელი ყველაზე მაღალია. შეგიძლიათ შექმნათ მომხმარებლები და მიანიჭოთ ნებისმიერი როლი. |
@@ -20040,6 +20216,10 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sbcf8f1` | users | New password for %(x)s | ახალი პაროლი %(x)s-ისთვის |
 | `S3fb75e` | users | Reset Password | პაროლის გადატვირთვა |
 | `S5ca6e5` | users | User Management | მომხმარებლების მართვა |
+| `Scfb147` | withdrawn_codes | A code whose change request was withdrawn stays as an empty shell: it keeps its number, legacy number and PrgIdx_GUi, so the same program or row cannot be imported again. Delete it here to free them. Deleting is final and is written to the audit log. | კოდი, რომლის ცვლილების მოთხოვნაც გაუქმდა, ცარიელ გარსად რჩება: ის ინარჩუნებს თავის ნომერს, ძველ ნომერს და PrgIdx_GUi-ს, ამიტომ იგივე პროგრამა ან სტრიქონი ხელახლა ვერ შემოვა. მათი გასათავისუფლებლად წაშალეთ აქ. წაშლა საბოლოოა და ჩაიწერება აუდიტის ჟურნალში. |
+| `S8516a7` | withdrawn_codes | Delete selected | არჩეულის წაშლა |
+| `Sdfeb06` | withdrawn_codes | No withdrawn codes. | გაუქმებული კოდები არ არის. |
+| `S87ec0b` | withdrawn_codes | Withdrawn on | გაუქმების თარიღი |
 
 ### 9.20 Strings with the screens that show them
 
@@ -20048,10 +20228,12 @@ Every string of the interface with the templates that use it. A native speaker a
 | Id | English | Screens | Languages |
 |---|---|---|---|
 | `S2cbacd` | %(n)s total | audit_log | 18 of 18 |
+| `S6d29d9` | %(n)s withdrawn code(s) deleted. | help and messages | 18 of 18 |
 | `S1a4626` | ...or just the expected number of rows | reconciliation | 18 of 18 |
 | `Seba07b` | A change set groups the change requests that ship with one controller software release, so reviewers see the whole package. Each request is still decided on its own. | list | 18 of 18 |
 | `S7a758c` | A change set needs a name of 1-120 characters. | message: change_set_service | 18 of 18 |
 | `S0240d7` | A code can be translated once its source text is Approved. | translations | 18 of 18 |
+| `Scfb147` | A code whose change request was withdrawn stays as an empty shell: it keeps its number, legacy number and PrgIdx_GUi, so the same program or row cannot be imported again. Delete it here to free them. Deleting is final and is written to the audit log. | withdrawn_codes | 18 of 18 |
 | `Sca2391` | A comment must be between 1 and 4000 characters. | message: change_request_service | 18 of 18 |
 | `S42cee2` | A field comment must be between 1 and 2000 characters. | message: field_review_service | 18 of 18 |
 | `Sa21b4c` | A note has at most 500 characters. | message: terminology_service | 18 of 18 |
@@ -20310,6 +20492,7 @@ Every string of the interface with the templates that use it. A native speaker a
 | `Sf6fdbe` | Delete | user_detail, users | 18 of 18 |
 | `Sa9ec7c` | Delete Permanently | detail | 18 of 18 |
 | `S7d1c7a` | Delete Release | detail | 18 of 18 |
+| `S8516a7` | Delete selected | withdrawn_codes | 18 of 18 |
 | `Sa2f8f5` | Delete this unpublished Release? | detail | 18 of 18 |
 | `S9afe6c` | Delete user | user_detail | 18 of 18 |
 | `S524e17` | Deprecate | detail | 18 of 18 |
@@ -20437,7 +20620,7 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S1150a1` | Gaps | catalogue_health | 18 of 18 |
 | `S7a2ec1` | generations kept | operations | 18 of 18 |
 | `S636c41` | Grid Operator | detail | 18 of 18 |
-| `S171a06` | Group | catalogue_health | 18 of 18 |
+| `S171a06` | Group | catalogue_health, withdrawn_codes | 18 of 18 |
 | `S8cd536` | Group / Subgroup | st_preview | 18 of 18 |
 | `Sfe694a` | hc_proposal must be 1 or 2 | message: st_import_service | 18 of 18 |
 | `Sac7f67` | headers only | new | 18 of 18 |
@@ -20513,7 +20696,7 @@ Every string of the interface with the templates that use it. A native speaker a
 | `Sdd6555` | Legacy no. | hub_consolidation, legacy_mapping, st_preview | 18 of 18 |
 | `S81f567` | Legacy number to new identifier | legacy_mapping | 18 of 18 |
 | `S64b267` | legacy number, identifier or name | legacy_mapping | 18 of 18 |
-| `S693272` | Legacy Reference Number | detail | 18 of 18 |
+| `S693272` | Legacy Reference Number | detail, withdrawn_codes | 18 of 18 |
 | `Sd7635c` | Legacy Reference Number (optional) | form | 18 of 18 |
 | `Sad60c5` | level | _role | 18 of 18 |
 | `S3c1c8a` | Library Import | base, new, st_new | 18 of 18 |
@@ -20622,16 +20805,18 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S2b478e` | No values. | lookups | 18 of 18 |
 | `S082244` | No webhooks. | integrations | 18 of 18 |
 | `Sb6fcd9` | No Windows identity reached the application. Open it through the organisation address, from a computer signed in to the company network. | login_windows | 18 of 18 |
+| `Sdfeb06` | No withdrawn codes. | withdrawn_codes | 18 of 18 |
 | `S4bddd5` | Nobody can review it until it is submitted. | detail | 18 of 18 |
 | `Se0a567` | Nobody decides on their own proposal; another Administrator or StCd Owner does. | message: translation_review_service | 18 of 18 |
 | `S2d8f60` | node value | detail | 18 of 18 |
 | `S71f8e7` | none | detail, form | 18 of 18 |
 | `Sb8e95b` | None found. | catalogue_health | 18 of 18 |
 | `S9a9707` | None. | catalogue_health, software_versions | 18 of 18 |
+| `Sd856bd` | Not deleted (it has a revision again or is still referenced): %(x)s | help and messages | 18 of 18 |
 | `S5af0a0` | Not for distribution | export_center | 18 of 18 |
 | `Sa8c86d` | NOT met | success_metrics | 18 of 18 |
 | `S357953` | NOT OK | export_verify | 18 of 18 |
-| `S34b903` | Not possible: the account has history (see above). Deactivate it instead; the person can no longer sign in and everything they did stays attributable. | user_detail | 18 of 18 |
+| `S34b903` | Not possible: the account has history (see above). Deactivate it instead; the person can no longer sign in and everything they did stays attributable. | help and messages | 18 of 18 |
 | `Sc914e0` | Not yet assigned | catalogue_health, detail, hub_consolidation, list | 18 of 18 |
 | `S8f9967` | Not yet assigned — fixed on Submit for Review | form | 18 of 18 |
 | `S4467d4` | Not yet published | detail | 18 of 18 |
@@ -20642,6 +20827,7 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S8e70d2` | Nothing is awaiting your approval. | approval_queue | 18 of 18 |
 | `Sc5e8fc` | Nothing is stalled. | stalled | 18 of 18 |
 | `Sd9c5b0` | Nothing selected: tick at least one program that is ready. | message: st_import_service | 18 of 18 |
+| `Sf4e488` | Nothing selected: tick at least one withdrawn code. | message: status_code_service | 18 of 18 |
 | `S57e34a` | Nothing: the account has never been used, so it can be deleted. | user_detail | 18 of 18 |
 | `Se94865` | Notices | base, dashboard, notifications | 18 of 18 |
 | `S4ada2b` | Notification not found | message: notification_service | 18 of 18 |
@@ -20879,7 +21065,7 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S2d8d46` | SEC-010: only Engineers and Administrators can translate. | message: translation_service | 18 of 18 |
 | `S9d603f` | SEC-010: only reviewing roles may comment on a field. | message: field_review_service | 18 of 18 |
 | `Sb27613` | SEC-010: your role cannot create change sets. | message: change_set_service | 18 of 18 |
-| `S859822` | Select | detail, mine | 18 of 18 |
+| `S859822` | Select | detail, mine, withdrawn_codes | 18 of 18 |
 | `S81448f` | select | detail, form | 18 of 18 |
 | `S535bd8` | Select a Functional System Group first | detail, form | 18 of 18 |
 | `S913aff` | Select all | mine | 18 of 18 |
@@ -20942,7 +21128,7 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S73372c` | Sub-range end | lookups | 18 of 18 |
 | `S1f36bd` | Sub-range start | lookups | 18 of 18 |
 | `Se3a971` | sub_range_end must be greater than sub_range_start | message: lookup_admin_service | 18 of 18 |
-| `Sfe07e9` | Subgroup | catalogue_health | 18 of 18 |
+| `Sfe07e9` | Subgroup | catalogue_health, withdrawn_codes | 18 of 18 |
 | `S3c5fac` | Subgroup does not belong to the selected Functional System Group. | message: status_code_service | 18 of 18 |
 | `S75a804` | subgroup(s) are running out of numbers: | catalogue_health | 18 of 18 |
 | `S9ddbd3` | Submission to approval (all time) | success_metrics | 18 of 18 |
@@ -20966,6 +21152,7 @@ Every string of the interface with the templates that use it. A native speaker a
 | `Sc3328c` | Text | review_checklist | 18 of 18 |
 | `Sd72b71` | That e-mail address or username is already in use. | message: user_service | 18 of 18 |
 | `S177ede` | That user does not review this language. | message: translation_review_service | 18 of 18 |
+| `S6ad9e8` | The account has history (see above). Deleting it erases its name, address and password and removes it from the lists; what it did stays in the audit log and in the records, shown as a deleted user. Deactivating keeps the name. | user_detail | 18 of 18 |
 | `S918d98` | The action must be accept, reject or note. | message: translation_review_service | 18 of 18 |
 | `S9e0005` | The audit chain is BROKEN | operations | 18 of 18 |
 | `S8bdea8` | The audit chain is intact | operations | 18 of 18 |
@@ -21062,6 +21249,7 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S9ad4d4` | Upload the generated StCd_<n>.st programs — several files at once, a whole folder, or one ZIP. Nothing is created yet: the next page lists every program so you can tick the ones to import. | st_new | 18 of 18 |
 | `S80c494` | Uploaded | detail | 18 of 18 |
 | `S02c0e4` | Used | catalogue_health | 18 of 18 |
+| `Scff3a3` | User deleted; its name and address are erased, what it did stays attributable. | help and messages | 18 of 18 |
 | `S5ca6e5` | User Management | users | 18 of 18 |
 | `S01eb94` | User not found | message: delegation_service | 18 of 18 |
 | `S84c290` | Username | account_settings, user_detail, users | 18 of 18 |
@@ -21113,6 +21301,8 @@ Every string of the interface with the templates that use it. A native speaker a
 | `Sa0d9d0` | Withdraw the ticked change requests? A withdrawn Draft is deleted; its number is only kept if it was already issued. | mine | 18 of 18 |
 | `S51a998` | Withdraw this change request? | detail | 18 of 18 |
 | `S02499f` | withdrawn | st_preview | 18 of 18 |
+| `S9fa05a` | Withdrawn Codes | base, withdrawn_codes | 18 of 18 |
+| `S87ec0b` | Withdrawn on | withdrawn_codes | 18 of 18 |
 | `Sf0c3cf` | without a legacy number | st_preview | 18 of 18 |
 | `Sd7a484` | Workflow | base | 18 of 18 |
 | `S57dda3` | Working-Set Export | export_center | 18 of 18 |
@@ -21138,7 +21328,7 @@ Every string of the interface with the templates that use it. A native speaker a
 | `Sb1d254` | Your entries compared with the stored values | form | 18 of 18 |
 | `S0b6c72` | Your entry | form | 18 of 18 |
 | `S863fd0` | Your own proposal: another person approves it. | language | 18 of 18 |
-| `S26d745` | Your password | user_detail | 18 of 18 |
+| `S26d745` | Your password | user_detail, withdrawn_codes | 18 of 18 |
 | `S20cb4c` | ZIP with manifest | detail, export_center | 18 of 18 |
 
 <!-- translations:end -->

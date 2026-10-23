@@ -106,7 +106,7 @@ def update_user(user_id: int):
 @api_v1_bp.get("/users/<int:user_id>/usage")
 @require_role(*USER_LIST_ROLES)
 def user_usage(user_id: int):
-    """What the user has done in the tool and whether the account can be deleted (BR-025)."""
+    """What the user has done in the tool, and so whether a delete removes or erases it (BR-025)."""
     try:
         return jsonify(UserService.usage(user_id)), 200
     except DomainError as exc:
@@ -116,9 +116,8 @@ def user_usage(user_id: int):
 @api_v1_bp.post("/users/<int:user_id>/delete")
 @require_role("ADMINISTRATOR")
 def delete_user(user_id: int):
-    """Delete an account that was never used. Needs the Administrator's own password
-    (`current_password`). A user with history gets 409: deactivate instead (`PATCH` with
-    `is_active=false`)."""
+    """Delete an account. Needs the Administrator's own password (`current_password`). An account
+    that nothing points at is removed; one with history is erased (BR-025)."""
     body = request.get_json(silent=True) or {}
     try:
         UserService.delete_user(user_id, current_user, body.get("current_password"))

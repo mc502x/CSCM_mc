@@ -143,7 +143,7 @@ Targets: p95 500ms search, p95 200ms single-record read, 5s CSV/JSON export, 15s
 | `integration/test_st_import.py` | 29 | FR-048o … FR-048w, BR-023, SEC-031 |
 | `integration/test_roles_and_languages.py` | 19 | FR-156, FR-157, BR-024, SEC-032 |
 | `integration/test_user_administration.py` | 10 | FR-158, BR-025, SEC-032, AUD-076 |
-| `integration/test_withdraw_and_reimport.py` | 9 | FR-159, FR-160, FR-048x, BR-026 |
+| `integration/test_withdraw_and_reimport.py` | 11 | FR-159, FR-160, FR-048x, BR-026 |
 | `integration/test_audit_chain_and_ops.py` | 27 | FR-150 … FR-153, AUD-072 … AUD-075, SEC-029 |
 | `integration/test_schema_upgrade.py` | 16 | upgrade, AUD-074 back-fill, BR-016, D-06 |
 | `integration/test_prg_idx_and_user_groups.py` | 9 | schema v4.1: PrgIdx_GUi, Main/Hub fields, user-group levels (no FR yet) |

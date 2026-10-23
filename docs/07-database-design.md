@@ -145,6 +145,7 @@ Alembic, one linear chain. The baseline executes `docs/artifacts/schema.sql` ver
 | `c9f1d3e5a782` | **schema v4.7**: the trigger `trg_user_email_immutable` — the e-mail address of a user can no longer be updated (FR-162); guarded, so it is created once |
 | `d0a2e4f6b893` | **schema v4.7**: the translation review — `language_reviewer`, `translation_review` (with the partial unique index of the open review), `translation_review_item`, `translation_override` (FR-164) |
 | `e1b3f5a7c904` | **schema v4.9**: the technical nomenclature — `terminology_term`, `terminology_translation` (FR-166) |
+| `f2c4a6b8d015` | **schema v4.9**: `user.deleted_at` (an account with history is erased, BR-025) and `status_code.withdrawn_at` (an empty shell can be deleted, BR-026); the triggers `trg_user_email_immutable` and `trg_prevent_nonsandbox_delete` are replaced; shells that already exist are marked |
 
 Tests keep this honest (`tests/integration/test_schema_upgrade.py`): a frozen copy of the v3 schema (`tests/fixtures/schema_d6f8b0c2e4a3.sql`) is filled with data and upgraded — data survives, defaults are sensible, `Covert` is hidden, Hub groups are `HUB`, old audit rows are chained and verify, the index is filled, an upgraded database has the same tables and columns as a fresh one, and the downgrade to v3 keeps the data. Before upgrading a live database the installer takes a verified backup (14-deployment-architecture.md §4).
 

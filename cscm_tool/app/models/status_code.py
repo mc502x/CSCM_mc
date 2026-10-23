@@ -52,6 +52,7 @@ class StatusCode(Base):
     reserved_identifier = db.Column(db.Text)
     owner_id = db.Column(db.Integer, db.ForeignKey("user.id"), nullable=False)
     created_at = db.Column(db.Text, nullable=False)
+    withdrawn_at = db.Column(db.Text)  # v4.9: the last revision was withdrawn (BR-026)
 
     functional_system_group: LookupFunctionalSystemGroup = cast(
         LookupFunctionalSystemGroup, db.relationship("LookupFunctionalSystemGroup")

@@ -10,7 +10,6 @@ from app.auth.roles import OWNER_ASSIGNABLE, may_change_role
 from app.domain.authz import require_roles
 from app.domain.errors import (
     ForbiddenError,
-    InvalidTransitionError,
     LastAdministratorError,
     PasswordPolicyError,
 )
@@ -259,10 +258,15 @@ class UserService:
         }
 
     @staticmethod
-    def delete_user(user_id: int, actor, reauth_password: str | None = None) -> None:
-        """Removes an account that was never used (BR-025). Only an Administrator, never the own
-        account, never the last active Administrator, and only with the Administrator's password
-        again (SEC-026). A user with history is refused with a pointer to deactivation."""
+    def delete_user(user_id: int, actor, reauth_password: str | None = None) -> dict:
+        """Deletes an account (BR-025). Only an Administrator, never the own account, never the last
+        active Administrator, and only with the Administrator's password again (SEC-026).
+
+        An account nothing points at is removed. An account with history is **erased**: name, address
+        and password go, it can no longer sign in, it disappears from every list and its user name
+        and address are free again - but the row stays, so nothing it did loses its author and the
+        audit log, which is never changed, still resolves every actor. Either way the audit entry
+        `USER_DELETE` keeps what the account held."""
         require_roles(actor, "ADMINISTRATOR")
         user = UserService._repo.get_or_404(user_id)
         if user.id == actor.id:
@@ -275,12 +279,6 @@ class UserService:
         ):
             raise LastAdministratorError("Cannot delete the last active Administrator.")
         report = UserService.usage(user.id)
-        if not report["deletable"]:
-            parts = ", ".join(f"{n} in {k}" for k, n in sorted(report["references"].items())[:4])
-            raise InvalidTransitionError(
-                f"{user.username} has history in the tool ({parts}) and cannot be deleted without "
-                "breaking the audit trail (BR-025). Deactivate the account instead."
-            )
         snapshot = {
             "username": user.username,
             "email": user.email,
@@ -296,9 +294,36 @@ class UserService:
             )
             db.session.execute(text(statement), {"i": user.id})
         db.session.expire(user)
-        db.session.execute(text("DELETE FROM user WHERE id = :i"), {"i": user.id})
-        AuditService.log("User", user_id, "USER_DELETE", actor=actor, before=snapshot)
+        if report["deletable"]:
+            db.session.execute(text("DELETE FROM user WHERE id = :i"), {"i": user.id})
+            mode = "removed"
+        else:
+            # the reviewer assignments of the account end; what others assigned stays
+            db.session.execute(text("DELETE FROM language_reviewer WHERE user_id = :i"), {"i": user.id})
+            db.session.execute(
+                text(
+                    "UPDATE user SET username = :u, email = :e, full_name = 'Deleted user', "
+                    "password_hash = '!', is_active = 0, failed_login_count = 0, "
+                    "locked_until = NULL, deleted_at = :t WHERE id = :i"
+                ),
+                {
+                    "u": f"deleted-{user.id}",
+                    "e": f"deleted-{user.id}@deleted.invalid",
+                    "t": utcnow_iso(),
+                    "i": user.id,
+                },
+            )
+            mode = "erased"
+        AuditService.log(
+            "User",
+            user_id,
+            "USER_DELETE",
+            actor=actor,
+            before=snapshot,
+            after={"mode": mode, "references": report["reference_total"]},
+        )
         db.session.commit()
+        return {"mode": mode, "references": report["reference_total"]}
 
     @staticmethod
     def _check_not_reused(user: User, new_password: str) -> list[str]:

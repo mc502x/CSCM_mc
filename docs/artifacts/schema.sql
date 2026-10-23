@@ -79,7 +79,9 @@
 --     section 3, docs/03-srs.md FR-156, BR-024)
 --   - lookup_language: French, Hindi and Georgian added; v4.4 adds Arabic (written right to left); every
 --     name reads <country letters> <name> <flag emoji>; user.ui_language accepts the six codes
--- v4.9 changes: the technical nomenclature (terminology_term, terminology_translation)
+-- v4.9 changes: the technical nomenclature (terminology_term, terminology_translation); user.deleted_at (a
+--     deleted account with history is erased, not removed: BR-025); status_code.withdrawn_at (a code whose
+--     change request was withdrawn can be deleted by an Administrator: BR-026)
 -- v4.7 changes (2026-10-24): trg_user_email_immutable (the e-mail address of a user is fixed); the tables of the
 --     in-application translation review (language_reviewer, translation_review, translation_review_item,
 --     translation_override)
@@ -393,7 +395,8 @@ CREATE TABLE user (
     last_login_at       TEXT,
     failed_login_count  INTEGER NOT NULL DEFAULT 0,
     locked_until        TEXT,
-    ui_language         TEXT NOT NULL DEFAULT 'en' CHECK (length(ui_language) = 2 AND ui_language = lower(ui_language))   -- I-22; the application decides which codes exist (v4.5)
+    ui_language         TEXT NOT NULL DEFAULT 'en' CHECK (length(ui_language) = 2 AND ui_language = lower(ui_language)),   -- I-22; the application decides which codes exist (v4.5)
+    deleted_at          TEXT   -- v4.9: set when an Administrator deletes an account that has history; name, address and password are erased, the row stays so that nothing it did loses its author
 );
 
 -- 11-security-architecture.md §4: a new password may not repeat any of the last 5
@@ -437,6 +440,8 @@ CREATE TABLE status_code (
                                                     OR reserved_identifier GLOB 'StCd-[0-9][0-9][0-9][0-9][0-9]'),
     owner_id                            INTEGER NOT NULL REFERENCES user(id),
     created_at                          TEXT NOT NULL DEFAULT (strftime('%Y-%m-%dT%H:%M:%fZ','now')),
+    -- v4.9: set when the last revision of the code was withdrawn (the code is an empty shell); only such a code can be deleted
+    withdrawn_at                        TEXT,
     CHECK (status_code_identifier IS NULL
            OR status_code_identifier GLOB 'StCd-[0-9][0-9][0-9][0-9][0-9]'
            OR status_code_identifier GLOB 'StCd-T[0-9][0-9][0-9][0-9][0-9]')
@@ -1060,6 +1065,8 @@ END;
 CREATE TRIGGER trg_prevent_nonsandbox_delete
 BEFORE DELETE ON status_code
 WHEN OLD.is_sandbox = 0
+     AND (OLD.withdrawn_at IS NULL
+          OR EXISTS (SELECT 1 FROM status_code_revision r WHERE r.status_code_id = OLD.id))
 BEGIN
     SELECT RAISE(ABORT, 'Only sandbox (is_sandbox=1) status codes may be deleted');
 END;
@@ -1159,7 +1166,7 @@ END;
 -- by deleting the unused account and creating it again, or by deactivating it (docs/03-srs.md FR-162).
 CREATE TRIGGER trg_user_email_immutable
 BEFORE UPDATE OF email ON user
-WHEN NEW.email <> OLD.email
+WHEN NEW.email <> OLD.email AND NEW.deleted_at IS NULL   -- v4.9: deleting an account erases its address
 BEGIN
     SELECT RAISE(ABORT, 'The e-mail address of a user cannot be changed');
 END;

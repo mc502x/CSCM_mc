@@ -70,14 +70,13 @@
   <h3 id="delete" style="margin-top:18px">{{ _('Delete') }}</h3>
   {% if is_self %}
   <p class="muted">{{ _('You cannot delete your own account.') }}</p>
-  {% elif usage.deletable %}
+  {% else %}
+  {% if not usage.deletable %}<p class="muted">{{ _('The account has history (see above). Deleting it erases its name, address and password and removes it from the lists; what it did stays in the audit log and in the records, shown as a deleted user. Deactivating keeps the name.') }}</p>{% endif %}
   <form method="post" action="{{ url_for('ui.user_delete', user_id=user.id) }}" data-confirm="Delete {{ user.username }} for good? This cannot be undone.">
     <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
     <div class="field" style="max-width:360px"><label for="current_password">{{ _('Your password') }}</label><input type="password" id="current_password" name="current_password" autocomplete="current-password" required></div>
     <button class="btn btn--danger" type="submit">{{ _('Delete user') }}</button>
   </form>
-  {% else %}
-  <p class="muted">{{ _('Not possible: the account has history (see above). Deactivate it instead; the person can no longer sign in and everything they did stays attributable.') }}</p>
   {% endif %}
 </div>
 {% elif may_change_role %}

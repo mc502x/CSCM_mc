@@ -762,7 +762,17 @@ class ImportService:
             result.identifier = existing.status_code_identifier
             if current is not None and _unchanged(current, data):
                 result.action = "skip"
-            elif current is None or current.lifecycle_status in ("REVIEW", "PENDING_APPROVAL"):
+            elif current is None:
+                result.issues.append(
+                    Issue(
+                        "legacy_reference_number",
+                        legacy,
+                        "The change request of this code was withdrawn; the code still holds its "
+                        "number.",
+                        "An Administrator can delete it under Administration, Withdrawn Codes.",
+                    )
+                )
+            elif current.lifecycle_status in ("REVIEW", "PENDING_APPROVAL"):
                 result.issues.append(
                     Issue(
                         "legacy_reference_number",

@@ -15,6 +15,7 @@ from app.i18n import translate as _
 from app.services.audit_service import AuditService
 from app.services.lookup_admin_service import LookupAdminService
 from app.services.lookup_service import VOCABULARY_MODELS, LookupService
+from app.services.status_code_service import StatusCodeService
 from app.services.user_service import UserService
 from app.ui import ui_bp
 
@@ -84,12 +85,56 @@ def user_set_active(user_id):
 @require_role_web("ADMINISTRATOR")
 def user_delete(user_id):
     try:
-        UserService.delete_user(user_id, current_user, request.form.get("current_password"))
+        result = UserService.delete_user(
+            user_id, current_user, request.form.get("current_password")
+        )
     except (LastAdministratorError, DomainError, ValueError) as exc:
         flash(_(str(exc)), "error")
         return redirect(url_for("ui.user_detail", user_id=user_id))
-    flash(_("User deleted."), "success")
+    if result["mode"] == "erased":
+        flash(
+            _("User deleted; its name and address are erased, what it did stays attributable."),
+            "success",
+        )
+    else:
+        flash(_("User deleted."), "success")
     return redirect(url_for("ui.user_list"))
+
+
+@ui_bp.route("/admin/withdrawn-codes")
+@require_role_web("ADMINISTRATOR")
+def withdrawn_codes():
+    """S48: the codes whose change request was withdrawn and that still hold a number (BR-026)."""
+    return render_template(
+        "admin/withdrawn_codes.html", codes=StatusCodeService.list_withdrawn(current_user)
+    )
+
+
+@ui_bp.route("/admin/withdrawn-codes/delete", methods=["POST"])
+@require_role_web("ADMINISTRATOR")
+def withdrawn_codes_delete():
+    ids = [int(i) for i in request.form.getlist("ids") if i.isdigit()]
+    try:
+        result = StatusCodeService.delete_withdrawn(
+            ids, current_user, request.form.get("current_password")
+        )
+    except (DomainError, ValueError) as exc:
+        flash(_(str(exc)), "error")
+        return redirect(url_for("ui.withdrawn_codes"))
+    if result["deleted"]:
+        flash(
+            _("%(n)s withdrawn code(s) deleted.", n=len(result["deleted"])),
+            "success",
+        )
+    if result["skipped"]:
+        flash(
+            _(
+                "Not deleted (it has a revision again or is still referenced): %(x)s",
+                x=", ".join(result["skipped"]),
+            ),
+            "error",
+        )
+    return redirect(url_for("ui.withdrawn_codes"))
 
 
 @ui_bp.route("/admin/users/new", methods=["POST"])

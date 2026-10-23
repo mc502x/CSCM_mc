@@ -8,6 +8,7 @@ sandbox codes bypass the governance workflow entirely by design)."""
 from datetime import UTC, datetime, timedelta
 
 from sqlalchemy import text
+from sqlalchemy.exc import IntegrityError
 
 from app.domain.authz import require_roles
 from app.domain.errors import (
@@ -37,6 +38,7 @@ from app.models.lookup import (
 from app.models.status_code import StatusCode, StatusCodeRevision, StatusCodeRevisionPlatform
 from app.repositories.status_code_repository import StatusCodeRepository
 from app.services.audit_service import AuditService
+from app.services.auth_service import AuthService
 from app.services.lookup_service import LookupService
 from app.services.numbering_service import NumberingService
 from app.services.reference_service import ReferenceService
@@ -734,6 +736,93 @@ class StatusCodeService:
         db.session.commit()
 
     @staticmethod
+    def list_withdrawn(actor_user) -> list[dict]:
+        """The codes whose last revision was withdrawn (BR-026): empty shells that keep a number, a
+        legacy number or a PrgIdx_GUi and so block the same program or row from being imported
+        again."""
+        require_roles(actor_user, "ADMINISTRATOR")
+        rows = (
+            db.session.query(StatusCode)
+            .filter(StatusCode.is_sandbox == 0, StatusCode.withdrawn_at.is_not(None))
+            .order_by(StatusCode.id)
+            .all()
+        )
+        prg = dict(db.session.execute(text("SELECT id, prg_idx FROM status_code")).all())
+        return [
+            {
+                "id": sc.id,
+                "identifier": sc.status_code_identifier or sc.reserved_identifier,
+                "issued": sc.status_code_identifier is not None,
+                "legacy_reference_number": sc.legacy_reference_number,
+                "prg_idx": prg.get(sc.id),
+                "group": sc.functional_system_group.code,
+                "subgroup": sc.functional_subgroup.code,
+                "withdrawn_at": sc.withdrawn_at,
+            }
+            for sc in rows
+            if not sc.revisions
+        ]
+
+    @staticmethod
+    def delete_withdrawn(ids: list[int], actor_user, reauth_password: str | None) -> dict:
+        """Deletes withdrawn codes for good (BR-026), with the Administrator's password (SEC-026).
+        A code that has a revision again, or that another record still points at, is reported and
+        left alone; every deletion is audited with what the code held."""
+        require_roles(actor_user, "ADMINISTRATOR")
+        AuthService.step_up(actor_user, reauth_password, "WITHDRAWN_CODE_DELETE")
+        if not ids:
+            raise DomainError("Nothing selected: tick at least one withdrawn code.")
+        deleted: list[str] = []
+        skipped: list[str] = []
+        for code_id in ids:
+            status_code = db.session.get(StatusCode, code_id)
+            label = (
+                (status_code.status_code_identifier or status_code.reserved_identifier or "-")
+                if status_code is not None
+                else str(code_id)
+            )
+            if (
+                status_code is None
+                or status_code.is_sandbox
+                or status_code.withdrawn_at is None
+                or status_code.revisions
+            ):
+                skipped.append(label)
+                continue
+            snapshot = {
+                "status_code_identifier": status_code.status_code_identifier,
+                "reserved_identifier": status_code.reserved_identifier,
+                "legacy_reference_number": status_code.legacy_reference_number,
+                "prg_idx": db.session.execute(
+                    text("SELECT prg_idx FROM status_code WHERE id = :i"), {"i": code_id}
+                ).scalar(),
+                "functional_system_group": status_code.functional_system_group.code,
+                "functional_subgroup": status_code.functional_subgroup.code,
+                "withdrawn_at": status_code.withdrawn_at,
+            }
+            try:
+                with db.session.begin_nested():
+                    db.session.execute(
+                        text("DELETE FROM import_source_item WHERE status_code_id = :i"),
+                        {"i": code_id},
+                    )
+                    db.session.expire(status_code)
+                    db.session.execute(text("DELETE FROM status_code WHERE id = :i"), {"i": code_id})
+                    AuditService.log(
+                        "StatusCode",
+                        code_id,
+                        "WITHDRAWN_CODE_DELETE",
+                        actor=actor_user,
+                        before=snapshot,
+                    )
+            except IntegrityError:
+                skipped.append(label)
+                continue
+            deleted.append(label)
+        db.session.commit()
+        return {"deleted": deleted, "skipped": skipped}
+
+    @staticmethod
     def _is_visible(revision: StatusCodeRevision, actor_user) -> bool:
         """BR-009: Draft/Review/PendingApproval data is hidden from Viewers."""
         if actor_user.role_code == "VIEWER":
@@ -837,6 +926,8 @@ class StatusCodeService:
         db.session.add(revision)
         db.session.flush()
         _set_platforms(revision, data.get("turbine_platforms") or [])
+        if status_code.withdrawn_at is not None:  # restored from its program file: not a shell
+            status_code.withdrawn_at = None
         return revision
 
 

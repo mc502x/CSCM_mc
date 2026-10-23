@@ -646,6 +646,12 @@ class ChangeRequestService:
             db.session.execute(
                 text("UPDATE status_code SET prg_idx = NULL WHERE id = :i"), {"i": status_code.id}
             )
+        if prior_revision is None:
+            # the code is an empty shell now; an Administrator can delete it (BR-026)
+            db.session.execute(
+                text("UPDATE status_code SET withdrawn_at = :t WHERE id = :i"),
+                {"t": utcnow_iso(), "i": status_code.id},
+            )
         if prior_revision is not None:
             # ux_revision_current_per_code allows only one is_current=1 row
             # per status_code; flush the deletion above before restoring it.

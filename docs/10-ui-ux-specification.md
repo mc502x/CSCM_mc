@@ -72,6 +72,7 @@ CSCM Tool is a **OneTool-integrated application** (2026-09-17 decision): it rend
 | S45 | Terminology *(v4.9)* | Everybody signed in; managers add and change terms | The vocabulary: coverage per language, the terms with category, definition and the state of every language, search and filter, add a term (`/terminology`) |
 | S46 | Terminology of a language *(v4.9)* | Everybody signed in; the technical roles propose, the approving roles approve | One row per term with the English text, the proposal and its state; save translations, send back with a note, approve one or all drafts of others; XLSX and CSV export (`/terminology/{language}`) |
 | S47 | Terminology check *(v4.9)* | Everybody signed in | The interface strings that contain a term whose translation is missing from the translation of the string (`/terminology/{language}/check`) |
+| S48 | Withdrawn Codes *(v4.9)* | Administrator | The codes whose last revision was withdrawn and that still hold a number, a legacy number or a PrgIdx_GUi; tick, enter the password, delete (`/admin/withdrawn-codes`) |
 
 ## 2. Navigation Map
 

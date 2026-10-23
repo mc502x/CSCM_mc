@@ -106,8 +106,8 @@ Generated from `docs/artifacts/openapi.yaml` and the access declared on each rou
 | GET | `/domain-signoff-requests` | Open domain sign-off requests awaiting the current Engineer (addressed to them, or open to their domains) | Engineer |
 | GET | `/change-requests/{crId}/domain-signoffs` | List required and completed Cross-Domain Sign-Offs for a CR | Working roles (not Viewer) and StCd Owner (read only) |
 | POST | `/change-requests/{crId}/domain-signoffs` | Record a Cross-Domain Sign-Off (actor must hold the named Engineering Domain) | Engineer |
-| GET | `/users/{userId}/usage` | What the account has done in the tool (the rows of every other table that point at it) and whether it can be deleted (Administrator, StCd... | Administrator, StCd Owner |
-| POST | `/users/{userId}/delete` | Delete an account that was never used (Administrator, with the Administrator's own password) | Administrator |
+| GET | `/users/{userId}/usage` | What the account has done in the tool (the rows of every other table that point at it) and whether a delete removes the account or erases... | Administrator, StCd Owner |
+| POST | `/users/{userId}/delete` | Delete an account (Administrator, with the Administrator's own password) | Administrator |
 | POST | `/change-requests/withdraw` | Withdraw several of your own open change requests in one call (FR-159) | Administrator, Engineer |
 | GET | `/imports` | List import jobs | Administrator, Engineer |
 | POST | `/imports` | Upload a CSV or XLSX status code library file | Administrator, Engineer |
