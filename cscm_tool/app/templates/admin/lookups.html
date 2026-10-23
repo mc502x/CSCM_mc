@@ -73,7 +73,7 @@
   <p class="hint">{{ _('Into any currently free range — confirmed as of 2026-09-17: 10000-10999, 14000-14999, 15000-15999, 16000-16999.') }}</p>
   <form method="post" action="{{ url_for('ui.functional_system_group_new') }}">
     <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
-    <div class="field"><label for="new_group_code">{{ _('Code') }}</label><input type="text" id="new_group_code" name="code" required placeholder="{{ _('WNEW') }}"></div>
+    <div class="field"><label for="new_group_code">{{ _('Code') }}</label><input type="text" id="new_group_code" name="code" required placeholder="WNEW"></div>
     <div class="field"><label for="new_group_label">{{ _('Label') }}</label><input type="text" id="new_group_label" name="label" required placeholder="{{ _('New Subsystem') }}"></div>
     <div class="form-row">
       <div class="field"><label for="new_group_range_start">{{ _('Range start') }}</label><input type="number" id="new_group_range_start" name="range_start" required></div>

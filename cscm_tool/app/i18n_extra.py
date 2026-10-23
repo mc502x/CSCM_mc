@@ -260,3 +260,7 @@ CATALOGUES: dict[str, dict[str, str]] = {
     **INDIAN,
     **EUROPEAN,
 }
+
+from app.i18n_generated import merged  # noqa: E402
+
+CATALOGUES = {code: merged(code, texts) for code, texts in CATALOGUES.items()}

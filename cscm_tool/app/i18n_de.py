@@ -778,3 +778,7 @@ DE: dict[str, str] = {
     "fixed: it identifies you, also for the Windows sign-in": "fest: sie identifiziert Sie, auch für die Windows-Anmeldung",
     "You sign in with Windows; your password is managed there.": "Sie melden sich mit Windows an; Ihr Passwort wird dort verwaltet.",
 }
+
+from app.i18n_generated import merged  # noqa: E402
+
+DE = merged("de", DE)  # the data file first, the hand-written entries on top
