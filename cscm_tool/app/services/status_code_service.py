@@ -10,6 +10,7 @@ from datetime import UTC, datetime, timedelta
 from sqlalchemy import text
 from sqlalchemy.exc import IntegrityError
 
+from app import status_code_fields
 from app.domain.authz import require_roles
 from app.domain.errors import (
     ConcurrentModificationError,
@@ -281,6 +282,8 @@ class StatusCodeService:
         )
         db.session.add(revision)
         db.session.flush()
+        status_code_fields.copy(current, revision)
+        status_code_fields.copy_user_groups(current, revision)
         for platform in current.platforms:
             db.session.add(
                 StatusCodeRevisionPlatform(
@@ -434,8 +437,15 @@ class StatusCodeService:
         if field_errors:
             raise ValidationFailed(field_errors)
 
+        controller_errors = status_code_fields.check_controller(
+            data, revision.status_code.functional_system_group.controller_type
+        )
+        if controller_errors:
+            raise ValidationFailed(controller_errors)
+
         before = _revision_snapshot(revision)
         _apply_revision_fields(revision, data)
+        status_code_fields.set_user_groups(revision, data.get("user_groups"))
         if data.get("turbine_platforms") is not None:
             _set_platforms(revision, data["turbine_platforms"])
         revision.row_version = (revision.row_version or 1) + 1
@@ -731,6 +741,7 @@ class StatusCodeService:
             db.session.query(StatusCodeRevisionPlatform).filter(
                 StatusCodeRevisionPlatform.status_code_revision_id == revision.id
             ).delete()
+            status_code_fields.delete_user_groups(revision.id)
             db.session.delete(revision)
         db.session.delete(status_code)
         db.session.commit()
@@ -879,6 +890,10 @@ class StatusCodeService:
                 ]
             )
 
+        controller_errors = status_code_fields.check_controller(data, group.controller_type)
+        if controller_errors:
+            raise ValidationFailed(controller_errors)
+
         now = utcnow_iso()
         if status_code_id is None:
             status_code = StatusCode(
@@ -909,6 +924,8 @@ class StatusCodeService:
             # or ux_revision_current_per_code rejects the insert.
             old_current = StatusCodeService._repo.get_current_revision(status_code_id)
             if old_current is not None:
+                # what the caller does not send (a spreadsheet row, an old client) carries over
+                data = {**status_code_fields.to_data(old_current), **data}
                 old_current.is_current = 0
                 # Flush this UPDATE before the new row is INSERTed below:
                 # ux_revision_current_per_code is a partial unique index
@@ -931,6 +948,7 @@ class StatusCodeService:
         db.session.add(revision)
         db.session.flush()
         _set_platforms(revision, data.get("turbine_platforms") or [])
+        status_code_fields.set_user_groups(revision, data.get("user_groups"))
         if status_code.withdrawn_at is not None:  # restored from its program file: not a shell
             status_code.withdrawn_at = None
         return revision
@@ -961,6 +979,7 @@ def _apply_revision_fields(revision: StatusCodeRevision, data: dict) -> None:
     revision.umrichterprogramm_gsc = data.get("umrichterprogramm_gsc", 0)
     revision.umrichterprogramm_msc = data.get("umrichterprogramm_msc", 0)
     revision.yaw_bearing_lubrication_program = data.get("yaw_bearing_lubrication_program", 0)
+    status_code_fields.apply(revision, data)  # v4.1: the further programs, flags and parameters
 
     # FR-025a/SEC-013/BR-012: eight restricted fields, Engineer-proposed here,
     # only authoritative once the Administrator's Review sign-off confirms
@@ -1112,6 +1131,7 @@ def revision_to_data(revision: StatusCodeRevision) -> dict:
         data[field] = getattr(revision, field)
     for field in ACCESS_FIELDS:
         data[field] = getattr(revision, f"{field}_id")
+    data.update(status_code_fields.to_data(revision))
     return data
 
 

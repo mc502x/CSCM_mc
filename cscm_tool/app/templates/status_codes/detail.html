@@ -95,6 +95,37 @@
     <dt>{{ _('Yaw Bearing Lubrication Program') }}</dt><dd>{{ revision.yaw_bearing_lubrication_program }}</dd>
   </dl>
 
+  {% set ctl = revision.controller_type %}
+  <h2>{{ _('Further Program References') }} <span class="muted">({{ _('Hub Controller only') if ctl == 'HUB' else _('Main Controller only') }})</span></h2>
+  <dl class="kv">
+    {% for field, label in (scf.HUB_PROGRAMS if ctl == 'HUB' else scf.MAIN_PROGRAMS) %}
+    <dt>{{ _(label) }}</dt><dd>{{ revision[field] }}</dd>
+    {% endfor %}
+  </dl>
+
+  <h2>{{ _('Operation Parameters') }}</h2>
+  <dl class="kv">
+    <dt>{{ _('Operating Mode Mask') }}</dt><dd>{{ revision.operating_mode_bits or '—' }}</dd>
+    <dt>{{ _('Task Call Frequency') }}</dt><dd>{{ revision.task_call_frequency if revision.task_call_frequency is not none else '—' }}</dd>
+    {% for field, label, controllers in scf.FLAGS if scf.applies_to(field, ctl) %}
+    <dt>{{ _(label) }}</dt><dd>{{ '—' if revision[field] is none else (_('Yes') if revision[field] else _('No')) }}</dd>
+    {% endfor %}
+  </dl>
+
+  {% set levels = revision.user_groups %}
+  {% if levels %}
+  <h2>{{ _('User-Group Levels') }}</h2>
+  <table>
+    <caption class="visually-hidden">{{ _('User-Group Levels') }}</caption>
+    <thead><tr><th scope="col">{{ _('Slot') }}</th><th scope="col">{{ _('Read level') }}</th><th scope="col">{{ _('Write level') }}</th></tr></thead>
+    <tbody>
+      {% for s in scf.slots() %}{% for lv in levels if lv.slot == s.slot %}
+      <tr><th scope="row">{{ s.slot }} {{ _(s.label) if s.audience else '' }}</th><td>{{ lv.read }}</td><td>{{ lv.write }}</td></tr>
+      {% endfor %}{% endfor %}
+    </tbody>
+  </table>
+  {% endif %}
+
   <h2>{{ macros.term('audience-access', _('Audience Access')) }} {% if not revision.admin_signoff_at %}<span class="proposed-badge">{{ _('Proposed') }}</span>{% endif %}</h2>
   <dl class="kv">
     <dt>{{ _('Development') }}</dt><dd>{{ revision.development_access or '—' }}</dd>

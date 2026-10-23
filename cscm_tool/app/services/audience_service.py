@@ -11,6 +11,7 @@ it means (docs/06-data-dictionary.md §9d), and a code with *no* value for the a
 is hidden too - the safe default is to disclose nothing. Only values the Administrator
 has confirmed at sign-off count; a Draft's proposed values never do."""
 
+from app import status_code_fields
 from app.models.status_code import StatusCodeRevision
 
 # audience -> (revision attribute, label)
@@ -38,6 +39,11 @@ INTERNAL_COLUMNS = (
     "umrichterprogramm_gsc",
     "umrichterprogramm_msc",
     "yaw_bearing_lubrication_program",
+    *status_code_fields.PROGRAM_FIELDS,
+    *status_code_fields.FLAG_FIELDS,
+    "operating_mode_mask",
+    "task_call_frequency",
+    "user_group_levels",
 )
 
 

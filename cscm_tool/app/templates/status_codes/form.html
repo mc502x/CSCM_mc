@@ -264,6 +264,79 @@
     </div>
   </details>
 
+  <details class="fieldset-collapsible">
+    <summary>{{ _('Further Program References') }}</summary>
+    <p class="hint">{{ _('Main Controller only') }}</p>
+    <div class="form-row">
+      {% for field, label in scf.MAIN_PROGRAMS %}
+      <div class="field">
+        <label for="{{ field }}">{{ _(label) }}</label>
+        <input type="number" id="{{ field }}" name="{{ field }}" min="0" max="65535" value="{{ values.get(field) or 0 }}">
+        {{ notes(field) }}
+      </div>
+      {% endfor %}
+    </div>
+    <p class="hint">{{ _('Hub Controller only') }}</p>
+    <div class="form-row">
+      {% for field, label in scf.HUB_PROGRAMS %}
+      <div class="field">
+        <label for="{{ field }}">{{ _(label) }}</label>
+        <input type="number" id="{{ field }}" name="{{ field }}" min="0" max="65535" value="{{ values.get(field) or 0 }}">
+        {{ notes(field) }}
+      </div>
+      {% endfor %}
+    </div>
+  </details>
+
+  <details class="fieldset-collapsible">
+    <summary>{{ _('Operation Parameters') }}</summary>
+    <div class="form-row">
+      <div class="field">
+        <label for="operating_mode_mask">{{ _('Operating Mode Mask') }}</label>
+        <input type="text" id="operating_mode_mask" name="operating_mode_mask" pattern="[01]*" maxlength="20" inputmode="numeric" value="{{ values.get('operating_mode_mask') or '' }}">
+        <div class="hint">{{ _('Bit string of the generated program, e.g. 111011 (20 bits on the Main Controller, 6 on the Hub Controller).') }}</div>
+        {{ notes('operating_mode_mask') }}
+      </div>
+      <div class="field">
+        <label for="task_call_frequency">{{ _('Task Call Frequency') }}</label>
+        <input type="number" id="task_call_frequency" name="task_call_frequency" min="1" value="{{ values.get('task_call_frequency') if values.get('task_call_frequency') is not none else '' }}">
+        {{ notes('task_call_frequency') }}
+      </div>
+      {% for field, label, controllers in scf.FLAGS %}
+      {% set current = values.get(field) %}
+      <div class="field">
+        <label for="{{ field }}">{{ _(label) }}{% if controllers == 'MAIN' %} ({{ _('Main Controller only') }}){% elif controllers == 'HUB' %} ({{ _('Hub Controller only') }}){% endif %}</label>
+        <select id="{{ field }}" name="{{ field }}">
+          <option value="" {{ 'selected' if current is none }}>({{ _('not captured') }})</option>
+          <option value="1" {{ 'selected' if current is not none and current }}>{{ _('Yes') }}</option>
+          <option value="0" {{ 'selected' if current is not none and not current }}>{{ _('No') }}</option>
+        </select>
+        {{ notes(field) }}
+      </div>
+      {% endfor %}
+    </div>
+  </details>
+
+  <details class="fieldset-collapsible">
+    <summary>{{ _('User-Group Levels') }}</summary>
+    <p class="hint">{{ _('Numeric levels of the generated program (0 to 255): read 1 = readable, 50 = no access.') }}</p>
+    {% set levels = values.get('user_groups') or {} %}
+    <table>
+      <caption class="visually-hidden">{{ _('User-Group Levels') }}</caption>
+      <thead><tr><th scope="col">{{ _('Slot') }}</th><th scope="col">{{ _('Read level') }}</th><th scope="col">{{ _('Write level') }}</th></tr></thead>
+      <tbody>
+        {% for s in scf.slots() %}
+        {% set lv = levels.get(s.slot) or {} %}
+        <tr>
+          <th scope="row">{{ s.slot }} {{ _(s.label) if s.audience else '' }}</th>
+          <td><input type="number" min="0" max="255" name="ug_read_{{ s.slot }}" aria-label="{{ _('Read level') }} {{ s.slot }}" value="{{ lv.get('read') if lv.get('read') is not none else '' }}"></td>
+          <td><input type="number" min="0" max="255" name="ug_write_{{ s.slot }}" aria-label="{{ _('Write level') }} {{ s.slot }}" value="{{ lv.get('write') if lv.get('write') is not none else '' }}"></td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </details>
+
   <fieldset>
     <legend>{{ _('Audience Access') }} <span class="proposed-badge">{{ _('Proposed — confirmed by Administrator at review') }}</span></legend>
     <div class="form-row">

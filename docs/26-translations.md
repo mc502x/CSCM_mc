@@ -230,37 +230,37 @@ What remains: (a) **no translation but the shipped ones is reviewed by a native 
 
 <!-- translations:start -->
 
-The interface has **1103 strings** (every text a template wraps in `_()`, the role names and the help texts). English is the source; the other languages are listed below. A string without a translation is shown in English.
+The interface has **1139 strings** (every text a template wraps in `_()`, the role names and the help texts). English is the source; the other languages are listed below. A string without a translation is shown in English.
 
 ### 9.1 Coverage
 
 | Language | Code | Direction | Translated | Share | Fingerprint |
 |---|---|---|---|---|---|
 | GB English 🇬🇧 | `en` | ltr | source | — | — |
-| DE Deutsch 🇩🇪 (German) | `de` | ltr | 1103 | 100 % | `01d04d7dd584` |
-| FR Français 🇫🇷 (French) | `fr` | ltr | 1102 | 99 % | `701e49e7f14a` |
-| IN हिन्दी 🇮🇳 (Hindi) | `hi` | ltr | 1102 | 99 % | `162e1655da7c` |
-| SA العربية 🇸🇦 (Arabic) | `ar` | rtl | 1102 | 99 % | `50c1f4a0fafe` |
-| IN বাংলা 🇮🇳 (Bengali) | `bn` | ltr | 1102 | 99 % | `01c33e150b24` |
-| IN मराठी 🇮🇳 (Marathi) | `mr` | ltr | 1102 | 99 % | `a5524f07643e` |
-| IN తెలుగు 🇮🇳 (Telugu) | `te` | ltr | 1102 | 99 % | `fa7d77bc1496` |
-| IN தமிழ் 🇮🇳 (Tamil) | `ta` | ltr | 1102 | 99 % | `1db3aa22735c` |
-| IN ગુજરાતી 🇮🇳 (Gujarati) | `gu` | ltr | 1102 | 99 % | `976aecbc66c0` |
-| PK اردو 🇵🇰 (Urdu) | `ur` | rtl | 1102 | 99 % | `743e38c2845a` |
-| IN ಕನ್ನಡ 🇮🇳 (Kannada) | `kn` | ltr | 1102 | 99 % | `cb6e8d551790` |
-| IN ଓଡ଼ିଆ 🇮🇳 (Odia) | `or` | ltr | 1102 | 99 % | `e1fb235c9547` |
-| IN മലയാളം 🇮🇳 (Malayalam) | `ml` | ltr | 1102 | 99 % | `dc853fb69c4f` |
-| IN ਪੰਜਾਬੀ 🇮🇳 (Punjabi) | `pa` | ltr | 1102 | 99 % | `bda2e76bc910` |
-| ES Español 🇪🇸 (Spanish) | `es` | ltr | 1102 | 99 % | `d67f6c883509` |
-| IT Italiano 🇮🇹 (Italian) | `it` | ltr | 1102 | 99 % | `c74a71f7d05d` |
-| DK Dansk 🇩🇰 (Danish) | `da` | ltr | 1102 | 99 % | `da6817ea4471` |
-| GE ქართული 🇬🇪 (Georgian) | `ka` | ltr | 1102 | 99 % | `424efc9c70ef` |
+| DE Deutsch 🇩🇪 (German) | `de` | ltr | 1139 | 100 % | `ffb244ca2d34` |
+| FR Français 🇫🇷 (French) | `fr` | ltr | 1138 | 99 % | `61f56b92a623` |
+| IN हिन्दी 🇮🇳 (Hindi) | `hi` | ltr | 1138 | 99 % | `b3757fafd3c5` |
+| SA العربية 🇸🇦 (Arabic) | `ar` | rtl | 1138 | 99 % | `fc0003fbba4e` |
+| IN বাংলা 🇮🇳 (Bengali) | `bn` | ltr | 1138 | 99 % | `1b8dbe9dee38` |
+| IN मराठी 🇮🇳 (Marathi) | `mr` | ltr | 1138 | 99 % | `6ea52886c5d4` |
+| IN తెలుగు 🇮🇳 (Telugu) | `te` | ltr | 1138 | 99 % | `8d120333c5d1` |
+| IN தமிழ் 🇮🇳 (Tamil) | `ta` | ltr | 1138 | 99 % | `b941f20f33dd` |
+| IN ગુજરાતી 🇮🇳 (Gujarati) | `gu` | ltr | 1138 | 99 % | `79c6a744567b` |
+| PK اردو 🇵🇰 (Urdu) | `ur` | rtl | 1138 | 99 % | `2e357ff4f7eb` |
+| IN ಕನ್ನಡ 🇮🇳 (Kannada) | `kn` | ltr | 1138 | 99 % | `c5c34779a8d3` |
+| IN ଓଡ଼ିଆ 🇮🇳 (Odia) | `or` | ltr | 1138 | 99 % | `dd5912341a7e` |
+| IN മലയാളം 🇮🇳 (Malayalam) | `ml` | ltr | 1138 | 99 % | `1dfa63edf655` |
+| IN ਪੰਜਾਬੀ 🇮🇳 (Punjabi) | `pa` | ltr | 1138 | 99 % | `c098eebfa38a` |
+| ES Español 🇪🇸 (Spanish) | `es` | ltr | 1138 | 99 % | `b9d51b01f93b` |
+| IT Italiano 🇮🇹 (Italian) | `it` | ltr | 1138 | 99 % | `9eb6c9c8eccd` |
+| DK Dansk 🇩🇰 (Danish) | `da` | ltr | 1138 | 99 % | `7e33f52aea3a` |
+| GE ქართული 🇬🇪 (Georgian) | `ka` | ltr | 1138 | 99 % | `4605bc306601` |
 
 The fingerprint is a short hash of the language's catalogue as shipped in the code (string ids and translations). Whether a language has been reviewed, by whom and when, and which proposals were accepted since, is kept in the application (Translations in the sidebar), not in this file.
 
 ### 9.2 DE Deutsch 🇩🇪 — German
 
-1103 of 1103 strings translated; direction left to right.
+1139 of 1139 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -556,9 +556,11 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S041a5d` | detail, export_center | Format | Format |
 | `S9e3c65` | detail | From revision | Von Revision |
 | `S2fa1f7` | detail, form, list | Functional Subgroup | Funktionsuntergruppe |
+| `Sb8c4c9` | detail, form | Further Program References | Weitere Programmverweise |
 | `S636c41` | detail | Grid Operator | Netzbetreiber |
 | `S90ccd6` | detail | History | Verlauf |
 | `Sfec8b7` | detail | Hub Controller group | Hub-Controller-Gruppe |
+| `S00ccae` | detail, form | Hub Controller only | nur Nabensteuerung |
 | `S3c883f` | detail | I have reviewed these dependants | Ich habe diese abhängigen Codes geprüft |
 | `S4bc96f` | detail | Import Job | Import-Auftrag |
 | `S50565a` | detail | Import progress | Import-Fortschritt |
@@ -572,13 +574,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S43d5c5` | detail, form | Loadless Spinning Permitted | Lastfreies Drehen erlaubt |
 | `S193786` | detail | Logical Node | Logischer Knoten |
 | `S578b78` | detail | Main Controller group | Hauptsteuerungs-Gruppe |
+| `Sa7512d` | detail, form | Main Controller only | nur Hauptsteuerung |
 | `Seb9a6d` | detail | Manage translations | Übersetzungen verwalten |
 | `Sc5beef` | detail | manifest | Manifest |
 | `S6d59f4` | detail | Manual Reset Program | Programm für manuelles Zurücksetzen |
 | `Sf9896c` | detail, form | Mark resolved | Als erledigt markieren |
 | `Sa7b93d` | detail, new, reconciliation | Mode | Modus |
 | `S31a335` | detail | new code | neuer Code |
-| `S816c52` | detail, export_verify, list | No | Nein |
+| `S816c52` | detail, export_verify, form | No | Nein |
 | `S06fc8d` | detail | No active Engineer holds the %(code)s domain yet. An Administrator must tag an Engineer with it (Administration → Users) before a sign-off can be requested. | Kein aktiver Ingenieur hat den Fachbereich %(code)s. Ein Administrator muss einem Ingenieur diesen Fachbereich zuweisen (Verwaltung → Benutzer), bevor eine Freigabe angefordert werden kann. |
 | `S362336` | detail | No change requests in this set yet. | Noch keine Änderungsanträge in diesem Paket. |
 | `S7e1129` | detail | No comments or decisions yet. | Noch keine Kommentare oder Entscheidungen. |
@@ -599,6 +602,8 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S5fc7e3` | detail | open | offen |
 | `Sf61187` | detail | Open New Revision | Neue Revision eröffnen |
 | `S578c53` | detail | Opens a Draft that must go through the full dual-review and Chief Engineer approval cycle before it takes effect. | Eröffnet einen Entwurf, der vor dem Wirksamwerden die volle doppelte Prüfung und die Genehmigung durch den Chefingenieur durchlaufen muss. |
+| `Sfa465a` | detail, form, status code fields | Operating Mode Mask | Betriebsartenmaske |
+| `S20691e` | detail, form | Operation Parameters | Betriebsparameter |
 | `S36463a` | detail | other code(s) still refer to this one: | weitere(r) Code(s) verweisen noch auf diesen: |
 | `S9734ac` | detail | Other codes that refer to this one. Review them before deprecating it. | Andere Codes, die auf diesen verweisen. Prüfen Sie sie, bevor Sie ihn außer Betrieb nehmen. |
 | `S780d35` | detail | Override identifier (migration / reservation only) | Kennung überschreiben (nur Migration / Reservierung) |
@@ -616,6 +621,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sa4ab7b` | detail | Program References | Programmverweise |
 | `S70cbd1` | detail | Proposed | Vorgeschlagen |
 | `S483bf2` | detail, list | Published | Veröffentlicht |
+| `S6a9c56` | detail, form | Read level | Lesestufe |
 | `Sf5ca9d` | detail | Recorded exports | Aufgezeichnete Exporte |
 | `Sa3f757` | detail | Reinstate to Released | Wieder auf Veröffentlicht setzen |
 | `S3238ca` | detail | Reinstatement reason | Grund der Wiederinbetriebnahme |
@@ -661,6 +667,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S6e3665` | detail, review_queue | Signed | Freigegeben |
 | `Sddfd83` | detail | Signed by | Freigegeben von |
 | `Sb71523` | detail | Size | Größe |
+| `Sece2ac` | detail, form | Slot | Slot |
 | `Sff44d2` | detail | Software Version | Software-Version |
 | `S169bf7` | detail, software_versions | Software version | Software-Version |
 | `S6da13a` | detail, fleet_feedback | Source | Quelle |
@@ -674,6 +681,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S123f6c` | detail | Submit for Review | Zur Prüfung einreichen |
 | `S3dca68` | detail | Superseded by Status Code id (optional) | Abgelöst durch Statuscode-ID (optional) |
 | `S08e643` | detail, list | Target software version | Ziel-Software-Version |
+| `S44203c` | detail, form, status code fields | Task Call Frequency | Task-Aufruffrequenz |
 | `S8fc804` | detail | The author has to submit it for review before the Reviewer or Administrator can see it. | Der Autor muss ihn zur Prüfung einreichen, bevor Prüfer oder Administrator ihn sehen können. |
 | `S091814` | detail | This change request has reached a terminal decision state | Dieser Änderungsantrag hat einen abschließenden Entscheidungszustand erreicht |
 | `S6d5708` | detail | This is the one truly irreversible action in the system. Type the identifier to confirm. | Dies ist die einzige wirklich unumkehrbare Aktion im System. Geben Sie zur Bestätigung die Kennung ein. |
@@ -689,6 +697,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S391d68` | detail, stalled | unassigned | nicht zugewiesen |
 | `S73ec5d` | detail, form | Up/Down Counter | Auf-/Abwärtszähler |
 | `S80c494` | detail | Uploaded | Hochgeladen |
+| `Sb01729` | detail, form | User-Group Levels | Benutzergruppen-Stufen |
 | `S45288a` | detail, new | Version Label | Versionsbezeichnung |
 | `S4993ae` | detail | View Change Request | Änderungsantrag ansehen |
 | `Scde93f` | detail | View Imported Drafts | Importierte Entwürfe ansehen |
@@ -701,9 +710,10 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S7d5316` | detail | Who | Wer |
 | `S47e564` | detail | Withdraw | Zurückziehen |
 | `S51a998` | detail | Withdraw this change request? | Diesen Änderungsantrag zurückziehen? |
+| `S95a2a4` | detail, form | Write level | Schreibstufe |
 | `S612fe0` | detail | Yaw Bearing Lubrication Program | Schmierprogramm Azimutlager |
 | `S559a3f` | detail | Yaw Program | Azimutprogramm |
-| `S5397e0` | detail, export_verify, list | Yes | Ja |
+| `S5397e0` | detail, export_verify, form | Yes | Ja |
 | `Sc8e4b4` | detail | Your decision step | Ihr Entscheidungsschritt |
 | `S20cb4c` | detail, export_center | ZIP with manifest | ZIP mit Manifest |
 | `S5d4358` | dry_run | All rows are clean. | Alle Zeilen sind fehlerfrei. |
@@ -791,6 +801,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sf094b9` | form | Affected component (optional) | Betroffene Komponente (optional) |
 | `S407cf2` | form | Applies from software version (optional) | Gilt ab Software-Version (optional) |
 | `Sa30242` | form | Applies up to software version (optional) | Gilt bis Software-Version (optional) |
+| `S7665e9` | form | Bit string of the generated program, e.g. 111011 (20 bits on the Main Controller, 6 on the Hub Controller). | Bitfolge des generierten Programms, z. B. 111011 (20 Bit bei der Hauptsteuerung, 6 bei der Nabensteuerung). |
 | `S77dfd2` | form, st_preview | Cancel | Abbrechen |
 | `S94c2a3` | form | Classification | Klassifizierung |
 | `S7c9afd` | form | Classification only — a Sandbox code's identifier is still drawn from the isolated StCd-T##### band, never from this group's numeric range. | Nur Klassifizierung – die Kennung eines Sandbox-Codes stammt weiterhin aus dem getrennten Bereich StCd-T#####, nie aus dem Nummernbereich dieser Gruppe. |
@@ -799,7 +810,9 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sdb0f93` | form | Immutable once allocated (BR-001). | Nach der Vergabe unveränderlich (BR-001). |
 | `Sd7635c` | form | Legacy Reference Number (optional) | Alt-Referenznummer (optional) |
 | `S2d3840` | form | New Sandbox Status Code | Neuer Sandbox-Statuscode |
+| `S0efd9f` | form | not captured | nicht erfasst |
 | `S8f9967` | form | Not yet assigned — fixed on Submit for Review | Noch nicht vergeben – wird beim Einreichen zur Prüfung festgelegt |
+| `S152225` | form | Numeric levels of the generated program (0 to 255): read 1 = readable, 50 = no access. | Zahlenstufen des generierten Programms (0 bis 255): Lesen 1 = lesbar, 50 = kein Zugriff. |
 | `S82890d` | form | Open review comments | Offene Prüfkommentare |
 | `S611331` | form | Planned deprecation date (optional) | Geplantes Außerbetriebnahmedatum (optional) |
 | `S75ee24` | form | Planned effective date (optional) | Geplantes Gültigkeitsdatum (optional) |
@@ -1307,6 +1320,29 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sc0d28c` | stalled | Reviewers who are out of office (they have delegated) are left out. | Prüfer, die abwesend sind (sie haben eine Vertretung eingerichtet), sind nicht aufgeführt. |
 | `Sca6d0e` | stalled | Stage | Stufe |
 | `Sb1bafe` | stalled | Stalled change requests | Hängende Änderungsanträge |
+| `S0b6108` | status code fields | Anemometer Heating Program | Windmesser-Heizung-Programm |
+| `S5387f1` | status code fields | Automatic Operation | Automatikbetrieb |
+| `S49412e` | status code fields | Availability Calculation | Verfügbarkeitsberechnung |
+| `S38cb6d` | status code fields | Converter Reset Program | Umrichter-Reset-Programm |
+| `S86a17b` | status code fields | Gearbox Oil Fan Program | Getriebeöllüfter-Programm |
+| `Scf4f90` | status code fields | Gearbox Oil Heating Program | Getriebeölheizung-Programm |
+| `S891ad9` | status code fields | Gearbox Oil Pump Program | Getriebeölpumpe-Programm |
+| `S6a0014` | status code fields | Generator Bearing Lubrication Program | Generatorlager-Schmierung-Programm |
+| `S7f38cc` | status code fields | Generator Fan Program | Generatorlüfter-Programm |
+| `Sf292a7` | status code fields | Generator Heating Program | Generatorheizung-Programm |
+| `Sdccc10` | status code fields | Hydraulic Pump Program | Hydraulikpumpe-Programm |
+| `Se21075` | status code fields | Manual Operation | Handbetrieb |
+| `S9beea7` | status code fields | Medium Voltage Circuit Breaker Program | Mittelspannungs-Leistungsschalter-Programm |
+| `Scb0a0d` | status code fields | Pitch Error Program | Pitch-Fehler-Programm |
+| `S941428` | status code fields | Pitch Warning Program | Pitch-Warnung-Programm |
+| `Sd2fe56` | status code fields | Rotor Bearing Lubrication Program | Rotorlager-Schmierung-Programm |
+| `S381e23` | status code fields | Rotor Brake Program | Rotorbremse-Programm |
+| `S1e3032` | status code fields | Stop Program 40 | Stopp-Programm 40 |
+| `S43b650` | status code fields | Stop Program 80 | Stopp-Programm 80 |
+| `S805790` | status code fields | Tower Fan Program | Turmlüfter-Programm |
+| `Sef9b9e` | status code fields | Transformer Oil Pump Program | Trafo-Ölpumpe-Programm |
+| `S18a446` | status code fields | Vane Position | Windfahnenposition |
+| `S9ebce6` | status code fields | Zero Load Operation | Nulllastbetrieb |
 | `Sff9f1f` | success_metrics | Age | Alter |
 | `S8cc047` | success_metrics | Approval | Genehmigung |
 | `S273d62` | success_metrics | Audit trail completeness of Released codes | Vollständigkeit der Nachvollziehbarkeit freigegebener Codes |
@@ -1370,7 +1406,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 
 ### 9.3 FR Français 🇫🇷 — French
 
-1102 of 1103 strings translated; direction left to right.
+1138 of 1139 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -1665,9 +1701,11 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S041a5d` | detail, export_center | Format | Format |
 | `S9e3c65` | detail | From revision | De la révision |
 | `S2fa1f7` | detail, form, list | Functional Subgroup | Sous-groupe fonctionnel |
+| `Sb8c4c9` | detail, form | Further Program References | Autres références de programme |
 | `S636c41` | detail | Grid Operator | Gestionnaire de réseau |
 | `S90ccd6` | detail | History | Historique |
 | `Sfec8b7` | detail | Hub Controller group | Groupe du contrôleur de moyeu |
+| `S00ccae` | detail, form | Hub Controller only | contrôleur de moyeu uniquement |
 | `S3c883f` | detail | I have reviewed these dependants | J'ai relu ces dépendances |
 | `S4bc96f` | detail | Import Job | Tâche d'import |
 | `S50565a` | detail | Import progress | Progression de l'import |
@@ -1681,13 +1719,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S43d5c5` | detail, form | Loadless Spinning Permitted | Rotation à vide autorisée |
 | `S193786` | detail | Logical Node | Nœud logique |
 | `S578b78` | detail | Main Controller group | Groupe du contrôleur principal |
+| `Sa7512d` | detail, form | Main Controller only | contrôleur principal uniquement |
 | `Seb9a6d` | detail | Manage translations | Gérer les traductions |
 | `Sc5beef` | detail | manifest | manifeste |
 | `S6d59f4` | detail | Manual Reset Program | Programme de réarmement manuel |
 | `Sf9896c` | detail, form | Mark resolved | Marquer comme résolu |
 | `Sa7b93d` | detail, new, reconciliation | Mode | Mode |
 | `S31a335` | detail | new code | nouveau code |
-| `S816c52` | detail, export_verify, list | No | Non |
+| `S816c52` | detail, export_verify, form | No | Non |
 | `S06fc8d` | detail | No active Engineer holds the %(code)s domain yet. An Administrator must tag an Engineer with it (Administration → Users) before a sign-off can be requested. | Aucun ingénieur actif n'a le domaine %(code)s. Un administrateur doit attribuer ce domaine à un ingénieur (Administration → Utilisateurs) avant qu'une validation puisse être demandée. |
 | `S362336` | detail | No change requests in this set yet. | Aucune demande de modification dans ce lot pour l'instant. |
 | `S7e1129` | detail | No comments or decisions yet. | Aucun commentaire ni décision pour l'instant. |
@@ -1708,6 +1747,8 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S5fc7e3` | detail | open | ouvert |
 | `Sf61187` | detail | Open New Revision | Ouvrir une nouvelle révision |
 | `S578c53` | detail | Opens a Draft that must go through the full dual-review and Chief Engineer approval cycle before it takes effect. | Ouvre un brouillon qui doit suivre le cycle complet de double relecture et d'approbation de l'ingénieur en chef avant de prendre effet. |
+| `Sfa465a` | detail, form, status code fields | Operating Mode Mask | Masque du mode de fonctionnement |
+| `S20691e` | detail, form | Operation Parameters | Paramètres de fonctionnement |
 | `S36463a` | detail | other code(s) still refer to this one: | autre(s) code(s) renvoient encore à celui-ci : |
 | `S9734ac` | detail | Other codes that refer to this one. Review them before deprecating it. | Autres codes qui renvoient à celui-ci. Relisez-les avant de le déclarer obsolète. |
 | `S780d35` | detail | Override identifier (migration / reservation only) | Remplacer l'identifiant (migration / réservation uniquement) |
@@ -1725,6 +1766,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sa4ab7b` | detail | Program References | Références de programme |
 | `S70cbd1` | detail | Proposed | Proposé |
 | `S483bf2` | detail, list | Published | Publié |
+| `S6a9c56` | detail, form | Read level | Niveau de lecture |
 | `Sf5ca9d` | detail | Recorded exports | Exports enregistrés |
 | `Sa3f757` | detail | Reinstate to Released | Rétablir à Publié |
 | `S3238ca` | detail | Reinstatement reason | Motif de rétablissement |
@@ -1770,6 +1812,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S6e3665` | detail, review_queue | Signed | Validé |
 | `Sddfd83` | detail | Signed by | Validé par |
 | `Sb71523` | detail | Size | Taille |
+| `Sece2ac` | detail, form | Slot | Emplacement |
 | `Sff44d2` | detail | Software Version | Version du logiciel |
 | `S169bf7` | detail, software_versions | Software version | Version du logiciel |
 | `S6da13a` | detail, fleet_feedback | Source | Source |
@@ -1783,6 +1826,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S123f6c` | detail | Submit for Review | Soumettre pour relecture |
 | `S3dca68` | detail | Superseded by Status Code id (optional) | Remplacé par l'id du code de statut (facultatif) |
 | `S08e643` | detail, list | Target software version | Version logicielle cible |
+| `S44203c` | detail, form, status code fields | Task Call Frequency | Fréquence d'appel de la tâche |
 | `S8fc804` | detail | The author has to submit it for review before the Reviewer or Administrator can see it. | L'auteur doit le soumettre pour relecture avant que le relecteur ou l'administrateur puisse le voir. |
 | `S091814` | detail | This change request has reached a terminal decision state | Cette demande de modification a atteint un état de décision final |
 | `S6d5708` | detail | This is the one truly irreversible action in the system. Type the identifier to confirm. | C'est la seule action vraiment irréversible du système. Saisissez l'identifiant pour confirmer. |
@@ -1798,6 +1842,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S391d68` | detail, stalled | unassigned | non assigné |
 | `S73ec5d` | detail, form | Up/Down Counter | Compteur progressif/dégressif |
 | `S80c494` | detail | Uploaded | Téléversé |
+| `Sb01729` | detail, form | User-Group Levels | Niveaux des groupes d'utilisateurs |
 | `S45288a` | detail, new | Version Label | Libellé de version |
 | `S4993ae` | detail | View Change Request | Voir la demande de modification |
 | `Scde93f` | detail | View Imported Drafts | Voir les brouillons importés |
@@ -1810,9 +1855,10 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S7d5316` | detail | Who | Qui |
 | `S47e564` | detail | Withdraw | Retirer |
 | `S51a998` | detail | Withdraw this change request? | Retirer cette demande de modification ? |
+| `S95a2a4` | detail, form | Write level | Niveau d'écriture |
 | `S612fe0` | detail | Yaw Bearing Lubrication Program | Programme de lubrification du palier d'orientation |
 | `S559a3f` | detail | Yaw Program | Programme d'orientation |
-| `S5397e0` | detail, export_verify, list | Yes | Oui |
+| `S5397e0` | detail, export_verify, form | Yes | Oui |
 | `Sc8e4b4` | detail | Your decision step | Votre étape de décision |
 | `S20cb4c` | detail, export_center | ZIP with manifest | ZIP avec manifeste |
 | `S5d4358` | dry_run | All rows are clean. | Toutes les lignes sont propres. |
@@ -1900,6 +1946,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sf094b9` | form | Affected component (optional) | Composant concerné (facultatif) |
 | `S407cf2` | form | Applies from software version (optional) | S'applique à partir de la version du logiciel (facultatif) |
 | `Sa30242` | form | Applies up to software version (optional) | S'applique jusqu'à la version du logiciel (facultatif) |
+| `S7665e9` | form | Bit string of the generated program, e.g. 111011 (20 bits on the Main Controller, 6 on the Hub Controller). | Chaîne de bits du programme généré, par ex. 111011 (20 bits pour le contrôleur principal, 6 pour le contrôleur de moyeu). |
 | `S77dfd2` | form, st_preview | Cancel | Annuler |
 | `S94c2a3` | form | Classification | Classification |
 | `S7c9afd` | form | Classification only — a Sandbox code's identifier is still drawn from the isolated StCd-T##### band, never from this group's numeric range. | Classification seulement — l'identifiant d'un code du bac à sable est toujours tiré de la bande isolée StCd-T#####, jamais de la plage numérique de ce groupe. |
@@ -1908,7 +1955,9 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sdb0f93` | form | Immutable once allocated (BR-001). | Immuable une fois attribué (BR-001). |
 | `Sd7635c` | form | Legacy Reference Number (optional) | Ancien numéro de référence (facultatif) |
 | `S2d3840` | form | New Sandbox Status Code | Nouveau code de statut du bac à sable |
+| `S0efd9f` | form | not captured | non saisi |
 | `S8f9967` | form | Not yet assigned — fixed on Submit for Review | Pas encore attribué — fixé à la soumission pour relecture |
+| `S152225` | form | Numeric levels of the generated program (0 to 255): read 1 = readable, 50 = no access. | Niveaux numériques du programme généré (0 à 255) : lecture 1 = lisible, 50 = aucun accès. |
 | `S82890d` | form | Open review comments | Commentaires de relecture ouverts |
 | `S611331` | form | Planned deprecation date (optional) | Date d'obsolescence prévue (facultatif) |
 | `S75ee24` | form | Planned effective date (optional) | Date d'entrée en vigueur prévue (facultatif) |
@@ -2416,6 +2465,29 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sc0d28c` | stalled | Reviewers who are out of office (they have delegated) are left out. | Les relecteurs absents (qui ont délégué) sont exclus. |
 | `Sca6d0e` | stalled | Stage | Étape |
 | `Sb1bafe` | stalled | Stalled change requests | Demandes en souffrance |
+| `S0b6108` | status code fields | Anemometer Heating Program | Programme du chauffage de l'anémomètre |
+| `S5387f1` | status code fields | Automatic Operation | Fonctionnement automatique |
+| `S49412e` | status code fields | Availability Calculation | Calcul de disponibilité |
+| `S38cb6d` | status code fields | Converter Reset Program | Programme de réinitialisation du convertisseur |
+| `S86a17b` | status code fields | Gearbox Oil Fan Program | Programme du ventilateur d'huile du multiplicateur |
+| `Scf4f90` | status code fields | Gearbox Oil Heating Program | Programme du chauffage d'huile du multiplicateur |
+| `S891ad9` | status code fields | Gearbox Oil Pump Program | Programme de la pompe à huile du multiplicateur |
+| `S6a0014` | status code fields | Generator Bearing Lubrication Program | Programme de graissage du palier de la génératrice |
+| `S7f38cc` | status code fields | Generator Fan Program | Programme du ventilateur de la génératrice |
+| `Sf292a7` | status code fields | Generator Heating Program | Programme du chauffage de la génératrice |
+| `Sdccc10` | status code fields | Hydraulic Pump Program | Programme de la pompe hydraulique |
+| `Se21075` | status code fields | Manual Operation | Fonctionnement manuel |
+| `S9beea7` | status code fields | Medium Voltage Circuit Breaker Program | Programme du disjoncteur moyenne tension |
+| `Scb0a0d` | status code fields | Pitch Error Program | Programme d'erreur de pas |
+| `S941428` | status code fields | Pitch Warning Program | Programme d'avertissement de pas |
+| `Sd2fe56` | status code fields | Rotor Bearing Lubrication Program | Programme de graissage du palier du rotor |
+| `S381e23` | status code fields | Rotor Brake Program | Programme du frein du rotor |
+| `S1e3032` | status code fields | Stop Program 40 | Programme d'arrêt 40 |
+| `S43b650` | status code fields | Stop Program 80 | Programme d'arrêt 80 |
+| `S805790` | status code fields | Tower Fan Program | Programme du ventilateur de la tour |
+| `Sef9b9e` | status code fields | Transformer Oil Pump Program | Programme de la pompe à huile du transformateur |
+| `S18a446` | status code fields | Vane Position | Position de la girouette |
+| `S9ebce6` | status code fields | Zero Load Operation | Fonctionnement à vide |
 | `Sff9f1f` | success_metrics | Age | Ancienneté |
 | `S8cc047` | success_metrics | Approval | Approbation |
 | `S273d62` | success_metrics | Audit trail completeness of Released codes | Exhaustivité de la piste d'audit des codes publiés |
@@ -2479,7 +2551,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 
 ### 9.4 IN हिन्दी 🇮🇳 — Hindi
 
-1102 of 1103 strings translated; direction left to right.
+1138 of 1139 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -2774,9 +2846,11 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S041a5d` | detail, export_center | Format | प्रारूप |
 | `S9e3c65` | detail | From revision | संशोधन से |
 | `S2fa1f7` | detail, form, list | Functional Subgroup | कार्यात्मक उप-समूह |
+| `Sb8c4c9` | detail, form | Further Program References | अन्य प्रोग्राम संदर्भ |
 | `S636c41` | detail | Grid Operator | ग्रिड ऑपरेटर |
 | `S90ccd6` | detail | History | इतिहास |
 | `Sfec8b7` | detail | Hub Controller group | हब नियंत्रक समूह |
+| `S00ccae` | detail, form | Hub Controller only | केवल हब नियंत्रक |
 | `S3c883f` | detail | I have reviewed these dependants | मैंने इन निर्भर कोड की समीक्षा कर ली है |
 | `S4bc96f` | detail | Import Job | आयात कार्य |
 | `S50565a` | detail | Import progress | आयात की प्रगति |
@@ -2790,13 +2864,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S43d5c5` | detail, form | Loadless Spinning Permitted | बिना लोड के घूमना अनुमत |
 | `S193786` | detail | Logical Node | लॉजिकल नोड |
 | `S578b78` | detail | Main Controller group | मुख्य नियंत्रक समूह |
+| `Sa7512d` | detail, form | Main Controller only | केवल मुख्य नियंत्रक |
 | `Seb9a6d` | detail | Manage translations | अनुवाद प्रबंधित करें |
 | `Sc5beef` | detail | manifest | मैनिफ़ेस्ट |
 | `S6d59f4` | detail | Manual Reset Program | मैनुअल रीसेट प्रोग्राम |
 | `Sf9896c` | detail, form | Mark resolved | हल के रूप में चिह्नित करें |
 | `Sa7b93d` | detail, new, reconciliation | Mode | मोड |
 | `S31a335` | detail | new code | नया कोड |
-| `S816c52` | detail, export_verify, list | No | नहीं |
+| `S816c52` | detail, export_verify, form | No | नहीं |
 | `S06fc8d` | detail | No active Engineer holds the %(code)s domain yet. An Administrator must tag an Engineer with it (Administration → Users) before a sign-off can be requested. | किसी सक्रिय अभियंता के पास डोमेन %(code)s नहीं है। साइन-ऑफ माँगने से पहले प्रशासक को किसी अभियंता को यह डोमेन देना होगा (प्रशासन → उपयोगकर्ता)। |
 | `S362336` | detail | No change requests in this set yet. | इस समुच्चय में अभी तक कोई परिवर्तन अनुरोध नहीं है। |
 | `S7e1129` | detail | No comments or decisions yet. | अभी तक कोई टिप्पणी या निर्णय नहीं। |
@@ -2817,6 +2892,8 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S5fc7e3` | detail | open | खुला |
 | `Sf61187` | detail | Open New Revision | नया संशोधन खोलें |
 | `S578c53` | detail | Opens a Draft that must go through the full dual-review and Chief Engineer approval cycle before it takes effect. | एक मसौदा खोलता है जिसे प्रभावी होने से पहले पूरे दोहरी समीक्षा और मुख्य अभियंता अनुमोदन चक्र से गुज़रना होता है। |
+| `Sfa465a` | detail, form, status code fields | Operating Mode Mask | संचालन मोड मास्क |
+| `S20691e` | detail, form | Operation Parameters | संचालन पैरामीटर |
 | `S36463a` | detail | other code(s) still refer to this one: | अन्य कोड अभी भी इसका संदर्भ देते हैं: |
 | `S9734ac` | detail | Other codes that refer to this one. Review them before deprecating it. | वे अन्य कोड जो इसका संदर्भ देते हैं। इसे अप्रचलित करने से पहले उनकी समीक्षा करें। |
 | `S780d35` | detail | Override identifier (migration / reservation only) | पहचानकर्ता अधिलेखित करें (केवल माइग्रेशन / आरक्षण के लिए) |
@@ -2834,6 +2911,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sa4ab7b` | detail | Program References | प्रोग्राम संदर्भ |
 | `S70cbd1` | detail | Proposed | प्रस्तावित |
 | `S483bf2` | detail, list | Published | प्रकाशित |
+| `S6a9c56` | detail, form | Read level | पढ़ने का स्तर |
 | `Sf5ca9d` | detail | Recorded exports | दर्ज निर्यात |
 | `Sa3f757` | detail | Reinstate to Released | जारी में पुनर्स्थापित करें |
 | `S3238ca` | detail | Reinstatement reason | पुनर्स्थापना का कारण |
@@ -2879,6 +2957,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S6e3665` | detail, review_queue | Signed | हस्ताक्षरित |
 | `Sddfd83` | detail | Signed by | हस्ताक्षरकर्ता |
 | `Sb71523` | detail | Size | आकार |
+| `Sece2ac` | detail, form | Slot | स्लॉट |
 | `Sff44d2` | detail | Software Version | सॉफ़्टवेयर संस्करण |
 | `S169bf7` | detail, software_versions | Software version | सॉफ़्टवेयर संस्करण |
 | `S6da13a` | detail, fleet_feedback | Source | स्रोत |
@@ -2892,6 +2971,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S123f6c` | detail | Submit for Review | समीक्षा के लिए जमा करें |
 | `S3dca68` | detail | Superseded by Status Code id (optional) | इसके स्थान पर स्थिति कोड आईडी (वैकल्पिक) |
 | `S08e643` | detail, list | Target software version | लक्षित सॉफ़्टवेयर संस्करण |
+| `S44203c` | detail, form, status code fields | Task Call Frequency | टास्क कॉल आवृत्ति |
 | `S8fc804` | detail | The author has to submit it for review before the Reviewer or Administrator can see it. | समीक्षक या प्रशासक के इसे देख पाने से पहले लेखक को इसे समीक्षा के लिए जमा करना होगा। |
 | `S091814` | detail | This change request has reached a terminal decision state | यह परिवर्तन अनुरोध अंतिम निर्णय स्थिति में पहुँच चुका है |
 | `S6d5708` | detail | This is the one truly irreversible action in the system. Type the identifier to confirm. | यह सिस्टम की एकमात्र सचमुच अपरिवर्तनीय कार्रवाई है। पुष्टि के लिए पहचानकर्ता टाइप करें। |
@@ -2907,6 +2987,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S391d68` | detail, stalled | unassigned | अनियुक्त |
 | `S73ec5d` | detail, form | Up/Down Counter | ऊपर/नीचे काउंटर |
 | `S80c494` | detail | Uploaded | अपलोड किया गया |
+| `Sb01729` | detail, form | User-Group Levels | उपयोगकर्ता-समूह स्तर |
 | `S45288a` | detail, new | Version Label | संस्करण लेबल |
 | `S4993ae` | detail | View Change Request | परिवर्तन अनुरोध देखें |
 | `Scde93f` | detail | View Imported Drafts | आयात किए गए मसौदे देखें |
@@ -2919,9 +3000,10 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S7d5316` | detail | Who | कौन |
 | `S47e564` | detail | Withdraw | वापस लें |
 | `S51a998` | detail | Withdraw this change request? | इस परिवर्तन अनुरोध को वापस लें? |
+| `S95a2a4` | detail, form | Write level | लिखने का स्तर |
 | `S612fe0` | detail | Yaw Bearing Lubrication Program | याव बेयरिंग स्नेहन प्रोग्राम |
 | `S559a3f` | detail | Yaw Program | याव प्रोग्राम |
-| `S5397e0` | detail, export_verify, list | Yes | हाँ |
+| `S5397e0` | detail, export_verify, form | Yes | हाँ |
 | `Sc8e4b4` | detail | Your decision step | आपका निर्णय चरण |
 | `S20cb4c` | detail, export_center | ZIP with manifest | मैनिफ़ेस्ट के साथ ZIP |
 | `S5d4358` | dry_run | All rows are clean. | सभी पंक्तियाँ साफ़ हैं। |
@@ -3009,6 +3091,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sf094b9` | form | Affected component (optional) | प्रभावित घटक (वैकल्पिक) |
 | `S407cf2` | form | Applies from software version (optional) | इस सॉफ़्टवेयर संस्करण से लागू (वैकल्पिक) |
 | `Sa30242` | form | Applies up to software version (optional) | इस सॉफ़्टवेयर संस्करण तक लागू (वैकल्पिक) |
+| `S7665e9` | form | Bit string of the generated program, e.g. 111011 (20 bits on the Main Controller, 6 on the Hub Controller). | जनरेट किए गए प्रोग्राम की बिट स्ट्रिंग, जैसे 111011 (मुख्य नियंत्रक में 20 बिट, हब नियंत्रक में 6)। |
 | `S77dfd2` | form, st_preview | Cancel | रद्द करें |
 | `S94c2a3` | form | Classification | वर्गीकरण |
 | `S7c9afd` | form | Classification only — a Sandbox code's identifier is still drawn from the isolated StCd-T##### band, never from this group's numeric range. | केवल वर्गीकरण — सैंडबॉक्स कोड का पहचानकर्ता फिर भी अलग बैंड StCd-T##### से लिया जाता है, इस समूह की संख्यात्मक सीमा से कभी नहीं। |
@@ -3017,7 +3100,9 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sdb0f93` | form | Immutable once allocated (BR-001). | एक बार नियत होने के बाद अपरिवर्तनीय (BR-001)। |
 | `Sd7635c` | form | Legacy Reference Number (optional) | पुराना संदर्भ क्रमांक (वैकल्पिक) |
 | `S2d3840` | form | New Sandbox Status Code | नया सैंडबॉक्स स्थिति कोड |
+| `S0efd9f` | form | not captured | दर्ज नहीं |
 | `S8f9967` | form | Not yet assigned — fixed on Submit for Review | अभी नियत नहीं — समीक्षा के लिए जमा करते समय तय होगा |
+| `S152225` | form | Numeric levels of the generated program (0 to 255): read 1 = readable, 50 = no access. | जनरेट किए गए प्रोग्राम के संख्यात्मक स्तर (0 से 255): पढ़ना 1 = पठनीय, 50 = पहुँच नहीं। |
 | `S82890d` | form | Open review comments | खुली समीक्षा टिप्पणियाँ |
 | `S611331` | form | Planned deprecation date (optional) | नियोजित अप्रचलन तिथि (वैकल्पिक) |
 | `S75ee24` | form | Planned effective date (optional) | नियोजित प्रभावी तिथि (वैकल्पिक) |
@@ -3525,6 +3610,29 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sc0d28c` | stalled | Reviewers who are out of office (they have delegated) are left out. | जो समीक्षक कार्यालय से बाहर हैं (जिन्होंने प्रत्यायोजन किया है) शामिल नहीं हैं। |
 | `Sca6d0e` | stalled | Stage | चरण |
 | `Sb1bafe` | stalled | Stalled change requests | अटके हुए अनुरोध |
+| `S0b6108` | status code fields | Anemometer Heating Program | एनीमोमीटर हीटिंग प्रोग्राम |
+| `S5387f1` | status code fields | Automatic Operation | स्वचालित संचालन |
+| `S49412e` | status code fields | Availability Calculation | उपलब्धता गणना |
+| `S38cb6d` | status code fields | Converter Reset Program | कन्वर्टर रीसेट प्रोग्राम |
+| `S86a17b` | status code fields | Gearbox Oil Fan Program | गियरबॉक्स तेल पंखा प्रोग्राम |
+| `Scf4f90` | status code fields | Gearbox Oil Heating Program | गियरबॉक्स तेल हीटिंग प्रोग्राम |
+| `S891ad9` | status code fields | Gearbox Oil Pump Program | गियरबॉक्स तेल पंप प्रोग्राम |
+| `S6a0014` | status code fields | Generator Bearing Lubrication Program | जनरेटर बेयरिंग स्नेहन प्रोग्राम |
+| `S7f38cc` | status code fields | Generator Fan Program | जनरेटर पंखा प्रोग्राम |
+| `Sf292a7` | status code fields | Generator Heating Program | जनरेटर हीटिंग प्रोग्राम |
+| `Sdccc10` | status code fields | Hydraulic Pump Program | हाइड्रोलिक पंप प्रोग्राम |
+| `Se21075` | status code fields | Manual Operation | मैनुअल संचालन |
+| `S9beea7` | status code fields | Medium Voltage Circuit Breaker Program | मध्यम वोल्टेज सर्किट ब्रेकर प्रोग्राम |
+| `Scb0a0d` | status code fields | Pitch Error Program | पिच त्रुटि प्रोग्राम |
+| `S941428` | status code fields | Pitch Warning Program | पिच चेतावनी प्रोग्राम |
+| `Sd2fe56` | status code fields | Rotor Bearing Lubrication Program | रोटर बेयरिंग स्नेहन प्रोग्राम |
+| `S381e23` | status code fields | Rotor Brake Program | रोटर ब्रेक प्रोग्राम |
+| `S1e3032` | status code fields | Stop Program 40 | स्टॉप प्रोग्राम 40 |
+| `S43b650` | status code fields | Stop Program 80 | स्टॉप प्रोग्राम 80 |
+| `S805790` | status code fields | Tower Fan Program | टावर पंखा प्रोग्राम |
+| `Sef9b9e` | status code fields | Transformer Oil Pump Program | ट्रांसफॉर्मर तेल पंप प्रोग्राम |
+| `S18a446` | status code fields | Vane Position | वेन स्थिति |
+| `S9ebce6` | status code fields | Zero Load Operation | शून्य भार संचालन |
 | `Sff9f1f` | success_metrics | Age | आयु |
 | `S8cc047` | success_metrics | Approval | अनुमोदन |
 | `S273d62` | success_metrics | Audit trail completeness of Released codes | जारी कोड की ऑडिट ट्रेल की पूर्णता |
@@ -3588,7 +3696,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 
 ### 9.5 SA العربية 🇸🇦 — Arabic
 
-1102 of 1103 strings translated; direction right to left.
+1138 of 1139 strings translated; direction right to left.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -3883,9 +3991,11 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S041a5d` | detail, export_center | Format | الصيغة |
 | `S9e3c65` | detail | From revision | من المراجعة |
 | `S2fa1f7` | detail, form, list | Functional Subgroup | المجموعة الفرعية الوظيفية |
+| `Sb8c4c9` | detail, form | Further Program References | مراجع برامج إضافية |
 | `S636c41` | detail | Grid Operator | مشغّل الشبكة |
 | `S90ccd6` | detail | History | السجل |
 | `Sfec8b7` | detail | Hub Controller group | مجموعة وحدة تحكم المحور |
+| `S00ccae` | detail, form | Hub Controller only | وحدة تحكم المحور فقط |
 | `S3c883f` | detail | I have reviewed these dependants | راجعتُ هذه الرموز التابعة |
 | `S4bc96f` | detail | Import Job | مهمة الاستيراد |
 | `S50565a` | detail | Import progress | تقدم الاستيراد |
@@ -3899,13 +4009,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S43d5c5` | detail, form | Loadless Spinning Permitted | الدوران دون حمل مسموح |
 | `S193786` | detail | Logical Node | العقدة المنطقية |
 | `S578b78` | detail | Main Controller group | مجموعة وحدة التحكم الرئيسية |
+| `Sa7512d` | detail, form | Main Controller only | وحدة التحكم الرئيسية فقط |
 | `Seb9a6d` | detail | Manage translations | إدارة الترجمات |
 | `Sc5beef` | detail | manifest | ملف البيان |
 | `S6d59f4` | detail | Manual Reset Program | برنامج إعادة الضبط اليدوي |
 | `Sf9896c` | detail, form | Mark resolved | وضع علامة تم الحل |
 | `Sa7b93d` | detail, new, reconciliation | Mode | الوضع |
 | `S31a335` | detail | new code | رمز جديد |
-| `S816c52` | detail, export_verify, list | No | لا |
+| `S816c52` | detail, export_verify, form | No | لا |
 | `S06fc8d` | detail | No active Engineer holds the %(code)s domain yet. An Administrator must tag an Engineer with it (Administration → Users) before a sign-off can be requested. | لا يوجد مهندس نشط لديه المجال %(code)s. على المسؤول أن يمنح مهندسًا هذا المجال (الإدارة ← المستخدمون) قبل أن يمكن طلب الاعتماد. |
 | `S362336` | detail | No change requests in this set yet. | لا توجد طلبات تغيير في هذه المجموعة بعد. |
 | `S7e1129` | detail | No comments or decisions yet. | لا تعليقات أو قرارات بعد. |
@@ -3926,6 +4037,8 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S5fc7e3` | detail | open | مفتوح |
 | `Sf61187` | detail | Open New Revision | فتح مراجعة جديدة |
 | `S578c53` | detail | Opens a Draft that must go through the full dual-review and Chief Engineer approval cycle before it takes effect. | يفتح مسودة يجب أن تمر بدورة المراجعة المزدوجة وموافقة كبير المهندسين كاملة قبل أن تسري. |
+| `Sfa465a` | detail, form, status code fields | Operating Mode Mask | قناع وضع التشغيل |
+| `S20691e` | detail, form | Operation Parameters | معاملات التشغيل |
 | `S36463a` | detail | other code(s) still refer to this one: | رموز أخرى ما زالت تشير إلى هذا الرمز: |
 | `S9734ac` | detail | Other codes that refer to this one. Review them before deprecating it. | رموز أخرى تشير إلى هذا الرمز. راجعها قبل وسمه كمتقادم. |
 | `S780d35` | detail | Override identifier (migration / reservation only) | تجاوز المعرّف (للترحيل / الحجز فقط) |
@@ -3943,6 +4056,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sa4ab7b` | detail | Program References | مراجع البرامج |
 | `S70cbd1` | detail | Proposed | مقترح |
 | `S483bf2` | detail, list | Published | منشور |
+| `S6a9c56` | detail, form | Read level | مستوى القراءة |
 | `Sf5ca9d` | detail | Recorded exports | عمليات التصدير المسجلة |
 | `Sa3f757` | detail | Reinstate to Released | إعادة إلى منشور |
 | `S3238ca` | detail | Reinstatement reason | سبب إعادة العمل |
@@ -3988,6 +4102,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S6e3665` | detail, review_queue | Signed | موقّع |
 | `Sddfd83` | detail | Signed by | وقّعه |
 | `Sb71523` | detail | Size | الحجم |
+| `Sece2ac` | detail, form | Slot | الخانة |
 | `Sff44d2` | detail | Software Version | إصدار البرنامج |
 | `S169bf7` | detail, software_versions | Software version | إصدار البرنامج |
 | `S6da13a` | detail, fleet_feedback | Source | المصدر |
@@ -4001,6 +4116,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S123f6c` | detail | Submit for Review | تقديم للمراجعة |
 | `S3dca68` | detail | Superseded by Status Code id (optional) | استُبدل بمعرّف رمز الحالة (اختياري) |
 | `S08e643` | detail, list | Target software version | إصدار البرنامج المستهدف |
+| `S44203c` | detail, form, status code fields | Task Call Frequency | تردد استدعاء المهمة |
 | `S8fc804` | detail | The author has to submit it for review before the Reviewer or Administrator can see it. | على المؤلف تقديمه للمراجعة قبل أن يتمكن المراجع أو المسؤول من رؤيته. |
 | `S091814` | detail | This change request has reached a terminal decision state | بلغ طلب التغيير هذا حالة قرار نهائية |
 | `S6d5708` | detail | This is the one truly irreversible action in the system. Type the identifier to confirm. | هذا هو الإجراء الوحيد غير القابل للتراجع حقًا في النظام. اكتب المعرّف للتأكيد. |
@@ -4016,6 +4132,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S391d68` | detail, stalled | unassigned | غير معيّن |
 | `S73ec5d` | detail, form | Up/Down Counter | عدّاد تصاعدي/تنازلي |
 | `S80c494` | detail | Uploaded | تم الرفع |
+| `Sb01729` | detail, form | User-Group Levels | مستويات مجموعات المستخدمين |
 | `S45288a` | detail, new | Version Label | تسمية النسخة |
 | `S4993ae` | detail | View Change Request | عرض طلب التغيير |
 | `Scde93f` | detail | View Imported Drafts | عرض المسودات المستوردة |
@@ -4028,9 +4145,10 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S7d5316` | detail | Who | من |
 | `S47e564` | detail | Withdraw | سحب |
 | `S51a998` | detail | Withdraw this change request? | سحب طلب التغيير هذا؟ |
+| `S95a2a4` | detail, form | Write level | مستوى الكتابة |
 | `S612fe0` | detail | Yaw Bearing Lubrication Program | برنامج تشحيم محمل الانعراج |
 | `S559a3f` | detail | Yaw Program | برنامج الانعراج |
-| `S5397e0` | detail, export_verify, list | Yes | نعم |
+| `S5397e0` | detail, export_verify, form | Yes | نعم |
 | `Sc8e4b4` | detail | Your decision step | خطوة قرارك |
 | `S20cb4c` | detail, export_center | ZIP with manifest | ZIP مع ملف البيان |
 | `S5d4358` | dry_run | All rows are clean. | كل الصفوف سليمة. |
@@ -4118,6 +4236,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sf094b9` | form | Affected component (optional) | المكوّن المتأثر (اختياري) |
 | `S407cf2` | form | Applies from software version (optional) | ينطبق من إصدار البرنامج (اختياري) |
 | `Sa30242` | form | Applies up to software version (optional) | ينطبق حتى إصدار البرنامج (اختياري) |
+| `S7665e9` | form | Bit string of the generated program, e.g. 111011 (20 bits on the Main Controller, 6 on the Hub Controller). | سلسلة البتات للبرنامج المولَّد، مثل 111011 (20 بتاً في وحدة التحكم الرئيسية و6 في وحدة تحكم المحور). |
 | `S77dfd2` | form, st_preview | Cancel | إلغاء |
 | `S94c2a3` | form | Classification | التصنيف |
 | `S7c9afd` | form | Classification only — a Sandbox code's identifier is still drawn from the isolated StCd-T##### band, never from this group's numeric range. | للتصنيف فقط — يُسحب معرّف الرمز التجريبي دائمًا من النطاق المعزول StCd-T#####، لا من النطاق الرقمي لهذه المجموعة أبدًا. |
@@ -4126,7 +4245,9 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sdb0f93` | form | Immutable once allocated (BR-001). | غير قابل للتغيير بعد التخصيص (BR-001). |
 | `Sd7635c` | form | Legacy Reference Number (optional) | الرقم المرجعي القديم (اختياري) |
 | `S2d3840` | form | New Sandbox Status Code | رمز حالة تجريبي جديد |
+| `S0efd9f` | form | not captured | غير مُدخل |
 | `S8f9967` | form | Not yet assigned — fixed on Submit for Review | لم يُخصَّص بعد — يُثبَّت عند التقديم للمراجعة |
+| `S152225` | form | Numeric levels of the generated program (0 to 255): read 1 = readable, 50 = no access. | المستويات الرقمية للبرنامج المولَّد (0 إلى 255): القراءة 1 = مقروء، 50 = لا وصول. |
 | `S82890d` | form | Open review comments | تعليقات المراجعة المفتوحة |
 | `S611331` | form | Planned deprecation date (optional) | تاريخ التقادم المخطط (اختياري) |
 | `S75ee24` | form | Planned effective date (optional) | التاريخ الفعلي المخطط (اختياري) |
@@ -4634,6 +4755,29 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sc0d28c` | stalled | Reviewers who are out of office (they have delegated) are left out. | المراجعون خارج المكتب (الذين فوّضوا) غير مشمولين. |
 | `Sca6d0e` | stalled | Stage | المرحلة |
 | `Sb1bafe` | stalled | Stalled change requests | الطلبات المتعثرة |
+| `S0b6108` | status code fields | Anemometer Heating Program | برنامج تسخين مقياس الرياح |
+| `S5387f1` | status code fields | Automatic Operation | التشغيل التلقائي |
+| `S49412e` | status code fields | Availability Calculation | حساب التوفّر |
+| `S38cb6d` | status code fields | Converter Reset Program | برنامج إعادة ضبط المحوّل |
+| `S86a17b` | status code fields | Gearbox Oil Fan Program | برنامج مروحة زيت علبة التروس |
+| `Scf4f90` | status code fields | Gearbox Oil Heating Program | برنامج تسخين زيت علبة التروس |
+| `S891ad9` | status code fields | Gearbox Oil Pump Program | برنامج مضخة زيت علبة التروس |
+| `S6a0014` | status code fields | Generator Bearing Lubrication Program | برنامج تشحيم محمل المولّد |
+| `S7f38cc` | status code fields | Generator Fan Program | برنامج مروحة المولّد |
+| `Sf292a7` | status code fields | Generator Heating Program | برنامج تسخين المولّد |
+| `Sdccc10` | status code fields | Hydraulic Pump Program | برنامج المضخة الهيدروليكية |
+| `Se21075` | status code fields | Manual Operation | التشغيل اليدوي |
+| `S9beea7` | status code fields | Medium Voltage Circuit Breaker Program | برنامج قاطع الدائرة للجهد المتوسط |
+| `Scb0a0d` | status code fields | Pitch Error Program | برنامج خطأ الميلان |
+| `S941428` | status code fields | Pitch Warning Program | برنامج تحذير الميلان |
+| `Sd2fe56` | status code fields | Rotor Bearing Lubrication Program | برنامج تشحيم محمل الدوّار |
+| `S381e23` | status code fields | Rotor Brake Program | برنامج فرامل الدوّار |
+| `S1e3032` | status code fields | Stop Program 40 | برنامج الإيقاف 40 |
+| `S43b650` | status code fields | Stop Program 80 | برنامج الإيقاف 80 |
+| `S805790` | status code fields | Tower Fan Program | برنامج مروحة البرج |
+| `Sef9b9e` | status code fields | Transformer Oil Pump Program | برنامج مضخة زيت المحوّل |
+| `S18a446` | status code fields | Vane Position | وضع دوّارة الرياح |
+| `S9ebce6` | status code fields | Zero Load Operation | التشغيل بدون حمل |
 | `Sff9f1f` | success_metrics | Age | العمر |
 | `S8cc047` | success_metrics | Approval | الموافقة |
 | `S273d62` | success_metrics | Audit trail completeness of Released codes | اكتمال مسار التدقيق للرموز المنشورة |
@@ -4697,7 +4841,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 
 ### 9.6 IN বাংলা 🇮🇳 — Bengali
 
-1102 of 1103 strings translated; direction left to right.
+1138 of 1139 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -4992,9 +5136,11 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S041a5d` | detail, export_center | Format | বিন্যাস |
 | `S9e3c65` | detail | From revision | সংশোধন থেকে |
 | `S2fa1f7` | detail, form, list | Functional Subgroup | কার্যকরী উপগ্রুপ |
+| `Sb8c4c9` | detail, form | Further Program References | আরও প্রোগ্রাম উল্লেখ |
 | `S636c41` | detail | Grid Operator | গ্রিড অপারেটর |
 | `S90ccd6` | detail | History | ইতিহাস |
 | `Sfec8b7` | detail | Hub Controller group | হাব নিয়ন্ত্রক গ্রুপ |
+| `S00ccae` | detail, form | Hub Controller only | শুধু হাব নিয়ন্ত্রক |
 | `S3c883f` | detail | I have reviewed these dependants | আমি এই নির্ভরশীলগুলো পর্যালোচনা করেছি |
 | `S4bc96f` | detail | Import Job | আমদানি কাজ |
 | `S50565a` | detail | Import progress | আমদানির অগ্রগতি |
@@ -5008,13 +5154,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S43d5c5` | detail, form | Loadless Spinning Permitted | লোড ছাড়া ঘোরা অনুমোদিত |
 | `S193786` | detail | Logical Node | লজিক্যাল নোড |
 | `S578b78` | detail | Main Controller group | প্রধান নিয়ন্ত্রক গ্রুপ |
+| `Sa7512d` | detail, form | Main Controller only | শুধু প্রধান নিয়ন্ত্রক |
 | `Seb9a6d` | detail | Manage translations | অনুবাদ পরিচালনা করুন |
 | `Sc5beef` | detail | manifest | ম্যানিফেস্ট |
 | `S6d59f4` | detail | Manual Reset Program | ম্যানুয়াল রিসেট প্রোগ্রাম |
 | `Sf9896c` | detail, form | Mark resolved | সমাধান হিসেবে চিহ্নিত করুন |
 | `Sa7b93d` | detail, new, reconciliation | Mode | মোড |
 | `S31a335` | detail | new code | নতুন কোড |
-| `S816c52` | detail, export_verify, list | No | না |
+| `S816c52` | detail, export_verify, form | No | না |
 | `S06fc8d` | detail | No active Engineer holds the %(code)s domain yet. An Administrator must tag an Engineer with it (Administration → Users) before a sign-off can be requested. | কোনো সক্রিয় প্রকৌশলীর ডোমেইন %(code)s নেই। সাইন-অফ চাওয়ার আগে একজন প্রশাসককে কোনো প্রকৌশলীকে এই ডোমেইন দিতে হবে (প্রশাসন → ব্যবহারকারী)। |
 | `S362336` | detail | No change requests in this set yet. | এই সেটে এখনো কোনো পরিবর্তন অনুরোধ নেই। |
 | `S7e1129` | detail | No comments or decisions yet. | এখনো কোনো মন্তব্য বা সিদ্ধান্ত নেই। |
@@ -5035,6 +5182,8 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S5fc7e3` | detail | open | খোলা |
 | `Sf61187` | detail | Open New Revision | নতুন সংশোধন খুলুন |
 | `S578c53` | detail | Opens a Draft that must go through the full dual-review and Chief Engineer approval cycle before it takes effect. | একটি খসড়া খোলে যা কার্যকর হওয়ার আগে দ্বিগুণ পর্যালোচনা ও প্রধান প্রকৌশলীর অনুমোদনের পূর্ণ চক্র পার করতে হবে। |
+| `Sfa465a` | detail, form, status code fields | Operating Mode Mask | পরিচালনা মোড মাস্ক |
+| `S20691e` | detail, form | Operation Parameters | পরিচালনা প্যারামিটার |
 | `S36463a` | detail | other code(s) still refer to this one: | অন্য কোড এখনো এটির দিকে নির্দেশ করে: |
 | `S9734ac` | detail | Other codes that refer to this one. Review them before deprecating it. | এই কোডের দিকে নির্দেশ করা অন্য কোড। অপ্রচলিত করার আগে সেগুলো পর্যালোচনা করুন। |
 | `S780d35` | detail | Override identifier (migration / reservation only) | শনাক্তকারী অগ্রাহ্য করুন (শুধু মাইগ্রেশন / সংরক্ষণের জন্য) |
@@ -5052,6 +5201,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sa4ab7b` | detail | Program References | প্রোগ্রাম রেফারেন্স |
 | `S70cbd1` | detail | Proposed | প্রস্তাবিত |
 | `S483bf2` | detail, list | Published | প্রকাশিত |
+| `S6a9c56` | detail, form | Read level | পড়ার স্তর |
 | `Sf5ca9d` | detail | Recorded exports | নথিভুক্ত রপ্তানি |
 | `Sa3f757` | detail | Reinstate to Released | প্রকাশিতে পুনঃস্থাপন করুন |
 | `S3238ca` | detail | Reinstatement reason | পুনঃস্থাপনের কারণ |
@@ -5097,6 +5247,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S6e3665` | detail, review_queue | Signed | স্বাক্ষরিত |
 | `Sddfd83` | detail | Signed by | স্বাক্ষরকারী |
 | `Sb71523` | detail | Size | আকার |
+| `Sece2ac` | detail, form | Slot | স্লট |
 | `Sff44d2` | detail | Software Version | সফটওয়্যার সংস্করণ |
 | `S169bf7` | detail, software_versions | Software version | সফটওয়্যার সংস্করণ |
 | `S6da13a` | detail, fleet_feedback | Source | উৎস |
@@ -5110,6 +5261,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S123f6c` | detail | Submit for Review | পর্যালোচনার জন্য জমা দিন |
 | `S3dca68` | detail | Superseded by Status Code id (optional) | এর দ্বারা প্রতিস্থাপিত স্ট্যাটাস কোড আইডি (ঐচ্ছিক) |
 | `S08e643` | detail, list | Target software version | লক্ষ্য সফটওয়্যার সংস্করণ |
+| `S44203c` | detail, form, status code fields | Task Call Frequency | টাস্ক কল ফ্রিকোয়েন্সি |
 | `S8fc804` | detail | The author has to submit it for review before the Reviewer or Administrator can see it. | পর্যালোচক বা প্রশাসক দেখার আগে লেখককে এটি পর্যালোচনার জন্য জমা দিতে হবে। |
 | `S091814` | detail | This change request has reached a terminal decision state | এই পরিবর্তন অনুরোধ চূড়ান্ত সিদ্ধান্তের অবস্থায় পৌঁছেছে |
 | `S6d5708` | detail | This is the one truly irreversible action in the system. Type the identifier to confirm. | এটি সিস্টেমের একমাত্র সত্যিই অপরিবর্তনীয় কার্যক্রম। নিশ্চিত করতে শনাক্তকারী টাইপ করুন। |
@@ -5125,6 +5277,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S391d68` | detail, stalled | unassigned | অনিযুক্ত |
 | `S73ec5d` | detail, form | Up/Down Counter | আপ/ডাউন কাউন্টার |
 | `S80c494` | detail | Uploaded | আপলোড হয়েছে |
+| `Sb01729` | detail, form | User-Group Levels | ব্যবহারকারী-গোষ্ঠী স্তর |
 | `S45288a` | detail, new | Version Label | সংস্করণ লেবেল |
 | `S4993ae` | detail | View Change Request | পরিবর্তন অনুরোধ দেখুন |
 | `Scde93f` | detail | View Imported Drafts | আমদানি করা খসড়া দেখুন |
@@ -5137,9 +5290,10 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S7d5316` | detail | Who | কে |
 | `S47e564` | detail | Withdraw | প্রত্যাহার |
 | `S51a998` | detail | Withdraw this change request? | এই পরিবর্তন অনুরোধ প্রত্যাহার করবেন? |
+| `S95a2a4` | detail, form | Write level | লেখার স্তর |
 | `S612fe0` | detail | Yaw Bearing Lubrication Program | ইয়ো বিয়ারিং লুব্রিকেশন প্রোগ্রাম |
 | `S559a3f` | detail | Yaw Program | ইয়ো প্রোগ্রাম |
-| `S5397e0` | detail, export_verify, list | Yes | হ্যাঁ |
+| `S5397e0` | detail, export_verify, form | Yes | হ্যাঁ |
 | `Sc8e4b4` | detail | Your decision step | আপনার সিদ্ধান্তের ধাপ |
 | `S20cb4c` | detail, export_center | ZIP with manifest | ম্যানিফেস্টসহ ZIP |
 | `S5d4358` | dry_run | All rows are clean. | সব সারি পরিষ্কার। |
@@ -5227,6 +5381,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sf094b9` | form | Affected component (optional) | প্রভাবিত উপাদান (ঐচ্ছিক) |
 | `S407cf2` | form | Applies from software version (optional) | এই সফটওয়্যার সংস্করণ থেকে প্রযোজ্য (ঐচ্ছিক) |
 | `Sa30242` | form | Applies up to software version (optional) | এই সফটওয়্যার সংস্করণ পর্যন্ত প্রযোজ্য (ঐচ্ছিক) |
+| `S7665e9` | form | Bit string of the generated program, e.g. 111011 (20 bits on the Main Controller, 6 on the Hub Controller). | তৈরি করা প্রোগ্রামের বিট স্ট্রিং, যেমন 111011 (প্রধান নিয়ন্ত্রকে 20 বিট, হাব নিয়ন্ত্রকে 6)। |
 | `S77dfd2` | form, st_preview | Cancel | বাতিল |
 | `S94c2a3` | form | Classification | শ্রেণিবিন্যাস |
 | `S7c9afd` | form | Classification only — a Sandbox code's identifier is still drawn from the isolated StCd-T##### band, never from this group's numeric range. | শুধু শ্রেণিবিন্যাস — স্যান্ডবক্স কোডের শনাক্তকারী তবু বিচ্ছিন্ন ব্যান্ড StCd-T##### থেকে নেওয়া হয়, এই গ্রুপের সংখ্যাগত পরিসর থেকে কখনো নয়। |
@@ -5235,7 +5390,9 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sdb0f93` | form | Immutable once allocated (BR-001). | একবার নির্ধারিত হলে অপরিবর্তনীয় (BR-001)। |
 | `Sd7635c` | form | Legacy Reference Number (optional) | পুরোনো রেফারেন্স নম্বর (ঐচ্ছিক) |
 | `S2d3840` | form | New Sandbox Status Code | নতুন স্যান্ডবক্স স্ট্যাটাস কোড |
+| `S0efd9f` | form | not captured | নথিভুক্ত নয় |
 | `S8f9967` | form | Not yet assigned — fixed on Submit for Review | এখনো নির্ধারিত হয়নি — পর্যালোচনার জন্য জমা দেওয়ার সময় ঠিক হবে |
+| `S152225` | form | Numeric levels of the generated program (0 to 255): read 1 = readable, 50 = no access. | তৈরি করা প্রোগ্রামের সংখ্যাগত স্তর (0 থেকে 255): পড়া 1 = পঠনযোগ্য, 50 = প্রবেশাধিকার নেই। |
 | `S82890d` | form | Open review comments | খোলা পর্যালোচনা মন্তব্য |
 | `S611331` | form | Planned deprecation date (optional) | পরিকল্পিত অপ্রচলনের তারিখ (ঐচ্ছিক) |
 | `S75ee24` | form | Planned effective date (optional) | পরিকল্পিত কার্যকরের তারিখ (ঐচ্ছিক) |
@@ -5743,6 +5900,29 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sc0d28c` | stalled | Reviewers who are out of office (they have delegated) are left out. | যে পর্যালোচকরা অফিসের বাইরে (প্রতিনিধিত্ব দিয়েছেন) তাঁদের বাদ দেওয়া হয়েছে। |
 | `Sca6d0e` | stalled | Stage | ধাপ |
 | `Sb1bafe` | stalled | Stalled change requests | আটকে থাকা অনুরোধ |
+| `S0b6108` | status code fields | Anemometer Heating Program | অ্যানিমোমিটার হিটিং প্রোগ্রাম |
+| `S5387f1` | status code fields | Automatic Operation | স্বয়ংক্রিয় পরিচালনা |
+| `S49412e` | status code fields | Availability Calculation | প্রাপ্যতা গণনা |
+| `S38cb6d` | status code fields | Converter Reset Program | কনভার্টার রিসেট প্রোগ্রাম |
+| `S86a17b` | status code fields | Gearbox Oil Fan Program | গিয়ারবক্স তেল ফ্যান প্রোগ্রাম |
+| `Scf4f90` | status code fields | Gearbox Oil Heating Program | গিয়ারবক্স তেল হিটিং প্রোগ্রাম |
+| `S891ad9` | status code fields | Gearbox Oil Pump Program | গিয়ারবক্স তেল পাম্প প্রোগ্রাম |
+| `S6a0014` | status code fields | Generator Bearing Lubrication Program | জেনারেটর বিয়ারিং লুব্রিকেশন প্রোগ্রাম |
+| `S7f38cc` | status code fields | Generator Fan Program | জেনারেটর ফ্যান প্রোগ্রাম |
+| `Sf292a7` | status code fields | Generator Heating Program | জেনারেটর হিটিং প্রোগ্রাম |
+| `Sdccc10` | status code fields | Hydraulic Pump Program | হাইড্রোলিক পাম্প প্রোগ্রাম |
+| `Se21075` | status code fields | Manual Operation | ম্যানুয়াল পরিচালনা |
+| `S9beea7` | status code fields | Medium Voltage Circuit Breaker Program | মাঝারি ভোল্টেজ সার্কিট ব্রেকার প্রোগ্রাম |
+| `Scb0a0d` | status code fields | Pitch Error Program | পিচ ত্রুটি প্রোগ্রাম |
+| `S941428` | status code fields | Pitch Warning Program | পিচ সতর্কতা প্রোগ্রাম |
+| `Sd2fe56` | status code fields | Rotor Bearing Lubrication Program | রোটর বিয়ারিং লুব্রিকেশন প্রোগ্রাম |
+| `S381e23` | status code fields | Rotor Brake Program | রোটর ব্রেক প্রোগ্রাম |
+| `S1e3032` | status code fields | Stop Program 40 | স্টপ প্রোগ্রাম 40 |
+| `S43b650` | status code fields | Stop Program 80 | স্টপ প্রোগ্রাম 80 |
+| `S805790` | status code fields | Tower Fan Program | টাওয়ার ফ্যান প্রোগ্রাম |
+| `Sef9b9e` | status code fields | Transformer Oil Pump Program | ট্রান্সফর্মার তেল পাম্প প্রোগ্রাম |
+| `S18a446` | status code fields | Vane Position | ভেন অবস্থান |
+| `S9ebce6` | status code fields | Zero Load Operation | শূন্য লোড পরিচালনা |
 | `Sff9f1f` | success_metrics | Age | বয়স |
 | `S8cc047` | success_metrics | Approval | অনুমোদন |
 | `S273d62` | success_metrics | Audit trail completeness of Released codes | প্রকাশিত কোডের অডিট ট্রেলের সম্পূর্ণতা |
@@ -5806,7 +5986,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 
 ### 9.7 IN मराठी 🇮🇳 — Marathi
 
-1102 of 1103 strings translated; direction left to right.
+1138 of 1139 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -6101,9 +6281,11 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S041a5d` | detail, export_center | Format | स्वरूप |
 | `S9e3c65` | detail | From revision | सुधारणेपासून |
 | `S2fa1f7` | detail, form, list | Functional Subgroup | कार्यात्मक उपगट |
+| `Sb8c4c9` | detail, form | Further Program References | इतर प्रोग्राम संदर्भ |
 | `S636c41` | detail | Grid Operator | ग्रिड ऑपरेटर |
 | `S90ccd6` | detail | History | इतिहास |
 | `Sfec8b7` | detail | Hub Controller group | हब नियंत्रक गट |
+| `S00ccae` | detail, form | Hub Controller only | फक्त हब नियंत्रक |
 | `S3c883f` | detail | I have reviewed these dependants | मी या अवलंबित कोडचे पुनरावलोकन केले आहे |
 | `S4bc96f` | detail | Import Job | आयात काम |
 | `S50565a` | detail | Import progress | आयात प्रगती |
@@ -6117,13 +6299,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S43d5c5` | detail, form | Loadless Spinning Permitted | भाराशिवाय फिरणे अनुमत |
 | `S193786` | detail | Logical Node | लॉजिकल नोड |
 | `S578b78` | detail | Main Controller group | मुख्य नियंत्रक गट |
+| `Sa7512d` | detail, form | Main Controller only | फक्त मुख्य नियंत्रक |
 | `Seb9a6d` | detail | Manage translations | भाषांतरे व्यवस्थापित करा |
 | `Sc5beef` | detail | manifest | मॅनिफेस्ट |
 | `S6d59f4` | detail | Manual Reset Program | मॅन्युअल रीसेट प्रोग्राम |
 | `Sf9896c` | detail, form | Mark resolved | निराकरण झाले म्हणून चिन्हांकित करा |
 | `Sa7b93d` | detail, new, reconciliation | Mode | मोड |
 | `S31a335` | detail | new code | नवीन कोड |
-| `S816c52` | detail, export_verify, list | No | नाही |
+| `S816c52` | detail, export_verify, form | No | नाही |
 | `S06fc8d` | detail | No active Engineer holds the %(code)s domain yet. An Administrator must tag an Engineer with it (Administration → Users) before a sign-off can be requested. | कोणत्याही सक्रिय अभियंत्याकडे %(code)s क्षेत्र नाही. साइन-ऑफ मागण्यापूर्वी प्रशासकाने एखाद्या अभियंत्याला हे क्षेत्र द्यावे (प्रशासन → वापरकर्ते). |
 | `S362336` | detail | No change requests in this set yet. | या संचात अद्याप बदल विनंत्या नाहीत. |
 | `S7e1129` | detail | No comments or decisions yet. | अद्याप टिप्पण्या किंवा निर्णय नाहीत. |
@@ -6144,6 +6327,8 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S5fc7e3` | detail | open | खुले |
 | `Sf61187` | detail | Open New Revision | नवीन सुधारणा उघडा |
 | `S578c53` | detail | Opens a Draft that must go through the full dual-review and Chief Engineer approval cycle before it takes effect. | एक मसुदा उघडतो ज्याला प्रभावी होण्यापूर्वी दुहेरी पुनरावलोकन आणि मुख्य अभियंत्याच्या मंजुरीचे संपूर्ण चक्र पार करावे लागते. |
+| `Sfa465a` | detail, form, status code fields | Operating Mode Mask | संचालन मोड मास्क |
+| `S20691e` | detail, form | Operation Parameters | संचालन पॅरामीटर |
 | `S36463a` | detail | other code(s) still refer to this one: | इतर कोड अजूनही याकडे निर्देश करतात: |
 | `S9734ac` | detail | Other codes that refer to this one. Review them before deprecating it. | याकडे निर्देश करणारे इतर कोड. कालबाह्य करण्यापूर्वी त्यांचे पुनरावलोकन करा. |
 | `S780d35` | detail | Override identifier (migration / reservation only) | ओळखकर्ता अधिलिखित करा (फक्त स्थलांतर / आरक्षणासाठी) |
@@ -6161,6 +6346,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sa4ab7b` | detail | Program References | प्रोग्राम संदर्भ |
 | `S70cbd1` | detail | Proposed | प्रस्तावित |
 | `S483bf2` | detail, list | Published | प्रकाशित |
+| `S6a9c56` | detail, form | Read level | वाचन पातळी |
 | `Sf5ca9d` | detail | Recorded exports | नोंदवलेल्या निर्यात |
 | `Sa3f757` | detail | Reinstate to Released | प्रकाशितवर पुनर्स्थापित करा |
 | `S3238ca` | detail | Reinstatement reason | पुनर्स्थापनेचे कारण |
@@ -6206,6 +6392,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S6e3665` | detail, review_queue | Signed | स्वाक्षरित |
 | `Sddfd83` | detail | Signed by | स्वाक्षरी केली |
 | `Sb71523` | detail | Size | आकार |
+| `Sece2ac` | detail, form | Slot | स्लॉट |
 | `Sff44d2` | detail | Software Version | सॉफ्टवेअर आवृत्ती |
 | `S169bf7` | detail, software_versions | Software version | सॉफ्टवेअर आवृत्ती |
 | `S6da13a` | detail, fleet_feedback | Source | स्रोत |
@@ -6219,6 +6406,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S123f6c` | detail | Submit for Review | पुनरावलोकनासाठी सादर करा |
 | `S3dca68` | detail | Superseded by Status Code id (optional) | याने बदललेला स्थिती कोड आयडी (पर्यायी) |
 | `S08e643` | detail, list | Target software version | लक्ष्य सॉफ्टवेअर आवृत्ती |
+| `S44203c` | detail, form, status code fields | Task Call Frequency | टास्क कॉल वारंवारता |
 | `S8fc804` | detail | The author has to submit it for review before the Reviewer or Administrator can see it. | पुनरावलोकक किंवा प्रशासक पाहण्यापूर्वी लेखकाने तो पुनरावलोकनासाठी सादर केला पाहिजे. |
 | `S091814` | detail | This change request has reached a terminal decision state | ही बदल विनंती अंतिम निर्णय स्थितीत पोहोचली आहे |
 | `S6d5708` | detail | This is the one truly irreversible action in the system. Type the identifier to confirm. | ही प्रणालीतील एकमेव खरोखर अपरिवर्तनीय कृती आहे. खात्रीसाठी ओळखकर्ता टाइप करा. |
@@ -6234,6 +6422,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S391d68` | detail, stalled | unassigned | नियुक्त नाही |
 | `S73ec5d` | detail, form | Up/Down Counter | वर/खाली मोजक |
 | `S80c494` | detail | Uploaded | अपलोड केले |
+| `Sb01729` | detail, form | User-Group Levels | वापरकर्ता-गट पातळी |
 | `S45288a` | detail, new | Version Label | आवृत्ती लेबल |
 | `S4993ae` | detail | View Change Request | बदल विनंती पहा |
 | `Scde93f` | detail | View Imported Drafts | आयात केलेले मसुदे पहा |
@@ -6246,9 +6435,10 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S7d5316` | detail | Who | कोण |
 | `S47e564` | detail | Withdraw | मागे घ्या |
 | `S51a998` | detail | Withdraw this change request? | ही बदल विनंती मागे घ्यायची? |
+| `S95a2a4` | detail, form | Write level | लेखन पातळी |
 | `S612fe0` | detail | Yaw Bearing Lubrication Program | याव बेअरिंग वंगण प्रोग्राम |
 | `S559a3f` | detail | Yaw Program | याव प्रोग्राम |
-| `S5397e0` | detail, export_verify, list | Yes | होय |
+| `S5397e0` | detail, export_verify, form | Yes | होय |
 | `Sc8e4b4` | detail | Your decision step | तुमचा निर्णय टप्पा |
 | `S20cb4c` | detail, export_center | ZIP with manifest | मॅनिफेस्टसह ZIP |
 | `S5d4358` | dry_run | All rows are clean. | सर्व ओळी स्वच्छ आहेत. |
@@ -6336,6 +6526,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sf094b9` | form | Affected component (optional) | बाधित घटक (पर्यायी) |
 | `S407cf2` | form | Applies from software version (optional) | या सॉफ्टवेअर आवृत्तीपासून लागू (पर्यायी) |
 | `Sa30242` | form | Applies up to software version (optional) | या सॉफ्टवेअर आवृत्तीपर्यंत लागू (पर्यायी) |
+| `S7665e9` | form | Bit string of the generated program, e.g. 111011 (20 bits on the Main Controller, 6 on the Hub Controller). | तयार केलेल्या प्रोग्रामची बिट स्ट्रिंग, उदा. 111011 (मुख्य नियंत्रकात 20 बिट, हब नियंत्रकात 6). |
 | `S77dfd2` | form, st_preview | Cancel | रद्द करा |
 | `S94c2a3` | form | Classification | वर्गीकरण |
 | `S7c9afd` | form | Classification only — a Sandbox code's identifier is still drawn from the isolated StCd-T##### band, never from this group's numeric range. | फक्त वर्गीकरण — सँडबॉक्स कोडचा ओळखकर्ता तरीही वेगळ्या पट्ट्या StCd-T##### मधून घेतला जातो, या गटाच्या संख्यात्मक श्रेणीतून कधीच नाही. |
@@ -6344,7 +6535,9 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sdb0f93` | form | Immutable once allocated (BR-001). | एकदा नियुक्त झाल्यावर अपरिवर्तनीय (BR-001). |
 | `Sd7635c` | form | Legacy Reference Number (optional) | जुना संदर्भ क्रमांक (पर्यायी) |
 | `S2d3840` | form | New Sandbox Status Code | नवीन सँडबॉक्स स्थिती कोड |
+| `S0efd9f` | form | not captured | नोंदवलेले नाही |
 | `S8f9967` | form | Not yet assigned — fixed on Submit for Review | अद्याप नियुक्त नाही — पुनरावलोकनासाठी सादर करताना निश्चित होतो |
+| `S152225` | form | Numeric levels of the generated program (0 to 255): read 1 = readable, 50 = no access. | तयार केलेल्या प्रोग्रामच्या संख्यात्मक पातळ्या (0 ते 255): वाचन 1 = वाचनीय, 50 = प्रवेश नाही. |
 | `S82890d` | form | Open review comments | खुल्या पुनरावलोकन टिप्पण्या |
 | `S611331` | form | Planned deprecation date (optional) | नियोजित कालबाह्यता तारीख (पर्यायी) |
 | `S75ee24` | form | Planned effective date (optional) | नियोजित प्रभावी तारीख (पर्यायी) |
@@ -6852,6 +7045,29 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sc0d28c` | stalled | Reviewers who are out of office (they have delegated) are left out. | कार्यालयाबाहेर असलेले (ज्यांनी प्रत्यायोजन केले आहे) पुनरावलोकक वगळले आहेत. |
 | `Sca6d0e` | stalled | Stage | टप्पा |
 | `Sb1bafe` | stalled | Stalled change requests | अडकलेल्या विनंत्या |
+| `S0b6108` | status code fields | Anemometer Heating Program | अ‍ॅनिमोमीटर हीटिंग प्रोग्राम |
+| `S5387f1` | status code fields | Automatic Operation | स्वयंचलित संचालन |
+| `S49412e` | status code fields | Availability Calculation | उपलब्धता गणना |
+| `S38cb6d` | status code fields | Converter Reset Program | कन्व्हर्टर रीसेट प्रोग्राम |
+| `S86a17b` | status code fields | Gearbox Oil Fan Program | गिअरबॉक्स तेल पंखा प्रोग्राम |
+| `Scf4f90` | status code fields | Gearbox Oil Heating Program | गिअरबॉक्स तेल हीटिंग प्रोग्राम |
+| `S891ad9` | status code fields | Gearbox Oil Pump Program | गिअरबॉक्स तेल पंप प्रोग्राम |
+| `S6a0014` | status code fields | Generator Bearing Lubrication Program | जनरेटर बेअरिंग स्नेहन प्रोग्राम |
+| `S7f38cc` | status code fields | Generator Fan Program | जनरेटर पंखा प्रोग्राम |
+| `Sf292a7` | status code fields | Generator Heating Program | जनरेटर हीटिंग प्रोग्राम |
+| `Sdccc10` | status code fields | Hydraulic Pump Program | हायड्रॉलिक पंप प्रोग्राम |
+| `Se21075` | status code fields | Manual Operation | मॅन्युअल संचालन |
+| `S9beea7` | status code fields | Medium Voltage Circuit Breaker Program | मध्यम व्होल्टेज सर्किट ब्रेकर प्रोग्राम |
+| `Scb0a0d` | status code fields | Pitch Error Program | पिच त्रुटी प्रोग्राम |
+| `S941428` | status code fields | Pitch Warning Program | पिच चेतावणी प्रोग्राम |
+| `Sd2fe56` | status code fields | Rotor Bearing Lubrication Program | रोटर बेअरिंग स्नेहन प्रोग्राम |
+| `S381e23` | status code fields | Rotor Brake Program | रोटर ब्रेक प्रोग्राम |
+| `S1e3032` | status code fields | Stop Program 40 | स्टॉप प्रोग्राम 40 |
+| `S43b650` | status code fields | Stop Program 80 | स्टॉप प्रोग्राम 80 |
+| `S805790` | status code fields | Tower Fan Program | टॉवर पंखा प्रोग्राम |
+| `Sef9b9e` | status code fields | Transformer Oil Pump Program | ट्रान्सफॉर्मर तेल पंप प्रोग्राम |
+| `S18a446` | status code fields | Vane Position | वेन स्थिती |
+| `S9ebce6` | status code fields | Zero Load Operation | शून्य भार संचालन |
 | `Sff9f1f` | success_metrics | Age | वय |
 | `S8cc047` | success_metrics | Approval | मंजुरी |
 | `S273d62` | success_metrics | Audit trail completeness of Released codes | प्रकाशित कोडच्या ऑडिट मागोव्याची पूर्णता |
@@ -6915,7 +7131,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 
 ### 9.8 IN తెలుగు 🇮🇳 — Telugu
 
-1102 of 1103 strings translated; direction left to right.
+1138 of 1139 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -7210,9 +7426,11 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S041a5d` | detail, export_center | Format | ఫార్మాట్ |
 | `S9e3c65` | detail | From revision | పునర్విమర్శ నుండి |
 | `S2fa1f7` | detail, form, list | Functional Subgroup | ఫంక్షనల్ సబ్‌గ్రూప్ |
+| `Sb8c4c9` | detail, form | Further Program References | మరిన్ని ప్రోగ్రామ్ సూచనలు |
 | `S636c41` | detail | Grid Operator | గ్రిడ్ ఆపరేటర్ |
 | `S90ccd6` | detail | History | చరిత్ర |
 | `Sfec8b7` | detail | Hub Controller group | హబ్ కంట్రోలర్ గ్రూప్ |
+| `S00ccae` | detail, form | Hub Controller only | హబ్ కంట్రోలర్ మాత్రమే |
 | `S3c883f` | detail | I have reviewed these dependants | నేను ఈ ఆధారిత కోడ్‌లను సమీక్షించాను |
 | `S4bc96f` | detail | Import Job | దిగుమతి పని |
 | `S50565a` | detail | Import progress | దిగుమతి పురోగతి |
@@ -7226,13 +7444,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S43d5c5` | detail, form | Loadless Spinning Permitted | లోడ్ లేకుండా తిరగడం అనుమతించబడింది |
 | `S193786` | detail | Logical Node | లాజికల్ నోడ్ |
 | `S578b78` | detail | Main Controller group | ప్రధాన కంట్రోలర్ గ్రూప్ |
+| `Sa7512d` | detail, form | Main Controller only | ప్రధాన కంట్రోలర్ మాత్రమే |
 | `Seb9a6d` | detail | Manage translations | అనువాదాలను నిర్వహించండి |
 | `Sc5beef` | detail | manifest | మానిఫెస్ట్ |
 | `S6d59f4` | detail | Manual Reset Program | మాన్యువల్ రీసెట్ ప్రోగ్రామ్ |
 | `Sf9896c` | detail, form | Mark resolved | పరిష్కరించినట్లు గుర్తించండి |
 | `Sa7b93d` | detail, new, reconciliation | Mode | మోడ్ |
 | `S31a335` | detail | new code | కొత్త కోడ్ |
-| `S816c52` | detail, export_verify, list | No | కాదు |
+| `S816c52` | detail, export_verify, form | No | కాదు |
 | `S06fc8d` | detail | No active Engineer holds the %(code)s domain yet. An Administrator must tag an Engineer with it (Administration → Users) before a sign-off can be requested. | ఏ సక్రియ ఇంజనీర్‌కూ %(code)s డొమైన్ లేదు. సైన్-ఆఫ్ అభ్యర్థించే ముందు నిర్వాహకుడు ఒక ఇంజనీర్‌కు ఈ డొమైన్ ఇవ్వాలి (నిర్వహణ → వినియోగదారులు). |
 | `S362336` | detail | No change requests in this set yet. | ఈ సమితిలో ఇంకా మార్పు అభ్యర్థనలు లేవు. |
 | `S7e1129` | detail | No comments or decisions yet. | ఇంకా వ్యాఖ్యలు లేదా నిర్ణయాలు లేవు. |
@@ -7253,6 +7472,8 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S5fc7e3` | detail | open | తెరిచి ఉంది |
 | `Sf61187` | detail | Open New Revision | కొత్త పునర్విమర్శ తెరవండి |
 | `S578c53` | detail | Opens a Draft that must go through the full dual-review and Chief Engineer approval cycle before it takes effect. | అమలులోకి రావడానికి ముందు పూర్తి ద్వంద్వ సమీక్ష మరియు చీఫ్ ఇంజనీర్ ఆమోద చక్రం గుండా వెళ్ళాల్సిన ముసాయిదాను తెరుస్తుంది. |
+| `Sfa465a` | detail, form, status code fields | Operating Mode Mask | ఆపరేటింగ్ మోడ్ మాస్క్ |
+| `S20691e` | detail, form | Operation Parameters | ఆపరేషన్ పారామీటర్లు |
 | `S36463a` | detail | other code(s) still refer to this one: | ఇతర కోడ్‌లు ఇప్పటికీ దీన్ని సూచిస్తున్నాయి: |
 | `S9734ac` | detail | Other codes that refer to this one. Review them before deprecating it. | దీన్ని సూచించే ఇతర కోడ్‌లు. వాడుకలో లేనిదిగా చేసే ముందు వాటిని సమీక్షించండి. |
 | `S780d35` | detail | Override identifier (migration / reservation only) | గుర్తింపును ఓవర్‌రైడ్ చేయండి (మైగ్రేషన్ / రిజర్వేషన్ మాత్రమే) |
@@ -7270,6 +7491,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sa4ab7b` | detail | Program References | ప్రోగ్రామ్ సూచనలు |
 | `S70cbd1` | detail | Proposed | ప్రతిపాదించినది |
 | `S483bf2` | detail, list | Published | ప్రచురించినది |
+| `S6a9c56` | detail, form | Read level | చదివే స్థాయి |
 | `Sf5ca9d` | detail | Recorded exports | నమోదు చేసిన ఎగుమతులు |
 | `Sa3f757` | detail | Reinstate to Released | విడుదల చేసినదిగా పునఃస్థాపించండి |
 | `S3238ca` | detail | Reinstatement reason | పునఃస్థాపన కారణం |
@@ -7315,6 +7537,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S6e3665` | detail, review_queue | Signed | సంతకం చేయబడింది |
 | `Sddfd83` | detail | Signed by | సంతకం చేసినవారు |
 | `Sb71523` | detail | Size | పరిమాణం |
+| `Sece2ac` | detail, form | Slot | స్లాట్ |
 | `Sff44d2` | detail | Software Version | సాఫ్ట్‌వేర్ వెర్షన్ |
 | `S169bf7` | detail, software_versions | Software version | సాఫ్ట్‌వేర్ వెర్షన్ |
 | `S6da13a` | detail, fleet_feedback | Source | మూలం |
@@ -7328,6 +7551,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S123f6c` | detail | Submit for Review | సమీక్ష కోసం సమర్పించండి |
 | `S3dca68` | detail | Superseded by Status Code id (optional) | దీనితో భర్తీ చేసిన స్థితి కోడ్ ఐడి (ఐచ్ఛికం) |
 | `S08e643` | detail, list | Target software version | లక్ష్య సాఫ్ట్‌వేర్ వెర్షన్ |
+| `S44203c` | detail, form, status code fields | Task Call Frequency | టాస్క్ కాల్ ఫ్రీక్వెన్సీ |
 | `S8fc804` | detail | The author has to submit it for review before the Reviewer or Administrator can see it. | సమీక్షకుడు లేదా నిర్వాహకుడు చూడకముందే రచయిత దీన్ని సమీక్ష కోసం సమర్పించాలి. |
 | `S091814` | detail | This change request has reached a terminal decision state | ఈ మార్పు అభ్యర్థన తుది నిర్ణయ స్థితికి చేరుకుంది |
 | `S6d5708` | detail | This is the one truly irreversible action in the system. Type the identifier to confirm. | ఇది వ్యవస్థలోని ఏకైక నిజంగా మార్చలేని చర్య. నిర్ధారించడానికి గుర్తింపును టైప్ చేయండి. |
@@ -7343,6 +7567,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S391d68` | detail, stalled | unassigned | నియమించలేదు |
 | `S73ec5d` | detail, form | Up/Down Counter | పైకి/కిందికి కౌంటర్ |
 | `S80c494` | detail | Uploaded | అప్‌లోడ్ చేయబడింది |
+| `Sb01729` | detail, form | User-Group Levels | వినియోగదారు-సమూహ స్థాయిలు |
 | `S45288a` | detail, new | Version Label | వెర్షన్ లేబుల్ |
 | `S4993ae` | detail | View Change Request | మార్పు అభ్యర్థన చూడండి |
 | `Scde93f` | detail | View Imported Drafts | దిగుమతి చేసిన ముసాయిదాలు చూడండి |
@@ -7355,9 +7580,10 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S7d5316` | detail | Who | ఎవరు |
 | `S47e564` | detail | Withdraw | ఉపసంహరించండి |
 | `S51a998` | detail | Withdraw this change request? | ఈ మార్పు అభ్యర్థనను ఉపసంహరించాలా? |
+| `S95a2a4` | detail, form | Write level | రాసే స్థాయి |
 | `S612fe0` | detail | Yaw Bearing Lubrication Program | యా బేరింగ్ లూబ్రికేషన్ ప్రోగ్రామ్ |
 | `S559a3f` | detail | Yaw Program | యా ప్రోగ్రామ్ |
-| `S5397e0` | detail, export_verify, list | Yes | అవును |
+| `S5397e0` | detail, export_verify, form | Yes | అవును |
 | `Sc8e4b4` | detail | Your decision step | మీ నిర్ణయ దశ |
 | `S20cb4c` | detail, export_center | ZIP with manifest | మానిఫెస్ట్‌తో ZIP |
 | `S5d4358` | dry_run | All rows are clean. | అన్ని వరుసలు శుభ్రంగా ఉన్నాయి. |
@@ -7445,6 +7671,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sf094b9` | form | Affected component (optional) | ప్రభావిత భాగం (ఐచ్ఛికం) |
 | `S407cf2` | form | Applies from software version (optional) | ఈ సాఫ్ట్‌వేర్ వెర్షన్ నుండి వర్తిస్తుంది (ఐచ్ఛికం) |
 | `Sa30242` | form | Applies up to software version (optional) | ఈ సాఫ్ట్‌వేర్ వెర్షన్ వరకు వర్తిస్తుంది (ఐచ్ఛికం) |
+| `S7665e9` | form | Bit string of the generated program, e.g. 111011 (20 bits on the Main Controller, 6 on the Hub Controller). | జనరేట్ చేసిన ప్రోగ్రామ్ బిట్ స్ట్రింగ్, ఉదా. 111011 (ప్రధాన కంట్రోలర్‌లో 20 బిట్లు, హబ్ కంట్రోలర్‌లో 6). |
 | `S77dfd2` | form, st_preview | Cancel | రద్దు చేయండి |
 | `S94c2a3` | form | Classification | వర్గీకరణ |
 | `S7c9afd` | form | Classification only — a Sandbox code's identifier is still drawn from the isolated StCd-T##### band, never from this group's numeric range. | వర్గీకరణ మాత్రమే — శాండ్‌బాక్స్ కోడ్ గుర్తింపు ఇప్పటికీ వేరు చేసిన బ్యాండ్ StCd-T##### నుండి తీసుకోబడుతుంది, ఈ గ్రూప్ సంఖ్యా పరిధి నుండి ఎప్పుడూ కాదు. |
@@ -7453,7 +7680,9 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sdb0f93` | form | Immutable once allocated (BR-001). | ఒకసారి కేటాయించాక మార్చలేనిది (BR-001). |
 | `Sd7635c` | form | Legacy Reference Number (optional) | పాత రిఫరెన్స్ సంఖ్య (ఐచ్ఛికం) |
 | `S2d3840` | form | New Sandbox Status Code | కొత్త శాండ్‌బాక్స్ స్థితి కోడ్ |
+| `S0efd9f` | form | not captured | నమోదు కాలేదు |
 | `S8f9967` | form | Not yet assigned — fixed on Submit for Review | ఇంకా కేటాయించలేదు — సమీక్ష కోసం సమర్పించినప్పుడు నిర్ణయించబడుతుంది |
+| `S152225` | form | Numeric levels of the generated program (0 to 255): read 1 = readable, 50 = no access. | జనరేట్ చేసిన ప్రోగ్రామ్ సంఖ్యా స్థాయిలు (0 నుండి 255): చదవడం 1 = చదవగలరు, 50 = ప్రవేశం లేదు. |
 | `S82890d` | form | Open review comments | తెరిచిన సమీక్ష వ్యాఖ్యలు |
 | `S611331` | form | Planned deprecation date (optional) | ప్రణాళిక చేసిన వాడుకలో లేని తేదీ (ఐచ్ఛికం) |
 | `S75ee24` | form | Planned effective date (optional) | ప్రణాళిక చేసిన అమలు తేదీ (ఐచ్ఛికం) |
@@ -7961,6 +8190,29 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sc0d28c` | stalled | Reviewers who are out of office (they have delegated) are left out. | కార్యాలయం వెలుపల ఉన్న (ప్రతినిధ్యం ఇచ్చిన) సమీక్షకులు మినహాయించబడ్డారు. |
 | `Sca6d0e` | stalled | Stage | దశ |
 | `Sb1bafe` | stalled | Stalled change requests | నిలిచిపోయిన అభ్యర్థనలు |
+| `S0b6108` | status code fields | Anemometer Heating Program | అనిమోమీటర్ హీటింగ్ ప్రోగ్రామ్ |
+| `S5387f1` | status code fields | Automatic Operation | ఆటోమేటిక్ ఆపరేషన్ |
+| `S49412e` | status code fields | Availability Calculation | లభ్యత గణన |
+| `S38cb6d` | status code fields | Converter Reset Program | కన్వర్టర్ రీసెట్ ప్రోగ్రామ్ |
+| `S86a17b` | status code fields | Gearbox Oil Fan Program | గేర్‌బాక్స్ ఆయిల్ ఫ్యాన్ ప్రోగ్రామ్ |
+| `Scf4f90` | status code fields | Gearbox Oil Heating Program | గేర్‌బాక్స్ ఆయిల్ హీటింగ్ ప్రోగ్రామ్ |
+| `S891ad9` | status code fields | Gearbox Oil Pump Program | గేర్‌బాక్స్ ఆయిల్ పంప్ ప్రోగ్రామ్ |
+| `S6a0014` | status code fields | Generator Bearing Lubrication Program | జనరేటర్ బేరింగ్ లూబ్రికేషన్ ప్రోగ్రామ్ |
+| `S7f38cc` | status code fields | Generator Fan Program | జనరేటర్ ఫ్యాన్ ప్రోగ్రామ్ |
+| `Sf292a7` | status code fields | Generator Heating Program | జనరేటర్ హీటింగ్ ప్రోగ్రామ్ |
+| `Sdccc10` | status code fields | Hydraulic Pump Program | హైడ్రాలిక్ పంప్ ప్రోగ్రామ్ |
+| `Se21075` | status code fields | Manual Operation | మాన్యువల్ ఆపరేషన్ |
+| `S9beea7` | status code fields | Medium Voltage Circuit Breaker Program | మధ్య వోల్టేజ్ సర్క్యూట్ బ్రేకర్ ప్రోగ్రామ్ |
+| `Scb0a0d` | status code fields | Pitch Error Program | పిచ్ లోపం ప్రోగ్రామ్ |
+| `S941428` | status code fields | Pitch Warning Program | పిచ్ హెచ్చరిక ప్రోగ్రామ్ |
+| `Sd2fe56` | status code fields | Rotor Bearing Lubrication Program | రోటర్ బేరింగ్ లూబ్రికేషన్ ప్రోగ్రామ్ |
+| `S381e23` | status code fields | Rotor Brake Program | రోటర్ బ్రేక్ ప్రోగ్రామ్ |
+| `S1e3032` | status code fields | Stop Program 40 | స్టాప్ ప్రోగ్రామ్ 40 |
+| `S43b650` | status code fields | Stop Program 80 | స్టాప్ ప్రోగ్రామ్ 80 |
+| `S805790` | status code fields | Tower Fan Program | టవర్ ఫ్యాన్ ప్రోగ్రామ్ |
+| `Sef9b9e` | status code fields | Transformer Oil Pump Program | ట్రాన్స్‌ఫార్మర్ ఆయిల్ పంప్ ప్రోగ్రామ్ |
+| `S18a446` | status code fields | Vane Position | వేన్ స్థానం |
+| `S9ebce6` | status code fields | Zero Load Operation | శూన్య లోడ్ ఆపరేషన్ |
 | `Sff9f1f` | success_metrics | Age | వయస్సు |
 | `S8cc047` | success_metrics | Approval | ఆమోదం |
 | `S273d62` | success_metrics | Audit trail completeness of Released codes | విడుదల చేసిన కోడ్‌ల ఆడిట్ ట్రైల్ సంపూర్ణత |
@@ -8024,7 +8276,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 
 ### 9.9 IN தமிழ் 🇮🇳 — Tamil
 
-1102 of 1103 strings translated; direction left to right.
+1138 of 1139 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -8319,9 +8571,11 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S041a5d` | detail, export_center | Format | வடிவம் |
 | `S9e3c65` | detail | From revision | திருத்தத்திலிருந்து |
 | `S2fa1f7` | detail, form, list | Functional Subgroup | செயல்பாட்டுத் துணைக் குழு |
+| `Sb8c4c9` | detail, form | Further Program References | மேலும் நிரல் குறிப்புகள் |
 | `S636c41` | detail | Grid Operator | மின்தொகுப்பு இயக்குநர் |
 | `S90ccd6` | detail | History | வரலாறு |
 | `Sfec8b7` | detail | Hub Controller group | ஹப் கட்டுப்படுத்தி குழு |
+| `S00ccae` | detail, form | Hub Controller only | ஹப் கட்டுப்படுத்தி மட்டும் |
 | `S3c883f` | detail | I have reviewed these dependants | இந்தச் சார்ந்தவற்றை நான் மதிப்பாய்வு செய்துவிட்டேன் |
 | `S4bc96f` | detail | Import Job | இறக்குமதிப் பணி |
 | `S50565a` | detail | Import progress | இறக்குமதி முன்னேற்றம் |
@@ -8335,13 +8589,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S43d5c5` | detail, form | Loadless Spinning Permitted | சுமையின்றிச் சுழல்வது அனுமதிக்கப்பட்டது |
 | `S193786` | detail | Logical Node | தருக்க முனை |
 | `S578b78` | detail | Main Controller group | முதன்மைக் கட்டுப்படுத்தி குழு |
+| `Sa7512d` | detail, form | Main Controller only | முதன்மை கட்டுப்படுத்தி மட்டும் |
 | `Seb9a6d` | detail | Manage translations | மொழிபெயர்ப்புகளை நிர்வகி |
 | `Sc5beef` | detail | manifest | மேனிஃபெஸ்ட் |
 | `S6d59f4` | detail | Manual Reset Program | கைமுறை மீட்டமை நிரல் |
 | `Sf9896c` | detail, form | Mark resolved | தீர்க்கப்பட்டதாகக் குறி |
 | `Sa7b93d` | detail, new, reconciliation | Mode | பயன்முறை |
 | `S31a335` | detail | new code | புதிய குறியீடு |
-| `S816c52` | detail, export_verify, list | No | இல்லை |
+| `S816c52` | detail, export_verify, form | No | இல்லை |
 | `S06fc8d` | detail | No active Engineer holds the %(code)s domain yet. An Administrator must tag an Engineer with it (Administration → Users) before a sign-off can be requested. | எந்த செயலில் உள்ள பொறியாளருக்கும் %(code)s துறை இல்லை. கையொப்பம் கோரும் முன் நிர்வாகி ஒரு பொறியாளருக்கு இந்தத் துறையை வழங்க வேண்டும் (நிர்வாகம் → பயனர்கள்). |
 | `S362336` | detail | No change requests in this set yet. | இந்தத் தொகுப்பில் இன்னும் மாற்றக் கோரிக்கைகள் இல்லை. |
 | `S7e1129` | detail | No comments or decisions yet. | இன்னும் கருத்துகள் அல்லது முடிவுகள் இல்லை. |
@@ -8362,6 +8617,8 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S5fc7e3` | detail | open | திறந்தது |
 | `Sf61187` | detail | Open New Revision | புதிய திருத்தத்தைத் திற |
 | `S578c53` | detail | Opens a Draft that must go through the full dual-review and Chief Engineer approval cycle before it takes effect. | நடைமுறைக்கு வரும் முன் முழு இரட்டை மதிப்பாய்வு, தலைமைப் பொறியாளர் ஒப்புதல் சுழற்சியைக் கடக்க வேண்டிய வரைவைத் திறக்கிறது. |
+| `Sfa465a` | detail, form, status code fields | Operating Mode Mask | இயக்க முறை முகமூடி |
+| `S20691e` | detail, form | Operation Parameters | இயக்க அளவுருக்கள் |
 | `S36463a` | detail | other code(s) still refer to this one: | பிற குறியீடுகள் இன்னும் இதைக் குறிப்பிடுகின்றன: |
 | `S9734ac` | detail | Other codes that refer to this one. Review them before deprecating it. | இதைக் குறிப்பிடும் பிற குறியீடுகள். வழக்கொழிவு செய்யும் முன் அவற்றை மதிப்பாய்வு செய்யுங்கள். |
 | `S780d35` | detail | Override identifier (migration / reservation only) | அடையாளங்காட்டியை மேலெழுது (இடம்பெயர்வு / ஒதுக்கீட்டுக்கு மட்டும்) |
@@ -8379,6 +8636,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sa4ab7b` | detail | Program References | நிரல் குறிப்புகள் |
 | `S70cbd1` | detail | Proposed | முன்மொழியப்பட்டது |
 | `S483bf2` | detail, list | Published | வெளியிடப்பட்டது |
+| `S6a9c56` | detail, form | Read level | படிக்கும் நிலை |
 | `Sf5ca9d` | detail | Recorded exports | பதிவான ஏற்றுமதிகள் |
 | `Sa3f757` | detail | Reinstate to Released | வெளியிடப்பட்டதாக மீட்டெடு |
 | `S3238ca` | detail | Reinstatement reason | மீட்டெடுப்புக் காரணம் |
@@ -8424,6 +8682,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S6e3665` | detail, review_queue | Signed | கையொப்பமிடப்பட்டது |
 | `Sddfd83` | detail | Signed by | கையொப்பமிட்டவர் |
 | `Sb71523` | detail | Size | அளவு |
+| `Sece2ac` | detail, form | Slot | ஸ்லாட் |
 | `Sff44d2` | detail | Software Version | மென்பொருள் பதிப்பு |
 | `S169bf7` | detail, software_versions | Software version | மென்பொருள் பதிப்பு |
 | `S6da13a` | detail, fleet_feedback | Source | மூலம் |
@@ -8437,6 +8696,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S123f6c` | detail | Submit for Review | மதிப்பாய்வுக்குச் சமர்ப்பி |
 | `S3dca68` | detail | Superseded by Status Code id (optional) | இதனால் மாற்றப்பட்ட நிலைக் குறியீடு ஐடி (விருப்பம்) |
 | `S08e643` | detail, list | Target software version | இலக்கு மென்பொருள் பதிப்பு |
+| `S44203c` | detail, form, status code fields | Task Call Frequency | பணி அழைப்பு அதிர்வெண் |
 | `S8fc804` | detail | The author has to submit it for review before the Reviewer or Administrator can see it. | மதிப்பாய்வாளர் அல்லது நிர்வாகி பார்க்கும் முன் ஆசிரியர் இதை மதிப்பாய்வுக்குச் சமர்ப்பிக்க வேண்டும். |
 | `S091814` | detail | This change request has reached a terminal decision state | இந்த மாற்றக் கோரிக்கை இறுதி முடிவு நிலையை அடைந்துவிட்டது |
 | `S6d5708` | detail | This is the one truly irreversible action in the system. Type the identifier to confirm. | இது அமைப்பின் ஒரே உண்மையிலேயே மாற்ற முடியாத செயல். உறுதிப்படுத்த அடையாளங்காட்டியை உள்ளிடுங்கள். |
@@ -8452,6 +8712,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S391d68` | detail, stalled | unassigned | நியமிக்கப்படவில்லை |
 | `S73ec5d` | detail, form | Up/Down Counter | மேல்/கீழ் எண்ணி |
 | `S80c494` | detail | Uploaded | பதிவேற்றப்பட்டது |
+| `Sb01729` | detail, form | User-Group Levels | பயனர்-குழு நிலைகள் |
 | `S45288a` | detail, new | Version Label | பதிப்பு லேபிள் |
 | `S4993ae` | detail | View Change Request | மாற்றக் கோரிக்கையைப் பார் |
 | `Scde93f` | detail | View Imported Drafts | இறக்குமதி செய்த வரைவுகளைப் பார் |
@@ -8464,9 +8725,10 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S7d5316` | detail | Who | யார் |
 | `S47e564` | detail | Withdraw | திரும்பப் பெறு |
 | `S51a998` | detail | Withdraw this change request? | இந்த மாற்றக் கோரிக்கையைத் திரும்பப் பெறவா? |
+| `S95a2a4` | detail, form | Write level | எழுதும் நிலை |
 | `S612fe0` | detail | Yaw Bearing Lubrication Program | யா தாங்கி உயவு நிரல் |
 | `S559a3f` | detail | Yaw Program | யா நிரல் |
-| `S5397e0` | detail, export_verify, list | Yes | ஆம் |
+| `S5397e0` | detail, export_verify, form | Yes | ஆம் |
 | `Sc8e4b4` | detail | Your decision step | உங்கள் முடிவுப் படி |
 | `S20cb4c` | detail, export_center | ZIP with manifest | மேனிஃபெஸ்டுடன் ZIP |
 | `S5d4358` | dry_run | All rows are clean. | அனைத்து வரிசைகளும் சுத்தமானவை. |
@@ -8554,6 +8816,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sf094b9` | form | Affected component (optional) | பாதிக்கப்பட்ட கூறு (விருப்பம்) |
 | `S407cf2` | form | Applies from software version (optional) | இந்த மென்பொருள் பதிப்பிலிருந்து பொருந்தும் (விருப்பம்) |
 | `Sa30242` | form | Applies up to software version (optional) | இந்த மென்பொருள் பதிப்பு வரை பொருந்தும் (விருப்பம்) |
+| `S7665e9` | form | Bit string of the generated program, e.g. 111011 (20 bits on the Main Controller, 6 on the Hub Controller). | உருவாக்கிய நிரலின் பிட் சரம், எ.கா. 111011 (முதன்மை கட்டுப்படுத்தியில் 20 பிட், ஹப் கட்டுப்படுத்தியில் 6). |
 | `S77dfd2` | form, st_preview | Cancel | ரத்து செய் |
 | `S94c2a3` | form | Classification | வகைப்பாடு |
 | `S7c9afd` | form | Classification only — a Sandbox code's identifier is still drawn from the isolated StCd-T##### band, never from this group's numeric range. | வகைப்பாடு மட்டும் — சாண்ட்பாக்ஸ் குறியீட்டின் அடையாளங்காட்டி இன்னும் தனிமைப்படுத்தப்பட்ட பட்டை StCd-T##### இலிருந்து எடுக்கப்படும், இந்தக் குழுவின் எண் வரம்பிலிருந்து ஒருபோதும் அல்ல. |
@@ -8562,7 +8825,9 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sdb0f93` | form | Immutable once allocated (BR-001). | ஒதுக்கிய பின் மாற்ற முடியாதது (BR-001). |
 | `Sd7635c` | form | Legacy Reference Number (optional) | பழைய குறிப்பு எண் (விருப்பம்) |
 | `S2d3840` | form | New Sandbox Status Code | புதிய சாண்ட்பாக்ஸ் நிலைக் குறியீடு |
+| `S0efd9f` | form | not captured | பதிவு செய்யப்படவில்லை |
 | `S8f9967` | form | Not yet assigned — fixed on Submit for Review | இன்னும் ஒதுக்கப்படவில்லை — மதிப்பாய்வுக்குச் சமர்ப்பிக்கும்போது நிர்ணயிக்கப்படும் |
+| `S152225` | form | Numeric levels of the generated program (0 to 255): read 1 = readable, 50 = no access. | உருவாக்கிய நிரலின் எண் நிலைகள் (0 முதல் 255): படித்தல் 1 = படிக்கலாம், 50 = அணுகல் இல்லை. |
 | `S82890d` | form | Open review comments | திறந்த மதிப்பாய்வுக் கருத்துகள் |
 | `S611331` | form | Planned deprecation date (optional) | திட்டமிட்ட வழக்கொழிவுத் தேதி (விருப்பம்) |
 | `S75ee24` | form | Planned effective date (optional) | திட்டமிட்ட அமலாக்கத் தேதி (விருப்பம்) |
@@ -9070,6 +9335,29 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sc0d28c` | stalled | Reviewers who are out of office (they have delegated) are left out. | அலுவலகத்துக்கு வெளியே உள்ள (பிரதிநிதித்துவம் அளித்த) மதிப்பாய்வாளர்கள் விலக்கப்பட்டுள்ளனர். |
 | `Sca6d0e` | stalled | Stage | படி |
 | `Sb1bafe` | stalled | Stalled change requests | சிக்கிய கோரிக்கைகள் |
+| `S0b6108` | status code fields | Anemometer Heating Program | காற்றுமானி வெப்பமூட்டி நிரல் |
+| `S5387f1` | status code fields | Automatic Operation | தானியங்கி இயக்கம் |
+| `S49412e` | status code fields | Availability Calculation | கிடைப்புக் கணக்கீடு |
+| `S38cb6d` | status code fields | Converter Reset Program | கன்வெர்ட்டர் மீட்டமைப்பு நிரல் |
+| `S86a17b` | status code fields | Gearbox Oil Fan Program | கியர்பாக்ஸ் எண்ணெய் மின்விசிறி நிரல் |
+| `Scf4f90` | status code fields | Gearbox Oil Heating Program | கியர்பாக்ஸ் எண்ணெய் வெப்பமூட்டி நிரல் |
+| `S891ad9` | status code fields | Gearbox Oil Pump Program | கியர்பாக்ஸ் எண்ணெய் பம்ப் நிரல் |
+| `S6a0014` | status code fields | Generator Bearing Lubrication Program | ஜெனரேட்டர் தாங்கி உயவு நிரல் |
+| `S7f38cc` | status code fields | Generator Fan Program | ஜெனரேட்டர் மின்விசிறி நிரல் |
+| `Sf292a7` | status code fields | Generator Heating Program | ஜெனரேட்டர் வெப்பமூட்டி நிரல் |
+| `Sdccc10` | status code fields | Hydraulic Pump Program | ஹைட்ராலிக் பம்ப் நிரல் |
+| `Se21075` | status code fields | Manual Operation | கைமுறை இயக்கம் |
+| `S9beea7` | status code fields | Medium Voltage Circuit Breaker Program | நடுத்தர மின்னழுத்த சர்க்யூட் பிரேக்கர் நிரல் |
+| `Scb0a0d` | status code fields | Pitch Error Program | பிட்ச் பிழை நிரல் |
+| `S941428` | status code fields | Pitch Warning Program | பிட்ச் எச்சரிக்கை நிரல் |
+| `Sd2fe56` | status code fields | Rotor Bearing Lubrication Program | ரோட்டர் தாங்கி உயவு நிரல் |
+| `S381e23` | status code fields | Rotor Brake Program | ரோட்டர் பிரேக் நிரல் |
+| `S1e3032` | status code fields | Stop Program 40 | நிறுத்த நிரல் 40 |
+| `S43b650` | status code fields | Stop Program 80 | நிறுத்த நிரல் 80 |
+| `S805790` | status code fields | Tower Fan Program | கோபுர மின்விசிறி நிரல் |
+| `Sef9b9e` | status code fields | Transformer Oil Pump Program | மின்மாற்றி எண்ணெய் பம்ப் நிரல் |
+| `S18a446` | status code fields | Vane Position | வேன் நிலை |
+| `S9ebce6` | status code fields | Zero Load Operation | சுழிய சுமை இயக்கம் |
 | `Sff9f1f` | success_metrics | Age | வயது |
 | `S8cc047` | success_metrics | Approval | ஒப்புதல் |
 | `S273d62` | success_metrics | Audit trail completeness of Released codes | வெளியிடப்பட்ட குறியீடுகளின் தணிக்கைத் தடத்தின் முழுமை |
@@ -9133,7 +9421,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 
 ### 9.10 IN ગુજરાતી 🇮🇳 — Gujarati
 
-1102 of 1103 strings translated; direction left to right.
+1138 of 1139 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -9428,9 +9716,11 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S041a5d` | detail, export_center | Format | સ્વરૂપ |
 | `S9e3c65` | detail | From revision | સુધારામાંથી |
 | `S2fa1f7` | detail, form, list | Functional Subgroup | કાર્યાત્મક પેટાજૂથ |
+| `Sb8c4c9` | detail, form | Further Program References | વધુ પ્રોગ્રામ સંદર્ભો |
 | `S636c41` | detail | Grid Operator | ગ્રિડ ઓપરેટર |
 | `S90ccd6` | detail | History | ઇતિહાસ |
 | `Sfec8b7` | detail | Hub Controller group | હબ નિયંત્રક જૂથ |
+| `S00ccae` | detail, form | Hub Controller only | ફક્ત હબ નિયંત્રક |
 | `S3c883f` | detail | I have reviewed these dependants | મેં આ આશ્રિતોની સમીક્ષા કરી છે |
 | `S4bc96f` | detail | Import Job | આયાત કાર્ય |
 | `S50565a` | detail | Import progress | આયાત પ્રગતિ |
@@ -9444,13 +9734,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S43d5c5` | detail, form | Loadless Spinning Permitted | ભાર વગર ફરવું માન્ય |
 | `S193786` | detail | Logical Node | લૉજિકલ નોડ |
 | `S578b78` | detail | Main Controller group | મુખ્ય નિયંત્રક જૂથ |
+| `Sa7512d` | detail, form | Main Controller only | ફક્ત મુખ્ય નિયંત્રક |
 | `Seb9a6d` | detail | Manage translations | અનુવાદો સંચાલિત કરો |
 | `Sc5beef` | detail | manifest | મેનિફેસ્ટ |
 | `S6d59f4` | detail | Manual Reset Program | મેન્યુઅલ રીસેટ પ્રોગ્રામ |
 | `Sf9896c` | detail, form | Mark resolved | ઉકેલાયું તરીકે ચિહ્નિત કરો |
 | `Sa7b93d` | detail, new, reconciliation | Mode | મોડ |
 | `S31a335` | detail | new code | નવો કોડ |
-| `S816c52` | detail, export_verify, list | No | ના |
+| `S816c52` | detail, export_verify, form | No | ના |
 | `S06fc8d` | detail | No active Engineer holds the %(code)s domain yet. An Administrator must tag an Engineer with it (Administration → Users) before a sign-off can be requested. | કોઈ સક્રિય ઇજનેર પાસે %(code)s ક્ષેત્ર નથી. સાઇન-ઑફ માગતા પહેલાં સંચાલકે કોઈ ઇજનેરને આ ક્ષેત્ર આપવું જોઈએ (વહીવટ → વપરાશકર્તાઓ). |
 | `S362336` | detail | No change requests in this set yet. | આ સમૂહમાં હજુ કોઈ ફેરફાર વિનંતી નથી. |
 | `S7e1129` | detail | No comments or decisions yet. | હજુ કોઈ ટિપ્પણી કે નિર્ણય નથી. |
@@ -9471,6 +9762,8 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S5fc7e3` | detail | open | ખુલ્લું |
 | `Sf61187` | detail | Open New Revision | નવો સુધારો ખોલો |
 | `S578c53` | detail | Opens a Draft that must go through the full dual-review and Chief Engineer approval cycle before it takes effect. | એક મુસદ્દો ખોલે છે જેણે અમલમાં આવતા પહેલાં બેવડી સમીક્ષા અને મુખ્ય ઇજનેરની મંજૂરીના સંપૂર્ણ ચક્રમાંથી પસાર થવું પડે. |
+| `Sfa465a` | detail, form, status code fields | Operating Mode Mask | સંચાલન મોડ માસ્ક |
+| `S20691e` | detail, form | Operation Parameters | સંચાલન પરિમાણો |
 | `S36463a` | detail | other code(s) still refer to this one: | અન્ય કોડ હજુ આ તરફ નિર્દેશ કરે છે: |
 | `S9734ac` | detail | Other codes that refer to this one. Review them before deprecating it. | આ તરફ નિર્દેશ કરતા અન્ય કોડ. અપ્રચલિત કરતાં પહેલાં તેમની સમીક્ષા કરો. |
 | `S780d35` | detail | Override identifier (migration / reservation only) | ઓળખકર્તા અધિલેખિત કરો (ફક્ત સ્થળાંતર / આરક્ષણ માટે) |
@@ -9488,6 +9781,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sa4ab7b` | detail | Program References | પ્રોગ્રામ સંદર્ભો |
 | `S70cbd1` | detail | Proposed | પ્રસ્તાવિત |
 | `S483bf2` | detail, list | Published | પ્રકાશિત |
+| `S6a9c56` | detail, form | Read level | વાંચન સ્તર |
 | `Sf5ca9d` | detail | Recorded exports | નોંધાયેલ નિકાસ |
 | `Sa3f757` | detail | Reinstate to Released | પ્રકાશિત પર પુનઃસ્થાપિત કરો |
 | `S3238ca` | detail | Reinstatement reason | પુનઃસ્થાપનાનું કારણ |
@@ -9533,6 +9827,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S6e3665` | detail, review_queue | Signed | સહી થયેલ |
 | `Sddfd83` | detail | Signed by | સહી કરનાર |
 | `Sb71523` | detail | Size | કદ |
+| `Sece2ac` | detail, form | Slot | સ્લોટ |
 | `Sff44d2` | detail | Software Version | સૉફ્ટવેર આવૃત્તિ |
 | `S169bf7` | detail, software_versions | Software version | સૉફ્ટવેર આવૃત્તિ |
 | `S6da13a` | detail, fleet_feedback | Source | સ્રોત |
@@ -9546,6 +9841,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S123f6c` | detail | Submit for Review | સમીક્ષા માટે સબમિટ કરો |
 | `S3dca68` | detail | Superseded by Status Code id (optional) | આનાથી બદલાયેલ સ્ટેટસ કોડ ID (વૈકલ્પિક) |
 | `S08e643` | detail, list | Target software version | લક્ષ્ય સૉફ્ટવેર આવૃત્તિ |
+| `S44203c` | detail, form, status code fields | Task Call Frequency | ટાસ્ક કોલ આવર્તન |
 | `S8fc804` | detail | The author has to submit it for review before the Reviewer or Administrator can see it. | સમીક્ષક કે સંચાલક જુએ તે પહેલાં લેખકે તેને સમીક્ષા માટે સબમિટ કરવો જોઈએ. |
 | `S091814` | detail | This change request has reached a terminal decision state | આ ફેરફાર વિનંતી અંતિમ નિર્ણય સ્થિતિમાં પહોંચી છે |
 | `S6d5708` | detail | This is the one truly irreversible action in the system. Type the identifier to confirm. | આ સિસ્ટમની એકમાત્ર ખરેખર અપરિવર્તનીય ક્રિયા છે. પુષ્ટિ માટે ઓળખકર્તા ટાઇપ કરો. |
@@ -9561,6 +9857,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S391d68` | detail, stalled | unassigned | સોંપાયેલ નથી |
 | `S73ec5d` | detail, form | Up/Down Counter | ઉપર/નીચે કાઉન્ટર |
 | `S80c494` | detail | Uploaded | અપલોડ થયું |
+| `Sb01729` | detail, form | User-Group Levels | વપરાશકર્તા-જૂથ સ્તરો |
 | `S45288a` | detail, new | Version Label | આવૃત્તિ લેબલ |
 | `S4993ae` | detail | View Change Request | ફેરફાર વિનંતી જુઓ |
 | `Scde93f` | detail | View Imported Drafts | આયાત કરેલા મુસદ્દા જુઓ |
@@ -9573,9 +9870,10 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S7d5316` | detail | Who | કોણ |
 | `S47e564` | detail | Withdraw | પાછી ખેંચો |
 | `S51a998` | detail | Withdraw this change request? | આ ફેરફાર વિનંતી પાછી ખેંચવી? |
+| `S95a2a4` | detail, form | Write level | લખાણ સ્તર |
 | `S612fe0` | detail | Yaw Bearing Lubrication Program | યો બેરિંગ લુબ્રિકેશન પ્રોગ્રામ |
 | `S559a3f` | detail | Yaw Program | યો પ્રોગ્રામ |
-| `S5397e0` | detail, export_verify, list | Yes | હા |
+| `S5397e0` | detail, export_verify, form | Yes | હા |
 | `Sc8e4b4` | detail | Your decision step | તમારો નિર્ણય તબક્કો |
 | `S20cb4c` | detail, export_center | ZIP with manifest | મેનિફેસ્ટ સાથે ZIP |
 | `S5d4358` | dry_run | All rows are clean. | બધી પંક્તિઓ સ્વચ્છ છે. |
@@ -9663,6 +9961,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sf094b9` | form | Affected component (optional) | અસરગ્રસ્ત ઘટક (વૈકલ્પિક) |
 | `S407cf2` | form | Applies from software version (optional) | આ સૉફ્ટવેર આવૃત્તિથી લાગુ (વૈકલ્પિક) |
 | `Sa30242` | form | Applies up to software version (optional) | આ સૉફ્ટવેર આવૃત્તિ સુધી લાગુ (વૈકલ્પિક) |
+| `S7665e9` | form | Bit string of the generated program, e.g. 111011 (20 bits on the Main Controller, 6 on the Hub Controller). | બનાવેલા પ્રોગ્રામની બિટ સ્ટ્રિંગ, દા.ત. 111011 (મુખ્ય નિયંત્રકમાં 20 બિટ, હબ નિયંત્રકમાં 6). |
 | `S77dfd2` | form, st_preview | Cancel | રદ કરો |
 | `S94c2a3` | form | Classification | વર્ગીકરણ |
 | `S7c9afd` | form | Classification only — a Sandbox code's identifier is still drawn from the isolated StCd-T##### band, never from this group's numeric range. | ફક્ત વર્ગીકરણ — સેન્ડબોક્સ કોડનો ઓળખકર્તા હજુ અલગ પટ્ટા StCd-T##### માંથી લેવાય છે, આ જૂથની સંખ્યાત્મક શ્રેણીમાંથી ક્યારેય નહીં. |
@@ -9671,7 +9970,9 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sdb0f93` | form | Immutable once allocated (BR-001). | એકવાર સોંપાયા પછી અપરિવર્તનીય (BR-001). |
 | `Sd7635c` | form | Legacy Reference Number (optional) | જૂનો સંદર્ભ નંબર (વૈકલ્પિક) |
 | `S2d3840` | form | New Sandbox Status Code | નવો સેન્ડબોક્સ સ્ટેટસ કોડ |
+| `S0efd9f` | form | not captured | નોંધાયેલ નથી |
 | `S8f9967` | form | Not yet assigned — fixed on Submit for Review | હજુ સોંપાયેલ નથી — સમીક્ષા માટે સબમિટ કરતી વખતે નક્કી થાય છે |
+| `S152225` | form | Numeric levels of the generated program (0 to 255): read 1 = readable, 50 = no access. | બનાવેલા પ્રોગ્રામના સંખ્યાત્મક સ્તરો (0 થી 255): વાંચન 1 = વાંચી શકાય, 50 = પ્રવેશ નથી. |
 | `S82890d` | form | Open review comments | ખુલ્લી સમીક્ષા ટિપ્પણીઓ |
 | `S611331` | form | Planned deprecation date (optional) | આયોજિત અપ્રચલન તારીખ (વૈકલ્પિક) |
 | `S75ee24` | form | Planned effective date (optional) | આયોજિત અમલ તારીખ (વૈકલ્પિક) |
@@ -10179,6 +10480,29 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sc0d28c` | stalled | Reviewers who are out of office (they have delegated) are left out. | ઑફિસ બહાર રહેલા (જેમણે સોંપણી કરી છે) સમીક્ષકો બાકાત છે. |
 | `Sca6d0e` | stalled | Stage | તબક્કો |
 | `Sb1bafe` | stalled | Stalled change requests | અટકેલી વિનંતીઓ |
+| `S0b6108` | status code fields | Anemometer Heating Program | એનિમોમીટર હીટિંગ પ્રોગ્રામ |
+| `S5387f1` | status code fields | Automatic Operation | સ્વચાલિત સંચાલન |
+| `S49412e` | status code fields | Availability Calculation | ઉપલબ્ધતા ગણતરી |
+| `S38cb6d` | status code fields | Converter Reset Program | કન્વર્ટર રીસેટ પ્રોગ્રામ |
+| `S86a17b` | status code fields | Gearbox Oil Fan Program | ગિયરબોક્સ ઓઇલ પંખો પ્રોગ્રામ |
+| `Scf4f90` | status code fields | Gearbox Oil Heating Program | ગિયરબોક્સ ઓઇલ હીટિંગ પ્રોગ્રામ |
+| `S891ad9` | status code fields | Gearbox Oil Pump Program | ગિયરબોક્સ ઓઇલ પંપ પ્રોગ્રામ |
+| `S6a0014` | status code fields | Generator Bearing Lubrication Program | જનરેટર બેરિંગ લુબ્રિકેશન પ્રોગ્રામ |
+| `S7f38cc` | status code fields | Generator Fan Program | જનરેટર પંખો પ્રોગ્રામ |
+| `Sf292a7` | status code fields | Generator Heating Program | જનરેટર હીટિંગ પ્રોગ્રામ |
+| `Sdccc10` | status code fields | Hydraulic Pump Program | હાઇડ્રોલિક પંપ પ્રોગ્રામ |
+| `Se21075` | status code fields | Manual Operation | મેન્યુઅલ સંચાલન |
+| `S9beea7` | status code fields | Medium Voltage Circuit Breaker Program | મધ્યમ વોલ્ટેજ સર્કિટ બ્રેકર પ્રોગ્રામ |
+| `Scb0a0d` | status code fields | Pitch Error Program | પિચ ભૂલ પ્રોગ્રામ |
+| `S941428` | status code fields | Pitch Warning Program | પિચ ચેતવણી પ્રોગ્રામ |
+| `Sd2fe56` | status code fields | Rotor Bearing Lubrication Program | રોટર બેરિંગ લુબ્રિકેશન પ્રોગ્રામ |
+| `S381e23` | status code fields | Rotor Brake Program | રોટર બ્રેક પ્રોગ્રામ |
+| `S1e3032` | status code fields | Stop Program 40 | સ્ટોપ પ્રોગ્રામ 40 |
+| `S43b650` | status code fields | Stop Program 80 | સ્ટોપ પ્રોગ્રામ 80 |
+| `S805790` | status code fields | Tower Fan Program | ટાવર પંખો પ્રોગ્રામ |
+| `Sef9b9e` | status code fields | Transformer Oil Pump Program | ટ્રાન્સફોર્મર ઓઇલ પંપ પ્રોગ્રામ |
+| `S18a446` | status code fields | Vane Position | વેન સ્થિતિ |
+| `S9ebce6` | status code fields | Zero Load Operation | શૂન્ય લોડ સંચાલન |
 | `Sff9f1f` | success_metrics | Age | ઉંમર |
 | `S8cc047` | success_metrics | Approval | મંજૂરી |
 | `S273d62` | success_metrics | Audit trail completeness of Released codes | પ્રકાશિત કોડના ઑડિટ ટ્રેલની સંપૂર્ણતા |
@@ -10242,7 +10566,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 
 ### 9.11 PK اردو 🇵🇰 — Urdu
 
-1102 of 1103 strings translated; direction right to left.
+1138 of 1139 strings translated; direction right to left.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -10537,9 +10861,11 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S041a5d` | detail, export_center | Format | فارمیٹ |
 | `S9e3c65` | detail | From revision | ترمیم سے |
 | `S2fa1f7` | detail, form, list | Functional Subgroup | فنکشنل ذیلی گروپ |
+| `Sb8c4c9` | detail, form | Further Program References | مزید پروگرام حوالے |
 | `S636c41` | detail | Grid Operator | گرڈ آپریٹر |
 | `S90ccd6` | detail | History | تاریخ |
 | `Sfec8b7` | detail | Hub Controller group | ہب کنٹرولر گروپ |
+| `S00ccae` | detail, form | Hub Controller only | صرف ہب کنٹرولر |
 | `S3c883f` | detail | I have reviewed these dependants | میں نے ان منحصر کوڈ کا جائزہ لے لیا ہے |
 | `S4bc96f` | detail | Import Job | درآمدی کام |
 | `S50565a` | detail | Import progress | درآمد کی پیش رفت |
@@ -10553,13 +10879,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S43d5c5` | detail, form | Loadless Spinning Permitted | بغیر بوجھ گھومنا مجاز |
 | `S193786` | detail | Logical Node | منطقی نوڈ |
 | `S578b78` | detail | Main Controller group | مرکزی کنٹرولر گروپ |
+| `Sa7512d` | detail, form | Main Controller only | صرف مرکزی کنٹرولر |
 | `Seb9a6d` | detail | Manage translations | تراجم کا انتظام کریں |
 | `Sc5beef` | detail | manifest | مینی فیسٹ |
 | `S6d59f4` | detail | Manual Reset Program | دستی ری سیٹ پروگرام |
 | `Sf9896c` | detail, form | Mark resolved | حل شدہ کے طور پر نشان زد کریں |
 | `Sa7b93d` | detail, new, reconciliation | Mode | موڈ |
 | `S31a335` | detail | new code | نیا کوڈ |
-| `S816c52` | detail, export_verify, list | No | نہیں |
+| `S816c52` | detail, export_verify, form | No | نہیں |
 | `S06fc8d` | detail | No active Engineer holds the %(code)s domain yet. An Administrator must tag an Engineer with it (Administration → Users) before a sign-off can be requested. | کسی فعال انجینئر کے پاس %(code)s ڈومین نہیں۔ سائن آف مانگنے سے پہلے منتظم کو کسی انجینئر کو یہ ڈومین دینا ہوگا (انتظامیہ ← صارفین)۔ |
 | `S362336` | detail | No change requests in this set yet. | اس مجموعے میں ابھی کوئی تبدیلی کی درخواست نہیں۔ |
 | `S7e1129` | detail | No comments or decisions yet. | ابھی کوئی تبصرہ یا فیصلہ نہیں۔ |
@@ -10580,6 +10907,8 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S5fc7e3` | detail | open | کھلا |
 | `Sf61187` | detail | Open New Revision | نئی ترمیم کھولیں |
 | `S578c53` | detail | Opens a Draft that must go through the full dual-review and Chief Engineer approval cycle before it takes effect. | ایک مسودہ کھولتا ہے جسے نافذ ہونے سے پہلے دوہرے جائزے اور چیف انجینئر کی منظوری کے مکمل دور سے گزرنا ہوگا۔ |
+| `Sfa465a` | detail, form, status code fields | Operating Mode Mask | آپریٹنگ موڈ ماسک |
+| `S20691e` | detail, form | Operation Parameters | آپریشن پیرامیٹر |
 | `S36463a` | detail | other code(s) still refer to this one: | دیگر کوڈ ابھی بھی اس کا حوالہ دیتے ہیں: |
 | `S9734ac` | detail | Other codes that refer to this one. Review them before deprecating it. | دیگر کوڈ جو اس کا حوالہ دیتے ہیں۔ اسے متروک کرنے سے پہلے ان کا جائزہ لیں۔ |
 | `S780d35` | detail | Override identifier (migration / reservation only) | شناخت کنندہ کو اوور رائیڈ کریں (صرف منتقلی / مخصوص کرنے کے لیے) |
@@ -10597,6 +10926,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sa4ab7b` | detail | Program References | پروگرام کے حوالے |
 | `S70cbd1` | detail | Proposed | مجوزہ |
 | `S483bf2` | detail, list | Published | شائع شدہ |
+| `S6a9c56` | detail, form | Read level | پڑھنے کی سطح |
 | `Sf5ca9d` | detail | Recorded exports | درج شدہ برآمدات |
 | `Sa3f757` | detail | Reinstate to Released | جاری شدہ پر بحال کریں |
 | `S3238ca` | detail | Reinstatement reason | بحالی کی وجہ |
@@ -10642,6 +10972,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S6e3665` | detail, review_queue | Signed | دستخط شدہ |
 | `Sddfd83` | detail | Signed by | دستخط کنندہ |
 | `Sb71523` | detail | Size | حجم |
+| `Sece2ac` | detail, form | Slot | سلاٹ |
 | `Sff44d2` | detail | Software Version | سافٹ ویئر ورژن |
 | `S169bf7` | detail, software_versions | Software version | سافٹ ویئر ورژن |
 | `S6da13a` | detail, fleet_feedback | Source | ماخذ |
@@ -10655,6 +10986,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S123f6c` | detail | Submit for Review | جائزے کے لیے جمع کرائیں |
 | `S3dca68` | detail | Superseded by Status Code id (optional) | اس سے بدلا گیا اسٹیٹس کوڈ شناخت (اختیاری) |
 | `S08e643` | detail, list | Target software version | ہدف سافٹ ویئر ورژن |
+| `S44203c` | detail, form, status code fields | Task Call Frequency | ٹاسک کال فریکوئنسی |
 | `S8fc804` | detail | The author has to submit it for review before the Reviewer or Administrator can see it. | جائزہ کار یا منتظم کے دیکھنے سے پہلے مصنف کو اسے جائزے کے لیے جمع کرانا ہوگا۔ |
 | `S091814` | detail | This change request has reached a terminal decision state | یہ تبدیلی کی درخواست حتمی فیصلے کی حالت میں پہنچ چکی ہے |
 | `S6d5708` | detail | This is the one truly irreversible action in the system. Type the identifier to confirm. | یہ نظام کا واحد واقعی ناقابلِ واپسی اقدام ہے۔ تصدیق کے لیے شناخت کنندہ ٹائپ کریں۔ |
@@ -10670,6 +11002,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S391d68` | detail, stalled | unassigned | مقرر نہیں |
 | `S73ec5d` | detail, form | Up/Down Counter | اوپر/نیچے کاؤنٹر |
 | `S80c494` | detail | Uploaded | اپ لوڈ کیا گیا |
+| `Sb01729` | detail, form | User-Group Levels | صارف گروہ کی سطحیں |
 | `S45288a` | detail, new | Version Label | ورژن کا لیبل |
 | `S4993ae` | detail | View Change Request | تبدیلی کی درخواست دیکھیں |
 | `Scde93f` | detail | View Imported Drafts | درآمد شدہ مسودے دیکھیں |
@@ -10682,9 +11015,10 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S7d5316` | detail | Who | کون |
 | `S47e564` | detail | Withdraw | واپس لیں |
 | `S51a998` | detail | Withdraw this change request? | کیا یہ تبدیلی کی درخواست واپس لینی ہے؟ |
+| `S95a2a4` | detail, form | Write level | لکھنے کی سطح |
 | `S612fe0` | detail | Yaw Bearing Lubrication Program | یاؤ بیئرنگ چکنائی پروگرام |
 | `S559a3f` | detail | Yaw Program | یاؤ پروگرام |
-| `S5397e0` | detail, export_verify, list | Yes | ہاں |
+| `S5397e0` | detail, export_verify, form | Yes | ہاں |
 | `Sc8e4b4` | detail | Your decision step | آپ کا فیصلے کا مرحلہ |
 | `S20cb4c` | detail, export_center | ZIP with manifest | مینی فیسٹ کے ساتھ ZIP |
 | `S5d4358` | dry_run | All rows are clean. | تمام سطریں صاف ہیں۔ |
@@ -10772,6 +11106,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sf094b9` | form | Affected component (optional) | متاثرہ جزو (اختیاری) |
 | `S407cf2` | form | Applies from software version (optional) | اس سافٹ ویئر ورژن سے لاگو (اختیاری) |
 | `Sa30242` | form | Applies up to software version (optional) | اس سافٹ ویئر ورژن تک لاگو (اختیاری) |
+| `S7665e9` | form | Bit string of the generated program, e.g. 111011 (20 bits on the Main Controller, 6 on the Hub Controller). | تیار شدہ پروگرام کی بٹ اسٹرنگ، مثلاً 111011 (مرکزی کنٹرولر میں 20 بٹ، ہب کنٹرولر میں 6)۔ |
 | `S77dfd2` | form, st_preview | Cancel | منسوخ کریں |
 | `S94c2a3` | form | Classification | درجہ بندی |
 | `S7c9afd` | form | Classification only — a Sandbox code's identifier is still drawn from the isolated StCd-T##### band, never from this group's numeric range. | صرف درجہ بندی — سینڈ باکس کوڈ کی شناخت پھر بھی الگ پٹی StCd-T##### سے لی جاتی ہے، اس گروپ کی عددی حد سے کبھی نہیں۔ |
@@ -10780,7 +11115,9 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sdb0f93` | form | Immutable once allocated (BR-001). | ایک بار مخصوص ہونے کے بعد ناقابلِ تبدیل (BR-001)۔ |
 | `Sd7635c` | form | Legacy Reference Number (optional) | پرانا حوالہ نمبر (اختیاری) |
 | `S2d3840` | form | New Sandbox Status Code | نیا سینڈ باکس اسٹیٹس کوڈ |
+| `S0efd9f` | form | not captured | درج نہیں |
 | `S8f9967` | form | Not yet assigned — fixed on Submit for Review | ابھی مخصوص نہیں — جائزے کے لیے جمع کراتے وقت طے ہوگا |
+| `S152225` | form | Numeric levels of the generated program (0 to 255): read 1 = readable, 50 = no access. | تیار شدہ پروگرام کی عددی سطحیں (0 سے 255): پڑھنا 1 = پڑھنے کے قابل، 50 = رسائی نہیں۔ |
 | `S82890d` | form | Open review comments | کھلے جائزے کے تبصرے |
 | `S611331` | form | Planned deprecation date (optional) | منصوبہ بند متروکیت کی تاریخ (اختیاری) |
 | `S75ee24` | form | Planned effective date (optional) | منصوبہ بند نفاذ کی تاریخ (اختیاری) |
@@ -11288,6 +11625,29 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sc0d28c` | stalled | Reviewers who are out of office (they have delegated) are left out. | دفتر سے باہر جائزہ کار (جنہوں نے تفویض کی ہے) شامل نہیں۔ |
 | `Sca6d0e` | stalled | Stage | مرحلہ |
 | `Sb1bafe` | stalled | Stalled change requests | رکی ہوئی درخواستیں |
+| `S0b6108` | status code fields | Anemometer Heating Program | اینیمومیٹر ہیٹنگ پروگرام |
+| `S5387f1` | status code fields | Automatic Operation | خودکار آپریشن |
+| `S49412e` | status code fields | Availability Calculation | دستیابی کا حساب |
+| `S38cb6d` | status code fields | Converter Reset Program | کنورٹر ری سیٹ پروگرام |
+| `S86a17b` | status code fields | Gearbox Oil Fan Program | گیئر باکس تیل پنکھا پروگرام |
+| `Scf4f90` | status code fields | Gearbox Oil Heating Program | گیئر باکس تیل ہیٹنگ پروگرام |
+| `S891ad9` | status code fields | Gearbox Oil Pump Program | گیئر باکس تیل پمپ پروگرام |
+| `S6a0014` | status code fields | Generator Bearing Lubrication Program | جنریٹر بیئرنگ چکنائی پروگرام |
+| `S7f38cc` | status code fields | Generator Fan Program | جنریٹر پنکھا پروگرام |
+| `Sf292a7` | status code fields | Generator Heating Program | جنریٹر ہیٹنگ پروگرام |
+| `Sdccc10` | status code fields | Hydraulic Pump Program | ہائیڈرولک پمپ پروگرام |
+| `Se21075` | status code fields | Manual Operation | دستی آپریشن |
+| `S9beea7` | status code fields | Medium Voltage Circuit Breaker Program | درمیانی وولٹیج سرکٹ بریکر پروگرام |
+| `Scb0a0d` | status code fields | Pitch Error Program | پچ خرابی پروگرام |
+| `S941428` | status code fields | Pitch Warning Program | پچ انتباہ پروگرام |
+| `Sd2fe56` | status code fields | Rotor Bearing Lubrication Program | روٹر بیئرنگ چکنائی پروگرام |
+| `S381e23` | status code fields | Rotor Brake Program | روٹر بریک پروگرام |
+| `S1e3032` | status code fields | Stop Program 40 | اسٹاپ پروگرام 40 |
+| `S43b650` | status code fields | Stop Program 80 | اسٹاپ پروگرام 80 |
+| `S805790` | status code fields | Tower Fan Program | ٹاور پنکھا پروگرام |
+| `Sef9b9e` | status code fields | Transformer Oil Pump Program | ٹرانسفارمر تیل پمپ پروگرام |
+| `S18a446` | status code fields | Vane Position | وین پوزیشن |
+| `S9ebce6` | status code fields | Zero Load Operation | صفر لوڈ آپریشن |
 | `Sff9f1f` | success_metrics | Age | عمر |
 | `S8cc047` | success_metrics | Approval | منظوری |
 | `S273d62` | success_metrics | Audit trail completeness of Released codes | جاری شدہ کوڈ کے آڈٹ سراغ کی تکمیل |
@@ -11351,7 +11711,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 
 ### 9.12 IN ಕನ್ನಡ 🇮🇳 — Kannada
 
-1102 of 1103 strings translated; direction left to right.
+1138 of 1139 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -11646,9 +12006,11 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S041a5d` | detail, export_center | Format | ಸ್ವರೂಪ |
 | `S9e3c65` | detail | From revision | ಪರಿಷ್ಕರಣೆಯಿಂದ |
 | `S2fa1f7` | detail, form, list | Functional Subgroup | ಕ್ರಿಯಾತ್ಮಕ ಉಪಗುಂಪು |
+| `Sb8c4c9` | detail, form | Further Program References | ಇನ್ನಷ್ಟು ಪ್ರೋಗ್ರಾಂ ಉಲ್ಲೇಖಗಳು |
 | `S636c41` | detail | Grid Operator | ಗ್ರಿಡ್ ಆಪರೇಟರ್ |
 | `S90ccd6` | detail | History | ಇತಿಹಾಸ |
 | `Sfec8b7` | detail | Hub Controller group | ಹಬ್ ನಿಯಂತ್ರಕ ಗುಂಪು |
+| `S00ccae` | detail, form | Hub Controller only | ಹಬ್ ನಿಯಂತ್ರಕ ಮಾತ್ರ |
 | `S3c883f` | detail | I have reviewed these dependants | ನಾನು ಈ ಅವಲಂಬಿತಗಳನ್ನು ಪರಿಶೀಲಿಸಿದ್ದೇನೆ |
 | `S4bc96f` | detail | Import Job | ಆಮದು ಕೆಲಸ |
 | `S50565a` | detail | Import progress | ಆಮದು ಪ್ರಗತಿ |
@@ -11662,13 +12024,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S43d5c5` | detail, form | Loadless Spinning Permitted | ಹೊರೆರಹಿತ ತಿರುಗುವಿಕೆ ಅನುಮತಿಸಲಾಗಿದೆ |
 | `S193786` | detail | Logical Node | ತಾರ್ಕಿಕ ನೋಡ್ |
 | `S578b78` | detail | Main Controller group | ಮುಖ್ಯ ನಿಯಂತ್ರಕ ಗುಂಪು |
+| `Sa7512d` | detail, form | Main Controller only | ಮುಖ್ಯ ನಿಯಂತ್ರಕ ಮಾತ್ರ |
 | `Seb9a6d` | detail | Manage translations | ಅನುವಾದಗಳನ್ನು ನಿರ್ವಹಿಸಿ |
 | `Sc5beef` | detail | manifest | ಮ್ಯಾನಿಫೆಸ್ಟ್ |
 | `S6d59f4` | detail | Manual Reset Program | ಕೈಯಾರೆ ರೀಸೆಟ್ ಪ್ರೋಗ್ರಾಂ |
 | `Sf9896c` | detail, form | Mark resolved | ಪರಿಹರಿಸಲಾಗಿದೆ ಎಂದು ಗುರುತಿಸಿ |
 | `Sa7b93d` | detail, new, reconciliation | Mode | ಮೋಡ್ |
 | `S31a335` | detail | new code | ಹೊಸ ಕೋಡ್ |
-| `S816c52` | detail, export_verify, list | No | ಇಲ್ಲ |
+| `S816c52` | detail, export_verify, form | No | ಇಲ್ಲ |
 | `S06fc8d` | detail | No active Engineer holds the %(code)s domain yet. An Administrator must tag an Engineer with it (Administration → Users) before a sign-off can be requested. | ಯಾವುದೇ ಸಕ್ರಿಯ ಎಂಜಿನಿಯರ್ ಬಳಿ %(code)s ಡೊಮೇನ್ ಇಲ್ಲ. ಸಹಿಯನ್ನು ವಿನಂತಿಸುವ ಮೊದಲು ನಿರ್ವಾಹಕರು ಎಂಜಿನಿಯರ್‌ಗೆ ಅದನ್ನು ನೀಡಬೇಕು (ನಿರ್ವಹಣೆ → ಬಳಕೆದಾರರು). |
 | `S362336` | detail | No change requests in this set yet. | ಈ ಸಮೂಹದಲ್ಲಿ ಇನ್ನೂ ಬದಲಾವಣೆ ವಿನಂತಿಗಳಿಲ್ಲ. |
 | `S7e1129` | detail | No comments or decisions yet. | ಇನ್ನೂ ಟಿಪ್ಪಣಿಗಳು ಅಥವಾ ನಿರ್ಧಾರಗಳಿಲ್ಲ. |
@@ -11689,6 +12052,8 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S5fc7e3` | detail | open | ತೆರೆದಿದೆ |
 | `Sf61187` | detail | Open New Revision | ಹೊಸ ಪರಿಷ್ಕರಣೆ ತೆರೆಯಿರಿ |
 | `S578c53` | detail | Opens a Draft that must go through the full dual-review and Chief Engineer approval cycle before it takes effect. | ಜಾರಿಗೆ ಬರುವ ಮೊದಲು ಪೂರ್ಣ ದ್ವಿಗುಣ ಪರಿಶೀಲನೆ ಮತ್ತು ಮುಖ್ಯ ಎಂಜಿನಿಯರ್ ಅನುಮೋದನೆ ಚಕ್ರದ ಮೂಲಕ ಹೋಗಬೇಕಾದ ಕರಡನ್ನು ತೆರೆಯುತ್ತದೆ. |
+| `Sfa465a` | detail, form, status code fields | Operating Mode Mask | ಕಾರ್ಯಾಚರಣೆ ಮೋಡ್ ಮಾಸ್ಕ್ |
+| `S20691e` | detail, form | Operation Parameters | ಕಾರ್ಯಾಚರಣೆ ಪ್ಯಾರಾಮೀಟರ್‌ಗಳು |
 | `S36463a` | detail | other code(s) still refer to this one: | ಇತರ ಕೋಡ್(ಗಳು) ಇನ್ನೂ ಇದನ್ನು ಉಲ್ಲೇಖಿಸುತ್ತವೆ: |
 | `S9734ac` | detail | Other codes that refer to this one. Review them before deprecating it. | ಇದನ್ನು ಉಲ್ಲೇಖಿಸುವ ಇತರ ಕೋಡ್‌ಗಳು. ಇದನ್ನು ಹಳತಾಗಿಸುವ ಮೊದಲು ಅವನ್ನು ಪರಿಶೀಲಿಸಿ. |
 | `S780d35` | detail | Override identifier (migration / reservation only) | ಗುರುತನ್ನು ಅತಿಕ್ರಮಿಸಿ (ವಲಸೆ / ಕಾಯ್ದಿರಿಸುವಿಕೆಗೆ ಮಾತ್ರ) |
@@ -11706,6 +12071,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sa4ab7b` | detail | Program References | ಪ್ರೋಗ್ರಾಂ ಉಲ್ಲೇಖಗಳು |
 | `S70cbd1` | detail | Proposed | ಪ್ರಸ್ತಾವಿತ |
 | `S483bf2` | detail, list | Published | ಪ್ರಕಟಿತ |
+| `S6a9c56` | detail, form | Read level | ಓದುವ ಮಟ್ಟ |
 | `Sf5ca9d` | detail | Recorded exports | ದಾಖಲಿತ ರಫ್ತುಗಳು |
 | `Sa3f757` | detail | Reinstate to Released | ಬಿಡುಗಡೆಯಾದದ್ದಕ್ಕೆ ಮರುಸ್ಥಾಪಿಸಿ |
 | `S3238ca` | detail | Reinstatement reason | ಮರುಸ್ಥಾಪನೆ ಕಾರಣ |
@@ -11751,6 +12117,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S6e3665` | detail, review_queue | Signed | ಸಹಿ ಮಾಡಲಾಗಿದೆ |
 | `Sddfd83` | detail | Signed by | ಸಹಿ ಮಾಡಿದವರು |
 | `Sb71523` | detail | Size | ಗಾತ್ರ |
+| `Sece2ac` | detail, form | Slot | ಸ್ಲಾಟ್ |
 | `Sff44d2` | detail | Software Version | ಸಾಫ್ಟ್‌ವೇರ್ ಆವೃತ್ತಿ |
 | `S169bf7` | detail, software_versions | Software version | ಸಾಫ್ಟ್‌ವೇರ್ ಆವೃತ್ತಿ |
 | `S6da13a` | detail, fleet_feedback | Source | ಮೂಲ |
@@ -11764,6 +12131,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S123f6c` | detail | Submit for Review | ಪರಿಶೀಲನೆಗಾಗಿ ಸಲ್ಲಿಸಿ |
 | `S3dca68` | detail | Superseded by Status Code id (optional) | ಇದರಿಂದ ಬದಲಿಸಲಾದ ಸ್ಥಿತಿ ಕೋಡ್ ಗುರುತು (ಐಚ್ಛಿಕ) |
 | `S08e643` | detail, list | Target software version | ಗುರಿ ಸಾಫ್ಟ್‌ವೇರ್ ಆವೃತ್ತಿ |
+| `S44203c` | detail, form, status code fields | Task Call Frequency | ಟಾಸ್ಕ್ ಕಾಲ್ ಆವರ್ತನ |
 | `S8fc804` | detail | The author has to submit it for review before the Reviewer or Administrator can see it. | ಪರಿಶೀಲಕ ಅಥವಾ ನಿರ್ವಾಹಕರು ನೋಡುವ ಮೊದಲು ಲೇಖಕರು ಇದನ್ನು ಪರಿಶೀಲನೆಗಾಗಿ ಸಲ್ಲಿಸಬೇಕು. |
 | `S091814` | detail | This change request has reached a terminal decision state | ಈ ಬದಲಾವಣೆ ವಿನಂತಿಯು ಅಂತಿಮ ನಿರ್ಧಾರ ಸ್ಥಿತಿಯನ್ನು ತಲುಪಿದೆ |
 | `S6d5708` | detail | This is the one truly irreversible action in the system. Type the identifier to confirm. | ಇದು ವ್ಯವಸ್ಥೆಯಲ್ಲಿರುವ ನಿಜವಾಗಿ ಬದಲಾಯಿಸಲಾಗದ ಏಕೈಕ ಕ್ರಿಯೆ. ದೃಢೀಕರಿಸಲು ಗುರುತನ್ನು ಟೈಪ್ ಮಾಡಿ. |
@@ -11779,6 +12147,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S391d68` | detail, stalled | unassigned | ನಿಯೋಜಿಸಲಾಗಿಲ್ಲ |
 | `S73ec5d` | detail, form | Up/Down Counter | ಮೇಲೆ/ಕೆಳಗೆ ಕೌಂಟರ್ |
 | `S80c494` | detail | Uploaded | ಅಪ್‌ಲೋಡ್ ಮಾಡಲಾಗಿದೆ |
+| `Sb01729` | detail, form | User-Group Levels | ಬಳಕೆದಾರ-ಗುಂಪು ಮಟ್ಟಗಳು |
 | `S45288a` | detail, new | Version Label | ಆವೃತ್ತಿ ಲೇಬಲ್ |
 | `S4993ae` | detail | View Change Request | ಬದಲಾವಣೆ ವಿನಂತಿ ವೀಕ್ಷಿಸಿ |
 | `Scde93f` | detail | View Imported Drafts | ಆಮದು ಮಾಡಿದ ಕರಡುಗಳನ್ನು ವೀಕ್ಷಿಸಿ |
@@ -11791,9 +12160,10 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S7d5316` | detail | Who | ಯಾರು |
 | `S47e564` | detail | Withdraw | ಹಿಂಪಡೆಯಿರಿ |
 | `S51a998` | detail | Withdraw this change request? | ಈ ಬದಲಾವಣೆ ವಿನಂತಿಯನ್ನು ಹಿಂಪಡೆಯಬೇಕೇ? |
+| `S95a2a4` | detail, form | Write level | ಬರೆಯುವ ಮಟ್ಟ |
 | `S612fe0` | detail | Yaw Bearing Lubrication Program | ಯಾ ಬೇರಿಂಗ್ ಲೂಬ್ರಿಕೇಶನ್ ಪ್ರೋಗ್ರಾಂ |
 | `S559a3f` | detail | Yaw Program | ಯಾ ಪ್ರೋಗ್ರಾಂ |
-| `S5397e0` | detail, export_verify, list | Yes | ಹೌದು |
+| `S5397e0` | detail, export_verify, form | Yes | ಹೌದು |
 | `Sc8e4b4` | detail | Your decision step | ನಿಮ್ಮ ನಿರ್ಧಾರ ಹಂತ |
 | `S20cb4c` | detail, export_center | ZIP with manifest | ಮ್ಯಾನಿಫೆಸ್ಟ್‌ನೊಂದಿಗೆ ZIP |
 | `S5d4358` | dry_run | All rows are clean. | ಎಲ್ಲಾ ಸಾಲುಗಳು ಸ್ವಚ್ಛವಾಗಿವೆ. |
@@ -11881,6 +12251,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sf094b9` | form | Affected component (optional) | ಬಾಧಿತ ಘಟಕ (ಐಚ್ಛಿಕ) |
 | `S407cf2` | form | Applies from software version (optional) | ಈ ಸಾಫ್ಟ್‌ವೇರ್ ಆವೃತ್ತಿಯಿಂದ ಅನ್ವಯ (ಐಚ್ಛಿಕ) |
 | `Sa30242` | form | Applies up to software version (optional) | ಈ ಸಾಫ್ಟ್‌ವೇರ್ ಆವೃತ್ತಿಯವರೆಗೆ ಅನ್ವಯ (ಐಚ್ಛಿಕ) |
+| `S7665e9` | form | Bit string of the generated program, e.g. 111011 (20 bits on the Main Controller, 6 on the Hub Controller). | ರಚಿಸಿದ ಪ್ರೋಗ್ರಾಂನ ಬಿಟ್ ಸ್ಟ್ರಿಂಗ್, ಉದಾ. 111011 (ಮುಖ್ಯ ನಿಯಂತ್ರಕದಲ್ಲಿ 20 ಬಿಟ್, ಹಬ್ ನಿಯಂತ್ರಕದಲ್ಲಿ 6). |
 | `S77dfd2` | form, st_preview | Cancel | ರದ್ದುಮಾಡಿ |
 | `S94c2a3` | form | Classification | ವರ್ಗೀಕರಣ |
 | `S7c9afd` | form | Classification only — a Sandbox code's identifier is still drawn from the isolated StCd-T##### band, never from this group's numeric range. | ವರ್ಗೀಕರಣ ಮಾತ್ರ — ಸ್ಯಾಂಡ್‌ಬಾಕ್ಸ್ ಕೋಡ್‌ನ ಗುರುತನ್ನು ಇನ್ನೂ ಪ್ರತ್ಯೇಕ StCd-T##### ಪಟ್ಟಿಯಿಂದ ಪಡೆಯಲಾಗುತ್ತದೆ, ಈ ಗುಂಪಿನ ಸಂಖ್ಯಾ ವ್ಯಾಪ್ತಿಯಿಂದ ಎಂದಿಗೂ ಅಲ್ಲ. |
@@ -11889,7 +12260,9 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sdb0f93` | form | Immutable once allocated (BR-001). | ಒಮ್ಮೆ ನಿಯೋಜಿಸಿದ ನಂತರ ಬದಲಾಯಿಸಲಾಗದು (BR-001). |
 | `Sd7635c` | form | Legacy Reference Number (optional) | ಹಳೆಯ ಉಲ್ಲೇಖ ಸಂಖ್ಯೆ (ಐಚ್ಛಿಕ) |
 | `S2d3840` | form | New Sandbox Status Code | ಹೊಸ ಸ್ಯಾಂಡ್‌ಬಾಕ್ಸ್ ಸ್ಥಿತಿ ಕೋಡ್ |
+| `S0efd9f` | form | not captured | ದಾಖಲಾಗಿಲ್ಲ |
 | `S8f9967` | form | Not yet assigned — fixed on Submit for Review | ಇನ್ನೂ ನಿಯೋಜಿಸಿಲ್ಲ — ಪರಿಶೀಲನೆಗೆ ಸಲ್ಲಿಸುವಾಗ ನಿಗದಿಯಾಗುತ್ತದೆ |
+| `S152225` | form | Numeric levels of the generated program (0 to 255): read 1 = readable, 50 = no access. | ರಚಿಸಿದ ಪ್ರೋಗ್ರಾಂನ ಸಂಖ್ಯಾ ಮಟ್ಟಗಳು (0 ರಿಂದ 255): ಓದು 1 = ಓದಬಹುದು, 50 = ಪ್ರವೇಶವಿಲ್ಲ. |
 | `S82890d` | form | Open review comments | ತೆರೆದ ಪರಿಶೀಲನಾ ಟಿಪ್ಪಣಿಗಳು |
 | `S611331` | form | Planned deprecation date (optional) | ಯೋಜಿತ ಹಳತಾಗಿಸುವ ದಿನಾಂಕ (ಐಚ್ಛಿಕ) |
 | `S75ee24` | form | Planned effective date (optional) | ಯೋಜಿತ ಜಾರಿ ದಿನಾಂಕ (ಐಚ್ಛಿಕ) |
@@ -12397,6 +12770,29 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sc0d28c` | stalled | Reviewers who are out of office (they have delegated) are left out. | ಕಚೇರಿಯಿಂದ ಹೊರಗಿರುವ (ನಿಯೋಜಿಸಿರುವ) ಪರಿಶೀಲಕರನ್ನು ಬಿಡಲಾಗಿದೆ. |
 | `Sca6d0e` | stalled | Stage | ಹಂತ |
 | `Sb1bafe` | stalled | Stalled change requests | ಸ್ಥಗಿತಗೊಂಡ ವಿನಂತಿಗಳು |
+| `S0b6108` | status code fields | Anemometer Heating Program | ಅನಿಮೋಮೀಟರ್ ಹೀಟಿಂಗ್ ಪ್ರೋಗ್ರಾಂ |
+| `S5387f1` | status code fields | Automatic Operation | ಸ್ವಯಂಚಾಲಿತ ಕಾರ್ಯಾಚರಣೆ |
+| `S49412e` | status code fields | Availability Calculation | ಲಭ್ಯತೆ ಲೆಕ್ಕಾಚಾರ |
+| `S38cb6d` | status code fields | Converter Reset Program | ಕನ್ವರ್ಟರ್ ಮರುಹೊಂದಿಕೆ ಪ್ರೋಗ್ರಾಂ |
+| `S86a17b` | status code fields | Gearbox Oil Fan Program | ಗೇರ್‌ಬಾಕ್ಸ್ ಎಣ್ಣೆ ಫ್ಯಾನ್ ಪ್ರೋಗ್ರಾಂ |
+| `Scf4f90` | status code fields | Gearbox Oil Heating Program | ಗೇರ್‌ಬಾಕ್ಸ್ ಎಣ್ಣೆ ಹೀಟಿಂಗ್ ಪ್ರೋಗ್ರಾಂ |
+| `S891ad9` | status code fields | Gearbox Oil Pump Program | ಗೇರ್‌ಬಾಕ್ಸ್ ಎಣ್ಣೆ ಪಂಪ್ ಪ್ರೋಗ್ರಾಂ |
+| `S6a0014` | status code fields | Generator Bearing Lubrication Program | ಜನರೇಟರ್ ಬೇರಿಂಗ್ ಲೂಬ್ರಿಕೇಶನ್ ಪ್ರೋಗ್ರಾಂ |
+| `S7f38cc` | status code fields | Generator Fan Program | ಜನರೇಟರ್ ಫ್ಯಾನ್ ಪ್ರೋಗ್ರಾಂ |
+| `Sf292a7` | status code fields | Generator Heating Program | ಜನರೇಟರ್ ಹೀಟಿಂಗ್ ಪ್ರೋಗ್ರಾಂ |
+| `Sdccc10` | status code fields | Hydraulic Pump Program | ಹೈಡ್ರಾಲಿಕ್ ಪಂಪ್ ಪ್ರೋಗ್ರಾಂ |
+| `Se21075` | status code fields | Manual Operation | ಕೈಯಾರೆ ಕಾರ್ಯಾಚರಣೆ |
+| `S9beea7` | status code fields | Medium Voltage Circuit Breaker Program | ಮಧ್ಯಮ ವೋಲ್ಟೇಜ್ ಸರ್ಕ್ಯೂಟ್ ಬ್ರೇಕರ್ ಪ್ರೋಗ್ರಾಂ |
+| `Scb0a0d` | status code fields | Pitch Error Program | ಪಿಚ್ ದೋಷ ಪ್ರೋಗ್ರಾಂ |
+| `S941428` | status code fields | Pitch Warning Program | ಪಿಚ್ ಎಚ್ಚರಿಕೆ ಪ್ರೋಗ್ರಾಂ |
+| `Sd2fe56` | status code fields | Rotor Bearing Lubrication Program | ರೋಟರ್ ಬೇರಿಂಗ್ ಲೂಬ್ರಿಕೇಶನ್ ಪ್ರೋಗ್ರಾಂ |
+| `S381e23` | status code fields | Rotor Brake Program | ರೋಟರ್ ಬ್ರೇಕ್ ಪ್ರೋಗ್ರಾಂ |
+| `S1e3032` | status code fields | Stop Program 40 | ಸ್ಟಾಪ್ ಪ್ರೋಗ್ರಾಂ 40 |
+| `S43b650` | status code fields | Stop Program 80 | ಸ್ಟಾಪ್ ಪ್ರೋಗ್ರಾಂ 80 |
+| `S805790` | status code fields | Tower Fan Program | ಟವರ್ ಫ್ಯಾನ್ ಪ್ರೋಗ್ರಾಂ |
+| `Sef9b9e` | status code fields | Transformer Oil Pump Program | ಟ್ರಾನ್ಸ್‌ಫಾರ್ಮರ್ ಎಣ್ಣೆ ಪಂಪ್ ಪ್ರೋಗ್ರಾಂ |
+| `S18a446` | status code fields | Vane Position | ವೇನ್ ಸ್ಥಾನ |
+| `S9ebce6` | status code fields | Zero Load Operation | ಶೂನ್ಯ ಲೋಡ್ ಕಾರ್ಯಾಚರಣೆ |
 | `Sff9f1f` | success_metrics | Age | ವಯಸ್ಸು |
 | `S8cc047` | success_metrics | Approval | ಅನುಮೋದನೆ |
 | `S273d62` | success_metrics | Audit trail completeness of Released codes | ಬಿಡುಗಡೆಯಾದ ಕೋಡ್‌ಗಳ ಲೆಕ್ಕಪರಿಶೋಧನಾ ಜಾಡಿನ ಪೂರ್ಣತೆ |
@@ -12460,7 +12856,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 
 ### 9.13 IN ଓଡ଼ିଆ 🇮🇳 — Odia
 
-1102 of 1103 strings translated; direction left to right.
+1138 of 1139 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -12755,9 +13151,11 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S041a5d` | detail, export_center | Format | ଫର୍ମାଟ୍ |
 | `S9e3c65` | detail | From revision | ସଂସ୍କରଣରୁ |
 | `S2fa1f7` | detail, form, list | Functional Subgroup | କାର୍ଯ୍ୟକ୍ଷମ ଉପଗୋଷ୍ଠୀ |
+| `Sb8c4c9` | detail, form | Further Program References | ଅଧିକ ପ୍ରୋଗ୍ରାମ୍ ସନ୍ଦର୍ଭ |
 | `S636c41` | detail | Grid Operator | ଗ୍ରିଡ୍ ଅପରେଟର୍ |
 | `S90ccd6` | detail | History | ଇତିହାସ |
 | `Sfec8b7` | detail | Hub Controller group | ହବ୍ ନିୟନ୍ତ୍ରକ ଗୋଷ୍ଠୀ |
+| `S00ccae` | detail, form | Hub Controller only | କେବଳ ହବ୍ ନିୟନ୍ତ୍ରକ |
 | `S3c883f` | detail | I have reviewed these dependants | ମୁଁ ଏହି ନିର୍ଭରଶୀଳଗୁଡ଼ିକୁ ସମୀକ୍ଷା କରିଛି |
 | `S4bc96f` | detail | Import Job | ଆମଦାନି କାମ |
 | `S50565a` | detail | Import progress | ଆମଦାନି ଅଗ୍ରଗତି |
@@ -12771,13 +13169,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S43d5c5` | detail, form | Loadless Spinning Permitted | ଭାରହୀନ ଘୂର୍ଣ୍ଣନ ଅନୁମତିପ୍ରାପ୍ତ |
 | `S193786` | detail | Logical Node | ତାର୍କିକ ନୋଡ୍ |
 | `S578b78` | detail | Main Controller group | ମୁଖ୍ୟ ନିୟନ୍ତ୍ରକ ଗୋଷ୍ଠୀ |
+| `Sa7512d` | detail, form | Main Controller only | କେବଳ ମୁଖ୍ୟ ନିୟନ୍ତ୍ରକ |
 | `Seb9a6d` | detail | Manage translations | ଅନୁବାଦ ପରିଚାଳନା କରନ୍ତୁ |
 | `Sc5beef` | detail | manifest | ମ୍ୟାନିଫେଷ୍ଟ |
 | `S6d59f4` | detail | Manual Reset Program | ମାନୁଆଲ୍ ରିସେଟ୍ ପ୍ରୋଗ୍ରାମ୍ |
 | `Sf9896c` | detail, form | Mark resolved | ସମାଧାନ ହୋଇଛି ବୋଲି ଚିହ୍ନିତ କରନ୍ତୁ |
 | `Sa7b93d` | detail, new, reconciliation | Mode | ମୋଡ୍ |
 | `S31a335` | detail | new code | ନୂଆ କୋଡ୍ |
-| `S816c52` | detail, export_verify, list | No | ନା |
+| `S816c52` | detail, export_verify, form | No | ନା |
 | `S06fc8d` | detail | No active Engineer holds the %(code)s domain yet. An Administrator must tag an Engineer with it (Administration → Users) before a sign-off can be requested. | କୌଣସି ସକ୍ରିୟ ଇଞ୍ଜିନିୟରଙ୍କ ନିକଟରେ %(code)s ଡୋମେନ୍ ନାହିଁ। ସ୍ୱାକ୍ଷର ଅନୁରୋଧ ପୂର୍ବରୁ ପ୍ରଶାସକ ଜଣେ ଇଞ୍ଜିନିୟରଙ୍କୁ ଏହା ଦେବା ଆବଶ୍ୟକ (ପ୍ରଶାସନ → ଉପଯୋଗକର୍ତ୍ତା)। |
 | `S362336` | detail | No change requests in this set yet. | ଏହି ସମୂହରେ ଏପର୍ଯ୍ୟନ୍ତ ପରିବର୍ତ୍ତନ ଅନୁରୋଧ ନାହିଁ। |
 | `S7e1129` | detail | No comments or decisions yet. | ଏପର୍ଯ୍ୟନ୍ତ ମନ୍ତବ୍ୟ ବା ନିଷ୍ପତ୍ତି ନାହିଁ। |
@@ -12798,6 +13197,8 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S5fc7e3` | detail | open | ଖୋଲା |
 | `Sf61187` | detail | Open New Revision | ନୂଆ ସଂସ୍କରଣ ଖୋଲନ୍ତୁ |
 | `S578c53` | detail | Opens a Draft that must go through the full dual-review and Chief Engineer approval cycle before it takes effect. | କାର୍ଯ୍ୟକାରୀ ହେବା ପୂର୍ବରୁ ପୂର୍ଣ୍ଣ ଦ୍ୱିଗୁଣ ସମୀକ୍ଷା ଓ ମୁଖ୍ୟ ଇଞ୍ଜିନିୟର ଅନୁମୋଦନ ଚକ୍ର ଦେଇ ଯିବାକୁ ଥିବା ଖସଡ଼ା ଖୋଲେ। |
+| `Sfa465a` | detail, form, status code fields | Operating Mode Mask | ପରିଚାଳନା ମୋଡ୍ ମାସ୍କ |
+| `S20691e` | detail, form | Operation Parameters | ପରିଚାଳନା ପାରାମିଟର୍ |
 | `S36463a` | detail | other code(s) still refer to this one: | ଅନ୍ୟ କୋଡ୍ ଏବେ ବି ଏହାକୁ ସୂଚାଉଛି: |
 | `S9734ac` | detail | Other codes that refer to this one. Review them before deprecating it. | ଏହାକୁ ସୂଚାଉଥିବା ଅନ୍ୟ କୋଡ୍। ଏହାକୁ ପ୍ରଚଳନ ବନ୍ଦ କରିବା ପୂର୍ବରୁ ସେଗୁଡ଼ିକୁ ସମୀକ୍ଷା କରନ୍ତୁ। |
 | `S780d35` | detail | Override identifier (migration / reservation only) | ପରିଚୟକ ଅତିକ୍ରମ କରନ୍ତୁ (କେବଳ ସ୍ଥାନାନ୍ତର / ସଂରକ୍ଷଣ ପାଇଁ) |
@@ -12815,6 +13216,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sa4ab7b` | detail | Program References | ପ୍ରୋଗ୍ରାମ୍ ସନ୍ଦର୍ଭ |
 | `S70cbd1` | detail | Proposed | ପ୍ରସ୍ତାବିତ |
 | `S483bf2` | detail, list | Published | ପ୍ରକାଶିତ |
+| `S6a9c56` | detail, form | Read level | ପଢ଼ିବା ସ୍ତର |
 | `Sf5ca9d` | detail | Recorded exports | ରେକର୍ଡ ହୋଇଥିବା ରପ୍ତାନି |
 | `Sa3f757` | detail | Reinstate to Released | ମୁକ୍ତକୁ ପୁନଃସ୍ଥାପନ କରନ୍ତୁ |
 | `S3238ca` | detail | Reinstatement reason | ପୁନଃସ୍ଥାପନ କାରଣ |
@@ -12860,6 +13262,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S6e3665` | detail, review_queue | Signed | ସ୍ୱାକ୍ଷରିତ |
 | `Sddfd83` | detail | Signed by | ସ୍ୱାକ୍ଷରକାରୀ |
 | `Sb71523` | detail | Size | ଆକାର |
+| `Sece2ac` | detail, form | Slot | ସ୍ଲଟ୍ |
 | `Sff44d2` | detail | Software Version | ସଫ୍ଟୱେର୍ ସଂସ୍କରଣ |
 | `S169bf7` | detail, software_versions | Software version | ସଫ୍ଟୱେର୍ ସଂସ୍କରଣ |
 | `S6da13a` | detail, fleet_feedback | Source | ଉତ୍ସ |
@@ -12873,6 +13276,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S123f6c` | detail | Submit for Review | ସମୀକ୍ଷା ପାଇଁ ଦାଖଲ କରନ୍ତୁ |
 | `S3dca68` | detail | Superseded by Status Code id (optional) | ଏହା ଦ୍ୱାରା ବଦଳାଯାଇଥିବା ସ୍ଥିତି କୋଡ୍ ପରିଚୟକ (ବିକଳ୍ପ) |
 | `S08e643` | detail, list | Target software version | ଲକ୍ଷ୍ୟ ସଫ୍ଟୱେର୍ ସଂସ୍କରଣ |
+| `S44203c` | detail, form, status code fields | Task Call Frequency | ଟାସ୍କ୍ କଲ୍ ଫ୍ରିକ୍ୱେନ୍ସି |
 | `S8fc804` | detail | The author has to submit it for review before the Reviewer or Administrator can see it. | ସମୀକ୍ଷକ ବା ପ୍ରଶାସକ ଦେଖିବା ପୂର୍ବରୁ ଲେଖକ ଏହାକୁ ସମୀକ୍ଷା ପାଇଁ ଦାଖଲ କରିବା ଆବଶ୍ୟକ। |
 | `S091814` | detail | This change request has reached a terminal decision state | ଏହି ପରିବର୍ତ୍ତନ ଅନୁରୋଧ ଏକ ଅନ୍ତିମ ନିଷ୍ପତ୍ତି ସ୍ଥିତିରେ ପହଞ୍ଚିଛି |
 | `S6d5708` | detail | This is the one truly irreversible action in the system. Type the identifier to confirm. | ଏହା ସିଷ୍ଟମ୍‌ର ଏକମାତ୍ର ପ୍ରକୃତ ଅପରିବର୍ତ୍ତନୀୟ କାର୍ଯ୍ୟ। ନିଶ୍ଚିତ କରିବାକୁ ପରିଚୟକ ଟାଇପ୍ କରନ୍ତୁ। |
@@ -12888,6 +13292,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S391d68` | detail, stalled | unassigned | ନିଯୁକ୍ତ ନୁହେଁ |
 | `S73ec5d` | detail, form | Up/Down Counter | ଉପର/ତଳ କାଉଣ୍ଟର୍ |
 | `S80c494` | detail | Uploaded | ଅପଲୋଡ୍ ହୋଇଛି |
+| `Sb01729` | detail, form | User-Group Levels | ଉପଯୋଗକର୍ତ୍ତା-ଗୋଷ୍ଠୀ ସ୍ତର |
 | `S45288a` | detail, new | Version Label | ସଂସ୍କରଣ ଲେବଲ୍ |
 | `S4993ae` | detail | View Change Request | ପରିବର୍ତ୍ତନ ଅନୁରୋଧ ଦେଖନ୍ତୁ |
 | `Scde93f` | detail | View Imported Drafts | ଆମଦାନି ହୋଇଥିବା ଖସଡ଼ା ଦେଖନ୍ତୁ |
@@ -12900,9 +13305,10 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S7d5316` | detail | Who | କିଏ |
 | `S47e564` | detail | Withdraw | ପ୍ରତ୍ୟାହାର |
 | `S51a998` | detail | Withdraw this change request? | ଏହି ପରିବର୍ତ୍ତନ ଅନୁରୋଧ ପ୍ରତ୍ୟାହାର କରିବେ? |
+| `S95a2a4` | detail, form | Write level | ଲେଖିବା ସ୍ତର |
 | `S612fe0` | detail | Yaw Bearing Lubrication Program | ୟା ବେୟାରିଂ ଲୁବ୍ରିକେସନ୍ ପ୍ରୋଗ୍ରାମ୍ |
 | `S559a3f` | detail | Yaw Program | ୟା ପ୍ରୋଗ୍ରାମ୍ |
-| `S5397e0` | detail, export_verify, list | Yes | ହଁ |
+| `S5397e0` | detail, export_verify, form | Yes | ହଁ |
 | `Sc8e4b4` | detail | Your decision step | ଆପଣଙ୍କ ନିଷ୍ପତ୍ତି ପର୍ଯ୍ୟାୟ |
 | `S20cb4c` | detail, export_center | ZIP with manifest | ମ୍ୟାନିଫେଷ୍ଟ ସହ ZIP |
 | `S5d4358` | dry_run | All rows are clean. | ସମସ୍ତ ଧାଡ଼ି ସଫା। |
@@ -12990,6 +13396,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sf094b9` | form | Affected component (optional) | ପ୍ରଭାବିତ ଉପାଦାନ (ବିକଳ୍ପ) |
 | `S407cf2` | form | Applies from software version (optional) | ଏହି ସଫ୍ଟୱେର୍ ସଂସ୍କରଣରୁ ପ୍ରଯୁଜ୍ୟ (ବିକଳ୍ପ) |
 | `Sa30242` | form | Applies up to software version (optional) | ଏହି ସଫ୍ଟୱେର୍ ସଂସ୍କରଣ ପର୍ଯ୍ୟନ୍ତ ପ୍ରଯୁଜ୍ୟ (ବିକଳ୍ପ) |
+| `S7665e9` | form | Bit string of the generated program, e.g. 111011 (20 bits on the Main Controller, 6 on the Hub Controller). | ପ୍ରସ୍ତୁତ ପ୍ରୋଗ୍ରାମ୍‌ର ବିଟ୍ ଷ୍ଟ୍ରିଂ, ଯଥା 111011 (ମୁଖ୍ୟ ନିୟନ୍ତ୍ରକରେ 20 ବିଟ୍, ହବ୍ ନିୟନ୍ତ୍ରକରେ 6)। |
 | `S77dfd2` | form, st_preview | Cancel | ବାତିଲ୍ କରନ୍ତୁ |
 | `S94c2a3` | form | Classification | ବର୍ଗୀକରଣ |
 | `S7c9afd` | form | Classification only — a Sandbox code's identifier is still drawn from the isolated StCd-T##### band, never from this group's numeric range. | କେବଳ ବର୍ଗୀକରଣ — ସ୍ୟାଣ୍ଡବକ୍ସ କୋଡ୍‌ର ପରିଚୟକ ଏବେ ବି ପୃଥକ StCd-T##### ପଟ୍ଟିରୁ ନିଆଯାଏ, ଏହି ଗୋଷ୍ଠୀର ସଂଖ୍ୟା ପରିସରରୁ କେବେ ନୁହେଁ। |
@@ -12998,7 +13405,9 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sdb0f93` | form | Immutable once allocated (BR-001). | ଥରେ ନିଯୁକ୍ତ ହେଲେ ଅପରିବର୍ତ୍ତନୀୟ (BR-001)। |
 | `Sd7635c` | form | Legacy Reference Number (optional) | ପୁରୁଣା ସନ୍ଦର୍ଭ ସଂଖ୍ୟା (ବିକଳ୍ପ) |
 | `S2d3840` | form | New Sandbox Status Code | ନୂଆ ସ୍ୟାଣ୍ଡବକ୍ସ ସ୍ଥିତି କୋଡ୍ |
+| `S0efd9f` | form | not captured | ଦର୍ଜ ହୋଇନାହିଁ |
 | `S8f9967` | form | Not yet assigned — fixed on Submit for Review | ଏପର୍ଯ୍ୟନ୍ତ ନିଯୁକ୍ତ ନୁହେଁ — ସମୀକ୍ଷା ପାଇଁ ଦାଖଲ ସମୟରେ ସ୍ଥିର ହୁଏ |
+| `S152225` | form | Numeric levels of the generated program (0 to 255): read 1 = readable, 50 = no access. | ପ୍ରସ୍ତୁତ ପ୍ରୋଗ୍ରାମ୍‌ର ସଂଖ୍ୟାତ୍ମକ ସ୍ତର (0 ରୁ 255): ପଢ଼ା 1 = ପଠନୀୟ, 50 = ପ୍ରବେଶ ନାହିଁ। |
 | `S82890d` | form | Open review comments | ଖୋଲା ସମୀକ୍ଷା ମନ୍ତବ୍ୟ |
 | `S611331` | form | Planned deprecation date (optional) | ଯୋଜନାବଦ୍ଧ ପ୍ରଚଳନ ବନ୍ଦ ତାରିଖ (ବିକଳ୍ପ) |
 | `S75ee24` | form | Planned effective date (optional) | ଯୋଜନାବଦ୍ଧ କାର୍ଯ୍ୟକାରୀ ତାରିଖ (ବିକଳ୍ପ) |
@@ -13506,6 +13915,29 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sc0d28c` | stalled | Reviewers who are out of office (they have delegated) are left out. | କାର୍ଯ୍ୟାଳୟ ବାହାରେ ଥିବା (ଦାୟିତ୍ୱ ଦେଇଥିବା) ସମୀକ୍ଷକ ବାଦ୍ ଦିଆଯାଇଛି। |
 | `Sca6d0e` | stalled | Stage | ପର୍ଯ୍ୟାୟ |
 | `Sb1bafe` | stalled | Stalled change requests | ଅଟକିଥିବା ଅନୁରୋଧ |
+| `S0b6108` | status code fields | Anemometer Heating Program | ଆନିମୋମିଟର୍ ହିଟିଂ ପ୍ରୋଗ୍ରାମ୍ |
+| `S5387f1` | status code fields | Automatic Operation | ସ୍ୱୟଂଚାଳିତ ପରିଚାଳନା |
+| `S49412e` | status code fields | Availability Calculation | ଉପଲବ୍ଧତା ଗଣନା |
+| `S38cb6d` | status code fields | Converter Reset Program | କନଭର୍ଟର୍ ରିସେଟ୍ ପ୍ରୋଗ୍ରାମ୍ |
+| `S86a17b` | status code fields | Gearbox Oil Fan Program | ଗିୟରବକ୍ସ ତେଲ ପଙ୍ଖା ପ୍ରୋଗ୍ରାମ୍ |
+| `Scf4f90` | status code fields | Gearbox Oil Heating Program | ଗିୟରବକ୍ସ ତେଲ ହିଟିଂ ପ୍ରୋଗ୍ରାମ୍ |
+| `S891ad9` | status code fields | Gearbox Oil Pump Program | ଗିୟରବକ୍ସ ତେଲ ପମ୍ପ ପ୍ରୋଗ୍ରାମ୍ |
+| `S6a0014` | status code fields | Generator Bearing Lubrication Program | ଜେନେରେଟର୍ ବେୟାରିଂ ଲୁବ୍ରିକେସନ୍ ପ୍ରୋଗ୍ରାମ୍ |
+| `S7f38cc` | status code fields | Generator Fan Program | ଜେନେରେଟର୍ ପଙ୍ଖା ପ୍ରୋଗ୍ରାମ୍ |
+| `Sf292a7` | status code fields | Generator Heating Program | ଜେନେରେଟର୍ ହିଟିଂ ପ୍ରୋଗ୍ରାମ୍ |
+| `Sdccc10` | status code fields | Hydraulic Pump Program | ହାଇଡ୍ରୋଲିକ୍ ପମ୍ପ ପ୍ରୋଗ୍ରାମ୍ |
+| `Se21075` | status code fields | Manual Operation | ମାନୁଆଲ୍ ପରିଚାଳନା |
+| `S9beea7` | status code fields | Medium Voltage Circuit Breaker Program | ମଧ୍ୟମ ଭୋଲ୍ଟେଜ୍ ସର୍କିଟ୍ ବ୍ରେକର୍ ପ୍ରୋଗ୍ରାମ୍ |
+| `Scb0a0d` | status code fields | Pitch Error Program | ପିଚ୍ ତ୍ରୁଟି ପ୍ରୋଗ୍ରାମ୍ |
+| `S941428` | status code fields | Pitch Warning Program | ପିଚ୍ ଚେତାବନୀ ପ୍ରୋଗ୍ରାମ୍ |
+| `Sd2fe56` | status code fields | Rotor Bearing Lubrication Program | ରୋଟର୍ ବେୟାରିଂ ଲୁବ୍ରିକେସନ୍ ପ୍ରୋଗ୍ରାମ୍ |
+| `S381e23` | status code fields | Rotor Brake Program | ରୋଟର୍ ବ୍ରେକ୍ ପ୍ରୋଗ୍ରାମ୍ |
+| `S1e3032` | status code fields | Stop Program 40 | ଷ୍ଟପ୍ ପ୍ରୋଗ୍ରାମ୍ 40 |
+| `S43b650` | status code fields | Stop Program 80 | ଷ୍ଟପ୍ ପ୍ରୋଗ୍ରାମ୍ 80 |
+| `S805790` | status code fields | Tower Fan Program | ଟାୱାର୍ ପଙ୍ଖା ପ୍ରୋଗ୍ରାମ୍ |
+| `Sef9b9e` | status code fields | Transformer Oil Pump Program | ଟ୍ରାନ୍ସଫର୍ମର୍ ତେଲ ପମ୍ପ ପ୍ରୋଗ୍ରାମ୍ |
+| `S18a446` | status code fields | Vane Position | ଭେନ୍ ସ୍ଥିତି |
+| `S9ebce6` | status code fields | Zero Load Operation | ଶୂନ୍ୟ ଲୋଡ୍ ପରିଚାଳନା |
 | `Sff9f1f` | success_metrics | Age | ବୟସ |
 | `S8cc047` | success_metrics | Approval | ଅନୁମୋଦନ |
 | `S273d62` | success_metrics | Audit trail completeness of Released codes | ମୁକ୍ତ କୋଡ୍‌ର ଅଡିଟ୍ ଟ୍ରେଲ୍ ସମ୍ପୂର୍ଣ୍ଣତା |
@@ -13569,7 +14001,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 
 ### 9.14 IN മലയാളം 🇮🇳 — Malayalam
 
-1102 of 1103 strings translated; direction left to right.
+1138 of 1139 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -13864,9 +14296,11 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S041a5d` | detail, export_center | Format | ഫോർമാറ്റ് |
 | `S9e3c65` | detail | From revision | റിവിഷനിൽ നിന്ന് |
 | `S2fa1f7` | detail, form, list | Functional Subgroup | ഫങ്ഷണൽ ഉപഗ്രൂപ്പ് |
+| `Sb8c4c9` | detail, form | Further Program References | കൂടുതൽ പ്രോഗ്രാം റഫറൻസുകൾ |
 | `S636c41` | detail | Grid Operator | ഗ്രിഡ് ഓപ്പറേറ്റർ |
 | `S90ccd6` | detail | History | ചരിത്രം |
 | `Sfec8b7` | detail | Hub Controller group | ഹബ് കൺട്രോളർ ഗ്രൂപ്പ് |
+| `S00ccae` | detail, form | Hub Controller only | ഹബ് കൺട്രോളർ മാത്രം |
 | `S3c883f` | detail | I have reviewed these dependants | ഞാൻ ഈ ആശ്രിതങ്ങൾ അവലോകനം ചെയ്തിട്ടുണ്ട് |
 | `S4bc96f` | detail | Import Job | ഇറക്കുമതി ജോലി |
 | `S50565a` | detail | Import progress | ഇറക്കുമതി പുരോഗതി |
@@ -13880,13 +14314,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S43d5c5` | detail, form | Loadless Spinning Permitted | ലോഡില്ലാത്ത കറക്കം അനുവദനീയം |
 | `S193786` | detail | Logical Node | ലോജിക്കൽ നോഡ് |
 | `S578b78` | detail | Main Controller group | മെയിൻ കൺട്രോളർ ഗ്രൂപ്പ് |
+| `Sa7512d` | detail, form | Main Controller only | മെയിൻ കൺട്രോളർ മാത്രം |
 | `Seb9a6d` | detail | Manage translations | വിവർത്തനങ്ങൾ നിയന്ത്രിക്കുക |
 | `Sc5beef` | detail | manifest | മാനിഫെസ്റ്റ് |
 | `S6d59f4` | detail | Manual Reset Program | മാനുവൽ റീസെറ്റ് പ്രോഗ്രാം |
 | `Sf9896c` | detail, form | Mark resolved | പരിഹരിച്ചതായി അടയാളപ്പെടുത്തുക |
 | `Sa7b93d` | detail, new, reconciliation | Mode | മോഡ് |
 | `S31a335` | detail | new code | പുതിയ കോഡ് |
-| `S816c52` | detail, export_verify, list | No | ഇല്ല |
+| `S816c52` | detail, export_verify, form | No | ഇല്ല |
 | `S06fc8d` | detail | No active Engineer holds the %(code)s domain yet. An Administrator must tag an Engineer with it (Administration → Users) before a sign-off can be requested. | സജീവമായ ഒരു എൻജിനീയർക്കും %(code)s ഡൊമെയ്ൻ ഇല്ല. സൈൻ-ഓഫ് അഭ്യർത്ഥിക്കുന്നതിന് മുമ്പ് അഡ്മിനിസ്ട്രേറ്റർ ഒരു എൻജിനീയർക്ക് ഇത് നൽകണം (അഡ്മിനിസ്ട്രേഷൻ → ഉപയോക്താക്കൾ). |
 | `S362336` | detail | No change requests in this set yet. | ഈ സമൂഹത്തിൽ ഇതുവരെ മാറ്റ അഭ്യർത്ഥനകളില്ല. |
 | `S7e1129` | detail | No comments or decisions yet. | ഇതുവരെ അഭിപ്രായങ്ങളോ തീരുമാനങ്ങളോ ഇല്ല. |
@@ -13907,6 +14342,8 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S5fc7e3` | detail | open | തുറന്നത് |
 | `Sf61187` | detail | Open New Revision | പുതിയ റിവിഷൻ തുറക്കുക |
 | `S578c53` | detail | Opens a Draft that must go through the full dual-review and Chief Engineer approval cycle before it takes effect. | പ്രാബല്യത്തിൽ വരുന്നതിന് മുമ്പ് പൂർണ്ണ ഇരട്ട അവലോകനത്തിലൂടെയും ചീഫ് എൻജിനീയറുടെ അംഗീകാര ചക്രത്തിലൂടെയും കടന്നുപോകേണ്ട ഒരു കരട് തുറക്കുന്നു. |
+| `Sfa465a` | detail, form, status code fields | Operating Mode Mask | പ്രവർത്തന മോഡ് മാസ്ക് |
+| `S20691e` | detail, form | Operation Parameters | പ്രവർത്തന പാരാമീറ്ററുകൾ |
 | `S36463a` | detail | other code(s) still refer to this one: | മറ്റ് കോഡുകൾ ഇപ്പോഴും ഇതിനെ പരാമർശിക്കുന്നു: |
 | `S9734ac` | detail | Other codes that refer to this one. Review them before deprecating it. | ഇതിനെ പരാമർശിക്കുന്ന മറ്റ് കോഡുകൾ. ഇത് കാലഹരണപ്പെടുത്തുന്നതിന് മുമ്പ് അവ അവലോകനം ചെയ്യുക. |
 | `S780d35` | detail | Override identifier (migration / reservation only) | ഐഡന്റിഫയർ അസാധുവാക്കുക (മൈഗ്രേഷൻ / റിസർവേഷൻ മാത്രം) |
@@ -13924,6 +14361,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sa4ab7b` | detail | Program References | പ്രോഗ്രാം റഫറൻസുകൾ |
 | `S70cbd1` | detail | Proposed | നിർദ്ദേശിച്ചത് |
 | `S483bf2` | detail, list | Published | പ്രസിദ്ധീകരിച്ചത് |
+| `S6a9c56` | detail, form | Read level | വായന നില |
 | `Sf5ca9d` | detail | Recorded exports | രേഖപ്പെടുത്തിയ എക്സ്പോർട്ടുകൾ |
 | `Sa3f757` | detail | Reinstate to Released | റിലീസ് ചെയ്തതിലേക്ക് പുനഃസ്ഥാപിക്കുക |
 | `S3238ca` | detail | Reinstatement reason | പുനഃസ്ഥാപന കാരണം |
@@ -13969,6 +14407,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S6e3665` | detail, review_queue | Signed | ഒപ്പിട്ടു |
 | `Sddfd83` | detail | Signed by | ഒപ്പിട്ടത് |
 | `Sb71523` | detail | Size | വലുപ്പം |
+| `Sece2ac` | detail, form | Slot | സ്ലോട്ട് |
 | `Sff44d2` | detail | Software Version | സോഫ്റ്റ്‌വെയർ പതിപ്പ് |
 | `S169bf7` | detail, software_versions | Software version | സോഫ്റ്റ്‌വെയർ പതിപ്പ് |
 | `S6da13a` | detail, fleet_feedback | Source | ഉറവിടം |
@@ -13982,6 +14421,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S123f6c` | detail | Submit for Review | അവലോകനത്തിനായി സമർപ്പിക്കുക |
 | `S3dca68` | detail | Superseded by Status Code id (optional) | ഇതിനാൽ മാറ്റിസ്ഥാപിച്ച സ്റ്റാറ്റസ് കോഡ് ഐഡി (ഓപ്ഷണൽ) |
 | `S08e643` | detail, list | Target software version | ലക്ഷ്യ സോഫ്റ്റ്‌വെയർ പതിപ്പ് |
+| `S44203c` | detail, form, status code fields | Task Call Frequency | ടാസ്ക് കോൾ ആവൃത്തി |
 | `S8fc804` | detail | The author has to submit it for review before the Reviewer or Administrator can see it. | അവലോകകനോ അഡ്മിനിസ്ട്രേറ്ററോ കാണുന്നതിന് മുമ്പ് രചയിതാവ് ഇത് അവലോകനത്തിനായി സമർപ്പിക്കണം. |
 | `S091814` | detail | This change request has reached a terminal decision state | ഈ മാറ്റ അഭ്യർത്ഥന അന്തിമ തീരുമാന നിലയിൽ എത്തിയിരിക്കുന്നു |
 | `S6d5708` | detail | This is the one truly irreversible action in the system. Type the identifier to confirm. | ഇത് സിസ്റ്റത്തിലെ യഥാർത്ഥത്തിൽ മാറ്റാനാവാത്ത ഒരേയൊരു പ്രവർത്തനമാണ്. സ്ഥിരീകരിക്കാൻ ഐഡന്റിഫയർ ടൈപ്പ് ചെയ്യുക. |
@@ -13997,6 +14437,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S391d68` | detail, stalled | unassigned | നിയോഗിച്ചിട്ടില്ല |
 | `S73ec5d` | detail, form | Up/Down Counter | അപ്/ഡൗൺ കൗണ്ടർ |
 | `S80c494` | detail | Uploaded | അപ്‌ലോഡ് ചെയ്തു |
+| `Sb01729` | detail, form | User-Group Levels | ഉപയോക്തൃ-ഗ്രൂപ്പ് നിലകൾ |
 | `S45288a` | detail, new | Version Label | പതിപ്പ് ലേബൽ |
 | `S4993ae` | detail | View Change Request | മാറ്റ അഭ്യർത്ഥന കാണുക |
 | `Scde93f` | detail | View Imported Drafts | ഇറക്കുമതി ചെയ്ത കരടുകൾ കാണുക |
@@ -14009,9 +14450,10 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S7d5316` | detail | Who | ആര് |
 | `S47e564` | detail | Withdraw | പിൻവലിക്കുക |
 | `S51a998` | detail | Withdraw this change request? | ഈ മാറ്റ അഭ്യർത്ഥന പിൻവലിക്കണോ? |
+| `S95a2a4` | detail, form | Write level | എഴുത്ത് നില |
 | `S612fe0` | detail | Yaw Bearing Lubrication Program | യാ ബെയറിംഗ് ലൂബ്രിക്കേഷൻ പ്രോഗ്രാം |
 | `S559a3f` | detail | Yaw Program | യാ പ്രോഗ്രാം |
-| `S5397e0` | detail, export_verify, list | Yes | അതെ |
+| `S5397e0` | detail, export_verify, form | Yes | അതെ |
 | `Sc8e4b4` | detail | Your decision step | നിങ്ങളുടെ തീരുമാന ഘട്ടം |
 | `S20cb4c` | detail, export_center | ZIP with manifest | മാനിഫെസ്റ്റ് സഹിതം ZIP |
 | `S5d4358` | dry_run | All rows are clean. | എല്ലാ വരികളും വൃത്തിയാണ്. |
@@ -14099,6 +14541,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sf094b9` | form | Affected component (optional) | ബാധിച്ച ഘടകം (ഓപ്ഷണൽ) |
 | `S407cf2` | form | Applies from software version (optional) | ഈ സോഫ്റ്റ്‌വെയർ പതിപ്പ് മുതൽ ബാധകം (ഓപ്ഷണൽ) |
 | `Sa30242` | form | Applies up to software version (optional) | ഈ സോഫ്റ്റ്‌വെയർ പതിപ്പ് വരെ ബാധകം (ഓപ്ഷണൽ) |
+| `S7665e9` | form | Bit string of the generated program, e.g. 111011 (20 bits on the Main Controller, 6 on the Hub Controller). | സൃഷ്ടിച്ച പ്രോഗ്രാമിന്റെ ബിറ്റ് സ്ട്രിംഗ്, ഉദാ. 111011 (മെയിൻ കൺട്രോളറിൽ 20 ബിറ്റ്, ഹബ് കൺട്രോളറിൽ 6). |
 | `S77dfd2` | form, st_preview | Cancel | റദ്ദാക്കുക |
 | `S94c2a3` | form | Classification | വർഗ്ഗീകരണം |
 | `S7c9afd` | form | Classification only — a Sandbox code's identifier is still drawn from the isolated StCd-T##### band, never from this group's numeric range. | വർഗ്ഗീകരണം മാത്രം — സാൻഡ്ബോക്സ് കോഡിന്റെ ഐഡന്റിഫയർ ഇപ്പോഴും വേറിട്ട StCd-T##### ബാൻഡിൽ നിന്നാണ് എടുക്കുന്നത്, ഈ ഗ്രൂപ്പിന്റെ സംഖ്യാ പരിധിയിൽ നിന്ന് ഒരിക്കലുമല്ല. |
@@ -14107,7 +14550,9 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sdb0f93` | form | Immutable once allocated (BR-001). | ഒരിക്കൽ നൽകിയാൽ മാറ്റാനാവില്ല (BR-001). |
 | `Sd7635c` | form | Legacy Reference Number (optional) | പഴയ റഫറൻസ് നമ്പർ (ഓപ്ഷണൽ) |
 | `S2d3840` | form | New Sandbox Status Code | പുതിയ സാൻഡ്ബോക്സ് സ്റ്റാറ്റസ് കോഡ് |
+| `S0efd9f` | form | not captured | രേഖപ്പെടുത്തിയിട്ടില്ല |
 | `S8f9967` | form | Not yet assigned — fixed on Submit for Review | ഇതുവരെ നൽകിയിട്ടില്ല — അവലോകനത്തിനായി സമർപ്പിക്കുമ്പോൾ നിശ്ചയിക്കും |
+| `S152225` | form | Numeric levels of the generated program (0 to 255): read 1 = readable, 50 = no access. | സൃഷ്ടിച്ച പ്രോഗ്രാമിന്റെ സംഖ്യാ നിലകൾ (0 മുതൽ 255 വരെ): വായന 1 = വായിക്കാം, 50 = പ്രവേശനമില്ല. |
 | `S82890d` | form | Open review comments | തുറന്ന അവലോകന അഭിപ്രായങ്ങൾ |
 | `S611331` | form | Planned deprecation date (optional) | ആസൂത്രിത കാലഹരണപ്പെടുത്തൽ തീയതി (ഓപ്ഷണൽ) |
 | `S75ee24` | form | Planned effective date (optional) | ആസൂത്രിത പ്രാബല്യ തീയതി (ഓപ്ഷണൽ) |
@@ -14615,6 +15060,29 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sc0d28c` | stalled | Reviewers who are out of office (they have delegated) are left out. | ഓഫീസിന് പുറത്തുള്ള (ചുമതല ഏൽപ്പിച്ച) അവലോകകരെ ഒഴിവാക്കിയിരിക്കുന്നു. |
 | `Sca6d0e` | stalled | Stage | ഘട്ടം |
 | `Sb1bafe` | stalled | Stalled change requests | തടസ്സപ്പെട്ട അഭ്യർത്ഥനകൾ |
+| `S0b6108` | status code fields | Anemometer Heating Program | അനിമോമീറ്റർ ഹീറ്റിംഗ് പ്രോഗ്രാം |
+| `S5387f1` | status code fields | Automatic Operation | ഓട്ടോമാറ്റിക് പ്രവർത്തനം |
+| `S49412e` | status code fields | Availability Calculation | ലഭ്യതാ കണക്കുകൂട്ടൽ |
+| `S38cb6d` | status code fields | Converter Reset Program | കൺവെർട്ടർ റീസെറ്റ് പ്രോഗ്രാം |
+| `S86a17b` | status code fields | Gearbox Oil Fan Program | ഗിയർബോക്സ് ഓയിൽ ഫാൻ പ്രോഗ്രാം |
+| `Scf4f90` | status code fields | Gearbox Oil Heating Program | ഗിയർബോക്സ് ഓയിൽ ഹീറ്റിംഗ് പ്രോഗ്രാം |
+| `S891ad9` | status code fields | Gearbox Oil Pump Program | ഗിയർബോക്സ് ഓയിൽ പമ്പ് പ്രോഗ്രാം |
+| `S6a0014` | status code fields | Generator Bearing Lubrication Program | ജനറേറ്റർ ബെയറിംഗ് ലൂബ്രിക്കേഷൻ പ്രോഗ്രാം |
+| `S7f38cc` | status code fields | Generator Fan Program | ജനറേറ്റർ ഫാൻ പ്രോഗ്രാം |
+| `Sf292a7` | status code fields | Generator Heating Program | ജനറേറ്റർ ഹീറ്റിംഗ് പ്രോഗ്രാം |
+| `Sdccc10` | status code fields | Hydraulic Pump Program | ഹൈഡ്രോളിക് പമ്പ് പ്രോഗ്രാം |
+| `Se21075` | status code fields | Manual Operation | മാനുവൽ പ്രവർത്തനം |
+| `S9beea7` | status code fields | Medium Voltage Circuit Breaker Program | മീഡിയം വോൾട്ടേജ് സർക്കീറ്റ് ബ്രേക്കർ പ്രോഗ്രാം |
+| `Scb0a0d` | status code fields | Pitch Error Program | പിച്ച് പിശക് പ്രോഗ്രാം |
+| `S941428` | status code fields | Pitch Warning Program | പിച്ച് മുന്നറിയിപ്പ് പ്രോഗ്രാം |
+| `Sd2fe56` | status code fields | Rotor Bearing Lubrication Program | റോട്ടർ ബെയറിംഗ് ലൂബ്രിക്കേഷൻ പ്രോഗ്രാം |
+| `S381e23` | status code fields | Rotor Brake Program | റോട്ടർ ബ്രേക്ക് പ്രോഗ്രാം |
+| `S1e3032` | status code fields | Stop Program 40 | സ്റ്റോപ്പ് പ്രോഗ്രാം 40 |
+| `S43b650` | status code fields | Stop Program 80 | സ്റ്റോപ്പ് പ്രോഗ്രാം 80 |
+| `S805790` | status code fields | Tower Fan Program | ടവർ ഫാൻ പ്രോഗ്രാം |
+| `Sef9b9e` | status code fields | Transformer Oil Pump Program | ട്രാൻസ്ഫോർമർ ഓയിൽ പമ്പ് പ്രോഗ്രാം |
+| `S18a446` | status code fields | Vane Position | വെയ്ൻ സ്ഥാനം |
+| `S9ebce6` | status code fields | Zero Load Operation | സീറോ ലോഡ് പ്രവർത്തനം |
 | `Sff9f1f` | success_metrics | Age | പ്രായം |
 | `S8cc047` | success_metrics | Approval | അംഗീകാരം |
 | `S273d62` | success_metrics | Audit trail completeness of Released codes | റിലീസ് ചെയ്ത കോഡുകളുടെ ഓഡിറ്റ് ട്രെയിൽ പൂർണ്ണത |
@@ -14678,7 +15146,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 
 ### 9.15 IN ਪੰਜਾਬੀ 🇮🇳 — Punjabi
 
-1102 of 1103 strings translated; direction left to right.
+1138 of 1139 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -14973,9 +15441,11 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S041a5d` | detail, export_center | Format | ਫਾਰਮੈਟ |
 | `S9e3c65` | detail | From revision | ਸੋਧ ਤੋਂ |
 | `S2fa1f7` | detail, form, list | Functional Subgroup | ਕਾਰਜਸ਼ੀਲ ਉਪ-ਸਮੂਹ |
+| `Sb8c4c9` | detail, form | Further Program References | ਹੋਰ ਪ੍ਰੋਗਰਾਮ ਹਵਾਲੇ |
 | `S636c41` | detail | Grid Operator | ਗਰਿੱਡ ਆਪਰੇਟਰ |
 | `S90ccd6` | detail | History | ਇਤਿਹਾਸ |
 | `Sfec8b7` | detail | Hub Controller group | ਹੱਬ ਕੰਟਰੋਲਰ ਸਮੂਹ |
+| `S00ccae` | detail, form | Hub Controller only | ਸਿਰਫ਼ ਹੱਬ ਕੰਟਰੋਲਰ |
 | `S3c883f` | detail | I have reviewed these dependants | ਮੈਂ ਇਨ੍ਹਾਂ ਨਿਰਭਰ ਕੋਡਾਂ ਦੀ ਸਮੀਖਿਆ ਕਰ ਲਈ ਹੈ |
 | `S4bc96f` | detail | Import Job | ਦਰਾਮਦ ਕੰਮ |
 | `S50565a` | detail | Import progress | ਦਰਾਮਦ ਪ੍ਰਗਤੀ |
@@ -14989,13 +15459,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S43d5c5` | detail, form | Loadless Spinning Permitted | ਬਿਨਾਂ ਭਾਰ ਘੁੰਮਣ ਦੀ ਆਗਿਆ |
 | `S193786` | detail | Logical Node | ਤਰਕਸ਼ੀਲ ਨੋਡ |
 | `S578b78` | detail | Main Controller group | ਮੁੱਖ ਕੰਟਰੋਲਰ ਸਮੂਹ |
+| `Sa7512d` | detail, form | Main Controller only | ਸਿਰਫ਼ ਮੁੱਖ ਕੰਟਰੋਲਰ |
 | `Seb9a6d` | detail | Manage translations | ਅਨੁਵਾਦ ਸੰਭਾਲੋ |
 | `Sc5beef` | detail | manifest | ਮੈਨੀਫੈਸਟ |
 | `S6d59f4` | detail | Manual Reset Program | ਦਸਤੀ ਰੀਸੈੱਟ ਪ੍ਰੋਗਰਾਮ |
 | `Sf9896c` | detail, form | Mark resolved | ਹੱਲ ਹੋਇਆ ਵਜੋਂ ਨਿਸ਼ਾਨਦੇਹੀ ਕਰੋ |
 | `Sa7b93d` | detail, new, reconciliation | Mode | ਮੋਡ |
 | `S31a335` | detail | new code | ਨਵਾਂ ਕੋਡ |
-| `S816c52` | detail, export_verify, list | No | ਨਹੀਂ |
+| `S816c52` | detail, export_verify, form | No | ਨਹੀਂ |
 | `S06fc8d` | detail | No active Engineer holds the %(code)s domain yet. An Administrator must tag an Engineer with it (Administration → Users) before a sign-off can be requested. | ਕਿਸੇ ਸਰਗਰਮ ਇੰਜੀਨੀਅਰ ਕੋਲ %(code)s ਡੋਮੇਨ ਨਹੀਂ ਹੈ। ਦਸਤਖ਼ਤ ਦੀ ਬੇਨਤੀ ਤੋਂ ਪਹਿਲਾਂ ਪ੍ਰਸ਼ਾਸਕ ਨੂੰ ਇੱਕ ਇੰਜੀਨੀਅਰ ਨੂੰ ਇਹ ਦੇਣਾ ਪਵੇਗਾ (ਪ੍ਰਸ਼ਾਸਨ → ਵਰਤੋਂਕਾਰ)। |
 | `S362336` | detail | No change requests in this set yet. | ਇਸ ਸਮੂਹ ਵਿੱਚ ਅਜੇ ਕੋਈ ਤਬਦੀਲੀ ਬੇਨਤੀ ਨਹੀਂ। |
 | `S7e1129` | detail | No comments or decisions yet. | ਅਜੇ ਕੋਈ ਟਿੱਪਣੀ ਜਾਂ ਫ਼ੈਸਲਾ ਨਹੀਂ। |
@@ -15016,6 +15487,8 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S5fc7e3` | detail | open | ਖੁੱਲ੍ਹਾ |
 | `Sf61187` | detail | Open New Revision | ਨਵੀਂ ਸੋਧ ਖੋਲ੍ਹੋ |
 | `S578c53` | detail | Opens a Draft that must go through the full dual-review and Chief Engineer approval cycle before it takes effect. | ਇੱਕ ਖਰੜਾ ਖੋਲ੍ਹਦਾ ਹੈ ਜਿਸਨੂੰ ਲਾਗੂ ਹੋਣ ਤੋਂ ਪਹਿਲਾਂ ਪੂਰੀ ਦੋਹਰੀ ਸਮੀਖਿਆ ਅਤੇ ਮੁੱਖ ਇੰਜੀਨੀਅਰ ਦੀ ਮਨਜ਼ੂਰੀ ਦੇ ਚੱਕਰ ਵਿੱਚੋਂ ਲੰਘਣਾ ਪਵੇਗਾ। |
+| `Sfa465a` | detail, form, status code fields | Operating Mode Mask | ਸੰਚਾਲਨ ਮੋਡ ਮਾਸਕ |
+| `S20691e` | detail, form | Operation Parameters | ਸੰਚਾਲਨ ਪੈਰਾਮੀਟਰ |
 | `S36463a` | detail | other code(s) still refer to this one: | ਹੋਰ ਕੋਡ ਅਜੇ ਵੀ ਇਸਦਾ ਹਵਾਲਾ ਦਿੰਦੇ ਹਨ: |
 | `S9734ac` | detail | Other codes that refer to this one. Review them before deprecating it. | ਹੋਰ ਕੋਡ ਜੋ ਇਸਦਾ ਹਵਾਲਾ ਦਿੰਦੇ ਹਨ। ਇਸਨੂੰ ਬੰਦ ਕਰਨ ਤੋਂ ਪਹਿਲਾਂ ਉਨ੍ਹਾਂ ਦੀ ਸਮੀਖਿਆ ਕਰੋ। |
 | `S780d35` | detail | Override identifier (migration / reservation only) | ਪਛਾਣਕਰਤਾ ਓਵਰਰਾਈਡ ਕਰੋ (ਸਿਰਫ਼ ਮਾਈਗ੍ਰੇਸ਼ਨ / ਰਾਖਵੇਂਕਰਨ ਲਈ) |
@@ -15033,6 +15506,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sa4ab7b` | detail | Program References | ਪ੍ਰੋਗਰਾਮ ਹਵਾਲੇ |
 | `S70cbd1` | detail | Proposed | ਪ੍ਰਸਤਾਵਿਤ |
 | `S483bf2` | detail, list | Published | ਪ੍ਰਕਾਸ਼ਿਤ |
+| `S6a9c56` | detail, form | Read level | ਪੜ੍ਹਨ ਦਾ ਪੱਧਰ |
 | `Sf5ca9d` | detail | Recorded exports | ਦਰਜ ਐਕਸਪੋਰਟ |
 | `Sa3f757` | detail | Reinstate to Released | ਜਾਰੀ ਵਿੱਚ ਬਹਾਲ ਕਰੋ |
 | `S3238ca` | detail | Reinstatement reason | ਬਹਾਲੀ ਦਾ ਕਾਰਨ |
@@ -15078,6 +15552,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S6e3665` | detail, review_queue | Signed | ਦਸਤਖ਼ਤ ਕੀਤਾ |
 | `Sddfd83` | detail | Signed by | ਦਸਤਖ਼ਤ ਕਰਤਾ |
 | `Sb71523` | detail | Size | ਆਕਾਰ |
+| `Sece2ac` | detail, form | Slot | ਸਲਾਟ |
 | `Sff44d2` | detail | Software Version | ਸਾਫਟਵੇਅਰ ਸੰਸਕਰਣ |
 | `S169bf7` | detail, software_versions | Software version | ਸਾਫਟਵੇਅਰ ਸੰਸਕਰਣ |
 | `S6da13a` | detail, fleet_feedback | Source | ਸਰੋਤ |
@@ -15091,6 +15566,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S123f6c` | detail | Submit for Review | ਸਮੀਖਿਆ ਲਈ ਜਮ੍ਹਾਂ ਕਰੋ |
 | `S3dca68` | detail | Superseded by Status Code id (optional) | ਇਸ ਦੁਆਰਾ ਬਦਲਿਆ ਸਥਿਤੀ ਕੋਡ ਪਛਾਣ (ਵਿਕਲਪਿਕ) |
 | `S08e643` | detail, list | Target software version | ਨਿਸ਼ਾਨਾ ਸਾਫਟਵੇਅਰ ਸੰਸਕਰਣ |
+| `S44203c` | detail, form, status code fields | Task Call Frequency | ਟਾਸਕ ਕਾਲ ਫ੍ਰੀਕੁਐਂਸੀ |
 | `S8fc804` | detail | The author has to submit it for review before the Reviewer or Administrator can see it. | ਸਮੀਖਿਅਕ ਜਾਂ ਪ੍ਰਸ਼ਾਸਕ ਦੇ ਵੇਖਣ ਤੋਂ ਪਹਿਲਾਂ ਲੇਖਕ ਨੂੰ ਇਹ ਸਮੀਖਿਆ ਲਈ ਜਮ੍ਹਾਂ ਕਰਨਾ ਪਵੇਗਾ। |
 | `S091814` | detail | This change request has reached a terminal decision state | ਇਹ ਤਬਦੀਲੀ ਬੇਨਤੀ ਅੰਤਿਮ ਫ਼ੈਸਲੇ ਦੀ ਸਥਿਤੀ ਵਿੱਚ ਪਹੁੰਚ ਚੁੱਕੀ ਹੈ |
 | `S6d5708` | detail | This is the one truly irreversible action in the system. Type the identifier to confirm. | ਇਹ ਸਿਸਟਮ ਦੀ ਇੱਕੋ-ਇੱਕ ਸੱਚਮੁੱਚ ਅਟੱਲ ਕਾਰਵਾਈ ਹੈ। ਪੁਸ਼ਟੀ ਲਈ ਪਛਾਣਕਰਤਾ ਟਾਈਪ ਕਰੋ। |
@@ -15106,6 +15582,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S391d68` | detail, stalled | unassigned | ਨਿਯੁਕਤ ਨਹੀਂ |
 | `S73ec5d` | detail, form | Up/Down Counter | ਉੱਪਰ/ਹੇਠਾਂ ਕਾਊਂਟਰ |
 | `S80c494` | detail | Uploaded | ਅੱਪਲੋਡ ਕੀਤਾ |
+| `Sb01729` | detail, form | User-Group Levels | ਵਰਤੋਂਕਾਰ-ਸਮੂਹ ਪੱਧਰ |
 | `S45288a` | detail, new | Version Label | ਸੰਸਕਰਣ ਲੇਬਲ |
 | `S4993ae` | detail | View Change Request | ਤਬਦੀਲੀ ਬੇਨਤੀ ਵੇਖੋ |
 | `Scde93f` | detail | View Imported Drafts | ਦਰਾਮਦ ਖਰੜੇ ਵੇਖੋ |
@@ -15118,9 +15595,10 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S7d5316` | detail | Who | ਕਿਸਨੇ |
 | `S47e564` | detail | Withdraw | ਵਾਪਸ ਲਓ |
 | `S51a998` | detail | Withdraw this change request? | ਕੀ ਇਹ ਤਬਦੀਲੀ ਬੇਨਤੀ ਵਾਪਸ ਲੈਣੀ ਹੈ? |
+| `S95a2a4` | detail, form | Write level | ਲਿਖਣ ਦਾ ਪੱਧਰ |
 | `S612fe0` | detail | Yaw Bearing Lubrication Program | ਯਾਅ ਬੇਅਰਿੰਗ ਲੁਬਰੀਕੇਸ਼ਨ ਪ੍ਰੋਗਰਾਮ |
 | `S559a3f` | detail | Yaw Program | ਯਾਅ ਪ੍ਰੋਗਰਾਮ |
-| `S5397e0` | detail, export_verify, list | Yes | ਹਾਂ |
+| `S5397e0` | detail, export_verify, form | Yes | ਹਾਂ |
 | `Sc8e4b4` | detail | Your decision step | ਤੁਹਾਡਾ ਫ਼ੈਸਲੇ ਦਾ ਪੜਾਅ |
 | `S20cb4c` | detail, export_center | ZIP with manifest | ਮੈਨੀਫੈਸਟ ਸਮੇਤ ZIP |
 | `S5d4358` | dry_run | All rows are clean. | ਸਾਰੀਆਂ ਕਤਾਰਾਂ ਸਾਫ਼ ਹਨ। |
@@ -15208,6 +15686,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sf094b9` | form | Affected component (optional) | ਪ੍ਰਭਾਵਿਤ ਹਿੱਸਾ (ਵਿਕਲਪਿਕ) |
 | `S407cf2` | form | Applies from software version (optional) | ਇਸ ਸਾਫਟਵੇਅਰ ਸੰਸਕਰਣ ਤੋਂ ਲਾਗੂ (ਵਿਕਲਪਿਕ) |
 | `Sa30242` | form | Applies up to software version (optional) | ਇਸ ਸਾਫਟਵੇਅਰ ਸੰਸਕਰਣ ਤੱਕ ਲਾਗੂ (ਵਿਕਲਪਿਕ) |
+| `S7665e9` | form | Bit string of the generated program, e.g. 111011 (20 bits on the Main Controller, 6 on the Hub Controller). | ਤਿਆਰ ਕੀਤੇ ਪ੍ਰੋਗਰਾਮ ਦੀ ਬਿੱਟ ਸਟ੍ਰਿੰਗ, ਜਿਵੇਂ 111011 (ਮੁੱਖ ਕੰਟਰੋਲਰ ਵਿੱਚ 20 ਬਿੱਟ, ਹੱਬ ਕੰਟਰੋਲਰ ਵਿੱਚ 6)। |
 | `S77dfd2` | form, st_preview | Cancel | ਰੱਦ ਕਰੋ |
 | `S94c2a3` | form | Classification | ਵਰਗੀਕਰਨ |
 | `S7c9afd` | form | Classification only — a Sandbox code's identifier is still drawn from the isolated StCd-T##### band, never from this group's numeric range. | ਸਿਰਫ਼ ਵਰਗੀਕਰਨ — ਸੈਂਡਬਾਕਸ ਕੋਡ ਦੀ ਪਛਾਣ ਅਜੇ ਵੀ ਵੱਖਰੀ StCd-T##### ਪੱਟੀ ਤੋਂ ਲਈ ਜਾਂਦੀ ਹੈ, ਇਸ ਸਮੂਹ ਦੀ ਅੰਕੀ ਹੱਦ ਤੋਂ ਕਦੇ ਨਹੀਂ। |
@@ -15216,7 +15695,9 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sdb0f93` | form | Immutable once allocated (BR-001). | ਇੱਕ ਵਾਰ ਨਿਯੁਕਤ ਹੋਣ ਤੋਂ ਬਾਅਦ ਅਟੱਲ (BR-001)। |
 | `Sd7635c` | form | Legacy Reference Number (optional) | ਪੁਰਾਣਾ ਹਵਾਲਾ ਨੰਬਰ (ਵਿਕਲਪਿਕ) |
 | `S2d3840` | form | New Sandbox Status Code | ਨਵਾਂ ਸੈਂਡਬਾਕਸ ਸਥਿਤੀ ਕੋਡ |
+| `S0efd9f` | form | not captured | ਦਰਜ ਨਹੀਂ |
 | `S8f9967` | form | Not yet assigned — fixed on Submit for Review | ਅਜੇ ਨਿਯੁਕਤ ਨਹੀਂ — ਸਮੀਖਿਆ ਲਈ ਜਮ੍ਹਾਂ ਕਰਨ ਵੇਲੇ ਤੈਅ ਹੋਵੇਗਾ |
+| `S152225` | form | Numeric levels of the generated program (0 to 255): read 1 = readable, 50 = no access. | ਤਿਆਰ ਕੀਤੇ ਪ੍ਰੋਗਰਾਮ ਦੇ ਅੰਕੀ ਪੱਧਰ (0 ਤੋਂ 255): ਪੜ੍ਹਨਾ 1 = ਪੜ੍ਹਨਯੋਗ, 50 = ਪਹੁੰਚ ਨਹੀਂ। |
 | `S82890d` | form | Open review comments | ਖੁੱਲ੍ਹੀਆਂ ਸਮੀਖਿਆ ਟਿੱਪਣੀਆਂ |
 | `S611331` | form | Planned deprecation date (optional) | ਯੋਜਨਾਬੱਧ ਬੰਦ ਕਰਨ ਦੀ ਮਿਤੀ (ਵਿਕਲਪਿਕ) |
 | `S75ee24` | form | Planned effective date (optional) | ਯੋਜਨਾਬੱਧ ਲਾਗੂਕਰਨ ਮਿਤੀ (ਵਿਕਲਪਿਕ) |
@@ -15724,6 +16205,29 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sc0d28c` | stalled | Reviewers who are out of office (they have delegated) are left out. | ਦਫ਼ਤਰ ਤੋਂ ਬਾਹਰ (ਜਿਨ੍ਹਾਂ ਨੇ ਜ਼ਿੰਮੇਵਾਰੀ ਸੌਂਪੀ ਹੈ) ਸਮੀਖਿਅਕ ਸ਼ਾਮਲ ਨਹੀਂ। |
 | `Sca6d0e` | stalled | Stage | ਪੜਾਅ |
 | `Sb1bafe` | stalled | Stalled change requests | ਰੁਕੀਆਂ ਬੇਨਤੀਆਂ |
+| `S0b6108` | status code fields | Anemometer Heating Program | ਐਨੀਮੋਮੀਟਰ ਹੀਟਿੰਗ ਪ੍ਰੋਗਰਾਮ |
+| `S5387f1` | status code fields | Automatic Operation | ਆਟੋਮੈਟਿਕ ਸੰਚਾਲਨ |
+| `S49412e` | status code fields | Availability Calculation | ਉਪਲਬਧਤਾ ਗਣਨਾ |
+| `S38cb6d` | status code fields | Converter Reset Program | ਕਨਵਰਟਰ ਰੀਸੈੱਟ ਪ੍ਰੋਗਰਾਮ |
+| `S86a17b` | status code fields | Gearbox Oil Fan Program | ਗੀਅਰਬਾਕਸ ਤੇਲ ਪੱਖਾ ਪ੍ਰੋਗਰਾਮ |
+| `Scf4f90` | status code fields | Gearbox Oil Heating Program | ਗੀਅਰਬਾਕਸ ਤੇਲ ਹੀਟਿੰਗ ਪ੍ਰੋਗਰਾਮ |
+| `S891ad9` | status code fields | Gearbox Oil Pump Program | ਗੀਅਰਬਾਕਸ ਤੇਲ ਪੰਪ ਪ੍ਰੋਗਰਾਮ |
+| `S6a0014` | status code fields | Generator Bearing Lubrication Program | ਜਨਰੇਟਰ ਬੇਅਰਿੰਗ ਲੁਬਰੀਕੇਸ਼ਨ ਪ੍ਰੋਗਰਾਮ |
+| `S7f38cc` | status code fields | Generator Fan Program | ਜਨਰੇਟਰ ਪੱਖਾ ਪ੍ਰੋਗਰਾਮ |
+| `Sf292a7` | status code fields | Generator Heating Program | ਜਨਰੇਟਰ ਹੀਟਿੰਗ ਪ੍ਰੋਗਰਾਮ |
+| `Sdccc10` | status code fields | Hydraulic Pump Program | ਹਾਈਡ੍ਰੌਲਿਕ ਪੰਪ ਪ੍ਰੋਗਰਾਮ |
+| `Se21075` | status code fields | Manual Operation | ਦਸਤੀ ਸੰਚਾਲਨ |
+| `S9beea7` | status code fields | Medium Voltage Circuit Breaker Program | ਮੱਧਮ ਵੋਲਟੇਜ ਸਰਕਟ ਬ੍ਰੇਕਰ ਪ੍ਰੋਗਰਾਮ |
+| `Scb0a0d` | status code fields | Pitch Error Program | ਪਿੱਚ ਗਲਤੀ ਪ੍ਰੋਗਰਾਮ |
+| `S941428` | status code fields | Pitch Warning Program | ਪਿੱਚ ਚੇਤਾਵਨੀ ਪ੍ਰੋਗਰਾਮ |
+| `Sd2fe56` | status code fields | Rotor Bearing Lubrication Program | ਰੋਟਰ ਬੇਅਰਿੰਗ ਲੁਬਰੀਕੇਸ਼ਨ ਪ੍ਰੋਗਰਾਮ |
+| `S381e23` | status code fields | Rotor Brake Program | ਰੋਟਰ ਬ੍ਰੇਕ ਪ੍ਰੋਗਰਾਮ |
+| `S1e3032` | status code fields | Stop Program 40 | ਸਟੌਪ ਪ੍ਰੋਗਰਾਮ 40 |
+| `S43b650` | status code fields | Stop Program 80 | ਸਟੌਪ ਪ੍ਰੋਗਰਾਮ 80 |
+| `S805790` | status code fields | Tower Fan Program | ਟਾਵਰ ਪੱਖਾ ਪ੍ਰੋਗਰਾਮ |
+| `Sef9b9e` | status code fields | Transformer Oil Pump Program | ਟ੍ਰਾਂਸਫਾਰਮਰ ਤੇਲ ਪੰਪ ਪ੍ਰੋਗਰਾਮ |
+| `S18a446` | status code fields | Vane Position | ਵੇਨ ਸਥਿਤੀ |
+| `S9ebce6` | status code fields | Zero Load Operation | ਜ਼ੀਰੋ ਲੋਡ ਸੰਚਾਲਨ |
 | `Sff9f1f` | success_metrics | Age | ਉਮਰ |
 | `S8cc047` | success_metrics | Approval | ਮਨਜ਼ੂਰੀ |
 | `S273d62` | success_metrics | Audit trail completeness of Released codes | ਜਾਰੀ ਕੋਡਾਂ ਦੇ ਆਡਿਟ ਟ੍ਰੇਲ ਦੀ ਸੰਪੂਰਨਤਾ |
@@ -15787,7 +16291,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 
 ### 9.16 ES Español 🇪🇸 — Spanish
 
-1102 of 1103 strings translated; direction left to right.
+1138 of 1139 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -16082,9 +16586,11 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S041a5d` | detail, export_center | Format | Formato |
 | `S9e3c65` | detail | From revision | De la revisión |
 | `S2fa1f7` | detail, form, list | Functional Subgroup | Subgrupo funcional |
+| `Sb8c4c9` | detail, form | Further Program References | Más referencias de programa |
 | `S636c41` | detail | Grid Operator | Operador de red |
 | `S90ccd6` | detail | History | Historial |
 | `Sfec8b7` | detail | Hub Controller group | Grupo del controlador del buje |
+| `S00ccae` | detail, form | Hub Controller only | solo controlador del buje |
 | `S3c883f` | detail | I have reviewed these dependants | He revisado estos dependientes |
 | `S4bc96f` | detail | Import Job | Tarea de importación |
 | `S50565a` | detail | Import progress | Progreso de la importación |
@@ -16098,13 +16604,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S43d5c5` | detail, form | Loadless Spinning Permitted | Giro sin carga permitido |
 | `S193786` | detail | Logical Node | Nodo lógico |
 | `S578b78` | detail | Main Controller group | Grupo del controlador principal |
+| `Sa7512d` | detail, form | Main Controller only | solo controlador principal |
 | `Seb9a6d` | detail | Manage translations | Gestionar traducciones |
 | `Sc5beef` | detail | manifest | manifiesto |
 | `S6d59f4` | detail | Manual Reset Program | Programa de reposición manual |
 | `Sf9896c` | detail, form | Mark resolved | Marcar como resuelto |
 | `Sa7b93d` | detail, new, reconciliation | Mode | Modo |
 | `S31a335` | detail | new code | código nuevo |
-| `S816c52` | detail, export_verify, list | No | No |
+| `S816c52` | detail, export_verify, form | No | No |
 | `S06fc8d` | detail | No active Engineer holds the %(code)s domain yet. An Administrator must tag an Engineer with it (Administration → Users) before a sign-off can be requested. | Ningún ingeniero activo tiene el ámbito %(code)s. Un administrador debe asignar ese ámbito a un ingeniero (Administración → Usuarios) antes de poder solicitar la conformidad. |
 | `S362336` | detail | No change requests in this set yet. | Aún no hay solicitudes de cambio en este conjunto. |
 | `S7e1129` | detail | No comments or decisions yet. | Aún no hay comentarios ni decisiones. |
@@ -16125,6 +16632,8 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S5fc7e3` | detail | open | abierto |
 | `Sf61187` | detail | Open New Revision | Abrir nueva revisión |
 | `S578c53` | detail | Opens a Draft that must go through the full dual-review and Chief Engineer approval cycle before it takes effect. | Abre un borrador que debe pasar el ciclo completo de doble revisión y aprobación del ingeniero jefe antes de surtir efecto. |
+| `Sfa465a` | detail, form, status code fields | Operating Mode Mask | Máscara del modo de funcionamiento |
+| `S20691e` | detail, form | Operation Parameters | Parámetros de funcionamiento |
 | `S36463a` | detail | other code(s) still refer to this one: | otro(s) código(s) aún remiten a este: |
 | `S9734ac` | detail | Other codes that refer to this one. Review them before deprecating it. | Otros códigos que remiten a este. Revíselos antes de declararlo obsoleto. |
 | `S780d35` | detail | Override identifier (migration / reservation only) | Sobrescribir identificador (solo migración / reserva) |
@@ -16142,6 +16651,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sa4ab7b` | detail | Program References | Referencias de programa |
 | `S70cbd1` | detail | Proposed | Propuesto |
 | `S483bf2` | detail, list | Published | Publicado |
+| `S6a9c56` | detail, form | Read level | Nivel de lectura |
 | `Sf5ca9d` | detail | Recorded exports | Exportaciones registradas |
 | `Sa3f757` | detail | Reinstate to Released | Reponer a Publicado |
 | `S3238ca` | detail | Reinstatement reason | Motivo de la reposición |
@@ -16187,6 +16697,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S6e3665` | detail, review_queue | Signed | Firmado |
 | `Sddfd83` | detail | Signed by | Firmado por |
 | `Sb71523` | detail | Size | Tamaño |
+| `Sece2ac` | detail, form | Slot | Ranura |
 | `Sff44d2` | detail | Software Version | Versión del software |
 | `S169bf7` | detail, software_versions | Software version | Versión de software |
 | `S6da13a` | detail, fleet_feedback | Source | Origen |
@@ -16200,6 +16711,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S123f6c` | detail | Submit for Review | Enviar a revisión |
 | `S3dca68` | detail | Superseded by Status Code id (optional) | Sustituido por el id de código de estado (opcional) |
 | `S08e643` | detail, list | Target software version | Versión de software de destino |
+| `S44203c` | detail, form, status code fields | Task Call Frequency | Frecuencia de llamada de la tarea |
 | `S8fc804` | detail | The author has to submit it for review before the Reviewer or Administrator can see it. | El autor debe enviarlo a revisión antes de que el revisor o el administrador puedan verlo. |
 | `S091814` | detail | This change request has reached a terminal decision state | Esta solicitud de cambio ha alcanzado un estado de decisión final |
 | `S6d5708` | detail | This is the one truly irreversible action in the system. Type the identifier to confirm. | Esta es la única acción realmente irreversible del sistema. Escriba el identificador para confirmar. |
@@ -16215,6 +16727,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S391d68` | detail, stalled | unassigned | sin asignar |
 | `S73ec5d` | detail, form | Up/Down Counter | Contador ascendente/descendente |
 | `S80c494` | detail | Uploaded | Subido |
+| `Sb01729` | detail, form | User-Group Levels | Niveles de los grupos de usuarios |
 | `S45288a` | detail, new | Version Label | Etiqueta de versión |
 | `S4993ae` | detail | View Change Request | Ver solicitud de cambio |
 | `Scde93f` | detail | View Imported Drafts | Ver borradores importados |
@@ -16227,9 +16740,10 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S7d5316` | detail | Who | Quién |
 | `S47e564` | detail | Withdraw | Retirar |
 | `S51a998` | detail | Withdraw this change request? | ¿Retirar esta solicitud de cambio? |
+| `S95a2a4` | detail, form | Write level | Nivel de escritura |
 | `S612fe0` | detail | Yaw Bearing Lubrication Program | Programa de lubricación del rodamiento de orientación |
 | `S559a3f` | detail | Yaw Program | Programa de orientación |
-| `S5397e0` | detail, export_verify, list | Yes | Sí |
+| `S5397e0` | detail, export_verify, form | Yes | Sí |
 | `Sc8e4b4` | detail | Your decision step | Su paso de decisión |
 | `S20cb4c` | detail, export_center | ZIP with manifest | ZIP con manifiesto |
 | `S5d4358` | dry_run | All rows are clean. | Todas las filas están limpias. |
@@ -16317,6 +16831,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sf094b9` | form | Affected component (optional) | Componente afectado (opcional) |
 | `S407cf2` | form | Applies from software version (optional) | Se aplica desde la versión del software (opcional) |
 | `Sa30242` | form | Applies up to software version (optional) | Se aplica hasta la versión del software (opcional) |
+| `S7665e9` | form | Bit string of the generated program, e.g. 111011 (20 bits on the Main Controller, 6 on the Hub Controller). | Cadena de bits del programa generado, p. ej. 111011 (20 bits en el controlador principal, 6 en el del buje). |
 | `S77dfd2` | form, st_preview | Cancel | Cancelar |
 | `S94c2a3` | form | Classification | Clasificación |
 | `S7c9afd` | form | Classification only — a Sandbox code's identifier is still drawn from the isolated StCd-T##### band, never from this group's numeric range. | Solo clasificación: el identificador de un código del entorno de pruebas sigue saliendo de la banda aislada StCd-T#####, nunca del rango numérico de este grupo. |
@@ -16325,7 +16840,9 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sdb0f93` | form | Immutable once allocated (BR-001). | Inmutable una vez asignado (BR-001). |
 | `Sd7635c` | form | Legacy Reference Number (optional) | Número de referencia anterior (opcional) |
 | `S2d3840` | form | New Sandbox Status Code | Nuevo código de estado del entorno de pruebas |
+| `S0efd9f` | form | not captured | no registrado |
 | `S8f9967` | form | Not yet assigned — fixed on Submit for Review | Aún sin asignar — se fija al enviar a revisión |
+| `S152225` | form | Numeric levels of the generated program (0 to 255): read 1 = readable, 50 = no access. | Niveles numéricos del programa generado (0 a 255): lectura 1 = legible, 50 = sin acceso. |
 | `S82890d` | form | Open review comments | Comentarios de revisión abiertos |
 | `S611331` | form | Planned deprecation date (optional) | Fecha de obsolescencia prevista (opcional) |
 | `S75ee24` | form | Planned effective date (optional) | Fecha de entrada en vigor prevista (opcional) |
@@ -16833,6 +17350,29 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sc0d28c` | stalled | Reviewers who are out of office (they have delegated) are left out. | Los revisores fuera de la oficina (que han delegado) no se incluyen. |
 | `Sca6d0e` | stalled | Stage | Etapa |
 | `Sb1bafe` | stalled | Stalled change requests | Solicitudes estancadas |
+| `S0b6108` | status code fields | Anemometer Heating Program | Programa de la calefacción del anemómetro |
+| `S5387f1` | status code fields | Automatic Operation | Funcionamiento automático |
+| `S49412e` | status code fields | Availability Calculation | Cálculo de disponibilidad |
+| `S38cb6d` | status code fields | Converter Reset Program | Programa de reinicio del convertidor |
+| `S86a17b` | status code fields | Gearbox Oil Fan Program | Programa del ventilador de aceite de la multiplicadora |
+| `Scf4f90` | status code fields | Gearbox Oil Heating Program | Programa de la calefacción de aceite de la multiplicadora |
+| `S891ad9` | status code fields | Gearbox Oil Pump Program | Programa de la bomba de aceite de la multiplicadora |
+| `S6a0014` | status code fields | Generator Bearing Lubrication Program | Programa de lubricación del cojinete del generador |
+| `S7f38cc` | status code fields | Generator Fan Program | Programa del ventilador del generador |
+| `Sf292a7` | status code fields | Generator Heating Program | Programa de la calefacción del generador |
+| `Sdccc10` | status code fields | Hydraulic Pump Program | Programa de la bomba hidráulica |
+| `Se21075` | status code fields | Manual Operation | Funcionamiento manual |
+| `S9beea7` | status code fields | Medium Voltage Circuit Breaker Program | Programa del interruptor de media tensión |
+| `Scb0a0d` | status code fields | Pitch Error Program | Programa de error de paso |
+| `S941428` | status code fields | Pitch Warning Program | Programa de advertencia de paso |
+| `Sd2fe56` | status code fields | Rotor Bearing Lubrication Program | Programa de lubricación del cojinete del rotor |
+| `S381e23` | status code fields | Rotor Brake Program | Programa del freno del rotor |
+| `S1e3032` | status code fields | Stop Program 40 | Programa de parada 40 |
+| `S43b650` | status code fields | Stop Program 80 | Programa de parada 80 |
+| `S805790` | status code fields | Tower Fan Program | Programa del ventilador de la torre |
+| `Sef9b9e` | status code fields | Transformer Oil Pump Program | Programa de la bomba de aceite del transformador |
+| `S18a446` | status code fields | Vane Position | Posición de la veleta |
+| `S9ebce6` | status code fields | Zero Load Operation | Funcionamiento en vacío |
 | `Sff9f1f` | success_metrics | Age | Antigüedad |
 | `S8cc047` | success_metrics | Approval | Aprobación |
 | `S273d62` | success_metrics | Audit trail completeness of Released codes | Integridad de la pista de auditoría de los códigos publicados |
@@ -16896,7 +17436,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 
 ### 9.17 IT Italiano 🇮🇹 — Italian
 
-1102 of 1103 strings translated; direction left to right.
+1138 of 1139 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -17191,9 +17731,11 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S041a5d` | detail, export_center | Format | Formato |
 | `S9e3c65` | detail | From revision | Dalla revisione |
 | `S2fa1f7` | detail, form, list | Functional Subgroup | Sottogruppo funzionale |
+| `Sb8c4c9` | detail, form | Further Program References | Altri riferimenti di programma |
 | `S636c41` | detail | Grid Operator | Gestore di rete |
 | `S90ccd6` | detail | History | Storico |
 | `Sfec8b7` | detail | Hub Controller group | Gruppo del controllore del mozzo |
+| `S00ccae` | detail, form | Hub Controller only | solo controllore del mozzo |
 | `S3c883f` | detail | I have reviewed these dependants | Ho rivisto questi dipendenti |
 | `S4bc96f` | detail | Import Job | Attività di importazione |
 | `S50565a` | detail | Import progress | Avanzamento dell'importazione |
@@ -17207,13 +17749,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S43d5c5` | detail, form | Loadless Spinning Permitted | Rotazione a vuoto consentita |
 | `S193786` | detail | Logical Node | Nodo logico |
 | `S578b78` | detail | Main Controller group | Gruppo del controllore principale |
+| `Sa7512d` | detail, form | Main Controller only | solo controllore principale |
 | `Seb9a6d` | detail | Manage translations | Gestisci traduzioni |
 | `Sc5beef` | detail | manifest | manifesto |
 | `S6d59f4` | detail | Manual Reset Program | Programma di ripristino manuale |
 | `Sf9896c` | detail, form | Mark resolved | Segna come risolto |
 | `Sa7b93d` | detail, new, reconciliation | Mode | Modalità |
 | `S31a335` | detail | new code | nuovo codice |
-| `S816c52` | detail, export_verify, list | No | No |
+| `S816c52` | detail, export_verify, form | No | No |
 | `S06fc8d` | detail | No active Engineer holds the %(code)s domain yet. An Administrator must tag an Engineer with it (Administration → Users) before a sign-off can be requested. | Nessun ingegnere attivo ha l'ambito %(code)s. Un amministratore deve assegnare questo ambito a un ingegnere (Amministrazione → Utenti) prima che si possa richiedere il benestare. |
 | `S362336` | detail | No change requests in this set yet. | Ancora nessuna richiesta di modifica in questo set. |
 | `S7e1129` | detail | No comments or decisions yet. | Ancora nessun commento o decisione. |
@@ -17234,6 +17777,8 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S5fc7e3` | detail | open | aperto |
 | `Sf61187` | detail | Open New Revision | Apri nuova revisione |
 | `S578c53` | detail | Opens a Draft that must go through the full dual-review and Chief Engineer approval cycle before it takes effect. | Apre una bozza che deve attraversare il ciclo completo di doppia revisione e approvazione del capo ingegnere prima di avere effetto. |
+| `Sfa465a` | detail, form, status code fields | Operating Mode Mask | Maschera della modalità operativa |
+| `S20691e` | detail, form | Operation Parameters | Parametri di funzionamento |
 | `S36463a` | detail | other code(s) still refer to this one: | altro/i codice/i rimandano ancora a questo: |
 | `S9734ac` | detail | Other codes that refer to this one. Review them before deprecating it. | Altri codici che rimandano a questo. Li riveda prima di dichiararlo obsoleto. |
 | `S780d35` | detail | Override identifier (migration / reservation only) | Sovrascrivi identificativo (solo migrazione / prenotazione) |
@@ -17251,6 +17796,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sa4ab7b` | detail | Program References | Riferimenti ai programmi |
 | `S70cbd1` | detail | Proposed | Proposto |
 | `S483bf2` | detail, list | Published | Pubblicato |
+| `S6a9c56` | detail, form | Read level | Livello di lettura |
 | `Sf5ca9d` | detail | Recorded exports | Esportazioni registrate |
 | `Sa3f757` | detail | Reinstate to Released | Ripristina a Rilasciato |
 | `S3238ca` | detail | Reinstatement reason | Motivo del ripristino |
@@ -17296,6 +17842,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S6e3665` | detail, review_queue | Signed | Firmato |
 | `Sddfd83` | detail | Signed by | Firmato da |
 | `Sb71523` | detail | Size | Dimensione |
+| `Sece2ac` | detail, form | Slot | Slot |
 | `Sff44d2` | detail | Software Version | Versione del software |
 | `S169bf7` | detail, software_versions | Software version | Versione software |
 | `S6da13a` | detail, fleet_feedback | Source | Origine |
@@ -17309,6 +17856,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S123f6c` | detail | Submit for Review | Invia in revisione |
 | `S3dca68` | detail | Superseded by Status Code id (optional) | Sostituito dall'id del codice di stato (facoltativo) |
 | `S08e643` | detail, list | Target software version | Versione software di destinazione |
+| `S44203c` | detail, form, status code fields | Task Call Frequency | Frequenza di chiamata del task |
 | `S8fc804` | detail | The author has to submit it for review before the Reviewer or Administrator can see it. | L'autore deve inviarla in revisione prima che il revisore o l'amministratore possano vederla. |
 | `S091814` | detail | This change request has reached a terminal decision state | Questa richiesta di modifica ha raggiunto uno stato di decisione finale |
 | `S6d5708` | detail | This is the one truly irreversible action in the system. Type the identifier to confirm. | Questa è l'unica azione davvero irreversibile del sistema. Digiti l'identificativo per confermare. |
@@ -17324,6 +17872,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S391d68` | detail, stalled | unassigned | non assegnato |
 | `S73ec5d` | detail, form | Up/Down Counter | Contatore su/giù |
 | `S80c494` | detail | Uploaded | Caricato |
+| `Sb01729` | detail, form | User-Group Levels | Livelli dei gruppi di utenti |
 | `S45288a` | detail, new | Version Label | Etichetta di versione |
 | `S4993ae` | detail | View Change Request | Visualizza richiesta di modifica |
 | `Scde93f` | detail | View Imported Drafts | Visualizza le bozze importate |
@@ -17336,9 +17885,10 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S7d5316` | detail | Who | Chi |
 | `S47e564` | detail | Withdraw | Ritira |
 | `S51a998` | detail | Withdraw this change request? | Ritirare questa richiesta di modifica? |
+| `S95a2a4` | detail, form | Write level | Livello di scrittura |
 | `S612fe0` | detail | Yaw Bearing Lubrication Program | Programma di lubrificazione del cuscinetto di imbardata |
 | `S559a3f` | detail | Yaw Program | Programma di imbardata |
-| `S5397e0` | detail, export_verify, list | Yes | Sì |
+| `S5397e0` | detail, export_verify, form | Yes | Sì |
 | `Sc8e4b4` | detail | Your decision step | La sua fase decisionale |
 | `S20cb4c` | detail, export_center | ZIP with manifest | ZIP con manifesto |
 | `S5d4358` | dry_run | All rows are clean. | Tutte le righe sono a posto. |
@@ -17426,6 +17976,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sf094b9` | form | Affected component (optional) | Componente interessato (facoltativo) |
 | `S407cf2` | form | Applies from software version (optional) | Si applica dalla versione del software (facoltativo) |
 | `Sa30242` | form | Applies up to software version (optional) | Si applica fino alla versione del software (facoltativo) |
+| `S7665e9` | form | Bit string of the generated program, e.g. 111011 (20 bits on the Main Controller, 6 on the Hub Controller). | Stringa di bit del programma generato, ad es. 111011 (20 bit nel controllore principale, 6 in quello del mozzo). |
 | `S77dfd2` | form, st_preview | Cancel | Annulla |
 | `S94c2a3` | form | Classification | Classificazione |
 | `S7c9afd` | form | Classification only — a Sandbox code's identifier is still drawn from the isolated StCd-T##### band, never from this group's numeric range. | Solo classificazione: l'identificativo di un codice sandbox viene comunque prelevato dalla banda isolata StCd-T#####, mai dall'intervallo numerico di questo gruppo. |
@@ -17434,7 +17985,9 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sdb0f93` | form | Immutable once allocated (BR-001). | Immutabile una volta assegnato (BR-001). |
 | `Sd7635c` | form | Legacy Reference Number (optional) | Numero di riferimento precedente (facoltativo) |
 | `S2d3840` | form | New Sandbox Status Code | Nuovo codice di stato sandbox |
+| `S0efd9f` | form | not captured | non rilevato |
 | `S8f9967` | form | Not yet assigned — fixed on Submit for Review | Non ancora assegnato — fissato all'invio in revisione |
+| `S152225` | form | Numeric levels of the generated program (0 to 255): read 1 = readable, 50 = no access. | Livelli numerici del programma generato (da 0 a 255): lettura 1 = leggibile, 50 = nessun accesso. |
 | `S82890d` | form | Open review comments | Commenti di revisione aperti |
 | `S611331` | form | Planned deprecation date (optional) | Data di obsolescenza pianificata (facoltativo) |
 | `S75ee24` | form | Planned effective date (optional) | Data di entrata in vigore pianificata (facoltativo) |
@@ -17942,6 +18495,29 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sc0d28c` | stalled | Reviewers who are out of office (they have delegated) are left out. | I revisori fuori ufficio (che hanno delegato) sono esclusi. |
 | `Sca6d0e` | stalled | Stage | Fase |
 | `Sb1bafe` | stalled | Stalled change requests | Richieste in stallo |
+| `S0b6108` | status code fields | Anemometer Heating Program | Programma del riscaldamento dell'anemometro |
+| `S5387f1` | status code fields | Automatic Operation | Funzionamento automatico |
+| `S49412e` | status code fields | Availability Calculation | Calcolo della disponibilità |
+| `S38cb6d` | status code fields | Converter Reset Program | Programma di reset del convertitore |
+| `S86a17b` | status code fields | Gearbox Oil Fan Program | Programma della ventola dell'olio del moltiplicatore |
+| `Scf4f90` | status code fields | Gearbox Oil Heating Program | Programma del riscaldamento dell'olio del moltiplicatore |
+| `S891ad9` | status code fields | Gearbox Oil Pump Program | Programma della pompa dell'olio del moltiplicatore |
+| `S6a0014` | status code fields | Generator Bearing Lubrication Program | Programma di lubrificazione del cuscinetto del generatore |
+| `S7f38cc` | status code fields | Generator Fan Program | Programma della ventola del generatore |
+| `Sf292a7` | status code fields | Generator Heating Program | Programma del riscaldamento del generatore |
+| `Sdccc10` | status code fields | Hydraulic Pump Program | Programma della pompa idraulica |
+| `Se21075` | status code fields | Manual Operation | Funzionamento manuale |
+| `S9beea7` | status code fields | Medium Voltage Circuit Breaker Program | Programma dell'interruttore di media tensione |
+| `Scb0a0d` | status code fields | Pitch Error Program | Programma di errore di passo |
+| `S941428` | status code fields | Pitch Warning Program | Programma di avviso di passo |
+| `Sd2fe56` | status code fields | Rotor Bearing Lubrication Program | Programma di lubrificazione del cuscinetto del rotore |
+| `S381e23` | status code fields | Rotor Brake Program | Programma del freno del rotore |
+| `S1e3032` | status code fields | Stop Program 40 | Programma di arresto 40 |
+| `S43b650` | status code fields | Stop Program 80 | Programma di arresto 80 |
+| `S805790` | status code fields | Tower Fan Program | Programma della ventola della torre |
+| `Sef9b9e` | status code fields | Transformer Oil Pump Program | Programma della pompa dell'olio del trasformatore |
+| `S18a446` | status code fields | Vane Position | Posizione della banderuola |
+| `S9ebce6` | status code fields | Zero Load Operation | Funzionamento a vuoto |
 | `Sff9f1f` | success_metrics | Age | Età |
 | `S8cc047` | success_metrics | Approval | Approvazione |
 | `S273d62` | success_metrics | Audit trail completeness of Released codes | Completezza della traccia di audit dei codici rilasciati |
@@ -18005,7 +18581,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 
 ### 9.18 DK Dansk 🇩🇰 — Danish
 
-1102 of 1103 strings translated; direction left to right.
+1138 of 1139 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -18300,9 +18876,11 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S041a5d` | detail, export_center | Format | Format |
 | `S9e3c65` | detail | From revision | Fra revision |
 | `S2fa1f7` | detail, form, list | Functional Subgroup | Funktionel undergruppe |
+| `Sb8c4c9` | detail, form | Further Program References | Flere programhenvisninger |
 | `S636c41` | detail | Grid Operator | Netoperatør |
 | `S90ccd6` | detail | History | Historik |
 | `Sfec8b7` | detail | Hub Controller group | Navstyringsgruppe |
+| `S00ccae` | detail, form | Hub Controller only | kun navstyring |
 | `S3c883f` | detail | I have reviewed these dependants | Jeg har gennemgået disse afhængige koder |
 | `S4bc96f` | detail | Import Job | Importopgave |
 | `S50565a` | detail | Import progress | Importfremdrift |
@@ -18316,13 +18894,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S43d5c5` | detail, form | Loadless Spinning Permitted | Tomgangsdrejning tilladt |
 | `S193786` | detail | Logical Node | Logisk node |
 | `S578b78` | detail | Main Controller group | Hovedstyringsgruppe |
+| `Sa7512d` | detail, form | Main Controller only | kun hovedstyring |
 | `Seb9a6d` | detail | Manage translations | Administrér oversættelser |
 | `Sc5beef` | detail | manifest | manifest |
 | `S6d59f4` | detail | Manual Reset Program | Program til manuel nulstilling |
 | `Sf9896c` | detail, form | Mark resolved | Markér som løst |
 | `Sa7b93d` | detail, new, reconciliation | Mode | Tilstand |
 | `S31a335` | detail | new code | ny kode |
-| `S816c52` | detail, export_verify, list | No | Nej |
+| `S816c52` | detail, export_verify, form | No | Nej |
 | `S06fc8d` | detail | No active Engineer holds the %(code)s domain yet. An Administrator must tag an Engineer with it (Administration → Users) before a sign-off can be requested. | Ingen aktiv ingeniør har disciplinen %(code)s. En administrator skal give en ingeniør denne disciplin (Administration → Brugere), før en underskrift kan anmodes. |
 | `S362336` | detail | No change requests in this set yet. | Endnu ingen ændringsanmodninger i dette sæt. |
 | `S7e1129` | detail | No comments or decisions yet. | Endnu ingen kommentarer eller beslutninger. |
@@ -18343,6 +18922,8 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S5fc7e3` | detail | open | åben |
 | `Sf61187` | detail | Open New Revision | Åbn ny revision |
 | `S578c53` | detail | Opens a Draft that must go through the full dual-review and Chief Engineer approval cycle before it takes effect. | Åbner en kladde, der skal gennem den fulde cyklus med dobbelt gennemgang og chefingeniørens godkendelse, før den træder i kraft. |
+| `Sfa465a` | detail, form, status code fields | Operating Mode Mask | Driftstilstandsmaske |
+| `S20691e` | detail, form | Operation Parameters | Driftsparametre |
 | `S36463a` | detail | other code(s) still refer to this one: | andre koder henviser stadig til denne: |
 | `S9734ac` | detail | Other codes that refer to this one. Review them before deprecating it. | Andre koder, der henviser til denne. Gennemgå dem, før den erklæres forældet. |
 | `S780d35` | detail | Override identifier (migration / reservation only) | Overstyr identifikator (kun migrering / reservation) |
@@ -18360,6 +18941,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sa4ab7b` | detail | Program References | Programreferencer |
 | `S70cbd1` | detail | Proposed | Foreslået |
 | `S483bf2` | detail, list | Published | Udgivet |
+| `S6a9c56` | detail, form | Read level | Læseniveau |
 | `Sf5ca9d` | detail | Recorded exports | Registrerede eksporter |
 | `Sa3f757` | detail | Reinstate to Released | Genindsæt som Udgivet |
 | `S3238ca` | detail | Reinstatement reason | Årsag til genindsættelse |
@@ -18405,6 +18987,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S6e3665` | detail, review_queue | Signed | Underskrevet |
 | `Sddfd83` | detail | Signed by | Underskrevet af |
 | `Sb71523` | detail | Size | Størrelse |
+| `Sece2ac` | detail, form | Slot | Plads |
 | `Sff44d2` | detail | Software Version | Softwareversion |
 | `S169bf7` | detail, software_versions | Software version | Softwareversion |
 | `S6da13a` | detail, fleet_feedback | Source | Kilde |
@@ -18418,6 +19001,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S123f6c` | detail | Submit for Review | Indsend til gennemgang |
 | `S3dca68` | detail | Superseded by Status Code id (optional) | Erstattet af statuskode-id (valgfrit) |
 | `S08e643` | detail, list | Target software version | Målsoftwareversion |
+| `S44203c` | detail, form, status code fields | Task Call Frequency | Task-kaldefrekvens |
 | `S8fc804` | detail | The author has to submit it for review before the Reviewer or Administrator can see it. | Forfatteren skal indsende den til gennemgang, før reviewer eller administrator kan se den. |
 | `S091814` | detail | This change request has reached a terminal decision state | Denne ændringsanmodning har nået en endelig beslutningstilstand |
 | `S6d5708` | detail | This is the one truly irreversible action in the system. Type the identifier to confirm. | Dette er den eneste virkelig uigenkaldelige handling i systemet. Skriv identifikatoren for at bekræfte. |
@@ -18433,6 +19017,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S391d68` | detail, stalled | unassigned | ikke tildelt |
 | `S73ec5d` | detail, form | Up/Down Counter | Op/ned-tæller |
 | `S80c494` | detail | Uploaded | Uploadet |
+| `Sb01729` | detail, form | User-Group Levels | Brugergruppeniveauer |
 | `S45288a` | detail, new | Version Label | Versionsetiket |
 | `S4993ae` | detail | View Change Request | Vis ændringsanmodning |
 | `Scde93f` | detail | View Imported Drafts | Vis importerede kladder |
@@ -18445,9 +19030,10 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S7d5316` | detail | Who | Hvem |
 | `S47e564` | detail | Withdraw | Træk tilbage |
 | `S51a998` | detail | Withdraw this change request? | Træk denne ændringsanmodning tilbage? |
+| `S95a2a4` | detail, form | Write level | Skriveniveau |
 | `S612fe0` | detail | Yaw Bearing Lubrication Program | Smøreprogram til krøjelejet |
 | `S559a3f` | detail | Yaw Program | Krøjningsprogram |
-| `S5397e0` | detail, export_verify, list | Yes | Ja |
+| `S5397e0` | detail, export_verify, form | Yes | Ja |
 | `Sc8e4b4` | detail | Your decision step | Dit beslutningstrin |
 | `S20cb4c` | detail, export_center | ZIP with manifest | ZIP med manifest |
 | `S5d4358` | dry_run | All rows are clean. | Alle rækker er rene. |
@@ -18535,6 +19121,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sf094b9` | form | Affected component (optional) | Berørt komponent (valgfrit) |
 | `S407cf2` | form | Applies from software version (optional) | Gælder fra softwareversion (valgfrit) |
 | `Sa30242` | form | Applies up to software version (optional) | Gælder til softwareversion (valgfrit) |
+| `S7665e9` | form | Bit string of the generated program, e.g. 111011 (20 bits on the Main Controller, 6 on the Hub Controller). | Bitstreng for det genererede program, f.eks. 111011 (20 bit i hovedstyringen, 6 i navstyringen). |
 | `S77dfd2` | form, st_preview | Cancel | Annullér |
 | `S94c2a3` | form | Classification | Klassifikation |
 | `S7c9afd` | form | Classification only — a Sandbox code's identifier is still drawn from the isolated StCd-T##### band, never from this group's numeric range. | Kun klassifikation — en sandkassekodes identifikator trækkes stadig fra det isolerede bånd StCd-T#####, aldrig fra denne gruppes talinterval. |
@@ -18543,7 +19130,9 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sdb0f93` | form | Immutable once allocated (BR-001). | Kan ikke ændres, når den er tildelt (BR-001). |
 | `Sd7635c` | form | Legacy Reference Number (optional) | Gammelt referencenummer (valgfrit) |
 | `S2d3840` | form | New Sandbox Status Code | Ny sandkasse-statuskode |
+| `S0efd9f` | form | not captured | ikke registreret |
 | `S8f9967` | form | Not yet assigned — fixed on Submit for Review | Endnu ikke tildelt — fastlægges ved Indsend til gennemgang |
+| `S152225` | form | Numeric levels of the generated program (0 to 255): read 1 = readable, 50 = no access. | Numeriske niveauer for det genererede program (0 til 255): læs 1 = læsbar, 50 = ingen adgang. |
 | `S82890d` | form | Open review comments | Åbne gennemgangskommentarer |
 | `S611331` | form | Planned deprecation date (optional) | Planlagt forældelsesdato (valgfrit) |
 | `S75ee24` | form | Planned effective date (optional) | Planlagt ikrafttrædelsesdato (valgfrit) |
@@ -19051,6 +19640,29 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sc0d28c` | stalled | Reviewers who are out of office (they have delegated) are left out. | Reviewere, der er ude af kontoret (og har delegeret), er udeladt. |
 | `Sca6d0e` | stalled | Stage | Trin |
 | `Sb1bafe` | stalled | Stalled change requests | Fastlåste anmodninger |
+| `S0b6108` | status code fields | Anemometer Heating Program | Anemometeropvarmningprogram |
+| `S5387f1` | status code fields | Automatic Operation | Automatisk drift |
+| `S49412e` | status code fields | Availability Calculation | Tilgængelighedsberegning |
+| `S38cb6d` | status code fields | Converter Reset Program | Konverter-nulstillingprogram |
+| `S86a17b` | status code fields | Gearbox Oil Fan Program | Gearolie-ventilatorprogram |
+| `Scf4f90` | status code fields | Gearbox Oil Heating Program | Gearolie-opvarmningprogram |
+| `S891ad9` | status code fields | Gearbox Oil Pump Program | Gearolie-pumpeprogram |
+| `S6a0014` | status code fields | Generator Bearing Lubrication Program | Generatorlejesmøringprogram |
+| `S7f38cc` | status code fields | Generator Fan Program | Generatorventilatorprogram |
+| `Sf292a7` | status code fields | Generator Heating Program | Generatoropvarmningprogram |
+| `Sdccc10` | status code fields | Hydraulic Pump Program | Hydraulikpumpeprogram |
+| `Se21075` | status code fields | Manual Operation | Manuel drift |
+| `S9beea7` | status code fields | Medium Voltage Circuit Breaker Program | Mellemspændings-afbryderprogram |
+| `Scb0a0d` | status code fields | Pitch Error Program | Pitchfejlprogram |
+| `S941428` | status code fields | Pitch Warning Program | Pitchadvarselprogram |
+| `Sd2fe56` | status code fields | Rotor Bearing Lubrication Program | Rotorlejesmøringprogram |
+| `S381e23` | status code fields | Rotor Brake Program | Rotorbremseprogram |
+| `S1e3032` | status code fields | Stop Program 40 | Stopprogram 40 |
+| `S43b650` | status code fields | Stop Program 80 | Stopprogram 80 |
+| `S805790` | status code fields | Tower Fan Program | Tårnventilatorprogram |
+| `Sef9b9e` | status code fields | Transformer Oil Pump Program | Transformerolie-pumpeprogram |
+| `S18a446` | status code fields | Vane Position | Vindfaneposition |
+| `S9ebce6` | status code fields | Zero Load Operation | Nullastdrift |
 | `Sff9f1f` | success_metrics | Age | Alder |
 | `S8cc047` | success_metrics | Approval | Godkendelse |
 | `S273d62` | success_metrics | Audit trail completeness of Released codes | Auditsporets fuldstændighed for udgivne koder |
@@ -19114,7 +19726,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 
 ### 9.19 GE ქართული 🇬🇪 — Georgian
 
-1102 of 1103 strings translated; direction left to right.
+1138 of 1139 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -19409,9 +20021,11 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S041a5d` | detail, export_center | Format | ფორმატი |
 | `S9e3c65` | detail | From revision | რევიზიიდან |
 | `S2fa1f7` | detail, form, list | Functional Subgroup | ფუნქციური ქვეჯგუფი |
+| `Sb8c4c9` | detail, form | Further Program References | დამატებითი პროგრამის მითითებები |
 | `S636c41` | detail | Grid Operator | ქსელის ოპერატორი |
 | `S90ccd6` | detail | History | ისტორია |
 | `Sfec8b7` | detail | Hub Controller group | კერის კონტროლერის ჯგუფი |
+| `S00ccae` | detail, form | Hub Controller only | მხოლოდ ჰაბის კონტროლერი |
 | `S3c883f` | detail | I have reviewed these dependants | გადავხედე ამ დამოკიდებულ კოდებს |
 | `S4bc96f` | detail | Import Job | იმპორტის დავალება |
 | `S50565a` | detail | Import progress | იმპორტის პროგრესი |
@@ -19425,13 +20039,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S43d5c5` | detail, form | Loadless Spinning Permitted | დატვირთვის გარეშე ბრუნვა დაშვებულია |
 | `S193786` | detail | Logical Node | ლოგიკური კვანძი |
 | `S578b78` | detail | Main Controller group | მთავარი კონტროლერის ჯგუფი |
+| `Sa7512d` | detail, form | Main Controller only | მხოლოდ მთავარი კონტროლერი |
 | `Seb9a6d` | detail | Manage translations | თარგმანების მართვა |
 | `Sc5beef` | detail | manifest | მანიფესტი |
 | `S6d59f4` | detail | Manual Reset Program | ხელით გადატვირთვის პროგრამა |
 | `Sf9896c` | detail, form | Mark resolved | გადაწყვეტილად მონიშვნა |
 | `Sa7b93d` | detail, new, reconciliation | Mode | რეჟიმი |
 | `S31a335` | detail | new code | ახალი კოდი |
-| `S816c52` | detail, export_verify, list | No | არა |
+| `S816c52` | detail, export_verify, form | No | არა |
 | `S06fc8d` | detail | No active Engineer holds the %(code)s domain yet. An Administrator must tag an Engineer with it (Administration → Users) before a sign-off can be requested. | არც ერთ აქტიურ ინჟინერს არ აქვს სფერო %(code)s. ადმინისტრატორმა ეს სფერო უნდა მიანიჭოს ინჟინერს (ადმინისტრირება → მომხმარებლები), სანამ ხელმოწერას მოითხოვთ. |
 | `S362336` | detail | No change requests in this set yet. | ამ ნაკრებში ცვლილების მოთხოვნები ჯერ არ არის. |
 | `S7e1129` | detail | No comments or decisions yet. | კომენტარები ან გადაწყვეტილებები ჯერ არ არის. |
@@ -19452,6 +20067,8 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S5fc7e3` | detail | open | ღია |
 | `Sf61187` | detail | Open New Revision | ახალი რევიზიის გახსნა |
 | `S578c53` | detail | Opens a Draft that must go through the full dual-review and Chief Engineer approval cycle before it takes effect. | ხსნის დრაფტს, რომელმაც ძალაში შესვლამდე ორმაგი განხილვისა და მთავარი ინჟინრის დამტკიცების სრული ციკლი უნდა გაიაროს. |
+| `Sfa465a` | detail, form, status code fields | Operating Mode Mask | სამუშაო რეჟიმის ნიღაბი |
+| `S20691e` | detail, form | Operation Parameters | სამუშაო პარამეტრები |
 | `S36463a` | detail | other code(s) still refer to this one: | სხვა კოდები კვლავ მიუთითებს ამაზე: |
 | `S9734ac` | detail | Other codes that refer to this one. Review them before deprecating it. | სხვა კოდები, რომლებიც ამას მიუთითებს. გადახედეთ მათ მოძველებამდე. |
 | `S780d35` | detail | Override identifier (migration / reservation only) | იდენტიფიკატორის გადაფარვა (მხოლოდ მიგრაცია / დაჯავშნა) |
@@ -19469,6 +20086,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sa4ab7b` | detail | Program References | პროგრამების მითითებები |
 | `S70cbd1` | detail | Proposed | შემოთავაზებული |
 | `S483bf2` | detail, list | Published | გამოქვეყნებული |
+| `S6a9c56` | detail, form | Read level | წაკითხვის დონე |
 | `Sf5ca9d` | detail | Recorded exports | ჩაწერილი ექსპორტები |
 | `Sa3f757` | detail | Reinstate to Released | გამოშვებულად აღდგენა |
 | `S3238ca` | detail | Reinstatement reason | აღდგენის მიზეზი |
@@ -19514,6 +20132,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S6e3665` | detail, review_queue | Signed | ხელმოწერილია |
 | `Sddfd83` | detail | Signed by | ხელი მოაწერა |
 | `Sb71523` | detail | Size | ზომა |
+| `Sece2ac` | detail, form | Slot | სლოტი |
 | `Sff44d2` | detail | Software Version | პროგრამის ვერსია |
 | `S169bf7` | detail, software_versions | Software version | პროგრამის ვერსია |
 | `S6da13a` | detail, fleet_feedback | Source | წყარო |
@@ -19527,6 +20146,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S123f6c` | detail | Submit for Review | განხილვაზე წარდგენა |
 | `S3dca68` | detail | Superseded by Status Code id (optional) | ჩანაცვლებულია სტატუსის კოდის id-ით (არასავალდებულო) |
 | `S08e643` | detail, list | Target software version | სამიზნე პროგრამული ვერსია |
+| `S44203c` | detail, form, status code fields | Task Call Frequency | ამოცანის გამოძახების სიხშირე |
 | `S8fc804` | detail | The author has to submit it for review before the Reviewer or Administrator can see it. | ავტორმა უნდა წარადგინოს განხილვაზე, სანამ მიმომხილველი ან ადმინისტრატორი მას ნახავს. |
 | `S091814` | detail | This change request has reached a terminal decision state | ეს ცვლილების მოთხოვნა საბოლოო გადაწყვეტილების მდგომარეობას მიაღწია |
 | `S6d5708` | detail | This is the one truly irreversible action in the system. Type the identifier to confirm. | ეს სისტემის ერთადერთი ნამდვილად შეუქცევადი მოქმედებაა. დასადასტურებლად ჩაწერეთ იდენტიფიკატორი. |
@@ -19542,6 +20162,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S391d68` | detail, stalled | unassigned | არ არის დანიშნული |
 | `S73ec5d` | detail, form | Up/Down Counter | ზევით/ქვევით მთვლელი |
 | `S80c494` | detail | Uploaded | ატვირთულია |
+| `Sb01729` | detail, form | User-Group Levels | მომხმარებელთა ჯგუფის დონეები |
 | `S45288a` | detail, new | Version Label | ვერსიის ეტიკეტი |
 | `S4993ae` | detail | View Change Request | ცვლილების მოთხოვნის ნახვა |
 | `Scde93f` | detail | View Imported Drafts | შემოტანილი დრაფტების ნახვა |
@@ -19554,9 +20175,10 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S7d5316` | detail | Who | ვინ |
 | `S47e564` | detail | Withdraw | გამოთხოვა |
 | `S51a998` | detail | Withdraw this change request? | გამოითხოვოს ეს ცვლილების მოთხოვნა? |
+| `S95a2a4` | detail, form | Write level | ჩაწერის დონე |
 | `S612fe0` | detail | Yaw Bearing Lubrication Program | მოხვევის საკისრის შეზეთვის პროგრამა |
 | `S559a3f` | detail | Yaw Program | მოხვევის პროგრამა |
-| `S5397e0` | detail, export_verify, list | Yes | დიახ |
+| `S5397e0` | detail, export_verify, form | Yes | დიახ |
 | `Sc8e4b4` | detail | Your decision step | თქვენი გადაწყვეტილების ეტაპი |
 | `S20cb4c` | detail, export_center | ZIP with manifest | ZIP მანიფესტით |
 | `S5d4358` | dry_run | All rows are clean. | ყველა სტრიქონი სუფთაა. |
@@ -19644,6 +20266,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sf094b9` | form | Affected component (optional) | დაზარალებული კომპონენტი (არასავალდებულო) |
 | `S407cf2` | form | Applies from software version (optional) | ვრცელდება პროგრამის ვერსიიდან (არასავალდებულო) |
 | `Sa30242` | form | Applies up to software version (optional) | ვრცელდება პროგრამის ვერსიამდე (არასავალდებულო) |
+| `S7665e9` | form | Bit string of the generated program, e.g. 111011 (20 bits on the Main Controller, 6 on the Hub Controller). | გენერირებული პროგრამის ბიტური სტრიქონი, მაგ. 111011 (მთავარ კონტროლერში 20 ბიტი, ჰაბის კონტროლერში 6). |
 | `S77dfd2` | form, st_preview | Cancel | გაუქმება |
 | `S94c2a3` | form | Classification | კლასიფიკაცია |
 | `S7c9afd` | form | Classification only — a Sandbox code's identifier is still drawn from the isolated StCd-T##### band, never from this group's numeric range. | მხოლოდ კლასიფიკაცია — სანდბოქს კოდის იდენტიფიკატორი მაინც იღება იზოლირებული ზოლიდან StCd-T#####, არასდროს ამ ჯგუფის რიცხვითი დიაპაზონიდან. |
@@ -19652,7 +20275,9 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sdb0f93` | form | Immutable once allocated (BR-001). | მინიჭების შემდეგ უცვლელია (BR-001). |
 | `Sd7635c` | form | Legacy Reference Number (optional) | ძველი საცნობარო ნომერი (არასავალდებულო) |
 | `S2d3840` | form | New Sandbox Status Code | ახალი სანდბოქს სტატუსის კოდი |
+| `S0efd9f` | form | not captured | არ არის აღრიცხული |
 | `S8f9967` | form | Not yet assigned — fixed on Submit for Review | ჯერ არ არის მინიჭებული — ფიქსირდება განხილვაზე წარდგენისას |
+| `S152225` | form | Numeric levels of the generated program (0 to 255): read 1 = readable, 50 = no access. | გენერირებული პროგრამის რიცხვითი დონეები (0-დან 255-მდე): წაკითხვა 1 = წასაკითხი, 50 = წვდომის გარეშე. |
 | `S82890d` | form | Open review comments | ღია განხილვის კომენტარები |
 | `S611331` | form | Planned deprecation date (optional) | დაგეგმილი მოძველების თარიღი (არასავალდებულო) |
 | `S75ee24` | form | Planned effective date (optional) | დაგეგმილი ძალაში შესვლის თარიღი (არასავალდებულო) |
@@ -20160,6 +20785,29 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sc0d28c` | stalled | Reviewers who are out of office (they have delegated) are left out. | მიმომხილველები, რომლებიც ოფისს გარეთ არიან (დელეგირება გააკეთეს), არ შედიან. |
 | `Sca6d0e` | stalled | Stage | ეტაპი |
 | `Sb1bafe` | stalled | Stalled change requests | გაჭედილი მოთხოვნები |
+| `S0b6108` | status code fields | Anemometer Heating Program | ანემომეტრის გათბობა პროგრამა |
+| `S5387f1` | status code fields | Automatic Operation | ავტომატური მუშაობა |
+| `S49412e` | status code fields | Availability Calculation | ხელმისაწვდომობის გამოთვლა |
+| `S38cb6d` | status code fields | Converter Reset Program | გარდამქმნელის გადატვირთვა პროგრამა |
+| `S86a17b` | status code fields | Gearbox Oil Fan Program | გადაცემათა კოლოფის ზეთის ვენტილატორი პროგრამა |
+| `Scf4f90` | status code fields | Gearbox Oil Heating Program | გადაცემათა კოლოფის ზეთის გათბობა პროგრამა |
+| `S891ad9` | status code fields | Gearbox Oil Pump Program | გადაცემათა კოლოფის ზეთის ტუმბო პროგრამა |
+| `S6a0014` | status code fields | Generator Bearing Lubrication Program | გენერატორის საკისრის შეზეთვა პროგრამა |
+| `S7f38cc` | status code fields | Generator Fan Program | გენერატორის ვენტილატორი პროგრამა |
+| `Sf292a7` | status code fields | Generator Heating Program | გენერატორის გათბობა პროგრამა |
+| `Sdccc10` | status code fields | Hydraulic Pump Program | ჰიდრავლიკური ტუმბო პროგრამა |
+| `Se21075` | status code fields | Manual Operation | ხელით მუშაობა |
+| `S9beea7` | status code fields | Medium Voltage Circuit Breaker Program | საშუალო ძაბვის ამომრთველი პროგრამა |
+| `Scb0a0d` | status code fields | Pitch Error Program | ფრთის დახრის შეცდომა პროგრამა |
+| `S941428` | status code fields | Pitch Warning Program | ფრთის დახრის გაფრთხილება პროგრამა |
+| `Sd2fe56` | status code fields | Rotor Bearing Lubrication Program | როტორის საკისრის შეზეთვა პროგრამა |
+| `S381e23` | status code fields | Rotor Brake Program | როტორის მუხრუჭი პროგრამა |
+| `S1e3032` | status code fields | Stop Program 40 | გაჩერების პროგრამა 40 |
+| `S43b650` | status code fields | Stop Program 80 | გაჩერების პროგრამა 80 |
+| `S805790` | status code fields | Tower Fan Program | კოშკის ვენტილატორი პროგრამა |
+| `Sef9b9e` | status code fields | Transformer Oil Pump Program | ტრანსფორმატორის ზეთის ტუმბო პროგრამა |
+| `S18a446` | status code fields | Vane Position | ქარის მიმართულების მაჩვენებლის პოზიცია |
+| `S9ebce6` | status code fields | Zero Load Operation | ცარიელი დატვირთვით მუშაობა |
 | `Sff9f1f` | success_metrics | Age | ასაკი |
 | `S8cc047` | success_metrics | Approval | დამტკიცება |
 | `S273d62` | success_metrics | Audit trail completeness of Released codes | გამოშვებული კოდების აუდიტის კვალის სისრულე |
@@ -20302,6 +20950,7 @@ Every string of the interface with the templates that use it. A native speaker a
 | `Sa2ca0f` | An archived revision cannot be changed. | message: status_code_service | 18 of 18 |
 | `S506d0b` | An audience export is built from Released data only; it cannot be combined with the unapproved working set. | message: export_service | 18 of 18 |
 | `Sa57433` | An open Draft/Review/PendingApproval revision already exists (BR-003). | message: status_code_service | 18 of 18 |
+| `S0b6108` | Anemometer Heating Program | status code fields | 18 of 18 |
 | `Sc5fe02` | any | list | 18 of 18 |
 | `Sf24c44` | Any %(code)s Engineer | detail | 18 of 18 |
 | `Se61c2f` | Any number state | legacy_mapping | 18 of 18 |
@@ -20343,6 +20992,8 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S273d62` | Audit trail completeness of Released codes | success_metrics | 18 of 18 |
 | `S5fda23` | Author | approval_queue, detail, mine, review_queue | 18 of 18 |
 | `S416869` | Auto Reset Program | detail | 18 of 18 |
+| `S5387f1` | Automatic Operation | status code fields | 18 of 18 |
+| `S49412e` | Availability Calculation | status code fields | 18 of 18 |
 | `S94ea8c` | Available fields | export_profiles | 18 of 18 |
 | `Sd71897` | Available Group | detail, form | 18 of 18 |
 | `S66dc40` | Awaiting Administrator Sign-Off | dashboard | 18 of 18 |
@@ -20359,6 +21010,7 @@ Every string of the interface with the templates that use it. A native speaker a
 | `Sb584dd` | Backups need a file-based SQLite database. | message: backup_service | 18 of 18 |
 | `S74f396` | Before | _macros | 18 of 18 |
 | `Sdd5bd0` | before: | audit_log | 18 of 18 |
+| `S7665e9` | Bit string of the generated program, e.g. 111011 (20 bits on the Main Controller, 6 on the Hub Controller). | form | 18 of 18 |
 | `Sdf88b8` | blocked | st_preview | 18 of 18 |
 | `Sd9234b` | BR-005: a translation must be approved by someone else. | message: translation_service | 18 of 18 |
 | `S928e2e` | Brake Program | detail | 18 of 18 |
@@ -20439,6 +21091,7 @@ Every string of the interface with the templates that use it. A native speaker a
 | `Saa4de2` | controller must be auto, MC or HC | message: st_import_service | 18 of 18 |
 | `S382b49` | Controller software versions this Release is for (optional) | new | 18 of 18 |
 | `Scd293f` | Converter Reactive Power Program | detail | 18 of 18 |
+| `S38cb6d` | Converter Reset Program | status code fields | 18 of 18 |
 | `S3998a7` | Copies the descriptive fields into a new Draft in a Main Controller group (a new number is allocated at submit; this code's identifier is kept as the legacy reference). | detail | 18 of 18 |
 | `S2fd88e` | Copy from previous revision | translations | 18 of 18 |
 | `S5a3538` | Copy the signing secret now - it is shown only once: | integrations | 18 of 18 |
@@ -20617,8 +21270,15 @@ Every string of the interface with the templates that use it. A native speaker a
 | `Sae533a` | Functional System Group not found | message: hub_consolidation_service | 18 of 18 |
 | `S1404e3` | functional_system_group query parameter is required for functional-subgroups | message: lookup_service | 18 of 18 |
 | `S91c45d` | functional_system_group, code, label, sub_range_start, and sub_range_end are required | message: lookup_admin_service | 18 of 18 |
+| `Sb8c4c9` | Further Program References | detail, form | 18 of 18 |
 | `S1150a1` | Gaps | catalogue_health | 18 of 18 |
+| `S86a17b` | Gearbox Oil Fan Program | status code fields | 18 of 18 |
+| `Scf4f90` | Gearbox Oil Heating Program | status code fields | 18 of 18 |
+| `S891ad9` | Gearbox Oil Pump Program | status code fields | 18 of 18 |
 | `S7a2ec1` | generations kept | operations | 18 of 18 |
+| `S6a0014` | Generator Bearing Lubrication Program | status code fields | 18 of 18 |
+| `S7f38cc` | Generator Fan Program | status code fields | 18 of 18 |
+| `Sf292a7` | Generator Heating Program | status code fields | 18 of 18 |
 | `S636c41` | Grid Operator | detail | 18 of 18 |
 | `S171a06` | Group | catalogue_health, withdrawn_codes | 18 of 18 |
 | `S8cd536` | Group / Subgroup | st_preview | 18 of 18 |
@@ -20632,8 +21292,10 @@ Every string of the interface with the templates that use it. A native speaker a
 | `Sb4aadc` | Hub Controller | catalogue_health, legacy_mapping | 18 of 18 |
 | `S3b9e43` | Hub Controller (legacy numbers, mapped to the new ones) | st_new | 18 of 18 |
 | `Sfec8b7` | Hub Controller group | detail | 18 of 18 |
+| `S00ccae` | Hub Controller only | detail, form | 18 of 18 |
 | `Sc50c53` | Hub Controller to Main Controller consolidation | hub_consolidation | 18 of 18 |
 | `Scd189f` | Hub group | hub_consolidation | 18 of 18 |
+| `Sdccc10` | Hydraulic Pump Program | status code fields | 18 of 18 |
 | `S3c883f` | I have reviewed these dependants | detail | 18 of 18 |
 | `S06b6ac` | Identifier | approval_queue, builder, detail, mine | 18 of 18 |
 | `Sb0cd00` | Identifier override must match StCd-NNNNN (five digits). | message: numbering_service | 18 of 18 |
@@ -20716,11 +21378,13 @@ Every string of the interface with the templates that use it. A native speaker a
 | `Sa24877` | Lower-case letters, digits and hyphens; it never changes. | index | 18 of 18 |
 | `S1b123c` | Main Controller | catalogue_health, legacy_mapping, st_new | 18 of 18 |
 | `S578b78` | Main Controller group | detail | 18 of 18 |
+| `Sa7512d` | Main Controller only | detail, form | 18 of 18 |
 | `Sefd197` | Main navigation | base | 18 of 18 |
 | `Seb9a6d` | Manage translations | detail | 18 of 18 |
 | `Sc5beef` | manifest | detail | 18 of 18 |
 | `S45ea95` | Manifest signature | export_verify | 18 of 18 |
 | `Sc6ff17` | MANIFEST.json (optional) | export_center | 18 of 18 |
+| `Se21075` | Manual Operation | status code fields | 18 of 18 |
 | `S6d59f4` | Manual Reset Program | detail | 18 of 18 |
 | `S1b8316` | Mark all as read | notifications | 18 of 18 |
 | `Sc1ee86` | Mark as read | notifications | 18 of 18 |
@@ -20728,6 +21392,7 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S48926c` | Master list (.csv/.xlsx with a legacy_reference_number column) | reconciliation | 18 of 18 |
 | `S19cd7d` | Meaning | index, language | 18 of 18 |
 | `S9418f1` | median of | success_metrics | 18 of 18 |
+| `S9beea7` | Medium Voltage Circuit Breaker Program | status code fields | 18 of 18 |
 | `Sceafa9` | met | success_metrics | 18 of 18 |
 | `S801c9a` | Migration progress | new, reconciliation | 18 of 18 |
 | `S92185d` | Missing | catalogue_health, index | 18 of 18 |
@@ -20768,7 +21433,7 @@ Every string of the interface with the templates that use it. A native speaker a
 | `Sd85719` | New Status Code | base, form, list | 18 of 18 |
 | `S05c749` | New Subsystem | lookups | 18 of 18 |
 | `Sbc9819` | Next | _macros | 18 of 18 |
-| `S816c52` | No | detail, export_verify, list, review_checklist | 18 of 18 |
+| `S816c52` | No | detail, export_verify, form, list | 18 of 18 |
 | `S70d3f5` | No active account matches this Windows identity. | message: auth_service | 18 of 18 |
 | `S06fc8d` | No active Engineer holds the %(code)s domain yet. An Administrator must tag an Engineer with it (Administration → Users) before a sign-off can be requested. | detail | 18 of 18 |
 | `S12b701` | No Approved candidates match this Release's scope. | builder | 18 of 18 |
@@ -20812,6 +21477,7 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S71f8e7` | none | detail, form | 18 of 18 |
 | `Sb8e95b` | None found. | catalogue_health | 18 of 18 |
 | `S9a9707` | None. | catalogue_health, software_versions | 18 of 18 |
+| `S0efd9f` | not captured | form | 18 of 18 |
 | `Sd856bd` | Not deleted (it has a revision again or is still referenced): %(x)s | help and messages | 18 of 18 |
 | `S5af0a0` | Not for distribution | export_center | 18 of 18 |
 | `Sa8c86d` | NOT met | success_metrics | 18 of 18 |
@@ -20837,6 +21503,7 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S8e20aa` | number, name, file ... | st_preview | 18 of 18 |
 | `S58c916` | Number-range capacity | catalogue_health | 18 of 18 |
 | `S7b4cb2` | Numbers are never reused, so a gap is lost capacity - listed for information. | catalogue_health | 18 of 18 |
+| `S152225` | Numeric levels of the generated program (0 to 255): read 1 = readable, 50 = no access. | form | 18 of 18 |
 | `S96b7d7` | Numeric range is immutable once created (BR-001). | lookups | 18 of 18 |
 | `Sd5ab17` | Occurrence counts per status code, aggregated and anonymised, imported from the internal monitoring side. They show which codes never fire (candidates for deprecation) and which fire most (candidates for better remedy text). | fleet_feedback | 18 of 18 |
 | `Sf52555` | Occurrences | fleet_feedback | 18 of 18 |
@@ -20879,6 +21546,8 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S578c53` | Opens a Draft that must go through the full dual-review and Chief Engineer approval cycle before it takes effect. | detail | 18 of 18 |
 | `Sf71701` | opens a new Draft on the same number | st_preview | 18 of 18 |
 | `Sffc13f` | opens a new revision | st_preview | 18 of 18 |
+| `Sfa465a` | Operating Mode Mask | detail, form, status code fields | 18 of 18 |
+| `S20691e` | Operation Parameters | detail, form | 18 of 18 |
 | `Sa1fdaa` | Operations | base, operations | 18 of 18 |
 | `S175835` | or | login | 18 of 18 |
 | `Sc0eff1` | Or a whole folder | st_new | 18 of 18 |
@@ -20903,6 +21572,8 @@ Every string of the interface with the templates that use it. A native speaker a
 | `Sc62d67` | period(s) | fleet_feedback | 18 of 18 |
 | `Sb68487` | period_end must not be before period_start. | message: occurrence_service | 18 of 18 |
 | `Sc983b6` | Pick a profile (columns and labels), an audience, a language or a software version. Every file comes with a manifest of SHA-256 hashes; "bundle" packs both into one ZIP. | detail | 18 of 18 |
+| `Scb0a0d` | Pitch Error Program | status code fields | 18 of 18 |
+| `S941428` | Pitch Warning Program | status code fields | 18 of 18 |
 | `S72383d` | Planned dates | detail | 18 of 18 |
 | `Sfb14b0` | Planned deprecation date | detail | 18 of 18 |
 | `S611331` | Planned deprecation date (optional) | form | 18 of 18 |
@@ -20951,6 +21622,7 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S8cb56e` | range_end must be greater than range_start | message: lookup_admin_service | 18 of 18 |
 | `Se25b5d` | Raw SQLite backup of the complete governed dataset. Handle per data-at-rest access-control requirements — this file carries the same sensitivity as the live database. | export_center | 18 of 18 |
 | `S67640d` | Read files and preview | st_new | 18 of 18 |
+| `S6a9c56` | Read level | detail, form | 18 of 18 |
 | `S75c053` | ready | st_preview | 18 of 18 |
 | `S55843f` | Reassign | stalled | 18 of 18 |
 | `Sca5d2f` | Recent import jobs | reconciliation | 18 of 18 |
@@ -21024,6 +21696,8 @@ Every string of the interface with the templates that use it. A native speaker a
 | `Sc3f104` | Role | delegations, user_detail, users | 18 of 18 |
 | `S441acb` | Role of %(x)s | user_detail, users | 18 of 18 |
 | `S47dcc2` | Roles | help, users | 18 of 18 |
+| `Sd2fe56` | Rotor Bearing Lubrication Program | status code fields | 18 of 18 |
+| `S381e23` | Rotor Brake Program | status code fields | 18 of 18 |
 | `S9bf7a8` | Row | dry_run | 18 of 18 |
 | `S3ff0b0` | row(s) have problems. Nothing has been created. | dry_run | 18 of 18 |
 | `Sfc1d6a` | row(s) imported as Drafts | detail | 18 of 18 |
@@ -21093,6 +21767,7 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S985cf9` | Simulation. | login_windows | 18 of 18 |
 | `Sb71523` | Size | detail | 18 of 18 |
 | `Sbe504f` | Skip to main content | base | 18 of 18 |
+| `Sece2ac` | Slot | detail, form | 18 of 18 |
 | `S57e8a7` | slow | _macros, success_metrics | 18 of 18 |
 | `Sff44d2` | Software Version | detail | 18 of 18 |
 | `S169bf7` | Software version | detail, software_versions | 18 of 18 |
@@ -21124,6 +21799,8 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S3a7f3a` | step must be reviewer, admin or chief-engineer | message: change_set_service | 18 of 18 |
 | `S98a377` | Still a Draft. | detail | 18 of 18 |
 | `S4f437c` | Still missing | reconciliation | 18 of 18 |
+| `S1e3032` | Stop Program 40 | status code fields | 18 of 18 |
+| `S43b650` | Stop Program 80 | status code fields | 18 of 18 |
 | `S5b05b1` | Stored now | form | 18 of 18 |
 | `S73372c` | Sub-range end | lookups | 18 of 18 |
 | `S1f36bd` | Sub-range start | lookups | 18 of 18 |
@@ -21143,6 +21820,7 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S08e643` | Target software version | detail, list | 18 of 18 |
 | `Sfda98f` | Target software version (optional) | new | 18 of 18 |
 | `Sd64b6e` | Target software versions | builder, detail | 18 of 18 |
+| `S44203c` | Task Call Frequency | detail, form, status code fields | 18 of 18 |
 | `S770bce` | Term | check, index, language | 18 of 18 |
 | `Sfc3dfb` | Term not found | message: terminology_service | 18 of 18 |
 | `S21d278` | Terminology | base, index, language | 18 of 18 |
@@ -21213,6 +21891,8 @@ Every string of the interface with the templates that use it. A native speaker a
 | `Sb55f1f` | To revision | detail | 18 of 18 |
 | `Se89497` | Token not found | message: integration_service | 18 of 18 |
 | `S54e4b5` | Too many login attempts; try again later. | message: auth_service | 18 of 18 |
+| `S805790` | Tower Fan Program | status code fields | 18 of 18 |
+| `Sef9b9e` | Transformer Oil Pump Program | status code fields | 18 of 18 |
 | `S622d09` | Translate a revision once its source text is Approved (or Released). | message: translation_service | 18 of 18 |
 | `Sac26a7` | Translation | check, language | 18 of 18 |
 | `S74e196` | Translation not found | message: terminology_service | 18 of 18 |
@@ -21252,6 +21932,7 @@ Every string of the interface with the templates that use it. A native speaker a
 | `Scff3a3` | User deleted; its name and address are erased, what it did stays attributable. | help and messages | 18 of 18 |
 | `S5ca6e5` | User Management | users | 18 of 18 |
 | `S01eb94` | User not found | message: delegation_service | 18 of 18 |
+| `Sb01729` | User-Group Levels | detail, form | 18 of 18 |
 | `S84c290` | Username | account_settings, user_detail, users | 18 of 18 |
 | `S2c7ab3` | Username or email | login | 18 of 18 |
 | `S57f2b1` | Users | base | 18 of 18 |
@@ -21259,6 +21940,7 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S511ee2` | Valid for (days, max 365) | integrations | 18 of 18 |
 | `Sbc0767` | valid_to must not be before valid_from. | message: delegation_service | 18 of 18 |
 | `Sfc039f` | Validate only (creates nothing) | new | 18 of 18 |
+| `S18a446` | Vane Position | status code fields | 18 of 18 |
 | `Sdda6ac` | Verify | export_center | 18 of 18 |
 | `S22b05e` | Verify a file | export_center | 18 of 18 |
 | `S112d15` | Verify an export | export_verify | 18 of 18 |
@@ -21308,9 +21990,10 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S57dda3` | Working-Set Export | export_center | 18 of 18 |
 | `S9ddad9` | would be created | dry_run | 18 of 18 |
 | `S0a18cf` | would be revised | dry_run | 18 of 18 |
+| `S95a2a4` | Write level | detail, form | 18 of 18 |
 | `S612fe0` | Yaw Bearing Lubrication Program | detail | 18 of 18 |
 | `S559a3f` | Yaw Program | detail | 18 of 18 |
-| `S5397e0` | Yes | detail, export_verify, list, review_checklist | 18 of 18 |
+| `S5397e0` | Yes | detail, export_verify, form, list | 18 of 18 |
 | `Sfb360f` | yes | fleet_feedback | 18 of 18 |
 | `S5a4692` | You are covering for a colleague | base | 18 of 18 |
 | `Sf384a3` | You are not assigned to review this language. | message: translation_review_service | 18 of 18 |
@@ -21329,6 +22012,7 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S0b6c72` | Your entry | form | 18 of 18 |
 | `S863fd0` | Your own proposal: another person approves it. | language | 18 of 18 |
 | `S26d745` | Your password | user_detail, withdrawn_codes | 18 of 18 |
+| `S9ebce6` | Zero Load Operation | status code fields | 18 of 18 |
 | `S20cb4c` | ZIP with manifest | detail, export_center | 18 of 18 |
 
 <!-- translations:end -->

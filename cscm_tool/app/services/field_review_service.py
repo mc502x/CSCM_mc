@@ -8,6 +8,7 @@
   the wording confirmed is stored with the sign-off, so later edits of the checklist
   never rewrite history. With no checklist items configured nothing changes."""
 
+from app import status_code_fields
 from app.domain.errors import ForbiddenError, InvalidTransitionError, NotFoundError
 from app.extensions import db
 from app.models.change_request import (
@@ -45,6 +46,10 @@ COMMENTABLE_FIELDS = (
     "umrichterprogramm_gsc",
     "umrichterprogramm_msc",
     "yaw_bearing_lubrication_program",
+    *status_code_fields.PROGRAM_FIELDS,
+    *status_code_fields.FLAG_FIELDS,
+    "operating_mode_mask",
+    "task_call_frequency",
     "development_access",
     "sales_access",
     "tcc_access",

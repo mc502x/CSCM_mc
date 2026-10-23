@@ -15,7 +15,7 @@ A ✅ means "an automated test exercises it", not "a person signed it off". Test
 | Security (SEC) — 24 | 24 | 0 | 0 (TLS termination and key custody are deployment checks, §6) |
 | Audit (AUD) — 8 | 8 | 0 | 0 |
 | Non-functional (NFR) — 14 | 12 | 1 (NFR-002 availability) | 1 (NFR-007 usability needs UAT) |
-| Test matrix (every TC in 13-test-strategy.md §8 and §8a, TC-001 … TC-062) | all | 0 | TC-030: scripted ✅, human sign-off 🧑 |
+| Test matrix (every TC in 13-test-strategy.md §8 and §8a, TC-001 … TC-063) | all | 0 | TC-030: scripted ✅, human sign-off 🧑 |
 
 ## 1a. The v4 pass (2026-10-23)
 
@@ -210,6 +210,7 @@ Also: `record_property` measurements are now carried into the report (`junit_fam
 | FR-165 | ✅ | `test_pdf_scripts::test_a_script_gets_its_own_font`, `…latin_text_needs_no_script_font_and_arabic_is_told_from_urdu`, `…every_script_builds_a_pdf_with_its_font`, `…the_title_page_and_notice_may_carry_any_script`, `…shaping_is_switched_on_per_cell_only_where_a_script_needs_it`, `…every_character_of_every_translation_is_drawn_by_a_bundled_font`, `…the_fonts_and_their_licence_are_bundled_and_shaping_is_available`, `…a_large_export_stays_fast_for_latin_text`; `test_publication::test_pdf_survives_characters_no_font_has` |
 | FR-166 | ✅ | `test_terminology::test_the_vocabulary_ships_with_every_term_in_every_language_as_a_draft`, `…the_shipped_terms_agree_with_the_interface_catalogue_where_both_have_the_word`, `…terms_that_are_never_translated_have_no_translation`, `…everybody_reads_but_only_the_technical_roles_propose`, `…an_interface_reviewer_has_no_say_in_the_terminology`, `…a_proposal_is_a_draft_until_another_person_approves_it`, `…a_shipped_draft_can_be_approved_by_anybody_who_may_approve_and_all_at_once`, `…send_back_needs_a_note_and_reopens_an_approved_translation`, `…validation_of_a_translation`, `…only_the_managers_add_and_change_terms_and_a_new_english_reopens_approvals`, `…the_check_finds_interface_strings_that_do_not_use_the_term`, `…the_vocabulary_is_exported_per_language_and_for_all`, `…a_formula_in_a_cell_is_neutralised_in_the_csv` |
 | FR-167 | ✅ | `test_i18n::test_every_language_translates_the_whole_interface_inventory`, `…every_template_string_has_a_german_entry`, `…placeholders_survive_translation`; `test_translations_doc::test_every_language_has_its_section_and_its_coverage_row` |
+| FR-168 | ✅ | `test_generated_fields::test_a_main_program_import_keeps_every_field_of_the_program`, `…the_two_zero_load_attributes_are_not_mixed_up`, `…a_hub_program_import_keeps_its_hub_fields_and_nothing_of_the_main_ones`, `…a_field_of_the_other_controller_is_refused_and_the_rest_is_stored`, `…values_out_of_range_are_refused`, `…a_new_revision_carries_over_what_the_caller_does_not_send_and_the_diff_shows_changes`, `…the_form_stores_the_fields_and_the_pages_show_them`, `…a_rejected_form_keeps_what_was_typed`, `…the_levels_and_programs_are_internal_and_never_leave_in_an_audience_export`, `…withdrawing_and_deleting_a_code_removes_its_levels` |
 
 ## 4. Business rules, security, non-functional
 

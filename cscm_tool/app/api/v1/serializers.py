@@ -2,6 +2,7 @@
 
 import json
 
+from app import status_code_fields
 from app.models.audit import AuditLogEntry
 from app.models.change_request import ChangeRequest, DomainSignoff, ReviewComment
 from app.models.import_job import ImportJob
@@ -117,6 +118,22 @@ def revision_payload(revision: StatusCodeRevision, warnings: list[dict] | None =
         "planned_effective_date": revision.planned_effective_date,
         "planned_deprecation_date": revision.planned_deprecation_date,
     }
+    # schema v4.1: the further programs, flags and parameters of the generated programs
+    for field in status_code_fields.PROGRAM_FIELDS:
+        payload[field] = getattr(revision, field)
+    for field in status_code_fields.FLAG_FIELDS:
+        value = getattr(revision, field)
+        payload[field] = None if value is None else bool(value)
+    payload["operating_mode_mask"] = revision.operating_mode_mask
+    payload["operating_mode_bits"] = status_code_fields.mask_to_binary(
+        revision.operating_mode_mask, "HUB" if group.controller_type == "HUB" else "MAIN"
+    )
+    payload["task_call_frequency"] = revision.task_call_frequency
+    payload["controller_type"] = group.controller_type
+    payload["user_groups"] = [
+        {"slot": slot, **levels}
+        for slot, levels in sorted(status_code_fields.user_groups(revision).items())
+    ]
     if warnings is not None:
         payload["warnings"] = warnings
     return payload

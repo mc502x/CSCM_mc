@@ -17,6 +17,8 @@ deliberately NOT hard-validated here."""
 
 import re
 
+from app import status_code_fields
+
 _DELAY_RE = re.compile(r"^\*?\d+(\.\d+)?\s?(ms|s|min|MIN|h|d)$")
 _REPEAT_WINDOW_RE = re.compile(r"^\d+(\.\d+)?\s?(s|min|h|d)$")
 _STATUS_CATEGORIES = {"ERROR", "WARNING", "INFO"}
@@ -151,6 +153,8 @@ def validate_revision_fields(data: dict) -> list[dict]:
         errors.append(
             {"field": "turbine_platforms", "message": "At least one Turbine Platform is required."}
         )
+
+    errors.extend(status_code_fields.validate(data))
 
     return errors
 

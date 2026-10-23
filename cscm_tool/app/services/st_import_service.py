@@ -54,6 +54,7 @@ from typing import Any
 from flask import current_app
 from sqlalchemy import text
 
+from app import status_code_fields
 from app.domain.authz import require_roles
 from app.domain.errors import DomainError, ForbiddenError, NotFoundError
 from app.extensions import db
@@ -93,6 +94,25 @@ _PROGRAM_FIELDS = {
     "ConverterGSC": "umrichterprogramm_gsc",
     "ConverterMSC": "umrichterprogramm_msc",
     "YawLub": "yaw_bearing_lubrication_program",
+}
+# the further subsystem programs of schema v4.1 (docs/06-data-dictionary.md section 2c.1)
+_EXTRA_PROGRAM_FIELDS = {
+    "ResetConverter": "converter_reset_program",
+    "Hydraulic": "hydraulic_pump_program",
+    "GearOilPump": "gearbox_oil_pump_program",
+    "GearOilCooling": "gearbox_oil_fan_program",
+    "GearHeating": "gearbox_oil_heating_program",
+    "GenFan": "generator_fan_program",
+    "GenHeating": "generator_heating_program",
+    "GenoLub": "generator_bearing_lubrication_program",
+    "RotBearLub": "rotor_bearing_lubrication_program",
+    "VaneAneHeat": "anemometer_heating_program",
+    "MeanVoltageCB": "medium_voltage_cb_program",
+    "TowerFan": "tower_fan_program",
+    "TrafoPump": "transformer_oil_pump_program",
+    "PtErrOp": "pitch_error_program",
+    "PtWarnOp": "pitch_warning_program",
+    "RotorBrake": "rotor_brake_program",
 }
 _ALL_CATALOGUE_PROGRAM_FIELDS = tuple(_PROGRAM_FIELDS.values())
 _ACCESS_FIELDS = (
@@ -573,7 +593,7 @@ def _to_data(
         "reset_delay": reset_delay or "0ms",
         "up_down_counter": False,
         "trigger_snapshot": bool(code.snapshot),
-        "loadless_spinning_permitted": bool(code.zero_load_operation),
+        "loadless_spinning_permitted": bool(code.other.get("ZeroLoadPrg_ArBo")),
         "number_of_times_repeated": (
             code.max_repeats if code.max_repeats and code.max_repeats >= 1 else None
         ),
@@ -595,10 +615,44 @@ def _to_data(
         data[target] = int(code.programs.get(source) or 0)
     for field_name in _ALL_CATALOGUE_PROGRAM_FIELDS:
         data.setdefault(field_name, 0)
+    data.update(_generated_fields(code, group.controller_type, warnings))
     for field_name in _ACCESS_FIELDS:
         data[field_name] = None
     if not code.name:
         warnings.append("The program has no name in its header comment.")
+    return data
+
+
+def _generated_fields(
+    code: stcd.StatusCode, controller: str, warnings: list[str]
+) -> dict[str, Any]:
+    """What the generated program holds beyond the classic fields (schema v4.1): the further
+    subsystem programs, the operating-mode mask, the task call frequency, two flags and the sixteen
+    user-group levels. A value for a field that does not apply to the controller is dropped with a
+    warning (docs/06-data-dictionary.md section 2f)."""
+    data: dict[str, Any] = {f: 0 for f in status_code_fields.PROGRAM_FIELDS}
+    for source, target in _EXTRA_PROGRAM_FIELDS.items():
+        value = int(code.programs.get(source) or 0)
+        if value and not status_code_fields.applies_to(target, controller):
+            warnings.append(
+                f"{source}PrgArUs is {value}, but {status_code_fields.LABELS[target]} does not "
+                f"apply to the {'Hub' if controller == 'HUB' else 'Main'} Controller; "
+                "it is left out."
+            )
+            value = 0
+        data[target] = value
+    for flag in status_code_fields.FLAG_FIELDS:
+        data[flag] = None
+    if status_code_fields.applies_to("zero_load_operation", controller):
+        data["zero_load_operation"] = code.zero_load_operation
+    data["availability_calc"] = code.availability_calc
+    data["operating_mode_mask"] = status_code_fields.parse_mask(code.op_mode_bits or None)
+    data["task_call_frequency"] = code.task_call_frequency
+    data["user_groups"] = {
+        slot: {"read": levels["read"], "write": levels["write"]}
+        for slot, levels in code.user_groups.items()
+        if "read" in levels and "write" in levels
+    }
     return data
 
 

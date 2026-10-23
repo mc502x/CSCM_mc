@@ -6,6 +6,7 @@ A profile names export *fields* (the column names of the flat export row, see
 
 import json
 
+from app import status_code_fields
 from app.domain.authz import require_roles
 from app.domain.errors import DomainError, NotFoundError
 from app.extensions import db
@@ -46,6 +47,11 @@ EXPORT_FIELDS = (
     "umrichterprogramm_gsc",
     "umrichterprogramm_msc",
     "yaw_bearing_lubrication_program",
+    *status_code_fields.PROGRAM_FIELDS,
+    *status_code_fields.FLAG_FIELDS,
+    "operating_mode_mask",
+    "task_call_frequency",
+    "user_group_levels",
     "development_access",
     "sales_access",
     "tcc_access",

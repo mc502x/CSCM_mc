@@ -12,6 +12,7 @@ from collections.abc import Callable
 from dataclasses import dataclass, field
 from datetime import UTC, datetime
 
+from app import status_code_fields
 from app.domain.authz import require_roles
 from app.export.csv_exporter import build_csv
 from app.export.full_database_exporter import export_full_database_bytes
@@ -42,6 +43,27 @@ _BUILDERS: dict[str, tuple[Callable[[list[dict]], bytes], str]] = {
 
 def _access_code(lookup) -> str | None:
     return lookup.code if lookup is not None else None
+
+
+def _generated_columns(revision: StatusCodeRevision) -> dict:
+    """The fields of the generated programs (schema v4.1): further programs, flags, parameters
+    and the numeric user-group levels as "slot:read/write" in slot order."""
+    controller = (
+        "HUB" if revision.status_code.functional_system_group.controller_type == "HUB" else "MAIN"
+    )
+    columns: dict = {f: getattr(revision, f) for f in status_code_fields.PROGRAM_FIELDS}
+    for flag in status_code_fields.FLAG_FIELDS:
+        value = getattr(revision, flag)
+        columns[flag] = None if value is None else bool(value)
+    columns["operating_mode_mask"] = (
+        status_code_fields.mask_to_binary(revision.operating_mode_mask, controller) or None
+    )
+    columns["task_call_frequency"] = revision.task_call_frequency
+    levels = status_code_fields.user_groups(revision)
+    columns["user_group_levels"] = (
+        " ".join(f"{slot}:{v['read']}/{v['write']}" for slot, v in sorted(levels.items())) or None
+    )
+    return columns
 
 
 def flatten_revision(revision: StatusCodeRevision) -> dict:
@@ -82,6 +104,7 @@ def flatten_revision(revision: StatusCodeRevision) -> dict:
         "umrichterprogramm_gsc": revision.umrichterprogramm_gsc,
         "umrichterprogramm_msc": revision.umrichterprogramm_msc,
         "yaw_bearing_lubrication_program": revision.yaw_bearing_lubrication_program,
+        **_generated_columns(revision),
         "development_access": _access_code(revision.development_access),
         "sales_access": _access_code(revision.sales_access),
         "tcc_access": _access_code(revision.tcc_access),

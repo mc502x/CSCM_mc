@@ -12,7 +12,7 @@
 The **Controller Status Code Management Tool (CSCM Tool)** is the governed system of record for the status codes of Senvion 4XM/3XM/2XM wind-turbine **Main Controllers** and **Hub Controllers**: the faults, warnings and informational messages the controller software raises. It reverses the former document-first practice — codes are *created, completed, reviewed, approved, versioned and released inside this tool*, and technical manuals, specifications and SCADA tag lists are derived from it.
 
 ### 1.2 What the software does
-1. Holds each status code with a stable identifier `StCd-XXXXX`, a rich field set (category, delays, counters, program references, eight audience-access values) and complete revision history.
+1. Holds each status code with a stable identifier `StCd-XXXXX`, a rich field set (category, delays, counters, program references, the further programs, parameters and user-group levels of the generated programs, eight audience-access values) and complete revision history.
 2. Enforces a **seven-state lifecycle** — Draft → Review → PendingApproval → Approved → Released → Deprecated → Archived — with **three independent decisions** before release: a Reviewer sign-off, an Administrator sign-off, and a Chief Engineer approval (FR-030–FR-039, BR-004, BR-005).
 3. Routes work to the right engineers with **Cross-Domain Sign-Off** (FR-027–FR-029).
 4. Allocates identifiers atomically per Functional System Group and Subgroup (FR-021).

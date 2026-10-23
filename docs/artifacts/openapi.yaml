@@ -1984,6 +1984,34 @@ components:
         umrichterprogramm_gsc: { type: integer }
         umrichterprogramm_msc: { type: integer }
         yaw_bearing_lubrication_program: { type: integer }
+        converter_reset_program: { type: integer, minimum: 0, maximum: 65535, default: 0, description: "Converter Reset Program (Main Controller only); 0 = the code does not act on it" }
+        hydraulic_pump_program: { type: integer, minimum: 0, maximum: 65535, default: 0, description: "Hydraulic Pump Program (Main Controller only); 0 = the code does not act on it" }
+        gearbox_oil_pump_program: { type: integer, minimum: 0, maximum: 65535, default: 0, description: "Gearbox Oil Pump Program (Main Controller only); 0 = the code does not act on it" }
+        gearbox_oil_fan_program: { type: integer, minimum: 0, maximum: 65535, default: 0, description: "Gearbox Oil Fan Program (Main Controller only); 0 = the code does not act on it" }
+        gearbox_oil_heating_program: { type: integer, minimum: 0, maximum: 65535, default: 0, description: "Gearbox Oil Heating Program (Main Controller only); 0 = the code does not act on it" }
+        generator_fan_program: { type: integer, minimum: 0, maximum: 65535, default: 0, description: "Generator Fan Program (Main Controller only); 0 = the code does not act on it" }
+        generator_heating_program: { type: integer, minimum: 0, maximum: 65535, default: 0, description: "Generator Heating Program (Main Controller only); 0 = the code does not act on it" }
+        generator_bearing_lubrication_program: { type: integer, minimum: 0, maximum: 65535, default: 0, description: "Generator Bearing Lubrication Program (Main Controller only); 0 = the code does not act on it" }
+        rotor_bearing_lubrication_program: { type: integer, minimum: 0, maximum: 65535, default: 0, description: "Rotor Bearing Lubrication Program (Main Controller only); 0 = the code does not act on it" }
+        anemometer_heating_program: { type: integer, minimum: 0, maximum: 65535, default: 0, description: "Anemometer Heating Program (Main Controller only); 0 = the code does not act on it" }
+        medium_voltage_cb_program: { type: integer, minimum: 0, maximum: 65535, default: 0, description: "Medium Voltage Circuit Breaker Program (Main Controller only); 0 = the code does not act on it" }
+        tower_fan_program: { type: integer, minimum: 0, maximum: 65535, default: 0, description: "Tower Fan Program (Main Controller only); 0 = the code does not act on it" }
+        transformer_oil_pump_program: { type: integer, minimum: 0, maximum: 65535, default: 0, description: "Transformer Oil Pump Program (Main Controller only); 0 = the code does not act on it" }
+        pitch_error_program: { type: integer, minimum: 0, maximum: 65535, default: 0, description: "Pitch Error Program (Hub Controller only); 0 = the code does not act on it" }
+        pitch_warning_program: { type: integer, minimum: 0, maximum: 65535, default: 0, description: "Pitch Warning Program (Hub Controller only); 0 = the code does not act on it" }
+        rotor_brake_program: { type: integer, minimum: 0, maximum: 65535, default: 0, description: "Rotor Brake Program (Hub Controller only); 0 = the code does not act on it" }
+        zero_load_operation: { type: boolean, nullable: true, description: "Zero Load Operation (Main Controller only); null = not captured" }
+        availability_calc: { type: boolean, nullable: true, description: "Availability Calculation (both controllers); null = not captured" }
+        stop_program_40_flag: { type: boolean, nullable: true, description: "Stop Program 40 (Hub Controller only); null = not captured" }
+        stop_program_80_flag: { type: boolean, nullable: true, description: "Stop Program 80 (Hub Controller only); null = not captured" }
+        manual_operation_flag: { type: boolean, nullable: true, description: "Manual Operation (Hub Controller only); null = not captured" }
+        automatic_operation_flag: { type: boolean, nullable: true, description: "Automatic Operation (Hub Controller only); null = not captured" }
+        vane_position_flag: { type: boolean, nullable: true, description: "Vane Position (Hub Controller only); null = not captured" }
+        operating_mode_mask: { type: integer, nullable: true, minimum: 0, maximum: 1048575, description: "OpModeArDw as a number: 20 bits on the Main Controller, 6 on the Hub Controller (the forms show it as a bit string); null = not captured" }
+        task_call_frequency: { type: integer, nullable: true, minimum: 1, description: "TaskCallFrequencyArBy (1, 10 or 100 so far); null = not captured" }
+        user_groups: { type: array, description: "The numeric user-group levels (UserGroupReadArBy / WriteArBy), one entry per slot 0-15; omitted = unchanged", items: { type: object, required: [slot, read, write], properties: { slot: { type: integer, minimum: 0, maximum: 15 }, read: { type: integer, minimum: 0, maximum: 255 }, write: { type: integer, minimum: 0, maximum: 255 } } } }
+        operating_mode_bits: { type: string, description: "operating_mode_mask as the bit string of the generated program" }
+        controller_type: { type: string, enum: [MAIN, HUB] }
         access_confirmed: { type: boolean, description: "True once the Administrator's Review sign-off has confirmed (or overridden) the eight audience-access fields" }
         functional_system_group_id: { type: integer }
         functional_subgroup_id: { type: integer }
@@ -2066,6 +2094,32 @@ components:
         umrichterprogramm_gsc: { type: integer, default: 0 }
         umrichterprogramm_msc: { type: integer, default: 0 }
         yaw_bearing_lubrication_program: { type: integer, default: 0 }
+        converter_reset_program: { type: integer, minimum: 0, maximum: 65535, default: 0, description: "Converter Reset Program (Main Controller only); 0 = the code does not act on it" }
+        hydraulic_pump_program: { type: integer, minimum: 0, maximum: 65535, default: 0, description: "Hydraulic Pump Program (Main Controller only); 0 = the code does not act on it" }
+        gearbox_oil_pump_program: { type: integer, minimum: 0, maximum: 65535, default: 0, description: "Gearbox Oil Pump Program (Main Controller only); 0 = the code does not act on it" }
+        gearbox_oil_fan_program: { type: integer, minimum: 0, maximum: 65535, default: 0, description: "Gearbox Oil Fan Program (Main Controller only); 0 = the code does not act on it" }
+        gearbox_oil_heating_program: { type: integer, minimum: 0, maximum: 65535, default: 0, description: "Gearbox Oil Heating Program (Main Controller only); 0 = the code does not act on it" }
+        generator_fan_program: { type: integer, minimum: 0, maximum: 65535, default: 0, description: "Generator Fan Program (Main Controller only); 0 = the code does not act on it" }
+        generator_heating_program: { type: integer, minimum: 0, maximum: 65535, default: 0, description: "Generator Heating Program (Main Controller only); 0 = the code does not act on it" }
+        generator_bearing_lubrication_program: { type: integer, minimum: 0, maximum: 65535, default: 0, description: "Generator Bearing Lubrication Program (Main Controller only); 0 = the code does not act on it" }
+        rotor_bearing_lubrication_program: { type: integer, minimum: 0, maximum: 65535, default: 0, description: "Rotor Bearing Lubrication Program (Main Controller only); 0 = the code does not act on it" }
+        anemometer_heating_program: { type: integer, minimum: 0, maximum: 65535, default: 0, description: "Anemometer Heating Program (Main Controller only); 0 = the code does not act on it" }
+        medium_voltage_cb_program: { type: integer, minimum: 0, maximum: 65535, default: 0, description: "Medium Voltage Circuit Breaker Program (Main Controller only); 0 = the code does not act on it" }
+        tower_fan_program: { type: integer, minimum: 0, maximum: 65535, default: 0, description: "Tower Fan Program (Main Controller only); 0 = the code does not act on it" }
+        transformer_oil_pump_program: { type: integer, minimum: 0, maximum: 65535, default: 0, description: "Transformer Oil Pump Program (Main Controller only); 0 = the code does not act on it" }
+        pitch_error_program: { type: integer, minimum: 0, maximum: 65535, default: 0, description: "Pitch Error Program (Hub Controller only); 0 = the code does not act on it" }
+        pitch_warning_program: { type: integer, minimum: 0, maximum: 65535, default: 0, description: "Pitch Warning Program (Hub Controller only); 0 = the code does not act on it" }
+        rotor_brake_program: { type: integer, minimum: 0, maximum: 65535, default: 0, description: "Rotor Brake Program (Hub Controller only); 0 = the code does not act on it" }
+        zero_load_operation: { type: boolean, nullable: true, description: "Zero Load Operation (Main Controller only); null = not captured" }
+        availability_calc: { type: boolean, nullable: true, description: "Availability Calculation (both controllers); null = not captured" }
+        stop_program_40_flag: { type: boolean, nullable: true, description: "Stop Program 40 (Hub Controller only); null = not captured" }
+        stop_program_80_flag: { type: boolean, nullable: true, description: "Stop Program 80 (Hub Controller only); null = not captured" }
+        manual_operation_flag: { type: boolean, nullable: true, description: "Manual Operation (Hub Controller only); null = not captured" }
+        automatic_operation_flag: { type: boolean, nullable: true, description: "Automatic Operation (Hub Controller only); null = not captured" }
+        vane_position_flag: { type: boolean, nullable: true, description: "Vane Position (Hub Controller only); null = not captured" }
+        operating_mode_mask: { type: integer, nullable: true, minimum: 0, maximum: 1048575, description: "OpModeArDw as a number: 20 bits on the Main Controller, 6 on the Hub Controller (the forms show it as a bit string); null = not captured" }
+        task_call_frequency: { type: integer, nullable: true, minimum: 1, description: "TaskCallFrequencyArBy (1, 10 or 100 so far); null = not captured" }
+        user_groups: { type: array, description: "The numeric user-group levels (UserGroupReadArBy / WriteArBy), one entry per slot 0-15; omitted = unchanged", items: { type: object, required: [slot, read, write], properties: { slot: { type: integer, minimum: 0, maximum: 15 }, read: { type: integer, minimum: 0, maximum: 255 }, write: { type: integer, minimum: 0, maximum: 255 } } } }
         development_access: { type: string, nullable: true }
         sales_access: { type: string, nullable: true }
         tcc_access: { type: string, nullable: true }

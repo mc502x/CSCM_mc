@@ -18,6 +18,7 @@ import io
 from collections import defaultdict
 from pathlib import Path
 
+from app import status_code_fields
 from app.auth.roles import ROLES
 from app.i18n import LANGUAGE_META, RTL_LANGUAGES, TEMPLATE_STRING_RE
 from app.i18n_de import DE
@@ -84,6 +85,8 @@ def screens() -> dict[str, list[str]]:
             found[english].add(path.stem)
     for role in ROLES.values():
         found[role.label].add("role badge")
+    for english in status_code_fields.LABELS.values():  # labels the templates take from the module
+        found[english].add("status code fields")
     for english, files in service_messages().items():
         found[english].update(f"message: {f}" for f in files[:2])
     for english in DE:  # help text and other strings that are not template literals

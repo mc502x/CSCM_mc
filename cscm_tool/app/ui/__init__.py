@@ -31,6 +31,7 @@ def _inject_current_user():
 
     v4: also the UI language (I-22), the unread-notice count (I-08) and the
     help lookups (I-35) every page needs."""
+    from app import status_code_fields
     from app.auth.roles import role_info
     from app.i18n import LANGUAGE_META, LANGUAGES, RTL_LANGUAGES, current_language
 
@@ -46,6 +47,7 @@ def _inject_current_user():
         "language_meta": LANGUAGE_META,
         "ui_dir": "rtl" if current_language() in RTL_LANGUAGES else "ltr",
         "role_info": role_info,
+        "scf": status_code_fields,  # the fields of the generated programs (FR-168)
         "translation_access": _translation_access(),
         "unread_notices": unread,
     }

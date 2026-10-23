@@ -1,6 +1,7 @@
 """Cross-Domain Sign-Off. FR-027-FR-029, BR-011. See
 docs/06-data-dictionary.md §2a for the field-to-domain ownership mapping."""
 
+from app import status_code_fields
 from app.domain.errors import DomainError
 from app.extensions import db
 from app.models.change_request import ChangeRequest, DomainSignoff, DomainSignoffRequest
@@ -42,6 +43,9 @@ FIELDS_OWNED_BY_DOMAIN: dict[str, tuple[str, ...]] = {
         "umrichterprogramm_gsc",
         "umrichterprogramm_msc",
         "yaw_bearing_lubrication_program",
+        *status_code_fields.PROGRAM_FIELDS,
+        "operating_mode_mask",
+        "task_call_frequency",
     ),
 }
 

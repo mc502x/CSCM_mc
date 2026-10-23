@@ -45,6 +45,7 @@ from typing import Any
 from flask import current_app
 from openpyxl import Workbook, load_workbook
 
+from app import status_code_fields
 from app.domain.authz import require_roles
 from app.domain.errors import DomainError, NotFoundError
 from app.extensions import db
@@ -513,6 +514,8 @@ _COMPARED = (
 
 
 def _normalise(value: Any) -> Any:
+    if isinstance(value, dict):
+        return {int(k): v for k, v in value.items()}
     if isinstance(value, list):
         return sorted(value)
     if value == "":
@@ -525,7 +528,12 @@ def _normalise(value: Any) -> Any:
 def changed_fields(current: StatusCodeRevision, data: dict) -> list[str]:
     """The compared fields in which a row (or a program file) differs from the current revision."""
     existing = revision_to_data(current)
-    return [f for f in _COMPARED if _normalise(existing.get(f)) != _normalise(data.get(f))]
+    # the fields of the generated programs are compared when the source carries them (v4.1)
+    compared = [
+        *_COMPARED,
+        *(f for f in (*status_code_fields.NEW_FIELDS, "user_groups") if f in data),
+    ]
+    return [f for f in compared if _normalise(existing.get(f)) != _normalise(data.get(f))]
 
 
 def _unchanged(current: StatusCodeRevision, data: dict) -> bool:

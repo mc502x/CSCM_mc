@@ -5,6 +5,7 @@ diagrams in docs/08-system-architecture.md §5.1-5.3."""
 from sqlalchemy import text
 from werkzeug.exceptions import NotFound
 
+from app import status_code_fields
 from app.domain.authz import require_roles
 from app.domain.errors import DomainError, InvalidTransitionError, SegregationOfDutiesViolation
 from app.extensions import db
@@ -639,6 +640,7 @@ class ChangeRequestService:
         db.session.query(StatusCodeRevisionPlatform).filter(
             StatusCodeRevisionPlatform.status_code_revision_id == revision.id
         ).delete()
+        status_code_fields.delete_user_groups(revision.id)
         db.session.delete(revision)
         if released:
             status_code.reserved_identifier = None

@@ -17,6 +17,7 @@ the translation status (I-15)."""
 
 from flask import flash, redirect, render_template, request, url_for
 
+from app import status_code_fields
 from app.api.v1.serializers import revision_payload
 from app.auth.decorators import current_user, login_required_web, require_role_web
 from app.domain.errors import (
@@ -126,6 +127,20 @@ def _form_to_data(form) -> dict:
         data[field] = _int_or_none(form.get(field)) or 0
     for field in _ACCESS_VOCAB_FIELDS:
         data[field] = _int_or_none(form.get(field))
+    # schema v4.1: the further programs, flags, parameters and user-group levels
+    for field in status_code_fields.PROGRAM_FIELDS:
+        data[field] = _int_or_none(form.get(field)) or 0
+    for field in status_code_fields.FLAG_FIELDS:
+        choice = form.get(field)
+        data[field] = None if choice in (None, "") else choice == "1"
+    data["operating_mode_mask"] = (form.get("operating_mode_mask") or "").strip() or None
+    data["task_call_frequency"] = _int_or_none(form.get("task_call_frequency"))
+    data["user_groups"] = {
+        slot: {"read": form.get(f"ug_read_{slot}"), "write": form.get(f"ug_write_{slot}")}
+        for slot in status_code_fields.USER_GROUP_SLOTS
+        if form.get(f"ug_read_{slot}") not in (None, "")
+        or form.get(f"ug_write_{slot}") not in (None, "")
+    }
     if form.get("row_version"):
         data["expected_row_version"] = form.get("row_version")
     return data
@@ -143,6 +158,10 @@ def _revision_to_form_values(payload: dict) -> dict:
     values["applies_to_version"] = payload["applies_to_version_id"]
     for field in _ACCESS_VOCAB_FIELDS:
         values[field] = payload[f"{field}_id"]
+    values["operating_mode_mask"] = payload["operating_mode_bits"]
+    values["user_groups"] = {
+        u["slot"]: {"read": u["read"], "write": u["write"]} for u in payload["user_groups"]
+    }
     return values
 
 

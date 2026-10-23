@@ -154,10 +154,39 @@ class StatusCodeRevision(Base):
     )  # I-07
     planned_effective_date = db.Column(db.Text)  # I-27
     planned_deprecation_date = db.Column(db.Text)  # I-27
+    converter_reset_program = db.Column(db.Integer, nullable=False, default=0)  # v4.1
+    hydraulic_pump_program = db.Column(db.Integer, nullable=False, default=0)  # v4.1
+    gearbox_oil_pump_program = db.Column(db.Integer, nullable=False, default=0)  # v4.1
+    gearbox_oil_fan_program = db.Column(db.Integer, nullable=False, default=0)  # v4.1
+    gearbox_oil_heating_program = db.Column(db.Integer, nullable=False, default=0)  # v4.1
+    generator_fan_program = db.Column(db.Integer, nullable=False, default=0)  # v4.1
+    generator_heating_program = db.Column(db.Integer, nullable=False, default=0)  # v4.1
+    generator_bearing_lubrication_program = db.Column(db.Integer, nullable=False, default=0)  # v4.1
+    rotor_bearing_lubrication_program = db.Column(db.Integer, nullable=False, default=0)  # v4.1
+    anemometer_heating_program = db.Column(db.Integer, nullable=False, default=0)  # v4.1
+    medium_voltage_cb_program = db.Column(db.Integer, nullable=False, default=0)  # v4.1
+    tower_fan_program = db.Column(db.Integer, nullable=False, default=0)  # v4.1
+    transformer_oil_pump_program = db.Column(db.Integer, nullable=False, default=0)  # v4.1
+    pitch_error_program = db.Column(db.Integer, nullable=False, default=0)  # v4.1
+    pitch_warning_program = db.Column(db.Integer, nullable=False, default=0)  # v4.1
+    rotor_brake_program = db.Column(db.Integer, nullable=False, default=0)  # v4.1
+    zero_load_operation = db.Column(db.Integer)  # v4.1, NULL = not captured
+    stop_program_40_flag = db.Column(db.Integer)  # v4.1, NULL = not captured
+    stop_program_80_flag = db.Column(db.Integer)  # v4.1, NULL = not captured
+    manual_operation_flag = db.Column(db.Integer)  # v4.1, NULL = not captured
+    automatic_operation_flag = db.Column(db.Integer)  # v4.1, NULL = not captured
+    vane_position_flag = db.Column(db.Integer)  # v4.1, NULL = not captured
+    operating_mode_mask = db.Column(db.Integer)  # v4.1, NULL = not captured
+    task_call_frequency = db.Column(db.Integer)  # v4.1, NULL = not captured
+    availability_calc = db.Column(db.Integer)  # v4.1, NULL = not captured
 
     status_code: StatusCode = cast(
         StatusCode,
         db.relationship("StatusCode", back_populates="revisions", foreign_keys=[status_code_id]),
+    )
+    user_group_rows: list["StatusCodeRevisionUserGroup"] = cast(
+        "list[StatusCodeRevisionUserGroup]",
+        db.relationship("StatusCodeRevisionUserGroup", lazy="selectin", viewonly=True),
     )
     development_access: LookupDevelopmentAccess | None = cast(
         "LookupDevelopmentAccess | None", db.relationship("LookupDevelopmentAccess")
@@ -219,3 +248,37 @@ class StatusCodeRevisionPlatform(Base):
     )
 
     __table_args__ = (db.UniqueConstraint("status_code_revision_id", "turbine_platform_id"),)
+
+
+class LookupUserGroupSlot(Base):
+    """One of the 16 user-group slots of the controller (schema v4.1, FR-168)."""
+
+    __tablename__ = "lookup_user_group_slot"
+
+    id = db.Column(db.Integer, primary_key=True)
+    slot = db.Column(db.Integer, nullable=False, unique=True)
+    audience_code = db.Column(db.Text)
+    label = db.Column(db.Text, nullable=False)
+    description = db.Column(db.Text)
+    is_active = db.Column(db.Integer, nullable=False, default=1)
+    sort_order = db.Column(db.Integer, nullable=False, default=0)
+
+
+class StatusCodeRevisionUserGroup(Base):
+    """The read and write level (BYTE) of one user-group slot of one revision."""
+
+    __tablename__ = "status_code_revision_user_group"
+
+    id = db.Column(db.Integer, primary_key=True)
+    status_code_revision_id = db.Column(
+        db.Integer, db.ForeignKey("status_code_revision.id"), nullable=False
+    )
+    user_group_slot_id = db.Column(
+        db.Integer, db.ForeignKey("lookup_user_group_slot.id"), nullable=False
+    )
+    read_level = db.Column(db.Integer, nullable=False)
+    write_level = db.Column(db.Integer, nullable=False)
+
+    slot_row: LookupUserGroupSlot = cast(
+        LookupUserGroupSlot, db.relationship("LookupUserGroupSlot", lazy="joined")
+    )

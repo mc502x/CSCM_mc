@@ -129,6 +129,7 @@ Targets: p95 500ms search, p95 200ms single-record read, 5s CSV/JSON export, 15s
 | TC-060 | Integration | PDF in every script | Each of the twelve script families gets its own font, Latin needs none, Arabic is told from Urdu, right-to-left cells are right-aligned, shaping is switched on only for the cells that need it, every character of every translation is covered by a bundled font, the fonts and their licence are bundled, a 1,500-row Latin export stays fast (`test_pdf_scripts`); the rendered pages were looked at | P1 |
 | TC-061 | Integration | Technical nomenclature | The vocabulary ships with every term in every language as a draft and agrees with the interface catalogue, a never-translated term has no translation, everybody reads and only the technical roles propose, an interface reviewer has no say, a proposal is a draft until another person approves it, send-back needs a note and reopens an approval, validation, only managers add and change terms and a new English text reopens approvals, the consistency check, export per language and for all, a formula is neutralised in the CSV (`test_terminology`) | P1 |
 | TC-062 | System | Windows sign-in against a real Windows identity | SSPI (Negotiate / NTLM) names the Windows user who runs the tests; the whole chain client, gateway, application signs that user in; a request without credentials gets a challenge and never reaches the application; a header the client sends is dropped by the gateway and ignored when it does not come from the trusted gateway; an unknown identity and a deactivated account are refused (`test_windows_gateway`, Windows only) | P1 |
+| TC-063 | Integration | Fields of the generated programs | A Main and a Hub program import keeps every field of the file (further programs, mask, task call frequency, flags, 15 user-group levels), the two zero-load attributes are not mixed up, a field of the other controller is refused (API and form, which keeps what was typed), values out of range are refused, a new revision and a Draft update keep what the caller does not send, the diff lists changes, the exports carry the columns and an audience export never does, withdrawing removes the levels (`test_generated_fields`) | P1 |
 
 ## 8a. v4 Test Suites
 
@@ -160,6 +161,7 @@ Targets: p95 500ms search, p95 200ms single-record read, 5s CSV/JSON export, 15s
 | `integration/test_pdf_scripts.py` | 9 | FR-165, FR-157 |
 | `integration/test_terminology.py` | 13 | FR-166, BR-018, AUD-077, SEC-010 |
 | `system/test_windows_gateway.py` | 6 | FR-163, SEC-033 |
+| `integration/test_generated_fields.py` | 10 | FR-168, FR-048o, FR-025, FR-032 |
 
 The authoritative, always-current counts are in `24-test-report.md` (generated).
 
