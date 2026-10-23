@@ -11,7 +11,7 @@ Conventions: `EPIC-##` → `FEAT-##.#` → `US-###`. Priority: P0 (must-have for
 - **US-002** CI configured (lint, format, type-check, test, security scan, no-cloud grep check). *AC:* CI runs on every push/PR; a deliberately failing test blocks merge; a deliberate cloud-SDK import blocks merge (TC-029). *Dependencies:* US-001. *Priority:* P0.
 
 ### FEAT-01.2 Database Schema & Migrations
-- **US-003** Initial Alembic migration implementing `artifacts/schema.sql` (v2 at the time; v4.7 now — 57 tables, 14 triggers; all lookups, 7-state lifecycle, dual sign-off + Chief Engineer columns, sandbox support). *AC:* fresh DB matches schema.sql exactly; migration reversible. *Dependencies:* US-001. *Priority:* P0.
+- **US-003** Initial Alembic migration implementing `artifacts/schema.sql` (v2 at the time; v4.7 now — 59 tables, 14 triggers; all lookups, 7-state lifecycle, dual sign-off + Chief Engineer columns, sandbox support). *AC:* fresh DB matches schema.sql exactly; migration reversible. *Dependencies:* US-001. *Priority:* P0.
 - **US-004** Seed all lookup tables, including the 12 Functional System Groups (9 Main + 3 Hub Controller), the 38 real Functional Subgroups (06-data-dictionary.md §9a), Turbine Platforms (2XM/3XM/4XM), and Engineering Domains. *AC:* seed migration inserts all documented rows. *Dependencies:* US-003. *Priority:* P0.
 
 ### FEAT-01.3 Authentication & Session Management

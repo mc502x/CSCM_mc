@@ -2,7 +2,7 @@
 
 ## 1. Overview
 
-MVP persistence is **SQLite** (single file, per C-001 in 03-srs.md), accessed exclusively through a repository layer (18-claude-code-implementation-guide.md) so a future migration to PostgreSQL requires no changes above the repository interface. The database runs on a local, on-premises server only — see 14-deployment-architecture.md §1 — and is itself the Master Database referenced throughout this package; no external upstream system exists. The full DDL is maintained at [artifacts/schema.sql](artifacts/schema.sql) (schema v4.7: 57 tables, 14 triggers; the optional search index is in [artifacts/schema-fts5.sql](artifacts/schema-fts5.sql)) and is the executable source of truth; this document explains the design decisions behind it.
+MVP persistence is **SQLite** (single file, per C-001 in 03-srs.md), accessed exclusively through a repository layer (18-claude-code-implementation-guide.md) so a future migration to PostgreSQL requires no changes above the repository interface. The database runs on a local, on-premises server only — see 14-deployment-architecture.md §1 — and is itself the Master Database referenced throughout this package; no external upstream system exists. The full DDL is maintained at [artifacts/schema.sql](artifacts/schema.sql) (schema v4.9: 59 tables, 14 triggers; the optional search index is in [artifacts/schema-fts5.sql](artifacts/schema-fts5.sql)) and is the executable source of truth; this document explains the design decisions behind it.
 
 ## 2. Logical Schema
 
@@ -31,6 +31,7 @@ See [artifacts/schema.sql](artifacts/schema.sql) for full DDL. Summary of tables
 | `lookup_development_access`, `lookup_sales_access`, `lookup_tcc_access`, `lookup_service_access`, `lookup_top_access`, `lookup_grid_operator_access`, `lookup_service_partner_access`, `lookup_customer_access` | Eight independent audience-access vocabularies, real observed values (corrected 2026-09-17, replaces the single `lookup_access_rights`) |
 | `user`, `user_engineering_domain` | Accounts and their domain tags; the e-mail address cannot be changed (trigger, v4.7) |
 | `language_reviewer`, `translation_review`, `translation_review_item`, `translation_override` *(v4.7)* | Native-speaker review of the interface translations: assignments, reviews, answers and proposals, accepted overrides (FR-164) |
+| `terminology_term`, `terminology_translation` *(v4.9)* | The technical nomenclature: the terms of the controller and the workflow and their translation per language, a draft until a second person approves it (FR-166) |
 | `status_code` | Governed identity, nullable identifier, sandbox flag |
 | `status_code_revision` | Versioned governed content, dual-review + Chief Engineer approval columns |
 | `status_code_revision_platform` | Revision ↔ Turbine Platform join |
@@ -143,6 +144,7 @@ Alembic, one linear chain. The baseline executes `docs/artifacts/schema.sql` ver
 | `b8e0c2d4f671` | **schema v4.6**: Spanish, Italian and Danish in the language lookup; Georgian moved to the end of the list (sort order 20) |
 | `c9f1d3e5a782` | **schema v4.7**: the trigger `trg_user_email_immutable` — the e-mail address of a user can no longer be updated (FR-162); guarded, so it is created once |
 | `d0a2e4f6b893` | **schema v4.7**: the translation review — `language_reviewer`, `translation_review` (with the partial unique index of the open review), `translation_review_item`, `translation_override` (FR-164) |
+| `e1b3f5a7c904` | **schema v4.9**: the technical nomenclature — `terminology_term`, `terminology_translation` (FR-166) |
 
 Tests keep this honest (`tests/integration/test_schema_upgrade.py`): a frozen copy of the v3 schema (`tests/fixtures/schema_d6f8b0c2e4a3.sql`) is filled with data and upgraded — data survives, defaults are sensible, `Covert` is hidden, Hub groups are `HUB`, old audit rows are chained and verify, the index is filled, an upgraded database has the same tables and columns as a fresh one, and the downgrade to v3 keeps the data. Before upgrading a live database the installer takes a verified backup (14-deployment-architecture.md §4).
 

@@ -79,6 +79,7 @@
 --     section 3, docs/03-srs.md FR-156, BR-024)
 --   - lookup_language: French, Hindi and Georgian added; v4.4 adds Arabic (written right to left); every
 --     name reads <country letters> <name> <flag emoji>; user.ui_language accepts the six codes
+-- v4.9 changes: the technical nomenclature (terminology_term, terminology_translation)
 -- v4.7 changes (2026-10-24): trg_user_email_immutable (the e-mail address of a user is fixed); the tables of the
 --     in-application translation review (language_reviewer, translation_review, translation_review_item,
 --     translation_override)

@@ -38,7 +38,7 @@ This document has two halves. **Part A** records the 36 improvement ideas collec
 | I-19 | Catalogue health and capacity forecast | ✅ implemented | FR-140, FR-141 | TC-046, TC-039 | — |
 | I-20 | Persistent rate-limit state | ✅ implemented | NFR-009 | TC-050 | proven with two real processes |
 | I-21 | Observability | ✅ implemented | FR-152, FR-153, NFR-011 | TC-044 | — |
-| I-22 | Accessibility and German UI | ✅ implemented | FR-155, NFR-010 | TC-049 | German covers the main screens; flash messages and admin pages stay English (see I-38) |
+| I-22 | Accessibility and German UI | ✅ implemented | FR-155, NFR-010 | TC-049 | German and every other language cover the whole interface since v4.9 (I-38, FR-167) |
 | I-23 | Field comments and review checklists | ✅ implemented | FR-127, FR-128 | TC-040 | — |
 | I-24 | Offline field-lookup bundle | ✅ implemented | FR-108 | TC-042 | single HTML file (no SQLite variant) |
 | I-25 | Platform variants | ✅ implemented | FR-094 | TC-039 | — |
@@ -81,7 +81,7 @@ All seven quick wins and the four-step sequencing of the original document are d
 | ID | Idea | Priority | Effort | Epic |
 |---|---|---|---|---|
 | I-37 | Unicode font for the PDF export **(observed)** — ✅ delivered in v4.7 (FR-165) | 🔴 HIGH | S | EPIC-20 |
-| I-38 | Complete German coverage: flash messages, admin pages, export headers **(observed)** | 🔴 HIGH | M | EPIC-15 |
+| I-38 | Complete interface coverage in every language: flash messages, admin pages, service-layer sentences **(observed)** — ✅ delivered in v4.9 (FR-167); the text of the exports outside the catalogue is still English (26-translations.md §5) | 🔴 HIGH | M | EPIC-15 |
 | I-39 | Asymmetric (Ed25519) manifest signatures and key rotation **(observed)** | 🟠 MEDIUM | M | EPIC-18, EPIC-12 |
 | I-40 | Holiday calendar for business days **(observed)** | 🟠 MEDIUM | S | EPIC-19 |
 | I-41 | Run and test on PostgreSQL (execute the port prepared by I-34) | 🟠 MEDIUM | L | EPIC-13 |
@@ -195,11 +195,11 @@ Open points, not built. (1) Deleting an account is possible only while it has no
 
 ## B.10 Translations (v4.7)
 
-The concept and the eleven open items for checking the translations by native speakers and for exporting the status code manuals in every designated language are in [26-translations.md](26-translations.md) §8. Built since: the review itself runs in the application, in its own section *Translations* (FR-164, [26-translations.md](26-translations.md) §3.4). The ones that matter most: find one native-speaker reviewer per language and assign them there; mark unreviewed languages as beta; a terminology list per language; language competence on the user for approving status code translations; content sheets (export and import) for translating the status codes; a coverage matrix and a readiness rule per Release; Unicode fonts for the PDF (I-37).
+The concept and the eleven open items for checking the translations by native speakers and for exporting the status code manuals in every designated language are in [26-translations.md](26-translations.md) §8. Built since: the review itself runs in the application, in its own section *Translations* (FR-164, [26-translations.md](26-translations.md) §3.4). The ones that matter most: find one native-speaker reviewer per language and assign them there; mark unreviewed languages as beta; a terminology list per language; language competence on the user for approving status code translations; content sheets (export and import) for translating the status codes; a coverage matrix and a readiness rule per Release; Unicode fonts for the PDF (I-37). Delivered in v4.9: the whole interface in all nineteen languages (FR-167, I-38) and the technical nomenclature as a section of its own with a two-person approval (FR-166, [26-translations.md](26-translations.md) §8a); the critical review of the implementation is in §8b of that file.
 
 ## B.7 Suggested sequencing
 
 1. **With go-live of v4:** I-45 (backup copy), I-48 (key custody) (I-37, the PDF font, is delivered) — small and they close observed gaps.
-2. **First quarter in production:** I-38 (German coverage), I-40 (holidays), I-44 (resumable import) and, once its inputs exist, the design-ready I-42 and I-43.
+2. **First quarter in production:** I-40 (holidays), I-44 (resumable import) and, once its inputs exist, the design-ready I-42 and I-43.
 3. **Second quarter:** I-39 (signatures and rotation), I-46 (webhook retry), I-49 (bulk revision), I-47 (SSO) as needed.
 4. **Later / on demand:** the LOW items and I-41 when the volume justifies the port.

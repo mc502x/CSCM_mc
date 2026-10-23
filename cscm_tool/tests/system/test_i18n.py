@@ -1,7 +1,7 @@
 """I-22: the German interface. The catalogue must cover every string a template wraps in `_()`,
 placeholders must survive translation, and the language choice must stick.
 
-TC-049. Requirements: FR-155.
+TC-049. Requirements: FR-155, FR-167.
 """
 
 import re
@@ -49,6 +49,31 @@ def test_placeholders_survive_translation():
         if sorted(PLACEHOLDER.findall(key)) != sorted(PLACEHOLDER.findall(value))
     ]
     assert problems == []
+
+
+# FR-167: the strings that stay as they are in every language (a unit, a code, a platform name)
+UNTRANSLATED = {"d", "WNEW", "TCC"}
+
+
+def test_every_language_translates_the_whole_interface_inventory():
+    from app.translation_catalogue import catalogue, languages, screens
+
+    inventory = set(screens())
+    catalogues = catalogue()
+    problems = {}
+    for code in languages():
+        if code == "en":
+            continue
+        missing = sorted(inventory - set(catalogues[code]) - UNTRANSLATED)
+        wrong = [
+            key
+            for key, value in catalogues[code].items()
+            if sorted(PLACEHOLDER.findall(key)) != sorted(PLACEHOLDER.findall(value))
+        ]
+        if missing or wrong:
+            problems[code] = {"missing": missing[:5], "placeholders": wrong[:5]}
+    assert problems == {}
+    assert len(languages()) == 19
 
 
 def test_there_are_no_stale_german_entries_for_removed_template_strings():

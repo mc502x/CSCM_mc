@@ -7,11 +7,13 @@ contract. This module only *finds* the sentences (by reading the source), so the
 inventory cannot miss one."""
 
 import ast
+import re
 from functools import cache
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
 PACKAGES = ("services", "domain", "importers", "auth")
+IDENTIFIER = re.compile(r"[a-z][a-z0-9_]*")  # a field name passed to an error, not a sentence
 
 
 @cache
@@ -30,5 +32,7 @@ def service_messages() -> dict[str, list[str]]:
                     continue
                 for arg in node.exc.args[:1]:
                     if isinstance(arg, ast.Constant) and isinstance(arg.value, str):
+                        if IDENTIFIER.fullmatch(arg.value):
+                            continue
                         found.setdefault(arg.value, set()).add(path.stem)
     return {text: sorted(files) for text, files in found.items()}

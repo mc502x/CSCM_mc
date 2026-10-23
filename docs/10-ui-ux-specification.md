@@ -69,6 +69,9 @@ CSCM Tool is a **OneTool-integrated application** (2026-09-17 decision): it rend
 | S42 | Translations *(v4.7)* | Reviewers of a language, Administrator, StCd Owner | The languages the user may review with the state of each (not reviewed, in progress, reviewed, changed since the review); managers see all languages (`/translations`) |
 | S43 | Translation review *(v4.7)* | Assigned reviewers | One row per string with screens, English, current translation, verdict, proposal and comment; the missing translations; XLSX sheet download and upload (`/translations/{language}`) |
 | S44 | Translation decisions *(v4.7)* | Administrator, StCd Owner | Reviewers of the language, proposals waiting for a decision, accepted overrides, recent decisions (`/translations/{language}/decisions`) |
+| S45 | Terminology *(v4.9)* | Everybody signed in; managers add and change terms | The vocabulary: coverage per language, the terms with category, definition and the state of every language, search and filter, add a term (`/terminology`) |
+| S46 | Terminology of a language *(v4.9)* | Everybody signed in; the technical roles propose, the approving roles approve | One row per term with the English text, the proposal and its state; save translations, send back with a note, approve one or all drafts of others; XLSX and CSV export (`/terminology/{language}`) |
+| S47 | Terminology check *(v4.9)* | Everybody signed in | The interface strings that contain a term whose translation is missing from the translation of the string (`/terminology/{language}/check`) |
 
 ## 2. Navigation Map
 
