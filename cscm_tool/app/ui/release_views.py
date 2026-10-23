@@ -11,6 +11,7 @@ from app.domain.errors import (
     NotFoundError,
     StepUpRequiredError,
 )
+from app.i18n import translate as _
 from app.services.lookup_service import LookupService
 from app.services.release_service import ReleaseService
 from app.ui import ui_bp
@@ -33,7 +34,7 @@ def release_new():
         scope_filter = {"functional_system_group": scope_group_id} if scope_group_id else {}
         target_versions = request.form.getlist("target_software_versions")
         if not name or not version_label:
-            flash("Name and version label are required.", "error")
+            flash(_("Name and version label are required."), "error")
         else:
             release = ReleaseService.create(
                 {
@@ -45,7 +46,7 @@ def release_new():
                 },
                 current_user,
             )
-            flash("Release created.", "success")
+            flash(_("Release created."), "success")
             return redirect(url_for("ui.release_builder", release_id=release.id))
 
     groups = LookupService.list_vocabulary("functional-system-groups")
@@ -62,7 +63,7 @@ def release_detail(release_id):
     try:
         release = ReleaseService.get(release_id)
     except NotFoundError:
-        flash("Release not found.", "error")
+        flash(_("Release not found."), "error")
         return redirect(url_for("ui.release_list"))
     from app.services.audience_service import AUDIENCES
     from app.services.export_profile_service import ExportProfileService
@@ -90,11 +91,11 @@ def release_builder(release_id):
     try:
         release = ReleaseService.get(release_id)
     except NotFoundError:
-        flash("Release not found.", "error")
+        flash(_("Release not found."), "error")
         return redirect(url_for("ui.release_list"))
 
     if release.status != "BUILDING":
-        flash("This Release is already published and can no longer be changed.", "info")
+        flash(_("This Release is already published and can no longer be changed."), "info")
         return redirect(url_for("ui.release_detail", release_id=release_id))
 
     if request.method == "POST":
@@ -102,9 +103,9 @@ def release_builder(release_id):
         try:
             ReleaseService.set_items(release_id, revision_ids, current_user)
         except (InvalidTransitionError, DomainError, ValueError) as exc:
-            flash(str(exc), "error")
+            flash(_(str(exc)), "error")
         else:
-            flash("Candidate set updated.", "success")
+            flash(_("Candidate set updated."), "success")
         return redirect(url_for("ui.release_builder", release_id=release_id))
 
     from app.services.software_version_service import SoftwareVersionService
@@ -127,12 +128,12 @@ def release_delete(release_id):
     try:
         ReleaseService.delete(release_id, current_user)
     except NotFoundError:
-        flash("Release not found.", "error")
+        flash(_("Release not found."), "error")
     except InvalidTransitionError as exc:
-        flash(str(exc), "error")
+        flash(_(str(exc)), "error")
         return redirect(url_for("ui.release_detail", release_id=release_id))
     else:
-        flash("Release deleted.", "success")
+        flash(_("Release deleted."), "success")
     return redirect(url_for("ui.release_list"))
 
 
@@ -146,14 +147,17 @@ def release_publish(release_id):
             release_id, current_user, reauth_password=request.form.get("current_password")
         )
     except (InvalidTransitionError, DomainError, StepUpRequiredError, AccountLockedError) as exc:
-        flash(str(exc), "error")
+        flash(_(str(exc)), "error")
         return redirect(url_for("ui.release_builder", release_id=release_id))
 
-    flash("Release published.", "success")
+    flash(_("Release published."), "success")
     for w in warnings:
         flash(
-            f"{w['status_code_identifier']} has a planned effective date of "
-            f"{w['planned_effective_date']}, which is still in the future.",
+            _(
+                "%(code)s has a planned effective date of %(date)s, which is still in the future.",
+                code=w["status_code_identifier"],
+                date=w["planned_effective_date"],
+            ),
             "info",
         )
     return redirect(url_for("ui.release_detail", release_id=release_id))

@@ -1,24 +1,24 @@
 {% extends "base.html" %}
 {% from "_role.html" import role_badge with context %}
-{% block title %}User Management — CSCM Tool{% endblock %}
+{% block title %}{{ _('User Management') }} — CSCM Tool{% endblock %}
 {% block content %}
-<div class="page-header"><h1>User Management</h1></div>
+<div class="page-header"><h1>{{ _('User Management') }}</h1></div>
 
 <div class="card">
-  <h2>Roles</h2>
+  <h2>{{ _('Roles') }}</h2>
   <p>
     {% for r in roles %}{{ role_badge(r) }} {% endfor %}
   </p>
   <p class="hint">
-    {% if is_admin %}Colour = level, red is the highest. You may create users and give every role.
-    {% else %}Colour = level, red is the highest. As StCd Owner you may move a user between Viewer, Engineer and Reviewer; creating users and every other role needs an Administrator.{% endif %}
+    {% if is_admin %}{{ _('Colour = level, red is the highest. You may create users and give every role.') }}
+    {% else %}{{ _('Colour = level, red is the highest. As StCd Owner you may move a user between Viewer, Engineer and Reviewer; creating users and every other role needs an Administrator.') }}{% endif %}
   </p>
 </div>
 
 <div class="card">
-  <h2>Existing Users</h2>
+  <h2>{{ _('Existing Users') }}</h2>
   <table>
-    <thead><tr><th scope="col">Username</th><th scope="col">Full Name</th><th scope="col">Role</th><th scope="col">Domains</th><th scope="col">Active</th><th scope="col">Actions</th></tr></thead>
+    <thead><tr><th scope="col">{{ _('Username') }}</th><th scope="col">{{ _('Full Name') }}</th><th scope="col">{{ _('Role') }}</th><th scope="col">{{ _('Domains') }}</th><th scope="col">{{ _('Active') }}</th><th scope="col">{{ _('Actions') }}</th></tr></thead>
     <tbody>
       {% for u in users %}
       <tr class="role-row role-row--{{ role_info(u.role.code).css }}">
@@ -28,49 +28,49 @@
         <td>{% for d in u.engineering_domains %}<span class="chip">{{ d.engineering_domain.code }}</span>{% endfor %}</td>
         <td>{{ 'Yes' if u.is_active else 'No' }}</td>
         <td><div class="row-actions">
-          <a class="btn" href="{{ url_for('ui.user_detail', user_id=u.id) }}">View</a>
+          <a class="btn" href="{{ url_for('ui.user_detail', user_id=u.id) }}">{{ _('View') }}</a>
           {% if is_admin %}
           <details>
-            <summary class="btn" style="display:inline-block">Edit</summary>
+            <summary class="btn" style="display:inline-block">{{ _('Edit') }}</summary>
             <form method="post" action="{{ url_for('ui.user_update', user_id=u.id) }}" style="margin-top:8px">
               <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
-              <div class="field"><label>Full name</label><input type="text" name="full_name" value="{{ u.full_name }}" aria-label="Full name of {{ u.username }}"></div>
-              <div class="field"><label>Role</label>
-                <select name="role" aria-label="Role of {{ u.username }}">
+              <div class="field"><label>{{ _('Full name') }}</label><input type="text" name="full_name" value="{{ u.full_name }}" aria-label="{{ _('Full name of %(x)s', x=u.username) }}"></div>
+              <div class="field"><label>{{ _('Role') }}</label>
+                <select name="role" aria-label="{{ _('Role of %(x)s', x=u.username) }}">
                   {% for r in roles %}<option value="{{ r }}" {{ 'selected' if u.role.code == r }}>{{ role_info(r).label }}</option>{% endfor %}
                 </select>
               </div>
               <div class="field checkbox-list">
-                <label>Engineering Domains</label>
+                <label>{{ _('Engineering Domains') }}</label>
                 {% for d in domains %}
                 <label><input type="checkbox" name="engineering_domains" value="{{ d.code }}" {{ 'checked' if d.code in u.engineering_domains|map(attribute='engineering_domain.code')|list }}> {{ d.code }}</label>
                 {% endfor %}
               </div>
-              <div class="field"><label><input type="checkbox" name="is_active" {{ 'checked' if u.is_active }}> Active</label></div>
-              <button class="btn btn--primary" type="submit">Save</button>
+              <div class="field"><label><input type="checkbox" name="is_active" {{ 'checked' if u.is_active }}> {{ _('Active') }}</label></div>
+              <button class="btn btn--primary" type="submit">{{ _('Save') }}</button>
             </form>
             <form method="post" action="{{ url_for('ui.user_reset_password', user_id=u.id) }}" style="margin-top:8px">
               <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
-              <div class="field"><label>Force-reset password</label><input type="password" name="new_password" minlength="12" placeholder="New password (12+ chars)" aria-label="New password for {{ u.username }}" autocomplete="new-password"></div>
-              <button class="btn" type="submit">Reset Password</button>
+              <div class="field"><label>{{ _('Force-reset password') }}</label><input type="password" name="new_password" minlength="12" placeholder="{{ _('New password (12+ chars)') }}" aria-label="{{ _('New password for %(x)s', x=u.username) }}" autocomplete="new-password"></div>
+              <button class="btn" type="submit">{{ _('Reset Password') }}</button>
             </form>
           </details>
           <form method="post" action="{{ url_for('ui.user_set_active', user_id=u.id) }}" class="inline-form">
             <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
             <input type="hidden" name="active" value="{{ '0' if u.is_active else '1' }}">
-            <button class="btn" type="submit"{% if u.id == current_user.id and u.is_active %} disabled title="You cannot deactivate yourself here"{% endif %}>{{ 'Deactivate' if u.is_active else 'Activate' }}</button>
+            <button class="btn" type="submit"{% if u.id == current_user.id and u.is_active %} disabled title="{{ _('You cannot deactivate yourself here') }}"{% endif %}>{{ 'Deactivate' if u.is_active else 'Activate' }}</button>
           </form>
-          {% if u.id != current_user.id %}<a class="btn btn--danger" href="{{ url_for('ui.user_detail', user_id=u.id) }}#delete">Delete</a>{% endif %}
+          {% if u.id != current_user.id %}<a class="btn btn--danger" href="{{ url_for('ui.user_detail', user_id=u.id) }}#delete">{{ _('Delete') }}</a>{% endif %}
           {% elif may_change_role(u) %}
           <form method="post" action="{{ url_for('ui.user_update', user_id=u.id) }}" class="btn-row">
             <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
-            <select name="role" aria-label="Role of {{ u.username }}">
+            <select name="role" aria-label="{{ _('Role of %(x)s', x=u.username) }}">
               {% for r in assignable %}<option value="{{ r }}" {{ 'selected' if u.role.code == r }}>{{ role_info(r).label }}</option>{% endfor %}
             </select>
-            <button class="btn btn--primary" type="submit">Set role</button>
+            <button class="btn btn--primary" type="submit">{{ _('Set role') }}</button>
           </form>
           {% else %}
-          <span class="muted">Administrator only</span>
+          <span class="muted">{{ _('Administrator only') }}</span>
           {% endif %}
         </div></td>
       </tr>
@@ -81,26 +81,26 @@
 
 {% if is_admin %}
 <div class="card" style="max-width:480px">
-  <h2>Create User</h2>
+  <h2>{{ _('Create User') }}</h2>
   <form method="post" action="{{ url_for('ui.user_new') }}">
     <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
-    <div class="field"><label for="username">Username</label><input type="text" id="username" name="username" required></div>
-    <div class="field"><label for="email">Email</label><input type="text" id="email" name="email" required></div>
-    <div class="field"><label for="full_name">Full name</label><input type="text" id="full_name" name="full_name" required></div>
-    <div class="field"><label for="role">Role</label>
+    <div class="field"><label for="username">{{ _('Username') }}</label><input type="text" id="username" name="username" required></div>
+    <div class="field"><label for="email">{{ _('Email') }}</label><input type="text" id="email" name="email" required></div>
+    <div class="field"><label for="full_name">{{ _('Full name') }}</label><input type="text" id="full_name" name="full_name" required></div>
+    <div class="field"><label for="role">{{ _('Role') }}</label>
       <select id="role" name="role">
         {% for r in roles %}<option value="{{ r }}" {{ 'selected' if r == 'VIEWER' }}>{{ role_info(r).label }}</option>{% endfor %}
       </select>
-      <div class="hint">Least-privilege default: Viewer (SEC-012).</div>
+      <div class="hint">{{ _('Least-privilege default: Viewer (SEC-012).') }}</div>
     </div>
     <div class="field checkbox-list">
-      <label>Engineering Domains</label>
+      <label>{{ _('Engineering Domains') }}</label>
       {% for d in domains %}
       <label><input type="checkbox" name="engineering_domains" value="{{ d.code }}"> {{ d.code }}</label>
       {% endfor %}
     </div>
-    <div class="field"><label for="password">Password</label><input type="password" id="password" name="password" required minlength="12"></div>
-    <button class="btn btn--primary" type="submit">Create User</button>
+    <div class="field"><label for="password">{{ _('Password') }}</label><input type="password" id="password" name="password" required minlength="12"></div>
+    <button class="btn btn--primary" type="submit">{{ _('Create User') }}</button>
   </form>
 </div>
 {% endif %}

@@ -9,6 +9,7 @@ from flask import Response, flash, redirect, render_template, request, url_for
 from app.auth.decorators import current_user, login_required_web, require_role_web
 from app.db_modes import writes_on_get
 from app.domain.errors import DomainError, NotFoundError
+from app.i18n import translate as _
 from app.models.export_job import ExportProfile
 from app.services import manifest_service
 from app.services.audience_service import AUDIENCES
@@ -66,9 +67,9 @@ def export_profiles():
                 current_user,
             )
         except _ERRORS as exc:
-            flash(str(exc), "error")
+            flash(_(str(exc)), "error")
         else:
-            flash("Export profile created.", "success")
+            flash(_("Export profile created."), "success")
         return redirect(url_for("ui.export_profiles"))
     return render_template(
         "admin/export_profiles.html",
@@ -94,9 +95,9 @@ def export_profile_update(profile_id):
     try:
         ExportProfileService.update(profile_id, data, current_user)
     except _ERRORS as exc:
-        flash(str(exc), "error")
+        flash(_(str(exc)), "error")
     else:
-        flash("Export profile saved.", "success")
+        flash(_("Export profile saved."), "success")
     return redirect(url_for("ui.export_profiles"))
 
 
@@ -106,7 +107,7 @@ def export_profile_update(profile_id):
 def export_verify():
     upload = request.files.get("file")
     if upload is None or not upload.filename:
-        flash("Choose the exported file to verify.", "error")
+        flash(_("Choose the exported file to verify."), "error")
         return redirect(url_for("ui.export_center"))
     content = upload.read()
     digest = manifest_service.sha256_hex(content)
@@ -117,7 +118,7 @@ def export_verify():
         try:
             manifest = json.loads(manifest_upload.read().decode("utf-8"))
         except (ValueError, UnicodeDecodeError):
-            flash("The manifest is not valid JSON.", "error")
+            flash(_("The manifest is not valid JSON."), "error")
             return redirect(url_for("ui.export_center"))
     elif matches and matches[0].manifest:
         manifest = json.loads(matches[0].manifest)
@@ -142,7 +143,7 @@ def release_shaped_export(release_id):
     Release page); the same pipeline as the API."""
     fmt = (request.args.get("format") or "csv").lower()
     if fmt not in _FORMATS:
-        flash("Unknown export format.", "error")
+        flash(_("Unknown export format."), "error")
         return redirect(url_for("ui.release_detail", release_id=release_id))
     try:
         release = ReleaseService.get(release_id)
@@ -168,7 +169,7 @@ def release_shaped_export(release_id):
             options=options,
         )
     except (NotFoundError, *_ERRORS) as exc:
-        flash(str(exc), "error")
+        flash(_(str(exc)), "error")
         return redirect(url_for("ui.release_detail", release_id=release_id))
     return Response(
         result.content,
@@ -193,7 +194,7 @@ def release_notes_download(release_id):
             release, fmt, current_user, bundle=request.args.get("bundle") == "on"
         )
     except (NotFoundError, *_ERRORS) as exc:
-        flash(str(exc), "error")
+        flash(_(str(exc)), "error")
         return redirect(url_for("ui.release_detail", release_id=release_id))
     return Response(
         result.content,
@@ -221,7 +222,7 @@ def release_offline_bundle_download(release_id):
         )
         result = ExportService.export_offline_bundle(release, current_user, options)
     except (NotFoundError, *_ERRORS) as exc:
-        flash(str(exc), "error")
+        flash(_(str(exc)), "error")
         return redirect(url_for("ui.release_detail", release_id=release_id))
     return Response(
         result.content,
@@ -241,9 +242,9 @@ def release_target_versions(release_id):
             release_id, request.form.getlist("software_versions"), current_user
         )
     except (NotFoundError, *_ERRORS) as exc:
-        flash(str(exc), "error")
+        flash(_(str(exc)), "error")
     else:
-        flash("Target software versions saved.", "success")
+        flash(_("Target software versions saved."), "success")
     return redirect(url_for("ui.release_builder", release_id=release_id))
 
 
@@ -259,7 +260,7 @@ def software_version_matrix():
         elif version:
             matrix = SoftwareVersionService.matrix(version)
     except (NotFoundError, *_ERRORS) as exc:
-        flash(str(exc), "error")
+        flash(_(str(exc)), "error")
     return render_template(
         "software_versions.html",
         versions=SoftwareVersionService.ordered(),
@@ -277,7 +278,7 @@ def status_code_translations(status_code_id):
     try:
         revision = StatusCodeService.get_current_revision(status_code_id, current_user)
     except NotFoundError:
-        flash("Status code not found.", "error")
+        flash(_("Status code not found."), "error")
         return redirect(url_for("ui.status_code_list"))
     # translations belong to the latest decided revision, which is what readers see
     target = StatusCodeService._repo.get_latest_revision_in_states(
@@ -289,14 +290,17 @@ def status_code_translations(status_code_id):
         try:
             if action == "approve":
                 TranslationService.approve(target.id, language, current_user)
-                flash("Translation approved.", "success")
+                flash(_("Translation approved."), "success")
             elif action == "carry":
                 copied = TranslationService.carry_over(target.id, current_user)
                 flash(
                     (
-                        f"Copied {', '.join(copied)} from the previous revision as drafts."
+                        _(
+                            "Copied %(languages)s from the previous revision as drafts.",
+                            languages=", ".join(copied),
+                        )
                         if copied
-                        else "Nothing to copy."
+                        else _("Nothing to copy.")
                     ),
                     "success" if copied else "info",
                 )
@@ -309,9 +313,9 @@ def status_code_translations(status_code_id):
                     request.form.get("remedy_text"),
                     current_user,
                 )
-                flash("Translation saved as a draft.", "success")
+                flash(_("Translation saved as a draft."), "success")
         except _ERRORS as exc:
-            flash(str(exc), "error")
+            flash(_(str(exc)), "error")
         return redirect(url_for("ui.status_code_translations", status_code_id=status_code_id))
     matrix = TranslationService.status_matrix(target.id, current_user) if target else []
     return render_template(

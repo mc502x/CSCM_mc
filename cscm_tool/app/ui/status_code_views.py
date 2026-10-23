@@ -26,6 +26,7 @@ from app.domain.errors import (
     NotFoundError,
     SegregationOfDutiesViolation,
 )
+from app.i18n import translate as _
 from app.services.change_request_service import ChangeRequestService
 from app.services.field_review_service import FieldReviewService
 from app.services.lookup_service import LookupService
@@ -222,9 +223,9 @@ def saved_search_create():
     try:
         SavedSearchService.save(current_user, request.form.get("name", ""), definition)
     except (DomainError, ValueError) as exc:
-        flash(str(exc), "error")
+        flash(_(str(exc)), "error")
     else:
-        flash("Search saved.", "success")
+        flash(_("Search saved."), "success")
     filters: dict[str, str] = dict(definition["filters"])  # type: ignore[arg-type]
     return redirect(url_for("ui.status_code_list", **filters))  # type: ignore[arg-type]
 
@@ -235,9 +236,9 @@ def saved_search_delete(search_id):
     try:
         SavedSearchService.delete(current_user, search_id)
     except (DomainError, ValueError) as exc:
-        flash(str(exc), "error")
+        flash(_(str(exc)), "error")
     else:
-        flash("Saved search removed.", "success")
+        flash(_("Saved search removed."), "success")
     return redirect(url_for("ui.status_code_list"))
 
 
@@ -254,9 +255,9 @@ def status_code_new():
         except ValidationFailed as exc:
             _flash_validation(exc)
         except (KeyError, ValueError) as exc:
-            flash(str(exc), "error")
+            flash(_(str(exc)), "error")
         else:
-            flash("Draft created.", "success")
+            flash(_("Draft created."), "success")
             _flash_warnings(revision)
             return redirect(
                 url_for("ui.status_code_detail", status_code_id=revision.status_code_id)
@@ -279,9 +280,15 @@ def status_code_new_sandbox():
         except ValidationFailed as exc:
             _flash_validation(exc)
         except (KeyError, ValueError) as exc:
-            flash(str(exc), "error")
+            flash(_(str(exc)), "error")
         else:
-            flash(f"Sandbox code {revision.status_code.status_code_identifier} created.", "success")
+            flash(
+                _(
+                    "Sandbox code %(code)s created.",
+                    code=revision.status_code.status_code_identifier,
+                ),
+                "success",
+            )
             return redirect(
                 url_for("ui.status_code_detail", status_code_id=revision.status_code_id)
             )
@@ -298,7 +305,7 @@ def status_code_detail(status_code_id):
     try:
         revision = StatusCodeService.get_current_revision(status_code_id, current_user)
     except NotFoundError:
-        flash("Status code not found.", "error")
+        flash(_("Status code not found."), "error")
         return redirect(url_for("ui.status_code_list"))
 
     history = StatusCodeService.list_revision_history(status_code_id, current_user)
@@ -318,7 +325,7 @@ def status_code_detail(status_code_id):
         try:
             diff = RevisionDiffService.diff_revisions(status_code_id, rev_a, rev_b, current_user)
         except NotFoundError:
-            flash("Revision not found.", "error")
+            flash(_("Revision not found."), "error")
 
     where_used = []
     if current_user.role_code != "VIEWER" and not revision.status_code.is_sandbox:
@@ -374,11 +381,11 @@ def status_code_edit(status_code_id):
     try:
         revision = StatusCodeService.get_current_revision(status_code_id, current_user)
     except NotFoundError:
-        flash("Status code not found.", "error")
+        flash(_("Status code not found."), "error")
         return redirect(url_for("ui.status_code_list"))
 
     if revision.lifecycle_status != "DRAFT":
-        flash("Only a Draft revision may be edited.", "error")
+        flash(_("Only a Draft revision may be edited."), "error")
         return redirect(url_for("ui.status_code_detail", status_code_id=status_code_id))
 
     values = _revision_to_form_values(revision_payload(revision))
@@ -407,9 +414,9 @@ def status_code_edit(status_code_id):
         except ValidationFailed as exc:
             _flash_validation(exc)
         except (SegregationOfDutiesViolation, KeyError, ValueError) as exc:
-            flash(str(exc), "error")
+            flash(_(str(exc)), "error")
         else:
-            flash("Draft saved.", "success")
+            flash(_("Draft saved."), "success")
             _flash_warnings(saved)
             return redirect(url_for("ui.status_code_detail", status_code_id=status_code_id))
 
@@ -433,16 +440,16 @@ def status_code_new_revision(status_code_id):
     try:
         revision = StatusCodeService.get_current_revision(status_code_id, current_user)
     except NotFoundError:
-        flash("Status code not found.", "error")
+        flash(_("Status code not found."), "error")
         return redirect(url_for("ui.status_code_list"))
 
     data = _revision_to_form_values(revision_payload(revision))
     try:
         new_revision = StatusCodeService.create_revision(status_code_id, data, current_user)
     except InvalidTransitionError as exc:
-        flash(str(exc), "error")
+        flash(_(str(exc)), "error")
     else:
-        flash(f"New Draft revision {new_revision.revision_number} opened.", "success")
+        flash(_("New Draft revision %(n)s opened.", n=new_revision.revision_number), "success")
 
     return redirect(url_for("ui.status_code_detail", status_code_id=status_code_id))
 
@@ -458,9 +465,11 @@ def status_code_platform_variant(status_code_id):
     except ValidationFailed as exc:
         _flash_validation(exc)
     except (DomainError, ValueError) as exc:
-        flash(str(exc), "error")
+        flash(_(str(exc)), "error")
     else:
-        flash("Platform variant created as a Draft; it goes through the normal review.", "success")
+        flash(
+            _("Platform variant created as a Draft; it goes through the normal review."), "success"
+        )
         return redirect(url_for("ui.status_code_detail", status_code_id=variant.status_code_id))
     return redirect(url_for("ui.status_code_detail", status_code_id=status_code_id, tab="actions"))
 
@@ -479,9 +488,9 @@ def status_code_planned_dates(status_code_id):
     except ValidationFailed as exc:
         _flash_validation(exc)
     except (DomainError, ValueError) as exc:
-        flash(str(exc), "error")
+        flash(_(str(exc)), "error")
     else:
-        flash("Planned dates saved.", "success")
+        flash(_("Planned dates saved."), "success")
     return redirect(url_for("ui.status_code_detail", status_code_id=status_code_id, tab="actions"))
 
 
@@ -499,11 +508,11 @@ def status_code_deprecate(status_code_id):
             acknowledge_dependants=request.form.get("acknowledge_dependants") == "on",
         )
     except InvalidTransitionError as exc:
-        flash(str(exc), "error")
+        flash(_(str(exc)), "error")
     except ValidationFailed as exc:
         _flash_validation(exc)
     else:
-        flash("Deprecation request opened; it must go through Review and Approval.", "success")
+        flash(_("Deprecation request opened; it must go through Review and Approval."), "success")
 
     return redirect(url_for("ui.status_code_detail", status_code_id=status_code_id, tab="actions"))
 
@@ -514,9 +523,9 @@ def status_code_archive(status_code_id):
     try:
         StatusCodeService.archive(status_code_id, current_user)
     except (InvalidTransitionError, DomainError) as exc:
-        flash(str(exc), "error")
+        flash(_(str(exc)), "error")
     else:
-        flash("Status code archived.", "success")
+        flash(_("Status code archived."), "success")
     return redirect(url_for("ui.status_code_detail", status_code_id=status_code_id))
 
 
@@ -527,11 +536,11 @@ def status_code_reinstate(status_code_id):
     try:
         StatusCodeService.reinstate(status_code_id, reason, current_user)
     except InvalidTransitionError as exc:
-        flash(str(exc), "error")
+        flash(_(str(exc)), "error")
     except ValidationFailed as exc:
         _flash_validation(exc)
     else:
-        flash("Status code reinstated to Released.", "success")
+        flash(_("Status code reinstated to Released."), "success")
     return redirect(url_for("ui.status_code_detail", status_code_id=status_code_id))
 
 
@@ -541,8 +550,8 @@ def status_code_delete(status_code_id):
     try:
         StatusCodeService.delete_sandbox(status_code_id, current_user)
     except (NotFoundError, DomainError) as exc:
-        flash(str(exc), "error")
+        flash(_(str(exc)), "error")
         return redirect(url_for("ui.status_code_detail", status_code_id=status_code_id))
 
-    flash("Sandbox status code permanently deleted.", "success")
+    flash(_("Sandbox status code permanently deleted."), "success")
     return redirect(url_for("ui.status_code_list"))

@@ -14,6 +14,7 @@ from app.domain.errors import (
     StepUpRequiredError,
 )
 from app.extensions import db
+from app.i18n import translate as _
 from app.models.change_request import ChangeRequest, DomainSignoffRequest
 from app.models.lookup import Role
 from app.models.status_code import StatusCodeRevision
@@ -138,7 +139,7 @@ def approval_queue():
 def change_request_detail(cr_id):
     cr = db.session.get(ChangeRequest, cr_id)
     if cr is None:
-        flash("Change request not found.", "error")
+        flash(_("Change request not found."), "error")
         return redirect(url_for("ui.my_change_requests"))
 
     revision = cr.revision
@@ -202,9 +203,9 @@ def cr_submit(cr_id):
             override_reason=request.form.get("override_reason"),
         )
     except (SegregationOfDutiesViolation, InvalidTransitionError, DomainError, ValueError) as exc:
-        flash(str(exc), "error")
+        flash(_(str(exc)), "error")
     else:
-        flash("Submitted for Review; identifier allocated.", "success")
+        flash(_("Submitted for Review; identifier allocated."), "success")
     return redirect(url_for("ui.change_request_detail", cr_id=cr_id))
 
 
@@ -223,9 +224,9 @@ def cr_reviewer_signoff(cr_id):
             checklist_confirmed=request.form.getlist("checklist_confirmed", type=int),
         )
     except _DECISION_ERRORS as exc:
-        flash(str(exc), "error")
+        flash(_(str(exc)), "error")
     else:
-        flash("Reviewer decision recorded.", "success")
+        flash(_("Reviewer decision recorded."), "success")
     return redirect(url_for("ui.change_request_detail", cr_id=cr_id))
 
 
@@ -248,9 +249,9 @@ def cr_admin_signoff(cr_id):
             reauth_password=request.form.get("current_password"),
         )
     except _DECISION_ERRORS as exc:
-        flash(str(exc), "error")
+        flash(_(str(exc)), "error")
     else:
-        flash("Administrator decision recorded.", "success")
+        flash(_("Administrator decision recorded."), "success")
     return redirect(url_for("ui.change_request_detail", cr_id=cr_id))
 
 
@@ -268,9 +269,9 @@ def cr_chief_engineer_decide(cr_id):
             reauth_password=request.form.get("current_password"),
         )
     except _DECISION_ERRORS as exc:
-        flash(str(exc), "error")
+        flash(_(str(exc)), "error")
     else:
-        flash("Chief Engineer decision recorded.", "success")
+        flash(_("Chief Engineer decision recorded."), "success")
     return redirect(url_for("ui.change_request_detail", cr_id=cr_id))
 
 
@@ -280,9 +281,9 @@ def cr_add_comment(cr_id):
     try:
         ChangeRequestService.add_comment(cr_id, current_user, request.form.get("comment", ""))
     except ValueError as exc:
-        flash(str(exc), "error")
+        flash(_(str(exc)), "error")
     else:
-        flash("Comment added.", "success")
+        flash(_("Comment added."), "success")
     return redirect(url_for("ui.change_request_detail", cr_id=cr_id))
 
 
@@ -293,9 +294,9 @@ def cr_assign_reviewer(cr_id):
     try:
         ChangeRequestService.assign_reviewer(cr_id, reviewer_id, current_user)
     except (SegregationOfDutiesViolation, InvalidTransitionError, ValueError) as exc:
-        flash(str(exc), "error")
+        flash(_(str(exc)), "error")
     else:
-        flash("Reviewer assignment updated.", "success")
+        flash(_("Reviewer assignment updated."), "success")
     return redirect(url_for("ui.change_request_detail", cr_id=cr_id))
 
 
@@ -304,7 +305,7 @@ def cr_assign_reviewer(cr_id):
 def cr_request_domain_signoff(cr_id):
     cr = db.session.get(ChangeRequest, cr_id)
     if cr is None:
-        flash("Change request not found.", "error")
+        flash(_("Change request not found."), "error")
         return redirect(url_for("ui.my_change_requests"))
     try:
         DomainSignoffService.request_signoff(
@@ -314,9 +315,9 @@ def cr_request_domain_signoff(cr_id):
             current_user,
         )
     except (DomainError, ValueError) as exc:
-        flash(str(exc), "error")
+        flash(_(str(exc)), "error")
     else:
-        flash("Sign-off requested.", "success")
+        flash(_("Sign-off requested."), "success")
     return redirect(url_for("ui.change_request_detail", cr_id=cr_id))
 
 
@@ -325,12 +326,12 @@ def cr_request_domain_signoff(cr_id):
 def cr_withdraw_selected():
     ids = [int(v) for v in request.form.getlist("cr_id") if v.isdigit()]
     if not ids:
-        flash("Tick at least one change request to withdraw.", "error")
+        flash(_("Tick at least one change request to withdraw."), "error")
         return redirect(url_for("ui.my_change_requests"))
     results = ChangeRequestService.withdraw_many(ids, current_user)
     done = sum(1 for r in results if r["ok"])
     if done:
-        flash(f"{done} change request(s) withdrawn.", "success")
+        flash(_("%(n)s change request(s) withdrawn.", n=done), "success")
     for r in results:
         if not r["ok"]:
             flash(f"#{r['cr_id']}: {r['message']}", "error")
@@ -349,10 +350,10 @@ def cr_withdraw(cr_id):
     try:
         ChangeRequestService.withdraw(cr_id, current_user)
     except (SegregationOfDutiesViolation, InvalidTransitionError) as exc:
-        flash(str(exc), "error")
+        flash(_(str(exc)), "error")
         return redirect(url_for("ui.change_request_detail", cr_id=cr_id))
 
-    flash("Change request withdrawn.", "success")
+    flash(_("Change request withdrawn."), "success")
     if status_code_id:
         return redirect(url_for("ui.status_code_detail", status_code_id=status_code_id))
     return redirect(url_for("ui.my_change_requests"))
@@ -363,14 +364,14 @@ def cr_withdraw(cr_id):
 def cr_domain_signoff(cr_id):
     cr = db.session.get(ChangeRequest, cr_id)
     if cr is None:
-        flash("Change request not found.", "error")
+        flash(_("Change request not found."), "error")
         return redirect(url_for("ui.my_change_requests"))
 
     domain_code = request.form.get("engineering_domain", "")
     try:
         DomainSignoffService.sign(cr, domain_code, current_user)
     except (DomainError, ValueError) as exc:
-        flash(str(exc), "error")
+        flash(_(str(exc)), "error")
     else:
-        flash(f"Signed off for {domain_code}.", "success")
+        flash(_("Signed off for %(domain)s.", domain=domain_code), "success")
     return redirect(url_for("ui.change_request_detail", cr_id=cr_id))

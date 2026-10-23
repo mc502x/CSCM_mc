@@ -18,6 +18,7 @@ from app.api.v1.serializers import import_job_payload
 from app.auth.decorators import current_user, require_role_web
 from app.domain.errors import DomainError
 from app.extensions import db
+from app.i18n import translate as _
 from app.models.lookup import LookupTurbinePlatform
 from app.services.import_service import ImportService
 from app.services.legacy_mapping_service import LegacyMappingService
@@ -35,7 +36,7 @@ def import_new():
         upload = request.files.get("file")
         mode = request.form.get("mode", "CREATE")
         if upload is None or not upload.filename:
-            flash("Choose a .csv or .xlsx file to upload.", "error")
+            flash(_("Choose a .csv or .xlsx file to upload."), "error")
         else:
             try:
                 if request.form.get("action") == "validate":
@@ -49,7 +50,7 @@ def import_new():
                     upload.filename, upload.read(), current_user, mode=mode
                 )
             except (DomainError, ValueError) as exc:
-                flash(str(exc), "error")
+                flash(_(str(exc)), "error")
             else:
                 return redirect(url_for("ui.import_detail", import_job_id=job.id))
 
@@ -71,7 +72,7 @@ def import_template(fmt):
             mimetype=_XLSX,
             headers={"Content-Disposition": "attachment; filename=cscm_import_template.xlsx"},
         )
-    flash("Unknown template format.", "error")
+    flash(_("Unknown template format."), "error")
     return redirect(url_for("ui.import_new"))
 
 
@@ -80,7 +81,7 @@ def import_template(fmt):
 def import_detail(import_job_id):
     job = ImportService.get(import_job_id)
     if job is None:
-        flash("Import job not found.", "error")
+        flash(_("Import job not found."), "error")
         return redirect(url_for("ui.import_new"))
     return render_template("imports/detail.html", job=job, progress=import_job_payload(job))
 
@@ -99,7 +100,7 @@ def import_progress(import_job_id):
 def import_errors(import_job_id):
     job = ImportService.get(import_job_id)
     if job is None or not job.error_report_reference:
-        flash("No error report available for this import job.", "error")
+        flash(_("No error report available for this import job."), "error")
         return redirect(url_for("ui.import_new"))
     if request.args.get("format") == "xlsx" and job.error_report_xlsx_reference:
         return send_file(
@@ -156,12 +157,12 @@ def st_import_new():
             (f.filename or "upload", f.read()) for f in request.files.getlist("files") if f.filename
         ]
         if not uploads:
-            flash("Choose the .st files, a folder or a ZIP to read.", "error")
+            flash(_("Choose the .st files, a folder or a ZIP to read."), "error")
         else:
             try:
                 preview = StImportService.preview(uploads, current_user, _st_options())
             except (DomainError, ValueError) as exc:
-                flash(str(exc), "error")
+                flash(_(str(exc)), "error")
             else:
                 return render_template("imports/st_preview.html", preview=preview)
     platforms = db.session.query(LookupTurbinePlatform).filter_by(is_active=1).all()
@@ -179,7 +180,7 @@ def st_import_confirm():
             change_set_name=request.form.get("change_set_name"),
         )
     except (DomainError, ValueError) as exc:
-        flash(str(exc), "error")
+        flash(_(str(exc)), "error")
         return redirect(url_for("ui.st_import_new"))
     return redirect(url_for("ui.import_detail", import_job_id=job.id))
 
@@ -190,7 +191,7 @@ def st_import_cancel():
     try:
         StImportService.discard(request.form.get("token", ""), current_user)
     except DomainError as exc:
-        flash(str(exc), "error")
+        flash(_(str(exc)), "error")
     return redirect(url_for("ui.st_import_new"))
 
 
@@ -241,5 +242,5 @@ def legacy_mapping_export(fmt):
             mimetype="text/csv",
             headers={"Content-Disposition": "attachment; filename=legacy_to_new_status_codes.csv"},
         )
-    flash("Unknown export format.", "error")
+    flash(_("Unknown export format."), "error")
     return redirect(url_for("ui.legacy_mapping"))

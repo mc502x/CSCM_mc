@@ -5,6 +5,7 @@ from flask import Response, flash, redirect, render_template, request, url_for
 
 from app.auth.decorators import current_user, login_required_web, require_role_web
 from app.domain.errors import AccountLockedError, StepUpRequiredError
+from app.i18n import translate as _
 from app.services.export_service import ExportService
 from app.services.release_service import ReleaseService
 from app.ui import ui_bp
@@ -34,7 +35,7 @@ def export_full_database():
             current_user, reauth_password=request.form.get("current_password")
         )
     except (StepUpRequiredError, AccountLockedError) as exc:
-        flash(str(exc), "error")
+        flash(_(str(exc)), "error")
         return redirect(url_for("ui.export_center"))
     return Response(
         content,

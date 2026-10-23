@@ -92,14 +92,14 @@
   <h3>{{ _('Request a Sign-Off') }}</h3>
   {% for code in pending_domains %}
   {% if not domain_holders[code] %}
-  <div class="flash flash--info">No active Engineer holds the <strong>{{ code }}</strong> domain yet. An Administrator must tag an Engineer with it (Administration &rarr; Users) before a sign-off can be requested.</div>
+  <div class="flash flash--info">{{ _('No active Engineer holds the %(code)s domain yet. An Administrator must tag an Engineer with it (Administration → Users) before a sign-off can be requested.', code=code) }}</div>
   {% else %}
   <form method="post" action="{{ url_for('ui.cr_request_domain_signoff', cr_id=cr.id) }}" class="btn-row">
     <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
     <input type="hidden" name="engineering_domain" value="{{ code }}">
     <label for="target_{{ code }}">{{ code }}:</label>
     <select id="target_{{ code }}" name="target_user_id">
-      <option value="">Any {{ code }} Engineer</option>
+      <option value="">{{ _('Any %(code)s Engineer', code=code) }}</option>
       {% for u in domain_holders[code] %}<option value="{{ u.id }}">{{ u.full_name }}</option>{% endfor %}
     </select>
     <button class="btn" type="submit">{{ _('Request') }}</button>
@@ -131,12 +131,12 @@
     {% if revision.remedy_text %}<dt>{{ _('Remedy') }}</dt><dd class="pre-wrap">{{ revision.remedy_text }}</dd>{% endif %}
     <dt>{{ macros.term('audience-access', _('Audience Access')) }}</dt>
     <dd>
-      Development: {{ revision.development_access or '—' }}, Sales: {{ revision.sales_access or '—' }},
-      TCC: {{ revision.tcc_access or '—' }}, Service: {{ revision.service_access or '—' }},
-      Turbine Operator Package: {{ revision.turbine_operator_package_access or '—' }},
-      Grid Operator: {{ revision.grid_operator_access or '—' }},
-      Service Partner: {{ revision.service_partner_access or '—' }},
-      Customer: {{ revision.customer_access or '—' }}
+      {{ _('Development') }}: {{ revision.development_access or '—' }}, {{ _('Sales') }}: {{ revision.sales_access or '—' }},
+      {{ _('TCC') }}: {{ revision.tcc_access or '—' }}, {{ _('Service') }}: {{ revision.service_access or '—' }},
+      {{ _('Turbine Operator Package') }}: {{ revision.turbine_operator_package_access or '—' }},
+      {{ _('Grid Operator') }}: {{ revision.grid_operator_access or '—' }},
+      {{ _('Service Partner') }}: {{ revision.service_partner_access or '—' }},
+      {{ _('Customer') }}: {{ revision.customer_access or '—' }}
       {% if not revision.admin_signoff_at %}<span class="proposed-badge">{{ _('Proposed') }}</span>{% endif %}
     </dd>
     {% if cr.justification %}<dt>{{ _('Justification') }}</dt><dd>{{ cr.justification }}</dd>{% endif %}

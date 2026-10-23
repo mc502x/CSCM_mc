@@ -14,7 +14,7 @@
     <dt>{{ _('File') }}</dt><dd>{{ backup.last_file or '—' }}</dd>
   </dl>
   {% if last_backup %}
-  <p class="muted">{{ _('Last run') }}: {{ last_backup.last_attempt_at }} — integrity {{ 'ok' if last_backup.integrity_ok else 'FAILED' }}, restore test {{ 'ok' if last_backup.restore_ok else 'FAILED' }}, audit chain {{ 'ok' if last_backup.audit_chain_ok else 'FAILED' }}. {{ last_backup.generations|length }} {{ _('generations kept') }}.</p>
+  <p class="muted">{{ _('Last run') }}: {{ last_backup.last_attempt_at }} — {{ _('integrity %(a)s, restore test %(b)s, audit chain %(c)s.', a=(_('ok') if last_backup.integrity_ok else _('FAILED')), b=(_('ok') if last_backup.restore_ok else _('FAILED')), c=(_('ok') if last_backup.audit_chain_ok else _('FAILED'))) }} {{ last_backup.generations|length }} {{ _('generations kept') }}.</p>
   {% endif %}
   {% endif %}
 </div>

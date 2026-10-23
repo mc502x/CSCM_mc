@@ -79,8 +79,8 @@
             {% else %}<span class="muted">proposal</span>{% endif %}
             {% if item and item.decision != 'PENDING' %}<div class="chip">{{ item.decision|lower }}</div>{% endif %}
           </td>
-          <td><textarea name="p_{{ row.id }}" rows="2" maxlength="1000"{% if rtl %} dir="rtl" class="rtl-text"{% endif %} lang="{{ language }}" aria-label="Proposal for {{ row.id }}"{% if item and item.decision != 'PENDING' %} disabled{% endif %}>{{ item.proposal if item and item.proposal else '' }}</textarea></td>
-          <td><input type="text" name="c_{{ row.id }}" maxlength="1000" value="{{ item.comment if item and item.comment else '' }}" aria-label="Comment for {{ row.id }}"{% if item and item.decision != 'PENDING' %} disabled{% endif %}></td>
+          <td><textarea name="p_{{ row.id }}" rows="2" maxlength="1000"{% if rtl %} dir="rtl" class="rtl-text"{% endif %} lang="{{ language }}" aria-label="{{ _('Proposal for %(x)s', x=row.id) }}"{% if item and item.decision != 'PENDING' %} disabled{% endif %}>{{ item.proposal if item and item.proposal else '' }}</textarea></td>
+          <td><input type="text" name="c_{{ row.id }}" maxlength="1000" value="{{ item.comment if item and item.comment else '' }}" aria-label="{{ _('Comment for %(x)s', x=row.id) }}"{% if item and item.decision != 'PENDING' %} disabled{% endif %}></td>
         </tr>
         {% else %}
         <tr><td colspan="6" class="table-empty">Nothing here for this filter.</td></tr>

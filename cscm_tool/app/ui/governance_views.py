@@ -27,6 +27,7 @@ from app.domain.errors import DomainError, NotFoundError
 from app.extensions import db
 from app.help_content import NEXT_STEP, QUICK_START, ROLE_GLOSSARY, STATE_GLOSSARY, TERM_GLOSSARY
 from app.i18n import LANGUAGES
+from app.i18n import translate as _
 from app.models.change_request import ChangeRequest
 from app.models.lookup import LookupFunctionalSystemGroup, Role
 from app.models.user import User
@@ -63,10 +64,10 @@ def notifications_read():
         try:
             NotificationService.mark_read(notice_id, current_user)
         except _ERRORS as exc:
-            flash(str(exc), "error")
+            flash(_(str(exc)), "error")
     else:
         NotificationService.mark_all_read(current_user)
-        flash("All notices marked as read.", "success")
+        flash(_("All notices marked as read."), "success")
     return redirect(url_for("ui.notifications"))
 
 
@@ -116,9 +117,9 @@ def change_set_new():
                 current_user,
             )
         except _ERRORS as exc:
-            flash(str(exc), "error")
+            flash(_(str(exc)), "error")
         else:
-            flash("Change set created.", "success")
+            flash(_("Change set created."), "success")
             return redirect(url_for("ui.change_set_detail", change_set_id=change_set.id))
     versions = LookupService.list_vocabulary("controller-software-versions")
     return render_template("change_sets/new.html", versions=versions)
@@ -130,7 +131,7 @@ def change_set_detail(change_set_id):
     try:
         overview = ChangeSetService.overview(change_set_id)
     except NotFoundError:
-        flash("Change set not found.", "error")
+        flash(_("Change set not found."), "error")
         return redirect(url_for("ui.change_set_list"))
     mine = (
         db.session.query(ChangeRequest)
@@ -161,9 +162,9 @@ def change_set_add(change_set_id):
             change_set_id, request.form.get("cr_id", type=int) or 0, current_user
         )
     except _ERRORS as exc:
-        flash(str(exc), "error")
+        flash(_(str(exc)), "error")
     else:
-        flash("Change request added to the set.", "success")
+        flash(_("Change request added to the set."), "success")
     return redirect(url_for("ui.change_set_detail", change_set_id=change_set_id))
 
 
@@ -175,9 +176,9 @@ def change_set_add_from_cr(cr_id):
             request.form.get("change_set_id", type=int) or 0, cr_id, current_user
         )
     except _ERRORS as exc:
-        flash(str(exc), "error")
+        flash(_(str(exc)), "error")
     else:
-        flash("Change request added to the set.", "success")
+        flash(_("Change request added to the set."), "success")
     return redirect(url_for("ui.change_request_detail", cr_id=cr_id))
 
 
@@ -187,9 +188,9 @@ def change_set_remove(change_set_id, cr_id):
     try:
         ChangeSetService.remove_cr(change_set_id, cr_id, current_user)
     except _ERRORS as exc:
-        flash(str(exc), "error")
+        flash(_(str(exc)), "error")
     else:
-        flash("Change request removed from the set.", "success")
+        flash(_("Change request removed from the set."), "success")
     return redirect(url_for("ui.change_set_detail", change_set_id=change_set_id))
 
 
@@ -199,9 +200,9 @@ def change_set_close(change_set_id):
     try:
         ChangeSetService.close(change_set_id, current_user)
     except _ERRORS as exc:
-        flash(str(exc), "error")
+        flash(_(str(exc)), "error")
     else:
-        flash("Change set closed.", "success")
+        flash(_("Change set closed."), "success")
     return redirect(url_for("ui.change_set_detail", change_set_id=change_set_id))
 
 
@@ -220,10 +221,13 @@ def change_set_decide(change_set_id):
             cr_ids=request.form.getlist("cr_ids", type=int) or None,
         )
     except _ERRORS as exc:
-        flash(str(exc), "error")
+        flash(_(str(exc)), "error")
     else:
         ok = sum(1 for r in results if r["ok"])
-        flash(f"{ok} of {len(results)} decisions recorded.", "success" if ok else "error")
+        flash(
+            _("%(ok)s of %(n)s decisions recorded.", ok=ok, n=len(results)),
+            "success" if ok else "error",
+        )
         for r in results:
             if not r["ok"]:
                 flash(f"CR #{r['cr_id']}: {r['message']}", "error")
@@ -253,11 +257,14 @@ def cr_auto_assign_reviewer(cr_id):
     try:
         cr = ChangeRequestService.auto_assign_reviewer(cr_id, current_user)
     except _ERRORS as exc:
-        flash(str(exc), "error")
+        flash(_(str(exc)), "error")
     else:
         reviewer = cr.assigned_reviewer
         flash(
-            f"Assigned to {reviewer.full_name if reviewer else '-'} (fewest open reviews).",
+            _(
+                "Assigned to %(name)s (fewest open reviews).",
+                name=reviewer.full_name if reviewer else "-",
+            ),
             "success",
         )
     return redirect(request.referrer or url_for("ui.change_request_detail", cr_id=cr_id))
@@ -277,9 +284,9 @@ def delegations():
                 current_user,
             )
         except _ERRORS as exc:
-            flash(str(exc), "error")
+            flash(_(str(exc)), "error")
         else:
-            flash("Delegation created.", "success")
+            flash(_("Delegation created."), "success")
         return redirect(url_for("ui.delegations"))
     candidates = (
         db.session.query(User)
@@ -304,9 +311,9 @@ def delegation_revoke(delegation_id):
     try:
         DelegationService.revoke(delegation_id, current_user)
     except _ERRORS as exc:
-        flash(str(exc), "error")
+        flash(_(str(exc)), "error")
     else:
-        flash("Delegation revoked.", "success")
+        flash(_("Delegation revoked."), "success")
     return redirect(url_for("ui.delegations"))
 
 
@@ -323,9 +330,9 @@ def review_checklist():
                 sort_order=request.form.get("sort_order", 0, type=int),
             )
         except _ERRORS as exc:
-            flash(str(exc), "error")
+            flash(_(str(exc)), "error")
         else:
-            flash("Checklist item added.", "success")
+            flash(_("Checklist item added."), "success")
         return redirect(url_for("ui.review_checklist"))
     return render_template(
         "admin/review_checklist.html",
@@ -346,7 +353,7 @@ def review_checklist_toggle(item_id):
     try:
         FieldReviewService.update_item(item_id, {"is_active": not item.is_active}, current_user)
     except _ERRORS as exc:
-        flash(str(exc), "error")
+        flash(_(str(exc)), "error")
     return redirect(url_for("ui.review_checklist"))
 
 
@@ -359,9 +366,9 @@ def cr_add_field_comment(cr_id):
             cr_id, request.form.get("field", ""), request.form.get("comment", ""), current_user
         )
     except _ERRORS as exc:
-        flash(str(exc), "error")
+        flash(_(str(exc)), "error")
     else:
-        flash("Field comment added.", "success")
+        flash(_("Field comment added."), "success")
     return redirect(url_for("ui.change_request_detail", cr_id=cr_id))
 
 
@@ -371,9 +378,9 @@ def field_comment_resolve(comment_id):
     try:
         comment = FieldReviewService.resolve_field_comment(comment_id, current_user)
     except _ERRORS as exc:
-        flash(str(exc), "error")
+        flash(_(str(exc)), "error")
         return redirect(request.referrer or url_for("ui.my_change_requests"))
-    flash("Comment marked as resolved.", "success")
+    flash(_("Comment marked as resolved."), "success")
     return redirect(url_for("ui.change_request_detail", cr_id=comment.change_request_id))
 
 
@@ -382,16 +389,16 @@ def field_comment_resolve(comment_id):
 def cr_add_attachment(cr_id):
     upload = request.files.get("file")
     if upload is None or not upload.filename:
-        flash("Choose a file to attach.", "error")
+        flash(_("Choose a file to attach."), "error")
     else:
         try:
             AttachmentService.add(
                 cr_id, upload.filename, upload.read(), request.form.get("description"), current_user
             )
         except _ERRORS as exc:
-            flash(str(exc), "error")
+            flash(_(str(exc)), "error")
         else:
-            flash("Evidence attached.", "success")
+            flash(_("Evidence attached."), "success")
     return redirect(url_for("ui.change_request_detail", cr_id=cr_id))
 
 
@@ -422,9 +429,9 @@ def attachment_delete(attachment_id):
     try:
         AttachmentService.delete(attachment_id, current_user)
     except _ERRORS as exc:
-        flash(str(exc), "error")
+        flash(_(str(exc)), "error")
     else:
-        flash("Evidence removed.", "success")
+        flash(_("Evidence removed."), "success")
     return redirect(
         url_for("ui.change_request_detail", cr_id=cr_id) if cr_id else url_for("ui.dashboard")
     )
@@ -439,9 +446,9 @@ def app_settings():
         try:
             SettingsService.update(values, current_user)
         except _ERRORS as exc:
-            flash(str(exc), "error")
+            flash(_(str(exc)), "error")
         else:
-            flash("Settings saved.", "success")
+            flash(_("Settings saved."), "success")
         return redirect(url_for("ui.app_settings"))
     return render_template("admin/settings.html", settings=SettingsService.all())
 

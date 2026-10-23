@@ -4,13 +4,13 @@
 {% block content %}
 <div class="page-header"><h1>{{ _('My Change Requests') }}</h1></div>
 {% if import_job_id %}
-<div class="flash flash--info">Showing only Drafts created by Import Job #{{ import_job_id }}. <a href="{{ url_for('ui.my_change_requests') }}">Show all</a></div>
+<div class="flash flash--info">{{ _('Showing only Drafts created by Import Job #%(id)s.', id=import_job_id) }} <a href="{{ url_for('ui.my_change_requests') }}">{{ _('Show all') }}</a></div>
 {% endif %}
 {% if sign_requests %}
 <div class="card">
-  <h2>Sign-Off Requests For You</h2>
+  <h2>{{ _('Sign-Off Requests For You') }}</h2>
   <table>
-    <thead><tr><th>Domain</th><th>Change Request</th><th>Title</th><th>Author</th><th>Requested</th><th></th></tr></thead>
+    <thead><tr><th>{{ _('Domain') }}</th><th>{{ _('Change Request') }}</th><th>{{ _('Title') }}</th><th>{{ _('Author') }}</th><th>{{ _('Requested') }}</th><th></th></tr></thead>
     <tbody>
       {% for r in sign_requests %}
       <tr>
@@ -19,7 +19,7 @@
         <td>{{ r.change_request.revision.title }}</td>
         <td>{{ user_label(r.change_request.requested_by) }}</td>
         <td>{{ r.created_at }}</td>
-        <td><a href="{{ url_for('ui.change_request_detail', cr_id=r.change_request_id) }}">Review &amp; sign off</a></td>
+        <td><a href="{{ url_for('ui.change_request_detail', cr_id=r.change_request_id) }}">{{ _('Review & sign off') }}</a></td>
       </tr>
       {% endfor %}
     </tbody>
@@ -44,7 +44,7 @@
         <td>{{ macros.sla_badge(slas[cr.id]) }}</td>
         <td>{{ user_label(cr.requested_by) }}</td>
         <td>{{ cr.submitted_at or '—' }}</td>
-        <td><a href="{{ url_for('ui.change_request_detail', cr_id=cr.id) }}">View</a></td>
+        <td><a href="{{ url_for('ui.change_request_detail', cr_id=cr.id) }}">{{ _('View') }}</a></td>
       </tr>
       {% endfor %}
     </tbody>
@@ -52,7 +52,7 @@
   {% if can_withdraw %}<div class="btn-row" style="margin-top:12px"><button class="btn btn--danger" type="submit">{{ _('Withdraw selected') }}</button></div>{% endif %}
   </form>
   {% else %}
-  <div class="table-empty">You have no change requests yet.</div>
+  <div class="table-empty">{{ _('You have no change requests yet.') }}</div>
   {% endif %}
 </div>
 {% endblock %}

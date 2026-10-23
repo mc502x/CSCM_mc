@@ -11,6 +11,7 @@ from app.domain.errors import (
     NotFoundError,
     PasswordPolicyError,
 )
+from app.i18n import translate as _
 from app.services.audit_service import AuditService
 from app.services.lookup_admin_service import LookupAdminService
 from app.services.lookup_service import VOCABULARY_MODELS, LookupService
@@ -46,7 +47,7 @@ def user_detail(user_id):
         user = UserService.get_user(user_id)
         usage = UserService.usage(user_id)
     except NotFoundError:
-        flash("User not found.", "error")
+        flash(_("User not found."), "error")
         return redirect(url_for("ui.user_list"))
     actor_role = current_user.role_code
     return render_template(
@@ -73,9 +74,9 @@ def user_set_active(user_id):
     try:
         UserService.update_user(user_id, is_active=active, actor=current_user)
     except (LastAdministratorError, DomainError, ValueError) as exc:
-        flash(str(exc), "error")
+        flash(_(str(exc)), "error")
     else:
-        flash("User activated." if active else "User deactivated.", "success")
+        flash(_("User activated.") if active else _("User deactivated."), "success")
     return redirect(request.form.get("next") or url_for("ui.user_list"))
 
 
@@ -85,9 +86,9 @@ def user_delete(user_id):
     try:
         UserService.delete_user(user_id, current_user, request.form.get("current_password"))
     except (LastAdministratorError, DomainError, ValueError) as exc:
-        flash(str(exc), "error")
+        flash(_(str(exc)), "error")
         return redirect(url_for("ui.user_detail", user_id=user_id))
-    flash("User deleted.", "success")
+    flash(_("User deleted."), "success")
     return redirect(url_for("ui.user_list"))
 
 
@@ -108,9 +109,9 @@ def user_new():
         for v in exc.violations:
             flash(v, "error")
     except ValueError as exc:
-        flash(str(exc), "error")
+        flash(_(str(exc)), "error")
     else:
-        flash("User created.", "success")
+        flash(_("User created."), "success")
     return redirect(url_for("ui.user_list"))
 
 
@@ -132,9 +133,9 @@ def user_update(user_id):
                 user_id, role_code=request.form.get("role") or None, actor=current_user
             )
     except (LastAdministratorError, DomainError, ValueError) as exc:
-        flash(str(exc), "error")
+        flash(_(str(exc)), "error")
     else:
-        flash("User updated.", "success")
+        flash(_("User updated."), "success")
     return redirect(url_for("ui.user_list"))
 
 
@@ -148,7 +149,7 @@ def user_reset_password(user_id):
         for v in exc.violations:
             flash(v, "error")
     else:
-        flash("Password reset.", "success")
+        flash(_("Password reset."), "success")
     return redirect(url_for("ui.user_list"))
 
 
@@ -197,9 +198,9 @@ def lookup_value_new(vocabulary):
     try:
         LookupAdminService.create_value(vocabulary, data, current_user)
     except (DomainError, ValueError) as exc:
-        flash(str(exc), "error")
+        flash(_(str(exc)), "error")
     else:
-        flash("Value added.", "success")
+        flash(_("Value added."), "success")
     return redirect(url_for("ui.lookup_admin", vocabulary=vocabulary))
 
 
@@ -217,9 +218,9 @@ def functional_system_group_new():
     try:
         group = LookupAdminService.create_functional_system_group(data, current_user)
     except (DomainError, ValueError) as exc:
-        flash(str(exc), "error")
+        flash(_(str(exc)), "error")
     else:
-        flash(f"Functional System Group '{group.code}' created.", "success")
+        flash(_("Functional System Group '%(code)s' created.", code=group.code), "success")
     return redirect(url_for("ui.lookup_admin", vocabulary="functional-system-groups"))
 
 
@@ -238,9 +239,9 @@ def functional_subgroup_new():
     try:
         LookupAdminService.create_functional_subgroup(data, current_user)
     except (DomainError, ValueError) as exc:
-        flash(str(exc), "error")
+        flash(_(str(exc)), "error")
     else:
-        flash("Functional Subgroup added.", "success")
+        flash(_("Functional Subgroup added."), "success")
     return redirect(
         url_for(
             "ui.lookup_admin", vocabulary="functional-subgroups", functional_system_group=group_id
@@ -259,11 +260,11 @@ def lookup_value_update(vocabulary, value_id):
     try:
         LookupAdminService.update_value(vocabulary, value_id, data, current_user)
     except NotFoundError:
-        flash("Value not found.", "error")
+        flash(_("Value not found."), "error")
     except ValueError as exc:
-        flash(str(exc), "error")
+        flash(_(str(exc)), "error")
     else:
-        flash("Value updated.", "success")
+        flash(_("Value updated."), "success")
     return redirect(url_for("ui.lookup_admin", vocabulary=vocabulary))
 
 

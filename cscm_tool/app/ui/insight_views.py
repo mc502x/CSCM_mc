@@ -8,6 +8,7 @@ from app.audit_chain import AuditChainService
 from app.auth.decorators import current_user, require_role_web
 from app.auth.roles import OVERSIGHT_ROLES
 from app.domain.errors import DomainError
+from app.i18n import translate as _
 from app.services import backup_service
 from app.services.health_report_service import HealthReportService
 from app.services.hub_consolidation_service import HubConsolidationService
@@ -44,7 +45,7 @@ def fleet_feedback():
     if request.method == "POST":
         upload = request.files.get("file")
         if upload is None or not upload.filename:
-            flash("Choose a CSV or XLSX file with the occurrence counts.", "error")
+            flash(_("Choose a CSV or XLSX file with the occurrence counts."), "error")
         else:
             try:
                 batch = OccurrenceService.import_counts(
@@ -56,11 +57,14 @@ def fleet_feedback():
                     current_user,
                 )
             except _ERRORS as exc:
-                flash(str(exc), "error")
+                flash(_(str(exc)), "error")
             else:
                 flash(
-                    f"Imported counts for {batch.row_count} codes "
-                    f"({batch.unmatched_count} rows matched no code).",
+                    _(
+                        "Imported counts for %(n)s codes (%(u)s rows matched no code).",
+                        n=batch.row_count,
+                        u=batch.unmatched_count,
+                    ),
                     "success",
                 )
         return redirect(url_for("ui.fleet_feedback"))
@@ -108,9 +112,9 @@ def hub_create_mc_draft(hub_status_code_id):
         for err in exc.field_errors:
             flash(f"{err['field']}: {err['message']}", "error")
     except _ERRORS as exc:
-        flash(str(exc), "error")
+        flash(_(str(exc)), "error")
     else:
-        flash("Main Controller draft created from the Hub Controller code.", "success")
+        flash(_("Main Controller draft created from the Hub Controller code."), "success")
         return redirect(url_for("ui.status_code_detail", status_code_id=revision.status_code_id))
     return redirect(url_for("ui.hub_consolidation"))
 
@@ -122,11 +126,14 @@ def hub_bulk_deprecate():
     try:
         result = HubConsolidationService.request_hub_deprecation(group_id, current_user)
     except _ERRORS as exc:
-        flash(str(exc), "error")
+        flash(_(str(exc)), "error")
     else:
         flash(
-            f"{len(result['created'])} deprecation request(s) opened, "
-            f"{len(result['skipped'])} skipped.",
+            _(
+                "%(n)s deprecation request(s) opened, %(s)s skipped.",
+                n=len(result["created"]),
+                s=len(result["skipped"]),
+            ),
             "success",
         )
         for item in result["skipped"][:10]:
@@ -162,7 +169,7 @@ def integration_token_create():
             request.form.get("expires_in_days", 90, type=int),
         )
     except _ERRORS as exc:
-        flash(str(exc), "error")
+        flash(_(str(exc)), "error")
         return redirect(url_for("ui.integrations"))
     # Rendered in this response only (not via flash/session): the secret is shown exactly once.
     return _integrations_page(new_token=plaintext)
@@ -174,9 +181,9 @@ def integration_token_revoke(token_id):
     try:
         ApiTokenService.revoke(token_id, current_user)
     except _ERRORS as exc:
-        flash(str(exc), "error")
+        flash(_(str(exc)), "error")
     else:
-        flash("Token revoked.", "success")
+        flash(_("Token revoked."), "success")
     return redirect(url_for("ui.integrations"))
 
 
@@ -188,7 +195,7 @@ def integration_webhook_create():
             current_user, request.form.get("name", ""), request.form.get("url", "")
         )
     except _ERRORS as exc:
-        flash(str(exc), "error")
+        flash(_(str(exc)), "error")
         return redirect(url_for("ui.integrations"))
     return _integrations_page(new_webhook_secret=secret)
 
@@ -199,7 +206,7 @@ def integration_webhook_toggle(webhook_id):
     try:
         WebhookService.set_active(webhook_id, request.form.get("active") == "1", current_user)
     except _ERRORS as exc:
-        flash(str(exc), "error")
+        flash(_(str(exc)), "error")
     return redirect(url_for("ui.integrations"))
 
 

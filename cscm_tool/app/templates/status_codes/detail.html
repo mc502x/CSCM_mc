@@ -85,26 +85,26 @@
 
   <h2>{{ _('Program References') }} <span class="muted">({{ _('advanced, controller firmware programs') }})</span></h2>
   <dl class="kv">
-    <dt>Yaw Program</dt><dd>{{ revision.yaw_program }}</dd>
-    <dt>Manual Reset Program</dt><dd>{{ revision.manual_reset_program }}</dd>
-    <dt>Auto Reset Program</dt><dd>{{ revision.auto_reset_program }}</dd>
-    <dt>Converter Reactive Power Program</dt><dd>{{ revision.converter_reactive_power_program }}</dd>
-    <dt>Brake Program</dt><dd>{{ revision.brake_program }}</dd>
-    <dt>Umrichterprogramm GSC</dt><dd>{{ revision.umrichterprogramm_gsc }}</dd>
-    <dt>Umrichterprogramm MSC</dt><dd>{{ revision.umrichterprogramm_msc }}</dd>
-    <dt>Yaw Bearing Lubrication Program</dt><dd>{{ revision.yaw_bearing_lubrication_program }}</dd>
+    <dt>{{ _('Yaw Program') }}</dt><dd>{{ revision.yaw_program }}</dd>
+    <dt>{{ _('Manual Reset Program') }}</dt><dd>{{ revision.manual_reset_program }}</dd>
+    <dt>{{ _('Auto Reset Program') }}</dt><dd>{{ revision.auto_reset_program }}</dd>
+    <dt>{{ _('Converter Reactive Power Program') }}</dt><dd>{{ revision.converter_reactive_power_program }}</dd>
+    <dt>{{ _('Brake Program') }}</dt><dd>{{ revision.brake_program }}</dd>
+    <dt>{{ _('Umrichterprogramm GSC') }}</dt><dd>{{ revision.umrichterprogramm_gsc }}</dd>
+    <dt>{{ _('Umrichterprogramm MSC') }}</dt><dd>{{ revision.umrichterprogramm_msc }}</dd>
+    <dt>{{ _('Yaw Bearing Lubrication Program') }}</dt><dd>{{ revision.yaw_bearing_lubrication_program }}</dd>
   </dl>
 
   <h2>{{ macros.term('audience-access', _('Audience Access')) }} {% if not revision.admin_signoff_at %}<span class="proposed-badge">{{ _('Proposed') }}</span>{% endif %}</h2>
   <dl class="kv">
-    <dt>Development</dt><dd>{{ revision.development_access or '—' }}</dd>
-    <dt>Sales</dt><dd>{{ revision.sales_access or '—' }}</dd>
+    <dt>{{ _('Development') }}</dt><dd>{{ revision.development_access or '—' }}</dd>
+    <dt>{{ _('Sales') }}</dt><dd>{{ revision.sales_access or '—' }}</dd>
     <dt>TCC</dt><dd>{{ revision.tcc_access or '—' }}</dd>
-    <dt>Service</dt><dd>{{ revision.service_access or '—' }}</dd>
-    <dt>Turbine Operator Package</dt><dd>{{ revision.turbine_operator_package_access or '—' }}</dd>
-    <dt>Grid Operator</dt><dd>{{ revision.grid_operator_access or '—' }}</dd>
-    <dt>Service Partner</dt><dd>{{ revision.service_partner_access or '—' }}</dd>
-    <dt>Customer</dt><dd>{{ revision.customer_access or '—' }}</dd>
+    <dt>{{ _('Service') }}</dt><dd>{{ revision.service_access or '—' }}</dd>
+    <dt>{{ _('Turbine Operator Package') }}</dt><dd>{{ revision.turbine_operator_package_access or '—' }}</dd>
+    <dt>{{ _('Grid Operator') }}</dt><dd>{{ revision.grid_operator_access or '—' }}</dd>
+    <dt>{{ _('Service Partner') }}</dt><dd>{{ revision.service_partner_access or '—' }}</dd>
+    <dt>{{ _('Customer') }}</dt><dd>{{ revision.customer_access or '—' }}</dd>
   </dl>
 </div>
 
@@ -248,7 +248,7 @@
   <form method="post" action="{{ url_for('ui.status_code_delete', status_code_id=revision.status_code_id) }}">
     <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
     <div class="field">
-      <input type="text" id="confirm_identifier" data-typed-confirm="confirm_delete_btn" data-expected="{{ revision.status_code_identifier }}" placeholder="Type {{ revision.status_code_identifier }} to confirm" aria-label="{{ _('Type the identifier to confirm') }}">
+      <input type="text" id="confirm_identifier" data-typed-confirm="confirm_delete_btn" data-expected="{{ revision.status_code_identifier }}" placeholder="{{ _('Type %(id)s to confirm', id=revision.status_code_identifier) }}" aria-label="{{ _('Type the identifier to confirm') }}">
     </div>
     <button class="btn btn--danger" type="submit" id="confirm_delete_btn">{{ _('Delete Permanently') }}</button>
   </form>

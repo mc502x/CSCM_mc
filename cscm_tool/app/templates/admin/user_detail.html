@@ -4,91 +4,91 @@
 {% block content %}
 <div class="page-header">
   <h1>{{ user.full_name }} <span class="muted">({{ user.username }})</span></h1>
-  <a class="btn" href="{{ url_for('ui.user_list') }}">Back to users</a>
+  <a class="btn" href="{{ url_for('ui.user_list') }}">{{ _('Back to users') }}</a>
 </div>
 
 <div class="card" style="max-width:720px">
-  <h2>Profile</h2>
+  <h2>{{ _('Profile') }}</h2>
   <dl class="kv">
-    <dt>Username</dt><dd>{{ user.username }}</dd>
-    <dt>E-mail</dt><dd>{{ user.email }}</dd>
-    <dt>Role</dt><dd>{{ role_badge(user.role.code) }}</dd>
-    <dt>Engineering domains</dt><dd>{% for d in user.engineering_domains %}<span class="chip">{{ d.engineering_domain.code }}</span>{% else %}—{% endfor %}</dd>
-    <dt>Active</dt><dd>{{ 'Yes' if user.is_active else 'No — cannot sign in' }}</dd>
-    <dt>Created</dt><dd>{{ user.created_at }}</dd>
-    <dt>Last sign-in</dt><dd>{{ user.last_login_at or 'never' }}</dd>
-    <dt>Interface language</dt><dd>{{ user.ui_language }}</dd>
+    <dt>{{ _('Username') }}</dt><dd>{{ user.username }}</dd>
+    <dt>{{ _('E-mail') }}</dt><dd>{{ user.email }}</dd>
+    <dt>{{ _('Role') }}</dt><dd>{{ role_badge(user.role.code) }}</dd>
+    <dt>{{ _('Engineering domains') }}</dt><dd>{% for d in user.engineering_domains %}<span class="chip">{{ d.engineering_domain.code }}</span>{% else %}—{% endfor %}</dd>
+    <dt>{{ _('Active') }}</dt><dd>{{ 'Yes' if user.is_active else 'No — cannot sign in' }}</dd>
+    <dt>{{ _('Created') }}</dt><dd>{{ user.created_at }}</dd>
+    <dt>{{ _('Last sign-in') }}</dt><dd>{{ user.last_login_at or 'never' }}</dd>
+    <dt>{{ _('Interface language') }}</dt><dd>{{ user.ui_language }}</dd>
   </dl>
 </div>
 
 <div class="card" style="max-width:720px">
-  <h2>What this account has done</h2>
+  <h2>{{ _('What this account has done') }}</h2>
   {% if usage.references %}
-  <p class="muted">These rows point at the account. They are history that must stay attributable, so the account can be deactivated but not deleted.</p>
+  <p class="muted">{{ _('These rows point at the account. They are history that must stay attributable, so the account can be deactivated but not deleted.') }}</p>
   <table>
-    <thead><tr><th scope="col">Where</th><th scope="col">Rows</th></tr></thead>
+    <thead><tr><th scope="col">{{ _('Where') }}</th><th scope="col">{{ _('Rows') }}</th></tr></thead>
     <tbody>{% for where, n in usage.references.items() %}<tr><td>{{ where }}</td><td>{{ n }}</td></tr>{% endfor %}</tbody>
   </table>
   {% else %}
-  <p>Nothing: the account has never been used, so it can be deleted.</p>
+  <p>{{ _('Nothing: the account has never been used, so it can be deleted.') }}</p>
   {% endif %}
 </div>
 
 {% if is_admin %}
 <div class="card" style="max-width:720px">
-  <h2>Actions</h2>
+  <h2>{{ _('Actions') }}</h2>
   <div class="btn-row">
     <form method="post" action="{{ url_for('ui.user_set_active', user_id=user.id) }}" class="inline-form">
       <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
       <input type="hidden" name="active" value="{{ '0' if user.is_active else '1' }}">
       <input type="hidden" name="next" value="{{ url_for('ui.user_detail', user_id=user.id) }}">
-      <button class="btn" type="submit"{% if is_self and user.is_active %} disabled title="You cannot deactivate yourself here"{% endif %}>{{ 'Deactivate' if user.is_active else 'Activate' }}</button>
+      <button class="btn" type="submit"{% if is_self and user.is_active %} disabled title="{{ _('You cannot deactivate yourself here') }}"{% endif %}>{{ 'Deactivate' if user.is_active else 'Activate' }}</button>
     </form>
   </div>
 
   <details style="margin-top:12px">
-    <summary class="btn" style="display:inline-block">Edit</summary>
+    <summary class="btn" style="display:inline-block">{{ _('Edit') }}</summary>
     <form method="post" action="{{ url_for('ui.user_update', user_id=user.id) }}" style="margin-top:8px">
       <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
-      <div class="field"><label for="full_name">Full name</label><input type="text" id="full_name" name="full_name" value="{{ user.full_name }}"></div>
-      <div class="field"><label for="role">Role</label>
+      <div class="field"><label for="full_name">{{ _('Full name') }}</label><input type="text" id="full_name" name="full_name" value="{{ user.full_name }}"></div>
+      <div class="field"><label for="role">{{ _('Role') }}</label>
         <select id="role" name="role">
           {% for r in roles %}<option value="{{ r }}" {{ 'selected' if user.role.code == r }}>{{ role_info(r).label }}</option>{% endfor %}
         </select>
       </div>
       <div class="field checkbox-list">
-        <label>Engineering Domains</label>
+        <label>{{ _('Engineering Domains') }}</label>
         {% for d in domains %}
         <label><input type="checkbox" name="engineering_domains" value="{{ d.code }}" {{ 'checked' if d.code in user.engineering_domains|map(attribute='engineering_domain.code')|list }}> {{ d.code }}</label>
         {% endfor %}
       </div>
-      <div class="field"><label><input type="checkbox" name="is_active" {{ 'checked' if user.is_active }}> Active</label></div>
-      <button class="btn btn--primary" type="submit">Save</button>
+      <div class="field"><label><input type="checkbox" name="is_active" {{ 'checked' if user.is_active }}> {{ _('Active') }}</label></div>
+      <button class="btn btn--primary" type="submit">{{ _('Save') }}</button>
     </form>
   </details>
 
-  <h3 id="delete" style="margin-top:18px">Delete</h3>
+  <h3 id="delete" style="margin-top:18px">{{ _('Delete') }}</h3>
   {% if is_self %}
-  <p class="muted">You cannot delete your own account.</p>
+  <p class="muted">{{ _('You cannot delete your own account.') }}</p>
   {% elif usage.deletable %}
   <form method="post" action="{{ url_for('ui.user_delete', user_id=user.id) }}" data-confirm="Delete {{ user.username }} for good? This cannot be undone.">
     <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
-    <div class="field" style="max-width:360px"><label for="current_password">Your password</label><input type="password" id="current_password" name="current_password" autocomplete="current-password" required></div>
-    <button class="btn btn--danger" type="submit">Delete user</button>
+    <div class="field" style="max-width:360px"><label for="current_password">{{ _('Your password') }}</label><input type="password" id="current_password" name="current_password" autocomplete="current-password" required></div>
+    <button class="btn btn--danger" type="submit">{{ _('Delete user') }}</button>
   </form>
   {% else %}
-  <p class="muted">Not possible: the account has history (see above). Deactivate it instead; the person can no longer sign in and everything they did stays attributable.</p>
+  <p class="muted">{{ _('Not possible: the account has history (see above). Deactivate it instead; the person can no longer sign in and everything they did stays attributable.') }}</p>
   {% endif %}
 </div>
 {% elif may_change_role %}
 <div class="card" style="max-width:720px">
-  <h2>Role</h2>
+  <h2>{{ _('Role') }}</h2>
   <form method="post" action="{{ url_for('ui.user_update', user_id=user.id) }}" class="btn-row">
     <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
-    <select name="role" aria-label="Role of {{ user.username }}">
+    <select name="role" aria-label="{{ _('Role of %(x)s', x=user.username) }}">
       {% for r in assignable %}<option value="{{ r }}" {{ 'selected' if user.role.code == r }}>{{ role_info(r).label }}</option>{% endfor %}
     </select>
-    <button class="btn btn--primary" type="submit">Set role</button>
+    <button class="btn btn--primary" type="submit">{{ _('Set role') }}</button>
   </form>
 </div>
 {% endif %}
