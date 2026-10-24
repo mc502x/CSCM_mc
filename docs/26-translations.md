@@ -71,7 +71,7 @@ The reviewer looks at every row for these seven things (the same list is in *Wha
 4. An Administrator or StCd Owner who is **not** the proposer opens *Decisions and reviewers* and **accepts** (optionally correcting the text), **rejects** or **notes** each open item (`TRANSLATION_PROPOSAL_DECIDE`). Only a proposed change can be accepted; an UNCLEAR item is noted or dismissed. A decision is final.
 5. An accepted change becomes an **override** and is **shown at once** in the application, for that language only, with no release and no restart. An override can be removed again, which brings the shipped text back (`TRANSLATION_OVERRIDE_REMOVE`).
 6. At the next release the maintainer moves the overrides into the catalogue file of the language and regenerates this file; the override then equals the shipped text and is removed.
-7. The next visit of an assigned reviewer starts a new review; section 3.5 tells the state of the language.
+7. The next visit of an assigned reviewer starts a new review. **A follow-up review covers only what is new or changed since the last approval** (*New and changed translations*; *All translations* shows the rest); what was approved stays approved. Approved means: an OK answer, an accepted proposal (its final text), a rejected proposal or a noted question; an undecided proposal approves nothing. Section 3.5 tells the state of the language.
 
 ### 3.5 Review states
 
@@ -81,8 +81,8 @@ The overview (S42) shows one state per language.
 |---|---|---|
 | not reviewed | nobody who speaks the language has completed a review of it | the language is marked as a beta in the language menu; not offered to customers |
 | in progress | a review is open | as above |
-| reviewed | a native speaker completed a review of exactly this version | offered without marking |
-| changed since the review | the text was edited (for example by an accepted proposal) after the review | stays offered; a short follow-up review of the changed strings is scheduled |
+| reviewed | a native speaker completed a review and no string awaits approval | offered without marking |
+| changed since the review | strings are new or were changed after they were approved (a shipped change, an override) | stays offered; the language keeps the *beta* mark for the working roles, a Viewer reads those strings in English until they are approved, and a **follow-up review** lists only them (FR-176) |
 
 ### 3.6 Who reviews
 
@@ -226,6 +226,42 @@ The implementation of v4.5 to v4.8 was reviewed for what a person who opens the 
 
 What remains: (a) **no translation but the shipped ones is reviewed by a native speaker** — the 18 languages are proposals, and the review of FR-164 is the way to correct them; (b) the messages of the API, the content of the exports outside the catalogue (section 5) and the user manual are English; (c) the web interface sets Urdu in Naskh, not in the Nastaliq of the PDF; (d) the terms of the Terminology section are not yet applied to the interface automatically.
 
+## 8c. The confidence check (v4.10)
+
+Before a native speaker has looked at a language, a **pre-check** says how far its text can be trusted. It is done by an AI checker (Claude) and is **not a review**: it does not remove the *beta* mark, it approves nothing, and it is no substitute for the native speakers of section 3. It tells the reviewers where to look first and the business how much work to expect.
+
+**Method.**
+
+1. *Every string, mechanically.* Placeholders kept, nothing missing, no untranslated English where a translation is expected, and every term of the nomenclature (section 8a) rendered as the nomenclature says when it stands alone.
+2. *A sample, read.* The same 160 strings in every language (60 short, 100 longer, drawn with a fixed seed from the 1,190) are read for meaning, register, consistency and the form of the technical terms. A **wrong meaning** counts 1, an **awkward or inconsistent wording** 0.5.
+3. *From the sample to a percentage.* The rate of the sample is carried over to the whole catalogue; from it are taken the **haircut** - what the checker cannot see in that language (4 points for German, French, Spanish and Italian, which it reads fluently, up to 16 for Odia, where it can judge only the surface) - and half a finding for every term that the interface renders differently from the nomenclature. The result is the estimated share of strings a native speaker would accept unchanged.
+4. *The colour.* The overview of the application (Translations) and the table 9.1 show the percentage on a colour in steps of five points: **red at 50 % or less, yellow around 75 %, green above 95 %**.
+
+**Result of 2026-10-24** (table 9.1 and 9.1a): the Latin-script languages come out between 92 % and 95 %, the languages of India, Arabic, Urdu and Georgian between 83 % and 88 %, Odia at 78 %. No language is above 95 %, so none is green: the checker would not put its name to that, and the haircut says so. The findings that stand out are the same in several languages and are worth settling once: *escalation* (the separate escalation code pool) was rendered as appeal, increase, intensity or *additional* in Tamil, Odia, Hindi, Marathi, Urdu, Kannada, Malayalam and Punjabi; *attributable* (what a deleted user did stays attributable) as *accusable* in Kannada and Malayalam; *revision* and *review* are the same word in Arabic and *revision* is *version* in Odia; *released* is *free* in Odia; and the *signing secret* is rendered literally in many languages. Odia also has an invented word for *deployment*. The flagged strings are listed in table 9.1a; **they have not been corrected**, because a correction by the same checker would be as unverified as the text; the native speaker decides.
+
+**The terms.** Between 2 and 18 strings per language (136 in all) that stand for a term of the nomenclature are rendered differently from it (for example *Main controller* and *Hub controller* in the languages of India, *Release* in Odia). Some of these are legitimate - a plural or an inflected form - and the check counts them as half a finding each. Which of the two is right is for the reviewers and for the owner of the nomenclature; until they decide, the interface and the glossary stay as they are.
+
+**Every change goes through the check.** A string that is added or changed, and any change of a term of the nomenclature, has to be read one by one and recorded:
+
+```bash
+python scripts/translation_precheck.py --check                  # what changed since the last check
+python scripts/translation_precheck.py --template > delta.json  # one line per changed string
+python scripts/translation_precheck.py --delta delta.json       # verdict OK, A (awkward) or E (wrong) for each
+```
+
+The record (`app/translations/precheck.json`) keeps the percentage of every language, the findings and who recorded what; `precheck_state.json` holds a short hash of every string at the last check. `--delta` refuses a changed string without a verdict and a changed nomenclature without the confirmation that the interface was compared with it, and `test_every_change_of_the_text_or_the_nomenclature_has_been_through_the_check` fails as long as the record is out of date, so a change cannot be released unchecked. The percentage of a language is recomputed from the sample rate for the strings that did not change and from the verdicts for those that did. A new full pre-check (`--baseline scripts/precheck_baseline.json`) is due when the share of strings read one by one has grown large, or when a language has been reviewed and its errors are known.
+
+**The StCd Owner is told (FR-178).** Two things report what a change of the vocabulary does to the languages, in the notices of the application (kind `TRANSLATION_IMPACT`):
+
+| When | What the notice says | Who gets it |
+|---|---|---|
+| A version is deployed or the server starts, and the shipped text or nomenclature differs from the last confidence check (`flask translation-impact` does the same by hand; the installers run it after the database upgrade) | the changed strings per language, whether the nomenclature changed, the reviewed languages with strings awaiting approval; the reminder to record the confidence check | the StCd Owners and the reviewers assigned to an affected language |
+| A term is **added** or **changed** in *Terminology*, or the translation of a term is **approved** | the languages without an approved translation, the interface strings that do not use the term (counted per language), the reviewed languages whose strings need a follow-up review; for an approval the one language | the StCd Owners and the reviewers assigned to an affected language |
+
+A notice is sent once per change and person; a failing notice never undoes the change. The test of this section runs in the build and covers what ships; the notice covers what is changed while the application runs and what a deployment brings.
+
+**And the approval of the native speakers is separate.** New and changed strings are approved by a follow-up review, not by the confidence check (FR-176, section 3.4).
+
 ## 9. Catalogue (generated)
 
 <!-- translations:start -->
@@ -234,29 +270,171 @@ The interface has **1190 strings** (every text a template wraps in `_()`, the ro
 
 ### 9.1 Coverage
 
-| Language | Code | Direction | Translated | Share | Fingerprint |
-|---|---|---|---|---|---|
-| GB English 🇬🇧 | `en` | ltr | source | — | — |
-| DE Deutsch 🇩🇪 (German) | `de` | ltr | 1190 | 100 % | `027fdaf635ca` |
-| FR Français 🇫🇷 (French) | `fr` | ltr | 1189 | 99 % | `68859c1dda92` |
-| IN हिन्दी 🇮🇳 (Hindi) | `hi` | ltr | 1189 | 99 % | `3029cad298a5` |
-| SA العربية 🇸🇦 (Arabic) | `ar` | rtl | 1189 | 99 % | `eec22ebbabb7` |
-| IN বাংলা 🇮🇳 (Bengali) | `bn` | ltr | 1189 | 99 % | `21f13e9b24f0` |
-| IN मराठी 🇮🇳 (Marathi) | `mr` | ltr | 1189 | 99 % | `71fdab40aa3a` |
-| IN తెలుగు 🇮🇳 (Telugu) | `te` | ltr | 1189 | 99 % | `846e5d8db4b7` |
-| IN தமிழ் 🇮🇳 (Tamil) | `ta` | ltr | 1189 | 99 % | `7eb2e8b9dffe` |
-| IN ગુજરાતી 🇮🇳 (Gujarati) | `gu` | ltr | 1189 | 99 % | `49fb4a601bff` |
-| PK اردو 🇵🇰 (Urdu) | `ur` | rtl | 1189 | 99 % | `912739aead4b` |
-| IN ಕನ್ನಡ 🇮🇳 (Kannada) | `kn` | ltr | 1189 | 99 % | `f02753392c02` |
-| IN ଓଡ଼ିଆ 🇮🇳 (Odia) | `or` | ltr | 1189 | 99 % | `6b02541854dc` |
-| IN മലയാളം 🇮🇳 (Malayalam) | `ml` | ltr | 1189 | 99 % | `ce900969c22c` |
-| IN ਪੰਜਾਬੀ 🇮🇳 (Punjabi) | `pa` | ltr | 1189 | 99 % | `fa36c61a0322` |
-| ES Español 🇪🇸 (Spanish) | `es` | ltr | 1189 | 99 % | `df96da35934d` |
-| IT Italiano 🇮🇹 (Italian) | `it` | ltr | 1189 | 99 % | `b8bd0de24a57` |
-| DK Dansk 🇩🇰 (Danish) | `da` | ltr | 1189 | 99 % | `53a225f4f32b` |
-| GE ქართული 🇬🇪 (Georgian) | `ka` | ltr | 1189 | 99 % | `2672bf1c4c6e` |
+| Language | Code | Direction | Translated | Share | Pre-check confidence | Fingerprint |
+|---|---|---|---|---|---|---|
+| GB English 🇬🇧 | `en` | ltr | source | — | — | — |
+| DE Deutsch 🇩🇪 (German) | `de` | ltr | 1190 | 100 % | <span style="background:#7fc561;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>94 %</b></span> | `027fdaf635ca` |
+| FR Français 🇫🇷 (French) | `fr` | ltr | 1189 | 99 % | <span style="background:#7fc561;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>94 %</b></span> | `68859c1dda92` |
+| IN हिन्दी 🇮🇳 (Hindi) | `hi` | ltr | 1189 | 99 % | <span style="background:#9ccf5c;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>88 %</b></span> | `3029cad298a5` |
+| SA العربية 🇸🇦 (Arabic) | `ar` | rtl | 1189 | 99 % | <span style="background:#9ccf5c;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>88 %</b></span> | `eec22ebbabb7` |
+| IN বাংলা 🇮🇳 (Bengali) | `bn` | ltr | 1189 | 99 % | <span style="background:#9ccf5c;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>87 %</b></span> | `21f13e9b24f0` |
+| IN मराठी 🇮🇳 (Marathi) | `mr` | ltr | 1189 | 99 % | <span style="background:#9ccf5c;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>87 %</b></span> | `71fdab40aa3a` |
+| IN తెలుగు 🇮🇳 (Telugu) | `te` | ltr | 1189 | 99 % | <span style="background:#9ccf5c;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>85 %</b></span> | `846e5d8db4b7` |
+| IN தமிழ் 🇮🇳 (Tamil) | `ta` | ltr | 1189 | 99 % | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>84 %</b></span> | `7eb2e8b9dffe` |
+| IN ગુજરાતી 🇮🇳 (Gujarati) | `gu` | ltr | 1189 | 99 % | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>84 %</b></span> | `49fb4a601bff` |
+| PK اردو 🇵🇰 (Urdu) | `ur` | rtl | 1189 | 99 % | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>85 %</b></span> | `912739aead4b` |
+| IN ಕನ್ನಡ 🇮🇳 (Kannada) | `kn` | ltr | 1189 | 99 % | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>84 %</b></span> | `f02753392c02` |
+| IN ଓଡ଼ିଆ 🇮🇳 (Odia) | `or` | ltr | 1189 | 99 % | <span style="background:#d9e050;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>78 %</b></span> | `6b02541854dc` |
+| IN മലയാളം 🇮🇳 (Malayalam) | `ml` | ltr | 1189 | 99 % | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>83 %</b></span> | `ce900969c22c` |
+| IN ਪੰਜਾਬੀ 🇮🇳 (Punjabi) | `pa` | ltr | 1189 | 99 % | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>83 %</b></span> | `fa36c61a0322` |
+| ES Español 🇪🇸 (Spanish) | `es` | ltr | 1189 | 99 % | <span style="background:#7fc561;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>94 %</b></span> | `df96da35934d` |
+| IT Italiano 🇮🇹 (Italian) | `it` | ltr | 1189 | 99 % | <span style="background:#7fc561;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>94 %</b></span> | `b8bd0de24a57` |
+| DK Dansk 🇩🇰 (Danish) | `da` | ltr | 1189 | 99 % | <span style="background:#7fc561;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>92 %</b></span> | `53a225f4f32b` |
+| GE ქართული 🇬🇪 (Georgian) | `ka` | ltr | 1189 | 99 % | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>83 %</b></span> | `2672bf1c4c6e` |
+
+The pre-check confidence is the estimate of section 8c - the share of strings a native speaker is expected to accept unchanged, by an AI checker and not by a native speaker; red is 50 % or less, green above 95 %.
 
 The fingerprint is a short hash of the language's catalogue as shipped in the code (string ids and translations). Whether a language has been reviewed, by whom and when, and which proposals were accepted since, is kept in the application (Translations in the sidebar), not in this file.
+
+### 9.1a Pre-check: findings per language
+
+| Language | Wrong meaning | Awkward or inconsistent | Terms differing from the nomenclature | Haircut (points) | Confidence |
+|---|---|---|---|---|---|
+| DE Deutsch 🇩🇪 | 0 | 6 | 11 | 4 | <span style="background:#7fc561;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>94 %</b></span> |
+| FR Français 🇫🇷 | 0 | 4 | 6 | 4 | <span style="background:#7fc561;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>94 %</b></span> |
+| IN हिन्दी 🇮🇳 | 1 | 7 | 4 | 9 | <span style="background:#9ccf5c;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>88 %</b></span> |
+| SA العربية 🇸🇦 | 1 | 3 | 7 | 10 | <span style="background:#9ccf5c;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>88 %</b></span> |
+| IN বাংলা 🇮🇳 | 0 | 6 | 3 | 11 | <span style="background:#9ccf5c;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>87 %</b></span> |
+| IN मराठी 🇮🇳 | 1 | 5 | 5 | 11 | <span style="background:#9ccf5c;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>87 %</b></span> |
+| IN తెలుగు 🇮🇳 | 0 | 5 | 4 | 13 | <span style="background:#9ccf5c;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>85 %</b></span> |
+| IN தமிழ் 🇮🇳 | 1 | 6 | 7 | 13 | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>84 %</b></span> |
+| IN ગુજરાતી 🇮🇳 | 1 | 6 | 6 | 13 | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>84 %</b></span> |
+| PK اردو 🇵🇰 | 1 | 5 | 2 | 13 | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>85 %</b></span> |
+| IN ಕನ್ನಡ 🇮🇳 | 1 | 7 | 15 | 13 | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>84 %</b></span> |
+| IN ଓଡ଼ିଆ 🇮🇳 | 6 | 4 | 18 | 16 | <span style="background:#d9e050;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>78 %</b></span> |
+| IN മലയാളം 🇮🇳 | 1 | 5 | 16 | 14 | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>83 %</b></span> |
+| IN ਪੰਜਾਬੀ 🇮🇳 | 1 | 6 | 15 | 14 | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>83 %</b></span> |
+| ES Español 🇪🇸 | 0 | 6 | 5 | 4 | <span style="background:#7fc561;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>94 %</b></span> |
+| IT Italiano 🇮🇹 | 0 | 5 | 4 | 4 | <span style="background:#7fc561;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>94 %</b></span> |
+| DK Dansk 🇩🇰 | 1 | 3 | 5 | 6 | <span style="background:#7fc561;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>92 %</b></span> |
+| GE ქართული 🇬🇪 | 0 | 7 | 3 | 15 | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>83 %</b></span> |
+
+The wrong and awkward counts are findings in the sample of 160 strings, the same strings in every language. The strings that were flagged, for the native speaker to look at first:
+
+| Language | Kind | English | Translation | Finding |
+|---|---|---|---|---|
+| `de` | awkward | Copy the signing secret now - it is shown only once: | Kopieren Sie das Signatur-Geheimnis jetzt – es wird nur einmal angezeigt: | 'Signatur-Geheimnis' is stiff; 'Signaturschlüssel' is usual |
+| `de` | awkward | Create Main Controller draft from this Hub code | Hauptsteuerungs-Entwurf aus diesem Hub-Code anlegen | 'Hauptsteuerung' here, 'Main-Controller' in the glossary |
+| `de` | awkward | Hub Controller group | Hub-Controller-Gruppe | 'Hub-Controller' here, 'Nabensteuerung' elsewhere |
+| `de` | awkward | Never translated | Nie übersetzen | reads as an instruction ('never translate'), not as a state |
+| `de` | awkward | Only a proposed change can be accepted. | Nur ein vorgeschlagener Änderungswunsch kann angenommen werden. | 'Änderungswunsch' where the rest says 'Änderungsantrag' |
+| `de` | awkward | SEC-010: only an Administrator closes a change set. | SEC-010: Nur ein Administrator schließt ein Änderungsset. | 'Änderungsset' where the rest says 'Änderungspaket' |
+| `fr` | awkward | All rows are clean. | Toutes les lignes sont propres. | 'propres' for rows without errors; 'sans erreur' is usual |
+| `fr` | awkward | Deprecations | Obsolescences | 'Obsolescences' is stiff |
+| `fr` | awkward | I have reviewed these dependants | J'ai relu ces dépendances | 'dépendances' instead of 'codes dépendants' |
+| `fr` | awkward | Not yet published | Pas encore publiée | feminine 'publiée' for a neutral label |
+| `hi` | awkward | All rows are clean. | सभी पंक्तियाँ साफ़ हैं। | 'साफ़' for rows without errors |
+| `hi` | awkward | Controller software versions this Release is for (optional) | नियंत्रक सॉफ़्टवेयर संस्करण जिनके लिए यह रिलीज़ है (वैकल्पिक) | word order |
+| `hi` | awkward | Copy the signing secret now - it is shown only once: | हस्ताक्षर रहस्य अभी कॉपी करें - यह केवल एक बार दिखाया जाता है: | literal rendering of 'signing secret' |
+| `hi` | awkward | Name of the change set (optional) | परिवर्तन समुच्चय का नाम (वैकल्पिक) | 'समुच्चय' where 44 says 'समूह' |
+| `hi` | awkward | New change set | नया परिवर्तन समूह | 'परिवर्तन समूह' here, 'समुच्चय' in 123 and 149 |
+| `hi` | awkward | Opens a Draft that must go through the full dual-review and Chief Engineer approval cycle before it takes effect. | एक मसौदा खोलता है जिसे प्रभावी होने से पहले पूरे दोहरी समीक्षा और मुख्य अभियंता अनुमोदन चक्र से गुज़रना होता है। | gender agreement ('पूरे दोहरी') |
+| `hi` | awkward | Your entries compared with the stored values | आपकी प्रविष्टियाँ संग्रहीत मानों से तुलना में | fragment |
+| `hi` | wrong | Reference number in the separate escalation code pool — not a CSCM Tool status code. | अलग वृद्धिकरण कोड पूल में संदर्भ क्रमांक — CSCM Tool का स्थिति कोड नहीं। | 'वृद्धिकरण' means increase, not escalation |
+| `ar` | awkward | Reinstatement reason | سبب إعادة العمل | 'إعادة العمل' for reinstatement is vague |
+| `ar` | awkward | Send back | إعادة | 'إعادة' alone for Send back is incomplete |
+| `ar` | awkward | Webhook not found | خطاف الويب غير موجود | 'خطاف الويب' is a literal rendering of webhook |
+| `ar` | wrong | opens a new revision | يفتح تنقيحًا جديدًا | revision is 'تنقيح' here and 'مراجعة' elsewhere, which also means review |
+| `bn` | awkward | A code whose change request was withdrawn stays as an empty shell: it keeps its number, legacy number and PrgIdx_GUi, so the same program or row cannot be imported again. Delete it here to free them. Deleting is final and is written to the audit log. | যে কোডের পরিবর্তন অনুরোধ প্রত্যাহার করা হয়েছে সেটি খালি খোলস হিসেবে থেকে যায়: এটি তার নম্বর, পুরনো নম্বর ও PrgIdx_GUi ধরে রাখে, ফলে একই প্রোগ্রাম বা সারি আবার আমদানি করা যায় না। এগুলি মুক্ত করতে এখানে মুছে ফেলুন। মোছা চূড়ান্ত এবং অডিট লগে লেখা হয়। | 'এগুলি' and 'এগুলো' mixed |
+| `bn` | awkward | All rows are clean. | সব সারি পরিষ্কার। | 'পরিষ্কার' for rows without errors |
+| `bn` | awkward | Copy the signing secret now - it is shown only once: | সাইনিং সিক্রেট এখনই কপি করুন - এটি শুধু একবার দেখানো হয়: | transliterated 'সিক্রেট' |
+| `bn` | awkward | Opens a Draft that must go through the full dual-review and Chief Engineer approval cycle before it takes effect. | একটি খসড়া খোলে যা কার্যকর হওয়ার আগে দ্বিগুণ পর্যালোচনা ও প্রধান প্রকৌশলীর অনুমোদনের পূর্ণ চক্র পার করতে হবে। | 'দ্বিগুণ' means doubled |
+| `bn` | awkward | User deleted; its name and address are erased, what it did stays attributable. | ব্যবহারকারী মুছে ফেলা হয়েছে; তার নাম ও ঠিকানা মুছে ফেলা হয়েছে, সে যা করেছে তা আরোপযোগ্য থাকে। | 'আরোপযোগ্য' is unusual |
+| `bn` | awkward | Your entries compared with the stored values | আপনার এন্ট্রি সংরক্ষিত মানের সঙ্গে তুলনায় | fragment |
+| `mr` | awkward | %(count)s codes have no confirmed access levels and are missing from every access-level file. | %(count)s कोडचे अॅक्सेस स्तर निश्चित नाहीत आणि ते प्रत्येक अॅक्सेस-स्तर फाइलमधून गायब आहेत. | 'अॅक्सेस' where the rest says 'प्रवेश' |
+| `mr` | awkward | All rows are clean. | सर्व ओळी स्वच्छ आहेत. | 'स्वच्छ' for rows without errors |
+| `mr` | awkward | Configuration | संरचना | 'संरचना' (structure) for Configuration |
+| `mr` | awkward | Copy the signing secret now - it is shown only once: | स्वाक्षरी गुपित आत्ताच कॉपी करा - ते फक्त एकदाच दाखवले जाते: | literal rendering of 'signing secret' |
+| `mr` | awkward | Your entries compared with the stored values | तुमच्या नोंदी जतन केलेल्या मूल्यांशी तुलनेत | fragment |
+| `mr` | wrong | Reference number in the separate escalation code pool — not a CSCM Tool status code. | वेगळ्या वाढ कोड संचातील संदर्भ क्रमांक — CSCM Tool चा स्थिती कोड नाही. | 'वाढ' (growth) for escalation |
+| `te` | awkward | A code whose change request was withdrawn stays as an empty shell: it keeps its number, legacy number and PrgIdx_GUi, so the same program or row cannot be imported again. Delete it here to free them. Deleting is final and is written to the audit log. | మార్పు అభ్యర్థన ఉపసంహరించిన కోడ్ ఖాళీ గూడుగా మిగులుతుంది: అది తన సంఖ్య, పాత సంఖ్య, PrgIdx_GUi ను ఉంచుకుంటుంది, అందువల్ల అదే ప్రోగ్రామ్ లేదా అడ్డు వరస మళ్లీ దిగుమతి కాదు. వాటిని విడిపించడానికి ఇక్కడ తొలగించండి. తొలగింపు తుది నిర్ణయం మరియు ఆడిట్ లాగ్‌లో నమోదవుతుంది. | 'అడ్డు వరస' where the rest says 'వరుస' |
+| `te` | awkward | All rows are clean. | అన్ని వరుసలు శుభ్రంగా ఉన్నాయి. | 'శుభ్రంగా' for rows without errors |
+| `te` | awkward | Copy the signing secret now - it is shown only once: | సంతకం రహస్యాన్ని ఇప్పుడే కాపీ చేయండి - ఇది ఒక్కసారి మాత్రమే చూపబడుతుంది: | literal rendering of 'signing secret' |
+| `te` | awkward | Internal network only. Tokens can only read; webhooks can only reach private addresses. | అంతర్గత నెట్‌వర్క్ మాత్రమే. టోకెన్లు చదవగలవు మాత్రమే; వెబ్‌హుక్‌లు ప్రైవేట్ చిరునామాలను మాత్రమే చేరగలవు. | word order of 'చదవగలవు మాత్రమే' |
+| `te` | awkward | Your entries compared with the stored values | మీ నమోదులు నిల్వ చేసిన విలువలతో పోలిక | fragment |
+| `ta` | awkward | All rows are clean. | அனைத்து வரிசைகளும் சுத்தமானவை. | 'சுத்தமானவை' for rows without errors |
+| `ta` | awkward | Change thresholds | வரம்புகளை மாற்றவும் | 'மாற்றவும்' where the buttons say 'மாற்று' |
+| `ta` | awkward | Copy the signing secret now - it is shown only once: | கையொப்ப ரகசியத்தை இப்போதே நகலெடுக்கவும் - இது ஒருமுறை மட்டுமே காட்டப்படும்: | literal rendering of 'signing secret' |
+| `ta` | awkward | Cross-domain sign-off (last 90 days) | துறைகள் கடந்த கையொப்பம் (கடந்த 90 நாட்கள்) | 'துறைகள் கடந்த' is stiff |
+| `ta` | awkward | I have reviewed these dependants | இந்தச் சார்ந்தவற்றை நான் மதிப்பாய்வு செய்துவிட்டேன் | 'சார்ந்தவற்றை' without a noun |
+| `ta` | awkward | Opens a Draft that must go through the full dual-review and Chief Engineer approval cycle before it takes effect. | நடைமுறைக்கு வரும் முன் முழு இரட்டை மதிப்பாய்வு, தலைமைப் பொறியாளர் ஒப்புதல் சுழற்சியைக் கடக்க வேண்டிய வரைவைத் திறக்கிறது. | long, hard to read |
+| `ta` | wrong | Reference number in the separate escalation code pool — not a CSCM Tool status code. | தனி மேல்முறையீட்டுக் குறியீட்டுத் தொகுப்பிலுள்ள குறிப்பு எண் — CSCM Tool நிலைக் குறியீடு அல்ல. | 'மேல்முறையீடு' means appeal, not escalation |
+| `gu` | awkward | All rows are clean. | બધી પંક્તિઓ સ્વચ્છ છે. | 'સ્વચ્છ' for rows without errors |
+| `gu` | awkward | Copy the signing secret now - it is shown only once: | સહી રહસ્ય હમણાં જ કૉપિ કરો - તે ફક્ત એક જ વાર બતાવાય છે: | literal rendering of 'signing secret' |
+| `gu` | awkward | I have reviewed these dependants | મેં આ આશ્રિતોની સમીક્ષા કરી છે | 'આશ્રિતો' without a noun |
+| `gu` | awkward | Opens a Draft that must go through the full dual-review and Chief Engineer approval cycle before it takes effect. | એક મુસદ્દો ખોલે છે જેણે અમલમાં આવતા પહેલાં બેવડી સમીક્ષા અને મુખ્ય ઇજનેરની મંજૂરીના સંપૂર્ણ ચક્રમાંથી પસાર થવું પડે. | grammar of the relative clause |
+| `gu` | awkward | User deleted; its name and address are erased, what it did stays attributable. | વપરાશકર્તા કાઢી નાખ્યો; તેનું નામ અને સરનામું ભૂંસાયા છે, તેણે જે કર્યું તે આરોપણીય રહે છે. | 'આરોપણીય' is unusual |
+| `gu` | awkward | Your entries compared with the stored values | તમારી નોંધો સંગ્રહિત મૂલ્યો સાથે સરખામણીમાં | fragment |
+| `gu` | wrong | would be revised | સુધારાત | 'સુધારાત' is not a usual form of 'would be revised' |
+| `ur` | awkward | All rows are clean. | تمام سطریں صاف ہیں۔ | 'صاف' for rows without errors |
+| `ur` | awkward | Copy the signing secret now - it is shown only once: | دستخطی راز ابھی کاپی کریں - یہ صرف ایک بار دکھایا جاتا ہے: | literal rendering of 'signing secret' |
+| `ur` | awkward | I have reviewed these dependants | میں نے ان منحصر کوڈ کا جائزہ لے لیا ہے | 'منحصر' without a noun |
+| `ur` | awkward | New change set | نیا تبدیلیوں کا مجموعہ | gender and number agreement ('نیا ... مجموعہ') |
+| `ur` | awkward | No change sets yet. | ابھی کوئی تبدیلیوں کا مجموعہ نہیں۔ | word order |
+| `ur` | wrong | Reference number in the separate escalation code pool — not a CSCM Tool status code. | الگ اضافی کوڈ پول میں حوالہ نمبر — CSCM Tool کا اسٹیٹس کوڈ نہیں۔ | 'اضافی' means additional, not escalation |
+| `kn` | awkward | %(count)s codes have no confirmed access levels and are missing from every access-level file. | %(count)s ಕೋಡ್‌ಗಳಿಗೆ ದೃಢೀಕೃತ ಪ್ರವೇಶ ಹಂತಗಳಿಲ್ಲ ಮತ್ತು ಅವು ಪ್ರತಿ ಪ್ರವೇಶ-ಹಂತ ಫೈಲ್‌ನಿಂದ ಕಾಣೆಯಾಗಿವೆ. | 'ಪ್ರವೇಶ' and 'ಆಕ್ಸೆಸ್' mixed |
+| `kn` | awkward | All rows are clean. | ಎಲ್ಲಾ ಸಾಲುಗಳು ಸ್ವಚ್ಛವಾಗಿವೆ. | 'ಸ್ವಚ್ಛ' for rows without errors |
+| `kn` | awkward | Copy the signing secret now - it is shown only once: | ಸಹಿ ರಹಸ್ಯವನ್ನು ಈಗಲೇ ನಕಲಿಸಿ - ಇದನ್ನು ಒಮ್ಮೆ ಮಾತ್ರ ತೋರಿಸಲಾಗುತ್ತದೆ: | literal rendering of 'signing secret' |
+| `kn` | awkward | Deprecate replaced Hub codes | ಬದಲಾಯಿಸಿದ ಹಬ್ ಕೋಡ್‌ಗಳನ್ನು ಹಳತಾಗಿಸಿ | 'ಹಳತಾಗಿಸಿ' is unnatural |
+| `kn` | awkward | Deprecations | ಹಳತಾಗಿಸುವಿಕೆಗಳು | 'ಹಳತಾಗಿಸುವಿಕೆಗಳು' is unnatural |
+| `kn` | awkward | I have reviewed these dependants | ನಾನು ಈ ಅವಲಂಬಿತಗಳನ್ನು ಪರಿಶೀಲಿಸಿದ್ದೇನೆ | 'ಅವಲಂಬಿತ' without a noun |
+| `kn` | awkward | Reference number in the separate escalation code pool — not a CSCM Tool status code. | ಪ್ರತ್ಯೇಕ ಉಲ್ಬಣ ಕೋಡ್ ಪೂಲ್‌ನಲ್ಲಿರುವ ಉಲ್ಲೇಖ ಸಂಖ್ಯೆ — CSCM Tool ಸ್ಥಿತಿ ಕೋಡ್ ಅಲ್ಲ. | 'ಉಲ್ಬಣ' (aggravation) for escalation |
+| `kn` | wrong | User deleted; its name and address are erased, what it did stays attributable. | ಬಳಕೆದಾರರನ್ನು ಅಳಿಸಲಾಗಿದೆ; ಅವರ ಹೆಸರು ಮತ್ತು ವಿಳಾಸ ಅಳಿಸಲ್ಪಟ್ಟಿವೆ, ಅವರು ಮಾಡಿದ್ದು ಆರೋಪಿಸಬಹುದಾದಂತೆ ಉಳಿಯುತ್ತದೆ. | 'ಆರೋಪಿಸಬಹುದಾದ' means accusable, not attributable |
+| `or` | awkward | All rows are clean. | ସମସ୍ତ ଧାଡ଼ି ସଫା। | 'ସଫା' for rows without errors |
+| `or` | awkward | Copy from previous revision | ପୂର୍ବ ସଂସ୍କରଣରୁ ନକଲ କରନ୍ତୁ | 'ସଂସ୍କରଣ' means version, not revision |
+| `or` | awkward | Deprecations | ପ୍ରଚଳନ ବନ୍ଦ | 'ପ୍ରଚଳନ ବନ୍ଦ' is a description, not a term |
+| `or` | awkward | opens a new revision | ନୂଆ ସଂସ୍କରଣ ଖୋଲେ | 'ସଂସ୍କରଣ' means version, not revision |
+| `or` | wrong | A profile fixes the columns, their order and header labels, and optionally a default audience and language. Profiles are data: change them here, no deployment needed. | ପ୍ରୋଫାଇଲ୍ ସ୍ତମ୍ଭ, ସେମାନଙ୍କ କ୍ରମ ଓ ଶୀର୍ଷକ ଲେବଲ୍ ଏବଂ ବିକଳ୍ପ ଭାବେ ଡିଫଲ୍ଟ ଲକ୍ଷ୍ୟ ଗୋଷ୍ଠୀ ଓ ଭାଷା ସ୍ଥିର କରେ। ପ୍ରୋଫାଇଲ୍ ଡାଟା: ଏଠାରେ ବଦଳାନ୍ତୁ, ମୁତୟନ ଦରକାର ନାହିଁ। | 'ମୁତୟନ' is not a word for deployment |
+| `or` | wrong | Copy the signing secret now - it is shown only once: | ସାଇନିଂ ଗୁପ୍ତ ଏବେ କପି କରନ୍ତୁ - ଏହା କେବଳ ଥରେ ଦେଖାଯାଏ: | incomplete phrase 'ସାଇନିଂ ଗୁପ୍ତ' |
+| `or` | wrong | No Released codes yet. | ଏପର୍ଯ୍ୟନ୍ତ ମୁକ୍ତ କୋଡ୍ ନାହିଁ। | 'ମୁକ୍ତ' means free, not released |
+| `or` | wrong | Reference number in the separate escalation code pool — not a CSCM Tool status code. | ପୃଥକ ଉତ୍କଟତା କୋଡ୍ ପୁଲ୍‌ରେ ସନ୍ଦର୍ଭ ସଂଖ୍ୟା — CSCM Tool ସ୍ଥିତି କୋଡ୍ ନୁହେଁ। | 'ଉତ୍କଟତା' means intensity, not escalation |
+| `or` | wrong | The current set of every Released status code, independent of any single Release. | ଗୋଟିଏ ରିଲିଜ୍‌ରୁ ସ୍ୱାଧୀନ ଭାବେ, ମୁକ୍ତ ହୋଇଥିବା ସମସ୍ତ ସ୍ଥିତି କୋଡ୍‌ର ବର୍ତ୍ତମାନ ସମୂହ। | 'ମୁକ୍ତ' means free, not released |
+| `or` | wrong | User deleted; its name and address are erased, what it did stays attributable. | ଉପଯୋଗକର୍ତ୍ତା ଲିଭାଯାଇଛି; ତାଙ୍କ ନାମ ଓ ଠିକଣା ମାଡ଼ି ଦିଆଯାଇଛି, ସେ ଯାହା କରିଛନ୍ତି ତାହା ଚିହ୍ନଟଯୋଗ୍ୟ ରହେ। | 'ମାଡ଼ି ଦିଆଯାଇଛି' means pressed down, not erased |
+| `ml` | awkward | All rows are clean. | എല്ലാ വരികളും വൃത്തിയാണ്. | 'വൃത്തിയാണ്' for rows without errors |
+| `ml` | awkward | Copy the signing secret now - it is shown only once: | ഒപ്പിടൽ രഹസ്യം ഇപ്പോൾ പകർത്തുക - ഇത് ഒരു തവണ മാത്രമേ കാണിക്കൂ: | literal rendering of 'signing secret' |
+| `ml` | awkward | fixed: it identifies you, also for the Windows sign-in | സ്ഥിരം: ഇത് നിങ്ങളുടെ തിരിച്ചറിയൽ ആണ്, വിൻഡോസ് സൈൻ-ഇനും ഇതുതന്നെ | meaning shifts ('ഇതുതന്നെ') |
+| `ml` | awkward | FR-021a: an identifier override requires a documented reason. | FR-021a: ഐഡന്റിഫയർ അസാധുവാക്കലിന് രേഖപ്പെടുത്തിയ കാരണം വേണം. | 'അസാധുവാക്കൽ' means invalidation, not override |
+| `ml` | awkward | Reference number in the separate escalation code pool — not a CSCM Tool status code. | വേറിട്ട വർദ്ധന കോഡ് പൂളിലെ റഫറൻസ് നമ്പർ — CSCM Tool സ്റ്റാറ്റസ് കോഡ് അല്ല. | 'വർദ്ധന' (increase) for escalation |
+| `ml` | wrong | User deleted; its name and address are erased, what it did stays attributable. | ഉപയോക്താവിനെ ഇല്ലാതാക്കി; പേരും വിലാസവും മായ്ച്ചു, അവർ ചെയ്തത് ആരോപിക്കാവുന്നതായി തുടരും. | 'ആരോപിക്കാവുന്ന' means accusable, not attributable |
+| `pa` | awkward | Deprecate replaced Hub codes | ਬਦਲੇ ਗਏ ਹੱਬ ਕੋਡ ਬੰਦ ਕਰੋ | 'ਬੰਦ ਕਰੋ' means close, not deprecate |
+| `pa` | awkward | Deprecations | ਬੰਦ ਕਰਨ ਦੀਆਂ ਕਾਰਵਾਈਆਂ | 'ਬੰਦ ਕਰਨ ਦੀਆਂ ਕਾਰਵਾਈਆਂ' means closing actions |
+| `pa` | awkward | Reference number in the separate escalation code pool — not a CSCM Tool status code. | ਵੱਖਰੇ ਵਾਧਾ ਕੋਡ ਪੂਲ ਵਿੱਚ ਹਵਾਲਾ ਨੰਬਰ — CSCM Tool ਦਾ ਸਥਿਤੀ ਕੋਡ ਨਹੀਂ। | 'ਵਾਧਾ' (increase) for escalation |
+| `pa` | awkward | Saving again keeps your entries and replaces the stored values. | ਮੁੜ ਸੁਰੱਖਿਅਤ ਕਰਨ ਨਾਲ ਤੁਹਾਡੀਆਂ ਐਂਟਰੀਆਂ ਰਹਿੰਦੀਆਂ ਹਨ ਅਤੇ ਸਟੋਰ ਮੁੱਲ ਬਦਲ ਜਾਂਦੇ ਹਨ। | 'ਸਟੋਰ' and 'ਸੁਰੱਖਿਅਤ' mixed |
+| `pa` | awkward | User deleted; its name and address are erased, what it did stays attributable. | ਵਰਤੋਂਕਾਰ ਮਿਟਾਇਆ ਗਿਆ; ਉਸਦਾ ਨਾਮ ਅਤੇ ਪਤਾ ਮਿਟਾ ਦਿੱਤੇ ਗਏ, ਜੋ ਉਸਨੇ ਕੀਤਾ ਉਹ ਪਛਾਣਯੋਗ ਰਹਿੰਦਾ ਹੈ। | 'ਮਿਟਾਇਆ' repeated in one sentence |
+| `pa` | awkward | Verify | ਪੜਤਾਲੋ | 'ਪੜਤਾਲੋ' is an informal imperative; the rest uses 'ਕਰੋ' |
+| `pa` | wrong | Copy the signing secret now - it is shown only once: | ਦਸਤਖ਼ਤ ਗੁਪਤ ਹੁਣੇ ਕਾਪੀ ਕਰੋ - ਇਹ ਸਿਰਫ਼ ਇੱਕ ਵਾਰ ਦਿਖਾਇਆ ਜਾਂਦਾ ਹੈ: | incomplete phrase 'ਦਸਤਖ਼ਤ ਗੁਪਤ' |
+| `es` | awkward | All required sign-offs are in, but this is still a Draft — the Reviewer and Administrator only see it after you choose Submit for Review below. | Todas las conformidades requeridas están, pero sigue siendo un borrador — el revisor y el administrador solo lo ven después de que elija Enviar a revisión más abajo. | 'conformidades', as in 34 |
+| `es` | awkward | All rows are clean. | Todas las filas están limpias. | 'limpias' for rows without errors |
+| `es` | awkward | Cross-domain sign-off (last 90 days) | Conformidad entre ámbitos (últimos 90 días) | 'entre ámbitos' for cross-domain is vague |
+| `es` | awkward | Deprecations | Obsolescencias | 'Obsolescencias' is stiff |
+| `es` | awkward | I have reviewed these dependants | He revisado estos dependientes | 'dependientes' instead of 'códigos dependientes' |
+| `es` | awkward | Request a Sign-Off | Solicitar conformidad | 'conformidad' for sign-off; 'visto bueno' or 'firma' is usual |
+| `it` | awkward | A code whose change request was withdrawn stays as an empty shell: it keeps its number, legacy number and PrgIdx_GUi, so the same program or row cannot be imported again. Delete it here to free them. Deleting is final and is written to the audit log. | Un codice la cui richiesta di modifica è stata ritirata resta come guscio vuoto: conserva il suo numero, il vecchio numero e il PrgIdx_GUi, quindi lo stesso programma o la stessa riga non può essere importato di nuovo. Eliminalo qui per liberarli. L'eliminazione è definitiva e viene scritta nel registro di audit. | informal address (tu) in an interface that otherwise uses Lei |
+| `it` | awkward | All rows are clean. | Tutte le righe sono a posto. | 'a posto' is colloquial |
+| `it` | awkward | Copy the signing secret now - it is shown only once: | Copiare ora il segreto di firma: viene mostrato una sola volta: | infinitive 'Copiare' where the rest uses the formal imperative |
+| `it` | awkward | Deprecations | Obsolescenze | 'Obsolescenze' is stiff |
+| `it` | awkward | I have reviewed these dependants | Ho rivisto questi dipendenti | 'dipendenti' instead of 'codici dipendenti' |
+| `da` | awkward | All rows are clean. | Alle rækker er rene. | 'rene' for rows without errors |
+| `da` | awkward | Controller software versions this Release is for (optional) | Styringssoftwareversioner, denne udgivelse er til (valgfrit) | awkward relative clause |
+| `da` | awkward | Deprecations | Forældelser | 'Forældelser' is stiff |
+| `da` | wrong | Full Name | Fulde navn | 'Fulde navn' should be 'Fuldt navn' |
+| `ka` | awkward | All rows are clean. | ყველა სტრიქონი სუფთაა. | 'სუფთაა' for rows without errors |
+| `ka` | awkward | Deprecations | მოძველებები | 'მოძველებები' is stiff |
+| `ka` | awkward | fixed: it identifies you, also for the Windows sign-in | ფიქსირებულია: ის გაიდენტიფიცირებთ, Windows-ით შესვლისთვისაც | 'გაიდენტიფიცირებთ' is awkward |
+| `ka` | awkward | Hub Controller group | კერის კონტროლერის ჯგუფი | 'კერის' where the glossary says 'ჰაბის' |
+| `ka` | awkward | No Released codes yet. | გამოშვებული კოდები ჯერ არ არის. | 'გამოშვებული' where the rest says 'გამოქვეყნებული' |
+| `ka` | awkward | Select the Approved, non-sandbox revisions to include, then Save. Publishing is immutable — a correction requires a new Release. | აირჩიეთ დამტკიცებული, არასანდბოქს რევიზიები ჩასართავად, შემდეგ შეინახეთ. გამოქვეყნება შეუქცევადია — შესწორებას ახალი რელიზი სჭირდება. | word order |
+| `ka` | awkward | User deleted; its name and address are erased, what it did stays attributable. | მომხმარებელი წაიშალა; მისი სახელი და მისამართი წაშლილია, მისი ქმედებები კვლავ მიეკუთვნება. | 'მიეკუთვნება' is incomplete |
 
 ### 9.2 DE Deutsch 🇩🇪 — German
 

@@ -27,7 +27,8 @@
   </details>
 
   <div class="btn-row" style="margin-top:10px">
-    <a class="btn{% if f.scope == 'translated' %} btn--primary{% endif %}" href="{{ url_for('ui.translation_review', language=language) }}">Check translations</a>
+    <a class="btn{% if f.scope == 'translated' %} btn--primary{% endif %}" href="{{ url_for('ui.translation_review', language=language) }}">{{ 'New and changed translations' if data.followup else 'Check translations' }} ({{ data.to_answer }})</a>
+    {% if data.followup %}<a class="btn{% if f.scope == 'all' %} btn--primary{% endif %}" href="{{ url_for('ui.translation_review', language=language, scope='all') }}">All translations ({{ data.all_total }})</a>{% endif %}
     <a class="btn{% if f.scope == 'missing' %} btn--primary{% endif %}" href="{{ url_for('ui.translation_review', language=language, scope='missing') }}">Missing translations ({{ data.missing_total }})</a>
     <a class="btn" href="{{ url_for('ui.translation_sheet', language=language) }}">Download the sheet (XLSX)</a>
   </div>
@@ -61,7 +62,7 @@
     <input type="hidden" name="page" value="{{ data.page }}">
     <div class="table-scroll"><table class="review-table" id="review-rows">
       <caption class="visually-hidden">Strings of {{ title }}</caption>
-      <thead><tr><th scope="col">Screen</th><th scope="col">English</th><th scope="col">{{ 'Current translation' if f.scope == 'translated' else 'Your translation' }}</th><th scope="col">Verdict</th><th scope="col">Proposal</th><th scope="col">Comment</th></tr></thead>
+      <thead><tr><th scope="col">Screen</th><th scope="col">English</th><th scope="col">{{ 'Current translation' if f.scope != 'missing' else 'Your translation' }}</th><th scope="col">Verdict</th><th scope="col">Proposal</th><th scope="col">Comment</th></tr></thead>
       <tbody>
         {% for row in data.rows %}
         {% set item = row.item %}
@@ -71,7 +72,7 @@
           <td{% if rtl %} dir="rtl" lang="{{ language }}" class="rtl-text"{% else %} lang="{{ language }}"{% endif %}>{{ row.current or '—' }}</td>
           <td>
             <input type="hidden" name="sid" value="{{ row.id }}">
-            {% if f.scope == 'translated' %}
+            {% if f.scope != 'missing' %}
             <fieldset class="verdicts">
               <legend class="visually-hidden">Verdict for {{ row.id }}</legend>
               {% for v in ('OK', 'CHANGE', 'UNCLEAR') %}<label><input type="radio" name="v_{{ row.id }}" value="{{ v }}"{% if item and item.verdict == v %} checked{% endif %}{% if item and item.decision != 'PENDING' %} disabled{% endif %}> {{ v }}</label>{% endfor %}
@@ -88,7 +89,7 @@
       </tbody>
     </table></div>
     <div class="btn-row" style="margin-top:12px">
-      {% if f.scope == 'translated' %}<button class="btn" type="button" data-set-verdict="OK" data-in="review-rows">Mark the rest of this page OK</button>{% endif %}
+      {% if f.scope != 'missing' %}<button class="btn" type="button" data-set-verdict="OK" data-in="review-rows">Mark the rest of this page OK</button>{% endif %}
       <button class="btn btn--primary" type="submit" name="go" value="stay">Save</button>
       <button class="btn" type="submit" name="go" value="next"{% if data.page >= data.pages %} disabled{% endif %}>Save and next page</button>
       <span class="muted">Page {{ data.page }} of {{ data.pages }} ({{ data.total }} rows)</span>

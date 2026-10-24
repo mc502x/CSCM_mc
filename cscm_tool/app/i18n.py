@@ -58,9 +58,9 @@ TEMPLATE_STRING_RE = re.compile(r"""\b_\(\s*(?:'((?:[^'\\]|\\.)*)'|"((?:[^"\\]|\
 
 
 def hidden_languages() -> frozenset[str]:
-    """The languages this request may not use (FR-172): no native speaker has reviewed them, and the
-    person is a Viewer or not signed in. Everybody else sees every language, marked beta (FR-170); a
-    Viewer who was assigned a language to review sees that one."""
+    """The languages this request may not use (FR-172): no native speaker has completed a review of
+    them, and the person is a Viewer or not signed in. Everybody else sees every language, marked
+    beta (FR-170); a Viewer who was assigned a language to review sees that one."""
     if not has_request_context():
         return frozenset()
     cached = g.get("hidden_languages")
@@ -73,13 +73,46 @@ def hidden_languages() -> frozenset[str]:
         try:
             from app.services.translation_review_service import TranslationReviewService
 
-            hidden = TranslationReviewService.beta_languages()
+            hidden = TranslationReviewService.unreviewed_languages()
             if current_user:
                 hidden -= set(TranslationReviewService.assigned_languages(current_user.id))
         except Exception:  # noqa: BLE001 - a database that has not been upgraded yet
             hidden = frozenset()
     g.hidden_languages = hidden
     return hidden
+
+
+def _withheld(language: str) -> frozenset[str]:
+    """The English texts a Viewer or guest reads instead of the translation (FR-176): strings of a
+    reviewed language that were added or changed after the review and are not approved yet. Nothing
+    is withheld from the working roles or from a Viewer who reviews this language. Worked out once
+    per request and language."""
+    if not has_request_context():
+        return frozenset()
+    cache = g.setdefault("withheld_cache", {})
+    if language not in cache:
+        cache[language] = _compute_withheld(language)
+    return cache[language]
+
+
+def _compute_withheld(language: str) -> frozenset[str]:
+    from app.auth.decorators import current_user
+
+    if current_user and current_user.role_code != "VIEWER":
+        return frozenset()
+    try:
+        from app.services.settings_service import SettingsService
+        from app.services.translation_review_service import TranslationReviewService
+
+        if SettingsService.get("languages.beta_marker") != "1":
+            return frozenset()
+        if current_user and language in TranslationReviewService.assigned_languages(
+            current_user.id
+        ):
+            return frozenset()
+        return TranslationReviewService.withheld_strings(language)
+    except Exception:  # noqa: BLE001 - a database that has not been upgraded yet
+        return frozenset()
 
 
 def usable_languages() -> dict[str, str]:
@@ -141,7 +174,7 @@ def translate_for(language: str | None, text: str, **values: Any) -> str:
 def translate(text: str, **values: Any) -> str:
     language = current_language()
     translated = text
-    if language != "en":
+    if language != "en" and text not in _withheld(language):
         accepted = _overrides(language).get(text)
         if accepted is not None:
             translated = accepted

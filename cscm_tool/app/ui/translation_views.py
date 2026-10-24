@@ -33,7 +33,11 @@ def _language(code: str) -> str:
 
 def _filters() -> dict:
     return {
-        "scope": "missing" if request.values.get("scope") == "missing" else "translated",
+        "scope": (
+            request.values.get("scope")
+            if request.values.get("scope") in ("missing", "all")
+            else "translated"
+        ),
         "q": (request.values.get("q") or "").strip(),
         "screen": (request.values.get("screen") or "").strip(),
         "state": (request.values.get("state") or "").strip(),

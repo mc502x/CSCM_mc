@@ -4,18 +4,21 @@
 <div class="page-header"><h1>{{ _('Translations') }}</h1></div>
 
 <div class="card">
+  <p class="muted"><strong>Pre-check confidence</strong> is an estimate of the share of strings a native speaker would accept unchanged. It comes from a mechanical check of every string and a read of a sample of 160 strings by an AI checker, reduced for what the checker cannot see in that language. It is not a review: a language stays <em>beta</em> until native speakers have approved it, and strings that are new or changed are approved separately. Red is 50 % or less, green above 95 %.</p>
   <p class="muted">Native speakers check the interface text of their language here. A reviewer answers every string with <strong>OK</strong>, <strong>CHANGE</strong> (and a proposal) or <strong>UNCLEAR</strong>, then completes the review; an Administrator or StCd Owner decides on the proposals, and an accepted proposal is shown by the application at once. How this fits together is in <code>docs/26-translations.md</code>.</p>
   {% if rows %}
   <div class="table-scroll">
   <table>
     <caption class="visually-hidden">Languages</caption>
-    <thead><tr><th scope="col">Language</th><th scope="col">Translated</th><th scope="col">Review</th><th scope="col">Reviewers</th><th scope="col">Open proposals</th><th scope="col">Accepted changes</th><th scope="col">Actions</th></tr></thead>
+    <thead><tr><th scope="col">Language</th><th scope="col">Translated</th><th scope="col">Review</th><th scope="col">Awaiting approval</th><th scope="col">Pre-check confidence</th><th scope="col">Reviewers</th><th scope="col">Open proposals</th><th scope="col">Accepted changes</th><th scope="col">Actions</th></tr></thead>
     <tbody>
       {% for r in rows %}
       <tr>
         <td>{{ label(r.code) }} <span class="muted">({{ names[r.code] }})</span>{% if r.rtl %} <span class="chip">right to left</span>{% endif %}</td>
         <td>{{ r.translated }} / {{ r.total }} ({{ r.share }} %)</td>
         <td><span class="chip review-state review-state--{{ r.state|replace(' ', '-') }}">{{ r.state }}</span>{% if r.last_completed %}<div class="muted">{{ r.last_completed.completed_at[:10] }}</div>{% endif %}</td>
+        <td>{{ r.awaiting }}</td>
+        <td>{% if r.precheck %}<span class="conf conf-b{{ r.precheck.bucket }}" title="AI pre-check of {{ r.precheck.checked_at }}: {{ r.precheck.errors }} wrong and {{ r.precheck.awkward }} awkward wordings in the sample of {{ r.precheck.sample }}, {{ r.precheck.glossary }} terms differ from the nomenclature, {{ r.precheck.haircut }} points off for what the checker cannot see{% if r.precheck.changed %}; {{ r.precheck.changed }} strings changed since and are not checked yet{% endif %}">{{ r.precheck.confidence|round|int }} %</span>{% else %}<span class="muted">not checked</span>{% endif %}</td>
         <td>{% for p in r.reviewers %}{{ p.name }}{% if not loop.last %}, {% endif %}{% else %}<span class="muted">nobody assigned</span>{% endfor %}</td>
         <td>{{ r.pending }}</td>
         <td>{{ r.overrides }}</td>

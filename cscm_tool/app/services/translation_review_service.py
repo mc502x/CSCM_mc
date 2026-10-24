@@ -27,6 +27,7 @@ from typing import Any
 
 from sqlalchemy import func
 
+from app import translation_precheck as precheck
 from app.domain.errors import DomainError, ForbiddenError, NotFoundError
 from app.extensions import db
 from app.models.translation import (
@@ -71,9 +72,59 @@ class TranslationReviewService:
         return getattr(actor, "role_code", None) in MANAGER_ROLES
 
     @staticmethod
+    def approved(language: str) -> dict[str, str]:
+        """English -> the translation a native speaker has approved: an OK answer, an accepted
+        proposal (its final text), a rejected proposal or a noted question (the text as it was).
+        The newest answer of a completed review wins; an unanswered question or an undecided
+        proposal approves nothing. A string that changed since is not approved any more."""
+        rows = (
+            db.session.query(TranslationReviewItem)
+            .join(TranslationReview, TranslationReview.id == TranslationReviewItem.review_id)
+            .filter(
+                TranslationReview.language_code == language, TranslationReview.status == "COMPLETED"
+            )
+            .order_by(TranslationReview.completed_at, TranslationReviewItem.id)
+            .all()
+        )
+        overrides = {
+            o.review_item_id: o.text
+            for o in db.session.query(TranslationOverride).filter_by(language_code=language)
+        }
+        approved: dict[str, str] = {}
+        for item in rows:
+            if item.verdict == "OK":
+                text = item.current_text
+            elif item.verdict == "CHANGE" and item.decision == "ACCEPTED":
+                text = overrides.get(item.id) or item.proposal
+            elif item.decision in ("REJECTED", "NOTED"):
+                text = item.current_text
+            else:
+                text = None
+            if text is None:
+                approved.pop(item.english, None)
+            else:
+                approved[item.english] = text
+        return approved
+
+    @staticmethod
+    def pending(language: str) -> dict[str, str]:
+        """English -> text of the strings of a language that no native speaker has approved yet:
+        everything while no review is completed, afterwards only what is new or changed (FR-176)."""
+        current = effective(language)
+        approved = TranslationReviewService.approved(language)
+        return {e: t for e, t in current.items() if approved.get(e) != t}
+
+    @staticmethod
+    def reviewed_languages() -> frozenset[str]:
+        """Languages with at least one completed review: the ones a Viewer may use (FR-172)."""
+        rows = db.session.query(TranslationReview.language_code).filter_by(status="COMPLETED")
+        return frozenset(r[0] for r in rows.distinct())
+
+    @staticmethod
     def beta_languages() -> frozenset[str]:
-        """Languages (besides the source English) that no native speaker has reviewed, or whose
-        text changed since the review (FR-170). Cheap while no review exists: nothing to compare."""
+        """Languages (besides the source English) with strings that no native speaker has approved:
+        all of them while no review is completed, afterwards only the new or changed ones (FR-170,
+        FR-176)."""
         from flask import g, has_request_context
 
         from app.services.settings_service import SettingsService
@@ -82,22 +133,41 @@ class TranslationReviewService:
             return g.beta_languages
         if SettingsService.get("languages.beta_marker") != "1":
             return frozenset()
-        done = {
-            code: fp
-            for code, fp in db.session.query(
-                TranslationReview.language_code, TranslationReview.fingerprint
-            )
-            .filter_by(status="COMPLETED")
-            .order_by(TranslationReview.completed_at)
-            .all()
-        }  # the newest review of a language wins
-        beta = set(reviewable_languages())
-        for code, fp in done.items():
-            if code in beta and fp == fingerprint(effective(code)):
-                beta.discard(code)
+        reviewed = TranslationReviewService.reviewed_languages()
+        beta = set(reviewable_languages()) - reviewed
+        for code in reviewed:
+            if TranslationReviewService.pending(code):
+                beta.add(code)
         result = frozenset(beta)
         if has_request_context():
             g.beta_languages = result
+        return result
+
+    @staticmethod
+    def unreviewed_languages() -> frozenset[str]:
+        """Languages no Viewer or guest may use: no review has ever been completed."""
+        from app.services.settings_service import SettingsService
+
+        if SettingsService.get("languages.beta_marker") != "1":
+            return frozenset()
+        return frozenset(reviewable_languages()) - TranslationReviewService.reviewed_languages()
+
+    @staticmethod
+    def withheld_strings(language: str) -> frozenset[str]:
+        """The English texts a Viewer or guest reads in English although the language has been
+        reviewed: the strings added or changed since the review, until they are approved (FR-176).
+        """
+        from flask import g, has_request_context
+
+        if has_request_context():
+            cache = g.setdefault("withheld_strings", {})
+            if language in cache:
+                return cache[language]
+        result: frozenset[str] = frozenset()
+        if language in TranslationReviewService.reviewed_languages():
+            result = frozenset(TranslationReviewService.pending(language))
+        if has_request_context():
+            cache[language] = result
         return result
 
     @staticmethod
@@ -159,12 +229,14 @@ class TranslationReviewService:
                 )
                 .scalar()
             )
+            awaiting = len(TranslationReviewService.pending(code))
             if last is None:
                 state = "in progress" if open_count else "not reviewed"
-            elif last.fingerprint != fingerprint(current):
+            elif awaiting:
                 state = "changed since the review"
             else:
                 state = "reviewed"
+            check = precheck.load().get("languages", {}).get(code)
             my_open = (
                 db.session.query(TranslationReview)
                 .filter_by(language_code=code, reviewer_id=actor.id, status="OPEN")
@@ -184,6 +256,22 @@ class TranslationReviewService:
                     "state": state,
                     "last_completed": last,
                     "pending": int(pending or 0),
+                    "awaiting": awaiting,
+                    "precheck": (
+                        {
+                            "confidence": check["confidence"],
+                            "bucket": precheck.bucket(check["confidence"]),
+                            "errors": check["errors"],
+                            "awkward": check["awkward"],
+                            "glossary": check["mechanical"]["glossary_mismatches"],
+                            "haircut": check["haircut"],
+                            "sample": check["sample_size"],
+                            "checked_at": check["checked_at"],
+                            "changed": len(precheck.changes()["strings"].get(code, [])),
+                        }
+                        if check
+                        else None
+                    ),
                     "can_review": code in mine,
                     "my_open": my_open,
                 }
@@ -290,16 +378,26 @@ class TranslationReviewService:
         state: str = "",
         page: int = 1,
     ) -> dict[str, Any]:
-        """The rows of one page of the review screen. `scope` is `translated` (check what is there)
-        or `missing` (strings that still have no translation)."""
+        """The rows of one page of the review screen. `scope` is `translated` (check what is there;
+        in a follow-up review only the strings that are new or changed since the last completed
+        review, FR-176), `all` (every translated string) or `missing` (strings that still have no
+        translation)."""
         known = screens()
         current = effective(review.language_code)
+        followup = review.language_code in TranslationReviewService.reviewed_languages()
+        required = (
+            set(TranslationReviewService.pending(review.language_code))
+            if followup
+            else set(current)
+        )
         answers = TranslationReviewService.answers(review.id)
         rows = []
         needle = q.strip().lower()
         for english in sorted(known, key=lambda e: (known[e][0], e.lower())):
             has = english in current
-            if (scope == "translated") != has:
+            if (scope != "missing") != has:
+                continue
+            if scope == "translated" and followup and english not in required:
                 continue
             sid = string_id(english)
             item = answers.get(sid)
@@ -329,14 +427,16 @@ class TranslationReviewService:
             )
         pages = max(1, -(-len(rows) // PER_PAGE))
         page = min(max(page, 1), pages)
-        answered = sum(1 for e in current if (a := answers.get(string_id(e))) and a.verdict)
+        answered = sum(1 for e in required if (a := answers.get(string_id(e))) and a.verdict)
         return {
             "rows": rows[(page - 1) * PER_PAGE : page * PER_PAGE],
             "total": len(rows),
             "page": page,
             "pages": pages,
             "answered": answered,
-            "to_answer": len(current),
+            "to_answer": len(required),
+            "followup": followup,
+            "all_total": len(current),
             "missing_total": len(known) - len(current),
             "screens": sorted({s for v in known.values() for s in v}),
         }
@@ -420,12 +520,17 @@ class TranslationReviewService:
             raise DomainError("This review is already completed.")
         answers = TranslationReviewService.answers(review.id)
         current = effective(review.language_code)
+        required = (
+            set(TranslationReviewService.pending(review.language_code))
+            if review.language_code in TranslationReviewService.reviewed_languages()
+            else set(current)
+        )
         unanswered = [
-            e for e in current if not (answers.get(string_id(e)) and answers[string_id(e)].verdict)
+            e for e in required if not (answers.get(string_id(e)) and answers[string_id(e)].verdict)
         ]
         if unanswered:
             raise ValueError(
-                f"{len(unanswered)} of {len(current)} strings have no verdict yet. Answer them, or use "
+                f"{len(unanswered)} of {len(required)} strings have no verdict yet. Answer them, or use "
                 "'Mark the rest of this page OK' where they are fine."
             )
         counts = {v: sum(1 for a in answers.values() if a.verdict == v) for v in VERDICTS}

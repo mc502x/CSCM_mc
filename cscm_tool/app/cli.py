@@ -102,6 +102,23 @@ def register_operations_commands(app: Flask) -> None:
 
         click.echo(json.dumps(NotificationService.send_reminders()))
 
+    @app.cli.command("translation-impact")
+    def translation_impact() -> None:
+        """Tell the StCd Owner what this version changed in the interface text or the nomenclature,
+        per language (FR-178). Run after a deployment; sends nothing when the check is current."""
+        from app.services.translation_impact_service import TranslationImpactService
+
+        impact = TranslationImpactService.catalogue_impact()
+        for row in impact["rows"]:
+            click.echo(
+                f"{row['code']}: {row['changed']} changed, {row['awaiting']} awaiting approval"
+                f"{', reviewed' if row['reviewed'] else ''}"
+            )
+        if impact["glossary_changed"]:
+            click.echo("The technical nomenclature changed.")
+        sent = TranslationImpactService.notify_catalogue_changes()
+        click.echo(json.dumps({"notices": sent}))
+
     @app.cli.command("audit-verify")
     @click.option("--no-anchor", is_flag=True, help="Do not update the stored anchor.")
     def audit_verify(no_anchor: bool) -> None:

@@ -410,3 +410,17 @@ html[dir="rtl"] .error-list { padding-left: 0; padding-right: 18px; }
 @font-face { font-family: "CSCM Noto"; src: url("../fonts/NotoSansMalayalam-Regular.ttf") format("truetype"); unicode-range: U+0D00-0D7F; font-display: swap; }
 @font-face { font-family: "CSCM Noto"; src: url("../fonts/NotoSansGeorgian-Regular.ttf") format("truetype"); unicode-range: U+10A0-10FF,U+1C90-1CBF,U+2D00-2D2F; font-display: swap; }
 @font-face { font-family: "CSCM Noto"; src: url("../fonts/NotoNaskhArabic-Regular.ttf") format("truetype"); unicode-range: U+0600-06FF,U+0750-077F,U+08A0-08FF,U+FB50-FDFF,U+FE70-FEFF; font-display: swap; }
+
+/* pre-check confidence of a translation (docs/26-translations.md §8c): red up to 50 %, green above 95 % */
+.conf { display: inline-block; min-width: 3.2em; padding: 2px 8px; border-radius: 10px; text-align: center; font-weight: 600; color: #1b1b1b; }
+.conf-b0 { background: #e5484d; color: #fff; }
+.conf-b1 { background: #ec6a4a; }
+.conf-b2 { background: #f08a47; }
+.conf-b3 { background: #f4a947; }
+.conf-b4 { background: #f6c445; }
+.conf-b5 { background: #f3dc4a; }
+.conf-b6 { background: #d9e050; }
+.conf-b7 { background: #bcd957; }
+.conf-b8 { background: #9ccf5c; }
+.conf-b9 { background: #7fc561; }
+.conf-b10 { background: #4fb26b; color: #fff; }

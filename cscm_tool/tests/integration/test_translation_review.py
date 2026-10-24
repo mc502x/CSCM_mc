@@ -320,18 +320,22 @@ def test_a_missing_translation_can_be_proposed_and_accepted(app, client, cast):
         assert effective("bn")[missing] == "অনুবাদ"
 
 
-def test_a_completed_review_shows_as_changed_after_a_later_acceptance(app, client, cast):
+def test_a_proposal_awaits_approval_until_it_is_decided(app, client, cast):
     item = _propose(app, client, cast)
     with app.app_context():
         review = db.session.query(TranslationReview).filter_by(language_code="fr").one()
         Reviews.save(review.id, _answers(app, "fr", skip=("Log in",)), _auth(cast["viewer"]))
     login_as(client, cast["viewer"])
     client.post("/translations/fr/complete")
-    assert "reviewed" in client.get("/translations").get_data(as_text=True)
+    # the proposal is not decided yet: that one string still awaits approval (FR-176)
+    assert "changed since the review" in client.get("/translations").get_data(as_text=True)
     login_as(client, cast["stcd_owner"])
     client.post(f"/translations/fr/decide/{item}", data={"action": "accept"})
+    # accepting it approves it: nothing awaits approval any more
     page = client.get("/translations").get_data(as_text=True)
-    assert "changed since the review" in page
+    assert "changed since the review" not in page
+    with app.app_context():
+        assert Reviews.pending("fr") == {}
 
 
 # ------------------------------------------------------------------------------ the sheet

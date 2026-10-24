@@ -211,23 +211,37 @@ def _language_menu(client):
 
 
 def _review(app, cast, language, fingerprint_value=None):
+    """A completed review in which every string of the language was answered OK."""
     from app.extensions import db
-    from app.models.translation import TranslationReview
-    from app.translation_catalogue import effective, fingerprint
+    from app.models.translation import TranslationReview, TranslationReviewItem
+    from app.translation_catalogue import effective, fingerprint, string_id
     from app.utils import utcnow_iso
 
     with app.app_context():
-        db.session.add(
-            TranslationReview(
-                language_code=language,
-                reviewer_id=cast["reviewer"].id,
-                status="COMPLETED",
-                started_at=utcnow_iso(),
-                completed_at=utcnow_iso(),
-                fingerprint=fingerprint_value or fingerprint(effective(language)),
-                string_count=1,
-            )
+        current = effective(language)
+        review = TranslationReview(
+            language_code=language,
+            reviewer_id=cast["reviewer"].id,
+            status="COMPLETED",
+            started_at=utcnow_iso(),
+            completed_at=utcnow_iso(),
+            fingerprint=fingerprint_value or fingerprint(current),
+            string_count=len(current),
         )
+        db.session.add(review)
+        db.session.flush()
+        for english, text in current.items():
+            db.session.add(
+                TranslationReviewItem(
+                    review_id=review.id,
+                    string_id=string_id(english),
+                    english=english,
+                    current_text=text,
+                    verdict="OK",
+                    decision="PENDING",
+                    updated_at=utcnow_iso(),
+                )
+            )
         db.session.commit()
 
 
@@ -248,11 +262,8 @@ def test_the_working_roles_see_every_language_and_the_unreviewed_ones_are_marked
     assert 'lang="fr"' in menu and "beta-tag" in menu.split('lang="fr"', 1)[1].split("</li>", 1)[0]
 
 
-def test_a_review_of_the_current_text_removes_the_mark_and_an_older_one_does_not_count(
-    app, client, cast
-):
+def test_a_review_removes_the_mark_and_a_changed_string_brings_it_back(app, client, cast):
     from app.extensions import db
-    from app.models.translation import TranslationReview
 
     login_as(client, cast["engineer"])
     _review(app, cast, "fr")
@@ -260,9 +271,23 @@ def test_a_review_of_the_current_text_removes_the_mark_and_an_older_one_does_not
     assert menu.count('class="beta-tag"') == 17
     assert "beta-tag" not in menu.split('lang="fr"', 1)[1].split("</li>", 1)[0]
 
-    with app.app_context():
-        review = db.session.query(TranslationReview).one()
-        review.fingerprint = "00000000"  # the text changed since the review
+    with (
+        app.app_context()
+    ):  # one string changed after the review: that one awaits approval (FR-176)
+        from app.models.translation import TranslationOverride
+        from app.translation_catalogue import string_id
+        from app.utils import utcnow_iso
+
+        db.session.add(
+            TranslationOverride(
+                language_code="fr",
+                string_id=string_id("Log in"),
+                english="Log in",
+                text="Ouvrir une session",
+                created_by=cast["admin"].id,
+                created_at=utcnow_iso(),
+            )
+        )
         db.session.commit()
     assert _language_menu(client).count('class="beta-tag"') == 18
 

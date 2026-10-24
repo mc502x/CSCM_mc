@@ -239,7 +239,15 @@ class TerminologyService:
             after={"code": code, "english": english, "category": category},
         )
         db.session.commit()
+        TerminologyService._tell_owner(term, "added")
         return term
+
+    @staticmethod
+    def _tell_owner(term, action: str, language: str | None = None) -> None:
+        """The StCd Owner learns which languages the change touches (FR-178)."""
+        from app.services.translation_impact_service import TranslationImpactService
+
+        TranslationImpactService.notify_term_change(term, action, language)
 
     @staticmethod
     def update_term(
@@ -294,6 +302,7 @@ class TerminologyService:
             },
         )
         db.session.commit()
+        TerminologyService._tell_owner(term, "changed")
         return term
 
     # ------------------------------------------------------------------ translating
@@ -363,6 +372,7 @@ class TerminologyService:
             after={"term": term.code, "language": tr.language_code, "text": tr.text},
         )
         db.session.commit()
+        TerminologyService._tell_owner(term, "translation approved", tr.language_code)
         return tr
 
     @staticmethod

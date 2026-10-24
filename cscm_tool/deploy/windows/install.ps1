@@ -125,6 +125,8 @@ Invoke-Step "flask db upgrade (a backup of an existing database is taken first)"
         try { Invoke-Flask @("backup-db") } catch { Write-Warning "pre-upgrade backup failed: $_" }
     }
     Invoke-Flask @("db", "upgrade")
+    # tell the StCd Owner what this version changed in the interface text or the nomenclature (FR-178)
+    try { Invoke-Flask @("translation-impact") } catch { Write-Warning "translation-impact failed: $_" }
 }
 
 Step "First Administrator"

@@ -26,6 +26,7 @@ from pathlib import Path
 APP_DIR = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(APP_DIR))
 
+from app import translation_precheck as precheck  # noqa: E402
 from app.translation_catalogue import (  # noqa: E402,F401  (re-exported for the tests)
     CHECKLIST,
     ENGLISH_NAMES,
@@ -64,23 +65,71 @@ def render() -> str:
         "translation is shown in English.\n"
     )
     out.append("### 9.1 Coverage\n")
-    out.append("| Language | Code | Direction | Translated | Share | Fingerprint |")
-    out.append("|---|---|---|---|---|---|")
+    checks = precheck.load().get("languages", {})
+    out.append(
+        "| Language | Code | Direction | Translated | Share | Pre-check confidence | Fingerprint |"
+    )
+    out.append("|---|---|---|---|---|---|---|")
     for code in languages():
         if code == "en":
-            out.append(f"| {_cell(label(code))} | `en` | ltr | source | — | — |")
+            out.append(f"| {_cell(label(code))} | `en` | ltr | source | — | — | — |")
             continue
         t = cat[code]
+        check = checks.get(code)
+        confidence = precheck.badge(check["confidence"]) if check else "not checked"
         out.append(
             f"| {_cell(label(code))} ({ENGLISH_NAMES[code]}) | `{code}` | {'rtl' if is_rtl(code) else 'ltr'} "
-            f"| {len(t)} | {100 * len(t) // total} % | `{fingerprint(t)}` |"
+            f"| {len(t)} | {100 * len(t) // total} % | {confidence} | `{fingerprint(t)}` |"
         )
     out.append("")
+    out.append(
+        "The pre-check confidence is the estimate of section 8c - the share of strings a native speaker is "
+        "expected to accept unchanged, by an AI checker and not by a native speaker; red is 50 % or less, "
+        "green above 95 %.\n"
+    )
     out.append(
         "The fingerprint is a short hash of the language's catalogue as shipped in the code (string ids and "
         "translations). Whether a language has been reviewed, by whom and when, and which proposals were "
         "accepted since, is kept in the application (Translations in the sidebar), not in this file.\n"
     )
+
+    if checks:
+        out.append("### 9.1a Pre-check: findings per language\n")
+        out.append(
+            "| Language | Wrong meaning | Awkward or inconsistent | Terms differing from the nomenclature "
+            "| Haircut (points) | Confidence |"
+        )
+        out.append("|---|---|---|---|---|---|")
+        for code in languages():
+            check = checks.get(code)
+            if code == "en" or not check:
+                continue
+            out.append(
+                f"| {_cell(label(code))} | {check['errors']} | {check['awkward']} "
+                f"| {check['mechanical']['glossary_mismatches']} | {check['haircut']:g} "
+                f"| {precheck.badge(check['confidence'])} |"
+            )
+        out.append("")
+        out.append(
+            "The wrong and awkward counts are findings in the sample of "
+            f"{next(iter(checks.values()))['sample_size']} strings, the same strings in every language. The "
+            "strings that were flagged, for the native speaker to look at first:\n"
+        )
+        out.append("| Language | Kind | English | Translation | Finding |")
+        out.append("|---|---|---|---|---|")
+        for code in languages():
+            check = checks.get(code)
+            if code == "en" or not check:
+                continue
+            for finding in sorted(
+                check["findings"], key=lambda f: (f["kind"], f["english"].lower())
+            ):
+                kind = "wrong" if finding["kind"] == "E" else "awkward"
+                out.append(
+                    f"| `{code}` | {kind} | {_cell(finding['english'])} "
+                    f"| {_cell(finding['translation'])} | {_cell(finding['note'])} |"
+                )
+        out.append("")
 
     for number, code in enumerate((c for c in languages() if c != "en"), start=2):
         t = cat[code]
