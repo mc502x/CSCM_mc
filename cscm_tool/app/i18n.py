@@ -90,6 +90,21 @@ def _overrides(language: str) -> dict[str, str]:
     return cache[language]
 
 
+def translate_for(language: str | None, text: str, **values: Any) -> str:
+    """The text in a language chosen by the caller, not by the person who is signed in: the words
+    around an export follow the language of the export (FR-171). English, or none, is the text."""
+    translated = text
+    if language and language != "en":
+        accepted = _overrides(language).get(text)
+        if accepted is not None:
+            translated = accepted
+        elif language == "de":
+            translated = DE.get(text, text)
+        else:
+            translated = CATALOGUES.get(language, {}).get(text, text)
+    return translated % values if values else translated
+
+
 def translate(text: str, **values: Any) -> str:
     language = current_language()
     translated = text

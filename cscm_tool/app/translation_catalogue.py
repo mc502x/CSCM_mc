@@ -87,6 +87,15 @@ def screens() -> dict[str, list[str]]:
         found[role.label].add("role badge")
     for english in status_code_fields.LABELS.values():  # labels the templates take from the module
         found[english].add("status code fields")
+    from app.export.pdf_exporter import TRANSLATED_TEXT
+    from app.services.export_service import TITLE_PAGE_TEXT
+    from app.ui import nav  # here: the UI package imports this module
+
+    for english in (*TRANSLATED_TEXT, *TITLE_PAGE_TEXT):  # the words around an export
+        found[english].add("export")
+
+    for english in nav.LABELS:  # the menu is data
+        found[english].add("menu")
     for english, files in service_messages().items():
         found[english].update(f"message: {f}" for f in files[:2])
     for english in DE:  # help text and other strings that are not template literals

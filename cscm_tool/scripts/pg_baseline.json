@@ -11,7 +11,7 @@
     "fts5": 4,
     "pragma-migration": 10,
     "sqlite-master-migration": 6,
-    "executescript": 14,
+    "executescript": 15,
     "sqlite3-module": 5,
     "pragma-app": 5,
     "begin-immediate": 2,

@@ -50,3 +50,5 @@ git/
 .git/
 
 .obsidian/
+# a one-off check workbook
+stcd_check.xlsx

@@ -18,6 +18,7 @@
 <a class="skip-link" href="#main">{{ _('Skip to main content') }}</a>
 {% if current_user %}
   <header class="topbar" role="banner">
+    <button type="button" class="menu-toggle" data-menu-toggle aria-controls="sidebar" aria-expanded="false">{{ _('Menu') }}</button>
     <div class="topbar__brand">CSCM Tool</div>
     <div class="topbar__user">
       <a class="bell" href="{{ url_for('ui.notifications') }}" aria-label="{{ _('Notices') }}{% if unread_notices %} ({{ unread_notices }} {{ _('unread') }}){% endif %}">
@@ -26,10 +27,10 @@
       <form method="post" action="{{ url_for('ui.set_language') }}" class="inline-form">
         <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
         <details class="lang-menu">
-          <summary aria-label="{{ _('Language') }}"><span class="lang-code">{{ language_meta[ui_lang][0] }}</span> {{ language_meta[ui_lang][1] }} {{ flag(ui_lang) }}</summary>
+          <summary aria-label="{{ _('Language') }}"><span class="lang-code">{{ language_meta[ui_lang][0] }}</span> {{ language_meta[ui_lang][1] }} {{ flag(ui_lang) }}{% if ui_lang in beta_languages %} <span class="beta-tag" title="{{ _('No native speaker has reviewed this language yet; the text may contain mistakes.') }}">{{ _('beta') }}</span>{% endif %}</summary>
           <ul>
             {% for code, meta in language_meta.items() %}
-            <li><button type="submit" name="lang" value="{{ code }}" lang="{{ code }}"{% if ui_lang == code %} aria-current="true"{% endif %}><span class="lang-code">{{ meta[0] }}</span> <span class="lang-name">{{ meta[1] }}</span> {{ flag(code) }}</button></li>
+            <li><button type="submit" name="lang" value="{{ code }}" lang="{{ code }}"{% if ui_lang == code %} aria-current="true"{% endif %}><span class="lang-code">{{ meta[0] }}</span> <span class="lang-name">{{ meta[1] }}</span> {{ flag(code) }}{% if code in beta_languages %} <span class="beta-tag" title="{{ _('No native speaker has reviewed this language yet; the text may contain mistakes.') }}">{{ _('beta') }}</span>{% endif %}</button></li>
             {% endfor %}
           </ul>
         </details>
@@ -43,96 +44,30 @@
     </div>
   </header>
   <div class="layout">
-    <nav class="sidebar" aria-label="{{ _('Main navigation') }}">
+    <nav class="sidebar" id="sidebar" aria-label="{{ _('Main navigation') }}">
       {% set ep = request.endpoint or '' %}
+      {% if current_user.role_code in ('ENGINEER', 'ADMINISTRATOR') %}
+      <div class="sidebar__new"><a class="btn btn--primary" href="{{ url_for('ui.status_code_new') }}">+ {{ _('New Status Code') }}</a></div>
+      {% endif %}
+      {% for group in nav_groups %}
+      {% if group.title %}
+      <details class="sidebar__group" data-nav-group="{{ group.key }}" open>
+        <summary class="sidebar__title">{{ _(group.title) }}{% if group.waiting %} <span class="nav-count" aria-label="{{ group.waiting }} {{ _('waiting') }}">{{ group.waiting }}</span>{% endif %}</summary>
+        {% for block in group.blocks %}
+        {% if block.title and group.blocks|length > 1 %}<div class="sidebar__subtitle">{{ _(block.title) }}</div>{% endif %}
+        {% for item in block['items'] %}
+        <a href="{{ url_for(item.endpoint) }}" class="{{ 'is-active' if item.active }}"{% if item.active %} aria-current="page"{% endif %}>{{ _(item.label) }}{% if item.count %} <span class="nav-count" aria-label="{{ item.count }} {{ _('waiting') }}">{{ item.count }}</span>{% endif %}</a>
+        {% endfor %}
+        {% endfor %}
+      </details>
+      {% else %}
       <div class="sidebar__group">
-        <a href="{{ url_for('ui.dashboard') }}" class="{{ 'is-active' if ep == 'ui.dashboard' }}">{{ _('Dashboard') }}</a>
-        <a href="{{ url_for('ui.status_code_list') }}" class="{{ 'is-active' if ep.startswith('ui.status_code') and ep not in ('ui.status_code_new', 'ui.status_code_new_sandbox') }}">{{ _('Status Codes') }}</a>
-        {% if current_user.role_code in ('ENGINEER', 'ADMINISTRATOR') %}
-        <a href="{{ url_for('ui.status_code_new') }}" class="{{ 'is-active' if ep == 'ui.status_code_new' }}">{{ _('New Status Code') }}</a>
-        {% endif %}
-        {% if current_user.role_code == 'ADMINISTRATOR' %}
-        <a href="{{ url_for('ui.status_code_new_sandbox') }}">{{ _('New Sandbox Code') }}</a>
-        {% endif %}
-        {% if current_user.role_code in ('ENGINEER', 'ADMINISTRATOR') %}
-        <a href="{{ url_for('ui.import_new') }}" class="{{ 'is-active' if ep.startswith('ui.import') }}">{{ _('Library Import') }}</a>
-        <a href="{{ url_for('ui.st_import_new') }}" class="{{ 'is-active' if ep.startswith('ui.st_import') }}">{{ _('Import from .st files') }}</a>
-        {% endif %}
-        <a href="{{ url_for('ui.terminology_index') }}" class="{{ 'is-active' if ep.startswith('ui.terminology') }}">{{ _('Terminology') }}</a>
-        {% if translation_access %}
-        <a href="{{ url_for('ui.translations_overview') }}" class="{{ 'is-active' if ep.startswith('ui.translation') }}">{{ _('Translations') }}</a>
-        {% endif %}
-        {% if current_user.role_code != 'VIEWER' %}
-        <a href="{{ url_for('ui.legacy_mapping') }}" class="{{ 'is-active' if ep.startswith('ui.legacy_mapping') }}">{{ _('Legacy mapping') }}</a>
-        {% endif %}
-      </div>
-      <div class="sidebar__group">
-        <div class="sidebar__title">{{ _('Workflow') }}</div>
-        {% if current_user.role_code != 'VIEWER' %}
-        <a href="{{ url_for('ui.my_change_requests') }}" class="{{ 'is-active' if ep == 'ui.my_change_requests' }}">{{ _('My Change Requests') }}</a>
-        {% endif %}
-        {% if current_user.can_act_as('REVIEWER') or current_user.can_act_as('ADMINISTRATOR') %}
-        <a href="{{ url_for('ui.review_queue') }}" class="{{ 'is-active' if ep == 'ui.review_queue' }}">{{ _('Review Queue') }}</a>
-        {% endif %}
-        {% if current_user.can_act_as('CHIEF_ENGINEER') %}
-        <a href="{{ url_for('ui.approval_queue') }}" class="{{ 'is-active' if ep == 'ui.approval_queue' }}">{{ _('Approval Queue') }}</a>
-        {% endif %}
-        {% if current_user.role_code != 'VIEWER' %}
-        <a href="{{ url_for('ui.change_set_list') }}" class="{{ 'is-active' if ep.startswith('ui.change_set') }}">{{ _('Change Sets') }}</a>
-        {% endif %}
-        {% if current_user.role_code == 'ADMINISTRATOR' %}
-        <a href="{{ url_for('ui.stalled_requests') }}" class="{{ 'is-active' if ep == 'ui.stalled_requests' }}">{{ _('Stalled Requests') }}</a>
-        {% endif %}
-        {% if current_user.role_code in ('ADMINISTRATOR', 'REVIEWER', 'CHIEF_ENGINEER') %}
-        <a href="{{ url_for('ui.delegations') }}" class="{{ 'is-active' if ep == 'ui.delegations' }}">{{ _('Delegation') }}</a>
-        {% endif %}
-      </div>
-      <div class="sidebar__group">
-        <div class="sidebar__title">{{ _('Releases') }}</div>
-        <a href="{{ url_for('ui.release_list') }}" class="{{ 'is-active' if ep.startswith('ui.release') }}">{{ _('Releases') }}</a>
-        <a href="{{ url_for('ui.export_center') }}" class="{{ 'is-active' if ep == 'ui.export_center' }}">{{ _('Export Center') }}</a>
-      </div>
-      {% if current_user.role_code != 'VIEWER' %}
-      <div class="sidebar__group">
-        <div class="sidebar__title">{{ _('Insight') }}</div>
-        {% if current_user.role_code in ('ADMINISTRATOR', 'REVIEWER', 'CHIEF_ENGINEER') %}
-        <a href="{{ url_for('ui.catalogue_health') }}" class="{{ 'is-active' if ep == 'ui.catalogue_health' }}">{{ _('Catalogue Health') }}</a>
-        {% endif %}
-        {% if current_user.role_code in ('ADMINISTRATOR', 'CHIEF_ENGINEER') %}
-        <a href="{{ url_for('ui.success_metrics') }}" class="{{ 'is-active' if ep == 'ui.success_metrics' }}">{{ _('Success Metrics') }}</a>
-        <a href="{{ url_for('ui.fleet_feedback') }}" class="{{ 'is-active' if ep == 'ui.fleet_feedback' }}">{{ _('Fleet Feedback') }}</a>
-        {% endif %}
-        <a href="{{ url_for('ui.hub_consolidation') }}" class="{{ 'is-active' if ep == 'ui.hub_consolidation' }}">{{ _('Hub Consolidation') }}</a>
+        {% for block in group.blocks %}{% for item in block['items'] %}
+        <a href="{{ url_for(item.endpoint) }}" class="{{ 'is-active' if item.active }}"{% if item.active %} aria-current="page"{% endif %}>{{ _(item.label) }}</a>
+        {% endfor %}{% endfor %}
       </div>
       {% endif %}
-      {% if current_user.role_code == 'STCD_OWNER' %}
-      <div class="sidebar__group">
-        <div class="sidebar__title">{{ _('Administration') }}</div>
-        <a href="{{ url_for('ui.user_list') }}" class="{{ 'is-active' if ep == 'ui.user_list' }}">{{ _('Users') }}</a>
-      </div>
-      {% endif %}
-      {% if current_user.role_code == 'ADMINISTRATOR' %}
-      <div class="sidebar__group">
-        <div class="sidebar__title">{{ _('Administration') }}</div>
-        <a href="{{ url_for('ui.user_list') }}" class="{{ 'is-active' if ep == 'ui.user_list' }}">{{ _('Users') }}</a>
-        <a href="{{ url_for('ui.lookup_admin') }}" class="{{ 'is-active' if ep == 'ui.lookup_admin' }}">{{ _('Lookups') }}</a>
-        <a href="{{ url_for('ui.export_profiles') }}" class="{{ 'is-active' if ep == 'ui.export_profiles' }}">{{ _('Export Profiles') }}</a>
-        <a href="{{ url_for('ui.review_checklist') }}" class="{{ 'is-active' if ep == 'ui.review_checklist' }}">{{ _('Review Checklist') }}</a>
-        <a href="{{ url_for('ui.app_settings') }}" class="{{ 'is-active' if ep == 'ui.app_settings' }}">{{ _('Settings') }}</a>
-        <a href="{{ url_for('ui.integrations') }}" class="{{ 'is-active' if ep == 'ui.integrations' }}">{{ _('Integrations') }}</a>
-        <a href="{{ url_for('ui.withdrawn_codes') }}" class="{{ 'is-active' if ep == 'ui.withdrawn_codes' }}">{{ _('Withdrawn Codes') }}</a>
-        <a href="{{ url_for('ui.operations') }}" class="{{ 'is-active' if ep == 'ui.operations' }}">{{ _('Operations') }}</a>
-        <a href="{{ url_for('ui.audit_log') }}" class="{{ 'is-active' if ep == 'ui.audit_log' }}">{{ _('Audit Log') }}</a>
-      </div>
-      {% elif current_user.role_code in ('REVIEWER', 'CHIEF_ENGINEER') %}
-      <div class="sidebar__group">
-        <div class="sidebar__title">{{ _('Administration') }}</div>
-        <a href="{{ url_for('ui.audit_log') }}" class="{{ 'is-active' if ep == 'ui.audit_log' }}">{{ _('Audit Log') }}</a>
-      </div>
-      {% endif %}
-      <div class="sidebar__group">
-        <a href="{{ url_for('ui.help_page') }}" class="{{ 'is-active' if ep == 'ui.help_page' }}">{{ _('Help') }}</a>
-      </div>
+      {% endfor %}
     </nav>
     <main class="main" id="main" tabindex="-1">
       {% include "_flashes.html" %}

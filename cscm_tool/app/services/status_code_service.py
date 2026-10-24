@@ -8,7 +8,6 @@ sandbox codes bypass the governance workflow entirely by design)."""
 from datetime import UTC, datetime, timedelta
 
 from sqlalchemy import text
-from sqlalchemy.exc import IntegrityError
 
 from app import status_code_fields
 from app.domain.authz import require_roles
@@ -446,6 +445,7 @@ class StatusCodeService:
         before = _revision_snapshot(revision)
         _apply_revision_fields(revision, data)
         status_code_fields.set_user_groups(revision, data.get("user_groups"))
+        status_code_fields.fill_default_levels(revision)
         if data.get("turbine_platforms") is not None:
             _set_platforms(revision, data["turbine_platforms"])
         revision.row_version = (revision.row_version or 1) + 1
@@ -754,7 +754,11 @@ class StatusCodeService:
         require_roles(actor_user, "ADMINISTRATOR")
         rows = (
             db.session.query(StatusCode)
-            .filter(StatusCode.is_sandbox == 0, StatusCode.withdrawn_at.is_not(None))
+            .filter(
+                StatusCode.is_sandbox == 0,
+                StatusCode.withdrawn_at.is_not(None),
+                StatusCode.deleted_at.is_(None),
+            )
             .order_by(StatusCode.id)
             .all()
         )
@@ -779,9 +783,13 @@ class StatusCodeService:
 
     @staticmethod
     def delete_withdrawn(ids: list[int], actor_user, reauth_password: str | None) -> dict:
-        """Deletes withdrawn codes for good (BR-026), with the Administrator's password (SEC-026).
-        A code that has a revision again, or that another record still points at, is reported and
-        left alone; every deletion is audited with what the code held."""
+        """Deletes withdrawn codes (BR-026), with the Administrator's password (SEC-026).
+
+        A withdrawn code is an empty shell that holds a number. Deleting it is done in place: the
+        row stays, so no id is ever reused and every audit entry keeps pointing at one code, but it
+        gives up its identifier, reserved number, legacy number and PrgIdx_GUi, so the program or
+        row can be imported again. A code that has a revision again is reported and left alone;
+        every deletion is audited with what the code held."""
         require_roles(actor_user, "ADMINISTRATOR")
         AuthService.step_up(actor_user, reauth_password, "WITHDRAWN_CODE_DELETE")
         if not ids:
@@ -799,6 +807,7 @@ class StatusCodeService:
                 status_code is None
                 or status_code.is_sandbox
                 or status_code.withdrawn_at is None
+                or status_code.deleted_at is not None
                 or status_code.revisions
             ):
                 skipped.append(label)
@@ -814,26 +823,18 @@ class StatusCodeService:
                 "functional_subgroup": status_code.functional_subgroup.code,
                 "withdrawn_at": status_code.withdrawn_at,
             }
-            try:
-                with db.session.begin_nested():
-                    db.session.execute(
-                        text("DELETE FROM import_source_item WHERE status_code_id = :i"),
-                        {"i": code_id},
-                    )
-                    db.session.expire(status_code)
-                    db.session.execute(
-                        text("DELETE FROM status_code WHERE id = :i"), {"i": code_id}
-                    )
-                    AuditService.log(
-                        "StatusCode",
-                        code_id,
-                        "WITHDRAWN_CODE_DELETE",
-                        actor=actor_user,
-                        before=snapshot,
-                    )
-            except IntegrityError:
-                skipped.append(label)
-                continue
+            db.session.execute(
+                text(
+                    "UPDATE status_code SET status_code_identifier = NULL, "
+                    "reserved_identifier = NULL, legacy_reference_number = NULL, prg_idx = NULL, "
+                    "deleted_at = :t WHERE id = :i"
+                ),
+                {"t": utcnow_iso(), "i": code_id},
+            )
+            db.session.expire(status_code)
+            AuditService.log(
+                "StatusCode", code_id, "WITHDRAWN_CODE_DELETE", actor=actor_user, before=snapshot
+            )
             deleted.append(label)
         db.session.commit()
         return {"deleted": deleted, "skipped": skipped}
@@ -949,6 +950,7 @@ class StatusCodeService:
         db.session.flush()
         _set_platforms(revision, data.get("turbine_platforms") or [])
         status_code_fields.set_user_groups(revision, data.get("user_groups"))
+        status_code_fields.fill_default_levels(revision)
         if status_code.withdrawn_at is not None:  # restored from its program file: not a shell
             status_code.withdrawn_at = None
         return revision

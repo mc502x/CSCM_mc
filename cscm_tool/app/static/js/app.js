@@ -222,7 +222,39 @@ function initSetVerdict(button) {
   });
 }
 
+/* The menu: groups that stay open or closed as the user left them (the one with the page you are on
+ * always shows), and the Menu button of narrow windows, where the sidebar is hidden otherwise. */
+function initMenu() {
+  var toggle = document.querySelector('[data-menu-toggle]');
+  var nav = document.getElementById('sidebar');
+  if (toggle && nav) {
+    toggle.addEventListener('click', function () {
+      var open = nav.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape' && nav.classList.contains('is-open')) {
+        nav.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.focus();
+      }
+    });
+  }
+  document.querySelectorAll('details[data-nav-group]').forEach(function (group) {
+    var key = 'cscm.nav.' + group.getAttribute('data-nav-group');
+    try {
+      if (window.localStorage.getItem(key) === 'closed' && !group.querySelector('a.is-active')) {
+        group.removeAttribute('open');
+      }
+    } catch (error) { /* storage can be blocked: the group simply stays open */ }
+    group.addEventListener('toggle', function () {
+      try { window.localStorage.setItem(key, group.open ? 'open' : 'closed'); } catch (error) { /* ignore */ }
+    });
+  });
+}
+
 document.addEventListener('DOMContentLoaded', function () {
+  initMenu();
   document.querySelectorAll('button[data-set-verdict]').forEach(initSetVerdict);
   document.querySelectorAll('input[data-check-all]').forEach(initCheckAll);
   document.querySelectorAll('input[data-filter-rows]').forEach(initFilterRows);

@@ -71,6 +71,29 @@ class TranslationReviewService:
         return getattr(actor, "role_code", None) in MANAGER_ROLES
 
     @staticmethod
+    def beta_languages() -> frozenset[str]:
+        """Languages (besides the source English) that no native speaker has reviewed, or whose
+        text changed since the review (FR-170). Cheap while no review exists: nothing to compare."""
+        from app.services.settings_service import SettingsService
+
+        if SettingsService.get("languages.beta_marker") != "1":
+            return frozenset()
+        done = {
+            code: fp
+            for code, fp in db.session.query(
+                TranslationReview.language_code, TranslationReview.fingerprint
+            )
+            .filter_by(status="COMPLETED")
+            .order_by(TranslationReview.completed_at)
+            .all()
+        }  # the newest review of a language wins
+        beta = set(reviewable_languages())
+        for code, fp in done.items():
+            if code in beta and fp == fingerprint(effective(code)):
+                beta.discard(code)
+        return frozenset(beta)
+
+    @staticmethod
     def assigned_languages(user_id: int) -> list[str]:
         rows = db.session.query(LanguageReviewer.language_code).filter_by(user_id=user_id).all()
         return sorted(r[0] for r in rows)

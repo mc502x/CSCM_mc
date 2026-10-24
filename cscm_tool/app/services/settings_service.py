@@ -57,6 +57,11 @@ SETTINGS: dict[str, tuple[str, Callable[[str], str], str]] = {
         _percent,
         "Alert when a subgroup's number band has at most N percent left",
     ),
+    "languages.beta_marker": (
+        "1",
+        _boolean,
+        "Mark a language that no native speaker has reviewed as beta in the language menu",
+    ),
     "health.capacity_alert_numbers": (
         "20",
         _positive_int,

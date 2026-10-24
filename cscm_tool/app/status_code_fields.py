@@ -117,6 +117,56 @@ def normalise_user_groups(value: Any) -> dict | None:
     return value
 
 
+def parse_levels(value: str) -> dict[int, dict[str, int]]:
+    """ "1:1/5 2:1/10" -> {1: {"read": 1, "write": 5}, 2: {...}} (the form of the export column)."""
+    out: dict[int, dict[str, int]] = {}
+    for part in re.split(r"[\s;,]+", value.strip()):
+        if not part:
+            continue
+        match = re.fullmatch(r"(\d+):(\d+)/(\d+)", part)
+        if not match:
+            raise ValueError(f"'{part}' is not a user group level like 1:1/5 (slot:read/write).")
+        slot, read, write = (int(g) for g in match.groups())
+        out[slot] = {"read": read, "write": write}
+    return out
+
+
+# audience field of the revision -> (slot of the user group, lookup table with the default levels)
+AUDIENCE_SLOTS = {
+    "development_access": (1, "lookup_development_access"),
+    "sales_access": (2, "lookup_sales_access"),
+    "tcc_access": (3, "lookup_tcc_access"),
+    "service_access": (4, "lookup_service_access"),
+    "turbine_operator_package_access": (5, "lookup_top_access"),
+    "grid_operator_access": (6, "lookup_grid_operator_access"),
+    "service_partner_access": (7, "lookup_service_partner_access"),
+    "customer_access": (8, "lookup_customer_access"),
+}
+
+
+def fill_default_levels(revision: Any) -> None:
+    """Section 2d.1: a named audience value brings the numbers it held on every code that carried
+    it (`default_read_level`, `default_write_level` of the lookup); a slot that already has levels
+    keeps them, and the Engineer may overwrite either."""
+    levels = user_groups(revision)
+    added = False
+    for field, (slot, table) in AUDIENCE_SLOTS.items():
+        value_id = getattr(revision, f"{field}_id")
+        if value_id is None or slot in levels:
+            continue
+        row = db.session.execute(
+            text(  # noqa: S608  # nosec B608 - the table names are the constants above
+                f"SELECT default_read_level, default_write_level FROM {table} WHERE id = :i"
+            ),
+            {"i": value_id},
+        ).first()
+        if row is not None and row[0] is not None and row[1] is not None:
+            levels[slot] = {"read": row[0], "write": row[1]}
+            added = True
+    if added:
+        set_user_groups(revision, levels)
+
+
 def _flag(value: Any) -> int | None:
     if value in (None, ""):
         return None

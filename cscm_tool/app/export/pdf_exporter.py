@@ -23,6 +23,8 @@ from typing import Any
 from fpdf import FPDF
 from fpdf.enums import MethodReturnValue
 
+from app.i18n import translate_for
+
 try:  # HarfBuzz binding; without it the scripts are drawn unshaped
     import uharfbuzz  # noqa: F401
 
@@ -97,6 +99,18 @@ DEFAULT_PDF_FIELDS = (
     ("lifecycle_status", "State"),
 )
 
+
+# The words the PDF and its title page print besides the data; they follow the language of the
+# export (FR-171) and are part of the translation inventory.
+TRANSLATED_TEXT: tuple[str, ...] = (
+    "Status code catalogue",
+    "Content digest (SHA-256 of the data rows)",
+    "The digest of the file itself is listed in the accompanying manifest "
+    "(MANIFEST.json); verify it with `flask verify-export`.",
+    "Page %(page)s of %(total)s",
+    "Not for distribution - unapproved data",
+    *(label for _field, label in DEFAULT_PDF_FIELDS),
+)
 
 _FALLBACK_TEXT = {"→": "->", "≥": ">=", "≤": "<=", "–": "-", "—": "-"}
 
@@ -200,7 +214,11 @@ class _CataloguePdf(FPDF):
         self.cell(0, 4, self.footer_note, align="L")
         self.set_x(MARGIN)
         self.use("", 6)
-        self.cell(0, 4, f"Page {self.page_no()} of {{nb}}", align="R")
+        page = translate_for(
+            self.language, "Page %(page)s of %(total)s", page=self.page_no(), total="{nb}"
+        )
+        self.use(page, 6)
+        self.cell(0, 4, page, align="R")
         self.set_text_color(0, 0, 0)
 
 
@@ -231,10 +249,13 @@ def _block(pdf: _CataloguePdf, width: float, height: float, text: str, size: flo
     pdf.multi_cell(width, height, text, align=align, new_x="LMARGIN", new_y="NEXT")
 
 
-def _title_page(pdf: _CataloguePdf, title: dict, notice: str | None) -> None:
+def _title_page(
+    pdf: _CataloguePdf, title: dict, notice: str | None, language: str | None = None
+) -> None:
     pdf.add_page()
     pdf.set_y(40)
-    _block(pdf, 0, 10, clean(title.get("heading") or "Status code catalogue"), 22)
+    heading = title.get("heading") or translate_for(language, "Status code catalogue")
+    _block(pdf, 0, 10, clean(heading), 22)
     if title.get("subtitle"):
         _block(pdf, 0, 7, clean(title["subtitle"]), 13)
     pdf.ln(8)
@@ -251,15 +272,20 @@ def _title_page(pdf: _CataloguePdf, title: dict, notice: str | None) -> None:
     if digest:
         pdf.ln(6)
         pdf.use("", 10)
-        pdf.cell(0, 6, "Content digest (SHA-256 of the data rows)", new_x="LMARGIN", new_y="NEXT")
+        label = translate_for(language, "Content digest (SHA-256 of the data rows)")
+        pdf.use(label, 10)
+        pdf.cell(0, 6, label, new_x="LMARGIN", new_y="NEXT")
         _block(pdf, 0, 4.5, digest, 8)
         pdf.set_text_color(90, 90, 90)
         _block(
             pdf,
             0,
             4,
-            "The digest of the file itself is listed in the accompanying manifest "
-            "(MANIFEST.json); verify it with `flask verify-export`.",
+            translate_for(
+                language,
+                "The digest of the file itself is listed in the accompanying manifest "
+                "(MANIFEST.json); verify it with `flask verify-export`.",
+            ),
             8,
         )
         pdf.set_text_color(0, 0, 0)
@@ -296,8 +322,9 @@ def build_pdf(
     if not SHAPING_AVAILABLE:  # pragma: no cover
         _log.warning("uharfbuzz is not installed: Indic and Arabic text is drawn without shaping")
 
+    notice = translate_for(language, notice) if notice else notice
     if title:
-        _title_page(pdf, title, notice)
+        _title_page(pdf, title, notice, language)
 
     pdf.add_page()
     if notice and not title:
@@ -312,7 +339,9 @@ def build_pdf(
         return bytes(pdf.output())
 
     if columns is None:
-        columns = [(f, label) for f, label in DEFAULT_PDF_FIELDS if f in rows[0]]
+        columns = [
+            (f, translate_for(language, label)) for f, label in DEFAULT_PDF_FIELDS if f in rows[0]
+        ]
     widths = column_widths(columns, rows, pdf.epw)
     bottom = pdf.h - 12
 

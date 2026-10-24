@@ -40,7 +40,29 @@ def _inject_current_user():
         from app.services.notification_service import NotificationService
 
         unread = NotificationService.unread_count(_current_user.id)
+    beta_languages: frozenset[str] = frozenset()
+    if _current_user:
+        try:
+            from app.services.translation_review_service import TranslationReviewService
+
+            beta_languages = TranslationReviewService.beta_languages()
+        except Exception:  # noqa: BLE001 - a database that has not been upgraded yet
+            beta_languages = frozenset()
+    nav_groups: list[dict] = []
+    if _current_user:
+        from flask import request
+
+        from app.ui import nav
+
+        nav_groups = nav.visible_menu(
+            _current_user,
+            request.endpoint or "",
+            {"translation_access": _translation_access()},
+            nav.nav_counts(_current_user),
+        )
     return {
+        "nav_groups": nav_groups,
+        "beta_languages": beta_languages,
         "current_user": _current_user,
         "ui_lang": current_language(),
         "languages": LANGUAGES,

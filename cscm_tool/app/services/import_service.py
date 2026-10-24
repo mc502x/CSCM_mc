@@ -146,6 +146,11 @@ TEMPLATE_HEADERS = (
     "applies_to_version",
     "planned_effective_date",
     "planned_deprecation_date",
+    *status_code_fields.PROGRAM_FIELDS,
+    *status_code_fields.FLAG_FIELDS,
+    "operating_mode_mask",
+    "task_call_frequency",
+    "user_group_levels",
 )
 
 _EXAMPLE_ROW = {
@@ -181,6 +186,9 @@ _HINTS = {
     "related_status_codes": "Identifiers like StCd-01234 separated by commas.",
     "planned_effective_date": "A date like 2027-03-31.",
     "planned_deprecation_date": "A date like 2027-03-31.",
+    "operating_mode_mask": "A string of 0 and 1, e.g. 111011; leave empty to keep what is stored.",
+    "task_call_frequency": "A whole number of at least 1 (1, 10 or 100 so far).",
+    "user_group_levels": "slot:read/write separated by spaces, e.g. 1:1/5 2:1/10.",
 }
 
 
@@ -341,6 +349,33 @@ def _resolve_version(column: str, code: str | None) -> int | None:
     return version.id
 
 
+def _generated_columns(row: dict, data: dict, guarded) -> None:
+    """The columns for the fields of the generated programs (FR-168). A column that is empty or
+    missing leaves the field as it is: a new code gets the defaults, an update keeps the value.
+    """
+    for field_name in status_code_fields.PROGRAM_FIELDS:
+        if row.get(field_name) not in (None, ""):
+            data[field_name] = guarded(_parse_int, row.get(field_name), field_name) or 0
+    for field_name in status_code_fields.FLAG_FIELDS:
+        if row.get(field_name) not in (None, ""):
+            data[field_name] = _parse_bool(row.get(field_name))
+    if _text(row, "operating_mode_mask"):
+        data["operating_mode_mask"] = _text(row, "operating_mode_mask")
+    if row.get("task_call_frequency") not in (None, ""):
+        data["task_call_frequency"] = guarded(
+            _parse_int, row.get("task_call_frequency"), "task_call_frequency"
+        )
+    if _text(row, "user_group_levels"):
+        try:
+            data["user_groups"] = status_code_fields.parse_levels(_text(row, "user_group_levels"))
+        except ValueError as exc:
+            guarded(_raise_issue, "user_group_levels", _text(row, "user_group_levels"), str(exc))
+
+
+def _raise_issue(column: str, value: Any, message: str):
+    raise ImportValidationError(column, value, message)
+
+
 def _row_to_data(row: dict, issues: list[Issue]) -> dict | None:
     """Resolves lookup codes to the surrogate-id-based dict shape
     StatusCodeService._build_revision expects (see module docstring). Problems are
@@ -419,6 +454,7 @@ def _row_to_data(row: dict, issues: list[Issue]) -> dict | None:
         data[field_name] = guarded(_parse_int, row.get(field_name), field_name) or 0
     for field_name in _ACCESS_FIELD_MODELS:
         data[field_name] = guarded(_resolve_access, field_name, _text(row, field_name) or None)
+    _generated_columns(row, data, guarded)
 
     value_of = {
         i.column: i for i in issues

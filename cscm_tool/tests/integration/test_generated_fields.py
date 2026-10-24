@@ -352,3 +352,98 @@ def test_withdrawing_and_deleting_a_code_removes_its_levels(app, client, cast, w
             == 0
         )
         assert db.session.query(StatusCode).count() == 1  # the empty shell stays until deleted
+
+
+# -------------------------------------------------------------------------- defaults and the CSV import
+def test_a_named_audience_value_brings_its_default_levels_and_explicit_levels_win(
+    app, client, cast, wcnv_ids
+):
+    from sqlalchemy import text
+
+    with app.app_context():
+        covert = db.session.execute(
+            text("SELECT id FROM lookup_top_access WHERE code = 'COVERT'")
+        ).scalar()
+    login_as(client, cast["engineer"])
+    created = client.post(
+        "/api/v1/status-codes",
+        json=valid_payload(*wcnv_ids, turbine_operator_package_access=covert),
+    )
+    assert created.status_code == 201, created.get_json()
+    # slot 5 is the Turbine Operator Package; Covert is read 50, write 50 on every code seen
+    assert created.get_json()["user_groups"] == [{"slot": 5, "read": 50, "write": 50}]
+
+    explicit = client.post(
+        "/api/v1/status-codes",
+        json=valid_payload(
+            *wcnv_ids,
+            title="Another converter fault",
+            turbine_operator_package_access=covert,
+            user_groups=[{"slot": 5, "read": 1, "write": 10}],
+        ),
+    )
+    assert explicit.get_json()["user_groups"] == [{"slot": 5, "read": 1, "write": 10}]
+
+
+def _csv_upload(client, row, dry_run=False):
+    import csv as csv_module
+
+    buffer = io.StringIO()
+    writer = csv_module.DictWriter(buffer, fieldnames=list(row))
+    writer.writeheader()
+    writer.writerow(row)
+    return client.post(
+        "/api/v1/imports",
+        data={
+            "file": (io.BytesIO(buffer.getvalue().encode()), "library.csv"),
+            **({"dry_run": "true"} if dry_run else {}),
+        },
+        content_type="multipart/form-data",
+    )
+
+
+def test_the_csv_import_carries_the_new_columns_and_an_update_without_them_keeps_the_values(
+    app, client, cast
+):
+    from app.services.import_service import TEMPLATE_HEADERS
+
+    for column in (
+        *fields.PROGRAM_FIELDS,
+        *fields.FLAG_FIELDS,
+        "operating_mode_mask",
+        "user_group_levels",
+    ):
+        assert column in TEMPLATE_HEADERS
+    row = {
+        "functional_system_group": "WCNV",
+        "functional_subgroup": "010xx",
+        "turbine_platforms": "3XM",
+        "title": "Imported converter fault",
+        "description": "Imported through the spreadsheet with the program fields.",
+        "status_category": "ERROR",
+        "available_group": "27",
+        "set_delay": "10ms",
+        "reset_delay": "2min",
+        "legacy_reference_number": "3777",
+        "hydraulic_pump_program": "7",
+        "availability_calc": "yes",
+        "operating_mode_mask": "11111110000100000000",
+        "task_call_frequency": "10",
+        "user_group_levels": "1:1/5 2:1/10",
+    }
+    login_as(client, cast["engineer"])
+    first = _csv_upload(client, row)
+    assert first.status_code in (200, 202), first.get_json()
+    revision = _revision(app)
+    with app.app_context():
+        revision = db.session.query(StatusCodeRevision).one()
+        assert revision.hydraulic_pump_program == 7 and revision.availability_calc == 1
+        assert revision.task_call_frequency == 10
+        assert fields.user_groups(revision) == {
+            1: {"read": 1, "write": 5},
+            2: {"read": 1, "write": 10},
+        }
+
+    bad = dict(row, legacy_reference_number="3778", user_group_levels="1-1-5")
+    refused = _csv_upload(client, bad, dry_run=True)
+    assert "user_group_levels" in json.dumps(refused.get_json())

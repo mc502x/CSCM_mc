@@ -257,7 +257,10 @@ def test_a_withdrawn_code_is_listed_and_an_administrator_deletes_it_and_imports_
     )
     assert "1 withdrawn code(s) deleted." in done.get_data(as_text=True)
     with app.app_context():
-        assert db.session.get(StatusCode, code_id) is None
+        shell = db.session.get(StatusCode, code_id)
+        # erased in place: the row (and so its id) stays, the number and the references go
+        assert shell is not None and shell.deleted_at is not None
+        assert shell.status_code_identifier is None and shell.legacy_reference_number is None
         entry = db.session.query(AuditLogEntry).filter_by(action="WITHDRAWN_CODE_DELETE").one()
         before = json.loads(entry.before_value)
         assert before["status_code_identifier"] == "StCd-01001"
@@ -269,6 +272,13 @@ def test_a_withdrawn_code_is_listed_and_an_administrator_deletes_it_and_imports_
     preview = _preview(client, [("StCd_1001.st", _read("StCd_1001.st"))])
     assert _item(preview)["state"] == "ready"
     assert client.post("/api/v1/imports/st", json={"token": preview["token"]}).status_code == 202
+    with app.app_context():
+        new_code = db.session.query(StatusCode).filter(StatusCode.deleted_at.is_(None)).one()
+        assert new_code.id != code_id  # an id is never handed out twice
+        assert new_code.reserved_identifier == "StCd-01001"
+    # the deleted code is gone from the list
+    login_as(client, cast["admin"])
+    assert "No withdrawn codes." in client.get("/admin/withdrawn-codes").get_data(as_text=True)
 
 
 def test_a_restored_code_is_no_shell_and_the_database_refuses_a_delete_around_the_service(

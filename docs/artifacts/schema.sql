@@ -79,6 +79,8 @@
 --     section 3, docs/03-srs.md FR-156, BR-024)
 --   - lookup_language: French, Hindi and Georgian added; v4.4 adds Arabic (written right to left); every
 --     name reads <country letters> <name> <flag emoji>; user.ui_language accepts the six codes
+-- v4.9.2 changes: status_code.deleted_at (a withdrawn code is erased in place, never removed; the delete
+--     trigger is strict again)
 -- v4.9 changes: the technical nomenclature (terminology_term, terminology_translation); user.deleted_at (a
 --     deleted account with history is erased, not removed: BR-025); status_code.withdrawn_at (a code whose
 --     change request was withdrawn can be deleted by an Administrator: BR-026)
@@ -442,6 +444,10 @@ CREATE TABLE status_code (
     created_at                          TEXT NOT NULL DEFAULT (strftime('%Y-%m-%dT%H:%M:%fZ','now')),
     -- v4.9: set when the last revision of the code was withdrawn (the code is an empty shell); only such a code can be deleted
     withdrawn_at                        TEXT,
+    -- v4.9.2: set when an Administrator deletes a withdrawn code. The row stays (so no id is ever
+    -- reused and every audit entry keeps pointing at one code) but gives up its identifier, reserved
+    -- number, legacy number and PrgIdx_GUi, so the same program or row can be imported again.
+    deleted_at                          TEXT,
     CHECK (status_code_identifier IS NULL
            OR status_code_identifier GLOB 'StCd-[0-9][0-9][0-9][0-9][0-9]'
            OR status_code_identifier GLOB 'StCd-T[0-9][0-9][0-9][0-9][0-9]')
@@ -1065,8 +1071,6 @@ END;
 CREATE TRIGGER trg_prevent_nonsandbox_delete
 BEFORE DELETE ON status_code
 WHEN OLD.is_sandbox = 0
-     AND (OLD.withdrawn_at IS NULL
-          OR EXISTS (SELECT 1 FROM status_code_revision r WHERE r.status_code_id = OLD.id))
 BEGIN
     SELECT RAISE(ABORT, 'Only sandbox (is_sandbox=1) status codes may be deleted');
 END;
