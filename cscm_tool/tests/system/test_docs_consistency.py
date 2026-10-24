@@ -109,8 +109,8 @@ def test_the_group_and_subgroup_counts_quoted_in_the_documents(schema_counts):
 def test_the_screen_count_matches_the_inventory():
     inventory = _text(DOCS / "10-ui-ux-specification.md")
     numbers = {int(n) for n in re.findall(r"^\| S(\d+) \|", inventory, re.M)}
-    assert numbers == set(range(1, 50))
-    assert "Forty-nine screens (S1–S49" in _text(DOCS / "22-software-description.md")
+    assert numbers == set(range(1, 51))
+    assert "Fifty screens (S1–S50" in _text(DOCS / "22-software-description.md")
 
 
 def test_the_audit_catalogue_lists_every_code_the_application_can_write():
@@ -137,11 +137,15 @@ def test_the_audit_catalogue_lists_every_code_the_application_can_write():
         "USER_DEACTIVATE",
         "OFFLINE_BUNDLE_EXPORT",
         "RELEASE_NOTES_EXPORT",
+        "BULK_DECISION",
+        "BULK_EDIT",
+        "BULK_SUBMIT",
+        "BULK_DOMAIN_SIGNOFF",
     }
     documented = set(re.findall(r"`([A-Z][A-Z_]{3,})`", _text(DOCS / "12-audit-compliance.md")))
     assert emitted - documented == set()
-    assert "Eighty-six action codes" in _text(DOCS / "22-software-description.md")
-    assert len(emitted) == 86
+    assert "Ninety-three action codes" in _text(DOCS / "22-software-description.md")
+    assert len(emitted) == 93
 
 
 # ------------------------------------------------------------------ requirement ids

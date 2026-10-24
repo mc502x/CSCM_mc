@@ -266,31 +266,31 @@ A notice is sent once per change and person; a failing notice never undoes the c
 
 <!-- translations:start -->
 
-The interface has **1217 strings** (every text a template wraps in `_()`, the role names and the help texts). English is the source; the other languages are listed below. A string without a translation is shown in English.
+The interface has **1280 strings** (every text a template wraps in `_()`, the role names and the help texts). English is the source; the other languages are listed below. A string without a translation is shown in English.
 
 ### 9.1 Coverage
 
 | Language | Code | Direction | Translated | Share | Pre-check confidence | Fingerprint |
 |---|---|---|---|---|---|---|
 | GB English 🇬🇧 | `en` | ltr | source | — | — | — |
-| DE Deutsch 🇩🇪 (German) | `de` | ltr | 1217 | 100 % | <span style="background:#7fc561;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>94 %</b></span> | `a3f55f2709bb` |
-| FR Français 🇫🇷 (French) | `fr` | ltr | 1216 | 99 % | <span style="background:#7fc561;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>94 %</b></span> | `3d6f948fecfc` |
-| IN हिन्दी 🇮🇳 (Hindi) | `hi` | ltr | 1216 | 99 % | <span style="background:#9ccf5c;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>88 %</b></span> | `76c7dc56621c` |
-| SA العربية 🇸🇦 (Arabic) | `ar` | rtl | 1216 | 99 % | <span style="background:#9ccf5c;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>88 %</b></span> | `45358c63a097` |
-| IN বাংলা 🇮🇳 (Bengali) | `bn` | ltr | 1216 | 99 % | <span style="background:#9ccf5c;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>87 %</b></span> | `ea52c364573a` |
-| IN मराठी 🇮🇳 (Marathi) | `mr` | ltr | 1216 | 99 % | <span style="background:#9ccf5c;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>86 %</b></span> | `5d4c124a5912` |
-| IN తెలుగు 🇮🇳 (Telugu) | `te` | ltr | 1216 | 99 % | <span style="background:#9ccf5c;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>85 %</b></span> | `f52cf7c790ce` |
-| IN தமிழ் 🇮🇳 (Tamil) | `ta` | ltr | 1216 | 99 % | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>84 %</b></span> | `f8d32b28ff59` |
-| IN ગુજરાતી 🇮🇳 (Gujarati) | `gu` | ltr | 1216 | 99 % | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>84 %</b></span> | `bffc46f357ae` |
-| PK اردو 🇵🇰 (Urdu) | `ur` | rtl | 1216 | 99 % | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>84 %</b></span> | `c92c3fc592a0` |
-| IN ಕನ್ನಡ 🇮🇳 (Kannada) | `kn` | ltr | 1216 | 99 % | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>83 %</b></span> | `c4633c5f629c` |
-| IN ଓଡ଼ିଆ 🇮🇳 (Odia) | `or` | ltr | 1216 | 99 % | <span style="background:#d9e050;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>78 %</b></span> | `8d5b2f9dab7a` |
-| IN മലയാളം 🇮🇳 (Malayalam) | `ml` | ltr | 1216 | 99 % | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>83 %</b></span> | `2a584acbe8dd` |
-| IN ਪੰਜਾਬੀ 🇮🇳 (Punjabi) | `pa` | ltr | 1216 | 99 % | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>83 %</b></span> | `f8fcffae48cb` |
-| ES Español 🇪🇸 (Spanish) | `es` | ltr | 1216 | 99 % | <span style="background:#7fc561;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>94 %</b></span> | `d2efc3171ab3` |
-| IT Italiano 🇮🇹 (Italian) | `it` | ltr | 1216 | 99 % | <span style="background:#7fc561;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>94 %</b></span> | `0484c13330b0` |
-| DK Dansk 🇩🇰 (Danish) | `da` | ltr | 1216 | 99 % | <span style="background:#7fc561;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>92 %</b></span> | `3afeacb98e5c` |
-| GE ქართული 🇬🇪 (Georgian) | `ka` | ltr | 1216 | 99 % | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>83 %</b></span> | `8bf67fdbf8f0` |
+| DE Deutsch 🇩🇪 (German) | `de` | ltr | 1280 | 100 % | <span style="background:#7fc561;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>94 %</b></span> | `cc7560ad60e1` |
+| FR Français 🇫🇷 (French) | `fr` | ltr | 1279 | 99 % | <span style="background:#7fc561;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>95 %</b></span> | `8d5530487ba5` |
+| IN हिन्दी 🇮🇳 (Hindi) | `hi` | ltr | 1279 | 99 % | <span style="background:#9ccf5c;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>88 %</b></span> | `7c352271016e` |
+| SA العربية 🇸🇦 (Arabic) | `ar` | rtl | 1279 | 99 % | <span style="background:#9ccf5c;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>88 %</b></span> | `de02b0586215` |
+| IN বাংলা 🇮🇳 (Bengali) | `bn` | ltr | 1279 | 99 % | <span style="background:#9ccf5c;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>87 %</b></span> | `220b2458cdcb` |
+| IN मराठी 🇮🇳 (Marathi) | `mr` | ltr | 1279 | 99 % | <span style="background:#9ccf5c;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>86 %</b></span> | `0f937b252ad9` |
+| IN తెలుగు 🇮🇳 (Telugu) | `te` | ltr | 1279 | 99 % | <span style="background:#9ccf5c;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>85 %</b></span> | `90512c76293e` |
+| IN தமிழ் 🇮🇳 (Tamil) | `ta` | ltr | 1279 | 99 % | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>84 %</b></span> | `83416d96b66b` |
+| IN ગુજરાતી 🇮🇳 (Gujarati) | `gu` | ltr | 1279 | 99 % | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>84 %</b></span> | `5145d3935f1b` |
+| PK اردو 🇵🇰 (Urdu) | `ur` | rtl | 1279 | 99 % | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>84 %</b></span> | `cd6cd4dd9ec2` |
+| IN ಕನ್ನಡ 🇮🇳 (Kannada) | `kn` | ltr | 1279 | 99 % | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>84 %</b></span> | `434da363a8fa` |
+| IN ଓଡ଼ିଆ 🇮🇳 (Odia) | `or` | ltr | 1279 | 99 % | <span style="background:#d9e050;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>78 %</b></span> | `63515fc04444` |
+| IN മലയാളം 🇮🇳 (Malayalam) | `ml` | ltr | 1279 | 99 % | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>83 %</b></span> | `2e2018887892` |
+| IN ਪੰਜਾਬੀ 🇮🇳 (Punjabi) | `pa` | ltr | 1279 | 99 % | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>83 %</b></span> | `e977c980ba84` |
+| ES Español 🇪🇸 (Spanish) | `es` | ltr | 1279 | 99 % | <span style="background:#7fc561;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>94 %</b></span> | `e54d745c155a` |
+| IT Italiano 🇮🇹 (Italian) | `it` | ltr | 1279 | 99 % | <span style="background:#7fc561;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>94 %</b></span> | `3570613bf48d` |
+| DK Dansk 🇩🇰 (Danish) | `da` | ltr | 1279 | 99 % | <span style="background:#7fc561;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>92 %</b></span> | `bf3c08ae6c80` |
+| GE ქართული 🇬🇪 (Georgian) | `ka` | ltr | 1279 | 99 % | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>82 %</b></span> | `5857d0c74620` |
 
 The pre-check confidence is the estimate of section 8c - the share of strings a native speaker is expected to accept unchanged, by an AI checker and not by a native speaker; red is 50 % or less, green above 95 %.
 
@@ -300,24 +300,24 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 
 | Language | Wrong meaning | Awkward or inconsistent | Terms differing from the nomenclature | Haircut (points) | Confidence |
 |---|---|---|---|---|---|
-| DE Deutsch 🇩🇪 | 0 | 6 | 11 | 4 | <span style="background:#7fc561;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>94 %</b></span> |
-| FR Français 🇫🇷 | 0 | 4 | 6 | 4 | <span style="background:#7fc561;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>94 %</b></span> |
-| IN हिन्दी 🇮🇳 | 1 | 7 | 4 | 9 | <span style="background:#9ccf5c;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>88 %</b></span> |
-| SA العربية 🇸🇦 | 1 | 3 | 7 | 10 | <span style="background:#9ccf5c;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>88 %</b></span> |
+| DE Deutsch 🇩🇪 | 0 | 6 | 12 | 4 | <span style="background:#7fc561;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>94 %</b></span> |
+| FR Français 🇫🇷 | 0 | 4 | 6 | 4 | <span style="background:#7fc561;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>95 %</b></span> |
+| IN हिन्दी 🇮🇳 | 1 | 7 | 5 | 9 | <span style="background:#9ccf5c;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>88 %</b></span> |
+| SA العربية 🇸🇦 | 1 | 3 | 8 | 10 | <span style="background:#9ccf5c;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>88 %</b></span> |
 | IN বাংলা 🇮🇳 | 0 | 6 | 3 | 11 | <span style="background:#9ccf5c;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>87 %</b></span> |
-| IN मराठी 🇮🇳 | 1 | 5 | 5 | 11 | <span style="background:#9ccf5c;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>86 %</b></span> |
+| IN मराठी 🇮🇳 | 1 | 5 | 6 | 11 | <span style="background:#9ccf5c;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>86 %</b></span> |
 | IN తెలుగు 🇮🇳 | 0 | 5 | 4 | 13 | <span style="background:#9ccf5c;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>85 %</b></span> |
 | IN தமிழ் 🇮🇳 | 1 | 6 | 7 | 13 | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>84 %</b></span> |
-| IN ગુજરાતી 🇮🇳 | 1 | 6 | 6 | 13 | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>84 %</b></span> |
+| IN ગુજરાતી 🇮🇳 | 1 | 6 | 7 | 13 | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>84 %</b></span> |
 | PK اردو 🇵🇰 | 1 | 5 | 2 | 13 | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>84 %</b></span> |
-| IN ಕನ್ನಡ 🇮🇳 | 1 | 7 | 15 | 13 | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>83 %</b></span> |
-| IN ଓଡ଼ିଆ 🇮🇳 | 6 | 4 | 18 | 16 | <span style="background:#d9e050;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>78 %</b></span> |
-| IN മലയാളം 🇮🇳 | 1 | 5 | 16 | 14 | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>83 %</b></span> |
-| IN ਪੰਜਾਬੀ 🇮🇳 | 1 | 6 | 15 | 14 | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>83 %</b></span> |
-| ES Español 🇪🇸 | 0 | 6 | 5 | 4 | <span style="background:#7fc561;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>94 %</b></span> |
-| IT Italiano 🇮🇹 | 0 | 5 | 4 | 4 | <span style="background:#7fc561;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>94 %</b></span> |
-| DK Dansk 🇩🇰 | 1 | 3 | 5 | 6 | <span style="background:#7fc561;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>92 %</b></span> |
-| GE ქართული 🇬🇪 | 0 | 7 | 3 | 15 | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>83 %</b></span> |
+| IN ಕನ್ನಡ 🇮🇳 | 1 | 7 | 16 | 13 | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>84 %</b></span> |
+| IN ଓଡ଼ିଆ 🇮🇳 | 6 | 4 | 20 | 16 | <span style="background:#d9e050;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>78 %</b></span> |
+| IN മലയാളം 🇮🇳 | 1 | 5 | 17 | 14 | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>83 %</b></span> |
+| IN ਪੰਜਾਬੀ 🇮🇳 | 1 | 6 | 16 | 14 | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>83 %</b></span> |
+| ES Español 🇪🇸 | 0 | 6 | 6 | 4 | <span style="background:#7fc561;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>94 %</b></span> |
+| IT Italiano 🇮🇹 | 0 | 5 | 5 | 4 | <span style="background:#7fc561;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>94 %</b></span> |
+| DK Dansk 🇩🇰 | 1 | 3 | 6 | 6 | <span style="background:#7fc561;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>92 %</b></span> |
+| GE ქართული 🇬🇪 | 0 | 7 | 4 | 15 | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>82 %</b></span> |
 
 The wrong and awkward counts are findings in the sample of 160 strings, the same strings in every language. The strings that were flagged, for the native speaker to look at first:
 
@@ -438,7 +438,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 
 ### 9.2 DE Deutsch 🇩🇪 — German
 
-1217 of 1217 strings translated; direction left to right.
+1280 of 1280 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -639,7 +639,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Scfa1b6` | detail | Add field comment | Feldkommentar hinzufügen |
 | `Sbb965e` | detail | Add one of your change requests | Einen Ihrer Änderungsanträge hinzufügen |
 | `S9a693b` | detail | Add to change set | Zum Änderungspaket hinzufügen |
-| `S7bbd6d` | detail | Administrator sign-off | Freigabe durch den Administrator |
+| `S7bbd6d` | detail, workbench | Administrator sign-off | Freigabe durch den Administrator |
 | `S212856` | detail | advanced, controller firmware programs | erweitert, Firmware-Programme der Steuerung |
 | `Sfbde82` | detail | Affected component | Betroffene Komponente |
 | `S25f8c5` | detail, export, form | Alarm | Alarm |
@@ -668,17 +668,17 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se7bab1` | detail | Chain of causes | Ursachenkette |
 | `S9c8393` | detail, mine | Change Request | Änderungsantrag |
 | `S4572f4` | detail | Change request | Änderungsantrag |
-| `S3295be` | detail | Change requests in this set | Änderungsanträge in diesem Paket |
+| `S3295be` | detail, workbench | Change requests in this set | Änderungsanträge in diesem Paket |
 | `S4d8006` | detail | Change set | Änderungspaket |
 | `S8aa57d` | detail | Changes | Änderungen |
 | `S3d14ea` | detail, export | Changes of this release only | Nur die Änderungen dieses Release |
 | `Sbd95c0` | detail | Checklist confirmed at sign-off | Bei der Freigabe bestätigte Checkliste |
 | `S074d62` | detail, role badge | Chief Engineer | Chefingenieur |
-| `S03695d` | detail | Chief Engineer decision | Entscheidung des Chefingenieurs |
+| `S03695d` | detail, workbench | Chief Engineer decision | Entscheidung des Chefingenieurs |
 | `Sf0a89f` | detail | Close change set | Änderungspaket schließen |
 | `S7c0c39` | detail | Close this change set? | Dieses Änderungspaket schließen? |
 | `S153d7a` | detail | Comment | Kommentar |
-| `S611578` | detail | Comment (required for rejection) | Kommentar (bei Ablehnung erforderlich) |
+| `S611578` | detail, workbench | Comment (required for rejection) | Kommentar (bei Ablehnung erforderlich) |
 | `Sc38432` | detail | Comment on this field | Kommentar zu diesem Feld |
 | `Sfce06e` | detail | Comments | Kommentare |
 | `S8d105c` | detail, reconciliation | Compare | Vergleichen |
@@ -704,7 +704,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S0e8574` | detail | Customer | Kunde |
 | `Scb307e` | detail | Decide the selected requests in one sitting | Die ausgewählten Anträge in einem Durchgang entscheiden |
 | `S319493` | detail | Decided by | Entschieden von |
-| `S7f59a1` | detail | Decision | Entscheidung |
+| `S7f59a1` | detail, workbench | Decision | Entscheidung |
 | `Sc51568` | detail | Decisions & Comments | Entscheidungen & Kommentare |
 | `Sa9ec7c` | detail | Delete Permanently | Endgültig löschen |
 | `S7d1c7a` | detail | Delete Release | Release löschen |
@@ -770,6 +770,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S6d59f4` | detail | Manual Reset Program | Programm für manuelles Zurücksetzen |
 | `Sf9896c` | detail, form | Mark resolved | Als erledigt markieren |
 | `Sa7b93d` | detail, new, reconciliation | Mode | Modus |
+| `S9f4d01` | detail | More than a few codes need a sample inspection first; use the workbench. | Bei mehr als wenigen Codes ist zuerst eine Stichprobenprüfung nötig; nutzen Sie den Arbeitsbereich. |
 | `S31a335` | detail | new code | neuer Code |
 | `S816c52` | detail, export_verify, form | No | Nein |
 | `S06fc8d` | detail | No active Engineer holds the %(code)s domain yet. An Administrator must tag an Engineer with it (Administration → Users) before a sign-off can be requested. | Kein aktiver Ingenieur hat den Fachbereich %(code)s. Ein Administrator muss einem Ingenieur diesen Fachbereich zuweisen (Verwaltung → Benutzer), bevor eine Freigabe angefordert werden kann. |
@@ -800,7 +801,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S9734ac` | detail | Other codes that refer to this one. Review them before deprecating it. | Andere Codes, die auf diesen verweisen. Prüfen Sie sie, bevor Sie ihn außer Betrieb nehmen. |
 | `S780d35` | detail | Override identifier (migration / reservation only) | Kennung überschreiben (nur Migration / Reservierung) |
 | `S89ff31` | detail | Owner | Verantwortlich |
-| `S2d20ee` | detail | Package overview | Paketübersicht |
+| `S2d20ee` | detail, workbench | Package overview | Paketübersicht |
 | `S4d1a47` | detail | Package: all languages and access levels | Paket: alle Sprachen und Zugriffsstufen |
 | `Sc49bd0` | detail | Packages of this Release | Pakete dieses Release |
 | `S96f608` | detail, review_queue | Pending | Ausstehend |
@@ -845,12 +846,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S026ab2` | detail | resolved | erledigt |
 | `S68c61f` | detail | Rev # | Rev.-Nr. |
 | `Se4758b` | detail, review_checklist | Review checklist | Prüf-Checkliste |
-| `S7bfca8` | detail | Reviewer sign-off | Freigabe durch den Prüfer |
+| `S7bfca8` | detail, workbench | Reviewer sign-off | Freigabe durch den Prüfer |
 | `S3beb9a` | detail | Revision | Revision |
 | `Sa72973` | detail | Revision Fields | Revisionsfelder |
 | `Sfc1d6a` | detail | row(s) imported as Drafts | Zeile(n) als Entwürfe importiert |
 | `S52d0b3` | detail, reconciliation, user_detail | Rows | Zeilen |
 | `Sd0edfb` | detail | Sales | Vertrieb |
+| `S241bf5` | detail, workbench | Sample number | Stichprobennummer |
 | `Sda38c6` | detail | Save planned dates | Geplante Daten speichern |
 | `S13c61c` | detail | Scope Filter | Umfangsfilter |
 | `S859822` | detail, mine, withdrawn_codes | Select | Auswählen |
@@ -912,11 +914,12 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S7d5316` | detail | Who | Wer |
 | `S47e564` | detail | Withdraw | Zurückziehen |
 | `S51a998` | detail | Withdraw this change request? | Diesen Änderungsantrag zurückziehen? |
+| `S93ef7c` | detail, workbench | Workbench | Arbeitsbereich |
 | `S95a2a4` | detail, form | Write level | Schreibstufe |
 | `S612fe0` | detail | Yaw Bearing Lubrication Program | Schmierprogramm Azimutlager |
 | `S559a3f` | detail | Yaw Program | Azimutprogramm |
 | `S5397e0` | detail, export_verify, form | Yes | Ja |
-| `Sc8e4b4` | detail | Your decision step | Ihr Entscheidungsschritt |
+| `Sc8e4b4` | detail, workbench | Your decision step | Ihr Entscheidungsschritt |
 | `S20cb4c` | detail, export_center | ZIP with manifest | ZIP mit Manifest |
 | `S5d4358` | dry_run | All rows are clean. | Alle Zeilen sind fehlerfrei. |
 | `S03510d` | dry_run | Back to import | Zurück zum Import |
@@ -943,7 +946,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S7b8d80` | export | Not for distribution - unapproved data | Nicht zur Weitergabe – nicht freigegebene Daten |
 | `Sd9b345` | export | not yet published | noch nicht veröffentlicht |
 | `Sa5d386` | export | Page %(page)s of %(total)s | Seite %(page)s von %(total)s |
-| `Sac1a42` | export | Platforms | Plattformen |
+| `Sac1a42` | export, workbench | Platforms | Plattformen |
 | `Se51c55` | export | Records | Datensätze |
 | `Sd41f56` | export, export_center | Release | Release |
 | `S2e8fd6` | export | Reset delay | Rücksetz-Verzögerung |
@@ -995,7 +998,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S45ea95` | export_verify | Manifest signature | Manifest-Signatur |
 | `S08f84b` | export_verify | No record of this exact file | Keine Aufzeichnung zu genau dieser Datei |
 | `S357953` | export_verify | NOT OK | NICHT IN ORDNUNG |
-| `S9ce3bd` | export_verify | OK | In Ordnung |
+| `S9ce3bd` | export_verify, workbench | OK | In Ordnung |
 | `S8a5285` | export_verify | Overall | Gesamt |
 | `Sd2bc4a` | export_verify | Produced by this system | Von diesem System erzeugt |
 | `S112d15` | export_verify | Verify an export | Einen Export prüfen |
@@ -1069,10 +1072,16 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S689b33` | help | The full manual is docs/23-user-manual.md in the project folder; the glossary below is the same one the tooltips use. | Das vollständige Handbuch ist docs/23-user-manual.md im Projektordner; das Glossar unten ist dasselbe, das die Tooltips verwenden. |
 | `S439914` | help | What happens next on a change request | Wie es bei einem Änderungsantrag weitergeht |
 | `S6d29d9` | help and messages | %(n)s withdrawn code(s) deleted. | %(n)s zurückgezogene(r) Code(s) gelöscht. |
+| `S285edc` | help and messages | %(ok)s of %(n)s: %(what)s. | %(ok)s von %(n)s: %(what)s. |
 | `Sb08e6c` | help and messages | A Reviewer and an Administrator each sign off (in any order). If either rejects, it goes back to the author. | Ein Prüfer und ein Administrator geben jeweils frei (in beliebiger Reihenfolge). Lehnt einer ab, geht der Antrag zurück an den Autor. |
 | `S2f1bed` | help and messages | An Administrator includes the revision in a Release and publishes it; then it is Released. | Ein Administrator nimmt die Revision in ein Release auf und veröffentlicht es; dann ist sie veröffentlicht. |
+| `S1308dc` | help and messages | defective codes sent back | mangelhafte Codes zurückgegeben |
+| `Se2bbd9` | help and messages | Drafts saved | Entwürfe gespeichert |
+| `S0ddfa5` | help and messages | Drafts signed off | Entwürfe freigegeben |
+| `Sf90ab8` | help and messages | Drafts submitted for review | Entwürfe zur Prüfung eingereicht |
 | `Sd856bd` | help and messages | Not deleted (it has a revision again or is still referenced): %(x)s | Nicht gelöscht (er hat wieder eine Revision oder wird noch referenziert): %(x)s |
 | `S34b903` | help and messages | Not possible: the account has history (see above). Deactivate it instead; the person can no longer sign in and everything they did stays attributable. | Nicht möglich: Das Konto hat einen Verlauf (siehe oben). Deaktivieren Sie es stattdessen; die Person kann sich dann nicht mehr anmelden, und alles, was sie getan hat, bleibt zuordenbar. |
+| `S6a26de` | help and messages | Sample %(id)s drawn: %(n)s of %(total)s codes to inspect. | Stichprobe %(id)s gezogen: %(n)s von %(total)s Codes zu prüfen. |
 | `Sce489f` | help and messages | The author gets any required cross-domain sign-offs, then submits the change request for review. | Der Autor holt die erforderlichen fachübergreifenden Freigaben ein und reicht den Änderungsantrag dann zur Prüfung ein. |
 | `S1cdbdd` | help and messages | The Chief Engineer approves or rejects. Approval makes the revision Approved (or Deprecated for a deprecation request). | Der Chefingenieur genehmigt oder lehnt ab. Die Genehmigung macht die Revision freigegeben (bei einem Außerbetriebnahme-Antrag: außer Betrieb). |
 | `S2d6ac0` | help and messages | The package is being built. Reload this page to follow its progress. | Das Paket wird erstellt. Laden Sie diese Seite neu, um den Fortschritt zu sehen. |
@@ -1145,7 +1154,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sded18c` | language | approved by | genehmigt von |
 | `Sedd46e` | language | Check against the interface | Mit der Oberfläche abgleichen |
 | `S5a013c` | language | missing | fehlend |
-| `S2c924e` | language | Note | Hinweis |
+| `S2c924e` | language, workbench | Note | Hinweis |
 | `S2f09d0` | language | Note on %(x)s | Hinweis zu %(x)s |
 | `S75bf99` | language | proposed by | vorgeschlagen von |
 | `Sc68e32` | language | Save translations | Übersetzungen speichern |
@@ -1267,6 +1276,26 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se146d2` | message: auth_service | Your account is not active. | Ihr Konto ist nicht aktiv. |
 | `Sb584dd` | message: backup_service | Backups need a file-based SQLite database. | Sicherungen benötigen eine dateibasierte SQLite-Datenbank. |
 | `S368c82` | message: backup_service | keep must be at least 1 | keep muss mindestens 1 sein |
+| `S18edaf` | message: bulk_service | A defect needs a note: say what is wrong. | Ein Mangel braucht eine Notiz: Sagen Sie, was nicht stimmt. |
+| `S68cada` | message: bulk_service, workbench | A defective Draft is corrected by its author. | Ein mangelhafter Entwurf wird von seinem Autor korrigiert. |
+| `S8941d5` | message: bulk_service | A domain sign-off needs the engineering domain. | Eine Fachfreigabe braucht den Fachbereich. |
+| `S071452` | message: bulk_service | A note has at most 1000 characters. | Eine Notiz hat höchstens 1000 Zeichen. |
+| `Sf74baa` | message: bulk_service, message: change_set_service | Change set not found | Änderungsset nicht gefunden |
+| `Sf89067` | message: bulk_service | Choose at least one value to set. | Wählen Sie mindestens einen Wert zum Setzen. |
+| `S1e3e33` | message: bulk_service | No change request of the set is waiting for you at this step. | Kein Änderungsantrag des Pakets wartet bei diesem Schritt auf Sie. |
+| `S95bd2d` | message: bulk_service | No Draft of the set is waiting for the sign-off of this domain. | Kein Entwurf des Pakets wartet auf die Freigabe dieses Fachbereichs. |
+| `S495371` | message: bulk_service | Only a sample with defects can be sent back. | Nur eine Stichprobe mit Mängeln kann zurückgegeben werden. |
+| `Sa6e3b3` | message: bulk_service | Sample not found | Stichprobe nicht gefunden |
+| `Sf745cc` | message: bulk_service | step must be domain, reviewer, admin or chief-engineer | step muss domain, reviewer, admin oder chief-engineer sein |
+| `S973577` | message: bulk_service | That change request is not in the sample. | Dieser Änderungsantrag ist nicht in der Stichprobe. |
+| `Sa1a149` | message: bulk_service | The batch changed since the sample was drawn; draw a new sample. | Die Charge hat sich seit der Ziehung der Stichprobe geändert; ziehen Sie eine neue Stichprobe. |
+| `S8e5b1c` | message: bulk_service | The verdict must be OK or DEFECT. | Das Urteil muss OK oder Mangel lauten. |
+| `Sddedd6` | message: bulk_service | This is not your sample: the person who decides inspects. | Das ist nicht Ihre Stichprobe: Wer entscheidet, prüft. |
+| `Sf56c6a` | message: bulk_service | This sample belongs to another change set or another step. | Diese Stichprobe gehört zu einem anderen Änderungspaket oder einem anderen Schritt. |
+| `S146a72` | message: bulk_service | This sample has been used for a decision already; draw a new one. | Diese Stichprobe wurde bereits für eine Entscheidung verwendet; ziehen Sie eine neue. |
+| `Sf0f02c` | message: bulk_service | This sample is closed. | Diese Stichprobe ist geschlossen. |
+| `Sf973bd` | message: bulk_service | This sample is older than 24 hours; draw a new one. | Diese Stichprobe ist älter als 24 Stunden; ziehen Sie eine neue. |
+| `S062a13` | message: bulk_service | This sample was replaced by a newer one. | Diese Stichprobe wurde durch eine neuere ersetzt. |
 | `Sca2391` | message: change_request_service | A comment must be between 1 and 4000 characters. | Ein Kommentar muss zwischen 1 und 4000 Zeichen lang sein. |
 | `S33cd99` | message: change_request_service | At least one Turbine Platform is required before Submit for Review (FR-023a). | Vor dem Einreichen zur Prüfung ist mindestens eine Turbinenplattform erforderlich (FR-023a). |
 | `S1fd35e` | message: change_request_service | decision must be APPROVE or REJECT. | decision muss APPROVE oder REJECT sein. |
@@ -1277,7 +1306,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sbd3a03` | message: change_request_service | reviewer_id must be an active user with the Reviewer role. | reviewer_id muss ein aktiver Benutzer mit der Rolle Prüfer sein. |
 | `S043693` | message: change_request_service | The Reviewer has already signed off this CR. | Der Prüfer hat diesen Änderungsantrag bereits freigegeben. |
 | `S7a758c` | message: change_set_service | A change set needs a name of 1-120 characters. | Ein Änderungsset braucht einen Namen mit 1-120 Zeichen. |
-| `Sf74baa` | message: change_set_service | Change set not found | Änderungsset nicht gefunden |
 | `Sd8fad1` | message: change_set_service | Only a CR that is still open can join a change set. | Nur ein noch offener Änderungsantrag kann einem Änderungsset beitreten. |
 | `S990d51` | message: change_set_service | Only the author of the CR or an Administrator may group it. | Nur der Autor des Änderungsantrags oder ein Administrator darf ihn gruppieren. |
 | `S69e4d1` | message: change_set_service | Only the author of the CR or an Administrator may ungroup it. | Nur der Autor des Änderungsantrags oder ein Administrator darf die Gruppierung aufheben. |
@@ -1363,6 +1391,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sdb88ba` | message: saved_search_service | Saved search not found | Gespeicherte Suche nicht gefunden |
 | `S046aff` | message: saved_search_service | This saved search belongs to someone else. | Diese gespeicherte Suche gehört einer anderen Person. |
 | `Saad8e2` | message: settings_service | must be a whole number between 0 and 100 | muss eine ganze Zahl zwischen 0 und 100 sein |
+| `S9625d1` | message: settings_service | must be a whole number between 1 and 100 | muss eine ganze Zahl zwischen 1 und 100 sein |
 | `S6e4015` | message: settings_service | must be a whole number between 1 and 365 | muss eine ganze Zahl zwischen 1 und 365 sein |
 | `S9671fb` | message: settings_service | must be true or false | muss true oder false sein |
 | `S5166bb` | message: st_import_service | A staged file changed after the preview. Upload again. | Eine bereitgestellte Datei hat sich nach der Vorschau geändert. Laden Sie sie erneut hoch. |
@@ -1560,7 +1589,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S6daf16` | st_preview | Preview: status codes from .st files | Vorschau: Statuscodes aus .st-Dateien |
 | `S15a21a` | st_preview | program(s) | Programm(e) |
 | `Se58289` | st_preview | Programs found in the uploaded files | In den hochgeladenen Dateien gefundene Programme |
-| `S75c053` | st_preview | ready | bereit |
+| `S75c053` | st_preview, workbench | ready | bereit |
 | `S0723bf` | st_preview | Select all programs that are ready | Alle bereiten Programme auswählen |
 | `S1a767a` | st_preview | updates the open Draft | aktualisiert den offenen Entwurf |
 | `S02499f` | st_preview | withdrawn | zurückgezogen |
@@ -1659,10 +1688,44 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S8516a7` | withdrawn_codes | Delete selected | Ausgewählte löschen |
 | `Sdfeb06` | withdrawn_codes | No withdrawn codes. | Keine zurückgezogenen Codes. |
 | `S87ec0b` | withdrawn_codes | Withdrawn on | Zurückgezogen am |
+| `S48d260` | workbench | %(n)s of %(total)s codes drawn at %(when)s. | %(n)s von %(total)s Codes gezogen am %(when)s. |
+| `S88b55f` | workbench | Approve the batch | Charge genehmigen |
+| `Sf40e77` | workbench | Available group | Verfügbare Gruppe |
+| `S99613c` | workbench | Blocked | Blockiert |
+| `Sca7133` | workbench | Choose the step you are about to decide, draw the sample, look at every sampled code and mark it. The sample is yours, valid for 24 hours and for this batch as it is now. | Wählen Sie den Schritt, den Sie entscheiden wollen, ziehen Sie die Stichprobe, sehen Sie sich jeden gezogenen Code an und markieren Sie ihn. Die Stichprobe gehört Ihnen und gilt 24 Stunden für diese Charge, wie sie jetzt ist. |
+| `S6f4274` | workbench | Codes in this batch | Codes in dieser Charge |
+| `S117313` | workbench | Decide the batch | Charge entscheiden |
+| `Se91aff` | workbench | Defect | Mangel |
+| `S16fbbf` | workbench | Domain sign-off | Fachfreigabe |
+| `Scb1884` | workbench | Dossier (XLSX) | Dossier (XLSX) |
+| `S25085f` | workbench | Draw a sample | Stichprobe ziehen |
+| `S9167a7` | workbench | Engineering domain | Fachbereich |
+| `Sbc3c59` | workbench | Only the values you choose are changed, on the Drafts you wrote (an Administrator: any Draft). | Nur die gewählten Werte werden geändert, und zwar an den Entwürfen, die Sie geschrieben haben (Administrator: jeder Entwurf). |
+| `S92223f` | workbench | Passed: no defect in the sample. Use sample number %(id)s below. | Bestanden: kein Mangel in der Stichprobe. Verwenden Sie unten die Stichprobennummer %(id)s. |
+| `S6275ab` | workbench | Ready to submit | Bereit zum Einreichen |
+| `Se1e74d` | workbench | Reject the batch | Charge ablehnen |
+| `S58fabf` | workbench | Sample | Stichprobe |
+| `S862471` | workbench | Sample inspection | Stichprobenprüfung |
+| `S69cc53` | workbench | Save the verdicts | Urteile speichern |
+| `S3ae55b` | workbench | Send the defective codes back | Mangelhafte Codes zurückgeben |
+| `Se90e7c` | workbench | Set on the Drafts | Auf die Entwürfe setzen |
+| `Sa58dac` | workbench | Set values on the Drafts | Werte der Entwürfe setzen |
+| `Sa443bb` | workbench | Sign off the Drafts | Entwürfe freigeben |
+| `S53f47f` | workbench | Sign-off pending | Freigabe ausstehend |
+| `Sae12bc` | workbench | Status category | Statuskategorie |
+| `Sdc416e` | workbench | Step | Schritt |
+| `Sf7710d` | workbench | Submit for review | Zur Prüfung einreichen |
+| `Sa45adc` | workbench | Submit the Drafts | Entwürfe einreichen |
+| `S2d099f` | workbench | Submits the Drafts you wrote. A Draft that still lacks a platform or a domain sign-off is reported and left as it is. | Reicht die Entwürfe ein, die Sie geschrieben haben. Ein Entwurf, dem noch eine Plattform oder eine Fachfreigabe fehlt, wird gemeldet und bleibt unverändert. |
+| `S5baa27` | workbench | The sample has defects, so the batch cannot be decided as it is. Send the defective codes back (the note is the reason), then draw a new sample of what is left. | Die Stichprobe hat Mängel, daher kann die Charge so nicht entschieden werden. Geben Sie die mangelhaften Codes zurück (die Notiz ist die Begründung) und ziehen Sie dann eine neue Stichprobe aus dem Rest. |
+| `S19f8ab` | workbench | Tick the codes an action is for; with none ticked an action covers every code it applies to. | Haken Sie die Codes an, für die eine Aktion gilt; ohne Haken gilt sie für alle Codes, auf die sie zutrifft. |
+| `S7f6e5a` | workbench | Verdict | Urteil |
+| `Se6246f` | workbench | What stops it | Was sie aufhält |
+| `Sbf45e2` | workbench | Work on many codes at once without weakening a step: every code still gets its own checks, its own audit entry and, for decisions, your password. A decision on more than %(above)s codes needs a sample inspection first: %(percent)s percent of the batch, at least %(minimum)s codes, spread over the subgroups. One defect in the sample stops the decision. | Viele Codes auf einmal bearbeiten, ohne einen Schritt zu schwächen: Jeder Code bekommt weiterhin seine eigenen Prüfungen, seinen eigenen Audit-Eintrag und bei Entscheidungen Ihr Passwort. Eine Entscheidung über mehr als %(above)s Codes braucht zuerst eine Stichprobenprüfung: %(percent)s Prozent der Charge, mindestens %(minimum)s Codes, verteilt über die Untergruppen. Ein Mangel in der Stichprobe stoppt die Entscheidung. |
 
 ### 9.3 FR Français 🇫🇷 — French
 
-1216 of 1217 strings translated; direction left to right.
+1279 of 1280 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -1862,7 +1925,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Scfa1b6` | detail | Add field comment | Ajouter un commentaire de champ |
 | `Sbb965e` | detail | Add one of your change requests | Ajouter une de vos demandes de modification |
 | `S9a693b` | detail | Add to change set | Ajouter au lot de modifications |
-| `S7bbd6d` | detail | Administrator sign-off | Validation de l'administrateur |
+| `S7bbd6d` | detail, workbench | Administrator sign-off | Validation de l'administrateur |
 | `S212856` | detail | advanced, controller firmware programs | avancé, programmes du micrologiciel du contrôleur |
 | `Sfbde82` | detail | Affected component | Composant concerné |
 | `S25f8c5` | detail, export, form | Alarm | Alarme |
@@ -1891,17 +1954,17 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se7bab1` | detail | Chain of causes | Chaîne de causes |
 | `S9c8393` | detail, mine | Change Request | Demande de modification |
 | `S4572f4` | detail | Change request | Demande de modification |
-| `S3295be` | detail | Change requests in this set | Demandes de modification de ce lot |
+| `S3295be` | detail, workbench | Change requests in this set | Demandes de modification de ce lot |
 | `S4d8006` | detail | Change set | Lot de modifications |
 | `S8aa57d` | detail | Changes | Modifications |
 | `S3d14ea` | detail, export | Changes of this release only | Uniquement les modifications de cette version |
 | `Sbd95c0` | detail | Checklist confirmed at sign-off | Liste de contrôle confirmée lors de la validation |
 | `S074d62` | detail, role badge | Chief Engineer | Ingénieur en chef |
-| `S03695d` | detail | Chief Engineer decision | Décision de l'ingénieur en chef |
+| `S03695d` | detail, workbench | Chief Engineer decision | Décision de l'ingénieur en chef |
 | `Sf0a89f` | detail | Close change set | Clore le lot de modifications |
 | `S7c0c39` | detail | Close this change set? | Clore ce lot de modifications ? |
 | `S153d7a` | detail | Comment | Commentaire |
-| `S611578` | detail | Comment (required for rejection) | Commentaire (obligatoire pour un rejet) |
+| `S611578` | detail, workbench | Comment (required for rejection) | Commentaire (obligatoire pour un rejet) |
 | `Sc38432` | detail | Comment on this field | Commenter ce champ |
 | `Sfce06e` | detail | Comments | Commentaires |
 | `S8d105c` | detail, reconciliation | Compare | Comparer |
@@ -1927,7 +1990,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S0e8574` | detail | Customer | Client |
 | `Scb307e` | detail | Decide the selected requests in one sitting | Décider des demandes sélectionnées en une seule séance |
 | `S319493` | detail | Decided by | Décidé par |
-| `S7f59a1` | detail | Decision | Décision |
+| `S7f59a1` | detail, workbench | Decision | Décision |
 | `Sc51568` | detail | Decisions & Comments | Décisions et commentaires |
 | `Sa9ec7c` | detail | Delete Permanently | Supprimer définitivement |
 | `S7d1c7a` | detail | Delete Release | Supprimer la version |
@@ -1993,6 +2056,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S6d59f4` | detail | Manual Reset Program | Programme de réarmement manuel |
 | `Sf9896c` | detail, form | Mark resolved | Marquer comme résolu |
 | `Sa7b93d` | detail, new, reconciliation | Mode | Mode |
+| `S9f4d01` | detail | More than a few codes need a sample inspection first; use the workbench. | Au-delà de quelques codes, un contrôle par échantillon est d'abord nécessaire ; utilisez l'espace de travail. |
 | `S31a335` | detail | new code | nouveau code |
 | `S816c52` | detail, export_verify, form | No | Non |
 | `S06fc8d` | detail | No active Engineer holds the %(code)s domain yet. An Administrator must tag an Engineer with it (Administration → Users) before a sign-off can be requested. | Aucun ingénieur actif n'a le domaine %(code)s. Un administrateur doit attribuer ce domaine à un ingénieur (Administration → Utilisateurs) avant qu'une validation puisse être demandée. |
@@ -2023,7 +2087,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S9734ac` | detail | Other codes that refer to this one. Review them before deprecating it. | Autres codes qui renvoient à celui-ci. Relisez-les avant de le déclarer obsolète. |
 | `S780d35` | detail | Override identifier (migration / reservation only) | Remplacer l'identifiant (migration / réservation uniquement) |
 | `S89ff31` | detail | Owner | Propriétaire |
-| `S2d20ee` | detail | Package overview | Vue d'ensemble du paquet |
+| `S2d20ee` | detail, workbench | Package overview | Vue d'ensemble du paquet |
 | `S4d1a47` | detail | Package: all languages and access levels | Paquet : toutes les langues et tous les niveaux d'accès |
 | `Sc49bd0` | detail | Packages of this Release | Paquets de cette version |
 | `S96f608` | detail, review_queue | Pending | En attente |
@@ -2068,12 +2132,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S026ab2` | detail | resolved | résolu |
 | `S68c61f` | detail | Rev # | Rév. n° |
 | `Se4758b` | detail, review_checklist | Review checklist | Liste de contrôle de relecture |
-| `S7bfca8` | detail | Reviewer sign-off | Validation du relecteur |
+| `S7bfca8` | detail, workbench | Reviewer sign-off | Validation du relecteur |
 | `S3beb9a` | detail | Revision | Révision |
 | `Sa72973` | detail | Revision Fields | Champs de la révision |
 | `Sfc1d6a` | detail | row(s) imported as Drafts | ligne(s) importée(s) en brouillons |
 | `S52d0b3` | detail, reconciliation, user_detail | Rows | Lignes |
 | `Sd0edfb` | detail | Sales | Ventes |
+| `S241bf5` | detail, workbench | Sample number | Numéro d'échantillon |
 | `Sda38c6` | detail | Save planned dates | Enregistrer les dates prévues |
 | `S13c61c` | detail | Scope Filter | Filtre de périmètre |
 | `S859822` | detail, mine, withdrawn_codes | Select | Sélectionner |
@@ -2135,11 +2200,12 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S7d5316` | detail | Who | Qui |
 | `S47e564` | detail | Withdraw | Retirer |
 | `S51a998` | detail | Withdraw this change request? | Retirer cette demande de modification ? |
+| `S93ef7c` | detail, workbench | Workbench | Espace de travail |
 | `S95a2a4` | detail, form | Write level | Niveau d'écriture |
 | `S612fe0` | detail | Yaw Bearing Lubrication Program | Programme de lubrification du palier d'orientation |
 | `S559a3f` | detail | Yaw Program | Programme d'orientation |
 | `S5397e0` | detail, export_verify, form | Yes | Oui |
-| `Sc8e4b4` | detail | Your decision step | Votre étape de décision |
+| `Sc8e4b4` | detail, workbench | Your decision step | Votre étape de décision |
 | `S20cb4c` | detail, export_center | ZIP with manifest | ZIP avec manifeste |
 | `S5d4358` | dry_run | All rows are clean. | Toutes les lignes sont propres. |
 | `S03510d` | dry_run | Back to import | Retour à l'import |
@@ -2166,7 +2232,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S7b8d80` | export | Not for distribution - unapproved data | Ne pas diffuser - données non approuvées |
 | `Sd9b345` | export | not yet published | pas encore publié |
 | `Sa5d386` | export | Page %(page)s of %(total)s | Page %(page)s sur %(total)s |
-| `Sac1a42` | export | Platforms | Plateformes |
+| `Sac1a42` | export, workbench | Platforms | Plateformes |
 | `Se51c55` | export | Records | Enregistrements |
 | `Sd41f56` | export, export_center | Release | Version publiée |
 | `S2e8fd6` | export | Reset delay | Temporisation de réarmement |
@@ -2218,7 +2284,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S45ea95` | export_verify | Manifest signature | Signature du manifeste |
 | `S08f84b` | export_verify | No record of this exact file | Aucune trace de ce fichier exact |
 | `S357953` | export_verify | NOT OK | NON OK |
-| `S9ce3bd` | export_verify | OK | OK |
+| `S9ce3bd` | export_verify, workbench | OK | OK |
 | `S8a5285` | export_verify | Overall | Globalement |
 | `Sd2bc4a` | export_verify | Produced by this system | Produit par ce système |
 | `S112d15` | export_verify | Verify an export | Vérifier un export |
@@ -2292,10 +2358,16 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S689b33` | help | The full manual is docs/23-user-manual.md in the project folder; the glossary below is the same one the tooltips use. | Le manuel complet est docs/23-user-manual.md dans le dossier du projet ; le glossaire ci-dessous est celui des info-bulles. |
 | `S439914` | help | What happens next on a change request | Ce qui se passe ensuite pour une demande de modification |
 | `S6d29d9` | help and messages | %(n)s withdrawn code(s) deleted. | %(n)s code(s) retiré(s) supprimé(s). |
+| `S285edc` | help and messages | %(ok)s of %(n)s: %(what)s. | %(ok)s sur %(n)s : %(what)s. |
 | `Sb08e6c` | help and messages | A Reviewer and an Administrator each sign off (in any order). If either rejects, it goes back to the author. | Un relecteur et un administrateur valident chacun (dans n'importe quel ordre). Si l'un des deux rejette, elle retourne à l'auteur. |
 | `S2f1bed` | help and messages | An Administrator includes the revision in a Release and publishes it; then it is Released. | Un administrateur inclut la révision dans une version et la publie ; elle est alors Publiée. |
+| `S1308dc` | help and messages | defective codes sent back | codes défectueux renvoyés |
+| `Se2bbd9` | help and messages | Drafts saved | Brouillons enregistrés |
+| `S0ddfa5` | help and messages | Drafts signed off | Brouillons validés |
+| `Sf90ab8` | help and messages | Drafts submitted for review | Brouillons soumis pour relecture |
 | `Sd856bd` | help and messages | Not deleted (it has a revision again or is still referenced): %(x)s | Non supprimé (il a de nouveau une révision ou il est encore référencé) : %(x)s |
 | `S34b903` | help and messages | Not possible: the account has history (see above). Deactivate it instead; the person can no longer sign in and everything they did stays attributable. | Impossible : le compte a un historique (voir ci-dessus). Désactivez-le plutôt ; la personne ne peut plus se connecter et tout ce qu'elle a fait reste attribuable. |
+| `S6a26de` | help and messages | Sample %(id)s drawn: %(n)s of %(total)s codes to inspect. | Échantillon %(id)s tiré : %(n)s codes sur %(total)s à contrôler. |
 | `Sce489f` | help and messages | The author gets any required cross-domain sign-offs, then submits the change request for review. | L'auteur obtient les validations inter-domaines requises, puis soumet la demande de modification pour relecture. |
 | `S1cdbdd` | help and messages | The Chief Engineer approves or rejects. Approval makes the revision Approved (or Deprecated for a deprecation request). | L'ingénieur en chef approuve ou rejette. L'approbation fait passer la révision à Approuvé (ou Obsolète pour une demande d'obsolescence). |
 | `S2d6ac0` | help and messages | The package is being built. Reload this page to follow its progress. | Le paquet est en cours de création. Rechargez cette page pour suivre sa progression. |
@@ -2368,7 +2440,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sded18c` | language | approved by | approuvé par |
 | `Sedd46e` | language | Check against the interface | Comparer avec l'interface |
 | `S5a013c` | language | missing | manquant |
-| `S2c924e` | language | Note | Note |
+| `S2c924e` | language, workbench | Note | Note |
 | `S2f09d0` | language | Note on %(x)s | Note sur %(x)s |
 | `S75bf99` | language | proposed by | proposé par |
 | `Sc68e32` | language | Save translations | Enregistrer les traductions |
@@ -2490,6 +2562,26 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se146d2` | message: auth_service | Your account is not active. | Votre compte n'est pas actif. |
 | `Sb584dd` | message: backup_service | Backups need a file-based SQLite database. | Les sauvegardes nécessitent une base de données SQLite sur fichier. |
 | `S368c82` | message: backup_service | keep must be at least 1 | keep doit être au moins 1 |
+| `S18edaf` | message: bulk_service | A defect needs a note: say what is wrong. | Un défaut exige une note : dites ce qui ne va pas. |
+| `S68cada` | message: bulk_service, workbench | A defective Draft is corrected by its author. | Un brouillon défectueux est corrigé par son auteur. |
+| `S8941d5` | message: bulk_service | A domain sign-off needs the engineering domain. | Une validation de domaine exige le domaine d'ingénierie. |
+| `S071452` | message: bulk_service | A note has at most 1000 characters. | Une note comporte au plus 1000 caractères. |
+| `Sf74baa` | message: bulk_service, message: change_set_service | Change set not found | Lot de modifications introuvable |
+| `Sf89067` | message: bulk_service | Choose at least one value to set. | Choisissez au moins une valeur à définir. |
+| `S1e3e33` | message: bulk_service | No change request of the set is waiting for you at this step. | Aucune demande de modification du lot ne vous attend à cette étape. |
+| `S95bd2d` | message: bulk_service | No Draft of the set is waiting for the sign-off of this domain. | Aucun brouillon du lot n'attend la validation de ce domaine. |
+| `S495371` | message: bulk_service | Only a sample with defects can be sent back. | Seul un échantillon présentant des défauts peut être renvoyé. |
+| `Sa6e3b3` | message: bulk_service | Sample not found | Échantillon introuvable |
+| `Sf745cc` | message: bulk_service | step must be domain, reviewer, admin or chief-engineer | step doit être domain, reviewer, admin ou chief-engineer |
+| `S973577` | message: bulk_service | That change request is not in the sample. | Cette demande de modification n'est pas dans l'échantillon. |
+| `Sa1a149` | message: bulk_service | The batch changed since the sample was drawn; draw a new sample. | Le lot a changé depuis le tirage de l'échantillon ; tirez un nouvel échantillon. |
+| `S8e5b1c` | message: bulk_service | The verdict must be OK or DEFECT. | Le verdict doit être OK ou défaut. |
+| `Sddedd6` | message: bulk_service | This is not your sample: the person who decides inspects. | Ce n'est pas votre échantillon : celui qui décide contrôle. |
+| `Sf56c6a` | message: bulk_service | This sample belongs to another change set or another step. | Cet échantillon appartient à un autre lot de modifications ou à une autre étape. |
+| `S146a72` | message: bulk_service | This sample has been used for a decision already; draw a new one. | Cet échantillon a déjà servi à une décision ; tirez-en un nouveau. |
+| `Sf0f02c` | message: bulk_service | This sample is closed. | Cet échantillon est clos. |
+| `Sf973bd` | message: bulk_service | This sample is older than 24 hours; draw a new one. | Cet échantillon date de plus de 24 heures ; tirez-en un nouveau. |
+| `S062a13` | message: bulk_service | This sample was replaced by a newer one. | Cet échantillon a été remplacé par un plus récent. |
 | `Sca2391` | message: change_request_service | A comment must be between 1 and 4000 characters. | Un commentaire doit comporter entre 1 et 4000 caractères. |
 | `S33cd99` | message: change_request_service | At least one Turbine Platform is required before Submit for Review (FR-023a). | Au moins une plateforme d'éolienne est requise avant la soumission pour relecture (FR-023a). |
 | `S1fd35e` | message: change_request_service | decision must be APPROVE or REJECT. | decision doit être APPROVE ou REJECT. |
@@ -2500,7 +2592,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sbd3a03` | message: change_request_service | reviewer_id must be an active user with the Reviewer role. | reviewer_id doit être un utilisateur actif ayant le rôle de relecteur. |
 | `S043693` | message: change_request_service | The Reviewer has already signed off this CR. | Le relecteur a déjà validé cette demande de modification. |
 | `S7a758c` | message: change_set_service | A change set needs a name of 1-120 characters. | Un lot de modifications a besoin d'un nom de 1 à 120 caractères. |
-| `Sf74baa` | message: change_set_service | Change set not found | Lot de modifications introuvable |
 | `Sd8fad1` | message: change_set_service | Only a CR that is still open can join a change set. | Seule une demande de modification encore ouverte peut rejoindre un lot de modifications. |
 | `S990d51` | message: change_set_service | Only the author of the CR or an Administrator may group it. | Seul l'auteur de la demande de modification ou un administrateur peut la regrouper. |
 | `S69e4d1` | message: change_set_service | Only the author of the CR or an Administrator may ungroup it. | Seul l'auteur de la demande de modification ou un administrateur peut la dégrouper. |
@@ -2586,6 +2677,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sdb88ba` | message: saved_search_service | Saved search not found | Recherche enregistrée introuvable |
 | `S046aff` | message: saved_search_service | This saved search belongs to someone else. | Cette recherche enregistrée appartient à quelqu'un d'autre. |
 | `Saad8e2` | message: settings_service | must be a whole number between 0 and 100 | doit être un nombre entier entre 0 et 100 |
+| `S9625d1` | message: settings_service | must be a whole number between 1 and 100 | doit être un nombre entier entre 1 et 100 |
 | `S6e4015` | message: settings_service | must be a whole number between 1 and 365 | doit être un nombre entier entre 1 et 365 |
 | `S9671fb` | message: settings_service | must be true or false | doit être true ou false |
 | `S5166bb` | message: st_import_service | A staged file changed after the preview. Upload again. | Un fichier préparé a changé après l'aperçu. Téléversez-le à nouveau. |
@@ -2783,7 +2875,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S6daf16` | st_preview | Preview: status codes from .st files | Aperçu : codes de statut issus de fichiers .st |
 | `S15a21a` | st_preview | program(s) | programme(s) |
 | `Se58289` | st_preview | Programs found in the uploaded files | Programmes trouvés dans les fichiers téléversés |
-| `S75c053` | st_preview | ready | prêts |
+| `S75c053` | st_preview, workbench | ready | prêts |
 | `S0723bf` | st_preview | Select all programs that are ready | Sélectionner tous les programmes prêts |
 | `S1a767a` | st_preview | updates the open Draft | met à jour le brouillon ouvert |
 | `S02499f` | st_preview | withdrawn | retirés |
@@ -2882,10 +2974,44 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S8516a7` | withdrawn_codes | Delete selected | Supprimer la sélection |
 | `Sdfeb06` | withdrawn_codes | No withdrawn codes. | Aucun code retiré. |
 | `S87ec0b` | withdrawn_codes | Withdrawn on | Retiré le |
+| `S48d260` | workbench | %(n)s of %(total)s codes drawn at %(when)s. | %(n)s codes sur %(total)s tirés le %(when)s. |
+| `S88b55f` | workbench | Approve the batch | Approuver le lot |
+| `Sf40e77` | workbench | Available group | Groupe disponible |
+| `S99613c` | workbench | Blocked | Bloqué |
+| `Sca7133` | workbench | Choose the step you are about to decide, draw the sample, look at every sampled code and mark it. The sample is yours, valid for 24 hours and for this batch as it is now. | Choisissez l'étape que vous allez décider, tirez l'échantillon, examinez chaque code tiré et marquez-le. L'échantillon est le vôtre, valable 24 heures et pour ce lot dans son état actuel. |
+| `S6f4274` | workbench | Codes in this batch | Codes de ce lot |
+| `S117313` | workbench | Decide the batch | Décider du lot |
+| `Se91aff` | workbench | Defect | Défaut |
+| `S16fbbf` | workbench | Domain sign-off | Validation de domaine |
+| `Scb1884` | workbench | Dossier (XLSX) | Dossier (XLSX) |
+| `S25085f` | workbench | Draw a sample | Tirer un échantillon |
+| `S9167a7` | workbench | Engineering domain | Domaine d'ingénierie |
+| `Sbc3c59` | workbench | Only the values you choose are changed, on the Drafts you wrote (an Administrator: any Draft). | Seules les valeurs choisies sont modifiées, sur les brouillons que vous avez rédigés (un administrateur : tout brouillon). |
+| `S92223f` | workbench | Passed: no defect in the sample. Use sample number %(id)s below. | Réussi : aucun défaut dans l'échantillon. Utilisez ci-dessous le numéro d'échantillon %(id)s. |
+| `S6275ab` | workbench | Ready to submit | Prêt à soumettre |
+| `Se1e74d` | workbench | Reject the batch | Rejeter le lot |
+| `S58fabf` | workbench | Sample | Échantillon |
+| `S862471` | workbench | Sample inspection | Contrôle par échantillon |
+| `S69cc53` | workbench | Save the verdicts | Enregistrer les verdicts |
+| `S3ae55b` | workbench | Send the defective codes back | Renvoyer les codes défectueux |
+| `Se90e7c` | workbench | Set on the Drafts | Appliquer aux brouillons |
+| `Sa58dac` | workbench | Set values on the Drafts | Définir des valeurs sur les brouillons |
+| `Sa443bb` | workbench | Sign off the Drafts | Valider les brouillons |
+| `S53f47f` | workbench | Sign-off pending | Validation en attente |
+| `Sae12bc` | workbench | Status category | Catégorie de statut |
+| `Sdc416e` | workbench | Step | Étape |
+| `Sf7710d` | workbench | Submit for review | Soumettre pour relecture |
+| `Sa45adc` | workbench | Submit the Drafts | Soumettre les brouillons |
+| `S2d099f` | workbench | Submits the Drafts you wrote. A Draft that still lacks a platform or a domain sign-off is reported and left as it is. | Soumet les brouillons que vous avez rédigés. Un brouillon auquel il manque encore une plateforme ou une validation de domaine est signalé et laissé tel quel. |
+| `S5baa27` | workbench | The sample has defects, so the batch cannot be decided as it is. Send the defective codes back (the note is the reason), then draw a new sample of what is left. | L'échantillon présente des défauts, le lot ne peut donc pas être décidé tel quel. Renvoyez les codes défectueux (la note est le motif), puis tirez un nouvel échantillon du reste. |
+| `S19f8ab` | workbench | Tick the codes an action is for; with none ticked an action covers every code it applies to. | Cochez les codes concernés par une action ; sans case cochée, une action vaut pour tous les codes concernés. |
+| `S7f6e5a` | workbench | Verdict | Verdict |
+| `Se6246f` | workbench | What stops it | Ce qui le bloque |
+| `Sbf45e2` | workbench | Work on many codes at once without weakening a step: every code still gets its own checks, its own audit entry and, for decisions, your password. A decision on more than %(above)s codes needs a sample inspection first: %(percent)s percent of the batch, at least %(minimum)s codes, spread over the subgroups. One defect in the sample stops the decision. | Traiter de nombreux codes à la fois sans affaiblir une étape : chaque code garde ses propres contrôles, sa propre entrée d'audit et, pour les décisions, votre mot de passe. Une décision sur plus de %(above)s codes exige d'abord un contrôle par échantillon : %(percent)s pour cent du lot, au moins %(minimum)s codes, répartis sur les sous-groupes. Un défaut dans l'échantillon arrête la décision. |
 
 ### 9.4 IN हिन्दी 🇮🇳 — Hindi
 
-1216 of 1217 strings translated; direction left to right.
+1279 of 1280 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -3085,7 +3211,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Scfa1b6` | detail | Add field comment | फ़ील्ड टिप्पणी जोड़ें |
 | `Sbb965e` | detail | Add one of your change requests | अपना एक परिवर्तन अनुरोध जोड़ें |
 | `S9a693b` | detail | Add to change set | परिवर्तन समुच्चय में जोड़ें |
-| `S7bbd6d` | detail | Administrator sign-off | प्रशासक साइन-ऑफ |
+| `S7bbd6d` | detail, workbench | Administrator sign-off | प्रशासक साइन-ऑफ |
 | `S212856` | detail | advanced, controller firmware programs | उन्नत, नियंत्रक फ़र्मवेयर प्रोग्राम |
 | `Sfbde82` | detail | Affected component | प्रभावित घटक |
 | `S25f8c5` | detail, export, form | Alarm | अलार्म |
@@ -3114,17 +3240,17 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se7bab1` | detail | Chain of causes | कारणों की शृंखला |
 | `S9c8393` | detail, mine | Change Request | परिवर्तन अनुरोध |
 | `S4572f4` | detail | Change request | परिवर्तन अनुरोध |
-| `S3295be` | detail | Change requests in this set | इस समुच्चय के परिवर्तन अनुरोध |
+| `S3295be` | detail, workbench | Change requests in this set | इस समुच्चय के परिवर्तन अनुरोध |
 | `S4d8006` | detail | Change set | परिवर्तन समुच्चय |
 | `S8aa57d` | detail | Changes | परिवर्तन |
 | `S3d14ea` | detail, export | Changes of this release only | केवल इस रिलीज़ के बदलाव |
 | `Sbd95c0` | detail | Checklist confirmed at sign-off | साइन-ऑफ के समय पुष्ट चेकलिस्ट |
 | `S074d62` | detail, role badge | Chief Engineer | मुख्य अभियंता |
-| `S03695d` | detail | Chief Engineer decision | मुख्य अभियंता का निर्णय |
+| `S03695d` | detail, workbench | Chief Engineer decision | मुख्य अभियंता का निर्णय |
 | `Sf0a89f` | detail | Close change set | परिवर्तन समुच्चय बंद करें |
 | `S7c0c39` | detail | Close this change set? | इस परिवर्तन समुच्चय को बंद करें? |
 | `S153d7a` | detail | Comment | टिप्पणी |
-| `S611578` | detail | Comment (required for rejection) | टिप्पणी (अस्वीकृति के लिए आवश्यक) |
+| `S611578` | detail, workbench | Comment (required for rejection) | टिप्पणी (अस्वीकृति के लिए आवश्यक) |
 | `Sc38432` | detail | Comment on this field | इस फ़ील्ड पर टिप्पणी करें |
 | `Sfce06e` | detail | Comments | टिप्पणियाँ |
 | `S8d105c` | detail, reconciliation | Compare | तुलना करें |
@@ -3150,7 +3276,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S0e8574` | detail | Customer | ग्राहक |
 | `Scb307e` | detail | Decide the selected requests in one sitting | चयनित अनुरोधों पर एक ही बैठक में निर्णय लें |
 | `S319493` | detail | Decided by | निर्णय लेने वाला |
-| `S7f59a1` | detail | Decision | निर्णय |
+| `S7f59a1` | detail, workbench | Decision | निर्णय |
 | `Sc51568` | detail | Decisions & Comments | निर्णय और टिप्पणियाँ |
 | `Sa9ec7c` | detail | Delete Permanently | स्थायी रूप से हटाएँ |
 | `S7d1c7a` | detail | Delete Release | रिलीज़ हटाएँ |
@@ -3216,6 +3342,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S6d59f4` | detail | Manual Reset Program | मैनुअल रीसेट प्रोग्राम |
 | `Sf9896c` | detail, form | Mark resolved | हल के रूप में चिह्नित करें |
 | `Sa7b93d` | detail, new, reconciliation | Mode | मोड |
+| `S9f4d01` | detail | More than a few codes need a sample inspection first; use the workbench. | कुछ ही कोड से अधिक के लिए पहले नमूना निरीक्षण ज़रूरी है; कार्यक्षेत्र का उपयोग करें। |
 | `S31a335` | detail | new code | नया कोड |
 | `S816c52` | detail, export_verify, form | No | नहीं |
 | `S06fc8d` | detail | No active Engineer holds the %(code)s domain yet. An Administrator must tag an Engineer with it (Administration → Users) before a sign-off can be requested. | किसी सक्रिय अभियंता के पास डोमेन %(code)s नहीं है। साइन-ऑफ माँगने से पहले प्रशासक को किसी अभियंता को यह डोमेन देना होगा (प्रशासन → उपयोगकर्ता)। |
@@ -3246,7 +3373,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S9734ac` | detail | Other codes that refer to this one. Review them before deprecating it. | वे अन्य कोड जो इसका संदर्भ देते हैं। इसे अप्रचलित करने से पहले उनकी समीक्षा करें। |
 | `S780d35` | detail | Override identifier (migration / reservation only) | पहचानकर्ता अधिलेखित करें (केवल माइग्रेशन / आरक्षण के लिए) |
 | `S89ff31` | detail | Owner | स्वामी |
-| `S2d20ee` | detail | Package overview | पैकेज का अवलोकन |
+| `S2d20ee` | detail, workbench | Package overview | पैकेज का अवलोकन |
 | `S4d1a47` | detail | Package: all languages and access levels | पैकेज: सभी भाषाएँ और पहुँच स्तर |
 | `Sc49bd0` | detail | Packages of this Release | इस रिलीज़ के पैकेज |
 | `S96f608` | detail, review_queue | Pending | लंबित |
@@ -3291,12 +3418,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S026ab2` | detail | resolved | हल किया गया |
 | `S68c61f` | detail | Rev # | संशोधन क्र. |
 | `Se4758b` | detail, review_checklist | Review checklist | समीक्षा चेकलिस्ट |
-| `S7bfca8` | detail | Reviewer sign-off | समीक्षक साइन-ऑफ |
+| `S7bfca8` | detail, workbench | Reviewer sign-off | समीक्षक साइन-ऑफ |
 | `S3beb9a` | detail | Revision | संशोधन |
 | `Sa72973` | detail | Revision Fields | संशोधन फ़ील्ड |
 | `Sfc1d6a` | detail | row(s) imported as Drafts | पंक्ति(याँ) मसौदों के रूप में आयात हुईं |
 | `S52d0b3` | detail, reconciliation, user_detail | Rows | पंक्तियाँ |
 | `Sd0edfb` | detail | Sales | बिक्री |
+| `S241bf5` | detail, workbench | Sample number | नमूना क्रमांक |
 | `Sda38c6` | detail | Save planned dates | नियोजित तिथियाँ सहेजें |
 | `S13c61c` | detail | Scope Filter | दायरा फ़िल्टर |
 | `S859822` | detail, mine, withdrawn_codes | Select | चुनें |
@@ -3358,11 +3486,12 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S7d5316` | detail | Who | कौन |
 | `S47e564` | detail | Withdraw | वापस लें |
 | `S51a998` | detail | Withdraw this change request? | इस परिवर्तन अनुरोध को वापस लें? |
+| `S93ef7c` | detail, workbench | Workbench | कार्यक्षेत्र |
 | `S95a2a4` | detail, form | Write level | लिखने का स्तर |
 | `S612fe0` | detail | Yaw Bearing Lubrication Program | याव बेयरिंग स्नेहन प्रोग्राम |
 | `S559a3f` | detail | Yaw Program | याव प्रोग्राम |
 | `S5397e0` | detail, export_verify, form | Yes | हाँ |
-| `Sc8e4b4` | detail | Your decision step | आपका निर्णय चरण |
+| `Sc8e4b4` | detail, workbench | Your decision step | आपका निर्णय चरण |
 | `S20cb4c` | detail, export_center | ZIP with manifest | मैनिफ़ेस्ट के साथ ZIP |
 | `S5d4358` | dry_run | All rows are clean. | सभी पंक्तियाँ साफ़ हैं। |
 | `S03510d` | dry_run | Back to import | आयात पर वापस जाएँ |
@@ -3389,7 +3518,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S7b8d80` | export | Not for distribution - unapproved data | वितरण के लिए नहीं - अस्वीकृत डेटा |
 | `Sd9b345` | export | not yet published | अभी प्रकाशित नहीं |
 | `Sa5d386` | export | Page %(page)s of %(total)s | पृष्ठ %(page)s / %(total)s |
-| `Sac1a42` | export | Platforms | प्लेटफ़ॉर्म |
+| `Sac1a42` | export, workbench | Platforms | प्लेटफ़ॉर्म |
 | `Se51c55` | export | Records | रिकॉर्ड |
 | `Sd41f56` | export, export_center | Release | रिलीज़ |
 | `S2e8fd6` | export | Reset delay | रीसेट विलंब |
@@ -3441,7 +3570,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S45ea95` | export_verify | Manifest signature | मैनिफ़ेस्ट हस्ताक्षर |
 | `S08f84b` | export_verify | No record of this exact file | इस सटीक फ़ाइल का कोई रिकॉर्ड नहीं |
 | `S357953` | export_verify | NOT OK | ठीक नहीं |
-| `S9ce3bd` | export_verify | OK | ठीक |
+| `S9ce3bd` | export_verify, workbench | OK | ठीक |
 | `S8a5285` | export_verify | Overall | कुल मिलाकर |
 | `Sd2bc4a` | export_verify | Produced by this system | इस सिस्टम द्वारा निर्मित |
 | `S112d15` | export_verify | Verify an export | निर्यात सत्यापित करें |
@@ -3515,10 +3644,16 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S689b33` | help | The full manual is docs/23-user-manual.md in the project folder; the glossary below is the same one the tooltips use. | पूरा मैनुअल प्रोजेक्ट फ़ोल्डर में docs/23-user-manual.md है; नीचे की शब्दावली वही है जो टूलटिप में उपयोग होती है। |
 | `S439914` | help | What happens next on a change request | परिवर्तन अनुरोध पर आगे क्या होता है |
 | `S6d29d9` | help and messages | %(n)s withdrawn code(s) deleted. | %(n)s वापस लिए गए कोड हटाए गए। |
+| `S285edc` | help and messages | %(ok)s of %(n)s: %(what)s. | %(ok)s / %(n)s: %(what)s। |
 | `Sb08e6c` | help and messages | A Reviewer and an Administrator each sign off (in any order). If either rejects, it goes back to the author. | एक समीक्षक और एक प्रशासक प्रत्येक साइन ऑफ करते हैं (किसी भी क्रम में)। यदि कोई अस्वीकार करे, तो वह लेखक के पास लौट जाता है। |
 | `S2f1bed` | help and messages | An Administrator includes the revision in a Release and publishes it; then it is Released. | एक प्रशासक संशोधन को रिलीज़ में शामिल कर प्रकाशित करता है; तब वह जारी हो जाता है। |
+| `S1308dc` | help and messages | defective codes sent back | दोषपूर्ण कोड वापस भेजे गए |
+| `Se2bbd9` | help and messages | Drafts saved | मसौदे सहेजे गए |
+| `S0ddfa5` | help and messages | Drafts signed off | मसौदों का साइन-ऑफ हुआ |
+| `Sf90ab8` | help and messages | Drafts submitted for review | मसौदे समीक्षा के लिए जमा किए गए |
 | `Sd856bd` | help and messages | Not deleted (it has a revision again or is still referenced): %(x)s | हटाया नहीं गया (उसका फिर से संशोधन है या उसका अब भी संदर्भ है): %(x)s |
 | `S34b903` | help and messages | Not possible: the account has history (see above). Deactivate it instead; the person can no longer sign in and everything they did stays attributable. | संभव नहीं: खाते का इतिहास है (ऊपर देखें)। इसके बजाय उसे निष्क्रिय करें; व्यक्ति अब साइन इन नहीं कर सकता और उसने जो भी किया वह उत्तरदायी बना रहता है। |
+| `S6a26de` | help and messages | Sample %(id)s drawn: %(n)s of %(total)s codes to inspect. | नमूना %(id)s निकाला गया: %(n)s / %(total)s कोड जाँचने हैं। |
 | `Sce489f` | help and messages | The author gets any required cross-domain sign-offs, then submits the change request for review. | लेखक आवश्यक अंतर-डोमेन साइन-ऑफ लेता है, फिर परिवर्तन अनुरोध को समीक्षा के लिए जमा करता है। |
 | `S1cdbdd` | help and messages | The Chief Engineer approves or rejects. Approval makes the revision Approved (or Deprecated for a deprecation request). | मुख्य अभियंता अनुमोदित या अस्वीकृत करता है। अनुमोदन से संशोधन अनुमोदित (या अप्रचलन अनुरोध के लिए अप्रचलित) हो जाता है। |
 | `S2d6ac0` | help and messages | The package is being built. Reload this page to follow its progress. | पैकेज बन रहा है। प्रगति देखने के लिए यह पेज फिर लोड करें। |
@@ -3591,7 +3726,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sded18c` | language | approved by | अनुमोदक |
 | `Sedd46e` | language | Check against the interface | इंटरफ़ेस से मिलान करें |
 | `S5a013c` | language | missing | अनुपलब्ध |
-| `S2c924e` | language | Note | टिप्पणी |
+| `S2c924e` | language, workbench | Note | टिप्पणी |
 | `S2f09d0` | language | Note on %(x)s | %(x)s पर टिप्पणी |
 | `S75bf99` | language | proposed by | प्रस्तावक |
 | `Sc68e32` | language | Save translations | अनुवाद सहेजें |
@@ -3713,6 +3848,26 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se146d2` | message: auth_service | Your account is not active. | आपका खाता सक्रिय नहीं है। |
 | `Sb584dd` | message: backup_service | Backups need a file-based SQLite database. | बैकअप के लिए फ़ाइल-आधारित SQLite डेटाबेस चाहिए। |
 | `S368c82` | message: backup_service | keep must be at least 1 | keep कम से कम 1 होना चाहिए |
+| `S18edaf` | message: bulk_service | A defect needs a note: say what is wrong. | दोष के लिए टिप्पणी ज़रूरी है: बताइए क्या गलत है। |
+| `S68cada` | message: bulk_service, workbench | A defective Draft is corrected by its author. | दोषपूर्ण मसौदा उसका लेखक सुधारता है। |
+| `S8941d5` | message: bulk_service | A domain sign-off needs the engineering domain. | डोमेन साइन-ऑफ के लिए इंजीनियरिंग डोमेन चाहिए। |
+| `S071452` | message: bulk_service | A note has at most 1000 characters. | टिप्पणी में अधिकतम 1000 अक्षर हो सकते हैं। |
+| `Sf74baa` | message: bulk_service, message: change_set_service | Change set not found | परिवर्तन समुच्चय नहीं मिला |
+| `Sf89067` | message: bulk_service | Choose at least one value to set. | सेट करने के लिए कम से कम एक मान चुनें। |
+| `S1e3e33` | message: bulk_service | No change request of the set is waiting for you at this step. | समूह का कोई परिवर्तन अनुरोध इस चरण पर आपकी प्रतीक्षा में नहीं है। |
+| `S95bd2d` | message: bulk_service | No Draft of the set is waiting for the sign-off of this domain. | समूह का कोई मसौदा इस डोमेन के साइन-ऑफ की प्रतीक्षा में नहीं है। |
+| `S495371` | message: bulk_service | Only a sample with defects can be sent back. | केवल दोषों वाला नमूना ही वापस भेजा जा सकता है। |
+| `Sa6e3b3` | message: bulk_service | Sample not found | नमूना नहीं मिला |
+| `Sf745cc` | message: bulk_service | step must be domain, reviewer, admin or chief-engineer | step domain, reviewer, admin या chief-engineer होना चाहिए |
+| `S973577` | message: bulk_service | That change request is not in the sample. | वह परिवर्तन अनुरोध नमूने में नहीं है। |
+| `Sa1a149` | message: bulk_service | The batch changed since the sample was drawn; draw a new sample. | नमूना निकालने के बाद बैच बदल गया है; नया नमूना निकालें। |
+| `S8e5b1c` | message: bulk_service | The verdict must be OK or DEFECT. | निर्णय OK या दोष होना चाहिए। |
+| `Sddedd6` | message: bulk_service | This is not your sample: the person who decides inspects. | यह आपका नमूना नहीं है: जो निर्णय लेता है, वही निरीक्षण करता है। |
+| `Sf56c6a` | message: bulk_service | This sample belongs to another change set or another step. | यह नमूना किसी अन्य परिवर्तन समूह या अन्य चरण का है। |
+| `S146a72` | message: bulk_service | This sample has been used for a decision already; draw a new one. | यह नमूना एक निर्णय के लिए पहले ही उपयोग हो चुका है; नया निकालें। |
+| `Sf0f02c` | message: bulk_service | This sample is closed. | यह नमूना बंद है। |
+| `Sf973bd` | message: bulk_service | This sample is older than 24 hours; draw a new one. | यह नमूना 24 घंटे से पुराना है; नया निकालें। |
+| `S062a13` | message: bulk_service | This sample was replaced by a newer one. | इस नमूने की जगह नया नमूना ले चुका है। |
 | `Sca2391` | message: change_request_service | A comment must be between 1 and 4000 characters. | टिप्पणी 1 से 4000 अक्षरों के बीच होनी चाहिए। |
 | `S33cd99` | message: change_request_service | At least one Turbine Platform is required before Submit for Review (FR-023a). | समीक्षा के लिए जमा करने से पहले कम से कम एक टर्बाइन प्लेटफ़ॉर्म आवश्यक है (FR-023a)। |
 | `S1fd35e` | message: change_request_service | decision must be APPROVE or REJECT. | decision APPROVE या REJECT होना चाहिए। |
@@ -3723,7 +3878,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sbd3a03` | message: change_request_service | reviewer_id must be an active user with the Reviewer role. | reviewer_id समीक्षक भूमिका वाला सक्रिय उपयोगकर्ता होना चाहिए। |
 | `S043693` | message: change_request_service | The Reviewer has already signed off this CR. | समीक्षक इस परिवर्तन अनुरोध पर पहले ही साइन ऑफ कर चुका है। |
 | `S7a758c` | message: change_set_service | A change set needs a name of 1-120 characters. | परिवर्तन समुच्चय के लिए 1-120 अक्षरों का नाम चाहिए। |
-| `Sf74baa` | message: change_set_service | Change set not found | परिवर्तन समुच्चय नहीं मिला |
 | `Sd8fad1` | message: change_set_service | Only a CR that is still open can join a change set. | केवल खुला परिवर्तन अनुरोध ही परिवर्तन समुच्चय में जुड़ सकता है। |
 | `S990d51` | message: change_set_service | Only the author of the CR or an Administrator may group it. | केवल परिवर्तन अनुरोध का लेखक या प्रशासक उसे समूहबद्ध कर सकता है। |
 | `S69e4d1` | message: change_set_service | Only the author of the CR or an Administrator may ungroup it. | केवल परिवर्तन अनुरोध का लेखक या प्रशासक उसे समूह से हटा सकता है। |
@@ -3809,6 +3963,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sdb88ba` | message: saved_search_service | Saved search not found | सहेजी गई खोज नहीं मिली |
 | `S046aff` | message: saved_search_service | This saved search belongs to someone else. | यह सहेजी गई खोज किसी और की है। |
 | `Saad8e2` | message: settings_service | must be a whole number between 0 and 100 | 0 और 100 के बीच पूर्ण संख्या होनी चाहिए |
+| `S9625d1` | message: settings_service | must be a whole number between 1 and 100 | 1 और 100 के बीच पूर्ण संख्या होनी चाहिए |
 | `S6e4015` | message: settings_service | must be a whole number between 1 and 365 | 1 और 365 के बीच पूर्ण संख्या होनी चाहिए |
 | `S9671fb` | message: settings_service | must be true or false | true या false होना चाहिए |
 | `S5166bb` | message: st_import_service | A staged file changed after the preview. Upload again. | पूर्वावलोकन के बाद एक स्टेज की गई फ़ाइल बदल गई। फिर से अपलोड करें। |
@@ -4006,7 +4161,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S6daf16` | st_preview | Preview: status codes from .st files | पूर्वावलोकन: .st फ़ाइलों से स्थिति कोड |
 | `S15a21a` | st_preview | program(s) | प्रोग्राम |
 | `Se58289` | st_preview | Programs found in the uploaded files | अपलोड की गई फ़ाइलों में मिले प्रोग्राम |
-| `S75c053` | st_preview | ready | तैयार |
+| `S75c053` | st_preview, workbench | ready | तैयार |
 | `S0723bf` | st_preview | Select all programs that are ready | सभी तैयार प्रोग्राम चुनें |
 | `S1a767a` | st_preview | updates the open Draft | खुला मसौदा अद्यतन करता है |
 | `S02499f` | st_preview | withdrawn | वापस लिए गए |
@@ -4105,10 +4260,44 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S8516a7` | withdrawn_codes | Delete selected | चयनित हटाएँ |
 | `Sdfeb06` | withdrawn_codes | No withdrawn codes. | कोई वापस लिया गया कोड नहीं। |
 | `S87ec0b` | withdrawn_codes | Withdrawn on | वापस लिया गया |
+| `S48d260` | workbench | %(n)s of %(total)s codes drawn at %(when)s. | %(n)s / %(total)s कोड %(when)s को चुने गए। |
+| `S88b55f` | workbench | Approve the batch | बैच अनुमोदित करें |
+| `Sf40e77` | workbench | Available group | उपलब्ध समूह |
+| `S99613c` | workbench | Blocked | अवरुद्ध |
+| `Sca7133` | workbench | Choose the step you are about to decide, draw the sample, look at every sampled code and mark it. The sample is yours, valid for 24 hours and for this batch as it is now. | वह चरण चुनें जिस पर आप निर्णय लेने वाले हैं, नमूना निकालें, चुने गए हर कोड को देखें और चिह्नित करें। नमूना आपका है, 24 घंटे के लिए और इस बैच के लिए जैसा वह अभी है, मान्य है। |
+| `S6f4274` | workbench | Codes in this batch | इस बैच के कोड |
+| `S117313` | workbench | Decide the batch | बैच पर निर्णय लें |
+| `Se91aff` | workbench | Defect | दोष |
+| `S16fbbf` | workbench | Domain sign-off | डोमेन साइन-ऑफ |
+| `Scb1884` | workbench | Dossier (XLSX) | डॉसियर (XLSX) |
+| `S25085f` | workbench | Draw a sample | नमूना निकालें |
+| `S9167a7` | workbench | Engineering domain | इंजीनियरिंग डोमेन |
+| `Sbc3c59` | workbench | Only the values you choose are changed, on the Drafts you wrote (an Administrator: any Draft). | केवल आपके चुने मान बदले जाते हैं, उन मसौदों पर जो आपने लिखे (प्रशासक: कोई भी मसौदा)। |
+| `S92223f` | workbench | Passed: no defect in the sample. Use sample number %(id)s below. | उत्तीर्ण: नमूने में कोई दोष नहीं। नीचे नमूना क्रमांक %(id)s का उपयोग करें। |
+| `S6275ab` | workbench | Ready to submit | जमा करने के लिए तैयार |
+| `Se1e74d` | workbench | Reject the batch | बैच अस्वीकार करें |
+| `S58fabf` | workbench | Sample | नमूना |
+| `S862471` | workbench | Sample inspection | नमूना निरीक्षण |
+| `S69cc53` | workbench | Save the verdicts | निर्णय सहेजें |
+| `S3ae55b` | workbench | Send the defective codes back | दोषपूर्ण कोड वापस भेजें |
+| `Se90e7c` | workbench | Set on the Drafts | मसौदों पर सेट करें |
+| `Sa58dac` | workbench | Set values on the Drafts | मसौदों पर मान सेट करें |
+| `Sa443bb` | workbench | Sign off the Drafts | मसौदों का साइन-ऑफ करें |
+| `S53f47f` | workbench | Sign-off pending | साइन-ऑफ लंबित |
+| `Sae12bc` | workbench | Status category | स्थिति श्रेणी |
+| `Sdc416e` | workbench | Step | चरण |
+| `Sf7710d` | workbench | Submit for review | समीक्षा के लिए जमा करें |
+| `Sa45adc` | workbench | Submit the Drafts | मसौदे जमा करें |
+| `S2d099f` | workbench | Submits the Drafts you wrote. A Draft that still lacks a platform or a domain sign-off is reported and left as it is. | आपके लिखे मसौदे जमा करता है। जिस मसौदे में प्लेटफ़ॉर्म या डोमेन साइन-ऑफ अभी नहीं है, उसकी सूचना दी जाती है और उसे जैसा है वैसा छोड़ दिया जाता है। |
+| `S5baa27` | workbench | The sample has defects, so the batch cannot be decided as it is. Send the defective codes back (the note is the reason), then draw a new sample of what is left. | नमूने में दोष हैं, इसलिए बैच पर जैसा है वैसा निर्णय नहीं हो सकता। दोषपूर्ण कोड वापस भेजें (टिप्पणी ही कारण है), फिर बचे हुए में से नया नमूना निकालें। |
+| `S19f8ab` | workbench | Tick the codes an action is for; with none ticked an action covers every code it applies to. | जिन कोड के लिए कार्रवाई है उन पर निशान लगाएँ; कोई निशान न हो तो कार्रवाई उन सभी कोड पर लागू होती है जिन पर वह लागू हो सकती है। |
+| `S7f6e5a` | workbench | Verdict | निर्णय |
+| `Se6246f` | workbench | What stops it | इसे क्या रोक रहा है |
+| `Sbf45e2` | workbench | Work on many codes at once without weakening a step: every code still gets its own checks, its own audit entry and, for decisions, your password. A decision on more than %(above)s codes needs a sample inspection first: %(percent)s percent of the batch, at least %(minimum)s codes, spread over the subgroups. One defect in the sample stops the decision. | किसी चरण को कमज़ोर किए बिना कई कोड पर एक साथ काम करें: हर कोड की अपनी जाँचें, अपनी ऑडिट प्रविष्टि और निर्णयों के लिए आपका पासवर्ड बना रहता है। %(above)s से अधिक कोड पर निर्णय के लिए पहले नमूना निरीक्षण ज़रूरी है: बैच का %(percent)s प्रतिशत, कम से कम %(minimum)s कोड, उपसमूहों में फैले हुए। नमूने में एक दोष निर्णय रोक देता है। |
 
 ### 9.5 SA العربية 🇸🇦 — Arabic
 
-1216 of 1217 strings translated; direction right to left.
+1279 of 1280 strings translated; direction right to left.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -4308,7 +4497,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Scfa1b6` | detail | Add field comment | إضافة تعليق على الحقل |
 | `Sbb965e` | detail | Add one of your change requests | إضافة أحد طلبات التغيير الخاصة بك |
 | `S9a693b` | detail | Add to change set | إضافة إلى مجموعة تغييرات |
-| `S7bbd6d` | detail | Administrator sign-off | اعتماد المسؤول |
+| `S7bbd6d` | detail, workbench | Administrator sign-off | اعتماد المسؤول |
 | `S212856` | detail | advanced, controller firmware programs | متقدم، برامج البرنامج الثابت لوحدة التحكم |
 | `Sfbde82` | detail | Affected component | المكوّن المتأثر |
 | `S25f8c5` | detail, export, form | Alarm | إنذار |
@@ -4337,17 +4526,17 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se7bab1` | detail | Chain of causes | سلسلة الأسباب |
 | `S9c8393` | detail, mine | Change Request | طلب تغيير |
 | `S4572f4` | detail | Change request | طلب التغيير |
-| `S3295be` | detail | Change requests in this set | طلبات التغيير في هذه المجموعة |
+| `S3295be` | detail, workbench | Change requests in this set | طلبات التغيير في هذه المجموعة |
 | `S4d8006` | detail | Change set | مجموعة تغييرات |
 | `S8aa57d` | detail | Changes | التغييرات |
 | `S3d14ea` | detail, export | Changes of this release only | تغييرات هذا الإصدار فقط |
 | `Sbd95c0` | detail | Checklist confirmed at sign-off | قائمة الفحص المؤكدة عند الاعتماد |
 | `S074d62` | detail, role badge | Chief Engineer | كبير المهندسين |
-| `S03695d` | detail | Chief Engineer decision | قرار كبير المهندسين |
+| `S03695d` | detail, workbench | Chief Engineer decision | قرار كبير المهندسين |
 | `Sf0a89f` | detail | Close change set | إغلاق مجموعة التغييرات |
 | `S7c0c39` | detail | Close this change set? | إغلاق مجموعة التغييرات هذه؟ |
 | `S153d7a` | detail | Comment | تعليق |
-| `S611578` | detail | Comment (required for rejection) | تعليق (مطلوب للرفض) |
+| `S611578` | detail, workbench | Comment (required for rejection) | تعليق (مطلوب للرفض) |
 | `Sc38432` | detail | Comment on this field | علّق على هذا الحقل |
 | `Sfce06e` | detail | Comments | التعليقات |
 | `S8d105c` | detail, reconciliation | Compare | مقارنة |
@@ -4373,7 +4562,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S0e8574` | detail | Customer | العميل |
 | `Scb307e` | detail | Decide the selected requests in one sitting | البتّ في الطلبات المحددة في جلسة واحدة |
 | `S319493` | detail | Decided by | قرّر |
-| `S7f59a1` | detail | Decision | القرار |
+| `S7f59a1` | detail, workbench | Decision | القرار |
 | `Sc51568` | detail | Decisions & Comments | القرارات والتعليقات |
 | `Sa9ec7c` | detail | Delete Permanently | حذف نهائي |
 | `S7d1c7a` | detail | Delete Release | حذف الإصدار |
@@ -4439,6 +4628,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S6d59f4` | detail | Manual Reset Program | برنامج إعادة الضبط اليدوي |
 | `Sf9896c` | detail, form | Mark resolved | وضع علامة تم الحل |
 | `Sa7b93d` | detail, new, reconciliation | Mode | الوضع |
+| `S9f4d01` | detail | More than a few codes need a sample inspection first; use the workbench. | أكثر من بضعة رموز يحتاج أولًا إلى فحص بالعيّنة؛ استخدم مساحة العمل. |
 | `S31a335` | detail | new code | رمز جديد |
 | `S816c52` | detail, export_verify, form | No | لا |
 | `S06fc8d` | detail | No active Engineer holds the %(code)s domain yet. An Administrator must tag an Engineer with it (Administration → Users) before a sign-off can be requested. | لا يوجد مهندس نشط لديه المجال %(code)s. على المسؤول أن يمنح مهندسًا هذا المجال (الإدارة ← المستخدمون) قبل أن يمكن طلب الاعتماد. |
@@ -4469,7 +4659,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S9734ac` | detail | Other codes that refer to this one. Review them before deprecating it. | رموز أخرى تشير إلى هذا الرمز. راجعها قبل وسمه كمتقادم. |
 | `S780d35` | detail | Override identifier (migration / reservation only) | تجاوز المعرّف (للترحيل / الحجز فقط) |
 | `S89ff31` | detail | Owner | المالك |
-| `S2d20ee` | detail | Package overview | نظرة عامة على الحزمة |
+| `S2d20ee` | detail, workbench | Package overview | نظرة عامة على الحزمة |
 | `S4d1a47` | detail | Package: all languages and access levels | الحزمة: جميع اللغات ومستويات الوصول |
 | `Sc49bd0` | detail | Packages of this Release | حزم هذا الإصدار |
 | `S96f608` | detail, review_queue | Pending | معلّق |
@@ -4514,12 +4704,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S026ab2` | detail | resolved | تم الحل |
 | `S68c61f` | detail | Rev # | رقم المراجعة |
 | `Se4758b` | detail, review_checklist | Review checklist | قائمة فحص المراجعة |
-| `S7bfca8` | detail | Reviewer sign-off | اعتماد المراجع |
+| `S7bfca8` | detail, workbench | Reviewer sign-off | اعتماد المراجع |
 | `S3beb9a` | detail | Revision | المراجعة |
 | `Sa72973` | detail | Revision Fields | حقول التنقيح |
 | `Sfc1d6a` | detail | row(s) imported as Drafts | صف/صفوف استُوردت كمسودات |
 | `S52d0b3` | detail, reconciliation, user_detail | Rows | الصفوف |
 | `Sd0edfb` | detail | Sales | المبيعات |
+| `S241bf5` | detail, workbench | Sample number | رقم العيّنة |
 | `Sda38c6` | detail | Save planned dates | حفظ التواريخ المخطط لها |
 | `S13c61c` | detail | Scope Filter | مرشح النطاق |
 | `S859822` | detail, mine, withdrawn_codes | Select | تحديد |
@@ -4581,11 +4772,12 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S7d5316` | detail | Who | من |
 | `S47e564` | detail | Withdraw | سحب |
 | `S51a998` | detail | Withdraw this change request? | سحب طلب التغيير هذا؟ |
+| `S93ef7c` | detail, workbench | Workbench | مساحة العمل |
 | `S95a2a4` | detail, form | Write level | مستوى الكتابة |
 | `S612fe0` | detail | Yaw Bearing Lubrication Program | برنامج تشحيم محمل الانعراج |
 | `S559a3f` | detail | Yaw Program | برنامج الانعراج |
 | `S5397e0` | detail, export_verify, form | Yes | نعم |
-| `Sc8e4b4` | detail | Your decision step | خطوة قرارك |
+| `Sc8e4b4` | detail, workbench | Your decision step | خطوة قرارك |
 | `S20cb4c` | detail, export_center | ZIP with manifest | ZIP مع ملف البيان |
 | `S5d4358` | dry_run | All rows are clean. | كل الصفوف سليمة. |
 | `S03510d` | dry_run | Back to import | العودة إلى الاستيراد |
@@ -4612,7 +4804,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S7b8d80` | export | Not for distribution - unapproved data | غير مخصص للتوزيع - بيانات غير معتمدة |
 | `Sd9b345` | export | not yet published | لم يُنشر بعد |
 | `Sa5d386` | export | Page %(page)s of %(total)s | الصفحة %(page)s من %(total)s |
-| `Sac1a42` | export | Platforms | المنصات |
+| `Sac1a42` | export, workbench | Platforms | المنصات |
 | `Se51c55` | export | Records | السجلات |
 | `Sd41f56` | export, export_center | Release | الإصدار |
 | `S2e8fd6` | export | Reset delay | تأخير إعادة الضبط |
@@ -4664,7 +4856,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S45ea95` | export_verify | Manifest signature | توقيع ملف البيان |
 | `S08f84b` | export_verify | No record of this exact file | لا يوجد سجل لهذا الملف بعينه |
 | `S357953` | export_verify | NOT OK | غير سليم |
-| `S9ce3bd` | export_verify | OK | سليم |
+| `S9ce3bd` | export_verify, workbench | OK | سليم |
 | `S8a5285` | export_verify | Overall | الإجمالي |
 | `Sd2bc4a` | export_verify | Produced by this system | أنتجه هذا النظام |
 | `S112d15` | export_verify | Verify an export | التحقق من تصدير |
@@ -4738,10 +4930,16 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S689b33` | help | The full manual is docs/23-user-manual.md in the project folder; the glossary below is the same one the tooltips use. | الدليل الكامل هو docs/23-user-manual.md في مجلد المشروع؛ والمسرد أدناه هو نفسه المستخدم في التلميحات. |
 | `S439914` | help | What happens next on a change request | ما يحدث بعد ذلك لطلب التغيير |
 | `S6d29d9` | help and messages | %(n)s withdrawn code(s) deleted. | تم حذف %(n)s من الرموز المسحوبة. |
+| `S285edc` | help and messages | %(ok)s of %(n)s: %(what)s. | %(ok)s من %(n)s: %(what)s. |
 | `Sb08e6c` | help and messages | A Reviewer and an Administrator each sign off (in any order). If either rejects, it goes back to the author. | يوقّع مراجع ومسؤول كلٌّ على حدة (بأي ترتيب). إن رفض أحدهما عاد إلى المؤلف. |
 | `S2f1bed` | help and messages | An Administrator includes the revision in a Release and publishes it; then it is Released. | يضمّن المسؤول المراجعة في إصدار وينشره؛ فتصبح منشورة. |
+| `S1308dc` | help and messages | defective codes sent back | أُعيدت الرموز المعيبة |
+| `Se2bbd9` | help and messages | Drafts saved | حُفظت المسودات |
+| `S0ddfa5` | help and messages | Drafts signed off | اعتُمدت المسودات |
+| `Sf90ab8` | help and messages | Drafts submitted for review | قُدّمت المسودات للمراجعة |
 | `Sd856bd` | help and messages | Not deleted (it has a revision again or is still referenced): %(x)s | لم يُحذف (لديه مراجعة من جديد أو لا يزال مُشاراً إليه): %(x)s |
 | `S34b903` | help and messages | Not possible: the account has history (see above). Deactivate it instead; the person can no longer sign in and everything they did stays attributable. | غير ممكن: للحساب سجل (انظر أعلاه). عطّله بدلًا من ذلك؛ فلا يستطيع الشخص تسجيل الدخول ويبقى كل ما فعله منسوبًا. |
+| `S6a26de` | help and messages | Sample %(id)s drawn: %(n)s of %(total)s codes to inspect. | سُحبت العيّنة %(id)s: %(n)s من %(total)s رمزًا للفحص. |
 | `Sce489f` | help and messages | The author gets any required cross-domain sign-offs, then submits the change request for review. | يحصل المؤلف على الاعتمادات متعددة المجالات المطلوبة ثم يقدّم طلب التغيير للمراجعة. |
 | `S1cdbdd` | help and messages | The Chief Engineer approves or rejects. Approval makes the revision Approved (or Deprecated for a deprecation request). | يوافق كبير المهندسين أو يرفض. تجعل الموافقة المراجعة معتمدة (أو متقادمة لطلب تقادم). |
 | `S2d6ac0` | help and messages | The package is being built. Reload this page to follow its progress. | جارٍ إنشاء الحزمة. أعد تحميل هذه الصفحة لمتابعة التقدم. |
@@ -4814,7 +5012,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sded18c` | language | approved by | اعتمده |
 | `Sedd46e` | language | Check against the interface | مطابقة مع الواجهة |
 | `S5a013c` | language | missing | مفقود |
-| `S2c924e` | language | Note | ملاحظة |
+| `S2c924e` | language, workbench | Note | ملاحظة |
 | `S2f09d0` | language | Note on %(x)s | ملاحظة على %(x)s |
 | `S75bf99` | language | proposed by | اقترحه |
 | `Sc68e32` | language | Save translations | حفظ الترجمات |
@@ -4936,6 +5134,26 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se146d2` | message: auth_service | Your account is not active. | حسابك غير نشط. |
 | `Sb584dd` | message: backup_service | Backups need a file-based SQLite database. | تحتاج النسخ الاحتياطية إلى قاعدة بيانات SQLite قائمة على ملف. |
 | `S368c82` | message: backup_service | keep must be at least 1 | يجب أن تكون keep 1 على الأقل |
+| `S18edaf` | message: bulk_service | A defect needs a note: say what is wrong. | العيب يحتاج إلى ملاحظة: اذكر ما الخطأ. |
+| `S68cada` | message: bulk_service, workbench | A defective Draft is corrected by its author. | المسودة المعيبة يصححها مؤلفها. |
+| `S8941d5` | message: bulk_service | A domain sign-off needs the engineering domain. | اعتماد المجال يحتاج إلى مجال الهندسة. |
+| `S071452` | message: bulk_service | A note has at most 1000 characters. | للملاحظة 1000 حرف كحد أقصى. |
+| `Sf74baa` | message: bulk_service, message: change_set_service | Change set not found | مجموعة التغييرات غير موجودة |
+| `Sf89067` | message: bulk_service | Choose at least one value to set. | اختر قيمة واحدة على الأقل لتعيينها. |
+| `S1e3e33` | message: bulk_service | No change request of the set is waiting for you at this step. | لا يوجد طلب تغيير في المجموعة ينتظرك في هذه الخطوة. |
+| `S95bd2d` | message: bulk_service | No Draft of the set is waiting for the sign-off of this domain. | لا توجد مسودة في المجموعة تنتظر اعتماد هذا المجال. |
+| `S495371` | message: bulk_service | Only a sample with defects can be sent back. | لا يمكن إعادة سوى عيّنة فيها عيوب. |
+| `Sa6e3b3` | message: bulk_service | Sample not found | العيّنة غير موجودة |
+| `Sf745cc` | message: bulk_service | step must be domain, reviewer, admin or chief-engineer | يجب أن تكون step إحدى القيم domain أو reviewer أو admin أو chief-engineer |
+| `S973577` | message: bulk_service | That change request is not in the sample. | طلب التغيير هذا ليس في العيّنة. |
+| `Sa1a149` | message: bulk_service | The batch changed since the sample was drawn; draw a new sample. | تغيّرت الدفعة منذ سحب العيّنة؛ اسحب عيّنة جديدة. |
+| `S8e5b1c` | message: bulk_service | The verdict must be OK or DEFECT. | يجب أن يكون الحكم OK أو عيب. |
+| `Sddedd6` | message: bulk_service | This is not your sample: the person who decides inspects. | هذه ليست عيّنتك: من يقرر هو من يفحص. |
+| `Sf56c6a` | message: bulk_service | This sample belongs to another change set or another step. | تنتمي هذه العيّنة إلى مجموعة تغييرات أخرى أو خطوة أخرى. |
+| `S146a72` | message: bulk_service | This sample has been used for a decision already; draw a new one. | استُخدمت هذه العيّنة لقرار من قبل؛ اسحب عيّنة جديدة. |
+| `Sf0f02c` | message: bulk_service | This sample is closed. | هذه العيّنة مغلقة. |
+| `Sf973bd` | message: bulk_service | This sample is older than 24 hours; draw a new one. | عمر هذه العيّنة أكثر من 24 ساعة؛ اسحب عيّنة جديدة. |
+| `S062a13` | message: bulk_service | This sample was replaced by a newer one. | حلّت عيّنة أحدث محل هذه العيّنة. |
 | `Sca2391` | message: change_request_service | A comment must be between 1 and 4000 characters. | يجب أن يتراوح التعليق بين 1 و4000 حرف. |
 | `S33cd99` | message: change_request_service | At least one Turbine Platform is required before Submit for Review (FR-023a). | مطلوب منصة توربين واحدة على الأقل قبل التقديم للمراجعة (FR-023a). |
 | `S1fd35e` | message: change_request_service | decision must be APPROVE or REJECT. | يجب أن تكون decision إما APPROVE أو REJECT. |
@@ -4946,7 +5164,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sbd3a03` | message: change_request_service | reviewer_id must be an active user with the Reviewer role. | يجب أن يكون reviewer_id مستخدمًا نشطًا بدور مراجع. |
 | `S043693` | message: change_request_service | The Reviewer has already signed off this CR. | وقّع المراجع على طلب التغيير هذا بالفعل. |
 | `S7a758c` | message: change_set_service | A change set needs a name of 1-120 characters. | تحتاج مجموعة التغييرات إلى اسم من 1 إلى 120 حرفًا. |
-| `Sf74baa` | message: change_set_service | Change set not found | مجموعة التغييرات غير موجودة |
 | `Sd8fad1` | message: change_set_service | Only a CR that is still open can join a change set. | لا ينضم إلى مجموعة تغييرات إلا طلب تغيير ما زال مفتوحًا. |
 | `S990d51` | message: change_set_service | Only the author of the CR or an Administrator may group it. | لا يجمّع طلب التغيير إلا مؤلفه أو مسؤول. |
 | `S69e4d1` | message: change_set_service | Only the author of the CR or an Administrator may ungroup it. | لا يفكّ تجميع طلب التغيير إلا مؤلفه أو مسؤول. |
@@ -5032,6 +5249,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sdb88ba` | message: saved_search_service | Saved search not found | البحث المحفوظ غير موجود |
 | `S046aff` | message: saved_search_service | This saved search belongs to someone else. | هذا البحث المحفوظ يخص شخصًا آخر. |
 | `Saad8e2` | message: settings_service | must be a whole number between 0 and 100 | يجب أن يكون عددًا صحيحًا بين 0 و100 |
+| `S9625d1` | message: settings_service | must be a whole number between 1 and 100 | يجب أن يكون عددًا صحيحًا بين 1 و100 |
 | `S6e4015` | message: settings_service | must be a whole number between 1 and 365 | يجب أن يكون عددًا صحيحًا بين 1 و365 |
 | `S9671fb` | message: settings_service | must be true or false | يجب أن تكون true أو false |
 | `S5166bb` | message: st_import_service | A staged file changed after the preview. Upload again. | تغيّر ملف مُجهَّز بعد المعاينة. ارفعه مرة أخرى. |
@@ -5229,7 +5447,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S6daf16` | st_preview | Preview: status codes from .st files | معاينة: رموز الحالة من ملفات .st |
 | `S15a21a` | st_preview | program(s) | برنامج/برامج |
 | `Se58289` | st_preview | Programs found in the uploaded files | البرامج الموجودة في الملفات المرفوعة |
-| `S75c053` | st_preview | ready | جاهزة |
+| `S75c053` | st_preview, workbench | ready | جاهزة |
 | `S0723bf` | st_preview | Select all programs that are ready | تحديد كل البرامج الجاهزة |
 | `S1a767a` | st_preview | updates the open Draft | يحدّث المسودة المفتوحة |
 | `S02499f` | st_preview | withdrawn | مسحوبة |
@@ -5328,10 +5546,44 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S8516a7` | withdrawn_codes | Delete selected | حذف المحدد |
 | `Sdfeb06` | withdrawn_codes | No withdrawn codes. | لا توجد رموز مسحوبة. |
 | `S87ec0b` | withdrawn_codes | Withdrawn on | تاريخ السحب |
+| `S48d260` | workbench | %(n)s of %(total)s codes drawn at %(when)s. | تم سحب %(n)s من %(total)s رمزًا في %(when)s. |
+| `S88b55f` | workbench | Approve the batch | اعتماد الدفعة |
+| `Sf40e77` | workbench | Available group | المجموعة المتاحة |
+| `S99613c` | workbench | Blocked | محظور |
+| `Sca7133` | workbench | Choose the step you are about to decide, draw the sample, look at every sampled code and mark it. The sample is yours, valid for 24 hours and for this batch as it is now. | اختر الخطوة التي ستقرر فيها، واسحب العيّنة، وافحص كل رمز مسحوب وعلّمه. العيّنة لك، وصالحة لمدة 24 ساعة ولهذه الدفعة كما هي الآن. |
+| `S6f4274` | workbench | Codes in this batch | رموز هذه الدفعة |
+| `S117313` | workbench | Decide the batch | اتخاذ القرار في الدفعة |
+| `Se91aff` | workbench | Defect | عيب |
+| `S16fbbf` | workbench | Domain sign-off | اعتماد المجال |
+| `Scb1884` | workbench | Dossier (XLSX) | ملف التوثيق (XLSX) |
+| `S25085f` | workbench | Draw a sample | سحب عيّنة |
+| `S9167a7` | workbench | Engineering domain | مجال الهندسة |
+| `Sbc3c59` | workbench | Only the values you choose are changed, on the Drafts you wrote (an Administrator: any Draft). | تتغير القيم التي تختارها فقط، في المسودات التي كتبتها (المسؤول: أي مسودة). |
+| `S92223f` | workbench | Passed: no defect in the sample. Use sample number %(id)s below. | ناجحة: لا عيب في العيّنة. استخدم رقم العيّنة %(id)s أدناه. |
+| `S6275ab` | workbench | Ready to submit | جاهز للتقديم |
+| `Se1e74d` | workbench | Reject the batch | رفض الدفعة |
+| `S58fabf` | workbench | Sample | عيّنة |
+| `S862471` | workbench | Sample inspection | فحص العيّنة |
+| `S69cc53` | workbench | Save the verdicts | حفظ الأحكام |
+| `S3ae55b` | workbench | Send the defective codes back | إعادة الرموز المعيبة |
+| `Se90e7c` | workbench | Set on the Drafts | تعيين على المسودات |
+| `Sa58dac` | workbench | Set values on the Drafts | تعيين قيم على المسودات |
+| `Sa443bb` | workbench | Sign off the Drafts | اعتماد المسودات |
+| `S53f47f` | workbench | Sign-off pending | اعتماد معلّق |
+| `Sae12bc` | workbench | Status category | فئة الحالة |
+| `Sdc416e` | workbench | Step | الخطوة |
+| `Sf7710d` | workbench | Submit for review | تقديم للمراجعة |
+| `Sa45adc` | workbench | Submit the Drafts | تقديم المسودات |
+| `S2d099f` | workbench | Submits the Drafts you wrote. A Draft that still lacks a platform or a domain sign-off is reported and left as it is. | يقدّم المسودات التي كتبتها. تُبلَّغ المسودة التي ينقصها منصة أو اعتماد مجال وتُترك كما هي. |
+| `S5baa27` | workbench | The sample has defects, so the batch cannot be decided as it is. Send the defective codes back (the note is the reason), then draw a new sample of what is left. | في العيّنة عيوب، لذلك لا يمكن اتخاذ القرار في الدفعة كما هي. أعد الرموز المعيبة (الملاحظة هي السبب)، ثم اسحب عيّنة جديدة مما تبقى. |
+| `S19f8ab` | workbench | Tick the codes an action is for; with none ticked an action covers every code it applies to. | علّم الرموز التي ينطبق عليها الإجراء؛ وإن لم تعلّم شيئًا شمل الإجراء كل الرموز التي ينطبق عليها. |
+| `S7f6e5a` | workbench | Verdict | الحكم |
+| `Se6246f` | workbench | What stops it | ما الذي يوقفه |
+| `Sbf45e2` | workbench | Work on many codes at once without weakening a step: every code still gets its own checks, its own audit entry and, for decisions, your password. A decision on more than %(above)s codes needs a sample inspection first: %(percent)s percent of the batch, at least %(minimum)s codes, spread over the subgroups. One defect in the sample stops the decision. | اعمل على رموز كثيرة دفعة واحدة دون إضعاف أي خطوة: يحتفظ كل رمز بفحوصاته وسجل تدقيقه، وبكلمة مرورك في القرارات. القرار في أكثر من %(above)s رمزًا يحتاج أولًا إلى فحص بالعيّنة: %(percent)s بالمئة من الدفعة، وعلى الأقل %(minimum)s رمزًا، موزعة على المجموعات الفرعية. عيب واحد في العيّنة يوقف القرار. |
 
 ### 9.6 IN বাংলা 🇮🇳 — Bengali
 
-1216 of 1217 strings translated; direction left to right.
+1279 of 1280 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -5531,7 +5783,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Scfa1b6` | detail | Add field comment | ফিল্ড মন্তব্য যোগ করুন |
 | `Sbb965e` | detail | Add one of your change requests | আপনার একটি পরিবর্তন অনুরোধ যোগ করুন |
 | `S9a693b` | detail | Add to change set | পরিবর্তন সেটে যোগ করুন |
-| `S7bbd6d` | detail | Administrator sign-off | প্রশাসকের সাইন-অফ |
+| `S7bbd6d` | detail, workbench | Administrator sign-off | প্রশাসকের সাইন-অফ |
 | `S212856` | detail | advanced, controller firmware programs | উন্নত, নিয়ন্ত্রক ফার্মওয়্যার প্রোগ্রাম |
 | `Sfbde82` | detail | Affected component | প্রভাবিত উপাদান |
 | `S25f8c5` | detail, export, form | Alarm | অ্যালার্ম |
@@ -5560,17 +5812,17 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se7bab1` | detail | Chain of causes | কারণের শৃঙ্খল |
 | `S9c8393` | detail, mine | Change Request | পরিবর্তন অনুরোধ |
 | `S4572f4` | detail | Change request | পরিবর্তন অনুরোধ |
-| `S3295be` | detail | Change requests in this set | এই সেটের পরিবর্তন অনুরোধ |
+| `S3295be` | detail, workbench | Change requests in this set | এই সেটের পরিবর্তন অনুরোধ |
 | `S4d8006` | detail | Change set | পরিবর্তন সেট |
 | `S8aa57d` | detail | Changes | পরিবর্তন |
 | `S3d14ea` | detail, export | Changes of this release only | শুধু এই রিলিজের পরিবর্তন |
 | `Sbd95c0` | detail | Checklist confirmed at sign-off | সাইন-অফের সময় নিশ্চিত চেকলিস্ট |
 | `S074d62` | detail, role badge | Chief Engineer | প্রধান প্রকৌশলী |
-| `S03695d` | detail | Chief Engineer decision | প্রধান প্রকৌশলীর সিদ্ধান্ত |
+| `S03695d` | detail, workbench | Chief Engineer decision | প্রধান প্রকৌশলীর সিদ্ধান্ত |
 | `Sf0a89f` | detail | Close change set | পরিবর্তন সেট বন্ধ করুন |
 | `S7c0c39` | detail | Close this change set? | এই পরিবর্তন সেট বন্ধ করবেন? |
 | `S153d7a` | detail | Comment | মন্তব্য |
-| `S611578` | detail | Comment (required for rejection) | মন্তব্য (প্রত্যাখ্যানের জন্য আবশ্যক) |
+| `S611578` | detail, workbench | Comment (required for rejection) | মন্তব্য (প্রত্যাখ্যানের জন্য আবশ্যক) |
 | `Sc38432` | detail | Comment on this field | এই ফিল্ডে মন্তব্য করুন |
 | `Sfce06e` | detail | Comments | মন্তব্য |
 | `S8d105c` | detail, reconciliation | Compare | তুলনা করুন |
@@ -5596,7 +5848,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S0e8574` | detail | Customer | গ্রাহক |
 | `Scb307e` | detail | Decide the selected requests in one sitting | বাছাই করা অনুরোধগুলোর সিদ্ধান্ত এক বৈঠকে নিন |
 | `S319493` | detail | Decided by | সিদ্ধান্তদাতা |
-| `S7f59a1` | detail | Decision | সিদ্ধান্ত |
+| `S7f59a1` | detail, workbench | Decision | সিদ্ধান্ত |
 | `Sc51568` | detail | Decisions & Comments | সিদ্ধান্ত ও মন্তব্য |
 | `Sa9ec7c` | detail | Delete Permanently | স্থায়ীভাবে মুছুন |
 | `S7d1c7a` | detail | Delete Release | রিলিজ মুছুন |
@@ -5662,6 +5914,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S6d59f4` | detail | Manual Reset Program | ম্যানুয়াল রিসেট প্রোগ্রাম |
 | `Sf9896c` | detail, form | Mark resolved | সমাধান হিসেবে চিহ্নিত করুন |
 | `Sa7b93d` | detail, new, reconciliation | Mode | মোড |
+| `S9f4d01` | detail | More than a few codes need a sample inspection first; use the workbench. | কয়েকটির বেশি কোডের জন্য আগে নমুনা পরিদর্শন দরকার; কর্মক্ষেত্র ব্যবহার করুন। |
 | `S31a335` | detail | new code | নতুন কোড |
 | `S816c52` | detail, export_verify, form | No | না |
 | `S06fc8d` | detail | No active Engineer holds the %(code)s domain yet. An Administrator must tag an Engineer with it (Administration → Users) before a sign-off can be requested. | কোনো সক্রিয় প্রকৌশলীর ডোমেইন %(code)s নেই। সাইন-অফ চাওয়ার আগে একজন প্রশাসককে কোনো প্রকৌশলীকে এই ডোমেইন দিতে হবে (প্রশাসন → ব্যবহারকারী)। |
@@ -5692,7 +5945,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S9734ac` | detail | Other codes that refer to this one. Review them before deprecating it. | এই কোডের দিকে নির্দেশ করা অন্য কোড। অপ্রচলিত করার আগে সেগুলো পর্যালোচনা করুন। |
 | `S780d35` | detail | Override identifier (migration / reservation only) | শনাক্তকারী অগ্রাহ্য করুন (শুধু মাইগ্রেশন / সংরক্ষণের জন্য) |
 | `S89ff31` | detail | Owner | মালিক |
-| `S2d20ee` | detail | Package overview | প্যাকেজের সংক্ষিপ্ত বিবরণ |
+| `S2d20ee` | detail, workbench | Package overview | প্যাকেজের সংক্ষিপ্ত বিবরণ |
 | `S4d1a47` | detail | Package: all languages and access levels | প্যাকেজ: সব ভাষা ও অ্যাক্সেস স্তর |
 | `Sc49bd0` | detail | Packages of this Release | এই রিলিজের প্যাকেজ |
 | `S96f608` | detail, review_queue | Pending | মুলতুবি |
@@ -5737,12 +5990,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S026ab2` | detail | resolved | সমাধান হয়েছে |
 | `S68c61f` | detail | Rev # | সংশোধন নং |
 | `Se4758b` | detail, review_checklist | Review checklist | পর্যালোচনা চেকলিস্ট |
-| `S7bfca8` | detail | Reviewer sign-off | পর্যালোচকের সাইন-অফ |
+| `S7bfca8` | detail, workbench | Reviewer sign-off | পর্যালোচকের সাইন-অফ |
 | `S3beb9a` | detail | Revision | সংশোধন |
 | `Sa72973` | detail | Revision Fields | সংশোধনের ফিল্ড |
 | `Sfc1d6a` | detail | row(s) imported as Drafts | সারি খসড়া হিসেবে আমদানি হয়েছে |
 | `S52d0b3` | detail, reconciliation, user_detail | Rows | সারি |
 | `Sd0edfb` | detail | Sales | বিক্রয় |
+| `S241bf5` | detail, workbench | Sample number | নমুনা নম্বর |
 | `Sda38c6` | detail | Save planned dates | পরিকল্পিত তারিখ সংরক্ষণ করুন |
 | `S13c61c` | detail | Scope Filter | পরিধি ফিল্টার |
 | `S859822` | detail, mine, withdrawn_codes | Select | বাছুন |
@@ -5804,11 +6058,12 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S7d5316` | detail | Who | কে |
 | `S47e564` | detail | Withdraw | প্রত্যাহার |
 | `S51a998` | detail | Withdraw this change request? | এই পরিবর্তন অনুরোধ প্রত্যাহার করবেন? |
+| `S93ef7c` | detail, workbench | Workbench | কর্মক্ষেত্র |
 | `S95a2a4` | detail, form | Write level | লেখার স্তর |
 | `S612fe0` | detail | Yaw Bearing Lubrication Program | ইয়ো বিয়ারিং লুব্রিকেশন প্রোগ্রাম |
 | `S559a3f` | detail | Yaw Program | ইয়ো প্রোগ্রাম |
 | `S5397e0` | detail, export_verify, form | Yes | হ্যাঁ |
-| `Sc8e4b4` | detail | Your decision step | আপনার সিদ্ধান্তের ধাপ |
+| `Sc8e4b4` | detail, workbench | Your decision step | আপনার সিদ্ধান্তের ধাপ |
 | `S20cb4c` | detail, export_center | ZIP with manifest | ম্যানিফেস্টসহ ZIP |
 | `S5d4358` | dry_run | All rows are clean. | সব সারি পরিষ্কার। |
 | `S03510d` | dry_run | Back to import | আমদানিতে ফিরে যান |
@@ -5835,7 +6090,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S7b8d80` | export | Not for distribution - unapproved data | বিতরণের জন্য নয় - অনুমোদিত নয় এমন ডেটা |
 | `Sd9b345` | export | not yet published | এখনও প্রকাশিত হয়নি |
 | `Sa5d386` | export | Page %(page)s of %(total)s | পৃষ্ঠা %(page)s / %(total)s |
-| `Sac1a42` | export | Platforms | প্ল্যাটফর্ম |
+| `Sac1a42` | export, workbench | Platforms | প্ল্যাটফর্ম |
 | `Se51c55` | export | Records | রেকর্ড |
 | `Sd41f56` | export, export_center | Release | রিলিজ |
 | `S2e8fd6` | export | Reset delay | রিসেট বিলম্ব |
@@ -5887,7 +6142,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S45ea95` | export_verify | Manifest signature | ম্যানিফেস্ট স্বাক্ষর |
 | `S08f84b` | export_verify | No record of this exact file | ঠিক এই ফাইলের কোনো রেকর্ড নেই |
 | `S357953` | export_verify | NOT OK | ঠিক নেই |
-| `S9ce3bd` | export_verify | OK | ঠিক আছে |
+| `S9ce3bd` | export_verify, workbench | OK | ঠিক আছে |
 | `S8a5285` | export_verify | Overall | সামগ্রিকভাবে |
 | `Sd2bc4a` | export_verify | Produced by this system | এই সিস্টেম দ্বারা তৈরি |
 | `S112d15` | export_verify | Verify an export | রপ্তানি যাচাই করুন |
@@ -5961,10 +6216,16 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S689b33` | help | The full manual is docs/23-user-manual.md in the project folder; the glossary below is the same one the tooltips use. | সম্পূর্ণ ম্যানুয়াল প্রকল্প ফোল্ডারে docs/23-user-manual.md; নিচের শব্দকোষ টুলটিপে ব্যবহৃত শব্দকোষের মতোই। |
 | `S439914` | help | What happens next on a change request | পরিবর্তন অনুরোধে এরপর কী হয় |
 | `S6d29d9` | help and messages | %(n)s withdrawn code(s) deleted. | %(n)s টি প্রত্যাহার করা কোড মুছে ফেলা হয়েছে। |
+| `S285edc` | help and messages | %(ok)s of %(n)s: %(what)s. | %(ok)s / %(n)s: %(what)s। |
 | `Sb08e6c` | help and messages | A Reviewer and an Administrator each sign off (in any order). If either rejects, it goes back to the author. | একজন পর্যালোচক ও একজন প্রশাসক প্রত্যেকে সাইন অফ করেন (যেকোনো ক্রমে)। কেউ প্রত্যাখ্যান করলে এটি লেখকের কাছে ফিরে যায়। |
 | `S2f1bed` | help and messages | An Administrator includes the revision in a Release and publishes it; then it is Released. | একজন প্রশাসক সংশোধনটি একটি রিলিজে অন্তর্ভুক্ত করে প্রকাশ করেন; তখন এটি প্রকাশিত হয়। |
+| `S1308dc` | help and messages | defective codes sent back | ত্রুটিপূর্ণ কোড ফেরত পাঠানো হয়েছে |
+| `Se2bbd9` | help and messages | Drafts saved | খসড়া সংরক্ষিত হয়েছে |
+| `S0ddfa5` | help and messages | Drafts signed off | খসড়ার সাইন-অফ হয়েছে |
+| `Sf90ab8` | help and messages | Drafts submitted for review | খসড়া পর্যালোচনার জন্য জমা হয়েছে |
 | `Sd856bd` | help and messages | Not deleted (it has a revision again or is still referenced): %(x)s | মোছা হয়নি (এর আবার সংশোধন আছে বা এখনও উল্লেখ আছে): %(x)s |
 | `S34b903` | help and messages | Not possible: the account has history (see above). Deactivate it instead; the person can no longer sign in and everything they did stays attributable. | সম্ভব নয়: অ্যাকাউন্টের ইতিহাস আছে (উপরে দেখুন)। এর পরিবর্তে নিষ্ক্রিয় করুন; ব্যক্তিটি আর সাইন ইন করতে পারবেন না এবং তিনি যা করেছেন তা দায়বদ্ধ থাকবে। |
+| `S6a26de` | help and messages | Sample %(id)s drawn: %(n)s of %(total)s codes to inspect. | নমুনা %(id)s তোলা হয়েছে: %(n)s / %(total)s টি কোড পরিদর্শন করতে হবে। |
 | `Sce489f` | help and messages | The author gets any required cross-domain sign-offs, then submits the change request for review. | লেখক প্রয়োজনীয় আন্তঃডোমেইন সাইন-অফ নেন, তারপর পরিবর্তন অনুরোধ পর্যালোচনার জন্য জমা দেন। |
 | `S1cdbdd` | help and messages | The Chief Engineer approves or rejects. Approval makes the revision Approved (or Deprecated for a deprecation request). | প্রধান প্রকৌশলী অনুমোদন বা প্রত্যাখ্যান করেন। অনুমোদন সংশোধনকে অনুমোদিত (বা অপ্রচলন অনুরোধে অপ্রচলিত) করে। |
 | `S2d6ac0` | help and messages | The package is being built. Reload this page to follow its progress. | প্যাকেজ তৈরি হচ্ছে। অগ্রগতি দেখতে এই পেজ আবার লোড করুন। |
@@ -6037,7 +6298,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sded18c` | language | approved by | অনুমোদক |
 | `Sedd46e` | language | Check against the interface | ইন্টারফেসের সঙ্গে মিলিয়ে দেখুন |
 | `S5a013c` | language | missing | অনুপস্থিত |
-| `S2c924e` | language | Note | নোট |
+| `S2c924e` | language, workbench | Note | নোট |
 | `S2f09d0` | language | Note on %(x)s | %(x)s সম্পর্কে নোট |
 | `S75bf99` | language | proposed by | প্রস্তাবক |
 | `Sc68e32` | language | Save translations | অনুবাদ সংরক্ষণ করুন |
@@ -6159,6 +6420,26 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se146d2` | message: auth_service | Your account is not active. | আপনার অ্যাকাউন্ট সক্রিয় নয়। |
 | `Sb584dd` | message: backup_service | Backups need a file-based SQLite database. | ব্যাকআপের জন্য ফাইলভিত্তিক SQLite ডেটাবেস লাগে। |
 | `S368c82` | message: backup_service | keep must be at least 1 | keep কমপক্ষে ১ হতে হবে |
+| `S18edaf` | message: bulk_service | A defect needs a note: say what is wrong. | ত্রুটির জন্য নোট দরকার: কী ভুল তা বলুন। |
+| `S68cada` | message: bulk_service, workbench | A defective Draft is corrected by its author. | ত্রুটিপূর্ণ খসড়া তার লেখক সংশোধন করেন। |
+| `S8941d5` | message: bulk_service | A domain sign-off needs the engineering domain. | ডোমেইন সাইন-অফের জন্য প্রকৌশল ডোমেইন দরকার। |
+| `S071452` | message: bulk_service | A note has at most 1000 characters. | একটি নোটে সর্বোচ্চ ১০০০ অক্ষর থাকতে পারে। |
+| `Sf74baa` | message: bulk_service, message: change_set_service | Change set not found | পরিবর্তন সেট পাওয়া যায়নি |
+| `Sf89067` | message: bulk_service | Choose at least one value to set. | সেট করার জন্য অন্তত একটি মান বেছে নিন। |
+| `S1e3e33` | message: bulk_service | No change request of the set is waiting for you at this step. | সেটের কোনো পরিবর্তন অনুরোধ এই ধাপে আপনার অপেক্ষায় নেই। |
+| `S95bd2d` | message: bulk_service | No Draft of the set is waiting for the sign-off of this domain. | সেটের কোনো খসড়া এই ডোমেইনের সাইন-অফের অপেক্ষায় নেই। |
+| `S495371` | message: bulk_service | Only a sample with defects can be sent back. | শুধু ত্রুটিযুক্ত নমুনা ফেরত পাঠানো যায়। |
+| `Sa6e3b3` | message: bulk_service | Sample not found | নমুনা পাওয়া যায়নি |
+| `Sf745cc` | message: bulk_service | step must be domain, reviewer, admin or chief-engineer | step অবশ্যই domain, reviewer, admin বা chief-engineer হতে হবে |
+| `S973577` | message: bulk_service | That change request is not in the sample. | ওই পরিবর্তন অনুরোধ নমুনায় নেই। |
+| `Sa1a149` | message: bulk_service | The batch changed since the sample was drawn; draw a new sample. | নমুনা তোলার পর ব্যাচ বদলেছে; নতুন নমুনা তুলুন। |
+| `S8e5b1c` | message: bulk_service | The verdict must be OK or DEFECT. | রায় অবশ্যই OK বা ত্রুটি হতে হবে। |
+| `Sddedd6` | message: bulk_service | This is not your sample: the person who decides inspects. | এটি আপনার নমুনা নয়: যিনি সিদ্ধান্ত নেন, তিনিই পরিদর্শন করেন। |
+| `Sf56c6a` | message: bulk_service | This sample belongs to another change set or another step. | এই নমুনা অন্য পরিবর্তন সেট বা অন্য ধাপের। |
+| `S146a72` | message: bulk_service | This sample has been used for a decision already; draw a new one. | এই নমুনা আগেই একটি সিদ্ধান্তে ব্যবহৃত হয়েছে; নতুন তুলুন। |
+| `Sf0f02c` | message: bulk_service | This sample is closed. | এই নমুনা বন্ধ। |
+| `Sf973bd` | message: bulk_service | This sample is older than 24 hours; draw a new one. | এই নমুনা ২৪ ঘণ্টার চেয়ে পুরোনো; নতুন তুলুন। |
+| `S062a13` | message: bulk_service | This sample was replaced by a newer one. | এই নমুনার জায়গায় নতুনটি এসেছে। |
 | `Sca2391` | message: change_request_service | A comment must be between 1 and 4000 characters. | মন্তব্য ১ থেকে ৪০০০ অক্ষরের মধ্যে হতে হবে। |
 | `S33cd99` | message: change_request_service | At least one Turbine Platform is required before Submit for Review (FR-023a). | পর্যালোচনার জন্য জমা দেওয়ার আগে অন্তত একটি টারবাইন প্ল্যাটফর্ম আবশ্যক (FR-023a)। |
 | `S1fd35e` | message: change_request_service | decision must be APPROVE or REJECT. | decision অবশ্যই APPROVE বা REJECT হতে হবে। |
@@ -6169,7 +6450,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sbd3a03` | message: change_request_service | reviewer_id must be an active user with the Reviewer role. | reviewer_id অবশ্যই পর্যালোচক ভূমিকার একজন সক্রিয় ব্যবহারকারী হতে হবে। |
 | `S043693` | message: change_request_service | The Reviewer has already signed off this CR. | পর্যালোচক ইতিমধ্যে এই পরিবর্তন অনুরোধে সাইন অফ করেছেন। |
 | `S7a758c` | message: change_set_service | A change set needs a name of 1-120 characters. | পরিবর্তন সেটের জন্য ১-১২০ অক্ষরের নাম লাগে। |
-| `Sf74baa` | message: change_set_service | Change set not found | পরিবর্তন সেট পাওয়া যায়নি |
 | `Sd8fad1` | message: change_set_service | Only a CR that is still open can join a change set. | শুধু এখনো খোলা পরিবর্তন অনুরোধ একটি পরিবর্তন সেটে যোগ দিতে পারে। |
 | `S990d51` | message: change_set_service | Only the author of the CR or an Administrator may group it. | শুধু পরিবর্তন অনুরোধের লেখক বা প্রশাসক এটি গ্রুপ করতে পারেন। |
 | `S69e4d1` | message: change_set_service | Only the author of the CR or an Administrator may ungroup it. | শুধু পরিবর্তন অনুরোধের লেখক বা প্রশাসক এটি গ্রুপ থেকে সরাতে পারেন। |
@@ -6255,6 +6535,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sdb88ba` | message: saved_search_service | Saved search not found | সংরক্ষিত অনুসন্ধান পাওয়া যায়নি |
 | `S046aff` | message: saved_search_service | This saved search belongs to someone else. | এই সংরক্ষিত অনুসন্ধান অন্য কারও। |
 | `Saad8e2` | message: settings_service | must be a whole number between 0 and 100 | অবশ্যই ০ থেকে ১০০-এর মধ্যে একটি পূর্ণসংখ্যা হতে হবে |
+| `S9625d1` | message: settings_service | must be a whole number between 1 and 100 | ১ থেকে ১০০ এর মধ্যে পূর্ণসংখ্যা হতে হবে |
 | `S6e4015` | message: settings_service | must be a whole number between 1 and 365 | অবশ্যই ১ থেকে ৩৬৫-এর মধ্যে একটি পূর্ণসংখ্যা হতে হবে |
 | `S9671fb` | message: settings_service | must be true or false | অবশ্যই true বা false হতে হবে |
 | `S5166bb` | message: st_import_service | A staged file changed after the preview. Upload again. | প্রিভিউয়ের পর একটি স্টেজ করা ফাইল বদলে গেছে। আবার আপলোড করুন। |
@@ -6452,7 +6733,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S6daf16` | st_preview | Preview: status codes from .st files | প্রিভিউ: .st ফাইল থেকে স্ট্যাটাস কোড |
 | `S15a21a` | st_preview | program(s) | প্রোগ্রাম |
 | `Se58289` | st_preview | Programs found in the uploaded files | আপলোড করা ফাইলে পাওয়া প্রোগ্রাম |
-| `S75c053` | st_preview | ready | প্রস্তুত |
+| `S75c053` | st_preview, workbench | ready | প্রস্তুত |
 | `S0723bf` | st_preview | Select all programs that are ready | সব প্রস্তুত প্রোগ্রাম বাছুন |
 | `S1a767a` | st_preview | updates the open Draft | খোলা খসড়া হালনাগাদ করে |
 | `S02499f` | st_preview | withdrawn | প্রত্যাহৃত |
@@ -6551,10 +6832,44 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S8516a7` | withdrawn_codes | Delete selected | নির্বাচিতগুলি মুছুন |
 | `Sdfeb06` | withdrawn_codes | No withdrawn codes. | প্রত্যাহার করা কোনো কোড নেই। |
 | `S87ec0b` | withdrawn_codes | Withdrawn on | প্রত্যাহারের তারিখ |
+| `S48d260` | workbench | %(n)s of %(total)s codes drawn at %(when)s. | %(n)s / %(total)s টি কোড %(when)s-এ বাছাই করা হয়েছে। |
+| `S88b55f` | workbench | Approve the batch | ব্যাচ অনুমোদন করুন |
+| `Sf40e77` | workbench | Available group | উপলভ্য গ্রুপ |
+| `S99613c` | workbench | Blocked | অবরুদ্ধ |
+| `Sca7133` | workbench | Choose the step you are about to decide, draw the sample, look at every sampled code and mark it. The sample is yours, valid for 24 hours and for this batch as it is now. | যে ধাপে সিদ্ধান্ত নেবেন তা বেছে নিন, নমুনা তুলুন, বাছাই করা প্রতিটি কোড দেখুন এবং চিহ্নিত করুন। নমুনা আপনার, ২৪ ঘণ্টা এবং এই ব্যাচের বর্তমান অবস্থার জন্য বৈধ। |
+| `S6f4274` | workbench | Codes in this batch | এই ব্যাচের কোড |
+| `S117313` | workbench | Decide the batch | ব্যাচের সিদ্ধান্ত নিন |
+| `Se91aff` | workbench | Defect | ত্রুটি |
+| `S16fbbf` | workbench | Domain sign-off | ডোমেইন সাইন-অফ |
+| `Scb1884` | workbench | Dossier (XLSX) | ডসিয়ার (XLSX) |
+| `S25085f` | workbench | Draw a sample | নমুনা তুলুন |
+| `S9167a7` | workbench | Engineering domain | প্রকৌশল ডোমেইন |
+| `Sbc3c59` | workbench | Only the values you choose are changed, on the Drafts you wrote (an Administrator: any Draft). | শুধু আপনার বাছাই করা মান বদলায়, আপনার লেখা খসড়াগুলোতে (প্রশাসক: যেকোনো খসড়া)। |
+| `S92223f` | workbench | Passed: no defect in the sample. Use sample number %(id)s below. | উত্তীর্ণ: নমুনায় কোনো ত্রুটি নেই। নিচে নমুনা নম্বর %(id)s ব্যবহার করুন। |
+| `S6275ab` | workbench | Ready to submit | জমা দেওয়ার জন্য প্রস্তুত |
+| `Se1e74d` | workbench | Reject the batch | ব্যাচ প্রত্যাখ্যান করুন |
+| `S58fabf` | workbench | Sample | নমুনা |
+| `S862471` | workbench | Sample inspection | নমুনা পরিদর্শন |
+| `S69cc53` | workbench | Save the verdicts | রায় সংরক্ষণ করুন |
+| `S3ae55b` | workbench | Send the defective codes back | ত্রুটিপূর্ণ কোড ফেরত পাঠান |
+| `Se90e7c` | workbench | Set on the Drafts | খসড়াগুলোতে সেট করুন |
+| `Sa58dac` | workbench | Set values on the Drafts | খসড়াগুলোতে মান সেট করুন |
+| `Sa443bb` | workbench | Sign off the Drafts | খসড়াগুলোর সাইন-অফ করুন |
+| `S53f47f` | workbench | Sign-off pending | সাইন-অফ মুলতুবি |
+| `Sae12bc` | workbench | Status category | স্ট্যাটাস বিভাগ |
+| `Sdc416e` | workbench | Step | ধাপ |
+| `Sf7710d` | workbench | Submit for review | পর্যালোচনার জন্য জমা দিন |
+| `Sa45adc` | workbench | Submit the Drafts | খসড়া জমা দিন |
+| `S2d099f` | workbench | Submits the Drafts you wrote. A Draft that still lacks a platform or a domain sign-off is reported and left as it is. | আপনার লেখা খসড়া জমা দেয়। যে খসড়ায় এখনো প্ল্যাটফর্ম বা ডোমেইন সাইন-অফ নেই, তা জানানো হয় এবং যেমন আছে তেমন রাখা হয়। |
+| `S5baa27` | workbench | The sample has defects, so the batch cannot be decided as it is. Send the defective codes back (the note is the reason), then draw a new sample of what is left. | নমুনায় ত্রুটি আছে, তাই ব্যাচের সিদ্ধান্ত এভাবে নেওয়া যায় না। ত্রুটিপূর্ণ কোড ফেরত পাঠান (নোটই কারণ), তারপর বাকিদের থেকে নতুন নমুনা তুলুন। |
+| `S19f8ab` | workbench | Tick the codes an action is for; with none ticked an action covers every code it applies to. | যে কোডগুলোর জন্য কাজ, সেগুলোয় টিক দিন; কোনো টিক না দিলে কাজটি প্রযোজ্য সব কোডে খাটে। |
+| `S7f6e5a` | workbench | Verdict | রায় |
+| `Se6246f` | workbench | What stops it | কী এটিকে থামাচ্ছে |
+| `Sbf45e2` | workbench | Work on many codes at once without weakening a step: every code still gets its own checks, its own audit entry and, for decisions, your password. A decision on more than %(above)s codes needs a sample inspection first: %(percent)s percent of the batch, at least %(minimum)s codes, spread over the subgroups. One defect in the sample stops the decision. | কোনো ধাপ দুর্বল না করে একসঙ্গে অনেক কোডে কাজ করুন: প্রতিটি কোড তার নিজের পরীক্ষা, নিজের অডিট এন্ট্রি এবং সিদ্ধান্তের জন্য আপনার পাসওয়ার্ড পায়। %(above)s-এর বেশি কোডের সিদ্ধান্তের জন্য আগে নমুনা পরিদর্শন দরকার: ব্যাচের %(percent)s শতাংশ, অন্তত %(minimum)s কোড, উপগ্রুপগুলোতে ছড়ানো। নমুনায় একটি ত্রুটি সিদ্ধান্ত থামিয়ে দেয়। |
 
 ### 9.7 IN मराठी 🇮🇳 — Marathi
 
-1216 of 1217 strings translated; direction left to right.
+1279 of 1280 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -6754,7 +7069,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Scfa1b6` | detail | Add field comment | फील्ड टिप्पणी जोडा |
 | `Sbb965e` | detail | Add one of your change requests | तुमची एक बदल विनंती जोडा |
 | `S9a693b` | detail | Add to change set | बदल संचात जोडा |
-| `S7bbd6d` | detail | Administrator sign-off | प्रशासक साइन-ऑफ |
+| `S7bbd6d` | detail, workbench | Administrator sign-off | प्रशासक साइन-ऑफ |
 | `S212856` | detail | advanced, controller firmware programs | प्रगत, नियंत्रक फर्मवेअर प्रोग्राम |
 | `Sfbde82` | detail | Affected component | बाधित घटक |
 | `S25f8c5` | detail, export, form | Alarm | अलार्म |
@@ -6783,17 +7098,17 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se7bab1` | detail | Chain of causes | कारणांची साखळी |
 | `S9c8393` | detail, mine | Change Request | बदल विनंती |
 | `S4572f4` | detail | Change request | बदल विनंती |
-| `S3295be` | detail | Change requests in this set | या संचातील बदल विनंत्या |
+| `S3295be` | detail, workbench | Change requests in this set | या संचातील बदल विनंत्या |
 | `S4d8006` | detail | Change set | बदल संच |
 | `S8aa57d` | detail | Changes | बदल |
 | `S3d14ea` | detail, export | Changes of this release only | फक्त या रिलीजमधील बदल |
 | `Sbd95c0` | detail | Checklist confirmed at sign-off | साइन-ऑफच्या वेळी पुष्टी केलेली चेकलिस्ट |
 | `S074d62` | detail, role badge | Chief Engineer | मुख्य अभियंता |
-| `S03695d` | detail | Chief Engineer decision | मुख्य अभियंत्याचा निर्णय |
+| `S03695d` | detail, workbench | Chief Engineer decision | मुख्य अभियंत्याचा निर्णय |
 | `Sf0a89f` | detail | Close change set | बदल संच बंद करा |
 | `S7c0c39` | detail | Close this change set? | हा बदल संच बंद करायचा? |
 | `S153d7a` | detail | Comment | टिप्पणी |
-| `S611578` | detail | Comment (required for rejection) | टिप्पणी (नाकारण्यासाठी आवश्यक) |
+| `S611578` | detail, workbench | Comment (required for rejection) | टिप्पणी (नाकारण्यासाठी आवश्यक) |
 | `Sc38432` | detail | Comment on this field | या फील्डवर टिप्पणी करा |
 | `Sfce06e` | detail | Comments | टिप्पण्या |
 | `S8d105c` | detail, reconciliation | Compare | तुलना करा |
@@ -6819,7 +7134,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S0e8574` | detail | Customer | ग्राहक |
 | `Scb307e` | detail | Decide the selected requests in one sitting | निवडलेल्या विनंत्यांवर एकाच बैठकीत निर्णय घ्या |
 | `S319493` | detail | Decided by | निर्णय घेणारा |
-| `S7f59a1` | detail | Decision | निर्णय |
+| `S7f59a1` | detail, workbench | Decision | निर्णय |
 | `Sc51568` | detail | Decisions & Comments | निर्णय आणि टिप्पण्या |
 | `Sa9ec7c` | detail | Delete Permanently | कायमचे हटवा |
 | `S7d1c7a` | detail | Delete Release | प्रकाशन हटवा |
@@ -6885,6 +7200,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S6d59f4` | detail | Manual Reset Program | मॅन्युअल रीसेट प्रोग्राम |
 | `Sf9896c` | detail, form | Mark resolved | निराकरण झाले म्हणून चिन्हांकित करा |
 | `Sa7b93d` | detail, new, reconciliation | Mode | मोड |
+| `S9f4d01` | detail | More than a few codes need a sample inspection first; use the workbench. | काही कोडपेक्षा जास्तीसाठी आधी नमुना तपासणी लागते; कार्यक्षेत्र वापरा. |
 | `S31a335` | detail | new code | नवीन कोड |
 | `S816c52` | detail, export_verify, form | No | नाही |
 | `S06fc8d` | detail | No active Engineer holds the %(code)s domain yet. An Administrator must tag an Engineer with it (Administration → Users) before a sign-off can be requested. | कोणत्याही सक्रिय अभियंत्याकडे %(code)s क्षेत्र नाही. साइन-ऑफ मागण्यापूर्वी प्रशासकाने एखाद्या अभियंत्याला हे क्षेत्र द्यावे (प्रशासन → वापरकर्ते). |
@@ -6915,7 +7231,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S9734ac` | detail | Other codes that refer to this one. Review them before deprecating it. | याकडे निर्देश करणारे इतर कोड. कालबाह्य करण्यापूर्वी त्यांचे पुनरावलोकन करा. |
 | `S780d35` | detail | Override identifier (migration / reservation only) | ओळखकर्ता अधिलिखित करा (फक्त स्थलांतर / आरक्षणासाठी) |
 | `S89ff31` | detail | Owner | मालक |
-| `S2d20ee` | detail | Package overview | पॅकेजचा आढावा |
+| `S2d20ee` | detail, workbench | Package overview | पॅकेजचा आढावा |
 | `S4d1a47` | detail | Package: all languages and access levels | पॅकेज: सर्व भाषा आणि अॅक्सेस स्तर |
 | `Sc49bd0` | detail | Packages of this Release | या रिलीजची पॅकेजेस |
 | `S96f608` | detail, review_queue | Pending | प्रलंबित |
@@ -6960,12 +7276,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S026ab2` | detail | resolved | निराकरण झाले |
 | `S68c61f` | detail | Rev # | सुधारणा क्र. |
 | `Se4758b` | detail, review_checklist | Review checklist | पुनरावलोकन चेकलिस्ट |
-| `S7bfca8` | detail | Reviewer sign-off | पुनरावलोकक साइन-ऑफ |
+| `S7bfca8` | detail, workbench | Reviewer sign-off | पुनरावलोकक साइन-ऑफ |
 | `S3beb9a` | detail | Revision | सुधारणा |
 | `Sa72973` | detail | Revision Fields | सुधारणा फील्ड |
 | `Sfc1d6a` | detail | row(s) imported as Drafts | ओळी मसुदे म्हणून आयात झाल्या |
 | `S52d0b3` | detail, reconciliation, user_detail | Rows | ओळी |
 | `Sd0edfb` | detail | Sales | विक्री |
+| `S241bf5` | detail, workbench | Sample number | नमुना क्रमांक |
 | `Sda38c6` | detail | Save planned dates | नियोजित तारखा जतन करा |
 | `S13c61c` | detail | Scope Filter | व्याप्ती फिल्टर |
 | `S859822` | detail, mine, withdrawn_codes | Select | निवडा |
@@ -7027,11 +7344,12 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S7d5316` | detail | Who | कोण |
 | `S47e564` | detail | Withdraw | मागे घ्या |
 | `S51a998` | detail | Withdraw this change request? | ही बदल विनंती मागे घ्यायची? |
+| `S93ef7c` | detail, workbench | Workbench | कार्यक्षेत्र |
 | `S95a2a4` | detail, form | Write level | लेखन पातळी |
 | `S612fe0` | detail | Yaw Bearing Lubrication Program | याव बेअरिंग वंगण प्रोग्राम |
 | `S559a3f` | detail | Yaw Program | याव प्रोग्राम |
 | `S5397e0` | detail, export_verify, form | Yes | होय |
-| `Sc8e4b4` | detail | Your decision step | तुमचा निर्णय टप्पा |
+| `Sc8e4b4` | detail, workbench | Your decision step | तुमचा निर्णय टप्पा |
 | `S20cb4c` | detail, export_center | ZIP with manifest | मॅनिफेस्टसह ZIP |
 | `S5d4358` | dry_run | All rows are clean. | सर्व ओळी स्वच्छ आहेत. |
 | `S03510d` | dry_run | Back to import | आयातकडे परत |
@@ -7058,7 +7376,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S7b8d80` | export | Not for distribution - unapproved data | वितरणासाठी नाही - अमंजूर डेटा |
 | `Sd9b345` | export | not yet published | अद्याप प्रकाशित नाही |
 | `Sa5d386` | export | Page %(page)s of %(total)s | पृष्ठ %(page)s / %(total)s |
-| `Sac1a42` | export | Platforms | प्लॅटफॉर्म |
+| `Sac1a42` | export, workbench | Platforms | प्लॅटफॉर्म |
 | `Se51c55` | export | Records | नोंदी |
 | `Sd41f56` | export, export_center | Release | प्रकाशन |
 | `S2e8fd6` | export | Reset delay | रीसेट विलंब |
@@ -7110,7 +7428,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S45ea95` | export_verify | Manifest signature | मॅनिफेस्ट स्वाक्षरी |
 | `S08f84b` | export_verify | No record of this exact file | नेमक्या या फाइलची नोंद नाही |
 | `S357953` | export_verify | NOT OK | ठीक नाही |
-| `S9ce3bd` | export_verify | OK | ठीक |
+| `S9ce3bd` | export_verify, workbench | OK | ठीक |
 | `S8a5285` | export_verify | Overall | एकंदरीत |
 | `Sd2bc4a` | export_verify | Produced by this system | या प्रणालीने तयार केलेले |
 | `S112d15` | export_verify | Verify an export | निर्यात सत्यापित करा |
@@ -7184,10 +7502,16 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S689b33` | help | The full manual is docs/23-user-manual.md in the project folder; the glossary below is the same one the tooltips use. | संपूर्ण नियमावली प्रकल्प फोल्डरमध्ये docs/23-user-manual.md आहे; खालील शब्दकोश टूलटिपमध्ये वापरलेलाच आहे. |
 | `S439914` | help | What happens next on a change request | बदल विनंतीचे पुढे काय होते |
 | `S6d29d9` | help and messages | %(n)s withdrawn code(s) deleted. | %(n)s मागे घेतलेले कोड हटवले. |
+| `S285edc` | help and messages | %(ok)s of %(n)s: %(what)s. | %(ok)s / %(n)s: %(what)s. |
 | `Sb08e6c` | help and messages | A Reviewer and an Administrator each sign off (in any order). If either rejects, it goes back to the author. | एक पुनरावलोकक आणि एक प्रशासक प्रत्येकी साइन ऑफ करतात (कोणत्याही क्रमाने). कोणीही नाकारल्यास ती लेखकाकडे परत जाते. |
 | `S2f1bed` | help and messages | An Administrator includes the revision in a Release and publishes it; then it is Released. | प्रशासक सुधारणा प्रकाशनात समाविष्ट करून प्रकाशित करतो; तेव्हा ती प्रकाशित होते. |
+| `S1308dc` | help and messages | defective codes sent back | दोषपूर्ण कोड परत पाठवले |
+| `Se2bbd9` | help and messages | Drafts saved | मसुदे जतन केले |
+| `S0ddfa5` | help and messages | Drafts signed off | मसुद्यांचा साइन-ऑफ झाला |
+| `Sf90ab8` | help and messages | Drafts submitted for review | मसुदे पुनरावलोकनासाठी सादर केले |
 | `Sd856bd` | help and messages | Not deleted (it has a revision again or is still referenced): %(x)s | हटवले नाही (त्याला पुन्हा सुधारणा आहे किंवा अजून संदर्भ आहे): %(x)s |
 | `S34b903` | help and messages | Not possible: the account has history (see above). Deactivate it instead; the person can no longer sign in and everything they did stays attributable. | शक्य नाही: खात्याचा इतिहास आहे (वर पहा). त्याऐवजी निष्क्रिय करा; ती व्यक्ती आता साइन इन करू शकत नाही आणि तिने जे केले ते जबाबदार राहते. |
+| `S6a26de` | help and messages | Sample %(id)s drawn: %(n)s of %(total)s codes to inspect. | नमुना %(id)s काढला: %(n)s / %(total)s कोड तपासायचे आहेत. |
 | `Sce489f` | help and messages | The author gets any required cross-domain sign-offs, then submits the change request for review. | लेखक आवश्यक आंतर-क्षेत्र साइन-ऑफ मिळवतो, मग बदल विनंती पुनरावलोकनासाठी सादर करतो. |
 | `S1cdbdd` | help and messages | The Chief Engineer approves or rejects. Approval makes the revision Approved (or Deprecated for a deprecation request). | मुख्य अभियंता मंजूर किंवा नाकारतो. मंजुरीमुळे सुधारणा मंजूर होते (किंवा कालबाह्यता विनंतीसाठी कालबाह्य). |
 | `S2d6ac0` | help and messages | The package is being built. Reload this page to follow its progress. | पॅकेज तयार होत आहे. प्रगती पाहण्यासाठी हे पेज पुन्हा लोड करा. |
@@ -7260,7 +7584,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sded18c` | language | approved by | मंजूर करणारा |
 | `Sedd46e` | language | Check against the interface | इंटरफेसशी जुळवून पहा |
 | `S5a013c` | language | missing | गहाळ |
-| `S2c924e` | language | Note | टीप |
+| `S2c924e` | language, workbench | Note | टीप |
 | `S2f09d0` | language | Note on %(x)s | %(x)s वर टीप |
 | `S75bf99` | language | proposed by | प्रस्तावक |
 | `Sc68e32` | language | Save translations | भाषांतरे जतन करा |
@@ -7382,6 +7706,26 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se146d2` | message: auth_service | Your account is not active. | तुमचे खाते सक्रिय नाही. |
 | `Sb584dd` | message: backup_service | Backups need a file-based SQLite database. | बॅकअपसाठी फाइल-आधारित SQLite डेटाबेस लागतो. |
 | `S368c82` | message: backup_service | keep must be at least 1 | keep किमान १ असावे |
+| `S18edaf` | message: bulk_service | A defect needs a note: say what is wrong. | दोषासाठी नोंद लागते: काय चुकले ते सांगा. |
+| `S68cada` | message: bulk_service, workbench | A defective Draft is corrected by its author. | दोषपूर्ण मसुदा त्याचा लेखक दुरुस्त करतो. |
+| `S8941d5` | message: bulk_service | A domain sign-off needs the engineering domain. | डोमेन साइन-ऑफसाठी अभियांत्रिकी डोमेन लागते. |
+| `S071452` | message: bulk_service | A note has at most 1000 characters. | नोंदीत जास्तीत जास्त 1000 अक्षरे असतात. |
+| `Sf74baa` | message: bulk_service, message: change_set_service | Change set not found | बदल संच सापडला नाही |
+| `Sf89067` | message: bulk_service | Choose at least one value to set. | सेट करण्यासाठी किमान एक मूल्य निवडा. |
+| `S1e3e33` | message: bulk_service | No change request of the set is waiting for you at this step. | संचातील कोणतीही बदल विनंती या टप्प्यावर तुमची वाट पाहत नाही. |
+| `S95bd2d` | message: bulk_service | No Draft of the set is waiting for the sign-off of this domain. | संचातील कोणताही मसुदा या डोमेनच्या साइन-ऑफची वाट पाहत नाही. |
+| `S495371` | message: bulk_service | Only a sample with defects can be sent back. | फक्त दोष असलेला नमुनाच परत पाठवता येतो. |
+| `Sa6e3b3` | message: bulk_service | Sample not found | नमुना सापडला नाही |
+| `Sf745cc` | message: bulk_service | step must be domain, reviewer, admin or chief-engineer | step हा domain, reviewer, admin किंवा chief-engineer असावा |
+| `S973577` | message: bulk_service | That change request is not in the sample. | ती बदल विनंती नमुन्यात नाही. |
+| `Sa1a149` | message: bulk_service | The batch changed since the sample was drawn; draw a new sample. | नमुना काढल्यापासून बॅच बदलली आहे; नवीन नमुना काढा. |
+| `S8e5b1c` | message: bulk_service | The verdict must be OK or DEFECT. | निर्णय OK किंवा दोष असा असावा. |
+| `Sddedd6` | message: bulk_service | This is not your sample: the person who decides inspects. | हा तुमचा नमुना नाही: जो निर्णय घेतो तोच तपासतो. |
+| `Sf56c6a` | message: bulk_service | This sample belongs to another change set or another step. | हा नमुना दुसऱ्या बदल संचाचा किंवा दुसऱ्या टप्प्याचा आहे. |
+| `S146a72` | message: bulk_service | This sample has been used for a decision already; draw a new one. | हा नमुना आधीच एका निर्णयासाठी वापरला गेला आहे; नवीन काढा. |
+| `Sf0f02c` | message: bulk_service | This sample is closed. | हा नमुना बंद आहे. |
+| `Sf973bd` | message: bulk_service | This sample is older than 24 hours; draw a new one. | हा नमुना 24 तासांपेक्षा जुना आहे; नवीन काढा. |
+| `S062a13` | message: bulk_service | This sample was replaced by a newer one. | या नमुन्याची जागा नव्या नमुन्याने घेतली आहे. |
 | `Sca2391` | message: change_request_service | A comment must be between 1 and 4000 characters. | टिप्पणी १ ते ४००० अक्षरांदरम्यान असावी. |
 | `S33cd99` | message: change_request_service | At least one Turbine Platform is required before Submit for Review (FR-023a). | पुनरावलोकनासाठी सादर करण्यापूर्वी किमान एक टर्बाइन प्लॅटफॉर्म आवश्यक आहे (FR-023a). |
 | `S1fd35e` | message: change_request_service | decision must be APPROVE or REJECT. | decision हे APPROVE किंवा REJECT असावे. |
@@ -7392,7 +7736,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sbd3a03` | message: change_request_service | reviewer_id must be an active user with the Reviewer role. | reviewer_id हा पुनरावलोकक भूमिका असलेला सक्रिय वापरकर्ता असावा. |
 | `S043693` | message: change_request_service | The Reviewer has already signed off this CR. | पुनरावलोककाने या बदल विनंतीवर आधीच साइन ऑफ केले आहे. |
 | `S7a758c` | message: change_set_service | A change set needs a name of 1-120 characters. | बदल संचाला १-१२० अक्षरांचे नाव लागते. |
-| `Sf74baa` | message: change_set_service | Change set not found | बदल संच सापडला नाही |
 | `Sd8fad1` | message: change_set_service | Only a CR that is still open can join a change set. | फक्त अजूनही खुली बदल विनंती बदल संचात सामील होऊ शकते. |
 | `S990d51` | message: change_set_service | Only the author of the CR or an Administrator may group it. | फक्त बदल विनंतीचा लेखक किंवा प्रशासक तिचे गटीकरण करू शकतो. |
 | `S69e4d1` | message: change_set_service | Only the author of the CR or an Administrator may ungroup it. | फक्त बदल विनंतीचा लेखक किंवा प्रशासक तिला गटातून काढू शकतो. |
@@ -7478,6 +7821,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sdb88ba` | message: saved_search_service | Saved search not found | जतन केलेला शोध सापडला नाही |
 | `S046aff` | message: saved_search_service | This saved search belongs to someone else. | हा जतन केलेला शोध दुसऱ्या कोणाचा आहे. |
 | `Saad8e2` | message: settings_service | must be a whole number between 0 and 100 | ० ते १०० दरम्यानची पूर्ण संख्या असावी |
+| `S9625d1` | message: settings_service | must be a whole number between 1 and 100 | 1 ते 100 मधील पूर्ण संख्या असावी |
 | `S6e4015` | message: settings_service | must be a whole number between 1 and 365 | १ ते ३६५ दरम्यानची पूर्ण संख्या असावी |
 | `S9671fb` | message: settings_service | must be true or false | true किंवा false असावे |
 | `S5166bb` | message: st_import_service | A staged file changed after the preview. Upload again. | पूर्वावलोकनानंतर एक स्टेज केलेली फाइल बदलली. पुन्हा अपलोड करा. |
@@ -7675,7 +8019,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S6daf16` | st_preview | Preview: status codes from .st files | पूर्वावलोकन: .st फाइलमधील स्थिती कोड |
 | `S15a21a` | st_preview | program(s) | प्रोग्राम |
 | `Se58289` | st_preview | Programs found in the uploaded files | अपलोड केलेल्या फाइलमध्ये सापडलेले प्रोग्राम |
-| `S75c053` | st_preview | ready | तयार |
+| `S75c053` | st_preview, workbench | ready | तयार |
 | `S0723bf` | st_preview | Select all programs that are ready | सर्व तयार प्रोग्राम निवडा |
 | `S1a767a` | st_preview | updates the open Draft | खुला मसुदा अद्ययावत करते |
 | `S02499f` | st_preview | withdrawn | मागे घेतलेले |
@@ -7774,10 +8118,44 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S8516a7` | withdrawn_codes | Delete selected | निवडलेले हटवा |
 | `Sdfeb06` | withdrawn_codes | No withdrawn codes. | मागे घेतलेला कोणताही कोड नाही. |
 | `S87ec0b` | withdrawn_codes | Withdrawn on | मागे घेतल्याची तारीख |
+| `S48d260` | workbench | %(n)s of %(total)s codes drawn at %(when)s. | %(n)s / %(total)s कोड %(when)s रोजी निवडले. |
+| `S88b55f` | workbench | Approve the batch | बॅच मंजूर करा |
+| `Sf40e77` | workbench | Available group | उपलब्ध गट |
+| `S99613c` | workbench | Blocked | अवरोधित |
+| `Sca7133` | workbench | Choose the step you are about to decide, draw the sample, look at every sampled code and mark it. The sample is yours, valid for 24 hours and for this batch as it is now. | ज्या टप्प्यावर निर्णय घेणार तो निवडा, नमुना काढा, निवडलेला प्रत्येक कोड पाहा आणि चिन्हांकित करा. नमुना तुमचा आहे, 24 तासांसाठी आणि या बॅचसाठी आता आहे तसा वैध आहे. |
+| `S6f4274` | workbench | Codes in this batch | या बॅचमधील कोड |
+| `S117313` | workbench | Decide the batch | बॅचवर निर्णय घ्या |
+| `Se91aff` | workbench | Defect | दोष |
+| `S16fbbf` | workbench | Domain sign-off | डोमेन साइन-ऑफ |
+| `Scb1884` | workbench | Dossier (XLSX) | डॉसियर (XLSX) |
+| `S25085f` | workbench | Draw a sample | नमुना काढा |
+| `S9167a7` | workbench | Engineering domain | अभियांत्रिकी डोमेन |
+| `Sbc3c59` | workbench | Only the values you choose are changed, on the Drafts you wrote (an Administrator: any Draft). | फक्त तुम्ही निवडलेली मूल्ये बदलतात, तुम्ही लिहिलेल्या मसुद्यांवर (प्रशासक: कोणताही मसुदा). |
+| `S92223f` | workbench | Passed: no defect in the sample. Use sample number %(id)s below. | उत्तीर्ण: नमुन्यात दोष नाही. खाली नमुना क्रमांक %(id)s वापरा. |
+| `S6275ab` | workbench | Ready to submit | सादर करण्यास तयार |
+| `Se1e74d` | workbench | Reject the batch | बॅच नाकारा |
+| `S58fabf` | workbench | Sample | नमुना |
+| `S862471` | workbench | Sample inspection | नमुना तपासणी |
+| `S69cc53` | workbench | Save the verdicts | निर्णय जतन करा |
+| `S3ae55b` | workbench | Send the defective codes back | दोषपूर्ण कोड परत पाठवा |
+| `Se90e7c` | workbench | Set on the Drafts | मसुद्यांवर सेट करा |
+| `Sa58dac` | workbench | Set values on the Drafts | मसुद्यांवर मूल्ये सेट करा |
+| `Sa443bb` | workbench | Sign off the Drafts | मसुद्यांचा साइन-ऑफ करा |
+| `S53f47f` | workbench | Sign-off pending | साइन-ऑफ प्रलंबित |
+| `Sae12bc` | workbench | Status category | स्थिती वर्ग |
+| `Sdc416e` | workbench | Step | टप्पा |
+| `Sf7710d` | workbench | Submit for review | पुनरावलोकनासाठी सादर करा |
+| `Sa45adc` | workbench | Submit the Drafts | मसुदे सादर करा |
+| `S2d099f` | workbench | Submits the Drafts you wrote. A Draft that still lacks a platform or a domain sign-off is reported and left as it is. | तुम्ही लिहिलेले मसुदे सादर करते. ज्या मसुद्यात अजून प्लॅटफॉर्म किंवा डोमेन साइन-ऑफ नाही, त्याची नोंद केली जाते आणि तो जसा आहे तसा सोडला जातो. |
+| `S5baa27` | workbench | The sample has defects, so the batch cannot be decided as it is. Send the defective codes back (the note is the reason), then draw a new sample of what is left. | नमुन्यात दोष आहेत, म्हणून बॅचवर आहे तसा निर्णय घेता येत नाही. दोषपूर्ण कोड परत पाठवा (नोंद हेच कारण), मग उरलेल्यांतून नवीन नमुना काढा. |
+| `S19f8ab` | workbench | Tick the codes an action is for; with none ticked an action covers every code it applies to. | ज्या कोडसाठी कृती आहे त्यावर खूण करा; कोणतीही खूण नसल्यास कृती लागू होणाऱ्या सर्व कोडवर लागू होते. |
+| `S7f6e5a` | workbench | Verdict | निर्णय |
+| `Se6246f` | workbench | What stops it | त्याला काय थांबवते |
+| `Sbf45e2` | workbench | Work on many codes at once without weakening a step: every code still gets its own checks, its own audit entry and, for decisions, your password. A decision on more than %(above)s codes needs a sample inspection first: %(percent)s percent of the batch, at least %(minimum)s codes, spread over the subgroups. One defect in the sample stops the decision. | एखादा टप्पा कमकुवत न करता अनेक कोडवर एकाच वेळी काम करा: प्रत्येक कोडला त्याच्या स्वतःच्या तपासण्या, स्वतःची ऑडिट नोंद आणि निर्णयांसाठी तुमचा पासवर्ड मिळतो. %(above)s पेक्षा जास्त कोडवरील निर्णयासाठी आधी नमुना तपासणी लागते: बॅचच्या %(percent)s टक्के, किमान %(minimum)s कोड, उपगटांत विखुरलेले. नमुन्यातील एक दोष निर्णय थांबवतो. |
 
 ### 9.8 IN తెలుగు 🇮🇳 — Telugu
 
-1216 of 1217 strings translated; direction left to right.
+1279 of 1280 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -7977,7 +8355,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Scfa1b6` | detail | Add field comment | ఫీల్డ్ వ్యాఖ్య జోడించండి |
 | `Sbb965e` | detail | Add one of your change requests | మీ మార్పు అభ్యర్థనలలో ఒకదాన్ని జోడించండి |
 | `S9a693b` | detail | Add to change set | మార్పుల సమితికి జోడించండి |
-| `S7bbd6d` | detail | Administrator sign-off | నిర్వాహకుడి సైన్-ఆఫ్ |
+| `S7bbd6d` | detail, workbench | Administrator sign-off | నిర్వాహకుడి సైన్-ఆఫ్ |
 | `S212856` | detail | advanced, controller firmware programs | అధునాతన, కంట్రోలర్ ఫర్మ్‌వేర్ ప్రోగ్రామ్‌లు |
 | `Sfbde82` | detail | Affected component | ప్రభావిత భాగం |
 | `S25f8c5` | detail, export, form | Alarm | అలారం |
@@ -8006,17 +8384,17 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se7bab1` | detail | Chain of causes | కారణాల గొలుసు |
 | `S9c8393` | detail, mine | Change Request | మార్పు అభ్యర్థన |
 | `S4572f4` | detail | Change request | మార్పు అభ్యర్థన |
-| `S3295be` | detail | Change requests in this set | ఈ సమితిలోని మార్పు అభ్యర్థనలు |
+| `S3295be` | detail, workbench | Change requests in this set | ఈ సమితిలోని మార్పు అభ్యర్థనలు |
 | `S4d8006` | detail | Change set | మార్పుల సమితి |
 | `S8aa57d` | detail | Changes | మార్పులు |
 | `S3d14ea` | detail, export | Changes of this release only | ఈ విడుదల మార్పులు మాత్రమే |
 | `Sbd95c0` | detail | Checklist confirmed at sign-off | సైన్-ఆఫ్ సమయంలో నిర్ధారించిన చెక్‌లిస్ట్ |
 | `S074d62` | detail, role badge | Chief Engineer | చీఫ్ ఇంజనీర్ |
-| `S03695d` | detail | Chief Engineer decision | చీఫ్ ఇంజనీర్ నిర్ణయం |
+| `S03695d` | detail, workbench | Chief Engineer decision | చీఫ్ ఇంజనీర్ నిర్ణయం |
 | `Sf0a89f` | detail | Close change set | మార్పుల సమితిని మూసివేయండి |
 | `S7c0c39` | detail | Close this change set? | ఈ మార్పుల సమితిని మూసివేయాలా? |
 | `S153d7a` | detail | Comment | వ్యాఖ్య |
-| `S611578` | detail | Comment (required for rejection) | వ్యాఖ్య (తిరస్కరణకు తప్పనిసరి) |
+| `S611578` | detail, workbench | Comment (required for rejection) | వ్యాఖ్య (తిరస్కరణకు తప్పనిసరి) |
 | `Sc38432` | detail | Comment on this field | ఈ ఫీల్డ్‌పై వ్యాఖ్యానించండి |
 | `Sfce06e` | detail | Comments | వ్యాఖ్యలు |
 | `S8d105c` | detail, reconciliation | Compare | పోల్చండి |
@@ -8042,7 +8420,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S0e8574` | detail | Customer | కస్టమర్ |
 | `Scb307e` | detail | Decide the selected requests in one sitting | ఎంచుకున్న అభ్యర్థనలపై ఒకే సమావేశంలో నిర్ణయించండి |
 | `S319493` | detail | Decided by | నిర్ణయించినవారు |
-| `S7f59a1` | detail | Decision | నిర్ణయం |
+| `S7f59a1` | detail, workbench | Decision | నిర్ణయం |
 | `Sc51568` | detail | Decisions & Comments | నిర్ణయాలు మరియు వ్యాఖ్యలు |
 | `Sa9ec7c` | detail | Delete Permanently | శాశ్వతంగా తొలగించండి |
 | `S7d1c7a` | detail | Delete Release | విడుదలను తొలగించండి |
@@ -8108,6 +8486,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S6d59f4` | detail | Manual Reset Program | మాన్యువల్ రీసెట్ ప్రోగ్రామ్ |
 | `Sf9896c` | detail, form | Mark resolved | పరిష్కరించినట్లు గుర్తించండి |
 | `Sa7b93d` | detail, new, reconciliation | Mode | మోడ్ |
+| `S9f4d01` | detail | More than a few codes need a sample inspection first; use the workbench. | కొన్ని కోడ్‌ల కంటే ఎక్కువకు ముందుగా నమూనా తనిఖీ అవసరం; వర్క్‌బెంచ్ ఉపయోగించండి. |
 | `S31a335` | detail | new code | కొత్త కోడ్ |
 | `S816c52` | detail, export_verify, form | No | కాదు |
 | `S06fc8d` | detail | No active Engineer holds the %(code)s domain yet. An Administrator must tag an Engineer with it (Administration → Users) before a sign-off can be requested. | ఏ సక్రియ ఇంజనీర్‌కూ %(code)s డొమైన్ లేదు. సైన్-ఆఫ్ అభ్యర్థించే ముందు నిర్వాహకుడు ఒక ఇంజనీర్‌కు ఈ డొమైన్ ఇవ్వాలి (నిర్వహణ → వినియోగదారులు). |
@@ -8138,7 +8517,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S9734ac` | detail | Other codes that refer to this one. Review them before deprecating it. | దీన్ని సూచించే ఇతర కోడ్‌లు. వాడుకలో లేనిదిగా చేసే ముందు వాటిని సమీక్షించండి. |
 | `S780d35` | detail | Override identifier (migration / reservation only) | గుర్తింపును ఓవర్‌రైడ్ చేయండి (మైగ్రేషన్ / రిజర్వేషన్ మాత్రమే) |
 | `S89ff31` | detail | Owner | యజమాని |
-| `S2d20ee` | detail | Package overview | ప్యాకేజీ అవలోకనం |
+| `S2d20ee` | detail, workbench | Package overview | ప్యాకేజీ అవలోకనం |
 | `S4d1a47` | detail | Package: all languages and access levels | ప్యాకేజీ: అన్ని భాషలు, యాక్సెస్ స్థాయిలు |
 | `Sc49bd0` | detail | Packages of this Release | ఈ విడుదల ప్యాకేజీలు |
 | `S96f608` | detail, review_queue | Pending | పెండింగ్ |
@@ -8183,12 +8562,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S026ab2` | detail | resolved | పరిష్కరించబడింది |
 | `S68c61f` | detail | Rev # | పునర్వి. సం. |
 | `Se4758b` | detail, review_checklist | Review checklist | సమీక్ష చెక్‌లిస్ట్ |
-| `S7bfca8` | detail | Reviewer sign-off | సమీక్షకుడి సైన్-ఆఫ్ |
+| `S7bfca8` | detail, workbench | Reviewer sign-off | సమీక్షకుడి సైన్-ఆఫ్ |
 | `S3beb9a` | detail | Revision | పునర్విమర్శ |
 | `Sa72973` | detail | Revision Fields | పునర్విమర్శ ఫీల్డ్‌లు |
 | `Sfc1d6a` | detail | row(s) imported as Drafts | వరుసలు ముసాయిదాలుగా దిగుమతి అయ్యాయి |
 | `S52d0b3` | detail, reconciliation, user_detail | Rows | వరుసలు |
 | `Sd0edfb` | detail | Sales | అమ్మకాలు |
+| `S241bf5` | detail, workbench | Sample number | నమూనా సంఖ్య |
 | `Sda38c6` | detail | Save planned dates | ప్రణాళిక చేసిన తేదీలను సేవ్ చేయండి |
 | `S13c61c` | detail | Scope Filter | పరిధి ఫిల్టర్ |
 | `S859822` | detail, mine, withdrawn_codes | Select | ఎంచుకోండి |
@@ -8250,11 +8630,12 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S7d5316` | detail | Who | ఎవరు |
 | `S47e564` | detail | Withdraw | ఉపసంహరించండి |
 | `S51a998` | detail | Withdraw this change request? | ఈ మార్పు అభ్యర్థనను ఉపసంహరించాలా? |
+| `S93ef7c` | detail, workbench | Workbench | వర్క్‌బెంచ్ |
 | `S95a2a4` | detail, form | Write level | రాసే స్థాయి |
 | `S612fe0` | detail | Yaw Bearing Lubrication Program | యా బేరింగ్ లూబ్రికేషన్ ప్రోగ్రామ్ |
 | `S559a3f` | detail | Yaw Program | యా ప్రోగ్రామ్ |
 | `S5397e0` | detail, export_verify, form | Yes | అవును |
-| `Sc8e4b4` | detail | Your decision step | మీ నిర్ణయ దశ |
+| `Sc8e4b4` | detail, workbench | Your decision step | మీ నిర్ణయ దశ |
 | `S20cb4c` | detail, export_center | ZIP with manifest | మానిఫెస్ట్‌తో ZIP |
 | `S5d4358` | dry_run | All rows are clean. | అన్ని వరుసలు శుభ్రంగా ఉన్నాయి. |
 | `S03510d` | dry_run | Back to import | దిగుమతికి తిరిగి వెళ్ళండి |
@@ -8281,7 +8662,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S7b8d80` | export | Not for distribution - unapproved data | పంపిణీ కోసం కాదు - ఆమోదించని డేటా |
 | `Sd9b345` | export | not yet published | ఇంకా ప్రచురించలేదు |
 | `Sa5d386` | export | Page %(page)s of %(total)s | పేజీ %(page)s / %(total)s |
-| `Sac1a42` | export | Platforms | ప్లాట్‌ఫారమ్‌లు |
+| `Sac1a42` | export, workbench | Platforms | ప్లాట్‌ఫారమ్‌లు |
 | `Se51c55` | export | Records | రికార్డులు |
 | `Sd41f56` | export, export_center | Release | విడుదల |
 | `S2e8fd6` | export | Reset delay | రీసెట్ ఆలస్యం |
@@ -8333,7 +8714,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S45ea95` | export_verify | Manifest signature | మానిఫెస్ట్ సంతకం |
 | `S08f84b` | export_verify | No record of this exact file | ఖచ్చితంగా ఈ ఫైల్‌కు రికార్డు లేదు |
 | `S357953` | export_verify | NOT OK | సరిగా లేదు |
-| `S9ce3bd` | export_verify | OK | సరే |
+| `S9ce3bd` | export_verify, workbench | OK | సరే |
 | `S8a5285` | export_verify | Overall | మొత్తంగా |
 | `Sd2bc4a` | export_verify | Produced by this system | ఈ వ్యవస్థ తయారు చేసినది |
 | `S112d15` | export_verify | Verify an export | ఎగుమతిని ధృవీకరించండి |
@@ -8407,10 +8788,16 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S689b33` | help | The full manual is docs/23-user-manual.md in the project folder; the glossary below is the same one the tooltips use. | పూర్తి మాన్యువల్ ప్రాజెక్ట్ ఫోల్డర్‌లో docs/23-user-manual.md; క్రింది పదకోశం టూల్‌టిప్‌లు ఉపయోగించేదే. |
 | `S439914` | help | What happens next on a change request | మార్పు అభ్యర్థనపై తర్వాత ఏం జరుగుతుంది |
 | `S6d29d9` | help and messages | %(n)s withdrawn code(s) deleted. | %(n)s ఉపసంహరించిన కోడ్‌లు తొలగించబడ్డాయి. |
+| `S285edc` | help and messages | %(ok)s of %(n)s: %(what)s. | %(ok)s / %(n)s: %(what)s. |
 | `Sb08e6c` | help and messages | A Reviewer and an Administrator each sign off (in any order). If either rejects, it goes back to the author. | ఒక సమీక్షకుడు మరియు ఒక నిర్వాహకుడు ఒక్కొక్కరు సైన్ ఆఫ్ చేస్తారు (ఏ క్రమంలోనైనా). ఎవరైనా తిరస్కరిస్తే అది రచయితకు తిరిగి వెళ్తుంది. |
 | `S2f1bed` | help and messages | An Administrator includes the revision in a Release and publishes it; then it is Released. | నిర్వాహకుడు పునర్విమర్శను విడుదలలో చేర్చి ప్రచురిస్తారు; అప్పుడు అది విడుదల చేసినదవుతుంది. |
+| `S1308dc` | help and messages | defective codes sent back | లోపభూయిష్ట కోడ్‌లు వెనక్కి పంపబడ్డాయి |
+| `Se2bbd9` | help and messages | Drafts saved | ముసాయిదాలు సేవ్ చేయబడ్డాయి |
+| `S0ddfa5` | help and messages | Drafts signed off | ముసాయిదాలకు సైన్-ఆఫ్ ఇవ్వబడింది |
+| `Sf90ab8` | help and messages | Drafts submitted for review | ముసాయిదాలు సమీక్ష కోసం సమర్పించబడ్డాయి |
 | `Sd856bd` | help and messages | Not deleted (it has a revision again or is still referenced): %(x)s | తొలగించలేదు (దానికి మళ్లీ సవరణ ఉంది లేదా ఇంకా సూచన ఉంది): %(x)s |
 | `S34b903` | help and messages | Not possible: the account has history (see above). Deactivate it instead; the person can no longer sign in and everything they did stays attributable. | సాధ్యం కాదు: ఖాతాకు చరిత్ర ఉంది (పైన చూడండి). బదులుగా నిష్క్రియం చేయండి; ఆ వ్యక్తి ఇక సైన్ ఇన్ చేయలేరు మరియు వారు చేసినదంతా బాధ్యతతో నిలిచి ఉంటుంది. |
+| `S6a26de` | help and messages | Sample %(id)s drawn: %(n)s of %(total)s codes to inspect. | నమూనా %(id)s తీయబడింది: %(n)s / %(total)s కోడ్‌లు తనిఖీ చేయాలి. |
 | `Sce489f` | help and messages | The author gets any required cross-domain sign-offs, then submits the change request for review. | రచయిత అవసరమైన క్రాస్-డొమైన్ సైన్-ఆఫ్‌లు పొంది, తర్వాత మార్పు అభ్యర్థనను సమీక్ష కోసం సమర్పిస్తారు. |
 | `S1cdbdd` | help and messages | The Chief Engineer approves or rejects. Approval makes the revision Approved (or Deprecated for a deprecation request). | చీఫ్ ఇంజనీర్ ఆమోదిస్తారు లేదా తిరస్కరిస్తారు. ఆమోదం పునర్విమర్శను ఆమోదించినదిగా (లేదా వాడుకలో లేని అభ్యర్థనకు వాడుకలో లేనిదిగా) చేస్తుంది. |
 | `S2d6ac0` | help and messages | The package is being built. Reload this page to follow its progress. | ప్యాకేజీ రూపొందుతోంది. పురోగతిని చూడటానికి ఈ పేజీని మళ్లీ లోడ్ చేయండి. |
@@ -8483,7 +8870,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sded18c` | language | approved by | ఆమోదించినవారు |
 | `Sedd46e` | language | Check against the interface | ఇంటర్‌ఫేస్‌తో సరిపోల్చండి |
 | `S5a013c` | language | missing | లేనిది |
-| `S2c924e` | language | Note | గమనిక |
+| `S2c924e` | language, workbench | Note | గమనిక |
 | `S2f09d0` | language | Note on %(x)s | %(x)s గురించి గమనిక |
 | `S75bf99` | language | proposed by | ప్రతిపాదించినవారు |
 | `Sc68e32` | language | Save translations | అనువాదాలను సేవ్ చేయండి |
@@ -8605,6 +8992,26 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se146d2` | message: auth_service | Your account is not active. | మీ ఖాతా సక్రియంగా లేదు. |
 | `Sb584dd` | message: backup_service | Backups need a file-based SQLite database. | బ్యాకప్‌లకు ఫైల్ ఆధారిత SQLite డేటాబేస్ అవసరం. |
 | `S368c82` | message: backup_service | keep must be at least 1 | keep కనీసం 1 ఉండాలి |
+| `S18edaf` | message: bulk_service | A defect needs a note: say what is wrong. | లోపానికి గమనిక అవసరం: ఏది తప్పో చెప్పండి. |
+| `S68cada` | message: bulk_service, workbench | A defective Draft is corrected by its author. | లోపభూయిష్ట ముసాయిదాను దాని రచయిత సరిచేస్తారు. |
+| `S8941d5` | message: bulk_service | A domain sign-off needs the engineering domain. | డొమైన్ సైన్-ఆఫ్‌కు ఇంజనీరింగ్ డొమైన్ అవసరం. |
+| `S071452` | message: bulk_service | A note has at most 1000 characters. | ఒక గమనికలో గరిష్టంగా 1000 అక్షరాలు ఉంటాయి. |
+| `Sf74baa` | message: bulk_service, message: change_set_service | Change set not found | మార్పుల సమితి కనబడలేదు |
+| `Sf89067` | message: bulk_service | Choose at least one value to set. | సెట్ చేయడానికి కనీసం ఒక విలువను ఎంచుకోండి. |
+| `S1e3e33` | message: bulk_service | No change request of the set is waiting for you at this step. | సెట్‌లో ఏ మార్పు అభ్యర్థన కూడా ఈ దశలో మీ కోసం వేచి ఉండలేదు. |
+| `S95bd2d` | message: bulk_service | No Draft of the set is waiting for the sign-off of this domain. | సెట్‌లో ఏ ముసాయిదా కూడా ఈ డొమైన్ సైన్-ఆఫ్ కోసం వేచి ఉండలేదు. |
+| `S495371` | message: bulk_service | Only a sample with defects can be sent back. | లోపాలున్న నమూనాను మాత్రమే వెనక్కి పంపవచ్చు. |
+| `Sa6e3b3` | message: bulk_service | Sample not found | నమూనా కనబడలేదు |
+| `Sf745cc` | message: bulk_service | step must be domain, reviewer, admin or chief-engineer | step తప్పనిసరిగా domain, reviewer, admin లేదా chief-engineer అయి ఉండాలి |
+| `S973577` | message: bulk_service | That change request is not in the sample. | ఆ మార్పు అభ్యర్థన నమూనాలో లేదు. |
+| `Sa1a149` | message: bulk_service | The batch changed since the sample was drawn; draw a new sample. | నమూనా తీసినప్పటి నుండి బ్యాచ్ మారింది; కొత్త నమూనా తీయండి. |
+| `S8e5b1c` | message: bulk_service | The verdict must be OK or DEFECT. | తీర్పు OK లేదా లోపం అయి ఉండాలి. |
+| `Sddedd6` | message: bulk_service | This is not your sample: the person who decides inspects. | ఇది మీ నమూనా కాదు: నిర్ణయించేవారే తనిఖీ చేస్తారు. |
+| `Sf56c6a` | message: bulk_service | This sample belongs to another change set or another step. | ఈ నమూనా మరో మార్పుల సమితికి లేదా మరో దశకు చెందినది. |
+| `S146a72` | message: bulk_service | This sample has been used for a decision already; draw a new one. | ఈ నమూనా ఇప్పటికే ఒక నిర్ణయానికి ఉపయోగించబడింది; కొత్తది తీయండి. |
+| `Sf0f02c` | message: bulk_service | This sample is closed. | ఈ నమూనా మూసివేయబడింది. |
+| `Sf973bd` | message: bulk_service | This sample is older than 24 hours; draw a new one. | ఈ నమూనా 24 గంటల కంటే పాతది; కొత్తది తీయండి. |
+| `S062a13` | message: bulk_service | This sample was replaced by a newer one. | ఈ నమూనా స్థానంలో కొత్తది వచ్చింది. |
 | `Sca2391` | message: change_request_service | A comment must be between 1 and 4000 characters. | వ్యాఖ్య 1 నుండి 4000 అక్షరాల మధ్య ఉండాలి. |
 | `S33cd99` | message: change_request_service | At least one Turbine Platform is required before Submit for Review (FR-023a). | సమీక్ష కోసం సమర్పించే ముందు కనీసం ఒక టర్బైన్ ప్లాట్‌ఫారమ్ అవసరం (FR-023a). |
 | `S1fd35e` | message: change_request_service | decision must be APPROVE or REJECT. | decision తప్పనిసరిగా APPROVE లేదా REJECT అయి ఉండాలి. |
@@ -8615,7 +9022,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sbd3a03` | message: change_request_service | reviewer_id must be an active user with the Reviewer role. | reviewer_id సమీక్షకుడి పాత్ర ఉన్న సక్రియ వినియోగదారు అయి ఉండాలి. |
 | `S043693` | message: change_request_service | The Reviewer has already signed off this CR. | సమీక్షకుడు ఈ మార్పు అభ్యర్థనపై ఇప్పటికే సైన్ ఆఫ్ చేశారు. |
 | `S7a758c` | message: change_set_service | A change set needs a name of 1-120 characters. | మార్పుల సమితికి 1-120 అక్షరాల పేరు అవసరం. |
-| `Sf74baa` | message: change_set_service | Change set not found | మార్పుల సమితి కనబడలేదు |
 | `Sd8fad1` | message: change_set_service | Only a CR that is still open can join a change set. | ఇంకా తెరిచి ఉన్న మార్పు అభ్యర్థన మాత్రమే మార్పుల సమితిలో చేరగలదు. |
 | `S990d51` | message: change_set_service | Only the author of the CR or an Administrator may group it. | మార్పు అభ్యర్థన రచయిత లేదా నిర్వాహకుడు మాత్రమే దాన్ని సమూహపరచగలరు. |
 | `S69e4d1` | message: change_set_service | Only the author of the CR or an Administrator may ungroup it. | మార్పు అభ్యర్థన రచయిత లేదా నిర్వాహకుడు మాత్రమే దాన్ని సమూహం నుండి తొలగించగలరు. |
@@ -8701,6 +9107,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sdb88ba` | message: saved_search_service | Saved search not found | సేవ్ చేసిన శోధన కనబడలేదు |
 | `S046aff` | message: saved_search_service | This saved search belongs to someone else. | ఈ సేవ్ చేసిన శోధన మరొకరికి చెందినది. |
 | `Saad8e2` | message: settings_service | must be a whole number between 0 and 100 | 0 మరియు 100 మధ్య పూర్ణ సంఖ్య అయి ఉండాలి |
+| `S9625d1` | message: settings_service | must be a whole number between 1 and 100 | 1 మరియు 100 మధ్య పూర్ణ సంఖ్య అయి ఉండాలి |
 | `S6e4015` | message: settings_service | must be a whole number between 1 and 365 | 1 మరియు 365 మధ్య పూర్ణ సంఖ్య అయి ఉండాలి |
 | `S9671fb` | message: settings_service | must be true or false | true లేదా false అయి ఉండాలి |
 | `S5166bb` | message: st_import_service | A staged file changed after the preview. Upload again. | ప్రివ్యూ తర్వాత స్టేజ్ చేసిన ఫైల్ మారింది. మళ్ళీ అప్‌లోడ్ చేయండి. |
@@ -8898,7 +9305,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S6daf16` | st_preview | Preview: status codes from .st files | ప్రివ్యూ: .st ఫైళ్ల నుండి స్థితి కోడ్‌లు |
 | `S15a21a` | st_preview | program(s) | ప్రోగ్రామ్‌లు |
 | `Se58289` | st_preview | Programs found in the uploaded files | అప్‌లోడ్ చేసిన ఫైళ్లలో దొరికిన ప్రోగ్రామ్‌లు |
-| `S75c053` | st_preview | ready | సిద్ధం |
+| `S75c053` | st_preview, workbench | ready | సిద్ధం |
 | `S0723bf` | st_preview | Select all programs that are ready | సిద్ధంగా ఉన్న అన్ని ప్రోగ్రామ్‌లను ఎంచుకోండి |
 | `S1a767a` | st_preview | updates the open Draft | తెరిచిన ముసాయిదాను నవీకరిస్తుంది |
 | `S02499f` | st_preview | withdrawn | ఉపసంహరించినవి |
@@ -8997,10 +9404,44 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S8516a7` | withdrawn_codes | Delete selected | ఎంచుకున్నవి తొలగించండి |
 | `Sdfeb06` | withdrawn_codes | No withdrawn codes. | ఉపసంహరించిన కోడ్‌లు లేవు. |
 | `S87ec0b` | withdrawn_codes | Withdrawn on | ఉపసంహరించిన తేదీ |
+| `S48d260` | workbench | %(n)s of %(total)s codes drawn at %(when)s. | %(n)s / %(total)s కోడ్‌లు %(when)s న తీయబడ్డాయి. |
+| `S88b55f` | workbench | Approve the batch | బ్యాచ్‌ను ఆమోదించండి |
+| `Sf40e77` | workbench | Available group | అందుబాటులో ఉన్న సమూహం |
+| `S99613c` | workbench | Blocked | నిరోధించబడింది |
+| `Sca7133` | workbench | Choose the step you are about to decide, draw the sample, look at every sampled code and mark it. The sample is yours, valid for 24 hours and for this batch as it is now. | మీరు నిర్ణయించబోయే దశను ఎంచుకోండి, నమూనా తీయండి, తీసిన ప్రతి కోడ్‌ను చూసి గుర్తించండి. నమూనా మీదే, 24 గంటలు మరియు ఇప్పుడున్న ఈ బ్యాచ్‌కు చెల్లుతుంది. |
+| `S6f4274` | workbench | Codes in this batch | ఈ బ్యాచ్‌లోని కోడ్‌లు |
+| `S117313` | workbench | Decide the batch | బ్యాచ్‌పై నిర్ణయించండి |
+| `Se91aff` | workbench | Defect | లోపం |
+| `S16fbbf` | workbench | Domain sign-off | డొమైన్ సైన్-ఆఫ్ |
+| `Scb1884` | workbench | Dossier (XLSX) | డోసియర్ (XLSX) |
+| `S25085f` | workbench | Draw a sample | నమూనా తీయండి |
+| `S9167a7` | workbench | Engineering domain | ఇంజనీరింగ్ డొమైన్ |
+| `Sbc3c59` | workbench | Only the values you choose are changed, on the Drafts you wrote (an Administrator: any Draft). | మీరు ఎంచుకున్న విలువలు మాత్రమే మారతాయి, మీరు రాసిన ముసాయిదాలపై (నిర్వాహకుడు: ఏ ముసాయిదా అయినా). |
+| `S92223f` | workbench | Passed: no defect in the sample. Use sample number %(id)s below. | ఉత్తీర్ణం: నమూనాలో లోపం లేదు. కింద నమూనా సంఖ్య %(id)s ఉపయోగించండి. |
+| `S6275ab` | workbench | Ready to submit | సమర్పించడానికి సిద్ధం |
+| `Se1e74d` | workbench | Reject the batch | బ్యాచ్‌ను తిరస్కరించండి |
+| `S58fabf` | workbench | Sample | నమూనా |
+| `S862471` | workbench | Sample inspection | నమూనా తనిఖీ |
+| `S69cc53` | workbench | Save the verdicts | తీర్పులను సేవ్ చేయండి |
+| `S3ae55b` | workbench | Send the defective codes back | లోపభూయిష్ట కోడ్‌లను వెనక్కి పంపండి |
+| `Se90e7c` | workbench | Set on the Drafts | ముసాయిదాలపై సెట్ చేయండి |
+| `Sa58dac` | workbench | Set values on the Drafts | ముసాయిదాలపై విలువలు సెట్ చేయండి |
+| `Sa443bb` | workbench | Sign off the Drafts | ముసాయిదాలకు సైన్-ఆఫ్ ఇవ్వండి |
+| `S53f47f` | workbench | Sign-off pending | సైన్-ఆఫ్ పెండింగ్ |
+| `Sae12bc` | workbench | Status category | స్థితి వర్గం |
+| `Sdc416e` | workbench | Step | దశ |
+| `Sf7710d` | workbench | Submit for review | సమీక్ష కోసం సమర్పించండి |
+| `Sa45adc` | workbench | Submit the Drafts | ముసాయిదాలను సమర్పించండి |
+| `S2d099f` | workbench | Submits the Drafts you wrote. A Draft that still lacks a platform or a domain sign-off is reported and left as it is. | మీరు రాసిన ముసాయిదాలను సమర్పిస్తుంది. ఇంకా ప్లాట్‌ఫారమ్ లేదా డొమైన్ సైన్-ఆఫ్ లేని ముసాయిదా గురించి తెలియజేసి, అది ఉన్నట్లే వదిలేస్తారు. |
+| `S5baa27` | workbench | The sample has defects, so the batch cannot be decided as it is. Send the defective codes back (the note is the reason), then draw a new sample of what is left. | నమూనాలో లోపాలున్నాయి, కాబట్టి బ్యాచ్‌ను ఇలాగే నిర్ణయించలేము. లోపభూయిష్ట కోడ్‌లను వెనక్కి పంపండి (గమనికే కారణం), తర్వాత మిగిలిన వాటి నుండి కొత్త నమూనా తీయండి. |
+| `S19f8ab` | workbench | Tick the codes an action is for; with none ticked an action covers every code it applies to. | చర్య వర్తించే కోడ్‌లను టిక్ చేయండి; ఏదీ టిక్ చేయకపోతే చర్య వర్తించగల అన్ని కోడ్‌లకూ వర్తిస్తుంది. |
+| `S7f6e5a` | workbench | Verdict | తీర్పు |
+| `Se6246f` | workbench | What stops it | దీనిని ఏది ఆపుతోంది |
+| `Sbf45e2` | workbench | Work on many codes at once without weakening a step: every code still gets its own checks, its own audit entry and, for decisions, your password. A decision on more than %(above)s codes needs a sample inspection first: %(percent)s percent of the batch, at least %(minimum)s codes, spread over the subgroups. One defect in the sample stops the decision. | ఏ దశనూ బలహీనపరచకుండా అనేక కోడ్‌లపై ఒకేసారి పని చేయండి: ప్రతి కోడ్‌కు దాని స్వంత తనిఖీలు, స్వంత ఆడిట్ నమోదు మరియు నిర్ణయాలకు మీ పాస్‌వర్డ్ ఉంటాయి. %(above)s కంటే ఎక్కువ కోడ్‌లపై నిర్ణయానికి ముందుగా నమూనా తనిఖీ అవసరం: బ్యాచ్‌లో %(percent)s శాతం, కనీసం %(minimum)s కోడ్‌లు, ఉప సమూహాలలో విస్తరించి. నమూనాలో ఒక్క లోపం నిర్ణయాన్ని ఆపుతుంది. |
 
 ### 9.9 IN தமிழ் 🇮🇳 — Tamil
 
-1216 of 1217 strings translated; direction left to right.
+1279 of 1280 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -9200,7 +9641,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Scfa1b6` | detail | Add field comment | புலக் கருத்தைச் சேர்க்கவும் |
 | `Sbb965e` | detail | Add one of your change requests | உங்கள் மாற்றக் கோரிக்கைகளில் ஒன்றைச் சேர்க்கவும் |
 | `S9a693b` | detail | Add to change set | மாற்றத் தொகுப்பில் சேர் |
-| `S7bbd6d` | detail | Administrator sign-off | நிர்வாகி கையொப்பம் |
+| `S7bbd6d` | detail, workbench | Administrator sign-off | நிர்வாகி கையொப்பம் |
 | `S212856` | detail | advanced, controller firmware programs | மேம்பட்ட, கட்டுப்படுத்தி நிலைபொருள் நிரல்கள் |
 | `Sfbde82` | detail | Affected component | பாதிக்கப்பட்ட கூறு |
 | `S25f8c5` | detail, export, form | Alarm | அலாரம் |
@@ -9229,17 +9670,17 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se7bab1` | detail | Chain of causes | காரணங்களின் சங்கிலி |
 | `S9c8393` | detail, mine | Change Request | மாற்றக் கோரிக்கை |
 | `S4572f4` | detail | Change request | மாற்றக் கோரிக்கை |
-| `S3295be` | detail | Change requests in this set | இந்தத் தொகுப்பிலுள்ள மாற்றக் கோரிக்கைகள் |
+| `S3295be` | detail, workbench | Change requests in this set | இந்தத் தொகுப்பிலுள்ள மாற்றக் கோரிக்கைகள் |
 | `S4d8006` | detail | Change set | மாற்றத் தொகுப்பு |
 | `S8aa57d` | detail | Changes | மாற்றங்கள் |
 | `S3d14ea` | detail, export | Changes of this release only | இந்த வெளியீட்டின் மாற்றங்கள் மட்டும் |
 | `Sbd95c0` | detail | Checklist confirmed at sign-off | கையொப்பத்தின்போது உறுதிப்படுத்தப்பட்ட சரிபார்ப்புப் பட்டியல் |
 | `S074d62` | detail, role badge | Chief Engineer | தலைமைப் பொறியாளர் |
-| `S03695d` | detail | Chief Engineer decision | தலைமைப் பொறியாளர் முடிவு |
+| `S03695d` | detail, workbench | Chief Engineer decision | தலைமைப் பொறியாளர் முடிவு |
 | `Sf0a89f` | detail | Close change set | மாற்றத் தொகுப்பை மூடு |
 | `S7c0c39` | detail | Close this change set? | இந்த மாற்றத் தொகுப்பை மூடவா? |
 | `S153d7a` | detail | Comment | கருத்து |
-| `S611578` | detail | Comment (required for rejection) | கருத்து (நிராகரிப்புக்குக் கட்டாயம்) |
+| `S611578` | detail, workbench | Comment (required for rejection) | கருத்து (நிராகரிப்புக்குக் கட்டாயம்) |
 | `Sc38432` | detail | Comment on this field | இந்தப் புலத்தில் கருத்திடுங்கள் |
 | `Sfce06e` | detail | Comments | கருத்துகள் |
 | `S8d105c` | detail, reconciliation | Compare | ஒப்பிடு |
@@ -9265,7 +9706,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S0e8574` | detail | Customer | வாடிக்கையாளர் |
 | `Scb307e` | detail | Decide the selected requests in one sitting | தேர்ந்தெடுத்த கோரிக்கைகளை ஒரே அமர்வில் முடிவு செய்யுங்கள் |
 | `S319493` | detail | Decided by | முடிவு செய்தவர் |
-| `S7f59a1` | detail | Decision | முடிவு |
+| `S7f59a1` | detail, workbench | Decision | முடிவு |
 | `Sc51568` | detail | Decisions & Comments | முடிவுகளும் கருத்துகளும் |
 | `Sa9ec7c` | detail | Delete Permanently | நிரந்தரமாக நீக்கு |
 | `S7d1c7a` | detail | Delete Release | வெளியீட்டை நீக்கு |
@@ -9331,6 +9772,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S6d59f4` | detail | Manual Reset Program | கைமுறை மீட்டமை நிரல் |
 | `Sf9896c` | detail, form | Mark resolved | தீர்க்கப்பட்டதாகக் குறி |
 | `Sa7b93d` | detail, new, reconciliation | Mode | பயன்முறை |
+| `S9f4d01` | detail | More than a few codes need a sample inspection first; use the workbench. | சில குறியீடுகளுக்கு மேல் இருந்தால் முதலில் மாதிரி ஆய்வு தேவை; பணிமேசையைப் பயன்படுத்துங்கள். |
 | `S31a335` | detail | new code | புதிய குறியீடு |
 | `S816c52` | detail, export_verify, form | No | இல்லை |
 | `S06fc8d` | detail | No active Engineer holds the %(code)s domain yet. An Administrator must tag an Engineer with it (Administration → Users) before a sign-off can be requested. | எந்த செயலில் உள்ள பொறியாளருக்கும் %(code)s துறை இல்லை. கையொப்பம் கோரும் முன் நிர்வாகி ஒரு பொறியாளருக்கு இந்தத் துறையை வழங்க வேண்டும் (நிர்வாகம் → பயனர்கள்). |
@@ -9361,7 +9803,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S9734ac` | detail | Other codes that refer to this one. Review them before deprecating it. | இதைக் குறிப்பிடும் பிற குறியீடுகள். வழக்கொழிவு செய்யும் முன் அவற்றை மதிப்பாய்வு செய்யுங்கள். |
 | `S780d35` | detail | Override identifier (migration / reservation only) | அடையாளங்காட்டியை மேலெழுது (இடம்பெயர்வு / ஒதுக்கீட்டுக்கு மட்டும்) |
 | `S89ff31` | detail | Owner | உரிமையாளர் |
-| `S2d20ee` | detail | Package overview | தொகுப்பின் மேலோட்டம் |
+| `S2d20ee` | detail, workbench | Package overview | தொகுப்பின் மேலோட்டம் |
 | `S4d1a47` | detail | Package: all languages and access levels | தொகுப்பு: அனைத்து மொழிகளும் அணுகல் நிலைகளும் |
 | `Sc49bd0` | detail | Packages of this Release | இந்த வெளியீட்டின் தொகுப்புகள் |
 | `S96f608` | detail, review_queue | Pending | நிலுவையில் |
@@ -9406,12 +9848,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S026ab2` | detail | resolved | தீர்க்கப்பட்டது |
 | `S68c61f` | detail | Rev # | திருத்த எண் |
 | `Se4758b` | detail, review_checklist | Review checklist | மதிப்பாய்வு சரிபார்ப்புப் பட்டியல் |
-| `S7bfca8` | detail | Reviewer sign-off | மதிப்பாய்வாளர் கையொப்பம் |
+| `S7bfca8` | detail, workbench | Reviewer sign-off | மதிப்பாய்வாளர் கையொப்பம் |
 | `S3beb9a` | detail | Revision | திருத்தம் |
 | `Sa72973` | detail | Revision Fields | திருத்தப் புலங்கள் |
 | `Sfc1d6a` | detail | row(s) imported as Drafts | வரிசை(கள்) வரைவுகளாக இறக்குமதியானது |
 | `S52d0b3` | detail, reconciliation, user_detail | Rows | வரிசைகள் |
 | `Sd0edfb` | detail | Sales | விற்பனை |
+| `S241bf5` | detail, workbench | Sample number | மாதிரி எண் |
 | `Sda38c6` | detail | Save planned dates | திட்டமிட்ட தேதிகளைச் சேமி |
 | `S13c61c` | detail | Scope Filter | வரம்பு வடிகட்டி |
 | `S859822` | detail, mine, withdrawn_codes | Select | தேர்ந்தெடு |
@@ -9473,11 +9916,12 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S7d5316` | detail | Who | யார் |
 | `S47e564` | detail | Withdraw | திரும்பப் பெறு |
 | `S51a998` | detail | Withdraw this change request? | இந்த மாற்றக் கோரிக்கையைத் திரும்பப் பெறவா? |
+| `S93ef7c` | detail, workbench | Workbench | பணிமேசை |
 | `S95a2a4` | detail, form | Write level | எழுதும் நிலை |
 | `S612fe0` | detail | Yaw Bearing Lubrication Program | யா தாங்கி உயவு நிரல் |
 | `S559a3f` | detail | Yaw Program | யா நிரல் |
 | `S5397e0` | detail, export_verify, form | Yes | ஆம் |
-| `Sc8e4b4` | detail | Your decision step | உங்கள் முடிவுப் படி |
+| `Sc8e4b4` | detail, workbench | Your decision step | உங்கள் முடிவுப் படி |
 | `S20cb4c` | detail, export_center | ZIP with manifest | மேனிஃபெஸ்டுடன் ZIP |
 | `S5d4358` | dry_run | All rows are clean. | அனைத்து வரிசைகளும் சுத்தமானவை. |
 | `S03510d` | dry_run | Back to import | இறக்குமதிக்குத் திரும்பு |
@@ -9504,7 +9948,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S7b8d80` | export | Not for distribution - unapproved data | விநியோகத்திற்கு அல்ல - அங்கீகரிக்கப்படாத தரவு |
 | `Sd9b345` | export | not yet published | இன்னும் வெளியிடப்படவில்லை |
 | `Sa5d386` | export | Page %(page)s of %(total)s | பக்கம் %(page)s / %(total)s |
-| `Sac1a42` | export | Platforms | தளங்கள் |
+| `Sac1a42` | export, workbench | Platforms | தளங்கள் |
 | `Se51c55` | export | Records | பதிவுகள் |
 | `Sd41f56` | export, export_center | Release | வெளியீடு |
 | `S2e8fd6` | export | Reset delay | மீட்டமை தாமதம் |
@@ -9556,7 +10000,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S45ea95` | export_verify | Manifest signature | மேனிஃபெஸ்ட் கையொப்பம் |
 | `S08f84b` | export_verify | No record of this exact file | சரியாக இந்தக் கோப்புக்குப் பதிவு இல்லை |
 | `S357953` | export_verify | NOT OK | சரியில்லை |
-| `S9ce3bd` | export_verify | OK | சரி |
+| `S9ce3bd` | export_verify, workbench | OK | சரி |
 | `S8a5285` | export_verify | Overall | ஒட்டுமொத்தமாக |
 | `Sd2bc4a` | export_verify | Produced by this system | இந்த அமைப்பு உருவாக்கியது |
 | `S112d15` | export_verify | Verify an export | ஏற்றுமதியைச் சரிபார் |
@@ -9630,10 +10074,16 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S689b33` | help | The full manual is docs/23-user-manual.md in the project folder; the glossary below is the same one the tooltips use. | முழு கையேடு திட்டக் கோப்புறையில் docs/23-user-manual.md; கீழுள்ள சொற்களஞ்சியம் கருவிக்குறிப்புகள் பயன்படுத்துவதே. |
 | `S439914` | help | What happens next on a change request | மாற்றக் கோரிக்கைக்கு அடுத்து என்ன நடக்கும் |
 | `S6d29d9` | help and messages | %(n)s withdrawn code(s) deleted. | %(n)s திரும்பப் பெற்ற குறியீடுகள் நீக்கப்பட்டன. |
+| `S285edc` | help and messages | %(ok)s of %(n)s: %(what)s. | %(ok)s / %(n)s: %(what)s. |
 | `Sb08e6c` | help and messages | A Reviewer and an Administrator each sign off (in any order). If either rejects, it goes back to the author. | ஒரு மதிப்பாய்வாளரும் ஒரு நிர்வாகியும் ஒவ்வொருவரும் கையொப்பமிடுகிறார்கள் (எந்த வரிசையிலும்). யாராவது நிராகரித்தால் அது ஆசிரியரிடம் திரும்பும். |
 | `S2f1bed` | help and messages | An Administrator includes the revision in a Release and publishes it; then it is Released. | நிர்வாகி திருத்தத்தை வெளியீட்டில் சேர்த்து வெளியிடுகிறார்; அப்போது அது வெளியிடப்பட்டதாகிறது. |
+| `S1308dc` | help and messages | defective codes sent back | குறைபாடுள்ள குறியீடுகள் திருப்பி அனுப்பப்பட்டன |
+| `Se2bbd9` | help and messages | Drafts saved | வரைவுகள் சேமிக்கப்பட்டன |
+| `S0ddfa5` | help and messages | Drafts signed off | வரைவுகளுக்குக் கையொப்பமிடப்பட்டது |
+| `Sf90ab8` | help and messages | Drafts submitted for review | வரைவுகள் மதிப்பாய்வுக்குச் சமர்ப்பிக்கப்பட்டன |
 | `Sd856bd` | help and messages | Not deleted (it has a revision again or is still referenced): %(x)s | நீக்கப்படவில்லை (அதற்கு மீண்டும் திருத்தம் உள்ளது அல்லது இன்னும் குறிப்பிடப்படுகிறது): %(x)s |
 | `S34b903` | help and messages | Not possible: the account has history (see above). Deactivate it instead; the person can no longer sign in and everything they did stays attributable. | சாத்தியமில்லை: கணக்குக்கு வரலாறு உள்ளது (மேலே பார்க்கவும்). அதற்குப் பதிலாகச் செயலிழக்கச் செய்யுங்கள்; அந்த நபர் இனி உள்நுழைய முடியாது, அவர் செய்தவை அனைத்தும் பொறுப்புடன் இருக்கும். |
+| `S6a26de` | help and messages | Sample %(id)s drawn: %(n)s of %(total)s codes to inspect. | மாதிரி %(id)s எடுக்கப்பட்டது: %(n)s / %(total)s குறியீடுகள் ஆய்வுக்கு. |
 | `Sce489f` | help and messages | The author gets any required cross-domain sign-offs, then submits the change request for review. | ஆசிரியர் தேவையான துறைகள் கடந்த கையொப்பங்களைப் பெற்று, பின்னர் மாற்றக் கோரிக்கையை மதிப்பாய்வுக்குச் சமர்ப்பிக்கிறார். |
 | `S1cdbdd` | help and messages | The Chief Engineer approves or rejects. Approval makes the revision Approved (or Deprecated for a deprecation request). | தலைமைப் பொறியாளர் அங்கீகரிக்கிறார் அல்லது நிராகரிக்கிறார். அங்கீகாரம் திருத்தத்தை அங்கீகரிக்கப்பட்டதாக (அல்லது வழக்கொழிவுக் கோரிக்கைக்கு வழக்கொழிந்ததாக) மாற்றும். |
 | `S2d6ac0` | help and messages | The package is being built. Reload this page to follow its progress. | தொகுப்பு உருவாக்கப்படுகிறது. முன்னேற்றத்தைக் காண இந்தப் பக்கத்தை மீண்டும் ஏற்றவும். |
@@ -9706,7 +10156,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sded18c` | language | approved by | அங்கீகரித்தவர் |
 | `Sedd46e` | language | Check against the interface | இடைமுகத்துடன் ஒப்பிடு |
 | `S5a013c` | language | missing | இல்லாதது |
-| `S2c924e` | language | Note | குறிப்பு |
+| `S2c924e` | language, workbench | Note | குறிப்பு |
 | `S2f09d0` | language | Note on %(x)s | %(x)s பற்றிய குறிப்பு |
 | `S75bf99` | language | proposed by | முன்மொழிந்தவர் |
 | `Sc68e32` | language | Save translations | மொழிபெயர்ப்புகளைச் சேமி |
@@ -9828,6 +10278,26 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se146d2` | message: auth_service | Your account is not active. | உங்கள் கணக்கு செயலில் இல்லை. |
 | `Sb584dd` | message: backup_service | Backups need a file-based SQLite database. | காப்புப் பிரதிகளுக்குக் கோப்பு அடிப்படையிலான SQLite தரவுத்தளம் தேவை. |
 | `S368c82` | message: backup_service | keep must be at least 1 | keep குறைந்தது 1 ஆக இருக்க வேண்டும் |
+| `S18edaf` | message: bulk_service | A defect needs a note: say what is wrong. | குறைபாட்டுக்குக் குறிப்பு தேவை: என்ன தவறு என்று சொல்லுங்கள். |
+| `S68cada` | message: bulk_service, workbench | A defective Draft is corrected by its author. | குறைபாடுள்ள வரைவை அதன் ஆசிரியர் திருத்துவார். |
+| `S8941d5` | message: bulk_service | A domain sign-off needs the engineering domain. | துறை கையொப்பத்துக்குப் பொறியியல் துறை தேவை. |
+| `S071452` | message: bulk_service | A note has at most 1000 characters. | ஒரு குறிப்பில் அதிகபட்சம் 1000 எழுத்துகள் இருக்கலாம். |
+| `Sf74baa` | message: bulk_service, message: change_set_service | Change set not found | மாற்றத் தொகுப்பு கிடைக்கவில்லை |
+| `Sf89067` | message: bulk_service | Choose at least one value to set. | அமைக்க குறைந்தது ஒரு மதிப்பைத் தேர்ந்தெடுக்கவும். |
+| `S1e3e33` | message: bulk_service | No change request of the set is waiting for you at this step. | தொகுப்பில் எந்த மாற்றக் கோரிக்கையும் இந்தப் படியில் உங்களுக்காகக் காத்திருக்கவில்லை. |
+| `S95bd2d` | message: bulk_service | No Draft of the set is waiting for the sign-off of this domain. | தொகுப்பில் எந்த வரைவும் இந்தத் துறையின் கையொப்பத்துக்காகக் காத்திருக்கவில்லை. |
+| `S495371` | message: bulk_service | Only a sample with defects can be sent back. | குறைபாடுகள் உள்ள மாதிரியை மட்டுமே திருப்பி அனுப்ப முடியும். |
+| `Sa6e3b3` | message: bulk_service | Sample not found | மாதிரி கிடைக்கவில்லை |
+| `Sf745cc` | message: bulk_service | step must be domain, reviewer, admin or chief-engineer | step என்பது domain, reviewer, admin அல்லது chief-engineer ஆக இருக்க வேண்டும் |
+| `S973577` | message: bulk_service | That change request is not in the sample. | அந்த மாற்றக் கோரிக்கை மாதிரியில் இல்லை. |
+| `Sa1a149` | message: bulk_service | The batch changed since the sample was drawn; draw a new sample. | மாதிரி எடுத்த பிறகு தொகுதி மாறியுள்ளது; புதிய மாதிரியை எடுங்கள். |
+| `S8e5b1c` | message: bulk_service | The verdict must be OK or DEFECT. | தீர்ப்பு OK அல்லது குறைபாடு ஆக இருக்க வேண்டும். |
+| `Sddedd6` | message: bulk_service | This is not your sample: the person who decides inspects. | இது உங்கள் மாதிரி அல்ல: முடிவு செய்பவரே ஆய்வு செய்கிறார். |
+| `Sf56c6a` | message: bulk_service | This sample belongs to another change set or another step. | இந்த மாதிரி வேறொரு மாற்றத் தொகுப்புக்கு அல்லது வேறொரு படிக்கு உரியது. |
+| `S146a72` | message: bulk_service | This sample has been used for a decision already; draw a new one. | இந்த மாதிரி ஏற்கனவே ஒரு முடிவுக்குப் பயன்படுத்தப்பட்டது; புதியதை எடுங்கள். |
+| `Sf0f02c` | message: bulk_service | This sample is closed. | இந்த மாதிரி மூடப்பட்டது. |
+| `Sf973bd` | message: bulk_service | This sample is older than 24 hours; draw a new one. | இந்த மாதிரி 24 மணி நேரத்தைவிடப் பழையது; புதியதை எடுங்கள். |
+| `S062a13` | message: bulk_service | This sample was replaced by a newer one. | இந்த மாதிரிக்குப் பதிலாகப் புதியது வந்துள்ளது. |
 | `Sca2391` | message: change_request_service | A comment must be between 1 and 4000 characters. | கருத்து 1 முதல் 4000 எழுத்துகளுக்குள் இருக்க வேண்டும். |
 | `S33cd99` | message: change_request_service | At least one Turbine Platform is required before Submit for Review (FR-023a). | மதிப்பாய்வுக்குச் சமர்ப்பிக்கும் முன் குறைந்தது ஒரு டர்பைன் தளம் தேவை (FR-023a). |
 | `S1fd35e` | message: change_request_service | decision must be APPROVE or REJECT. | decision APPROVE அல்லது REJECT ஆக இருக்க வேண்டும். |
@@ -9838,7 +10308,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sbd3a03` | message: change_request_service | reviewer_id must be an active user with the Reviewer role. | reviewer_id மதிப்பாய்வாளர் பங்குள்ள செயலில் உள்ள பயனராக இருக்க வேண்டும். |
 | `S043693` | message: change_request_service | The Reviewer has already signed off this CR. | மதிப்பாய்வாளர் ஏற்கனவே இந்த மாற்றக் கோரிக்கையில் கையொப்பமிட்டுள்ளார். |
 | `S7a758c` | message: change_set_service | A change set needs a name of 1-120 characters. | மாற்றத் தொகுப்புக்கு 1-120 எழுத்துகளுள்ள பெயர் தேவை. |
-| `Sf74baa` | message: change_set_service | Change set not found | மாற்றத் தொகுப்பு கிடைக்கவில்லை |
 | `Sd8fad1` | message: change_set_service | Only a CR that is still open can join a change set. | இன்னும் திறந்திருக்கும் மாற்றக் கோரிக்கை மட்டுமே மாற்றத் தொகுப்பில் சேர முடியும். |
 | `S990d51` | message: change_set_service | Only the author of the CR or an Administrator may group it. | மாற்றக் கோரிக்கையின் ஆசிரியர் அல்லது நிர்வாகி மட்டுமே அதைக் குழுப்படுத்த முடியும். |
 | `S69e4d1` | message: change_set_service | Only the author of the CR or an Administrator may ungroup it. | மாற்றக் கோரிக்கையின் ஆசிரியர் அல்லது நிர்வாகி மட்டுமே அதன் குழுவை நீக்க முடியும். |
@@ -9924,6 +10393,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sdb88ba` | message: saved_search_service | Saved search not found | சேமித்த தேடல் கிடைக்கவில்லை |
 | `S046aff` | message: saved_search_service | This saved search belongs to someone else. | இந்தச் சேமித்த தேடல் வேறொருவருக்குச் சொந்தமானது. |
 | `Saad8e2` | message: settings_service | must be a whole number between 0 and 100 | 0 முதல் 100 வரையிலான முழு எண்ணாக இருக்க வேண்டும் |
+| `S9625d1` | message: settings_service | must be a whole number between 1 and 100 | 1 முதல் 100 வரையிலான முழு எண்ணாக இருக்க வேண்டும் |
 | `S6e4015` | message: settings_service | must be a whole number between 1 and 365 | 1 முதல் 365 வரையிலான முழு எண்ணாக இருக்க வேண்டும் |
 | `S9671fb` | message: settings_service | must be true or false | true அல்லது false ஆக இருக்க வேண்டும் |
 | `S5166bb` | message: st_import_service | A staged file changed after the preview. Upload again. | முன்னோட்டத்துக்குப் பின் ஒரு தயாரிக்கப்பட்ட கோப்பு மாறியது. மீண்டும் பதிவேற்றுங்கள். |
@@ -10121,7 +10591,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S6daf16` | st_preview | Preview: status codes from .st files | முன்னோட்டம்: .st கோப்புகளிலிருந்து நிலைக் குறியீடுகள் |
 | `S15a21a` | st_preview | program(s) | நிரல்(கள்) |
 | `Se58289` | st_preview | Programs found in the uploaded files | பதிவேற்றிய கோப்புகளில் கண்ட நிரல்கள் |
-| `S75c053` | st_preview | ready | தயார் |
+| `S75c053` | st_preview, workbench | ready | தயார் |
 | `S0723bf` | st_preview | Select all programs that are ready | தயாராக உள்ள அனைத்து நிரல்களையும் தேர்ந்தெடு |
 | `S1a767a` | st_preview | updates the open Draft | திறந்த வரைவைப் புதுப்பிக்கிறது |
 | `S02499f` | st_preview | withdrawn | திரும்பப் பெற்றவை |
@@ -10220,10 +10690,44 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S8516a7` | withdrawn_codes | Delete selected | தேர்ந்தெடுத்தவற்றை நீக்கு |
 | `Sdfeb06` | withdrawn_codes | No withdrawn codes. | திரும்பப் பெற்ற குறியீடுகள் இல்லை. |
 | `S87ec0b` | withdrawn_codes | Withdrawn on | திரும்பப் பெற்ற நாள் |
+| `S48d260` | workbench | %(n)s of %(total)s codes drawn at %(when)s. | %(n)s / %(total)s குறியீடுகள் %(when)s அன்று எடுக்கப்பட்டன. |
+| `S88b55f` | workbench | Approve the batch | தொகுதியை அங்கீகரி |
+| `Sf40e77` | workbench | Available group | கிடைக்கும் குழு |
+| `S99613c` | workbench | Blocked | தடுக்கப்பட்டது |
+| `Sca7133` | workbench | Choose the step you are about to decide, draw the sample, look at every sampled code and mark it. The sample is yours, valid for 24 hours and for this batch as it is now. | நீங்கள் முடிவு செய்யப்போகும் படியைத் தேர்ந்தெடுங்கள், மாதிரியை எடுங்கள், எடுக்கப்பட்ட ஒவ்வொரு குறியீட்டையும் பார்த்து குறியிடுங்கள். மாதிரி உங்களுடையது, 24 மணி நேரத்துக்கும் இந்தத் தொகுதியின் தற்போதைய நிலைக்கும் செல்லும். |
+| `S6f4274` | workbench | Codes in this batch | இந்தத் தொகுதியின் குறியீடுகள் |
+| `S117313` | workbench | Decide the batch | தொகுதியைப் பற்றி முடிவு செய் |
+| `Se91aff` | workbench | Defect | குறைபாடு |
+| `S16fbbf` | workbench | Domain sign-off | துறை கையொப்பம் |
+| `Scb1884` | workbench | Dossier (XLSX) | ஆவணத் தொகுப்பு (XLSX) |
+| `S25085f` | workbench | Draw a sample | மாதிரியை எடு |
+| `S9167a7` | workbench | Engineering domain | பொறியியல் துறை |
+| `Sbc3c59` | workbench | Only the values you choose are changed, on the Drafts you wrote (an Administrator: any Draft). | நீங்கள் தேர்ந்தெடுத்த மதிப்புகள் மட்டுமே மாறும், நீங்கள் எழுதிய வரைவுகளில் (நிர்வாகி: எந்த வரைவும்). |
+| `S92223f` | workbench | Passed: no defect in the sample. Use sample number %(id)s below. | தேர்ச்சி: மாதிரியில் குறைபாடு இல்லை. கீழே மாதிரி எண் %(id)s ஐப் பயன்படுத்துங்கள். |
+| `S6275ab` | workbench | Ready to submit | சமர்ப்பிக்கத் தயார் |
+| `Se1e74d` | workbench | Reject the batch | தொகுதியை நிராகரி |
+| `S58fabf` | workbench | Sample | மாதிரி |
+| `S862471` | workbench | Sample inspection | மாதிரி ஆய்வு |
+| `S69cc53` | workbench | Save the verdicts | தீர்ப்புகளைச் சேமி |
+| `S3ae55b` | workbench | Send the defective codes back | குறைபாடுள்ள குறியீடுகளைத் திருப்பி அனுப்பு |
+| `Se90e7c` | workbench | Set on the Drafts | வரைவுகளில் அமை |
+| `Sa58dac` | workbench | Set values on the Drafts | வரைவுகளில் மதிப்புகளை அமை |
+| `Sa443bb` | workbench | Sign off the Drafts | வரைவுகளுக்குக் கையொப்பமிடு |
+| `S53f47f` | workbench | Sign-off pending | கையொப்பம் நிலுவையில் |
+| `Sae12bc` | workbench | Status category | நிலை வகை |
+| `Sdc416e` | workbench | Step | படி |
+| `Sf7710d` | workbench | Submit for review | மதிப்பாய்வுக்குச் சமர்ப்பி |
+| `Sa45adc` | workbench | Submit the Drafts | வரைவுகளைச் சமர்ப்பி |
+| `S2d099f` | workbench | Submits the Drafts you wrote. A Draft that still lacks a platform or a domain sign-off is reported and left as it is. | நீங்கள் எழுதிய வரைவுகளைச் சமர்ப்பிக்கிறது. இன்னும் தளம் அல்லது துறை கையொப்பம் இல்லாத வரைவு பற்றித் தெரிவிக்கப்பட்டு அது அப்படியே விடப்படும். |
+| `S5baa27` | workbench | The sample has defects, so the batch cannot be decided as it is. Send the defective codes back (the note is the reason), then draw a new sample of what is left. | மாதிரியில் குறைபாடுகள் உள்ளன, எனவே தொகுதியை இப்படியே முடிவு செய்ய முடியாது. குறைபாடுள்ள குறியீடுகளைத் திருப்பி அனுப்புங்கள் (குறிப்பே காரணம்), பிறகு மீதமுள்ளவற்றிலிருந்து புதிய மாதிரியை எடுங்கள். |
+| `S19f8ab` | workbench | Tick the codes an action is for; with none ticked an action covers every code it applies to. | செயல் எந்தக் குறியீடுகளுக்கோ அவற்றில் குறியிடுங்கள்; எதுவும் குறியிடாவிட்டால் செயல் பொருந்தும் எல்லாக் குறியீடுகளுக்கும் பொருந்தும். |
+| `S7f6e5a` | workbench | Verdict | தீர்ப்பு |
+| `Se6246f` | workbench | What stops it | இதை எது தடுக்கிறது |
+| `Sbf45e2` | workbench | Work on many codes at once without weakening a step: every code still gets its own checks, its own audit entry and, for decisions, your password. A decision on more than %(above)s codes needs a sample inspection first: %(percent)s percent of the batch, at least %(minimum)s codes, spread over the subgroups. One defect in the sample stops the decision. | எந்தப் படியையும் பலவீனப்படுத்தாமல் பல குறியீடுகளில் ஒரே நேரத்தில் வேலை செய்யுங்கள்: ஒவ்வொரு குறியீட்டுக்கும் அதன் சொந்த சோதனைகள், சொந்த தணிக்கைப் பதிவு மற்றும் முடிவுகளுக்கு உங்கள் கடவுச்சொல் உண்டு. %(above)s குறியீடுகளுக்கு மேல் முடிவு செய்ய முதலில் மாதிரி ஆய்வு தேவை: தொகுதியில் %(percent)s சதவீதம், குறைந்தது %(minimum)s குறியீடுகள், துணைக் குழுக்களில் பரவலாக. மாதிரியில் ஒரு குறைபாடு முடிவை நிறுத்தும். |
 
 ### 9.10 IN ગુજરાતી 🇮🇳 — Gujarati
 
-1216 of 1217 strings translated; direction left to right.
+1279 of 1280 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -10423,7 +10927,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Scfa1b6` | detail | Add field comment | ફીલ્ડ ટિપ્પણી ઉમેરો |
 | `Sbb965e` | detail | Add one of your change requests | તમારી એક ફેરફાર વિનંતી ઉમેરો |
 | `S9a693b` | detail | Add to change set | ફેરફાર સમૂહમાં ઉમેરો |
-| `S7bbd6d` | detail | Administrator sign-off | સંચાલક સાઇન-ઑફ |
+| `S7bbd6d` | detail, workbench | Administrator sign-off | સંચાલક સાઇન-ઑફ |
 | `S212856` | detail | advanced, controller firmware programs | અદ્યતન, નિયંત્રક ફર્મવેર પ્રોગ્રામ |
 | `Sfbde82` | detail | Affected component | અસરગ્રસ્ત ઘટક |
 | `S25f8c5` | detail, export, form | Alarm | એલાર્મ |
@@ -10452,17 +10956,17 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se7bab1` | detail | Chain of causes | કારણોની સાંકળ |
 | `S9c8393` | detail, mine | Change Request | ફેરફાર વિનંતી |
 | `S4572f4` | detail | Change request | ફેરફાર વિનંતી |
-| `S3295be` | detail | Change requests in this set | આ સમૂહની ફેરફાર વિનંતીઓ |
+| `S3295be` | detail, workbench | Change requests in this set | આ સમૂહની ફેરફાર વિનંતીઓ |
 | `S4d8006` | detail | Change set | ફેરફાર સમૂહ |
 | `S8aa57d` | detail | Changes | ફેરફારો |
 | `S3d14ea` | detail, export | Changes of this release only | ફક્ત આ રિલીઝના ફેરફારો |
 | `Sbd95c0` | detail | Checklist confirmed at sign-off | સાઇન-ઑફ સમયે પુષ્ટિ થયેલ ચેકલિસ્ટ |
 | `S074d62` | detail, role badge | Chief Engineer | મુખ્ય ઇજનેર |
-| `S03695d` | detail | Chief Engineer decision | મુખ્ય ઇજનેરનો નિર્ણય |
+| `S03695d` | detail, workbench | Chief Engineer decision | મુખ્ય ઇજનેરનો નિર્ણય |
 | `Sf0a89f` | detail | Close change set | ફેરફાર સમૂહ બંધ કરો |
 | `S7c0c39` | detail | Close this change set? | આ ફેરફાર સમૂહ બંધ કરવો? |
 | `S153d7a` | detail | Comment | ટિપ્પણી |
-| `S611578` | detail | Comment (required for rejection) | ટિપ્પણી (નામંજૂરી માટે જરૂરી) |
+| `S611578` | detail, workbench | Comment (required for rejection) | ટિપ્પણી (નામંજૂરી માટે જરૂરી) |
 | `Sc38432` | detail | Comment on this field | આ ફીલ્ડ પર ટિપ્પણી કરો |
 | `Sfce06e` | detail | Comments | ટિપ્પણીઓ |
 | `S8d105c` | detail, reconciliation | Compare | સરખાવો |
@@ -10488,7 +10992,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S0e8574` | detail | Customer | ગ્રાહક |
 | `Scb307e` | detail | Decide the selected requests in one sitting | પસંદ કરેલ વિનંતીઓ પર એક જ બેઠકમાં નિર્ણય લો |
 | `S319493` | detail | Decided by | નિર્ણય લેનાર |
-| `S7f59a1` | detail | Decision | નિર્ણય |
+| `S7f59a1` | detail, workbench | Decision | નિર્ણય |
 | `Sc51568` | detail | Decisions & Comments | નિર્ણયો અને ટિપ્પણીઓ |
 | `Sa9ec7c` | detail | Delete Permanently | કાયમ માટે કાઢી નાખો |
 | `S7d1c7a` | detail | Delete Release | રિલીઝ કાઢી નાખો |
@@ -10554,6 +11058,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S6d59f4` | detail | Manual Reset Program | મેન્યુઅલ રીસેટ પ્રોગ્રામ |
 | `Sf9896c` | detail, form | Mark resolved | ઉકેલાયું તરીકે ચિહ્નિત કરો |
 | `Sa7b93d` | detail, new, reconciliation | Mode | મોડ |
+| `S9f4d01` | detail | More than a few codes need a sample inspection first; use the workbench. | થોડાથી વધુ કોડ માટે પહેલાં નમૂના તપાસ જોઈએ; કાર્યક્ષેત્રનો ઉપયોગ કરો. |
 | `S31a335` | detail | new code | નવો કોડ |
 | `S816c52` | detail, export_verify, form | No | ના |
 | `S06fc8d` | detail | No active Engineer holds the %(code)s domain yet. An Administrator must tag an Engineer with it (Administration → Users) before a sign-off can be requested. | કોઈ સક્રિય ઇજનેર પાસે %(code)s ક્ષેત્ર નથી. સાઇન-ઑફ માગતા પહેલાં સંચાલકે કોઈ ઇજનેરને આ ક્ષેત્ર આપવું જોઈએ (વહીવટ → વપરાશકર્તાઓ). |
@@ -10584,7 +11089,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S9734ac` | detail | Other codes that refer to this one. Review them before deprecating it. | આ તરફ નિર્દેશ કરતા અન્ય કોડ. અપ્રચલિત કરતાં પહેલાં તેમની સમીક્ષા કરો. |
 | `S780d35` | detail | Override identifier (migration / reservation only) | ઓળખકર્તા અધિલેખિત કરો (ફક્ત સ્થળાંતર / આરક્ષણ માટે) |
 | `S89ff31` | detail | Owner | માલિક |
-| `S2d20ee` | detail | Package overview | પેકેજનું સિંહાવલોકન |
+| `S2d20ee` | detail, workbench | Package overview | પેકેજનું સિંહાવલોકન |
 | `S4d1a47` | detail | Package: all languages and access levels | પેકેજ: બધી ભાષાઓ અને એક્સેસ સ્તર |
 | `Sc49bd0` | detail | Packages of this Release | આ રિલીઝના પેકેજ |
 | `S96f608` | detail, review_queue | Pending | બાકી |
@@ -10629,12 +11134,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S026ab2` | detail | resolved | ઉકેલાયું |
 | `S68c61f` | detail | Rev # | સુધારો નં. |
 | `Se4758b` | detail, review_checklist | Review checklist | સમીક્ષા ચેકલિસ્ટ |
-| `S7bfca8` | detail | Reviewer sign-off | સમીક્ષક સાઇન-ઑફ |
+| `S7bfca8` | detail, workbench | Reviewer sign-off | સમીક્ષક સાઇન-ઑફ |
 | `S3beb9a` | detail | Revision | સુધારો |
 | `Sa72973` | detail | Revision Fields | સુધારા ફીલ્ડ |
 | `Sfc1d6a` | detail | row(s) imported as Drafts | પંક્તિઓ મુસદ્દા તરીકે આયાત થઈ |
 | `S52d0b3` | detail, reconciliation, user_detail | Rows | પંક્તિઓ |
 | `Sd0edfb` | detail | Sales | વેચાણ |
+| `S241bf5` | detail, workbench | Sample number | નમૂના નંબર |
 | `Sda38c6` | detail | Save planned dates | આયોજિત તારીખો સાચવો |
 | `S13c61c` | detail | Scope Filter | વ્યાપ ફિલ્ટર |
 | `S859822` | detail, mine, withdrawn_codes | Select | પસંદ કરો |
@@ -10696,11 +11202,12 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S7d5316` | detail | Who | કોણ |
 | `S47e564` | detail | Withdraw | પાછી ખેંચો |
 | `S51a998` | detail | Withdraw this change request? | આ ફેરફાર વિનંતી પાછી ખેંચવી? |
+| `S93ef7c` | detail, workbench | Workbench | કાર્યક્ષેત્ર |
 | `S95a2a4` | detail, form | Write level | લખાણ સ્તર |
 | `S612fe0` | detail | Yaw Bearing Lubrication Program | યો બેરિંગ લુબ્રિકેશન પ્રોગ્રામ |
 | `S559a3f` | detail | Yaw Program | યો પ્રોગ્રામ |
 | `S5397e0` | detail, export_verify, form | Yes | હા |
-| `Sc8e4b4` | detail | Your decision step | તમારો નિર્ણય તબક્કો |
+| `Sc8e4b4` | detail, workbench | Your decision step | તમારો નિર્ણય તબક્કો |
 | `S20cb4c` | detail, export_center | ZIP with manifest | મેનિફેસ્ટ સાથે ZIP |
 | `S5d4358` | dry_run | All rows are clean. | બધી પંક્તિઓ સ્વચ્છ છે. |
 | `S03510d` | dry_run | Back to import | આયાત પર પાછા |
@@ -10727,7 +11234,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S7b8d80` | export | Not for distribution - unapproved data | વિતરણ માટે નથી - અમંજૂર ડેટા |
 | `Sd9b345` | export | not yet published | હજી પ્રકાશિત નથી |
 | `Sa5d386` | export | Page %(page)s of %(total)s | પૃષ્ઠ %(page)s / %(total)s |
-| `Sac1a42` | export | Platforms | પ્લેટફોર્મ |
+| `Sac1a42` | export, workbench | Platforms | પ્લેટફોર્મ |
 | `Se51c55` | export | Records | રેકોર્ડ |
 | `Sd41f56` | export, export_center | Release | રિલીઝ |
 | `S2e8fd6` | export | Reset delay | રીસેટ વિલંબ |
@@ -10779,7 +11286,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S45ea95` | export_verify | Manifest signature | મેનિફેસ્ટ સહી |
 | `S08f84b` | export_verify | No record of this exact file | બરાબર આ ફાઇલની કોઈ નોંધ નથી |
 | `S357953` | export_verify | NOT OK | બરાબર નથી |
-| `S9ce3bd` | export_verify | OK | બરાબર |
+| `S9ce3bd` | export_verify, workbench | OK | બરાબર |
 | `S8a5285` | export_verify | Overall | એકંદરે |
 | `Sd2bc4a` | export_verify | Produced by this system | આ સિસ્ટમે બનાવેલ |
 | `S112d15` | export_verify | Verify an export | નિકાસ ચકાસો |
@@ -10853,10 +11360,16 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S689b33` | help | The full manual is docs/23-user-manual.md in the project folder; the glossary below is the same one the tooltips use. | સંપૂર્ણ માર્ગદર્શિકા પ્રોજેક્ટ ફોલ્ડરમાં docs/23-user-manual.md છે; નીચેનો શબ્દકોશ ટૂલટિપમાં વપરાય છે તે જ છે. |
 | `S439914` | help | What happens next on a change request | ફેરફાર વિનંતીનું આગળ શું થાય છે |
 | `S6d29d9` | help and messages | %(n)s withdrawn code(s) deleted. | %(n)s પાછા ખેંચેલા કોડ કાઢી નાખ્યા. |
+| `S285edc` | help and messages | %(ok)s of %(n)s: %(what)s. | %(ok)s / %(n)s: %(what)s. |
 | `Sb08e6c` | help and messages | A Reviewer and an Administrator each sign off (in any order). If either rejects, it goes back to the author. | એક સમીક્ષક અને એક સંચાલક દરેક સાઇન ઑફ કરે છે (કોઈપણ ક્રમમાં). કોઈ નામંજૂર કરે તો તે લેખક પાસે પાછી જાય છે. |
 | `S2f1bed` | help and messages | An Administrator includes the revision in a Release and publishes it; then it is Released. | સંચાલક સુધારાને રિલીઝમાં સમાવી પ્રકાશિત કરે છે; ત્યારે તે પ્રકાશિત થાય છે. |
+| `S1308dc` | help and messages | defective codes sent back | ખામીયુક્ત કોડ પાછા મોકલ્યા |
+| `Se2bbd9` | help and messages | Drafts saved | મુસદ્દા સાચવ્યા |
+| `S0ddfa5` | help and messages | Drafts signed off | મુસદ્દાઓનું સાઇન-ઑફ થયું |
+| `Sf90ab8` | help and messages | Drafts submitted for review | મુસદ્દા સમીક્ષા માટે સબમિટ કર્યા |
 | `Sd856bd` | help and messages | Not deleted (it has a revision again or is still referenced): %(x)s | કાઢ્યો નથી (તેની ફરી સુધારણા છે અથવા હજી સંદર્ભ છે): %(x)s |
 | `S34b903` | help and messages | Not possible: the account has history (see above). Deactivate it instead; the person can no longer sign in and everything they did stays attributable. | શક્ય નથી: એકાઉન્ટનો ઇતિહાસ છે (ઉપર જુઓ). તેના બદલે નિષ્ક્રિય કરો; વ્યક્તિ હવે સાઇન ઇન કરી શકશે નહીં અને તેણે જે કર્યું તે જવાબદાર રહે છે. |
+| `S6a26de` | help and messages | Sample %(id)s drawn: %(n)s of %(total)s codes to inspect. | નમૂનો %(id)s ખેંચાયો: %(n)s / %(total)s કોડ તપાસવાના છે. |
 | `Sce489f` | help and messages | The author gets any required cross-domain sign-offs, then submits the change request for review. | લેખક જરૂરી આંતર-ક્ષેત્ર સાઇન-ઑફ મેળવે છે, પછી ફેરફાર વિનંતી સમીક્ષા માટે સબમિટ કરે છે. |
 | `S1cdbdd` | help and messages | The Chief Engineer approves or rejects. Approval makes the revision Approved (or Deprecated for a deprecation request). | મુખ્ય ઇજનેર મંજૂર અથવા નામંજૂર કરે છે. મંજૂરી સુધારાને મંજૂર (અથવા અપ્રચલન વિનંતી માટે અપ્રચલિત) બનાવે છે. |
 | `S2d6ac0` | help and messages | The package is being built. Reload this page to follow its progress. | પેકેજ બની રહ્યું છે. પ્રગતિ જોવા માટે આ પેજ ફરી લોડ કરો. |
@@ -10929,7 +11442,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sded18c` | language | approved by | મંજૂર કરનાર |
 | `Sedd46e` | language | Check against the interface | ઇન્ટરફેસ સાથે સરખાવો |
 | `S5a013c` | language | missing | ખૂટે છે |
-| `S2c924e` | language | Note | નોંધ |
+| `S2c924e` | language, workbench | Note | નોંધ |
 | `S2f09d0` | language | Note on %(x)s | %(x)s પર નોંધ |
 | `S75bf99` | language | proposed by | પ્રસ્તાવક |
 | `Sc68e32` | language | Save translations | અનુવાદો સાચવો |
@@ -11051,6 +11564,26 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se146d2` | message: auth_service | Your account is not active. | તમારું એકાઉન્ટ સક્રિય નથી. |
 | `Sb584dd` | message: backup_service | Backups need a file-based SQLite database. | બેકઅપ માટે ફાઇલ આધારિત SQLite ડેટાબેઝ જોઈએ. |
 | `S368c82` | message: backup_service | keep must be at least 1 | keep ઓછામાં ઓછું 1 હોવું જોઈએ |
+| `S18edaf` | message: bulk_service | A defect needs a note: say what is wrong. | ખામી માટે નોંધ જોઈએ: શું ખોટું છે તે કહો. |
+| `S68cada` | message: bulk_service, workbench | A defective Draft is corrected by its author. | ખામીયુક્ત મુસદ્દો તેનો લેખક સુધારે છે. |
+| `S8941d5` | message: bulk_service | A domain sign-off needs the engineering domain. | ડોમેન સાઇન-ઑફ માટે ઇજનેરી ડોમેન જોઈએ. |
+| `S071452` | message: bulk_service | A note has at most 1000 characters. | નોંધમાં વધુમાં વધુ 1000 અક્ષર હોય છે. |
+| `Sf74baa` | message: bulk_service, message: change_set_service | Change set not found | ફેરફાર સમૂહ મળ્યો નથી |
+| `Sf89067` | message: bulk_service | Choose at least one value to set. | સેટ કરવા માટે ઓછામાં ઓછું એક મૂલ્ય પસંદ કરો. |
+| `S1e3e33` | message: bulk_service | No change request of the set is waiting for you at this step. | સમૂહની કોઈ ફેરફાર વિનંતી આ પગલા પર તમારી રાહ જોતી નથી. |
+| `S95bd2d` | message: bulk_service | No Draft of the set is waiting for the sign-off of this domain. | સમૂહનો કોઈ મુસદ્દો આ ડોમેનના સાઇન-ઑફની રાહ જોતો નથી. |
+| `S495371` | message: bulk_service | Only a sample with defects can be sent back. | ફક્ત ખામીવાળો નમૂનો જ પાછો મોકલી શકાય. |
+| `Sa6e3b3` | message: bulk_service | Sample not found | નમૂનો મળ્યો નથી |
+| `Sf745cc` | message: bulk_service | step must be domain, reviewer, admin or chief-engineer | step domain, reviewer, admin અથવા chief-engineer હોવો જોઈએ |
+| `S973577` | message: bulk_service | That change request is not in the sample. | તે ફેરફાર વિનંતી નમૂનામાં નથી. |
+| `Sa1a149` | message: bulk_service | The batch changed since the sample was drawn; draw a new sample. | નમૂનો ખેંચ્યા પછી બેચ બદલાઈ છે; નવો નમૂનો ખેંચો. |
+| `S8e5b1c` | message: bulk_service | The verdict must be OK or DEFECT. | ચુકાદો OK અથવા ખામી હોવો જોઈએ. |
+| `Sddedd6` | message: bulk_service | This is not your sample: the person who decides inspects. | આ તમારો નમૂનો નથી: જે નિર્ણય લે છે તે જ તપાસે છે. |
+| `Sf56c6a` | message: bulk_service | This sample belongs to another change set or another step. | આ નમૂનો બીજા ફેરફાર સમૂહ અથવા બીજા પગલાનો છે. |
+| `S146a72` | message: bulk_service | This sample has been used for a decision already; draw a new one. | આ નમૂનો પહેલેથી એક નિર્ણય માટે વપરાયો છે; નવો ખેંચો. |
+| `Sf0f02c` | message: bulk_service | This sample is closed. | આ નમૂનો બંધ છે. |
+| `Sf973bd` | message: bulk_service | This sample is older than 24 hours; draw a new one. | આ નમૂનો 24 કલાકથી જૂનો છે; નવો ખેંચો. |
+| `S062a13` | message: bulk_service | This sample was replaced by a newer one. | આ નમૂનાની જગ્યાએ નવો નમૂનો આવ્યો છે. |
 | `Sca2391` | message: change_request_service | A comment must be between 1 and 4000 characters. | ટિપ્પણી 1 થી 4000 અક્ષરોની વચ્ચે હોવી જોઈએ. |
 | `S33cd99` | message: change_request_service | At least one Turbine Platform is required before Submit for Review (FR-023a). | સમીક્ષા માટે સબમિટ કરતાં પહેલાં ઓછામાં ઓછું એક ટર્બાઇન પ્લેટફોર્મ જરૂરી છે (FR-023a). |
 | `S1fd35e` | message: change_request_service | decision must be APPROVE or REJECT. | decision APPROVE અથવા REJECT હોવું જોઈએ. |
@@ -11061,7 +11594,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sbd3a03` | message: change_request_service | reviewer_id must be an active user with the Reviewer role. | reviewer_id સમીક્ષક ભૂમિકા ધરાવતો સક્રિય વપરાશકર્તા હોવો જોઈએ. |
 | `S043693` | message: change_request_service | The Reviewer has already signed off this CR. | સમીક્ષકે આ ફેરફાર વિનંતી પર પહેલેથી સાઇન ઑફ કર્યું છે. |
 | `S7a758c` | message: change_set_service | A change set needs a name of 1-120 characters. | ફેરફાર સમૂહને 1-120 અક્ષરોનું નામ જોઈએ. |
-| `Sf74baa` | message: change_set_service | Change set not found | ફેરફાર સમૂહ મળ્યો નથી |
 | `Sd8fad1` | message: change_set_service | Only a CR that is still open can join a change set. | ફક્ત હજુ ખુલ્લી ફેરફાર વિનંતી ફેરફાર સમૂહમાં જોડાઈ શકે. |
 | `S990d51` | message: change_set_service | Only the author of the CR or an Administrator may group it. | ફક્ત ફેરફાર વિનંતીના લેખક અથવા સંચાલક તેનું જૂથ બનાવી શકે. |
 | `S69e4d1` | message: change_set_service | Only the author of the CR or an Administrator may ungroup it. | ફક્ત ફેરફાર વિનંતીના લેખક અથવા સંચાલક તેને જૂથમાંથી કાઢી શકે. |
@@ -11147,6 +11679,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sdb88ba` | message: saved_search_service | Saved search not found | સાચવેલી શોધ મળી નથી |
 | `S046aff` | message: saved_search_service | This saved search belongs to someone else. | આ સાચવેલી શોધ બીજા કોઈની છે. |
 | `Saad8e2` | message: settings_service | must be a whole number between 0 and 100 | 0 અને 100 વચ્ચેની પૂર્ણ સંખ્યા હોવી જોઈએ |
+| `S9625d1` | message: settings_service | must be a whole number between 1 and 100 | 1 અને 100 વચ્ચેની પૂર્ણ સંખ્યા હોવી જોઈએ |
 | `S6e4015` | message: settings_service | must be a whole number between 1 and 365 | 1 અને 365 વચ્ચેની પૂર્ણ સંખ્યા હોવી જોઈએ |
 | `S9671fb` | message: settings_service | must be true or false | true અથવા false હોવું જોઈએ |
 | `S5166bb` | message: st_import_service | A staged file changed after the preview. Upload again. | પૂર્વાવલોકન પછી એક સ્ટેજ કરેલી ફાઇલ બદલાઈ. ફરી અપલોડ કરો. |
@@ -11344,7 +11877,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S6daf16` | st_preview | Preview: status codes from .st files | પૂર્વાવલોકન: .st ફાઇલોમાંથી સ્ટેટસ કોડ |
 | `S15a21a` | st_preview | program(s) | પ્રોગ્રામ |
 | `Se58289` | st_preview | Programs found in the uploaded files | અપલોડ કરેલી ફાઇલોમાં મળેલા પ્રોગ્રામ |
-| `S75c053` | st_preview | ready | તૈયાર |
+| `S75c053` | st_preview, workbench | ready | તૈયાર |
 | `S0723bf` | st_preview | Select all programs that are ready | બધા તૈયાર પ્રોગ્રામ પસંદ કરો |
 | `S1a767a` | st_preview | updates the open Draft | ખુલ્લો મુસદ્દો અદ્યતન કરે છે |
 | `S02499f` | st_preview | withdrawn | પાછા ખેંચાયેલા |
@@ -11443,10 +11976,44 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S8516a7` | withdrawn_codes | Delete selected | પસંદ કરેલા કાઢી નાખો |
 | `Sdfeb06` | withdrawn_codes | No withdrawn codes. | પાછો ખેંચાયેલો કોઈ કોડ નથી. |
 | `S87ec0b` | withdrawn_codes | Withdrawn on | પાછું ખેંચ્યાની તારીખ |
+| `S48d260` | workbench | %(n)s of %(total)s codes drawn at %(when)s. | %(n)s / %(total)s કોડ %(when)s ના રોજ ખેંચાયા. |
+| `S88b55f` | workbench | Approve the batch | બેચ મંજૂર કરો |
+| `Sf40e77` | workbench | Available group | ઉપલબ્ધ જૂથ |
+| `S99613c` | workbench | Blocked | અવરોધિત |
+| `Sca7133` | workbench | Choose the step you are about to decide, draw the sample, look at every sampled code and mark it. The sample is yours, valid for 24 hours and for this batch as it is now. | જે પગલા પર નિર્ણય લેવાના છો તે પસંદ કરો, નમૂનો ખેંચો, ખેંચાયેલા દરેક કોડને જુઓ અને ચિહ્નિત કરો. નમૂનો તમારો છે, 24 કલાક માટે અને આ બેચ માટે હમણાં છે તેમ માન્ય છે. |
+| `S6f4274` | workbench | Codes in this batch | આ બેચના કોડ |
+| `S117313` | workbench | Decide the batch | બેચ પર નિર્ણય લો |
+| `Se91aff` | workbench | Defect | ખામી |
+| `S16fbbf` | workbench | Domain sign-off | ડોમેન સાઇન-ઑફ |
+| `Scb1884` | workbench | Dossier (XLSX) | ડોઝિયર (XLSX) |
+| `S25085f` | workbench | Draw a sample | નમૂનો ખેંચો |
+| `S9167a7` | workbench | Engineering domain | ઇજનેરી ડોમેન |
+| `Sbc3c59` | workbench | Only the values you choose are changed, on the Drafts you wrote (an Administrator: any Draft). | ફક્ત તમે પસંદ કરેલાં મૂલ્યો બદલાય છે, તમે લખેલા મુસદ્દાઓ પર (સંચાલક: કોઈ પણ મુસદ્દો). |
+| `S92223f` | workbench | Passed: no defect in the sample. Use sample number %(id)s below. | પાસ: નમૂનામાં કોઈ ખામી નથી. નીચે નમૂના નંબર %(id)s વાપરો. |
+| `S6275ab` | workbench | Ready to submit | સબમિટ કરવા તૈયાર |
+| `Se1e74d` | workbench | Reject the batch | બેચ નકારો |
+| `S58fabf` | workbench | Sample | નમૂનો |
+| `S862471` | workbench | Sample inspection | નમૂના તપાસ |
+| `S69cc53` | workbench | Save the verdicts | ચુકાદા સાચવો |
+| `S3ae55b` | workbench | Send the defective codes back | ખામીયુક્ત કોડ પાછા મોકલો |
+| `Se90e7c` | workbench | Set on the Drafts | મુસદ્દાઓ પર સેટ કરો |
+| `Sa58dac` | workbench | Set values on the Drafts | મુસદ્દાઓ પર મૂલ્યો સેટ કરો |
+| `Sa443bb` | workbench | Sign off the Drafts | મુસદ્દાઓનું સાઇન-ઑફ કરો |
+| `S53f47f` | workbench | Sign-off pending | સાઇન-ઑફ બાકી |
+| `Sae12bc` | workbench | Status category | સ્ટેટસ શ્રેણી |
+| `Sdc416e` | workbench | Step | પગલું |
+| `Sf7710d` | workbench | Submit for review | સમીક્ષા માટે સબમિટ કરો |
+| `Sa45adc` | workbench | Submit the Drafts | મુસદ્દા સબમિટ કરો |
+| `S2d099f` | workbench | Submits the Drafts you wrote. A Draft that still lacks a platform or a domain sign-off is reported and left as it is. | તમે લખેલા મુસદ્દા સબમિટ કરે છે. જે મુસદ્દામાં હજી પ્લેટફોર્મ કે ડોમેન સાઇન-ઑફ નથી તેની જાણ કરાય છે અને તે જેવો છે તેવો રાખાય છે. |
+| `S5baa27` | workbench | The sample has defects, so the batch cannot be decided as it is. Send the defective codes back (the note is the reason), then draw a new sample of what is left. | નમૂનામાં ખામીઓ છે, તેથી બેચ પર જેવી છે તેવી નિર્ણય લઈ શકાય નહીં. ખામીયુક્ત કોડ પાછા મોકલો (નોંધ જ કારણ છે), પછી બાકીનામાંથી નવો નમૂનો ખેંચો. |
+| `S19f8ab` | workbench | Tick the codes an action is for; with none ticked an action covers every code it applies to. | જે કોડ માટે ક્રિયા છે તેના પર ટિક કરો; કોઈ ટિક ન હોય તો ક્રિયા લાગુ પડતા બધા કોડને લાગુ પડે છે. |
+| `S7f6e5a` | workbench | Verdict | ચુકાદો |
+| `Se6246f` | workbench | What stops it | તેને શું રોકે છે |
+| `Sbf45e2` | workbench | Work on many codes at once without weakening a step: every code still gets its own checks, its own audit entry and, for decisions, your password. A decision on more than %(above)s codes needs a sample inspection first: %(percent)s percent of the batch, at least %(minimum)s codes, spread over the subgroups. One defect in the sample stops the decision. | કોઈ પગલું નબળું કર્યા વિના ઘણા કોડ પર એકસાથે કામ કરો: દરેક કોડને તેની પોતાની તપાસ, પોતાની ઑડિટ નોંધ અને નિર્ણયો માટે તમારો પાસવર્ડ મળે છે. %(above)s થી વધુ કોડ પરના નિર્ણય માટે પહેલાં નમૂના તપાસ જોઈએ: બેચના %(percent)s ટકા, ઓછામાં ઓછા %(minimum)s કોડ, પેટાજૂથોમાં ફેલાયેલા. નમૂનામાં એક ખામી નિર્ણય અટકાવે છે. |
 
 ### 9.11 PK اردو 🇵🇰 — Urdu
 
-1216 of 1217 strings translated; direction right to left.
+1279 of 1280 strings translated; direction right to left.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -11646,7 +12213,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Scfa1b6` | detail | Add field comment | فیلڈ تبصرہ شامل کریں |
 | `Sbb965e` | detail | Add one of your change requests | اپنی ایک تبدیلی کی درخواست شامل کریں |
 | `S9a693b` | detail | Add to change set | تبدیلیوں کے مجموعے میں شامل کریں |
-| `S7bbd6d` | detail | Administrator sign-off | منتظم کا سائن آف |
+| `S7bbd6d` | detail, workbench | Administrator sign-off | منتظم کا سائن آف |
 | `S212856` | detail | advanced, controller firmware programs | جدید، کنٹرولر فرم ویئر پروگرام |
 | `Sfbde82` | detail | Affected component | متاثرہ جزو |
 | `S25f8c5` | detail, export, form | Alarm | الارم |
@@ -11675,17 +12242,17 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se7bab1` | detail | Chain of causes | وجوہات کی زنجیر |
 | `S9c8393` | detail, mine | Change Request | تبدیلی کی درخواست |
 | `S4572f4` | detail | Change request | تبدیلی کی درخواست |
-| `S3295be` | detail | Change requests in this set | اس مجموعے کی تبدیلی کی درخواستیں |
+| `S3295be` | detail, workbench | Change requests in this set | اس مجموعے کی تبدیلی کی درخواستیں |
 | `S4d8006` | detail | Change set | تبدیلیوں کا مجموعہ |
 | `S8aa57d` | detail | Changes | تبدیلیاں |
 | `S3d14ea` | detail, export | Changes of this release only | صرف اس ریلیز کی تبدیلیاں |
 | `Sbd95c0` | detail | Checklist confirmed at sign-off | سائن آف کے وقت تصدیق شدہ چیک لسٹ |
 | `S074d62` | detail, role badge | Chief Engineer | چیف انجینئر |
-| `S03695d` | detail | Chief Engineer decision | چیف انجینئر کا فیصلہ |
+| `S03695d` | detail, workbench | Chief Engineer decision | چیف انجینئر کا فیصلہ |
 | `Sf0a89f` | detail | Close change set | تبدیلیوں کا مجموعہ بند کریں |
 | `S7c0c39` | detail | Close this change set? | کیا یہ تبدیلیوں کا مجموعہ بند کرنا ہے؟ |
 | `S153d7a` | detail | Comment | تبصرہ |
-| `S611578` | detail | Comment (required for rejection) | تبصرہ (مسترد کرنے کے لیے لازمی) |
+| `S611578` | detail, workbench | Comment (required for rejection) | تبصرہ (مسترد کرنے کے لیے لازمی) |
 | `Sc38432` | detail | Comment on this field | اس فیلڈ پر تبصرہ کریں |
 | `Sfce06e` | detail | Comments | تبصرے |
 | `S8d105c` | detail, reconciliation | Compare | موازنہ کریں |
@@ -11711,7 +12278,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S0e8574` | detail | Customer | گاہک |
 | `Scb307e` | detail | Decide the selected requests in one sitting | منتخب درخواستوں پر ایک ہی نشست میں فیصلہ کریں |
 | `S319493` | detail | Decided by | فیصلہ کرنے والا |
-| `S7f59a1` | detail | Decision | فیصلہ |
+| `S7f59a1` | detail, workbench | Decision | فیصلہ |
 | `Sc51568` | detail | Decisions & Comments | فیصلے اور تبصرے |
 | `Sa9ec7c` | detail | Delete Permanently | مستقل طور پر حذف کریں |
 | `S7d1c7a` | detail | Delete Release | ریلیز حذف کریں |
@@ -11777,6 +12344,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S6d59f4` | detail | Manual Reset Program | دستی ری سیٹ پروگرام |
 | `Sf9896c` | detail, form | Mark resolved | حل شدہ کے طور پر نشان زد کریں |
 | `Sa7b93d` | detail, new, reconciliation | Mode | موڈ |
+| `S9f4d01` | detail | More than a few codes need a sample inspection first; use the workbench. | چند کوڈز سے زیادہ کے لیے پہلے نمونے کا معائنہ ضروری ہے؛ ورک بنچ استعمال کریں۔ |
 | `S31a335` | detail | new code | نیا کوڈ |
 | `S816c52` | detail, export_verify, form | No | نہیں |
 | `S06fc8d` | detail | No active Engineer holds the %(code)s domain yet. An Administrator must tag an Engineer with it (Administration → Users) before a sign-off can be requested. | کسی فعال انجینئر کے پاس %(code)s ڈومین نہیں۔ سائن آف مانگنے سے پہلے منتظم کو کسی انجینئر کو یہ ڈومین دینا ہوگا (انتظامیہ ← صارفین)۔ |
@@ -11807,7 +12375,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S9734ac` | detail | Other codes that refer to this one. Review them before deprecating it. | دیگر کوڈ جو اس کا حوالہ دیتے ہیں۔ اسے متروک کرنے سے پہلے ان کا جائزہ لیں۔ |
 | `S780d35` | detail | Override identifier (migration / reservation only) | شناخت کنندہ کو اوور رائیڈ کریں (صرف منتقلی / مخصوص کرنے کے لیے) |
 | `S89ff31` | detail | Owner | مالک |
-| `S2d20ee` | detail | Package overview | پیکیج کا جائزہ |
+| `S2d20ee` | detail, workbench | Package overview | پیکیج کا جائزہ |
 | `S4d1a47` | detail | Package: all languages and access levels | پیکیج: تمام زبانیں اور رسائی کی سطحیں |
 | `Sc49bd0` | detail | Packages of this Release | اس ریلیز کے پیکیج |
 | `S96f608` | detail, review_queue | Pending | زیرِ التواء |
@@ -11852,12 +12420,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S026ab2` | detail | resolved | حل شدہ |
 | `S68c61f` | detail | Rev # | ترمیم نمبر |
 | `Se4758b` | detail, review_checklist | Review checklist | جائزے کی چیک لسٹ |
-| `S7bfca8` | detail | Reviewer sign-off | جائزہ کار کا سائن آف |
+| `S7bfca8` | detail, workbench | Reviewer sign-off | جائزہ کار کا سائن آف |
 | `S3beb9a` | detail | Revision | ترمیم |
 | `Sa72973` | detail | Revision Fields | ترمیم کے فیلڈز |
 | `Sfc1d6a` | detail | row(s) imported as Drafts | سطریں مسودوں کے طور پر درآمد ہوئیں |
 | `S52d0b3` | detail, reconciliation, user_detail | Rows | سطریں |
 | `Sd0edfb` | detail | Sales | سیلز |
+| `S241bf5` | detail, workbench | Sample number | نمونہ نمبر |
 | `Sda38c6` | detail | Save planned dates | منصوبہ بند تاریخیں محفوظ کریں |
 | `S13c61c` | detail | Scope Filter | دائرے کا فلٹر |
 | `S859822` | detail, mine, withdrawn_codes | Select | منتخب کریں |
@@ -11919,11 +12488,12 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S7d5316` | detail | Who | کون |
 | `S47e564` | detail | Withdraw | واپس لیں |
 | `S51a998` | detail | Withdraw this change request? | کیا یہ تبدیلی کی درخواست واپس لینی ہے؟ |
+| `S93ef7c` | detail, workbench | Workbench | ورک بنچ |
 | `S95a2a4` | detail, form | Write level | لکھنے کی سطح |
 | `S612fe0` | detail | Yaw Bearing Lubrication Program | یاؤ بیئرنگ چکنائی پروگرام |
 | `S559a3f` | detail | Yaw Program | یاؤ پروگرام |
 | `S5397e0` | detail, export_verify, form | Yes | ہاں |
-| `Sc8e4b4` | detail | Your decision step | آپ کا فیصلے کا مرحلہ |
+| `Sc8e4b4` | detail, workbench | Your decision step | آپ کا فیصلے کا مرحلہ |
 | `S20cb4c` | detail, export_center | ZIP with manifest | مینی فیسٹ کے ساتھ ZIP |
 | `S5d4358` | dry_run | All rows are clean. | تمام سطریں صاف ہیں۔ |
 | `S03510d` | dry_run | Back to import | درآمد پر واپس |
@@ -11950,7 +12520,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S7b8d80` | export | Not for distribution - unapproved data | تقسیم کے لیے نہیں - غیر منظور شدہ ڈیٹا |
 | `Sd9b345` | export | not yet published | ابھی شائع نہیں ہوا |
 | `Sa5d386` | export | Page %(page)s of %(total)s | صفحہ %(page)s از %(total)s |
-| `Sac1a42` | export | Platforms | پلیٹ فارم |
+| `Sac1a42` | export, workbench | Platforms | پلیٹ فارم |
 | `Se51c55` | export | Records | ریکارڈ |
 | `Sd41f56` | export, export_center | Release | ریلیز |
 | `S2e8fd6` | export | Reset delay | ری سیٹ تاخیر |
@@ -12002,7 +12572,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S45ea95` | export_verify | Manifest signature | مینی فیسٹ کا دستخط |
 | `S08f84b` | export_verify | No record of this exact file | ٹھیک اسی فائل کا کوئی ریکارڈ نہیں |
 | `S357953` | export_verify | NOT OK | ٹھیک نہیں |
-| `S9ce3bd` | export_verify | OK | ٹھیک |
+| `S9ce3bd` | export_verify, workbench | OK | ٹھیک |
 | `S8a5285` | export_verify | Overall | مجموعی طور پر |
 | `Sd2bc4a` | export_verify | Produced by this system | اس نظام کا تیار کردہ |
 | `S112d15` | export_verify | Verify an export | برآمد کی تصدیق کریں |
@@ -12076,10 +12646,16 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S689b33` | help | The full manual is docs/23-user-manual.md in the project folder; the glossary below is the same one the tooltips use. | مکمل دستی منصوبے کے فولڈر میں docs/23-user-manual.md ہے؛ نیچے کی لغت وہی ہے جو ٹول ٹپس میں استعمال ہوتی ہے۔ |
 | `S439914` | help | What happens next on a change request | تبدیلی کی درخواست پر آگے کیا ہوتا ہے |
 | `S6d29d9` | help and messages | %(n)s withdrawn code(s) deleted. | %(n)s واپس لیے گئے کوڈ حذف ہو گئے۔ |
+| `S285edc` | help and messages | %(ok)s of %(n)s: %(what)s. | %(ok)s / %(n)s: %(what)s۔ |
 | `Sb08e6c` | help and messages | A Reviewer and an Administrator each sign off (in any order). If either rejects, it goes back to the author. | ایک جائزہ کار اور ایک منتظم ہر ایک سائن آف کرتا ہے (کسی بھی ترتیب سے)۔ اگر کوئی مسترد کرے تو وہ مصنف کے پاس واپس جاتی ہے۔ |
 | `S2f1bed` | help and messages | An Administrator includes the revision in a Release and publishes it; then it is Released. | منتظم ترمیم کو ریلیز میں شامل کر کے شائع کرتا ہے؛ تب وہ جاری شدہ ہو جاتی ہے۔ |
+| `S1308dc` | help and messages | defective codes sent back | نقص والے کوڈ واپس بھیج دیے گئے |
+| `Se2bbd9` | help and messages | Drafts saved | مسودے محفوظ ہو گئے |
+| `S0ddfa5` | help and messages | Drafts signed off | مسودوں کا سائن آف ہو گیا |
+| `Sf90ab8` | help and messages | Drafts submitted for review | مسودے جائزے کے لیے جمع کرائے گئے |
 | `Sd856bd` | help and messages | Not deleted (it has a revision again or is still referenced): %(x)s | حذف نہیں ہوا (اس کی دوبارہ ترمیم ہے یا اب بھی حوالہ موجود ہے): %(x)s |
 | `S34b903` | help and messages | Not possible: the account has history (see above). Deactivate it instead; the person can no longer sign in and everything they did stays attributable. | ممکن نہیں: اکاؤنٹ کی تاریخ ہے (اوپر دیکھیں)۔ اس کے بجائے غیر فعال کریں؛ وہ شخص اب سائن اِن نہیں کر سکتا اور اس نے جو کیا وہ قابلِ نسبت رہتا ہے۔ |
+| `S6a26de` | help and messages | Sample %(id)s drawn: %(n)s of %(total)s codes to inspect. | نمونہ %(id)s نکالا گیا: %(n)s / %(total)s کوڈ جانچنے ہیں۔ |
 | `Sce489f` | help and messages | The author gets any required cross-domain sign-offs, then submits the change request for review. | مصنف مطلوبہ بین الشعبہ سائن آف حاصل کرتا ہے، پھر تبدیلی کی درخواست جائزے کے لیے جمع کراتا ہے۔ |
 | `S1cdbdd` | help and messages | The Chief Engineer approves or rejects. Approval makes the revision Approved (or Deprecated for a deprecation request). | چیف انجینئر منظور یا مسترد کرتا ہے۔ منظوری ترمیم کو منظور شدہ (یا متروکیت کی درخواست کے لیے متروک) بنا دیتی ہے۔ |
 | `S2d6ac0` | help and messages | The package is being built. Reload this page to follow its progress. | پیکیج بن رہا ہے۔ پیش رفت دیکھنے کے لیے یہ صفحہ دوبارہ لوڈ کریں۔ |
@@ -12152,7 +12728,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sded18c` | language | approved by | منظور کنندہ |
 | `Sedd46e` | language | Check against the interface | انٹرفیس سے ملا کر دیکھیں |
 | `S5a013c` | language | missing | غائب |
-| `S2c924e` | language | Note | نوٹ |
+| `S2c924e` | language, workbench | Note | نوٹ |
 | `S2f09d0` | language | Note on %(x)s | %(x)s پر نوٹ |
 | `S75bf99` | language | proposed by | تجویز کنندہ |
 | `Sc68e32` | language | Save translations | تراجم محفوظ کریں |
@@ -12274,6 +12850,26 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se146d2` | message: auth_service | Your account is not active. | آپ کا اکاؤنٹ فعال نہیں۔ |
 | `Sb584dd` | message: backup_service | Backups need a file-based SQLite database. | بیک اپ کے لیے فائل پر مبنی SQLite ڈیٹا بیس درکار ہے۔ |
 | `S368c82` | message: backup_service | keep must be at least 1 | keep کم از کم 1 ہونا چاہیے |
+| `S18edaf` | message: bulk_service | A defect needs a note: say what is wrong. | نقص کے لیے نوٹ ضروری ہے: بتائیں کیا غلط ہے۔ |
+| `S68cada` | message: bulk_service, workbench | A defective Draft is corrected by its author. | نقص والا مسودہ اس کا مصنف درست کرتا ہے۔ |
+| `S8941d5` | message: bulk_service | A domain sign-off needs the engineering domain. | ڈومین سائن آف کے لیے انجینئرنگ ڈومین ضروری ہے۔ |
+| `S071452` | message: bulk_service | A note has at most 1000 characters. | نوٹ میں زیادہ سے زیادہ 1000 حروف ہو سکتے ہیں۔ |
+| `Sf74baa` | message: bulk_service, message: change_set_service | Change set not found | تبدیلیوں کا مجموعہ نہیں ملا |
+| `Sf89067` | message: bulk_service | Choose at least one value to set. | سیٹ کرنے کے لیے کم از کم ایک قدر منتخب کریں۔ |
+| `S1e3e33` | message: bulk_service | No change request of the set is waiting for you at this step. | مجموعے کی کوئی تبدیلی کی درخواست اس مرحلے پر آپ کی منتظر نہیں۔ |
+| `S95bd2d` | message: bulk_service | No Draft of the set is waiting for the sign-off of this domain. | مجموعے کا کوئی مسودہ اس ڈومین کے سائن آف کا منتظر نہیں۔ |
+| `S495371` | message: bulk_service | Only a sample with defects can be sent back. | صرف نقص والا نمونہ ہی واپس بھیجا جا سکتا ہے۔ |
+| `Sa6e3b3` | message: bulk_service | Sample not found | نمونہ نہیں ملا |
+| `Sf745cc` | message: bulk_service | step must be domain, reviewer, admin or chief-engineer | step کا domain، reviewer، admin یا chief-engineer ہونا ضروری ہے |
+| `S973577` | message: bulk_service | That change request is not in the sample. | وہ تبدیلی کی درخواست نمونے میں نہیں ہے۔ |
+| `Sa1a149` | message: bulk_service | The batch changed since the sample was drawn; draw a new sample. | نمونہ نکالنے کے بعد بیچ بدل گیا ہے؛ نیا نمونہ نکالیں۔ |
+| `S8e5b1c` | message: bulk_service | The verdict must be OK or DEFECT. | فیصلہ OK یا نقص ہونا چاہیے۔ |
+| `Sddedd6` | message: bulk_service | This is not your sample: the person who decides inspects. | یہ آپ کا نمونہ نہیں: جو فیصلہ کرتا ہے وہی معائنہ کرتا ہے۔ |
+| `Sf56c6a` | message: bulk_service | This sample belongs to another change set or another step. | یہ نمونہ کسی اور تبدیلی کے مجموعے یا کسی اور مرحلے کا ہے۔ |
+| `S146a72` | message: bulk_service | This sample has been used for a decision already; draw a new one. | یہ نمونہ پہلے ہی ایک فیصلے کے لیے استعمال ہو چکا ہے؛ نیا نکالیں۔ |
+| `Sf0f02c` | message: bulk_service | This sample is closed. | یہ نمونہ بند ہے۔ |
+| `Sf973bd` | message: bulk_service | This sample is older than 24 hours; draw a new one. | یہ نمونہ 24 گھنٹے سے پرانا ہے؛ نیا نکالیں۔ |
+| `S062a13` | message: bulk_service | This sample was replaced by a newer one. | اس نمونے کی جگہ نیا نمونہ لے چکا ہے۔ |
 | `Sca2391` | message: change_request_service | A comment must be between 1 and 4000 characters. | تبصرہ 1 سے 4000 حروف کے درمیان ہونا چاہیے۔ |
 | `S33cd99` | message: change_request_service | At least one Turbine Platform is required before Submit for Review (FR-023a). | جائزے کے لیے جمع کرانے سے پہلے کم از کم ایک ٹربائن پلیٹ فارم ضروری ہے (FR-023a)۔ |
 | `S1fd35e` | message: change_request_service | decision must be APPROVE or REJECT. | decision APPROVE یا REJECT ہونا چاہیے۔ |
@@ -12284,7 +12880,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sbd3a03` | message: change_request_service | reviewer_id must be an active user with the Reviewer role. | reviewer_id جائزہ کار کے کردار والا فعال صارف ہونا چاہیے۔ |
 | `S043693` | message: change_request_service | The Reviewer has already signed off this CR. | جائزہ کار نے اس تبدیلی کی درخواست پر پہلے ہی سائن آف کر دیا ہے۔ |
 | `S7a758c` | message: change_set_service | A change set needs a name of 1-120 characters. | تبدیلیوں کے مجموعے کو 1-120 حروف کا نام درکار ہے۔ |
-| `Sf74baa` | message: change_set_service | Change set not found | تبدیلیوں کا مجموعہ نہیں ملا |
 | `Sd8fad1` | message: change_set_service | Only a CR that is still open can join a change set. | صرف ابھی تک کھلی تبدیلی کی درخواست تبدیلیوں کے مجموعے میں شامل ہو سکتی ہے۔ |
 | `S990d51` | message: change_set_service | Only the author of the CR or an Administrator may group it. | صرف تبدیلی کی درخواست کا مصنف یا منتظم اسے گروپ کر سکتا ہے۔ |
 | `S69e4d1` | message: change_set_service | Only the author of the CR or an Administrator may ungroup it. | صرف تبدیلی کی درخواست کا مصنف یا منتظم اسے گروپ سے نکال سکتا ہے۔ |
@@ -12370,6 +12965,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sdb88ba` | message: saved_search_service | Saved search not found | محفوظ شدہ تلاش نہیں ملی |
 | `S046aff` | message: saved_search_service | This saved search belongs to someone else. | یہ محفوظ شدہ تلاش کسی اور کی ہے۔ |
 | `Saad8e2` | message: settings_service | must be a whole number between 0 and 100 | 0 اور 100 کے درمیان پورا عدد ہونا چاہیے |
+| `S9625d1` | message: settings_service | must be a whole number between 1 and 100 | 1 اور 100 کے درمیان پورا عدد ہونا چاہیے |
 | `S6e4015` | message: settings_service | must be a whole number between 1 and 365 | 1 اور 365 کے درمیان پورا عدد ہونا چاہیے |
 | `S9671fb` | message: settings_service | must be true or false | true یا false ہونا چاہیے |
 | `S5166bb` | message: st_import_service | A staged file changed after the preview. Upload again. | پیش منظر کے بعد ایک تیار شدہ فائل بدل گئی۔ دوبارہ اپ لوڈ کریں۔ |
@@ -12567,7 +13163,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S6daf16` | st_preview | Preview: status codes from .st files | پیش منظر: .st فائلوں سے اسٹیٹس کوڈ |
 | `S15a21a` | st_preview | program(s) | پروگرام |
 | `Se58289` | st_preview | Programs found in the uploaded files | اپ لوڈ کی گئی فائلوں میں ملے پروگرام |
-| `S75c053` | st_preview | ready | تیار |
+| `S75c053` | st_preview, workbench | ready | تیار |
 | `S0723bf` | st_preview | Select all programs that are ready | تمام تیار پروگرام منتخب کریں |
 | `S1a767a` | st_preview | updates the open Draft | کھلے مسودے کو اپ ڈیٹ کرتا ہے |
 | `S02499f` | st_preview | withdrawn | واپس لیے گئے |
@@ -12666,10 +13262,44 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S8516a7` | withdrawn_codes | Delete selected | منتخب حذف کریں |
 | `Sdfeb06` | withdrawn_codes | No withdrawn codes. | کوئی واپس لیا گیا کوڈ نہیں۔ |
 | `S87ec0b` | withdrawn_codes | Withdrawn on | واپسی کی تاریخ |
+| `S48d260` | workbench | %(n)s of %(total)s codes drawn at %(when)s. | %(n)s / %(total)s کوڈ %(when)s کو منتخب کیے گئے۔ |
+| `S88b55f` | workbench | Approve the batch | بیچ منظور کریں |
+| `Sf40e77` | workbench | Available group | دستیاب گروپ |
+| `S99613c` | workbench | Blocked | بند |
+| `Sca7133` | workbench | Choose the step you are about to decide, draw the sample, look at every sampled code and mark it. The sample is yours, valid for 24 hours and for this batch as it is now. | وہ مرحلہ منتخب کریں جس پر آپ فیصلہ کرنے والے ہیں، نمونہ نکالیں، نکالے گئے ہر کوڈ کو دیکھیں اور نشان لگائیں۔ نمونہ آپ کا ہے، 24 گھنٹے اور اس بیچ کے لیے جیسی وہ اب ہے، قابل استعمال ہے۔ |
+| `S6f4274` | workbench | Codes in this batch | اس بیچ کے کوڈ |
+| `S117313` | workbench | Decide the batch | بیچ پر فیصلہ کریں |
+| `Se91aff` | workbench | Defect | نقص |
+| `S16fbbf` | workbench | Domain sign-off | ڈومین سائن آف |
+| `Scb1884` | workbench | Dossier (XLSX) | ڈوزیئر (XLSX) |
+| `S25085f` | workbench | Draw a sample | نمونہ نکالیں |
+| `S9167a7` | workbench | Engineering domain | انجینئرنگ ڈومین |
+| `Sbc3c59` | workbench | Only the values you choose are changed, on the Drafts you wrote (an Administrator: any Draft). | صرف آپ کی منتخب کردہ قدریں بدلتی ہیں، ان مسودوں پر جو آپ نے لکھے (منتظم: کوئی بھی مسودہ)۔ |
+| `S92223f` | workbench | Passed: no defect in the sample. Use sample number %(id)s below. | کامیاب: نمونے میں کوئی نقص نہیں۔ نیچے نمونہ نمبر %(id)s استعمال کریں۔ |
+| `S6275ab` | workbench | Ready to submit | جمع کرانے کے لیے تیار |
+| `Se1e74d` | workbench | Reject the batch | بیچ مسترد کریں |
+| `S58fabf` | workbench | Sample | نمونہ |
+| `S862471` | workbench | Sample inspection | نمونے کا معائنہ |
+| `S69cc53` | workbench | Save the verdicts | فیصلے محفوظ کریں |
+| `S3ae55b` | workbench | Send the defective codes back | نقص والے کوڈ واپس بھیجیں |
+| `Se90e7c` | workbench | Set on the Drafts | مسودوں پر سیٹ کریں |
+| `Sa58dac` | workbench | Set values on the Drafts | مسودوں پر قدریں سیٹ کریں |
+| `Sa443bb` | workbench | Sign off the Drafts | مسودوں کا سائن آف کریں |
+| `S53f47f` | workbench | Sign-off pending | سائن آف زیر التوا |
+| `Sae12bc` | workbench | Status category | اسٹیٹس زمرہ |
+| `Sdc416e` | workbench | Step | مرحلہ |
+| `Sf7710d` | workbench | Submit for review | جائزے کے لیے جمع کرائیں |
+| `Sa45adc` | workbench | Submit the Drafts | مسودے جمع کرائیں |
+| `S2d099f` | workbench | Submits the Drafts you wrote. A Draft that still lacks a platform or a domain sign-off is reported and left as it is. | آپ کے لکھے ہوئے مسودے جمع کراتا ہے۔ جس مسودے میں ابھی پلیٹ فارم یا ڈومین سائن آف نہیں، اس کی اطلاع دی جاتی ہے اور اسے جیسا ہے ویسا چھوڑ دیا جاتا ہے۔ |
+| `S5baa27` | workbench | The sample has defects, so the batch cannot be decided as it is. Send the defective codes back (the note is the reason), then draw a new sample of what is left. | نمونے میں نقائص ہیں، اس لیے بیچ پر جیسا ہے ویسا فیصلہ نہیں ہو سکتا۔ نقص والے کوڈ واپس بھیجیں (نوٹ ہی وجہ ہے)، پھر باقی میں سے نیا نمونہ نکالیں۔ |
+| `S19f8ab` | workbench | Tick the codes an action is for; with none ticked an action covers every code it applies to. | جن کوڈز کے لیے کارروائی ہے ان پر نشان لگائیں؛ کوئی نشان نہ ہو تو کارروائی ہر اس کوڈ پر لاگو ہوتی ہے جس پر وہ لاگو ہو سکتی ہے۔ |
+| `S7f6e5a` | workbench | Verdict | فیصلہ |
+| `Se6246f` | workbench | What stops it | اسے کیا روک رہا ہے |
+| `Sbf45e2` | workbench | Work on many codes at once without weakening a step: every code still gets its own checks, its own audit entry and, for decisions, your password. A decision on more than %(above)s codes needs a sample inspection first: %(percent)s percent of the batch, at least %(minimum)s codes, spread over the subgroups. One defect in the sample stops the decision. | کسی مرحلے کو کمزور کیے بغیر بہت سے کوڈز پر ایک ساتھ کام کریں: ہر کوڈ کی اپنی جانچ، اپنی آڈٹ اندراج اور فیصلوں کے لیے آپ کا پاس ورڈ برقرار رہتا ہے۔ %(above)s سے زیادہ کوڈز پر فیصلے کے لیے پہلے نمونے کا معائنہ ضروری ہے: بیچ کا %(percent)s فیصد، کم از کم %(minimum)s کوڈ، ذیلی گروپوں میں پھیلے ہوئے۔ نمونے میں ایک نقص فیصلہ روک دیتا ہے۔ |
 
 ### 9.12 IN ಕನ್ನಡ 🇮🇳 — Kannada
 
-1216 of 1217 strings translated; direction left to right.
+1279 of 1280 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -12869,7 +13499,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Scfa1b6` | detail | Add field comment | ಕ್ಷೇತ್ರ ಟಿಪ್ಪಣಿ ಸೇರಿಸಿ |
 | `Sbb965e` | detail | Add one of your change requests | ನಿಮ್ಮ ಒಂದು ಬದಲಾವಣೆ ವಿನಂತಿಯನ್ನು ಸೇರಿಸಿ |
 | `S9a693b` | detail | Add to change set | ಬದಲಾವಣೆ ಸಮೂಹಕ್ಕೆ ಸೇರಿಸಿ |
-| `S7bbd6d` | detail | Administrator sign-off | ನಿರ್ವಾಹಕರ ಸಹಿ |
+| `S7bbd6d` | detail, workbench | Administrator sign-off | ನಿರ್ವಾಹಕರ ಸಹಿ |
 | `S212856` | detail | advanced, controller firmware programs | ಸುಧಾರಿತ, ನಿಯಂತ್ರಕ ಫರ್ಮ್‌ವೇರ್ ಪ್ರೋಗ್ರಾಂಗಳು |
 | `Sfbde82` | detail | Affected component | ಬಾಧಿತ ಘಟಕ |
 | `S25f8c5` | detail, export, form | Alarm | ಅಲಾರಂ |
@@ -12898,17 +13528,17 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se7bab1` | detail | Chain of causes | ಕಾರಣಗಳ ಸರಪಳಿ |
 | `S9c8393` | detail, mine | Change Request | ಬದಲಾವಣೆ ವಿನಂತಿ |
 | `S4572f4` | detail | Change request | ಬದಲಾವಣೆ ವಿನಂತಿ |
-| `S3295be` | detail | Change requests in this set | ಈ ಸಮೂಹದ ಬದಲಾವಣೆ ವಿನಂತಿಗಳು |
+| `S3295be` | detail, workbench | Change requests in this set | ಈ ಸಮೂಹದ ಬದಲಾವಣೆ ವಿನಂತಿಗಳು |
 | `S4d8006` | detail | Change set | ಬದಲಾವಣೆ ಸಮೂಹ |
 | `S8aa57d` | detail | Changes | ಬದಲಾವಣೆಗಳು |
 | `S3d14ea` | detail, export | Changes of this release only | ಈ ಬಿಡುಗಡೆಯ ಬದಲಾವಣೆಗಳು ಮಾತ್ರ |
 | `Sbd95c0` | detail | Checklist confirmed at sign-off | ಸಹಿಯ ಸಮಯದಲ್ಲಿ ದೃಢೀಕರಿಸಿದ ಪರಿಶೀಲನಾಪಟ್ಟಿ |
 | `S074d62` | detail, role badge | Chief Engineer | ಮುಖ್ಯ ಎಂಜಿನಿಯರ್ |
-| `S03695d` | detail | Chief Engineer decision | ಮುಖ್ಯ ಎಂಜಿನಿಯರ್ ನಿರ್ಧಾರ |
+| `S03695d` | detail, workbench | Chief Engineer decision | ಮುಖ್ಯ ಎಂಜಿನಿಯರ್ ನಿರ್ಧಾರ |
 | `Sf0a89f` | detail | Close change set | ಬದಲಾವಣೆ ಸಮೂಹ ಮುಚ್ಚಿ |
 | `S7c0c39` | detail | Close this change set? | ಈ ಬದಲಾವಣೆ ಸಮೂಹವನ್ನು ಮುಚ್ಚಬೇಕೇ? |
 | `S153d7a` | detail | Comment | ಟಿಪ್ಪಣಿ |
-| `S611578` | detail | Comment (required for rejection) | ಟಿಪ್ಪಣಿ (ತಿರಸ್ಕಾರಕ್ಕೆ ಕಡ್ಡಾಯ) |
+| `S611578` | detail, workbench | Comment (required for rejection) | ಟಿಪ್ಪಣಿ (ತಿರಸ್ಕಾರಕ್ಕೆ ಕಡ್ಡಾಯ) |
 | `Sc38432` | detail | Comment on this field | ಈ ಕ್ಷೇತ್ರದ ಬಗ್ಗೆ ಟಿಪ್ಪಣಿ ಮಾಡಿ |
 | `Sfce06e` | detail | Comments | ಟಿಪ್ಪಣಿಗಳು |
 | `S8d105c` | detail, reconciliation | Compare | ಹೋಲಿಸಿ |
@@ -12934,7 +13564,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S0e8574` | detail | Customer | ಗ್ರಾಹಕ |
 | `Scb307e` | detail | Decide the selected requests in one sitting | ಆಯ್ದ ವಿನಂತಿಗಳನ್ನು ಒಂದೇ ಬಾರಿಗೆ ನಿರ್ಧರಿಸಿ |
 | `S319493` | detail | Decided by | ನಿರ್ಧರಿಸಿದವರು |
-| `S7f59a1` | detail | Decision | ನಿರ್ಧಾರ |
+| `S7f59a1` | detail, workbench | Decision | ನಿರ್ಧಾರ |
 | `Sc51568` | detail | Decisions & Comments | ನಿರ್ಧಾರಗಳು ಮತ್ತು ಟಿಪ್ಪಣಿಗಳು |
 | `Sa9ec7c` | detail | Delete Permanently | ಶಾಶ್ವತವಾಗಿ ಅಳಿಸಿ |
 | `S7d1c7a` | detail | Delete Release | ಬಿಡುಗಡೆ ಅಳಿಸಿ |
@@ -13000,6 +13630,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S6d59f4` | detail | Manual Reset Program | ಕೈಯಾರೆ ರೀಸೆಟ್ ಪ್ರೋಗ್ರಾಂ |
 | `Sf9896c` | detail, form | Mark resolved | ಪರಿಹರಿಸಲಾಗಿದೆ ಎಂದು ಗುರುತಿಸಿ |
 | `Sa7b93d` | detail, new, reconciliation | Mode | ಮೋಡ್ |
+| `S9f4d01` | detail | More than a few codes need a sample inspection first; use the workbench. | ಕೆಲವು ಕೋಡ್‌ಗಳಿಗಿಂತ ಹೆಚ್ಚಿಗೆ ಮೊದಲು ಮಾದರಿ ತಪಾಸಣೆ ಬೇಕು; ವರ್ಕ್‌ಬೆಂಚ್ ಬಳಸಿ. |
 | `S31a335` | detail | new code | ಹೊಸ ಕೋಡ್ |
 | `S816c52` | detail, export_verify, form | No | ಇಲ್ಲ |
 | `S06fc8d` | detail | No active Engineer holds the %(code)s domain yet. An Administrator must tag an Engineer with it (Administration → Users) before a sign-off can be requested. | ಯಾವುದೇ ಸಕ್ರಿಯ ಎಂಜಿನಿಯರ್ ಬಳಿ %(code)s ಡೊಮೇನ್ ಇಲ್ಲ. ಸಹಿಯನ್ನು ವಿನಂತಿಸುವ ಮೊದಲು ನಿರ್ವಾಹಕರು ಎಂಜಿನಿಯರ್‌ಗೆ ಅದನ್ನು ನೀಡಬೇಕು (ನಿರ್ವಹಣೆ → ಬಳಕೆದಾರರು). |
@@ -13030,7 +13661,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S9734ac` | detail | Other codes that refer to this one. Review them before deprecating it. | ಇದನ್ನು ಉಲ್ಲೇಖಿಸುವ ಇತರ ಕೋಡ್‌ಗಳು. ಇದನ್ನು ಹಳತಾಗಿಸುವ ಮೊದಲು ಅವನ್ನು ಪರಿಶೀಲಿಸಿ. |
 | `S780d35` | detail | Override identifier (migration / reservation only) | ಗುರುತನ್ನು ಅತಿಕ್ರಮಿಸಿ (ವಲಸೆ / ಕಾಯ್ದಿರಿಸುವಿಕೆಗೆ ಮಾತ್ರ) |
 | `S89ff31` | detail | Owner | ಮಾಲೀಕ |
-| `S2d20ee` | detail | Package overview | ಪ್ಯಾಕೇಜ್ ಅವಲೋಕನ |
+| `S2d20ee` | detail, workbench | Package overview | ಪ್ಯಾಕೇಜ್ ಅವಲೋಕನ |
 | `S4d1a47` | detail | Package: all languages and access levels | ಪ್ಯಾಕೇಜ್: ಎಲ್ಲಾ ಭಾಷೆಗಳು ಮತ್ತು ಪ್ರವೇಶ ಹಂತಗಳು |
 | `Sc49bd0` | detail | Packages of this Release | ಈ ಬಿಡುಗಡೆಯ ಪ್ಯಾಕೇಜ್‌ಗಳು |
 | `S96f608` | detail, review_queue | Pending | ಬಾಕಿ |
@@ -13075,12 +13706,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S026ab2` | detail | resolved | ಪರಿಹರಿಸಲಾಗಿದೆ |
 | `S68c61f` | detail | Rev # | ಪರಿಷ್ಕರಣೆ ಸಂ. |
 | `Se4758b` | detail, review_checklist | Review checklist | ಪರಿಶೀಲನಾ ಪರಿಶೀಲನಾಪಟ್ಟಿ |
-| `S7bfca8` | detail | Reviewer sign-off | ಪರಿಶೀಲಕರ ಸಹಿ |
+| `S7bfca8` | detail, workbench | Reviewer sign-off | ಪರಿಶೀಲಕರ ಸಹಿ |
 | `S3beb9a` | detail | Revision | ಪರಿಷ್ಕರಣೆ |
 | `Sa72973` | detail | Revision Fields | ಪರಿಷ್ಕರಣೆ ಕ್ಷೇತ್ರಗಳು |
 | `Sfc1d6a` | detail | row(s) imported as Drafts | ಸಾಲು(ಗಳು) ಕರಡುಗಳಾಗಿ ಆಮದಾಗಿವೆ |
 | `S52d0b3` | detail, reconciliation, user_detail | Rows | ಸಾಲುಗಳು |
 | `Sd0edfb` | detail | Sales | ಮಾರಾಟ |
+| `S241bf5` | detail, workbench | Sample number | ಮಾದರಿ ಸಂಖ್ಯೆ |
 | `Sda38c6` | detail | Save planned dates | ಯೋಜಿತ ದಿನಾಂಕಗಳನ್ನು ಉಳಿಸಿ |
 | `S13c61c` | detail | Scope Filter | ವ್ಯಾಪ್ತಿ ಫಿಲ್ಟರ್ |
 | `S859822` | detail, mine, withdrawn_codes | Select | ಆಯ್ಕೆಮಾಡಿ |
@@ -13142,11 +13774,12 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S7d5316` | detail | Who | ಯಾರು |
 | `S47e564` | detail | Withdraw | ಹಿಂಪಡೆಯಿರಿ |
 | `S51a998` | detail | Withdraw this change request? | ಈ ಬದಲಾವಣೆ ವಿನಂತಿಯನ್ನು ಹಿಂಪಡೆಯಬೇಕೇ? |
+| `S93ef7c` | detail, workbench | Workbench | ವರ್ಕ್‌ಬೆಂಚ್ |
 | `S95a2a4` | detail, form | Write level | ಬರೆಯುವ ಮಟ್ಟ |
 | `S612fe0` | detail | Yaw Bearing Lubrication Program | ಯಾ ಬೇರಿಂಗ್ ಲೂಬ್ರಿಕೇಶನ್ ಪ್ರೋಗ್ರಾಂ |
 | `S559a3f` | detail | Yaw Program | ಯಾ ಪ್ರೋಗ್ರಾಂ |
 | `S5397e0` | detail, export_verify, form | Yes | ಹೌದು |
-| `Sc8e4b4` | detail | Your decision step | ನಿಮ್ಮ ನಿರ್ಧಾರ ಹಂತ |
+| `Sc8e4b4` | detail, workbench | Your decision step | ನಿಮ್ಮ ನಿರ್ಧಾರ ಹಂತ |
 | `S20cb4c` | detail, export_center | ZIP with manifest | ಮ್ಯಾನಿಫೆಸ್ಟ್‌ನೊಂದಿಗೆ ZIP |
 | `S5d4358` | dry_run | All rows are clean. | ಎಲ್ಲಾ ಸಾಲುಗಳು ಸ್ವಚ್ಛವಾಗಿವೆ. |
 | `S03510d` | dry_run | Back to import | ಆಮದಿಗೆ ಹಿಂತಿರುಗಿ |
@@ -13173,7 +13806,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S7b8d80` | export | Not for distribution - unapproved data | ವಿತರಣೆಗೆ ಅಲ್ಲ - ಅನುಮೋದಿಸದ ಡೇಟಾ |
 | `Sd9b345` | export | not yet published | ಇನ್ನೂ ಪ್ರಕಟವಾಗಿಲ್ಲ |
 | `Sa5d386` | export | Page %(page)s of %(total)s | ಪುಟ %(page)s / %(total)s |
-| `Sac1a42` | export | Platforms | ವೇದಿಕೆಗಳು |
+| `Sac1a42` | export, workbench | Platforms | ವೇದಿಕೆಗಳು |
 | `Se51c55` | export | Records | ದಾಖಲೆಗಳು |
 | `Sd41f56` | export, export_center | Release | ಬಿಡುಗಡೆ |
 | `S2e8fd6` | export | Reset delay | ರೀಸೆಟ್ ವಿಳಂಬ |
@@ -13225,7 +13858,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S45ea95` | export_verify | Manifest signature | ಮ್ಯಾನಿಫೆಸ್ಟ್ ಸಹಿ |
 | `S08f84b` | export_verify | No record of this exact file | ಈ ನಿಖರ ಫೈಲ್‌ನ ದಾಖಲೆ ಇಲ್ಲ |
 | `S357953` | export_verify | NOT OK | ಸರಿಯಿಲ್ಲ |
-| `S9ce3bd` | export_verify | OK | ಸರಿ |
+| `S9ce3bd` | export_verify, workbench | OK | ಸರಿ |
 | `S8a5285` | export_verify | Overall | ಒಟ್ಟಾರೆ |
 | `Sd2bc4a` | export_verify | Produced by this system | ಈ ವ್ಯವಸ್ಥೆ ತಯಾರಿಸಿದ್ದು |
 | `S112d15` | export_verify | Verify an export | ರಫ್ತನ್ನು ಪರಿಶೀಲಿಸಿ |
@@ -13299,10 +13932,16 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S689b33` | help | The full manual is docs/23-user-manual.md in the project folder; the glossary below is the same one the tooltips use. | ಸಂಪೂರ್ಣ ಕೈಪಿಡಿ ಯೋಜನಾ ಫೋಲ್ಡರ್‌ನಲ್ಲಿ docs/23-user-manual.md ಆಗಿದೆ; ಕೆಳಗಿನ ಪದಕೋಶ ಟೂಲ್‌ಟಿಪ್‌ಗಳು ಬಳಸುವುದೇ. |
 | `S439914` | help | What happens next on a change request | ಬದಲಾವಣೆ ವಿನಂತಿಯಲ್ಲಿ ಮುಂದೆ ಏನಾಗುತ್ತದೆ |
 | `S6d29d9` | help and messages | %(n)s withdrawn code(s) deleted. | %(n)s ಹಿಂಪಡೆದ ಕೋಡ್‌ಗಳನ್ನು ಅಳಿಸಲಾಗಿದೆ. |
+| `S285edc` | help and messages | %(ok)s of %(n)s: %(what)s. | %(ok)s / %(n)s: %(what)s. |
 | `Sb08e6c` | help and messages | A Reviewer and an Administrator each sign off (in any order). If either rejects, it goes back to the author. | ಒಬ್ಬ ಪರಿಶೀಲಕ ಮತ್ತು ಒಬ್ಬ ನಿರ್ವಾಹಕ ಪ್ರತಿಯೊಬ್ಬರೂ ಸಹಿ ಮಾಡುತ್ತಾರೆ (ಯಾವುದೇ ಕ್ರಮದಲ್ಲಿ). ಯಾರಾದರೂ ತಿರಸ್ಕರಿಸಿದರೆ ಅದು ಲೇಖಕರಿಗೆ ಹಿಂತಿರುಗುತ್ತದೆ. |
 | `S2f1bed` | help and messages | An Administrator includes the revision in a Release and publishes it; then it is Released. | ನಿರ್ವಾಹಕರು ಪರಿಷ್ಕರಣೆಯನ್ನು ಬಿಡುಗಡೆಗೆ ಸೇರಿಸಿ ಪ್ರಕಟಿಸುತ್ತಾರೆ; ನಂತರ ಅದು ಬಿಡುಗಡೆಯಾದದ್ದು. |
+| `S1308dc` | help and messages | defective codes sent back | ದೋಷಯುಕ್ತ ಕೋಡ್‌ಗಳನ್ನು ಹಿಂದಕ್ಕೆ ಕಳುಹಿಸಲಾಗಿದೆ |
+| `Se2bbd9` | help and messages | Drafts saved | ಕರಡುಗಳನ್ನು ಉಳಿಸಲಾಗಿದೆ |
+| `S0ddfa5` | help and messages | Drafts signed off | ಕರಡುಗಳಿಗೆ ಸಹಿ ಮಾಡಲಾಗಿದೆ |
+| `Sf90ab8` | help and messages | Drafts submitted for review | ಕರಡುಗಳನ್ನು ಪರಿಶೀಲನೆಗೆ ಸಲ್ಲಿಸಲಾಗಿದೆ |
 | `Sd856bd` | help and messages | Not deleted (it has a revision again or is still referenced): %(x)s | ಅಳಿಸಲಿಲ್ಲ (ಅದಕ್ಕೆ ಮತ್ತೆ ಪರಿಷ್ಕರಣೆ ಇದೆ ಅಥವಾ ಇನ್ನೂ ಉಲ್ಲೇಖವಿದೆ): %(x)s |
 | `S34b903` | help and messages | Not possible: the account has history (see above). Deactivate it instead; the person can no longer sign in and everything they did stays attributable. | ಸಾಧ್ಯವಿಲ್ಲ: ಖಾತೆಗೆ ಇತಿಹಾಸವಿದೆ (ಮೇಲೆ ನೋಡಿ). ಬದಲಿಗೆ ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಿ; ವ್ಯಕ್ತಿ ಇನ್ನು ಸೈನ್ ಇನ್ ಮಾಡಲಾರರು ಮತ್ತು ಅವರು ಮಾಡಿದ್ದೆಲ್ಲವೂ ಗುರುತಿಸಬಹುದಾದಂತೆಯೇ ಉಳಿಯುತ್ತದೆ. |
+| `S6a26de` | help and messages | Sample %(id)s drawn: %(n)s of %(total)s codes to inspect. | ಮಾದರಿ %(id)s ತೆಗೆಯಲಾಗಿದೆ: %(n)s / %(total)s ಕೋಡ್‌ಗಳನ್ನು ತಪಾಸಿಸಬೇಕು. |
 | `Sce489f` | help and messages | The author gets any required cross-domain sign-offs, then submits the change request for review. | ಲೇಖಕರು ಅಗತ್ಯ ಅಂತರ-ಡೊಮೇನ್ ಸಹಿಗಳನ್ನು ಪಡೆದು, ನಂತರ ಬದಲಾವಣೆ ವಿನಂತಿಯನ್ನು ಪರಿಶೀಲನೆಗೆ ಸಲ್ಲಿಸುತ್ತಾರೆ. |
 | `S1cdbdd` | help and messages | The Chief Engineer approves or rejects. Approval makes the revision Approved (or Deprecated for a deprecation request). | ಮುಖ್ಯ ಎಂಜಿನಿಯರ್ ಅನುಮೋದಿಸುತ್ತಾರೆ ಅಥವಾ ತಿರಸ್ಕರಿಸುತ್ತಾರೆ. ಅನುಮೋದನೆಯು ಪರಿಷ್ಕರಣೆಯನ್ನು ಅನುಮೋದಿತ (ಅಥವಾ ಹಳತಾಗಿಸುವ ವಿನಂತಿಗೆ ಹಳತಾದ) ಮಾಡುತ್ತದೆ. |
 | `S2d6ac0` | help and messages | The package is being built. Reload this page to follow its progress. | ಪ್ಯಾಕೇಜ್ ರಚನೆಯಾಗುತ್ತಿದೆ. ಪ್ರಗತಿ ನೋಡಲು ಈ ಪುಟವನ್ನು ಮತ್ತೆ ಲೋಡ್ ಮಾಡಿ. |
@@ -13375,7 +14014,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sded18c` | language | approved by | ಅನುಮೋದಿಸಿದವರು |
 | `Sedd46e` | language | Check against the interface | ಇಂಟರ್ಫೇಸ್ ವಿರುದ್ಧ ಪರಿಶೀಲಿಸಿ |
 | `S5a013c` | language | missing | ಕಾಣೆಯಾಗಿದೆ |
-| `S2c924e` | language | Note | ಟಿಪ್ಪಣಿ |
+| `S2c924e` | language, workbench | Note | ಟಿಪ್ಪಣಿ |
 | `S2f09d0` | language | Note on %(x)s | %(x)s ಕುರಿತು ಟಿಪ್ಪಣಿ |
 | `S75bf99` | language | proposed by | ಸೂಚಿಸಿದವರು |
 | `Sc68e32` | language | Save translations | ಅನುವಾದಗಳನ್ನು ಉಳಿಸಿ |
@@ -13497,6 +14136,26 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se146d2` | message: auth_service | Your account is not active. | ನಿಮ್ಮ ಖಾತೆ ಸಕ್ರಿಯವಾಗಿಲ್ಲ. |
 | `Sb584dd` | message: backup_service | Backups need a file-based SQLite database. | ಬ್ಯಾಕಪ್‌ಗಳಿಗೆ ಫೈಲ್ ಆಧಾರಿತ SQLite ಡೇಟಾಬೇಸ್ ಬೇಕು. |
 | `S368c82` | message: backup_service | keep must be at least 1 | keep ಕನಿಷ್ಠ 1 ಆಗಿರಬೇಕು |
+| `S18edaf` | message: bulk_service | A defect needs a note: say what is wrong. | ದೋಷಕ್ಕೆ ಟಿಪ್ಪಣಿ ಬೇಕು: ಏನು ತಪ್ಪು ಎಂದು ಹೇಳಿ. |
+| `S68cada` | message: bulk_service, workbench | A defective Draft is corrected by its author. | ದೋಷಯುಕ್ತ ಕರಡನ್ನು ಅದರ ಲೇಖಕರು ಸರಿಪಡಿಸುತ್ತಾರೆ. |
+| `S8941d5` | message: bulk_service | A domain sign-off needs the engineering domain. | ಡೊಮೇನ್ ಸಹಿಗೆ ಎಂಜಿನಿಯರಿಂಗ್ ಡೊಮೇನ್ ಬೇಕು. |
+| `S071452` | message: bulk_service | A note has at most 1000 characters. | ಒಂದು ಟಿಪ್ಪಣಿಯಲ್ಲಿ ಗರಿಷ್ಠ 1000 ಅಕ್ಷರಗಳು ಇರಬಹುದು. |
+| `Sf74baa` | message: bulk_service, message: change_set_service | Change set not found | ಬದಲಾವಣೆ ಸಮೂಹ ಸಿಗಲಿಲ್ಲ |
+| `Sf89067` | message: bulk_service | Choose at least one value to set. | ಸೆಟ್ ಮಾಡಲು ಕನಿಷ್ಠ ಒಂದು ಮೌಲ್ಯವನ್ನು ಆಯ್ಕೆಮಾಡಿ. |
+| `S1e3e33` | message: bulk_service | No change request of the set is waiting for you at this step. | ಸೆಟ್‌ನ ಯಾವ ಬದಲಾವಣೆ ವಿನಂತಿಯೂ ಈ ಹಂತದಲ್ಲಿ ನಿಮಗಾಗಿ ಕಾಯುತ್ತಿಲ್ಲ. |
+| `S95bd2d` | message: bulk_service | No Draft of the set is waiting for the sign-off of this domain. | ಸೆಟ್‌ನ ಯಾವ ಕರಡೂ ಈ ಡೊಮೇನ್‌ನ ಸಹಿಗಾಗಿ ಕಾಯುತ್ತಿಲ್ಲ. |
+| `S495371` | message: bulk_service | Only a sample with defects can be sent back. | ದೋಷಗಳಿರುವ ಮಾದರಿಯನ್ನು ಮಾತ್ರ ಹಿಂದಕ್ಕೆ ಕಳುಹಿಸಬಹುದು. |
+| `Sa6e3b3` | message: bulk_service | Sample not found | ಮಾದರಿ ಸಿಗಲಿಲ್ಲ |
+| `Sf745cc` | message: bulk_service | step must be domain, reviewer, admin or chief-engineer | step ಎಂಬುದು domain, reviewer, admin ಅಥವಾ chief-engineer ಆಗಿರಬೇಕು |
+| `S973577` | message: bulk_service | That change request is not in the sample. | ಆ ಬದಲಾವಣೆ ವಿನಂತಿ ಮಾದರಿಯಲ್ಲಿ ಇಲ್ಲ. |
+| `Sa1a149` | message: bulk_service | The batch changed since the sample was drawn; draw a new sample. | ಮಾದರಿ ತೆಗೆದ ನಂತರ ಬ್ಯಾಚ್ ಬದಲಾಗಿದೆ; ಹೊಸ ಮಾದರಿ ತೆಗೆಯಿರಿ. |
+| `S8e5b1c` | message: bulk_service | The verdict must be OK or DEFECT. | ತೀರ್ಪು OK ಅಥವಾ ದೋಷ ಆಗಿರಬೇಕು. |
+| `Sddedd6` | message: bulk_service | This is not your sample: the person who decides inspects. | ಇದು ನಿಮ್ಮ ಮಾದರಿ ಅಲ್ಲ: ನಿರ್ಧರಿಸುವವರೇ ತಪಾಸಣೆ ಮಾಡುತ್ತಾರೆ. |
+| `Sf56c6a` | message: bulk_service | This sample belongs to another change set or another step. | ಈ ಮಾದರಿ ಮತ್ತೊಂದು ಬದಲಾವಣೆ ಸಮೂಹ ಅಥವಾ ಮತ್ತೊಂದು ಹಂತಕ್ಕೆ ಸೇರಿದೆ. |
+| `S146a72` | message: bulk_service | This sample has been used for a decision already; draw a new one. | ಈ ಮಾದರಿಯನ್ನು ಈಗಾಗಲೇ ಒಂದು ನಿರ್ಧಾರಕ್ಕೆ ಬಳಸಲಾಗಿದೆ; ಹೊಸದನ್ನು ತೆಗೆಯಿರಿ. |
+| `Sf0f02c` | message: bulk_service | This sample is closed. | ಈ ಮಾದರಿ ಮುಚ್ಚಲ್ಪಟ್ಟಿದೆ. |
+| `Sf973bd` | message: bulk_service | This sample is older than 24 hours; draw a new one. | ಈ ಮಾದರಿ 24 ಗಂಟೆಗಳಿಗಿಂತ ಹಳೆಯದು; ಹೊಸದನ್ನು ತೆಗೆಯಿರಿ. |
+| `S062a13` | message: bulk_service | This sample was replaced by a newer one. | ಈ ಮಾದರಿಯ ಸ್ಥಾನದಲ್ಲಿ ಹೊಸದು ಬಂದಿದೆ. |
 | `Sca2391` | message: change_request_service | A comment must be between 1 and 4000 characters. | ಟಿಪ್ಪಣಿ 1 ರಿಂದ 4000 ಅಕ್ಷರಗಳ ನಡುವೆ ಇರಬೇಕು. |
 | `S33cd99` | message: change_request_service | At least one Turbine Platform is required before Submit for Review (FR-023a). | ಪರಿಶೀಲನೆಗೆ ಸಲ್ಲಿಸುವ ಮೊದಲು ಕನಿಷ್ಠ ಒಂದು ಟರ್ಬೈನ್ ವೇದಿಕೆ ಅಗತ್ಯ (FR-023a). |
 | `S1fd35e` | message: change_request_service | decision must be APPROVE or REJECT. | decision APPROVE ಅಥವಾ REJECT ಆಗಿರಬೇಕು. |
@@ -13507,7 +14166,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sbd3a03` | message: change_request_service | reviewer_id must be an active user with the Reviewer role. | reviewer_id ಪರಿಶೀಲಕ ಪಾತ್ರವಿರುವ ಸಕ್ರಿಯ ಬಳಕೆದಾರರಾಗಿರಬೇಕು. |
 | `S043693` | message: change_request_service | The Reviewer has already signed off this CR. | ಪರಿಶೀಲಕರು ಈ ಬದಲಾವಣೆ ವಿನಂತಿಗೆ ಈಗಾಗಲೇ ಸಹಿ ಮಾಡಿದ್ದಾರೆ. |
 | `S7a758c` | message: change_set_service | A change set needs a name of 1-120 characters. | ಬದಲಾವಣೆ ಸಮೂಹಕ್ಕೆ 1-120 ಅಕ್ಷರಗಳ ಹೆಸರು ಬೇಕು. |
-| `Sf74baa` | message: change_set_service | Change set not found | ಬದಲಾವಣೆ ಸಮೂಹ ಸಿಗಲಿಲ್ಲ |
 | `Sd8fad1` | message: change_set_service | Only a CR that is still open can join a change set. | ಇನ್ನೂ ತೆರೆದಿರುವ ಬದಲಾವಣೆ ವಿನಂತಿ ಮಾತ್ರ ಬದಲಾವಣೆ ಸಮೂಹವನ್ನು ಸೇರಬಹುದು. |
 | `S990d51` | message: change_set_service | Only the author of the CR or an Administrator may group it. | ಬದಲಾವಣೆ ವಿನಂತಿಯ ಲೇಖಕ ಅಥವಾ ನಿರ್ವಾಹಕ ಮಾತ್ರ ಅದನ್ನು ಗುಂಪುಮಾಡಬಹುದು. |
 | `S69e4d1` | message: change_set_service | Only the author of the CR or an Administrator may ungroup it. | ಬದಲಾವಣೆ ವಿನಂತಿಯ ಲೇಖಕ ಅಥವಾ ನಿರ್ವಾಹಕ ಮಾತ್ರ ಅದನ್ನು ಗುಂಪಿನಿಂದ ತೆಗೆಯಬಹುದು. |
@@ -13593,6 +14251,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sdb88ba` | message: saved_search_service | Saved search not found | ಉಳಿಸಿದ ಹುಡುಕಾಟ ಸಿಗಲಿಲ್ಲ |
 | `S046aff` | message: saved_search_service | This saved search belongs to someone else. | ಈ ಉಳಿಸಿದ ಹುಡುಕಾಟ ಬೇರೊಬ್ಬರಿಗೆ ಸೇರಿದ್ದು. |
 | `Saad8e2` | message: settings_service | must be a whole number between 0 and 100 | 0 ಮತ್ತು 100 ರ ನಡುವಿನ ಪೂರ್ಣಾಂಕ ಆಗಿರಬೇಕು |
+| `S9625d1` | message: settings_service | must be a whole number between 1 and 100 | 1 ಮತ್ತು 100 ರ ನಡುವಿನ ಪೂರ್ಣ ಸಂಖ್ಯೆ ಆಗಿರಬೇಕು |
 | `S6e4015` | message: settings_service | must be a whole number between 1 and 365 | 1 ಮತ್ತು 365 ರ ನಡುವಿನ ಪೂರ್ಣಾಂಕ ಆಗಿರಬೇಕು |
 | `S9671fb` | message: settings_service | must be true or false | true ಅಥವಾ false ಆಗಿರಬೇಕು |
 | `S5166bb` | message: st_import_service | A staged file changed after the preview. Upload again. | ಪೂರ್ವವೀಕ್ಷಣೆಯ ನಂತರ ಒಂದು ಸಿದ್ಧಪಡಿಸಿದ ಫೈಲ್ ಬದಲಾಗಿದೆ. ಮತ್ತೆ ಅಪ್‌ಲೋಡ್ ಮಾಡಿ. |
@@ -13790,7 +14449,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S6daf16` | st_preview | Preview: status codes from .st files | ಪೂರ್ವವೀಕ್ಷಣೆ: .st ಫೈಲ್‌ಗಳಿಂದ ಸ್ಥಿತಿ ಕೋಡ್‌ಗಳು |
 | `S15a21a` | st_preview | program(s) | ಪ್ರೋಗ್ರಾಂ(ಗಳು) |
 | `Se58289` | st_preview | Programs found in the uploaded files | ಅಪ್‌ಲೋಡ್ ಮಾಡಿದ ಫೈಲ್‌ಗಳಲ್ಲಿ ಸಿಕ್ಕ ಪ್ರೋಗ್ರಾಂಗಳು |
-| `S75c053` | st_preview | ready | ಸಿದ್ಧ |
+| `S75c053` | st_preview, workbench | ready | ಸಿದ್ಧ |
 | `S0723bf` | st_preview | Select all programs that are ready | ಸಿದ್ಧವಿರುವ ಎಲ್ಲಾ ಪ್ರೋಗ್ರಾಂಗಳನ್ನು ಆಯ್ಕೆಮಾಡಿ |
 | `S1a767a` | st_preview | updates the open Draft | ತೆರೆದ ಕರಡನ್ನು ನವೀಕರಿಸುತ್ತದೆ |
 | `S02499f` | st_preview | withdrawn | ಹಿಂಪಡೆಯಲಾಗಿದೆ |
@@ -13889,10 +14548,44 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S8516a7` | withdrawn_codes | Delete selected | ಆಯ್ದವನ್ನು ಅಳಿಸಿ |
 | `Sdfeb06` | withdrawn_codes | No withdrawn codes. | ಹಿಂಪಡೆದ ಕೋಡ್‌ಗಳಿಲ್ಲ. |
 | `S87ec0b` | withdrawn_codes | Withdrawn on | ಹಿಂಪಡೆದ ದಿನಾಂಕ |
+| `S48d260` | workbench | %(n)s of %(total)s codes drawn at %(when)s. | %(n)s / %(total)s ಕೋಡ್‌ಗಳನ್ನು %(when)s ರಂದು ಆಯ್ಕೆ ಮಾಡಲಾಗಿದೆ. |
+| `S88b55f` | workbench | Approve the batch | ಬ್ಯಾಚ್ ಅನುಮೋದಿಸಿ |
+| `Sf40e77` | workbench | Available group | ಲಭ್ಯವಿರುವ ಗುಂಪು |
+| `S99613c` | workbench | Blocked | ತಡೆಹಿಡಿಯಲಾಗಿದೆ |
+| `Sca7133` | workbench | Choose the step you are about to decide, draw the sample, look at every sampled code and mark it. The sample is yours, valid for 24 hours and for this batch as it is now. | ನೀವು ನಿರ್ಧರಿಸಲಿರುವ ಹಂತವನ್ನು ಆಯ್ಕೆಮಾಡಿ, ಮಾದರಿಯನ್ನು ತೆಗೆಯಿರಿ, ತೆಗೆದ ಪ್ರತಿ ಕೋಡ್ ಅನ್ನು ನೋಡಿ ಗುರುತಿಸಿ. ಮಾದರಿ ನಿಮ್ಮದು, 24 ಗಂಟೆಗಳ ಕಾಲ ಮತ್ತು ಈಗ ಇರುವಂತೆ ಈ ಬ್ಯಾಚ್‌ಗೆ ಮಾನ್ಯ. |
+| `S6f4274` | workbench | Codes in this batch | ಈ ಬ್ಯಾಚ್‌ನ ಕೋಡ್‌ಗಳು |
+| `S117313` | workbench | Decide the batch | ಬ್ಯಾಚ್ ಬಗ್ಗೆ ನಿರ್ಧರಿಸಿ |
+| `Se91aff` | workbench | Defect | ದೋಷ |
+| `S16fbbf` | workbench | Domain sign-off | ಡೊಮೇನ್ ಸಹಿ |
+| `Scb1884` | workbench | Dossier (XLSX) | ಡೋಸಿಯರ್ (XLSX) |
+| `S25085f` | workbench | Draw a sample | ಮಾದರಿ ತೆಗೆಯಿರಿ |
+| `S9167a7` | workbench | Engineering domain | ಎಂಜಿನಿಯರಿಂಗ್ ಡೊಮೇನ್ |
+| `Sbc3c59` | workbench | Only the values you choose are changed, on the Drafts you wrote (an Administrator: any Draft). | ನೀವು ಆಯ್ಕೆಮಾಡಿದ ಮೌಲ್ಯಗಳು ಮಾತ್ರ ಬದಲಾಗುತ್ತವೆ, ನೀವು ಬರೆದ ಕರಡುಗಳಲ್ಲಿ (ನಿರ್ವಾಹಕರು: ಯಾವುದೇ ಕರಡು). |
+| `S92223f` | workbench | Passed: no defect in the sample. Use sample number %(id)s below. | ಉತ್ತೀರ್ಣ: ಮಾದರಿಯಲ್ಲಿ ದೋಷವಿಲ್ಲ. ಕೆಳಗೆ ಮಾದರಿ ಸಂಖ್ಯೆ %(id)s ಬಳಸಿ. |
+| `S6275ab` | workbench | Ready to submit | ಸಲ್ಲಿಸಲು ಸಿದ್ಧ |
+| `Se1e74d` | workbench | Reject the batch | ಬ್ಯಾಚ್ ತಿರಸ್ಕರಿಸಿ |
+| `S58fabf` | workbench | Sample | ಮಾದರಿ |
+| `S862471` | workbench | Sample inspection | ಮಾದರಿ ತಪಾಸಣೆ |
+| `S69cc53` | workbench | Save the verdicts | ತೀರ್ಪುಗಳನ್ನು ಉಳಿಸಿ |
+| `S3ae55b` | workbench | Send the defective codes back | ದೋಷಯುಕ್ತ ಕೋಡ್‌ಗಳನ್ನು ಹಿಂದಕ್ಕೆ ಕಳುಹಿಸಿ |
+| `Se90e7c` | workbench | Set on the Drafts | ಕರಡುಗಳಲ್ಲಿ ಸೆಟ್ ಮಾಡಿ |
+| `Sa58dac` | workbench | Set values on the Drafts | ಕರಡುಗಳಲ್ಲಿ ಮೌಲ್ಯಗಳನ್ನು ಸೆಟ್ ಮಾಡಿ |
+| `Sa443bb` | workbench | Sign off the Drafts | ಕರಡುಗಳಿಗೆ ಸಹಿ ಮಾಡಿ |
+| `S53f47f` | workbench | Sign-off pending | ಸಹಿ ಬಾಕಿ |
+| `Sae12bc` | workbench | Status category | ಸ್ಥಿತಿ ವರ್ಗ |
+| `Sdc416e` | workbench | Step | ಹಂತ |
+| `Sf7710d` | workbench | Submit for review | ಪರಿಶೀಲನೆಗೆ ಸಲ್ಲಿಸಿ |
+| `Sa45adc` | workbench | Submit the Drafts | ಕರಡುಗಳನ್ನು ಸಲ್ಲಿಸಿ |
+| `S2d099f` | workbench | Submits the Drafts you wrote. A Draft that still lacks a platform or a domain sign-off is reported and left as it is. | ನೀವು ಬರೆದ ಕರಡುಗಳನ್ನು ಸಲ್ಲಿಸುತ್ತದೆ. ಇನ್ನೂ ವೇದಿಕೆ ಅಥವಾ ಡೊಮೇನ್ ಸಹಿ ಇಲ್ಲದ ಕರಡಿನ ಬಗ್ಗೆ ತಿಳಿಸಿ ಅದನ್ನು ಇದ್ದಂತೆಯೇ ಬಿಡಲಾಗುತ್ತದೆ. |
+| `S5baa27` | workbench | The sample has defects, so the batch cannot be decided as it is. Send the defective codes back (the note is the reason), then draw a new sample of what is left. | ಮಾದರಿಯಲ್ಲಿ ದೋಷಗಳಿವೆ, ಆದ್ದರಿಂದ ಬ್ಯಾಚ್ ಬಗ್ಗೆ ಹೀಗೆಯೇ ನಿರ್ಧರಿಸಲಾಗದು. ದೋಷಯುಕ್ತ ಕೋಡ್‌ಗಳನ್ನು ಹಿಂದಕ್ಕೆ ಕಳುಹಿಸಿ (ಟಿಪ್ಪಣಿಯೇ ಕಾರಣ), ನಂತರ ಉಳಿದವುಗಳಿಂದ ಹೊಸ ಮಾದರಿ ತೆಗೆಯಿರಿ. |
+| `S19f8ab` | workbench | Tick the codes an action is for; with none ticked an action covers every code it applies to. | ಕ್ರಿಯೆ ಯಾವ ಕೋಡ್‌ಗಳಿಗೋ ಅವುಗಳಲ್ಲಿ ಟಿಕ್ ಮಾಡಿ; ಯಾವುದೂ ಟಿಕ್ ಮಾಡದಿದ್ದರೆ ಕ್ರಿಯೆ ಅನ್ವಯವಾಗುವ ಎಲ್ಲಾ ಕೋಡ್‌ಗಳಿಗೂ ಅನ್ವಯಿಸುತ್ತದೆ. |
+| `S7f6e5a` | workbench | Verdict | ತೀರ್ಪು |
+| `Se6246f` | workbench | What stops it | ಇದನ್ನು ಯಾವುದು ತಡೆಯುತ್ತಿದೆ |
+| `Sbf45e2` | workbench | Work on many codes at once without weakening a step: every code still gets its own checks, its own audit entry and, for decisions, your password. A decision on more than %(above)s codes needs a sample inspection first: %(percent)s percent of the batch, at least %(minimum)s codes, spread over the subgroups. One defect in the sample stops the decision. | ಯಾವುದೇ ಹಂತವನ್ನು ದುರ್ಬಲಗೊಳಿಸದೆ ಅನೇಕ ಕೋಡ್‌ಗಳ ಮೇಲೆ ಒಮ್ಮೆಗೇ ಕೆಲಸ ಮಾಡಿ: ಪ್ರತಿ ಕೋಡ್‌ಗೆ ಅದರದೇ ತಪಾಸಣೆ, ಅದರದೇ ಆಡಿಟ್ ದಾಖಲೆ ಮತ್ತು ನಿರ್ಧಾರಗಳಿಗೆ ನಿಮ್ಮ ಪಾಸ್‌ವರ್ಡ್ ಇರುತ್ತದೆ. %(above)s ಕ್ಕಿಂತ ಹೆಚ್ಚು ಕೋಡ್‌ಗಳ ನಿರ್ಧಾರಕ್ಕೆ ಮೊದಲು ಮಾದರಿ ತಪಾಸಣೆ ಬೇಕು: ಬ್ಯಾಚ್‌ನ %(percent)s ಶೇಕಡಾ, ಕನಿಷ್ಠ %(minimum)s ಕೋಡ್‌ಗಳು, ಉಪಗುಂಪುಗಳಲ್ಲಿ ಹರಡಿದ್ದು. ಮಾದರಿಯಲ್ಲಿ ಒಂದು ದೋಷ ನಿರ್ಧಾರವನ್ನು ನಿಲ್ಲಿಸುತ್ತದೆ. |
 
 ### 9.13 IN ଓଡ଼ିଆ 🇮🇳 — Odia
 
-1216 of 1217 strings translated; direction left to right.
+1279 of 1280 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -14092,7 +14785,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Scfa1b6` | detail | Add field comment | କ୍ଷେତ୍ର ମନ୍ତବ୍ୟ ଯୋଡ଼ନ୍ତୁ |
 | `Sbb965e` | detail | Add one of your change requests | ଆପଣଙ୍କ ଗୋଟିଏ ପରିବର୍ତ୍ତନ ଅନୁରୋଧ ଯୋଡ଼ନ୍ତୁ |
 | `S9a693b` | detail | Add to change set | ପରିବର୍ତ୍ତନ ସମୂହରେ ଯୋଡ଼ନ୍ତୁ |
-| `S7bbd6d` | detail | Administrator sign-off | ପ୍ରଶାସକ ସ୍ୱାକ୍ଷର |
+| `S7bbd6d` | detail, workbench | Administrator sign-off | ପ୍ରଶାସକ ସ୍ୱାକ୍ଷର |
 | `S212856` | detail | advanced, controller firmware programs | ଉନ୍ନତ, କଣ୍ଟ୍ରୋଲର୍ ଫର୍ମୱେର୍ ପ୍ରୋଗ୍ରାମ୍ |
 | `Sfbde82` | detail | Affected component | ପ୍ରଭାବିତ ଉପାଦାନ |
 | `S25f8c5` | detail, export, form | Alarm | ଆଲାରମ୍ |
@@ -14121,17 +14814,17 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se7bab1` | detail | Chain of causes | କାରଣର ଶୃଙ୍ଖଳ |
 | `S9c8393` | detail, mine | Change Request | ପରିବର୍ତ୍ତନ ଅନୁରୋଧ |
 | `S4572f4` | detail | Change request | ପରିବର୍ତ୍ତନ ଅନୁରୋଧ |
-| `S3295be` | detail | Change requests in this set | ଏହି ସମୂହର ପରିବର୍ତ୍ତନ ଅନୁରୋଧ |
+| `S3295be` | detail, workbench | Change requests in this set | ଏହି ସମୂହର ପରିବର୍ତ୍ତନ ଅନୁରୋଧ |
 | `S4d8006` | detail | Change set | ପରିବର୍ତ୍ତନ ସମୂହ |
 | `S8aa57d` | detail | Changes | ପରିବର୍ତ୍ତନ |
 | `S3d14ea` | detail, export | Changes of this release only | କେବଳ ଏହି ରିଲିଜ୍‌ର ପରିବର୍ତ୍ତନ |
 | `Sbd95c0` | detail | Checklist confirmed at sign-off | ସ୍ୱାକ୍ଷର ସମୟରେ ନିଶ୍ଚିତ ଚେକ୍‌ଲିଷ୍ଟ |
 | `S074d62` | detail, role badge | Chief Engineer | ମୁଖ୍ୟ ଇଞ୍ଜିନିୟର |
-| `S03695d` | detail | Chief Engineer decision | ମୁଖ୍ୟ ଇଞ୍ଜିନିୟର ନିଷ୍ପତ୍ତି |
+| `S03695d` | detail, workbench | Chief Engineer decision | ମୁଖ୍ୟ ଇଞ୍ଜିନିୟର ନିଷ୍ପତ୍ତି |
 | `Sf0a89f` | detail | Close change set | ପରିବର୍ତ୍ତନ ସମୂହ ବନ୍ଦ କରନ୍ତୁ |
 | `S7c0c39` | detail | Close this change set? | ଏହି ପରିବର୍ତ୍ତନ ସମୂହ ବନ୍ଦ କରିବେ? |
 | `S153d7a` | detail | Comment | ମନ୍ତବ୍ୟ |
-| `S611578` | detail | Comment (required for rejection) | ମନ୍ତବ୍ୟ (ପ୍ରତ୍ୟାଖ୍ୟାନ ପାଇଁ ବାଧ୍ୟତାମୂଳକ) |
+| `S611578` | detail, workbench | Comment (required for rejection) | ମନ୍ତବ୍ୟ (ପ୍ରତ୍ୟାଖ୍ୟାନ ପାଇଁ ବାଧ୍ୟତାମୂଳକ) |
 | `Sc38432` | detail | Comment on this field | ଏହି କ୍ଷେତ୍ର ଉପରେ ମନ୍ତବ୍ୟ ଦିଅନ୍ତୁ |
 | `Sfce06e` | detail | Comments | ମନ୍ତବ୍ୟ |
 | `S8d105c` | detail, reconciliation | Compare | ତୁଳନା କରନ୍ତୁ |
@@ -14157,7 +14850,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S0e8574` | detail | Customer | ଗ୍ରାହକ |
 | `Scb307e` | detail | Decide the selected requests in one sitting | ବଛାଯାଇଥିବା ଅନୁରୋଧ ଏକ ବୈଠକରେ ନିଷ୍ପତ୍ତି ନିଅନ୍ତୁ |
 | `S319493` | detail | Decided by | ନିଷ୍ପତ୍ତିକାରୀ |
-| `S7f59a1` | detail | Decision | ନିଷ୍ପତ୍ତି |
+| `S7f59a1` | detail, workbench | Decision | ନିଷ୍ପତ୍ତି |
 | `Sc51568` | detail | Decisions & Comments | ନିଷ୍ପତ୍ତି ଓ ମନ୍ତବ୍ୟ |
 | `Sa9ec7c` | detail | Delete Permanently | ସ୍ଥାୟୀ ଭାବେ ଲିଭାନ୍ତୁ |
 | `S7d1c7a` | detail | Delete Release | ରିଲିଜ୍ ଲିଭାନ୍ତୁ |
@@ -14223,6 +14916,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S6d59f4` | detail | Manual Reset Program | ମାନୁଆଲ୍ ରିସେଟ୍ ପ୍ରୋଗ୍ରାମ୍ |
 | `Sf9896c` | detail, form | Mark resolved | ସମାଧାନ ହୋଇଛି ବୋଲି ଚିହ୍ନିତ କରନ୍ତୁ |
 | `Sa7b93d` | detail, new, reconciliation | Mode | ମୋଡ୍ |
+| `S9f4d01` | detail | More than a few codes need a sample inspection first; use the workbench. | କିଛି କୋଡ୍‌ରୁ ଅଧିକ ପାଇଁ ପ୍ରଥମେ ନମୁନା ଯାଞ୍ଚ ଦରକାର; ୱାର୍କବେଞ୍ଚ ବ୍ୟବହାର କରନ୍ତୁ। |
 | `S31a335` | detail | new code | ନୂଆ କୋଡ୍ |
 | `S816c52` | detail, export_verify, form | No | ନା |
 | `S06fc8d` | detail | No active Engineer holds the %(code)s domain yet. An Administrator must tag an Engineer with it (Administration → Users) before a sign-off can be requested. | କୌଣସି ସକ୍ରିୟ ଇଞ୍ଜିନିୟରଙ୍କ ନିକଟରେ %(code)s ଡୋମେନ୍ ନାହିଁ। ସ୍ୱାକ୍ଷର ଅନୁରୋଧ ପୂର୍ବରୁ ପ୍ରଶାସକ ଜଣେ ଇଞ୍ଜିନିୟରଙ୍କୁ ଏହା ଦେବା ଆବଶ୍ୟକ (ପ୍ରଶାସନ → ଉପଯୋଗକର୍ତ୍ତା)। |
@@ -14253,7 +14947,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S9734ac` | detail | Other codes that refer to this one. Review them before deprecating it. | ଏହାକୁ ସୂଚାଉଥିବା ଅନ୍ୟ କୋଡ୍। ଏହାକୁ ପ୍ରଚଳନ ବନ୍ଦ କରିବା ପୂର୍ବରୁ ସେଗୁଡ଼ିକୁ ସମୀକ୍ଷା କରନ୍ତୁ। |
 | `S780d35` | detail | Override identifier (migration / reservation only) | ପରିଚୟକ ଅତିକ୍ରମ କରନ୍ତୁ (କେବଳ ସ୍ଥାନାନ୍ତର / ସଂରକ୍ଷଣ ପାଇଁ) |
 | `S89ff31` | detail | Owner | ମାଲିକ |
-| `S2d20ee` | detail | Package overview | ପ୍ୟାକେଜ୍ ସମୀକ୍ଷା |
+| `S2d20ee` | detail, workbench | Package overview | ପ୍ୟାକେଜ୍ ସମୀକ୍ଷା |
 | `S4d1a47` | detail | Package: all languages and access levels | ପ୍ୟାକେଜ୍: ସମସ୍ତ ଭାଷା ଓ ପ୍ରବେଶ ସ୍ତର |
 | `Sc49bd0` | detail | Packages of this Release | ଏହି ରିଲିଜ୍‌ର ପ୍ୟାକେଜ୍ |
 | `S96f608` | detail, review_queue | Pending | ବାକି |
@@ -14298,12 +14992,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S026ab2` | detail | resolved | ସମାଧାନ ହୋଇଛି |
 | `S68c61f` | detail | Rev # | ସଂସ୍କରଣ ସଂ. |
 | `Se4758b` | detail, review_checklist | Review checklist | ସମୀକ୍ଷା ଚେକ୍‌ଲିଷ୍ଟ |
-| `S7bfca8` | detail | Reviewer sign-off | ସମୀକ୍ଷକ ସ୍ୱାକ୍ଷର |
+| `S7bfca8` | detail, workbench | Reviewer sign-off | ସମୀକ୍ଷକ ସ୍ୱାକ୍ଷର |
 | `S3beb9a` | detail | Revision | ସଂସ୍କରଣ |
 | `Sa72973` | detail | Revision Fields | ସଂସ୍କରଣ କ୍ଷେତ୍ର |
 | `Sfc1d6a` | detail | row(s) imported as Drafts | ଧାଡ଼ି ଖସଡ଼ା ଭାବେ ଆମଦାନି ହୋଇଛି |
 | `S52d0b3` | detail, reconciliation, user_detail | Rows | ଧାଡ଼ି |
 | `Sd0edfb` | detail | Sales | ବିକ୍ରୟ |
+| `S241bf5` | detail, workbench | Sample number | ନମୁନା ନମ୍ବର |
 | `Sda38c6` | detail | Save planned dates | ଯୋଜନାବଦ୍ଧ ତାରିଖ ସଞ୍ଚୟ କରନ୍ତୁ |
 | `S13c61c` | detail | Scope Filter | ପରିସର ଫିଲ୍ଟର୍ |
 | `S859822` | detail, mine, withdrawn_codes | Select | ବାଛନ୍ତୁ |
@@ -14365,11 +15060,12 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S7d5316` | detail | Who | କିଏ |
 | `S47e564` | detail | Withdraw | ପ୍ରତ୍ୟାହାର |
 | `S51a998` | detail | Withdraw this change request? | ଏହି ପରିବର୍ତ୍ତନ ଅନୁରୋଧ ପ୍ରତ୍ୟାହାର କରିବେ? |
+| `S93ef7c` | detail, workbench | Workbench | ୱାର୍କବେଞ୍ଚ |
 | `S95a2a4` | detail, form | Write level | ଲେଖିବା ସ୍ତର |
 | `S612fe0` | detail | Yaw Bearing Lubrication Program | ୟା ବେୟାରିଂ ଲୁବ୍ରିକେସନ୍ ପ୍ରୋଗ୍ରାମ୍ |
 | `S559a3f` | detail | Yaw Program | ୟା ପ୍ରୋଗ୍ରାମ୍ |
 | `S5397e0` | detail, export_verify, form | Yes | ହଁ |
-| `Sc8e4b4` | detail | Your decision step | ଆପଣଙ୍କ ନିଷ୍ପତ୍ତି ପର୍ଯ୍ୟାୟ |
+| `Sc8e4b4` | detail, workbench | Your decision step | ଆପଣଙ୍କ ନିଷ୍ପତ୍ତି ପର୍ଯ୍ୟାୟ |
 | `S20cb4c` | detail, export_center | ZIP with manifest | ମ୍ୟାନିଫେଷ୍ଟ ସହ ZIP |
 | `S5d4358` | dry_run | All rows are clean. | ସମସ୍ତ ଧାଡ଼ି ସଫା। |
 | `S03510d` | dry_run | Back to import | ଆମଦାନିକୁ ଫେରନ୍ତୁ |
@@ -14396,7 +15092,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S7b8d80` | export | Not for distribution - unapproved data | ବିତରଣ ପାଇଁ ନୁହେଁ - ଅନନୁମୋଦିତ ତଥ୍ୟ |
 | `Sd9b345` | export | not yet published | ଏପର୍ଯ୍ୟନ୍ତ ପ୍ରକାଶିତ ହୋଇନାହିଁ |
 | `Sa5d386` | export | Page %(page)s of %(total)s | ପୃଷ୍ଠା %(page)s / %(total)s |
-| `Sac1a42` | export | Platforms | ପ୍ଲାଟଫର୍ମ |
+| `Sac1a42` | export, workbench | Platforms | ପ୍ଲାଟଫର୍ମ |
 | `Se51c55` | export | Records | ରେକର୍ଡ |
 | `Sd41f56` | export, export_center | Release | ରିଲିଜ୍ |
 | `S2e8fd6` | export | Reset delay | ରିସେଟ୍ ବିଳମ୍ବ |
@@ -14448,7 +15144,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S45ea95` | export_verify | Manifest signature | ମ୍ୟାନିଫେଷ୍ଟ ସ୍ୱାକ୍ଷର |
 | `S08f84b` | export_verify | No record of this exact file | ଠିକ୍ ଏହି ଫାଇଲ୍‌ର କୌଣସି ରେକର୍ଡ ନାହିଁ |
 | `S357953` | export_verify | NOT OK | ଠିକ୍ ନୁହେଁ |
-| `S9ce3bd` | export_verify | OK | ଠିକ୍ |
+| `S9ce3bd` | export_verify, workbench | OK | ଠିକ୍ |
 | `S8a5285` | export_verify | Overall | ସମୁଦାୟ |
 | `Sd2bc4a` | export_verify | Produced by this system | ଏହି ସିଷ୍ଟମ୍ ଦ୍ୱାରା ପ୍ରସ୍ତୁତ |
 | `S112d15` | export_verify | Verify an export | ରପ୍ତାନି ଯାଞ୍ଚ କରନ୍ତୁ |
@@ -14522,10 +15218,16 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S689b33` | help | The full manual is docs/23-user-manual.md in the project folder; the glossary below is the same one the tooltips use. | ସମ୍ପୂର୍ଣ୍ଣ ମାନୁଆଲ୍ ପ୍ରୋଜେକ୍ଟ ଫୋଲ୍ଡରରେ docs/23-user-manual.md; ତଳ ଶବ୍ଦାବଳୀ ଟୁଲଟିପ୍ ବ୍ୟବହାର କରୁଥିବା ସେହି ଶବ୍ଦାବଳୀ। |
 | `S439914` | help | What happens next on a change request | ପରିବର୍ତ୍ତନ ଅନୁରୋଧରେ ପରେ କ’ଣ ହୁଏ |
 | `S6d29d9` | help and messages | %(n)s withdrawn code(s) deleted. | %(n)s ପ୍ରତ୍ୟାହୃତ କୋଡ୍ ଲିଭାଯାଇଛି। |
+| `S285edc` | help and messages | %(ok)s of %(n)s: %(what)s. | %(ok)s / %(n)s: %(what)s। |
 | `Sb08e6c` | help and messages | A Reviewer and an Administrator each sign off (in any order). If either rejects, it goes back to the author. | ଜଣେ ସମୀକ୍ଷକ ଓ ଜଣେ ପ୍ରଶାସକ ପ୍ରତ୍ୟେକେ ସ୍ୱାକ୍ଷର କରନ୍ତି (ଯେକୌଣସି କ୍ରମରେ)। ଯେକେହି ପ୍ରତ୍ୟାଖ୍ୟାନ କଲେ ଏହା ଲେଖକଙ୍କ ନିକଟକୁ ଫେରେ। |
 | `S2f1bed` | help and messages | An Administrator includes the revision in a Release and publishes it; then it is Released. | ପ୍ରଶାସକ ସଂସ୍କରଣକୁ ରିଲିଜ୍‌ରେ ଅନ୍ତର୍ଭୁକ୍ତ କରି ପ୍ରକାଶ କରନ୍ତି; ତା’ପରେ ଏହା ମୁକ୍ତ ହୁଏ। |
+| `S1308dc` | help and messages | defective codes sent back | ତ୍ରୁଟିପୂର୍ଣ୍ଣ କୋଡ୍ ଫେରାଇ ପଠାଗଲା |
+| `Se2bbd9` | help and messages | Drafts saved | ଖସଡ଼ା ସଞ୍ଚିତ ହେଲା |
+| `S0ddfa5` | help and messages | Drafts signed off | ଖସଡ଼ାର ସ୍ୱାକ୍ଷର ହେଲା |
+| `Sf90ab8` | help and messages | Drafts submitted for review | ଖସଡ଼ା ସମୀକ୍ଷା ପାଇଁ ଦାଖଲ ହେଲା |
 | `Sd856bd` | help and messages | Not deleted (it has a revision again or is still referenced): %(x)s | ଲିଭାଯାଇନାହିଁ (ଏହାର ପୁଣି ସଂସ୍କରଣ ଅଛି ବା ଏବେ ବି ସୂଚିତ): %(x)s |
 | `S34b903` | help and messages | Not possible: the account has history (see above). Deactivate it instead; the person can no longer sign in and everything they did stays attributable. | ସମ୍ଭବ ନୁହେଁ: ଖାତାର ଇତିହାସ ଅଛି (ଉପରେ ଦେଖନ୍ତୁ)। ବଦଳରେ ନିଷ୍କ୍ରିୟ କରନ୍ତୁ; ବ୍ୟକ୍ତି ଆଉ ସାଇନ୍ ଇନ୍ କରିପାରିବେ ନାହିଁ ଏବଂ ସେମାନେ ଯାହା କରିଛନ୍ତି ତାହା ଚିହ୍ନଟଯୋଗ୍ୟ ରହେ। |
+| `S6a26de` | help and messages | Sample %(id)s drawn: %(n)s of %(total)s codes to inspect. | ନମୁନା %(id)s ବାହାର କରାଗଲା: %(n)s / %(total)s କୋଡ୍ ଯାଞ୍ଚ କରିବାକୁ। |
 | `Sce489f` | help and messages | The author gets any required cross-domain sign-offs, then submits the change request for review. | ଲେଖକ ଆବଶ୍ୟକ ଆନ୍ତଃ-ଡୋମେନ୍ ସ୍ୱାକ୍ଷର ପାଆନ୍ତି, ତା’ପରେ ପରିବର୍ତ୍ତନ ଅନୁରୋଧ ସମୀକ୍ଷା ପାଇଁ ଦାଖଲ କରନ୍ତି। |
 | `S1cdbdd` | help and messages | The Chief Engineer approves or rejects. Approval makes the revision Approved (or Deprecated for a deprecation request). | ମୁଖ୍ୟ ଇଞ୍ଜିନିୟର ଅନୁମୋଦନ ବା ପ୍ରତ୍ୟାଖ୍ୟାନ କରନ୍ତି। ଅନୁମୋଦନ ସଂସ୍କରଣକୁ ଅନୁମୋଦିତ (ବା ପ୍ରଚଳନ ବନ୍ଦ ଅନୁରୋଧ ପାଇଁ ପ୍ରଚଳନ ବନ୍ଦ) କରେ। |
 | `S2d6ac0` | help and messages | The package is being built. Reload this page to follow its progress. | ପ୍ୟାକେଜ୍ ତିଆରି ହେଉଛି। ଅଗ୍ରଗତି ଦେଖିବାକୁ ଏହି ପୃଷ୍ଠା ପୁଣି ଲୋଡ୍ କରନ୍ତୁ। |
@@ -14598,7 +15300,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sded18c` | language | approved by | ଅନୁମୋଦକ |
 | `Sedd46e` | language | Check against the interface | ଇଣ୍ଟରଫେସ୍ ସହ ଯାଞ୍ଚ କରନ୍ତୁ |
 | `S5a013c` | language | missing | ଅନୁପସ୍ଥିତ |
-| `S2c924e` | language | Note | ଟିପ୍ପଣୀ |
+| `S2c924e` | language, workbench | Note | ଟିପ୍ପଣୀ |
 | `S2f09d0` | language | Note on %(x)s | %(x)s ଉପରେ ଟିପ୍ପଣୀ |
 | `S75bf99` | language | proposed by | ପ୍ରସ୍ତାବକ |
 | `Sc68e32` | language | Save translations | ଅନୁବାଦ ସଞ୍ଚୟ କରନ୍ତୁ |
@@ -14720,6 +15422,26 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se146d2` | message: auth_service | Your account is not active. | ଆପଣଙ୍କ ଖାତା ସକ୍ରିୟ ନୁହେଁ। |
 | `Sb584dd` | message: backup_service | Backups need a file-based SQLite database. | ବ୍ୟାକଅପ୍ ପାଇଁ ଫାଇଲ୍-ଆଧାରିତ SQLite ଡାଟାବେସ୍ ଦରକାର। |
 | `S368c82` | message: backup_service | keep must be at least 1 | keep ଅନ୍ତତଃ 1 ହେବା ଉଚିତ |
+| `S18edaf` | message: bulk_service | A defect needs a note: say what is wrong. | ତ୍ରୁଟି ପାଇଁ ଟିପ୍ପଣୀ ଦରକାର: କଣ ଭୁଲ ତାହା କୁହନ୍ତୁ। |
+| `S68cada` | message: bulk_service, workbench | A defective Draft is corrected by its author. | ତ୍ରୁଟିପୂର୍ଣ୍ଣ ଖସଡ଼ାକୁ ତାହାର ଲେଖକ ସଂଶୋଧନ କରନ୍ତି। |
+| `S8941d5` | message: bulk_service | A domain sign-off needs the engineering domain. | ଡୋମେନ୍ ସ୍ୱାକ୍ଷର ପାଇଁ ଇଞ୍ଜିନିୟରିଂ ଡୋମେନ୍ ଦରକାର। |
+| `S071452` | message: bulk_service | A note has at most 1000 characters. | ଗୋଟିଏ ଟିପ୍ପଣୀରେ ସର୍ବାଧିକ 1000 ଅକ୍ଷର ଥାଇପାରେ। |
+| `Sf74baa` | message: bulk_service, message: change_set_service | Change set not found | ପରିବର୍ତ୍ତନ ସମୂହ ମିଳିଲା ନାହିଁ |
+| `Sf89067` | message: bulk_service | Choose at least one value to set. | ସେଟ୍ କରିବାକୁ ଅତିକମରେ ଗୋଟିଏ ମୂଲ୍ୟ ବାଛନ୍ତୁ। |
+| `S1e3e33` | message: bulk_service | No change request of the set is waiting for you at this step. | ସେଟ୍‌ର କୌଣସି ପରିବର୍ତ୍ତନ ଅନୁରୋଧ ଏହି ପଦକ୍ଷେପରେ ଆପଣଙ୍କ ପାଇଁ ଅପେକ୍ଷା କରୁନାହିଁ। |
+| `S95bd2d` | message: bulk_service | No Draft of the set is waiting for the sign-off of this domain. | ସେଟ୍‌ର କୌଣସି ଖସଡ଼ା ଏହି ଡୋମେନ୍‌ର ସ୍ୱାକ୍ଷର ପାଇଁ ଅପେକ୍ଷା କରୁନାହିଁ। |
+| `S495371` | message: bulk_service | Only a sample with defects can be sent back. | କେବଳ ତ୍ରୁଟିଥିବା ନମୁନାକୁ ହିଁ ଫେରାଇ ପଠାଯାଇପାରିବ। |
+| `Sa6e3b3` | message: bulk_service | Sample not found | ନମୁନା ମିଳିଲା ନାହିଁ |
+| `Sf745cc` | message: bulk_service | step must be domain, reviewer, admin or chief-engineer | step domain, reviewer, admin କିମ୍ବା chief-engineer ହେବା ଉଚିତ |
+| `S973577` | message: bulk_service | That change request is not in the sample. | ସେହି ପରିବର୍ତ୍ତନ ଅନୁରୋଧ ନମୁନାରେ ନାହିଁ। |
+| `Sa1a149` | message: bulk_service | The batch changed since the sample was drawn; draw a new sample. | ନମୁନା ବାହାର କରିବା ପରେ ବ୍ୟାଚ୍ ବଦଳିଛି; ନୂଆ ନମୁନା ବାହାର କରନ୍ତୁ। |
+| `S8e5b1c` | message: bulk_service | The verdict must be OK or DEFECT. | ରାୟ OK କିମ୍ବା ତ୍ରୁଟି ହେବା ଉଚିତ। |
+| `Sddedd6` | message: bulk_service | This is not your sample: the person who decides inspects. | ଏହା ଆପଣଙ୍କ ନମୁନା ନୁହେଁ: ଯିଏ ନିଷ୍ପତ୍ତି ନିଏ ସେ ହିଁ ଯାଞ୍ଚ କରେ। |
+| `Sf56c6a` | message: bulk_service | This sample belongs to another change set or another step. | ଏହି ନମୁନା ଅନ୍ୟ ପରିବର୍ତ୍ତନ ସମୂହ କିମ୍ବା ଅନ୍ୟ ପଦକ୍ଷେପର। |
+| `S146a72` | message: bulk_service | This sample has been used for a decision already; draw a new one. | ଏହି ନମୁନା ପୂର୍ବରୁ ଗୋଟିଏ ନିଷ୍ପତ୍ତି ପାଇଁ ବ୍ୟବହୃତ ହୋଇସାରିଛି; ନୂଆ ବାହାର କରନ୍ତୁ। |
+| `Sf0f02c` | message: bulk_service | This sample is closed. | ଏହି ନମୁନା ବନ୍ଦ ଅଛି। |
+| `Sf973bd` | message: bulk_service | This sample is older than 24 hours; draw a new one. | ଏହି ନମୁନା 24 ଘଣ୍ଟାରୁ ପୁରୁଣା; ନୂଆ ବାହାର କରନ୍ତୁ। |
+| `S062a13` | message: bulk_service | This sample was replaced by a newer one. | ଏହି ନମୁନା ବଦଳରେ ନୂଆ ଏକ ଆସିଛି। |
 | `Sca2391` | message: change_request_service | A comment must be between 1 and 4000 characters. | ମନ୍ତବ୍ୟ 1 ରୁ 4000 ଅକ୍ଷର ମଧ୍ୟରେ ହେବା ଉଚିତ। |
 | `S33cd99` | message: change_request_service | At least one Turbine Platform is required before Submit for Review (FR-023a). | ସମୀକ୍ଷା ପାଇଁ ଦାଖଲ ପୂର୍ବରୁ ଅନ୍ତତଃ ଗୋଟିଏ ଟର୍ବାଇନ୍ ପ୍ଲାଟଫର୍ମ ଆବଶ୍ୟକ (FR-023a)। |
 | `S1fd35e` | message: change_request_service | decision must be APPROVE or REJECT. | decision APPROVE ବା REJECT ହେବା ଉଚିତ। |
@@ -14730,7 +15452,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sbd3a03` | message: change_request_service | reviewer_id must be an active user with the Reviewer role. | reviewer_id ସମୀକ୍ଷକ ଭୂମିକା ଥିବା ସକ୍ରିୟ ଉପଯୋଗକର୍ତ୍ତା ହେବା ଉଚିତ। |
 | `S043693` | message: change_request_service | The Reviewer has already signed off this CR. | ସମୀକ୍ଷକ ଏହି ପରିବର୍ତ୍ତନ ଅନୁରୋଧରେ ପୂର୍ବରୁ ସ୍ୱାକ୍ଷର କରିସାରିଛନ୍ତି। |
 | `S7a758c` | message: change_set_service | A change set needs a name of 1-120 characters. | ପରିବର୍ତ୍ତନ ସମୂହ ପାଇଁ 1-120 ଅକ୍ଷରର ନାମ ଦରକାର। |
-| `Sf74baa` | message: change_set_service | Change set not found | ପରିବର୍ତ୍ତନ ସମୂହ ମିଳିଲା ନାହିଁ |
 | `Sd8fad1` | message: change_set_service | Only a CR that is still open can join a change set. | କେବଳ ଏପର୍ଯ୍ୟନ୍ତ ଖୋଲା ପରିବର୍ତ୍ତନ ଅନୁରୋଧ ପରିବର୍ତ୍ତନ ସମୂହରେ ଯୋଗ ଦେଇପାରେ। |
 | `S990d51` | message: change_set_service | Only the author of the CR or an Administrator may group it. | କେବଳ ପରିବର୍ତ୍ତନ ଅନୁରୋଧର ଲେଖକ ବା ପ୍ରଶାସକ ଏହାକୁ ଗୋଷ୍ଠୀଭୁକ୍ତ କରିପାରିବେ। |
 | `S69e4d1` | message: change_set_service | Only the author of the CR or an Administrator may ungroup it. | କେବଳ ପରିବର୍ତ୍ତନ ଅନୁରୋଧର ଲେଖକ ବା ପ୍ରଶାସକ ଏହାକୁ ଗୋଷ୍ଠୀରୁ ହଟାଇପାରିବେ। |
@@ -14816,6 +15537,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sdb88ba` | message: saved_search_service | Saved search not found | ସଞ୍ଚିତ ସନ୍ଧାନ ମିଳିଲା ନାହିଁ |
 | `S046aff` | message: saved_search_service | This saved search belongs to someone else. | ଏହି ସଞ୍ଚିତ ସନ୍ଧାନ ଅନ୍ୟ କାହାର। |
 | `Saad8e2` | message: settings_service | must be a whole number between 0 and 100 | 0 ଓ 100 ମଧ୍ୟରେ ଏକ ପୂର୍ଣ୍ଣ ସଂଖ୍ୟା ହେବା ଉଚିତ |
+| `S9625d1` | message: settings_service | must be a whole number between 1 and 100 | 1 ଓ 100 ମଧ୍ୟରେ ପୂର୍ଣ୍ଣ ସଂଖ୍ୟା ହେବା ଉଚିତ |
 | `S6e4015` | message: settings_service | must be a whole number between 1 and 365 | 1 ଓ 365 ମଧ୍ୟରେ ଏକ ପୂର୍ଣ୍ଣ ସଂଖ୍ୟା ହେବା ଉଚିତ |
 | `S9671fb` | message: settings_service | must be true or false | true ବା false ହେବା ଉଚିତ |
 | `S5166bb` | message: st_import_service | A staged file changed after the preview. Upload again. | ପୂର୍ବାବଲୋକନ ପରେ ଏକ ପ୍ରସ୍ତୁତ ଫାଇଲ୍ ବଦଳିଛି। ପୁଣି ଅପଲୋଡ୍ କରନ୍ତୁ। |
@@ -15013,7 +15735,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S6daf16` | st_preview | Preview: status codes from .st files | ପୂର୍ବାବଲୋକନ: .st ଫାଇଲ୍‌ରୁ ସ୍ଥିତି କୋଡ୍ |
 | `S15a21a` | st_preview | program(s) | ପ୍ରୋଗ୍ରାମ୍ |
 | `Se58289` | st_preview | Programs found in the uploaded files | ଅପଲୋଡ୍ ହୋଇଥିବା ଫାଇଲରେ ମିଳିଥିବା ପ୍ରୋଗ୍ରାମ୍ |
-| `S75c053` | st_preview | ready | ପ୍ରସ୍ତୁତ |
+| `S75c053` | st_preview, workbench | ready | ପ୍ରସ୍ତୁତ |
 | `S0723bf` | st_preview | Select all programs that are ready | ପ୍ରସ୍ତୁତ ଥିବା ସମସ୍ତ ପ୍ରୋଗ୍ରାମ୍ ବାଛନ୍ତୁ |
 | `S1a767a` | st_preview | updates the open Draft | ଖୋଲା ଖସଡ଼ା ଅଦ୍ୟତନ କରେ |
 | `S02499f` | st_preview | withdrawn | ପ୍ରତ୍ୟାହୃତ |
@@ -15112,10 +15834,44 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S8516a7` | withdrawn_codes | Delete selected | ବଛାଯାଇଥିବା ଲିଭାନ୍ତୁ |
 | `Sdfeb06` | withdrawn_codes | No withdrawn codes. | କୌଣସି ପ୍ରତ୍ୟାହୃତ କୋଡ୍ ନାହିଁ। |
 | `S87ec0b` | withdrawn_codes | Withdrawn on | ପ୍ରତ୍ୟାହାର ତାରିଖ |
+| `S48d260` | workbench | %(n)s of %(total)s codes drawn at %(when)s. | %(n)s / %(total)s କୋଡ୍ %(when)s ରେ ବଛାଯାଇଛି। |
+| `S88b55f` | workbench | Approve the batch | ବ୍ୟାଚ୍ ଅନୁମୋଦନ କରନ୍ତୁ |
+| `Sf40e77` | workbench | Available group | ଉପଲବ୍ଧ ଗୋଷ୍ଠୀ |
+| `S99613c` | workbench | Blocked | ଅବରୋଧିତ |
+| `Sca7133` | workbench | Choose the step you are about to decide, draw the sample, look at every sampled code and mark it. The sample is yours, valid for 24 hours and for this batch as it is now. | ଆପଣ ନିଷ୍ପତ୍ତି ନେବାକୁ ଯାଉଥିବା ପଦକ୍ଷେପ ବାଛନ୍ତୁ, ନମୁନା ବାହାର କରନ୍ତୁ, ବାହାରିଥିବା ପ୍ରତ୍ୟେକ କୋଡ୍ ଦେଖି ଚିହ୍ନିତ କରନ୍ତୁ। ନମୁନା ଆପଣଙ୍କର, 24 ଘଣ୍ଟା ପାଇଁ ଏବଂ ଏବେ ଯେପରି ଅଛି ସେହି ବ୍ୟାଚ୍ ପାଇଁ ବୈଧ। |
+| `S6f4274` | workbench | Codes in this batch | ଏହି ବ୍ୟାଚ୍‌ର କୋଡ୍ |
+| `S117313` | workbench | Decide the batch | ବ୍ୟାଚ୍ ବିଷୟରେ ନିଷ୍ପତ୍ତି ନିଅନ୍ତୁ |
+| `Se91aff` | workbench | Defect | ତ୍ରୁଟି |
+| `S16fbbf` | workbench | Domain sign-off | ଡୋମେନ୍ ସ୍ୱାକ୍ଷର |
+| `Scb1884` | workbench | Dossier (XLSX) | ଡୋସିୟର୍ (XLSX) |
+| `S25085f` | workbench | Draw a sample | ନମୁନା ବାହାର କରନ୍ତୁ |
+| `S9167a7` | workbench | Engineering domain | ଇଞ୍ଜିନିୟରିଂ ଡୋମେନ୍ |
+| `Sbc3c59` | workbench | Only the values you choose are changed, on the Drafts you wrote (an Administrator: any Draft). | କେବଳ ଆପଣ ବାଛିଥିବା ମୂଲ୍ୟ ବଦଳେ, ଆପଣ ଲେଖିଥିବା ଖସଡ଼ାରେ (ପ୍ରଶାସକ: ଯେକୌଣସି ଖସଡ଼ା)। |
+| `S92223f` | workbench | Passed: no defect in the sample. Use sample number %(id)s below. | ଉତ୍ତୀର୍ଣ୍ଣ: ନମୁନାରେ କୌଣସି ତ୍ରୁଟି ନାହିଁ। ତଳେ ନମୁନା ନମ୍ବର %(id)s ବ୍ୟବହାର କରନ୍ତୁ। |
+| `S6275ab` | workbench | Ready to submit | ଦାଖଲ ପାଇଁ ପ୍ରସ୍ତୁତ |
+| `Se1e74d` | workbench | Reject the batch | ବ୍ୟାଚ୍ ପ୍ରତ୍ୟାଖ୍ୟାନ କରନ୍ତୁ |
+| `S58fabf` | workbench | Sample | ନମୁନା |
+| `S862471` | workbench | Sample inspection | ନମୁନା ଯାଞ୍ଚ |
+| `S69cc53` | workbench | Save the verdicts | ରାୟ ସଞ୍ଚୟ କରନ୍ତୁ |
+| `S3ae55b` | workbench | Send the defective codes back | ତ୍ରୁଟିପୂର୍ଣ୍ଣ କୋଡ୍ ଫେରାଇ ପଠାନ୍ତୁ |
+| `Se90e7c` | workbench | Set on the Drafts | ଖସଡ଼ାରେ ସେଟ୍ କରନ୍ତୁ |
+| `Sa58dac` | workbench | Set values on the Drafts | ଖସଡ଼ାରେ ମୂଲ୍ୟ ସେଟ୍ କରନ୍ତୁ |
+| `Sa443bb` | workbench | Sign off the Drafts | ଖସଡ଼ାର ସ୍ୱାକ୍ଷର କରନ୍ତୁ |
+| `S53f47f` | workbench | Sign-off pending | ସ୍ୱାକ୍ଷର ବାକି |
+| `Sae12bc` | workbench | Status category | ସ୍ଥିତି ବର୍ଗ |
+| `Sdc416e` | workbench | Step | ପଦକ୍ଷେପ |
+| `Sf7710d` | workbench | Submit for review | ସମୀକ୍ଷା ପାଇଁ ଦାଖଲ କରନ୍ତୁ |
+| `Sa45adc` | workbench | Submit the Drafts | ଖସଡ଼ା ଦାଖଲ କରନ୍ତୁ |
+| `S2d099f` | workbench | Submits the Drafts you wrote. A Draft that still lacks a platform or a domain sign-off is reported and left as it is. | ଆପଣ ଲେଖିଥିବା ଖସଡ଼ା ଦାଖଲ କରେ। ଯେଉଁ ଖସଡ଼ାରେ ଏପର୍ଯ୍ୟନ୍ତ ପ୍ଲାଟଫର୍ମ କିମ୍ବା ଡୋମେନ୍ ସ୍ୱାକ୍ଷର ନାହିଁ, ତାହା ଜଣାଯାଏ ଏବଂ ଯେପରି ଅଛି ସେପରି ଛଡ଼ାଯାଏ। |
+| `S5baa27` | workbench | The sample has defects, so the batch cannot be decided as it is. Send the defective codes back (the note is the reason), then draw a new sample of what is left. | ନମୁନାରେ ତ୍ରୁଟି ଅଛି, ତେଣୁ ବ୍ୟାଚ୍ ବିଷୟରେ ଏପରି ନିଷ୍ପତ୍ତି ନିଆଯାଇପାରିବ ନାହିଁ। ତ୍ରୁଟିପୂର୍ଣ୍ଣ କୋଡ୍ ଫେରାଇ ପଠାନ୍ତୁ (ଟିପ୍ପଣୀ ହିଁ କାରଣ), ତା'ପରେ ବଳକା ମଧ୍ୟରୁ ନୂଆ ନମୁନା ବାହାର କରନ୍ତୁ। |
+| `S19f8ab` | workbench | Tick the codes an action is for; with none ticked an action covers every code it applies to. | ଯେଉଁ କୋଡ୍ ପାଇଁ କାର୍ଯ୍ୟ, ସେଗୁଡ଼ିକରେ ଟିକ୍ କରନ୍ତୁ; କିଛି ଟିକ୍ ନଥିଲେ କାର୍ଯ୍ୟ ପ୍ରଯୁଜ୍ୟ ସମସ୍ତ କୋଡ୍‌ରେ ଲାଗୁ ହୁଏ। |
+| `S7f6e5a` | workbench | Verdict | ରାୟ |
+| `Se6246f` | workbench | What stops it | ଏହାକୁ କଣ ରୋକୁଛି |
+| `Sbf45e2` | workbench | Work on many codes at once without weakening a step: every code still gets its own checks, its own audit entry and, for decisions, your password. A decision on more than %(above)s codes needs a sample inspection first: %(percent)s percent of the batch, at least %(minimum)s codes, spread over the subgroups. One defect in the sample stops the decision. | କୌଣସି ପଦକ୍ଷେପ ଦୁର୍ବଳ ନକରି ଅନେକ କୋଡ୍‌ରେ ଏକାଥରେ କାମ କରନ୍ତୁ: ପ୍ରତ୍ୟେକ କୋଡ୍ ନିଜର ଯାଞ୍ଚ, ନିଜର ଅଡିଟ୍ ଏଣ୍ଟ୍ରି ଓ ନିଷ୍ପତ୍ତି ପାଇଁ ଆପଣଙ୍କ ପାସୱାର୍ଡ ପାଏ। %(above)s ରୁ ଅଧିକ କୋଡ୍ ଉପରେ ନିଷ୍ପତ୍ତି ପାଇଁ ପ୍ରଥମେ ନମୁନା ଯାଞ୍ଚ ଦରକାର: ବ୍ୟାଚ୍‌ର %(percent)s ପ୍ରତିଶତ, ଅତିକମରେ %(minimum)s କୋଡ୍, ଉପଗୋଷ୍ଠୀରେ ବିସ୍ତାରିତ। ନମୁନାରେ ଗୋଟିଏ ତ୍ରୁଟି ନିଷ୍ପତ୍ତି ବନ୍ଦ କରିଦିଏ। |
 
 ### 9.14 IN മലയാളം 🇮🇳 — Malayalam
 
-1216 of 1217 strings translated; direction left to right.
+1279 of 1280 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -15315,7 +16071,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Scfa1b6` | detail | Add field comment | ഫീൽഡ് അഭിപ്രായം ചേർക്കുക |
 | `Sbb965e` | detail | Add one of your change requests | നിങ്ങളുടെ ഒരു മാറ്റ അഭ്യർത്ഥന ചേർക്കുക |
 | `S9a693b` | detail | Add to change set | മാറ്റ സമൂഹത്തിലേക്ക് ചേർക്കുക |
-| `S7bbd6d` | detail | Administrator sign-off | അഡ്മിനിസ്ട്രേറ്ററുടെ സൈൻ-ഓഫ് |
+| `S7bbd6d` | detail, workbench | Administrator sign-off | അഡ്മിനിസ്ട്രേറ്ററുടെ സൈൻ-ഓഫ് |
 | `S212856` | detail | advanced, controller firmware programs | അഡ്വാൻസ്ഡ്, കൺട്രോളർ ഫേംവെയർ പ്രോഗ്രാമുകൾ |
 | `Sfbde82` | detail | Affected component | ബാധിച്ച ഘടകം |
 | `S25f8c5` | detail, export, form | Alarm | അലാറം |
@@ -15344,17 +16100,17 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se7bab1` | detail | Chain of causes | കാരണങ്ങളുടെ ശൃംഖല |
 | `S9c8393` | detail, mine | Change Request | മാറ്റ അഭ്യർത്ഥന |
 | `S4572f4` | detail | Change request | മാറ്റ അഭ്യർത്ഥന |
-| `S3295be` | detail | Change requests in this set | ഈ സമൂഹത്തിലെ മാറ്റ അഭ്യർത്ഥനകൾ |
+| `S3295be` | detail, workbench | Change requests in this set | ഈ സമൂഹത്തിലെ മാറ്റ അഭ്യർത്ഥനകൾ |
 | `S4d8006` | detail | Change set | മാറ്റ സമൂഹം |
 | `S8aa57d` | detail | Changes | മാറ്റങ്ങൾ |
 | `S3d14ea` | detail, export | Changes of this release only | ഈ റിലീസിലെ മാറ്റങ്ങൾ മാത്രം |
 | `Sbd95c0` | detail | Checklist confirmed at sign-off | സൈൻ-ഓഫ് സമയത്ത് സ്ഥിരീകരിച്ച ചെക്ക്‌ലിസ്റ്റ് |
 | `S074d62` | detail, role badge | Chief Engineer | ചീഫ് എൻജിനീയർ |
-| `S03695d` | detail | Chief Engineer decision | ചീഫ് എൻജിനീയറുടെ തീരുമാനം |
+| `S03695d` | detail, workbench | Chief Engineer decision | ചീഫ് എൻജിനീയറുടെ തീരുമാനം |
 | `Sf0a89f` | detail | Close change set | മാറ്റ സമൂഹം അടയ്ക്കുക |
 | `S7c0c39` | detail | Close this change set? | ഈ മാറ്റ സമൂഹം അടയ്ക്കണോ? |
 | `S153d7a` | detail | Comment | അഭിപ്രായം |
-| `S611578` | detail | Comment (required for rejection) | അഭിപ്രായം (നിരസിക്കാൻ നിർബന്ധം) |
+| `S611578` | detail, workbench | Comment (required for rejection) | അഭിപ്രായം (നിരസിക്കാൻ നിർബന്ധം) |
 | `Sc38432` | detail | Comment on this field | ഈ ഫീൽഡിൽ അഭിപ്രായം പറയുക |
 | `Sfce06e` | detail | Comments | അഭിപ്രായങ്ങൾ |
 | `S8d105c` | detail, reconciliation | Compare | താരതമ്യം ചെയ്യുക |
@@ -15380,7 +16136,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S0e8574` | detail | Customer | ഉപഭോക്താവ് |
 | `Scb307e` | detail | Decide the selected requests in one sitting | തിരഞ്ഞെടുത്ത അഭ്യർത്ഥനകളിൽ ഒറ്റ ഇരുപ്പിൽ തീരുമാനിക്കുക |
 | `S319493` | detail | Decided by | തീരുമാനിച്ചത് |
-| `S7f59a1` | detail | Decision | തീരുമാനം |
+| `S7f59a1` | detail, workbench | Decision | തീരുമാനം |
 | `Sc51568` | detail | Decisions & Comments | തീരുമാനങ്ങളും അഭിപ്രായങ്ങളും |
 | `Sa9ec7c` | detail | Delete Permanently | ശാശ്വതമായി ഇല്ലാതാക്കുക |
 | `S7d1c7a` | detail | Delete Release | റിലീസ് ഇല്ലാതാക്കുക |
@@ -15446,6 +16202,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S6d59f4` | detail | Manual Reset Program | മാനുവൽ റീസെറ്റ് പ്രോഗ്രാം |
 | `Sf9896c` | detail, form | Mark resolved | പരിഹരിച്ചതായി അടയാളപ്പെടുത്തുക |
 | `Sa7b93d` | detail, new, reconciliation | Mode | മോഡ് |
+| `S9f4d01` | detail | More than a few codes need a sample inspection first; use the workbench. | കുറച്ച് കോഡുകളിൽ കൂടുതലായാൽ ആദ്യം സാമ്പിൾ പരിശോധന വേണം; വർക്ക്ബെഞ്ച് ഉപയോഗിക്കുക. |
 | `S31a335` | detail | new code | പുതിയ കോഡ് |
 | `S816c52` | detail, export_verify, form | No | ഇല്ല |
 | `S06fc8d` | detail | No active Engineer holds the %(code)s domain yet. An Administrator must tag an Engineer with it (Administration → Users) before a sign-off can be requested. | സജീവമായ ഒരു എൻജിനീയർക്കും %(code)s ഡൊമെയ്ൻ ഇല്ല. സൈൻ-ഓഫ് അഭ്യർത്ഥിക്കുന്നതിന് മുമ്പ് അഡ്മിനിസ്ട്രേറ്റർ ഒരു എൻജിനീയർക്ക് ഇത് നൽകണം (അഡ്മിനിസ്ട്രേഷൻ → ഉപയോക്താക്കൾ). |
@@ -15476,7 +16233,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S9734ac` | detail | Other codes that refer to this one. Review them before deprecating it. | ഇതിനെ പരാമർശിക്കുന്ന മറ്റ് കോഡുകൾ. ഇത് കാലഹരണപ്പെടുത്തുന്നതിന് മുമ്പ് അവ അവലോകനം ചെയ്യുക. |
 | `S780d35` | detail | Override identifier (migration / reservation only) | ഐഡന്റിഫയർ അസാധുവാക്കുക (മൈഗ്രേഷൻ / റിസർവേഷൻ മാത്രം) |
 | `S89ff31` | detail | Owner | ഉടമ |
-| `S2d20ee` | detail | Package overview | പാക്കേജ് അവലോകനം |
+| `S2d20ee` | detail, workbench | Package overview | പാക്കേജ് അവലോകനം |
 | `S4d1a47` | detail | Package: all languages and access levels | പാക്കേജ്: എല്ലാ ഭാഷകളും ആക്‌സസ് തലങ്ങളും |
 | `Sc49bd0` | detail | Packages of this Release | ഈ റിലീസിന്റെ പാക്കേജുകൾ |
 | `S96f608` | detail, review_queue | Pending | തീർപ്പാകാത്തത് |
@@ -15521,12 +16278,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S026ab2` | detail | resolved | പരിഹരിച്ചു |
 | `S68c61f` | detail | Rev # | റിവിഷൻ നം. |
 | `Se4758b` | detail, review_checklist | Review checklist | അവലോകന ചെക്ക്‌ലിസ്റ്റ് |
-| `S7bfca8` | detail | Reviewer sign-off | അവലോകകന്റെ സൈൻ-ഓഫ് |
+| `S7bfca8` | detail, workbench | Reviewer sign-off | അവലോകകന്റെ സൈൻ-ഓഫ് |
 | `S3beb9a` | detail | Revision | റിവിഷൻ |
 | `Sa72973` | detail | Revision Fields | റിവിഷൻ ഫീൽഡുകൾ |
 | `Sfc1d6a` | detail | row(s) imported as Drafts | വരികൾ കരടുകളായി ഇറക്കുമതി ചെയ്തു |
 | `S52d0b3` | detail, reconciliation, user_detail | Rows | വരികൾ |
 | `Sd0edfb` | detail | Sales | വിൽപ്പന |
+| `S241bf5` | detail, workbench | Sample number | സാമ്പിൾ നമ്പർ |
 | `Sda38c6` | detail | Save planned dates | ആസൂത്രിത തീയതികൾ സംരക്ഷിക്കുക |
 | `S13c61c` | detail | Scope Filter | വ്യാപ്തി ഫിൽട്ടർ |
 | `S859822` | detail, mine, withdrawn_codes | Select | തിരഞ്ഞെടുക്കുക |
@@ -15588,11 +16346,12 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S7d5316` | detail | Who | ആര് |
 | `S47e564` | detail | Withdraw | പിൻവലിക്കുക |
 | `S51a998` | detail | Withdraw this change request? | ഈ മാറ്റ അഭ്യർത്ഥന പിൻവലിക്കണോ? |
+| `S93ef7c` | detail, workbench | Workbench | വർക്ക്ബെഞ്ച് |
 | `S95a2a4` | detail, form | Write level | എഴുത്ത് നില |
 | `S612fe0` | detail | Yaw Bearing Lubrication Program | യാ ബെയറിംഗ് ലൂബ്രിക്കേഷൻ പ്രോഗ്രാം |
 | `S559a3f` | detail | Yaw Program | യാ പ്രോഗ്രാം |
 | `S5397e0` | detail, export_verify, form | Yes | അതെ |
-| `Sc8e4b4` | detail | Your decision step | നിങ്ങളുടെ തീരുമാന ഘട്ടം |
+| `Sc8e4b4` | detail, workbench | Your decision step | നിങ്ങളുടെ തീരുമാന ഘട്ടം |
 | `S20cb4c` | detail, export_center | ZIP with manifest | മാനിഫെസ്റ്റ് സഹിതം ZIP |
 | `S5d4358` | dry_run | All rows are clean. | എല്ലാ വരികളും വൃത്തിയാണ്. |
 | `S03510d` | dry_run | Back to import | ഇറക്കുമതിയിലേക്ക് മടങ്ങുക |
@@ -15619,7 +16378,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S7b8d80` | export | Not for distribution - unapproved data | വിതരണത്തിനുള്ളതല്ല - അംഗീകരിക്കാത്ത ഡാറ്റ |
 | `Sd9b345` | export | not yet published | ഇതുവരെ പ്രസിദ്ധീകരിച്ചിട്ടില്ല |
 | `Sa5d386` | export | Page %(page)s of %(total)s | പേജ് %(page)s / %(total)s |
-| `Sac1a42` | export | Platforms | പ്ലാറ്റ്ഫോമുകൾ |
+| `Sac1a42` | export, workbench | Platforms | പ്ലാറ്റ്ഫോമുകൾ |
 | `Se51c55` | export | Records | രേഖകൾ |
 | `Sd41f56` | export, export_center | Release | റിലീസ് |
 | `S2e8fd6` | export | Reset delay | റീസെറ്റ് കാലതാമസം |
@@ -15671,7 +16430,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S45ea95` | export_verify | Manifest signature | മാനിഫെസ്റ്റ് ഒപ്പ് |
 | `S08f84b` | export_verify | No record of this exact file | ഈ ഫയലിന്റെ രേഖയില്ല |
 | `S357953` | export_verify | NOT OK | ശരിയല്ല |
-| `S9ce3bd` | export_verify | OK | ശരി |
+| `S9ce3bd` | export_verify, workbench | OK | ശരി |
 | `S8a5285` | export_verify | Overall | മൊത്തത്തിൽ |
 | `Sd2bc4a` | export_verify | Produced by this system | ഈ സിസ്റ്റം നിർമ്മിച്ചത് |
 | `S112d15` | export_verify | Verify an export | എക്സ്പോർട്ട് പരിശോധിക്കുക |
@@ -15745,10 +16504,16 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S689b33` | help | The full manual is docs/23-user-manual.md in the project folder; the glossary below is the same one the tooltips use. | പൂർണ്ണ മാനുവൽ പ്രോജക്ട് ഫോൾഡറിലെ docs/23-user-manual.md ആണ്; താഴെയുള്ള പദാവലി ടൂൾടിപ്പുകൾ ഉപയോഗിക്കുന്നതുതന്നെ. |
 | `S439914` | help | What happens next on a change request | ഒരു മാറ്റ അഭ്യർത്ഥനയിൽ അടുത്തതായി എന്ത് സംഭവിക്കും |
 | `S6d29d9` | help and messages | %(n)s withdrawn code(s) deleted. | %(n)s പിൻവലിച്ച കോഡുകൾ ഇല്ലാതാക്കി. |
+| `S285edc` | help and messages | %(ok)s of %(n)s: %(what)s. | %(ok)s / %(n)s: %(what)s. |
 | `Sb08e6c` | help and messages | A Reviewer and an Administrator each sign off (in any order). If either rejects, it goes back to the author. | ഒരു അവലോകകനും ഒരു അഡ്മിനിസ്ട്രേറ്ററും ഓരോരുത്തരും സൈൻ ഓഫ് ചെയ്യുന്നു (ഏത് ക്രമത്തിലും). ആരെങ്കിലും നിരസിച്ചാൽ അത് രചയിതാവിലേക്ക് മടങ്ങുന്നു. |
 | `S2f1bed` | help and messages | An Administrator includes the revision in a Release and publishes it; then it is Released. | അഡ്മിനിസ്ട്രേറ്റർ റിവിഷൻ റിലീസിൽ ഉൾപ്പെടുത്തി പ്രസിദ്ധീകരിക്കുന്നു; അപ്പോൾ അത് റിലീസ് ചെയ്തതാകുന്നു. |
+| `S1308dc` | help and messages | defective codes sent back | തകരാറുള്ള കോഡുകൾ തിരികെ അയച്ചു |
+| `Se2bbd9` | help and messages | Drafts saved | കരടുകൾ സംരക്ഷിച്ചു |
+| `S0ddfa5` | help and messages | Drafts signed off | കരടുകൾക്ക് സൈൻ-ഓഫ് നൽകി |
+| `Sf90ab8` | help and messages | Drafts submitted for review | കരടുകൾ അവലോകനത്തിനായി സമർപ്പിച്ചു |
 | `Sd856bd` | help and messages | Not deleted (it has a revision again or is still referenced): %(x)s | ഇല്ലാതാക്കിയില്ല (വീണ്ടും റിവിഷൻ ഉണ്ട് അല്ലെങ്കിൽ ഇപ്പോഴും പരാമർശിക്കപ്പെടുന്നു): %(x)s |
 | `S34b903` | help and messages | Not possible: the account has history (see above). Deactivate it instead; the person can no longer sign in and everything they did stays attributable. | സാധ്യമല്ല: അക്കൗണ്ടിന് ചരിത്രമുണ്ട് (മുകളിൽ കാണുക). പകരം നിഷ്ക്രിയമാക്കുക; വ്യക്തിക്ക് ഇനി സൈൻ ഇൻ ചെയ്യാനാവില്ല, അവർ ചെയ്തതെല്ലാം ആരോപിക്കാവുന്നതായി തുടരും. |
+| `S6a26de` | help and messages | Sample %(id)s drawn: %(n)s of %(total)s codes to inspect. | സാമ്പിൾ %(id)s എടുത്തു: %(n)s / %(total)s കോഡുകൾ പരിശോധിക്കണം. |
 | `Sce489f` | help and messages | The author gets any required cross-domain sign-offs, then submits the change request for review. | രചയിതാവ് ആവശ്യമായ ക്രോസ്-ഡൊമെയ്ൻ സൈൻ-ഓഫുകൾ നേടുന്നു, തുടർന്ന് മാറ്റ അഭ്യർത്ഥന അവലോകനത്തിനായി സമർപ്പിക്കുന്നു. |
 | `S1cdbdd` | help and messages | The Chief Engineer approves or rejects. Approval makes the revision Approved (or Deprecated for a deprecation request). | ചീഫ് എൻജിനീയർ അംഗീകരിക്കുകയോ നിരസിക്കുകയോ ചെയ്യുന്നു. അംഗീകാരം റിവിഷനെ അംഗീകരിച്ചതാക്കുന്നു (കാലഹരണപ്പെടുത്തൽ അഭ്യർത്ഥനയ്ക്ക് കാലഹരണപ്പെട്ടതാക്കുന്നു). |
 | `S2d6ac0` | help and messages | The package is being built. Reload this page to follow its progress. | പാക്കേജ് ഉണ്ടാക്കുകയാണ്. പുരോഗതി കാണാൻ ഈ പേജ് വീണ്ടും ലോഡ് ചെയ്യുക. |
@@ -15821,7 +16586,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sded18c` | language | approved by | അംഗീകരിച്ചത് |
 | `Sedd46e` | language | Check against the interface | ഇന്റർഫേസുമായി പരിശോധിക്കുക |
 | `S5a013c` | language | missing | കാണാനില്ല |
-| `S2c924e` | language | Note | കുറിപ്പ് |
+| `S2c924e` | language, workbench | Note | കുറിപ്പ് |
 | `S2f09d0` | language | Note on %(x)s | %(x)s നെക്കുറിച്ചുള്ള കുറിപ്പ് |
 | `S75bf99` | language | proposed by | നിർദ്ദേശിച്ചത് |
 | `Sc68e32` | language | Save translations | വിവർത്തനങ്ങൾ സംരക്ഷിക്കുക |
@@ -15943,6 +16708,26 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se146d2` | message: auth_service | Your account is not active. | നിങ്ങളുടെ അക്കൗണ്ട് സജീവമല്ല. |
 | `Sb584dd` | message: backup_service | Backups need a file-based SQLite database. | ബാക്കപ്പുകൾക്ക് ഫയൽ അധിഷ്ഠിത SQLite ഡാറ്റാബേസ് വേണം. |
 | `S368c82` | message: backup_service | keep must be at least 1 | keep കുറഞ്ഞത് 1 ആയിരിക്കണം |
+| `S18edaf` | message: bulk_service | A defect needs a note: say what is wrong. | തകരാറിന് ഒരു കുറിപ്പ് വേണം: എന്താണ് തെറ്റെന്ന് പറയുക. |
+| `S68cada` | message: bulk_service, workbench | A defective Draft is corrected by its author. | തകരാറുള്ള കരട് അതിന്റെ രചയിതാവ് തിരുത്തുന്നു. |
+| `S8941d5` | message: bulk_service | A domain sign-off needs the engineering domain. | ഡൊമെയ്ൻ സൈൻ-ഓഫിന് എൻജിനീയറിംഗ് ഡൊമെയ്ൻ വേണം. |
+| `S071452` | message: bulk_service | A note has at most 1000 characters. | ഒരു കുറിപ്പിൽ പരമാവധി 1000 അക്ഷരങ്ങൾ ഉണ്ടാകാം. |
+| `Sf74baa` | message: bulk_service, message: change_set_service | Change set not found | മാറ്റ സമൂഹം കണ്ടെത്തിയില്ല |
+| `Sf89067` | message: bulk_service | Choose at least one value to set. | സെറ്റ് ചെയ്യാൻ ഒരു മൂല്യമെങ്കിലും തിരഞ്ഞെടുക്കുക. |
+| `S1e3e33` | message: bulk_service | No change request of the set is waiting for you at this step. | സെറ്റിലെ ഒരു മാറ്റ അഭ്യർത്ഥനയും ഈ ഘട്ടത്തിൽ നിങ്ങൾക്കായി കാത്തിരിക്കുന്നില്ല. |
+| `S95bd2d` | message: bulk_service | No Draft of the set is waiting for the sign-off of this domain. | സെറ്റിലെ ഒരു കരടും ഈ ഡൊമെയ്‌നിന്റെ സൈൻ-ഓഫിനായി കാത്തിരിക്കുന്നില്ല. |
+| `S495371` | message: bulk_service | Only a sample with defects can be sent back. | തകരാറുകളുള്ള സാമ്പിൾ മാത്രമേ തിരികെ അയയ്ക്കാനാകൂ. |
+| `Sa6e3b3` | message: bulk_service | Sample not found | സാമ്പിൾ കണ്ടെത്തിയില്ല |
+| `Sf745cc` | message: bulk_service | step must be domain, reviewer, admin or chief-engineer | step എന്നത് domain, reviewer, admin അല്ലെങ്കിൽ chief-engineer ആയിരിക്കണം |
+| `S973577` | message: bulk_service | That change request is not in the sample. | ആ മാറ്റ അഭ്യർത്ഥന സാമ്പിളിൽ ഇല്ല. |
+| `Sa1a149` | message: bulk_service | The batch changed since the sample was drawn; draw a new sample. | സാമ്പിൾ എടുത്തതിനു ശേഷം ബാച്ച് മാറി; പുതിയ സാമ്പിൾ എടുക്കുക. |
+| `S8e5b1c` | message: bulk_service | The verdict must be OK or DEFECT. | വിധി OK അല്ലെങ്കിൽ തകരാർ ആയിരിക്കണം. |
+| `Sddedd6` | message: bulk_service | This is not your sample: the person who decides inspects. | ഇത് നിങ്ങളുടെ സാമ്പിൾ അല്ല: തീരുമാനിക്കുന്നയാളാണ് പരിശോധിക്കുന്നത്. |
+| `Sf56c6a` | message: bulk_service | This sample belongs to another change set or another step. | ഈ സാമ്പിൾ മറ്റൊരു മാറ്റ സെറ്റിന്റെയോ മറ്റൊരു ഘട്ടത്തിന്റെയോ ആണ്. |
+| `S146a72` | message: bulk_service | This sample has been used for a decision already; draw a new one. | ഈ സാമ്പിൾ ഇതിനകം ഒരു തീരുമാനത്തിന് ഉപയോഗിച്ചു; പുതിയത് എടുക്കുക. |
+| `Sf0f02c` | message: bulk_service | This sample is closed. | ഈ സാമ്പിൾ അടച്ചിരിക്കുന്നു. |
+| `Sf973bd` | message: bulk_service | This sample is older than 24 hours; draw a new one. | ഈ സാമ്പിളിന് 24 മണിക്കൂറിലധികം പഴക്കമുണ്ട്; പുതിയത് എടുക്കുക. |
+| `S062a13` | message: bulk_service | This sample was replaced by a newer one. | ഈ സാമ്പിളിന് പകരം പുതിയത് വന്നിട്ടുണ്ട്. |
 | `Sca2391` | message: change_request_service | A comment must be between 1 and 4000 characters. | അഭിപ്രായം 1 മുതൽ 4000 വരെ അക്ഷരങ്ങൾ ആയിരിക്കണം. |
 | `S33cd99` | message: change_request_service | At least one Turbine Platform is required before Submit for Review (FR-023a). | അവലോകനത്തിനായി സമർപ്പിക്കുന്നതിന് മുമ്പ് കുറഞ്ഞത് ഒരു ടർബൈൻ പ്ലാറ്റ്ഫോം വേണം (FR-023a). |
 | `S1fd35e` | message: change_request_service | decision must be APPROVE or REJECT. | decision APPROVE അല്ലെങ്കിൽ REJECT ആയിരിക്കണം. |
@@ -15953,7 +16738,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sbd3a03` | message: change_request_service | reviewer_id must be an active user with the Reviewer role. | reviewer_id അവലോകക റോളുള്ള സജീവ ഉപയോക്താവ് ആയിരിക്കണം. |
 | `S043693` | message: change_request_service | The Reviewer has already signed off this CR. | അവലോകകൻ ഈ മാറ്റ അഭ്യർത്ഥനയിൽ ഇതിനകം സൈൻ ഓഫ് ചെയ്തിട്ടുണ്ട്. |
 | `S7a758c` | message: change_set_service | A change set needs a name of 1-120 characters. | മാറ്റ സമൂഹത്തിന് 1-120 അക്ഷരങ്ങളുള്ള പേര് വേണം. |
-| `Sf74baa` | message: change_set_service | Change set not found | മാറ്റ സമൂഹം കണ്ടെത്തിയില്ല |
 | `Sd8fad1` | message: change_set_service | Only a CR that is still open can join a change set. | ഇപ്പോഴും തുറന്നിരിക്കുന്ന മാറ്റ അഭ്യർത്ഥനയ്ക്ക് മാത്രമേ മാറ്റ സമൂഹത്തിൽ ചേരാനാകൂ. |
 | `S990d51` | message: change_set_service | Only the author of the CR or an Administrator may group it. | മാറ്റ അഭ്യർത്ഥനയുടെ രചയിതാവിനോ അഡ്മിനിസ്ട്രേറ്റർക്കോ മാത്രമേ ഇത് ഗ്രൂപ്പ് ചെയ്യാനാകൂ. |
 | `S69e4d1` | message: change_set_service | Only the author of the CR or an Administrator may ungroup it. | മാറ്റ അഭ്യർത്ഥനയുടെ രചയിതാവിനോ അഡ്മിനിസ്ട്രേറ്റർക്കോ മാത്രമേ ഇത് ഗ്രൂപ്പിൽ നിന്ന് നീക്കാനാകൂ. |
@@ -16039,6 +16823,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sdb88ba` | message: saved_search_service | Saved search not found | സംരക്ഷിച്ച തിരയൽ കണ്ടെത്തിയില്ല |
 | `S046aff` | message: saved_search_service | This saved search belongs to someone else. | ഈ സംരക്ഷിച്ച തിരയൽ മറ്റൊരാളുടേതാണ്. |
 | `Saad8e2` | message: settings_service | must be a whole number between 0 and 100 | 0 നും 100 നും ഇടയിലുള്ള പൂർണ്ണസംഖ്യ ആയിരിക്കണം |
+| `S9625d1` | message: settings_service | must be a whole number between 1 and 100 | 1 നും 100 നും ഇടയിലുള്ള പൂർണ്ണസംഖ്യ ആയിരിക്കണം |
 | `S6e4015` | message: settings_service | must be a whole number between 1 and 365 | 1 നും 365 നും ഇടയിലുള്ള പൂർണ്ണസംഖ്യ ആയിരിക്കണം |
 | `S9671fb` | message: settings_service | must be true or false | true അല്ലെങ്കിൽ false ആയിരിക്കണം |
 | `S5166bb` | message: st_import_service | A staged file changed after the preview. Upload again. | പ്രിവ്യൂവിന് ശേഷം ഒരു സജ്ജമാക്കിയ ഫയൽ മാറി. വീണ്ടും അപ്‌ലോഡ് ചെയ്യുക. |
@@ -16236,7 +17021,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S6daf16` | st_preview | Preview: status codes from .st files | പ്രിവ്യൂ: .st ഫയലുകളിൽ നിന്നുള്ള സ്റ്റാറ്റസ് കോഡുകൾ |
 | `S15a21a` | st_preview | program(s) | പ്രോഗ്രാം(കൾ) |
 | `Se58289` | st_preview | Programs found in the uploaded files | അപ്‌ലോഡ് ചെയ്ത ഫയലുകളിൽ കണ്ടെത്തിയ പ്രോഗ്രാമുകൾ |
-| `S75c053` | st_preview | ready | തയ്യാർ |
+| `S75c053` | st_preview, workbench | ready | തയ്യാർ |
 | `S0723bf` | st_preview | Select all programs that are ready | തയ്യാറായ എല്ലാ പ്രോഗ്രാമുകളും തിരഞ്ഞെടുക്കുക |
 | `S1a767a` | st_preview | updates the open Draft | തുറന്ന കരട് അപ്‌ഡേറ്റ് ചെയ്യുന്നു |
 | `S02499f` | st_preview | withdrawn | പിൻവലിച്ചത് |
@@ -16335,10 +17120,44 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S8516a7` | withdrawn_codes | Delete selected | തിരഞ്ഞെടുത്തവ ഇല്ലാതാക്കുക |
 | `Sdfeb06` | withdrawn_codes | No withdrawn codes. | പിൻവലിച്ച കോഡുകളില്ല. |
 | `S87ec0b` | withdrawn_codes | Withdrawn on | പിൻവലിച്ച തീയതി |
+| `S48d260` | workbench | %(n)s of %(total)s codes drawn at %(when)s. | %(n)s / %(total)s കോഡുകൾ %(when)s ന് തിരഞ്ഞെടുത്തു. |
+| `S88b55f` | workbench | Approve the batch | ബാച്ച് അംഗീകരിക്കുക |
+| `Sf40e77` | workbench | Available group | ലഭ്യമായ ഗ്രൂപ്പ് |
+| `S99613c` | workbench | Blocked | തടഞ്ഞിരിക്കുന്നു |
+| `Sca7133` | workbench | Choose the step you are about to decide, draw the sample, look at every sampled code and mark it. The sample is yours, valid for 24 hours and for this batch as it is now. | നിങ്ങൾ തീരുമാനിക്കാൻ പോകുന്ന ഘട്ടം തിരഞ്ഞെടുക്കുക, സാമ്പിൾ എടുക്കുക, എടുത്ത ഓരോ കോഡും നോക്കി അടയാളപ്പെടുത്തുക. സാമ്പിൾ നിങ്ങളുടേതാണ്, 24 മണിക്കൂറിനും ഇപ്പോഴുള്ളതുപോലെ ഈ ബാച്ചിനും സാധുവാണ്. |
+| `S6f4274` | workbench | Codes in this batch | ഈ ബാച്ചിലെ കോഡുകൾ |
+| `S117313` | workbench | Decide the batch | ബാച്ചിനെക്കുറിച്ച് തീരുമാനിക്കുക |
+| `Se91aff` | workbench | Defect | തകരാർ |
+| `S16fbbf` | workbench | Domain sign-off | ഡൊമെയ്ൻ സൈൻ-ഓഫ് |
+| `Scb1884` | workbench | Dossier (XLSX) | ഡോസിയർ (XLSX) |
+| `S25085f` | workbench | Draw a sample | സാമ്പിൾ എടുക്കുക |
+| `S9167a7` | workbench | Engineering domain | എൻജിനീയറിംഗ് ഡൊമെയ്ൻ |
+| `Sbc3c59` | workbench | Only the values you choose are changed, on the Drafts you wrote (an Administrator: any Draft). | നിങ്ങൾ തിരഞ്ഞെടുത്ത മൂല്യങ്ങൾ മാത്രം മാറുന്നു, നിങ്ങൾ എഴുതിയ കരടുകളിൽ (അഡ്മിനിസ്ട്രേറ്റർ: ഏത് കരടും). |
+| `S92223f` | workbench | Passed: no defect in the sample. Use sample number %(id)s below. | വിജയിച്ചു: സാമ്പിളിൽ തകരാറില്ല. താഴെ സാമ്പിൾ നമ്പർ %(id)s ഉപയോഗിക്കുക. |
+| `S6275ab` | workbench | Ready to submit | സമർപ്പിക്കാൻ തയ്യാർ |
+| `Se1e74d` | workbench | Reject the batch | ബാച്ച് നിരസിക്കുക |
+| `S58fabf` | workbench | Sample | സാമ്പിൾ |
+| `S862471` | workbench | Sample inspection | സാമ്പിൾ പരിശോധന |
+| `S69cc53` | workbench | Save the verdicts | വിധികൾ സംരക്ഷിക്കുക |
+| `S3ae55b` | workbench | Send the defective codes back | തകരാറുള്ള കോഡുകൾ തിരികെ അയയ്ക്കുക |
+| `Se90e7c` | workbench | Set on the Drafts | കരടുകളിൽ സെറ്റ് ചെയ്യുക |
+| `Sa58dac` | workbench | Set values on the Drafts | കരടുകളിൽ മൂല്യങ്ങൾ സെറ്റ് ചെയ്യുക |
+| `Sa443bb` | workbench | Sign off the Drafts | കരടുകൾക്ക് സൈൻ-ഓഫ് നൽകുക |
+| `S53f47f` | workbench | Sign-off pending | സൈൻ-ഓഫ് ബാക്കി |
+| `Sae12bc` | workbench | Status category | സ്റ്റാറ്റസ് വിഭാഗം |
+| `Sdc416e` | workbench | Step | ഘട്ടം |
+| `Sf7710d` | workbench | Submit for review | അവലോകനത്തിനായി സമർപ്പിക്കുക |
+| `Sa45adc` | workbench | Submit the Drafts | കരടുകൾ സമർപ്പിക്കുക |
+| `S2d099f` | workbench | Submits the Drafts you wrote. A Draft that still lacks a platform or a domain sign-off is reported and left as it is. | നിങ്ങൾ എഴുതിയ കരടുകൾ സമർപ്പിക്കുന്നു. പ്ലാറ്റ്ഫോമോ ഡൊമെയ്ൻ സൈൻ-ഓഫോ ഇനിയും ഇല്ലാത്ത കരടിനെക്കുറിച്ച് അറിയിക്കുകയും അത് ഉള്ളതുപോലെ വിടുകയും ചെയ്യുന്നു. |
+| `S5baa27` | workbench | The sample has defects, so the batch cannot be decided as it is. Send the defective codes back (the note is the reason), then draw a new sample of what is left. | സാമ്പിളിൽ തകരാറുകളുണ്ട്, അതിനാൽ ബാച്ചിനെക്കുറിച്ച് ഇങ്ങനെ തീരുമാനിക്കാനാകില്ല. തകരാറുള്ള കോഡുകൾ തിരികെ അയയ്ക്കുക (കുറിപ്പാണ് കാരണം), എന്നിട്ട് ബാക്കിയുള്ളതിൽ നിന്ന് പുതിയ സാമ്പിൾ എടുക്കുക. |
+| `S19f8ab` | workbench | Tick the codes an action is for; with none ticked an action covers every code it applies to. | പ്രവർത്തനം ബാധകമായ കോഡുകൾ ടിക്ക് ചെയ്യുക; ഒന്നും ടിക്ക് ചെയ്യാതിരുന്നാൽ പ്രവർത്തനം ബാധകമായ എല്ലാ കോഡുകളിലും ബാധകമാണ്. |
+| `S7f6e5a` | workbench | Verdict | വിധി |
+| `Se6246f` | workbench | What stops it | ഇതിനെ തടയുന്നത് എന്ത് |
+| `Sbf45e2` | workbench | Work on many codes at once without weakening a step: every code still gets its own checks, its own audit entry and, for decisions, your password. A decision on more than %(above)s codes needs a sample inspection first: %(percent)s percent of the batch, at least %(minimum)s codes, spread over the subgroups. One defect in the sample stops the decision. | ഒരു ഘട്ടവും ദുർബലപ്പെടുത്താതെ ഒരുപാട് കോഡുകളിൽ ഒരുമിച്ച് പ്രവർത്തിക്കുക: ഓരോ കോഡിനും അതിന്റേതായ പരിശോധനകൾ, അതിന്റേതായ ഓഡിറ്റ് രേഖ, തീരുമാനങ്ങൾക്ക് നിങ്ങളുടെ പാസ്‌വേഡ് എന്നിവ ലഭിക്കും. %(above)s ൽ കൂടുതൽ കോഡുകളെക്കുറിച്ചുള്ള തീരുമാനത്തിന് ആദ്യം സാമ്പിൾ പരിശോധന വേണം: ബാച്ചിന്റെ %(percent)s ശതമാനം, കുറഞ്ഞത് %(minimum)s കോഡുകൾ, ഉപഗ്രൂപ്പുകളിൽ വിതരണം ചെയ്തത്. സാമ്പിളിലെ ഒരു തകരാർ തീരുമാനം നിർത്തുന്നു. |
 
 ### 9.15 IN ਪੰਜਾਬੀ 🇮🇳 — Punjabi
 
-1216 of 1217 strings translated; direction left to right.
+1279 of 1280 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -16538,7 +17357,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Scfa1b6` | detail | Add field comment | ਖੇਤਰ ਟਿੱਪਣੀ ਜੋੜੋ |
 | `Sbb965e` | detail | Add one of your change requests | ਆਪਣੀ ਇੱਕ ਤਬਦੀਲੀ ਬੇਨਤੀ ਜੋੜੋ |
 | `S9a693b` | detail | Add to change set | ਤਬਦੀਲੀ ਸਮੂਹ ਵਿੱਚ ਜੋੜੋ |
-| `S7bbd6d` | detail | Administrator sign-off | ਪ੍ਰਸ਼ਾਸਕ ਦਸਤਖ਼ਤ |
+| `S7bbd6d` | detail, workbench | Administrator sign-off | ਪ੍ਰਸ਼ਾਸਕ ਦਸਤਖ਼ਤ |
 | `S212856` | detail | advanced, controller firmware programs | ਉੱਨਤ, ਕੰਟਰੋਲਰ ਫਰਮਵੇਅਰ ਪ੍ਰੋਗਰਾਮ |
 | `Sfbde82` | detail | Affected component | ਪ੍ਰਭਾਵਿਤ ਹਿੱਸਾ |
 | `S25f8c5` | detail, export, form | Alarm | ਅਲਾਰਮ |
@@ -16567,17 +17386,17 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se7bab1` | detail | Chain of causes | ਕਾਰਨਾਂ ਦੀ ਲੜੀ |
 | `S9c8393` | detail, mine | Change Request | ਤਬਦੀਲੀ ਬੇਨਤੀ |
 | `S4572f4` | detail | Change request | ਤਬਦੀਲੀ ਬੇਨਤੀ |
-| `S3295be` | detail | Change requests in this set | ਇਸ ਸਮੂਹ ਦੀਆਂ ਤਬਦੀਲੀ ਬੇਨਤੀਆਂ |
+| `S3295be` | detail, workbench | Change requests in this set | ਇਸ ਸਮੂਹ ਦੀਆਂ ਤਬਦੀਲੀ ਬੇਨਤੀਆਂ |
 | `S4d8006` | detail | Change set | ਤਬਦੀਲੀ ਸਮੂਹ |
 | `S8aa57d` | detail | Changes | ਤਬਦੀਲੀਆਂ |
 | `S3d14ea` | detail, export | Changes of this release only | ਸਿਰਫ਼ ਇਸ ਰਿਲੀਜ਼ ਦੀਆਂ ਤਬਦੀਲੀਆਂ |
 | `Sbd95c0` | detail | Checklist confirmed at sign-off | ਦਸਤਖ਼ਤ ਵੇਲੇ ਪੁਸ਼ਟੀ ਕੀਤੀ ਚੈੱਕਲਿਸਟ |
 | `S074d62` | detail, role badge | Chief Engineer | ਮੁੱਖ ਇੰਜੀਨੀਅਰ |
-| `S03695d` | detail | Chief Engineer decision | ਮੁੱਖ ਇੰਜੀਨੀਅਰ ਦਾ ਫ਼ੈਸਲਾ |
+| `S03695d` | detail, workbench | Chief Engineer decision | ਮੁੱਖ ਇੰਜੀਨੀਅਰ ਦਾ ਫ਼ੈਸਲਾ |
 | `Sf0a89f` | detail | Close change set | ਤਬਦੀਲੀ ਸਮੂਹ ਬੰਦ ਕਰੋ |
 | `S7c0c39` | detail | Close this change set? | ਕੀ ਇਹ ਤਬਦੀਲੀ ਸਮੂਹ ਬੰਦ ਕਰਨਾ ਹੈ? |
 | `S153d7a` | detail | Comment | ਟਿੱਪਣੀ |
-| `S611578` | detail | Comment (required for rejection) | ਟਿੱਪਣੀ (ਰੱਦ ਕਰਨ ਲਈ ਲਾਜ਼ਮੀ) |
+| `S611578` | detail, workbench | Comment (required for rejection) | ਟਿੱਪਣੀ (ਰੱਦ ਕਰਨ ਲਈ ਲਾਜ਼ਮੀ) |
 | `Sc38432` | detail | Comment on this field | ਇਸ ਖੇਤਰ ਉੱਤੇ ਟਿੱਪਣੀ ਕਰੋ |
 | `Sfce06e` | detail | Comments | ਟਿੱਪਣੀਆਂ |
 | `S8d105c` | detail, reconciliation | Compare | ਤੁਲਨਾ ਕਰੋ |
@@ -16603,7 +17422,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S0e8574` | detail | Customer | ਗਾਹਕ |
 | `Scb307e` | detail | Decide the selected requests in one sitting | ਚੁਣੀਆਂ ਬੇਨਤੀਆਂ ਉੱਤੇ ਇੱਕੋ ਬੈਠਕ ਵਿੱਚ ਫ਼ੈਸਲਾ ਕਰੋ |
 | `S319493` | detail | Decided by | ਫ਼ੈਸਲਾ ਕਰਤਾ |
-| `S7f59a1` | detail | Decision | ਫ਼ੈਸਲਾ |
+| `S7f59a1` | detail, workbench | Decision | ਫ਼ੈਸਲਾ |
 | `Sc51568` | detail | Decisions & Comments | ਫ਼ੈਸਲੇ ਅਤੇ ਟਿੱਪਣੀਆਂ |
 | `Sa9ec7c` | detail | Delete Permanently | ਸਦਾ ਲਈ ਮਿਟਾਓ |
 | `S7d1c7a` | detail | Delete Release | ਰਿਲੀਜ਼ ਮਿਟਾਓ |
@@ -16669,6 +17488,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S6d59f4` | detail | Manual Reset Program | ਦਸਤੀ ਰੀਸੈੱਟ ਪ੍ਰੋਗਰਾਮ |
 | `Sf9896c` | detail, form | Mark resolved | ਹੱਲ ਹੋਇਆ ਵਜੋਂ ਨਿਸ਼ਾਨਦੇਹੀ ਕਰੋ |
 | `Sa7b93d` | detail, new, reconciliation | Mode | ਮੋਡ |
+| `S9f4d01` | detail | More than a few codes need a sample inspection first; use the workbench. | ਕੁਝ ਕੋਡਾਂ ਤੋਂ ਵੱਧ ਲਈ ਪਹਿਲਾਂ ਨਮੂਨੇ ਦੀ ਜਾਂਚ ਚਾਹੀਦੀ ਹੈ; ਵਰਕਬੈਂਚ ਵਰਤੋ। |
 | `S31a335` | detail | new code | ਨਵਾਂ ਕੋਡ |
 | `S816c52` | detail, export_verify, form | No | ਨਹੀਂ |
 | `S06fc8d` | detail | No active Engineer holds the %(code)s domain yet. An Administrator must tag an Engineer with it (Administration → Users) before a sign-off can be requested. | ਕਿਸੇ ਸਰਗਰਮ ਇੰਜੀਨੀਅਰ ਕੋਲ %(code)s ਡੋਮੇਨ ਨਹੀਂ ਹੈ। ਦਸਤਖ਼ਤ ਦੀ ਬੇਨਤੀ ਤੋਂ ਪਹਿਲਾਂ ਪ੍ਰਸ਼ਾਸਕ ਨੂੰ ਇੱਕ ਇੰਜੀਨੀਅਰ ਨੂੰ ਇਹ ਦੇਣਾ ਪਵੇਗਾ (ਪ੍ਰਸ਼ਾਸਨ → ਵਰਤੋਂਕਾਰ)। |
@@ -16699,7 +17519,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S9734ac` | detail | Other codes that refer to this one. Review them before deprecating it. | ਹੋਰ ਕੋਡ ਜੋ ਇਸਦਾ ਹਵਾਲਾ ਦਿੰਦੇ ਹਨ। ਇਸਨੂੰ ਬੰਦ ਕਰਨ ਤੋਂ ਪਹਿਲਾਂ ਉਨ੍ਹਾਂ ਦੀ ਸਮੀਖਿਆ ਕਰੋ। |
 | `S780d35` | detail | Override identifier (migration / reservation only) | ਪਛਾਣਕਰਤਾ ਓਵਰਰਾਈਡ ਕਰੋ (ਸਿਰਫ਼ ਮਾਈਗ੍ਰੇਸ਼ਨ / ਰਾਖਵੇਂਕਰਨ ਲਈ) |
 | `S89ff31` | detail | Owner | ਮਾਲਕ |
-| `S2d20ee` | detail | Package overview | ਪੈਕੇਜ ਸਮੀਖਿਆ |
+| `S2d20ee` | detail, workbench | Package overview | ਪੈਕੇਜ ਸਮੀਖਿਆ |
 | `S4d1a47` | detail | Package: all languages and access levels | ਪੈਕੇਜ: ਸਾਰੀਆਂ ਭਾਸ਼ਾਵਾਂ ਅਤੇ ਪਹੁੰਚ ਪੱਧਰ |
 | `Sc49bd0` | detail | Packages of this Release | ਇਸ ਰਿਲੀਜ਼ ਦੇ ਪੈਕੇਜ |
 | `S96f608` | detail, review_queue | Pending | ਬਕਾਇਆ |
@@ -16744,12 +17564,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S026ab2` | detail | resolved | ਹੱਲ ਹੋਇਆ |
 | `S68c61f` | detail | Rev # | ਸੋਧ ਨੰ. |
 | `Se4758b` | detail, review_checklist | Review checklist | ਸਮੀਖਿਆ ਚੈੱਕਲਿਸਟ |
-| `S7bfca8` | detail | Reviewer sign-off | ਸਮੀਖਿਅਕ ਦਸਤਖ਼ਤ |
+| `S7bfca8` | detail, workbench | Reviewer sign-off | ਸਮੀਖਿਅਕ ਦਸਤਖ਼ਤ |
 | `S3beb9a` | detail | Revision | ਸੋਧ |
 | `Sa72973` | detail | Revision Fields | ਸੋਧ ਖੇਤਰ |
 | `Sfc1d6a` | detail | row(s) imported as Drafts | ਕਤਾਰਾਂ ਖਰੜਿਆਂ ਵਜੋਂ ਦਰਾਮਦ ਹੋਈਆਂ |
 | `S52d0b3` | detail, reconciliation, user_detail | Rows | ਕਤਾਰਾਂ |
 | `Sd0edfb` | detail | Sales | ਵਿਕਰੀ |
+| `S241bf5` | detail, workbench | Sample number | ਨਮੂਨਾ ਨੰਬਰ |
 | `Sda38c6` | detail | Save planned dates | ਯੋਜਨਾਬੱਧ ਮਿਤੀਆਂ ਸੁਰੱਖਿਅਤ ਕਰੋ |
 | `S13c61c` | detail | Scope Filter | ਦਾਇਰਾ ਫਿਲਟਰ |
 | `S859822` | detail, mine, withdrawn_codes | Select | ਚੁਣੋ |
@@ -16811,11 +17632,12 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S7d5316` | detail | Who | ਕਿਸਨੇ |
 | `S47e564` | detail | Withdraw | ਵਾਪਸ ਲਓ |
 | `S51a998` | detail | Withdraw this change request? | ਕੀ ਇਹ ਤਬਦੀਲੀ ਬੇਨਤੀ ਵਾਪਸ ਲੈਣੀ ਹੈ? |
+| `S93ef7c` | detail, workbench | Workbench | ਵਰਕਬੈਂਚ |
 | `S95a2a4` | detail, form | Write level | ਲਿਖਣ ਦਾ ਪੱਧਰ |
 | `S612fe0` | detail | Yaw Bearing Lubrication Program | ਯਾਅ ਬੇਅਰਿੰਗ ਲੁਬਰੀਕੇਸ਼ਨ ਪ੍ਰੋਗਰਾਮ |
 | `S559a3f` | detail | Yaw Program | ਯਾਅ ਪ੍ਰੋਗਰਾਮ |
 | `S5397e0` | detail, export_verify, form | Yes | ਹਾਂ |
-| `Sc8e4b4` | detail | Your decision step | ਤੁਹਾਡਾ ਫ਼ੈਸਲੇ ਦਾ ਪੜਾਅ |
+| `Sc8e4b4` | detail, workbench | Your decision step | ਤੁਹਾਡਾ ਫ਼ੈਸਲੇ ਦਾ ਪੜਾਅ |
 | `S20cb4c` | detail, export_center | ZIP with manifest | ਮੈਨੀਫੈਸਟ ਸਮੇਤ ZIP |
 | `S5d4358` | dry_run | All rows are clean. | ਸਾਰੀਆਂ ਕਤਾਰਾਂ ਸਾਫ਼ ਹਨ। |
 | `S03510d` | dry_run | Back to import | ਦਰਾਮਦ ਕੋਲ ਵਾਪਸ |
@@ -16842,7 +17664,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S7b8d80` | export | Not for distribution - unapproved data | ਵੰਡ ਲਈ ਨਹੀਂ - ਗੈਰ-ਮਨਜ਼ੂਰ ਡੇਟਾ |
 | `Sd9b345` | export | not yet published | ਅਜੇ ਪ੍ਰਕਾਸ਼ਿਤ ਨਹੀਂ |
 | `Sa5d386` | export | Page %(page)s of %(total)s | ਸਫ਼ਾ %(page)s / %(total)s |
-| `Sac1a42` | export | Platforms | ਪਲੇਟਫਾਰਮ |
+| `Sac1a42` | export, workbench | Platforms | ਪਲੇਟਫਾਰਮ |
 | `Se51c55` | export | Records | ਰਿਕਾਰਡ |
 | `Sd41f56` | export, export_center | Release | ਰਿਲੀਜ਼ |
 | `S2e8fd6` | export | Reset delay | ਰੀਸੈੱਟ ਦੇਰੀ |
@@ -16894,7 +17716,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S45ea95` | export_verify | Manifest signature | ਮੈਨੀਫੈਸਟ ਦਸਤਖ਼ਤ |
 | `S08f84b` | export_verify | No record of this exact file | ਬਿਲਕੁਲ ਇਸ ਫਾਈਲ ਦਾ ਕੋਈ ਰਿਕਾਰਡ ਨਹੀਂ |
 | `S357953` | export_verify | NOT OK | ਠੀਕ ਨਹੀਂ |
-| `S9ce3bd` | export_verify | OK | ਠੀਕ |
+| `S9ce3bd` | export_verify, workbench | OK | ਠੀਕ |
 | `S8a5285` | export_verify | Overall | ਸਮੁੱਚੇ ਤੌਰ 'ਤੇ |
 | `Sd2bc4a` | export_verify | Produced by this system | ਇਸ ਸਿਸਟਮ ਵੱਲੋਂ ਤਿਆਰ |
 | `S112d15` | export_verify | Verify an export | ਐਕਸਪੋਰਟ ਦੀ ਪੜਤਾਲ ਕਰੋ |
@@ -16968,10 +17790,16 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S689b33` | help | The full manual is docs/23-user-manual.md in the project folder; the glossary below is the same one the tooltips use. | ਪੂਰਾ ਮੈਨੂਅਲ ਪ੍ਰੋਜੈਕਟ ਫੋਲਡਰ ਵਿੱਚ docs/23-user-manual.md ਹੈ; ਹੇਠਲੀ ਸ਼ਬਦਾਵਲੀ ਉਹੀ ਹੈ ਜੋ ਟੂਲਟਿੱਪ ਵਰਤਦੇ ਹਨ। |
 | `S439914` | help | What happens next on a change request | ਤਬਦੀਲੀ ਬੇਨਤੀ ਉੱਤੇ ਅੱਗੇ ਕੀ ਹੁੰਦਾ ਹੈ |
 | `S6d29d9` | help and messages | %(n)s withdrawn code(s) deleted. | %(n)s ਵਾਪਸ ਲਏ ਕੋਡ ਮਿਟਾਏ ਗਏ। |
+| `S285edc` | help and messages | %(ok)s of %(n)s: %(what)s. | %(ok)s / %(n)s: %(what)s। |
 | `Sb08e6c` | help and messages | A Reviewer and an Administrator each sign off (in any order). If either rejects, it goes back to the author. | ਇੱਕ ਸਮੀਖਿਅਕ ਅਤੇ ਇੱਕ ਪ੍ਰਸ਼ਾਸਕ ਹਰ ਇੱਕ ਦਸਤਖ਼ਤ ਕਰਦਾ ਹੈ (ਕਿਸੇ ਵੀ ਕ੍ਰਮ ਵਿੱਚ)। ਜੇ ਕੋਈ ਰੱਦ ਕਰੇ ਤਾਂ ਇਹ ਲੇਖਕ ਕੋਲ ਵਾਪਸ ਜਾਂਦੀ ਹੈ। |
 | `S2f1bed` | help and messages | An Administrator includes the revision in a Release and publishes it; then it is Released. | ਪ੍ਰਸ਼ਾਸਕ ਸੋਧ ਨੂੰ ਰਿਲੀਜ਼ ਵਿੱਚ ਸ਼ਾਮਲ ਕਰਕੇ ਪ੍ਰਕਾਸ਼ਿਤ ਕਰਦਾ ਹੈ; ਫਿਰ ਇਹ ਜਾਰੀ ਹੋ ਜਾਂਦੀ ਹੈ। |
+| `S1308dc` | help and messages | defective codes sent back | ਨੁਕਸ ਵਾਲੇ ਕੋਡ ਵਾਪਸ ਭੇਜ ਦਿੱਤੇ ਗਏ |
+| `Se2bbd9` | help and messages | Drafts saved | ਖਰੜੇ ਸੁਰੱਖਿਅਤ ਹੋ ਗਏ |
+| `S0ddfa5` | help and messages | Drafts signed off | ਖਰੜਿਆਂ ਦਾ ਸਾਈਨ-ਆਫ਼ ਹੋ ਗਿਆ |
+| `Sf90ab8` | help and messages | Drafts submitted for review | ਖਰੜੇ ਸਮੀਖਿਆ ਲਈ ਜਮ੍ਹਾਂ ਹੋਏ |
 | `Sd856bd` | help and messages | Not deleted (it has a revision again or is still referenced): %(x)s | ਮਿਟਾਇਆ ਨਹੀਂ ਗਿਆ (ਇਸਦੀ ਦੁਬਾਰਾ ਸੋਧ ਹੈ ਜਾਂ ਅਜੇ ਹਵਾਲਾ ਹੈ): %(x)s |
 | `S34b903` | help and messages | Not possible: the account has history (see above). Deactivate it instead; the person can no longer sign in and everything they did stays attributable. | ਸੰਭਵ ਨਹੀਂ: ਖਾਤੇ ਦਾ ਇਤਿਹਾਸ ਹੈ (ਉੱਪਰ ਵੇਖੋ)। ਇਸਦੀ ਥਾਂ ਨਾ-ਸਰਗਰਮ ਕਰੋ; ਵਿਅਕਤੀ ਹੁਣ ਸਾਈਨ ਇਨ ਨਹੀਂ ਕਰ ਸਕਦਾ ਅਤੇ ਜੋ ਉਸਨੇ ਕੀਤਾ ਉਹ ਪਛਾਣਯੋਗ ਰਹਿੰਦਾ ਹੈ। |
+| `S6a26de` | help and messages | Sample %(id)s drawn: %(n)s of %(total)s codes to inspect. | ਨਮੂਨਾ %(id)s ਕੱਢਿਆ ਗਿਆ: %(n)s / %(total)s ਕੋਡ ਜਾਂਚਣੇ ਹਨ। |
 | `Sce489f` | help and messages | The author gets any required cross-domain sign-offs, then submits the change request for review. | ਲੇਖਕ ਲੋੜੀਂਦੇ ਅੰਤਰ-ਡੋਮੇਨ ਦਸਤਖ਼ਤ ਲੈਂਦਾ ਹੈ, ਫਿਰ ਤਬਦੀਲੀ ਬੇਨਤੀ ਸਮੀਖਿਆ ਲਈ ਜਮ੍ਹਾਂ ਕਰਦਾ ਹੈ। |
 | `S1cdbdd` | help and messages | The Chief Engineer approves or rejects. Approval makes the revision Approved (or Deprecated for a deprecation request). | ਮੁੱਖ ਇੰਜੀਨੀਅਰ ਮਨਜ਼ੂਰ ਜਾਂ ਰੱਦ ਕਰਦਾ ਹੈ। ਮਨਜ਼ੂਰੀ ਸੋਧ ਨੂੰ ਮਨਜ਼ੂਰ (ਜਾਂ ਬੰਦ ਕਰਨ ਦੀ ਬੇਨਤੀ ਲਈ ਬੰਦ) ਬਣਾ ਦਿੰਦੀ ਹੈ। |
 | `S2d6ac0` | help and messages | The package is being built. Reload this page to follow its progress. | ਪੈਕੇਜ ਬਣ ਰਿਹਾ ਹੈ। ਪ੍ਰਗਤੀ ਦੇਖਣ ਲਈ ਇਹ ਸਫ਼ਾ ਮੁੜ ਲੋਡ ਕਰੋ। |
@@ -17044,7 +17872,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sded18c` | language | approved by | ਮਨਜ਼ੂਰ ਕਰਨ ਵਾਲਾ |
 | `Sedd46e` | language | Check against the interface | ਇੰਟਰਫੇਸ ਨਾਲ ਮਿਲਾ ਕੇ ਵੇਖੋ |
 | `S5a013c` | language | missing | ਗੁੰਮ |
-| `S2c924e` | language | Note | ਨੋਟ |
+| `S2c924e` | language, workbench | Note | ਨੋਟ |
 | `S2f09d0` | language | Note on %(x)s | %(x)s ਬਾਰੇ ਨੋਟ |
 | `S75bf99` | language | proposed by | ਸੁਝਾਉਣ ਵਾਲਾ |
 | `Sc68e32` | language | Save translations | ਅਨੁਵਾਦ ਸੁਰੱਖਿਅਤ ਕਰੋ |
@@ -17166,6 +17994,26 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se146d2` | message: auth_service | Your account is not active. | ਤੁਹਾਡਾ ਖਾਤਾ ਸਰਗਰਮ ਨਹੀਂ। |
 | `Sb584dd` | message: backup_service | Backups need a file-based SQLite database. | ਬੈਕਅੱਪ ਲਈ ਫਾਈਲ-ਅਧਾਰਿਤ SQLite ਡੇਟਾਬੇਸ ਚਾਹੀਦਾ ਹੈ। |
 | `S368c82` | message: backup_service | keep must be at least 1 | keep ਘੱਟੋ-ਘੱਟ 1 ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ |
+| `S18edaf` | message: bulk_service | A defect needs a note: say what is wrong. | ਨੁਕਸ ਲਈ ਨੋਟ ਚਾਹੀਦਾ ਹੈ: ਦੱਸੋ ਕੀ ਗਲਤ ਹੈ। |
+| `S68cada` | message: bulk_service, workbench | A defective Draft is corrected by its author. | ਨੁਕਸ ਵਾਲਾ ਖਰੜਾ ਉਸਦਾ ਲੇਖਕ ਠੀਕ ਕਰਦਾ ਹੈ। |
+| `S8941d5` | message: bulk_service | A domain sign-off needs the engineering domain. | ਡੋਮੇਨ ਸਾਈਨ-ਆਫ਼ ਲਈ ਇੰਜੀਨੀਅਰਿੰਗ ਡੋਮੇਨ ਚਾਹੀਦਾ ਹੈ। |
+| `S071452` | message: bulk_service | A note has at most 1000 characters. | ਇੱਕ ਨੋਟ ਵਿੱਚ ਵੱਧ ਤੋਂ ਵੱਧ 1000 ਅੱਖਰ ਹੋ ਸਕਦੇ ਹਨ। |
+| `Sf74baa` | message: bulk_service, message: change_set_service | Change set not found | ਤਬਦੀਲੀ ਸਮੂਹ ਨਹੀਂ ਮਿਲਿਆ |
+| `Sf89067` | message: bulk_service | Choose at least one value to set. | ਸੈੱਟ ਕਰਨ ਲਈ ਘੱਟੋ-ਘੱਟ ਇੱਕ ਮੁੱਲ ਚੁਣੋ। |
+| `S1e3e33` | message: bulk_service | No change request of the set is waiting for you at this step. | ਸੈੱਟ ਦੀ ਕੋਈ ਤਬਦੀਲੀ ਬੇਨਤੀ ਇਸ ਪੜਾਅ ਉੱਤੇ ਤੁਹਾਡੀ ਉਡੀਕ ਵਿੱਚ ਨਹੀਂ। |
+| `S95bd2d` | message: bulk_service | No Draft of the set is waiting for the sign-off of this domain. | ਸੈੱਟ ਦਾ ਕੋਈ ਖਰੜਾ ਇਸ ਡੋਮੇਨ ਦੇ ਸਾਈਨ-ਆਫ਼ ਦੀ ਉਡੀਕ ਵਿੱਚ ਨਹੀਂ। |
+| `S495371` | message: bulk_service | Only a sample with defects can be sent back. | ਸਿਰਫ਼ ਨੁਕਸਾਂ ਵਾਲਾ ਨਮੂਨਾ ਹੀ ਵਾਪਸ ਭੇਜਿਆ ਜਾ ਸਕਦਾ ਹੈ। |
+| `Sa6e3b3` | message: bulk_service | Sample not found | ਨਮੂਨਾ ਨਹੀਂ ਮਿਲਿਆ |
+| `Sf745cc` | message: bulk_service | step must be domain, reviewer, admin or chief-engineer | step ਦਾ domain, reviewer, admin ਜਾਂ chief-engineer ਹੋਣਾ ਜ਼ਰੂਰੀ ਹੈ |
+| `S973577` | message: bulk_service | That change request is not in the sample. | ਉਹ ਤਬਦੀਲੀ ਬੇਨਤੀ ਨਮੂਨੇ ਵਿੱਚ ਨਹੀਂ ਹੈ। |
+| `Sa1a149` | message: bulk_service | The batch changed since the sample was drawn; draw a new sample. | ਨਮੂਨਾ ਕੱਢਣ ਤੋਂ ਬਾਅਦ ਬੈਚ ਬਦਲ ਗਿਆ ਹੈ; ਨਵਾਂ ਨਮੂਨਾ ਕੱਢੋ। |
+| `S8e5b1c` | message: bulk_service | The verdict must be OK or DEFECT. | ਫ਼ੈਸਲਾ OK ਜਾਂ ਨੁਕਸ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ। |
+| `Sddedd6` | message: bulk_service | This is not your sample: the person who decides inspects. | ਇਹ ਤੁਹਾਡਾ ਨਮੂਨਾ ਨਹੀਂ: ਜੋ ਫ਼ੈਸਲਾ ਕਰਦਾ ਹੈ ਉਹੀ ਜਾਂਚ ਕਰਦਾ ਹੈ। |
+| `Sf56c6a` | message: bulk_service | This sample belongs to another change set or another step. | ਇਹ ਨਮੂਨਾ ਕਿਸੇ ਹੋਰ ਤਬਦੀਲੀ ਸੈੱਟ ਜਾਂ ਕਿਸੇ ਹੋਰ ਪੜਾਅ ਦਾ ਹੈ। |
+| `S146a72` | message: bulk_service | This sample has been used for a decision already; draw a new one. | ਇਹ ਨਮੂਨਾ ਪਹਿਲਾਂ ਹੀ ਇੱਕ ਫ਼ੈਸਲੇ ਲਈ ਵਰਤਿਆ ਜਾ ਚੁੱਕਾ ਹੈ; ਨਵਾਂ ਕੱਢੋ। |
+| `Sf0f02c` | message: bulk_service | This sample is closed. | ਇਹ ਨਮੂਨਾ ਬੰਦ ਹੈ। |
+| `Sf973bd` | message: bulk_service | This sample is older than 24 hours; draw a new one. | ਇਹ ਨਮੂਨਾ 24 ਘੰਟਿਆਂ ਤੋਂ ਪੁਰਾਣਾ ਹੈ; ਨਵਾਂ ਕੱਢੋ। |
+| `S062a13` | message: bulk_service | This sample was replaced by a newer one. | ਇਸ ਨਮੂਨੇ ਦੀ ਥਾਂ ਨਵਾਂ ਆ ਚੁੱਕਾ ਹੈ। |
 | `Sca2391` | message: change_request_service | A comment must be between 1 and 4000 characters. | ਟਿੱਪਣੀ 1 ਤੋਂ 4000 ਅੱਖਰਾਂ ਵਿਚਕਾਰ ਹੋਣੀ ਚਾਹੀਦੀ ਹੈ। |
 | `S33cd99` | message: change_request_service | At least one Turbine Platform is required before Submit for Review (FR-023a). | ਸਮੀਖਿਆ ਲਈ ਜਮ੍ਹਾਂ ਕਰਨ ਤੋਂ ਪਹਿਲਾਂ ਘੱਟੋ-ਘੱਟ ਇੱਕ ਟਰਬਾਈਨ ਪਲੇਟਫਾਰਮ ਲੋੜੀਂਦਾ ਹੈ (FR-023a)। |
 | `S1fd35e` | message: change_request_service | decision must be APPROVE or REJECT. | decision APPROVE ਜਾਂ REJECT ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ। |
@@ -17176,7 +18024,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sbd3a03` | message: change_request_service | reviewer_id must be an active user with the Reviewer role. | reviewer_id ਸਮੀਖਿਅਕ ਭੂਮਿਕਾ ਵਾਲਾ ਸਰਗਰਮ ਵਰਤੋਂਕਾਰ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ। |
 | `S043693` | message: change_request_service | The Reviewer has already signed off this CR. | ਸਮੀਖਿਅਕ ਨੇ ਇਸ ਤਬਦੀਲੀ ਬੇਨਤੀ ਉੱਤੇ ਪਹਿਲਾਂ ਹੀ ਦਸਤਖ਼ਤ ਕਰ ਦਿੱਤੇ ਹਨ। |
 | `S7a758c` | message: change_set_service | A change set needs a name of 1-120 characters. | ਤਬਦੀਲੀ ਸਮੂਹ ਨੂੰ 1-120 ਅੱਖਰਾਂ ਦਾ ਨਾਮ ਚਾਹੀਦਾ ਹੈ। |
-| `Sf74baa` | message: change_set_service | Change set not found | ਤਬਦੀਲੀ ਸਮੂਹ ਨਹੀਂ ਮਿਲਿਆ |
 | `Sd8fad1` | message: change_set_service | Only a CR that is still open can join a change set. | ਸਿਰਫ਼ ਅਜੇ ਖੁੱਲ੍ਹੀ ਤਬਦੀਲੀ ਬੇਨਤੀ ਹੀ ਤਬਦੀਲੀ ਸਮੂਹ ਵਿੱਚ ਸ਼ਾਮਲ ਹੋ ਸਕਦੀ ਹੈ। |
 | `S990d51` | message: change_set_service | Only the author of the CR or an Administrator may group it. | ਸਿਰਫ਼ ਤਬਦੀਲੀ ਬੇਨਤੀ ਦਾ ਲੇਖਕ ਜਾਂ ਪ੍ਰਸ਼ਾਸਕ ਇਸਨੂੰ ਸਮੂਹਬੱਧ ਕਰ ਸਕਦਾ ਹੈ। |
 | `S69e4d1` | message: change_set_service | Only the author of the CR or an Administrator may ungroup it. | ਸਿਰਫ਼ ਤਬਦੀਲੀ ਬੇਨਤੀ ਦਾ ਲੇਖਕ ਜਾਂ ਪ੍ਰਸ਼ਾਸਕ ਇਸਨੂੰ ਸਮੂਹ ਵਿੱਚੋਂ ਕੱਢ ਸਕਦਾ ਹੈ। |
@@ -17262,6 +18109,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sdb88ba` | message: saved_search_service | Saved search not found | ਸੁਰੱਖਿਅਤ ਖੋਜ ਨਹੀਂ ਮਿਲੀ |
 | `S046aff` | message: saved_search_service | This saved search belongs to someone else. | ਇਹ ਸੁਰੱਖਿਅਤ ਖੋਜ ਕਿਸੇ ਹੋਰ ਦੀ ਹੈ। |
 | `Saad8e2` | message: settings_service | must be a whole number between 0 and 100 | 0 ਅਤੇ 100 ਵਿਚਕਾਰ ਪੂਰਨ ਅੰਕ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ |
+| `S9625d1` | message: settings_service | must be a whole number between 1 and 100 | 1 ਅਤੇ 100 ਵਿਚਕਾਰ ਪੂਰਨ ਅੰਕ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ |
 | `S6e4015` | message: settings_service | must be a whole number between 1 and 365 | 1 ਅਤੇ 365 ਵਿਚਕਾਰ ਪੂਰਨ ਅੰਕ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ |
 | `S9671fb` | message: settings_service | must be true or false | true ਜਾਂ false ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ |
 | `S5166bb` | message: st_import_service | A staged file changed after the preview. Upload again. | ਪੂਰਵ-ਝਲਕ ਤੋਂ ਬਾਅਦ ਇੱਕ ਤਿਆਰ ਫਾਈਲ ਬਦਲ ਗਈ। ਦੁਬਾਰਾ ਅੱਪਲੋਡ ਕਰੋ। |
@@ -17459,7 +18307,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S6daf16` | st_preview | Preview: status codes from .st files | ਪੂਰਵ-ਝਲਕ: .st ਫਾਈਲਾਂ ਤੋਂ ਸਥਿਤੀ ਕੋਡ |
 | `S15a21a` | st_preview | program(s) | ਪ੍ਰੋਗਰਾਮ |
 | `Se58289` | st_preview | Programs found in the uploaded files | ਅੱਪਲੋਡ ਕੀਤੀਆਂ ਫਾਈਲਾਂ ਵਿੱਚ ਮਿਲੇ ਪ੍ਰੋਗਰਾਮ |
-| `S75c053` | st_preview | ready | ਤਿਆਰ |
+| `S75c053` | st_preview, workbench | ready | ਤਿਆਰ |
 | `S0723bf` | st_preview | Select all programs that are ready | ਸਾਰੇ ਤਿਆਰ ਪ੍ਰੋਗਰਾਮ ਚੁਣੋ |
 | `S1a767a` | st_preview | updates the open Draft | ਖੁੱਲ੍ਹੇ ਖਰੜੇ ਨੂੰ ਅੱਪਡੇਟ ਕਰਦਾ ਹੈ |
 | `S02499f` | st_preview | withdrawn | ਵਾਪਸ ਲਏ |
@@ -17558,10 +18406,44 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S8516a7` | withdrawn_codes | Delete selected | ਚੁਣੇ ਹੋਏ ਮਿਟਾਓ |
 | `Sdfeb06` | withdrawn_codes | No withdrawn codes. | ਕੋਈ ਵਾਪਸ ਲਿਆ ਕੋਡ ਨਹੀਂ। |
 | `S87ec0b` | withdrawn_codes | Withdrawn on | ਵਾਪਸ ਲੈਣ ਦੀ ਮਿਤੀ |
+| `S48d260` | workbench | %(n)s of %(total)s codes drawn at %(when)s. | %(n)s / %(total)s ਕੋਡ %(when)s ਨੂੰ ਚੁਣੇ ਗਏ। |
+| `S88b55f` | workbench | Approve the batch | ਬੈਚ ਮਨਜ਼ੂਰ ਕਰੋ |
+| `Sf40e77` | workbench | Available group | ਉਪਲਬਧ ਸਮੂਹ |
+| `S99613c` | workbench | Blocked | ਰੋਕਿਆ ਹੋਇਆ |
+| `Sca7133` | workbench | Choose the step you are about to decide, draw the sample, look at every sampled code and mark it. The sample is yours, valid for 24 hours and for this batch as it is now. | ਉਹ ਪੜਾਅ ਚੁਣੋ ਜਿਸ ਉੱਤੇ ਤੁਸੀਂ ਫ਼ੈਸਲਾ ਕਰਨ ਵਾਲੇ ਹੋ, ਨਮੂਨਾ ਕੱਢੋ, ਕੱਢੇ ਗਏ ਹਰ ਕੋਡ ਨੂੰ ਵੇਖੋ ਅਤੇ ਨਿਸ਼ਾਨ ਲਗਾਓ। ਨਮੂਨਾ ਤੁਹਾਡਾ ਹੈ, 24 ਘੰਟੇ ਲਈ ਅਤੇ ਇਸ ਬੈਚ ਲਈ ਜਿਵੇਂ ਇਹ ਹੁਣ ਹੈ, ਜਾਇਜ਼ ਹੈ। |
+| `S6f4274` | workbench | Codes in this batch | ਇਸ ਬੈਚ ਦੇ ਕੋਡ |
+| `S117313` | workbench | Decide the batch | ਬੈਚ ਬਾਰੇ ਫ਼ੈਸਲਾ ਕਰੋ |
+| `Se91aff` | workbench | Defect | ਨੁਕਸ |
+| `S16fbbf` | workbench | Domain sign-off | ਡੋਮੇਨ ਸਾਈਨ-ਆਫ਼ |
+| `Scb1884` | workbench | Dossier (XLSX) | ਡੋਜ਼ੀਅਰ (XLSX) |
+| `S25085f` | workbench | Draw a sample | ਨਮੂਨਾ ਕੱਢੋ |
+| `S9167a7` | workbench | Engineering domain | ਇੰਜੀਨੀਅਰਿੰਗ ਡੋਮੇਨ |
+| `Sbc3c59` | workbench | Only the values you choose are changed, on the Drafts you wrote (an Administrator: any Draft). | ਸਿਰਫ਼ ਤੁਹਾਡੇ ਚੁਣੇ ਮੁੱਲ ਬਦਲਦੇ ਹਨ, ਤੁਹਾਡੇ ਲਿਖੇ ਖਰੜਿਆਂ ਉੱਤੇ (ਪ੍ਰਸ਼ਾਸਕ: ਕੋਈ ਵੀ ਖਰੜਾ)। |
+| `S92223f` | workbench | Passed: no defect in the sample. Use sample number %(id)s below. | ਪਾਸ: ਨਮੂਨੇ ਵਿੱਚ ਕੋਈ ਨੁਕਸ ਨਹੀਂ। ਹੇਠਾਂ ਨਮੂਨਾ ਨੰਬਰ %(id)s ਵਰਤੋ। |
+| `S6275ab` | workbench | Ready to submit | ਜਮ੍ਹਾਂ ਕਰਨ ਲਈ ਤਿਆਰ |
+| `Se1e74d` | workbench | Reject the batch | ਬੈਚ ਰੱਦ ਕਰੋ |
+| `S58fabf` | workbench | Sample | ਨਮੂਨਾ |
+| `S862471` | workbench | Sample inspection | ਨਮੂਨੇ ਦੀ ਜਾਂਚ |
+| `S69cc53` | workbench | Save the verdicts | ਫ਼ੈਸਲੇ ਸੁਰੱਖਿਅਤ ਕਰੋ |
+| `S3ae55b` | workbench | Send the defective codes back | ਨੁਕਸ ਵਾਲੇ ਕੋਡ ਵਾਪਸ ਭੇਜੋ |
+| `Se90e7c` | workbench | Set on the Drafts | ਖਰੜਿਆਂ ਉੱਤੇ ਸੈੱਟ ਕਰੋ |
+| `Sa58dac` | workbench | Set values on the Drafts | ਖਰੜਿਆਂ ਉੱਤੇ ਮੁੱਲ ਸੈੱਟ ਕਰੋ |
+| `Sa443bb` | workbench | Sign off the Drafts | ਖਰੜਿਆਂ ਦਾ ਸਾਈਨ-ਆਫ਼ ਕਰੋ |
+| `S53f47f` | workbench | Sign-off pending | ਸਾਈਨ-ਆਫ਼ ਬਾਕੀ |
+| `Sae12bc` | workbench | Status category | ਸਥਿਤੀ ਸ਼੍ਰੇਣੀ |
+| `Sdc416e` | workbench | Step | ਪੜਾਅ |
+| `Sf7710d` | workbench | Submit for review | ਸਮੀਖਿਆ ਲਈ ਜਮ੍ਹਾਂ ਕਰੋ |
+| `Sa45adc` | workbench | Submit the Drafts | ਖਰੜੇ ਜਮ੍ਹਾਂ ਕਰੋ |
+| `S2d099f` | workbench | Submits the Drafts you wrote. A Draft that still lacks a platform or a domain sign-off is reported and left as it is. | ਤੁਹਾਡੇ ਲਿਖੇ ਖਰੜੇ ਜਮ੍ਹਾਂ ਕਰਦਾ ਹੈ। ਜਿਸ ਖਰੜੇ ਵਿੱਚ ਅਜੇ ਪਲੇਟਫਾਰਮ ਜਾਂ ਡੋਮੇਨ ਸਾਈਨ-ਆਫ਼ ਨਹੀਂ, ਉਸਦੀ ਸੂਚਨਾ ਦਿੱਤੀ ਜਾਂਦੀ ਹੈ ਅਤੇ ਉਸਨੂੰ ਜਿਵੇਂ ਹੈ ਉਵੇਂ ਛੱਡ ਦਿੱਤਾ ਜਾਂਦਾ ਹੈ। |
+| `S5baa27` | workbench | The sample has defects, so the batch cannot be decided as it is. Send the defective codes back (the note is the reason), then draw a new sample of what is left. | ਨਮੂਨੇ ਵਿੱਚ ਨੁਕਸ ਹਨ, ਇਸ ਲਈ ਬੈਚ ਬਾਰੇ ਇਵੇਂ ਫ਼ੈਸਲਾ ਨਹੀਂ ਹੋ ਸਕਦਾ। ਨੁਕਸ ਵਾਲੇ ਕੋਡ ਵਾਪਸ ਭੇਜੋ (ਨੋਟ ਹੀ ਕਾਰਨ ਹੈ), ਫਿਰ ਬਾਕੀ ਵਿੱਚੋਂ ਨਵਾਂ ਨਮੂਨਾ ਕੱਢੋ। |
+| `S19f8ab` | workbench | Tick the codes an action is for; with none ticked an action covers every code it applies to. | ਜਿਨ੍ਹਾਂ ਕੋਡਾਂ ਲਈ ਕਾਰਵਾਈ ਹੈ ਉਨ੍ਹਾਂ ਉੱਤੇ ਟਿਕ ਲਗਾਓ; ਕੋਈ ਟਿਕ ਨਾ ਹੋਵੇ ਤਾਂ ਕਾਰਵਾਈ ਉਨ੍ਹਾਂ ਸਾਰੇ ਕੋਡਾਂ ਉੱਤੇ ਲਾਗੂ ਹੁੰਦੀ ਹੈ ਜਿਨ੍ਹਾਂ ਉੱਤੇ ਹੋ ਸਕਦੀ ਹੈ। |
+| `S7f6e5a` | workbench | Verdict | ਫ਼ੈਸਲਾ |
+| `Se6246f` | workbench | What stops it | ਇਸਨੂੰ ਕੀ ਰੋਕ ਰਿਹਾ ਹੈ |
+| `Sbf45e2` | workbench | Work on many codes at once without weakening a step: every code still gets its own checks, its own audit entry and, for decisions, your password. A decision on more than %(above)s codes needs a sample inspection first: %(percent)s percent of the batch, at least %(minimum)s codes, spread over the subgroups. One defect in the sample stops the decision. | ਕਿਸੇ ਪੜਾਅ ਨੂੰ ਕਮਜ਼ੋਰ ਕੀਤੇ ਬਿਨਾਂ ਬਹੁਤ ਸਾਰੇ ਕੋਡਾਂ ਉੱਤੇ ਇੱਕੋ ਵਾਰ ਕੰਮ ਕਰੋ: ਹਰ ਕੋਡ ਨੂੰ ਆਪਣੀਆਂ ਜਾਂਚਾਂ, ਆਪਣੀ ਆਡਿਟ ਐਂਟਰੀ ਅਤੇ ਫ਼ੈਸਲਿਆਂ ਲਈ ਤੁਹਾਡਾ ਪਾਸਵਰਡ ਮਿਲਦਾ ਹੈ। %(above)s ਤੋਂ ਵੱਧ ਕੋਡਾਂ ਬਾਰੇ ਫ਼ੈਸਲੇ ਲਈ ਪਹਿਲਾਂ ਨਮੂਨੇ ਦੀ ਜਾਂਚ ਚਾਹੀਦੀ ਹੈ: ਬੈਚ ਦਾ %(percent)s ਫ਼ੀਸਦੀ, ਘੱਟੋ-ਘੱਟ %(minimum)s ਕੋਡ, ਉਪ-ਸਮੂਹਾਂ ਵਿੱਚ ਫੈਲੇ ਹੋਏ। ਨਮੂਨੇ ਵਿੱਚ ਇੱਕ ਨੁਕਸ ਫ਼ੈਸਲਾ ਰੋਕ ਦਿੰਦਾ ਹੈ। |
 
 ### 9.16 ES Español 🇪🇸 — Spanish
 
-1216 of 1217 strings translated; direction left to right.
+1279 of 1280 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -17761,7 +18643,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Scfa1b6` | detail | Add field comment | Añadir comentario de campo |
 | `Sbb965e` | detail | Add one of your change requests | Añadir una de sus solicitudes de cambio |
 | `S9a693b` | detail | Add to change set | Añadir a un conjunto de cambios |
-| `S7bbd6d` | detail | Administrator sign-off | Conformidad del administrador |
+| `S7bbd6d` | detail, workbench | Administrator sign-off | Conformidad del administrador |
 | `S212856` | detail | advanced, controller firmware programs | avanzado, programas del firmware del controlador |
 | `Sfbde82` | detail | Affected component | Componente afectado |
 | `S25f8c5` | detail, export, form | Alarm | Alarma |
@@ -17790,17 +18672,17 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se7bab1` | detail | Chain of causes | Cadena de causas |
 | `S9c8393` | detail, mine | Change Request | Solicitud de cambio |
 | `S4572f4` | detail | Change request | Solicitud de cambio |
-| `S3295be` | detail | Change requests in this set | Solicitudes de cambio de este conjunto |
+| `S3295be` | detail, workbench | Change requests in this set | Solicitudes de cambio de este conjunto |
 | `S4d8006` | detail | Change set | Conjunto de cambios |
 | `S8aa57d` | detail | Changes | Cambios |
 | `S3d14ea` | detail, export | Changes of this release only | Solo los cambios de esta versión |
 | `Sbd95c0` | detail | Checklist confirmed at sign-off | Lista de comprobación confirmada en la conformidad |
 | `S074d62` | detail, role badge | Chief Engineer | Ingeniero jefe |
-| `S03695d` | detail | Chief Engineer decision | Decisión del ingeniero jefe |
+| `S03695d` | detail, workbench | Chief Engineer decision | Decisión del ingeniero jefe |
 | `Sf0a89f` | detail | Close change set | Cerrar el conjunto de cambios |
 | `S7c0c39` | detail | Close this change set? | ¿Cerrar este conjunto de cambios? |
 | `S153d7a` | detail | Comment | Comentario |
-| `S611578` | detail | Comment (required for rejection) | Comentario (obligatorio para rechazar) |
+| `S611578` | detail, workbench | Comment (required for rejection) | Comentario (obligatorio para rechazar) |
 | `Sc38432` | detail | Comment on this field | Comentar este campo |
 | `Sfce06e` | detail | Comments | Comentarios |
 | `S8d105c` | detail, reconciliation | Compare | Comparar |
@@ -17826,7 +18708,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S0e8574` | detail | Customer | Cliente |
 | `Scb307e` | detail | Decide the selected requests in one sitting | Decidir las solicitudes seleccionadas en una sola sesión |
 | `S319493` | detail | Decided by | Decidido por |
-| `S7f59a1` | detail | Decision | Decisión |
+| `S7f59a1` | detail, workbench | Decision | Decisión |
 | `Sc51568` | detail | Decisions & Comments | Decisiones y comentarios |
 | `Sa9ec7c` | detail | Delete Permanently | Eliminar definitivamente |
 | `S7d1c7a` | detail | Delete Release | Eliminar versión |
@@ -17892,6 +18774,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S6d59f4` | detail | Manual Reset Program | Programa de reposición manual |
 | `Sf9896c` | detail, form | Mark resolved | Marcar como resuelto |
 | `Sa7b93d` | detail, new, reconciliation | Mode | Modo |
+| `S9f4d01` | detail | More than a few codes need a sample inspection first; use the workbench. | Más de unos pocos códigos necesitan antes una inspección por muestreo; use el espacio de trabajo. |
 | `S31a335` | detail | new code | código nuevo |
 | `S816c52` | detail, export_verify, form | No | No |
 | `S06fc8d` | detail | No active Engineer holds the %(code)s domain yet. An Administrator must tag an Engineer with it (Administration → Users) before a sign-off can be requested. | Ningún ingeniero activo tiene el ámbito %(code)s. Un administrador debe asignar ese ámbito a un ingeniero (Administración → Usuarios) antes de poder solicitar la conformidad. |
@@ -17922,7 +18805,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S9734ac` | detail | Other codes that refer to this one. Review them before deprecating it. | Otros códigos que remiten a este. Revíselos antes de declararlo obsoleto. |
 | `S780d35` | detail | Override identifier (migration / reservation only) | Sobrescribir identificador (solo migración / reserva) |
 | `S89ff31` | detail | Owner | Propietario |
-| `S2d20ee` | detail | Package overview | Resumen del paquete |
+| `S2d20ee` | detail, workbench | Package overview | Resumen del paquete |
 | `S4d1a47` | detail | Package: all languages and access levels | Paquete: todos los idiomas y niveles de acceso |
 | `Sc49bd0` | detail | Packages of this Release | Paquetes de esta versión |
 | `S96f608` | detail, review_queue | Pending | Pendiente |
@@ -17967,12 +18850,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S026ab2` | detail | resolved | resuelto |
 | `S68c61f` | detail | Rev # | N.º de rev. |
 | `Se4758b` | detail, review_checklist | Review checklist | Lista de comprobación de revisión |
-| `S7bfca8` | detail | Reviewer sign-off | Conformidad del revisor |
+| `S7bfca8` | detail, workbench | Reviewer sign-off | Conformidad del revisor |
 | `S3beb9a` | detail | Revision | Revisión |
 | `Sa72973` | detail | Revision Fields | Campos de la revisión |
 | `Sfc1d6a` | detail | row(s) imported as Drafts | fila(s) importadas como borradores |
 | `S52d0b3` | detail, reconciliation, user_detail | Rows | Filas |
 | `Sd0edfb` | detail | Sales | Ventas |
+| `S241bf5` | detail, workbench | Sample number | Número de muestra |
 | `Sda38c6` | detail | Save planned dates | Guardar fechas previstas |
 | `S13c61c` | detail | Scope Filter | Filtro de alcance |
 | `S859822` | detail, mine, withdrawn_codes | Select | Seleccionar |
@@ -18034,11 +18918,12 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S7d5316` | detail | Who | Quién |
 | `S47e564` | detail | Withdraw | Retirar |
 | `S51a998` | detail | Withdraw this change request? | ¿Retirar esta solicitud de cambio? |
+| `S93ef7c` | detail, workbench | Workbench | Espacio de trabajo |
 | `S95a2a4` | detail, form | Write level | Nivel de escritura |
 | `S612fe0` | detail | Yaw Bearing Lubrication Program | Programa de lubricación del rodamiento de orientación |
 | `S559a3f` | detail | Yaw Program | Programa de orientación |
 | `S5397e0` | detail, export_verify, form | Yes | Sí |
-| `Sc8e4b4` | detail | Your decision step | Su paso de decisión |
+| `Sc8e4b4` | detail, workbench | Your decision step | Su paso de decisión |
 | `S20cb4c` | detail, export_center | ZIP with manifest | ZIP con manifiesto |
 | `S5d4358` | dry_run | All rows are clean. | Todas las filas están limpias. |
 | `S03510d` | dry_run | Back to import | Volver a la importación |
@@ -18065,7 +18950,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S7b8d80` | export | Not for distribution - unapproved data | No distribuir - datos no aprobados |
 | `Sd9b345` | export | not yet published | aún no publicado |
 | `Sa5d386` | export | Page %(page)s of %(total)s | Página %(page)s de %(total)s |
-| `Sac1a42` | export | Platforms | Plataformas |
+| `Sac1a42` | export, workbench | Platforms | Plataformas |
 | `Se51c55` | export | Records | Registros |
 | `Sd41f56` | export, export_center | Release | Versión publicada |
 | `S2e8fd6` | export | Reset delay | Retardo de reposición |
@@ -18117,7 +19002,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S45ea95` | export_verify | Manifest signature | Firma del manifiesto |
 | `S08f84b` | export_verify | No record of this exact file | No hay registro de este archivo exacto |
 | `S357953` | export_verify | NOT OK | NO CORRECTO |
-| `S9ce3bd` | export_verify | OK | CORRECTO |
+| `S9ce3bd` | export_verify, workbench | OK | CORRECTO |
 | `S8a5285` | export_verify | Overall | En conjunto |
 | `Sd2bc4a` | export_verify | Produced by this system | Producido por este sistema |
 | `S112d15` | export_verify | Verify an export | Verificar una exportación |
@@ -18191,10 +19076,16 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S689b33` | help | The full manual is docs/23-user-manual.md in the project folder; the glossary below is the same one the tooltips use. | El manual completo es docs/23-user-manual.md en la carpeta del proyecto; el glosario de abajo es el mismo que usan las descripciones emergentes. |
 | `S439914` | help | What happens next on a change request | Qué ocurre a continuación con una solicitud de cambio |
 | `S6d29d9` | help and messages | %(n)s withdrawn code(s) deleted. | %(n)s código(s) retirado(s) eliminado(s). |
+| `S285edc` | help and messages | %(ok)s of %(n)s: %(what)s. | %(ok)s de %(n)s: %(what)s. |
 | `Sb08e6c` | help and messages | A Reviewer and an Administrator each sign off (in any order). If either rejects, it goes back to the author. | Un revisor y un administrador dan cada uno su conformidad (en cualquier orden). Si alguno rechaza, vuelve al autor. |
 | `S2f1bed` | help and messages | An Administrator includes the revision in a Release and publishes it; then it is Released. | Un administrador incluye la revisión en una versión y la publica; entonces pasa a Publicado. |
+| `S1308dc` | help and messages | defective codes sent back | códigos defectuosos devueltos |
+| `Se2bbd9` | help and messages | Drafts saved | Borradores guardados |
+| `S0ddfa5` | help and messages | Drafts signed off | Borradores con conformidad |
+| `Sf90ab8` | help and messages | Drafts submitted for review | Borradores enviados a revisión |
 | `Sd856bd` | help and messages | Not deleted (it has a revision again or is still referenced): %(x)s | No eliminado (vuelve a tener una revisión o aún se hace referencia a él): %(x)s |
 | `S34b903` | help and messages | Not possible: the account has history (see above). Deactivate it instead; the person can no longer sign in and everything they did stays attributable. | No es posible: la cuenta tiene historial (véase arriba). Desactívela en su lugar; la persona ya no podrá iniciar sesión y todo lo que hizo sigue siendo atribuible. |
+| `S6a26de` | help and messages | Sample %(id)s drawn: %(n)s of %(total)s codes to inspect. | Muestra %(id)s extraída: %(n)s de %(total)s códigos por inspeccionar. |
 | `Sce489f` | help and messages | The author gets any required cross-domain sign-offs, then submits the change request for review. | El autor obtiene las conformidades entre ámbitos requeridas y luego envía la solicitud de cambio a revisión. |
 | `S1cdbdd` | help and messages | The Chief Engineer approves or rejects. Approval makes the revision Approved (or Deprecated for a deprecation request). | El ingeniero jefe aprueba o rechaza. La aprobación hace que la revisión pase a Aprobado (u Obsoleto en una solicitud de obsolescencia). |
 | `S2d6ac0` | help and messages | The package is being built. Reload this page to follow its progress. | El paquete se está creando. Recargue esta página para seguir el progreso. |
@@ -18267,7 +19158,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sded18c` | language | approved by | aprobado por |
 | `Sedd46e` | language | Check against the interface | Comparar con la interfaz |
 | `S5a013c` | language | missing | falta |
-| `S2c924e` | language | Note | Nota |
+| `S2c924e` | language, workbench | Note | Nota |
 | `S2f09d0` | language | Note on %(x)s | Nota sobre %(x)s |
 | `S75bf99` | language | proposed by | propuesto por |
 | `Sc68e32` | language | Save translations | Guardar traducciones |
@@ -18389,6 +19280,26 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se146d2` | message: auth_service | Your account is not active. | Su cuenta no está activa. |
 | `Sb584dd` | message: backup_service | Backups need a file-based SQLite database. | Las copias de seguridad necesitan una base de datos SQLite basada en archivo. |
 | `S368c82` | message: backup_service | keep must be at least 1 | keep debe ser al menos 1 |
+| `S18edaf` | message: bulk_service | A defect needs a note: say what is wrong. | Un defecto necesita una nota: diga qué está mal. |
+| `S68cada` | message: bulk_service, workbench | A defective Draft is corrected by its author. | Un borrador defectuoso lo corrige su autor. |
+| `S8941d5` | message: bulk_service | A domain sign-off needs the engineering domain. | Una conformidad de dominio necesita el dominio de ingeniería. |
+| `S071452` | message: bulk_service | A note has at most 1000 characters. | Una nota tiene como máximo 1000 caracteres. |
+| `Sf74baa` | message: bulk_service, message: change_set_service | Change set not found | Conjunto de cambios no encontrado |
+| `Sf89067` | message: bulk_service | Choose at least one value to set. | Elija al menos un valor que establecer. |
+| `S1e3e33` | message: bulk_service | No change request of the set is waiting for you at this step. | Ninguna solicitud de cambio del conjunto le espera en este paso. |
+| `S95bd2d` | message: bulk_service | No Draft of the set is waiting for the sign-off of this domain. | Ningún borrador del conjunto espera la conformidad de este dominio. |
+| `S495371` | message: bulk_service | Only a sample with defects can be sent back. | Solo se puede devolver una muestra con defectos. |
+| `Sa6e3b3` | message: bulk_service | Sample not found | Muestra no encontrada |
+| `Sf745cc` | message: bulk_service | step must be domain, reviewer, admin or chief-engineer | step debe ser domain, reviewer, admin o chief-engineer |
+| `S973577` | message: bulk_service | That change request is not in the sample. | Esa solicitud de cambio no está en la muestra. |
+| `Sa1a149` | message: bulk_service | The batch changed since the sample was drawn; draw a new sample. | El lote ha cambiado desde que se extrajo la muestra; extraiga una nueva. |
+| `S8e5b1c` | message: bulk_service | The verdict must be OK or DEFECT. | El veredicto debe ser OK o defecto. |
+| `Sddedd6` | message: bulk_service | This is not your sample: the person who decides inspects. | Esta no es su muestra: quien decide, inspecciona. |
+| `Sf56c6a` | message: bulk_service | This sample belongs to another change set or another step. | Esta muestra pertenece a otro conjunto de cambios o a otro paso. |
+| `S146a72` | message: bulk_service | This sample has been used for a decision already; draw a new one. | Esta muestra ya se usó para una decisión; extraiga una nueva. |
+| `Sf0f02c` | message: bulk_service | This sample is closed. | Esta muestra está cerrada. |
+| `Sf973bd` | message: bulk_service | This sample is older than 24 hours; draw a new one. | Esta muestra tiene más de 24 horas; extraiga una nueva. |
+| `S062a13` | message: bulk_service | This sample was replaced by a newer one. | Esta muestra fue sustituida por una más reciente. |
 | `Sca2391` | message: change_request_service | A comment must be between 1 and 4000 characters. | Un comentario debe tener entre 1 y 4000 caracteres. |
 | `S33cd99` | message: change_request_service | At least one Turbine Platform is required before Submit for Review (FR-023a). | Se requiere al menos una plataforma de aerogenerador antes de enviar a revisión (FR-023a). |
 | `S1fd35e` | message: change_request_service | decision must be APPROVE or REJECT. | decision debe ser APPROVE o REJECT. |
@@ -18399,7 +19310,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sbd3a03` | message: change_request_service | reviewer_id must be an active user with the Reviewer role. | reviewer_id debe ser un usuario activo con el rol de revisor. |
 | `S043693` | message: change_request_service | The Reviewer has already signed off this CR. | El revisor ya ha dado su conformidad a esta solicitud de cambio. |
 | `S7a758c` | message: change_set_service | A change set needs a name of 1-120 characters. | Un conjunto de cambios necesita un nombre de 1 a 120 caracteres. |
-| `Sf74baa` | message: change_set_service | Change set not found | Conjunto de cambios no encontrado |
 | `Sd8fad1` | message: change_set_service | Only a CR that is still open can join a change set. | Solo una solicitud de cambio aún abierta puede unirse a un conjunto de cambios. |
 | `S990d51` | message: change_set_service | Only the author of the CR or an Administrator may group it. | Solo el autor de la solicitud de cambio o un administrador puede agruparla. |
 | `S69e4d1` | message: change_set_service | Only the author of the CR or an Administrator may ungroup it. | Solo el autor de la solicitud de cambio o un administrador puede desagruparla. |
@@ -18485,6 +19395,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sdb88ba` | message: saved_search_service | Saved search not found | Búsqueda guardada no encontrada |
 | `S046aff` | message: saved_search_service | This saved search belongs to someone else. | Esta búsqueda guardada pertenece a otra persona. |
 | `Saad8e2` | message: settings_service | must be a whole number between 0 and 100 | debe ser un número entero entre 0 y 100 |
+| `S9625d1` | message: settings_service | must be a whole number between 1 and 100 | debe ser un número entero entre 1 y 100 |
 | `S6e4015` | message: settings_service | must be a whole number between 1 and 365 | debe ser un número entero entre 1 y 365 |
 | `S9671fb` | message: settings_service | must be true or false | debe ser true o false |
 | `S5166bb` | message: st_import_service | A staged file changed after the preview. Upload again. | Un archivo preparado cambió después de la vista previa. Súbalo de nuevo. |
@@ -18682,7 +19593,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S6daf16` | st_preview | Preview: status codes from .st files | Vista previa: códigos de estado de archivos .st |
 | `S15a21a` | st_preview | program(s) | programa(s) |
 | `Se58289` | st_preview | Programs found in the uploaded files | Programas encontrados en los archivos subidos |
-| `S75c053` | st_preview | ready | listos |
+| `S75c053` | st_preview, workbench | ready | listos |
 | `S0723bf` | st_preview | Select all programs that are ready | Seleccionar todos los programas listos |
 | `S1a767a` | st_preview | updates the open Draft | actualiza el borrador abierto |
 | `S02499f` | st_preview | withdrawn | retirados |
@@ -18781,10 +19692,44 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S8516a7` | withdrawn_codes | Delete selected | Eliminar seleccionados |
 | `Sdfeb06` | withdrawn_codes | No withdrawn codes. | No hay códigos retirados. |
 | `S87ec0b` | withdrawn_codes | Withdrawn on | Retirado el |
+| `S48d260` | workbench | %(n)s of %(total)s codes drawn at %(when)s. | %(n)s de %(total)s códigos extraídos el %(when)s. |
+| `S88b55f` | workbench | Approve the batch | Aprobar el lote |
+| `Sf40e77` | workbench | Available group | Grupo disponible |
+| `S99613c` | workbench | Blocked | Bloqueado |
+| `Sca7133` | workbench | Choose the step you are about to decide, draw the sample, look at every sampled code and mark it. The sample is yours, valid for 24 hours and for this batch as it is now. | Elija el paso que va a decidir, extraiga la muestra, examine cada código extraído y márquelo. La muestra es suya, válida 24 horas y para este lote tal como está ahora. |
+| `S6f4274` | workbench | Codes in this batch | Códigos de este lote |
+| `S117313` | workbench | Decide the batch | Decidir el lote |
+| `Se91aff` | workbench | Defect | Defecto |
+| `S16fbbf` | workbench | Domain sign-off | Conformidad de dominio |
+| `Scb1884` | workbench | Dossier (XLSX) | Expediente (XLSX) |
+| `S25085f` | workbench | Draw a sample | Extraer una muestra |
+| `S9167a7` | workbench | Engineering domain | Dominio de ingeniería |
+| `Sbc3c59` | workbench | Only the values you choose are changed, on the Drafts you wrote (an Administrator: any Draft). | Solo se cambian los valores que elija, en los borradores que usted escribió (un administrador: cualquier borrador). |
+| `S92223f` | workbench | Passed: no defect in the sample. Use sample number %(id)s below. | Aprobada: ningún defecto en la muestra. Use abajo el número de muestra %(id)s. |
+| `S6275ab` | workbench | Ready to submit | Listo para enviar |
+| `Se1e74d` | workbench | Reject the batch | Rechazar el lote |
+| `S58fabf` | workbench | Sample | Muestra |
+| `S862471` | workbench | Sample inspection | Inspección por muestreo |
+| `S69cc53` | workbench | Save the verdicts | Guardar los veredictos |
+| `S3ae55b` | workbench | Send the defective codes back | Devolver los códigos defectuosos |
+| `Se90e7c` | workbench | Set on the Drafts | Aplicar a los borradores |
+| `Sa58dac` | workbench | Set values on the Drafts | Establecer valores en los borradores |
+| `Sa443bb` | workbench | Sign off the Drafts | Dar conformidad a los borradores |
+| `S53f47f` | workbench | Sign-off pending | Conformidad pendiente |
+| `Sae12bc` | workbench | Status category | Categoría de estado |
+| `Sdc416e` | workbench | Step | Paso |
+| `Sf7710d` | workbench | Submit for review | Enviar a revisión |
+| `Sa45adc` | workbench | Submit the Drafts | Enviar los borradores |
+| `S2d099f` | workbench | Submits the Drafts you wrote. A Draft that still lacks a platform or a domain sign-off is reported and left as it is. | Envía los borradores que usted escribió. Un borrador al que aún le falta una plataforma o una conformidad de dominio se señala y se deja como está. |
+| `S5baa27` | workbench | The sample has defects, so the batch cannot be decided as it is. Send the defective codes back (the note is the reason), then draw a new sample of what is left. | La muestra tiene defectos, por lo que el lote no puede decidirse tal como está. Devuelva los códigos defectuosos (la nota es el motivo) y luego extraiga una nueva muestra de lo que queda. |
+| `S19f8ab` | workbench | Tick the codes an action is for; with none ticked an action covers every code it applies to. | Marque los códigos a los que se aplica una acción; sin ninguno marcado, una acción abarca todos los códigos a los que se aplica. |
+| `S7f6e5a` | workbench | Verdict | Veredicto |
+| `Se6246f` | workbench | What stops it | Qué lo detiene |
+| `Sbf45e2` | workbench | Work on many codes at once without weakening a step: every code still gets its own checks, its own audit entry and, for decisions, your password. A decision on more than %(above)s codes needs a sample inspection first: %(percent)s percent of the batch, at least %(minimum)s codes, spread over the subgroups. One defect in the sample stops the decision. | Trabajar con muchos códigos a la vez sin debilitar un paso: cada código sigue teniendo sus propias comprobaciones, su propia entrada de auditoría y, en las decisiones, su contraseña. Una decisión sobre más de %(above)s códigos necesita antes una inspección por muestreo: %(percent)s por ciento del lote, al menos %(minimum)s códigos, repartidos entre los subgrupos. Un defecto en la muestra detiene la decisión. |
 
 ### 9.17 IT Italiano 🇮🇹 — Italian
 
-1216 of 1217 strings translated; direction left to right.
+1279 of 1280 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -18984,7 +19929,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Scfa1b6` | detail | Add field comment | Aggiungi commento di campo |
 | `Sbb965e` | detail | Add one of your change requests | Aggiungi una delle sue richieste di modifica |
 | `S9a693b` | detail | Add to change set | Aggiungi a un set di modifiche |
-| `S7bbd6d` | detail | Administrator sign-off | Benestare dell'amministratore |
+| `S7bbd6d` | detail, workbench | Administrator sign-off | Benestare dell'amministratore |
 | `S212856` | detail | advanced, controller firmware programs | avanzato, programmi del firmware del controllore |
 | `Sfbde82` | detail | Affected component | Componente interessato |
 | `S25f8c5` | detail, export, form | Alarm | Allarme |
@@ -19013,17 +19958,17 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se7bab1` | detail | Chain of causes | Catena di cause |
 | `S9c8393` | detail, mine | Change Request | Richiesta di modifica |
 | `S4572f4` | detail | Change request | Richiesta di modifica |
-| `S3295be` | detail | Change requests in this set | Richieste di modifica in questo set |
+| `S3295be` | detail, workbench | Change requests in this set | Richieste di modifica in questo set |
 | `S4d8006` | detail | Change set | Set di modifiche |
 | `S8aa57d` | detail | Changes | Modifiche |
 | `S3d14ea` | detail, export | Changes of this release only | Solo le modifiche di questa versione |
 | `Sbd95c0` | detail | Checklist confirmed at sign-off | Lista di controllo confermata al benestare |
 | `S074d62` | detail, role badge | Chief Engineer | Capo ingegnere |
-| `S03695d` | detail | Chief Engineer decision | Decisione del capo ingegnere |
+| `S03695d` | detail, workbench | Chief Engineer decision | Decisione del capo ingegnere |
 | `Sf0a89f` | detail | Close change set | Chiudi set di modifiche |
 | `S7c0c39` | detail | Close this change set? | Chiudere questo set di modifiche? |
 | `S153d7a` | detail | Comment | Commento |
-| `S611578` | detail | Comment (required for rejection) | Commento (obbligatorio per il rifiuto) |
+| `S611578` | detail, workbench | Comment (required for rejection) | Commento (obbligatorio per il rifiuto) |
 | `Sc38432` | detail | Comment on this field | Commenta questo campo |
 | `Sfce06e` | detail | Comments | Commenti |
 | `S8d105c` | detail, reconciliation | Compare | Confronta |
@@ -19049,7 +19994,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S0e8574` | detail | Customer | Cliente |
 | `Scb307e` | detail | Decide the selected requests in one sitting | Decidi le richieste selezionate in un'unica seduta |
 | `S319493` | detail | Decided by | Deciso da |
-| `S7f59a1` | detail | Decision | Decisione |
+| `S7f59a1` | detail, workbench | Decision | Decisione |
 | `Sc51568` | detail | Decisions & Comments | Decisioni e commenti |
 | `Sa9ec7c` | detail | Delete Permanently | Elimina definitivamente |
 | `S7d1c7a` | detail | Delete Release | Elimina rilascio |
@@ -19115,6 +20060,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S6d59f4` | detail | Manual Reset Program | Programma di ripristino manuale |
 | `Sf9896c` | detail, form | Mark resolved | Segna come risolto |
 | `Sa7b93d` | detail, new, reconciliation | Mode | Modalità |
+| `S9f4d01` | detail | More than a few codes need a sample inspection first; use the workbench. | Oltre pochi codici serve prima un'ispezione a campione; usi l'area di lavoro. |
 | `S31a335` | detail | new code | nuovo codice |
 | `S816c52` | detail, export_verify, form | No | No |
 | `S06fc8d` | detail | No active Engineer holds the %(code)s domain yet. An Administrator must tag an Engineer with it (Administration → Users) before a sign-off can be requested. | Nessun ingegnere attivo ha l'ambito %(code)s. Un amministratore deve assegnare questo ambito a un ingegnere (Amministrazione → Utenti) prima che si possa richiedere il benestare. |
@@ -19145,7 +20091,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S9734ac` | detail | Other codes that refer to this one. Review them before deprecating it. | Altri codici che rimandano a questo. Li riveda prima di dichiararlo obsoleto. |
 | `S780d35` | detail | Override identifier (migration / reservation only) | Sovrascrivi identificativo (solo migrazione / prenotazione) |
 | `S89ff31` | detail | Owner | Proprietario |
-| `S2d20ee` | detail | Package overview | Panoramica del pacchetto |
+| `S2d20ee` | detail, workbench | Package overview | Panoramica del pacchetto |
 | `S4d1a47` | detail | Package: all languages and access levels | Pacchetto: tutte le lingue e tutti i livelli di accesso |
 | `Sc49bd0` | detail | Packages of this Release | Pacchetti di questa versione |
 | `S96f608` | detail, review_queue | Pending | In sospeso |
@@ -19190,12 +20136,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S026ab2` | detail | resolved | risolto |
 | `S68c61f` | detail | Rev # | N. rev. |
 | `Se4758b` | detail, review_checklist | Review checklist | Lista di controllo della revisione |
-| `S7bfca8` | detail | Reviewer sign-off | Benestare del revisore |
+| `S7bfca8` | detail, workbench | Reviewer sign-off | Benestare del revisore |
 | `S3beb9a` | detail | Revision | Revisione |
 | `Sa72973` | detail | Revision Fields | Campi della revisione |
 | `Sfc1d6a` | detail | row(s) imported as Drafts | riga/righe importate come bozze |
 | `S52d0b3` | detail, reconciliation, user_detail | Rows | Righe |
 | `Sd0edfb` | detail | Sales | Vendite |
+| `S241bf5` | detail, workbench | Sample number | Numero del campione |
 | `Sda38c6` | detail | Save planned dates | Salva date pianificate |
 | `S13c61c` | detail | Scope Filter | Filtro di ambito |
 | `S859822` | detail, mine, withdrawn_codes | Select | Seleziona |
@@ -19257,11 +20204,12 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S7d5316` | detail | Who | Chi |
 | `S47e564` | detail | Withdraw | Ritira |
 | `S51a998` | detail | Withdraw this change request? | Ritirare questa richiesta di modifica? |
+| `S93ef7c` | detail, workbench | Workbench | Area di lavoro |
 | `S95a2a4` | detail, form | Write level | Livello di scrittura |
 | `S612fe0` | detail | Yaw Bearing Lubrication Program | Programma di lubrificazione del cuscinetto di imbardata |
 | `S559a3f` | detail | Yaw Program | Programma di imbardata |
 | `S5397e0` | detail, export_verify, form | Yes | Sì |
-| `Sc8e4b4` | detail | Your decision step | La sua fase decisionale |
+| `Sc8e4b4` | detail, workbench | Your decision step | La sua fase decisionale |
 | `S20cb4c` | detail, export_center | ZIP with manifest | ZIP con manifesto |
 | `S5d4358` | dry_run | All rows are clean. | Tutte le righe sono a posto. |
 | `S03510d` | dry_run | Back to import | Torna all'importazione |
@@ -19288,7 +20236,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S7b8d80` | export | Not for distribution - unapproved data | Non per la distribuzione - dati non approvati |
 | `Sd9b345` | export | not yet published | non ancora pubblicato |
 | `Sa5d386` | export | Page %(page)s of %(total)s | Pagina %(page)s di %(total)s |
-| `Sac1a42` | export | Platforms | Piattaforme |
+| `Sac1a42` | export, workbench | Platforms | Piattaforme |
 | `Se51c55` | export | Records | Record |
 | `Sd41f56` | export, export_center | Release | Rilascio |
 | `S2e8fd6` | export | Reset delay | Ritardo di ripristino |
@@ -19340,7 +20288,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S45ea95` | export_verify | Manifest signature | Firma del manifesto |
 | `S08f84b` | export_verify | No record of this exact file | Nessuna traccia di questo file esatto |
 | `S357953` | export_verify | NOT OK | NON OK |
-| `S9ce3bd` | export_verify | OK | OK |
+| `S9ce3bd` | export_verify, workbench | OK | OK |
 | `S8a5285` | export_verify | Overall | Complessivamente |
 | `Sd2bc4a` | export_verify | Produced by this system | Prodotto da questo sistema |
 | `S112d15` | export_verify | Verify an export | Verifica un'esportazione |
@@ -19414,10 +20362,16 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S689b33` | help | The full manual is docs/23-user-manual.md in the project folder; the glossary below is the same one the tooltips use. | Il manuale completo è docs/23-user-manual.md nella cartella del progetto; il glossario qui sotto è lo stesso dei suggerimenti. |
 | `S439914` | help | What happens next on a change request | Che cosa succede dopo a una richiesta di modifica |
 | `S6d29d9` | help and messages | %(n)s withdrawn code(s) deleted. | %(n)s codice/i ritirato/i eliminato/i. |
+| `S285edc` | help and messages | %(ok)s of %(n)s: %(what)s. | %(ok)s su %(n)s: %(what)s. |
 | `Sb08e6c` | help and messages | A Reviewer and an Administrator each sign off (in any order). If either rejects, it goes back to the author. | Un revisore e un amministratore danno ciascuno il benestare (in qualsiasi ordine). Se uno dei due rifiuta, la richiesta torna all'autore. |
 | `S2f1bed` | help and messages | An Administrator includes the revision in a Release and publishes it; then it is Released. | Un amministratore include la revisione in un rilascio e lo pubblica; allora diventa Rilasciata. |
+| `S1308dc` | help and messages | defective codes sent back | codici difettosi rimandati indietro |
+| `Se2bbd9` | help and messages | Drafts saved | Bozze salvate |
+| `S0ddfa5` | help and messages | Drafts signed off | Bozze con benestare |
+| `Sf90ab8` | help and messages | Drafts submitted for review | Bozze inviate in revisione |
 | `Sd856bd` | help and messages | Not deleted (it has a revision again or is still referenced): %(x)s | Non eliminato (ha di nuovo una revisione o è ancora referenziato): %(x)s |
 | `S34b903` | help and messages | Not possible: the account has history (see above). Deactivate it instead; the person can no longer sign in and everything they did stays attributable. | Non possibile: l'account ha uno storico (vedi sopra). Lo disattivi invece; la persona non può più accedere e tutto ciò che ha fatto resta attribuibile. |
+| `S6a26de` | help and messages | Sample %(id)s drawn: %(n)s of %(total)s codes to inspect. | Campione %(id)s estratto: %(n)s codici su %(total)s da ispezionare. |
 | `Sce489f` | help and messages | The author gets any required cross-domain sign-offs, then submits the change request for review. | L'autore ottiene i benestare interdisciplinari richiesti, poi invia la richiesta di modifica in revisione. |
 | `S1cdbdd` | help and messages | The Chief Engineer approves or rejects. Approval makes the revision Approved (or Deprecated for a deprecation request). | Il capo ingegnere approva o rifiuta. L'approvazione porta la revisione ad Approvato (oppure a Obsoleto per una richiesta di obsolescenza). |
 | `S2d6ac0` | help and messages | The package is being built. Reload this page to follow its progress. | Il pacchetto è in costruzione. Ricarica questa pagina per seguirne l'avanzamento. |
@@ -19490,7 +20444,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sded18c` | language | approved by | approvato da |
 | `Sedd46e` | language | Check against the interface | Confronta con l'interfaccia |
 | `S5a013c` | language | missing | mancante |
-| `S2c924e` | language | Note | Nota |
+| `S2c924e` | language, workbench | Note | Nota |
 | `S2f09d0` | language | Note on %(x)s | Nota su %(x)s |
 | `S75bf99` | language | proposed by | proposto da |
 | `Sc68e32` | language | Save translations | Salva traduzioni |
@@ -19612,6 +20566,26 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se146d2` | message: auth_service | Your account is not active. | Il suo account non è attivo. |
 | `Sb584dd` | message: backup_service | Backups need a file-based SQLite database. | I backup richiedono un database SQLite basato su file. |
 | `S368c82` | message: backup_service | keep must be at least 1 | keep deve essere almeno 1 |
+| `S18edaf` | message: bulk_service | A defect needs a note: say what is wrong. | Un difetto richiede una nota: indichi cosa non va. |
+| `S68cada` | message: bulk_service, workbench | A defective Draft is corrected by its author. | Una bozza difettosa viene corretta dal suo autore. |
+| `S8941d5` | message: bulk_service | A domain sign-off needs the engineering domain. | Un benestare di dominio richiede il dominio ingegneristico. |
+| `S071452` | message: bulk_service | A note has at most 1000 characters. | Una nota ha al massimo 1000 caratteri. |
+| `Sf74baa` | message: bulk_service, message: change_set_service | Change set not found | Set di modifiche non trovato |
+| `Sf89067` | message: bulk_service | Choose at least one value to set. | Scelga almeno un valore da impostare. |
+| `S1e3e33` | message: bulk_service | No change request of the set is waiting for you at this step. | Nessuna richiesta di modifica del set attende lei a questo passo. |
+| `S95bd2d` | message: bulk_service | No Draft of the set is waiting for the sign-off of this domain. | Nessuna bozza del set attende il benestare di questo dominio. |
+| `S495371` | message: bulk_service | Only a sample with defects can be sent back. | Si può rimandare indietro solo un campione con difetti. |
+| `Sa6e3b3` | message: bulk_service | Sample not found | Campione non trovato |
+| `Sf745cc` | message: bulk_service | step must be domain, reviewer, admin or chief-engineer | step deve essere domain, reviewer, admin o chief-engineer |
+| `S973577` | message: bulk_service | That change request is not in the sample. | Quella richiesta di modifica non è nel campione. |
+| `Sa1a149` | message: bulk_service | The batch changed since the sample was drawn; draw a new sample. | Il lotto è cambiato dopo l'estrazione del campione; estragga un nuovo campione. |
+| `S8e5b1c` | message: bulk_service | The verdict must be OK or DEFECT. | Il verdetto deve essere OK o difetto. |
+| `Sddedd6` | message: bulk_service | This is not your sample: the person who decides inspects. | Questo non è il suo campione: chi decide ispeziona. |
+| `Sf56c6a` | message: bulk_service | This sample belongs to another change set or another step. | Questo campione appartiene a un altro set di modifiche o a un altro passo. |
+| `S146a72` | message: bulk_service | This sample has been used for a decision already; draw a new one. | Questo campione è già stato usato per una decisione; ne estragga uno nuovo. |
+| `Sf0f02c` | message: bulk_service | This sample is closed. | Questo campione è chiuso. |
+| `Sf973bd` | message: bulk_service | This sample is older than 24 hours; draw a new one. | Questo campione ha più di 24 ore; ne estragga uno nuovo. |
+| `S062a13` | message: bulk_service | This sample was replaced by a newer one. | Questo campione è stato sostituito da uno più recente. |
 | `Sca2391` | message: change_request_service | A comment must be between 1 and 4000 characters. | Un commento deve avere tra 1 e 4000 caratteri. |
 | `S33cd99` | message: change_request_service | At least one Turbine Platform is required before Submit for Review (FR-023a). | È richiesta almeno una piattaforma di turbina prima dell'invio in revisione (FR-023a). |
 | `S1fd35e` | message: change_request_service | decision must be APPROVE or REJECT. | decision deve essere APPROVE o REJECT. |
@@ -19622,7 +20596,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sbd3a03` | message: change_request_service | reviewer_id must be an active user with the Reviewer role. | reviewer_id deve essere un utente attivo con il ruolo di revisore. |
 | `S043693` | message: change_request_service | The Reviewer has already signed off this CR. | Il revisore ha già dato il benestare a questa richiesta di modifica. |
 | `S7a758c` | message: change_set_service | A change set needs a name of 1-120 characters. | Un set di modifiche richiede un nome di 1-120 caratteri. |
-| `Sf74baa` | message: change_set_service | Change set not found | Set di modifiche non trovato |
 | `Sd8fad1` | message: change_set_service | Only a CR that is still open can join a change set. | Solo una richiesta di modifica ancora aperta può entrare in un set di modifiche. |
 | `S990d51` | message: change_set_service | Only the author of the CR or an Administrator may group it. | Solo l'autore della richiesta di modifica o un amministratore può raggrupparla. |
 | `S69e4d1` | message: change_set_service | Only the author of the CR or an Administrator may ungroup it. | Solo l'autore della richiesta di modifica o un amministratore può separarla dal gruppo. |
@@ -19708,6 +20681,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sdb88ba` | message: saved_search_service | Saved search not found | Ricerca salvata non trovata |
 | `S046aff` | message: saved_search_service | This saved search belongs to someone else. | Questa ricerca salvata appartiene a qualcun altro. |
 | `Saad8e2` | message: settings_service | must be a whole number between 0 and 100 | deve essere un numero intero tra 0 e 100 |
+| `S9625d1` | message: settings_service | must be a whole number between 1 and 100 | deve essere un numero intero tra 1 e 100 |
 | `S6e4015` | message: settings_service | must be a whole number between 1 and 365 | deve essere un numero intero tra 1 e 365 |
 | `S9671fb` | message: settings_service | must be true or false | deve essere true o false |
 | `S5166bb` | message: st_import_service | A staged file changed after the preview. Upload again. | Un file preparato è cambiato dopo l'anteprima. Lo carichi di nuovo. |
@@ -19905,7 +20879,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S6daf16` | st_preview | Preview: status codes from .st files | Anteprima: codici di stato da file .st |
 | `S15a21a` | st_preview | program(s) | programma/i |
 | `Se58289` | st_preview | Programs found in the uploaded files | Programmi trovati nei file caricati |
-| `S75c053` | st_preview | ready | pronti |
+| `S75c053` | st_preview, workbench | ready | pronti |
 | `S0723bf` | st_preview | Select all programs that are ready | Seleziona tutti i programmi pronti |
 | `S1a767a` | st_preview | updates the open Draft | aggiorna la bozza aperta |
 | `S02499f` | st_preview | withdrawn | ritirati |
@@ -20004,10 +20978,44 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S8516a7` | withdrawn_codes | Delete selected | Elimina selezionati |
 | `Sdfeb06` | withdrawn_codes | No withdrawn codes. | Nessun codice ritirato. |
 | `S87ec0b` | withdrawn_codes | Withdrawn on | Ritirato il |
+| `S48d260` | workbench | %(n)s of %(total)s codes drawn at %(when)s. | %(n)s codici su %(total)s estratti il %(when)s. |
+| `S88b55f` | workbench | Approve the batch | Approva il lotto |
+| `Sf40e77` | workbench | Available group | Gruppo disponibile |
+| `S99613c` | workbench | Blocked | Bloccato |
+| `Sca7133` | workbench | Choose the step you are about to decide, draw the sample, look at every sampled code and mark it. The sample is yours, valid for 24 hours and for this batch as it is now. | Scelga il passo che sta per decidere, estragga il campione, esamini ogni codice estratto e lo contrassegni. Il campione è suo, valido 24 ore e per questo lotto così com'è ora. |
+| `S6f4274` | workbench | Codes in this batch | Codici di questo lotto |
+| `S117313` | workbench | Decide the batch | Decidi il lotto |
+| `Se91aff` | workbench | Defect | Difetto |
+| `S16fbbf` | workbench | Domain sign-off | Benestare di dominio |
+| `Scb1884` | workbench | Dossier (XLSX) | Dossier (XLSX) |
+| `S25085f` | workbench | Draw a sample | Estrai un campione |
+| `S9167a7` | workbench | Engineering domain | Dominio ingegneristico |
+| `Sbc3c59` | workbench | Only the values you choose are changed, on the Drafts you wrote (an Administrator: any Draft). | Vengono modificati solo i valori scelti, sulle bozze che lei ha scritto (un amministratore: qualsiasi bozza). |
+| `S92223f` | workbench | Passed: no defect in the sample. Use sample number %(id)s below. | Superato: nessun difetto nel campione. Usi qui sotto il numero di campione %(id)s. |
+| `S6275ab` | workbench | Ready to submit | Pronto per l'invio |
+| `Se1e74d` | workbench | Reject the batch | Rifiuta il lotto |
+| `S58fabf` | workbench | Sample | Campione |
+| `S862471` | workbench | Sample inspection | Ispezione a campione |
+| `S69cc53` | workbench | Save the verdicts | Salva i verdetti |
+| `S3ae55b` | workbench | Send the defective codes back | Rimanda indietro i codici difettosi |
+| `Se90e7c` | workbench | Set on the Drafts | Imposta sulle bozze |
+| `Sa58dac` | workbench | Set values on the Drafts | Imposta valori sulle bozze |
+| `Sa443bb` | workbench | Sign off the Drafts | Dai il benestare alle bozze |
+| `S53f47f` | workbench | Sign-off pending | Benestare in attesa |
+| `Sae12bc` | workbench | Status category | Categoria di stato |
+| `Sdc416e` | workbench | Step | Passo |
+| `Sf7710d` | workbench | Submit for review | Invia in revisione |
+| `Sa45adc` | workbench | Submit the Drafts | Invia le bozze |
+| `S2d099f` | workbench | Submits the Drafts you wrote. A Draft that still lacks a platform or a domain sign-off is reported and left as it is. | Invia le bozze che lei ha scritto. Una bozza a cui manca ancora una piattaforma o un benestare di dominio viene segnalata e lasciata com'è. |
+| `S5baa27` | workbench | The sample has defects, so the batch cannot be decided as it is. Send the defective codes back (the note is the reason), then draw a new sample of what is left. | Il campione ha difetti, quindi il lotto non può essere deciso così com'è. Rimandi indietro i codici difettosi (la nota è il motivo), poi estragga un nuovo campione da quel che resta. |
+| `S19f8ab` | workbench | Tick the codes an action is for; with none ticked an action covers every code it applies to. | Spunti i codici a cui si riferisce un'azione; senza spunte un'azione vale per tutti i codici a cui si applica. |
+| `S7f6e5a` | workbench | Verdict | Verdetto |
+| `Se6246f` | workbench | What stops it | Cosa lo ferma |
+| `Sbf45e2` | workbench | Work on many codes at once without weakening a step: every code still gets its own checks, its own audit entry and, for decisions, your password. A decision on more than %(above)s codes needs a sample inspection first: %(percent)s percent of the batch, at least %(minimum)s codes, spread over the subgroups. One defect in the sample stops the decision. | Lavorare su molti codici insieme senza indebolire un passo: ogni codice ha comunque i propri controlli, la propria voce di audit e, per le decisioni, la sua password. Una decisione su più di %(above)s codici richiede prima un'ispezione a campione: %(percent)s per cento del lotto, almeno %(minimum)s codici, distribuiti sui sottogruppi. Un difetto nel campione blocca la decisione. |
 
 ### 9.18 DK Dansk 🇩🇰 — Danish
 
-1216 of 1217 strings translated; direction left to right.
+1279 of 1280 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -20207,7 +21215,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Scfa1b6` | detail | Add field comment | Tilføj feltkommentar |
 | `Sbb965e` | detail | Add one of your change requests | Tilføj en af dine ændringsanmodninger |
 | `S9a693b` | detail | Add to change set | Føj til ændringssæt |
-| `S7bbd6d` | detail | Administrator sign-off | Administratorens underskrift |
+| `S7bbd6d` | detail, workbench | Administrator sign-off | Administratorens underskrift |
 | `S212856` | detail | advanced, controller firmware programs | avanceret, styringens firmwareprogrammer |
 | `Sfbde82` | detail | Affected component | Berørt komponent |
 | `S25f8c5` | detail, export, form | Alarm | Alarm |
@@ -20236,17 +21244,17 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se7bab1` | detail | Chain of causes | Årsagskæde |
 | `S9c8393` | detail, mine | Change Request | Ændringsanmodning |
 | `S4572f4` | detail | Change request | Ændringsanmodning |
-| `S3295be` | detail | Change requests in this set | Ændringsanmodninger i dette sæt |
+| `S3295be` | detail, workbench | Change requests in this set | Ændringsanmodninger i dette sæt |
 | `S4d8006` | detail | Change set | Ændringssæt |
 | `S8aa57d` | detail | Changes | Ændringer |
 | `S3d14ea` | detail, export | Changes of this release only | Kun ændringerne i denne udgave |
 | `Sbd95c0` | detail | Checklist confirmed at sign-off | Tjeklisten bekræftet ved underskrift |
 | `S074d62` | detail, role badge | Chief Engineer | Chefingeniør |
-| `S03695d` | detail | Chief Engineer decision | Chefingeniørens beslutning |
+| `S03695d` | detail, workbench | Chief Engineer decision | Chefingeniørens beslutning |
 | `Sf0a89f` | detail | Close change set | Luk ændringssæt |
 | `S7c0c39` | detail | Close this change set? | Luk dette ændringssæt? |
 | `S153d7a` | detail | Comment | Kommentar |
-| `S611578` | detail | Comment (required for rejection) | Kommentar (påkrævet ved afvisning) |
+| `S611578` | detail, workbench | Comment (required for rejection) | Kommentar (påkrævet ved afvisning) |
 | `Sc38432` | detail | Comment on this field | Kommentér dette felt |
 | `Sfce06e` | detail | Comments | Kommentarer |
 | `S8d105c` | detail, reconciliation | Compare | Sammenlign |
@@ -20272,7 +21280,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S0e8574` | detail | Customer | Kunde |
 | `Scb307e` | detail | Decide the selected requests in one sitting | Beslut de valgte anmodninger i én omgang |
 | `S319493` | detail | Decided by | Besluttet af |
-| `S7f59a1` | detail | Decision | Beslutning |
+| `S7f59a1` | detail, workbench | Decision | Beslutning |
 | `Sc51568` | detail | Decisions & Comments | Beslutninger og kommentarer |
 | `Sa9ec7c` | detail | Delete Permanently | Slet permanent |
 | `S7d1c7a` | detail | Delete Release | Slet udgivelse |
@@ -20338,6 +21346,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S6d59f4` | detail | Manual Reset Program | Program til manuel nulstilling |
 | `Sf9896c` | detail, form | Mark resolved | Markér som løst |
 | `Sa7b93d` | detail, new, reconciliation | Mode | Tilstand |
+| `S9f4d01` | detail | More than a few codes need a sample inspection first; use the workbench. | Mere end nogle få koder kræver først en stikprøvekontrol; brug arbejdsbordet. |
 | `S31a335` | detail | new code | ny kode |
 | `S816c52` | detail, export_verify, form | No | Nej |
 | `S06fc8d` | detail | No active Engineer holds the %(code)s domain yet. An Administrator must tag an Engineer with it (Administration → Users) before a sign-off can be requested. | Ingen aktiv ingeniør har disciplinen %(code)s. En administrator skal give en ingeniør denne disciplin (Administration → Brugere), før en underskrift kan anmodes. |
@@ -20368,7 +21377,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S9734ac` | detail | Other codes that refer to this one. Review them before deprecating it. | Andre koder, der henviser til denne. Gennemgå dem, før den erklæres forældet. |
 | `S780d35` | detail | Override identifier (migration / reservation only) | Overstyr identifikator (kun migrering / reservation) |
 | `S89ff31` | detail | Owner | Ejer |
-| `S2d20ee` | detail | Package overview | Pakkeoversigt |
+| `S2d20ee` | detail, workbench | Package overview | Pakkeoversigt |
 | `S4d1a47` | detail | Package: all languages and access levels | Pakke: alle sprog og adgangsniveauer |
 | `Sc49bd0` | detail | Packages of this Release | Pakker til denne udgave |
 | `S96f608` | detail, review_queue | Pending | Afventer |
@@ -20413,12 +21422,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S026ab2` | detail | resolved | løst |
 | `S68c61f` | detail | Rev # | Rev. nr. |
 | `Se4758b` | detail, review_checklist | Review checklist | Gennemgangstjekliste |
-| `S7bfca8` | detail | Reviewer sign-off | Reviewerens underskrift |
+| `S7bfca8` | detail, workbench | Reviewer sign-off | Reviewerens underskrift |
 | `S3beb9a` | detail | Revision | Revision |
 | `Sa72973` | detail | Revision Fields | Revisionsfelter |
 | `Sfc1d6a` | detail | row(s) imported as Drafts | række(r) importeret som kladder |
 | `S52d0b3` | detail, reconciliation, user_detail | Rows | Rækker |
 | `Sd0edfb` | detail | Sales | Salg |
+| `S241bf5` | detail, workbench | Sample number | Stikprøvenummer |
 | `Sda38c6` | detail | Save planned dates | Gem planlagte datoer |
 | `S13c61c` | detail | Scope Filter | Omfangsfilter |
 | `S859822` | detail, mine, withdrawn_codes | Select | Vælg |
@@ -20480,11 +21490,12 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S7d5316` | detail | Who | Hvem |
 | `S47e564` | detail | Withdraw | Træk tilbage |
 | `S51a998` | detail | Withdraw this change request? | Træk denne ændringsanmodning tilbage? |
+| `S93ef7c` | detail, workbench | Workbench | Arbejdsbord |
 | `S95a2a4` | detail, form | Write level | Skriveniveau |
 | `S612fe0` | detail | Yaw Bearing Lubrication Program | Smøreprogram til krøjelejet |
 | `S559a3f` | detail | Yaw Program | Krøjningsprogram |
 | `S5397e0` | detail, export_verify, form | Yes | Ja |
-| `Sc8e4b4` | detail | Your decision step | Dit beslutningstrin |
+| `Sc8e4b4` | detail, workbench | Your decision step | Dit beslutningstrin |
 | `S20cb4c` | detail, export_center | ZIP with manifest | ZIP med manifest |
 | `S5d4358` | dry_run | All rows are clean. | Alle rækker er rene. |
 | `S03510d` | dry_run | Back to import | Tilbage til import |
@@ -20511,7 +21522,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S7b8d80` | export | Not for distribution - unapproved data | Må ikke distribueres - ikke godkendte data |
 | `Sd9b345` | export | not yet published | endnu ikke udgivet |
 | `Sa5d386` | export | Page %(page)s of %(total)s | Side %(page)s af %(total)s |
-| `Sac1a42` | export | Platforms | Platforme |
+| `Sac1a42` | export, workbench | Platforms | Platforme |
 | `Se51c55` | export | Records | Poster |
 | `Sd41f56` | export, export_center | Release | Udgivelse |
 | `S2e8fd6` | export | Reset delay | Nulstillingsforsinkelse |
@@ -20563,7 +21574,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S45ea95` | export_verify | Manifest signature | Manifestets signatur |
 | `S08f84b` | export_verify | No record of this exact file | Ingen registrering af netop denne fil |
 | `S357953` | export_verify | NOT OK | IKKE OK |
-| `S9ce3bd` | export_verify | OK | OK |
+| `S9ce3bd` | export_verify, workbench | OK | OK |
 | `S8a5285` | export_verify | Overall | Samlet |
 | `Sd2bc4a` | export_verify | Produced by this system | Produceret af dette system |
 | `S112d15` | export_verify | Verify an export | Verificér en eksport |
@@ -20637,10 +21648,16 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S689b33` | help | The full manual is docs/23-user-manual.md in the project folder; the glossary below is the same one the tooltips use. | Den fulde manual er docs/23-user-manual.md i projektmappen; ordlisten nedenfor er den samme som i værktøjstip. |
 | `S439914` | help | What happens next on a change request | Hvad sker der derefter med en ændringsanmodning |
 | `S6d29d9` | help and messages | %(n)s withdrawn code(s) deleted. | %(n)s tilbagetrukne koder slettet. |
+| `S285edc` | help and messages | %(ok)s of %(n)s: %(what)s. | %(ok)s af %(n)s: %(what)s. |
 | `Sb08e6c` | help and messages | A Reviewer and an Administrator each sign off (in any order). If either rejects, it goes back to the author. | En reviewer og en administrator underskriver hver (i vilkårlig rækkefølge). Afviser en af dem, går den tilbage til forfatteren. |
 | `S2f1bed` | help and messages | An Administrator includes the revision in a Release and publishes it; then it is Released. | En administrator medtager revisionen i en udgivelse og udgiver den; derefter er den Udgivet. |
+| `S1308dc` | help and messages | defective codes sent back | mangelfulde koder sendt tilbage |
+| `Se2bbd9` | help and messages | Drafts saved | Kladder gemt |
+| `S0ddfa5` | help and messages | Drafts signed off | Kladder godkendt |
+| `Sf90ab8` | help and messages | Drafts submitted for review | Kladder indsendt til gennemgang |
 | `Sd856bd` | help and messages | Not deleted (it has a revision again or is still referenced): %(x)s | Ikke slettet (den har igen en revision eller henvises der stadig til): %(x)s |
 | `S34b903` | help and messages | Not possible: the account has history (see above). Deactivate it instead; the person can no longer sign in and everything they did stays attributable. | Ikke muligt: kontoen har historik (se ovenfor). Deaktivér den i stedet; personen kan ikke længere logge ind, og alt, vedkommende har gjort, kan stadig henføres. |
+| `S6a26de` | help and messages | Sample %(id)s drawn: %(n)s of %(total)s codes to inspect. | Stikprøve %(id)s udtrukket: %(n)s af %(total)s koder skal kontrolleres. |
 | `Sce489f` | help and messages | The author gets any required cross-domain sign-offs, then submits the change request for review. | Forfatteren indhenter de nødvendige tværfaglige underskrifter og indsender derefter ændringsanmodningen til gennemgang. |
 | `S1cdbdd` | help and messages | The Chief Engineer approves or rejects. Approval makes the revision Approved (or Deprecated for a deprecation request). | Chefingeniøren godkender eller afviser. Godkendelsen gør revisionen Godkendt (eller Forældet ved en forældelsesanmodning). |
 | `S2d6ac0` | help and messages | The package is being built. Reload this page to follow its progress. | Pakken oprettes. Genindlæs siden for at følge fremdriften. |
@@ -20713,7 +21730,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sded18c` | language | approved by | godkendt af |
 | `Sedd46e` | language | Check against the interface | Sammenlign med grænsefladen |
 | `S5a013c` | language | missing | mangler |
-| `S2c924e` | language | Note | Note |
+| `S2c924e` | language, workbench | Note | Note |
 | `S2f09d0` | language | Note on %(x)s | Note til %(x)s |
 | `S75bf99` | language | proposed by | foreslået af |
 | `Sc68e32` | language | Save translations | Gem oversættelser |
@@ -20835,6 +21852,26 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se146d2` | message: auth_service | Your account is not active. | Din konto er ikke aktiv. |
 | `Sb584dd` | message: backup_service | Backups need a file-based SQLite database. | Sikkerhedskopier kræver en filbaseret SQLite-database. |
 | `S368c82` | message: backup_service | keep must be at least 1 | keep skal være mindst 1 |
+| `S18edaf` | message: bulk_service | A defect needs a note: say what is wrong. | En fejl kræver en note: skriv, hvad der er galt. |
+| `S68cada` | message: bulk_service, workbench | A defective Draft is corrected by its author. | En mangelfuld kladde rettes af sin forfatter. |
+| `S8941d5` | message: bulk_service | A domain sign-off needs the engineering domain. | En faglig godkendelse kræver fagområdet. |
+| `S071452` | message: bulk_service | A note has at most 1000 characters. | En note har højst 1000 tegn. |
+| `Sf74baa` | message: bulk_service, message: change_set_service | Change set not found | Ændringssæt ikke fundet |
+| `Sf89067` | message: bulk_service | Choose at least one value to set. | Vælg mindst én værdi, der skal sættes. |
+| `S1e3e33` | message: bulk_service | No change request of the set is waiting for you at this step. | Ingen ændringsanmodning i sættet venter på dig ved dette trin. |
+| `S95bd2d` | message: bulk_service | No Draft of the set is waiting for the sign-off of this domain. | Ingen kladde i sættet venter på dette fagområdes godkendelse. |
+| `S495371` | message: bulk_service | Only a sample with defects can be sent back. | Kun en stikprøve med fejl kan sendes tilbage. |
+| `Sa6e3b3` | message: bulk_service | Sample not found | Stikprøven blev ikke fundet |
+| `Sf745cc` | message: bulk_service | step must be domain, reviewer, admin or chief-engineer | step skal være domain, reviewer, admin eller chief-engineer |
+| `S973577` | message: bulk_service | That change request is not in the sample. | Den ændringsanmodning er ikke i stikprøven. |
+| `Sa1a149` | message: bulk_service | The batch changed since the sample was drawn; draw a new sample. | Partiet er ændret, siden stikprøven blev udtrukket; udtræk en ny stikprøve. |
+| `S8e5b1c` | message: bulk_service | The verdict must be OK or DEFECT. | Dommen skal være OK eller fejl. |
+| `Sddedd6` | message: bulk_service | This is not your sample: the person who decides inspects. | Det er ikke din stikprøve: den, der afgør, kontrollerer. |
+| `Sf56c6a` | message: bulk_service | This sample belongs to another change set or another step. | Denne stikprøve hører til et andet ændringssæt eller et andet trin. |
+| `S146a72` | message: bulk_service | This sample has been used for a decision already; draw a new one. | Denne stikprøve er allerede brugt til en afgørelse; udtræk en ny. |
+| `Sf0f02c` | message: bulk_service | This sample is closed. | Denne stikprøve er lukket. |
+| `Sf973bd` | message: bulk_service | This sample is older than 24 hours; draw a new one. | Denne stikprøve er ældre end 24 timer; udtræk en ny. |
+| `S062a13` | message: bulk_service | This sample was replaced by a newer one. | Denne stikprøve blev erstattet af en nyere. |
 | `Sca2391` | message: change_request_service | A comment must be between 1 and 4000 characters. | En kommentar skal være mellem 1 og 4000 tegn. |
 | `S33cd99` | message: change_request_service | At least one Turbine Platform is required before Submit for Review (FR-023a). | Mindst én turbineplatform er påkrævet, før den kan indsendes til gennemgang (FR-023a). |
 | `S1fd35e` | message: change_request_service | decision must be APPROVE or REJECT. | decision skal være APPROVE eller REJECT. |
@@ -20845,7 +21882,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sbd3a03` | message: change_request_service | reviewer_id must be an active user with the Reviewer role. | reviewer_id skal være en aktiv bruger med rollen Reviewer. |
 | `S043693` | message: change_request_service | The Reviewer has already signed off this CR. | Revieweren har allerede underskrevet denne ændringsanmodning. |
 | `S7a758c` | message: change_set_service | A change set needs a name of 1-120 characters. | Et ændringssæt skal have et navn på 1-120 tegn. |
-| `Sf74baa` | message: change_set_service | Change set not found | Ændringssæt ikke fundet |
 | `Sd8fad1` | message: change_set_service | Only a CR that is still open can join a change set. | Kun en stadig åben ændringsanmodning kan komme med i et ændringssæt. |
 | `S990d51` | message: change_set_service | Only the author of the CR or an Administrator may group it. | Kun ændringsanmodningens forfatter eller en administrator må gruppere den. |
 | `S69e4d1` | message: change_set_service | Only the author of the CR or an Administrator may ungroup it. | Kun ændringsanmodningens forfatter eller en administrator må fjerne den fra gruppen. |
@@ -20931,6 +21967,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sdb88ba` | message: saved_search_service | Saved search not found | Gemt søgning ikke fundet |
 | `S046aff` | message: saved_search_service | This saved search belongs to someone else. | Denne gemte søgning tilhører en anden. |
 | `Saad8e2` | message: settings_service | must be a whole number between 0 and 100 | skal være et helt tal mellem 0 og 100 |
+| `S9625d1` | message: settings_service | must be a whole number between 1 and 100 | skal være et helt tal mellem 1 og 100 |
 | `S6e4015` | message: settings_service | must be a whole number between 1 and 365 | skal være et helt tal mellem 1 og 365 |
 | `S9671fb` | message: settings_service | must be true or false | skal være true eller false |
 | `S5166bb` | message: st_import_service | A staged file changed after the preview. Upload again. | En klargjort fil er ændret efter forhåndsvisningen. Upload igen. |
@@ -21128,7 +22165,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S6daf16` | st_preview | Preview: status codes from .st files | Forhåndsvisning: statuskoder fra .st-filer |
 | `S15a21a` | st_preview | program(s) | program(mer) |
 | `Se58289` | st_preview | Programs found in the uploaded files | Programmer fundet i de uploadede filer |
-| `S75c053` | st_preview | ready | klar |
+| `S75c053` | st_preview, workbench | ready | klar |
 | `S0723bf` | st_preview | Select all programs that are ready | Vælg alle programmer, der er klar |
 | `S1a767a` | st_preview | updates the open Draft | opdaterer den åbne kladde |
 | `S02499f` | st_preview | withdrawn | trukket tilbage |
@@ -21227,10 +22264,44 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S8516a7` | withdrawn_codes | Delete selected | Slet valgte |
 | `Sdfeb06` | withdrawn_codes | No withdrawn codes. | Ingen tilbagetrukne koder. |
 | `S87ec0b` | withdrawn_codes | Withdrawn on | Trukket tilbage den |
+| `S48d260` | workbench | %(n)s of %(total)s codes drawn at %(when)s. | %(n)s af %(total)s koder udtrukket den %(when)s. |
+| `S88b55f` | workbench | Approve the batch | Godkend partiet |
+| `Sf40e77` | workbench | Available group | Tilgængelig gruppe |
+| `S99613c` | workbench | Blocked | Blokeret |
+| `Sca7133` | workbench | Choose the step you are about to decide, draw the sample, look at every sampled code and mark it. The sample is yours, valid for 24 hours and for this batch as it is now. | Vælg det trin, du er ved at afgøre, udtræk stikprøven, se på hver udtrukket kode og markér den. Stikprøven er din, gælder i 24 timer og for dette parti, som det er nu. |
+| `S6f4274` | workbench | Codes in this batch | Koder i dette parti |
+| `S117313` | workbench | Decide the batch | Afgør partiet |
+| `Se91aff` | workbench | Defect | Fejl |
+| `S16fbbf` | workbench | Domain sign-off | Faglig godkendelse |
+| `Scb1884` | workbench | Dossier (XLSX) | Dossier (XLSX) |
+| `S25085f` | workbench | Draw a sample | Udtræk en stikprøve |
+| `S9167a7` | workbench | Engineering domain | Fagområde |
+| `Sbc3c59` | workbench | Only the values you choose are changed, on the Drafts you wrote (an Administrator: any Draft). | Kun de valgte værdier ændres, på de kladder, du har skrevet (en administrator: enhver kladde). |
+| `S92223f` | workbench | Passed: no defect in the sample. Use sample number %(id)s below. | Bestået: ingen fejl i stikprøven. Brug stikprøvenummer %(id)s nedenfor. |
+| `S6275ab` | workbench | Ready to submit | Klar til indsendelse |
+| `Se1e74d` | workbench | Reject the batch | Afvis partiet |
+| `S58fabf` | workbench | Sample | Stikprøve |
+| `S862471` | workbench | Sample inspection | Stikprøvekontrol |
+| `S69cc53` | workbench | Save the verdicts | Gem dommene |
+| `S3ae55b` | workbench | Send the defective codes back | Send de mangelfulde koder tilbage |
+| `Se90e7c` | workbench | Set on the Drafts | Sæt på kladderne |
+| `Sa58dac` | workbench | Set values on the Drafts | Sæt værdier på kladderne |
+| `Sa443bb` | workbench | Sign off the Drafts | Godkend kladderne |
+| `S53f47f` | workbench | Sign-off pending | Godkendelse afventer |
+| `Sae12bc` | workbench | Status category | Statuskategori |
+| `Sdc416e` | workbench | Step | Trin |
+| `Sf7710d` | workbench | Submit for review | Indsend til gennemgang |
+| `Sa45adc` | workbench | Submit the Drafts | Indsend kladderne |
+| `S2d099f` | workbench | Submits the Drafts you wrote. A Draft that still lacks a platform or a domain sign-off is reported and left as it is. | Indsender de kladder, du har skrevet. En kladde, der stadig mangler en platform eller en faglig godkendelse, meldes og lades uændret. |
+| `S5baa27` | workbench | The sample has defects, so the batch cannot be decided as it is. Send the defective codes back (the note is the reason), then draw a new sample of what is left. | Stikprøven har fejl, så partiet kan ikke afgøres, som det er. Send de mangelfulde koder tilbage (noten er begrundelsen), og udtræk så en ny stikprøve af resten. |
+| `S19f8ab` | workbench | Tick the codes an action is for; with none ticked an action covers every code it applies to. | Sæt kryds ved de koder, en handling gælder for; uden kryds gælder en handling alle koder, den kan anvendes på. |
+| `S7f6e5a` | workbench | Verdict | Dom |
+| `Se6246f` | workbench | What stops it | Hvad der stopper den |
+| `Sbf45e2` | workbench | Work on many codes at once without weakening a step: every code still gets its own checks, its own audit entry and, for decisions, your password. A decision on more than %(above)s codes needs a sample inspection first: %(percent)s percent of the batch, at least %(minimum)s codes, spread over the subgroups. One defect in the sample stops the decision. | Arbejd på mange koder ad gangen uden at svække et trin: hver kode får stadig sine egne kontroller, sin egen auditpost og ved afgørelser din adgangskode. En afgørelse om mere end %(above)s koder kræver først en stikprøvekontrol: %(percent)s procent af partiet, mindst %(minimum)s koder, fordelt på undergrupperne. En fejl i stikprøven stopper afgørelsen. |
 
 ### 9.19 GE ქართული 🇬🇪 — Georgian
 
-1216 of 1217 strings translated; direction left to right.
+1279 of 1280 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -21430,7 +22501,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Scfa1b6` | detail | Add field comment | ველის კომენტარის დამატება |
 | `Sbb965e` | detail | Add one of your change requests | თქვენი ერთ-ერთი ცვლილების მოთხოვნის დამატება |
 | `S9a693b` | detail | Add to change set | ცვლილებების ნაკრებში დამატება |
-| `S7bbd6d` | detail | Administrator sign-off | ადმინისტრატორის ხელმოწერა |
+| `S7bbd6d` | detail, workbench | Administrator sign-off | ადმინისტრატორის ხელმოწერა |
 | `S212856` | detail | advanced, controller firmware programs | გაფართოებული, კონტროლერის ფირმვერის პროგრამები |
 | `Sfbde82` | detail | Affected component | დაზარალებული კომპონენტი |
 | `S25f8c5` | detail, export, form | Alarm | განგაში |
@@ -21459,17 +22530,17 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se7bab1` | detail | Chain of causes | მიზეზების ჯაჭვი |
 | `S9c8393` | detail, mine | Change Request | ცვლილების მოთხოვნა |
 | `S4572f4` | detail | Change request | ცვლილების მოთხოვნა |
-| `S3295be` | detail | Change requests in this set | ცვლილების მოთხოვნები ამ ნაკრებში |
+| `S3295be` | detail, workbench | Change requests in this set | ცვლილების მოთხოვნები ამ ნაკრებში |
 | `S4d8006` | detail | Change set | ცვლილებების ნაკრები |
 | `S8aa57d` | detail | Changes | ცვლილებები |
 | `S3d14ea` | detail, export | Changes of this release only | მხოლოდ ამ რელიზის ცვლილებები |
 | `Sbd95c0` | detail | Checklist confirmed at sign-off | საკონტროლო სია, დადასტურებული ხელმოწერისას |
 | `S074d62` | detail, role badge | Chief Engineer | მთავარი ინჟინერი |
-| `S03695d` | detail | Chief Engineer decision | მთავარი ინჟინრის გადაწყვეტილება |
+| `S03695d` | detail, workbench | Chief Engineer decision | მთავარი ინჟინრის გადაწყვეტილება |
 | `Sf0a89f` | detail | Close change set | ცვლილებების ნაკრების დახურვა |
 | `S7c0c39` | detail | Close this change set? | დაიხუროს ცვლილებების ეს ნაკრები? |
 | `S153d7a` | detail | Comment | კომენტარი |
-| `S611578` | detail | Comment (required for rejection) | კომენტარი (უარყოფისთვის სავალდებულოა) |
+| `S611578` | detail, workbench | Comment (required for rejection) | კომენტარი (უარყოფისთვის სავალდებულოა) |
 | `Sc38432` | detail | Comment on this field | ამ ველის კომენტირება |
 | `Sfce06e` | detail | Comments | კომენტარები |
 | `S8d105c` | detail, reconciliation | Compare | შედარება |
@@ -21495,7 +22566,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S0e8574` | detail | Customer | მომხმარებელი |
 | `Scb307e` | detail | Decide the selected requests in one sitting | მონიშნული მოთხოვნების გადაწყვეტა ერთ ჯერზე |
 | `S319493` | detail | Decided by | გადაწყვიტა |
-| `S7f59a1` | detail | Decision | გადაწყვეტილება |
+| `S7f59a1` | detail, workbench | Decision | გადაწყვეტილება |
 | `Sc51568` | detail | Decisions & Comments | გადაწყვეტილებები და კომენტარები |
 | `Sa9ec7c` | detail | Delete Permanently | სამუდამოდ წაშლა |
 | `S7d1c7a` | detail | Delete Release | რელიზის წაშლა |
@@ -21561,6 +22632,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S6d59f4` | detail | Manual Reset Program | ხელით გადატვირთვის პროგრამა |
 | `Sf9896c` | detail, form | Mark resolved | გადაწყვეტილად მონიშვნა |
 | `Sa7b93d` | detail, new, reconciliation | Mode | რეჟიმი |
+| `S9f4d01` | detail | More than a few codes need a sample inspection first; use the workbench. | რამდენიმე კოდზე მეტისთვის ჯერ საჭიროა ნიმუშის შემოწმება; გამოიყენეთ სამუშაო მაგიდა. |
 | `S31a335` | detail | new code | ახალი კოდი |
 | `S816c52` | detail, export_verify, form | No | არა |
 | `S06fc8d` | detail | No active Engineer holds the %(code)s domain yet. An Administrator must tag an Engineer with it (Administration → Users) before a sign-off can be requested. | არც ერთ აქტიურ ინჟინერს არ აქვს სფერო %(code)s. ადმინისტრატორმა ეს სფერო უნდა მიანიჭოს ინჟინერს (ადმინისტრირება → მომხმარებლები), სანამ ხელმოწერას მოითხოვთ. |
@@ -21591,7 +22663,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S9734ac` | detail | Other codes that refer to this one. Review them before deprecating it. | სხვა კოდები, რომლებიც ამას მიუთითებს. გადახედეთ მათ მოძველებამდე. |
 | `S780d35` | detail | Override identifier (migration / reservation only) | იდენტიფიკატორის გადაფარვა (მხოლოდ მიგრაცია / დაჯავშნა) |
 | `S89ff31` | detail | Owner | მფლობელი |
-| `S2d20ee` | detail | Package overview | პაკეტის მიმოხილვა |
+| `S2d20ee` | detail, workbench | Package overview | პაკეტის მიმოხილვა |
 | `S4d1a47` | detail | Package: all languages and access levels | პაკეტი: ყველა ენა და წვდომის დონე |
 | `Sc49bd0` | detail | Packages of this Release | ამ რელიზის პაკეტები |
 | `S96f608` | detail, review_queue | Pending | მოლოდინში |
@@ -21636,12 +22708,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S026ab2` | detail | resolved | გადაწყვეტილია |
 | `S68c61f` | detail | Rev # | რევ. № |
 | `Se4758b` | detail, review_checklist | Review checklist | განხილვის საკონტროლო სია |
-| `S7bfca8` | detail | Reviewer sign-off | მიმომხილველის ხელმოწერა |
+| `S7bfca8` | detail, workbench | Reviewer sign-off | მიმომხილველის ხელმოწერა |
 | `S3beb9a` | detail | Revision | რევიზია |
 | `Sa72973` | detail | Revision Fields | რევიზიის ველები |
 | `Sfc1d6a` | detail | row(s) imported as Drafts | სტრიქონი დრაფტებად შემოვიდა |
 | `S52d0b3` | detail, reconciliation, user_detail | Rows | სტრიქონები |
 | `Sd0edfb` | detail | Sales | გაყიდვები |
+| `S241bf5` | detail, workbench | Sample number | ნიმუშის ნომერი |
 | `Sda38c6` | detail | Save planned dates | დაგეგმილი თარიღების შენახვა |
 | `S13c61c` | detail | Scope Filter | ფარგლების ფილტრი |
 | `S859822` | detail, mine, withdrawn_codes | Select | არჩევა |
@@ -21703,11 +22776,12 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S7d5316` | detail | Who | ვინ |
 | `S47e564` | detail | Withdraw | გამოთხოვა |
 | `S51a998` | detail | Withdraw this change request? | გამოითხოვოს ეს ცვლილების მოთხოვნა? |
+| `S93ef7c` | detail, workbench | Workbench | სამუშაო მაგიდა |
 | `S95a2a4` | detail, form | Write level | ჩაწერის დონე |
 | `S612fe0` | detail | Yaw Bearing Lubrication Program | მოხვევის საკისრის შეზეთვის პროგრამა |
 | `S559a3f` | detail | Yaw Program | მოხვევის პროგრამა |
 | `S5397e0` | detail, export_verify, form | Yes | დიახ |
-| `Sc8e4b4` | detail | Your decision step | თქვენი გადაწყვეტილების ეტაპი |
+| `Sc8e4b4` | detail, workbench | Your decision step | თქვენი გადაწყვეტილების ეტაპი |
 | `S20cb4c` | detail, export_center | ZIP with manifest | ZIP მანიფესტით |
 | `S5d4358` | dry_run | All rows are clean. | ყველა სტრიქონი სუფთაა. |
 | `S03510d` | dry_run | Back to import | უკან იმპორტზე |
@@ -21734,7 +22808,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S7b8d80` | export | Not for distribution - unapproved data | არ არის გასავრცელებლად - დაუდასტურებელი მონაცემები |
 | `Sd9b345` | export | not yet published | ჯერ არ არის გამოქვეყნებული |
 | `Sa5d386` | export | Page %(page)s of %(total)s | გვერდი %(page)s / %(total)s |
-| `Sac1a42` | export | Platforms | პლატფორმები |
+| `Sac1a42` | export, workbench | Platforms | პლატფორმები |
 | `Se51c55` | export | Records | ჩანაწერები |
 | `Sd41f56` | export, export_center | Release | რელიზი |
 | `S2e8fd6` | export | Reset delay | გადატვირთვის დაყოვნება |
@@ -21786,7 +22860,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S45ea95` | export_verify | Manifest signature | მანიფესტის ხელმოწერა |
 | `S08f84b` | export_verify | No record of this exact file | ზუსტად ამ ფაილის ჩანაწერი არ არის |
 | `S357953` | export_verify | NOT OK | არ არის კარგი |
-| `S9ce3bd` | export_verify | OK | კარგი |
+| `S9ce3bd` | export_verify, workbench | OK | კარგი |
 | `S8a5285` | export_verify | Overall | საერთო |
 | `Sd2bc4a` | export_verify | Produced by this system | შექმნილია ამ სისტემის მიერ |
 | `S112d15` | export_verify | Verify an export | ექსპორტის შემოწმება |
@@ -21860,10 +22934,16 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S689b33` | help | The full manual is docs/23-user-manual.md in the project folder; the glossary below is the same one the tooltips use. | სრული სახელმძღვანელო არის docs/23-user-manual.md პროექტის საქაღალდეში; ქვემოთ მოცემული ლექსიკონი ისაა, რასაც მინიშნებები იყენებს. |
 | `S439914` | help | What happens next on a change request | რა ხდება შემდეგ ცვლილების მოთხოვნასთან |
 | `S6d29d9` | help and messages | %(n)s withdrawn code(s) deleted. | წაიშალა %(n)s გაუქმებული კოდი. |
+| `S285edc` | help and messages | %(ok)s of %(n)s: %(what)s. | %(ok)s / %(n)s: %(what)s. |
 | `Sb08e6c` | help and messages | A Reviewer and an Administrator each sign off (in any order). If either rejects, it goes back to the author. | მიმომხილველი და ადმინისტრატორი თითოეული ცალ-ცალკე აწერს ხელს (ნებისმიერი თანმიმდევრობით). თუ რომელიმე უარყოფს, ის ავტორს უბრუნდება. |
 | `S2f1bed` | help and messages | An Administrator includes the revision in a Release and publishes it; then it is Released. | ადმინისტრატორი რევიზიას რელიზში რთავს და აქვეყნებს; შემდეგ ის გამოშვებულია. |
+| `S1308dc` | help and messages | defective codes sent back | დეფექტური კოდები უკან დაბრუნდა |
+| `Se2bbd9` | help and messages | Drafts saved | დრაფტები შენახულია |
+| `S0ddfa5` | help and messages | Drafts signed off | დრაფტებს ხელი მოეწერა |
+| `Sf90ab8` | help and messages | Drafts submitted for review | დრაფტები განხილვაზე წარდგენილია |
 | `Sd856bd` | help and messages | Not deleted (it has a revision again or is still referenced): %(x)s | არ წაიშალა (მას ისევ აქვს რევიზია ან კვლავ მითითებულია): %(x)s |
 | `S34b903` | help and messages | Not possible: the account has history (see above). Deactivate it instead; the person can no longer sign in and everything they did stays attributable. | შეუძლებელია: ანგარიშს ისტორია აქვს (იხ. ზემოთ). გამორთეთ ის; პირი ვეღარ შევა და ყველაფერი, რაც გააკეთა, მიკუთვნებადი რჩება. |
+| `S6a26de` | help and messages | Sample %(id)s drawn: %(n)s of %(total)s codes to inspect. | ნიმუში %(id)s ამოღებულია: %(n)s / %(total)s კოდი შესამოწმებელია. |
 | `Sce489f` | help and messages | The author gets any required cross-domain sign-offs, then submits the change request for review. | ავტორი იღებს საჭირო ჯვარედინი სფეროების ხელმოწერებს, შემდეგ კი ცვლილების მოთხოვნას განხილვაზე წარადგენს. |
 | `S1cdbdd` | help and messages | The Chief Engineer approves or rejects. Approval makes the revision Approved (or Deprecated for a deprecation request). | მთავარი ინჟინერი ამტკიცებს ან უარყოფს. დამტკიცება რევიზიას დამტკიცებულად აქცევს (ან მოძველებულად მოძველების მოთხოვნისას). |
 | `S2d6ac0` | help and messages | The package is being built. Reload this page to follow its progress. | პაკეტი იქმნება. პროგრესის სანახავად გადატვირთეთ ეს გვერდი. |
@@ -21936,7 +23016,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sded18c` | language | approved by | დამტკიცებულია: |
 | `Sedd46e` | language | Check against the interface | ინტერფეისთან შედარება |
 | `S5a013c` | language | missing | აკლია |
-| `S2c924e` | language | Note | შენიშვნა |
+| `S2c924e` | language, workbench | Note | შენიშვნა |
 | `S2f09d0` | language | Note on %(x)s | შენიშვნა %(x)s-ზე |
 | `S75bf99` | language | proposed by | შემოთავაზებულია: |
 | `Sc68e32` | language | Save translations | თარგმანების შენახვა |
@@ -22058,6 +23138,26 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se146d2` | message: auth_service | Your account is not active. | თქვენი ანგარიში აქტიური არ არის. |
 | `Sb584dd` | message: backup_service | Backups need a file-based SQLite database. | სარეზერვო ასლებს ფაილზე დაფუძნებული SQLite მონაცემთა ბაზა სჭირდება. |
 | `S368c82` | message: backup_service | keep must be at least 1 | keep მინიმუმ 1 უნდა იყოს |
+| `S18edaf` | message: bulk_service | A defect needs a note: say what is wrong. | დეფექტს სჭირდება შენიშვნა: დაწერეთ, რა არის არასწორი. |
+| `S68cada` | message: bulk_service, workbench | A defective Draft is corrected by its author. | დეფექტურ დრაფტს ავტორი ასწორებს. |
+| `S8941d5` | message: bulk_service | A domain sign-off needs the engineering domain. | დომენის ხელმოწერას სჭირდება საინჟინრო დომენი. |
+| `S071452` | message: bulk_service | A note has at most 1000 characters. | შენიშვნა შეიძლება შეიცავდეს მაქსიმუმ 1000 სიმბოლოს. |
+| `Sf74baa` | message: bulk_service, message: change_set_service | Change set not found | ცვლილებების ნაკრები ვერ მოიძებნა |
+| `Sf89067` | message: bulk_service | Choose at least one value to set. | აირჩიეთ მინიმუმ ერთი მნიშვნელობა დასაყენებლად. |
+| `S1e3e33` | message: bulk_service | No change request of the set is waiting for you at this step. | ნაკრების არცერთი ცვლილების მოთხოვნა არ გელოდებათ ამ ეტაპზე. |
+| `S95bd2d` | message: bulk_service | No Draft of the set is waiting for the sign-off of this domain. | ნაკრების არცერთი დრაფტი არ ელოდება ამ დომენის ხელმოწერას. |
+| `S495371` | message: bulk_service | Only a sample with defects can be sent back. | უკან დაბრუნება შეიძლება მხოლოდ დეფექტებიანი ნიმუშისა. |
+| `Sa6e3b3` | message: bulk_service | Sample not found | ნიმუში ვერ მოიძებნა |
+| `Sf745cc` | message: bulk_service | step must be domain, reviewer, admin or chief-engineer | step უნდა იყოს domain, reviewer, admin ან chief-engineer |
+| `S973577` | message: bulk_service | That change request is not in the sample. | ეს ცვლილების მოთხოვნა ნიმუშში არ არის. |
+| `Sa1a149` | message: bulk_service | The batch changed since the sample was drawn; draw a new sample. | ნიმუშის ამოღების შემდეგ პარტია შეიცვალა; ამოიღეთ ახალი ნიმუში. |
+| `S8e5b1c` | message: bulk_service | The verdict must be OK or DEFECT. | განაჩენი უნდა იყოს OK ან დეფექტი. |
+| `Sddedd6` | message: bulk_service | This is not your sample: the person who decides inspects. | ეს თქვენი ნიმუში არ არის: ამოწმებს ის, ვინც წყვეტს. |
+| `Sf56c6a` | message: bulk_service | This sample belongs to another change set or another step. | ეს ნიმუში სხვა ცვლილებების ნაკრებს ან სხვა ეტაპს ეკუთვნის. |
+| `S146a72` | message: bulk_service | This sample has been used for a decision already; draw a new one. | ეს ნიმუში უკვე გამოყენებულია ერთი გადაწყვეტილებისთვის; ამოიღეთ ახალი. |
+| `Sf0f02c` | message: bulk_service | This sample is closed. | ეს ნიმუში დახურულია. |
+| `Sf973bd` | message: bulk_service | This sample is older than 24 hours; draw a new one. | ეს ნიმუში 24 საათზე ძველია; ამოიღეთ ახალი. |
+| `S062a13` | message: bulk_service | This sample was replaced by a newer one. | ეს ნიმუში ახალმა ჩაანაცვლა. |
 | `Sca2391` | message: change_request_service | A comment must be between 1 and 4000 characters. | კომენტარი უნდა იყოს 1-დან 4000 სიმბოლომდე. |
 | `S33cd99` | message: change_request_service | At least one Turbine Platform is required before Submit for Review (FR-023a). | განხილვაზე წარდგენამდე საჭიროა ტურბინის მინიმუმ ერთი პლატფორმა (FR-023a). |
 | `S1fd35e` | message: change_request_service | decision must be APPROVE or REJECT. | decision უნდა იყოს APPROVE ან REJECT. |
@@ -22068,7 +23168,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sbd3a03` | message: change_request_service | reviewer_id must be an active user with the Reviewer role. | reviewer_id უნდა იყოს აქტიური მომხმარებელი მიმომხილველის როლით. |
 | `S043693` | message: change_request_service | The Reviewer has already signed off this CR. | მიმომხილველმა ამ ცვლილების მოთხოვნას უკვე მოაწერა ხელი. |
 | `S7a758c` | message: change_set_service | A change set needs a name of 1-120 characters. | ცვლილებების ნაკრებს სჭირდება 1-120 სიმბოლოიანი სახელი. |
-| `Sf74baa` | message: change_set_service | Change set not found | ცვლილებების ნაკრები ვერ მოიძებნა |
 | `Sd8fad1` | message: change_set_service | Only a CR that is still open can join a change set. | ცვლილებების ნაკრებს მხოლოდ კვლავ ღია ცვლილების მოთხოვნა შეუერთდება. |
 | `S990d51` | message: change_set_service | Only the author of the CR or an Administrator may group it. | ცვლილების მოთხოვნის დაჯგუფება მხოლოდ მის ავტორს ან ადმინისტრატორს შეუძლია. |
 | `S69e4d1` | message: change_set_service | Only the author of the CR or an Administrator may ungroup it. | ცვლილების მოთხოვნის დაჯგუფების გაუქმება მხოლოდ მის ავტორს ან ადმინისტრატორს შეუძლია. |
@@ -22154,6 +23253,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sdb88ba` | message: saved_search_service | Saved search not found | შენახული ძიება ვერ მოიძებნა |
 | `S046aff` | message: saved_search_service | This saved search belongs to someone else. | ეს შენახული ძიება სხვას ეკუთვნის. |
 | `Saad8e2` | message: settings_service | must be a whole number between 0 and 100 | უნდა იყოს მთელი რიცხვი 0-სა და 100-ს შორის |
+| `S9625d1` | message: settings_service | must be a whole number between 1 and 100 | უნდა იყოს მთელი რიცხვი 1-დან 100-მდე |
 | `S6e4015` | message: settings_service | must be a whole number between 1 and 365 | უნდა იყოს მთელი რიცხვი 1-სა და 365-ს შორის |
 | `S9671fb` | message: settings_service | must be true or false | უნდა იყოს true ან false |
 | `S5166bb` | message: st_import_service | A staged file changed after the preview. Upload again. | მომზადებული ფაილი წინასწარი ნახვის შემდეგ შეიცვალა. ატვირთეთ ხელახლა. |
@@ -22351,7 +23451,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S6daf16` | st_preview | Preview: status codes from .st files | წინასწარი ნახვა: სტატუსის კოდები .st ფაილებიდან |
 | `S15a21a` | st_preview | program(s) | პროგრამა |
 | `Se58289` | st_preview | Programs found in the uploaded files | ატვირთულ ფაილებში ნაპოვნი პროგრამები |
-| `S75c053` | st_preview | ready | მზადაა |
+| `S75c053` | st_preview, workbench | ready | მზადაა |
 | `S0723bf` | st_preview | Select all programs that are ready | ყველა მზა პროგრამის მონიშვნა |
 | `S1a767a` | st_preview | updates the open Draft | ანახლებს ღია დრაფტს |
 | `S02499f` | st_preview | withdrawn | გამოთხოვილი |
@@ -22450,6 +23550,40 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S8516a7` | withdrawn_codes | Delete selected | არჩეულის წაშლა |
 | `Sdfeb06` | withdrawn_codes | No withdrawn codes. | გაუქმებული კოდები არ არის. |
 | `S87ec0b` | withdrawn_codes | Withdrawn on | გაუქმების თარიღი |
+| `S48d260` | workbench | %(n)s of %(total)s codes drawn at %(when)s. | %(n)s / %(total)s კოდი ამოღებულია %(when)s-ზე. |
+| `S88b55f` | workbench | Approve the batch | პარტიის დამტკიცება |
+| `Sf40e77` | workbench | Available group | ხელმისაწვდომი ჯგუფი |
+| `S99613c` | workbench | Blocked | დაბლოკილია |
+| `Sca7133` | workbench | Choose the step you are about to decide, draw the sample, look at every sampled code and mark it. The sample is yours, valid for 24 hours and for this batch as it is now. | აირჩიეთ ეტაპი, რომელზეც გადაწყვეტთ, ამოიღეთ ნიმუში, დაათვალიერეთ ყოველი ამოღებული კოდი და მონიშნეთ. ნიმუში თქვენია, მოქმედებს 24 საათი და ამ პარტიისთვის ისე, როგორიც ახლაა. |
+| `S6f4274` | workbench | Codes in this batch | ამ პარტიის კოდები |
+| `S117313` | workbench | Decide the batch | პარტიაზე გადაწყვეტილება |
+| `Se91aff` | workbench | Defect | დეფექტი |
+| `S16fbbf` | workbench | Domain sign-off | დომენის ხელმოწერა |
+| `Scb1884` | workbench | Dossier (XLSX) | დოსიე (XLSX) |
+| `S25085f` | workbench | Draw a sample | ნიმუშის ამოღება |
+| `S9167a7` | workbench | Engineering domain | საინჟინრო დომენი |
+| `Sbc3c59` | workbench | Only the values you choose are changed, on the Drafts you wrote (an Administrator: any Draft). | იცვლება მხოლოდ თქვენ მიერ არჩეული მნიშვნელობები, თქვენ დაწერილ დრაფტებზე (ადმინისტრატორი: ნებისმიერ დრაფტზე). |
+| `S92223f` | workbench | Passed: no defect in the sample. Use sample number %(id)s below. | გავიდა: ნიმუშში დეფექტი არ არის. ქვემოთ გამოიყენეთ ნიმუშის ნომერი %(id)s. |
+| `S6275ab` | workbench | Ready to submit | მზადაა წარსადგენად |
+| `Se1e74d` | workbench | Reject the batch | პარტიის უარყოფა |
+| `S58fabf` | workbench | Sample | ნიმუში |
+| `S862471` | workbench | Sample inspection | ნიმუშის შემოწმება |
+| `S69cc53` | workbench | Save the verdicts | განაჩენების შენახვა |
+| `S3ae55b` | workbench | Send the defective codes back | დეფექტური კოდების უკან დაბრუნება |
+| `Se90e7c` | workbench | Set on the Drafts | დრაფტებზე დაყენება |
+| `Sa58dac` | workbench | Set values on the Drafts | დრაფტებზე მნიშვნელობების დაყენება |
+| `Sa443bb` | workbench | Sign off the Drafts | დრაფტების ხელმოწერა |
+| `S53f47f` | workbench | Sign-off pending | ხელმოწერა მოლოდინშია |
+| `Sae12bc` | workbench | Status category | სტატუსის კატეგორია |
+| `Sdc416e` | workbench | Step | ეტაპი |
+| `Sf7710d` | workbench | Submit for review | განხილვაზე წარდგენა |
+| `Sa45adc` | workbench | Submit the Drafts | დრაფტების წარდგენა |
+| `S2d099f` | workbench | Submits the Drafts you wrote. A Draft that still lacks a platform or a domain sign-off is reported and left as it is. | წარადგენს თქვენ დაწერილ დრაფტებს. დრაფტი, რომელსაც ჯერ არ აქვს პლატფორმა ან დომენის ხელმოწერა, იგი მოხსენდება და უცვლელი რჩება. |
+| `S5baa27` | workbench | The sample has defects, so the batch cannot be decided as it is. Send the defective codes back (the note is the reason), then draw a new sample of what is left. | ნიმუშში დეფექტებია, ამიტომ პარტიაზე ასე გადაწყვეტილების მიღება შეუძლებელია. დააბრუნეთ დეფექტური კოდები (შენიშვნა არის მიზეზი), შემდეგ ამოიღეთ ახალი ნიმუში დარჩენილიდან. |
+| `S19f8ab` | workbench | Tick the codes an action is for; with none ticked an action covers every code it applies to. | მონიშნეთ კოდები, რომლებზეც მოქმედება ვრცელდება; მონიშვნის გარეშე მოქმედება ეხება ყველა კოდს, რომელზეც შეიძლება გავრცელდეს. |
+| `S7f6e5a` | workbench | Verdict | განაჩენი |
+| `Se6246f` | workbench | What stops it | რა აჩერებს მას |
+| `Sbf45e2` | workbench | Work on many codes at once without weakening a step: every code still gets its own checks, its own audit entry and, for decisions, your password. A decision on more than %(above)s codes needs a sample inspection first: %(percent)s percent of the batch, at least %(minimum)s codes, spread over the subgroups. One defect in the sample stops the decision. | იმუშავეთ ბევრ კოდზე ერთდროულად, ეტაპის შესუსტების გარეშე: ყოველ კოდს აქვს საკუთარი შემოწმებები, საკუთარი აუდიტის ჩანაწერი და გადაწყვეტილებებისთვის თქვენი პაროლი. %(above)s-ზე მეტ კოდზე გადაწყვეტილებას ჯერ სჭირდება ნიმუშის შემოწმება: პარტიის %(percent)s პროცენტი, მინიმუმ %(minimum)s კოდი, განაწილებული ქვეჯგუფებზე. ნიმუშში ერთი დეფექტი აჩერებს გადაწყვეტილებას. |
 
 ### 9.20 Strings with the screens that show them
 
@@ -22458,8 +23592,10 @@ Every string of the interface with the templates that use it. A native speaker a
 | Id | English | Screens | Languages |
 |---|---|---|---|
 | `Sc3dc5c` | %(count)s codes have no confirmed access levels and are missing from every access-level file. | detail | 18 of 18 |
+| `S48d260` | %(n)s of %(total)s codes drawn at %(when)s. | workbench | 18 of 18 |
 | `S2cbacd` | %(n)s total | audit_log | 18 of 18 |
 | `S6d29d9` | %(n)s withdrawn code(s) deleted. | help and messages | 18 of 18 |
+| `S285edc` | %(ok)s of %(n)s: %(what)s. | help and messages | 18 of 18 |
 | `S1a4626` | ...or just the expected number of rows | reconciliation | 18 of 18 |
 | `Seba07b` | A change set groups the change requests that ship with one controller software release, so reviewers see the whole package. Each request is still decided on its own. | list | 18 of 18 |
 | `S7a758c` | A change set needs a name of 1-120 characters. | message: change_set_service | 18 of 18 |
@@ -22468,7 +23604,11 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S3f50cd` | A code that is raised again and again is replaced by its repeat code. Repeat codes outside the catalogue are marked external. | connections | 18 of 18 |
 | `Scfb147` | A code whose change request was withdrawn stays as an empty shell: it keeps its number, legacy number and PrgIdx_GUi, so the same program or row cannot be imported again. Delete it here to free them. Deleting is final and is written to the audit log. | withdrawn_codes | 18 of 18 |
 | `Sca2391` | A comment must be between 1 and 4000 characters. | message: change_request_service | 18 of 18 |
+| `S18edaf` | A defect needs a note: say what is wrong. | message: bulk_service | 18 of 18 |
+| `S68cada` | A defective Draft is corrected by its author. | message: bulk_service, workbench | 18 of 18 |
+| `S8941d5` | A domain sign-off needs the engineering domain. | message: bulk_service | 18 of 18 |
 | `S42cee2` | A field comment must be between 1 and 2000 characters. | message: field_review_service | 18 of 18 |
+| `S071452` | A note has at most 1000 characters. | message: bulk_service | 18 of 18 |
 | `Sa21b4c` | A note has at most 500 characters. | message: terminology_service | 18 of 18 |
 | `Sba3640` | A number with a unit: ms, s, min, h, or d (e.g. "10ms", "2min"). | form | 18 of 18 |
 | `Sbdcc6f` | A profile fixes the columns, their order and header labels, and optionally a default audience and language. Profiles are data: change them here, no deployment needed. | export_profiles | 18 of 18 |
@@ -22510,7 +23650,7 @@ Every string of the interface with the templates that use it. A native speaker a
 | `Sb8be3d` | Administration | menu | 18 of 18 |
 | `S1eda23` | Administrator | approval_queue, detail, review_queue, role badge | 18 of 18 |
 | `S3b803b` | Administrator only | users | 18 of 18 |
-| `S7bbd6d` | Administrator sign-off | detail | 18 of 18 |
+| `S7bbd6d` | Administrator sign-off | detail, workbench | 18 of 18 |
 | `S212856` | advanced, controller firmware programs | detail | 18 of 18 |
 | `Sfbde82` | Affected component | detail | 18 of 18 |
 | `Sf094b9` | Affected component (optional) | form | 18 of 18 |
@@ -22555,6 +23695,7 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S4d93b4` | Approve all drafts of others | language | 18 of 18 |
 | `Sbd6fb2` | Approve every draft of this language that you did not propose yourself? | language | 18 of 18 |
 | `Sde38bf` | Approve selected | detail | 18 of 18 |
+| `S88b55f` | Approve the batch | workbench | 18 of 18 |
 | `Sa0452c` | Approve translation | translations | 18 of 18 |
 | `S41b81e` | Approved | index | 18 of 18 |
 | `Sc9560d` | approved | language | 18 of 18 |
@@ -22583,6 +23724,7 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S49412e` | Availability Calculation | status code fields | 18 of 18 |
 | `S94ea8c` | Available fields | export_profiles | 18 of 18 |
 | `Sd71897` | Available Group | detail, form | 18 of 18 |
+| `Sf40e77` | Available group | workbench | 18 of 18 |
 | `S66dc40` | Awaiting Administrator Sign-Off | dashboard | 18 of 18 |
 | `S33a0d3` | Awaiting Chief Engineer Approval | dashboard | 18 of 18 |
 | `S04cc8e` | Awaiting Cross-Domain Sign-Off | dashboard | 18 of 18 |
@@ -22599,6 +23741,7 @@ Every string of the interface with the templates that use it. A native speaker a
 | `Sdd5bd0` | before: | audit_log | 18 of 18 |
 | `Sa295e0` | beta | base | 18 of 18 |
 | `S7665e9` | Bit string of the generated program, e.g. 111011 (20 bits on the Main Controller, 6 on the Hub Controller). | form | 18 of 18 |
+| `S99613c` | Blocked | workbench | 18 of 18 |
 | `Sdf88b8` | blocked | st_preview | 18 of 18 |
 | `Sd9234b` | BR-005: a translation must be approved by someone else. | message: translation_service | 18 of 18 |
 | `S928e2e` | Brake Program | detail | 18 of 18 |
@@ -22626,11 +23769,11 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S9c8393` | Change Request | detail, mine | 18 of 18 |
 | `S4572f4` | Change request | detail | 18 of 18 |
 | `Sd9f9e4` | Change request not found | message: attachment_service, message: change_set_service | 18 of 18 |
-| `S3295be` | Change requests in this set | detail | 18 of 18 |
+| `S3295be` | Change requests in this set | detail, workbench | 18 of 18 |
 | `S003e61` | Change requests waiting for approval | approval_queue | 18 of 18 |
 | `S2ef718` | Change requests waiting for review | review_queue | 18 of 18 |
 | `S4d8006` | Change set | detail | 18 of 18 |
-| `Sf74baa` | Change set not found | message: change_set_service | 18 of 18 |
+| `Sf74baa` | Change set not found | message: bulk_service, message: change_set_service | 18 of 18 |
 | `S162a45` | Change Sets | list, menu | 18 of 18 |
 | `S9e895f` | Change sets | list | 18 of 18 |
 | `Sfd77f5` | Change thresholds | stalled | 18 of 18 |
@@ -22649,11 +23792,13 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S6dc3f5` | Checklist text must be between 3 and 300 characters. | message: field_review_service | 18 of 18 |
 | `S33dbd7` | checklist_confirmed must be a list of checklist item ids. | message: field_review_service | 18 of 18 |
 | `S074d62` | Chief Engineer | detail, role badge | 18 of 18 |
-| `S03695d` | Chief Engineer decision | detail | 18 of 18 |
+| `S03695d` | Chief Engineer decision | detail, workbench | 18 of 18 |
 | `S1ae983` | Choose a category. | message: terminology_service | 18 of 18 |
 | `S08fb99` | Choose an active user. | message: translation_review_service | 18 of 18 |
 | `Sbdd594` | Choose at least one access level or the unfiltered files. | message: package_service | 18 of 18 |
 | `S4af5c1` | Choose at least one format. | message: package_service | 18 of 18 |
+| `Sf89067` | Choose at least one value to set. | message: bulk_service | 18 of 18 |
+| `Sca7133` | Choose the step you are about to decide, draw the sample, look at every sampled code and mark it. The sample is yours, valid for 24 hours and for this batch as it is now. | workbench | 18 of 18 |
 | `S94c2a3` | Classification | form | 18 of 18 |
 | `S7c9afd` | Classification only — a Sandbox code's identifier is still drawn from the isolated StCd-T##### band, never from this group's numeric range. | form | 18 of 18 |
 | `Sf0a89f` | Close change set | detail | 18 of 18 |
@@ -22664,6 +23809,7 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S48dd6b` | code, label, range_start, and range_end are required | message: lookup_admin_service | 18 of 18 |
 | `S199993` | Codes | catalogue_health, connections, fleet_feedback | 18 of 18 |
 | `S37d298` | codes apply to | software_versions | 18 of 18 |
+| `S6f4274` | Codes in this batch | workbench | 18 of 18 |
 | `Se54fe8` | Codes with a connection | connections | 18 of 18 |
 | `Sc1d0d9` | Codes without an active owner | success_metrics | 18 of 18 |
 | `Scc6146` | Colour = level, red is the highest. As StCd Owner you may move a user between Viewer, Engineer and Reviewer; creating users and every other role needs an Administrator. | users | 18 of 18 |
@@ -22671,7 +23817,7 @@ Every string of the interface with the templates that use it. A native speaker a
 | `Scf723c` | Columns | list | 18 of 18 |
 | `Sf27073` | Columns (one per line: field \| header label) | export_profiles | 18 of 18 |
 | `S153d7a` | Comment | detail | 18 of 18 |
-| `S611578` | Comment (required for rejection) | detail | 18 of 18 |
+| `S611578` | Comment (required for rejection) | detail, workbench | 18 of 18 |
 | `Sfa63c7` | Comment for %(x)s | review | 18 of 18 |
 | `S3d8204` | Comment not found | message: field_review_service | 18 of 18 |
 | `Sc38432` | Comment on this field | detail | 18 of 18 |
@@ -22733,14 +23879,17 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S5548ae` | days | catalogue_health | 18 of 18 |
 | `Sd65ded` | Deactivate | review_checklist | 18 of 18 |
 | `Sa26b9b` | Decide | approval_queue | 18 of 18 |
+| `S117313` | Decide the batch | workbench | 18 of 18 |
 | `Scb307e` | Decide the selected requests in one sitting | detail | 18 of 18 |
 | `S319493` | Decided by | detail | 18 of 18 |
-| `S7f59a1` | Decision | detail | 18 of 18 |
+| `S7f59a1` | Decision | detail, workbench | 18 of 18 |
 | `S1fd35e` | decision must be APPROVE or REJECT. | message: change_request_service | 18 of 18 |
 | `Sc51568` | Decisions & Comments | detail | 18 of 18 |
 | `S7505d6` | default | export, settings | 18 of 18 |
 | `Sa8ec52` | Default audience | export_profiles | 18 of 18 |
 | `Sa30251` | default_category must be ERROR, WARNING or INFO | message: st_import_service | 18 of 18 |
+| `Se91aff` | Defect | workbench | 18 of 18 |
+| `S1308dc` | defective codes sent back | help and messages | 18 of 18 |
 | `S710ea3` | Delegation | delegations, menu | 18 of 18 |
 | `Sc25e7c` | Delegation and out-of-office cover | delegations | 18 of 18 |
 | `S0c681f` | Delegation not found | message: delegation_service | 18 of 18 |
@@ -22768,14 +23917,20 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S441564` | differs in | st_preview | 18 of 18 |
 | `S552a2b` | Documented reason | detail | 18 of 18 |
 | `S9b1091` | Domain | detail, mine | 18 of 18 |
+| `S16fbbf` | Domain sign-off | workbench | 18 of 18 |
 | `S102b4d` | Domain sign-off can only be requested while the CR is in Draft. | message: domain_signoff_service | 18 of 18 |
 | `Sa0d641` | Domains | users | 18 of 18 |
+| `Scb1884` | Dossier (XLSX) | workbench | 18 of 18 |
 | `Sa479c9` | Download | detail | 18 of 18 |
 | `S056839` | Download Error Report | detail | 18 of 18 |
 | `S9468a1` | Download Full Database Backup | export_center | 18 of 18 |
 | `S0e7766` | draft | hub_consolidation, language | 18 of 18 |
 | `S23d33e` | Draft | detail, index | 18 of 18 |
 | `S250750` | Draft CRs of mine blocked on a domain sign-off | dashboard | 18 of 18 |
+| `Se2bbd9` | Drafts saved | help and messages | 18 of 18 |
+| `S0ddfa5` | Drafts signed off | help and messages | 18 of 18 |
+| `Sf90ab8` | Drafts submitted for review | help and messages | 18 of 18 |
+| `S25085f` | Draw a sample | workbench | 18 of 18 |
 | `S0d01e2` | E-mail | account_settings, user_detail | 18 of 18 |
 | `S7cc58e` | e.g. REVIEWER_SIGNOFF | audit_log | 18 of 18 |
 | `Sad7745` | Each column must be an object with 'field' and 'label'. | message: export_profile_service | 18 of 18 |
@@ -22788,6 +23943,7 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S19582d` | Effective dates | catalogue_health | 18 of 18 |
 | `S84add5` | Email | users | 18 of 18 |
 | `S05fc94` | Engineer | role badge | 18 of 18 |
+| `S9167a7` | Engineering domain | workbench | 18 of 18 |
 | `S441e73` | Engineering domains | user_detail | 18 of 18 |
 | `S08eacf` | Engineering Domains | user_detail, users | 18 of 18 |
 | `S649df0` | English | index | 18 of 18 |
@@ -23023,8 +24179,10 @@ Every string of the interface with the templates that use it. A native speaker a
 | `Se78fe7` | mode | dry_run | 18 of 18 |
 | `S646d5e` | mode must be CREATE or UPDATE | message: import_service | 18 of 18 |
 | `S8d22fe` | More than 5000 rows. | message: translation_review_service | 18 of 18 |
+| `S9f4d01` | More than a few codes need a sample inspection first; use the workbench. | detail | 18 of 18 |
 | `S3da032` | Most frequent | fleet_feedback | 18 of 18 |
 | `Saad8e2` | must be a whole number between 0 and 100 | message: settings_service | 18 of 18 |
+| `S9625d1` | must be a whole number between 1 and 100 | message: settings_service | 18 of 18 |
 | `S6e4015` | must be a whole number between 1 and 365 | message: settings_service | 18 of 18 |
 | `S9671fb` | must be true or false | message: settings_service | 18 of 18 |
 | `S617eec` | My Change Requests | menu, mine | 18 of 18 |
@@ -23058,6 +24216,7 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S12b701` | No Approved candidates match this Release's scope. | builder | 18 of 18 |
 | `Sa62a99` | No backup directory is configured (BACKUP_DIR). Schedule `flask backup-db` as described in the deployment guide. | operations | 18 of 18 |
 | `S02bd56` | No candidates (or no data imported yet). | fleet_feedback | 18 of 18 |
+| `S1e3e33` | No change request of the set is waiting for you at this step. | message: bulk_service | 18 of 18 |
 | `S362336` | No change requests in this set yet. | detail | 18 of 18 |
 | `Se5076c` | No change sets yet. | list | 18 of 18 |
 | `S1c1f74` | No checklist items configured. | review_checklist | 18 of 18 |
@@ -23068,6 +24227,7 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S30d2d7` | No delegations. | delegations | 18 of 18 |
 | `S64463a` | No DEPRECATE audit entry found; cannot verify retention period. | message: status_code_service | 18 of 18 |
 | `S7cb594` | No deprecation/archival/deletion actions are available for this record's current state. | detail | 18 of 18 |
+| `S95bd2d` | No Draft of the set is waiting for the sign-off of this domain. | message: bulk_service | 18 of 18 |
 | `Sf502f2` | No evidence attached. | detail | 18 of 18 |
 | `Sec1732` | No field comments. | detail | 18 of 18 |
 | `S27cea7` | No field differences. | _macros | 18 of 18 |
@@ -23111,7 +24271,7 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S4467d4` | Not yet published | detail | 18 of 18 |
 | `Sd9b345` | not yet published | export | 18 of 18 |
 | `S23402a` | Not yet submitted. | detail | 18 of 18 |
-| `S2c924e` | Note | language | 18 of 18 |
+| `S2c924e` | Note | language, workbench | 18 of 18 |
 | `S2f09d0` | Note on %(x)s | language | 18 of 18 |
 | `Sb23ab5` | Nothing is awaiting Review sign-off. | review_queue | 18 of 18 |
 | `S8e70d2` | Nothing is awaiting your approval. | approval_queue | 18 of 18 |
@@ -23135,7 +24295,7 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S19f611` | Offline lookup (HTML) | detail | 18 of 18 |
 | `S2ff2ae` | Offline lookup + manifest (ZIP) | detail | 18 of 18 |
 | `S7a85f4` | ok | catalogue_health, operations | 18 of 18 |
-| `S9ce3bd` | OK | export_verify | 18 of 18 |
+| `S9ce3bd` | OK | export_verify, workbench | 18 of 18 |
 | `S464e43` | on track | _macros | 18 of 18 |
 | `S3f0e3e` | One ZIP with the complete baseline in every language and for every access level, plus the release notes and a manifest with a SHA-256 for each file. Building it takes a few minutes; the page shows the progress. | detail | 18 of 18 |
 | `S80bce3` | Only .csv and .xlsx files are accepted. | message: import_service, message: occurrence_service | 18 of 18 |
@@ -23146,6 +24306,7 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S6d188a` | Only a proposed change can be accepted. | message: translation_review_service | 18 of 18 |
 | `S8865f4` | Only a published Release can be packaged. | message: package_service | 18 of 18 |
 | `Sd84ed6` | Only a Released Status Code can be deprecated. | message: status_code_service | 18 of 18 |
+| `S495371` | Only a sample with defects can be sent back. | message: bulk_service | 18 of 18 |
 | `Sd7df4c` | Only an Administrator or an StCd Owner may do this. | message: translation_review_service | 18 of 18 |
 | `S0c55eb` | Only an Approved or Released Hub Controller code can be carried over. | message: hub_consolidation_service | 18 of 18 |
 | `S14dd84` | Only an Approved, Released or Deprecated code can be copied as a platform variant. | message: status_code_service | 18 of 18 |
@@ -23162,6 +24323,7 @@ Every string of the interface with the templates that use it. A native speaker a
 | `Sdfaf0a` | Only the delegator or an Administrator may revoke a delegation. | message: delegation_service | 18 of 18 |
 | `S2ca27e` | Only the originating Engineer may request a domain sign-off. | message: domain_signoff_service | 18 of 18 |
 | `S6b9417` | Only the uploader or an Administrator may remove evidence. | message: attachment_service | 18 of 18 |
+| `Sbc3c59` | Only the values you choose are changed, on the Drafts you wrote (an Administrator: any Draft). | workbench | 18 of 18 |
 | `S12aa03` | only translated codes | detail | 18 of 18 |
 | `S5fc7e3` | open | detail | 18 of 18 |
 | `Scf9b77` | Open | index, notifications | 18 of 18 |
@@ -23188,12 +24350,13 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S6166d2` | Override not found | message: translation_review_service | 18 of 18 |
 | `S89ff31` | Owner | detail | 18 of 18 |
 | `S9b6676` | Package not found | message: package_service | 18 of 18 |
-| `S2d20ee` | Package overview | detail | 18 of 18 |
+| `S2d20ee` | Package overview | detail, workbench | 18 of 18 |
 | `S4d1a47` | Package: all languages and access levels | detail | 18 of 18 |
 | `Sc49bd0` | Packages of this Release | detail | 18 of 18 |
 | `Sa5d386` | Page %(page)s of %(total)s | export | 18 of 18 |
 | `S600584` | Pages | _macros | 18 of 18 |
 | `Sfa38ca` | Part of a loop of suppressions: each code is suppressed by another one of the loop. | connections | 18 of 18 |
+| `S92223f` | Passed: no defect in the sample. Use sample number %(id)s below. | workbench | 18 of 18 |
 | `S8be3c9` | Password | login, users | 18 of 18 |
 | `S781961` | Pause | integrations | 18 of 18 |
 | `S8af321` | PDF orientation | export_profiles | 18 of 18 |
@@ -23219,7 +24382,7 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S123a7f` | Platform | detail | 18 of 18 |
 | `Sfc8d58` | Platform variant | detail | 18 of 18 |
 | `Scd8926` | Platform variants | detail | 18 of 18 |
-| `Sac1a42` | Platforms | export | 18 of 18 |
+| `Sac1a42` | Platforms | export, workbench | 18 of 18 |
 | `S810099` | Please check | _macros | 18 of 18 |
 | `S057b01` | Please re-enter your password to confirm this action (I-17). | message: auth_service | 18 of 18 |
 | `S25c604` | portrait | export_profiles | 18 of 18 |
@@ -23260,7 +24423,8 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S67640d` | Read files and preview | st_new | 18 of 18 |
 | `S2b85e8` | Read from the set condition and the repeat code of the imported program. A text reading, not an interpretation of the controller logic. | detail | 18 of 18 |
 | `S6a9c56` | Read level | detail, form | 18 of 18 |
-| `S75c053` | ready | st_preview | 18 of 18 |
+| `S75c053` | ready | st_preview, workbench | 18 of 18 |
+| `S6275ab` | Ready to submit | workbench | 18 of 18 |
 | `S55843f` | Reassign | stalled | 18 of 18 |
 | `Sca5d2f` | Recent import jobs | reconciliation | 18 of 18 |
 | `Sf5ca9d` | Recorded exports | detail | 18 of 18 |
@@ -23271,6 +24435,7 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S3238ca` | Reinstatement reason | detail | 18 of 18 |
 | `S2b03b5` | Reject | detail | 18 of 18 |
 | `S27fb5c` | Reject selected | detail | 18 of 18 |
+| `Se1e74d` | Reject the batch | workbench | 18 of 18 |
 | `S685e8f` | Rejection requires a comment. | message: change_request_service | 18 of 18 |
 | `S045c2c` | Related codes | detail | 18 of 18 |
 | `S9e0128` | Related codes (optional) | form | 18 of 18 |
@@ -23326,7 +24491,7 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S437a0d` | Review Queue | menu, review_queue | 18 of 18 |
 | `Sa74f16` | Reviewer | approval_queue, detail, review_queue, role badge | 18 of 18 |
 | `S4b9d6e` | Reviewer comment | form | 18 of 18 |
-| `S7bfca8` | Reviewer sign-off | detail | 18 of 18 |
+| `S7bfca8` | Reviewer sign-off | detail, workbench | 18 of 18 |
 | `S0bc91e` | Reviewer workload | stalled | 18 of 18 |
 | `Sbd3a03` | reviewer_id must be an active user with the Reviewer role. | message: change_request_service | 18 of 18 |
 | `Sc0d28c` | Reviewers who are out of office (they have delegated) are left out. | stalled | 18 of 18 |
@@ -23346,6 +24511,11 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S52d0b3` | Rows | detail, reconciliation, user_detail | 18 of 18 |
 | `S6c30d2` | rows | dry_run | 18 of 18 |
 | `Sd0edfb` | Sales | detail | 18 of 18 |
+| `S58fabf` | Sample | workbench | 18 of 18 |
+| `S6a26de` | Sample %(id)s drawn: %(n)s of %(total)s codes to inspect. | help and messages | 18 of 18 |
+| `S862471` | Sample inspection | workbench | 18 of 18 |
+| `Sa6e3b3` | Sample not found | message: bulk_service | 18 of 18 |
+| `S241bf5` | Sample number | detail, workbench | 18 of 18 |
 | `Sc351bb` | Sandbox identifier band StCd-T00000..T99999 is exhausted. | message: numbering_service | 18 of 18 |
 | `S4f581e` | Sandbox only | list | 18 of 18 |
 | `Sf03c1b` | Sandbox revisions can never be added to a Release (FR-048). | message: release_service | 18 of 18 |
@@ -23362,6 +24532,7 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S913aba` | Save settings | settings | 18 of 18 |
 | `Scc8a3c` | Save targets | builder | 18 of 18 |
 | `Sff86e9` | Save the current filters as | list | 18 of 18 |
+| `S69cc53` | Save the verdicts | workbench | 18 of 18 |
 | `Sc68e32` | Save translations | language | 18 of 18 |
 | `Sdb88ba` | Saved search not found | message: saved_search_service | 18 of 18 |
 | `Sed1d84` | Saved searches | list | 18 of 18 |
@@ -23382,19 +24553,22 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S2d8d46` | SEC-010: only Engineers and Administrators can translate. | message: translation_service | 18 of 18 |
 | `S9d603f` | SEC-010: only reviewing roles may comment on a field. | message: field_review_service | 18 of 18 |
 | `Sb27613` | SEC-010: your role cannot create change sets. | message: change_set_service | 18 of 18 |
-| `S859822` | Select | detail, mine, withdrawn_codes | 18 of 18 |
+| `S859822` | Select | detail, mine, withdrawn_codes, workbench | 18 of 18 |
 | `S81448f` | select | detail, form | 18 of 18 |
 | `S535bd8` | Select a Functional System Group first | detail, form | 18 of 18 |
 | `S913aff` | Select all | mine | 18 of 18 |
 | `S0723bf` | Select all programs that are ready | st_preview | 18 of 18 |
 | `S85e466` | Select the Approved, non-sandbox revisions to include, then Save. Publishing is immutable — a correction requires a new Release. | builder | 18 of 18 |
 | `S0aa2a5` | Send back | language | 18 of 18 |
+| `S3ae55b` | Send the defective codes back | workbench | 18 of 18 |
 | `Sb3138e` | Sent on release publish as JSON with the header X-CSCM-Signature: sha256=<HMAC of the body with the secret>. | integrations | 18 of 18 |
 | `S329cb8` | Service | detail | 18 of 18 |
 | `Scf4cc3` | Service Partner | detail | 18 of 18 |
 | `S3871fb` | Set Delay | detail, form | 18 of 18 |
 | `S89fdd5` | Set delay | export | 18 of 18 |
+| `Se90e7c` | Set on the Drafts | workbench | 18 of 18 |
 | `Sc761ae` | Set role | user_detail, users | 18 of 18 |
+| `Sa58dac` | Set values on the Drafts | workbench | 18 of 18 |
 | `Sc7f73b` | Settings | menu, settings | 18 of 18 |
 | `S79075b` | Shaped export | detail | 18 of 18 |
 | `Sd97d1e` | Show | software_versions | 18 of 18 |
@@ -23402,7 +24576,9 @@ Every string of the interface with the templates that use it. A native speaker a
 | `Se48471` | Showing only Drafts created by Import Job #%(id)s. | mine | 18 of 18 |
 | `S991f8c` | Sign in as this Windows user | login_windows | 18 of 18 |
 | `Sd876ad` | Sign in with Windows | login, login_windows | 18 of 18 |
+| `Sa443bb` | Sign off the Drafts | workbench | 18 of 18 |
 | `S5e5039` | Sign Off This Domain | detail | 18 of 18 |
+| `S53f47f` | Sign-off pending | workbench | 18 of 18 |
 | `Sff9480` | Sign-Off Requests For You | mine | 18 of 18 |
 | `Sfdef49` | Sign-Off Status | detail | 18 of 18 |
 | `S6e3665` | Signed | detail, review_queue | 18 of 18 |
@@ -23434,6 +24610,7 @@ Every string of the interface with the templates that use it. A native speaker a
 | `Sbae7d5` | Status | catalogue_health, detail, list, reconciliation | 18 of 18 |
 | `S82b5dd` | Status & Timing | form | 18 of 18 |
 | `Se246b6` | Status Category | detail, form, list | 18 of 18 |
+| `Sae12bc` | Status category | workbench | 18 of 18 |
 | `S234237` | Status category of the new codes | st_new | 18 of 18 |
 | `Sfcbb29` | Status code | export | 18 of 18 |
 | `S98c645` | Status code catalogue | export | 18 of 18 |
@@ -23443,6 +24620,8 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S20bff1` | Status codes | list | 18 of 18 |
 | `S8449c5` | StatusCode, User, Release... | audit_log | 18 of 18 |
 | `S3c0e8a` | StCd Owner | role badge | 18 of 18 |
+| `Sdc416e` | Step | workbench | 18 of 18 |
+| `Sf745cc` | step must be domain, reviewer, admin or chief-engineer | message: bulk_service | 18 of 18 |
 | `S3a7f3a` | step must be reviewer, admin or chief-engineer | message: change_set_service | 18 of 18 |
 | `S98a377` | Still a Draft. | detail | 18 of 18 |
 | `S4f437c` | Still missing | reconciliation | 18 of 18 |
@@ -23458,6 +24637,9 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S9ddbd3` | Submission to approval (all time) | success_metrics | 18 of 18 |
 | `S1c0f84` | Submission to approval (last 90 days) | success_metrics | 18 of 18 |
 | `S123f6c` | Submit for Review | detail | 18 of 18 |
+| `Sf7710d` | Submit for review | workbench | 18 of 18 |
+| `Sa45adc` | Submit the Drafts | workbench | 18 of 18 |
+| `S2d099f` | Submits the Drafts you wrote. A Draft that still lacks a platform or a domain sign-off is reported and left as it is. | workbench | 18 of 18 |
 | `S2e0035` | Submitted | mine | 18 of 18 |
 | `Sa4a761` | Success Metrics | menu, success_metrics | 18 of 18 |
 | `Se08405` | Success metrics | success_metrics | 18 of 18 |
@@ -23479,6 +24661,7 @@ Every string of the interface with the templates that use it. A native speaker a
 | `Sa55a27` | Terms | help, index | 18 of 18 |
 | `S542818` | Terms of the language | language | 18 of 18 |
 | `Sc3328c` | Text | review_checklist | 18 of 18 |
+| `S973577` | That change request is not in the sample. | message: bulk_service | 18 of 18 |
 | `Sd72b71` | That e-mail address or username is already in use. | message: user_service | 18 of 18 |
 | `S177ede` | That user does not review this language. | message: translation_review_service | 18 of 18 |
 | `S6ad9e8` | The account has history (see above). Deleting it erases its name, address and password and removes it from the lists; what it did stays in the audit log and in the records, shown as a deleted user. Deactivating keeps the name. | user_detail | 18 of 18 |
@@ -23487,6 +24670,7 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S8bdea8` | The audit chain is intact | operations | 18 of 18 |
 | `Sce489f` | The author gets any required cross-domain sign-offs, then submits the change request for review. | help and messages | 18 of 18 |
 | `S8fc804` | The author has to submit it for review before the Reviewer or Administrator can see it. | detail | 18 of 18 |
+| `Sa1a149` | The batch changed since the sample was drawn; draw a new sample. | message: bulk_service | 18 of 18 |
 | `Seaf43b` | The change set is closed. | message: change_set_service | 18 of 18 |
 | `S1cdbdd` | The Chief Engineer approves or rejects. Approval makes the revision Approved (or Deprecated for a deprecation request). | help and messages | 18 of 18 |
 | `S991055` | The code is lower-case letters, digits and hyphens (2 to 80). | message: terminology_service | 18 of 18 |
@@ -23510,6 +24694,7 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S8b51cc` | The preview has expired. Upload the files again. | message: st_import_service | 18 of 18 |
 | `Sde7a5b` | The program files do not carry a category; you can change it in each Draft. | st_new | 18 of 18 |
 | `S043693` | The Reviewer has already signed off this CR. | message: change_request_service | 18 of 18 |
+| `S5baa27` | The sample has defects, so the batch cannot be decided as it is. Send the defective codes back (the note is the reason), then draw a new sample of what is left. | workbench | 18 of 18 |
 | `Sd6b132` | The sheet has no 'Review' tab; download the sheet from this page. | message: translation_review_service | 18 of 18 |
 | `Sf60096` | The sheet is larger than 5 MB. | message: translation_review_service | 18 of 18 |
 | `S9aef40` | The source language is edited on the revision itself. | message: translation_service | 18 of 18 |
@@ -23519,6 +24704,7 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S7f38d7` | The translated description must be 1-4000 characters. | message: translation_service | 18 of 18 |
 | `S1363ee` | The translated remedy text must be at most 4000 characters. | message: translation_service | 18 of 18 |
 | `S02b245` | The translated title must be 1-120 characters. | message: translation_service | 18 of 18 |
+| `S8e5b1c` | The verdict must be OK or DEFECT. | message: bulk_service | 18 of 18 |
 | `S3f60bb` | The webhook target must be on the internal network (a private or loopback address). | message: integration_service | 18 of 18 |
 | `S9e4b4a` | The webhook URL must be an http(s) URL. | message: integration_service | 18 of 18 |
 | `S1b0006` | The Windows sign-in is not enabled (AUTH_MODE). | message: auth_service | 18 of 18 |
@@ -23532,15 +24718,22 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S4a32e5` | This is not a Hub Controller code. | message: hub_consolidation_service | 18 of 18 |
 | `Saee885` | This is not a Hub Controller group. | message: hub_consolidation_service | 18 of 18 |
 | `S7ac419` | This is not your review. | message: translation_review_service | 18 of 18 |
+| `Sddedd6` | This is not your sample: the person who decides inspects. | message: bulk_service | 18 of 18 |
 | `S6d5708` | This is the one truly irreversible action in the system. Type the identifier to confirm. | detail | 18 of 18 |
 | `Sd92b89` | This notification belongs to someone else. | message: notification_service | 18 of 18 |
 | `Saf3610` | This preview belongs to another user. | message: st_import_service | 18 of 18 |
 | `Sb5ddec` | This proposal has been decided already. | message: translation_review_service | 18 of 18 |
 | `S1a4bdb` | This review is already completed. | message: translation_review_service | 18 of 18 |
+| `Sf56c6a` | This sample belongs to another change set or another step. | message: bulk_service | 18 of 18 |
+| `S146a72` | This sample has been used for a decision already; draw a new one. | message: bulk_service | 18 of 18 |
+| `Sf0f02c` | This sample is closed. | message: bulk_service | 18 of 18 |
+| `Sf973bd` | This sample is older than 24 hours; draw a new one. | message: bulk_service | 18 of 18 |
+| `S062a13` | This sample was replaced by a newer one. | message: bulk_service | 18 of 18 |
 | `S046aff` | This saved search belongs to someone else. | message: saved_search_service | 18 of 18 |
 | `S7ff275` | This status code was not imported from a program file | message: st_import_service | 18 of 18 |
 | `Sd4d429` | This term is never translated. | message: terminology_service | 18 of 18 |
 | `Se831d9` | This translation is approved already. | message: terminology_service | 18 of 18 |
+| `S19f8ab` | Tick the codes an action is for; with none ticked an action covers every code it applies to. | workbench | 18 of 18 |
 | `S768e0c` | Title | approval_queue, builder, detail, export | 18 of 18 |
 | `Sae79ea` | To | audit_log, software_versions | 18 of 18 |
 | `S6bd377` | to look at | check | 18 of 18 |
@@ -23598,6 +24791,7 @@ Every string of the interface with the templates that use it. A native speaker a
 | `Sbc0767` | valid_to must not be before valid_from. | message: delegation_service | 18 of 18 |
 | `Sfc039f` | Validate only (creates nothing) | new | 18 of 18 |
 | `S18a446` | Vane Position | status code fields | 18 of 18 |
+| `S7f6e5a` | Verdict | workbench | 18 of 18 |
 | `Sdda6ac` | Verify | export_center | 18 of 18 |
 | `S22b05e` | Verify a file | export_center | 18 of 18 |
 | `S112d15` | Verify an export | export_verify | 18 of 18 |
@@ -23626,6 +24820,7 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S439914` | What happens next on a change request | help | 18 of 18 |
 | `S844394` | What looks wrong | connections | 18 of 18 |
 | `Sed412e` | What service staff should do. Feeds the service manual. | form | 18 of 18 |
+| `Se6246f` | What stops it | workbench | 18 of 18 |
 | `Sdbc1fc` | What this account has done | user_detail | 18 of 18 |
 | `S769bb1` | When | audit_log, detail | 18 of 18 |
 | `Se90e89` | When set, only codes that apply to one of these versions are offered as candidates. | new | 18 of 18 |
@@ -23646,6 +24841,8 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S9fa05a` | Withdrawn Codes | menu, withdrawn_codes | 18 of 18 |
 | `S87ec0b` | Withdrawn on | withdrawn_codes | 18 of 18 |
 | `Sf0c3cf` | without a legacy number | st_preview | 18 of 18 |
+| `Sbf45e2` | Work on many codes at once without weakening a step: every code still gets its own checks, its own audit entry and, for decisions, your password. A decision on more than %(above)s codes needs a sample inspection first: %(percent)s percent of the batch, at least %(minimum)s codes, spread over the subgroups. One defect in the sample stops the decision. | workbench | 18 of 18 |
+| `S93ef7c` | Workbench | detail, workbench | 18 of 18 |
 | `Sd7a484` | Workflow | menu | 18 of 18 |
 | `S57dda3` | Working-Set Export | export_center | 18 of 18 |
 | `S9ddad9` | would be created | dry_run | 18 of 18 |
@@ -23667,7 +24864,7 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S23b0c3` | You sign in with Windows; your password is managed there. | account_settings | 18 of 18 |
 | `S4ab291` | Your account | account_settings | 18 of 18 |
 | `Se146d2` | Your account is not active. | message: auth_service | 18 of 18 |
-| `Sc8e4b4` | Your decision step | detail | 18 of 18 |
+| `Sc8e4b4` | Your decision step | detail, workbench | 18 of 18 |
 | `Sb1d254` | Your entries compared with the stored values | form | 18 of 18 |
 | `S0b6c72` | Your entry | form | 18 of 18 |
 | `S863fd0` | Your own proposal: another person approves it. | language | 18 of 18 |

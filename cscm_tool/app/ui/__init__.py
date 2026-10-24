@@ -155,6 +155,7 @@ def decision_label(decision):
 from app.ui import (  # noqa: E402,F401
     admin_views,
     auth_views,
+    bulk_views,
     change_request_views,
     dashboard_views,
     export_views,

@@ -29,6 +29,13 @@ def _percent(value: str) -> str:
     return str(number)
 
 
+def _sample_percent(value: str) -> str:
+    number = int(value)
+    if number < 1 or number > 100:
+        raise ValueError("must be a whole number between 1 and 100")
+    return str(number)
+
+
 def _boolean(value: str) -> str:
     if str(value).lower() in ("1", "true", "yes", "on"):
         return "1"
@@ -51,6 +58,21 @@ SETTINGS: dict[str, tuple[str, Callable[[str], str], str]] = {
         "0",
         _boolean,
         "Assign the least-loaded Reviewer on Submit for Review",
+    ),
+    "bulk.sample_percent": (
+        "10",
+        _sample_percent,
+        "Bulk decision: share of the batch that is inspected as a sample (percent)",
+    ),
+    "bulk.sample_minimum": (
+        "8",
+        _positive_int,
+        "Bulk decision: at least this many codes are inspected",
+    ),
+    "bulk.sample_above": (
+        "5",
+        _positive_int,
+        "Bulk decision: a batch of at most this many codes needs no sample",
     ),
     "health.capacity_alert_percent": (
         "15",

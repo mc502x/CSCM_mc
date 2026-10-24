@@ -16,23 +16,33 @@
    "date": "2026-10-24",
    "by": "AI pre-check (Claude), read one by one 2026-10-24",
    "note": "delta: 486 changed strings read one by one"
+  },
+  {
+   "date": "2026-10-24",
+   "by": "AI pre-check (Claude), read one by one 2026-10-25",
+   "note": "delta: 1134 changed strings read one by one"
+  },
+  {
+   "date": "2026-10-24",
+   "by": "AI pre-check (Claude), read one by one 2026-10-25",
+   "note": "delta: 36 changed strings read one by one"
   }
  ],
  "languages": {
   "de": {
-   "confidence": 93.7,
-   "accuracy": 98.2,
+   "confidence": 93.8,
+   "accuracy": 98.3,
    "haircut": 4.0,
    "sample_size": 160,
    "sample_rate": 0.01875,
    "errors": 0,
    "awkward": 6,
    "mechanical": {
-    "strings": 1217,
+    "strings": 1280,
     "missing": 0,
     "placeholders": 0,
     "identical": 0,
-    "glossary_mismatches": 11
+    "glossary_mismatches": 12
    },
    "findings": [
     {
@@ -246,12 +256,390 @@
      "hash": "2cef24",
      "kind": "OK",
      "note": ""
+    },
+    "S48d260": {
+     "english": "%(n)s of %(total)s codes drawn at %(when)s.",
+     "hash": "fbe8bb",
+     "kind": "OK",
+     "note": ""
+    },
+    "S285edc": {
+     "english": "%(ok)s of %(n)s: %(what)s.",
+     "hash": "97e447",
+     "kind": "OK",
+     "note": ""
+    },
+    "S18edaf": {
+     "english": "A defect needs a note: say what is wrong.",
+     "hash": "ff6ac2",
+     "kind": "OK",
+     "note": ""
+    },
+    "S68cada": {
+     "english": "A defective Draft is corrected by its author.",
+     "hash": "07d969",
+     "kind": "OK",
+     "note": ""
+    },
+    "S8941d5": {
+     "english": "A domain sign-off needs the engineering domain.",
+     "hash": "041b6d",
+     "kind": "OK",
+     "note": ""
+    },
+    "S071452": {
+     "english": "A note has at most 1000 characters.",
+     "hash": "08952c",
+     "kind": "OK",
+     "note": ""
+    },
+    "S88b55f": {
+     "english": "Approve the batch",
+     "hash": "9e6006",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf40e77": {
+     "english": "Available group",
+     "hash": "98e182",
+     "kind": "OK",
+     "note": ""
+    },
+    "S99613c": {
+     "english": "Blocked",
+     "hash": "2498b3",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf89067": {
+     "english": "Choose at least one value to set.",
+     "hash": "cb49fb",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sca7133": {
+     "english": "Choose the step you are about to decide, draw the sample, look at every sampled code and mark it. The sample is yours, valid for 24 hours and for this batch as it is now.",
+     "hash": "037d3c",
+     "kind": "OK",
+     "note": ""
+    },
+    "S6f4274": {
+     "english": "Codes in this batch",
+     "hash": "5f741d",
+     "kind": "OK",
+     "note": ""
+    },
+    "S117313": {
+     "english": "Decide the batch",
+     "hash": "017268",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se91aff": {
+     "english": "Defect",
+     "hash": "b480c8",
+     "kind": "OK",
+     "note": ""
+    },
+    "S16fbbf": {
+     "english": "Domain sign-off",
+     "hash": "058f02",
+     "kind": "OK",
+     "note": ""
+    },
+    "Scb1884": {
+     "english": "Dossier (XLSX)",
+     "hash": "54c5b6",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se2bbd9": {
+     "english": "Drafts saved",
+     "hash": "de9a27",
+     "kind": "OK",
+     "note": ""
+    },
+    "S0ddfa5": {
+     "english": "Drafts signed off",
+     "hash": "5afb7e",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf90ab8": {
+     "english": "Drafts submitted for review",
+     "hash": "487962",
+     "kind": "OK",
+     "note": ""
+    },
+    "S25085f": {
+     "english": "Draw a sample",
+     "hash": "7f0f9b",
+     "kind": "OK",
+     "note": ""
+    },
+    "S9167a7": {
+     "english": "Engineering domain",
+     "hash": "6e0959",
+     "kind": "OK",
+     "note": ""
+    },
+    "S9f4d01": {
+     "english": "More than a few codes need a sample inspection first; use the workbench.",
+     "hash": "8b766d",
+     "kind": "OK",
+     "note": ""
+    },
+    "S95bd2d": {
+     "english": "No Draft of the set is waiting for the sign-off of this domain.",
+     "hash": "11f0af",
+     "kind": "OK",
+     "note": ""
+    },
+    "S1e3e33": {
+     "english": "No change request of the set is waiting for you at this step.",
+     "hash": "6ee2a8",
+     "kind": "OK",
+     "note": ""
+    },
+    "S495371": {
+     "english": "Only a sample with defects can be sent back.",
+     "hash": "d2421f",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sbc3c59": {
+     "english": "Only the values you choose are changed, on the Drafts you wrote (an Administrator: any Draft).",
+     "hash": "31df73",
+     "kind": "OK",
+     "note": ""
+    },
+    "S92223f": {
+     "english": "Passed: no defect in the sample. Use sample number %(id)s below.",
+     "hash": "53f69b",
+     "kind": "OK",
+     "note": ""
+    },
+    "S6275ab": {
+     "english": "Ready to submit",
+     "hash": "e90dcc",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se1e74d": {
+     "english": "Reject the batch",
+     "hash": "b9238a",
+     "kind": "OK",
+     "note": ""
+    },
+    "S58fabf": {
+     "english": "Sample",
+     "hash": "c54541",
+     "kind": "OK",
+     "note": ""
+    },
+    "S6a26de": {
+     "english": "Sample %(id)s drawn: %(n)s of %(total)s codes to inspect.",
+     "hash": "baa41f",
+     "kind": "OK",
+     "note": ""
+    },
+    "S862471": {
+     "english": "Sample inspection",
+     "hash": "0b889f",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa6e3b3": {
+     "english": "Sample not found",
+     "hash": "7ef17c",
+     "kind": "OK",
+     "note": ""
+    },
+    "S241bf5": {
+     "english": "Sample number",
+     "hash": "ce92b4",
+     "kind": "OK",
+     "note": ""
+    },
+    "S69cc53": {
+     "english": "Save the verdicts",
+     "hash": "40561b",
+     "kind": "OK",
+     "note": ""
+    },
+    "S3ae55b": {
+     "english": "Send the defective codes back",
+     "hash": "39a5bf",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se90e7c": {
+     "english": "Set on the Drafts",
+     "hash": "00d441",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa58dac": {
+     "english": "Set values on the Drafts",
+     "hash": "3f6cfb",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa443bb": {
+     "english": "Sign off the Drafts",
+     "hash": "5bca8e",
+     "kind": "OK",
+     "note": ""
+    },
+    "S53f47f": {
+     "english": "Sign-off pending",
+     "hash": "a59a7d",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sae12bc": {
+     "english": "Status category",
+     "hash": "0788b7",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sdc416e": {
+     "english": "Step",
+     "hash": "7c0e72",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf7710d": {
+     "english": "Submit for review",
+     "hash": "56a9e8",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa45adc": {
+     "english": "Submit the Drafts",
+     "hash": "efac4b",
+     "kind": "OK",
+     "note": ""
+    },
+    "S2d099f": {
+     "english": "Submits the Drafts you wrote. A Draft that still lacks a platform or a domain sign-off is reported and left as it is.",
+     "hash": "fbacdd",
+     "kind": "OK",
+     "note": ""
+    },
+    "S973577": {
+     "english": "That change request is not in the sample.",
+     "hash": "bbf1a4",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa1a149": {
+     "english": "The batch changed since the sample was drawn; draw a new sample.",
+     "hash": "8f33ba",
+     "kind": "OK",
+     "note": ""
+    },
+    "S5baa27": {
+     "english": "The sample has defects, so the batch cannot be decided as it is. Send the defective codes back (the note is the reason), then draw a new sample of what is left.",
+     "hash": "732714",
+     "kind": "OK",
+     "note": ""
+    },
+    "S8e5b1c": {
+     "english": "The verdict must be OK or DEFECT.",
+     "hash": "894145",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sddedd6": {
+     "english": "This is not your sample: the person who decides inspects.",
+     "hash": "52768a",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf56c6a": {
+     "english": "This sample belongs to another change set or another step.",
+     "hash": "b5ab1f",
+     "kind": "OK",
+     "note": ""
+    },
+    "S146a72": {
+     "english": "This sample has been used for a decision already; draw a new one.",
+     "hash": "e677b8",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf0f02c": {
+     "english": "This sample is closed.",
+     "hash": "ce0928",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf973bd": {
+     "english": "This sample is older than 24 hours; draw a new one.",
+     "hash": "c7e7eb",
+     "kind": "OK",
+     "note": ""
+    },
+    "S062a13": {
+     "english": "This sample was replaced by a newer one.",
+     "hash": "c48330",
+     "kind": "OK",
+     "note": ""
+    },
+    "S19f8ab": {
+     "english": "Tick the codes an action is for; with none ticked an action covers every code it applies to.",
+     "hash": "f66770",
+     "kind": "OK",
+     "note": ""
+    },
+    "S7f6e5a": {
+     "english": "Verdict",
+     "hash": "5b2a5b",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se6246f": {
+     "english": "What stops it",
+     "hash": "7b7ef1",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sbf45e2": {
+     "english": "Work on many codes at once without weakening a step: every code still gets its own checks, its own audit entry and, for decisions, your password. A decision on more than %(above)s codes needs a sample inspection first: %(percent)s percent of the batch, at least %(minimum)s codes, spread over the subgroups. One defect in the sample stops the decision.",
+     "hash": "20a130",
+     "kind": "OK",
+     "note": ""
+    },
+    "S93ef7c": {
+     "english": "Workbench",
+     "hash": "a6f18d",
+     "kind": "OK",
+     "note": ""
+    },
+    "S1308dc": {
+     "english": "defective codes sent back",
+     "hash": "be55b8",
+     "kind": "OK",
+     "note": ""
+    },
+    "S9625d1": {
+     "english": "must be a whole number between 1 and 100",
+     "hash": "ab42a0",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf745cc": {
+     "english": "step must be domain, reviewer, admin or chief-engineer",
+     "hash": "646d1e",
+     "kind": "OK",
+     "note": ""
     }
    },
    "checked_at": "2026-10-24"
   },
   "fr": {
-   "confidence": 94.5,
+   "confidence": 94.6,
    "accuracy": 98.8,
    "haircut": 4.0,
    "sample_size": 160,
@@ -259,7 +647,7 @@
    "errors": 0,
    "awkward": 4,
    "mechanical": {
-    "strings": 1216,
+    "strings": 1279,
     "missing": 0,
     "placeholders": 0,
     "identical": 0,
@@ -461,24 +849,402 @@
      "hash": "7e3b97",
      "kind": "OK",
      "note": ""
+    },
+    "S48d260": {
+     "english": "%(n)s of %(total)s codes drawn at %(when)s.",
+     "hash": "cd3fc7",
+     "kind": "OK",
+     "note": ""
+    },
+    "S285edc": {
+     "english": "%(ok)s of %(n)s: %(what)s.",
+     "hash": "76c211",
+     "kind": "OK",
+     "note": ""
+    },
+    "S18edaf": {
+     "english": "A defect needs a note: say what is wrong.",
+     "hash": "6864ba",
+     "kind": "OK",
+     "note": ""
+    },
+    "S68cada": {
+     "english": "A defective Draft is corrected by its author.",
+     "hash": "f5fd9b",
+     "kind": "OK",
+     "note": ""
+    },
+    "S8941d5": {
+     "english": "A domain sign-off needs the engineering domain.",
+     "hash": "012ae8",
+     "kind": "OK",
+     "note": ""
+    },
+    "S071452": {
+     "english": "A note has at most 1000 characters.",
+     "hash": "ced134",
+     "kind": "OK",
+     "note": ""
+    },
+    "S88b55f": {
+     "english": "Approve the batch",
+     "hash": "8bd1b2",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf40e77": {
+     "english": "Available group",
+     "hash": "0f4602",
+     "kind": "OK",
+     "note": ""
+    },
+    "S99613c": {
+     "english": "Blocked",
+     "hash": "418b14",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf89067": {
+     "english": "Choose at least one value to set.",
+     "hash": "e153e4",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sca7133": {
+     "english": "Choose the step you are about to decide, draw the sample, look at every sampled code and mark it. The sample is yours, valid for 24 hours and for this batch as it is now.",
+     "hash": "f69c84",
+     "kind": "OK",
+     "note": ""
+    },
+    "S6f4274": {
+     "english": "Codes in this batch",
+     "hash": "e95f55",
+     "kind": "OK",
+     "note": ""
+    },
+    "S117313": {
+     "english": "Decide the batch",
+     "hash": "292f87",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se91aff": {
+     "english": "Defect",
+     "hash": "9a0a48",
+     "kind": "OK",
+     "note": ""
+    },
+    "S16fbbf": {
+     "english": "Domain sign-off",
+     "hash": "8abf53",
+     "kind": "OK",
+     "note": ""
+    },
+    "Scb1884": {
+     "english": "Dossier (XLSX)",
+     "hash": "54c5b6",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se2bbd9": {
+     "english": "Drafts saved",
+     "hash": "6b7be2",
+     "kind": "OK",
+     "note": ""
+    },
+    "S0ddfa5": {
+     "english": "Drafts signed off",
+     "hash": "5a2dcb",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf90ab8": {
+     "english": "Drafts submitted for review",
+     "hash": "042d8f",
+     "kind": "OK",
+     "note": ""
+    },
+    "S25085f": {
+     "english": "Draw a sample",
+     "hash": "ce34a0",
+     "kind": "OK",
+     "note": ""
+    },
+    "S9167a7": {
+     "english": "Engineering domain",
+     "hash": "e82554",
+     "kind": "OK",
+     "note": ""
+    },
+    "S9f4d01": {
+     "english": "More than a few codes need a sample inspection first; use the workbench.",
+     "hash": "e3a733",
+     "kind": "OK",
+     "note": ""
+    },
+    "S95bd2d": {
+     "english": "No Draft of the set is waiting for the sign-off of this domain.",
+     "hash": "a2fd24",
+     "kind": "OK",
+     "note": ""
+    },
+    "S1e3e33": {
+     "english": "No change request of the set is waiting for you at this step.",
+     "hash": "00df5c",
+     "kind": "OK",
+     "note": ""
+    },
+    "S495371": {
+     "english": "Only a sample with defects can be sent back.",
+     "hash": "2bf665",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sbc3c59": {
+     "english": "Only the values you choose are changed, on the Drafts you wrote (an Administrator: any Draft).",
+     "hash": "162f9a",
+     "kind": "OK",
+     "note": ""
+    },
+    "S92223f": {
+     "english": "Passed: no defect in the sample. Use sample number %(id)s below.",
+     "hash": "cceb3b",
+     "kind": "OK",
+     "note": ""
+    },
+    "S6275ab": {
+     "english": "Ready to submit",
+     "hash": "38dc60",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se1e74d": {
+     "english": "Reject the batch",
+     "hash": "f3b006",
+     "kind": "OK",
+     "note": ""
+    },
+    "S58fabf": {
+     "english": "Sample",
+     "hash": "49d94f",
+     "kind": "OK",
+     "note": ""
+    },
+    "S6a26de": {
+     "english": "Sample %(id)s drawn: %(n)s of %(total)s codes to inspect.",
+     "hash": "6ac76a",
+     "kind": "OK",
+     "note": ""
+    },
+    "S862471": {
+     "english": "Sample inspection",
+     "hash": "c9710d",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa6e3b3": {
+     "english": "Sample not found",
+     "hash": "b5b8f0",
+     "kind": "OK",
+     "note": ""
+    },
+    "S241bf5": {
+     "english": "Sample number",
+     "hash": "a378f1",
+     "kind": "OK",
+     "note": ""
+    },
+    "S69cc53": {
+     "english": "Save the verdicts",
+     "hash": "bb7e8b",
+     "kind": "OK",
+     "note": ""
+    },
+    "S3ae55b": {
+     "english": "Send the defective codes back",
+     "hash": "128e23",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se90e7c": {
+     "english": "Set on the Drafts",
+     "hash": "d1969e",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa58dac": {
+     "english": "Set values on the Drafts",
+     "hash": "a1c412",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa443bb": {
+     "english": "Sign off the Drafts",
+     "hash": "8e3391",
+     "kind": "OK",
+     "note": ""
+    },
+    "S53f47f": {
+     "english": "Sign-off pending",
+     "hash": "adc3a9",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sae12bc": {
+     "english": "Status category",
+     "hash": "ec24fd",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sdc416e": {
+     "english": "Step",
+     "hash": "7d290f",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf7710d": {
+     "english": "Submit for review",
+     "hash": "be7b24",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa45adc": {
+     "english": "Submit the Drafts",
+     "hash": "b1e7b9",
+     "kind": "OK",
+     "note": ""
+    },
+    "S2d099f": {
+     "english": "Submits the Drafts you wrote. A Draft that still lacks a platform or a domain sign-off is reported and left as it is.",
+     "hash": "27d1ac",
+     "kind": "OK",
+     "note": ""
+    },
+    "S973577": {
+     "english": "That change request is not in the sample.",
+     "hash": "172445",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa1a149": {
+     "english": "The batch changed since the sample was drawn; draw a new sample.",
+     "hash": "24aa3e",
+     "kind": "OK",
+     "note": ""
+    },
+    "S5baa27": {
+     "english": "The sample has defects, so the batch cannot be decided as it is. Send the defective codes back (the note is the reason), then draw a new sample of what is left.",
+     "hash": "96fd06",
+     "kind": "OK",
+     "note": ""
+    },
+    "S8e5b1c": {
+     "english": "The verdict must be OK or DEFECT.",
+     "hash": "32b8c3",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sddedd6": {
+     "english": "This is not your sample: the person who decides inspects.",
+     "hash": "118013",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf56c6a": {
+     "english": "This sample belongs to another change set or another step.",
+     "hash": "370b10",
+     "kind": "OK",
+     "note": ""
+    },
+    "S146a72": {
+     "english": "This sample has been used for a decision already; draw a new one.",
+     "hash": "981755",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf0f02c": {
+     "english": "This sample is closed.",
+     "hash": "120143",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf973bd": {
+     "english": "This sample is older than 24 hours; draw a new one.",
+     "hash": "337cc1",
+     "kind": "OK",
+     "note": ""
+    },
+    "S062a13": {
+     "english": "This sample was replaced by a newer one.",
+     "hash": "ddf517",
+     "kind": "OK",
+     "note": ""
+    },
+    "S19f8ab": {
+     "english": "Tick the codes an action is for; with none ticked an action covers every code it applies to.",
+     "hash": "86bee7",
+     "kind": "OK",
+     "note": ""
+    },
+    "S7f6e5a": {
+     "english": "Verdict",
+     "hash": "974a7a",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se6246f": {
+     "english": "What stops it",
+     "hash": "91541d",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sbf45e2": {
+     "english": "Work on many codes at once without weakening a step: every code still gets its own checks, its own audit entry and, for decisions, your password. A decision on more than %(above)s codes needs a sample inspection first: %(percent)s percent of the batch, at least %(minimum)s codes, spread over the subgroups. One defect in the sample stops the decision.",
+     "hash": "bcf38f",
+     "kind": "OK",
+     "note": ""
+    },
+    "S93ef7c": {
+     "english": "Workbench",
+     "hash": "8d26df",
+     "kind": "OK",
+     "note": ""
+    },
+    "S1308dc": {
+     "english": "defective codes sent back",
+     "hash": "baee96",
+     "kind": "OK",
+     "note": ""
+    },
+    "S9625d1": {
+     "english": "must be a whole number between 1 and 100",
+     "hash": "c544db",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf745cc": {
+     "english": "step must be domain, reviewer, admin or chief-engineer",
+     "hash": "30bfe0",
+     "kind": "OK",
+     "note": ""
     }
    },
    "checked_at": "2026-10-24"
   },
   "es": {
-   "confidence": 94.0,
-   "accuracy": 98.2,
+   "confidence": 93.7,
+   "accuracy": 98.0,
    "haircut": 4.0,
    "sample_size": 160,
    "sample_rate": 0.01875,
    "errors": 0,
    "awkward": 6,
    "mechanical": {
-    "strings": 1216,
+    "strings": 1279,
     "missing": 0,
     "placeholders": 0,
     "identical": 0,
-    "glossary_mismatches": 5
+    "glossary_mismatches": 6
    },
    "findings": [
     {
@@ -692,12 +1458,390 @@
      "hash": "ab62d3",
      "kind": "OK",
      "note": ""
+    },
+    "S48d260": {
+     "english": "%(n)s of %(total)s codes drawn at %(when)s.",
+     "hash": "510043",
+     "kind": "OK",
+     "note": ""
+    },
+    "S285edc": {
+     "english": "%(ok)s of %(n)s: %(what)s.",
+     "hash": "01f393",
+     "kind": "OK",
+     "note": ""
+    },
+    "S18edaf": {
+     "english": "A defect needs a note: say what is wrong.",
+     "hash": "815db4",
+     "kind": "OK",
+     "note": ""
+    },
+    "S68cada": {
+     "english": "A defective Draft is corrected by its author.",
+     "hash": "1335c6",
+     "kind": "OK",
+     "note": ""
+    },
+    "S8941d5": {
+     "english": "A domain sign-off needs the engineering domain.",
+     "hash": "579dee",
+     "kind": "A",
+     "note": "'conformidad' for sign-off; 'visto bueno' or 'firma' is usual"
+    },
+    "S071452": {
+     "english": "A note has at most 1000 characters.",
+     "hash": "73149b",
+     "kind": "OK",
+     "note": ""
+    },
+    "S88b55f": {
+     "english": "Approve the batch",
+     "hash": "efa199",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf40e77": {
+     "english": "Available group",
+     "hash": "0e0788",
+     "kind": "OK",
+     "note": ""
+    },
+    "S99613c": {
+     "english": "Blocked",
+     "hash": "683277",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf89067": {
+     "english": "Choose at least one value to set.",
+     "hash": "bc5648",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sca7133": {
+     "english": "Choose the step you are about to decide, draw the sample, look at every sampled code and mark it. The sample is yours, valid for 24 hours and for this batch as it is now.",
+     "hash": "e33cf8",
+     "kind": "OK",
+     "note": ""
+    },
+    "S6f4274": {
+     "english": "Codes in this batch",
+     "hash": "3ecc6d",
+     "kind": "OK",
+     "note": ""
+    },
+    "S117313": {
+     "english": "Decide the batch",
+     "hash": "fff992",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se91aff": {
+     "english": "Defect",
+     "hash": "07d2a1",
+     "kind": "OK",
+     "note": ""
+    },
+    "S16fbbf": {
+     "english": "Domain sign-off",
+     "hash": "a95411",
+     "kind": "A",
+     "note": "'conformidad' for sign-off; 'visto bueno' or 'firma' is usual"
+    },
+    "Scb1884": {
+     "english": "Dossier (XLSX)",
+     "hash": "6d9edc",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se2bbd9": {
+     "english": "Drafts saved",
+     "hash": "9553a2",
+     "kind": "OK",
+     "note": ""
+    },
+    "S0ddfa5": {
+     "english": "Drafts signed off",
+     "hash": "87a8d3",
+     "kind": "A",
+     "note": "'conformidad' for sign-off; 'visto bueno' or 'firma' is usual"
+    },
+    "Sf90ab8": {
+     "english": "Drafts submitted for review",
+     "hash": "b6d227",
+     "kind": "OK",
+     "note": ""
+    },
+    "S25085f": {
+     "english": "Draw a sample",
+     "hash": "b909e2",
+     "kind": "OK",
+     "note": ""
+    },
+    "S9167a7": {
+     "english": "Engineering domain",
+     "hash": "6fcf9c",
+     "kind": "OK",
+     "note": ""
+    },
+    "S9f4d01": {
+     "english": "More than a few codes need a sample inspection first; use the workbench.",
+     "hash": "a8b2c8",
+     "kind": "OK",
+     "note": ""
+    },
+    "S95bd2d": {
+     "english": "No Draft of the set is waiting for the sign-off of this domain.",
+     "hash": "ef160b",
+     "kind": "A",
+     "note": "'conformidad' for sign-off; 'visto bueno' or 'firma' is usual"
+    },
+    "S1e3e33": {
+     "english": "No change request of the set is waiting for you at this step.",
+     "hash": "3631b9",
+     "kind": "OK",
+     "note": ""
+    },
+    "S495371": {
+     "english": "Only a sample with defects can be sent back.",
+     "hash": "52e2e6",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sbc3c59": {
+     "english": "Only the values you choose are changed, on the Drafts you wrote (an Administrator: any Draft).",
+     "hash": "092609",
+     "kind": "OK",
+     "note": ""
+    },
+    "S92223f": {
+     "english": "Passed: no defect in the sample. Use sample number %(id)s below.",
+     "hash": "4e4f3e",
+     "kind": "OK",
+     "note": ""
+    },
+    "S6275ab": {
+     "english": "Ready to submit",
+     "hash": "f86459",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se1e74d": {
+     "english": "Reject the batch",
+     "hash": "c17c60",
+     "kind": "OK",
+     "note": ""
+    },
+    "S58fabf": {
+     "english": "Sample",
+     "hash": "25a3f2",
+     "kind": "OK",
+     "note": ""
+    },
+    "S6a26de": {
+     "english": "Sample %(id)s drawn: %(n)s of %(total)s codes to inspect.",
+     "hash": "6d3bec",
+     "kind": "OK",
+     "note": ""
+    },
+    "S862471": {
+     "english": "Sample inspection",
+     "hash": "19d29c",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa6e3b3": {
+     "english": "Sample not found",
+     "hash": "785a58",
+     "kind": "OK",
+     "note": ""
+    },
+    "S241bf5": {
+     "english": "Sample number",
+     "hash": "ae6bbd",
+     "kind": "OK",
+     "note": ""
+    },
+    "S69cc53": {
+     "english": "Save the verdicts",
+     "hash": "78486e",
+     "kind": "OK",
+     "note": ""
+    },
+    "S3ae55b": {
+     "english": "Send the defective codes back",
+     "hash": "f518d6",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se90e7c": {
+     "english": "Set on the Drafts",
+     "hash": "41d160",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa58dac": {
+     "english": "Set values on the Drafts",
+     "hash": "09700a",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa443bb": {
+     "english": "Sign off the Drafts",
+     "hash": "b97e43",
+     "kind": "A",
+     "note": "'conformidad' for sign-off; 'visto bueno' or 'firma' is usual"
+    },
+    "S53f47f": {
+     "english": "Sign-off pending",
+     "hash": "70ede6",
+     "kind": "A",
+     "note": "'conformidad' for sign-off; 'visto bueno' or 'firma' is usual"
+    },
+    "Sae12bc": {
+     "english": "Status category",
+     "hash": "fcbc8b",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sdc416e": {
+     "english": "Step",
+     "hash": "fcd9e4",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf7710d": {
+     "english": "Submit for review",
+     "hash": "e9e18a",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa45adc": {
+     "english": "Submit the Drafts",
+     "hash": "8863bb",
+     "kind": "OK",
+     "note": ""
+    },
+    "S2d099f": {
+     "english": "Submits the Drafts you wrote. A Draft that still lacks a platform or a domain sign-off is reported and left as it is.",
+     "hash": "9ef53f",
+     "kind": "A",
+     "note": "'conformidad' for sign-off; 'visto bueno' or 'firma' is usual"
+    },
+    "S973577": {
+     "english": "That change request is not in the sample.",
+     "hash": "a28a69",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa1a149": {
+     "english": "The batch changed since the sample was drawn; draw a new sample.",
+     "hash": "1c5f01",
+     "kind": "OK",
+     "note": ""
+    },
+    "S5baa27": {
+     "english": "The sample has defects, so the batch cannot be decided as it is. Send the defective codes back (the note is the reason), then draw a new sample of what is left.",
+     "hash": "0e89cb",
+     "kind": "OK",
+     "note": ""
+    },
+    "S8e5b1c": {
+     "english": "The verdict must be OK or DEFECT.",
+     "hash": "28c500",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sddedd6": {
+     "english": "This is not your sample: the person who decides inspects.",
+     "hash": "030127",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf56c6a": {
+     "english": "This sample belongs to another change set or another step.",
+     "hash": "bbbcd2",
+     "kind": "OK",
+     "note": ""
+    },
+    "S146a72": {
+     "english": "This sample has been used for a decision already; draw a new one.",
+     "hash": "ac04ea",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf0f02c": {
+     "english": "This sample is closed.",
+     "hash": "a23451",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf973bd": {
+     "english": "This sample is older than 24 hours; draw a new one.",
+     "hash": "0c3c25",
+     "kind": "OK",
+     "note": ""
+    },
+    "S062a13": {
+     "english": "This sample was replaced by a newer one.",
+     "hash": "677a14",
+     "kind": "OK",
+     "note": ""
+    },
+    "S19f8ab": {
+     "english": "Tick the codes an action is for; with none ticked an action covers every code it applies to.",
+     "hash": "2b17bc",
+     "kind": "OK",
+     "note": ""
+    },
+    "S7f6e5a": {
+     "english": "Verdict",
+     "hash": "84fa70",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se6246f": {
+     "english": "What stops it",
+     "hash": "e600f7",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sbf45e2": {
+     "english": "Work on many codes at once without weakening a step: every code still gets its own checks, its own audit entry and, for decisions, your password. A decision on more than %(above)s codes needs a sample inspection first: %(percent)s percent of the batch, at least %(minimum)s codes, spread over the subgroups. One defect in the sample stops the decision.",
+     "hash": "5cff25",
+     "kind": "OK",
+     "note": ""
+    },
+    "S93ef7c": {
+     "english": "Workbench",
+     "hash": "bc8581",
+     "kind": "OK",
+     "note": ""
+    },
+    "S1308dc": {
+     "english": "defective codes sent back",
+     "hash": "ad06d2",
+     "kind": "OK",
+     "note": ""
+    },
+    "S9625d1": {
+     "english": "must be a whole number between 1 and 100",
+     "hash": "580f69",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf745cc": {
+     "english": "step must be domain, reviewer, admin or chief-engineer",
+     "hash": "c008b7",
+     "kind": "OK",
+     "note": ""
     }
    },
    "checked_at": "2026-10-24"
   },
   "it": {
-   "confidence": 94.3,
+   "confidence": 94.4,
    "accuracy": 98.5,
    "haircut": 4.0,
    "sample_size": 160,
@@ -705,11 +1849,11 @@
    "errors": 0,
    "awkward": 5,
    "mechanical": {
-    "strings": 1216,
+    "strings": 1279,
     "missing": 0,
     "placeholders": 0,
     "identical": 0,
-    "glossary_mismatches": 4
+    "glossary_mismatches": 5
    },
    "findings": [
     {
@@ -915,12 +2059,390 @@
      "hash": "c69326",
      "kind": "OK",
      "note": ""
+    },
+    "S48d260": {
+     "english": "%(n)s of %(total)s codes drawn at %(when)s.",
+     "hash": "701b0c",
+     "kind": "OK",
+     "note": ""
+    },
+    "S285edc": {
+     "english": "%(ok)s of %(n)s: %(what)s.",
+     "hash": "01202e",
+     "kind": "OK",
+     "note": ""
+    },
+    "S18edaf": {
+     "english": "A defect needs a note: say what is wrong.",
+     "hash": "96fe54",
+     "kind": "OK",
+     "note": ""
+    },
+    "S68cada": {
+     "english": "A defective Draft is corrected by its author.",
+     "hash": "e1a080",
+     "kind": "OK",
+     "note": ""
+    },
+    "S8941d5": {
+     "english": "A domain sign-off needs the engineering domain.",
+     "hash": "a9d240",
+     "kind": "OK",
+     "note": ""
+    },
+    "S071452": {
+     "english": "A note has at most 1000 characters.",
+     "hash": "49b744",
+     "kind": "OK",
+     "note": ""
+    },
+    "S88b55f": {
+     "english": "Approve the batch",
+     "hash": "71b271",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf40e77": {
+     "english": "Available group",
+     "hash": "6ad94a",
+     "kind": "OK",
+     "note": ""
+    },
+    "S99613c": {
+     "english": "Blocked",
+     "hash": "7f3957",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf89067": {
+     "english": "Choose at least one value to set.",
+     "hash": "2a0690",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sca7133": {
+     "english": "Choose the step you are about to decide, draw the sample, look at every sampled code and mark it. The sample is yours, valid for 24 hours and for this batch as it is now.",
+     "hash": "f60f73",
+     "kind": "OK",
+     "note": ""
+    },
+    "S6f4274": {
+     "english": "Codes in this batch",
+     "hash": "beb52d",
+     "kind": "OK",
+     "note": ""
+    },
+    "S117313": {
+     "english": "Decide the batch",
+     "hash": "4d4c7d",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se91aff": {
+     "english": "Defect",
+     "hash": "f851f6",
+     "kind": "OK",
+     "note": ""
+    },
+    "S16fbbf": {
+     "english": "Domain sign-off",
+     "hash": "e3c606",
+     "kind": "OK",
+     "note": ""
+    },
+    "Scb1884": {
+     "english": "Dossier (XLSX)",
+     "hash": "54c5b6",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se2bbd9": {
+     "english": "Drafts saved",
+     "hash": "f9c3c9",
+     "kind": "OK",
+     "note": ""
+    },
+    "S0ddfa5": {
+     "english": "Drafts signed off",
+     "hash": "c2d336",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf90ab8": {
+     "english": "Drafts submitted for review",
+     "hash": "7af92b",
+     "kind": "OK",
+     "note": ""
+    },
+    "S25085f": {
+     "english": "Draw a sample",
+     "hash": "06c666",
+     "kind": "OK",
+     "note": ""
+    },
+    "S9167a7": {
+     "english": "Engineering domain",
+     "hash": "e17595",
+     "kind": "OK",
+     "note": ""
+    },
+    "S9f4d01": {
+     "english": "More than a few codes need a sample inspection first; use the workbench.",
+     "hash": "628b73",
+     "kind": "OK",
+     "note": ""
+    },
+    "S95bd2d": {
+     "english": "No Draft of the set is waiting for the sign-off of this domain.",
+     "hash": "e6a9ad",
+     "kind": "OK",
+     "note": ""
+    },
+    "S1e3e33": {
+     "english": "No change request of the set is waiting for you at this step.",
+     "hash": "f3624f",
+     "kind": "OK",
+     "note": ""
+    },
+    "S495371": {
+     "english": "Only a sample with defects can be sent back.",
+     "hash": "97540b",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sbc3c59": {
+     "english": "Only the values you choose are changed, on the Drafts you wrote (an Administrator: any Draft).",
+     "hash": "7a70c9",
+     "kind": "OK",
+     "note": ""
+    },
+    "S92223f": {
+     "english": "Passed: no defect in the sample. Use sample number %(id)s below.",
+     "hash": "8ea393",
+     "kind": "OK",
+     "note": ""
+    },
+    "S6275ab": {
+     "english": "Ready to submit",
+     "hash": "a5a6f9",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se1e74d": {
+     "english": "Reject the batch",
+     "hash": "f667a7",
+     "kind": "OK",
+     "note": ""
+    },
+    "S58fabf": {
+     "english": "Sample",
+     "hash": "c17651",
+     "kind": "OK",
+     "note": ""
+    },
+    "S6a26de": {
+     "english": "Sample %(id)s drawn: %(n)s of %(total)s codes to inspect.",
+     "hash": "6b7f17",
+     "kind": "OK",
+     "note": ""
+    },
+    "S862471": {
+     "english": "Sample inspection",
+     "hash": "00a642",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa6e3b3": {
+     "english": "Sample not found",
+     "hash": "69cc00",
+     "kind": "OK",
+     "note": ""
+    },
+    "S241bf5": {
+     "english": "Sample number",
+     "hash": "53459d",
+     "kind": "OK",
+     "note": ""
+    },
+    "S69cc53": {
+     "english": "Save the verdicts",
+     "hash": "0d2438",
+     "kind": "OK",
+     "note": ""
+    },
+    "S3ae55b": {
+     "english": "Send the defective codes back",
+     "hash": "777f54",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se90e7c": {
+     "english": "Set on the Drafts",
+     "hash": "a7f243",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa58dac": {
+     "english": "Set values on the Drafts",
+     "hash": "12f300",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa443bb": {
+     "english": "Sign off the Drafts",
+     "hash": "a6fe14",
+     "kind": "OK",
+     "note": ""
+    },
+    "S53f47f": {
+     "english": "Sign-off pending",
+     "hash": "b42e23",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sae12bc": {
+     "english": "Status category",
+     "hash": "8b6bc4",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sdc416e": {
+     "english": "Step",
+     "hash": "625743",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf7710d": {
+     "english": "Submit for review",
+     "hash": "ceca12",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa45adc": {
+     "english": "Submit the Drafts",
+     "hash": "c796aa",
+     "kind": "OK",
+     "note": ""
+    },
+    "S2d099f": {
+     "english": "Submits the Drafts you wrote. A Draft that still lacks a platform or a domain sign-off is reported and left as it is.",
+     "hash": "d2463f",
+     "kind": "OK",
+     "note": ""
+    },
+    "S973577": {
+     "english": "That change request is not in the sample.",
+     "hash": "ce4a73",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa1a149": {
+     "english": "The batch changed since the sample was drawn; draw a new sample.",
+     "hash": "99ac09",
+     "kind": "OK",
+     "note": ""
+    },
+    "S5baa27": {
+     "english": "The sample has defects, so the batch cannot be decided as it is. Send the defective codes back (the note is the reason), then draw a new sample of what is left.",
+     "hash": "3ecf0f",
+     "kind": "OK",
+     "note": ""
+    },
+    "S8e5b1c": {
+     "english": "The verdict must be OK or DEFECT.",
+     "hash": "468950",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sddedd6": {
+     "english": "This is not your sample: the person who decides inspects.",
+     "hash": "e9671b",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf56c6a": {
+     "english": "This sample belongs to another change set or another step.",
+     "hash": "8fd3de",
+     "kind": "OK",
+     "note": ""
+    },
+    "S146a72": {
+     "english": "This sample has been used for a decision already; draw a new one.",
+     "hash": "9db717",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf0f02c": {
+     "english": "This sample is closed.",
+     "hash": "9335ed",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf973bd": {
+     "english": "This sample is older than 24 hours; draw a new one.",
+     "hash": "a1b503",
+     "kind": "OK",
+     "note": ""
+    },
+    "S062a13": {
+     "english": "This sample was replaced by a newer one.",
+     "hash": "4c7844",
+     "kind": "OK",
+     "note": ""
+    },
+    "S19f8ab": {
+     "english": "Tick the codes an action is for; with none ticked an action covers every code it applies to.",
+     "hash": "f86029",
+     "kind": "OK",
+     "note": ""
+    },
+    "S7f6e5a": {
+     "english": "Verdict",
+     "hash": "faeba5",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se6246f": {
+     "english": "What stops it",
+     "hash": "4e0e3a",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sbf45e2": {
+     "english": "Work on many codes at once without weakening a step: every code still gets its own checks, its own audit entry and, for decisions, your password. A decision on more than %(above)s codes needs a sample inspection first: %(percent)s percent of the batch, at least %(minimum)s codes, spread over the subgroups. One defect in the sample stops the decision.",
+     "hash": "8f7a09",
+     "kind": "OK",
+     "note": ""
+    },
+    "S93ef7c": {
+     "english": "Workbench",
+     "hash": "9a5748",
+     "kind": "OK",
+     "note": ""
+    },
+    "S1308dc": {
+     "english": "defective codes sent back",
+     "hash": "54ed3c",
+     "kind": "OK",
+     "note": ""
+    },
+    "S9625d1": {
+     "english": "must be a whole number between 1 and 100",
+     "hash": "783c14",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf745cc": {
+     "english": "step must be domain, reviewer, admin or chief-engineer",
+     "hash": "0f5db8",
+     "kind": "OK",
+     "note": ""
     }
    },
    "checked_at": "2026-10-24"
   },
   "da": {
-   "confidence": 92.3,
+   "confidence": 92.2,
    "accuracy": 98.5,
    "haircut": 6.0,
    "sample_size": 160,
@@ -928,11 +2450,11 @@
    "errors": 1,
    "awkward": 3,
    "mechanical": {
-    "strings": 1216,
+    "strings": 1279,
     "missing": 0,
     "placeholders": 0,
     "identical": 0,
-    "glossary_mismatches": 5
+    "glossary_mismatches": 6
    },
    "findings": [
     {
@@ -1130,6 +2652,384 @@
      "hash": "319cef",
      "kind": "OK",
      "note": ""
+    },
+    "S48d260": {
+     "english": "%(n)s of %(total)s codes drawn at %(when)s.",
+     "hash": "92d70f",
+     "kind": "OK",
+     "note": ""
+    },
+    "S285edc": {
+     "english": "%(ok)s of %(n)s: %(what)s.",
+     "hash": "c22f8a",
+     "kind": "OK",
+     "note": ""
+    },
+    "S18edaf": {
+     "english": "A defect needs a note: say what is wrong.",
+     "hash": "ebda73",
+     "kind": "OK",
+     "note": ""
+    },
+    "S68cada": {
+     "english": "A defective Draft is corrected by its author.",
+     "hash": "539906",
+     "kind": "OK",
+     "note": ""
+    },
+    "S8941d5": {
+     "english": "A domain sign-off needs the engineering domain.",
+     "hash": "cc829a",
+     "kind": "OK",
+     "note": ""
+    },
+    "S071452": {
+     "english": "A note has at most 1000 characters.",
+     "hash": "99d24b",
+     "kind": "OK",
+     "note": ""
+    },
+    "S88b55f": {
+     "english": "Approve the batch",
+     "hash": "523fb8",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf40e77": {
+     "english": "Available group",
+     "hash": "f868fb",
+     "kind": "OK",
+     "note": ""
+    },
+    "S99613c": {
+     "english": "Blocked",
+     "hash": "e5c931",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf89067": {
+     "english": "Choose at least one value to set.",
+     "hash": "824c93",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sca7133": {
+     "english": "Choose the step you are about to decide, draw the sample, look at every sampled code and mark it. The sample is yours, valid for 24 hours and for this batch as it is now.",
+     "hash": "6a109a",
+     "kind": "OK",
+     "note": ""
+    },
+    "S6f4274": {
+     "english": "Codes in this batch",
+     "hash": "c8334d",
+     "kind": "OK",
+     "note": ""
+    },
+    "S117313": {
+     "english": "Decide the batch",
+     "hash": "819084",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se91aff": {
+     "english": "Defect",
+     "hash": "8c69af",
+     "kind": "OK",
+     "note": ""
+    },
+    "S16fbbf": {
+     "english": "Domain sign-off",
+     "hash": "f2c0e4",
+     "kind": "OK",
+     "note": ""
+    },
+    "Scb1884": {
+     "english": "Dossier (XLSX)",
+     "hash": "54c5b6",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se2bbd9": {
+     "english": "Drafts saved",
+     "hash": "8abf2a",
+     "kind": "OK",
+     "note": ""
+    },
+    "S0ddfa5": {
+     "english": "Drafts signed off",
+     "hash": "a190d0",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf90ab8": {
+     "english": "Drafts submitted for review",
+     "hash": "e861b3",
+     "kind": "OK",
+     "note": ""
+    },
+    "S25085f": {
+     "english": "Draw a sample",
+     "hash": "7e68c0",
+     "kind": "OK",
+     "note": ""
+    },
+    "S9167a7": {
+     "english": "Engineering domain",
+     "hash": "0097d1",
+     "kind": "OK",
+     "note": ""
+    },
+    "S9f4d01": {
+     "english": "More than a few codes need a sample inspection first; use the workbench.",
+     "hash": "10ea8e",
+     "kind": "A",
+     "note": "'arbejdsbord' for workbench is stiff"
+    },
+    "S95bd2d": {
+     "english": "No Draft of the set is waiting for the sign-off of this domain.",
+     "hash": "0dbfa3",
+     "kind": "OK",
+     "note": ""
+    },
+    "S1e3e33": {
+     "english": "No change request of the set is waiting for you at this step.",
+     "hash": "8b0e44",
+     "kind": "OK",
+     "note": ""
+    },
+    "S495371": {
+     "english": "Only a sample with defects can be sent back.",
+     "hash": "60d48e",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sbc3c59": {
+     "english": "Only the values you choose are changed, on the Drafts you wrote (an Administrator: any Draft).",
+     "hash": "a86625",
+     "kind": "OK",
+     "note": ""
+    },
+    "S92223f": {
+     "english": "Passed: no defect in the sample. Use sample number %(id)s below.",
+     "hash": "1fed53",
+     "kind": "OK",
+     "note": ""
+    },
+    "S6275ab": {
+     "english": "Ready to submit",
+     "hash": "0b7b07",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se1e74d": {
+     "english": "Reject the batch",
+     "hash": "ebe281",
+     "kind": "OK",
+     "note": ""
+    },
+    "S58fabf": {
+     "english": "Sample",
+     "hash": "7c4668",
+     "kind": "OK",
+     "note": ""
+    },
+    "S6a26de": {
+     "english": "Sample %(id)s drawn: %(n)s of %(total)s codes to inspect.",
+     "hash": "f0309d",
+     "kind": "OK",
+     "note": ""
+    },
+    "S862471": {
+     "english": "Sample inspection",
+     "hash": "b19985",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa6e3b3": {
+     "english": "Sample not found",
+     "hash": "fc786c",
+     "kind": "OK",
+     "note": ""
+    },
+    "S241bf5": {
+     "english": "Sample number",
+     "hash": "34e6a5",
+     "kind": "OK",
+     "note": ""
+    },
+    "S69cc53": {
+     "english": "Save the verdicts",
+     "hash": "5f03d1",
+     "kind": "OK",
+     "note": ""
+    },
+    "S3ae55b": {
+     "english": "Send the defective codes back",
+     "hash": "c534e3",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se90e7c": {
+     "english": "Set on the Drafts",
+     "hash": "c49609",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa58dac": {
+     "english": "Set values on the Drafts",
+     "hash": "d7ad7f",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa443bb": {
+     "english": "Sign off the Drafts",
+     "hash": "a76685",
+     "kind": "OK",
+     "note": ""
+    },
+    "S53f47f": {
+     "english": "Sign-off pending",
+     "hash": "272f72",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sae12bc": {
+     "english": "Status category",
+     "hash": "eabbfb",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sdc416e": {
+     "english": "Step",
+     "hash": "def0b0",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf7710d": {
+     "english": "Submit for review",
+     "hash": "2a9917",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa45adc": {
+     "english": "Submit the Drafts",
+     "hash": "034d18",
+     "kind": "OK",
+     "note": ""
+    },
+    "S2d099f": {
+     "english": "Submits the Drafts you wrote. A Draft that still lacks a platform or a domain sign-off is reported and left as it is.",
+     "hash": "331af0",
+     "kind": "OK",
+     "note": ""
+    },
+    "S973577": {
+     "english": "That change request is not in the sample.",
+     "hash": "715c0e",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa1a149": {
+     "english": "The batch changed since the sample was drawn; draw a new sample.",
+     "hash": "2c6f5f",
+     "kind": "OK",
+     "note": ""
+    },
+    "S5baa27": {
+     "english": "The sample has defects, so the batch cannot be decided as it is. Send the defective codes back (the note is the reason), then draw a new sample of what is left.",
+     "hash": "ba4145",
+     "kind": "OK",
+     "note": ""
+    },
+    "S8e5b1c": {
+     "english": "The verdict must be OK or DEFECT.",
+     "hash": "f36ad0",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sddedd6": {
+     "english": "This is not your sample: the person who decides inspects.",
+     "hash": "757a2a",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf56c6a": {
+     "english": "This sample belongs to another change set or another step.",
+     "hash": "0fc773",
+     "kind": "OK",
+     "note": ""
+    },
+    "S146a72": {
+     "english": "This sample has been used for a decision already; draw a new one.",
+     "hash": "49f9a1",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf0f02c": {
+     "english": "This sample is closed.",
+     "hash": "9a53b8",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf973bd": {
+     "english": "This sample is older than 24 hours; draw a new one.",
+     "hash": "447148",
+     "kind": "OK",
+     "note": ""
+    },
+    "S062a13": {
+     "english": "This sample was replaced by a newer one.",
+     "hash": "3e63ea",
+     "kind": "OK",
+     "note": ""
+    },
+    "S19f8ab": {
+     "english": "Tick the codes an action is for; with none ticked an action covers every code it applies to.",
+     "hash": "e275c1",
+     "kind": "OK",
+     "note": ""
+    },
+    "S7f6e5a": {
+     "english": "Verdict",
+     "hash": "639035",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se6246f": {
+     "english": "What stops it",
+     "hash": "894efd",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sbf45e2": {
+     "english": "Work on many codes at once without weakening a step: every code still gets its own checks, its own audit entry and, for decisions, your password. A decision on more than %(above)s codes needs a sample inspection first: %(percent)s percent of the batch, at least %(minimum)s codes, spread over the subgroups. One defect in the sample stops the decision.",
+     "hash": "17b134",
+     "kind": "OK",
+     "note": ""
+    },
+    "S93ef7c": {
+     "english": "Workbench",
+     "hash": "1d6375",
+     "kind": "A",
+     "note": "'arbejdsbord' for workbench is stiff"
+    },
+    "S1308dc": {
+     "english": "defective codes sent back",
+     "hash": "c2af03",
+     "kind": "OK",
+     "note": ""
+    },
+    "S9625d1": {
+     "english": "must be a whole number between 1 and 100",
+     "hash": "7d25bb",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf745cc": {
+     "english": "step must be domain, reviewer, admin or chief-engineer",
+     "hash": "151252",
+     "kind": "OK",
+     "note": ""
     }
    },
    "checked_at": "2026-10-24"
@@ -1143,11 +3043,11 @@
    "errors": 1,
    "awkward": 7,
    "mechanical": {
-    "strings": 1216,
+    "strings": 1279,
     "missing": 0,
     "placeholders": 0,
     "identical": 0,
-    "glossary_mismatches": 4
+    "glossary_mismatches": 5
    },
    "findings": [
     {
@@ -1377,24 +3277,402 @@
      "hash": "7b010a",
      "kind": "OK",
      "note": ""
+    },
+    "S48d260": {
+     "english": "%(n)s of %(total)s codes drawn at %(when)s.",
+     "hash": "3f8939",
+     "kind": "OK",
+     "note": ""
+    },
+    "S285edc": {
+     "english": "%(ok)s of %(n)s: %(what)s.",
+     "hash": "9813a1",
+     "kind": "OK",
+     "note": ""
+    },
+    "S18edaf": {
+     "english": "A defect needs a note: say what is wrong.",
+     "hash": "ace738",
+     "kind": "OK",
+     "note": ""
+    },
+    "S68cada": {
+     "english": "A defective Draft is corrected by its author.",
+     "hash": "06dba2",
+     "kind": "OK",
+     "note": ""
+    },
+    "S8941d5": {
+     "english": "A domain sign-off needs the engineering domain.",
+     "hash": "a0050c",
+     "kind": "OK",
+     "note": ""
+    },
+    "S071452": {
+     "english": "A note has at most 1000 characters.",
+     "hash": "c5d2e2",
+     "kind": "OK",
+     "note": ""
+    },
+    "S88b55f": {
+     "english": "Approve the batch",
+     "hash": "fbf17a",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf40e77": {
+     "english": "Available group",
+     "hash": "79d3f8",
+     "kind": "OK",
+     "note": ""
+    },
+    "S99613c": {
+     "english": "Blocked",
+     "hash": "0d6900",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf89067": {
+     "english": "Choose at least one value to set.",
+     "hash": "53f2f1",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sca7133": {
+     "english": "Choose the step you are about to decide, draw the sample, look at every sampled code and mark it. The sample is yours, valid for 24 hours and for this batch as it is now.",
+     "hash": "e0d33e",
+     "kind": "OK",
+     "note": ""
+    },
+    "S6f4274": {
+     "english": "Codes in this batch",
+     "hash": "b90971",
+     "kind": "OK",
+     "note": ""
+    },
+    "S117313": {
+     "english": "Decide the batch",
+     "hash": "e5d6bd",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se91aff": {
+     "english": "Defect",
+     "hash": "e2fd12",
+     "kind": "OK",
+     "note": ""
+    },
+    "S16fbbf": {
+     "english": "Domain sign-off",
+     "hash": "0012d1",
+     "kind": "OK",
+     "note": ""
+    },
+    "Scb1884": {
+     "english": "Dossier (XLSX)",
+     "hash": "07c68f",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se2bbd9": {
+     "english": "Drafts saved",
+     "hash": "9c3b81",
+     "kind": "OK",
+     "note": ""
+    },
+    "S0ddfa5": {
+     "english": "Drafts signed off",
+     "hash": "43b93a",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf90ab8": {
+     "english": "Drafts submitted for review",
+     "hash": "748c28",
+     "kind": "OK",
+     "note": ""
+    },
+    "S25085f": {
+     "english": "Draw a sample",
+     "hash": "6c63d5",
+     "kind": "OK",
+     "note": ""
+    },
+    "S9167a7": {
+     "english": "Engineering domain",
+     "hash": "54a626",
+     "kind": "OK",
+     "note": ""
+    },
+    "S9f4d01": {
+     "english": "More than a few codes need a sample inspection first; use the workbench.",
+     "hash": "8fe89e",
+     "kind": "OK",
+     "note": ""
+    },
+    "S95bd2d": {
+     "english": "No Draft of the set is waiting for the sign-off of this domain.",
+     "hash": "71ae91",
+     "kind": "OK",
+     "note": ""
+    },
+    "S1e3e33": {
+     "english": "No change request of the set is waiting for you at this step.",
+     "hash": "804a49",
+     "kind": "OK",
+     "note": ""
+    },
+    "S495371": {
+     "english": "Only a sample with defects can be sent back.",
+     "hash": "5c0e50",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sbc3c59": {
+     "english": "Only the values you choose are changed, on the Drafts you wrote (an Administrator: any Draft).",
+     "hash": "b17b4a",
+     "kind": "OK",
+     "note": ""
+    },
+    "S92223f": {
+     "english": "Passed: no defect in the sample. Use sample number %(id)s below.",
+     "hash": "efbffb",
+     "kind": "OK",
+     "note": ""
+    },
+    "S6275ab": {
+     "english": "Ready to submit",
+     "hash": "f50c23",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se1e74d": {
+     "english": "Reject the batch",
+     "hash": "741013",
+     "kind": "OK",
+     "note": ""
+    },
+    "S58fabf": {
+     "english": "Sample",
+     "hash": "79d812",
+     "kind": "OK",
+     "note": ""
+    },
+    "S6a26de": {
+     "english": "Sample %(id)s drawn: %(n)s of %(total)s codes to inspect.",
+     "hash": "e1cb0f",
+     "kind": "OK",
+     "note": ""
+    },
+    "S862471": {
+     "english": "Sample inspection",
+     "hash": "ce372c",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa6e3b3": {
+     "english": "Sample not found",
+     "hash": "712aea",
+     "kind": "OK",
+     "note": ""
+    },
+    "S241bf5": {
+     "english": "Sample number",
+     "hash": "3a8c9a",
+     "kind": "OK",
+     "note": ""
+    },
+    "S69cc53": {
+     "english": "Save the verdicts",
+     "hash": "0382bb",
+     "kind": "A",
+     "note": "'निर्णय' is both the verdict and the decision"
+    },
+    "S3ae55b": {
+     "english": "Send the defective codes back",
+     "hash": "bd1d70",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se90e7c": {
+     "english": "Set on the Drafts",
+     "hash": "cb9fdd",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa58dac": {
+     "english": "Set values on the Drafts",
+     "hash": "b5d6f0",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa443bb": {
+     "english": "Sign off the Drafts",
+     "hash": "bb725b",
+     "kind": "OK",
+     "note": ""
+    },
+    "S53f47f": {
+     "english": "Sign-off pending",
+     "hash": "2889d0",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sae12bc": {
+     "english": "Status category",
+     "hash": "5493bb",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sdc416e": {
+     "english": "Step",
+     "hash": "468c70",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf7710d": {
+     "english": "Submit for review",
+     "hash": "feddb9",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa45adc": {
+     "english": "Submit the Drafts",
+     "hash": "36da43",
+     "kind": "OK",
+     "note": ""
+    },
+    "S2d099f": {
+     "english": "Submits the Drafts you wrote. A Draft that still lacks a platform or a domain sign-off is reported and left as it is.",
+     "hash": "efb4c0",
+     "kind": "OK",
+     "note": ""
+    },
+    "S973577": {
+     "english": "That change request is not in the sample.",
+     "hash": "0a7f2e",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa1a149": {
+     "english": "The batch changed since the sample was drawn; draw a new sample.",
+     "hash": "1b8a58",
+     "kind": "OK",
+     "note": ""
+    },
+    "S5baa27": {
+     "english": "The sample has defects, so the batch cannot be decided as it is. Send the defective codes back (the note is the reason), then draw a new sample of what is left.",
+     "hash": "e7a9ac",
+     "kind": "OK",
+     "note": ""
+    },
+    "S8e5b1c": {
+     "english": "The verdict must be OK or DEFECT.",
+     "hash": "b7e7b6",
+     "kind": "A",
+     "note": "'निर्णय' is both the verdict and the decision"
+    },
+    "Sddedd6": {
+     "english": "This is not your sample: the person who decides inspects.",
+     "hash": "af782b",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf56c6a": {
+     "english": "This sample belongs to another change set or another step.",
+     "hash": "3e8cd2",
+     "kind": "OK",
+     "note": ""
+    },
+    "S146a72": {
+     "english": "This sample has been used for a decision already; draw a new one.",
+     "hash": "31e77e",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf0f02c": {
+     "english": "This sample is closed.",
+     "hash": "b487c7",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf973bd": {
+     "english": "This sample is older than 24 hours; draw a new one.",
+     "hash": "25b151",
+     "kind": "OK",
+     "note": ""
+    },
+    "S062a13": {
+     "english": "This sample was replaced by a newer one.",
+     "hash": "2cd97d",
+     "kind": "OK",
+     "note": ""
+    },
+    "S19f8ab": {
+     "english": "Tick the codes an action is for; with none ticked an action covers every code it applies to.",
+     "hash": "1af680",
+     "kind": "OK",
+     "note": ""
+    },
+    "S7f6e5a": {
+     "english": "Verdict",
+     "hash": "12c332",
+     "kind": "A",
+     "note": "'निर्णय' is both the verdict and the decision"
+    },
+    "Se6246f": {
+     "english": "What stops it",
+     "hash": "52e4d2",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sbf45e2": {
+     "english": "Work on many codes at once without weakening a step: every code still gets its own checks, its own audit entry and, for decisions, your password. A decision on more than %(above)s codes needs a sample inspection first: %(percent)s percent of the batch, at least %(minimum)s codes, spread over the subgroups. One defect in the sample stops the decision.",
+     "hash": "974409",
+     "kind": "OK",
+     "note": ""
+    },
+    "S93ef7c": {
+     "english": "Workbench",
+     "hash": "b42a52",
+     "kind": "OK",
+     "note": ""
+    },
+    "S1308dc": {
+     "english": "defective codes sent back",
+     "hash": "544b84",
+     "kind": "OK",
+     "note": ""
+    },
+    "S9625d1": {
+     "english": "must be a whole number between 1 and 100",
+     "hash": "be041a",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf745cc": {
+     "english": "step must be domain, reviewer, admin or chief-engineer",
+     "hash": "eb0b10",
+     "kind": "OK",
+     "note": ""
     }
    },
    "checked_at": "2026-10-24"
   },
   "ar": {
-   "confidence": 88.1,
-   "accuracy": 98.4,
+   "confidence": 88.2,
+   "accuracy": 98.5,
    "haircut": 10.0,
    "sample_size": 160,
    "sample_rate": 0.01562,
    "errors": 1,
    "awkward": 3,
    "mechanical": {
-    "strings": 1216,
+    "strings": 1279,
     "missing": 0,
     "placeholders": 0,
     "identical": 0,
-    "glossary_mismatches": 7
+    "glossary_mismatches": 8
    },
    "findings": [
     {
@@ -1592,20 +3870,398 @@
      "hash": "515237",
      "kind": "OK",
      "note": ""
+    },
+    "S48d260": {
+     "english": "%(n)s of %(total)s codes drawn at %(when)s.",
+     "hash": "f1ddca",
+     "kind": "OK",
+     "note": ""
+    },
+    "S285edc": {
+     "english": "%(ok)s of %(n)s: %(what)s.",
+     "hash": "99c3f1",
+     "kind": "OK",
+     "note": ""
+    },
+    "S18edaf": {
+     "english": "A defect needs a note: say what is wrong.",
+     "hash": "a69ad2",
+     "kind": "OK",
+     "note": ""
+    },
+    "S68cada": {
+     "english": "A defective Draft is corrected by its author.",
+     "hash": "f8af9e",
+     "kind": "OK",
+     "note": ""
+    },
+    "S8941d5": {
+     "english": "A domain sign-off needs the engineering domain.",
+     "hash": "96775e",
+     "kind": "OK",
+     "note": ""
+    },
+    "S071452": {
+     "english": "A note has at most 1000 characters.",
+     "hash": "d52b74",
+     "kind": "OK",
+     "note": ""
+    },
+    "S88b55f": {
+     "english": "Approve the batch",
+     "hash": "65ca11",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf40e77": {
+     "english": "Available group",
+     "hash": "c6a47d",
+     "kind": "OK",
+     "note": ""
+    },
+    "S99613c": {
+     "english": "Blocked",
+     "hash": "599b6d",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf89067": {
+     "english": "Choose at least one value to set.",
+     "hash": "8d0b5a",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sca7133": {
+     "english": "Choose the step you are about to decide, draw the sample, look at every sampled code and mark it. The sample is yours, valid for 24 hours and for this batch as it is now.",
+     "hash": "2ce01f",
+     "kind": "OK",
+     "note": ""
+    },
+    "S6f4274": {
+     "english": "Codes in this batch",
+     "hash": "82e5d8",
+     "kind": "OK",
+     "note": ""
+    },
+    "S117313": {
+     "english": "Decide the batch",
+     "hash": "9c3409",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se91aff": {
+     "english": "Defect",
+     "hash": "36cf88",
+     "kind": "OK",
+     "note": ""
+    },
+    "S16fbbf": {
+     "english": "Domain sign-off",
+     "hash": "0563c5",
+     "kind": "OK",
+     "note": ""
+    },
+    "Scb1884": {
+     "english": "Dossier (XLSX)",
+     "hash": "421a89",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se2bbd9": {
+     "english": "Drafts saved",
+     "hash": "0df7a5",
+     "kind": "OK",
+     "note": ""
+    },
+    "S0ddfa5": {
+     "english": "Drafts signed off",
+     "hash": "2519c6",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf90ab8": {
+     "english": "Drafts submitted for review",
+     "hash": "ba3072",
+     "kind": "OK",
+     "note": ""
+    },
+    "S25085f": {
+     "english": "Draw a sample",
+     "hash": "17e3f6",
+     "kind": "OK",
+     "note": ""
+    },
+    "S9167a7": {
+     "english": "Engineering domain",
+     "hash": "207b3c",
+     "kind": "OK",
+     "note": ""
+    },
+    "S9f4d01": {
+     "english": "More than a few codes need a sample inspection first; use the workbench.",
+     "hash": "6758a8",
+     "kind": "OK",
+     "note": ""
+    },
+    "S95bd2d": {
+     "english": "No Draft of the set is waiting for the sign-off of this domain.",
+     "hash": "f349c1",
+     "kind": "OK",
+     "note": ""
+    },
+    "S1e3e33": {
+     "english": "No change request of the set is waiting for you at this step.",
+     "hash": "69ecf6",
+     "kind": "OK",
+     "note": ""
+    },
+    "S495371": {
+     "english": "Only a sample with defects can be sent back.",
+     "hash": "2530d5",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sbc3c59": {
+     "english": "Only the values you choose are changed, on the Drafts you wrote (an Administrator: any Draft).",
+     "hash": "99691c",
+     "kind": "OK",
+     "note": ""
+    },
+    "S92223f": {
+     "english": "Passed: no defect in the sample. Use sample number %(id)s below.",
+     "hash": "41238c",
+     "kind": "OK",
+     "note": ""
+    },
+    "S6275ab": {
+     "english": "Ready to submit",
+     "hash": "aad3fd",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se1e74d": {
+     "english": "Reject the batch",
+     "hash": "85aa93",
+     "kind": "OK",
+     "note": ""
+    },
+    "S58fabf": {
+     "english": "Sample",
+     "hash": "727ff1",
+     "kind": "OK",
+     "note": ""
+    },
+    "S6a26de": {
+     "english": "Sample %(id)s drawn: %(n)s of %(total)s codes to inspect.",
+     "hash": "e11bc7",
+     "kind": "OK",
+     "note": ""
+    },
+    "S862471": {
+     "english": "Sample inspection",
+     "hash": "decfad",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa6e3b3": {
+     "english": "Sample not found",
+     "hash": "bbb2e9",
+     "kind": "OK",
+     "note": ""
+    },
+    "S241bf5": {
+     "english": "Sample number",
+     "hash": "4cd776",
+     "kind": "OK",
+     "note": ""
+    },
+    "S69cc53": {
+     "english": "Save the verdicts",
+     "hash": "c5fae8",
+     "kind": "OK",
+     "note": ""
+    },
+    "S3ae55b": {
+     "english": "Send the defective codes back",
+     "hash": "44f352",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se90e7c": {
+     "english": "Set on the Drafts",
+     "hash": "659fdb",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa58dac": {
+     "english": "Set values on the Drafts",
+     "hash": "8fe314",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa443bb": {
+     "english": "Sign off the Drafts",
+     "hash": "4d37e0",
+     "kind": "OK",
+     "note": ""
+    },
+    "S53f47f": {
+     "english": "Sign-off pending",
+     "hash": "477e38",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sae12bc": {
+     "english": "Status category",
+     "hash": "85b9f2",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sdc416e": {
+     "english": "Step",
+     "hash": "4ce7bf",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf7710d": {
+     "english": "Submit for review",
+     "hash": "cfddb3",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa45adc": {
+     "english": "Submit the Drafts",
+     "hash": "bbaa32",
+     "kind": "OK",
+     "note": ""
+    },
+    "S2d099f": {
+     "english": "Submits the Drafts you wrote. A Draft that still lacks a platform or a domain sign-off is reported and left as it is.",
+     "hash": "7f1cc0",
+     "kind": "OK",
+     "note": ""
+    },
+    "S973577": {
+     "english": "That change request is not in the sample.",
+     "hash": "2580d3",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa1a149": {
+     "english": "The batch changed since the sample was drawn; draw a new sample.",
+     "hash": "079f31",
+     "kind": "OK",
+     "note": ""
+    },
+    "S5baa27": {
+     "english": "The sample has defects, so the batch cannot be decided as it is. Send the defective codes back (the note is the reason), then draw a new sample of what is left.",
+     "hash": "5ef47d",
+     "kind": "OK",
+     "note": ""
+    },
+    "S8e5b1c": {
+     "english": "The verdict must be OK or DEFECT.",
+     "hash": "aa3dca",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sddedd6": {
+     "english": "This is not your sample: the person who decides inspects.",
+     "hash": "5b421e",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf56c6a": {
+     "english": "This sample belongs to another change set or another step.",
+     "hash": "54e939",
+     "kind": "OK",
+     "note": ""
+    },
+    "S146a72": {
+     "english": "This sample has been used for a decision already; draw a new one.",
+     "hash": "f3efde",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf0f02c": {
+     "english": "This sample is closed.",
+     "hash": "cf2c0e",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf973bd": {
+     "english": "This sample is older than 24 hours; draw a new one.",
+     "hash": "e23784",
+     "kind": "OK",
+     "note": ""
+    },
+    "S062a13": {
+     "english": "This sample was replaced by a newer one.",
+     "hash": "2d717d",
+     "kind": "OK",
+     "note": ""
+    },
+    "S19f8ab": {
+     "english": "Tick the codes an action is for; with none ticked an action covers every code it applies to.",
+     "hash": "f59516",
+     "kind": "OK",
+     "note": ""
+    },
+    "S7f6e5a": {
+     "english": "Verdict",
+     "hash": "aa8d9a",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se6246f": {
+     "english": "What stops it",
+     "hash": "e3028a",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sbf45e2": {
+     "english": "Work on many codes at once without weakening a step: every code still gets its own checks, its own audit entry and, for decisions, your password. A decision on more than %(above)s codes needs a sample inspection first: %(percent)s percent of the batch, at least %(minimum)s codes, spread over the subgroups. One defect in the sample stops the decision.",
+     "hash": "c8ab84",
+     "kind": "OK",
+     "note": ""
+    },
+    "S93ef7c": {
+     "english": "Workbench",
+     "hash": "dec77c",
+     "kind": "OK",
+     "note": ""
+    },
+    "S1308dc": {
+     "english": "defective codes sent back",
+     "hash": "b4ad3a",
+     "kind": "OK",
+     "note": ""
+    },
+    "S9625d1": {
+     "english": "must be a whole number between 1 and 100",
+     "hash": "cab371",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf745cc": {
+     "english": "step must be domain, reviewer, admin or chief-engineer",
+     "hash": "94c485",
+     "kind": "OK",
+     "note": ""
     }
    },
    "checked_at": "2026-10-24"
   },
   "bn": {
-   "confidence": 86.8,
-   "accuracy": 97.9,
+   "confidence": 86.9,
+   "accuracy": 98.0,
    "haircut": 11.0,
    "sample_size": 160,
    "sample_rate": 0.01875,
    "errors": 0,
    "awkward": 6,
    "mechanical": {
-    "strings": 1216,
+    "strings": 1279,
     "missing": 0,
     "placeholders": 0,
     "identical": 0,
@@ -1823,6 +4479,384 @@
      "hash": "af2ceb",
      "kind": "OK",
      "note": ""
+    },
+    "S48d260": {
+     "english": "%(n)s of %(total)s codes drawn at %(when)s.",
+     "hash": "a4a353",
+     "kind": "OK",
+     "note": ""
+    },
+    "S285edc": {
+     "english": "%(ok)s of %(n)s: %(what)s.",
+     "hash": "9813a1",
+     "kind": "OK",
+     "note": ""
+    },
+    "S18edaf": {
+     "english": "A defect needs a note: say what is wrong.",
+     "hash": "fe8d59",
+     "kind": "OK",
+     "note": ""
+    },
+    "S68cada": {
+     "english": "A defective Draft is corrected by its author.",
+     "hash": "f77838",
+     "kind": "OK",
+     "note": ""
+    },
+    "S8941d5": {
+     "english": "A domain sign-off needs the engineering domain.",
+     "hash": "8dd635",
+     "kind": "OK",
+     "note": ""
+    },
+    "S071452": {
+     "english": "A note has at most 1000 characters.",
+     "hash": "f920d5",
+     "kind": "OK",
+     "note": ""
+    },
+    "S88b55f": {
+     "english": "Approve the batch",
+     "hash": "8f7fb4",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf40e77": {
+     "english": "Available group",
+     "hash": "e77f51",
+     "kind": "OK",
+     "note": ""
+    },
+    "S99613c": {
+     "english": "Blocked",
+     "hash": "92fce3",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf89067": {
+     "english": "Choose at least one value to set.",
+     "hash": "acee7a",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sca7133": {
+     "english": "Choose the step you are about to decide, draw the sample, look at every sampled code and mark it. The sample is yours, valid for 24 hours and for this batch as it is now.",
+     "hash": "edd457",
+     "kind": "OK",
+     "note": ""
+    },
+    "S6f4274": {
+     "english": "Codes in this batch",
+     "hash": "6eaf3a",
+     "kind": "OK",
+     "note": ""
+    },
+    "S117313": {
+     "english": "Decide the batch",
+     "hash": "a6e612",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se91aff": {
+     "english": "Defect",
+     "hash": "1b0fc2",
+     "kind": "OK",
+     "note": ""
+    },
+    "S16fbbf": {
+     "english": "Domain sign-off",
+     "hash": "9109f8",
+     "kind": "OK",
+     "note": ""
+    },
+    "Scb1884": {
+     "english": "Dossier (XLSX)",
+     "hash": "8181bd",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se2bbd9": {
+     "english": "Drafts saved",
+     "hash": "8cf9d1",
+     "kind": "OK",
+     "note": ""
+    },
+    "S0ddfa5": {
+     "english": "Drafts signed off",
+     "hash": "1d07d7",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf90ab8": {
+     "english": "Drafts submitted for review",
+     "hash": "d83e78",
+     "kind": "OK",
+     "note": ""
+    },
+    "S25085f": {
+     "english": "Draw a sample",
+     "hash": "2fe685",
+     "kind": "OK",
+     "note": ""
+    },
+    "S9167a7": {
+     "english": "Engineering domain",
+     "hash": "2d55aa",
+     "kind": "OK",
+     "note": ""
+    },
+    "S9f4d01": {
+     "english": "More than a few codes need a sample inspection first; use the workbench.",
+     "hash": "8e6b46",
+     "kind": "OK",
+     "note": ""
+    },
+    "S95bd2d": {
+     "english": "No Draft of the set is waiting for the sign-off of this domain.",
+     "hash": "d8a930",
+     "kind": "OK",
+     "note": ""
+    },
+    "S1e3e33": {
+     "english": "No change request of the set is waiting for you at this step.",
+     "hash": "49a52b",
+     "kind": "OK",
+     "note": ""
+    },
+    "S495371": {
+     "english": "Only a sample with defects can be sent back.",
+     "hash": "5dc9f5",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sbc3c59": {
+     "english": "Only the values you choose are changed, on the Drafts you wrote (an Administrator: any Draft).",
+     "hash": "c3ade7",
+     "kind": "OK",
+     "note": ""
+    },
+    "S92223f": {
+     "english": "Passed: no defect in the sample. Use sample number %(id)s below.",
+     "hash": "2080e0",
+     "kind": "OK",
+     "note": ""
+    },
+    "S6275ab": {
+     "english": "Ready to submit",
+     "hash": "019709",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se1e74d": {
+     "english": "Reject the batch",
+     "hash": "32563e",
+     "kind": "OK",
+     "note": ""
+    },
+    "S58fabf": {
+     "english": "Sample",
+     "hash": "c96a7d",
+     "kind": "OK",
+     "note": ""
+    },
+    "S6a26de": {
+     "english": "Sample %(id)s drawn: %(n)s of %(total)s codes to inspect.",
+     "hash": "204b9c",
+     "kind": "OK",
+     "note": ""
+    },
+    "S862471": {
+     "english": "Sample inspection",
+     "hash": "8ce509",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa6e3b3": {
+     "english": "Sample not found",
+     "hash": "71bd86",
+     "kind": "OK",
+     "note": ""
+    },
+    "S241bf5": {
+     "english": "Sample number",
+     "hash": "415b1e",
+     "kind": "OK",
+     "note": ""
+    },
+    "S69cc53": {
+     "english": "Save the verdicts",
+     "hash": "2e3a95",
+     "kind": "OK",
+     "note": ""
+    },
+    "S3ae55b": {
+     "english": "Send the defective codes back",
+     "hash": "500c55",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se90e7c": {
+     "english": "Set on the Drafts",
+     "hash": "268251",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa58dac": {
+     "english": "Set values on the Drafts",
+     "hash": "c32699",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa443bb": {
+     "english": "Sign off the Drafts",
+     "hash": "5eb885",
+     "kind": "OK",
+     "note": ""
+    },
+    "S53f47f": {
+     "english": "Sign-off pending",
+     "hash": "697372",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sae12bc": {
+     "english": "Status category",
+     "hash": "2a3029",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sdc416e": {
+     "english": "Step",
+     "hash": "4a2224",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf7710d": {
+     "english": "Submit for review",
+     "hash": "b3a960",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa45adc": {
+     "english": "Submit the Drafts",
+     "hash": "17018f",
+     "kind": "OK",
+     "note": ""
+    },
+    "S2d099f": {
+     "english": "Submits the Drafts you wrote. A Draft that still lacks a platform or a domain sign-off is reported and left as it is.",
+     "hash": "66b9d1",
+     "kind": "OK",
+     "note": ""
+    },
+    "S973577": {
+     "english": "That change request is not in the sample.",
+     "hash": "54f7a7",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa1a149": {
+     "english": "The batch changed since the sample was drawn; draw a new sample.",
+     "hash": "4c73ff",
+     "kind": "OK",
+     "note": ""
+    },
+    "S5baa27": {
+     "english": "The sample has defects, so the batch cannot be decided as it is. Send the defective codes back (the note is the reason), then draw a new sample of what is left.",
+     "hash": "b0ce99",
+     "kind": "OK",
+     "note": ""
+    },
+    "S8e5b1c": {
+     "english": "The verdict must be OK or DEFECT.",
+     "hash": "e0948e",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sddedd6": {
+     "english": "This is not your sample: the person who decides inspects.",
+     "hash": "d6e216",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf56c6a": {
+     "english": "This sample belongs to another change set or another step.",
+     "hash": "050861",
+     "kind": "OK",
+     "note": ""
+    },
+    "S146a72": {
+     "english": "This sample has been used for a decision already; draw a new one.",
+     "hash": "13e456",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf0f02c": {
+     "english": "This sample is closed.",
+     "hash": "276df5",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf973bd": {
+     "english": "This sample is older than 24 hours; draw a new one.",
+     "hash": "edf2fb",
+     "kind": "OK",
+     "note": ""
+    },
+    "S062a13": {
+     "english": "This sample was replaced by a newer one.",
+     "hash": "1ee753",
+     "kind": "OK",
+     "note": ""
+    },
+    "S19f8ab": {
+     "english": "Tick the codes an action is for; with none ticked an action covers every code it applies to.",
+     "hash": "04a859",
+     "kind": "OK",
+     "note": ""
+    },
+    "S7f6e5a": {
+     "english": "Verdict",
+     "hash": "e1fcf5",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se6246f": {
+     "english": "What stops it",
+     "hash": "385c67",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sbf45e2": {
+     "english": "Work on many codes at once without weakening a step: every code still gets its own checks, its own audit entry and, for decisions, your password. A decision on more than %(above)s codes needs a sample inspection first: %(percent)s percent of the batch, at least %(minimum)s codes, spread over the subgroups. One defect in the sample stops the decision.",
+     "hash": "f2555a",
+     "kind": "OK",
+     "note": ""
+    },
+    "S93ef7c": {
+     "english": "Workbench",
+     "hash": "ec9cc2",
+     "kind": "OK",
+     "note": ""
+    },
+    "S1308dc": {
+     "english": "defective codes sent back",
+     "hash": "44273c",
+     "kind": "OK",
+     "note": ""
+    },
+    "S9625d1": {
+     "english": "must be a whole number between 1 and 100",
+     "hash": "0c336c",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf745cc": {
+     "english": "step must be domain, reviewer, admin or chief-engineer",
+     "hash": "9c7c81",
+     "kind": "OK",
+     "note": ""
     }
    },
    "checked_at": "2026-10-24"
@@ -1836,11 +4870,11 @@
    "errors": 1,
    "awkward": 5,
    "mechanical": {
-    "strings": 1216,
+    "strings": 1279,
     "missing": 0,
     "placeholders": 0,
     "identical": 0,
-    "glossary_mismatches": 5
+    "glossary_mismatches": 6
    },
    "findings": [
     {
@@ -2054,20 +5088,398 @@
      "hash": "e1d9e6",
      "kind": "OK",
      "note": ""
+    },
+    "S48d260": {
+     "english": "%(n)s of %(total)s codes drawn at %(when)s.",
+     "hash": "3e7ad1",
+     "kind": "OK",
+     "note": ""
+    },
+    "S285edc": {
+     "english": "%(ok)s of %(n)s: %(what)s.",
+     "hash": "a4541e",
+     "kind": "OK",
+     "note": ""
+    },
+    "S18edaf": {
+     "english": "A defect needs a note: say what is wrong.",
+     "hash": "a9c349",
+     "kind": "OK",
+     "note": ""
+    },
+    "S68cada": {
+     "english": "A defective Draft is corrected by its author.",
+     "hash": "0b24dc",
+     "kind": "OK",
+     "note": ""
+    },
+    "S8941d5": {
+     "english": "A domain sign-off needs the engineering domain.",
+     "hash": "55987f",
+     "kind": "OK",
+     "note": ""
+    },
+    "S071452": {
+     "english": "A note has at most 1000 characters.",
+     "hash": "367d48",
+     "kind": "OK",
+     "note": ""
+    },
+    "S88b55f": {
+     "english": "Approve the batch",
+     "hash": "61dc67",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf40e77": {
+     "english": "Available group",
+     "hash": "6ead6c",
+     "kind": "OK",
+     "note": ""
+    },
+    "S99613c": {
+     "english": "Blocked",
+     "hash": "beeb53",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf89067": {
+     "english": "Choose at least one value to set.",
+     "hash": "cb7d0f",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sca7133": {
+     "english": "Choose the step you are about to decide, draw the sample, look at every sampled code and mark it. The sample is yours, valid for 24 hours and for this batch as it is now.",
+     "hash": "184ad6",
+     "kind": "OK",
+     "note": ""
+    },
+    "S6f4274": {
+     "english": "Codes in this batch",
+     "hash": "f64144",
+     "kind": "OK",
+     "note": ""
+    },
+    "S117313": {
+     "english": "Decide the batch",
+     "hash": "63135f",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se91aff": {
+     "english": "Defect",
+     "hash": "e2fd12",
+     "kind": "OK",
+     "note": ""
+    },
+    "S16fbbf": {
+     "english": "Domain sign-off",
+     "hash": "0012d1",
+     "kind": "OK",
+     "note": ""
+    },
+    "Scb1884": {
+     "english": "Dossier (XLSX)",
+     "hash": "07c68f",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se2bbd9": {
+     "english": "Drafts saved",
+     "hash": "b64486",
+     "kind": "OK",
+     "note": ""
+    },
+    "S0ddfa5": {
+     "english": "Drafts signed off",
+     "hash": "1ad230",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf90ab8": {
+     "english": "Drafts submitted for review",
+     "hash": "7e1652",
+     "kind": "OK",
+     "note": ""
+    },
+    "S25085f": {
+     "english": "Draw a sample",
+     "hash": "4d0039",
+     "kind": "OK",
+     "note": ""
+    },
+    "S9167a7": {
+     "english": "Engineering domain",
+     "hash": "6e54e4",
+     "kind": "OK",
+     "note": ""
+    },
+    "S9f4d01": {
+     "english": "More than a few codes need a sample inspection first; use the workbench.",
+     "hash": "cfbf1a",
+     "kind": "OK",
+     "note": ""
+    },
+    "S95bd2d": {
+     "english": "No Draft of the set is waiting for the sign-off of this domain.",
+     "hash": "5197a4",
+     "kind": "OK",
+     "note": ""
+    },
+    "S1e3e33": {
+     "english": "No change request of the set is waiting for you at this step.",
+     "hash": "686601",
+     "kind": "OK",
+     "note": ""
+    },
+    "S495371": {
+     "english": "Only a sample with defects can be sent back.",
+     "hash": "910a3f",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sbc3c59": {
+     "english": "Only the values you choose are changed, on the Drafts you wrote (an Administrator: any Draft).",
+     "hash": "51d288",
+     "kind": "OK",
+     "note": ""
+    },
+    "S92223f": {
+     "english": "Passed: no defect in the sample. Use sample number %(id)s below.",
+     "hash": "4f1342",
+     "kind": "OK",
+     "note": ""
+    },
+    "S6275ab": {
+     "english": "Ready to submit",
+     "hash": "82770c",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se1e74d": {
+     "english": "Reject the batch",
+     "hash": "4bbdac",
+     "kind": "OK",
+     "note": ""
+    },
+    "S58fabf": {
+     "english": "Sample",
+     "hash": "d7ea46",
+     "kind": "OK",
+     "note": ""
+    },
+    "S6a26de": {
+     "english": "Sample %(id)s drawn: %(n)s of %(total)s codes to inspect.",
+     "hash": "bf1cf0",
+     "kind": "OK",
+     "note": ""
+    },
+    "S862471": {
+     "english": "Sample inspection",
+     "hash": "f7fd16",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa6e3b3": {
+     "english": "Sample not found",
+     "hash": "7eac7a",
+     "kind": "OK",
+     "note": ""
+    },
+    "S241bf5": {
+     "english": "Sample number",
+     "hash": "1f4aa5",
+     "kind": "OK",
+     "note": ""
+    },
+    "S69cc53": {
+     "english": "Save the verdicts",
+     "hash": "0b3a52",
+     "kind": "A",
+     "note": "'निर्णय' is both the verdict and the decision"
+    },
+    "S3ae55b": {
+     "english": "Send the defective codes back",
+     "hash": "e213e1",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se90e7c": {
+     "english": "Set on the Drafts",
+     "hash": "471029",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa58dac": {
+     "english": "Set values on the Drafts",
+     "hash": "32d952",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa443bb": {
+     "english": "Sign off the Drafts",
+     "hash": "f8dc20",
+     "kind": "OK",
+     "note": ""
+    },
+    "S53f47f": {
+     "english": "Sign-off pending",
+     "hash": "37c7e2",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sae12bc": {
+     "english": "Status category",
+     "hash": "f52643",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sdc416e": {
+     "english": "Step",
+     "hash": "205dd5",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf7710d": {
+     "english": "Submit for review",
+     "hash": "c3dd4b",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa45adc": {
+     "english": "Submit the Drafts",
+     "hash": "000c75",
+     "kind": "OK",
+     "note": ""
+    },
+    "S2d099f": {
+     "english": "Submits the Drafts you wrote. A Draft that still lacks a platform or a domain sign-off is reported and left as it is.",
+     "hash": "07b6cd",
+     "kind": "OK",
+     "note": ""
+    },
+    "S973577": {
+     "english": "That change request is not in the sample.",
+     "hash": "b783fb",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa1a149": {
+     "english": "The batch changed since the sample was drawn; draw a new sample.",
+     "hash": "735d93",
+     "kind": "OK",
+     "note": ""
+    },
+    "S5baa27": {
+     "english": "The sample has defects, so the batch cannot be decided as it is. Send the defective codes back (the note is the reason), then draw a new sample of what is left.",
+     "hash": "47bbfb",
+     "kind": "OK",
+     "note": ""
+    },
+    "S8e5b1c": {
+     "english": "The verdict must be OK or DEFECT.",
+     "hash": "b20d3f",
+     "kind": "A",
+     "note": "'निर्णय' is both the verdict and the decision"
+    },
+    "Sddedd6": {
+     "english": "This is not your sample: the person who decides inspects.",
+     "hash": "e4c210",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf56c6a": {
+     "english": "This sample belongs to another change set or another step.",
+     "hash": "6033a7",
+     "kind": "OK",
+     "note": ""
+    },
+    "S146a72": {
+     "english": "This sample has been used for a decision already; draw a new one.",
+     "hash": "f36e03",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf0f02c": {
+     "english": "This sample is closed.",
+     "hash": "6f5be5",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf973bd": {
+     "english": "This sample is older than 24 hours; draw a new one.",
+     "hash": "0fa5de",
+     "kind": "OK",
+     "note": ""
+    },
+    "S062a13": {
+     "english": "This sample was replaced by a newer one.",
+     "hash": "faa07d",
+     "kind": "OK",
+     "note": ""
+    },
+    "S19f8ab": {
+     "english": "Tick the codes an action is for; with none ticked an action covers every code it applies to.",
+     "hash": "835632",
+     "kind": "OK",
+     "note": ""
+    },
+    "S7f6e5a": {
+     "english": "Verdict",
+     "hash": "12c332",
+     "kind": "A",
+     "note": "'निर्णय' is both the verdict and the decision"
+    },
+    "Se6246f": {
+     "english": "What stops it",
+     "hash": "160854",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sbf45e2": {
+     "english": "Work on many codes at once without weakening a step: every code still gets its own checks, its own audit entry and, for decisions, your password. A decision on more than %(above)s codes needs a sample inspection first: %(percent)s percent of the batch, at least %(minimum)s codes, spread over the subgroups. One defect in the sample stops the decision.",
+     "hash": "f7d037",
+     "kind": "OK",
+     "note": ""
+    },
+    "S93ef7c": {
+     "english": "Workbench",
+     "hash": "b42a52",
+     "kind": "OK",
+     "note": ""
+    },
+    "S1308dc": {
+     "english": "defective codes sent back",
+     "hash": "f8726f",
+     "kind": "OK",
+     "note": ""
+    },
+    "S9625d1": {
+     "english": "must be a whole number between 1 and 100",
+     "hash": "70bc40",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf745cc": {
+     "english": "step must be domain, reviewer, admin or chief-engineer",
+     "hash": "9ead9c",
+     "kind": "OK",
+     "note": ""
     }
    },
    "checked_at": "2026-10-24"
   },
   "te": {
-   "confidence": 85.1,
-   "accuracy": 98.2,
+   "confidence": 85.2,
+   "accuracy": 98.3,
    "haircut": 13.0,
    "sample_size": 160,
    "sample_rate": 0.01562,
    "errors": 0,
    "awkward": 5,
    "mechanical": {
-    "strings": 1216,
+    "strings": 1279,
     "missing": 0,
     "placeholders": 0,
     "identical": 0,
@@ -2277,20 +5689,398 @@
      "hash": "ea1bee",
      "kind": "OK",
      "note": ""
+    },
+    "S48d260": {
+     "english": "%(n)s of %(total)s codes drawn at %(when)s.",
+     "hash": "eb99e9",
+     "kind": "OK",
+     "note": ""
+    },
+    "S285edc": {
+     "english": "%(ok)s of %(n)s: %(what)s.",
+     "hash": "a4541e",
+     "kind": "OK",
+     "note": ""
+    },
+    "S18edaf": {
+     "english": "A defect needs a note: say what is wrong.",
+     "hash": "344621",
+     "kind": "OK",
+     "note": ""
+    },
+    "S68cada": {
+     "english": "A defective Draft is corrected by its author.",
+     "hash": "b4b089",
+     "kind": "OK",
+     "note": ""
+    },
+    "S8941d5": {
+     "english": "A domain sign-off needs the engineering domain.",
+     "hash": "4df5f4",
+     "kind": "OK",
+     "note": ""
+    },
+    "S071452": {
+     "english": "A note has at most 1000 characters.",
+     "hash": "ab34b8",
+     "kind": "OK",
+     "note": ""
+    },
+    "S88b55f": {
+     "english": "Approve the batch",
+     "hash": "ccc833",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf40e77": {
+     "english": "Available group",
+     "hash": "9b77ea",
+     "kind": "OK",
+     "note": ""
+    },
+    "S99613c": {
+     "english": "Blocked",
+     "hash": "f75d7c",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf89067": {
+     "english": "Choose at least one value to set.",
+     "hash": "dcccf9",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sca7133": {
+     "english": "Choose the step you are about to decide, draw the sample, look at every sampled code and mark it. The sample is yours, valid for 24 hours and for this batch as it is now.",
+     "hash": "aa357e",
+     "kind": "OK",
+     "note": ""
+    },
+    "S6f4274": {
+     "english": "Codes in this batch",
+     "hash": "fe1dc6",
+     "kind": "OK",
+     "note": ""
+    },
+    "S117313": {
+     "english": "Decide the batch",
+     "hash": "f07c21",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se91aff": {
+     "english": "Defect",
+     "hash": "a64dae",
+     "kind": "OK",
+     "note": ""
+    },
+    "S16fbbf": {
+     "english": "Domain sign-off",
+     "hash": "fc7ccb",
+     "kind": "OK",
+     "note": ""
+    },
+    "Scb1884": {
+     "english": "Dossier (XLSX)",
+     "hash": "a6c5d2",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se2bbd9": {
+     "english": "Drafts saved",
+     "hash": "277027",
+     "kind": "OK",
+     "note": ""
+    },
+    "S0ddfa5": {
+     "english": "Drafts signed off",
+     "hash": "3dd121",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf90ab8": {
+     "english": "Drafts submitted for review",
+     "hash": "fdb5c0",
+     "kind": "OK",
+     "note": ""
+    },
+    "S25085f": {
+     "english": "Draw a sample",
+     "hash": "3ddfb3",
+     "kind": "OK",
+     "note": ""
+    },
+    "S9167a7": {
+     "english": "Engineering domain",
+     "hash": "c943ec",
+     "kind": "OK",
+     "note": ""
+    },
+    "S9f4d01": {
+     "english": "More than a few codes need a sample inspection first; use the workbench.",
+     "hash": "e4b26e",
+     "kind": "OK",
+     "note": ""
+    },
+    "S95bd2d": {
+     "english": "No Draft of the set is waiting for the sign-off of this domain.",
+     "hash": "92bb41",
+     "kind": "OK",
+     "note": ""
+    },
+    "S1e3e33": {
+     "english": "No change request of the set is waiting for you at this step.",
+     "hash": "6c9d62",
+     "kind": "OK",
+     "note": ""
+    },
+    "S495371": {
+     "english": "Only a sample with defects can be sent back.",
+     "hash": "d24a10",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sbc3c59": {
+     "english": "Only the values you choose are changed, on the Drafts you wrote (an Administrator: any Draft).",
+     "hash": "b5a2e9",
+     "kind": "OK",
+     "note": ""
+    },
+    "S92223f": {
+     "english": "Passed: no defect in the sample. Use sample number %(id)s below.",
+     "hash": "7b9b2c",
+     "kind": "OK",
+     "note": ""
+    },
+    "S6275ab": {
+     "english": "Ready to submit",
+     "hash": "cdf4e9",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se1e74d": {
+     "english": "Reject the batch",
+     "hash": "e16b59",
+     "kind": "OK",
+     "note": ""
+    },
+    "S58fabf": {
+     "english": "Sample",
+     "hash": "2fae81",
+     "kind": "OK",
+     "note": ""
+    },
+    "S6a26de": {
+     "english": "Sample %(id)s drawn: %(n)s of %(total)s codes to inspect.",
+     "hash": "aca835",
+     "kind": "OK",
+     "note": ""
+    },
+    "S862471": {
+     "english": "Sample inspection",
+     "hash": "5c9190",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa6e3b3": {
+     "english": "Sample not found",
+     "hash": "9d3191",
+     "kind": "OK",
+     "note": ""
+    },
+    "S241bf5": {
+     "english": "Sample number",
+     "hash": "40a9f3",
+     "kind": "OK",
+     "note": ""
+    },
+    "S69cc53": {
+     "english": "Save the verdicts",
+     "hash": "a924b0",
+     "kind": "OK",
+     "note": ""
+    },
+    "S3ae55b": {
+     "english": "Send the defective codes back",
+     "hash": "f8e930",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se90e7c": {
+     "english": "Set on the Drafts",
+     "hash": "bc1271",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa58dac": {
+     "english": "Set values on the Drafts",
+     "hash": "685732",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa443bb": {
+     "english": "Sign off the Drafts",
+     "hash": "f01602",
+     "kind": "OK",
+     "note": ""
+    },
+    "S53f47f": {
+     "english": "Sign-off pending",
+     "hash": "dc3caa",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sae12bc": {
+     "english": "Status category",
+     "hash": "3961e7",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sdc416e": {
+     "english": "Step",
+     "hash": "3ed462",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf7710d": {
+     "english": "Submit for review",
+     "hash": "a5178d",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa45adc": {
+     "english": "Submit the Drafts",
+     "hash": "f3305b",
+     "kind": "OK",
+     "note": ""
+    },
+    "S2d099f": {
+     "english": "Submits the Drafts you wrote. A Draft that still lacks a platform or a domain sign-off is reported and left as it is.",
+     "hash": "7921ec",
+     "kind": "OK",
+     "note": ""
+    },
+    "S973577": {
+     "english": "That change request is not in the sample.",
+     "hash": "ff1f0e",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa1a149": {
+     "english": "The batch changed since the sample was drawn; draw a new sample.",
+     "hash": "76455a",
+     "kind": "OK",
+     "note": ""
+    },
+    "S5baa27": {
+     "english": "The sample has defects, so the batch cannot be decided as it is. Send the defective codes back (the note is the reason), then draw a new sample of what is left.",
+     "hash": "bb04c4",
+     "kind": "OK",
+     "note": ""
+    },
+    "S8e5b1c": {
+     "english": "The verdict must be OK or DEFECT.",
+     "hash": "907b23",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sddedd6": {
+     "english": "This is not your sample: the person who decides inspects.",
+     "hash": "984da7",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf56c6a": {
+     "english": "This sample belongs to another change set or another step.",
+     "hash": "0713fc",
+     "kind": "OK",
+     "note": ""
+    },
+    "S146a72": {
+     "english": "This sample has been used for a decision already; draw a new one.",
+     "hash": "9d3f9e",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf0f02c": {
+     "english": "This sample is closed.",
+     "hash": "8f9a14",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf973bd": {
+     "english": "This sample is older than 24 hours; draw a new one.",
+     "hash": "bc735c",
+     "kind": "OK",
+     "note": ""
+    },
+    "S062a13": {
+     "english": "This sample was replaced by a newer one.",
+     "hash": "478f28",
+     "kind": "OK",
+     "note": ""
+    },
+    "S19f8ab": {
+     "english": "Tick the codes an action is for; with none ticked an action covers every code it applies to.",
+     "hash": "411a1f",
+     "kind": "OK",
+     "note": ""
+    },
+    "S7f6e5a": {
+     "english": "Verdict",
+     "hash": "f1c8c1",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se6246f": {
+     "english": "What stops it",
+     "hash": "00ed45",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sbf45e2": {
+     "english": "Work on many codes at once without weakening a step: every code still gets its own checks, its own audit entry and, for decisions, your password. A decision on more than %(above)s codes needs a sample inspection first: %(percent)s percent of the batch, at least %(minimum)s codes, spread over the subgroups. One defect in the sample stops the decision.",
+     "hash": "bbbeaf",
+     "kind": "OK",
+     "note": ""
+    },
+    "S93ef7c": {
+     "english": "Workbench",
+     "hash": "16ced2",
+     "kind": "OK",
+     "note": ""
+    },
+    "S1308dc": {
+     "english": "defective codes sent back",
+     "hash": "13334c",
+     "kind": "OK",
+     "note": ""
+    },
+    "S9625d1": {
+     "english": "must be a whole number between 1 and 100",
+     "hash": "0d6e6b",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf745cc": {
+     "english": "step must be domain, reviewer, admin or chief-engineer",
+     "hash": "c029f4",
+     "kind": "OK",
+     "note": ""
     }
    },
    "checked_at": "2026-10-24"
   },
   "ta": {
-   "confidence": 84.1,
-   "accuracy": 97.4,
+   "confidence": 84.2,
+   "accuracy": 97.5,
    "haircut": 13.0,
    "sample_size": 160,
    "sample_rate": 0.025,
    "errors": 1,
    "awkward": 6,
    "mechanical": {
-    "strings": 1216,
+    "strings": 1279,
     "missing": 0,
     "placeholders": 0,
     "identical": 0,
@@ -2516,24 +6306,402 @@
      "hash": "11287a",
      "kind": "OK",
      "note": ""
+    },
+    "S48d260": {
+     "english": "%(n)s of %(total)s codes drawn at %(when)s.",
+     "hash": "7ac4d2",
+     "kind": "OK",
+     "note": ""
+    },
+    "S285edc": {
+     "english": "%(ok)s of %(n)s: %(what)s.",
+     "hash": "a4541e",
+     "kind": "OK",
+     "note": ""
+    },
+    "S18edaf": {
+     "english": "A defect needs a note: say what is wrong.",
+     "hash": "a9eff8",
+     "kind": "OK",
+     "note": ""
+    },
+    "S68cada": {
+     "english": "A defective Draft is corrected by its author.",
+     "hash": "4996a6",
+     "kind": "OK",
+     "note": ""
+    },
+    "S8941d5": {
+     "english": "A domain sign-off needs the engineering domain.",
+     "hash": "ee0d4c",
+     "kind": "OK",
+     "note": ""
+    },
+    "S071452": {
+     "english": "A note has at most 1000 characters.",
+     "hash": "2f6fab",
+     "kind": "OK",
+     "note": ""
+    },
+    "S88b55f": {
+     "english": "Approve the batch",
+     "hash": "4f5112",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf40e77": {
+     "english": "Available group",
+     "hash": "de7f1f",
+     "kind": "OK",
+     "note": ""
+    },
+    "S99613c": {
+     "english": "Blocked",
+     "hash": "7546c2",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf89067": {
+     "english": "Choose at least one value to set.",
+     "hash": "4809d9",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sca7133": {
+     "english": "Choose the step you are about to decide, draw the sample, look at every sampled code and mark it. The sample is yours, valid for 24 hours and for this batch as it is now.",
+     "hash": "d2e476",
+     "kind": "OK",
+     "note": ""
+    },
+    "S6f4274": {
+     "english": "Codes in this batch",
+     "hash": "875dd8",
+     "kind": "OK",
+     "note": ""
+    },
+    "S117313": {
+     "english": "Decide the batch",
+     "hash": "fbc15d",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se91aff": {
+     "english": "Defect",
+     "hash": "911722",
+     "kind": "OK",
+     "note": ""
+    },
+    "S16fbbf": {
+     "english": "Domain sign-off",
+     "hash": "9c5eaa",
+     "kind": "OK",
+     "note": ""
+    },
+    "Scb1884": {
+     "english": "Dossier (XLSX)",
+     "hash": "9ecaf3",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se2bbd9": {
+     "english": "Drafts saved",
+     "hash": "544390",
+     "kind": "OK",
+     "note": ""
+    },
+    "S0ddfa5": {
+     "english": "Drafts signed off",
+     "hash": "7ec5ae",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf90ab8": {
+     "english": "Drafts submitted for review",
+     "hash": "77f83d",
+     "kind": "OK",
+     "note": ""
+    },
+    "S25085f": {
+     "english": "Draw a sample",
+     "hash": "149d13",
+     "kind": "OK",
+     "note": ""
+    },
+    "S9167a7": {
+     "english": "Engineering domain",
+     "hash": "e80e0d",
+     "kind": "OK",
+     "note": ""
+    },
+    "S9f4d01": {
+     "english": "More than a few codes need a sample inspection first; use the workbench.",
+     "hash": "ab12f0",
+     "kind": "OK",
+     "note": ""
+    },
+    "S95bd2d": {
+     "english": "No Draft of the set is waiting for the sign-off of this domain.",
+     "hash": "fbe5cf",
+     "kind": "OK",
+     "note": ""
+    },
+    "S1e3e33": {
+     "english": "No change request of the set is waiting for you at this step.",
+     "hash": "5a0160",
+     "kind": "OK",
+     "note": ""
+    },
+    "S495371": {
+     "english": "Only a sample with defects can be sent back.",
+     "hash": "23f17b",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sbc3c59": {
+     "english": "Only the values you choose are changed, on the Drafts you wrote (an Administrator: any Draft).",
+     "hash": "96c9b9",
+     "kind": "OK",
+     "note": ""
+    },
+    "S92223f": {
+     "english": "Passed: no defect in the sample. Use sample number %(id)s below.",
+     "hash": "4af07d",
+     "kind": "OK",
+     "note": ""
+    },
+    "S6275ab": {
+     "english": "Ready to submit",
+     "hash": "ce060d",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se1e74d": {
+     "english": "Reject the batch",
+     "hash": "e96eff",
+     "kind": "OK",
+     "note": ""
+    },
+    "S58fabf": {
+     "english": "Sample",
+     "hash": "9fd299",
+     "kind": "OK",
+     "note": ""
+    },
+    "S6a26de": {
+     "english": "Sample %(id)s drawn: %(n)s of %(total)s codes to inspect.",
+     "hash": "8682bc",
+     "kind": "OK",
+     "note": ""
+    },
+    "S862471": {
+     "english": "Sample inspection",
+     "hash": "c4fbae",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa6e3b3": {
+     "english": "Sample not found",
+     "hash": "fa14be",
+     "kind": "OK",
+     "note": ""
+    },
+    "S241bf5": {
+     "english": "Sample number",
+     "hash": "9e8651",
+     "kind": "OK",
+     "note": ""
+    },
+    "S69cc53": {
+     "english": "Save the verdicts",
+     "hash": "e6c88e",
+     "kind": "OK",
+     "note": ""
+    },
+    "S3ae55b": {
+     "english": "Send the defective codes back",
+     "hash": "94f8e2",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se90e7c": {
+     "english": "Set on the Drafts",
+     "hash": "c155e3",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa58dac": {
+     "english": "Set values on the Drafts",
+     "hash": "d41ec6",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa443bb": {
+     "english": "Sign off the Drafts",
+     "hash": "19c365",
+     "kind": "OK",
+     "note": ""
+    },
+    "S53f47f": {
+     "english": "Sign-off pending",
+     "hash": "cd65ba",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sae12bc": {
+     "english": "Status category",
+     "hash": "aa7979",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sdc416e": {
+     "english": "Step",
+     "hash": "3c1e98",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf7710d": {
+     "english": "Submit for review",
+     "hash": "7f35aa",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa45adc": {
+     "english": "Submit the Drafts",
+     "hash": "91828d",
+     "kind": "OK",
+     "note": ""
+    },
+    "S2d099f": {
+     "english": "Submits the Drafts you wrote. A Draft that still lacks a platform or a domain sign-off is reported and left as it is.",
+     "hash": "43494d",
+     "kind": "OK",
+     "note": ""
+    },
+    "S973577": {
+     "english": "That change request is not in the sample.",
+     "hash": "ddad2f",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa1a149": {
+     "english": "The batch changed since the sample was drawn; draw a new sample.",
+     "hash": "b91235",
+     "kind": "OK",
+     "note": ""
+    },
+    "S5baa27": {
+     "english": "The sample has defects, so the batch cannot be decided as it is. Send the defective codes back (the note is the reason), then draw a new sample of what is left.",
+     "hash": "767bbe",
+     "kind": "OK",
+     "note": ""
+    },
+    "S8e5b1c": {
+     "english": "The verdict must be OK or DEFECT.",
+     "hash": "e2cb5b",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sddedd6": {
+     "english": "This is not your sample: the person who decides inspects.",
+     "hash": "23c0f1",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf56c6a": {
+     "english": "This sample belongs to another change set or another step.",
+     "hash": "6f9305",
+     "kind": "OK",
+     "note": ""
+    },
+    "S146a72": {
+     "english": "This sample has been used for a decision already; draw a new one.",
+     "hash": "0934f0",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf0f02c": {
+     "english": "This sample is closed.",
+     "hash": "0fcaaf",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf973bd": {
+     "english": "This sample is older than 24 hours; draw a new one.",
+     "hash": "4dbc8e",
+     "kind": "OK",
+     "note": ""
+    },
+    "S062a13": {
+     "english": "This sample was replaced by a newer one.",
+     "hash": "14fd5e",
+     "kind": "OK",
+     "note": ""
+    },
+    "S19f8ab": {
+     "english": "Tick the codes an action is for; with none ticked an action covers every code it applies to.",
+     "hash": "9996d8",
+     "kind": "OK",
+     "note": ""
+    },
+    "S7f6e5a": {
+     "english": "Verdict",
+     "hash": "af1dfb",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se6246f": {
+     "english": "What stops it",
+     "hash": "110a74",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sbf45e2": {
+     "english": "Work on many codes at once without weakening a step: every code still gets its own checks, its own audit entry and, for decisions, your password. A decision on more than %(above)s codes needs a sample inspection first: %(percent)s percent of the batch, at least %(minimum)s codes, spread over the subgroups. One defect in the sample stops the decision.",
+     "hash": "822601",
+     "kind": "OK",
+     "note": ""
+    },
+    "S93ef7c": {
+     "english": "Workbench",
+     "hash": "ae8f5b",
+     "kind": "OK",
+     "note": ""
+    },
+    "S1308dc": {
+     "english": "defective codes sent back",
+     "hash": "027291",
+     "kind": "OK",
+     "note": ""
+    },
+    "S9625d1": {
+     "english": "must be a whole number between 1 and 100",
+     "hash": "863812",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf745cc": {
+     "english": "step must be domain, reviewer, admin or chief-engineer",
+     "hash": "bcf9e5",
+     "kind": "OK",
+     "note": ""
     }
    },
    "checked_at": "2026-10-24"
   },
   "gu": {
-   "confidence": 84.1,
-   "accuracy": 97.3,
+   "confidence": 84.2,
+   "accuracy": 97.4,
    "haircut": 13.0,
    "sample_size": 160,
    "sample_rate": 0.025,
    "errors": 1,
    "awkward": 6,
    "mechanical": {
-    "strings": 1216,
+    "strings": 1279,
     "missing": 0,
     "placeholders": 0,
     "identical": 0,
-    "glossary_mismatches": 6
+    "glossary_mismatches": 7
    },
    "findings": [
     {
@@ -2755,6 +6923,384 @@
      "hash": "14a075",
      "kind": "OK",
      "note": ""
+    },
+    "S48d260": {
+     "english": "%(n)s of %(total)s codes drawn at %(when)s.",
+     "hash": "a916c0",
+     "kind": "OK",
+     "note": ""
+    },
+    "S285edc": {
+     "english": "%(ok)s of %(n)s: %(what)s.",
+     "hash": "a4541e",
+     "kind": "OK",
+     "note": ""
+    },
+    "S18edaf": {
+     "english": "A defect needs a note: say what is wrong.",
+     "hash": "f69f78",
+     "kind": "OK",
+     "note": ""
+    },
+    "S68cada": {
+     "english": "A defective Draft is corrected by its author.",
+     "hash": "b00f40",
+     "kind": "OK",
+     "note": ""
+    },
+    "S8941d5": {
+     "english": "A domain sign-off needs the engineering domain.",
+     "hash": "e1ddbd",
+     "kind": "OK",
+     "note": ""
+    },
+    "S071452": {
+     "english": "A note has at most 1000 characters.",
+     "hash": "d1b19b",
+     "kind": "OK",
+     "note": ""
+    },
+    "S88b55f": {
+     "english": "Approve the batch",
+     "hash": "f362df",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf40e77": {
+     "english": "Available group",
+     "hash": "a0fbf4",
+     "kind": "OK",
+     "note": ""
+    },
+    "S99613c": {
+     "english": "Blocked",
+     "hash": "d0d379",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf89067": {
+     "english": "Choose at least one value to set.",
+     "hash": "725410",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sca7133": {
+     "english": "Choose the step you are about to decide, draw the sample, look at every sampled code and mark it. The sample is yours, valid for 24 hours and for this batch as it is now.",
+     "hash": "f91902",
+     "kind": "OK",
+     "note": ""
+    },
+    "S6f4274": {
+     "english": "Codes in this batch",
+     "hash": "f5fc79",
+     "kind": "OK",
+     "note": ""
+    },
+    "S117313": {
+     "english": "Decide the batch",
+     "hash": "7a239b",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se91aff": {
+     "english": "Defect",
+     "hash": "a2f92a",
+     "kind": "OK",
+     "note": ""
+    },
+    "S16fbbf": {
+     "english": "Domain sign-off",
+     "hash": "bf8249",
+     "kind": "OK",
+     "note": ""
+    },
+    "Scb1884": {
+     "english": "Dossier (XLSX)",
+     "hash": "05981d",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se2bbd9": {
+     "english": "Drafts saved",
+     "hash": "a6c64a",
+     "kind": "OK",
+     "note": ""
+    },
+    "S0ddfa5": {
+     "english": "Drafts signed off",
+     "hash": "d89f6c",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf90ab8": {
+     "english": "Drafts submitted for review",
+     "hash": "9f1522",
+     "kind": "OK",
+     "note": ""
+    },
+    "S25085f": {
+     "english": "Draw a sample",
+     "hash": "a11881",
+     "kind": "OK",
+     "note": ""
+    },
+    "S9167a7": {
+     "english": "Engineering domain",
+     "hash": "24192e",
+     "kind": "OK",
+     "note": ""
+    },
+    "S9f4d01": {
+     "english": "More than a few codes need a sample inspection first; use the workbench.",
+     "hash": "c3ff2e",
+     "kind": "OK",
+     "note": ""
+    },
+    "S95bd2d": {
+     "english": "No Draft of the set is waiting for the sign-off of this domain.",
+     "hash": "dc7b58",
+     "kind": "OK",
+     "note": ""
+    },
+    "S1e3e33": {
+     "english": "No change request of the set is waiting for you at this step.",
+     "hash": "b20368",
+     "kind": "OK",
+     "note": ""
+    },
+    "S495371": {
+     "english": "Only a sample with defects can be sent back.",
+     "hash": "08485f",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sbc3c59": {
+     "english": "Only the values you choose are changed, on the Drafts you wrote (an Administrator: any Draft).",
+     "hash": "aead82",
+     "kind": "OK",
+     "note": ""
+    },
+    "S92223f": {
+     "english": "Passed: no defect in the sample. Use sample number %(id)s below.",
+     "hash": "e93747",
+     "kind": "OK",
+     "note": ""
+    },
+    "S6275ab": {
+     "english": "Ready to submit",
+     "hash": "601d4d",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se1e74d": {
+     "english": "Reject the batch",
+     "hash": "77034e",
+     "kind": "OK",
+     "note": ""
+    },
+    "S58fabf": {
+     "english": "Sample",
+     "hash": "4de085",
+     "kind": "OK",
+     "note": ""
+    },
+    "S6a26de": {
+     "english": "Sample %(id)s drawn: %(n)s of %(total)s codes to inspect.",
+     "hash": "0a5332",
+     "kind": "OK",
+     "note": ""
+    },
+    "S862471": {
+     "english": "Sample inspection",
+     "hash": "b3f90a",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa6e3b3": {
+     "english": "Sample not found",
+     "hash": "00fd49",
+     "kind": "OK",
+     "note": ""
+    },
+    "S241bf5": {
+     "english": "Sample number",
+     "hash": "fdd725",
+     "kind": "OK",
+     "note": ""
+    },
+    "S69cc53": {
+     "english": "Save the verdicts",
+     "hash": "689636",
+     "kind": "OK",
+     "note": ""
+    },
+    "S3ae55b": {
+     "english": "Send the defective codes back",
+     "hash": "6f572c",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se90e7c": {
+     "english": "Set on the Drafts",
+     "hash": "31207e",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa58dac": {
+     "english": "Set values on the Drafts",
+     "hash": "e50ae2",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa443bb": {
+     "english": "Sign off the Drafts",
+     "hash": "55c58b",
+     "kind": "OK",
+     "note": ""
+    },
+    "S53f47f": {
+     "english": "Sign-off pending",
+     "hash": "14dd06",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sae12bc": {
+     "english": "Status category",
+     "hash": "beac51",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sdc416e": {
+     "english": "Step",
+     "hash": "7f0ded",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf7710d": {
+     "english": "Submit for review",
+     "hash": "0d7d93",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa45adc": {
+     "english": "Submit the Drafts",
+     "hash": "1a94a3",
+     "kind": "OK",
+     "note": ""
+    },
+    "S2d099f": {
+     "english": "Submits the Drafts you wrote. A Draft that still lacks a platform or a domain sign-off is reported and left as it is.",
+     "hash": "98e6cd",
+     "kind": "OK",
+     "note": ""
+    },
+    "S973577": {
+     "english": "That change request is not in the sample.",
+     "hash": "0a89c1",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa1a149": {
+     "english": "The batch changed since the sample was drawn; draw a new sample.",
+     "hash": "cc468f",
+     "kind": "OK",
+     "note": ""
+    },
+    "S5baa27": {
+     "english": "The sample has defects, so the batch cannot be decided as it is. Send the defective codes back (the note is the reason), then draw a new sample of what is left.",
+     "hash": "4168e2",
+     "kind": "OK",
+     "note": ""
+    },
+    "S8e5b1c": {
+     "english": "The verdict must be OK or DEFECT.",
+     "hash": "c72a92",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sddedd6": {
+     "english": "This is not your sample: the person who decides inspects.",
+     "hash": "6bc1e0",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf56c6a": {
+     "english": "This sample belongs to another change set or another step.",
+     "hash": "ae65c8",
+     "kind": "OK",
+     "note": ""
+    },
+    "S146a72": {
+     "english": "This sample has been used for a decision already; draw a new one.",
+     "hash": "7d077e",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf0f02c": {
+     "english": "This sample is closed.",
+     "hash": "f607b6",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf973bd": {
+     "english": "This sample is older than 24 hours; draw a new one.",
+     "hash": "803a3e",
+     "kind": "OK",
+     "note": ""
+    },
+    "S062a13": {
+     "english": "This sample was replaced by a newer one.",
+     "hash": "57b4ea",
+     "kind": "OK",
+     "note": ""
+    },
+    "S19f8ab": {
+     "english": "Tick the codes an action is for; with none ticked an action covers every code it applies to.",
+     "hash": "6cf507",
+     "kind": "OK",
+     "note": ""
+    },
+    "S7f6e5a": {
+     "english": "Verdict",
+     "hash": "289b2f",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se6246f": {
+     "english": "What stops it",
+     "hash": "6bd4e2",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sbf45e2": {
+     "english": "Work on many codes at once without weakening a step: every code still gets its own checks, its own audit entry and, for decisions, your password. A decision on more than %(above)s codes needs a sample inspection first: %(percent)s percent of the batch, at least %(minimum)s codes, spread over the subgroups. One defect in the sample stops the decision.",
+     "hash": "13c490",
+     "kind": "OK",
+     "note": ""
+    },
+    "S93ef7c": {
+     "english": "Workbench",
+     "hash": "19d17b",
+     "kind": "OK",
+     "note": ""
+    },
+    "S1308dc": {
+     "english": "defective codes sent back",
+     "hash": "983ee9",
+     "kind": "OK",
+     "note": ""
+    },
+    "S9625d1": {
+     "english": "must be a whole number between 1 and 100",
+     "hash": "6e124d",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf745cc": {
+     "english": "step must be domain, reviewer, admin or chief-engineer",
+     "hash": "9bc7e3",
+     "kind": "OK",
+     "note": ""
     }
    },
    "checked_at": "2026-10-24"
@@ -2768,7 +7314,7 @@
    "errors": 1,
    "awkward": 5,
    "mechanical": {
-    "strings": 1216,
+    "strings": 1279,
     "missing": 0,
     "placeholders": 0,
     "identical": 0,
@@ -2986,24 +7532,402 @@
      "hash": "21d38b",
      "kind": "OK",
      "note": ""
+    },
+    "S48d260": {
+     "english": "%(n)s of %(total)s codes drawn at %(when)s.",
+     "hash": "d78734",
+     "kind": "OK",
+     "note": ""
+    },
+    "S285edc": {
+     "english": "%(ok)s of %(n)s: %(what)s.",
+     "hash": "9390b6",
+     "kind": "OK",
+     "note": ""
+    },
+    "S18edaf": {
+     "english": "A defect needs a note: say what is wrong.",
+     "hash": "3e6ad7",
+     "kind": "OK",
+     "note": ""
+    },
+    "S68cada": {
+     "english": "A defective Draft is corrected by its author.",
+     "hash": "46e390",
+     "kind": "OK",
+     "note": ""
+    },
+    "S8941d5": {
+     "english": "A domain sign-off needs the engineering domain.",
+     "hash": "bb3d6b",
+     "kind": "OK",
+     "note": ""
+    },
+    "S071452": {
+     "english": "A note has at most 1000 characters.",
+     "hash": "fb569c",
+     "kind": "OK",
+     "note": ""
+    },
+    "S88b55f": {
+     "english": "Approve the batch",
+     "hash": "ac6109",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf40e77": {
+     "english": "Available group",
+     "hash": "24a74b",
+     "kind": "OK",
+     "note": ""
+    },
+    "S99613c": {
+     "english": "Blocked",
+     "hash": "b2020e",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf89067": {
+     "english": "Choose at least one value to set.",
+     "hash": "09046e",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sca7133": {
+     "english": "Choose the step you are about to decide, draw the sample, look at every sampled code and mark it. The sample is yours, valid for 24 hours and for this batch as it is now.",
+     "hash": "ec2e85",
+     "kind": "OK",
+     "note": ""
+    },
+    "S6f4274": {
+     "english": "Codes in this batch",
+     "hash": "c898c7",
+     "kind": "OK",
+     "note": ""
+    },
+    "S117313": {
+     "english": "Decide the batch",
+     "hash": "086eb0",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se91aff": {
+     "english": "Defect",
+     "hash": "41873f",
+     "kind": "OK",
+     "note": ""
+    },
+    "S16fbbf": {
+     "english": "Domain sign-off",
+     "hash": "05a112",
+     "kind": "OK",
+     "note": ""
+    },
+    "Scb1884": {
+     "english": "Dossier (XLSX)",
+     "hash": "94da06",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se2bbd9": {
+     "english": "Drafts saved",
+     "hash": "673718",
+     "kind": "OK",
+     "note": ""
+    },
+    "S0ddfa5": {
+     "english": "Drafts signed off",
+     "hash": "6b85ec",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf90ab8": {
+     "english": "Drafts submitted for review",
+     "hash": "b5e230",
+     "kind": "OK",
+     "note": ""
+    },
+    "S25085f": {
+     "english": "Draw a sample",
+     "hash": "5b02b9",
+     "kind": "OK",
+     "note": ""
+    },
+    "S9167a7": {
+     "english": "Engineering domain",
+     "hash": "2a9e23",
+     "kind": "OK",
+     "note": ""
+    },
+    "S9f4d01": {
+     "english": "More than a few codes need a sample inspection first; use the workbench.",
+     "hash": "0f1127",
+     "kind": "OK",
+     "note": ""
+    },
+    "S95bd2d": {
+     "english": "No Draft of the set is waiting for the sign-off of this domain.",
+     "hash": "ce3add",
+     "kind": "OK",
+     "note": ""
+    },
+    "S1e3e33": {
+     "english": "No change request of the set is waiting for you at this step.",
+     "hash": "4ee5e2",
+     "kind": "OK",
+     "note": ""
+    },
+    "S495371": {
+     "english": "Only a sample with defects can be sent back.",
+     "hash": "8d40ad",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sbc3c59": {
+     "english": "Only the values you choose are changed, on the Drafts you wrote (an Administrator: any Draft).",
+     "hash": "955d78",
+     "kind": "OK",
+     "note": ""
+    },
+    "S92223f": {
+     "english": "Passed: no defect in the sample. Use sample number %(id)s below.",
+     "hash": "5e2050",
+     "kind": "OK",
+     "note": ""
+    },
+    "S6275ab": {
+     "english": "Ready to submit",
+     "hash": "514765",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se1e74d": {
+     "english": "Reject the batch",
+     "hash": "fa96cb",
+     "kind": "OK",
+     "note": ""
+    },
+    "S58fabf": {
+     "english": "Sample",
+     "hash": "726b20",
+     "kind": "OK",
+     "note": ""
+    },
+    "S6a26de": {
+     "english": "Sample %(id)s drawn: %(n)s of %(total)s codes to inspect.",
+     "hash": "8fdfa9",
+     "kind": "OK",
+     "note": ""
+    },
+    "S862471": {
+     "english": "Sample inspection",
+     "hash": "d9ccf2",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa6e3b3": {
+     "english": "Sample not found",
+     "hash": "609c53",
+     "kind": "OK",
+     "note": ""
+    },
+    "S241bf5": {
+     "english": "Sample number",
+     "hash": "fa05be",
+     "kind": "OK",
+     "note": ""
+    },
+    "S69cc53": {
+     "english": "Save the verdicts",
+     "hash": "0939a5",
+     "kind": "A",
+     "note": "'فیصلہ' is both the verdict and the decision"
+    },
+    "S3ae55b": {
+     "english": "Send the defective codes back",
+     "hash": "e1f34d",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se90e7c": {
+     "english": "Set on the Drafts",
+     "hash": "17512c",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa58dac": {
+     "english": "Set values on the Drafts",
+     "hash": "14f31d",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa443bb": {
+     "english": "Sign off the Drafts",
+     "hash": "e1c3b2",
+     "kind": "OK",
+     "note": ""
+    },
+    "S53f47f": {
+     "english": "Sign-off pending",
+     "hash": "6b0c33",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sae12bc": {
+     "english": "Status category",
+     "hash": "3b2736",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sdc416e": {
+     "english": "Step",
+     "hash": "e73212",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf7710d": {
+     "english": "Submit for review",
+     "hash": "1a3522",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa45adc": {
+     "english": "Submit the Drafts",
+     "hash": "e3a238",
+     "kind": "OK",
+     "note": ""
+    },
+    "S2d099f": {
+     "english": "Submits the Drafts you wrote. A Draft that still lacks a platform or a domain sign-off is reported and left as it is.",
+     "hash": "3c7faa",
+     "kind": "OK",
+     "note": ""
+    },
+    "S973577": {
+     "english": "That change request is not in the sample.",
+     "hash": "e5af59",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa1a149": {
+     "english": "The batch changed since the sample was drawn; draw a new sample.",
+     "hash": "dbe3fa",
+     "kind": "OK",
+     "note": ""
+    },
+    "S5baa27": {
+     "english": "The sample has defects, so the batch cannot be decided as it is. Send the defective codes back (the note is the reason), then draw a new sample of what is left.",
+     "hash": "bfffd8",
+     "kind": "OK",
+     "note": ""
+    },
+    "S8e5b1c": {
+     "english": "The verdict must be OK or DEFECT.",
+     "hash": "65a8cc",
+     "kind": "A",
+     "note": "'فیصلہ' is both the verdict and the decision"
+    },
+    "Sddedd6": {
+     "english": "This is not your sample: the person who decides inspects.",
+     "hash": "d24f47",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf56c6a": {
+     "english": "This sample belongs to another change set or another step.",
+     "hash": "f0f77c",
+     "kind": "OK",
+     "note": ""
+    },
+    "S146a72": {
+     "english": "This sample has been used for a decision already; draw a new one.",
+     "hash": "1abf26",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf0f02c": {
+     "english": "This sample is closed.",
+     "hash": "d2dd32",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf973bd": {
+     "english": "This sample is older than 24 hours; draw a new one.",
+     "hash": "10ee8c",
+     "kind": "OK",
+     "note": ""
+    },
+    "S062a13": {
+     "english": "This sample was replaced by a newer one.",
+     "hash": "f1c232",
+     "kind": "OK",
+     "note": ""
+    },
+    "S19f8ab": {
+     "english": "Tick the codes an action is for; with none ticked an action covers every code it applies to.",
+     "hash": "069523",
+     "kind": "OK",
+     "note": ""
+    },
+    "S7f6e5a": {
+     "english": "Verdict",
+     "hash": "9d7bfb",
+     "kind": "A",
+     "note": "'فیصلہ' is both the verdict and the decision"
+    },
+    "Se6246f": {
+     "english": "What stops it",
+     "hash": "ab4e49",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sbf45e2": {
+     "english": "Work on many codes at once without weakening a step: every code still gets its own checks, its own audit entry and, for decisions, your password. A decision on more than %(above)s codes needs a sample inspection first: %(percent)s percent of the batch, at least %(minimum)s codes, spread over the subgroups. One defect in the sample stops the decision.",
+     "hash": "520d1d",
+     "kind": "OK",
+     "note": ""
+    },
+    "S93ef7c": {
+     "english": "Workbench",
+     "hash": "a18f5a",
+     "kind": "OK",
+     "note": ""
+    },
+    "S1308dc": {
+     "english": "defective codes sent back",
+     "hash": "cb9f42",
+     "kind": "OK",
+     "note": ""
+    },
+    "S9625d1": {
+     "english": "must be a whole number between 1 and 100",
+     "hash": "f777b9",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf745cc": {
+     "english": "step must be domain, reviewer, admin or chief-engineer",
+     "hash": "2e9a75",
+     "kind": "OK",
+     "note": ""
     }
    },
    "checked_at": "2026-10-24"
   },
   "kn": {
-   "confidence": 83.4,
-   "accuracy": 97.0,
+   "confidence": 83.5,
+   "accuracy": 97.2,
    "haircut": 13.0,
    "sample_size": 160,
    "sample_rate": 0.02813,
    "errors": 1,
    "awkward": 7,
    "mechanical": {
-    "strings": 1216,
+    "strings": 1279,
     "missing": 0,
     "placeholders": 0,
     "identical": 0,
-    "glossary_mismatches": 15
+    "glossary_mismatches": 16
    },
    "findings": [
     {
@@ -3233,24 +8157,402 @@
      "hash": "55702c",
      "kind": "OK",
      "note": ""
+    },
+    "S48d260": {
+     "english": "%(n)s of %(total)s codes drawn at %(when)s.",
+     "hash": "6e64fa",
+     "kind": "OK",
+     "note": ""
+    },
+    "S285edc": {
+     "english": "%(ok)s of %(n)s: %(what)s.",
+     "hash": "a4541e",
+     "kind": "OK",
+     "note": ""
+    },
+    "S18edaf": {
+     "english": "A defect needs a note: say what is wrong.",
+     "hash": "eca04b",
+     "kind": "OK",
+     "note": ""
+    },
+    "S68cada": {
+     "english": "A defective Draft is corrected by its author.",
+     "hash": "20ba53",
+     "kind": "OK",
+     "note": ""
+    },
+    "S8941d5": {
+     "english": "A domain sign-off needs the engineering domain.",
+     "hash": "719244",
+     "kind": "OK",
+     "note": ""
+    },
+    "S071452": {
+     "english": "A note has at most 1000 characters.",
+     "hash": "0e19dc",
+     "kind": "OK",
+     "note": ""
+    },
+    "S88b55f": {
+     "english": "Approve the batch",
+     "hash": "56337d",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf40e77": {
+     "english": "Available group",
+     "hash": "fffe62",
+     "kind": "OK",
+     "note": ""
+    },
+    "S99613c": {
+     "english": "Blocked",
+     "hash": "267008",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf89067": {
+     "english": "Choose at least one value to set.",
+     "hash": "882182",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sca7133": {
+     "english": "Choose the step you are about to decide, draw the sample, look at every sampled code and mark it. The sample is yours, valid for 24 hours and for this batch as it is now.",
+     "hash": "948ba9",
+     "kind": "OK",
+     "note": ""
+    },
+    "S6f4274": {
+     "english": "Codes in this batch",
+     "hash": "c74d12",
+     "kind": "OK",
+     "note": ""
+    },
+    "S117313": {
+     "english": "Decide the batch",
+     "hash": "94e859",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se91aff": {
+     "english": "Defect",
+     "hash": "55b263",
+     "kind": "OK",
+     "note": ""
+    },
+    "S16fbbf": {
+     "english": "Domain sign-off",
+     "hash": "7a76d4",
+     "kind": "OK",
+     "note": ""
+    },
+    "Scb1884": {
+     "english": "Dossier (XLSX)",
+     "hash": "33fb44",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se2bbd9": {
+     "english": "Drafts saved",
+     "hash": "9155b7",
+     "kind": "OK",
+     "note": ""
+    },
+    "S0ddfa5": {
+     "english": "Drafts signed off",
+     "hash": "c9f65d",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf90ab8": {
+     "english": "Drafts submitted for review",
+     "hash": "cad400",
+     "kind": "OK",
+     "note": ""
+    },
+    "S25085f": {
+     "english": "Draw a sample",
+     "hash": "2d2cd4",
+     "kind": "OK",
+     "note": ""
+    },
+    "S9167a7": {
+     "english": "Engineering domain",
+     "hash": "adaec2",
+     "kind": "OK",
+     "note": ""
+    },
+    "S9f4d01": {
+     "english": "More than a few codes need a sample inspection first; use the workbench.",
+     "hash": "a03683",
+     "kind": "OK",
+     "note": ""
+    },
+    "S95bd2d": {
+     "english": "No Draft of the set is waiting for the sign-off of this domain.",
+     "hash": "a75442",
+     "kind": "OK",
+     "note": ""
+    },
+    "S1e3e33": {
+     "english": "No change request of the set is waiting for you at this step.",
+     "hash": "b46acb",
+     "kind": "OK",
+     "note": ""
+    },
+    "S495371": {
+     "english": "Only a sample with defects can be sent back.",
+     "hash": "7968bc",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sbc3c59": {
+     "english": "Only the values you choose are changed, on the Drafts you wrote (an Administrator: any Draft).",
+     "hash": "e42bf4",
+     "kind": "OK",
+     "note": ""
+    },
+    "S92223f": {
+     "english": "Passed: no defect in the sample. Use sample number %(id)s below.",
+     "hash": "ce6ac5",
+     "kind": "OK",
+     "note": ""
+    },
+    "S6275ab": {
+     "english": "Ready to submit",
+     "hash": "77d1af",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se1e74d": {
+     "english": "Reject the batch",
+     "hash": "c6ad7a",
+     "kind": "OK",
+     "note": ""
+    },
+    "S58fabf": {
+     "english": "Sample",
+     "hash": "1c94ac",
+     "kind": "OK",
+     "note": ""
+    },
+    "S6a26de": {
+     "english": "Sample %(id)s drawn: %(n)s of %(total)s codes to inspect.",
+     "hash": "a0c7ee",
+     "kind": "OK",
+     "note": ""
+    },
+    "S862471": {
+     "english": "Sample inspection",
+     "hash": "8714d3",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa6e3b3": {
+     "english": "Sample not found",
+     "hash": "7cf26c",
+     "kind": "OK",
+     "note": ""
+    },
+    "S241bf5": {
+     "english": "Sample number",
+     "hash": "9b91c9",
+     "kind": "OK",
+     "note": ""
+    },
+    "S69cc53": {
+     "english": "Save the verdicts",
+     "hash": "9d2636",
+     "kind": "OK",
+     "note": ""
+    },
+    "S3ae55b": {
+     "english": "Send the defective codes back",
+     "hash": "436a14",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se90e7c": {
+     "english": "Set on the Drafts",
+     "hash": "0ec03b",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa58dac": {
+     "english": "Set values on the Drafts",
+     "hash": "6ac974",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa443bb": {
+     "english": "Sign off the Drafts",
+     "hash": "c003d1",
+     "kind": "OK",
+     "note": ""
+    },
+    "S53f47f": {
+     "english": "Sign-off pending",
+     "hash": "a93717",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sae12bc": {
+     "english": "Status category",
+     "hash": "5189cd",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sdc416e": {
+     "english": "Step",
+     "hash": "64ab55",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf7710d": {
+     "english": "Submit for review",
+     "hash": "41038a",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa45adc": {
+     "english": "Submit the Drafts",
+     "hash": "12e034",
+     "kind": "OK",
+     "note": ""
+    },
+    "S2d099f": {
+     "english": "Submits the Drafts you wrote. A Draft that still lacks a platform or a domain sign-off is reported and left as it is.",
+     "hash": "b1b65b",
+     "kind": "OK",
+     "note": ""
+    },
+    "S973577": {
+     "english": "That change request is not in the sample.",
+     "hash": "e86112",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa1a149": {
+     "english": "The batch changed since the sample was drawn; draw a new sample.",
+     "hash": "af6336",
+     "kind": "OK",
+     "note": ""
+    },
+    "S5baa27": {
+     "english": "The sample has defects, so the batch cannot be decided as it is. Send the defective codes back (the note is the reason), then draw a new sample of what is left.",
+     "hash": "4a2fd6",
+     "kind": "OK",
+     "note": ""
+    },
+    "S8e5b1c": {
+     "english": "The verdict must be OK or DEFECT.",
+     "hash": "843368",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sddedd6": {
+     "english": "This is not your sample: the person who decides inspects.",
+     "hash": "888aa8",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf56c6a": {
+     "english": "This sample belongs to another change set or another step.",
+     "hash": "37966d",
+     "kind": "OK",
+     "note": ""
+    },
+    "S146a72": {
+     "english": "This sample has been used for a decision already; draw a new one.",
+     "hash": "a278dc",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf0f02c": {
+     "english": "This sample is closed.",
+     "hash": "7afbbb",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf973bd": {
+     "english": "This sample is older than 24 hours; draw a new one.",
+     "hash": "faf425",
+     "kind": "OK",
+     "note": ""
+    },
+    "S062a13": {
+     "english": "This sample was replaced by a newer one.",
+     "hash": "2679f4",
+     "kind": "OK",
+     "note": ""
+    },
+    "S19f8ab": {
+     "english": "Tick the codes an action is for; with none ticked an action covers every code it applies to.",
+     "hash": "11207a",
+     "kind": "OK",
+     "note": ""
+    },
+    "S7f6e5a": {
+     "english": "Verdict",
+     "hash": "9717ee",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se6246f": {
+     "english": "What stops it",
+     "hash": "a294d8",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sbf45e2": {
+     "english": "Work on many codes at once without weakening a step: every code still gets its own checks, its own audit entry and, for decisions, your password. A decision on more than %(above)s codes needs a sample inspection first: %(percent)s percent of the batch, at least %(minimum)s codes, spread over the subgroups. One defect in the sample stops the decision.",
+     "hash": "bd317c",
+     "kind": "OK",
+     "note": ""
+    },
+    "S93ef7c": {
+     "english": "Workbench",
+     "hash": "0cd2b7",
+     "kind": "OK",
+     "note": ""
+    },
+    "S1308dc": {
+     "english": "defective codes sent back",
+     "hash": "5a5df8",
+     "kind": "OK",
+     "note": ""
+    },
+    "S9625d1": {
+     "english": "must be a whole number between 1 and 100",
+     "hash": "6095f3",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf745cc": {
+     "english": "step must be domain, reviewer, admin or chief-engineer",
+     "hash": "fcf02b",
+     "kind": "OK",
+     "note": ""
     }
    },
    "checked_at": "2026-10-24"
   },
   "ml": {
-   "confidence": 83.0,
-   "accuracy": 97.6,
+   "confidence": 83.1,
+   "accuracy": 97.7,
    "haircut": 14.0,
    "sample_size": 160,
    "sample_rate": 0.02187,
    "errors": 1,
    "awkward": 5,
    "mechanical": {
-    "strings": 1216,
+    "strings": 1279,
     "missing": 0,
     "placeholders": 0,
     "identical": 0,
-    "glossary_mismatches": 16
+    "glossary_mismatches": 17
    },
    "findings": [
     {
@@ -3464,6 +8766,384 @@
      "hash": "58579a",
      "kind": "OK",
      "note": ""
+    },
+    "S48d260": {
+     "english": "%(n)s of %(total)s codes drawn at %(when)s.",
+     "hash": "b0b3a3",
+     "kind": "OK",
+     "note": ""
+    },
+    "S285edc": {
+     "english": "%(ok)s of %(n)s: %(what)s.",
+     "hash": "a4541e",
+     "kind": "OK",
+     "note": ""
+    },
+    "S18edaf": {
+     "english": "A defect needs a note: say what is wrong.",
+     "hash": "da2a36",
+     "kind": "OK",
+     "note": ""
+    },
+    "S68cada": {
+     "english": "A defective Draft is corrected by its author.",
+     "hash": "a36bcd",
+     "kind": "OK",
+     "note": ""
+    },
+    "S8941d5": {
+     "english": "A domain sign-off needs the engineering domain.",
+     "hash": "26b7df",
+     "kind": "OK",
+     "note": ""
+    },
+    "S071452": {
+     "english": "A note has at most 1000 characters.",
+     "hash": "4477a8",
+     "kind": "OK",
+     "note": ""
+    },
+    "S88b55f": {
+     "english": "Approve the batch",
+     "hash": "912f14",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf40e77": {
+     "english": "Available group",
+     "hash": "ec4698",
+     "kind": "OK",
+     "note": ""
+    },
+    "S99613c": {
+     "english": "Blocked",
+     "hash": "3f7ca0",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf89067": {
+     "english": "Choose at least one value to set.",
+     "hash": "0b5805",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sca7133": {
+     "english": "Choose the step you are about to decide, draw the sample, look at every sampled code and mark it. The sample is yours, valid for 24 hours and for this batch as it is now.",
+     "hash": "5a66f2",
+     "kind": "OK",
+     "note": ""
+    },
+    "S6f4274": {
+     "english": "Codes in this batch",
+     "hash": "8d2e90",
+     "kind": "OK",
+     "note": ""
+    },
+    "S117313": {
+     "english": "Decide the batch",
+     "hash": "7a7cf1",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se91aff": {
+     "english": "Defect",
+     "hash": "230e9f",
+     "kind": "OK",
+     "note": ""
+    },
+    "S16fbbf": {
+     "english": "Domain sign-off",
+     "hash": "fd367a",
+     "kind": "OK",
+     "note": ""
+    },
+    "Scb1884": {
+     "english": "Dossier (XLSX)",
+     "hash": "1f39cc",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se2bbd9": {
+     "english": "Drafts saved",
+     "hash": "db20f6",
+     "kind": "OK",
+     "note": ""
+    },
+    "S0ddfa5": {
+     "english": "Drafts signed off",
+     "hash": "a88ace",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf90ab8": {
+     "english": "Drafts submitted for review",
+     "hash": "e934cb",
+     "kind": "OK",
+     "note": ""
+    },
+    "S25085f": {
+     "english": "Draw a sample",
+     "hash": "6dae5f",
+     "kind": "OK",
+     "note": ""
+    },
+    "S9167a7": {
+     "english": "Engineering domain",
+     "hash": "ba0055",
+     "kind": "OK",
+     "note": ""
+    },
+    "S9f4d01": {
+     "english": "More than a few codes need a sample inspection first; use the workbench.",
+     "hash": "649e6c",
+     "kind": "OK",
+     "note": ""
+    },
+    "S95bd2d": {
+     "english": "No Draft of the set is waiting for the sign-off of this domain.",
+     "hash": "e5ca7e",
+     "kind": "OK",
+     "note": ""
+    },
+    "S1e3e33": {
+     "english": "No change request of the set is waiting for you at this step.",
+     "hash": "f976b9",
+     "kind": "OK",
+     "note": ""
+    },
+    "S495371": {
+     "english": "Only a sample with defects can be sent back.",
+     "hash": "7fe6ea",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sbc3c59": {
+     "english": "Only the values you choose are changed, on the Drafts you wrote (an Administrator: any Draft).",
+     "hash": "3cffe6",
+     "kind": "OK",
+     "note": ""
+    },
+    "S92223f": {
+     "english": "Passed: no defect in the sample. Use sample number %(id)s below.",
+     "hash": "0db696",
+     "kind": "OK",
+     "note": ""
+    },
+    "S6275ab": {
+     "english": "Ready to submit",
+     "hash": "94012d",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se1e74d": {
+     "english": "Reject the batch",
+     "hash": "186280",
+     "kind": "OK",
+     "note": ""
+    },
+    "S58fabf": {
+     "english": "Sample",
+     "hash": "2030ff",
+     "kind": "OK",
+     "note": ""
+    },
+    "S6a26de": {
+     "english": "Sample %(id)s drawn: %(n)s of %(total)s codes to inspect.",
+     "hash": "1fc9ee",
+     "kind": "OK",
+     "note": ""
+    },
+    "S862471": {
+     "english": "Sample inspection",
+     "hash": "948069",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa6e3b3": {
+     "english": "Sample not found",
+     "hash": "4d5342",
+     "kind": "OK",
+     "note": ""
+    },
+    "S241bf5": {
+     "english": "Sample number",
+     "hash": "636ebe",
+     "kind": "OK",
+     "note": ""
+    },
+    "S69cc53": {
+     "english": "Save the verdicts",
+     "hash": "e13369",
+     "kind": "OK",
+     "note": ""
+    },
+    "S3ae55b": {
+     "english": "Send the defective codes back",
+     "hash": "955c19",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se90e7c": {
+     "english": "Set on the Drafts",
+     "hash": "a2a3b1",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa58dac": {
+     "english": "Set values on the Drafts",
+     "hash": "84dd91",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa443bb": {
+     "english": "Sign off the Drafts",
+     "hash": "6bb87b",
+     "kind": "OK",
+     "note": ""
+    },
+    "S53f47f": {
+     "english": "Sign-off pending",
+     "hash": "bcaad1",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sae12bc": {
+     "english": "Status category",
+     "hash": "0fd9db",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sdc416e": {
+     "english": "Step",
+     "hash": "4164fc",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf7710d": {
+     "english": "Submit for review",
+     "hash": "e5fe31",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa45adc": {
+     "english": "Submit the Drafts",
+     "hash": "45581a",
+     "kind": "OK",
+     "note": ""
+    },
+    "S2d099f": {
+     "english": "Submits the Drafts you wrote. A Draft that still lacks a platform or a domain sign-off is reported and left as it is.",
+     "hash": "3cb72a",
+     "kind": "OK",
+     "note": ""
+    },
+    "S973577": {
+     "english": "That change request is not in the sample.",
+     "hash": "29fc05",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa1a149": {
+     "english": "The batch changed since the sample was drawn; draw a new sample.",
+     "hash": "a723e7",
+     "kind": "OK",
+     "note": ""
+    },
+    "S5baa27": {
+     "english": "The sample has defects, so the batch cannot be decided as it is. Send the defective codes back (the note is the reason), then draw a new sample of what is left.",
+     "hash": "7cf6b0",
+     "kind": "OK",
+     "note": ""
+    },
+    "S8e5b1c": {
+     "english": "The verdict must be OK or DEFECT.",
+     "hash": "de7925",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sddedd6": {
+     "english": "This is not your sample: the person who decides inspects.",
+     "hash": "03a8dc",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf56c6a": {
+     "english": "This sample belongs to another change set or another step.",
+     "hash": "36daf5",
+     "kind": "OK",
+     "note": ""
+    },
+    "S146a72": {
+     "english": "This sample has been used for a decision already; draw a new one.",
+     "hash": "7f4f42",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf0f02c": {
+     "english": "This sample is closed.",
+     "hash": "f6a22f",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf973bd": {
+     "english": "This sample is older than 24 hours; draw a new one.",
+     "hash": "407016",
+     "kind": "OK",
+     "note": ""
+    },
+    "S062a13": {
+     "english": "This sample was replaced by a newer one.",
+     "hash": "ced196",
+     "kind": "OK",
+     "note": ""
+    },
+    "S19f8ab": {
+     "english": "Tick the codes an action is for; with none ticked an action covers every code it applies to.",
+     "hash": "74a65b",
+     "kind": "OK",
+     "note": ""
+    },
+    "S7f6e5a": {
+     "english": "Verdict",
+     "hash": "30e392",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se6246f": {
+     "english": "What stops it",
+     "hash": "7f7800",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sbf45e2": {
+     "english": "Work on many codes at once without weakening a step: every code still gets its own checks, its own audit entry and, for decisions, your password. A decision on more than %(above)s codes needs a sample inspection first: %(percent)s percent of the batch, at least %(minimum)s codes, spread over the subgroups. One defect in the sample stops the decision.",
+     "hash": "c1498d",
+     "kind": "OK",
+     "note": ""
+    },
+    "S93ef7c": {
+     "english": "Workbench",
+     "hash": "214867",
+     "kind": "OK",
+     "note": ""
+    },
+    "S1308dc": {
+     "english": "defective codes sent back",
+     "hash": "07a61f",
+     "kind": "OK",
+     "note": ""
+    },
+    "S9625d1": {
+     "english": "must be a whole number between 1 and 100",
+     "hash": "d513a3",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf745cc": {
+     "english": "step must be domain, reviewer, admin or chief-engineer",
+     "hash": "0f0c1a",
+     "kind": "OK",
+     "note": ""
     }
    },
    "checked_at": "2026-10-24"
@@ -3477,11 +9157,11 @@
    "errors": 1,
    "awkward": 6,
    "mechanical": {
-    "strings": 1216,
+    "strings": 1279,
     "missing": 0,
     "placeholders": 0,
     "identical": 0,
-    "glossary_mismatches": 15
+    "glossary_mismatches": 16
    },
    "findings": [
     {
@@ -3703,12 +9383,390 @@
      "hash": "961b22",
      "kind": "OK",
      "note": ""
+    },
+    "S48d260": {
+     "english": "%(n)s of %(total)s codes drawn at %(when)s.",
+     "hash": "a2456d",
+     "kind": "OK",
+     "note": ""
+    },
+    "S285edc": {
+     "english": "%(ok)s of %(n)s: %(what)s.",
+     "hash": "9813a1",
+     "kind": "OK",
+     "note": ""
+    },
+    "S18edaf": {
+     "english": "A defect needs a note: say what is wrong.",
+     "hash": "ea6f33",
+     "kind": "OK",
+     "note": ""
+    },
+    "S68cada": {
+     "english": "A defective Draft is corrected by its author.",
+     "hash": "d1c47d",
+     "kind": "OK",
+     "note": ""
+    },
+    "S8941d5": {
+     "english": "A domain sign-off needs the engineering domain.",
+     "hash": "e8d0c4",
+     "kind": "OK",
+     "note": ""
+    },
+    "S071452": {
+     "english": "A note has at most 1000 characters.",
+     "hash": "ceaac8",
+     "kind": "OK",
+     "note": ""
+    },
+    "S88b55f": {
+     "english": "Approve the batch",
+     "hash": "102c82",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf40e77": {
+     "english": "Available group",
+     "hash": "07d544",
+     "kind": "OK",
+     "note": ""
+    },
+    "S99613c": {
+     "english": "Blocked",
+     "hash": "91f0ef",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf89067": {
+     "english": "Choose at least one value to set.",
+     "hash": "2de485",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sca7133": {
+     "english": "Choose the step you are about to decide, draw the sample, look at every sampled code and mark it. The sample is yours, valid for 24 hours and for this batch as it is now.",
+     "hash": "e2e39d",
+     "kind": "OK",
+     "note": ""
+    },
+    "S6f4274": {
+     "english": "Codes in this batch",
+     "hash": "9af554",
+     "kind": "OK",
+     "note": ""
+    },
+    "S117313": {
+     "english": "Decide the batch",
+     "hash": "12be7b",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se91aff": {
+     "english": "Defect",
+     "hash": "874712",
+     "kind": "OK",
+     "note": ""
+    },
+    "S16fbbf": {
+     "english": "Domain sign-off",
+     "hash": "581cc4",
+     "kind": "OK",
+     "note": ""
+    },
+    "Scb1884": {
+     "english": "Dossier (XLSX)",
+     "hash": "9cfadc",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se2bbd9": {
+     "english": "Drafts saved",
+     "hash": "6a917c",
+     "kind": "OK",
+     "note": ""
+    },
+    "S0ddfa5": {
+     "english": "Drafts signed off",
+     "hash": "694ed2",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf90ab8": {
+     "english": "Drafts submitted for review",
+     "hash": "2bb3af",
+     "kind": "OK",
+     "note": ""
+    },
+    "S25085f": {
+     "english": "Draw a sample",
+     "hash": "1062d6",
+     "kind": "OK",
+     "note": ""
+    },
+    "S9167a7": {
+     "english": "Engineering domain",
+     "hash": "4be370",
+     "kind": "OK",
+     "note": ""
+    },
+    "S9f4d01": {
+     "english": "More than a few codes need a sample inspection first; use the workbench.",
+     "hash": "d642d2",
+     "kind": "OK",
+     "note": ""
+    },
+    "S95bd2d": {
+     "english": "No Draft of the set is waiting for the sign-off of this domain.",
+     "hash": "1a9250",
+     "kind": "OK",
+     "note": ""
+    },
+    "S1e3e33": {
+     "english": "No change request of the set is waiting for you at this step.",
+     "hash": "991a48",
+     "kind": "OK",
+     "note": ""
+    },
+    "S495371": {
+     "english": "Only a sample with defects can be sent back.",
+     "hash": "99277f",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sbc3c59": {
+     "english": "Only the values you choose are changed, on the Drafts you wrote (an Administrator: any Draft).",
+     "hash": "43bc78",
+     "kind": "OK",
+     "note": ""
+    },
+    "S92223f": {
+     "english": "Passed: no defect in the sample. Use sample number %(id)s below.",
+     "hash": "f2988c",
+     "kind": "OK",
+     "note": ""
+    },
+    "S6275ab": {
+     "english": "Ready to submit",
+     "hash": "e7764e",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se1e74d": {
+     "english": "Reject the batch",
+     "hash": "ea7790",
+     "kind": "OK",
+     "note": ""
+    },
+    "S58fabf": {
+     "english": "Sample",
+     "hash": "198df6",
+     "kind": "OK",
+     "note": ""
+    },
+    "S6a26de": {
+     "english": "Sample %(id)s drawn: %(n)s of %(total)s codes to inspect.",
+     "hash": "df326e",
+     "kind": "OK",
+     "note": ""
+    },
+    "S862471": {
+     "english": "Sample inspection",
+     "hash": "241872",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa6e3b3": {
+     "english": "Sample not found",
+     "hash": "147876",
+     "kind": "OK",
+     "note": ""
+    },
+    "S241bf5": {
+     "english": "Sample number",
+     "hash": "9d0da7",
+     "kind": "OK",
+     "note": ""
+    },
+    "S69cc53": {
+     "english": "Save the verdicts",
+     "hash": "9ada9e",
+     "kind": "A",
+     "note": "'ਫ਼ੈਸਲਾ' is both the verdict and the decision"
+    },
+    "S3ae55b": {
+     "english": "Send the defective codes back",
+     "hash": "569853",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se90e7c": {
+     "english": "Set on the Drafts",
+     "hash": "0cd54d",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa58dac": {
+     "english": "Set values on the Drafts",
+     "hash": "14630c",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa443bb": {
+     "english": "Sign off the Drafts",
+     "hash": "fc19b3",
+     "kind": "OK",
+     "note": ""
+    },
+    "S53f47f": {
+     "english": "Sign-off pending",
+     "hash": "1f017a",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sae12bc": {
+     "english": "Status category",
+     "hash": "64fc1e",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sdc416e": {
+     "english": "Step",
+     "hash": "d53048",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf7710d": {
+     "english": "Submit for review",
+     "hash": "345faf",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa45adc": {
+     "english": "Submit the Drafts",
+     "hash": "506c62",
+     "kind": "OK",
+     "note": ""
+    },
+    "S2d099f": {
+     "english": "Submits the Drafts you wrote. A Draft that still lacks a platform or a domain sign-off is reported and left as it is.",
+     "hash": "bdad56",
+     "kind": "OK",
+     "note": ""
+    },
+    "S973577": {
+     "english": "That change request is not in the sample.",
+     "hash": "567bcf",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa1a149": {
+     "english": "The batch changed since the sample was drawn; draw a new sample.",
+     "hash": "551c9a",
+     "kind": "OK",
+     "note": ""
+    },
+    "S5baa27": {
+     "english": "The sample has defects, so the batch cannot be decided as it is. Send the defective codes back (the note is the reason), then draw a new sample of what is left.",
+     "hash": "0bd13f",
+     "kind": "OK",
+     "note": ""
+    },
+    "S8e5b1c": {
+     "english": "The verdict must be OK or DEFECT.",
+     "hash": "b3e3f3",
+     "kind": "A",
+     "note": "'ਫ਼ੈਸਲਾ' is both the verdict and the decision"
+    },
+    "Sddedd6": {
+     "english": "This is not your sample: the person who decides inspects.",
+     "hash": "7d272f",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf56c6a": {
+     "english": "This sample belongs to another change set or another step.",
+     "hash": "3b064c",
+     "kind": "OK",
+     "note": ""
+    },
+    "S146a72": {
+     "english": "This sample has been used for a decision already; draw a new one.",
+     "hash": "85dba5",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf0f02c": {
+     "english": "This sample is closed.",
+     "hash": "f22d12",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf973bd": {
+     "english": "This sample is older than 24 hours; draw a new one.",
+     "hash": "63b354",
+     "kind": "OK",
+     "note": ""
+    },
+    "S062a13": {
+     "english": "This sample was replaced by a newer one.",
+     "hash": "cfbe00",
+     "kind": "OK",
+     "note": ""
+    },
+    "S19f8ab": {
+     "english": "Tick the codes an action is for; with none ticked an action covers every code it applies to.",
+     "hash": "76595e",
+     "kind": "OK",
+     "note": ""
+    },
+    "S7f6e5a": {
+     "english": "Verdict",
+     "hash": "36f2a4",
+     "kind": "A",
+     "note": "'ਫ਼ੈਸਲਾ' is both the verdict and the decision"
+    },
+    "Se6246f": {
+     "english": "What stops it",
+     "hash": "358856",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sbf45e2": {
+     "english": "Work on many codes at once without weakening a step: every code still gets its own checks, its own audit entry and, for decisions, your password. A decision on more than %(above)s codes needs a sample inspection first: %(percent)s percent of the batch, at least %(minimum)s codes, spread over the subgroups. One defect in the sample stops the decision.",
+     "hash": "01d84f",
+     "kind": "OK",
+     "note": ""
+    },
+    "S93ef7c": {
+     "english": "Workbench",
+     "hash": "bafb26",
+     "kind": "OK",
+     "note": ""
+    },
+    "S1308dc": {
+     "english": "defective codes sent back",
+     "hash": "0b0037",
+     "kind": "OK",
+     "note": ""
+    },
+    "S9625d1": {
+     "english": "must be a whole number between 1 and 100",
+     "hash": "cfe868",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf745cc": {
+     "english": "step must be domain, reviewer, admin or chief-engineer",
+     "hash": "cc32e6",
+     "kind": "OK",
+     "note": ""
     }
    },
    "checked_at": "2026-10-24"
   },
   "ka": {
-   "confidence": 82.6,
+   "confidence": 82.5,
    "accuracy": 97.7,
    "haircut": 15.0,
    "sample_size": 160,
@@ -3716,11 +9774,11 @@
    "errors": 0,
    "awkward": 7,
    "mechanical": {
-    "strings": 1216,
+    "strings": 1279,
     "missing": 0,
     "placeholders": 0,
     "identical": 0,
-    "glossary_mismatches": 3
+    "glossary_mismatches": 4
    },
    "findings": [
     {
@@ -3942,24 +10000,402 @@
      "hash": "42df28",
      "kind": "OK",
      "note": ""
+    },
+    "S48d260": {
+     "english": "%(n)s of %(total)s codes drawn at %(when)s.",
+     "hash": "63b99d",
+     "kind": "OK",
+     "note": ""
+    },
+    "S285edc": {
+     "english": "%(ok)s of %(n)s: %(what)s.",
+     "hash": "a4541e",
+     "kind": "OK",
+     "note": ""
+    },
+    "S18edaf": {
+     "english": "A defect needs a note: say what is wrong.",
+     "hash": "ff68b0",
+     "kind": "OK",
+     "note": ""
+    },
+    "S68cada": {
+     "english": "A defective Draft is corrected by its author.",
+     "hash": "e50524",
+     "kind": "OK",
+     "note": ""
+    },
+    "S8941d5": {
+     "english": "A domain sign-off needs the engineering domain.",
+     "hash": "a064d1",
+     "kind": "OK",
+     "note": ""
+    },
+    "S071452": {
+     "english": "A note has at most 1000 characters.",
+     "hash": "244f75",
+     "kind": "OK",
+     "note": ""
+    },
+    "S88b55f": {
+     "english": "Approve the batch",
+     "hash": "39805c",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf40e77": {
+     "english": "Available group",
+     "hash": "8d3f94",
+     "kind": "OK",
+     "note": ""
+    },
+    "S99613c": {
+     "english": "Blocked",
+     "hash": "d7149e",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf89067": {
+     "english": "Choose at least one value to set.",
+     "hash": "12eceb",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sca7133": {
+     "english": "Choose the step you are about to decide, draw the sample, look at every sampled code and mark it. The sample is yours, valid for 24 hours and for this batch as it is now.",
+     "hash": "f2786d",
+     "kind": "OK",
+     "note": ""
+    },
+    "S6f4274": {
+     "english": "Codes in this batch",
+     "hash": "194164",
+     "kind": "OK",
+     "note": ""
+    },
+    "S117313": {
+     "english": "Decide the batch",
+     "hash": "2b1ebf",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se91aff": {
+     "english": "Defect",
+     "hash": "01a8ae",
+     "kind": "OK",
+     "note": ""
+    },
+    "S16fbbf": {
+     "english": "Domain sign-off",
+     "hash": "ebb9e0",
+     "kind": "OK",
+     "note": ""
+    },
+    "Scb1884": {
+     "english": "Dossier (XLSX)",
+     "hash": "0cfd60",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se2bbd9": {
+     "english": "Drafts saved",
+     "hash": "9ceb4a",
+     "kind": "OK",
+     "note": ""
+    },
+    "S0ddfa5": {
+     "english": "Drafts signed off",
+     "hash": "88d37f",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf90ab8": {
+     "english": "Drafts submitted for review",
+     "hash": "20e9a1",
+     "kind": "OK",
+     "note": ""
+    },
+    "S25085f": {
+     "english": "Draw a sample",
+     "hash": "a8b5b3",
+     "kind": "OK",
+     "note": ""
+    },
+    "S9167a7": {
+     "english": "Engineering domain",
+     "hash": "768516",
+     "kind": "OK",
+     "note": ""
+    },
+    "S9f4d01": {
+     "english": "More than a few codes need a sample inspection first; use the workbench.",
+     "hash": "c3efce",
+     "kind": "OK",
+     "note": ""
+    },
+    "S95bd2d": {
+     "english": "No Draft of the set is waiting for the sign-off of this domain.",
+     "hash": "22dc17",
+     "kind": "OK",
+     "note": ""
+    },
+    "S1e3e33": {
+     "english": "No change request of the set is waiting for you at this step.",
+     "hash": "d1ec4d",
+     "kind": "OK",
+     "note": ""
+    },
+    "S495371": {
+     "english": "Only a sample with defects can be sent back.",
+     "hash": "f3d6d3",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sbc3c59": {
+     "english": "Only the values you choose are changed, on the Drafts you wrote (an Administrator: any Draft).",
+     "hash": "9d9abd",
+     "kind": "OK",
+     "note": ""
+    },
+    "S92223f": {
+     "english": "Passed: no defect in the sample. Use sample number %(id)s below.",
+     "hash": "a43510",
+     "kind": "OK",
+     "note": ""
+    },
+    "S6275ab": {
+     "english": "Ready to submit",
+     "hash": "d539b6",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se1e74d": {
+     "english": "Reject the batch",
+     "hash": "acbcb6",
+     "kind": "OK",
+     "note": ""
+    },
+    "S58fabf": {
+     "english": "Sample",
+     "hash": "5b25ee",
+     "kind": "OK",
+     "note": ""
+    },
+    "S6a26de": {
+     "english": "Sample %(id)s drawn: %(n)s of %(total)s codes to inspect.",
+     "hash": "6e6ded",
+     "kind": "OK",
+     "note": ""
+    },
+    "S862471": {
+     "english": "Sample inspection",
+     "hash": "86f478",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa6e3b3": {
+     "english": "Sample not found",
+     "hash": "5a7fcb",
+     "kind": "OK",
+     "note": ""
+    },
+    "S241bf5": {
+     "english": "Sample number",
+     "hash": "9776fc",
+     "kind": "OK",
+     "note": ""
+    },
+    "S69cc53": {
+     "english": "Save the verdicts",
+     "hash": "742d9b",
+     "kind": "A",
+     "note": "'განაჩენი' (a court sentence) is heavy for a verdict"
+    },
+    "S3ae55b": {
+     "english": "Send the defective codes back",
+     "hash": "b43c6f",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se90e7c": {
+     "english": "Set on the Drafts",
+     "hash": "03339e",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa58dac": {
+     "english": "Set values on the Drafts",
+     "hash": "476eb9",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa443bb": {
+     "english": "Sign off the Drafts",
+     "hash": "a9de90",
+     "kind": "OK",
+     "note": ""
+    },
+    "S53f47f": {
+     "english": "Sign-off pending",
+     "hash": "94d41c",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sae12bc": {
+     "english": "Status category",
+     "hash": "7edbcd",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sdc416e": {
+     "english": "Step",
+     "hash": "715cb9",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf7710d": {
+     "english": "Submit for review",
+     "hash": "018a04",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa45adc": {
+     "english": "Submit the Drafts",
+     "hash": "3a041b",
+     "kind": "OK",
+     "note": ""
+    },
+    "S2d099f": {
+     "english": "Submits the Drafts you wrote. A Draft that still lacks a platform or a domain sign-off is reported and left as it is.",
+     "hash": "0e0120",
+     "kind": "OK",
+     "note": ""
+    },
+    "S973577": {
+     "english": "That change request is not in the sample.",
+     "hash": "f22945",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa1a149": {
+     "english": "The batch changed since the sample was drawn; draw a new sample.",
+     "hash": "b0d6a9",
+     "kind": "OK",
+     "note": ""
+    },
+    "S5baa27": {
+     "english": "The sample has defects, so the batch cannot be decided as it is. Send the defective codes back (the note is the reason), then draw a new sample of what is left.",
+     "hash": "d2d848",
+     "kind": "OK",
+     "note": ""
+    },
+    "S8e5b1c": {
+     "english": "The verdict must be OK or DEFECT.",
+     "hash": "146350",
+     "kind": "A",
+     "note": "'განაჩენი' (a court sentence) is heavy for a verdict"
+    },
+    "Sddedd6": {
+     "english": "This is not your sample: the person who decides inspects.",
+     "hash": "79c0fb",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf56c6a": {
+     "english": "This sample belongs to another change set or another step.",
+     "hash": "6a4032",
+     "kind": "OK",
+     "note": ""
+    },
+    "S146a72": {
+     "english": "This sample has been used for a decision already; draw a new one.",
+     "hash": "0e98c0",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf0f02c": {
+     "english": "This sample is closed.",
+     "hash": "d8e04a",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf973bd": {
+     "english": "This sample is older than 24 hours; draw a new one.",
+     "hash": "19e91a",
+     "kind": "OK",
+     "note": ""
+    },
+    "S062a13": {
+     "english": "This sample was replaced by a newer one.",
+     "hash": "1b468d",
+     "kind": "OK",
+     "note": ""
+    },
+    "S19f8ab": {
+     "english": "Tick the codes an action is for; with none ticked an action covers every code it applies to.",
+     "hash": "f80ba4",
+     "kind": "OK",
+     "note": ""
+    },
+    "S7f6e5a": {
+     "english": "Verdict",
+     "hash": "216852",
+     "kind": "A",
+     "note": "'განაჩენი' (a court sentence) is heavy for a verdict"
+    },
+    "Se6246f": {
+     "english": "What stops it",
+     "hash": "f16407",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sbf45e2": {
+     "english": "Work on many codes at once without weakening a step: every code still gets its own checks, its own audit entry and, for decisions, your password. A decision on more than %(above)s codes needs a sample inspection first: %(percent)s percent of the batch, at least %(minimum)s codes, spread over the subgroups. One defect in the sample stops the decision.",
+     "hash": "c0643b",
+     "kind": "OK",
+     "note": ""
+    },
+    "S93ef7c": {
+     "english": "Workbench",
+     "hash": "1c0ba8",
+     "kind": "OK",
+     "note": ""
+    },
+    "S1308dc": {
+     "english": "defective codes sent back",
+     "hash": "313b58",
+     "kind": "OK",
+     "note": ""
+    },
+    "S9625d1": {
+     "english": "must be a whole number between 1 and 100",
+     "hash": "e4299d",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf745cc": {
+     "english": "step must be domain, reviewer, admin or chief-engineer",
+     "hash": "63a844",
+     "kind": "OK",
+     "note": ""
     }
    },
    "checked_at": "2026-10-24"
   },
   "or": {
-   "confidence": 78.1,
-   "accuracy": 94.9,
+   "confidence": 78.3,
+   "accuracy": 95.1,
    "haircut": 16.0,
    "sample_size": 160,
    "sample_rate": 0.05,
    "errors": 6,
    "awkward": 4,
    "mechanical": {
-    "strings": 1216,
+    "strings": 1279,
     "missing": 0,
     "placeholders": 0,
     "identical": 0,
-    "glossary_mismatches": 18
+    "glossary_mismatches": 20
    },
    "findings": [
     {
@@ -4203,6 +10639,384 @@
     "S7d24f7": {
      "english": "not in the catalogue",
      "hash": "563c97",
+     "kind": "OK",
+     "note": ""
+    },
+    "S48d260": {
+     "english": "%(n)s of %(total)s codes drawn at %(when)s.",
+     "hash": "37973c",
+     "kind": "OK",
+     "note": ""
+    },
+    "S285edc": {
+     "english": "%(ok)s of %(n)s: %(what)s.",
+     "hash": "9813a1",
+     "kind": "OK",
+     "note": ""
+    },
+    "S18edaf": {
+     "english": "A defect needs a note: say what is wrong.",
+     "hash": "6e81a4",
+     "kind": "OK",
+     "note": ""
+    },
+    "S68cada": {
+     "english": "A defective Draft is corrected by its author.",
+     "hash": "16a498",
+     "kind": "OK",
+     "note": ""
+    },
+    "S8941d5": {
+     "english": "A domain sign-off needs the engineering domain.",
+     "hash": "e4e5c6",
+     "kind": "OK",
+     "note": ""
+    },
+    "S071452": {
+     "english": "A note has at most 1000 characters.",
+     "hash": "0f5884",
+     "kind": "OK",
+     "note": ""
+    },
+    "S88b55f": {
+     "english": "Approve the batch",
+     "hash": "c5b90c",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf40e77": {
+     "english": "Available group",
+     "hash": "9aba15",
+     "kind": "OK",
+     "note": ""
+    },
+    "S99613c": {
+     "english": "Blocked",
+     "hash": "251754",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf89067": {
+     "english": "Choose at least one value to set.",
+     "hash": "33da13",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sca7133": {
+     "english": "Choose the step you are about to decide, draw the sample, look at every sampled code and mark it. The sample is yours, valid for 24 hours and for this batch as it is now.",
+     "hash": "3741ff",
+     "kind": "OK",
+     "note": ""
+    },
+    "S6f4274": {
+     "english": "Codes in this batch",
+     "hash": "236cfa",
+     "kind": "OK",
+     "note": ""
+    },
+    "S117313": {
+     "english": "Decide the batch",
+     "hash": "603125",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se91aff": {
+     "english": "Defect",
+     "hash": "70f6a2",
+     "kind": "OK",
+     "note": ""
+    },
+    "S16fbbf": {
+     "english": "Domain sign-off",
+     "hash": "e643f8",
+     "kind": "OK",
+     "note": ""
+    },
+    "Scb1884": {
+     "english": "Dossier (XLSX)",
+     "hash": "4184c6",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se2bbd9": {
+     "english": "Drafts saved",
+     "hash": "1c97c4",
+     "kind": "OK",
+     "note": ""
+    },
+    "S0ddfa5": {
+     "english": "Drafts signed off",
+     "hash": "7b3be0",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf90ab8": {
+     "english": "Drafts submitted for review",
+     "hash": "25054a",
+     "kind": "OK",
+     "note": ""
+    },
+    "S25085f": {
+     "english": "Draw a sample",
+     "hash": "8ebe1b",
+     "kind": "OK",
+     "note": ""
+    },
+    "S9167a7": {
+     "english": "Engineering domain",
+     "hash": "c3ed14",
+     "kind": "OK",
+     "note": ""
+    },
+    "S9f4d01": {
+     "english": "More than a few codes need a sample inspection first; use the workbench.",
+     "hash": "043bac",
+     "kind": "OK",
+     "note": ""
+    },
+    "S95bd2d": {
+     "english": "No Draft of the set is waiting for the sign-off of this domain.",
+     "hash": "4ce88e",
+     "kind": "OK",
+     "note": ""
+    },
+    "S1e3e33": {
+     "english": "No change request of the set is waiting for you at this step.",
+     "hash": "62b49c",
+     "kind": "OK",
+     "note": ""
+    },
+    "S495371": {
+     "english": "Only a sample with defects can be sent back.",
+     "hash": "ee0c77",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sbc3c59": {
+     "english": "Only the values you choose are changed, on the Drafts you wrote (an Administrator: any Draft).",
+     "hash": "73c5c5",
+     "kind": "OK",
+     "note": ""
+    },
+    "S92223f": {
+     "english": "Passed: no defect in the sample. Use sample number %(id)s below.",
+     "hash": "7470f9",
+     "kind": "OK",
+     "note": ""
+    },
+    "S6275ab": {
+     "english": "Ready to submit",
+     "hash": "472c5d",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se1e74d": {
+     "english": "Reject the batch",
+     "hash": "c0f797",
+     "kind": "OK",
+     "note": ""
+    },
+    "S58fabf": {
+     "english": "Sample",
+     "hash": "0ed06d",
+     "kind": "OK",
+     "note": ""
+    },
+    "S6a26de": {
+     "english": "Sample %(id)s drawn: %(n)s of %(total)s codes to inspect.",
+     "hash": "23e116",
+     "kind": "OK",
+     "note": ""
+    },
+    "S862471": {
+     "english": "Sample inspection",
+     "hash": "8b076f",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa6e3b3": {
+     "english": "Sample not found",
+     "hash": "93ef28",
+     "kind": "OK",
+     "note": ""
+    },
+    "S241bf5": {
+     "english": "Sample number",
+     "hash": "0756ef",
+     "kind": "OK",
+     "note": ""
+    },
+    "S69cc53": {
+     "english": "Save the verdicts",
+     "hash": "82f11d",
+     "kind": "OK",
+     "note": ""
+    },
+    "S3ae55b": {
+     "english": "Send the defective codes back",
+     "hash": "b2a773",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se90e7c": {
+     "english": "Set on the Drafts",
+     "hash": "53571e",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa58dac": {
+     "english": "Set values on the Drafts",
+     "hash": "5bd52e",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa443bb": {
+     "english": "Sign off the Drafts",
+     "hash": "cb4f6f",
+     "kind": "OK",
+     "note": ""
+    },
+    "S53f47f": {
+     "english": "Sign-off pending",
+     "hash": "e14e13",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sae12bc": {
+     "english": "Status category",
+     "hash": "427287",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sdc416e": {
+     "english": "Step",
+     "hash": "5fc418",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf7710d": {
+     "english": "Submit for review",
+     "hash": "215b24",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa45adc": {
+     "english": "Submit the Drafts",
+     "hash": "02d169",
+     "kind": "OK",
+     "note": ""
+    },
+    "S2d099f": {
+     "english": "Submits the Drafts you wrote. A Draft that still lacks a platform or a domain sign-off is reported and left as it is.",
+     "hash": "951cca",
+     "kind": "OK",
+     "note": ""
+    },
+    "S973577": {
+     "english": "That change request is not in the sample.",
+     "hash": "065d2c",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa1a149": {
+     "english": "The batch changed since the sample was drawn; draw a new sample.",
+     "hash": "d25c43",
+     "kind": "OK",
+     "note": ""
+    },
+    "S5baa27": {
+     "english": "The sample has defects, so the batch cannot be decided as it is. Send the defective codes back (the note is the reason), then draw a new sample of what is left.",
+     "hash": "e84478",
+     "kind": "OK",
+     "note": ""
+    },
+    "S8e5b1c": {
+     "english": "The verdict must be OK or DEFECT.",
+     "hash": "378eba",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sddedd6": {
+     "english": "This is not your sample: the person who decides inspects.",
+     "hash": "869e4a",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf56c6a": {
+     "english": "This sample belongs to another change set or another step.",
+     "hash": "a46eb7",
+     "kind": "OK",
+     "note": ""
+    },
+    "S146a72": {
+     "english": "This sample has been used for a decision already; draw a new one.",
+     "hash": "86c9fb",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf0f02c": {
+     "english": "This sample is closed.",
+     "hash": "235d8f",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf973bd": {
+     "english": "This sample is older than 24 hours; draw a new one.",
+     "hash": "7d94a7",
+     "kind": "OK",
+     "note": ""
+    },
+    "S062a13": {
+     "english": "This sample was replaced by a newer one.",
+     "hash": "bd8a81",
+     "kind": "OK",
+     "note": ""
+    },
+    "S19f8ab": {
+     "english": "Tick the codes an action is for; with none ticked an action covers every code it applies to.",
+     "hash": "f6e19b",
+     "kind": "OK",
+     "note": ""
+    },
+    "S7f6e5a": {
+     "english": "Verdict",
+     "hash": "d75343",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se6246f": {
+     "english": "What stops it",
+     "hash": "a07447",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sbf45e2": {
+     "english": "Work on many codes at once without weakening a step: every code still gets its own checks, its own audit entry and, for decisions, your password. A decision on more than %(above)s codes needs a sample inspection first: %(percent)s percent of the batch, at least %(minimum)s codes, spread over the subgroups. One defect in the sample stops the decision.",
+     "hash": "c6d034",
+     "kind": "OK",
+     "note": ""
+    },
+    "S93ef7c": {
+     "english": "Workbench",
+     "hash": "9fa562",
+     "kind": "OK",
+     "note": ""
+    },
+    "S1308dc": {
+     "english": "defective codes sent back",
+     "hash": "43b755",
+     "kind": "OK",
+     "note": ""
+    },
+    "S9625d1": {
+     "english": "must be a whole number between 1 and 100",
+     "hash": "a794b3",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sf745cc": {
+     "english": "step must be domain, reviewer, admin or chief-engineer",
+     "hash": "76404b",
      "kind": "OK",
      "note": ""
     }

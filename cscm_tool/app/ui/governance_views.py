@@ -219,6 +219,7 @@ def change_set_decide(change_set_id):
             current_user,
             request.form.get("current_password"),
             cr_ids=request.form.getlist("cr_ids", type=int) or None,
+            sample_id=request.form.get("sample_id", type=int),
         )
     except _ERRORS as exc:
         flash(_(str(exc)), "error")

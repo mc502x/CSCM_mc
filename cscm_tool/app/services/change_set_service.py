@@ -14,6 +14,7 @@ from app.models.change_request import ChangeRequest, ChangeSet
 from app.models.lookup import LookupControllerSoftwareVersion
 from app.services.audit_service import AuditService
 from app.services.auth_service import AuthService
+from app.services.bulk_service import BulkService
 from app.services.change_request_service import ChangeRequestService
 from app.services.sla_service import SlaService
 from app.utils import utcnow_iso
@@ -147,14 +148,25 @@ class ChangeSetService:
         actor,
         reauth_password: str | None,
         cr_ids: list[int] | None = None,
+        sample_id: int | None = None,
     ) -> list[dict]:
         """Decide several CRs of the set in one sitting. `step` is reviewer, admin or
         chief-engineer. Each CR goes through its own service call (see module docstring)."""
         if step not in _STEP_STATE:
             raise ValueError("step must be reviewer, admin or chief-engineer")
         change_set = ChangeSetService.get(change_set_id)
+        # FR-180: more than a handful of codes need a passed sample inspection first
+        sample = None
+        if decision == "APPROVE":
+            try:
+                eligible = BulkService.eligible(change_set, step, actor, None, cr_ids)
+            except ForbiddenError:
+                eligible = []  # the single-CR checks report it per code
+            sample = BulkService.require_sample(sample_id, change_set, step, actor, eligible)
         # One password check for the whole sitting; a wrong password counts once and aborts.
         AuthService.step_up(actor, reauth_password, f"BULK_{step.upper()}_DECISION")
+        if sample is not None:
+            comment = ((comment or "") + BulkService.sample_note(sample)).strip()
         wanted = set(cr_ids) if cr_ids else None
         results = []
         for cr in list(change_set.change_requests):
@@ -163,6 +175,14 @@ class ChangeSetService:
             if cr.revision.lifecycle_status != _STEP_STATE[step]:
                 results.append(
                     {"cr_id": cr.id, "ok": False, "message": "Not waiting for this step."}
+                )
+                continue
+            revision = cr.revision
+            if (step == "reviewer" and revision.reviewer_signoff_by is not None) or (
+                step == "admin" and revision.admin_signoff_by is not None
+            ):
+                results.append(
+                    {"cr_id": cr.id, "ok": False, "message": "Already signed off for this step."}
                 )
                 continue
             try:
@@ -183,4 +203,7 @@ class ChangeSetService:
                 results.append({"cr_id": cr.id, "ok": False, "message": str(exc)})
             else:
                 results.append({"cr_id": cr.id, "ok": True, "message": "Decision recorded."})
+        BulkService._close(
+            change_set, "BULK_DECISION", actor, results, sample, step=step, decision=decision
+        )
         return results

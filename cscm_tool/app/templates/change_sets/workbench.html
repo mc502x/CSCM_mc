@@ -1,0 +1,171 @@
+{% extends "base.html" %}
+{% import "_macros.html" as macros %}
+{% block title %}{{ _('Workbench') }} — {{ overview.change_set.name }} — CSCM Tool{% endblock %}
+{% block content %}
+{% set cs = overview.change_set %}
+{% set working = current_user.role_code in ('ADMINISTRATOR', 'ENGINEER') %}
+<div class="page-header">
+  <div>
+    <h1>{{ _('Workbench') }}: {{ cs.name }} <span class="chip">{{ cs.status|title }}</span></h1>
+    <div class="muted"><a href="{{ url_for('ui.change_set_detail', change_set_id=cs.id) }}">{{ _('Package overview') }}</a> &middot; <a href="{{ url_for('api_v1.change_set_dossier', change_set_id=cs.id) }}">{{ _('Dossier (XLSX)') }}</a></div>
+  </div>
+</div>
+
+<div class="card">
+  <p class="muted">{{ _('Work on many codes at once without weakening a step: every code still gets its own checks, its own audit entry and, for decisions, your password. A decision on more than %(above)s codes needs a sample inspection first: %(percent)s percent of the batch, at least %(minimum)s codes, spread over the subgroups. One defect in the sample stops the decision.', above=rules.above, percent=rules.percent, minimum=rules.minimum) }}</p>
+  <p>
+    <span class="chip">{{ _('Ready to submit') }}: {{ readiness.tally.ready }}</span>
+    <span class="chip">{{ _('Blocked') }}: {{ readiness.tally.blocked }}</span>
+    {% for domain, n in readiness.pending_by_domain.items() %}<span class="chip">{{ _('Sign-off pending') }} {{ domain }}: {{ n }}</span>{% endfor %}
+  </p>
+</div>
+
+<form method="post" id="bulk-form">
+  <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+  <div class="card">
+    <h2>{{ _('Codes in this batch') }}</h2>
+    <p class="muted">{{ _('Tick the codes an action is for; with none ticked an action covers every code it applies to.') }}</p>
+    <div class="table-scroll">
+    <table>
+      <caption class="visually-hidden">{{ _('Change requests in this set') }}</caption>
+      <thead><tr><th scope="col"><span class="visually-hidden">{{ _('Select') }}</span></th><th scope="col">{{ _('Identifier') }}</th><th scope="col">{{ _('Title') }}</th><th scope="col">{{ _('State') }}</th><th scope="col">{{ _('What stops it') }}</th></tr></thead>
+      <tbody>
+        {% for row in overview.rows %}
+        {% set blockers = [] %}
+        {% for r in readiness.rows if r.cr.id == row.cr.id %}{% for b in r.blockers %}{% set _x = blockers.append(b) %}{% endfor %}{% endfor %}
+        <tr>
+          <td><input type="checkbox" name="cr_ids" value="{{ row.cr.id }}" aria-label="CR #{{ row.cr.id }}"></td>
+          <td><a href="{{ url_for('ui.change_request_detail', cr_id=row.cr.id) }}">{{ row.identifier or ('#' ~ row.cr.id) }}</a></td>
+          <td>{{ row.title }}</td>
+          <td>{{ macros.lifecycle_badge(row.state) }}</td>
+          <td>{% if blockers %}{{ blockers|join('; ') }}{% elif row.state == 'DRAFT' %}<span class="muted">{{ _('ready') }}</span>{% endif %}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    </div>
+  </div>
+
+  {% if working %}
+  <div class="card">
+    <h2>{{ _('Set values on the Drafts') }}</h2>
+    <p class="muted">{{ _('Only the values you choose are changed, on the Drafts you wrote (an Administrator: any Draft).') }}</p>
+    <div class="form-row">
+      <div class="field"><label for="b_category">{{ _('Status category') }}</label>
+        <select id="b_category" name="status_category"><option value="">—</option><option>ERROR</option><option>WARNING</option><option>INFO</option></select></div>
+      <div class="field"><label for="b_group">{{ _('Available group') }}</label><input type="number" id="b_group" name="available_group" min="1"></div>
+      <div class="field checkbox-list"><span class="label">{{ _('Platforms') }}</span>
+        {% for p in platforms %}<label><input type="checkbox" name="turbine_platforms" value="{{ p.code }}"> {{ p.code }}</label>{% endfor %}</div>
+    </div>
+    <div class="form-row">
+      {% for field, values in access %}
+      <div class="field"><label for="b_{{ field }}">{{ field.replace('_access', '').replace('_', ' ')|title }}</label>
+        <select id="b_{{ field }}" name="{{ field }}"><option value="">—</option>{% for v in values %}<option value="{{ v.id }}">{{ v.code }}</option>{% endfor %}</select></div>
+      {% endfor %}
+    </div>
+    <div class="btn-row"><button class="btn btn--primary" type="submit" formaction="{{ url_for('ui.change_set_bulk_edit', change_set_id=cs.id) }}">{{ _('Set on the Drafts') }}</button></div>
+  </div>
+
+  <div class="card">
+    <h2>{{ _('Submit for review') }}</h2>
+    <p class="muted">{{ _('Submits the Drafts you wrote. A Draft that still lacks a platform or a domain sign-off is reported and left as it is.') }}</p>
+    <div class="btn-row"><button class="btn btn--primary" type="submit" formaction="{{ url_for('ui.change_set_bulk_submit', change_set_id=cs.id) }}">{{ _('Submit the Drafts') }}</button></div>
+  </div>
+  {% endif %}
+
+  <div class="card">
+    <h2>{{ _('Sample inspection') }}</h2>
+    <p class="muted">{{ _('Choose the step you are about to decide, draw the sample, look at every sampled code and mark it. The sample is yours, valid for 24 hours and for this batch as it is now.') }}</p>
+    <div class="form-row">
+      <div class="field"><label for="b_step">{{ _('Step') }}</label>
+        <select id="b_step" name="step">
+          {% for d in domains %}<option value="domain:{{ d }}">{{ _('Domain sign-off') }} {{ d }}</option>{% endfor %}
+          {% if current_user.can_act_as('REVIEWER') %}<option value="reviewer">{{ _('Reviewer sign-off') }}</option>{% endif %}
+          {% if current_user.can_act_as('ADMINISTRATOR') %}<option value="admin">{{ _('Administrator sign-off') }}</option>{% endif %}
+          {% if current_user.can_act_as('CHIEF_ENGINEER') %}<option value="chief-engineer">{{ _('Chief Engineer decision') }}</option>{% endif %}
+        </select></div>
+    </div>
+    <div class="btn-row"><button class="btn" type="submit" formaction="{{ url_for('ui.change_set_sample_draw', change_set_id=cs.id) }}">{{ _('Draw a sample') }}</button></div>
+  </div>
+</form>
+
+{% for s in samples %}
+<div class="card">
+  <h2>{{ _('Sample') }} {{ s.id }} — {{ s.step }}{% if s.domain_code %} {{ s.domain_code }}{% endif %} <span class="chip">{{ s.status }}</span></h2>
+  <p class="muted">{{ _('%(n)s of %(total)s codes drawn at %(when)s.', n=s.items|length, total=s.population, when=s.drawn_at) }}</p>
+  <form method="post" action="{{ url_for('ui.change_set_sample_verdicts', sample_id=s.id) }}">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    <table>
+      <thead><tr><th scope="col">{{ _('Identifier') }}</th><th scope="col">{{ _('Title') }}</th><th scope="col">{{ _('Verdict') }}</th><th scope="col">{{ _('Note') }}</th></tr></thead>
+      <tbody>
+        {% for item in s.items %}
+        {% set rev = item.change_request.revision %}
+        <tr>
+          <td><a href="{{ url_for('ui.change_request_detail', cr_id=item.change_request_id) }}">{{ rev.status_code.status_code_identifier or rev.status_code.reserved_identifier or ('#' ~ item.change_request_id) }}</a></td>
+          <td>{{ rev.title }}</td>
+          <td>
+            <label><input type="radio" name="verdict_{{ item.change_request_id }}" value="OK"{% if item.verdict == 'OK' %} checked{% endif %}> {{ _('OK') }}</label>
+            <label><input type="radio" name="verdict_{{ item.change_request_id }}" value="DEFECT"{% if item.verdict == 'DEFECT' %} checked{% endif %}> {{ _('Defect') }}</label>
+          </td>
+          <td><input type="text" name="note_{{ item.change_request_id }}" value="{{ item.note or '' }}" aria-label="{{ _('Note') }}"></td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    <div class="btn-row"><button class="btn btn--primary" type="submit">{{ _('Save the verdicts') }}</button></div>
+  </form>
+
+  {% if s.status == 'PASSED' %}
+  <p>{{ _('Passed: no defect in the sample. Use sample number %(id)s below.', id=s.id) }}</p>
+  {% elif s.status == 'FAILED' %}
+  <form method="post" action="{{ url_for('ui.change_set_sample_reject', sample_id=s.id) }}">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    <p>{{ _('The sample has defects, so the batch cannot be decided as it is. Send the defective codes back (the note is the reason), then draw a new sample of what is left.') }}</p>
+    {% if s.step != 'domain' %}
+    {{ macros.password_field('rej_pw_' ~ s.id) }}
+    <div class="btn-row"><button class="btn btn--danger" type="submit">{{ _('Send the defective codes back') }}</button></div>
+    {% else %}<p class="muted">{{ _('A defective Draft is corrected by its author.') }}</p>{% endif %}
+  </form>
+  {% endif %}
+</div>
+{% endfor %}
+
+{% if working or current_user.can_act_as('REVIEWER') or current_user.can_act_as('ADMINISTRATOR') or current_user.can_act_as('CHIEF_ENGINEER') %}
+<div class="card">
+  <h2>{{ _('Decide the batch') }}</h2>
+  <form method="post" id="decide-form">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    <div class="form-row">
+      <div class="field"><label for="d_sample">{{ _('Sample number') }}</label><input type="number" id="d_sample" name="sample_id" min="1"></div>
+    </div>
+    {% if domains %}
+    <fieldset>
+      <legend>{{ _('Domain sign-off') }}</legend>
+      <div class="form-row"><div class="field"><label for="d_domain">{{ _('Engineering domain') }}</label>
+        <select id="d_domain" name="domain">{% for d in domains %}<option>{{ d }}</option>{% endfor %}</select></div></div>
+      <div class="btn-row"><button class="btn btn--primary" type="submit" formaction="{{ url_for('ui.change_set_bulk_domain', change_set_id=cs.id) }}">{{ _('Sign off the Drafts') }}</button></div>
+    </fieldset>
+    {% endif %}
+    {% if current_user.can_act_as('REVIEWER') or current_user.can_act_as('ADMINISTRATOR') or current_user.can_act_as('CHIEF_ENGINEER') %}
+    <fieldset>
+      <legend>{{ _('Decision') }}</legend>
+      <div class="form-row">
+        <div class="field"><label for="d_step">{{ _('Your decision step') }}</label>
+          <select id="d_step" name="step">
+            {% if current_user.can_act_as('REVIEWER') %}<option value="reviewer">{{ _('Reviewer sign-off') }}</option>{% endif %}
+            {% if current_user.can_act_as('ADMINISTRATOR') %}<option value="admin">{{ _('Administrator sign-off') }}</option>{% endif %}
+            {% if current_user.can_act_as('CHIEF_ENGINEER') %}<option value="chief-engineer">{{ _('Chief Engineer decision') }}</option>{% endif %}
+          </select></div>
+        <div class="field"><label for="d_comment">{{ _('Comment (required for rejection)') }}</label><input type="text" id="d_comment" name="comment"></div>
+      </div>
+      {{ macros.password_field('d_pw') }}
+      <div class="btn-row">
+        <button class="btn btn--primary" type="submit" name="decision" value="APPROVE" formaction="{{ url_for('ui.change_set_decide', change_set_id=cs.id) }}">{{ _('Approve the batch') }}</button>
+        <button class="btn btn--danger" type="submit" name="decision" value="REJECT" formaction="{{ url_for('ui.change_set_decide', change_set_id=cs.id) }}">{{ _('Reject the batch') }}</button>
+      </div>
+    </fieldset>
+    {% endif %}
+  </form>
+</div>
+{% endif %}
+{% endblock %}

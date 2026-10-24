@@ -6,7 +6,7 @@
 <div class="page-header">
   <div>
     <h1>{{ cs.name }} <span class="chip">{{ cs.status|title }}</span></h1>
-    <div class="muted">{{ cs.description or '' }}{% if cs.target_software_version %} &middot; {{ _('Target software version') }}: {{ cs.target_software_version.code }}{% endif %}</div>
+    <div class="muted"><a href="{{ url_for('ui.change_set_workbench', change_set_id=cs.id) }}">{{ _('Workbench') }}</a> &middot; {{ cs.description or '' }}{% if cs.target_software_version %} &middot; {{ _('Target software version') }}: {{ cs.target_software_version.code }}{% endif %}</div>
   </div>
   {% if current_user.role_code == 'ADMINISTRATOR' and cs.status == 'OPEN' %}
   <form method="post" action="{{ url_for('ui.change_set_close', change_set_id=cs.id) }}" data-confirm="{{ _('Close this change set?') }}">
@@ -46,7 +46,9 @@
     <fieldset>
       <legend>{{ _('Decide the selected requests in one sitting') }}</legend>
       <p class="muted">{{ _('Every request is still decided on its own: it gets its own check that you did not write or already sign it, its own comment and its own audit entry. Requests you may not decide are reported and skipped.') }}</p>
+      <p class="muted">{{ _('More than a few codes need a sample inspection first; use the workbench.') }}</p>
       <div class="form-row">
+        <div class="field"><label for="bulk_sample">{{ _('Sample number') }}</label><input type="number" id="bulk_sample" name="sample_id" min="1"></div>
         <div class="field">
           <label for="bulk_step">{{ _('Your decision step') }}</label>
           <select id="bulk_step" name="step">

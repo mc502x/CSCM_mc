@@ -1111,6 +1111,94 @@ paths:
         '200': { description: Dependants, content: { application/json: { schema: { type: object, properties: { items: { type: array, items: { $ref: '#/components/schemas/WhereUsedEntry' } } } } } } }
         '404': { $ref: '#/components/responses/NotFound' }
 
+  /change-sets/{changeSetId}/readiness:
+    parameters: [{ name: changeSetId, in: path, required: true, schema: { type: integer } }]
+    get:
+      tags: [ChangeSets]
+      summary: What still stops each Draft of the batch from being submitted, with the rule of the sample inspection (FR-180). Not available to Viewers.
+      responses:
+        '200': { description: Readiness, content: { application/json: { schema: { type: object, properties: { tally: { type: object }, pending_by_domain: { type: object }, rules: { type: object }, items: { type: array, items: { type: object } } } } } } }
+
+  /change-sets/{changeSetId}/bulk-edit:
+    parameters: [{ name: changeSetId, in: path, required: true, schema: { type: integer } }]
+    post:
+      tags: [ChangeSets]
+      summary: Set the same status category, platforms, available group or access levels on the Drafts of the batch (FR-180); each Draft is saved on its own, only by its author or an Administrator.
+      requestBody: { required: true, content: { application/json: { schema: { type: object, properties: { change_request_ids: { type: array, items: { type: integer } }, changes: { type: object } } } } } }
+      responses:
+        '200': { description: One result per Draft, content: { application/json: { schema: { type: object, properties: { results: { type: array, items: { type: object } } } } } } }
+        '422': { $ref: '#/components/responses/ValidationError' }
+
+  /change-sets/{changeSetId}/bulk-submit:
+    parameters: [{ name: changeSetId, in: path, required: true, schema: { type: integer } }]
+    post:
+      tags: [ChangeSets]
+      summary: Submit for review the Drafts of the batch that the caller wrote (FR-180); one that is not ready is reported with the reason.
+      responses:
+        '200': { description: One result per Draft, content: { application/json: { schema: { type: object, properties: { results: { type: array, items: { type: object } } } } } } }
+
+  /change-sets/{changeSetId}/domain-signoffs:
+    parameters: [{ name: changeSetId, in: path, required: true, schema: { type: integer } }]
+    post:
+      tags: [ChangeSets]
+      summary: Sign off an engineering domain on the Drafts of the batch (FR-180); more than a handful of codes need a passed `sample_id`.
+      requestBody: { required: true, content: { application/json: { schema: { type: object, required: [domain], properties: { domain: { type: string }, sample_id: { type: integer }, change_request_ids: { type: array, items: { type: integer } } } } } } }
+      responses:
+        '200': { description: One result per Draft, content: { application/json: { schema: { type: object, properties: { results: { type: array, items: { type: object } } } } } } }
+        '422': { $ref: '#/components/responses/ValidationError' }
+
+  /change-sets/{changeSetId}/samples:
+    parameters: [{ name: changeSetId, in: path, required: true, schema: { type: integer } }]
+    post:
+      tags: [ChangeSets]
+      summary: Draw the sample a bulk decision at `step` needs (FR-180) - stratified by subgroup, drawn for the caller, valid 24 hours.
+      requestBody: { required: true, content: { application/json: { schema: { type: object, required: [step], properties: { step: { type: string, enum: [domain, reviewer, admin, chief-engineer] }, domain: { type: string }, change_request_ids: { type: array, items: { type: integer } } } } } } }
+      responses:
+        '201': { description: The sample, content: { application/json: { schema: { $ref: '#/components/schemas/BulkSample' } } } }
+        '422': { $ref: '#/components/responses/ValidationError' }
+    get:
+      tags: [ChangeSets]
+      summary: The samples drawn for the batch, newest first (FR-180).
+      responses:
+        '200': { description: Samples, content: { application/json: { schema: { type: object, properties: { items: { type: array, items: { $ref: '#/components/schemas/BulkSample' } } } } } } }
+
+  /change-sets/{changeSetId}/dossier.xlsx:
+    parameters: [{ name: changeSetId, in: path, required: true, schema: { type: integer } }]
+    get:
+      tags: [ChangeSets]
+      summary: The change set as an XLSX dossier for an audit - codes with their decisions, samples with their verdicts, the audit entries (FR-180).
+      responses:
+        '200': { description: Workbook, content: { application/vnd.openxmlformats-officedocument.spreadsheetml.sheet: {} } }
+
+  /bulk-samples/{sampleId}:
+    parameters: [{ name: sampleId, in: path, required: true, schema: { type: integer } }]
+    get:
+      tags: [ChangeSets]
+      summary: One sample with its sampled codes and their verdicts (FR-180).
+      responses:
+        '200': { description: The sample, content: { application/json: { schema: { $ref: '#/components/schemas/BulkSample' } } } }
+        '404': { $ref: '#/components/responses/NotFound' }
+
+  /bulk-samples/{sampleId}/items/{changeRequestId}:
+    parameters: [{ name: sampleId, in: path, required: true, schema: { type: integer } }, { name: changeRequestId, in: path, required: true, schema: { type: integer } }]
+    put:
+      tags: [ChangeSets]
+      summary: Mark a sampled code OK or DEFECT (a defect needs a note); only by the person who drew the sample (FR-180).
+      requestBody: { required: true, content: { application/json: { schema: { type: object, required: [verdict], properties: { verdict: { type: string, enum: [OK, DEFECT] }, note: { type: string } } } } } }
+      responses:
+        '200': { description: The sample, content: { application/json: { schema: { $ref: '#/components/schemas/BulkSample' } } } }
+        '422': { $ref: '#/components/responses/ValidationError' }
+
+  /bulk-samples/{sampleId}/reject-defects:
+    parameters: [{ name: sampleId, in: path, required: true, schema: { type: integer } }]
+    post:
+      tags: [ChangeSets]
+      summary: Send back the codes of a failed sample that were found defective, with the note as the reason, and close the sample (FR-180). Needs the password of the caller.
+      requestBody: { content: { application/json: { schema: { type: object, properties: { current_password: { type: string }, comment: { type: string } } } } } }
+      responses:
+        '200': { description: One result per defective code, content: { application/json: { schema: { type: object, properties: { results: { type: array, items: { type: object } } } } } } }
+        '422': { $ref: '#/components/responses/ValidationError' }
+
   /status-codes/{statusCodeId}/connections:
     parameters: [{ $ref: '#/components/parameters/StatusCodeId' }]
     get:
@@ -2734,6 +2822,22 @@ components:
         title_page: { type: boolean }
         pdf_orientation: { type: string, enum: [L, P] }
         is_active: { type: boolean }
+    BulkSample:
+      type: object
+      properties:
+        id: { type: integer }
+        change_set_id: { type: integer }
+        step: { type: string }
+        domain: { type: string, nullable: true }
+        status: { type: string, enum: [OPEN, PASSED, FAILED, USED, VOID] }
+        population: { type: integer }
+        sampled: { type: integer }
+        rate_percent: { type: integer }
+        drawn_by: { type: integer }
+        drawn_at: { type: string }
+        used_at: { type: string, nullable: true }
+        items: { type: array, items: { type: object } }
+
     PackageJob:
       type: object
       properties:

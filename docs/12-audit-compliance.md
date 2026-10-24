@@ -50,6 +50,8 @@ This document governs the **business audit trail** (`audit_log_entry`), the comp
 | `STEP_UP_SUCCESS` / `STEP_UP_FAILURE` *(v4)* | User | Password confirmation for a sensitive action (SEC-026) | actor, `purpose` (e.g. `RELEASE_PUBLISH`) — never the password |
 | `PLANNED_DATES_SET` *(v4)* | StatusCodeRevision | Administrator stamps planned effective / deprecation dates (FR-109) | before/after dates |
 | `RELEASE_TARGETS_SET` *(v4)* | Release | Target software versions set before publish (FR-106) | before/after version codes |
+| `BULK_SAMPLE_DRAW` / `BULK_SAMPLE_VERDICT` / `BULK_SAMPLE_VOID` *(v4.13)* | ChangeSet / BulkSample | A sample was drawn (population, size, seed, the codes), a sampled code was marked OK or DEFECT, a sample was closed after its defects were sent back (FR-180) | person, step, domain, sample, verdict, note |
+| `BULK_DECISION` / `BULK_EDIT` / `BULK_SUBMIT` / `BULK_DOMAIN_SIGNOFF` *(v4.13)* | ChangeSet | A bulk action finished: how many codes were done and how many failed, the sample that covered it, the step and the decision or the fields set (FR-180) | person, counts, sample |
 | `PACKAGE_REQUEST` / `PACKAGE_EXPORT` *(v4.10)* | ExportJob | A package of all languages and access levels was requested and finished (FR-174) | requester, release, scope, file count, SHA-256 |
 | `OFFLINE_BUNDLE_EXPORT` / `RELEASE_NOTES_EXPORT` *(v4)* | ExportJob | Offline lookup bundle or release notes generated (FR-105, FR-108) | requester, release, SHA-256, options |
 | `EXPORT_PROFILE_CREATE` / `EXPORT_PROFILE_UPDATE` *(v4)* | ExportProfile | Administrator changes an export profile (FR-100) | before/after columns, audience, language |

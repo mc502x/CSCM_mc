@@ -1,6 +1,6 @@
 # 09. API Specification — CSCM Tool
 
-Full machine-readable contract: [artifacts/openapi.yaml](artifacts/openapi.yaml) (OpenAPI 3.0.3, **v4.0.0**, 151 operations — field set corrected 2026-09-17 against a real export of the live status code library, extended 2026-10-23 by the improvement pack). A test (`test_openapi_conformance`) fails when the code and this contract differ, and the endpoint table in §7 is generated from the code (`scripts/gen_api_summary.py`). This document explains the conventions that apply across every endpoint.
+Full machine-readable contract: [artifacts/openapi.yaml](artifacts/openapi.yaml) (OpenAPI 3.0.3, **v4.0.0**, 161 operations — field set corrected 2026-09-17 against a real export of the live status code library, extended 2026-10-23 by the improvement pack). A test (`test_openapi_conformance`) fails when the code and this contract differ, and the endpoint table in §7 is generated from the code (`scripts/gen_api_summary.py`). This document explains the conventions that apply across every endpoint.
 
 ## 1. Versioning
 
@@ -134,6 +134,16 @@ Generated from `docs/artifacts/openapi.yaml` and the access declared on each rou
 | GET | `/health/ready` | Readiness probe (no authentication, I-21): database reachable, schema at the expected Alembic head, newest audit rows chain correctly, la... | Public |
 | GET | `/status-codes/similar` | Existing codes of a subgroup with a similar title ("did you mean to revise ...?", I-12) | Administrator, Engineer |
 | GET | `/status-codes/{statusCodeId}/where-used` | Every other code whose current revision refers to this one (repeated-error pointer, related codes, supersession, platform variant) - I-04 | Working roles (not Viewer) and StCd Owner (read only) |
+| GET | `/change-sets/{changeSetId}/readiness` | What still stops each Draft of the batch from being submitted, with the rule of the sample inspection (FR-180) | Working roles (not Viewer) and StCd Owner (read only) |
+| POST | `/change-sets/{changeSetId}/bulk-edit` | Set the same status category, platforms, available group or access levels on the Drafts of the batch (FR-180); each Draft is saved on its... | Administrator, Engineer |
+| POST | `/change-sets/{changeSetId}/bulk-submit` | Submit for review the Drafts of the batch that the caller wrote (FR-180); one that is not ready is reported with the reason | Administrator, Engineer |
+| POST | `/change-sets/{changeSetId}/domain-signoffs` | Sign off an engineering domain on the Drafts of the batch (FR-180); more than a handful of codes need a passed `sample_id` | Administrator, Engineer |
+| POST | `/change-sets/{changeSetId}/samples` | Draw the sample a bulk decision at `step` needs (FR-180) - stratified by subgroup, drawn for the caller, valid 24 hours | Working roles (not Viewer) |
+| GET | `/change-sets/{changeSetId}/samples` | The samples drawn for the batch, newest first (FR-180) | Working roles (not Viewer) and StCd Owner (read only) |
+| GET | `/change-sets/{changeSetId}/dossier.xlsx` | The change set as an XLSX dossier for an audit - codes with their decisions, samples with their verdicts, the audit entries (FR-180) | Working roles (not Viewer) and StCd Owner (read only) |
+| GET | `/bulk-samples/{sampleId}` | One sample with its sampled codes and their verdicts (FR-180) | Working roles (not Viewer) and StCd Owner (read only) |
+| PUT | `/bulk-samples/{sampleId}/items/{changeRequestId}` | Mark a sampled code OK or DEFECT (a defect needs a note); only by the person who drew the sample (FR-180) | Working roles (not Viewer) |
+| POST | `/bulk-samples/{sampleId}/reject-defects` | Send back the codes of a failed sample that were found defective, with the note as the reason, and close the sample (FR-180) | Working roles (not Viewer) |
 | GET | `/status-codes/{statusCodeId}/connections` | What suppresses this code, what it suppresses, what it requires and where it escalates, read from the imported programs, with the chain o... | Working roles (not Viewer) and StCd Owner (read only) |
 | GET | `/status-codes/connections` | The causes with the codes they suppress (a tree), the escalation targets and what looks wrong in the connections between codes (FR-179) | Working roles (not Viewer) and StCd Owner (read only) |
 | GET | `/status-codes/{statusCodeId}/family` | The code and its platform variants (I-25) | Any signed-in user |

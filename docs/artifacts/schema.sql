@@ -79,6 +79,7 @@
 --     section 3, docs/03-srs.md FR-156, BR-024)
 --   - lookup_language: French, Hindi and Georgian added; v4.4 adds Arabic (written right to left); every
 --     name reads <country letters> <name> <flag emoji>; user.ui_language accepts the six codes
+-- v4.13 changes: the sample inspection of a bulk decision (bulk_sample, bulk_sample_item)
 -- v4.9.2 changes: status_code.deleted_at (a withdrawn code is erased in place, never removed; the delete
 --     trigger is strict again)
 -- v4.9 changes: the technical nomenclature (terminology_term, terminology_translation); user.deleted_at (a
@@ -1275,3 +1276,35 @@ CREATE TABLE terminology_translation (
     UNIQUE (term_id, language_code),
     CHECK ((status = 'APPROVED') = (approved_at IS NOT NULL))
 );
+
+
+-- v4.13: the sample inspection of a bulk decision (FR-180): which codes of a batch were drawn, who looked
+CREATE TABLE bulk_sample (
+    id                  INTEGER PRIMARY KEY,
+    change_set_id       INTEGER NOT NULL REFERENCES change_set(id),
+    step                TEXT NOT NULL CHECK (step IN ('domain','reviewer','admin','chief-engineer')),
+    domain_code         TEXT CHECK (domain_code IS NULL OR length(domain_code) BETWEEN 1 AND 40),
+    drawn_by            INTEGER NOT NULL REFERENCES user(id),
+    drawn_at            TEXT NOT NULL DEFAULT (strftime('%Y-%m-%dT%H:%M:%fZ','now')),
+    seed                TEXT NOT NULL,
+    population          INTEGER NOT NULL CHECK (population >= 1),
+    population_hash     TEXT NOT NULL,
+    rate_percent        INTEGER NOT NULL CHECK (rate_percent BETWEEN 1 AND 100),
+    status              TEXT NOT NULL DEFAULT 'OPEN' CHECK (status IN ('OPEN','PASSED','FAILED','USED','VOID')),
+    used_at             TEXT,
+    CHECK ((step = 'domain') = (domain_code IS NOT NULL)),
+    CHECK ((status = 'USED') = (used_at IS NOT NULL))
+);
+
+CREATE TABLE bulk_sample_item (
+    id                  INTEGER PRIMARY KEY,
+    sample_id           INTEGER NOT NULL REFERENCES bulk_sample(id),
+    change_request_id   INTEGER NOT NULL REFERENCES change_request(id),
+    verdict             TEXT CHECK (verdict IN ('OK','DEFECT')),
+    note                TEXT CHECK (note IS NULL OR length(note) <= 1000),
+    checked_at          TEXT,
+    UNIQUE (sample_id, change_request_id),
+    CHECK ((verdict IS NULL) = (checked_at IS NULL))
+);
+
+CREATE INDEX ix_bulk_sample_set ON bulk_sample (change_set_id, step, status);

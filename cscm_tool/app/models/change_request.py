@@ -202,3 +202,41 @@ class CrChecklistConfirmation(Base):
     confirmed_at = db.Column(db.Text, nullable=False)
 
     __table_args__ = (db.UniqueConstraint("change_request_id", "checklist_item_id"),)
+
+
+class BulkSample(Base):
+    """FR-180: the sample drawn from a batch of change requests before a bulk decision."""
+
+    __tablename__ = "bulk_sample"
+
+    id = db.Column(db.Integer, primary_key=True)
+    change_set_id = db.Column(db.Integer, db.ForeignKey("change_set.id"), nullable=False)
+    step = db.Column(db.Text, nullable=False)  # domain | reviewer | admin | chief-engineer
+    domain_code = db.Column(db.Text)
+    drawn_by = db.Column(db.Integer, db.ForeignKey("user.id"), nullable=False)
+    drawn_at = db.Column(db.Text, nullable=False)
+    seed = db.Column(db.Text, nullable=False)
+    population = db.Column(db.Integer, nullable=False)
+    population_hash = db.Column(db.Text, nullable=False)
+    rate_percent = db.Column(db.Integer, nullable=False)
+    status = db.Column(db.Text, nullable=False, default="OPEN")  # OPEN|PASSED|FAILED|USED|VOID
+    used_at = db.Column(db.Text)
+
+    items: list["BulkSampleItem"] = cast(
+        "list[BulkSampleItem]",
+        db.relationship("BulkSampleItem", back_populates="sample", order_by="BulkSampleItem.id"),
+    )
+
+
+class BulkSampleItem(Base):
+    __tablename__ = "bulk_sample_item"
+
+    id = db.Column(db.Integer, primary_key=True)
+    sample_id = db.Column(db.Integer, db.ForeignKey("bulk_sample.id"), nullable=False)
+    change_request_id = db.Column(db.Integer, db.ForeignKey("change_request.id"), nullable=False)
+    verdict = db.Column(db.Text)  # OK | DEFECT
+    note = db.Column(db.Text)
+    checked_at = db.Column(db.Text)
+
+    sample: BulkSample = cast(BulkSample, db.relationship("BulkSample", back_populates="items"))
+    change_request: ChangeRequest = cast(ChangeRequest, db.relationship("ChangeRequest"))

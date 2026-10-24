@@ -345,6 +345,7 @@ def decide_change_set(change_set_id: int):
             current_user,
             body.get("current_password"),
             cr_ids=body.get("change_request_ids"),
+            sample_id=body.get("sample_id"),
         )
     except (DomainError, ValueError) as exc:
         return error_response(exc)

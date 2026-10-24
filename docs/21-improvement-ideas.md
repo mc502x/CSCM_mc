@@ -104,8 +104,8 @@ All seven quick wins and the four-step sequencing of the original document are d
 | I-58 | Token usage report and per-token rate limit | 🟢 LOW | S | EPIC-11 |
 | I-59 | Stronger test techniques: mutation testing and state-machine property tests | 🟢 LOW | M | EPIC-13 |
 | I-60 | Document-to-code links: show which exports and releases used a code's wording | 🟢 LOW | S | EPIC-18 |
-| I-61 | Batch edit of imported Drafts: status category, platforms and audience access for the ticked codes of a change set | 🟠 MEDIUM | M | EPIC-14 |
-| I-62 | Bulk submit for review and bulk cross-domain sign-off for a change set | 🟠 MEDIUM | M | EPIC-19 |
+| I-61 | Batch edit of imported Drafts: status category, platforms and audience access for the ticked codes of a change set — ✅ delivered in v4.13 (FR-180) | 🟠 MEDIUM | M | EPIC-14 |
+| I-62 | Bulk submit for review and bulk cross-domain sign-off for a change set — ✅ delivered in v4.13 (FR-180) | 🟠 MEDIUM | M | EPIC-19 |
 | I-63 | Re-import from the programs: show what changed against the catalogue (drift) and revise the codes | 🟠 MEDIUM | M | EPIC-14 |
 | I-64 | Wire the parsed user-group levels, the remaining subsystem programs and the operating-mode mask from `import_source_item` into catalogue columns — ✅ delivered in v4.9.1 (FR-168) | 🟠 MEDIUM | M | EPIC-14 |
 | I-65 | Per-program status category in the preview (derived from the alarm type once the business defines the mapping) | 🟢 LOW | S | EPIC-14 |
@@ -211,6 +211,9 @@ The concept and the eleven open items for checking the translations by native sp
 | **The complete baseline of a Release** (every code valid as of it, ~900 MC + ~350 HC), narrowed by platform (2XM / 3XM / 4XM) and controller (MC / HC) | v4.10.0 | FR-173 |
 | **The package**: every language x every access level x chosen formats, release notes and a manifest with a SHA-256 per file, built in the background | v4.10.0 | FR-174 |
 | **The download rule**: everybody downloads what is released; the working set and unpublished Releases only the StCd Owner and the Administrator | v4.10.0 | FR-175 |
+| **Confidence check of the translations**, separate approval of new and changed strings, language impact notices to the StCd Owner | v4.11.0 | FR-176 … FR-178 |
+| **Connections** between status codes (suppression, preconditions, escalation) read from the imported programs | v4.12.0 | FR-179 |
+| **Bulk workflow for the migration — I-70 with I-61 and I-62**: the workbench of a change set (readiness, bulk edit, bulk submit, bulk domain sign-off, bulk decisions), the sample inspection (stratified, 10 % / at least 8, one defect blocks), and the dossier (XLSX) for an auditor | v4.13.0 | FR-180 |
 
 **New ideas from the review of the release process** (not built):
 
@@ -229,7 +232,7 @@ Weighed from the work of a wind turbine controls team - getting ~1,250 codes (ab
 
 | Rank | ID | Idea | Why it matters to the team | Size |
 |---|---|---|---|---|
-| 1 | I-70 | **Bulk workflow for the migration**: bulk edit (I-61), bulk submit and bulk cross-domain sign-off (I-62) and a bulk decision with a sample check for a change set of imported codes | The three decisions per code are right for a new code and impossible for 1,250 imported ones; without a bulk path go-live stalls in the queues of four roles | M |
+| 1 ✅ | I-70 | **Bulk workflow for the migration** (delivered in v4.13): bulk edit (I-61), bulk submit and bulk cross-domain sign-off (I-62) and a bulk decision with a sample check for a change set of imported codes | The three decisions per code are right for a new code and impossible for 1,250 imported ones; without a bulk path go-live stalls in the queues of four roles | M |
 | 2 | I-71 | **Build-against-catalogue check**: upload the generated programs of a controller software build and get a drift report against the released baseline for that software version (extends I-63 and the first step of I-42) | Closes the loop *manual = turbine*: the one question the whole tool exists to answer, asked at every software release instead of once at import | M |
 | 3 | I-72 | **Definition linter with turbine rules** (extends I-55 and I-67): alarm without remedy text, set or reset delay inconsistent with the category, a repeat counter without a replacement code, a Hub code without a Main counterpart, a missing program field, duplicate titles; shown per code and as a gate on the Release | Catches the defects that cost service technicians time, before they are published; gives the Release a measurable completeness | S - M |
 | 4 | I-73 | **Change propagation across platform variants**: when a code of 3XM is revised, list its 2XM and 4XM variants with the same change prefilled for review | The same fault is maintained three times today; this is the main source of drift between platforms | M |
