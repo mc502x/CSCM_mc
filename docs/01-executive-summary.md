@@ -20,6 +20,7 @@ CSCM Tool inverts the current document-first workflow: status codes are created,
 | Foundation for automation | REST API and structured export formats enable future, strictly on-premises integration with documentation generation, software repositories, and SCADA systems, without re-architecting the data model. |
 | Fully on-premises operation | No public cloud component anywhere in the system, including authentication — a hard deployment constraint, not a default. |
 | Trustworthy hand-over (v4) | Every export carries a manifest with SHA-256 hashes (optionally signed), can be limited to an audience, a language and a controller software version, and can be verified later without the database; release notes show what changed since the previous Release. |
+| Complete manuals per release (v4.10) | A Release can be exported as the complete baseline — every status code valid as of it, about 900 for the Main and 350 for the Hub Controller — narrowed to a platform and a controller, and as one package of every language and access level with a manifest. Everybody may download what is released; only the StCd Owner and the Administrator what is not. |
 | Operable by the owning team (v4) | Verified nightly backups, a tamper-evident audit log, readiness and metrics endpoints, SLA ageing with reminders, delegation for absences, and one-script installation keep the single-file system safe to run on-premises. |
 
 ## 4. Success Metrics

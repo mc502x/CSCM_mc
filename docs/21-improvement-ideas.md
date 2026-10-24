@@ -86,7 +86,7 @@ All seven quick wins and the four-step sequencing of the original document are d
 | I-40 | Holiday calendar for business days **(observed)** | 🟠 MEDIUM | S | EPIC-19 |
 | I-41 | Run and test on PostgreSQL (execute the port prepared by I-34) | 🟠 MEDIUM | L | EPIC-13 |
 | I-42 | Git-linked status code library versions and tag proposals | 🟠 MEDIUM | L | new EPIC-26 |
-| I-43 | Template-driven DOCX export (customer / brand templates) | 🟠 MEDIUM | L | EPIC-20 |
+| I-43 | Template-driven DOCX export (customer / brand templates) — ◐ the data side (complete baseline, platform and controller filter, package) is delivered in v4.10 (FR-173, FR-174); the Word output waits for the templates | 🟠 MEDIUM | L | EPIC-20 |
 | I-44 | Import worker that survives a restart and can resume **(observed)** | 🟠 MEDIUM | M | EPIC-14 |
 | I-45 | Backup replication and encryption: second volume, off-host copy | 🟠 MEDIUM | S | EPIC-25 |
 | I-46 | Webhook retry with back-off and a dead-letter view **(observed)** | 🟠 MEDIUM | S | EPIC-11 |
@@ -107,7 +107,7 @@ All seven quick wins and the four-step sequencing of the original document are d
 | I-61 | Batch edit of imported Drafts: status category, platforms and audience access for the ticked codes of a change set | 🟠 MEDIUM | M | EPIC-14 |
 | I-62 | Bulk submit for review and bulk cross-domain sign-off for a change set | 🟠 MEDIUM | M | EPIC-19 |
 | I-63 | Re-import from the programs: show what changed against the catalogue (drift) and revise the codes | 🟠 MEDIUM | M | EPIC-14 |
-| I-64 | Wire the parsed user-group levels, the remaining subsystem programs and the operating-mode mask from `import_source_item` into catalogue columns | 🟠 MEDIUM | M | EPIC-14 |
+| I-64 | Wire the parsed user-group levels, the remaining subsystem programs and the operating-mode mask from `import_source_item` into catalogue columns — ✅ delivered in v4.9.1 (FR-168) | 🟠 MEDIUM | M | EPIC-14 |
 | I-65 | Per-program status category in the preview (derived from the alarm type once the business defines the mapping) | 🟢 LOW | S | EPIC-14 |
 
 ## B.2 🔴 HIGH priority
@@ -131,7 +131,7 @@ All seven quick wins and the four-step sequencing of the original document are d
 | **I-40** | **Holiday calendar for business days (S) (observed)** | `business_days_between` skips only weekends, so a public holiday week looks like a stalled queue. An Administrator-maintained table of non-working days (per site or global) feeds SLA ages, reminders and the KPIs. | EPIC-19 |
 | **I-41** | **Run and test on PostgreSQL (L)** | I-34 delivered the inventory (47 blockers, 125 ports at the baseline of 2026-10-24, schema v4.7) and the dialect guards; the port itself is open: a PostgreSQL schema file, PL/pgSQL triggers, `FOR UPDATE`/advisory locks instead of `BEGIN IMMEDIATE`, `tsvector` search, `pg_dump`-based backup and a CI job that runs the suite on PostgreSQL. Do this when volume or availability needs justify it (Phase 3). | EPIC-13 |
 | **I-42** | **Git-linked status code library versions and tag proposals (L)** | Every controller software release tag gets a *status code library version* (SemVer-like: new code = minor, changed meaning/severity/reaction = major, text only = patch). Tags are *pulled as proposals* from a local or mirrored clone (optionally enriched from GitHub), a human accepts, edits or rejects them; an unchanged software release attaches to the existing library version; a drift scan compares the controller source with the library. Designed (state machine, data model, options, open questions) but **not built**: it needs a sample of the controller source files, the Git host and the tag conventions. Strictly opt-in and read-only toward the code repository, with an explicit exception recorded in 11 §12. | new EPIC-26 |
-| **I-43** | **Template-driven DOCX export (L)** | Generate the status-code documentation straight into the customer or brand Word template (registry of versioned templates, placeholders validated on upload, audience-redacted content, headings and tables that feed the table of contents, document properties with library version and hash, optional PDF where LibreOffice exists). Designed but **not built**; needs the real templates, the meaning of "2xm/3xm/4xm" (turbine platforms vs. the 2xxx/3xxx/4xxx number ranges) and the audience tiers per customer. | EPIC-20 |
+| **I-43** | **Template-driven DOCX export (L)** | Generate the status-code documentation straight into the customer or brand Word template (registry of versioned templates, placeholders validated on upload, audience-redacted content, headings and tables that feed the table of contents, document properties with library version and hash, optional PDF where LibreOffice exists). The Word output is designed but **not built**; it needs the three real templates (put in the project folder or uploaded, see I-66), the meaning of "2xm/3xm/4xm" (assumed: the turbine platforms) and the audience tiers per customer. | EPIC-20 |
 | **I-44** | **Import worker that survives a restart (M) (observed)** | A large import runs in a thread of the web process; a restart leaves the job at its last recorded state and the file must be re-uploaded. Persist the evaluated rows, process them from a small job table by a separate process (or `flask import-worker`), resume after a restart. | EPIC-14 |
 | **I-45** | **Backup replication and encryption (S)** | `flask backup-db --mirror <dir>` to copy each verified generation to a second location and record it in the status file; optional encryption of the copy with a key from the password safe; readiness reports an unreplicated backup. | EPIC-25 |
 | **I-46** | **Webhook retry with back-off and a dead-letter view (S) (observed)** | A delivery is attempted once; a consumer that is down for ten minutes misses the event (the change feed is the safety net). Retry a few times with back-off from the reminder job and show undelivered events on the Integrations page with a *Resend* button. | EPIC-11 |
@@ -141,7 +141,7 @@ All seven quick wins and the four-step sequencing of the original document are d
 | **I-61** | **Batch edit of imported Drafts (M)** | The status code import gives every Draft the same category, platforms and empty audience access. A bulk action on a change set would set them for the ticked codes in one step, each still an ordinary edit of an open Draft by its author (audited per code). | EPIC-14 |
 | **I-62** | **Bulk submit and bulk domain sign-off (M)** | An imported batch of hundreds of Drafts must be submitted one by one and each needs the cross-domain sign-off. A change-set action would submit every ready Draft and let a domain owner sign off the batch with one password confirmation, as the bulk decisions already do (I-11, I-17). | EPIC-19 |
 | **I-63** | **Re-import and drift report (M)** | `import_source_item` keeps the SHA-256 and the parsed attributes of every program. Uploading the same program again could show which attributes changed against the catalogue and open a revision (or update the Draft) for the codes the user ticks. | EPIC-14 |
-| **I-64** | **Wire the remaining program attributes (M)** | User-group levels, the remaining subsystem programs, the operating-mode mask and the task frequency are parsed and kept as JSON only. Once the v4.1 columns are editable in the application the import should fill them; the mapping table of 06-data-dictionary.md §5a lists which. | EPIC-14 |
+| **I-64** | **Wire the remaining program attributes (M) — delivered in v4.9.1 (FR-168)** | User-group levels, the remaining subsystem programs, the operating-mode mask and the task frequency are parsed and kept as JSON only. Once the v4.1 columns are editable in the application the import should fill them; the mapping table of 06-data-dictionary.md §5a lists which. | EPIC-14 |
 
 ## B.4 🟢 LOW priority
 
@@ -196,6 +196,32 @@ Open points, not built. (1) Deleting an account is possible only while it has no
 ## B.10 Translations (v4.7)
 
 The concept and the eleven open items for checking the translations by native speakers and for exporting the status code manuals in every designated language are in [26-translations.md](26-translations.md) §8. Built since: the review itself runs in the application, in its own section *Translations* (FR-164, [26-translations.md](26-translations.md) §3.4). The ones that matter most: find one native-speaker reviewer per language and assign them there; mark unreviewed languages as beta; a terminology list per language; language competence on the user for approving status code translations; content sheets (export and import) for translating the status codes; a coverage matrix and a readiness rule per Release; Unicode fonts for the PDF (I-37). Delivered in v4.9: the whole interface in all nineteen languages (FR-167, I-38) and the technical nomenclature as a section of its own with a two-person approval (FR-166, [26-translations.md](26-translations.md) §8a); the critical review of the implementation is in §8b of that file.
+
+## B.11 Delivered since v4.9, and what the review of the release process added (v4.10)
+
+**Delivered after the list was written** (each is specified in [03-srs.md](03-srs.md) §1.17 and traced in [20-traceability-matrix.md](20-traceability-matrix.md)):
+
+| Delivered | Version | Requirements |
+|---|---|---|
+| The fields of the generated programs (further programs, flags, task call frequency, operating-mode mask, user-group levels) stored, edited, imported and exported — this is **I-64** | v4.9.1 | FR-168 |
+| Users with history and withdrawn codes can be deleted (erased in place, the audit log is never changed) | v4.9.0 – v4.9.2 | BR-025, BR-026 |
+| The menu grouped by the work of the user, with counts and a Menu button | v4.9.2 | FR-169 |
+| The *beta* mark for unreviewed languages, hidden from Viewers and guests | v4.9.2 – v4.9.3 | FR-170, FR-172 |
+| The words around an export in the language of the export | v4.9.2 | FR-171 |
+| **The complete baseline of a Release** (every code valid as of it, ~900 MC + ~350 HC), narrowed by platform (2XM / 3XM / 4XM) and controller (MC / HC) | v4.10.0 | FR-173 |
+| **The package**: every language x every access level x chosen formats, release notes and a manifest with a SHA-256 per file, built in the background | v4.10.0 | FR-174 |
+| **The download rule**: everybody downloads what is released; the working set and unpublished Releases only the StCd Owner and the Administrator | v4.10.0 | FR-175 |
+
+**New ideas from the review of the release process** (not built):
+
+| ID | Idea | Priority | Effort | Epic |
+|---|---|---|---|---|
+| I-66 | Upload of the DOCX templates in the application (one per platform, replaceable by an Administrator, placeholders and styles checked on upload) — the way into I-43 | 🟠 MEDIUM | M | EPIC-20 |
+| I-67 | Publish gate on translation coverage: warn or block the publication of a Release while a language is below a threshold (today the Release page only shows the numbers, FR-173) | 🟠 MEDIUM | S | EPIC-22 |
+| I-68 | Packages: retention and cleanup of the files under `instance/packages`, one running build per Release, a build that survives a restart (as I-44), a notice when it is ready | 🟠 MEDIUM | M | EPIC-20 |
+| I-69 | A manual edition number and document properties (library version, Release, hash) printed on every file of a package | 🟢 LOW | S | EPIC-20 |
+
+**I-43 now.** The baseline, the platform and controller filter and the package are the data side of it and are built. What is missing is the Word output itself: the three templates (2XM, 3XM, 4XM; assumed to be the turbine platforms, which the templates will confirm) are to be put in the project folder or uploaded in the application (I-66), together with their style names, the cover fields and an example entry page.
 
 ## B.7 Suggested sequencing
 
