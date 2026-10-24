@@ -66,13 +66,32 @@ def release_detail(release_id):
         flash(_("Release not found."), "error")
         return redirect(url_for("ui.release_list"))
     from app.services.audience_service import AUDIENCES
+    from app.services.baseline_service import BaselineService
     from app.services.export_profile_service import ExportProfileService
     from app.services.export_service import ExportService
+    from app.services.package_service import PackageService
     from app.services.software_version_service import SoftwareVersionService
 
+    can_package = release.status == "PUBLISHED"  # FR-175: everybody, once it is released
+    can_see_readiness = current_user.role_code in (
+        "ADMINISTRATOR",
+        "ENGINEER",
+        "REVIEWER",
+        "CHIEF_ENGINEER",
+        "STCD_OWNER",
+    )
     return render_template(
         "releases/detail.html",
         release=release_payload(release),
+        baseline=BaselineService.summary(release),
+        readiness=BaselineService.readiness(release) if can_see_readiness else None,
+        can_package=can_package,
+        packages=(
+            [PackageService.status(j) for j in PackageService.packages_of(release_id)]
+            if can_package
+            else []
+        ),
+        platforms=LookupService.list_vocabulary("turbine-platforms"),
         profiles=ExportProfileService.list_all(),
         audiences=AUDIENCES,
         content_languages=LookupService.list_vocabulary("languages"),

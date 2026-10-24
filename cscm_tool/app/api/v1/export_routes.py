@@ -9,8 +9,8 @@ from app.api.v1.publication_routes import export_options_from_request, file_resp
 from app.auth.decorators import allow_token, current_user, login_required, require_role
 from app.db_modes import writes_on_get
 from app.domain.errors import AccountLockedError, DomainError, NotFoundError, StepUpRequiredError
-from app.services.export_service import ExportService
-from app.services.release_service import ReleaseService
+from app.services.export_service import UNRELEASED_EXPORT_ROLES, ExportService
+from app.services.release_service import ReleaseService, require_released_or_owner
 
 _VALID_FORMATS = {"csv", "json", "xlsx", "pdf"}
 WORKING_SET_NOTICE = "Not for distribution - unapproved data"
@@ -31,13 +31,16 @@ def export_release(release_id: int):
         )
     try:
         release = ReleaseService.get(release_id)
+        require_released_or_owner(release, current_user)
     except NotFoundError:
         return jsonify(error="not_found", message="Release not found"), 404
+    except DomainError as exc:
+        return error_response(exc)
 
     try:
         options = export_options_from_request()
         result = ExportService.export_catalogue(
-            [item.revision for item in release.items],
+            ExportService.release_revisions(release, options),
             export_format,
             current_user,
             release_id=release_id,
@@ -92,10 +95,10 @@ def export_released():
 
 @api_v1_bp.get("/exports/working-set")
 @writes_on_get
-@require_role("ENGINEER", "REVIEWER", "ADMINISTRATOR", "CHIEF_ENGINEER")
+@require_role(*UNRELEASED_EXPORT_ROLES)
 def export_working_set():
     """FR-046: ad-hoc filtered working set, any lifecycle state, labelled
-    "Not for distribution — unapproved data"; never available to Viewers."""
+    "Not for distribution — unapproved data"; only the StCd Owner and Administrator (FR-175)."""
     export_format, error = _format_or_error()
     if error:
         return error

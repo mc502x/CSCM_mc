@@ -140,8 +140,8 @@ def test_the_audit_catalogue_lists_every_code_the_application_can_write():
     }
     documented = set(re.findall(r"`([A-Z][A-Z_]{3,})`", _text(DOCS / "12-audit-compliance.md")))
     assert emitted - documented == set()
-    assert "Eighty-four action codes" in _text(DOCS / "22-software-description.md")
-    assert len(emitted) == 84
+    assert "Eighty-six action codes" in _text(DOCS / "22-software-description.md")
+    assert len(emitted) == 86
 
 
 # ------------------------------------------------------------------ requirement ids

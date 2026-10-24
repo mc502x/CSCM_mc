@@ -13,6 +13,7 @@ from app.i18n import translate as _
 from app.models.export_job import ExportProfile
 from app.services import manifest_service
 from app.services.audience_service import AUDIENCES
+from app.services.baseline_service import validate_controller, validate_platform
 from app.services.export_profile_service import (
     EXPORT_FIELDS,
     ExportProfileService,
@@ -20,7 +21,8 @@ from app.services.export_profile_service import (
 )
 from app.services.export_service import ExportOptions, ExportService
 from app.services.lookup_service import LookupService
-from app.services.release_service import ReleaseService
+from app.services.package_service import PackageRequest, PackageService
+from app.services.release_service import ReleaseService, require_released_or_owner
 from app.services.software_version_service import SoftwareVersionService
 from app.services.status_code_service import StatusCodeService
 from app.services.translation_service import TranslationService
@@ -147,6 +149,7 @@ def release_shaped_export(release_id):
         return redirect(url_for("ui.release_detail", release_id=release_id))
     try:
         release = ReleaseService.get(release_id)
+        require_released_or_owner(release, current_user)
         profile = (
             ExportProfileService.get_by_code(request.args["profile"])
             if request.args.get("profile")
@@ -158,10 +161,13 @@ def release_shaped_export(release_id):
             language=request.args.get("language") or None,
             strict_language=request.args.get("strict_language") == "on",
             software_version=request.args.get("software_version") or None,
+            platform=validate_platform(request.args.get("platform")),
+            controller=validate_controller(request.args.get("controller")),
+            content=request.args.get("content") or "baseline",
             bundle=request.args.get("bundle") == "on",
         )
         result = ExportService.export_catalogue(
-            [item.revision for item in release.items],
+            ExportService.release_revisions(release, options),
             fmt,
             current_user,
             release_id=release_id,
@@ -181,6 +187,52 @@ def release_shaped_export(release_id):
     )
 
 
+@ui_bp.route("/releases/<int:release_id>/packages", methods=["POST"])
+@login_required_web
+def release_package_create(release_id):
+    """FR-174: every language x every access level of the complete baseline, as one ZIP."""
+    form = request.form
+    try:
+        release = ReleaseService.get(release_id)
+        PackageService.request(
+            release,
+            current_user,
+            PackageRequest(
+                formats=tuple(form.getlist("formats")),
+                languages=tuple(form.getlist("languages")),
+                audiences=tuple(form.getlist("audiences")),
+                include_unfiltered=form.get("include_unfiltered") == "on",
+                platform=form.get("platform") or None,
+                controller=form.get("controller") or None,
+                strict_language=form.get("strict_language") == "on",
+            ),
+        )
+    except (NotFoundError, *_ERRORS) as exc:
+        flash(_(str(exc)), "error")
+    else:
+        flash(_("The package is being built. Reload this page to follow its progress."), "info")
+    return redirect(url_for("ui.release_detail", release_id=release_id))
+
+
+@ui_bp.route("/packages/<int:job_id>/download")
+@login_required_web
+def release_package_download(job_id):
+    try:
+        job = PackageService.get(job_id)
+        content, filename = PackageService.content(job, current_user)
+    except (NotFoundError, *_ERRORS) as exc:
+        flash(_(str(exc)), "error")
+        return redirect(url_for("ui.export_center"))
+    return Response(
+        content,
+        mimetype="application/zip",
+        headers={
+            "Content-Disposition": f"attachment; filename={filename}",
+            "X-Content-SHA256": job.sha256 or "",
+        },
+    )
+
+
 @ui_bp.route("/releases/<int:release_id>/notes")
 @writes_on_get
 @login_required_web
@@ -188,8 +240,7 @@ def release_notes_download(release_id):
     fmt = (request.args.get("format") or "md").lower()
     try:
         release = ReleaseService.get(release_id)
-        if release.status != "PUBLISHED" and current_user.role_code != "ADMINISTRATOR":
-            raise NotFoundError("Release not found")
+        require_released_or_owner(release, current_user)
         result = ExportService.export_release_notes(
             release, fmt, current_user, bundle=request.args.get("bundle") == "on"
         )
@@ -218,6 +269,9 @@ def release_offline_bundle_download(release_id):
             audience=request.args.get("audience") or None,
             language=request.args.get("language") or None,
             software_version=request.args.get("software_version") or None,
+            platform=validate_platform(request.args.get("platform")),
+            controller=validate_controller(request.args.get("controller")),
+            content=request.args.get("content") or "baseline",
             bundle=request.args.get("bundle") == "on",
         )
         result = ExportService.export_offline_bundle(release, current_user, options)

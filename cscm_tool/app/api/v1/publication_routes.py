@@ -13,12 +13,13 @@ from app.api.v1 import api_v1_bp
 from app.api.v1._errors import error_response
 from app.auth.decorators import current_user, login_required, require_role
 from app.db_modes import writes_on_get
-from app.domain.errors import DomainError, NotFoundError
+from app.domain.errors import DomainError
 from app.services import manifest_service
 from app.services.audience_service import AUDIENCES, validate_audience
+from app.services.baseline_service import validate_controller, validate_platform
 from app.services.export_profile_service import ExportProfileService, parse_columns
 from app.services.export_service import ExportOptions, ExportService
-from app.services.release_service import ReleaseService
+from app.services.release_service import ReleaseService, require_released_or_owner
 from app.services.software_version_service import SoftwareVersionService
 from app.services.translation_service import TranslationService
 
@@ -44,6 +45,9 @@ def export_options_from_request(*, allow_audience: bool = True) -> ExportOptions
         language=request.args.get("language") or None,
         strict_language=request.args.get("strict_language") == "true",
         software_version=request.args.get("software_version") or None,
+        platform=validate_platform(request.args.get("platform")),
+        controller=validate_controller(request.args.get("controller")),
+        content=request.args.get("content") or "baseline",
         bundle=request.args.get("bundle") == "true",
     )
 
@@ -133,8 +137,7 @@ def release_notes(release_id: int):
         return jsonify(error="validation_error", message="format must be md, csv, pdf or json"), 422
     try:
         release = _published_release(release_id)
-        if release.status != "PUBLISHED" and current_user.role_code != "ADMINISTRATOR":
-            raise NotFoundError("Release not found")
+        require_released_or_owner(release, current_user)
         result = ExportService.export_release_notes(
             release, fmt, current_user, bundle=request.args.get("bundle") == "true"
         )

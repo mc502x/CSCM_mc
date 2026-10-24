@@ -50,6 +50,7 @@ This document governs the **business audit trail** (`audit_log_entry`), the comp
 | `STEP_UP_SUCCESS` / `STEP_UP_FAILURE` *(v4)* | User | Password confirmation for a sensitive action (SEC-026) | actor, `purpose` (e.g. `RELEASE_PUBLISH`) — never the password |
 | `PLANNED_DATES_SET` *(v4)* | StatusCodeRevision | Administrator stamps planned effective / deprecation dates (FR-109) | before/after dates |
 | `RELEASE_TARGETS_SET` *(v4)* | Release | Target software versions set before publish (FR-106) | before/after version codes |
+| `PACKAGE_REQUEST` / `PACKAGE_EXPORT` *(v4.10)* | ExportJob | A package of all languages and access levels was requested and finished (FR-174) | requester, release, scope, file count, SHA-256 |
 | `OFFLINE_BUNDLE_EXPORT` / `RELEASE_NOTES_EXPORT` *(v4)* | ExportJob | Offline lookup bundle or release notes generated (FR-105, FR-108) | requester, release, SHA-256, options |
 | `EXPORT_PROFILE_CREATE` / `EXPORT_PROFILE_UPDATE` *(v4)* | ExportProfile | Administrator changes an export profile (FR-100) | before/after columns, audience, language |
 | `TRANSLATION_SAVE` / `TRANSLATION_APPROVE` / `TRANSLATION_CARRY_OVER` *(v4)* | StatusCodeRevision | Translation workflow (FR-110) | language, status, translator / approver |

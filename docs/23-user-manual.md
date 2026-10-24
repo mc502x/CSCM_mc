@@ -82,8 +82,8 @@ A code travels through seven states:
 | Build, publish, delete (unpublished) releases                                           | —             | —              | —        | —              | ✓             | —          |
 | Archive / reinstate deprecated codes; sandbox codes                                     | —             | —              | —        | —              | ✓             | —          |
 | Library import                                                                          | —             | ✓              | —        | —              | ✓             | —          |
-| Export released data                                                                    | ✓             | ✓              | ✓        | ✓              | ✓             | —          |
-| Export the unapproved working set                                                       | —             | ✓              | ✓        | ✓              | ✓             | —          |
+| Export released data, build and download the package of a published Release *(v4.10)*  | ✓             | ✓              | ✓        | ✓              | ✓             | ✓          |
+| Export the unapproved working set (and the files of an unpublished Release)            | —             | —              | —        | —              | ✓             | ✓          |
 | Full-database backup (password required)                                                | —             | —              | —        | —              | ✓             | —          |
 | Confirm a decision with your password *(v4)*                                            | —             | —              | ✓        | ✓              | ✓             | —          |
 | Name a delegate / act as a delegate *(v4)*                                              | —             | —              | ✓        | ✓              | ✓             | —          |
@@ -196,7 +196,7 @@ Add a comment to any request with *Add a comment*. It changes nothing but is rec
 1. **Releases → New Release**: *Name*, *Version Label*, optional *Description*, optional scope (*Functional System Group*). **Create Release**.
 2. *(v4)* In the Release Builder, **Target software versions** limits the candidate list to codes that apply to the chosen versions (§25). **Edit Candidates**: the list shows Approved codes within the scope (never sandbox codes). Tick the ones to include → **Save Candidate Set**. Approved codes you leave out stay Approved for a later Release.
 3. **Publish** (confirm the dialog; *(v4)* you also enter your password, and codes whose planned effective date is still in the future are listed as warnings — they do not block). All included codes become **Released**, receive the effective date, and the Release is frozen. This cannot be undone and a published Release cannot be changed or deleted. Corrections need a new revision and a new Release.
-4. A Release not yet published can be removed with **Delete Release**. *(v4)* A published Release has **Release notes**, **exports with a manifest**, an **offline lookup page** and — if webhooks are configured — notifies them (§24).
+4. A Release not yet published can be removed with **Delete Release**. The Release page shows the **complete baseline** - the count of every code valid as of the Release, split by controller (Main / Hub) and platform (2XM, 3XM, 4XM): a manual of a Release always contains all of them, not only the codes the Release changed. In **Shaped export** choose *Complete baseline* or *Changes of this release only*, narrow it to a **platform** and a **controller**, a language and an access level. Everybody who may see the Release (it is published) also finds **Package: all languages and access levels**: choose the formats (PDF, XLSX, CSV, JSON), optionally a platform and a controller, and *Build package* - one ZIP with the baseline in every language for every access level, the release notes and a `MANIFEST.json` with a SHA-256 for each file. Building takes a few minutes; reload the page to follow it and download the ZIP when it says COMPLETE. The line above the form shows how many codes are translated per language, so you know what will still be in English. *(v4)* A published Release has **Release notes**, **exports with a manifest**, an **offline lookup page** and — if webhooks are configured — notifies them (§24).
 
 ## 13. Exporting data
 **Export Center** offers, in **CSV, JSON, XLSX and PDF**:
@@ -205,7 +205,7 @@ Add a comment to any request with *Add a comment*. It changes nothing but is rec
 |---|---|---|
 | **All Released Status Codes** | everyone | the latest Released version of every code (sandbox excluded) |
 | **Release Export** | everyone | the contents of one published Release |
-| **Working-Set Export** | everyone except Viewers | every current code in any state, including unapproved Drafts. Every row carries *Not for distribution - unapproved data*, and the file name says so too. Never publish it. |
+| **Working-Set Export** | StCd Owner and Administrator | every current code in any state, including unapproved Drafts. Every row carries *Not for distribution - unapproved data*, and the file name says so too. Never publish it. |
 | **Full-Database Backup** | Administrator | complete raw database file. Store it with the same protection as the database itself. |
 
 File names end with the time of generation, e.g. `cscm_released_2026-10-22_11-05.csv`, `cscm_release_v1.0_2026-10-22_11-05.xlsx`, `cscm_working-set_NOT_FOR_DISTRIBUTION_2026-10-22_11-05.csv` (format `YYYY-MM-DD_HH-MM`, UTC).

@@ -37,7 +37,7 @@ CSCM Tool is a **OneTool-integrated application** (2026-09-17 decision): it rend
 | S10a | Domain Sign-Off Request | Engineer (second domain) | Complete domain-owned fields, record sign-off |
 | S11 | Release List | All | Browse releases |
 | S12 | Release Builder | Administrator | Build candidate set, publish |
-| S13 | Release Detail | All | View published contents, export |
+| S13 | Release Detail | All | View published contents, export the complete baseline (by platform, controller, language, access level), build the package of all languages and access levels (FR-173, FR-174) |
 | S14 | User Management | Administrator, StCd Owner (roles only) | CRUD users, roles, Engineering Domain tags; every role is a coloured badge, red = highest level; the StCd Owner sees the list and moves users between Viewer, Engineer and Reviewer (v4.3). Per user: **View** (the user's page, `/admin/users/{id}`: profile and what the account has done), **Edit**, **Deactivate / Activate** and **Delete** (v4.6; delete only while the account has no history and with the Administrator's password) |
 | S15 | Lookup/Vocabulary Management | Administrator | Manage Functional Groups/Subgroups (incl. create new — §4 S15), Turbine Platforms, Engineering Domains, Available Group, the 8 access vocabularies |
 | S16 | Audit Log Search | Administrator, Reviewer/Chief Engineer (scoped) | Investigate history |

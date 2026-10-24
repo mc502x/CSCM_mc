@@ -76,6 +76,7 @@ class Config:
     # I-32: uploads above this many rows are processed by a background worker
     IMPORT_ASYNC_ROW_THRESHOLD = int(os.environ.get("IMPORT_ASYNC_ROW_THRESHOLD", "300"))
     IMPORT_ASYNC_INLINE = False  # tests run the "background" job on the calling thread
+    PACKAGE_ASYNC_INLINE = False  # FR-174: a package is built by a worker thread, tests inline
 
     # FR-163 / SEC-033: how people sign in. "password" (the MVP), "windows" (the Windows identity
     # handed over by the organisation's authenticating gateway; passwords are refused) or "both".
@@ -111,6 +112,7 @@ class DevelopmentConfig(Config):
 class TestingConfig(Config):
     TESTING = True
     IMPORT_ASYNC_INLINE = True
+    PACKAGE_ASYNC_INLINE = True
     SQLALCHEMY_DATABASE_URI = "sqlite://"  # in-memory, fresh per test run
     SESSION_COOKIE_SECURE = False
     WTF_CSRF_ENABLED = False

@@ -77,7 +77,7 @@ API_GRID = [
         "GET",
         "/exports/working-set?format=csv",
         None,
-        ("ADMINISTRATOR", "ENGINEER", "REVIEWER", "CHIEF_ENGINEER"),
+        ("ADMINISTRATOR", "STCD_OWNER"),
     ),
     ("POST", "/exports/full-database", {}, ADMIN),
     ("GET", "/lookups/turbine-platforms", None, LOGGED_IN),

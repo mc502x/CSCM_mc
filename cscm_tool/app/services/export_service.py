@@ -29,6 +29,7 @@ from app.services import manifest_service
 from app.services.audience_service import AUDIENCES, AudienceService, validate_audience
 from app.services.audit_service import AuditService
 from app.services.auth_service import AuthService
+from app.services.baseline_service import CONTROLLERS, BaselineService, validate_controller
 from app.services.export_profile_service import parse_columns
 from app.services.software_version_service import SoftwareVersionService
 from app.services.translation_service import TranslationService, source_language
@@ -40,6 +41,11 @@ _BUILDERS: dict[str, tuple[Callable[[list[dict]], bytes], str]] = {
     "xlsx": (build_xlsx, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"),
     "pdf": (build_pdf, "application/pdf"),
 }
+
+
+# FR-175: anybody may download what has been released; data that is not released yet may only be
+# downloaded by the StCd Owner and the Administrator.
+UNRELEASED_EXPORT_ROLES = ("STCD_OWNER", "ADMINISTRATOR")
 
 
 def _access_code(lookup) -> str | None:
@@ -153,6 +159,9 @@ class ExportOptions:
     language: str | None = None
     strict_language: bool = False
     software_version: str | None = None
+    platform: str | None = None  # 2XM | 3XM | 4XM (FR-173)
+    controller: str | None = None  # MC | HC (FR-173)
+    content: str = "baseline"  # "baseline" (every valid code) | "delta" (this release's items)
     bundle: bool = False
     extra_files: dict[str, bytes] = field(default_factory=dict)
 
@@ -188,6 +197,9 @@ TITLE_PAGE_TEXT: tuple[str, ...] = (
     "Language",
     "source",
     "Software version",
+    "Scope",
+    "Complete baseline",
+    "Changes of this release only",
 )
 
 
@@ -196,7 +208,10 @@ class ExportService:
 
     @staticmethod
     def _prepare(
-        revisions: list[StatusCodeRevision], options: ExportOptions, notice: str | None
+        revisions: list[StatusCodeRevision],
+        options: ExportOptions,
+        notice: str | None,
+        flat: dict[int, dict] | None = None,
     ) -> tuple[list[dict], list[tuple[str, str]] | None]:
         """Applies version/audience/language/profile to `revisions`; returns the flat rows
         and, with a profile, the ordered (field, label) columns."""
@@ -209,6 +224,20 @@ class ExportService:
         if options.software_version:
             version = SoftwareVersionService.get_by_code(options.software_version)
             revisions = [r for r in revisions if SoftwareVersionService.applies(r, version)]
+        controller = validate_controller(options.controller)
+        if controller:
+            wanted = CONTROLLERS[controller]
+            revisions = [
+                r
+                for r in revisions
+                if r.status_code.functional_system_group.controller_type == wanted
+            ]
+        if options.platform:
+            revisions = [
+                r
+                for r in revisions
+                if any(link.turbine_platform.code == options.platform for link in r.platforms)
+            ]
         if audience:
             revisions = AudienceService.filter_revisions(revisions, audience)
 
@@ -223,7 +252,8 @@ class ExportService:
 
         rows = []
         for revision in revisions:
-            row = flatten_revision(revision)
+            # a package builds hundreds of variants of the same codes: flatten each only once
+            row = dict(flat[revision.id]) if flat is not None else flatten_revision(revision)
             if use_language:
                 translated = translations.get(revision.id)
                 if translated is not None:
@@ -246,6 +276,71 @@ class ExportService:
             if notice and all(f != "distribution_notice" for f, _ in columns):
                 columns.append(("distribution_notice", "Distribution notice"))
         return rows, columns
+
+    @staticmethod
+    def title_page(
+        release: Release | None,
+        profile: ExportProfile | None,
+        options: ExportOptions,
+        row_count: int,
+        digest: str,
+        actor,
+        generated_at: str,
+    ) -> dict | None:
+        """The title page of a PDF (and the data behind it); None when there is no release and
+        the profile asks for none."""
+        if release is None and not (profile is not None and profile.title_page):
+            return None
+
+        def tr(text: str) -> str:  # the words around the data follow the language of the export
+            return translate_for(options.language, text)
+
+        return {
+            "heading": profile.name if profile else tr("Status code catalogue"),
+            "subtitle": f"{release.name} - {release.version_label}" if release else None,
+            "lines": [
+                (tr("Release"), release.name if release else "-"),
+                (tr("Version"), release.version_label if release else "-"),
+                (
+                    tr("Effective date"),
+                    (release.published_at or tr("not yet published")) if release else "-",
+                ),
+                (tr("Generated (UTC)"), generated_at),
+                (tr("Generated by"), getattr(actor, "full_name", "")),
+                (tr("Records"), str(row_count)),
+                (tr("Profile"), profile.code if profile else tr("default")),
+                (
+                    tr("Audience"),
+                    AUDIENCES[options.audience][1] if options.audience else tr("all"),
+                ),
+                (tr("Language"), options.language or tr("source")),
+                (tr("Software version"), options.software_version or tr("all")),
+                *(
+                    [(tr("Scope"), ExportService._scope_text(options, tr))]
+                    if release is not None
+                    else []
+                ),
+            ],
+            "content_digest": digest,
+            "footer": f"{release.name} {release.version_label}" if release else "CSCM Tool",
+        }
+
+    @staticmethod
+    def _scope_text(options: ExportOptions, tr: Callable[[str], str]) -> str:
+        what = tr(
+            "Changes of this release only" if options.content == "delta" else "Complete baseline"
+        )
+        return " / ".join(p for p in (what, options.platform, options.controller) if p)
+
+    @staticmethod
+    def release_revisions(release: Release, options: ExportOptions) -> list[StatusCodeRevision]:
+        """FR-173: what a Release export contains - by default the complete baseline (every code
+        valid as of the Release), or with content="delta" only the revisions it carries."""
+        if options.content not in ("baseline", "delta"):
+            raise ValueError("content must be 'baseline' or 'delta'.")
+        if options.content == "delta":
+            return [item.revision for item in release.items]
+        return BaselineService.revisions(release)
 
     @staticmethod
     def _render(
@@ -304,36 +399,9 @@ class ExportService:
         profile = options.profile
         generated_at = utcnow_iso()
 
-        title = None
-        if release is not None or (profile is not None and profile.title_page):
-
-            def tr(text: str) -> str:  # the words around the data follow the language of the export
-                return translate_for(options.language, text)
-
-            title = {
-                "heading": profile.name if profile else tr("Status code catalogue"),
-                "subtitle": f"{release.name} - {release.version_label}" if release else None,
-                "lines": [
-                    (tr("Release"), release.name if release else "-"),
-                    (tr("Version"), release.version_label if release else "-"),
-                    (
-                        tr("Effective date"),
-                        (release.published_at or tr("not yet published")) if release else "-",
-                    ),
-                    (tr("Generated (UTC)"), generated_at),
-                    (tr("Generated by"), getattr(actor, "full_name", "")),
-                    (tr("Records"), str(len(rows))),
-                    (tr("Profile"), profile.code if profile else tr("default")),
-                    (
-                        tr("Audience"),
-                        AUDIENCES[options.audience][1] if options.audience else tr("all"),
-                    ),
-                    (tr("Language"), options.language or tr("source")),
-                    (tr("Software version"), options.software_version or tr("all")),
-                ],
-                "content_digest": digest,
-                "footer": f"{release.name} {release.version_label}" if release else "CSCM Tool",
-            }
+        title = ExportService.title_page(
+            release, profile, options, len(rows), digest, actor, generated_at
+        )
 
         data = ExportService._render(
             export_format,
@@ -351,7 +419,16 @@ class ExportService:
         )
         label_parts = [p for p in (name_label, profile.code if profile else None) if p]
         label_parts += [
-            p for p in (options.audience, options.language, options.software_version) if p
+            p
+            for p in (
+                options.audience,
+                options.language,
+                options.software_version,
+                options.platform,
+                options.controller,
+                "changes" if release_id and options.content == "delta" else None,
+            )
+            if p
         ]
         data_name = export_filename(kind, export_format, "-".join(label_parts) or None)
         data_hash = manifest_service.sha256_hex(data)
@@ -370,7 +447,18 @@ class ExportService:
                 else None
             ),
             scope=(
-                scope if scope is not None else ({"release_id": release_id} if release_id else {})
+                scope
+                if scope is not None
+                else (
+                    {
+                        "release_id": release_id,
+                        "content": options.content,
+                        "platform": options.platform,
+                        "controller": options.controller,
+                    }
+                    if release_id
+                    else {}
+                )
             ),
             export_format=export_format,
             profile=profile.code if profile else None,
@@ -509,7 +597,7 @@ class ExportService:
         from app.export.offline_bundle import build_offline_bundle
 
         options = options or ExportOptions()
-        revisions = [item.revision for item in release.items]
+        revisions = ExportService.release_revisions(release, options)
         rows, _columns = ExportService._prepare(revisions, options, None)
         digest = manifest_service.content_digest(rows)
         generated_at = utcnow_iso()
@@ -670,7 +758,7 @@ class ExportService:
     def working_set_revisions(actor, **filters) -> list[StatusCodeRevision]:
         """FR-046: ad-hoc filtered working set, any lifecycle state, still
         excluding sandbox codes (FR-054). Never available to Viewers (BR-009)."""
-        require_roles(actor, "ADMINISTRATOR", "ENGINEER", "REVIEWER", "CHIEF_ENGINEER")
+        require_roles(actor, *UNRELEASED_EXPORT_ROLES)
         return ExportService._repo.search_current_revisions(
             page=1, page_size=100000, eager=True, **filters
         )[0]

@@ -230,37 +230,37 @@ What remains: (a) **no translation but the shipped ones is reviewed by a native 
 
 <!-- translations:start -->
 
-The interface has **1163 strings** (every text a template wraps in `_()`, the role names and the help texts). English is the source; the other languages are listed below. A string without a translation is shown in English.
+The interface has **1190 strings** (every text a template wraps in `_()`, the role names and the help texts). English is the source; the other languages are listed below. A string without a translation is shown in English.
 
 ### 9.1 Coverage
 
 | Language | Code | Direction | Translated | Share | Fingerprint |
 |---|---|---|---|---|---|
 | GB English 🇬🇧 | `en` | ltr | source | — | — |
-| DE Deutsch 🇩🇪 (German) | `de` | ltr | 1163 | 100 % | `db7bfa0f5443` |
-| FR Français 🇫🇷 (French) | `fr` | ltr | 1162 | 99 % | `f93b1a285cf4` |
-| IN हिन्दी 🇮🇳 (Hindi) | `hi` | ltr | 1162 | 99 % | `0a2c6753a20b` |
-| SA العربية 🇸🇦 (Arabic) | `ar` | rtl | 1162 | 99 % | `6adde2465a7a` |
-| IN বাংলা 🇮🇳 (Bengali) | `bn` | ltr | 1162 | 99 % | `53937116181b` |
-| IN मराठी 🇮🇳 (Marathi) | `mr` | ltr | 1162 | 99 % | `f1f3d4fe68d0` |
-| IN తెలుగు 🇮🇳 (Telugu) | `te` | ltr | 1162 | 99 % | `522b8c4a3aae` |
-| IN தமிழ் 🇮🇳 (Tamil) | `ta` | ltr | 1162 | 99 % | `666ebf928e9f` |
-| IN ગુજરાતી 🇮🇳 (Gujarati) | `gu` | ltr | 1162 | 99 % | `ec2a933deaf3` |
-| PK اردو 🇵🇰 (Urdu) | `ur` | rtl | 1162 | 99 % | `0f4ffa819a99` |
-| IN ಕನ್ನಡ 🇮🇳 (Kannada) | `kn` | ltr | 1162 | 99 % | `5bb3769c8f62` |
-| IN ଓଡ଼ିଆ 🇮🇳 (Odia) | `or` | ltr | 1162 | 99 % | `f99194b359ec` |
-| IN മലയാളം 🇮🇳 (Malayalam) | `ml` | ltr | 1162 | 99 % | `ff4f49e076d0` |
-| IN ਪੰਜਾਬੀ 🇮🇳 (Punjabi) | `pa` | ltr | 1162 | 99 % | `9156e6bf4461` |
-| ES Español 🇪🇸 (Spanish) | `es` | ltr | 1162 | 99 % | `9b59e6f019d4` |
-| IT Italiano 🇮🇹 (Italian) | `it` | ltr | 1162 | 99 % | `bfb108bb56a4` |
-| DK Dansk 🇩🇰 (Danish) | `da` | ltr | 1162 | 99 % | `8f71aeed94f2` |
-| GE ქართული 🇬🇪 (Georgian) | `ka` | ltr | 1162 | 99 % | `9f8ee3bd82b1` |
+| DE Deutsch 🇩🇪 (German) | `de` | ltr | 1190 | 100 % | `027fdaf635ca` |
+| FR Français 🇫🇷 (French) | `fr` | ltr | 1189 | 99 % | `68859c1dda92` |
+| IN हिन्दी 🇮🇳 (Hindi) | `hi` | ltr | 1189 | 99 % | `3029cad298a5` |
+| SA العربية 🇸🇦 (Arabic) | `ar` | rtl | 1189 | 99 % | `eec22ebbabb7` |
+| IN বাংলা 🇮🇳 (Bengali) | `bn` | ltr | 1189 | 99 % | `21f13e9b24f0` |
+| IN मराठी 🇮🇳 (Marathi) | `mr` | ltr | 1189 | 99 % | `71fdab40aa3a` |
+| IN తెలుగు 🇮🇳 (Telugu) | `te` | ltr | 1189 | 99 % | `846e5d8db4b7` |
+| IN தமிழ் 🇮🇳 (Tamil) | `ta` | ltr | 1189 | 99 % | `7eb2e8b9dffe` |
+| IN ગુજરાતી 🇮🇳 (Gujarati) | `gu` | ltr | 1189 | 99 % | `49fb4a601bff` |
+| PK اردو 🇵🇰 (Urdu) | `ur` | rtl | 1189 | 99 % | `912739aead4b` |
+| IN ಕನ್ನಡ 🇮🇳 (Kannada) | `kn` | ltr | 1189 | 99 % | `f02753392c02` |
+| IN ଓଡ଼ିଆ 🇮🇳 (Odia) | `or` | ltr | 1189 | 99 % | `6b02541854dc` |
+| IN മലയാളം 🇮🇳 (Malayalam) | `ml` | ltr | 1189 | 99 % | `ce900969c22c` |
+| IN ਪੰਜਾਬੀ 🇮🇳 (Punjabi) | `pa` | ltr | 1189 | 99 % | `fa36c61a0322` |
+| ES Español 🇪🇸 (Spanish) | `es` | ltr | 1189 | 99 % | `df96da35934d` |
+| IT Italiano 🇮🇹 (Italian) | `it` | ltr | 1189 | 99 % | `b8bd0de24a57` |
+| DK Dansk 🇩🇰 (Danish) | `da` | ltr | 1189 | 99 % | `53a225f4f32b` |
+| GE ქართული 🇬🇪 (Georgian) | `ka` | ltr | 1189 | 99 % | `2672bf1c4c6e` |
 
 The fingerprint is a short hash of the language's catalogue as shipped in the code (string ids and translations). Whether a language has been reviewed, by whom and when, and which proposals were accepted since, is kept in the application (Translations in the sidebar), not in this file.
 
 ### 9.2 DE Deutsch 🇩🇪 — German
 
-1163 of 1163 strings translated; direction left to right.
+1190 of 1190 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -428,6 +428,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sc3f104` | delegations, user_detail, users | Role | Rolle |
 | `Sd5dcf0` | delegations | Until (inclusive) | Bis (einschließlich) |
 | `Sa4aefa` | delegations | Valid | Gültig |
+| `Sc3dc5c` | detail | %(count)s codes have no confirmed access levels and are missing from every access-level file. | %(count)s Codes haben keine bestätigten Zugriffsstufen und fehlen in jeder Datei für eine Zugriffsstufe. |
 | `Sc3cd63` | detail, user_detail, users | Actions | Aktionen |
 | `S61cc55` | detail, lookups, review_checklist | Add | Hinzufügen |
 | `S12cc59` | detail | Add a comment (no decision) | Kommentar hinzufügen (ohne Entscheidung) |
@@ -441,7 +442,9 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S25f8c5` | detail, export, form | Alarm | Alarm |
 | `Sd87c44` | detail, export, hub_consolidation | all | alle |
 | `S484388` | detail, export_center | all columns | alle Spalten |
+| `S2e73c3` | detail | All languages and all access levels are included. Use the export above for a single language or access level. | Alle Sprachen und alle Zugriffsstufen sind enthalten. Für eine einzelne Sprache oder Zugriffsstufe nutzen Sie den Export oben. |
 | `S432284` | detail | All required sign-offs are in, but this is still a Draft — the Reviewer and Administrator only see it after you choose Submit for Review below. | Alle erforderlichen Freigaben liegen vor, aber der Antrag ist noch ein Entwurf – Prüfer und Administrator sehen ihn erst, wenn Sie unten "Zur Prüfung einreichen" wählen. |
+| `S9b0b4c` | detail | also the files without an access level (all columns) | auch die Dateien ohne Zugriffsstufe (alle Spalten) |
 | `Sf24c44` | detail | Any %(code)s Engineer | Beliebiger Ingenieur (%(code)s) |
 | `Sb99a01` | detail | Applies to software versions | Gilt für Software-Versionen |
 | `S7b2c7f` | detail, language | Approve | Genehmigen |
@@ -458,12 +461,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S416869` | detail | Auto Reset Program | Programm für automatisches Zurücksetzen |
 | `Sd71897` | detail, form | Available Group | Verfügbarkeitsgruppe |
 | `S928e2e` | detail | Brake Program | Bremsprogramm |
+| `Sab2e8a` | detail | Build package | Paket erstellen |
 | `Scfadbd` | detail | By | Von |
 | `S9c8393` | detail, mine | Change Request | Änderungsantrag |
 | `S4572f4` | detail | Change request | Änderungsantrag |
 | `S3295be` | detail | Change requests in this set | Änderungsanträge in diesem Paket |
 | `S4d8006` | detail | Change set | Änderungspaket |
 | `S8aa57d` | detail | Changes | Änderungen |
+| `S3d14ea` | detail, export | Changes of this release only | Nur die Änderungen dieses Release |
 | `Sbd95c0` | detail | Checklist confirmed at sign-off | Bei der Freigabe bestätigte Checkliste |
 | `S074d62` | detail, role badge | Chief Engineer | Chefingenieur |
 | `S03695d` | detail | Chief Engineer decision | Entscheidung des Chefingenieurs |
@@ -476,8 +481,11 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sfce06e` | detail | Comments | Kommentare |
 | `S8d105c` | detail, reconciliation | Compare | Vergleichen |
 | `Sc9a03b` | detail | Compare Revisions | Revisionen vergleichen |
+| `S0ff7e5` | detail, export | Complete baseline | Vollständiger Stand |
 | `S1798b3` | detail | Completed | Abgeschlossen |
 | `S7671b5` | detail | Confirm or override Audience Access | Zielgruppen-Zugriff bestätigen oder überschreiben |
+| `S4f9be0` | detail | Content | Inhalt |
+| `Sa36a5f` | detail, legacy_mapping, st_new | Controller | Steuerung |
 | `Scd293f` | detail | Converter Reactive Power Program | Umrichter-Blindleistungsprogramm |
 | `S3998a7` | detail | Copies the descriptive fields into a new Draft in a Main Controller group (a new number is allocated at submit; this code's identifier is kept as the legacy reference). | Kopiert die beschreibenden Felder in einen neuen Entwurf in einer Hauptsteuerungs-Gruppe (die neue Nummer wird beim Einreichen vergeben; die Kennung dieses Codes bleibt als Altreferenz erhalten). |
 | `S54b051` | detail | Copy this code for another turbine platform. The copy is a new Draft that links back here and goes through the normal review. | Diesen Code für eine andere Anlagenplattform kopieren. Die Kopie ist ein neuer Entwurf, verweist hierher zurück und durchläuft die normale Prüfung. |
@@ -508,6 +516,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S4c17aa` | detail | Development | Entwicklung |
 | `S552a2b` | detail | Documented reason | Dokumentierter Grund |
 | `S9b1091` | detail, mine | Domain | Fachbereich |
+| `Sa479c9` | detail | Download | Herunterladen |
 | `S056839` | detail | Download Error Report | Fehlerbericht herunterladen |
 | `S23d33e` | detail, index | Draft | Entwurf |
 | `S3c7a50` | detail | Edit Candidates | Kandidaten bearbeiten |
@@ -529,6 +538,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sdd7b7e` | detail | failed validation | mit Prüffehlern |
 | `Sd106a6` | detail | Field comments | Feldkommentare |
 | `S2c3caf` | detail, export_verify, operations | File | Datei |
+| `S6ce6c5` | detail | Files | Dateien |
 | `Se0996a` | detail, form | first | erste |
 | `S041a5d` | detail, export_center | Format | Format |
 | `S9e3c65` | detail | From revision | Von Revision |
@@ -536,6 +546,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sb8c4c9` | detail, form | Further Program References | Weitere Programmverweise |
 | `S636c41` | detail | Grid Operator | Netzbetreiber |
 | `S90ccd6` | detail | History | Verlauf |
+| `S0dfe7b` | detail | Hub controller | Hub-Controller |
 | `Sfec8b7` | detail | Hub Controller group | Hub-Controller-Gruppe |
 | `S00ccae` | detail, form | Hub Controller only | nur Nabensteuerung |
 | `S3c883f` | detail | I have reviewed these dependants | Ich habe diese abhängigen Codes geprüft |
@@ -550,6 +561,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S693272` | detail, withdrawn_codes | Legacy Reference Number | Alt-Referenznummer |
 | `S43d5c5` | detail, form | Loadless Spinning Permitted | Lastfreies Drehen erlaubt |
 | `S193786` | detail | Logical Node | Logischer Knoten |
+| `Sc3f827` | detail | Main controller | Main-Controller |
 | `S578b78` | detail | Main Controller group | Hauptsteuerungs-Gruppe |
 | `Sa7512d` | detail, form | Main Controller only | nur Hauptsteuerung |
 | `Seb9a6d` | detail | Manage translations | Übersetzungen verwalten |
@@ -575,6 +587,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sde04fa` | detail, fleet_feedback, success_metrics | of | von |
 | `S19f611` | detail | Offline lookup (HTML) | Offline-Nachschlagen (HTML) |
 | `S2ff2ae` | detail | Offline lookup + manifest (ZIP) | Offline-Nachschlagen + Manifest (ZIP) |
+| `S3f0e3e` | detail | One ZIP with the complete baseline in every language and for every access level, plus the release notes and a manifest with a SHA-256 for each file. Building it takes a few minutes; the page shows the progress. | Ein ZIP mit dem vollständigen Stand in jeder Sprache und für jede Zugriffsstufe, dazu die Release Notes und ein Manifest mit einem SHA-256 je Datei. Das Erstellen dauert einige Minuten; die Seite zeigt den Fortschritt. |
 | `S12aa03` | detail | only translated codes | nur übersetzte Codes |
 | `S5fc7e3` | detail | open | offen |
 | `Sf61187` | detail | Open New Revision | Neue Revision eröffnen |
@@ -586,11 +599,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S780d35` | detail | Override identifier (migration / reservation only) | Kennung überschreiben (nur Migration / Reservierung) |
 | `S89ff31` | detail | Owner | Verantwortlich |
 | `S2d20ee` | detail | Package overview | Paketübersicht |
+| `S4d1a47` | detail | Package: all languages and access levels | Paket: alle Sprachen und Zugriffsstufen |
+| `Sc49bd0` | detail | Packages of this Release | Pakete dieses Release |
 | `S96f608` | detail, review_queue | Pending | Ausstehend |
 | `Sc983b6` | detail | Pick a profile (columns and labels), an audience, a language or a software version. Every file comes with a manifest of SHA-256 hashes; "bundle" packs both into one ZIP. | Wählen Sie ein Profil (Spalten und Überschriften), eine Zielgruppe, eine Sprache oder eine Software-Version. Jede Datei hat ein Manifest mit SHA-256-Hashes; "Bündel" packt beides in ein ZIP. |
 | `S72383d` | detail | Planned dates | Geplante Daten |
 | `Sfb14b0` | detail | Planned deprecation date | Geplantes Außerbetriebnahmedatum |
 | `S00e733` | detail | Planned effective date | Geplantes Gültigkeitsdatum |
+| `S123a7f` | detail | Platform | Plattform |
 | `Sfc8d58` | detail | Platform variant | Plattform-Variante |
 | `Scd8926` | detail | Platform variants | Plattform-Varianten |
 | `S141f0c` | detail | Processing in the background... | Verarbeitung im Hintergrund ... |
@@ -611,6 +627,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S9b44a2` | detail | Release notes (PDF) | Release-Notes (PDF) |
 | `S3dfa01` | detail | Release notes and offline lookup | Release-Notes und Offline-Nachschlagen |
 | `Sdcddb7` | detail | Release notes list what was added, changed (field by field) and deprecated since the previous Release. The offline page is one self-contained HTML file for use at the turbine without a connection. | Die Release-Notes führen auf, was seit dem vorigen Release hinzugefügt, geändert (Feld für Feld) und außer Betrieb genommen wurde. Die Offline-Seite ist eine eigenständige HTML-Datei für den Einsatz an der Anlage ohne Verbindung. |
+| `Scce715` | detail | Reload | Neu laden |
 | `S0544a3` | detail | Reload this page to see the progress. | Laden Sie die Seite neu, um den Fortschritt zu sehen. |
 | `S99e347` | detail | Remedy | Abhilfe |
 | `Se96390` | detail, list | Remove | Entfernen |
@@ -660,9 +677,11 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S08e643` | detail, list | Target software version | Ziel-Software-Version |
 | `S44203c` | detail, form, status code fields | Task Call Frequency | Task-Aufruffrequenz |
 | `S8fc804` | detail | The author has to submit it for review before the Reviewer or Administrator can see it. | Der Autor muss ihn zur Prüfung einreichen, bevor Prüfer oder Administrator ihn sehen können. |
+| `Sa5f3f8` | detail | These files contain the complete baseline: every status code that is valid as of this Release, not only the ones it changed. | Diese Dateien enthalten den vollständigen Stand: jeden Statuscode, der zu diesem Release gültig ist, nicht nur die geänderten. |
 | `S091814` | detail | This change request has reached a terminal decision state | Dieser Änderungsantrag hat einen abschließenden Entscheidungszustand erreicht |
 | `S6d5708` | detail | This is the one truly irreversible action in the system. Type the identifier to confirm. | Dies ist die einzige wirklich unumkehrbare Aktion im System. Geben Sie zur Bestätigung die Kennung ein. |
 | `Sb55f1f` | detail | To revision | Bis Revision |
+| `Sa2a321` | detail | Translated codes per language | Übersetzte Codes je Sprache |
 | `S8ad830` | detail, menu, overview | Translations | Übersetzungen |
 | `Seaf576` | detail, form | Trigger Snapshot | Schnappschuss auslösen |
 | `S285ec8` | detail, form | Troubleshooting | Fehlersuche |
@@ -723,6 +742,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Se51c55` | export | Records | Datensätze |
 | `Sd41f56` | export, export_center | Release | Release |
 | `S2e8fd6` | export | Reset delay | Rücksetz-Verzögerung |
+| `S4651a3` | export | Scope | Umfang |
 | `S89fdd5` | export | Set delay | Setz-Verzögerung |
 | `S828d33` | export | source | Quelle |
 | `Sfcbb29` | export | Status code | Statuscode |
@@ -850,6 +870,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S34b903` | help and messages | Not possible: the account has history (see above). Deactivate it instead; the person can no longer sign in and everything they did stays attributable. | Nicht möglich: Das Konto hat einen Verlauf (siehe oben). Deaktivieren Sie es stattdessen; die Person kann sich dann nicht mehr anmelden, und alles, was sie getan hat, bleibt zuordenbar. |
 | `Sce489f` | help and messages | The author gets any required cross-domain sign-offs, then submits the change request for review. | Der Autor holt die erforderlichen fachübergreifenden Freigaben ein und reicht den Änderungsantrag dann zur Prüfung ein. |
 | `S1cdbdd` | help and messages | The Chief Engineer approves or rejects. Approval makes the revision Approved (or Deprecated for a deprecation request). | Der Chefingenieur genehmigt oder lehnt ab. Die Genehmigung macht die Revision freigegeben (bei einem Außerbetriebnahme-Antrag: außer Betrieb). |
+| `S2d6ac0` | help and messages | The package is being built. Reload this page to follow its progress. | Das Paket wird erstellt. Laden Sie diese Seite neu, um den Fortschritt zu sehen. |
 | `Scff3a3` | help and messages | User deleted; its name and address are erased, what it did stays attributable. | Benutzer gelöscht; Name und Adresse sind gelöscht, was er getan hat, bleibt zuordenbar. |
 | `Secfb3f` | hub_consolidation | Deprecate replaced Hub codes | Ersetzte Hub-Codes außer Betrieb nehmen |
 | `S0e7766` | hub_consolidation, language | draft | Entwurf |
@@ -929,7 +950,6 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S863fd0` | language | Your own proposal: another person approves it. | Ihr eigener Vorschlag: Eine andere Person genehmigt ihn. |
 | `Sf9d469` | legacy_mapping | All controllers | Alle Steuerungen |
 | `Se61c2f` | legacy_mapping | Any number state | Jeder Nummernstatus |
-| `Sa36a5f` | legacy_mapping, st_new, st_preview | Controller | Steuerung |
 | `S7c4f77` | legacy_mapping | issued | vergeben |
 | `Sfd5ec0` | legacy_mapping, menu, new | Legacy mapping | Alt-Neu-Zuordnung |
 | `S81f567` | legacy_mapping | Legacy number to new identifier | Altnummer zu neuer Kennung |
@@ -1079,6 +1099,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S751ff5` | message: export_profile_service | Export profile not found | Exportprofil nicht gefunden |
 | `S4a8527` | message: export_profile_service | name must be 1-80 characters. | name muss 1-80 Zeichen lang sein. |
 | `S506d0b` | message: export_service | An audience export is built from Released data only; it cannot be combined with the unapproved working set. | Ein Zielgruppen-Export wird nur aus freigegebenen Daten erstellt; er lässt sich nicht mit dem ungenehmigten Arbeitsstand kombinieren. |
+| `S4bb9a3` | message: export_service | content must be 'baseline' or 'delta'. | content muss 'baseline' oder 'delta' sein. |
 | `Sf593c4` | message: export_service | language is required for a translated export | Für einen übersetzten Export ist die Sprache erforderlich |
 | `S42cee2` | message: field_review_service | A field comment must be between 1 and 2000 characters. | Ein Feldkommentar muss zwischen 1 und 2000 Zeichen lang sein. |
 | `S0168d7` | message: field_review_service | Checklist item not found | Checklistenpunkt nicht gefunden |
@@ -1118,8 +1139,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sb68487` | message: occurrence_service | period_end must not be before period_start. | period_end darf nicht vor period_start liegen. |
 | `S682b0f` | message: occurrence_service | source_label must be 1-80 characters. | source_label muss 1-80 Zeichen lang sein. |
 | `S3b0e31` | message: occurrence_service | The file needs the columns status_code_identifier and occurrences. | Die Datei braucht die Spalten status_code_identifier und occurrences. |
+| `Sbdd594` | message: package_service | Choose at least one access level or the unfiltered files. | Wählen Sie mindestens eine Zugriffsstufe oder die ungefilterten Dateien. |
+| `S4af5c1` | message: package_service | Choose at least one format. | Wählen Sie mindestens ein Format. |
+| `S8865f4` | message: package_service | Only a published Release can be packaged. | Nur ein veröffentlichtes Release kann gepackt werden. |
+| `S9b6676` | message: package_service | Package not found | Paket nicht gefunden |
+| `S2ddbdd` | message: package_service, message: release_notes_service | Release not found | Release nicht gefunden |
+| `S3bc283` | message: package_service | The package file is no longer on the server. | Die Paketdatei ist nicht mehr auf dem Server. |
+| `S310622` | message: package_service | The package is not ready. | Das Paket ist noch nicht fertig. |
 | `S2142ac` | message: release_notes_service | format must be md, csv, pdf or json | format muss md, csv, pdf oder json sein |
-| `S2ddbdd` | message: release_notes_service | Release not found | Release nicht gefunden |
 | `S6e9bf7` | message: release_service | A published Release can never be deleted (BR-007). | Ein veröffentlichtes Release kann nie gelöscht werden (BR-007). |
 | `S06fb3b` | message: release_service | Cannot change items on a published Release (BR-007). | Die Positionen eines veröffentlichten Releases können nicht geändert werden (BR-007). |
 | `Sc1eab3` | message: release_service | Cannot change the targets of a published Release (BR-007). | Die Zielversionen eines veröffentlichten Releases können nicht geändert werden (BR-007). |
@@ -1430,7 +1457,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 
 ### 9.3 FR Français 🇫🇷 — French
 
-1162 of 1163 strings translated; direction left to right.
+1189 of 1190 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -1597,6 +1624,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sc3f104` | delegations, user_detail, users | Role | Rôle |
 | `Sd5dcf0` | delegations | Until (inclusive) | Jusqu'au (inclus) |
 | `Sa4aefa` | delegations | Valid | Valide |
+| `Sc3dc5c` | detail | %(count)s codes have no confirmed access levels and are missing from every access-level file. | %(count)s codes n'ont aucun niveau d'accès confirmé et manquent dans chaque fichier par niveau d'accès. |
 | `Sc3cd63` | detail, user_detail, users | Actions | Actions |
 | `S61cc55` | detail, lookups, review_checklist | Add | Ajouter |
 | `S12cc59` | detail | Add a comment (no decision) | Ajouter un commentaire (sans décision) |
@@ -1610,7 +1638,9 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S25f8c5` | detail, export, form | Alarm | Alarme |
 | `Sd87c44` | detail, export, hub_consolidation | all | tous |
 | `S484388` | detail, export_center | all columns | toutes les colonnes |
+| `S2e73c3` | detail | All languages and all access levels are included. Use the export above for a single language or access level. | Toutes les langues et tous les niveaux d'accès sont inclus. Pour une seule langue ou un seul niveau d'accès, utilisez l'export ci-dessus. |
 | `S432284` | detail | All required sign-offs are in, but this is still a Draft — the Reviewer and Administrator only see it after you choose Submit for Review below. | Toutes les validations requises sont là, mais il s'agit toujours d'un brouillon — le relecteur et l'administrateur ne le voient qu'après que vous avez choisi Soumettre pour relecture ci-dessous. |
+| `S9b0b4c` | detail | also the files without an access level (all columns) | aussi les fichiers sans niveau d'accès (toutes les colonnes) |
 | `Sf24c44` | detail | Any %(code)s Engineer | N'importe quel ingénieur %(code)s |
 | `Sb99a01` | detail | Applies to software versions | S'applique aux versions du logiciel |
 | `S7b2c7f` | detail, language | Approve | Approuver |
@@ -1627,12 +1657,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S416869` | detail | Auto Reset Program | Programme de réarmement automatique |
 | `Sd71897` | detail, form | Available Group | Groupe de disponibilité |
 | `S928e2e` | detail | Brake Program | Programme de freinage |
+| `Sab2e8a` | detail | Build package | Créer le paquet |
 | `Scfadbd` | detail | By | Par |
 | `S9c8393` | detail, mine | Change Request | Demande de modification |
 | `S4572f4` | detail | Change request | Demande de modification |
 | `S3295be` | detail | Change requests in this set | Demandes de modification de ce lot |
 | `S4d8006` | detail | Change set | Lot de modifications |
 | `S8aa57d` | detail | Changes | Modifications |
+| `S3d14ea` | detail, export | Changes of this release only | Uniquement les modifications de cette version |
 | `Sbd95c0` | detail | Checklist confirmed at sign-off | Liste de contrôle confirmée lors de la validation |
 | `S074d62` | detail, role badge | Chief Engineer | Ingénieur en chef |
 | `S03695d` | detail | Chief Engineer decision | Décision de l'ingénieur en chef |
@@ -1645,8 +1677,11 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sfce06e` | detail | Comments | Commentaires |
 | `S8d105c` | detail, reconciliation | Compare | Comparer |
 | `Sc9a03b` | detail | Compare Revisions | Comparer les révisions |
+| `S0ff7e5` | detail, export | Complete baseline | État complet |
 | `S1798b3` | detail | Completed | Terminé |
 | `S7671b5` | detail | Confirm or override Audience Access | Confirmer ou remplacer l'accès par public |
+| `S4f9be0` | detail | Content | Contenu |
+| `Sa36a5f` | detail, legacy_mapping, st_new | Controller | Contrôleur |
 | `Scd293f` | detail | Converter Reactive Power Program | Programme de puissance réactive du convertisseur |
 | `S3998a7` | detail | Copies the descriptive fields into a new Draft in a Main Controller group (a new number is allocated at submit; this code's identifier is kept as the legacy reference). | Copie les champs descriptifs dans un nouveau brouillon d'un groupe du contrôleur principal (un nouveau numéro est attribué à la soumission ; l'identifiant de ce code est conservé comme référence héritée). |
 | `S54b051` | detail | Copy this code for another turbine platform. The copy is a new Draft that links back here and goes through the normal review. | Copiez ce code pour une autre plateforme d'éolienne. La copie est un nouveau brouillon qui renvoie ici et suit la relecture normale. |
@@ -1677,6 +1712,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S4c17aa` | detail | Development | Développement |
 | `S552a2b` | detail | Documented reason | Motif documenté |
 | `S9b1091` | detail, mine | Domain | Domaine |
+| `Sa479c9` | detail | Download | Télécharger |
 | `S056839` | detail | Download Error Report | Télécharger le rapport d'erreurs |
 | `S23d33e` | detail, index | Draft | Brouillon |
 | `S3c7a50` | detail | Edit Candidates | Modifier les candidats |
@@ -1698,6 +1734,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sdd7b7e` | detail | failed validation | ont échoué à la validation |
 | `Sd106a6` | detail | Field comments | Commentaires de champ |
 | `S2c3caf` | detail, export_verify, operations | File | Fichier |
+| `S6ce6c5` | detail | Files | Fichiers |
 | `Se0996a` | detail, form | first | première |
 | `S041a5d` | detail, export_center | Format | Format |
 | `S9e3c65` | detail | From revision | De la révision |
@@ -1705,6 +1742,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sb8c4c9` | detail, form | Further Program References | Autres références de programme |
 | `S636c41` | detail | Grid Operator | Gestionnaire de réseau |
 | `S90ccd6` | detail | History | Historique |
+| `S0dfe7b` | detail | Hub controller | Contrôleur de moyeu |
 | `Sfec8b7` | detail | Hub Controller group | Groupe du contrôleur de moyeu |
 | `S00ccae` | detail, form | Hub Controller only | contrôleur de moyeu uniquement |
 | `S3c883f` | detail | I have reviewed these dependants | J'ai relu ces dépendances |
@@ -1719,6 +1757,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S693272` | detail, withdrawn_codes | Legacy Reference Number | Ancien numéro de référence |
 | `S43d5c5` | detail, form | Loadless Spinning Permitted | Rotation à vide autorisée |
 | `S193786` | detail | Logical Node | Nœud logique |
+| `Sc3f827` | detail | Main controller | Contrôleur principal |
 | `S578b78` | detail | Main Controller group | Groupe du contrôleur principal |
 | `Sa7512d` | detail, form | Main Controller only | contrôleur principal uniquement |
 | `Seb9a6d` | detail | Manage translations | Gérer les traductions |
@@ -1744,6 +1783,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sde04fa` | detail, fleet_feedback, success_metrics | of | sur |
 | `S19f611` | detail | Offline lookup (HTML) | Consultation hors ligne (HTML) |
 | `S2ff2ae` | detail | Offline lookup + manifest (ZIP) | Consultation hors ligne + manifeste (ZIP) |
+| `S3f0e3e` | detail | One ZIP with the complete baseline in every language and for every access level, plus the release notes and a manifest with a SHA-256 for each file. Building it takes a few minutes; the page shows the progress. | Un ZIP avec l'état complet dans chaque langue et pour chaque niveau d'accès, plus les notes de version et un manifeste avec un SHA-256 par fichier. La création prend quelques minutes ; la page affiche la progression. |
 | `S12aa03` | detail | only translated codes | uniquement les codes traduits |
 | `S5fc7e3` | detail | open | ouvert |
 | `Sf61187` | detail | Open New Revision | Ouvrir une nouvelle révision |
@@ -1755,11 +1795,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S780d35` | detail | Override identifier (migration / reservation only) | Remplacer l'identifiant (migration / réservation uniquement) |
 | `S89ff31` | detail | Owner | Propriétaire |
 | `S2d20ee` | detail | Package overview | Vue d'ensemble du paquet |
+| `S4d1a47` | detail | Package: all languages and access levels | Paquet : toutes les langues et tous les niveaux d'accès |
+| `Sc49bd0` | detail | Packages of this Release | Paquets de cette version |
 | `S96f608` | detail, review_queue | Pending | En attente |
 | `Sc983b6` | detail | Pick a profile (columns and labels), an audience, a language or a software version. Every file comes with a manifest of SHA-256 hashes; "bundle" packs both into one ZIP. | Choisissez un profil (colonnes et libellés), un public, une langue ou une version du logiciel. Chaque fichier est accompagné d'un manifeste d'empreintes SHA-256 ; « bundle » regroupe les deux dans un seul ZIP. |
 | `S72383d` | detail | Planned dates | Dates prévues |
 | `Sfb14b0` | detail | Planned deprecation date | Date d'obsolescence prévue |
 | `S00e733` | detail | Planned effective date | Date d'entrée en vigueur prévue |
+| `S123a7f` | detail | Platform | Plateforme |
 | `Sfc8d58` | detail | Platform variant | Variante de plateforme |
 | `Scd8926` | detail | Platform variants | Variantes de plateforme |
 | `S141f0c` | detail | Processing in the background... | Traitement en arrière-plan... |
@@ -1780,6 +1823,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S9b44a2` | detail | Release notes (PDF) | Notes de version (PDF) |
 | `S3dfa01` | detail | Release notes and offline lookup | Notes de version et consultation hors ligne |
 | `Sdcddb7` | detail | Release notes list what was added, changed (field by field) and deprecated since the previous Release. The offline page is one self-contained HTML file for use at the turbine without a connection. | Les notes de version indiquent ce qui a été ajouté, modifié (champ par champ) et déclaré obsolète depuis la version précédente. La page hors ligne est un fichier HTML autonome à utiliser à la turbine sans connexion. |
+| `Scce715` | detail | Reload | Recharger |
 | `S0544a3` | detail | Reload this page to see the progress. | Rechargez cette page pour voir la progression. |
 | `S99e347` | detail | Remedy | Remède |
 | `Se96390` | detail, list | Remove | Supprimer |
@@ -1829,9 +1873,11 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S08e643` | detail, list | Target software version | Version logicielle cible |
 | `S44203c` | detail, form, status code fields | Task Call Frequency | Fréquence d'appel de la tâche |
 | `S8fc804` | detail | The author has to submit it for review before the Reviewer or Administrator can see it. | L'auteur doit le soumettre pour relecture avant que le relecteur ou l'administrateur puisse le voir. |
+| `Sa5f3f8` | detail | These files contain the complete baseline: every status code that is valid as of this Release, not only the ones it changed. | Ces fichiers contiennent l'état complet : tous les codes de statut valides à cette version, pas seulement ceux qu'elle a modifiés. |
 | `S091814` | detail | This change request has reached a terminal decision state | Cette demande de modification a atteint un état de décision final |
 | `S6d5708` | detail | This is the one truly irreversible action in the system. Type the identifier to confirm. | C'est la seule action vraiment irréversible du système. Saisissez l'identifiant pour confirmer. |
 | `Sb55f1f` | detail | To revision | À la révision |
+| `Sa2a321` | detail | Translated codes per language | Codes traduits par langue |
 | `S8ad830` | detail, menu, overview | Translations | Traductions |
 | `Seaf576` | detail, form | Trigger Snapshot | Déclencher un instantané |
 | `S285ec8` | detail, form | Troubleshooting | Dépannage |
@@ -1892,6 +1938,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Se51c55` | export | Records | Enregistrements |
 | `Sd41f56` | export, export_center | Release | Version publiée |
 | `S2e8fd6` | export | Reset delay | Temporisation de réarmement |
+| `S4651a3` | export | Scope | Périmètre |
 | `S89fdd5` | export | Set delay | Temporisation d'activation |
 | `S828d33` | export | source | source |
 | `Sfcbb29` | export | Status code | Code de statut |
@@ -2019,6 +2066,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S34b903` | help and messages | Not possible: the account has history (see above). Deactivate it instead; the person can no longer sign in and everything they did stays attributable. | Impossible : le compte a un historique (voir ci-dessus). Désactivez-le plutôt ; la personne ne peut plus se connecter et tout ce qu'elle a fait reste attribuable. |
 | `Sce489f` | help and messages | The author gets any required cross-domain sign-offs, then submits the change request for review. | L'auteur obtient les validations inter-domaines requises, puis soumet la demande de modification pour relecture. |
 | `S1cdbdd` | help and messages | The Chief Engineer approves or rejects. Approval makes the revision Approved (or Deprecated for a deprecation request). | L'ingénieur en chef approuve ou rejette. L'approbation fait passer la révision à Approuvé (ou Obsolète pour une demande d'obsolescence). |
+| `S2d6ac0` | help and messages | The package is being built. Reload this page to follow its progress. | Le paquet est en cours de création. Rechargez cette page pour suivre sa progression. |
 | `Scff3a3` | help and messages | User deleted; its name and address are erased, what it did stays attributable. | Utilisateur supprimé ; son nom et son adresse sont effacés, ce qu'il a fait reste attribuable. |
 | `Secfb3f` | hub_consolidation | Deprecate replaced Hub codes | Déclarer obsolètes les codes de moyeu remplacés |
 | `S0e7766` | hub_consolidation, language | draft | brouillon |
@@ -2098,7 +2146,6 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S863fd0` | language | Your own proposal: another person approves it. | Votre propre proposition : une autre personne l'approuve. |
 | `Sf9d469` | legacy_mapping | All controllers | Tous les contrôleurs |
 | `Se61c2f` | legacy_mapping | Any number state | Tout état de numéro |
-| `Sa36a5f` | legacy_mapping, st_new, st_preview | Controller | Contrôleur |
 | `S7c4f77` | legacy_mapping | issued | attribués |
 | `Sfd5ec0` | legacy_mapping, menu, new | Legacy mapping | Correspondance ancien-nouveau |
 | `S81f567` | legacy_mapping | Legacy number to new identifier | Ancien numéro vers nouvel identifiant |
@@ -2248,6 +2295,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S751ff5` | message: export_profile_service | Export profile not found | Profil d'export introuvable |
 | `S4a8527` | message: export_profile_service | name must be 1-80 characters. | name doit comporter 1 à 80 caractères. |
 | `S506d0b` | message: export_service | An audience export is built from Released data only; it cannot be combined with the unapproved working set. | Un export par public est construit uniquement à partir de données publiées ; il ne peut pas être combiné avec l'ensemble de travail non approuvé. |
+| `S4bb9a3` | message: export_service | content must be 'baseline' or 'delta'. | content doit être 'baseline' ou 'delta'. |
 | `Sf593c4` | message: export_service | language is required for a translated export | La langue est requise pour un export traduit |
 | `S42cee2` | message: field_review_service | A field comment must be between 1 and 2000 characters. | Un commentaire de champ doit comporter entre 1 et 2000 caractères. |
 | `S0168d7` | message: field_review_service | Checklist item not found | Point de liste de contrôle introuvable |
@@ -2287,8 +2335,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sb68487` | message: occurrence_service | period_end must not be before period_start. | period_end ne doit pas précéder period_start. |
 | `S682b0f` | message: occurrence_service | source_label must be 1-80 characters. | source_label doit comporter 1 à 80 caractères. |
 | `S3b0e31` | message: occurrence_service | The file needs the columns status_code_identifier and occurrences. | Le fichier a besoin des colonnes status_code_identifier et occurrences. |
+| `Sbdd594` | message: package_service | Choose at least one access level or the unfiltered files. | Choisissez au moins un niveau d'accès ou les fichiers non filtrés. |
+| `S4af5c1` | message: package_service | Choose at least one format. | Choisissez au moins un format. |
+| `S8865f4` | message: package_service | Only a published Release can be packaged. | Seule une version publiée peut être empaquetée. |
+| `S9b6676` | message: package_service | Package not found | Paquet introuvable |
+| `S2ddbdd` | message: package_service, message: release_notes_service | Release not found | Version publiée introuvable |
+| `S3bc283` | message: package_service | The package file is no longer on the server. | Le fichier du paquet n'est plus sur le serveur. |
+| `S310622` | message: package_service | The package is not ready. | Le paquet n'est pas encore prêt. |
 | `S2142ac` | message: release_notes_service | format must be md, csv, pdf or json | format doit être md, csv, pdf ou json |
-| `S2ddbdd` | message: release_notes_service | Release not found | Version publiée introuvable |
 | `S6e9bf7` | message: release_service | A published Release can never be deleted (BR-007). | Une version publiée ne peut jamais être supprimée (BR-007). |
 | `S06fb3b` | message: release_service | Cannot change items on a published Release (BR-007). | Les éléments d'une version publiée ne peuvent pas être modifiés (BR-007). |
 | `Sc1eab3` | message: release_service | Cannot change the targets of a published Release (BR-007). | Les versions cibles d'une version publiée ne peuvent pas être modifiées (BR-007). |
@@ -2599,7 +2653,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 
 ### 9.4 IN हिन्दी 🇮🇳 — Hindi
 
-1162 of 1163 strings translated; direction left to right.
+1189 of 1190 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -2766,6 +2820,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sc3f104` | delegations, user_detail, users | Role | भूमिका |
 | `Sd5dcf0` | delegations | Until (inclusive) | तक (सहित) |
 | `Sa4aefa` | delegations | Valid | मान्य |
+| `Sc3dc5c` | detail | %(count)s codes have no confirmed access levels and are missing from every access-level file. | %(count)s कोड के पुष्ट पहुँच स्तर नहीं हैं और वे हर पहुँच-स्तर फ़ाइल से गायब हैं। |
 | `Sc3cd63` | detail, user_detail, users | Actions | कार्रवाइयाँ |
 | `S61cc55` | detail, lookups, review_checklist | Add | जोड़ें |
 | `S12cc59` | detail | Add a comment (no decision) | टिप्पणी जोड़ें (निर्णय के बिना) |
@@ -2779,7 +2834,9 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S25f8c5` | detail, export, form | Alarm | अलार्म |
 | `Sd87c44` | detail, export, hub_consolidation | all | सभी |
 | `S484388` | detail, export_center | all columns | सभी कॉलम |
+| `S2e73c3` | detail | All languages and all access levels are included. Use the export above for a single language or access level. | सभी भाषाएँ और सभी पहुँच स्तर शामिल हैं। किसी एक भाषा या पहुँच स्तर के लिए ऊपर का एक्सपोर्ट उपयोग करें। |
 | `S432284` | detail | All required sign-offs are in, but this is still a Draft — the Reviewer and Administrator only see it after you choose Submit for Review below. | सभी आवश्यक साइन-ऑफ मिल चुके हैं, पर यह अभी भी मसौदा है — समीक्षक और प्रशासक इसे तभी देखते हैं जब आप नीचे समीक्षा के लिए जमा करें चुनते हैं। |
+| `S9b0b4c` | detail | also the files without an access level (all columns) | बिना पहुँच स्तर वाली फ़ाइलें भी (सभी कॉलम) |
 | `Sf24c44` | detail | Any %(code)s Engineer | कोई भी %(code)s अभियंता |
 | `Sb99a01` | detail | Applies to software versions | सॉफ़्टवेयर संस्करणों पर लागू |
 | `S7b2c7f` | detail, language | Approve | अनुमोदित करें |
@@ -2796,12 +2853,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S416869` | detail | Auto Reset Program | स्वचालित रीसेट प्रोग्राम |
 | `Sd71897` | detail, form | Available Group | उपलब्धता समूह |
 | `S928e2e` | detail | Brake Program | ब्रेक प्रोग्राम |
+| `Sab2e8a` | detail | Build package | पैकेज बनाएँ |
 | `Scfadbd` | detail | By | द्वारा |
 | `S9c8393` | detail, mine | Change Request | परिवर्तन अनुरोध |
 | `S4572f4` | detail | Change request | परिवर्तन अनुरोध |
 | `S3295be` | detail | Change requests in this set | इस समुच्चय के परिवर्तन अनुरोध |
 | `S4d8006` | detail | Change set | परिवर्तन समुच्चय |
 | `S8aa57d` | detail | Changes | परिवर्तन |
+| `S3d14ea` | detail, export | Changes of this release only | केवल इस रिलीज़ के बदलाव |
 | `Sbd95c0` | detail | Checklist confirmed at sign-off | साइन-ऑफ के समय पुष्ट चेकलिस्ट |
 | `S074d62` | detail, role badge | Chief Engineer | मुख्य अभियंता |
 | `S03695d` | detail | Chief Engineer decision | मुख्य अभियंता का निर्णय |
@@ -2814,8 +2873,11 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sfce06e` | detail | Comments | टिप्पणियाँ |
 | `S8d105c` | detail, reconciliation | Compare | तुलना करें |
 | `Sc9a03b` | detail | Compare Revisions | संशोधनों की तुलना करें |
+| `S0ff7e5` | detail, export | Complete baseline | पूर्ण आधार स्थिति |
 | `S1798b3` | detail | Completed | पूर्ण |
 | `S7671b5` | detail | Confirm or override Audience Access | लक्षित समूह पहुँच की पुष्टि करें या अधिलेखित करें |
+| `S4f9be0` | detail | Content | सामग्री |
+| `Sa36a5f` | detail, legacy_mapping, st_new | Controller | नियंत्रक |
 | `Scd293f` | detail | Converter Reactive Power Program | कन्वर्टर रिएक्टिव पावर प्रोग्राम |
 | `S3998a7` | detail | Copies the descriptive fields into a new Draft in a Main Controller group (a new number is allocated at submit; this code's identifier is kept as the legacy reference). | वर्णनात्मक फ़ील्ड को मुख्य नियंत्रक समूह में एक नए मसौदे में कॉपी करता है (जमा करते समय नया नंबर मिलता है; इस कोड का पहचानकर्ता पुराने संदर्भ के रूप में रखा जाता है)। |
 | `S54b051` | detail | Copy this code for another turbine platform. The copy is a new Draft that links back here and goes through the normal review. | इस कोड को किसी अन्य टर्बाइन प्लेटफ़ॉर्म के लिए कॉपी करें। प्रति एक नया मसौदा है जो यहाँ वापस जुड़ता है और सामान्य समीक्षा से गुज़रता है। |
@@ -2846,6 +2908,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S4c17aa` | detail | Development | विकास |
 | `S552a2b` | detail | Documented reason | दस्तावेज़ित कारण |
 | `S9b1091` | detail, mine | Domain | डोमेन |
+| `Sa479c9` | detail | Download | डाउनलोड |
 | `S056839` | detail | Download Error Report | त्रुटि रिपोर्ट डाउनलोड करें |
 | `S23d33e` | detail, index | Draft | मसौदा |
 | `S3c7a50` | detail | Edit Candidates | उम्मीदवार संपादित करें |
@@ -2867,6 +2930,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sdd7b7e` | detail | failed validation | सत्यापन में विफल |
 | `Sd106a6` | detail | Field comments | फ़ील्ड टिप्पणियाँ |
 | `S2c3caf` | detail, export_verify, operations | File | फ़ाइल |
+| `S6ce6c5` | detail | Files | फ़ाइलें |
 | `Se0996a` | detail, form | first | पहला |
 | `S041a5d` | detail, export_center | Format | प्रारूप |
 | `S9e3c65` | detail | From revision | संशोधन से |
@@ -2874,6 +2938,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sb8c4c9` | detail, form | Further Program References | अन्य प्रोग्राम संदर्भ |
 | `S636c41` | detail | Grid Operator | ग्रिड ऑपरेटर |
 | `S90ccd6` | detail | History | इतिहास |
+| `S0dfe7b` | detail | Hub controller | हब कंट्रोलर |
 | `Sfec8b7` | detail | Hub Controller group | हब नियंत्रक समूह |
 | `S00ccae` | detail, form | Hub Controller only | केवल हब नियंत्रक |
 | `S3c883f` | detail | I have reviewed these dependants | मैंने इन निर्भर कोड की समीक्षा कर ली है |
@@ -2888,6 +2953,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S693272` | detail, withdrawn_codes | Legacy Reference Number | पुराना संदर्भ क्रमांक |
 | `S43d5c5` | detail, form | Loadless Spinning Permitted | बिना लोड के घूमना अनुमत |
 | `S193786` | detail | Logical Node | लॉजिकल नोड |
+| `Sc3f827` | detail | Main controller | मुख्य कंट्रोलर |
 | `S578b78` | detail | Main Controller group | मुख्य नियंत्रक समूह |
 | `Sa7512d` | detail, form | Main Controller only | केवल मुख्य नियंत्रक |
 | `Seb9a6d` | detail | Manage translations | अनुवाद प्रबंधित करें |
@@ -2913,6 +2979,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sde04fa` | detail, fleet_feedback, success_metrics | of | में से |
 | `S19f611` | detail | Offline lookup (HTML) | ऑफ़लाइन लुकअप (HTML) |
 | `S2ff2ae` | detail | Offline lookup + manifest (ZIP) | ऑफ़लाइन लुकअप + मैनिफ़ेस्ट (ZIP) |
+| `S3f0e3e` | detail | One ZIP with the complete baseline in every language and for every access level, plus the release notes and a manifest with a SHA-256 for each file. Building it takes a few minutes; the page shows the progress. | हर भाषा और हर पहुँच स्तर के लिए पूर्ण आधार स्थिति वाली एक ZIP, साथ में रिलीज़ नोट्स और हर फ़ाइल के SHA-256 वाला मैनिफ़ेस्ट। इसे बनाने में कुछ मिनट लगते हैं; पेज प्रगति दिखाता है। |
 | `S12aa03` | detail | only translated codes | केवल अनूदित कोड |
 | `S5fc7e3` | detail | open | खुला |
 | `Sf61187` | detail | Open New Revision | नया संशोधन खोलें |
@@ -2924,11 +2991,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S780d35` | detail | Override identifier (migration / reservation only) | पहचानकर्ता अधिलेखित करें (केवल माइग्रेशन / आरक्षण के लिए) |
 | `S89ff31` | detail | Owner | स्वामी |
 | `S2d20ee` | detail | Package overview | पैकेज का अवलोकन |
+| `S4d1a47` | detail | Package: all languages and access levels | पैकेज: सभी भाषाएँ और पहुँच स्तर |
+| `Sc49bd0` | detail | Packages of this Release | इस रिलीज़ के पैकेज |
 | `S96f608` | detail, review_queue | Pending | लंबित |
 | `Sc983b6` | detail | Pick a profile (columns and labels), an audience, a language or a software version. Every file comes with a manifest of SHA-256 hashes; "bundle" packs both into one ZIP. | प्रोफ़ाइल (कॉलम और लेबल), लक्षित समूह, भाषा या सॉफ़्टवेयर संस्करण चुनें। हर फ़ाइल के साथ SHA-256 हैश का मैनिफ़ेस्ट आता है; "bundle" दोनों को एक ZIP में बाँध देता है। |
 | `S72383d` | detail | Planned dates | नियोजित तिथियाँ |
 | `Sfb14b0` | detail | Planned deprecation date | नियोजित अप्रचलन तिथि |
 | `S00e733` | detail | Planned effective date | नियोजित प्रभावी तिथि |
+| `S123a7f` | detail | Platform | प्लेटफ़ॉर्म |
 | `Sfc8d58` | detail | Platform variant | प्लेटफ़ॉर्म रूपांतर |
 | `Scd8926` | detail | Platform variants | प्लेटफ़ॉर्म रूपांतर |
 | `S141f0c` | detail | Processing in the background... | पृष्ठभूमि में संसाधित हो रहा है... |
@@ -2949,6 +3019,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S9b44a2` | detail | Release notes (PDF) | रिलीज़ नोट (PDF) |
 | `S3dfa01` | detail | Release notes and offline lookup | रिलीज़ नोट और ऑफ़लाइन लुकअप |
 | `Sdcddb7` | detail | Release notes list what was added, changed (field by field) and deprecated since the previous Release. The offline page is one self-contained HTML file for use at the turbine without a connection. | रिलीज़ नोट बताते हैं कि पिछली रिलीज़ से क्या जोड़ा गया, बदला गया (फ़ील्ड दर फ़ील्ड) और अप्रचलित हुआ। ऑफ़लाइन पृष्ठ एक स्वतः-पूर्ण HTML फ़ाइल है जिसे टर्बाइन पर बिना कनेक्शन उपयोग किया जा सकता है। |
+| `Scce715` | detail | Reload | फिर लोड करें |
 | `S0544a3` | detail | Reload this page to see the progress. | प्रगति देखने के लिए यह पृष्ठ पुनः लोड करें। |
 | `S99e347` | detail | Remedy | समाधान |
 | `Se96390` | detail, list | Remove | हटाएँ |
@@ -2998,9 +3069,11 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S08e643` | detail, list | Target software version | लक्षित सॉफ़्टवेयर संस्करण |
 | `S44203c` | detail, form, status code fields | Task Call Frequency | टास्क कॉल आवृत्ति |
 | `S8fc804` | detail | The author has to submit it for review before the Reviewer or Administrator can see it. | समीक्षक या प्रशासक के इसे देख पाने से पहले लेखक को इसे समीक्षा के लिए जमा करना होगा। |
+| `Sa5f3f8` | detail | These files contain the complete baseline: every status code that is valid as of this Release, not only the ones it changed. | इन फ़ाइलों में पूर्ण आधार स्थिति है: इस रिलीज़ के अनुसार मान्य हर स्थिति कोड, केवल बदले हुए नहीं। |
 | `S091814` | detail | This change request has reached a terminal decision state | यह परिवर्तन अनुरोध अंतिम निर्णय स्थिति में पहुँच चुका है |
 | `S6d5708` | detail | This is the one truly irreversible action in the system. Type the identifier to confirm. | यह सिस्टम की एकमात्र सचमुच अपरिवर्तनीय कार्रवाई है। पुष्टि के लिए पहचानकर्ता टाइप करें। |
 | `Sb55f1f` | detail | To revision | संशोधन तक |
+| `Sa2a321` | detail | Translated codes per language | प्रति भाषा अनूदित कोड |
 | `S8ad830` | detail, menu, overview | Translations | अनुवाद |
 | `Seaf576` | detail, form | Trigger Snapshot | स्नैपशॉट ट्रिगर करें |
 | `S285ec8` | detail, form | Troubleshooting | समस्या निवारण |
@@ -3061,6 +3134,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Se51c55` | export | Records | रिकॉर्ड |
 | `Sd41f56` | export, export_center | Release | रिलीज़ |
 | `S2e8fd6` | export | Reset delay | रीसेट विलंब |
+| `S4651a3` | export | Scope | दायरा |
 | `S89fdd5` | export | Set delay | सेट विलंब |
 | `S828d33` | export | source | स्रोत |
 | `Sfcbb29` | export | Status code | स्थिति कोड |
@@ -3188,6 +3262,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S34b903` | help and messages | Not possible: the account has history (see above). Deactivate it instead; the person can no longer sign in and everything they did stays attributable. | संभव नहीं: खाते का इतिहास है (ऊपर देखें)। इसके बजाय उसे निष्क्रिय करें; व्यक्ति अब साइन इन नहीं कर सकता और उसने जो भी किया वह उत्तरदायी बना रहता है। |
 | `Sce489f` | help and messages | The author gets any required cross-domain sign-offs, then submits the change request for review. | लेखक आवश्यक अंतर-डोमेन साइन-ऑफ लेता है, फिर परिवर्तन अनुरोध को समीक्षा के लिए जमा करता है। |
 | `S1cdbdd` | help and messages | The Chief Engineer approves or rejects. Approval makes the revision Approved (or Deprecated for a deprecation request). | मुख्य अभियंता अनुमोदित या अस्वीकृत करता है। अनुमोदन से संशोधन अनुमोदित (या अप्रचलन अनुरोध के लिए अप्रचलित) हो जाता है। |
+| `S2d6ac0` | help and messages | The package is being built. Reload this page to follow its progress. | पैकेज बन रहा है। प्रगति देखने के लिए यह पेज फिर लोड करें। |
 | `Scff3a3` | help and messages | User deleted; its name and address are erased, what it did stays attributable. | उपयोगकर्ता हटा दिया गया; उसका नाम और पता मिटा दिया गया है, उसने जो किया वह अब भी आरोपित रहता है। |
 | `Secfb3f` | hub_consolidation | Deprecate replaced Hub codes | प्रतिस्थापित हब कोड अप्रचलित घोषित करें |
 | `S0e7766` | hub_consolidation, language | draft | मसौदा |
@@ -3267,7 +3342,6 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S863fd0` | language | Your own proposal: another person approves it. | आपका अपना प्रस्ताव: कोई और व्यक्ति उसे अनुमोदित करता है। |
 | `Sf9d469` | legacy_mapping | All controllers | सभी नियंत्रक |
 | `Se61c2f` | legacy_mapping | Any number state | कोई भी नंबर स्थिति |
-| `Sa36a5f` | legacy_mapping, st_new, st_preview | Controller | नियंत्रक |
 | `S7c4f77` | legacy_mapping | issued | जारी |
 | `Sfd5ec0` | legacy_mapping, menu, new | Legacy mapping | पुराने-नए की मैपिंग |
 | `S81f567` | legacy_mapping | Legacy number to new identifier | पुराना नंबर → नया पहचानकर्ता |
@@ -3417,6 +3491,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S751ff5` | message: export_profile_service | Export profile not found | निर्यात प्रोफ़ाइल नहीं मिली |
 | `S4a8527` | message: export_profile_service | name must be 1-80 characters. | name 1-80 अक्षरों का होना चाहिए। |
 | `S506d0b` | message: export_service | An audience export is built from Released data only; it cannot be combined with the unapproved working set. | लक्षित समूह निर्यात केवल जारी डेटा से बनता है; उसे अननुमोदित कार्य समुच्चय के साथ नहीं जोड़ा जा सकता। |
+| `S4bb9a3` | message: export_service | content must be 'baseline' or 'delta'. | content 'baseline' या 'delta' होना चाहिए। |
 | `Sf593c4` | message: export_service | language is required for a translated export | अनूदित निर्यात के लिए भाषा आवश्यक है |
 | `S42cee2` | message: field_review_service | A field comment must be between 1 and 2000 characters. | फ़ील्ड टिप्पणी 1 से 2000 अक्षरों के बीच होनी चाहिए। |
 | `S0168d7` | message: field_review_service | Checklist item not found | चेकलिस्ट बिंदु नहीं मिला |
@@ -3456,8 +3531,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sb68487` | message: occurrence_service | period_end must not be before period_start. | period_end, period_start से पहले नहीं होना चाहिए। |
 | `S682b0f` | message: occurrence_service | source_label must be 1-80 characters. | source_label 1-80 अक्षरों का होना चाहिए। |
 | `S3b0e31` | message: occurrence_service | The file needs the columns status_code_identifier and occurrences. | फ़ाइल में status_code_identifier और occurrences कॉलम चाहिए। |
+| `Sbdd594` | message: package_service | Choose at least one access level or the unfiltered files. | कम से कम एक पहुँच स्तर या बिना फ़िल्टर वाली फ़ाइलें चुनें। |
+| `S4af5c1` | message: package_service | Choose at least one format. | कम से कम एक फ़ॉर्मैट चुनें। |
+| `S8865f4` | message: package_service | Only a published Release can be packaged. | केवल प्रकाशित रिलीज़ का पैकेज बनाया जा सकता है। |
+| `S9b6676` | message: package_service | Package not found | पैकेज नहीं मिला |
+| `S2ddbdd` | message: package_service, message: release_notes_service | Release not found | रिलीज़ नहीं मिली |
+| `S3bc283` | message: package_service | The package file is no longer on the server. | पैकेज फ़ाइल अब सर्वर पर नहीं है। |
+| `S310622` | message: package_service | The package is not ready. | पैकेज अभी तैयार नहीं है। |
 | `S2142ac` | message: release_notes_service | format must be md, csv, pdf or json | format md, csv, pdf या json होना चाहिए |
-| `S2ddbdd` | message: release_notes_service | Release not found | रिलीज़ नहीं मिली |
 | `S6e9bf7` | message: release_service | A published Release can never be deleted (BR-007). | प्रकाशित रिलीज़ कभी हटाई नहीं जा सकती (BR-007)। |
 | `S06fb3b` | message: release_service | Cannot change items on a published Release (BR-007). | प्रकाशित रिलीज़ की मदें नहीं बदली जा सकतीं (BR-007)। |
 | `Sc1eab3` | message: release_service | Cannot change the targets of a published Release (BR-007). | प्रकाशित रिलीज़ के लक्ष्य नहीं बदले जा सकते (BR-007)। |
@@ -3768,7 +3849,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 
 ### 9.5 SA العربية 🇸🇦 — Arabic
 
-1162 of 1163 strings translated; direction right to left.
+1189 of 1190 strings translated; direction right to left.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -3935,6 +4016,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sc3f104` | delegations, user_detail, users | Role | الدور |
 | `Sd5dcf0` | delegations | Until (inclusive) | حتى (شاملًا) |
 | `Sa4aefa` | delegations | Valid | ساري |
+| `Sc3dc5c` | detail | %(count)s codes have no confirmed access levels and are missing from every access-level file. | %(count)s رموز ليس لها مستويات وصول مؤكدة وهي غائبة عن كل ملف مستوى وصول. |
 | `Sc3cd63` | detail, user_detail, users | Actions | الإجراءات |
 | `S61cc55` | detail, lookups, review_checklist | Add | إضافة |
 | `S12cc59` | detail | Add a comment (no decision) | إضافة تعليق (دون قرار) |
@@ -3948,7 +4030,9 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S25f8c5` | detail, export, form | Alarm | إنذار |
 | `Sd87c44` | detail, export, hub_consolidation | all | الكل |
 | `S484388` | detail, export_center | all columns | كل الأعمدة |
+| `S2e73c3` | detail | All languages and all access levels are included. Use the export above for a single language or access level. | جميع اللغات وجميع مستويات الوصول مشمولة. للغة واحدة أو مستوى وصول واحد استخدم التصدير أعلاه. |
 | `S432284` | detail | All required sign-offs are in, but this is still a Draft — the Reviewer and Administrator only see it after you choose Submit for Review below. | جميع الاعتمادات المطلوبة موجودة، لكنه ما زال مسودة — لا يراه المراجع والمسؤول إلا بعد أن تختار «تقديم للمراجعة» أدناه. |
+| `S9b0b4c` | detail | also the files without an access level (all columns) | وأيضًا الملفات بلا مستوى وصول (كل الأعمدة) |
 | `Sf24c44` | detail | Any %(code)s Engineer | أي مهندس %(code)s |
 | `Sb99a01` | detail | Applies to software versions | ينطبق على إصدارات البرنامج |
 | `S7b2c7f` | detail, language | Approve | موافقة |
@@ -3965,12 +4049,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S416869` | detail | Auto Reset Program | برنامج إعادة الضبط التلقائي |
 | `Sd71897` | detail, form | Available Group | مجموعة التوافر |
 | `S928e2e` | detail | Brake Program | برنامج الفرملة |
+| `Sab2e8a` | detail | Build package | إنشاء الحزمة |
 | `Scfadbd` | detail | By | بواسطة |
 | `S9c8393` | detail, mine | Change Request | طلب تغيير |
 | `S4572f4` | detail | Change request | طلب التغيير |
 | `S3295be` | detail | Change requests in this set | طلبات التغيير في هذه المجموعة |
 | `S4d8006` | detail | Change set | مجموعة تغييرات |
 | `S8aa57d` | detail | Changes | التغييرات |
+| `S3d14ea` | detail, export | Changes of this release only | تغييرات هذا الإصدار فقط |
 | `Sbd95c0` | detail | Checklist confirmed at sign-off | قائمة الفحص المؤكدة عند الاعتماد |
 | `S074d62` | detail, role badge | Chief Engineer | كبير المهندسين |
 | `S03695d` | detail | Chief Engineer decision | قرار كبير المهندسين |
@@ -3983,8 +4069,11 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sfce06e` | detail | Comments | التعليقات |
 | `S8d105c` | detail, reconciliation | Compare | مقارنة |
 | `Sc9a03b` | detail | Compare Revisions | مقارنة المراجعات |
+| `S0ff7e5` | detail, export | Complete baseline | الحالة الكاملة |
 | `S1798b3` | detail | Completed | اكتمل |
 | `S7671b5` | detail | Confirm or override Audience Access | تأكيد أو تجاوز وصول الجمهور |
+| `S4f9be0` | detail | Content | المحتوى |
+| `Sa36a5f` | detail, legacy_mapping, st_new | Controller | وحدة التحكم |
 | `Scd293f` | detail | Converter Reactive Power Program | برنامج القدرة غير الفعالة للمحوّل |
 | `S3998a7` | detail | Copies the descriptive fields into a new Draft in a Main Controller group (a new number is allocated at submit; this code's identifier is kept as the legacy reference). | ينسخ الحقول الوصفية إلى مسودة جديدة في مجموعة وحدة التحكم الرئيسية (يُخصَّص رقم جديد عند التقديم؛ ويُحتفظ بمعرّف هذا الرمز كمرجع قديم). |
 | `S54b051` | detail | Copy this code for another turbine platform. The copy is a new Draft that links back here and goes through the normal review. | انسخ هذا الرمز لمنصة توربين أخرى. النسخة مسودة جديدة ترتبط بهذا الرمز وتمر بالمراجعة العادية. |
@@ -4015,6 +4104,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S4c17aa` | detail | Development | التطوير |
 | `S552a2b` | detail | Documented reason | السبب الموثّق |
 | `S9b1091` | detail, mine | Domain | المجال |
+| `Sa479c9` | detail | Download | تنزيل |
 | `S056839` | detail | Download Error Report | تنزيل تقرير الأخطاء |
 | `S23d33e` | detail, index | Draft | مسودة |
 | `S3c7a50` | detail | Edit Candidates | تحرير المرشحين |
@@ -4036,6 +4126,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sdd7b7e` | detail | failed validation | فشلت في التحقق |
 | `Sd106a6` | detail | Field comments | تعليقات الحقول |
 | `S2c3caf` | detail, export_verify, operations | File | الملف |
+| `S6ce6c5` | detail | Files | الملفات |
 | `Se0996a` | detail, form | first | الأول |
 | `S041a5d` | detail, export_center | Format | الصيغة |
 | `S9e3c65` | detail | From revision | من المراجعة |
@@ -4043,6 +4134,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sb8c4c9` | detail, form | Further Program References | مراجع برامج إضافية |
 | `S636c41` | detail | Grid Operator | مشغّل الشبكة |
 | `S90ccd6` | detail | History | السجل |
+| `S0dfe7b` | detail | Hub controller | وحدة تحكم المحور |
 | `Sfec8b7` | detail | Hub Controller group | مجموعة وحدة تحكم المحور |
 | `S00ccae` | detail, form | Hub Controller only | وحدة تحكم المحور فقط |
 | `S3c883f` | detail | I have reviewed these dependants | راجعتُ هذه الرموز التابعة |
@@ -4057,6 +4149,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S693272` | detail, withdrawn_codes | Legacy Reference Number | الرقم المرجعي القديم |
 | `S43d5c5` | detail, form | Loadless Spinning Permitted | الدوران دون حمل مسموح |
 | `S193786` | detail | Logical Node | العقدة المنطقية |
+| `Sc3f827` | detail | Main controller | وحدة التحكم الرئيسية |
 | `S578b78` | detail | Main Controller group | مجموعة وحدة التحكم الرئيسية |
 | `Sa7512d` | detail, form | Main Controller only | وحدة التحكم الرئيسية فقط |
 | `Seb9a6d` | detail | Manage translations | إدارة الترجمات |
@@ -4082,6 +4175,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sde04fa` | detail, fleet_feedback, success_metrics | of | من |
 | `S19f611` | detail | Offline lookup (HTML) | البحث دون اتصال (HTML) |
 | `S2ff2ae` | detail | Offline lookup + manifest (ZIP) | البحث دون اتصال + ملف البيان (ZIP) |
+| `S3f0e3e` | detail | One ZIP with the complete baseline in every language and for every access level, plus the release notes and a manifest with a SHA-256 for each file. Building it takes a few minutes; the page shows the progress. | ملف ZIP واحد يضم الحالة الكاملة بكل لغة ولكل مستوى وصول، إضافةً إلى ملاحظات الإصدار وبيان يحوي SHA-256 لكل ملف. يستغرق الإنشاء بضع دقائق؛ وتعرض الصفحة التقدم. |
 | `S12aa03` | detail | only translated codes | الرموز المترجمة فقط |
 | `S5fc7e3` | detail | open | مفتوح |
 | `Sf61187` | detail | Open New Revision | فتح مراجعة جديدة |
@@ -4093,11 +4187,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S780d35` | detail | Override identifier (migration / reservation only) | تجاوز المعرّف (للترحيل / الحجز فقط) |
 | `S89ff31` | detail | Owner | المالك |
 | `S2d20ee` | detail | Package overview | نظرة عامة على الحزمة |
+| `S4d1a47` | detail | Package: all languages and access levels | الحزمة: جميع اللغات ومستويات الوصول |
+| `Sc49bd0` | detail | Packages of this Release | حزم هذا الإصدار |
 | `S96f608` | detail, review_queue | Pending | معلّق |
 | `Sc983b6` | detail | Pick a profile (columns and labels), an audience, a language or a software version. Every file comes with a manifest of SHA-256 hashes; "bundle" packs both into one ZIP. | اختر ملفًا (أعمدة وتسميات) أو جمهورًا أو لغة أو إصدار برنامج. يأتي كل ملف مع ملف بيان بتجزئات SHA-256؛ و"bundle" يجمع الاثنين في ZIP واحد. |
 | `S72383d` | detail | Planned dates | التواريخ المخطط لها |
 | `Sfb14b0` | detail | Planned deprecation date | تاريخ التقادم المخطط |
 | `S00e733` | detail | Planned effective date | التاريخ الفعلي المخطط |
+| `S123a7f` | detail | Platform | المنصة |
 | `Sfc8d58` | detail | Platform variant | متغير المنصة |
 | `Scd8926` | detail | Platform variants | متغيرات المنصة |
 | `S141f0c` | detail | Processing in the background... | قيد المعالجة في الخلفية... |
@@ -4118,6 +4215,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S9b44a2` | detail | Release notes (PDF) | ملاحظات الإصدار (PDF) |
 | `S3dfa01` | detail | Release notes and offline lookup | ملاحظات الإصدار والبحث دون اتصال |
 | `Sdcddb7` | detail | Release notes list what was added, changed (field by field) and deprecated since the previous Release. The offline page is one self-contained HTML file for use at the turbine without a connection. | تسرد ملاحظات الإصدار ما أُضيف وما تغيّر (حقلًا بحقل) وما صار متقادمًا منذ الإصدار السابق. الصفحة دون اتصال ملف HTML واحد مكتفٍ بذاته للاستخدام عند التوربين دون اتصال. |
+| `Scce715` | detail | Reload | إعادة التحميل |
 | `S0544a3` | detail | Reload this page to see the progress. | أعد تحميل هذه الصفحة لرؤية التقدم. |
 | `S99e347` | detail | Remedy | الإجراء التصحيحي |
 | `Se96390` | detail, list | Remove | إزالة |
@@ -4167,9 +4265,11 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S08e643` | detail, list | Target software version | إصدار البرنامج المستهدف |
 | `S44203c` | detail, form, status code fields | Task Call Frequency | تردد استدعاء المهمة |
 | `S8fc804` | detail | The author has to submit it for review before the Reviewer or Administrator can see it. | على المؤلف تقديمه للمراجعة قبل أن يتمكن المراجع أو المسؤول من رؤيته. |
+| `Sa5f3f8` | detail | These files contain the complete baseline: every status code that is valid as of this Release, not only the ones it changed. | تحتوي هذه الملفات على الحالة الكاملة: كل رمز حالة صالح في هذا الإصدار، وليس فقط ما غيّره. |
 | `S091814` | detail | This change request has reached a terminal decision state | بلغ طلب التغيير هذا حالة قرار نهائية |
 | `S6d5708` | detail | This is the one truly irreversible action in the system. Type the identifier to confirm. | هذا هو الإجراء الوحيد غير القابل للتراجع حقًا في النظام. اكتب المعرّف للتأكيد. |
 | `Sb55f1f` | detail | To revision | إلى المراجعة |
+| `Sa2a321` | detail | Translated codes per language | الرموز المترجمة لكل لغة |
 | `S8ad830` | detail, menu, overview | Translations | الترجمات |
 | `Seaf576` | detail, form | Trigger Snapshot | تشغيل لقطة |
 | `S285ec8` | detail, form | Troubleshooting | استكشاف الأخطاء |
@@ -4230,6 +4330,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Se51c55` | export | Records | السجلات |
 | `Sd41f56` | export, export_center | Release | الإصدار |
 | `S2e8fd6` | export | Reset delay | تأخير إعادة الضبط |
+| `S4651a3` | export | Scope | النطاق |
 | `S89fdd5` | export | Set delay | تأخير التفعيل |
 | `S828d33` | export | source | المصدر |
 | `Sfcbb29` | export | Status code | رمز الحالة |
@@ -4357,6 +4458,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S34b903` | help and messages | Not possible: the account has history (see above). Deactivate it instead; the person can no longer sign in and everything they did stays attributable. | غير ممكن: للحساب سجل (انظر أعلاه). عطّله بدلًا من ذلك؛ فلا يستطيع الشخص تسجيل الدخول ويبقى كل ما فعله منسوبًا. |
 | `Sce489f` | help and messages | The author gets any required cross-domain sign-offs, then submits the change request for review. | يحصل المؤلف على الاعتمادات متعددة المجالات المطلوبة ثم يقدّم طلب التغيير للمراجعة. |
 | `S1cdbdd` | help and messages | The Chief Engineer approves or rejects. Approval makes the revision Approved (or Deprecated for a deprecation request). | يوافق كبير المهندسين أو يرفض. تجعل الموافقة المراجعة معتمدة (أو متقادمة لطلب تقادم). |
+| `S2d6ac0` | help and messages | The package is being built. Reload this page to follow its progress. | جارٍ إنشاء الحزمة. أعد تحميل هذه الصفحة لمتابعة التقدم. |
 | `Scff3a3` | help and messages | User deleted; its name and address are erased, what it did stays attributable. | تم حذف المستخدم؛ مُسح اسمه وعنوانه، وما فعله يبقى منسوباً إليه. |
 | `Secfb3f` | hub_consolidation | Deprecate replaced Hub codes | وسم رموز المحور المستبدلة كمتقادمة |
 | `S0e7766` | hub_consolidation, language | draft | مسودة |
@@ -4436,7 +4538,6 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S863fd0` | language | Your own proposal: another person approves it. | اقتراحك أنت: يعتمده شخص آخر. |
 | `Sf9d469` | legacy_mapping | All controllers | كل وحدات التحكم |
 | `Se61c2f` | legacy_mapping | Any number state | أي حالة رقم |
-| `Sa36a5f` | legacy_mapping, st_new, st_preview | Controller | وحدة التحكم |
 | `S7c4f77` | legacy_mapping | issued | صادرة |
 | `Sfd5ec0` | legacy_mapping, menu, new | Legacy mapping | ربط القديم بالجديد |
 | `S81f567` | legacy_mapping | Legacy number to new identifier | الرقم القديم إلى المعرّف الجديد |
@@ -4586,6 +4687,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S751ff5` | message: export_profile_service | Export profile not found | ملف التصدير غير موجود |
 | `S4a8527` | message: export_profile_service | name must be 1-80 characters. | يجب أن يتكون name من 1-80 حرفًا. |
 | `S506d0b` | message: export_service | An audience export is built from Released data only; it cannot be combined with the unapproved working set. | يُبنى تصدير الجمهور من البيانات المنشورة فقط؛ ولا يمكن دمجه مع مجموعة العمل غير المعتمدة. |
+| `S4bb9a3` | message: export_service | content must be 'baseline' or 'delta'. | يجب أن تكون قيمة content هي 'baseline' أو 'delta'. |
 | `Sf593c4` | message: export_service | language is required for a translated export | اللغة مطلوبة للتصدير المترجم |
 | `S42cee2` | message: field_review_service | A field comment must be between 1 and 2000 characters. | يجب أن يتراوح تعليق الحقل بين 1 و2000 حرف. |
 | `S0168d7` | message: field_review_service | Checklist item not found | بند قائمة الفحص غير موجود |
@@ -4625,8 +4727,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sb68487` | message: occurrence_service | period_end must not be before period_start. | يجب ألا يسبق period_end القيمة period_start. |
 | `S682b0f` | message: occurrence_service | source_label must be 1-80 characters. | يجب أن تتكون source_label من 1-80 حرفًا. |
 | `S3b0e31` | message: occurrence_service | The file needs the columns status_code_identifier and occurrences. | يحتاج الملف إلى العمودين status_code_identifier وoccurrences. |
+| `Sbdd594` | message: package_service | Choose at least one access level or the unfiltered files. | اختر مستوى وصول واحدًا على الأقل أو الملفات غير المصفّاة. |
+| `S4af5c1` | message: package_service | Choose at least one format. | اختر صيغة واحدة على الأقل. |
+| `S8865f4` | message: package_service | Only a published Release can be packaged. | لا يمكن تجميع حزمة إلا لإصدار منشور. |
+| `S9b6676` | message: package_service | Package not found | الحزمة غير موجودة |
+| `S2ddbdd` | message: package_service, message: release_notes_service | Release not found | الإصدار غير موجود |
+| `S3bc283` | message: package_service | The package file is no longer on the server. | ملف الحزمة لم يعد موجودًا على الخادم. |
+| `S310622` | message: package_service | The package is not ready. | الحزمة ليست جاهزة بعد. |
 | `S2142ac` | message: release_notes_service | format must be md, csv, pdf or json | يجب أن تكون format إحدى md أو csv أو pdf أو json |
-| `S2ddbdd` | message: release_notes_service | Release not found | الإصدار غير موجود |
 | `S6e9bf7` | message: release_service | A published Release can never be deleted (BR-007). | لا يمكن حذف إصدار منشور أبدًا (BR-007). |
 | `S06fb3b` | message: release_service | Cannot change items on a published Release (BR-007). | لا يمكن تغيير بنود إصدار منشور (BR-007). |
 | `Sc1eab3` | message: release_service | Cannot change the targets of a published Release (BR-007). | لا يمكن تغيير أهداف إصدار منشور (BR-007). |
@@ -4937,7 +5045,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 
 ### 9.6 IN বাংলা 🇮🇳 — Bengali
 
-1162 of 1163 strings translated; direction left to right.
+1189 of 1190 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -5104,6 +5212,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sc3f104` | delegations, user_detail, users | Role | ভূমিকা |
 | `Sd5dcf0` | delegations | Until (inclusive) | পর্যন্ত (সহ) |
 | `Sa4aefa` | delegations | Valid | বৈধ |
+| `Sc3dc5c` | detail | %(count)s codes have no confirmed access levels and are missing from every access-level file. | %(count)s টি কোডের নিশ্চিত অ্যাক্সেস স্তর নেই এবং সেগুলো প্রতিটি অ্যাক্সেস-স্তর ফাইল থেকে বাদ পড়েছে। |
 | `Sc3cd63` | detail, user_detail, users | Actions | কার্যক্রম |
 | `S61cc55` | detail, lookups, review_checklist | Add | যোগ করুন |
 | `S12cc59` | detail | Add a comment (no decision) | একটি মন্তব্য যোগ করুন (সিদ্ধান্ত ছাড়া) |
@@ -5117,7 +5226,9 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S25f8c5` | detail, export, form | Alarm | অ্যালার্ম |
 | `Sd87c44` | detail, export, hub_consolidation | all | সব |
 | `S484388` | detail, export_center | all columns | সব কলাম |
+| `S2e73c3` | detail | All languages and all access levels are included. Use the export above for a single language or access level. | সব ভাষা ও সব অ্যাক্সেস স্তর অন্তর্ভুক্ত। একটি ভাষা বা অ্যাক্সেস স্তরের জন্য উপরের এক্সপোর্ট ব্যবহার করুন। |
 | `S432284` | detail | All required sign-offs are in, but this is still a Draft — the Reviewer and Administrator only see it after you choose Submit for Review below. | সব প্রয়োজনীয় সাইন-অফ এসেছে, কিন্তু এটি এখনো খসড়া — আপনি নিচে পর্যালোচনার জন্য জমা দিন বেছে নেওয়ার পরই পর্যালোচক ও প্রশাসক এটি দেখতে পান। |
+| `S9b0b4c` | detail | also the files without an access level (all columns) | অ্যাক্সেস স্তর ছাড়া ফাইলও (সব কলাম) |
 | `Sf24c44` | detail | Any %(code)s Engineer | যেকোনো %(code)s প্রকৌশলী |
 | `Sb99a01` | detail | Applies to software versions | সফটওয়্যার সংস্করণে প্রযোজ্য |
 | `S7b2c7f` | detail, language | Approve | অনুমোদন করুন |
@@ -5134,12 +5245,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S416869` | detail | Auto Reset Program | স্বয়ংক্রিয় রিসেট প্রোগ্রাম |
 | `Sd71897` | detail, form | Available Group | প্রাপ্যতা গ্রুপ |
 | `S928e2e` | detail | Brake Program | ব্রেক প্রোগ্রাম |
+| `Sab2e8a` | detail | Build package | প্যাকেজ তৈরি করুন |
 | `Scfadbd` | detail | By | দ্বারা |
 | `S9c8393` | detail, mine | Change Request | পরিবর্তন অনুরোধ |
 | `S4572f4` | detail | Change request | পরিবর্তন অনুরোধ |
 | `S3295be` | detail | Change requests in this set | এই সেটের পরিবর্তন অনুরোধ |
 | `S4d8006` | detail | Change set | পরিবর্তন সেট |
 | `S8aa57d` | detail | Changes | পরিবর্তন |
+| `S3d14ea` | detail, export | Changes of this release only | শুধু এই রিলিজের পরিবর্তন |
 | `Sbd95c0` | detail | Checklist confirmed at sign-off | সাইন-অফের সময় নিশ্চিত চেকলিস্ট |
 | `S074d62` | detail, role badge | Chief Engineer | প্রধান প্রকৌশলী |
 | `S03695d` | detail | Chief Engineer decision | প্রধান প্রকৌশলীর সিদ্ধান্ত |
@@ -5152,8 +5265,11 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sfce06e` | detail | Comments | মন্তব্য |
 | `S8d105c` | detail, reconciliation | Compare | তুলনা করুন |
 | `Sc9a03b` | detail | Compare Revisions | সংশোধন তুলনা করুন |
+| `S0ff7e5` | detail, export | Complete baseline | সম্পূর্ণ ভিত্তি অবস্থা |
 | `S1798b3` | detail | Completed | সম্পন্ন হয়েছে |
 | `S7671b5` | detail | Confirm or override Audience Access | লক্ষ্য গোষ্ঠীর অ্যাক্সেস নিশ্চিত বা অগ্রাহ্য করুন |
+| `S4f9be0` | detail | Content | বিষয়বস্তু |
+| `Sa36a5f` | detail, legacy_mapping, st_new | Controller | নিয়ন্ত্রক |
 | `Scd293f` | detail | Converter Reactive Power Program | কনভার্টার রিঅ্যাক্টিভ পাওয়ার প্রোগ্রাম |
 | `S3998a7` | detail | Copies the descriptive fields into a new Draft in a Main Controller group (a new number is allocated at submit; this code's identifier is kept as the legacy reference). | বর্ণনামূলক ফিল্ড প্রধান নিয়ন্ত্রক গ্রুপের একটি নতুন খসড়ায় কপি করে (জমার সময় নতুন নম্বর দেওয়া হয়; এই কোডের শনাক্তকারী পুরোনো রেফারেন্স হিসেবে রাখা হয়)। |
 | `S54b051` | detail | Copy this code for another turbine platform. The copy is a new Draft that links back here and goes through the normal review. | এই কোডটি অন্য টারবাইন প্ল্যাটফর্মের জন্য কপি করুন। কপি একটি নতুন খসড়া যা এখানে ফিরে যুক্ত হয় এবং সাধারণ পর্যালোচনা পার করে। |
@@ -5184,6 +5300,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S4c17aa` | detail | Development | ডেভেলপমেন্ট |
 | `S552a2b` | detail | Documented reason | নথিভুক্ত কারণ |
 | `S9b1091` | detail, mine | Domain | ডোমেইন |
+| `Sa479c9` | detail | Download | ডাউনলোড |
 | `S056839` | detail | Download Error Report | ত্রুটি প্রতিবেদন ডাউনলোড করুন |
 | `S23d33e` | detail, index | Draft | খসড়া |
 | `S3c7a50` | detail | Edit Candidates | প্রার্থী সম্পাদনা করুন |
@@ -5205,6 +5322,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sdd7b7e` | detail | failed validation | যাচাইয়ে ব্যর্থ |
 | `Sd106a6` | detail | Field comments | ফিল্ডের মন্তব্য |
 | `S2c3caf` | detail, export_verify, operations | File | ফাইল |
+| `S6ce6c5` | detail | Files | ফাইল |
 | `Se0996a` | detail, form | first | প্রথম |
 | `S041a5d` | detail, export_center | Format | বিন্যাস |
 | `S9e3c65` | detail | From revision | সংশোধন থেকে |
@@ -5212,6 +5330,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sb8c4c9` | detail, form | Further Program References | আরও প্রোগ্রাম উল্লেখ |
 | `S636c41` | detail | Grid Operator | গ্রিড অপারেটর |
 | `S90ccd6` | detail | History | ইতিহাস |
+| `S0dfe7b` | detail | Hub controller | হাব কন্ট্রোলার |
 | `Sfec8b7` | detail | Hub Controller group | হাব নিয়ন্ত্রক গ্রুপ |
 | `S00ccae` | detail, form | Hub Controller only | শুধু হাব নিয়ন্ত্রক |
 | `S3c883f` | detail | I have reviewed these dependants | আমি এই নির্ভরশীলগুলো পর্যালোচনা করেছি |
@@ -5226,6 +5345,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S693272` | detail, withdrawn_codes | Legacy Reference Number | পুরোনো রেফারেন্স নম্বর |
 | `S43d5c5` | detail, form | Loadless Spinning Permitted | লোড ছাড়া ঘোরা অনুমোদিত |
 | `S193786` | detail | Logical Node | লজিক্যাল নোড |
+| `Sc3f827` | detail | Main controller | মেইন কন্ট্রোলার |
 | `S578b78` | detail | Main Controller group | প্রধান নিয়ন্ত্রক গ্রুপ |
 | `Sa7512d` | detail, form | Main Controller only | শুধু প্রধান নিয়ন্ত্রক |
 | `Seb9a6d` | detail | Manage translations | অনুবাদ পরিচালনা করুন |
@@ -5251,6 +5371,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sde04fa` | detail, fleet_feedback, success_metrics | of | এর মধ্যে |
 | `S19f611` | detail | Offline lookup (HTML) | অফলাইন লুকআপ (HTML) |
 | `S2ff2ae` | detail | Offline lookup + manifest (ZIP) | অফলাইন লুকআপ + ম্যানিফেস্ট (ZIP) |
+| `S3f0e3e` | detail | One ZIP with the complete baseline in every language and for every access level, plus the release notes and a manifest with a SHA-256 for each file. Building it takes a few minutes; the page shows the progress. | প্রতিটি ভাষায় ও প্রতিটি অ্যাক্সেস স্তরের জন্য সম্পূর্ণ ভিত্তি অবস্থাসহ একটি ZIP, সঙ্গে রিলিজ নোট এবং প্রতিটি ফাইলের SHA-256 সহ ম্যানিফেস্ট। তৈরি করতে কয়েক মিনিট লাগে; পেজে অগ্রগতি দেখা যায়। |
 | `S12aa03` | detail | only translated codes | শুধু অনূদিত কোড |
 | `S5fc7e3` | detail | open | খোলা |
 | `Sf61187` | detail | Open New Revision | নতুন সংশোধন খুলুন |
@@ -5262,11 +5383,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S780d35` | detail | Override identifier (migration / reservation only) | শনাক্তকারী অগ্রাহ্য করুন (শুধু মাইগ্রেশন / সংরক্ষণের জন্য) |
 | `S89ff31` | detail | Owner | মালিক |
 | `S2d20ee` | detail | Package overview | প্যাকেজের সংক্ষিপ্ত বিবরণ |
+| `S4d1a47` | detail | Package: all languages and access levels | প্যাকেজ: সব ভাষা ও অ্যাক্সেস স্তর |
+| `Sc49bd0` | detail | Packages of this Release | এই রিলিজের প্যাকেজ |
 | `S96f608` | detail, review_queue | Pending | মুলতুবি |
 | `Sc983b6` | detail | Pick a profile (columns and labels), an audience, a language or a software version. Every file comes with a manifest of SHA-256 hashes; "bundle" packs both into one ZIP. | একটি প্রোফাইল (কলাম ও লেবেল), লক্ষ্য গোষ্ঠী, ভাষা বা সফটওয়্যার সংস্করণ বাছুন। প্রতিটি ফাইলের সঙ্গে SHA-256 হ্যাশের ম্যানিফেস্ট আসে; "bundle" দুটিকে একটি ZIP-এ বাঁধে। |
 | `S72383d` | detail | Planned dates | পরিকল্পিত তারিখ |
 | `Sfb14b0` | detail | Planned deprecation date | পরিকল্পিত অপ্রচলনের তারিখ |
 | `S00e733` | detail | Planned effective date | পরিকল্পিত কার্যকরের তারিখ |
+| `S123a7f` | detail | Platform | প্ল্যাটফর্ম |
 | `Sfc8d58` | detail | Platform variant | প্ল্যাটফর্ম রূপভেদ |
 | `Scd8926` | detail | Platform variants | প্ল্যাটফর্ম রূপভেদ |
 | `S141f0c` | detail | Processing in the background... | ব্যাকগ্রাউন্ডে প্রক্রিয়া চলছে... |
@@ -5287,6 +5411,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S9b44a2` | detail | Release notes (PDF) | রিলিজ নোট (PDF) |
 | `S3dfa01` | detail | Release notes and offline lookup | রিলিজ নোট ও অফলাইন লুকআপ |
 | `Sdcddb7` | detail | Release notes list what was added, changed (field by field) and deprecated since the previous Release. The offline page is one self-contained HTML file for use at the turbine without a connection. | রিলিজ নোট আগের রিলিজের পর কী যোগ হয়েছে, বদলেছে (ফিল্ড ধরে) ও অপ্রচলিত হয়েছে তা তালিকাভুক্ত করে। অফলাইন পৃষ্ঠা একটি স্বয়ংসম্পূর্ণ HTML ফাইল যা টারবাইনে সংযোগ ছাড়াই ব্যবহার করা যায়। |
+| `Scce715` | detail | Reload | আবার লোড করুন |
 | `S0544a3` | detail | Reload this page to see the progress. | অগ্রগতি দেখতে এই পৃষ্ঠা পুনরায় লোড করুন। |
 | `S99e347` | detail | Remedy | প্রতিকার |
 | `Se96390` | detail, list | Remove | সরান |
@@ -5336,9 +5461,11 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S08e643` | detail, list | Target software version | লক্ষ্য সফটওয়্যার সংস্করণ |
 | `S44203c` | detail, form, status code fields | Task Call Frequency | টাস্ক কল ফ্রিকোয়েন্সি |
 | `S8fc804` | detail | The author has to submit it for review before the Reviewer or Administrator can see it. | পর্যালোচক বা প্রশাসক দেখার আগে লেখককে এটি পর্যালোচনার জন্য জমা দিতে হবে। |
+| `Sa5f3f8` | detail | These files contain the complete baseline: every status code that is valid as of this Release, not only the ones it changed. | এই ফাইলগুলোতে সম্পূর্ণ ভিত্তি অবস্থা আছে: এই রিলিজ অনুযায়ী বৈধ প্রতিটি স্ট্যাটাস কোড, শুধু পরিবর্তিতগুলো নয়। |
 | `S091814` | detail | This change request has reached a terminal decision state | এই পরিবর্তন অনুরোধ চূড়ান্ত সিদ্ধান্তের অবস্থায় পৌঁছেছে |
 | `S6d5708` | detail | This is the one truly irreversible action in the system. Type the identifier to confirm. | এটি সিস্টেমের একমাত্র সত্যিই অপরিবর্তনীয় কার্যক্রম। নিশ্চিত করতে শনাক্তকারী টাইপ করুন। |
 | `Sb55f1f` | detail | To revision | সংশোধন পর্যন্ত |
+| `Sa2a321` | detail | Translated codes per language | ভাষা অনুযায়ী অনূদিত কোড |
 | `S8ad830` | detail, menu, overview | Translations | অনুবাদ |
 | `Seaf576` | detail, form | Trigger Snapshot | স্ন্যাপশট ট্রিগার করুন |
 | `S285ec8` | detail, form | Troubleshooting | সমস্যা সমাধান |
@@ -5399,6 +5526,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Se51c55` | export | Records | রেকর্ড |
 | `Sd41f56` | export, export_center | Release | রিলিজ |
 | `S2e8fd6` | export | Reset delay | রিসেট বিলম্ব |
+| `S4651a3` | export | Scope | পরিধি |
 | `S89fdd5` | export | Set delay | সেট বিলম্ব |
 | `S828d33` | export | source | উৎস |
 | `Sfcbb29` | export | Status code | স্ট্যাটাস কোড |
@@ -5526,6 +5654,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S34b903` | help and messages | Not possible: the account has history (see above). Deactivate it instead; the person can no longer sign in and everything they did stays attributable. | সম্ভব নয়: অ্যাকাউন্টের ইতিহাস আছে (উপরে দেখুন)। এর পরিবর্তে নিষ্ক্রিয় করুন; ব্যক্তিটি আর সাইন ইন করতে পারবেন না এবং তিনি যা করেছেন তা দায়বদ্ধ থাকবে। |
 | `Sce489f` | help and messages | The author gets any required cross-domain sign-offs, then submits the change request for review. | লেখক প্রয়োজনীয় আন্তঃডোমেইন সাইন-অফ নেন, তারপর পরিবর্তন অনুরোধ পর্যালোচনার জন্য জমা দেন। |
 | `S1cdbdd` | help and messages | The Chief Engineer approves or rejects. Approval makes the revision Approved (or Deprecated for a deprecation request). | প্রধান প্রকৌশলী অনুমোদন বা প্রত্যাখ্যান করেন। অনুমোদন সংশোধনকে অনুমোদিত (বা অপ্রচলন অনুরোধে অপ্রচলিত) করে। |
+| `S2d6ac0` | help and messages | The package is being built. Reload this page to follow its progress. | প্যাকেজ তৈরি হচ্ছে। অগ্রগতি দেখতে এই পেজ আবার লোড করুন। |
 | `Scff3a3` | help and messages | User deleted; its name and address are erased, what it did stays attributable. | ব্যবহারকারী মুছে ফেলা হয়েছে; তার নাম ও ঠিকানা মুছে ফেলা হয়েছে, সে যা করেছে তা আরোপযোগ্য থাকে। |
 | `Secfb3f` | hub_consolidation | Deprecate replaced Hub codes | প্রতিস্থাপিত হাব কোড অপ্রচলিত ঘোষণা করুন |
 | `S0e7766` | hub_consolidation, language | draft | খসড়া |
@@ -5605,7 +5734,6 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S863fd0` | language | Your own proposal: another person approves it. | আপনার নিজের প্রস্তাব: অন্য একজন এটি অনুমোদন করেন। |
 | `Sf9d469` | legacy_mapping | All controllers | সব নিয়ন্ত্রক |
 | `Se61c2f` | legacy_mapping | Any number state | যেকোনো নম্বরের অবস্থা |
-| `Sa36a5f` | legacy_mapping, st_new, st_preview | Controller | নিয়ন্ত্রক |
 | `S7c4f77` | legacy_mapping | issued | প্রদত্ত |
 | `Sfd5ec0` | legacy_mapping, menu, new | Legacy mapping | পুরোনো-নতুন ম্যাপিং |
 | `S81f567` | legacy_mapping | Legacy number to new identifier | পুরোনো নম্বর থেকে নতুন শনাক্তকারী |
@@ -5755,6 +5883,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S751ff5` | message: export_profile_service | Export profile not found | রপ্তানি প্রোফাইল পাওয়া যায়নি |
 | `S4a8527` | message: export_profile_service | name must be 1-80 characters. | name ১-৮০ অক্ষরের হতে হবে। |
 | `S506d0b` | message: export_service | An audience export is built from Released data only; it cannot be combined with the unapproved working set. | লক্ষ্য গোষ্ঠীর রপ্তানি শুধু প্রকাশিত ডেটা থেকে তৈরি হয়; এটি অননুমোদিত কর্ম সেটের সঙ্গে মেলানো যায় না। |
+| `S4bb9a3` | message: export_service | content must be 'baseline' or 'delta'. | content অবশ্যই 'baseline' বা 'delta' হতে হবে। |
 | `Sf593c4` | message: export_service | language is required for a translated export | অনূদিত রপ্তানির জন্য ভাষা আবশ্যক |
 | `S42cee2` | message: field_review_service | A field comment must be between 1 and 2000 characters. | ফিল্ড মন্তব্য ১ থেকে ২০০০ অক্ষরের মধ্যে হতে হবে। |
 | `S0168d7` | message: field_review_service | Checklist item not found | চেকলিস্টের বিষয় পাওয়া যায়নি |
@@ -5794,8 +5923,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sb68487` | message: occurrence_service | period_end must not be before period_start. | period_end, period_start-এর আগে হতে পারবে না। |
 | `S682b0f` | message: occurrence_service | source_label must be 1-80 characters. | source_label ১-৮০ অক্ষরের হতে হবে। |
 | `S3b0e31` | message: occurrence_service | The file needs the columns status_code_identifier and occurrences. | ফাইলে status_code_identifier ও occurrences কলাম লাগে। |
+| `Sbdd594` | message: package_service | Choose at least one access level or the unfiltered files. | অন্তত একটি অ্যাক্সেস স্তর বা ফিল্টারবিহীন ফাইল বেছে নিন। |
+| `S4af5c1` | message: package_service | Choose at least one format. | অন্তত একটি ফরম্যাট বেছে নিন। |
+| `S8865f4` | message: package_service | Only a published Release can be packaged. | শুধু প্রকাশিত রিলিজের প্যাকেজ তৈরি করা যায়। |
+| `S9b6676` | message: package_service | Package not found | প্যাকেজ পাওয়া যায়নি |
+| `S2ddbdd` | message: package_service, message: release_notes_service | Release not found | রিলিজ পাওয়া যায়নি |
+| `S3bc283` | message: package_service | The package file is no longer on the server. | প্যাকেজ ফাইলটি আর সার্ভারে নেই। |
+| `S310622` | message: package_service | The package is not ready. | প্যাকেজ এখনও প্রস্তুত নয়। |
 | `S2142ac` | message: release_notes_service | format must be md, csv, pdf or json | format অবশ্যই md, csv, pdf বা json হতে হবে |
-| `S2ddbdd` | message: release_notes_service | Release not found | রিলিজ পাওয়া যায়নি |
 | `S6e9bf7` | message: release_service | A published Release can never be deleted (BR-007). | প্রকাশিত রিলিজ কখনো মোছা যায় না (BR-007)। |
 | `S06fb3b` | message: release_service | Cannot change items on a published Release (BR-007). | প্রকাশিত রিলিজের আইটেম বদলানো যায় না (BR-007)। |
 | `Sc1eab3` | message: release_service | Cannot change the targets of a published Release (BR-007). | প্রকাশিত রিলিজের লক্ষ্য বদলানো যায় না (BR-007)। |
@@ -6106,7 +6241,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 
 ### 9.7 IN मराठी 🇮🇳 — Marathi
 
-1162 of 1163 strings translated; direction left to right.
+1189 of 1190 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -6273,6 +6408,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sc3f104` | delegations, user_detail, users | Role | भूमिका |
 | `Sd5dcf0` | delegations | Until (inclusive) | पर्यंत (समावेश) |
 | `Sa4aefa` | delegations | Valid | वैध |
+| `Sc3dc5c` | detail | %(count)s codes have no confirmed access levels and are missing from every access-level file. | %(count)s कोडचे अॅक्सेस स्तर निश्चित नाहीत आणि ते प्रत्येक अॅक्सेस-स्तर फाइलमधून गायब आहेत. |
 | `Sc3cd63` | detail, user_detail, users | Actions | कृती |
 | `S61cc55` | detail, lookups, review_checklist | Add | जोडा |
 | `S12cc59` | detail | Add a comment (no decision) | टिप्पणी जोडा (निर्णयाशिवाय) |
@@ -6286,7 +6422,9 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S25f8c5` | detail, export, form | Alarm | अलार्म |
 | `Sd87c44` | detail, export, hub_consolidation | all | सर्व |
 | `S484388` | detail, export_center | all columns | सर्व स्तंभ |
+| `S2e73c3` | detail | All languages and all access levels are included. Use the export above for a single language or access level. | सर्व भाषा आणि सर्व अॅक्सेस स्तर समाविष्ट आहेत. एका भाषेसाठी किंवा अॅक्सेस स्तरासाठी वरील एक्स्पोर्ट वापरा. |
 | `S432284` | detail | All required sign-offs are in, but this is still a Draft — the Reviewer and Administrator only see it after you choose Submit for Review below. | सर्व आवश्यक साइन-ऑफ आले आहेत, पण हा अजूनही मसुदा आहे — तुम्ही खाली पुनरावलोकनासाठी सादर करा निवडल्यानंतरच पुनरावलोकक व प्रशासक तो पाहतात. |
+| `S9b0b4c` | detail | also the files without an access level (all columns) | अॅक्सेस स्तर नसलेल्या फाइलसुद्धा (सर्व स्तंभ) |
 | `Sf24c44` | detail | Any %(code)s Engineer | कोणताही %(code)s अभियंता |
 | `Sb99a01` | detail | Applies to software versions | सॉफ्टवेअर आवृत्त्यांना लागू |
 | `S7b2c7f` | detail, language | Approve | मंजूर करा |
@@ -6303,12 +6441,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S416869` | detail | Auto Reset Program | स्वयंचलित रीसेट प्रोग्राम |
 | `Sd71897` | detail, form | Available Group | उपलब्धता गट |
 | `S928e2e` | detail | Brake Program | ब्रेक प्रोग्राम |
+| `Sab2e8a` | detail | Build package | पॅकेज तयार करा |
 | `Scfadbd` | detail | By | द्वारे |
 | `S9c8393` | detail, mine | Change Request | बदल विनंती |
 | `S4572f4` | detail | Change request | बदल विनंती |
 | `S3295be` | detail | Change requests in this set | या संचातील बदल विनंत्या |
 | `S4d8006` | detail | Change set | बदल संच |
 | `S8aa57d` | detail | Changes | बदल |
+| `S3d14ea` | detail, export | Changes of this release only | फक्त या रिलीजमधील बदल |
 | `Sbd95c0` | detail | Checklist confirmed at sign-off | साइन-ऑफच्या वेळी पुष्टी केलेली चेकलिस्ट |
 | `S074d62` | detail, role badge | Chief Engineer | मुख्य अभियंता |
 | `S03695d` | detail | Chief Engineer decision | मुख्य अभियंत्याचा निर्णय |
@@ -6321,8 +6461,11 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sfce06e` | detail | Comments | टिप्पण्या |
 | `S8d105c` | detail, reconciliation | Compare | तुलना करा |
 | `Sc9a03b` | detail | Compare Revisions | सुधारणांची तुलना करा |
+| `S0ff7e5` | detail, export | Complete baseline | संपूर्ण आधारस्थिती |
 | `S1798b3` | detail | Completed | पूर्ण झाले |
 | `S7671b5` | detail | Confirm or override Audience Access | लक्ष्य गट प्रवेशाची पुष्टी किंवा अधिलिखित करा |
+| `S4f9be0` | detail | Content | आशय |
+| `Sa36a5f` | detail, legacy_mapping, st_new | Controller | नियंत्रक |
 | `Scd293f` | detail | Converter Reactive Power Program | कन्व्हर्टर रिअ‍ॅक्टिव्ह पॉवर प्रोग्राम |
 | `S3998a7` | detail | Copies the descriptive fields into a new Draft in a Main Controller group (a new number is allocated at submit; this code's identifier is kept as the legacy reference). | वर्णनात्मक फील्ड मुख्य नियंत्रक गटातील नवीन मसुद्यात कॉपी करते (सादर करताना नवीन क्रमांक दिला जातो; या कोडचा ओळखकर्ता जुना संदर्भ म्हणून ठेवला जातो). |
 | `S54b051` | detail | Copy this code for another turbine platform. The copy is a new Draft that links back here and goes through the normal review. | हा कोड दुसऱ्या टर्बाइन प्लॅटफॉर्मसाठी कॉपी करा. प्रत ही नवीन मसुदा आहे जी इथे परत जोडते आणि सामान्य पुनरावलोकनातून जाते. |
@@ -6353,6 +6496,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S4c17aa` | detail | Development | विकास |
 | `S552a2b` | detail | Documented reason | नोंदवलेले कारण |
 | `S9b1091` | detail, mine | Domain | क्षेत्र |
+| `Sa479c9` | detail | Download | डाउनलोड |
 | `S056839` | detail | Download Error Report | त्रुटी अहवाल डाउनलोड करा |
 | `S23d33e` | detail, index | Draft | मसुदा |
 | `S3c7a50` | detail | Edit Candidates | उमेदवार संपादित करा |
@@ -6374,6 +6518,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sdd7b7e` | detail | failed validation | सत्यापनात अयशस्वी |
 | `Sd106a6` | detail | Field comments | फील्ड टिप्पण्या |
 | `S2c3caf` | detail, export_verify, operations | File | फाइल |
+| `S6ce6c5` | detail | Files | फाइल |
 | `Se0996a` | detail, form | first | पहिली |
 | `S041a5d` | detail, export_center | Format | स्वरूप |
 | `S9e3c65` | detail | From revision | सुधारणेपासून |
@@ -6381,6 +6526,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sb8c4c9` | detail, form | Further Program References | इतर प्रोग्राम संदर्भ |
 | `S636c41` | detail | Grid Operator | ग्रिड ऑपरेटर |
 | `S90ccd6` | detail | History | इतिहास |
+| `S0dfe7b` | detail | Hub controller | हब कंट्रोलर |
 | `Sfec8b7` | detail | Hub Controller group | हब नियंत्रक गट |
 | `S00ccae` | detail, form | Hub Controller only | फक्त हब नियंत्रक |
 | `S3c883f` | detail | I have reviewed these dependants | मी या अवलंबित कोडचे पुनरावलोकन केले आहे |
@@ -6395,6 +6541,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S693272` | detail, withdrawn_codes | Legacy Reference Number | जुना संदर्भ क्रमांक |
 | `S43d5c5` | detail, form | Loadless Spinning Permitted | भाराशिवाय फिरणे अनुमत |
 | `S193786` | detail | Logical Node | लॉजिकल नोड |
+| `Sc3f827` | detail | Main controller | मुख्य कंट्रोलर |
 | `S578b78` | detail | Main Controller group | मुख्य नियंत्रक गट |
 | `Sa7512d` | detail, form | Main Controller only | फक्त मुख्य नियंत्रक |
 | `Seb9a6d` | detail | Manage translations | भाषांतरे व्यवस्थापित करा |
@@ -6420,6 +6567,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sde04fa` | detail, fleet_feedback, success_metrics | of | पैकी |
 | `S19f611` | detail | Offline lookup (HTML) | ऑफलाइन लुकअप (HTML) |
 | `S2ff2ae` | detail | Offline lookup + manifest (ZIP) | ऑफलाइन लुकअप + मॅनिफेस्ट (ZIP) |
+| `S3f0e3e` | detail | One ZIP with the complete baseline in every language and for every access level, plus the release notes and a manifest with a SHA-256 for each file. Building it takes a few minutes; the page shows the progress. | प्रत्येक भाषेत आणि प्रत्येक अॅक्सेस स्तरासाठी संपूर्ण आधारस्थितीची एक ZIP, सोबत रिलीज नोट्स आणि प्रत्येक फाइलच्या SHA-256 सह मॅनिफेस्ट. तयार होण्यास काही मिनिटे लागतात; पेज प्रगती दाखवते. |
 | `S12aa03` | detail | only translated codes | फक्त भाषांतरित कोड |
 | `S5fc7e3` | detail | open | खुले |
 | `Sf61187` | detail | Open New Revision | नवीन सुधारणा उघडा |
@@ -6431,11 +6579,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S780d35` | detail | Override identifier (migration / reservation only) | ओळखकर्ता अधिलिखित करा (फक्त स्थलांतर / आरक्षणासाठी) |
 | `S89ff31` | detail | Owner | मालक |
 | `S2d20ee` | detail | Package overview | पॅकेजचा आढावा |
+| `S4d1a47` | detail | Package: all languages and access levels | पॅकेज: सर्व भाषा आणि अॅक्सेस स्तर |
+| `Sc49bd0` | detail | Packages of this Release | या रिलीजची पॅकेजेस |
 | `S96f608` | detail, review_queue | Pending | प्रलंबित |
 | `Sc983b6` | detail | Pick a profile (columns and labels), an audience, a language or a software version. Every file comes with a manifest of SHA-256 hashes; "bundle" packs both into one ZIP. | प्रोफाइल (स्तंभ आणि लेबले), लक्ष्य गट, भाषा किंवा सॉफ्टवेअर आवृत्ती निवडा. प्रत्येक फाइलसोबत SHA-256 हॅशचे मॅनिफेस्ट येते; "bundle" दोन्ही एका ZIP मध्ये बांधते. |
 | `S72383d` | detail | Planned dates | नियोजित तारखा |
 | `Sfb14b0` | detail | Planned deprecation date | नियोजित कालबाह्यता तारीख |
 | `S00e733` | detail | Planned effective date | नियोजित प्रभावी तारीख |
+| `S123a7f` | detail | Platform | प्लॅटफॉर्म |
 | `Sfc8d58` | detail | Platform variant | प्लॅटफॉर्म प्रकार |
 | `Scd8926` | detail | Platform variants | प्लॅटफॉर्म प्रकार |
 | `S141f0c` | detail | Processing in the background... | पार्श्वभूमीत प्रक्रिया सुरू आहे... |
@@ -6456,6 +6607,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S9b44a2` | detail | Release notes (PDF) | प्रकाशन टिपा (PDF) |
 | `S3dfa01` | detail | Release notes and offline lookup | प्रकाशन टिपा आणि ऑफलाइन लुकअप |
 | `Sdcddb7` | detail | Release notes list what was added, changed (field by field) and deprecated since the previous Release. The offline page is one self-contained HTML file for use at the turbine without a connection. | प्रकाशन टिपा मागील प्रकाशनानंतर काय जोडले, बदलले (फील्डनुसार) आणि कालबाह्य झाले ते सूचीबद्ध करतात. ऑफलाइन पृष्ठ ही एक स्वयंपूर्ण HTML फाइल आहे जी टर्बाइनवर कनेक्शनशिवाय वापरता येते. |
+| `Scce715` | detail | Reload | पुन्हा लोड करा |
 | `S0544a3` | detail | Reload this page to see the progress. | प्रगती पाहण्यासाठी हे पृष्ठ पुन्हा लोड करा. |
 | `S99e347` | detail | Remedy | उपाय |
 | `Se96390` | detail, list | Remove | काढा |
@@ -6505,9 +6657,11 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S08e643` | detail, list | Target software version | लक्ष्य सॉफ्टवेअर आवृत्ती |
 | `S44203c` | detail, form, status code fields | Task Call Frequency | टास्क कॉल वारंवारता |
 | `S8fc804` | detail | The author has to submit it for review before the Reviewer or Administrator can see it. | पुनरावलोकक किंवा प्रशासक पाहण्यापूर्वी लेखकाने तो पुनरावलोकनासाठी सादर केला पाहिजे. |
+| `Sa5f3f8` | detail | These files contain the complete baseline: every status code that is valid as of this Release, not only the ones it changed. | या फाइलमध्ये संपूर्ण आधारस्थिती आहे: या रिलीजनुसार वैध असलेला प्रत्येक स्थिती कोड, फक्त बदललेले नाहीत. |
 | `S091814` | detail | This change request has reached a terminal decision state | ही बदल विनंती अंतिम निर्णय स्थितीत पोहोचली आहे |
 | `S6d5708` | detail | This is the one truly irreversible action in the system. Type the identifier to confirm. | ही प्रणालीतील एकमेव खरोखर अपरिवर्तनीय कृती आहे. खात्रीसाठी ओळखकर्ता टाइप करा. |
 | `Sb55f1f` | detail | To revision | सुधारणेपर्यंत |
+| `Sa2a321` | detail | Translated codes per language | भाषेनुसार भाषांतरित कोड |
 | `S8ad830` | detail, menu, overview | Translations | भाषांतरे |
 | `Seaf576` | detail, form | Trigger Snapshot | स्नॅपशॉट सुरू करा |
 | `S285ec8` | detail, form | Troubleshooting | समस्या निवारण |
@@ -6568,6 +6722,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Se51c55` | export | Records | नोंदी |
 | `Sd41f56` | export, export_center | Release | प्रकाशन |
 | `S2e8fd6` | export | Reset delay | रीसेट विलंब |
+| `S4651a3` | export | Scope | व्याप्ती |
 | `S89fdd5` | export | Set delay | सेट विलंब |
 | `S828d33` | export | source | स्रोत |
 | `Sfcbb29` | export | Status code | स्थिती कोड |
@@ -6695,6 +6850,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S34b903` | help and messages | Not possible: the account has history (see above). Deactivate it instead; the person can no longer sign in and everything they did stays attributable. | शक्य नाही: खात्याचा इतिहास आहे (वर पहा). त्याऐवजी निष्क्रिय करा; ती व्यक्ती आता साइन इन करू शकत नाही आणि तिने जे केले ते जबाबदार राहते. |
 | `Sce489f` | help and messages | The author gets any required cross-domain sign-offs, then submits the change request for review. | लेखक आवश्यक आंतर-क्षेत्र साइन-ऑफ मिळवतो, मग बदल विनंती पुनरावलोकनासाठी सादर करतो. |
 | `S1cdbdd` | help and messages | The Chief Engineer approves or rejects. Approval makes the revision Approved (or Deprecated for a deprecation request). | मुख्य अभियंता मंजूर किंवा नाकारतो. मंजुरीमुळे सुधारणा मंजूर होते (किंवा कालबाह्यता विनंतीसाठी कालबाह्य). |
+| `S2d6ac0` | help and messages | The package is being built. Reload this page to follow its progress. | पॅकेज तयार होत आहे. प्रगती पाहण्यासाठी हे पेज पुन्हा लोड करा. |
 | `Scff3a3` | help and messages | User deleted; its name and address are erased, what it did stays attributable. | वापरकर्ता हटवला; त्याचे नाव आणि पत्ता पुसला आहे, त्याने जे केले ते श्रेय देता येण्याजोगे राहते. |
 | `Secfb3f` | hub_consolidation | Deprecate replaced Hub codes | बदललेले हब कोड कालबाह्य घोषित करा |
 | `S0e7766` | hub_consolidation, language | draft | मसुदा |
@@ -6774,7 +6930,6 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S863fd0` | language | Your own proposal: another person approves it. | तुमचा स्वतःचा प्रस्ताव: दुसरी व्यक्ती तो मंजूर करते. |
 | `Sf9d469` | legacy_mapping | All controllers | सर्व नियंत्रक |
 | `Se61c2f` | legacy_mapping | Any number state | कोणतीही क्रमांक स्थिती |
-| `Sa36a5f` | legacy_mapping, st_new, st_preview | Controller | नियंत्रक |
 | `S7c4f77` | legacy_mapping | issued | दिलेले |
 | `Sfd5ec0` | legacy_mapping, menu, new | Legacy mapping | जुने-नवे मॅपिंग |
 | `S81f567` | legacy_mapping | Legacy number to new identifier | जुना क्रमांक ते नवीन ओळखकर्ता |
@@ -6924,6 +7079,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S751ff5` | message: export_profile_service | Export profile not found | निर्यात प्रोफाइल सापडली नाही |
 | `S4a8527` | message: export_profile_service | name must be 1-80 characters. | name हे १-८० अक्षरांचे असावे. |
 | `S506d0b` | message: export_service | An audience export is built from Released data only; it cannot be combined with the unapproved working set. | लक्ष्य गट निर्यात फक्त प्रकाशित डेटापासून बनते; ती अमंजूर कार्य संचासह जोडता येत नाही. |
+| `S4bb9a3` | message: export_service | content must be 'baseline' or 'delta'. | content 'baseline' किंवा 'delta' असले पाहिजे. |
 | `Sf593c4` | message: export_service | language is required for a translated export | भाषांतरित निर्यातीसाठी भाषा आवश्यक आहे |
 | `S42cee2` | message: field_review_service | A field comment must be between 1 and 2000 characters. | फील्ड टिप्पणी १ ते २००० अक्षरांदरम्यान असावी. |
 | `S0168d7` | message: field_review_service | Checklist item not found | चेकलिस्ट मुद्दा सापडला नाही |
@@ -6963,8 +7119,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sb68487` | message: occurrence_service | period_end must not be before period_start. | period_end हे period_start च्या आधी असू नये. |
 | `S682b0f` | message: occurrence_service | source_label must be 1-80 characters. | source_label १-८० अक्षरांचे असावे. |
 | `S3b0e31` | message: occurrence_service | The file needs the columns status_code_identifier and occurrences. | फाइलला status_code_identifier आणि occurrences स्तंभ लागतात. |
+| `Sbdd594` | message: package_service | Choose at least one access level or the unfiltered files. | किमान एक अॅक्सेस स्तर किंवा फिल्टर न केलेल्या फाइल निवडा. |
+| `S4af5c1` | message: package_service | Choose at least one format. | किमान एक फॉरमॅट निवडा. |
+| `S8865f4` | message: package_service | Only a published Release can be packaged. | फक्त प्रकाशित रिलीजचे पॅकेज करता येते. |
+| `S9b6676` | message: package_service | Package not found | पॅकेज सापडले नाही |
+| `S2ddbdd` | message: package_service, message: release_notes_service | Release not found | प्रकाशन सापडले नाही |
+| `S3bc283` | message: package_service | The package file is no longer on the server. | पॅकेज फाइल आता सर्व्हरवर नाही. |
+| `S310622` | message: package_service | The package is not ready. | पॅकेज अजून तयार नाही. |
 | `S2142ac` | message: release_notes_service | format must be md, csv, pdf or json | format हे md, csv, pdf किंवा json असावे |
-| `S2ddbdd` | message: release_notes_service | Release not found | प्रकाशन सापडले नाही |
 | `S6e9bf7` | message: release_service | A published Release can never be deleted (BR-007). | प्रकाशित प्रकाशन कधीही हटवता येत नाही (BR-007). |
 | `S06fb3b` | message: release_service | Cannot change items on a published Release (BR-007). | प्रकाशित प्रकाशनाचे घटक बदलता येत नाहीत (BR-007). |
 | `Sc1eab3` | message: release_service | Cannot change the targets of a published Release (BR-007). | प्रकाशित प्रकाशनाची लक्ष्ये बदलता येत नाहीत (BR-007). |
@@ -7275,7 +7437,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 
 ### 9.8 IN తెలుగు 🇮🇳 — Telugu
 
-1162 of 1163 strings translated; direction left to right.
+1189 of 1190 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -7442,6 +7604,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sc3f104` | delegations, user_detail, users | Role | పాత్ర |
 | `Sd5dcf0` | delegations | Until (inclusive) | వరకు (కలుపుకొని) |
 | `Sa4aefa` | delegations | Valid | చెల్లుబాటు |
+| `Sc3dc5c` | detail | %(count)s codes have no confirmed access levels and are missing from every access-level file. | %(count)s కోడ్‌లకు నిర్ధారిత యాక్సెస్ స్థాయిలు లేవు, అవి ప్రతి యాక్సెస్-స్థాయి ఫైల్‌లో లేవు. |
 | `Sc3cd63` | detail, user_detail, users | Actions | చర్యలు |
 | `S61cc55` | detail, lookups, review_checklist | Add | జోడించండి |
 | `S12cc59` | detail | Add a comment (no decision) | వ్యాఖ్య జోడించండి (నిర్ణయం లేకుండా) |
@@ -7455,7 +7618,9 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S25f8c5` | detail, export, form | Alarm | అలారం |
 | `Sd87c44` | detail, export, hub_consolidation | all | అన్నీ |
 | `S484388` | detail, export_center | all columns | అన్ని నిలువు వరుసలు |
+| `S2e73c3` | detail | All languages and all access levels are included. Use the export above for a single language or access level. | అన్ని భాషలు, అన్ని యాక్సెస్ స్థాయిలు చేర్చబడ్డాయి. ఒక భాష లేదా ఒక యాక్సెస్ స్థాయి కోసం పై ఎగుమతిని ఉపయోగించండి. |
 | `S432284` | detail | All required sign-offs are in, but this is still a Draft — the Reviewer and Administrator only see it after you choose Submit for Review below. | అవసరమైన అన్ని సైన్-ఆఫ్‌లు వచ్చాయి, కానీ ఇది ఇంకా ముసాయిదా — మీరు క్రింద సమీక్ష కోసం సమర్పించండి ఎంచుకున్న తర్వాతే సమీక్షకుడు మరియు నిర్వాహకుడు దీన్ని చూస్తారు. |
+| `S9b0b4c` | detail | also the files without an access level (all columns) | యాక్సెస్ స్థాయి లేని ఫైళ్లు కూడా (అన్ని నిలువు వరుసలు) |
 | `Sf24c44` | detail | Any %(code)s Engineer | ఏదైనా %(code)s ఇంజనీర్ |
 | `Sb99a01` | detail | Applies to software versions | సాఫ్ట్‌వేర్ వెర్షన్లకు వర్తిస్తుంది |
 | `S7b2c7f` | detail, language | Approve | ఆమోదించండి |
@@ -7472,12 +7637,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S416869` | detail | Auto Reset Program | ఆటో రీసెట్ ప్రోగ్రామ్ |
 | `Sd71897` | detail, form | Available Group | లభ్యత సమూహం |
 | `S928e2e` | detail | Brake Program | బ్రేక్ ప్రోగ్రామ్ |
+| `Sab2e8a` | detail | Build package | ప్యాకేజీ రూపొందించండి |
 | `Scfadbd` | detail | By | ద్వారా |
 | `S9c8393` | detail, mine | Change Request | మార్పు అభ్యర్థన |
 | `S4572f4` | detail | Change request | మార్పు అభ్యర్థన |
 | `S3295be` | detail | Change requests in this set | ఈ సమితిలోని మార్పు అభ్యర్థనలు |
 | `S4d8006` | detail | Change set | మార్పుల సమితి |
 | `S8aa57d` | detail | Changes | మార్పులు |
+| `S3d14ea` | detail, export | Changes of this release only | ఈ విడుదల మార్పులు మాత్రమే |
 | `Sbd95c0` | detail | Checklist confirmed at sign-off | సైన్-ఆఫ్ సమయంలో నిర్ధారించిన చెక్‌లిస్ట్ |
 | `S074d62` | detail, role badge | Chief Engineer | చీఫ్ ఇంజనీర్ |
 | `S03695d` | detail | Chief Engineer decision | చీఫ్ ఇంజనీర్ నిర్ణయం |
@@ -7490,8 +7657,11 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sfce06e` | detail | Comments | వ్యాఖ్యలు |
 | `S8d105c` | detail, reconciliation | Compare | పోల్చండి |
 | `Sc9a03b` | detail | Compare Revisions | పునర్విమర్శలను పోల్చండి |
+| `S0ff7e5` | detail, export | Complete baseline | పూర్తి ఆధార స్థితి |
 | `S1798b3` | detail | Completed | పూర్తయింది |
 | `S7671b5` | detail | Confirm or override Audience Access | లక్ష్య సమూహ ప్రాప్యతను నిర్ధారించండి లేదా ఓవర్‌రైడ్ చేయండి |
+| `S4f9be0` | detail | Content | విషయం |
+| `Sa36a5f` | detail, legacy_mapping, st_new | Controller | కంట్రోలర్ |
 | `Scd293f` | detail | Converter Reactive Power Program | కన్వర్టర్ రియాక్టివ్ పవర్ ప్రోగ్రామ్ |
 | `S3998a7` | detail | Copies the descriptive fields into a new Draft in a Main Controller group (a new number is allocated at submit; this code's identifier is kept as the legacy reference). | వివరణాత్మక ఫీల్డ్‌లను ప్రధాన కంట్రోలర్ గ్రూప్‌లోని కొత్త ముసాయిదాలోకి కాపీ చేస్తుంది (సమర్పణ సమయంలో కొత్త సంఖ్య కేటాయించబడుతుంది; ఈ కోడ్ గుర్తింపు పాత రిఫరెన్స్‌గా ఉంచబడుతుంది). |
 | `S54b051` | detail | Copy this code for another turbine platform. The copy is a new Draft that links back here and goes through the normal review. | ఈ కోడ్‌ను మరో టర్బైన్ ప్లాట్‌ఫారమ్ కోసం కాపీ చేయండి. కాపీ ఇక్కడికి తిరిగి లింక్ అయ్యే కొత్త ముసాయిదా మరియు సాధారణ సమీక్ష గుండా వెళ్తుంది. |
@@ -7522,6 +7692,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S4c17aa` | detail | Development | అభివృద్ధి |
 | `S552a2b` | detail | Documented reason | నమోదు చేసిన కారణం |
 | `S9b1091` | detail, mine | Domain | డొమైన్ |
+| `Sa479c9` | detail | Download | డౌన్‌లోడ్ |
 | `S056839` | detail | Download Error Report | లోపాల నివేదికను డౌన్‌లోడ్ చేయండి |
 | `S23d33e` | detail, index | Draft | ముసాయిదా |
 | `S3c7a50` | detail | Edit Candidates | అభ్యర్థులను సవరించండి |
@@ -7543,6 +7714,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sdd7b7e` | detail | failed validation | ధృవీకరణలో విఫలమయ్యాయి |
 | `Sd106a6` | detail | Field comments | ఫీల్డ్ వ్యాఖ్యలు |
 | `S2c3caf` | detail, export_verify, operations | File | ఫైల్ |
+| `S6ce6c5` | detail | Files | ఫైళ్లు |
 | `Se0996a` | detail, form | first | మొదటి |
 | `S041a5d` | detail, export_center | Format | ఫార్మాట్ |
 | `S9e3c65` | detail | From revision | పునర్విమర్శ నుండి |
@@ -7550,6 +7722,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sb8c4c9` | detail, form | Further Program References | మరిన్ని ప్రోగ్రామ్ సూచనలు |
 | `S636c41` | detail | Grid Operator | గ్రిడ్ ఆపరేటర్ |
 | `S90ccd6` | detail | History | చరిత్ర |
+| `S0dfe7b` | detail | Hub controller | హబ్ కంట్రోలర్ |
 | `Sfec8b7` | detail | Hub Controller group | హబ్ కంట్రోలర్ గ్రూప్ |
 | `S00ccae` | detail, form | Hub Controller only | హబ్ కంట్రోలర్ మాత్రమే |
 | `S3c883f` | detail | I have reviewed these dependants | నేను ఈ ఆధారిత కోడ్‌లను సమీక్షించాను |
@@ -7564,6 +7737,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S693272` | detail, withdrawn_codes | Legacy Reference Number | పాత రిఫరెన్స్ సంఖ్య |
 | `S43d5c5` | detail, form | Loadless Spinning Permitted | లోడ్ లేకుండా తిరగడం అనుమతించబడింది |
 | `S193786` | detail | Logical Node | లాజికల్ నోడ్ |
+| `Sc3f827` | detail | Main controller | ప్రధాన కంట్రోలర్ |
 | `S578b78` | detail | Main Controller group | ప్రధాన కంట్రోలర్ గ్రూప్ |
 | `Sa7512d` | detail, form | Main Controller only | ప్రధాన కంట్రోలర్ మాత్రమే |
 | `Seb9a6d` | detail | Manage translations | అనువాదాలను నిర్వహించండి |
@@ -7589,6 +7763,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sde04fa` | detail, fleet_feedback, success_metrics | of | లో |
 | `S19f611` | detail | Offline lookup (HTML) | ఆఫ్‌లైన్ లుకప్ (HTML) |
 | `S2ff2ae` | detail | Offline lookup + manifest (ZIP) | ఆఫ్‌లైన్ లుకప్ + మానిఫెస్ట్ (ZIP) |
+| `S3f0e3e` | detail | One ZIP with the complete baseline in every language and for every access level, plus the release notes and a manifest with a SHA-256 for each file. Building it takes a few minutes; the page shows the progress. | ప్రతి భాషలో, ప్రతి యాక్సెస్ స్థాయికి పూర్తి ఆధార స్థితితో ఒక ZIP, దానితో పాటు విడుదల నోట్స్, ప్రతి ఫైల్ SHA-256తో మానిఫెస్ట్. రూపొందించడానికి కొన్ని నిమిషాలు పడుతుంది; పేజీ పురోగతిని చూపుతుంది. |
 | `S12aa03` | detail | only translated codes | అనువదించిన కోడ్‌లు మాత్రమే |
 | `S5fc7e3` | detail | open | తెరిచి ఉంది |
 | `Sf61187` | detail | Open New Revision | కొత్త పునర్విమర్శ తెరవండి |
@@ -7600,11 +7775,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S780d35` | detail | Override identifier (migration / reservation only) | గుర్తింపును ఓవర్‌రైడ్ చేయండి (మైగ్రేషన్ / రిజర్వేషన్ మాత్రమే) |
 | `S89ff31` | detail | Owner | యజమాని |
 | `S2d20ee` | detail | Package overview | ప్యాకేజీ అవలోకనం |
+| `S4d1a47` | detail | Package: all languages and access levels | ప్యాకేజీ: అన్ని భాషలు, యాక్సెస్ స్థాయిలు |
+| `Sc49bd0` | detail | Packages of this Release | ఈ విడుదల ప్యాకేజీలు |
 | `S96f608` | detail, review_queue | Pending | పెండింగ్ |
 | `Sc983b6` | detail | Pick a profile (columns and labels), an audience, a language or a software version. Every file comes with a manifest of SHA-256 hashes; "bundle" packs both into one ZIP. | ఒక ప్రొఫైల్ (నిలువు వరుసలు, లేబుళ్లు), లక్ష్య సమూహం, భాష లేదా సాఫ్ట్‌వేర్ వెర్షన్ ఎంచుకోండి. ప్రతి ఫైల్‌తో SHA-256 హ్యాష్‌ల మానిఫెస్ట్ వస్తుంది; "bundle" రెండింటినీ ఒక ZIPలో కట్టేస్తుంది. |
 | `S72383d` | detail | Planned dates | ప్రణాళిక చేసిన తేదీలు |
 | `Sfb14b0` | detail | Planned deprecation date | ప్రణాళిక చేసిన వాడుకలో లేని తేదీ |
 | `S00e733` | detail | Planned effective date | ప్రణాళిక చేసిన అమలు తేదీ |
+| `S123a7f` | detail | Platform | ప్లాట్‌ఫారమ్ |
 | `Sfc8d58` | detail | Platform variant | ప్లాట్‌ఫారమ్ వేరియంట్ |
 | `Scd8926` | detail | Platform variants | ప్లాట్‌ఫారమ్ వేరియంట్లు |
 | `S141f0c` | detail | Processing in the background... | నేపథ్యంలో ప్రాసెస్ అవుతోంది... |
@@ -7625,6 +7803,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S9b44a2` | detail | Release notes (PDF) | విడుదల నోట్స్ (PDF) |
 | `S3dfa01` | detail | Release notes and offline lookup | విడుదల నోట్స్ మరియు ఆఫ్‌లైన్ లుకప్ |
 | `Sdcddb7` | detail | Release notes list what was added, changed (field by field) and deprecated since the previous Release. The offline page is one self-contained HTML file for use at the turbine without a connection. | మునుపటి విడుదల తర్వాత ఏం జోడించారో, మార్చారో (ఫీల్డ్ వారీగా) మరియు వాడుకలో లేనిదిగా చేశారో విడుదల నోట్స్ జాబితా చేస్తాయి. ఆఫ్‌లైన్ పేజీ టర్బైన్ వద్ద కనెక్షన్ లేకుండా వాడటానికి ఒకే స్వయం సమృద్ధ HTML ఫైల్. |
+| `Scce715` | detail | Reload | మళ్లీ లోడ్ చేయండి |
 | `S0544a3` | detail | Reload this page to see the progress. | పురోగతి చూడటానికి ఈ పేజీని మళ్ళీ లోడ్ చేయండి. |
 | `S99e347` | detail | Remedy | పరిష్కారం |
 | `Se96390` | detail, list | Remove | తొలగించు |
@@ -7674,9 +7853,11 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S08e643` | detail, list | Target software version | లక్ష్య సాఫ్ట్‌వేర్ వెర్షన్ |
 | `S44203c` | detail, form, status code fields | Task Call Frequency | టాస్క్ కాల్ ఫ్రీక్వెన్సీ |
 | `S8fc804` | detail | The author has to submit it for review before the Reviewer or Administrator can see it. | సమీక్షకుడు లేదా నిర్వాహకుడు చూడకముందే రచయిత దీన్ని సమీక్ష కోసం సమర్పించాలి. |
+| `Sa5f3f8` | detail | These files contain the complete baseline: every status code that is valid as of this Release, not only the ones it changed. | ఈ ఫైళ్లలో పూర్తి ఆధార స్థితి ఉంది: ఈ విడుదల నాటికి చెల్లుబాటయ్యే ప్రతి స్థితి కోడ్, మార్చినవి మాత్రమే కాదు. |
 | `S091814` | detail | This change request has reached a terminal decision state | ఈ మార్పు అభ్యర్థన తుది నిర్ణయ స్థితికి చేరుకుంది |
 | `S6d5708` | detail | This is the one truly irreversible action in the system. Type the identifier to confirm. | ఇది వ్యవస్థలోని ఏకైక నిజంగా మార్చలేని చర్య. నిర్ధారించడానికి గుర్తింపును టైప్ చేయండి. |
 | `Sb55f1f` | detail | To revision | పునర్విమర్శ వరకు |
+| `Sa2a321` | detail | Translated codes per language | భాష వారీగా అనువదించిన కోడ్‌లు |
 | `S8ad830` | detail, menu, overview | Translations | అనువాదాలు |
 | `Seaf576` | detail, form | Trigger Snapshot | స్నాప్‌షాట్ ట్రిగ్గర్ చేయండి |
 | `S285ec8` | detail, form | Troubleshooting | సమస్య పరిష్కారం |
@@ -7737,6 +7918,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Se51c55` | export | Records | రికార్డులు |
 | `Sd41f56` | export, export_center | Release | విడుదల |
 | `S2e8fd6` | export | Reset delay | రీసెట్ ఆలస్యం |
+| `S4651a3` | export | Scope | పరిధి |
 | `S89fdd5` | export | Set delay | సెట్ ఆలస్యం |
 | `S828d33` | export | source | మూలం |
 | `Sfcbb29` | export | Status code | స్థితి కోడ్ |
@@ -7864,6 +8046,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S34b903` | help and messages | Not possible: the account has history (see above). Deactivate it instead; the person can no longer sign in and everything they did stays attributable. | సాధ్యం కాదు: ఖాతాకు చరిత్ర ఉంది (పైన చూడండి). బదులుగా నిష్క్రియం చేయండి; ఆ వ్యక్తి ఇక సైన్ ఇన్ చేయలేరు మరియు వారు చేసినదంతా బాధ్యతతో నిలిచి ఉంటుంది. |
 | `Sce489f` | help and messages | The author gets any required cross-domain sign-offs, then submits the change request for review. | రచయిత అవసరమైన క్రాస్-డొమైన్ సైన్-ఆఫ్‌లు పొంది, తర్వాత మార్పు అభ్యర్థనను సమీక్ష కోసం సమర్పిస్తారు. |
 | `S1cdbdd` | help and messages | The Chief Engineer approves or rejects. Approval makes the revision Approved (or Deprecated for a deprecation request). | చీఫ్ ఇంజనీర్ ఆమోదిస్తారు లేదా తిరస్కరిస్తారు. ఆమోదం పునర్విమర్శను ఆమోదించినదిగా (లేదా వాడుకలో లేని అభ్యర్థనకు వాడుకలో లేనిదిగా) చేస్తుంది. |
+| `S2d6ac0` | help and messages | The package is being built. Reload this page to follow its progress. | ప్యాకేజీ రూపొందుతోంది. పురోగతిని చూడటానికి ఈ పేజీని మళ్లీ లోడ్ చేయండి. |
 | `Scff3a3` | help and messages | User deleted; its name and address are erased, what it did stays attributable. | వినియోగదారు తొలగించబడ్డారు; వారి పేరు, చిరునామా తుడిచివేయబడ్డాయి, వారు చేసినది ఆపాదించదగినదిగా ఉంటుంది. |
 | `Secfb3f` | hub_consolidation | Deprecate replaced Hub codes | ప్రత్యామ్నాయం ఉన్న హబ్ కోడ్‌లను వాడుకలో లేనివిగా ప్రకటించండి |
 | `S0e7766` | hub_consolidation, language | draft | ముసాయిదా |
@@ -7943,7 +8126,6 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S863fd0` | language | Your own proposal: another person approves it. | మీ స్వంత ప్రతిపాదన: మరొకరు దాన్ని ఆమోదిస్తారు. |
 | `Sf9d469` | legacy_mapping | All controllers | అన్ని కంట్రోలర్లు |
 | `Se61c2f` | legacy_mapping | Any number state | ఏదైనా సంఖ్య స్థితి |
-| `Sa36a5f` | legacy_mapping, st_new, st_preview | Controller | కంట్రోలర్ |
 | `S7c4f77` | legacy_mapping | issued | జారీ చేసినవి |
 | `Sfd5ec0` | legacy_mapping, menu, new | Legacy mapping | పాత-కొత్త మ్యాపింగ్ |
 | `S81f567` | legacy_mapping | Legacy number to new identifier | పాత సంఖ్య నుండి కొత్త గుర్తింపు |
@@ -8093,6 +8275,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S751ff5` | message: export_profile_service | Export profile not found | ఎగుమతి ప్రొఫైల్ కనబడలేదు |
 | `S4a8527` | message: export_profile_service | name must be 1-80 characters. | name 1-80 అక్షరాలు ఉండాలి. |
 | `S506d0b` | message: export_service | An audience export is built from Released data only; it cannot be combined with the unapproved working set. | లక్ష్య సమూహ ఎగుమతి విడుదల చేసిన డేటా నుండి మాత్రమే నిర్మించబడుతుంది; దాన్ని ఆమోదించని వర్కింగ్ సెట్‌తో కలపలేరు. |
+| `S4bb9a3` | message: export_service | content must be 'baseline' or 'delta'. | content 'baseline' లేదా 'delta' అయి ఉండాలి. |
 | `Sf593c4` | message: export_service | language is required for a translated export | అనువదించిన ఎగుమతికి భాష అవసరం |
 | `S42cee2` | message: field_review_service | A field comment must be between 1 and 2000 characters. | ఫీల్డ్ వ్యాఖ్య 1 నుండి 2000 అక్షరాల మధ్య ఉండాలి. |
 | `S0168d7` | message: field_review_service | Checklist item not found | చెక్‌లిస్ట్ అంశం కనబడలేదు |
@@ -8132,8 +8315,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sb68487` | message: occurrence_service | period_end must not be before period_start. | period_end, period_start కంటే ముందు ఉండకూడదు. |
 | `S682b0f` | message: occurrence_service | source_label must be 1-80 characters. | source_label 1-80 అక్షరాలు ఉండాలి. |
 | `S3b0e31` | message: occurrence_service | The file needs the columns status_code_identifier and occurrences. | ఫైల్‌కు status_code_identifier మరియు occurrences నిలువు వరుసలు అవసరం. |
+| `Sbdd594` | message: package_service | Choose at least one access level or the unfiltered files. | కనీసం ఒక యాక్సెస్ స్థాయి లేదా ఫిల్టర్ చేయని ఫైల్‌లను ఎంచుకోండి. |
+| `S4af5c1` | message: package_service | Choose at least one format. | కనీసం ఒక ఫార్మాట్ ఎంచుకోండి. |
+| `S8865f4` | message: package_service | Only a published Release can be packaged. | ప్రచురించిన విడుదలను మాత్రమే ప్యాకేజీ చేయవచ్చు. |
+| `S9b6676` | message: package_service | Package not found | ప్యాకేజీ కనుగొనబడలేదు |
+| `S2ddbdd` | message: package_service, message: release_notes_service | Release not found | విడుదల కనబడలేదు |
+| `S3bc283` | message: package_service | The package file is no longer on the server. | ప్యాకేజీ ఫైల్ ఇకపై సర్వర్‌లో లేదు. |
+| `S310622` | message: package_service | The package is not ready. | ప్యాకేజీ ఇంకా సిద్ధంగా లేదు. |
 | `S2142ac` | message: release_notes_service | format must be md, csv, pdf or json | format తప్పనిసరిగా md, csv, pdf లేదా json అయి ఉండాలి |
-| `S2ddbdd` | message: release_notes_service | Release not found | విడుదల కనబడలేదు |
 | `S6e9bf7` | message: release_service | A published Release can never be deleted (BR-007). | ప్రచురించిన విడుదలను ఎప్పుడూ తొలగించలేరు (BR-007). |
 | `S06fb3b` | message: release_service | Cannot change items on a published Release (BR-007). | ప్రచురించిన విడుదల అంశాలను మార్చలేరు (BR-007). |
 | `Sc1eab3` | message: release_service | Cannot change the targets of a published Release (BR-007). | ప్రచురించిన విడుదల లక్ష్యాలను మార్చలేరు (BR-007). |
@@ -8444,7 +8633,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 
 ### 9.9 IN தமிழ் 🇮🇳 — Tamil
 
-1162 of 1163 strings translated; direction left to right.
+1189 of 1190 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -8611,6 +8800,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sc3f104` | delegations, user_detail, users | Role | பங்கு |
 | `Sd5dcf0` | delegations | Until (inclusive) | வரை (உட்பட) |
 | `Sa4aefa` | delegations | Valid | செல்லுபடியாகும் |
+| `Sc3dc5c` | detail | %(count)s codes have no confirmed access levels and are missing from every access-level file. | %(count)s குறியீடுகளுக்கு உறுதிசெய்யப்பட்ட அணுகல் நிலைகள் இல்லை; அவை ஒவ்வொரு அணுகல்-நிலை கோப்பிலிருந்தும் விடுபட்டுள்ளன. |
 | `Sc3cd63` | detail, user_detail, users | Actions | செயல்கள் |
 | `S61cc55` | detail, lookups, review_checklist | Add | சேர் |
 | `S12cc59` | detail | Add a comment (no decision) | கருத்தைச் சேர்க்கவும் (முடிவு இல்லாமல்) |
@@ -8624,7 +8814,9 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S25f8c5` | detail, export, form | Alarm | அலாரம் |
 | `Sd87c44` | detail, export, hub_consolidation | all | அனைத்தும் |
 | `S484388` | detail, export_center | all columns | அனைத்து நெடுவரிசைகள் |
+| `S2e73c3` | detail | All languages and all access levels are included. Use the export above for a single language or access level. | அனைத்து மொழிகளும் அனைத்து அணுகல் நிலைகளும் சேர்க்கப்பட்டுள்ளன. ஒரு மொழி அல்லது ஒரு அணுகல் நிலைக்கு மேலுள்ள ஏற்றுமதியைப் பயன்படுத்தவும். |
 | `S432284` | detail | All required sign-offs are in, but this is still a Draft — the Reviewer and Administrator only see it after you choose Submit for Review below. | தேவையான அனைத்து கையொப்பங்களும் வந்துவிட்டன, ஆனால் இது இன்னும் வரைவு — நீங்கள் கீழே மதிப்பாய்வுக்குச் சமர்ப்பி என்பதைத் தேர்ந்தெடுத்த பிறகே மதிப்பாய்வாளரும் நிர்வாகியும் இதைப் பார்க்கிறார்கள். |
+| `S9b0b4c` | detail | also the files without an access level (all columns) | அணுகல் நிலை இல்லாத கோப்புகளும் (அனைத்து நெடுவரிசைகள்) |
 | `Sf24c44` | detail | Any %(code)s Engineer | ஏதேனும் %(code)s பொறியாளர் |
 | `Sb99a01` | detail | Applies to software versions | மென்பொருள் பதிப்புகளுக்குப் பொருந்தும் |
 | `S7b2c7f` | detail, language | Approve | ஒப்புதல் அளி |
@@ -8641,12 +8833,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S416869` | detail | Auto Reset Program | தானியங்கி மீட்டமை நிரல் |
 | `Sd71897` | detail, form | Available Group | கிடைக்கும் தன்மை குழு |
 | `S928e2e` | detail | Brake Program | பிரேக் நிரல் |
+| `Sab2e8a` | detail | Build package | தொகுப்பை உருவாக்கு |
 | `Scfadbd` | detail | By | மூலம் |
 | `S9c8393` | detail, mine | Change Request | மாற்றக் கோரிக்கை |
 | `S4572f4` | detail | Change request | மாற்றக் கோரிக்கை |
 | `S3295be` | detail | Change requests in this set | இந்தத் தொகுப்பிலுள்ள மாற்றக் கோரிக்கைகள் |
 | `S4d8006` | detail | Change set | மாற்றத் தொகுப்பு |
 | `S8aa57d` | detail | Changes | மாற்றங்கள் |
+| `S3d14ea` | detail, export | Changes of this release only | இந்த வெளியீட்டின் மாற்றங்கள் மட்டும் |
 | `Sbd95c0` | detail | Checklist confirmed at sign-off | கையொப்பத்தின்போது உறுதிப்படுத்தப்பட்ட சரிபார்ப்புப் பட்டியல் |
 | `S074d62` | detail, role badge | Chief Engineer | தலைமைப் பொறியாளர் |
 | `S03695d` | detail | Chief Engineer decision | தலைமைப் பொறியாளர் முடிவு |
@@ -8659,8 +8853,11 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sfce06e` | detail | Comments | கருத்துகள் |
 | `S8d105c` | detail, reconciliation | Compare | ஒப்பிடு |
 | `Sc9a03b` | detail | Compare Revisions | திருத்தங்களை ஒப்பிடு |
+| `S0ff7e5` | detail, export | Complete baseline | முழுமையான அடிப்படை நிலை |
 | `S1798b3` | detail | Completed | முடிந்தது |
 | `S7671b5` | detail | Confirm or override Audience Access | இலக்குப் பார்வையாளர் அணுகலை உறுதிப்படுத்து அல்லது மேலெழுது |
+| `S4f9be0` | detail | Content | உள்ளடக்கம் |
+| `Sa36a5f` | detail, legacy_mapping, st_new | Controller | கட்டுப்படுத்தி |
 | `Scd293f` | detail | Converter Reactive Power Program | மாற்றி எதிர்வினை மின்திறன் நிரல் |
 | `S3998a7` | detail | Copies the descriptive fields into a new Draft in a Main Controller group (a new number is allocated at submit; this code's identifier is kept as the legacy reference). | விளக்கப் புலங்களை முதன்மைக் கட்டுப்படுத்தி குழுவில் புதிய வரைவாக நகலெடுக்கிறது (சமர்ப்பிக்கும்போது புதிய எண் ஒதுக்கப்படும்; இந்தக் குறியீட்டின் அடையாளங்காட்டி பழைய குறிப்பாக வைக்கப்படும்). |
 | `S54b051` | detail | Copy this code for another turbine platform. The copy is a new Draft that links back here and goes through the normal review. | இந்தக் குறியீட்டை வேறொரு டர்பைன் தளத்துக்கு நகலெடுக்கவும். நகல் இங்கு திரும்ப இணைக்கும் புதிய வரைவு, சாதாரண மதிப்பாய்வைக் கடக்கும். |
@@ -8691,6 +8888,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S4c17aa` | detail | Development | மேம்பாடு |
 | `S552a2b` | detail | Documented reason | ஆவணப்படுத்தப்பட்ட காரணம் |
 | `S9b1091` | detail, mine | Domain | துறை |
+| `Sa479c9` | detail | Download | பதிவிறக்கு |
 | `S056839` | detail | Download Error Report | பிழை அறிக்கையைப் பதிவிறக்கு |
 | `S23d33e` | detail, index | Draft | வரைவு |
 | `S3c7a50` | detail | Edit Candidates | வேட்பாளர்களைத் திருத்து |
@@ -8712,6 +8910,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sdd7b7e` | detail | failed validation | சரிபார்ப்பில் தோல்வியடைந்தன |
 | `Sd106a6` | detail | Field comments | புலக் கருத்துகள் |
 | `S2c3caf` | detail, export_verify, operations | File | கோப்பு |
+| `S6ce6c5` | detail | Files | கோப்புகள் |
 | `Se0996a` | detail, form | first | முதல் |
 | `S041a5d` | detail, export_center | Format | வடிவம் |
 | `S9e3c65` | detail | From revision | திருத்தத்திலிருந்து |
@@ -8719,6 +8918,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sb8c4c9` | detail, form | Further Program References | மேலும் நிரல் குறிப்புகள் |
 | `S636c41` | detail | Grid Operator | மின்தொகுப்பு இயக்குநர் |
 | `S90ccd6` | detail | History | வரலாறு |
+| `S0dfe7b` | detail | Hub controller | ஹப் கட்டுப்படுத்தி |
 | `Sfec8b7` | detail | Hub Controller group | ஹப் கட்டுப்படுத்தி குழு |
 | `S00ccae` | detail, form | Hub Controller only | ஹப் கட்டுப்படுத்தி மட்டும் |
 | `S3c883f` | detail | I have reviewed these dependants | இந்தச் சார்ந்தவற்றை நான் மதிப்பாய்வு செய்துவிட்டேன் |
@@ -8733,6 +8933,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S693272` | detail, withdrawn_codes | Legacy Reference Number | பழைய குறிப்பு எண் |
 | `S43d5c5` | detail, form | Loadless Spinning Permitted | சுமையின்றிச் சுழல்வது அனுமதிக்கப்பட்டது |
 | `S193786` | detail | Logical Node | தருக்க முனை |
+| `Sc3f827` | detail | Main controller | முதன்மை கட்டுப்படுத்தி |
 | `S578b78` | detail | Main Controller group | முதன்மைக் கட்டுப்படுத்தி குழு |
 | `Sa7512d` | detail, form | Main Controller only | முதன்மை கட்டுப்படுத்தி மட்டும் |
 | `Seb9a6d` | detail | Manage translations | மொழிபெயர்ப்புகளை நிர்வகி |
@@ -8758,6 +8959,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sde04fa` | detail, fleet_feedback, success_metrics | of | இல் |
 | `S19f611` | detail | Offline lookup (HTML) | இணையமற்ற தேடல் (HTML) |
 | `S2ff2ae` | detail | Offline lookup + manifest (ZIP) | இணையமற்ற தேடல் + மேனிஃபெஸ்ட் (ZIP) |
+| `S3f0e3e` | detail | One ZIP with the complete baseline in every language and for every access level, plus the release notes and a manifest with a SHA-256 for each file. Building it takes a few minutes; the page shows the progress. | ஒவ்வொரு மொழியிலும் ஒவ்வொரு அணுகல் நிலைக்கும் முழுமையான அடிப்படை நிலையுடன் ஒரு ZIP, கூடவே வெளியீட்டு குறிப்புகளும் ஒவ்வொரு கோப்பின் SHA-256 உடன் மேனிஃபெஸ்டும். உருவாக்க சில நிமிடங்கள் ஆகும்; பக்கம் முன்னேற்றத்தைக் காட்டும். |
 | `S12aa03` | detail | only translated codes | மொழிபெயர்க்கப்பட்ட குறியீடுகள் மட்டும் |
 | `S5fc7e3` | detail | open | திறந்தது |
 | `Sf61187` | detail | Open New Revision | புதிய திருத்தத்தைத் திற |
@@ -8769,11 +8971,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S780d35` | detail | Override identifier (migration / reservation only) | அடையாளங்காட்டியை மேலெழுது (இடம்பெயர்வு / ஒதுக்கீட்டுக்கு மட்டும்) |
 | `S89ff31` | detail | Owner | உரிமையாளர் |
 | `S2d20ee` | detail | Package overview | தொகுப்பின் மேலோட்டம் |
+| `S4d1a47` | detail | Package: all languages and access levels | தொகுப்பு: அனைத்து மொழிகளும் அணுகல் நிலைகளும் |
+| `Sc49bd0` | detail | Packages of this Release | இந்த வெளியீட்டின் தொகுப்புகள் |
 | `S96f608` | detail, review_queue | Pending | நிலுவையில் |
 | `Sc983b6` | detail | Pick a profile (columns and labels), an audience, a language or a software version. Every file comes with a manifest of SHA-256 hashes; "bundle" packs both into one ZIP. | ஒரு சுயவிவரம் (நெடுவரிசைகள், லேபிள்கள்), இலக்குப் பார்வையாளர்கள், மொழி அல்லது மென்பொருள் பதிப்பைத் தேர்ந்தெடுங்கள். ஒவ்வொரு கோப்புடனும் SHA-256 ஹாஷ்களின் மேனிஃபெஸ்ட் வரும்; "bundle" இரண்டையும் ஒரு ZIP இல் கட்டுகிறது. |
 | `S72383d` | detail | Planned dates | திட்டமிட்ட தேதிகள் |
 | `Sfb14b0` | detail | Planned deprecation date | திட்டமிட்ட வழக்கொழிவுத் தேதி |
 | `S00e733` | detail | Planned effective date | திட்டமிட்ட அமலாக்கத் தேதி |
+| `S123a7f` | detail | Platform | தளம் |
 | `Sfc8d58` | detail | Platform variant | தள மாறுபாடு |
 | `Scd8926` | detail | Platform variants | தள மாறுபாடுகள் |
 | `S141f0c` | detail | Processing in the background... | பின்னணியில் செயலாக்கப்படுகிறது... |
@@ -8794,6 +8999,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S9b44a2` | detail | Release notes (PDF) | வெளியீட்டுக் குறிப்புகள் (PDF) |
 | `S3dfa01` | detail | Release notes and offline lookup | வெளியீட்டுக் குறிப்புகளும் இணையமற்ற தேடலும் |
 | `Sdcddb7` | detail | Release notes list what was added, changed (field by field) and deprecated since the previous Release. The offline page is one self-contained HTML file for use at the turbine without a connection. | முந்தைய வெளியீட்டுக்குப் பிறகு எவை சேர்க்கப்பட்டன, மாற்றப்பட்டன (புலம் வாரியாக), வழக்கொழிந்தன என்பதை வெளியீட்டுக் குறிப்புகள் பட்டியலிடுகின்றன. இணையமற்ற பக்கம் டர்பைனில் இணைப்பின்றிப் பயன்படுத்த ஒரே தன்னிறைவான HTML கோப்பு. |
+| `Scce715` | detail | Reload | மீண்டும் ஏற்று |
 | `S0544a3` | detail | Reload this page to see the progress. | முன்னேற்றத்தைக் காண இந்தப் பக்கத்தை மீண்டும் ஏற்றவும். |
 | `S99e347` | detail | Remedy | தீர்வு |
 | `Se96390` | detail, list | Remove | அகற்று |
@@ -8843,9 +9049,11 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S08e643` | detail, list | Target software version | இலக்கு மென்பொருள் பதிப்பு |
 | `S44203c` | detail, form, status code fields | Task Call Frequency | பணி அழைப்பு அதிர்வெண் |
 | `S8fc804` | detail | The author has to submit it for review before the Reviewer or Administrator can see it. | மதிப்பாய்வாளர் அல்லது நிர்வாகி பார்க்கும் முன் ஆசிரியர் இதை மதிப்பாய்வுக்குச் சமர்ப்பிக்க வேண்டும். |
+| `Sa5f3f8` | detail | These files contain the complete baseline: every status code that is valid as of this Release, not only the ones it changed. | இந்தக் கோப்புகளில் முழுமையான அடிப்படை நிலை உள்ளது: இந்த வெளியீட்டில் செல்லுபடியாகும் ஒவ்வொரு நிலைக் குறியீடும், மாற்றப்பட்டவை மட்டுமல்ல. |
 | `S091814` | detail | This change request has reached a terminal decision state | இந்த மாற்றக் கோரிக்கை இறுதி முடிவு நிலையை அடைந்துவிட்டது |
 | `S6d5708` | detail | This is the one truly irreversible action in the system. Type the identifier to confirm. | இது அமைப்பின் ஒரே உண்மையிலேயே மாற்ற முடியாத செயல். உறுதிப்படுத்த அடையாளங்காட்டியை உள்ளிடுங்கள். |
 | `Sb55f1f` | detail | To revision | திருத்தம் வரை |
+| `Sa2a321` | detail | Translated codes per language | மொழிவாரியாக மொழிபெயர்க்கப்பட்ட குறியீடுகள் |
 | `S8ad830` | detail, menu, overview | Translations | மொழிபெயர்ப்புகள் |
 | `Seaf576` | detail, form | Trigger Snapshot | ஸ்னாப்ஷாட்டைத் தூண்டு |
 | `S285ec8` | detail, form | Troubleshooting | சிக்கல் தீர்வு |
@@ -8906,6 +9114,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Se51c55` | export | Records | பதிவுகள் |
 | `Sd41f56` | export, export_center | Release | வெளியீடு |
 | `S2e8fd6` | export | Reset delay | மீட்டமை தாமதம் |
+| `S4651a3` | export | Scope | வரம்பு |
 | `S89fdd5` | export | Set delay | அமைப்பு தாமதம் |
 | `S828d33` | export | source | மூலம் |
 | `Sfcbb29` | export | Status code | நிலைக் குறியீடு |
@@ -9033,6 +9242,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S34b903` | help and messages | Not possible: the account has history (see above). Deactivate it instead; the person can no longer sign in and everything they did stays attributable. | சாத்தியமில்லை: கணக்குக்கு வரலாறு உள்ளது (மேலே பார்க்கவும்). அதற்குப் பதிலாகச் செயலிழக்கச் செய்யுங்கள்; அந்த நபர் இனி உள்நுழைய முடியாது, அவர் செய்தவை அனைத்தும் பொறுப்புடன் இருக்கும். |
 | `Sce489f` | help and messages | The author gets any required cross-domain sign-offs, then submits the change request for review. | ஆசிரியர் தேவையான துறைகள் கடந்த கையொப்பங்களைப் பெற்று, பின்னர் மாற்றக் கோரிக்கையை மதிப்பாய்வுக்குச் சமர்ப்பிக்கிறார். |
 | `S1cdbdd` | help and messages | The Chief Engineer approves or rejects. Approval makes the revision Approved (or Deprecated for a deprecation request). | தலைமைப் பொறியாளர் அங்கீகரிக்கிறார் அல்லது நிராகரிக்கிறார். அங்கீகாரம் திருத்தத்தை அங்கீகரிக்கப்பட்டதாக (அல்லது வழக்கொழிவுக் கோரிக்கைக்கு வழக்கொழிந்ததாக) மாற்றும். |
+| `S2d6ac0` | help and messages | The package is being built. Reload this page to follow its progress. | தொகுப்பு உருவாக்கப்படுகிறது. முன்னேற்றத்தைக் காண இந்தப் பக்கத்தை மீண்டும் ஏற்றவும். |
 | `Scff3a3` | help and messages | User deleted; its name and address are erased, what it did stays attributable. | பயனர் நீக்கப்பட்டார்; அவர் பெயரும் முகவரியும் அழிக்கப்பட்டன, அவர் செய்தவை அவருக்குரியவையாகவே இருக்கும். |
 | `Secfb3f` | hub_consolidation | Deprecate replaced Hub codes | மாற்றப்பட்ட ஹப் குறியீடுகளை வழக்கொழிந்ததாக அறிவி |
 | `S0e7766` | hub_consolidation, language | draft | வரைவு |
@@ -9112,7 +9322,6 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S863fd0` | language | Your own proposal: another person approves it. | உங்கள் சொந்த முன்மொழிவு: இன்னொருவர் அதை அங்கீகரிக்கிறார். |
 | `Sf9d469` | legacy_mapping | All controllers | அனைத்துக் கட்டுப்படுத்திகள் |
 | `Se61c2f` | legacy_mapping | Any number state | எந்த எண் நிலையும் |
-| `Sa36a5f` | legacy_mapping, st_new, st_preview | Controller | கட்டுப்படுத்தி |
 | `S7c4f77` | legacy_mapping | issued | வழங்கப்பட்டவை |
 | `Sfd5ec0` | legacy_mapping, menu, new | Legacy mapping | பழைய-புதிய இணைப்பு |
 | `S81f567` | legacy_mapping | Legacy number to new identifier | பழைய எண்ணிலிருந்து புதிய அடையாளங்காட்டிக்கு |
@@ -9262,6 +9471,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S751ff5` | message: export_profile_service | Export profile not found | ஏற்றுமதி சுயவிவரம் கிடைக்கவில்லை |
 | `S4a8527` | message: export_profile_service | name must be 1-80 characters. | name 1-80 எழுத்துகளாக இருக்க வேண்டும். |
 | `S506d0b` | message: export_service | An audience export is built from Released data only; it cannot be combined with the unapproved working set. | இலக்குப் பார்வையாளர் ஏற்றுமதி வெளியிடப்பட்ட தரவிலிருந்து மட்டுமே உருவாக்கப்படும்; அதை அங்கீகரிக்கப்படாத பணித் தொகுப்புடன் இணைக்க முடியாது. |
+| `S4bb9a3` | message: export_service | content must be 'baseline' or 'delta'. | content 'baseline' அல்லது 'delta' ஆக இருக்க வேண்டும். |
 | `Sf593c4` | message: export_service | language is required for a translated export | மொழிபெயர்க்கப்பட்ட ஏற்றுமதிக்கு மொழி தேவை |
 | `S42cee2` | message: field_review_service | A field comment must be between 1 and 2000 characters. | புலக் கருத்து 1 முதல் 2000 எழுத்துகளுக்குள் இருக்க வேண்டும். |
 | `S0168d7` | message: field_review_service | Checklist item not found | சரிபார்ப்புப் பட்டியல் அம்சம் கிடைக்கவில்லை |
@@ -9301,8 +9511,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sb68487` | message: occurrence_service | period_end must not be before period_start. | period_end, period_start க்கு முன் இருக்கக் கூடாது. |
 | `S682b0f` | message: occurrence_service | source_label must be 1-80 characters. | source_label 1-80 எழுத்துகளாக இருக்க வேண்டும். |
 | `S3b0e31` | message: occurrence_service | The file needs the columns status_code_identifier and occurrences. | கோப்புக்கு status_code_identifier மற்றும் occurrences நெடுவரிசைகள் தேவை. |
+| `Sbdd594` | message: package_service | Choose at least one access level or the unfiltered files. | குறைந்தது ஒரு அணுகல் நிலை அல்லது வடிகட்டாத கோப்புகளைத் தேர்ந்தெடுக்கவும். |
+| `S4af5c1` | message: package_service | Choose at least one format. | குறைந்தது ஒரு வடிவத்தைத் தேர்ந்தெடுக்கவும். |
+| `S8865f4` | message: package_service | Only a published Release can be packaged. | வெளியிடப்பட்ட வெளியீட்டை மட்டுமே தொகுக்க முடியும். |
+| `S9b6676` | message: package_service | Package not found | தொகுப்பு கிடைக்கவில்லை |
+| `S2ddbdd` | message: package_service, message: release_notes_service | Release not found | வெளியீடு கிடைக்கவில்லை |
+| `S3bc283` | message: package_service | The package file is no longer on the server. | தொகுப்பு கோப்பு இனி சேவையகத்தில் இல்லை. |
+| `S310622` | message: package_service | The package is not ready. | தொகுப்பு இன்னும் தயாராகவில்லை. |
 | `S2142ac` | message: release_notes_service | format must be md, csv, pdf or json | format md, csv, pdf அல்லது json ஆக இருக்க வேண்டும் |
-| `S2ddbdd` | message: release_notes_service | Release not found | வெளியீடு கிடைக்கவில்லை |
 | `S6e9bf7` | message: release_service | A published Release can never be deleted (BR-007). | வெளியிடப்பட்ட வெளியீட்டை ஒருபோதும் நீக்க முடியாது (BR-007). |
 | `S06fb3b` | message: release_service | Cannot change items on a published Release (BR-007). | வெளியிடப்பட்ட வெளியீட்டின் உருப்படிகளை மாற்ற முடியாது (BR-007). |
 | `Sc1eab3` | message: release_service | Cannot change the targets of a published Release (BR-007). | வெளியிடப்பட்ட வெளியீட்டின் இலக்குகளை மாற்ற முடியாது (BR-007). |
@@ -9613,7 +9829,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 
 ### 9.10 IN ગુજરાતી 🇮🇳 — Gujarati
 
-1162 of 1163 strings translated; direction left to right.
+1189 of 1190 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -9780,6 +9996,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sc3f104` | delegations, user_detail, users | Role | ભૂમિકા |
 | `Sd5dcf0` | delegations | Until (inclusive) | સુધી (સહિત) |
 | `Sa4aefa` | delegations | Valid | માન્ય |
+| `Sc3dc5c` | detail | %(count)s codes have no confirmed access levels and are missing from every access-level file. | %(count)s કોડના પુષ્ટ એક્સેસ સ્તર નથી અને તે દરેક એક્સેસ-સ્તર ફાઇલમાંથી ગેરહાજર છે. |
 | `Sc3cd63` | detail, user_detail, users | Actions | ક્રિયાઓ |
 | `S61cc55` | detail, lookups, review_checklist | Add | ઉમેરો |
 | `S12cc59` | detail | Add a comment (no decision) | ટિપ્પણી ઉમેરો (નિર્ણય વિના) |
@@ -9793,7 +10010,9 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S25f8c5` | detail, export, form | Alarm | એલાર્મ |
 | `Sd87c44` | detail, export, hub_consolidation | all | બધા |
 | `S484388` | detail, export_center | all columns | બધા કૉલમ |
+| `S2e73c3` | detail | All languages and all access levels are included. Use the export above for a single language or access level. | બધી ભાષાઓ અને બધા એક્સેસ સ્તર સામેલ છે. એક ભાષા કે એક એક્સેસ સ્તર માટે ઉપરનું એક્સપોર્ટ વાપરો. |
 | `S432284` | detail | All required sign-offs are in, but this is still a Draft — the Reviewer and Administrator only see it after you choose Submit for Review below. | બધા જરૂરી સાઇન-ઑફ આવી ગયા છે, પણ આ હજુ મુસદ્દો છે — તમે નીચે સમીક્ષા માટે સબમિટ કરો પસંદ કરો પછી જ સમીક્ષક અને સંચાલક તે જુએ છે. |
+| `S9b0b4c` | detail | also the files without an access level (all columns) | એક્સેસ સ્તર વગરની ફાઇલો પણ (બધા કૉલમ) |
 | `Sf24c44` | detail | Any %(code)s Engineer | કોઈપણ %(code)s ઇજનેર |
 | `Sb99a01` | detail | Applies to software versions | સૉફ્ટવેર આવૃત્તિઓને લાગુ |
 | `S7b2c7f` | detail, language | Approve | મંજૂર કરો |
@@ -9810,12 +10029,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S416869` | detail | Auto Reset Program | સ્વચાલિત રીસેટ પ્રોગ્રામ |
 | `Sd71897` | detail, form | Available Group | ઉપલબ્ધતા જૂથ |
 | `S928e2e` | detail | Brake Program | બ્રેક પ્રોગ્રામ |
+| `Sab2e8a` | detail | Build package | પેકેજ બનાવો |
 | `Scfadbd` | detail | By | દ્વારા |
 | `S9c8393` | detail, mine | Change Request | ફેરફાર વિનંતી |
 | `S4572f4` | detail | Change request | ફેરફાર વિનંતી |
 | `S3295be` | detail | Change requests in this set | આ સમૂહની ફેરફાર વિનંતીઓ |
 | `S4d8006` | detail | Change set | ફેરફાર સમૂહ |
 | `S8aa57d` | detail | Changes | ફેરફારો |
+| `S3d14ea` | detail, export | Changes of this release only | ફક્ત આ રિલીઝના ફેરફારો |
 | `Sbd95c0` | detail | Checklist confirmed at sign-off | સાઇન-ઑફ સમયે પુષ્ટિ થયેલ ચેકલિસ્ટ |
 | `S074d62` | detail, role badge | Chief Engineer | મુખ્ય ઇજનેર |
 | `S03695d` | detail | Chief Engineer decision | મુખ્ય ઇજનેરનો નિર્ણય |
@@ -9828,8 +10049,11 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sfce06e` | detail | Comments | ટિપ્પણીઓ |
 | `S8d105c` | detail, reconciliation | Compare | સરખાવો |
 | `Sc9a03b` | detail | Compare Revisions | સુધારાઓની સરખામણી કરો |
+| `S0ff7e5` | detail, export | Complete baseline | સંપૂર્ણ આધાર સ્થિતિ |
 | `S1798b3` | detail | Completed | પૂર્ણ થયું |
 | `S7671b5` | detail | Confirm or override Audience Access | લક્ષિત જૂથ ઍક્સેસની પુષ્ટિ કરો અથવા અધિલેખિત કરો |
+| `S4f9be0` | detail | Content | સામગ્રી |
+| `Sa36a5f` | detail, legacy_mapping, st_new | Controller | નિયંત્રક |
 | `Scd293f` | detail | Converter Reactive Power Program | કન્વર્ટર રિએક્ટિવ પાવર પ્રોગ્રામ |
 | `S3998a7` | detail | Copies the descriptive fields into a new Draft in a Main Controller group (a new number is allocated at submit; this code's identifier is kept as the legacy reference). | વર્ણનાત્મક ફીલ્ડ મુખ્ય નિયંત્રક જૂથના નવા મુસદ્દામાં કૉપિ કરે છે (સબમિટ સમયે નવો નંબર અપાય છે; આ કોડનો ઓળખકર્તા જૂના સંદર્ભ તરીકે રખાય છે). |
 | `S54b051` | detail | Copy this code for another turbine platform. The copy is a new Draft that links back here and goes through the normal review. | આ કોડ બીજા ટર્બાઇન પ્લેટફોર્મ માટે કૉપિ કરો. નકલ એક નવો મુસદ્દો છે જે અહીં પાછો જોડાય છે અને સામાન્ય સમીક્ષામાંથી પસાર થાય છે. |
@@ -9860,6 +10084,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S4c17aa` | detail | Development | વિકાસ |
 | `S552a2b` | detail | Documented reason | નોંધાયેલ કારણ |
 | `S9b1091` | detail, mine | Domain | ક્ષેત્ર |
+| `Sa479c9` | detail | Download | ડાઉનલોડ |
 | `S056839` | detail | Download Error Report | ભૂલ અહેવાલ ડાઉનલોડ કરો |
 | `S23d33e` | detail, index | Draft | મુસદ્દો |
 | `S3c7a50` | detail | Edit Candidates | ઉમેદવારો સંપાદિત કરો |
@@ -9881,6 +10106,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sdd7b7e` | detail | failed validation | માન્યતામાં નિષ્ફળ |
 | `Sd106a6` | detail | Field comments | ફીલ્ડ ટિપ્પણીઓ |
 | `S2c3caf` | detail, export_verify, operations | File | ફાઇલ |
+| `S6ce6c5` | detail | Files | ફાઇલો |
 | `Se0996a` | detail, form | first | પહેલી |
 | `S041a5d` | detail, export_center | Format | સ્વરૂપ |
 | `S9e3c65` | detail | From revision | સુધારામાંથી |
@@ -9888,6 +10114,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sb8c4c9` | detail, form | Further Program References | વધુ પ્રોગ્રામ સંદર્ભો |
 | `S636c41` | detail | Grid Operator | ગ્રિડ ઓપરેટર |
 | `S90ccd6` | detail | History | ઇતિહાસ |
+| `S0dfe7b` | detail | Hub controller | હબ કંટ્રોલર |
 | `Sfec8b7` | detail | Hub Controller group | હબ નિયંત્રક જૂથ |
 | `S00ccae` | detail, form | Hub Controller only | ફક્ત હબ નિયંત્રક |
 | `S3c883f` | detail | I have reviewed these dependants | મેં આ આશ્રિતોની સમીક્ષા કરી છે |
@@ -9902,6 +10129,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S693272` | detail, withdrawn_codes | Legacy Reference Number | જૂનો સંદર્ભ નંબર |
 | `S43d5c5` | detail, form | Loadless Spinning Permitted | ભાર વગર ફરવું માન્ય |
 | `S193786` | detail | Logical Node | લૉજિકલ નોડ |
+| `Sc3f827` | detail | Main controller | મુખ્ય કંટ્રોલર |
 | `S578b78` | detail | Main Controller group | મુખ્ય નિયંત્રક જૂથ |
 | `Sa7512d` | detail, form | Main Controller only | ફક્ત મુખ્ય નિયંત્રક |
 | `Seb9a6d` | detail | Manage translations | અનુવાદો સંચાલિત કરો |
@@ -9927,6 +10155,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sde04fa` | detail, fleet_feedback, success_metrics | of | માંથી |
 | `S19f611` | detail | Offline lookup (HTML) | ઑફલાઇન લુકઅપ (HTML) |
 | `S2ff2ae` | detail | Offline lookup + manifest (ZIP) | ઑફલાઇન લુકઅપ + મેનિફેસ્ટ (ZIP) |
+| `S3f0e3e` | detail | One ZIP with the complete baseline in every language and for every access level, plus the release notes and a manifest with a SHA-256 for each file. Building it takes a few minutes; the page shows the progress. | દરેક ભાષામાં અને દરેક એક્સેસ સ્તર માટે સંપૂર્ણ આધાર સ્થિતિ સાથેની એક ZIP, સાથે રિલીઝ નોંધ અને દરેક ફાઇલના SHA-256 સાથેનું મેનિફેસ્ટ. બનાવવામાં થોડી મિનિટ લાગે છે; પેજ પ્રગતિ બતાવે છે. |
 | `S12aa03` | detail | only translated codes | ફક્ત અનુવાદિત કોડ |
 | `S5fc7e3` | detail | open | ખુલ્લું |
 | `Sf61187` | detail | Open New Revision | નવો સુધારો ખોલો |
@@ -9938,11 +10167,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S780d35` | detail | Override identifier (migration / reservation only) | ઓળખકર્તા અધિલેખિત કરો (ફક્ત સ્થળાંતર / આરક્ષણ માટે) |
 | `S89ff31` | detail | Owner | માલિક |
 | `S2d20ee` | detail | Package overview | પેકેજનું સિંહાવલોકન |
+| `S4d1a47` | detail | Package: all languages and access levels | પેકેજ: બધી ભાષાઓ અને એક્સેસ સ્તર |
+| `Sc49bd0` | detail | Packages of this Release | આ રિલીઝના પેકેજ |
 | `S96f608` | detail, review_queue | Pending | બાકી |
 | `Sc983b6` | detail | Pick a profile (columns and labels), an audience, a language or a software version. Every file comes with a manifest of SHA-256 hashes; "bundle" packs both into one ZIP. | પ્રોફાઇલ (કૉલમ અને લેબલ), લક્ષિત જૂથ, ભાષા અથવા સૉફ્ટવેર આવૃત્તિ પસંદ કરો. દરેક ફાઇલ સાથે SHA-256 હૅશનો મેનિફેસ્ટ આવે છે; "bundle" બંનેને એક ZIP માં બાંધે છે. |
 | `S72383d` | detail | Planned dates | આયોજિત તારીખો |
 | `Sfb14b0` | detail | Planned deprecation date | આયોજિત અપ્રચલન તારીખ |
 | `S00e733` | detail | Planned effective date | આયોજિત અમલ તારીખ |
+| `S123a7f` | detail | Platform | પ્લેટફોર્મ |
 | `Sfc8d58` | detail | Platform variant | પ્લેટફોર્મ પ્રકાર |
 | `Scd8926` | detail | Platform variants | પ્લેટફોર્મ પ્રકારો |
 | `S141f0c` | detail | Processing in the background... | પૃષ્ઠભૂમિમાં પ્રક્રિયા થઈ રહી છે... |
@@ -9963,6 +10195,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S9b44a2` | detail | Release notes (PDF) | રિલીઝ નોંધો (PDF) |
 | `S3dfa01` | detail | Release notes and offline lookup | રિલીઝ નોંધો અને ઑફલાઇન લુકઅપ |
 | `Sdcddb7` | detail | Release notes list what was added, changed (field by field) and deprecated since the previous Release. The offline page is one self-contained HTML file for use at the turbine without a connection. | રિલીઝ નોંધો પાછલી રિલીઝ પછી શું ઉમેરાયું, બદલાયું (ફીલ્ડ પ્રમાણે) અને અપ્રચલિત થયું તે યાદી કરે છે. ઑફલાઇન પૃષ્ઠ એક સ્વયંપૂર્ણ HTML ફાઇલ છે જે ટર્બાઇન પર જોડાણ વિના વાપરી શકાય. |
+| `Scce715` | detail | Reload | ફરી લોડ કરો |
 | `S0544a3` | detail | Reload this page to see the progress. | પ્રગતિ જોવા આ પૃષ્ઠ ફરી લોડ કરો. |
 | `S99e347` | detail | Remedy | ઉપાય |
 | `Se96390` | detail, list | Remove | દૂર કરો |
@@ -10012,9 +10245,11 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S08e643` | detail, list | Target software version | લક્ષ્ય સૉફ્ટવેર આવૃત્તિ |
 | `S44203c` | detail, form, status code fields | Task Call Frequency | ટાસ્ક કોલ આવર્તન |
 | `S8fc804` | detail | The author has to submit it for review before the Reviewer or Administrator can see it. | સમીક્ષક કે સંચાલક જુએ તે પહેલાં લેખકે તેને સમીક્ષા માટે સબમિટ કરવો જોઈએ. |
+| `Sa5f3f8` | detail | These files contain the complete baseline: every status code that is valid as of this Release, not only the ones it changed. | આ ફાઇલોમાં સંપૂર્ણ આધાર સ્થિતિ છે: આ રિલીઝ મુજબ માન્ય દરેક સ્ટેટસ કોડ, ફક્ત બદલાયેલા નહીં. |
 | `S091814` | detail | This change request has reached a terminal decision state | આ ફેરફાર વિનંતી અંતિમ નિર્ણય સ્થિતિમાં પહોંચી છે |
 | `S6d5708` | detail | This is the one truly irreversible action in the system. Type the identifier to confirm. | આ સિસ્ટમની એકમાત્ર ખરેખર અપરિવર્તનીય ક્રિયા છે. પુષ્ટિ માટે ઓળખકર્તા ટાઇપ કરો. |
 | `Sb55f1f` | detail | To revision | સુધારા સુધી |
+| `Sa2a321` | detail | Translated codes per language | ભાષા પ્રમાણે અનુવાદિત કોડ |
 | `S8ad830` | detail, menu, overview | Translations | અનુવાદો |
 | `Seaf576` | detail, form | Trigger Snapshot | સ્નેપશોટ ટ્રિગર કરો |
 | `S285ec8` | detail, form | Troubleshooting | મુશ્કેલી નિવારણ |
@@ -10075,6 +10310,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Se51c55` | export | Records | રેકોર્ડ |
 | `Sd41f56` | export, export_center | Release | રિલીઝ |
 | `S2e8fd6` | export | Reset delay | રીસેટ વિલંબ |
+| `S4651a3` | export | Scope | વ્યાપ |
 | `S89fdd5` | export | Set delay | સેટ વિલંબ |
 | `S828d33` | export | source | સ્રોત |
 | `Sfcbb29` | export | Status code | સ્ટેટસ કોડ |
@@ -10202,6 +10438,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S34b903` | help and messages | Not possible: the account has history (see above). Deactivate it instead; the person can no longer sign in and everything they did stays attributable. | શક્ય નથી: એકાઉન્ટનો ઇતિહાસ છે (ઉપર જુઓ). તેના બદલે નિષ્ક્રિય કરો; વ્યક્તિ હવે સાઇન ઇન કરી શકશે નહીં અને તેણે જે કર્યું તે જવાબદાર રહે છે. |
 | `Sce489f` | help and messages | The author gets any required cross-domain sign-offs, then submits the change request for review. | લેખક જરૂરી આંતર-ક્ષેત્ર સાઇન-ઑફ મેળવે છે, પછી ફેરફાર વિનંતી સમીક્ષા માટે સબમિટ કરે છે. |
 | `S1cdbdd` | help and messages | The Chief Engineer approves or rejects. Approval makes the revision Approved (or Deprecated for a deprecation request). | મુખ્ય ઇજનેર મંજૂર અથવા નામંજૂર કરે છે. મંજૂરી સુધારાને મંજૂર (અથવા અપ્રચલન વિનંતી માટે અપ્રચલિત) બનાવે છે. |
+| `S2d6ac0` | help and messages | The package is being built. Reload this page to follow its progress. | પેકેજ બની રહ્યું છે. પ્રગતિ જોવા માટે આ પેજ ફરી લોડ કરો. |
 | `Scff3a3` | help and messages | User deleted; its name and address are erased, what it did stays attributable. | વપરાશકર્તા કાઢી નાખ્યો; તેનું નામ અને સરનામું ભૂંસાયા છે, તેણે જે કર્યું તે આરોપણીય રહે છે. |
 | `Secfb3f` | hub_consolidation | Deprecate replaced Hub codes | બદલાયેલા હબ કોડ અપ્રચલિત જાહેર કરો |
 | `S0e7766` | hub_consolidation, language | draft | મુસદ્દો |
@@ -10281,7 +10518,6 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S863fd0` | language | Your own proposal: another person approves it. | તમારો પોતાનો પ્રસ્તાવ: બીજી વ્યક્તિ તેને મંજૂર કરે છે. |
 | `Sf9d469` | legacy_mapping | All controllers | બધા નિયંત્રકો |
 | `Se61c2f` | legacy_mapping | Any number state | કોઈપણ નંબર સ્થિતિ |
-| `Sa36a5f` | legacy_mapping, st_new, st_preview | Controller | નિયંત્રક |
 | `S7c4f77` | legacy_mapping | issued | આપેલા |
 | `Sfd5ec0` | legacy_mapping, menu, new | Legacy mapping | જૂનું-નવું મેપિંગ |
 | `S81f567` | legacy_mapping | Legacy number to new identifier | જૂનો નંબર થી નવો ઓળખકર્તા |
@@ -10431,6 +10667,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S751ff5` | message: export_profile_service | Export profile not found | નિકાસ પ્રોફાઇલ મળી નથી |
 | `S4a8527` | message: export_profile_service | name must be 1-80 characters. | name 1-80 અક્ષરોનું હોવું જોઈએ. |
 | `S506d0b` | message: export_service | An audience export is built from Released data only; it cannot be combined with the unapproved working set. | લક્ષિત જૂથ નિકાસ ફક્ત પ્રકાશિત ડેટામાંથી બને છે; તેને બિન-મંજૂર કાર્ય સમૂહ સાથે જોડી શકાતી નથી. |
+| `S4bb9a3` | message: export_service | content must be 'baseline' or 'delta'. | content 'baseline' અથવા 'delta' હોવો જોઈએ. |
 | `Sf593c4` | message: export_service | language is required for a translated export | અનુવાદિત નિકાસ માટે ભાષા જરૂરી છે |
 | `S42cee2` | message: field_review_service | A field comment must be between 1 and 2000 characters. | ફીલ્ડ ટિપ્પણી 1 થી 2000 અક્ષરોની વચ્ચે હોવી જોઈએ. |
 | `S0168d7` | message: field_review_service | Checklist item not found | ચેકલિસ્ટ મુદ્દો મળ્યો નથી |
@@ -10470,8 +10707,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sb68487` | message: occurrence_service | period_end must not be before period_start. | period_end, period_start પહેલાં ન હોવું જોઈએ. |
 | `S682b0f` | message: occurrence_service | source_label must be 1-80 characters. | source_label 1-80 અક્ષરોનું હોવું જોઈએ. |
 | `S3b0e31` | message: occurrence_service | The file needs the columns status_code_identifier and occurrences. | ફાઇલને status_code_identifier અને occurrences કૉલમ જોઈએ. |
+| `Sbdd594` | message: package_service | Choose at least one access level or the unfiltered files. | ઓછામાં ઓછું એક એક્સેસ સ્તર અથવા ફિલ્ટર વગરની ફાઇલો પસંદ કરો. |
+| `S4af5c1` | message: package_service | Choose at least one format. | ઓછામાં ઓછું એક ફોર્મેટ પસંદ કરો. |
+| `S8865f4` | message: package_service | Only a published Release can be packaged. | ફક્ત પ્રકાશિત રિલીઝનું પેકેજ બનાવી શકાય છે. |
+| `S9b6676` | message: package_service | Package not found | પેકેજ મળ્યું નથી |
+| `S2ddbdd` | message: package_service, message: release_notes_service | Release not found | રિલીઝ મળી નથી |
+| `S3bc283` | message: package_service | The package file is no longer on the server. | પેકેજ ફાઇલ હવે સર્વર પર નથી. |
+| `S310622` | message: package_service | The package is not ready. | પેકેજ હજી તૈયાર નથી. |
 | `S2142ac` | message: release_notes_service | format must be md, csv, pdf or json | format md, csv, pdf અથવા json હોવું જોઈએ |
-| `S2ddbdd` | message: release_notes_service | Release not found | રિલીઝ મળી નથી |
 | `S6e9bf7` | message: release_service | A published Release can never be deleted (BR-007). | પ્રકાશિત રિલીઝ ક્યારેય કાઢી શકાતી નથી (BR-007). |
 | `S06fb3b` | message: release_service | Cannot change items on a published Release (BR-007). | પ્રકાશિત રિલીઝની બાબતો બદલી શકાતી નથી (BR-007). |
 | `Sc1eab3` | message: release_service | Cannot change the targets of a published Release (BR-007). | પ્રકાશિત રિલીઝના લક્ષ્યો બદલી શકાતા નથી (BR-007). |
@@ -10782,7 +11025,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 
 ### 9.11 PK اردو 🇵🇰 — Urdu
 
-1162 of 1163 strings translated; direction right to left.
+1189 of 1190 strings translated; direction right to left.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -10949,6 +11192,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sc3f104` | delegations, user_detail, users | Role | کردار |
 | `Sd5dcf0` | delegations | Until (inclusive) | تک (شامل) |
 | `Sa4aefa` | delegations | Valid | درست |
+| `Sc3dc5c` | detail | %(count)s codes have no confirmed access levels and are missing from every access-level file. | %(count)s کوڈز کی رسائی کی سطحیں تصدیق شدہ نہیں ہیں اور وہ ہر رسائی-سطح فائل سے غائب ہیں۔ |
 | `Sc3cd63` | detail, user_detail, users | Actions | اقدامات |
 | `S61cc55` | detail, lookups, review_checklist | Add | شامل کریں |
 | `S12cc59` | detail | Add a comment (no decision) | تبصرہ شامل کریں (فیصلے کے بغیر) |
@@ -10962,7 +11206,9 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S25f8c5` | detail, export, form | Alarm | الارم |
 | `Sd87c44` | detail, export, hub_consolidation | all | سب |
 | `S484388` | detail, export_center | all columns | تمام کالم |
+| `S2e73c3` | detail | All languages and all access levels are included. Use the export above for a single language or access level. | تمام زبانیں اور تمام رسائی کی سطحیں شامل ہیں۔ ایک زبان یا ایک رسائی سطح کے لیے اوپر کی برآمد استعمال کریں۔ |
 | `S432284` | detail | All required sign-offs are in, but this is still a Draft — the Reviewer and Administrator only see it after you choose Submit for Review below. | تمام مطلوبہ سائن آف آ چکے ہیں، مگر یہ ابھی مسودہ ہے — جائزہ کار اور منتظم اسے تبھی دیکھتے ہیں جب آپ نیچے جائزے کے لیے جمع کرائیں منتخب کریں۔ |
+| `S9b0b4c` | detail | also the files without an access level (all columns) | رسائی سطح کے بغیر فائلیں بھی (تمام کالم) |
 | `Sf24c44` | detail | Any %(code)s Engineer | کوئی بھی %(code)s انجینئر |
 | `Sb99a01` | detail | Applies to software versions | سافٹ ویئر ورژنز پر لاگو |
 | `S7b2c7f` | detail, language | Approve | منظور کریں |
@@ -10979,12 +11225,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S416869` | detail | Auto Reset Program | خودکار ری سیٹ پروگرام |
 | `Sd71897` | detail, form | Available Group | دستیابی گروپ |
 | `S928e2e` | detail | Brake Program | بریک پروگرام |
+| `Sab2e8a` | detail | Build package | پیکیج بنائیں |
 | `Scfadbd` | detail | By | بذریعہ |
 | `S9c8393` | detail, mine | Change Request | تبدیلی کی درخواست |
 | `S4572f4` | detail | Change request | تبدیلی کی درخواست |
 | `S3295be` | detail | Change requests in this set | اس مجموعے کی تبدیلی کی درخواستیں |
 | `S4d8006` | detail | Change set | تبدیلیوں کا مجموعہ |
 | `S8aa57d` | detail | Changes | تبدیلیاں |
+| `S3d14ea` | detail, export | Changes of this release only | صرف اس ریلیز کی تبدیلیاں |
 | `Sbd95c0` | detail | Checklist confirmed at sign-off | سائن آف کے وقت تصدیق شدہ چیک لسٹ |
 | `S074d62` | detail, role badge | Chief Engineer | چیف انجینئر |
 | `S03695d` | detail | Chief Engineer decision | چیف انجینئر کا فیصلہ |
@@ -10997,8 +11245,11 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sfce06e` | detail | Comments | تبصرے |
 | `S8d105c` | detail, reconciliation | Compare | موازنہ کریں |
 | `Sc9a03b` | detail | Compare Revisions | ترامیم کا موازنہ کریں |
+| `S0ff7e5` | detail, export | Complete baseline | مکمل بنیادی حالت |
 | `S1798b3` | detail | Completed | مکمل ہوا |
 | `S7671b5` | detail | Confirm or override Audience Access | ہدف گروہ تک رسائی کی تصدیق یا اوور رائیڈ کریں |
+| `S4f9be0` | detail | Content | مواد |
+| `Sa36a5f` | detail, legacy_mapping, st_new | Controller | کنٹرولر |
 | `Scd293f` | detail | Converter Reactive Power Program | کنورٹر ری ایکٹو پاور پروگرام |
 | `S3998a7` | detail | Copies the descriptive fields into a new Draft in a Main Controller group (a new number is allocated at submit; this code's identifier is kept as the legacy reference). | وضاحتی فیلڈز کو مرکزی کنٹرولر گروپ کے نئے مسودے میں کاپی کرتا ہے (جمع کراتے وقت نیا نمبر دیا جاتا ہے؛ اس کوڈ کی شناخت پرانے حوالے کے طور پر رکھی جاتی ہے)۔ |
 | `S54b051` | detail | Copy this code for another turbine platform. The copy is a new Draft that links back here and goes through the normal review. | اس کوڈ کو کسی دوسرے ٹربائن پلیٹ فارم کے لیے کاپی کریں۔ کاپی ایک نیا مسودہ ہے جو یہاں واپس جڑتا ہے اور عام جائزے سے گزرتا ہے۔ |
@@ -11029,6 +11280,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S4c17aa` | detail | Development | ڈیولپمنٹ |
 | `S552a2b` | detail | Documented reason | دستاویزی وجہ |
 | `S9b1091` | detail, mine | Domain | ڈومین |
+| `Sa479c9` | detail | Download | ڈاؤن لوڈ |
 | `S056839` | detail | Download Error Report | خرابی کی رپورٹ ڈاؤن لوڈ کریں |
 | `S23d33e` | detail, index | Draft | مسودہ |
 | `S3c7a50` | detail | Edit Candidates | امیدواروں میں ترمیم کریں |
@@ -11050,6 +11302,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sdd7b7e` | detail | failed validation | توثیق میں ناکام |
 | `Sd106a6` | detail | Field comments | فیلڈ کے تبصرے |
 | `S2c3caf` | detail, export_verify, operations | File | فائل |
+| `S6ce6c5` | detail | Files | فائلیں |
 | `Se0996a` | detail, form | first | پہلا |
 | `S041a5d` | detail, export_center | Format | فارمیٹ |
 | `S9e3c65` | detail | From revision | ترمیم سے |
@@ -11057,6 +11310,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sb8c4c9` | detail, form | Further Program References | مزید پروگرام حوالے |
 | `S636c41` | detail | Grid Operator | گرڈ آپریٹر |
 | `S90ccd6` | detail | History | تاریخ |
+| `S0dfe7b` | detail | Hub controller | ہب کنٹرولر |
 | `Sfec8b7` | detail | Hub Controller group | ہب کنٹرولر گروپ |
 | `S00ccae` | detail, form | Hub Controller only | صرف ہب کنٹرولر |
 | `S3c883f` | detail | I have reviewed these dependants | میں نے ان منحصر کوڈ کا جائزہ لے لیا ہے |
@@ -11071,6 +11325,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S693272` | detail, withdrawn_codes | Legacy Reference Number | پرانا حوالہ نمبر |
 | `S43d5c5` | detail, form | Loadless Spinning Permitted | بغیر بوجھ گھومنا مجاز |
 | `S193786` | detail | Logical Node | منطقی نوڈ |
+| `Sc3f827` | detail | Main controller | مین کنٹرولر |
 | `S578b78` | detail | Main Controller group | مرکزی کنٹرولر گروپ |
 | `Sa7512d` | detail, form | Main Controller only | صرف مرکزی کنٹرولر |
 | `Seb9a6d` | detail | Manage translations | تراجم کا انتظام کریں |
@@ -11096,6 +11351,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sde04fa` | detail, fleet_feedback, success_metrics | of | میں سے |
 | `S19f611` | detail | Offline lookup (HTML) | آف لائن تلاش (HTML) |
 | `S2ff2ae` | detail | Offline lookup + manifest (ZIP) | آف لائن تلاش + مینی فیسٹ (ZIP) |
+| `S3f0e3e` | detail | One ZIP with the complete baseline in every language and for every access level, plus the release notes and a manifest with a SHA-256 for each file. Building it takes a few minutes; the page shows the progress. | ہر زبان اور ہر رسائی سطح کے لیے مکمل بنیادی حالت کے ساتھ ایک ZIP، ساتھ ریلیز نوٹس اور ہر فائل کے SHA-256 والا مینی فیسٹ۔ بنانے میں چند منٹ لگتے ہیں؛ صفحہ پیش رفت دکھاتا ہے۔ |
 | `S12aa03` | detail | only translated codes | صرف ترجمہ شدہ کوڈ |
 | `S5fc7e3` | detail | open | کھلا |
 | `Sf61187` | detail | Open New Revision | نئی ترمیم کھولیں |
@@ -11107,11 +11363,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S780d35` | detail | Override identifier (migration / reservation only) | شناخت کنندہ کو اوور رائیڈ کریں (صرف منتقلی / مخصوص کرنے کے لیے) |
 | `S89ff31` | detail | Owner | مالک |
 | `S2d20ee` | detail | Package overview | پیکیج کا جائزہ |
+| `S4d1a47` | detail | Package: all languages and access levels | پیکیج: تمام زبانیں اور رسائی کی سطحیں |
+| `Sc49bd0` | detail | Packages of this Release | اس ریلیز کے پیکیج |
 | `S96f608` | detail, review_queue | Pending | زیرِ التواء |
 | `Sc983b6` | detail | Pick a profile (columns and labels), an audience, a language or a software version. Every file comes with a manifest of SHA-256 hashes; "bundle" packs both into one ZIP. | ایک پروفائل (کالم اور لیبل)، ہدف گروہ، زبان یا سافٹ ویئر ورژن منتخب کریں۔ ہر فائل کے ساتھ SHA-256 ہیشوں کا مینی فیسٹ آتا ہے؛ "bundle" دونوں کو ایک ZIP میں باندھتا ہے۔ |
 | `S72383d` | detail | Planned dates | منصوبہ بند تاریخیں |
 | `Sfb14b0` | detail | Planned deprecation date | منصوبہ بند متروکیت کی تاریخ |
 | `S00e733` | detail | Planned effective date | منصوبہ بند نفاذ کی تاریخ |
+| `S123a7f` | detail | Platform | پلیٹ فارم |
 | `Sfc8d58` | detail | Platform variant | پلیٹ فارم کی قسم |
 | `Scd8926` | detail | Platform variants | پلیٹ فارم کی اقسام |
 | `S141f0c` | detail | Processing in the background... | پس منظر میں پروسیس ہو رہا ہے... |
@@ -11132,6 +11391,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S9b44a2` | detail | Release notes (PDF) | ریلیز نوٹس (PDF) |
 | `S3dfa01` | detail | Release notes and offline lookup | ریلیز نوٹس اور آف لائن تلاش |
 | `Sdcddb7` | detail | Release notes list what was added, changed (field by field) and deprecated since the previous Release. The offline page is one self-contained HTML file for use at the turbine without a connection. | ریلیز نوٹس بتاتے ہیں کہ پچھلی ریلیز کے بعد کیا شامل ہوا، بدلا (فیلڈ بہ فیلڈ) اور متروک ہوا۔ آف لائن صفحہ ایک خود کفیل HTML فائل ہے جو ٹربائن پر بغیر کنکشن کے استعمال کی جا سکتی ہے۔ |
+| `Scce715` | detail | Reload | دوبارہ لوڈ کریں |
 | `S0544a3` | detail | Reload this page to see the progress. | پیش رفت دیکھنے کے لیے یہ صفحہ دوبارہ لوڈ کریں۔ |
 | `S99e347` | detail | Remedy | تدارک |
 | `Se96390` | detail, list | Remove | ہٹائیں |
@@ -11181,9 +11441,11 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S08e643` | detail, list | Target software version | ہدف سافٹ ویئر ورژن |
 | `S44203c` | detail, form, status code fields | Task Call Frequency | ٹاسک کال فریکوئنسی |
 | `S8fc804` | detail | The author has to submit it for review before the Reviewer or Administrator can see it. | جائزہ کار یا منتظم کے دیکھنے سے پہلے مصنف کو اسے جائزے کے لیے جمع کرانا ہوگا۔ |
+| `Sa5f3f8` | detail | These files contain the complete baseline: every status code that is valid as of this Release, not only the ones it changed. | ان فائلوں میں مکمل بنیادی حالت ہے: اس ریلیز کے مطابق درست ہر اسٹیٹس کوڈ، صرف تبدیل شدہ نہیں۔ |
 | `S091814` | detail | This change request has reached a terminal decision state | یہ تبدیلی کی درخواست حتمی فیصلے کی حالت میں پہنچ چکی ہے |
 | `S6d5708` | detail | This is the one truly irreversible action in the system. Type the identifier to confirm. | یہ نظام کا واحد واقعی ناقابلِ واپسی اقدام ہے۔ تصدیق کے لیے شناخت کنندہ ٹائپ کریں۔ |
 | `Sb55f1f` | detail | To revision | ترمیم تک |
+| `Sa2a321` | detail | Translated codes per language | فی زبان ترجمہ شدہ کوڈز |
 | `S8ad830` | detail, menu, overview | Translations | تراجم |
 | `Seaf576` | detail, form | Trigger Snapshot | اسنیپ شاٹ شروع کریں |
 | `S285ec8` | detail, form | Troubleshooting | مسئلے کا حل |
@@ -11244,6 +11506,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Se51c55` | export | Records | ریکارڈ |
 | `Sd41f56` | export, export_center | Release | ریلیز |
 | `S2e8fd6` | export | Reset delay | ری سیٹ تاخیر |
+| `S4651a3` | export | Scope | دائرہ |
 | `S89fdd5` | export | Set delay | سیٹ تاخیر |
 | `S828d33` | export | source | ماخذ |
 | `Sfcbb29` | export | Status code | اسٹیٹس کوڈ |
@@ -11371,6 +11634,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S34b903` | help and messages | Not possible: the account has history (see above). Deactivate it instead; the person can no longer sign in and everything they did stays attributable. | ممکن نہیں: اکاؤنٹ کی تاریخ ہے (اوپر دیکھیں)۔ اس کے بجائے غیر فعال کریں؛ وہ شخص اب سائن اِن نہیں کر سکتا اور اس نے جو کیا وہ قابلِ نسبت رہتا ہے۔ |
 | `Sce489f` | help and messages | The author gets any required cross-domain sign-offs, then submits the change request for review. | مصنف مطلوبہ بین الشعبہ سائن آف حاصل کرتا ہے، پھر تبدیلی کی درخواست جائزے کے لیے جمع کراتا ہے۔ |
 | `S1cdbdd` | help and messages | The Chief Engineer approves or rejects. Approval makes the revision Approved (or Deprecated for a deprecation request). | چیف انجینئر منظور یا مسترد کرتا ہے۔ منظوری ترمیم کو منظور شدہ (یا متروکیت کی درخواست کے لیے متروک) بنا دیتی ہے۔ |
+| `S2d6ac0` | help and messages | The package is being built. Reload this page to follow its progress. | پیکیج بن رہا ہے۔ پیش رفت دیکھنے کے لیے یہ صفحہ دوبارہ لوڈ کریں۔ |
 | `Scff3a3` | help and messages | User deleted; its name and address are erased, what it did stays attributable. | صارف حذف ہو گیا؛ اس کا نام اور پتا مٹا دیا گیا، جو اس نے کیا وہ اسی کے نام رہتا ہے۔ |
 | `Secfb3f` | hub_consolidation | Deprecate replaced Hub codes | تبدیل شدہ ہب کوڈ کو متروک قرار دیں |
 | `S0e7766` | hub_consolidation, language | draft | مسودہ |
@@ -11450,7 +11714,6 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S863fd0` | language | Your own proposal: another person approves it. | آپ کی اپنی تجویز: کوئی اور شخص اسے منظور کرتا ہے۔ |
 | `Sf9d469` | legacy_mapping | All controllers | تمام کنٹرولر |
 | `Se61c2f` | legacy_mapping | Any number state | نمبر کی کوئی بھی حالت |
-| `Sa36a5f` | legacy_mapping, st_new, st_preview | Controller | کنٹرولر |
 | `S7c4f77` | legacy_mapping | issued | جاری شدہ |
 | `Sfd5ec0` | legacy_mapping, menu, new | Legacy mapping | پرانے-نئے کی میپنگ |
 | `S81f567` | legacy_mapping | Legacy number to new identifier | پرانا نمبر سے نیا شناخت کنندہ |
@@ -11600,6 +11863,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S751ff5` | message: export_profile_service | Export profile not found | برآمدی پروفائل نہیں ملا |
 | `S4a8527` | message: export_profile_service | name must be 1-80 characters. | name 1-80 حروف کا ہونا چاہیے۔ |
 | `S506d0b` | message: export_service | An audience export is built from Released data only; it cannot be combined with the unapproved working set. | ہدف گروہ کی برآمد صرف جاری شدہ ڈیٹا سے بنتی ہے؛ اسے غیر منظور شدہ ورکنگ سیٹ کے ساتھ ملایا نہیں جا سکتا۔ |
+| `S4bb9a3` | message: export_service | content must be 'baseline' or 'delta'. | content لازماً 'baseline' یا 'delta' ہونا چاہیے۔ |
 | `Sf593c4` | message: export_service | language is required for a translated export | ترجمہ شدہ برآمد کے لیے زبان ضروری ہے |
 | `S42cee2` | message: field_review_service | A field comment must be between 1 and 2000 characters. | فیلڈ تبصرہ 1 سے 2000 حروف کے درمیان ہونا چاہیے۔ |
 | `S0168d7` | message: field_review_service | Checklist item not found | چیک لسٹ نکتہ نہیں ملا |
@@ -11639,8 +11903,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sb68487` | message: occurrence_service | period_end must not be before period_start. | period_end، period_start سے پہلے نہیں ہونا چاہیے۔ |
 | `S682b0f` | message: occurrence_service | source_label must be 1-80 characters. | source_label 1-80 حروف کا ہونا چاہیے۔ |
 | `S3b0e31` | message: occurrence_service | The file needs the columns status_code_identifier and occurrences. | فائل کو status_code_identifier اور occurrences کالم درکار ہیں۔ |
+| `Sbdd594` | message: package_service | Choose at least one access level or the unfiltered files. | کم از کم ایک رسائی سطح یا بغیر فلٹر فائلیں منتخب کریں۔ |
+| `S4af5c1` | message: package_service | Choose at least one format. | کم از کم ایک فارمیٹ منتخب کریں۔ |
+| `S8865f4` | message: package_service | Only a published Release can be packaged. | صرف شائع شدہ ریلیز کا پیکیج بنایا جا سکتا ہے۔ |
+| `S9b6676` | message: package_service | Package not found | پیکیج نہیں ملا |
+| `S2ddbdd` | message: package_service, message: release_notes_service | Release not found | ریلیز نہیں ملی |
+| `S3bc283` | message: package_service | The package file is no longer on the server. | پیکیج فائل اب سرور پر موجود نہیں ہے۔ |
+| `S310622` | message: package_service | The package is not ready. | پیکیج ابھی تیار نہیں ہے۔ |
 | `S2142ac` | message: release_notes_service | format must be md, csv, pdf or json | format md، csv، pdf یا json ہونا چاہیے |
-| `S2ddbdd` | message: release_notes_service | Release not found | ریلیز نہیں ملی |
 | `S6e9bf7` | message: release_service | A published Release can never be deleted (BR-007). | شائع شدہ ریلیز کبھی حذف نہیں کی جا سکتی (BR-007)۔ |
 | `S06fb3b` | message: release_service | Cannot change items on a published Release (BR-007). | شائع شدہ ریلیز کی اشیاء تبدیل نہیں کی جا سکتیں (BR-007)۔ |
 | `Sc1eab3` | message: release_service | Cannot change the targets of a published Release (BR-007). | شائع شدہ ریلیز کے اہداف تبدیل نہیں کیے جا سکتے (BR-007)۔ |
@@ -11951,7 +12221,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 
 ### 9.12 IN ಕನ್ನಡ 🇮🇳 — Kannada
 
-1162 of 1163 strings translated; direction left to right.
+1189 of 1190 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -12118,6 +12388,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sc3f104` | delegations, user_detail, users | Role | ಪಾತ್ರ |
 | `Sd5dcf0` | delegations | Until (inclusive) | ವರೆಗೆ (ಒಳಗೊಂಡಂತೆ) |
 | `Sa4aefa` | delegations | Valid | ಮಾನ್ಯ |
+| `Sc3dc5c` | detail | %(count)s codes have no confirmed access levels and are missing from every access-level file. | %(count)s ಕೋಡ್‌ಗಳಿಗೆ ದೃಢೀಕೃತ ಪ್ರವೇಶ ಹಂತಗಳಿಲ್ಲ ಮತ್ತು ಅವು ಪ್ರತಿ ಪ್ರವೇಶ-ಹಂತ ಫೈಲ್‌ನಿಂದ ಕಾಣೆಯಾಗಿವೆ. |
 | `Sc3cd63` | detail, user_detail, users | Actions | ಕ್ರಿಯೆಗಳು |
 | `S61cc55` | detail, lookups, review_checklist | Add | ಸೇರಿಸಿ |
 | `S12cc59` | detail | Add a comment (no decision) | ಟಿಪ್ಪಣಿ ಸೇರಿಸಿ (ನಿರ್ಧಾರವಿಲ್ಲದೆ) |
@@ -12131,7 +12402,9 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S25f8c5` | detail, export, form | Alarm | ಅಲಾರಂ |
 | `Sd87c44` | detail, export, hub_consolidation | all | ಎಲ್ಲಾ |
 | `S484388` | detail, export_center | all columns | ಎಲ್ಲಾ ಕಾಲಮ್‌ಗಳು |
+| `S2e73c3` | detail | All languages and all access levels are included. Use the export above for a single language or access level. | ಎಲ್ಲಾ ಭಾಷೆಗಳು ಮತ್ತು ಎಲ್ಲಾ ಪ್ರವೇಶ ಹಂತಗಳು ಸೇರಿವೆ. ಒಂದು ಭಾಷೆ ಅಥವಾ ಒಂದು ಪ್ರವೇಶ ಹಂತಕ್ಕೆ ಮೇಲಿನ ರಫ್ತು ಬಳಸಿ. |
 | `S432284` | detail | All required sign-offs are in, but this is still a Draft — the Reviewer and Administrator only see it after you choose Submit for Review below. | ಅಗತ್ಯ ಎಲ್ಲಾ ಸಹಿಗಳು ಬಂದಿವೆ, ಆದರೆ ಇದು ಇನ್ನೂ ಕರಡು — ನೀವು ಕೆಳಗೆ ಪರಿಶೀಲನೆಗಾಗಿ ಸಲ್ಲಿಸಿ ಆಯ್ಕೆ ಮಾಡಿದ ನಂತರವೇ ಪರಿಶೀಲಕ ಮತ್ತು ನಿರ್ವಾಹಕರು ಇದನ್ನು ನೋಡುತ್ತಾರೆ. |
+| `S9b0b4c` | detail | also the files without an access level (all columns) | ಪ್ರವೇಶ ಹಂತ ಇಲ್ಲದ ಫೈಲ್‌ಗಳೂ (ಎಲ್ಲಾ ಕಾಲಮ್‌ಗಳು) |
 | `Sf24c44` | detail | Any %(code)s Engineer | ಯಾವುದೇ %(code)s ಎಂಜಿನಿಯರ್ |
 | `Sb99a01` | detail | Applies to software versions | ಸಾಫ್ಟ್‌ವೇರ್ ಆವೃತ್ತಿಗಳಿಗೆ ಅನ್ವಯ |
 | `S7b2c7f` | detail, language | Approve | ಅನುಮೋದಿಸಿ |
@@ -12148,12 +12421,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S416869` | detail | Auto Reset Program | ಸ್ವಯಂ ರೀಸೆಟ್ ಪ್ರೋಗ್ರಾಂ |
 | `Sd71897` | detail, form | Available Group | ಲಭ್ಯತೆ ಗುಂಪು |
 | `S928e2e` | detail | Brake Program | ಬ್ರೇಕ್ ಪ್ರೋಗ್ರಾಂ |
+| `Sab2e8a` | detail | Build package | ಪ್ಯಾಕೇಜ್ ರಚಿಸಿ |
 | `Scfadbd` | detail | By | ಇವರಿಂದ |
 | `S9c8393` | detail, mine | Change Request | ಬದಲಾವಣೆ ವಿನಂತಿ |
 | `S4572f4` | detail | Change request | ಬದಲಾವಣೆ ವಿನಂತಿ |
 | `S3295be` | detail | Change requests in this set | ಈ ಸಮೂಹದ ಬದಲಾವಣೆ ವಿನಂತಿಗಳು |
 | `S4d8006` | detail | Change set | ಬದಲಾವಣೆ ಸಮೂಹ |
 | `S8aa57d` | detail | Changes | ಬದಲಾವಣೆಗಳು |
+| `S3d14ea` | detail, export | Changes of this release only | ಈ ಬಿಡುಗಡೆಯ ಬದಲಾವಣೆಗಳು ಮಾತ್ರ |
 | `Sbd95c0` | detail | Checklist confirmed at sign-off | ಸಹಿಯ ಸಮಯದಲ್ಲಿ ದೃಢೀಕರಿಸಿದ ಪರಿಶೀಲನಾಪಟ್ಟಿ |
 | `S074d62` | detail, role badge | Chief Engineer | ಮುಖ್ಯ ಎಂಜಿನಿಯರ್ |
 | `S03695d` | detail | Chief Engineer decision | ಮುಖ್ಯ ಎಂಜಿನಿಯರ್ ನಿರ್ಧಾರ |
@@ -12166,8 +12441,11 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sfce06e` | detail | Comments | ಟಿಪ್ಪಣಿಗಳು |
 | `S8d105c` | detail, reconciliation | Compare | ಹೋಲಿಸಿ |
 | `Sc9a03b` | detail | Compare Revisions | ಪರಿಷ್ಕರಣೆಗಳನ್ನು ಹೋಲಿಸಿ |
+| `S0ff7e5` | detail, export | Complete baseline | ಸಂಪೂರ್ಣ ಆಧಾರ ಸ್ಥಿತಿ |
 | `S1798b3` | detail | Completed | ಪೂರ್ಣಗೊಂಡಿತು |
 | `S7671b5` | detail | Confirm or override Audience Access | ಉದ್ದೇಶಿತ ಬಳಕೆದಾರರ ಪ್ರವೇಶವನ್ನು ದೃಢೀಕರಿಸಿ ಅಥವಾ ಅತಿಕ್ರಮಿಸಿ |
+| `S4f9be0` | detail | Content | ವಿಷಯ |
+| `Sa36a5f` | detail, legacy_mapping, st_new | Controller | ನಿಯಂತ್ರಕ |
 | `Scd293f` | detail | Converter Reactive Power Program | ಕನ್ವರ್ಟರ್ ರಿಯಾಕ್ಟಿವ್ ಪವರ್ ಪ್ರೋಗ್ರಾಂ |
 | `S3998a7` | detail | Copies the descriptive fields into a new Draft in a Main Controller group (a new number is allocated at submit; this code's identifier is kept as the legacy reference). | ವಿವರಣಾತ್ಮಕ ಕ್ಷೇತ್ರಗಳನ್ನು ಮುಖ್ಯ ನಿಯಂತ್ರಕ ಗುಂಪಿನ ಹೊಸ ಕರಡಿಗೆ ನಕಲಿಸುತ್ತದೆ (ಸಲ್ಲಿಸುವಾಗ ಹೊಸ ಸಂಖ್ಯೆ ನೀಡಲಾಗುತ್ತದೆ; ಈ ಕೋಡ್‌ನ ಗುರುತನ್ನು ಹಳೆಯ ಉಲ್ಲೇಖವಾಗಿ ಇಡಲಾಗುತ್ತದೆ). |
 | `S54b051` | detail | Copy this code for another turbine platform. The copy is a new Draft that links back here and goes through the normal review. | ಈ ಕೋಡ್ ಅನ್ನು ಬೇರೆ ಟರ್ಬೈನ್ ವೇದಿಕೆಗೆ ನಕಲಿಸಿ. ನಕಲು ಇಲ್ಲಿಗೆ ಮರಳಿ ಜೋಡಿಸುವ ಹೊಸ ಕರಡು ಮತ್ತು ಸಾಮಾನ್ಯ ಪರಿಶೀಲನೆಗೆ ಹೋಗುತ್ತದೆ. |
@@ -12198,6 +12476,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S4c17aa` | detail | Development | ಅಭಿವೃದ್ಧಿ |
 | `S552a2b` | detail | Documented reason | ದಾಖಲಿತ ಕಾರಣ |
 | `S9b1091` | detail, mine | Domain | ಡೊಮೇನ್ |
+| `Sa479c9` | detail | Download | ಡೌನ್‌ಲೋಡ್ |
 | `S056839` | detail | Download Error Report | ದೋಷ ವರದಿ ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ |
 | `S23d33e` | detail, index | Draft | ಕರಡು |
 | `S3c7a50` | detail | Edit Candidates | ಅಭ್ಯರ್ಥಿಗಳನ್ನು ಸಂಪಾದಿಸಿ |
@@ -12219,6 +12498,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sdd7b7e` | detail | failed validation | ಮೌಲ್ಯೀಕರಣದಲ್ಲಿ ವಿಫಲ |
 | `Sd106a6` | detail | Field comments | ಕ್ಷೇತ್ರ ಟಿಪ್ಪಣಿಗಳು |
 | `S2c3caf` | detail, export_verify, operations | File | ಫೈಲ್ |
+| `S6ce6c5` | detail | Files | ಫೈಲ್‌ಗಳು |
 | `Se0996a` | detail, form | first | ಮೊದಲ |
 | `S041a5d` | detail, export_center | Format | ಸ್ವರೂಪ |
 | `S9e3c65` | detail | From revision | ಪರಿಷ್ಕರಣೆಯಿಂದ |
@@ -12226,6 +12506,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sb8c4c9` | detail, form | Further Program References | ಇನ್ನಷ್ಟು ಪ್ರೋಗ್ರಾಂ ಉಲ್ಲೇಖಗಳು |
 | `S636c41` | detail | Grid Operator | ಗ್ರಿಡ್ ಆಪರೇಟರ್ |
 | `S90ccd6` | detail | History | ಇತಿಹಾಸ |
+| `S0dfe7b` | detail | Hub controller | ಹಬ್ ಕಂಟ್ರೋಲರ್ |
 | `Sfec8b7` | detail | Hub Controller group | ಹಬ್ ನಿಯಂತ್ರಕ ಗುಂಪು |
 | `S00ccae` | detail, form | Hub Controller only | ಹಬ್ ನಿಯಂತ್ರಕ ಮಾತ್ರ |
 | `S3c883f` | detail | I have reviewed these dependants | ನಾನು ಈ ಅವಲಂಬಿತಗಳನ್ನು ಪರಿಶೀಲಿಸಿದ್ದೇನೆ |
@@ -12240,6 +12521,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S693272` | detail, withdrawn_codes | Legacy Reference Number | ಹಳೆಯ ಉಲ್ಲೇಖ ಸಂಖ್ಯೆ |
 | `S43d5c5` | detail, form | Loadless Spinning Permitted | ಹೊರೆರಹಿತ ತಿರುಗುವಿಕೆ ಅನುಮತಿಸಲಾಗಿದೆ |
 | `S193786` | detail | Logical Node | ತಾರ್ಕಿಕ ನೋಡ್ |
+| `Sc3f827` | detail | Main controller | ಮುಖ್ಯ ಕಂಟ್ರೋಲರ್ |
 | `S578b78` | detail | Main Controller group | ಮುಖ್ಯ ನಿಯಂತ್ರಕ ಗುಂಪು |
 | `Sa7512d` | detail, form | Main Controller only | ಮುಖ್ಯ ನಿಯಂತ್ರಕ ಮಾತ್ರ |
 | `Seb9a6d` | detail | Manage translations | ಅನುವಾದಗಳನ್ನು ನಿರ್ವಹಿಸಿ |
@@ -12265,6 +12547,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sde04fa` | detail, fleet_feedback, success_metrics | of | ರಲ್ಲಿ |
 | `S19f611` | detail | Offline lookup (HTML) | ಆಫ್‌ಲೈನ್ ಲುಕ್‌ಅಪ್ (HTML) |
 | `S2ff2ae` | detail | Offline lookup + manifest (ZIP) | ಆಫ್‌ಲೈನ್ ಲುಕ್‌ಅಪ್ + ಮ್ಯಾನಿಫೆಸ್ಟ್ (ZIP) |
+| `S3f0e3e` | detail | One ZIP with the complete baseline in every language and for every access level, plus the release notes and a manifest with a SHA-256 for each file. Building it takes a few minutes; the page shows the progress. | ಪ್ರತಿ ಭಾಷೆಯಲ್ಲಿ ಮತ್ತು ಪ್ರತಿ ಪ್ರವೇಶ ಹಂತಕ್ಕೆ ಸಂಪೂರ್ಣ ಆಧಾರ ಸ್ಥಿತಿಯ ಒಂದು ZIP, ಜೊತೆಗೆ ಬಿಡುಗಡೆ ಟಿಪ್ಪಣಿಗಳು ಮತ್ತು ಪ್ರತಿ ಫೈಲ್‌ನ SHA-256 ಇರುವ ಮ್ಯಾನಿಫೆಸ್ಟ್. ರಚಿಸಲು ಕೆಲವು ನಿಮಿಷ ಬೇಕು; ಪುಟ ಪ್ರಗತಿಯನ್ನು ತೋರಿಸುತ್ತದೆ. |
 | `S12aa03` | detail | only translated codes | ಅನುವಾದಿತ ಕೋಡ್‌ಗಳು ಮಾತ್ರ |
 | `S5fc7e3` | detail | open | ತೆರೆದಿದೆ |
 | `Sf61187` | detail | Open New Revision | ಹೊಸ ಪರಿಷ್ಕರಣೆ ತೆರೆಯಿರಿ |
@@ -12276,11 +12559,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S780d35` | detail | Override identifier (migration / reservation only) | ಗುರುತನ್ನು ಅತಿಕ್ರಮಿಸಿ (ವಲಸೆ / ಕಾಯ್ದಿರಿಸುವಿಕೆಗೆ ಮಾತ್ರ) |
 | `S89ff31` | detail | Owner | ಮಾಲೀಕ |
 | `S2d20ee` | detail | Package overview | ಪ್ಯಾಕೇಜ್ ಅವಲೋಕನ |
+| `S4d1a47` | detail | Package: all languages and access levels | ಪ್ಯಾಕೇಜ್: ಎಲ್ಲಾ ಭಾಷೆಗಳು ಮತ್ತು ಪ್ರವೇಶ ಹಂತಗಳು |
+| `Sc49bd0` | detail | Packages of this Release | ಈ ಬಿಡುಗಡೆಯ ಪ್ಯಾಕೇಜ್‌ಗಳು |
 | `S96f608` | detail, review_queue | Pending | ಬಾಕಿ |
 | `Sc983b6` | detail | Pick a profile (columns and labels), an audience, a language or a software version. Every file comes with a manifest of SHA-256 hashes; "bundle" packs both into one ZIP. | ಪ್ರೊಫೈಲ್ (ಕಾಲಮ್‌ಗಳು ಮತ್ತು ಲೇಬಲ್‌ಗಳು), ಉದ್ದೇಶಿತ ಬಳಕೆದಾರರು, ಭಾಷೆ ಅಥವಾ ಸಾಫ್ಟ್‌ವೇರ್ ಆವೃತ್ತಿಯನ್ನು ಆರಿಸಿ. ಪ್ರತಿ ಫೈಲ್ SHA-256 ಹ್ಯಾಶ್‌ಗಳ ಮ್ಯಾನಿಫೆಸ್ಟ್‌ನೊಂದಿಗೆ ಬರುತ್ತದೆ; "bundle" ಎರಡನ್ನೂ ಒಂದು ZIP ಆಗಿ ಕಟ್ಟುತ್ತದೆ. |
 | `S72383d` | detail | Planned dates | ಯೋಜಿತ ದಿನಾಂಕಗಳು |
 | `Sfb14b0` | detail | Planned deprecation date | ಯೋಜಿತ ಹಳತಾಗಿಸುವ ದಿನಾಂಕ |
 | `S00e733` | detail | Planned effective date | ಯೋಜಿತ ಜಾರಿ ದಿನಾಂಕ |
+| `S123a7f` | detail | Platform | ವೇದಿಕೆ |
 | `Sfc8d58` | detail | Platform variant | ವೇದಿಕೆ ರೂಪಾಂತರ |
 | `Scd8926` | detail | Platform variants | ವೇದಿಕೆ ರೂಪಾಂತರಗಳು |
 | `S141f0c` | detail | Processing in the background... | ಹಿನ್ನೆಲೆಯಲ್ಲಿ ಸಂಸ್ಕರಿಸಲಾಗುತ್ತಿದೆ... |
@@ -12301,6 +12587,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S9b44a2` | detail | Release notes (PDF) | ಬಿಡುಗಡೆ ಟಿಪ್ಪಣಿಗಳು (PDF) |
 | `S3dfa01` | detail | Release notes and offline lookup | ಬಿಡುಗಡೆ ಟಿಪ್ಪಣಿಗಳು ಮತ್ತು ಆಫ್‌ಲೈನ್ ಲುಕ್‌ಅಪ್ |
 | `Sdcddb7` | detail | Release notes list what was added, changed (field by field) and deprecated since the previous Release. The offline page is one self-contained HTML file for use at the turbine without a connection. | ಬಿಡುಗಡೆ ಟಿಪ್ಪಣಿಗಳು ಹಿಂದಿನ ಬಿಡುಗಡೆಯ ನಂತರ ಏನು ಸೇರಿಸಲಾಯಿತು, ಬದಲಾಯಿತು (ಕ್ಷೇತ್ರ ಕ್ಷೇತ್ರವಾಗಿ) ಮತ್ತು ಹಳತಾಯಿತು ಎಂದು ಪಟ್ಟಿಮಾಡುತ್ತವೆ. ಆಫ್‌ಲೈನ್ ಪುಟವು ಸಂಪರ್ಕವಿಲ್ಲದೆ ಟರ್ಬೈನ್‌ನಲ್ಲಿ ಬಳಸಲು ಒಂದು ಸ್ವಯಂಪೂರ್ಣ HTML ಫೈಲ್. |
+| `Scce715` | detail | Reload | ಮತ್ತೆ ಲೋಡ್ ಮಾಡಿ |
 | `S0544a3` | detail | Reload this page to see the progress. | ಪ್ರಗತಿ ನೋಡಲು ಈ ಪುಟವನ್ನು ಮರುಲೋಡ್ ಮಾಡಿ. |
 | `S99e347` | detail | Remedy | ಪರಿಹಾರ |
 | `Se96390` | detail, list | Remove | ತೆಗೆದುಹಾಕಿ |
@@ -12350,9 +12637,11 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S08e643` | detail, list | Target software version | ಗುರಿ ಸಾಫ್ಟ್‌ವೇರ್ ಆವೃತ್ತಿ |
 | `S44203c` | detail, form, status code fields | Task Call Frequency | ಟಾಸ್ಕ್ ಕಾಲ್ ಆವರ್ತನ |
 | `S8fc804` | detail | The author has to submit it for review before the Reviewer or Administrator can see it. | ಪರಿಶೀಲಕ ಅಥವಾ ನಿರ್ವಾಹಕರು ನೋಡುವ ಮೊದಲು ಲೇಖಕರು ಇದನ್ನು ಪರಿಶೀಲನೆಗಾಗಿ ಸಲ್ಲಿಸಬೇಕು. |
+| `Sa5f3f8` | detail | These files contain the complete baseline: every status code that is valid as of this Release, not only the ones it changed. | ಈ ಫೈಲ್‌ಗಳಲ್ಲಿ ಸಂಪೂರ್ಣ ಆಧಾರ ಸ್ಥಿತಿ ಇದೆ: ಈ ಬಿಡುಗಡೆಯ ಪ್ರಕಾರ ಮಾನ್ಯವಾದ ಪ್ರತಿ ಸ್ಥಿತಿ ಕೋಡ್, ಬದಲಾದವು ಮಾತ್ರವಲ್ಲ. |
 | `S091814` | detail | This change request has reached a terminal decision state | ಈ ಬದಲಾವಣೆ ವಿನಂತಿಯು ಅಂತಿಮ ನಿರ್ಧಾರ ಸ್ಥಿತಿಯನ್ನು ತಲುಪಿದೆ |
 | `S6d5708` | detail | This is the one truly irreversible action in the system. Type the identifier to confirm. | ಇದು ವ್ಯವಸ್ಥೆಯಲ್ಲಿರುವ ನಿಜವಾಗಿ ಬದಲಾಯಿಸಲಾಗದ ಏಕೈಕ ಕ್ರಿಯೆ. ದೃಢೀಕರಿಸಲು ಗುರುತನ್ನು ಟೈಪ್ ಮಾಡಿ. |
 | `Sb55f1f` | detail | To revision | ಪರಿಷ್ಕರಣೆಗೆ |
+| `Sa2a321` | detail | Translated codes per language | ಭಾಷೆವಾರು ಅನುವಾದಿತ ಕೋಡ್‌ಗಳು |
 | `S8ad830` | detail, menu, overview | Translations | ಅನುವಾದಗಳು |
 | `Seaf576` | detail, form | Trigger Snapshot | ಸ್ನ್ಯಾಪ್‌ಶಾಟ್ ಪ್ರಚೋದಿಸಿ |
 | `S285ec8` | detail, form | Troubleshooting | ದೋಷ ನಿವಾರಣೆ |
@@ -12413,6 +12702,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Se51c55` | export | Records | ದಾಖಲೆಗಳು |
 | `Sd41f56` | export, export_center | Release | ಬಿಡುಗಡೆ |
 | `S2e8fd6` | export | Reset delay | ರೀಸೆಟ್ ವಿಳಂಬ |
+| `S4651a3` | export | Scope | ವ್ಯಾಪ್ತಿ |
 | `S89fdd5` | export | Set delay | ಸೆಟ್ ವಿಳಂಬ |
 | `S828d33` | export | source | ಮೂಲ |
 | `Sfcbb29` | export | Status code | ಸ್ಥಿತಿ ಕೋಡ್ |
@@ -12540,6 +12830,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S34b903` | help and messages | Not possible: the account has history (see above). Deactivate it instead; the person can no longer sign in and everything they did stays attributable. | ಸಾಧ್ಯವಿಲ್ಲ: ಖಾತೆಗೆ ಇತಿಹಾಸವಿದೆ (ಮೇಲೆ ನೋಡಿ). ಬದಲಿಗೆ ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಿ; ವ್ಯಕ್ತಿ ಇನ್ನು ಸೈನ್ ಇನ್ ಮಾಡಲಾರರು ಮತ್ತು ಅವರು ಮಾಡಿದ್ದೆಲ್ಲವೂ ಗುರುತಿಸಬಹುದಾದಂತೆಯೇ ಉಳಿಯುತ್ತದೆ. |
 | `Sce489f` | help and messages | The author gets any required cross-domain sign-offs, then submits the change request for review. | ಲೇಖಕರು ಅಗತ್ಯ ಅಂತರ-ಡೊಮೇನ್ ಸಹಿಗಳನ್ನು ಪಡೆದು, ನಂತರ ಬದಲಾವಣೆ ವಿನಂತಿಯನ್ನು ಪರಿಶೀಲನೆಗೆ ಸಲ್ಲಿಸುತ್ತಾರೆ. |
 | `S1cdbdd` | help and messages | The Chief Engineer approves or rejects. Approval makes the revision Approved (or Deprecated for a deprecation request). | ಮುಖ್ಯ ಎಂಜಿನಿಯರ್ ಅನುಮೋದಿಸುತ್ತಾರೆ ಅಥವಾ ತಿರಸ್ಕರಿಸುತ್ತಾರೆ. ಅನುಮೋದನೆಯು ಪರಿಷ್ಕರಣೆಯನ್ನು ಅನುಮೋದಿತ (ಅಥವಾ ಹಳತಾಗಿಸುವ ವಿನಂತಿಗೆ ಹಳತಾದ) ಮಾಡುತ್ತದೆ. |
+| `S2d6ac0` | help and messages | The package is being built. Reload this page to follow its progress. | ಪ್ಯಾಕೇಜ್ ರಚನೆಯಾಗುತ್ತಿದೆ. ಪ್ರಗತಿ ನೋಡಲು ಈ ಪುಟವನ್ನು ಮತ್ತೆ ಲೋಡ್ ಮಾಡಿ. |
 | `Scff3a3` | help and messages | User deleted; its name and address are erased, what it did stays attributable. | ಬಳಕೆದಾರರನ್ನು ಅಳಿಸಲಾಗಿದೆ; ಅವರ ಹೆಸರು ಮತ್ತು ವಿಳಾಸ ಅಳಿಸಲ್ಪಟ್ಟಿವೆ, ಅವರು ಮಾಡಿದ್ದು ಆರೋಪಿಸಬಹುದಾದಂತೆ ಉಳಿಯುತ್ತದೆ. |
 | `Secfb3f` | hub_consolidation | Deprecate replaced Hub codes | ಬದಲಾಯಿಸಿದ ಹಬ್ ಕೋಡ್‌ಗಳನ್ನು ಹಳತಾಗಿಸಿ |
 | `S0e7766` | hub_consolidation, language | draft | ಕರಡು |
@@ -12619,7 +12910,6 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S863fd0` | language | Your own proposal: another person approves it. | ನಿಮ್ಮ ಸ್ವಂತ ಸೂಚನೆ: ಬೇರೊಬ್ಬರು ಅದನ್ನು ಅನುಮೋದಿಸುತ್ತಾರೆ. |
 | `Sf9d469` | legacy_mapping | All controllers | ಎಲ್ಲಾ ನಿಯಂತ್ರಕಗಳು |
 | `Se61c2f` | legacy_mapping | Any number state | ಯಾವುದೇ ಸಂಖ್ಯೆ ಸ್ಥಿತಿ |
-| `Sa36a5f` | legacy_mapping, st_new, st_preview | Controller | ನಿಯಂತ್ರಕ |
 | `S7c4f77` | legacy_mapping | issued | ನೀಡಲಾಗಿದೆ |
 | `Sfd5ec0` | legacy_mapping, menu, new | Legacy mapping | ಹಳೆಯ-ಹೊಸ ಮ್ಯಾಪಿಂಗ್ |
 | `S81f567` | legacy_mapping | Legacy number to new identifier | ಹಳೆಯ ಸಂಖ್ಯೆಯಿಂದ ಹೊಸ ಗುರುತಿಗೆ |
@@ -12769,6 +13059,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S751ff5` | message: export_profile_service | Export profile not found | ರಫ್ತು ಪ್ರೊಫೈಲ್ ಸಿಗಲಿಲ್ಲ |
 | `S4a8527` | message: export_profile_service | name must be 1-80 characters. | name 1-80 ಅಕ್ಷರಗಳಾಗಿರಬೇಕು. |
 | `S506d0b` | message: export_service | An audience export is built from Released data only; it cannot be combined with the unapproved working set. | ಉದ್ದೇಶಿತ ಬಳಕೆದಾರರ ರಫ್ತು ಬಿಡುಗಡೆಯಾದ ಡೇಟಾದಿಂದ ಮಾತ್ರ ನಿರ್ಮಿಸಲ್ಪಡುತ್ತದೆ; ಅದನ್ನು ಅನುಮೋದಿಸದ ಕಾರ್ಯನಿರತ ಸಮೂಹದೊಂದಿಗೆ ಸೇರಿಸಲಾಗದು. |
+| `S4bb9a3` | message: export_service | content must be 'baseline' or 'delta'. | content 'baseline' ಅಥವಾ 'delta' ಆಗಿರಬೇಕು. |
 | `Sf593c4` | message: export_service | language is required for a translated export | ಅನುವಾದಿತ ರಫ್ತಿಗೆ ಭಾಷೆ ಅಗತ್ಯ |
 | `S42cee2` | message: field_review_service | A field comment must be between 1 and 2000 characters. | ಕ್ಷೇತ್ರ ಟಿಪ್ಪಣಿ 1 ರಿಂದ 2000 ಅಕ್ಷರಗಳ ನಡುವೆ ಇರಬೇಕು. |
 | `S0168d7` | message: field_review_service | Checklist item not found | ಪರಿಶೀಲನಾಪಟ್ಟಿ ಅಂಶ ಸಿಗಲಿಲ್ಲ |
@@ -12808,8 +13099,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sb68487` | message: occurrence_service | period_end must not be before period_start. | period_end, period_start ಗಿಂತ ಮೊದಲು ಇರಬಾರದು. |
 | `S682b0f` | message: occurrence_service | source_label must be 1-80 characters. | source_label 1-80 ಅಕ್ಷರಗಳಾಗಿರಬೇಕು. |
 | `S3b0e31` | message: occurrence_service | The file needs the columns status_code_identifier and occurrences. | ಫೈಲ್‌ಗೆ status_code_identifier ಮತ್ತು occurrences ಕಾಲಮ್‌ಗಳು ಬೇಕು. |
+| `Sbdd594` | message: package_service | Choose at least one access level or the unfiltered files. | ಕನಿಷ್ಠ ಒಂದು ಪ್ರವೇಶ ಹಂತ ಅಥವಾ ಫಿಲ್ಟರ್ ಮಾಡದ ಫೈಲ್‌ಗಳನ್ನು ಆಯ್ಕೆಮಾಡಿ. |
+| `S4af5c1` | message: package_service | Choose at least one format. | ಕನಿಷ್ಠ ಒಂದು ಫಾರ್ಮ್ಯಾಟ್ ಆಯ್ಕೆಮಾಡಿ. |
+| `S8865f4` | message: package_service | Only a published Release can be packaged. | ಪ್ರಕಟಿತ ಬಿಡುಗಡೆಯನ್ನು ಮಾತ್ರ ಪ್ಯಾಕೇಜ್ ಮಾಡಬಹುದು. |
+| `S9b6676` | message: package_service | Package not found | ಪ್ಯಾಕೇಜ್ ಕಂಡುಬಂದಿಲ್ಲ |
+| `S2ddbdd` | message: package_service, message: release_notes_service | Release not found | ಬಿಡುಗಡೆ ಸಿಗಲಿಲ್ಲ |
+| `S3bc283` | message: package_service | The package file is no longer on the server. | ಪ್ಯಾಕೇಜ್ ಫೈಲ್ ಇನ್ನು ಸರ್ವರ್‌ನಲ್ಲಿ ಇಲ್ಲ. |
+| `S310622` | message: package_service | The package is not ready. | ಪ್ಯಾಕೇಜ್ ಇನ್ನೂ ಸಿದ್ಧವಾಗಿಲ್ಲ. |
 | `S2142ac` | message: release_notes_service | format must be md, csv, pdf or json | format md, csv, pdf ಅಥವಾ json ಆಗಿರಬೇಕು |
-| `S2ddbdd` | message: release_notes_service | Release not found | ಬಿಡುಗಡೆ ಸಿಗಲಿಲ್ಲ |
 | `S6e9bf7` | message: release_service | A published Release can never be deleted (BR-007). | ಪ್ರಕಟಿತ ಬಿಡುಗಡೆಯನ್ನು ಎಂದಿಗೂ ಅಳಿಸಲಾಗದು (BR-007). |
 | `S06fb3b` | message: release_service | Cannot change items on a published Release (BR-007). | ಪ್ರಕಟಿತ ಬಿಡುಗಡೆಯ ಅಂಶಗಳನ್ನು ಬದಲಿಸಲಾಗದು (BR-007). |
 | `Sc1eab3` | message: release_service | Cannot change the targets of a published Release (BR-007). | ಪ್ರಕಟಿತ ಬಿಡುಗಡೆಯ ಗುರಿಗಳನ್ನು ಬದಲಿಸಲಾಗದು (BR-007). |
@@ -13120,7 +13417,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 
 ### 9.13 IN ଓଡ଼ିଆ 🇮🇳 — Odia
 
-1162 of 1163 strings translated; direction left to right.
+1189 of 1190 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -13287,6 +13584,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sc3f104` | delegations, user_detail, users | Role | ଭୂମିକା |
 | `Sd5dcf0` | delegations | Until (inclusive) | ପର୍ଯ୍ୟନ୍ତ (ସହିତ) |
 | `Sa4aefa` | delegations | Valid | ବୈଧ |
+| `Sc3dc5c` | detail | %(count)s codes have no confirmed access levels and are missing from every access-level file. | %(count)s କୋଡ୍‌ର ନିଶ୍ଚିତ ପ୍ରବେଶ ସ୍ତର ନାହିଁ ଏବଂ ସେଗୁଡ଼ିକ ପ୍ରତ୍ୟେକ ପ୍ରବେଶ-ସ୍ତର ଫାଇଲ୍‌ରୁ ଅନୁପସ୍ଥିତ। |
 | `Sc3cd63` | detail, user_detail, users | Actions | କାର୍ଯ୍ୟ |
 | `S61cc55` | detail, lookups, review_checklist | Add | ଯୋଡ଼ନ୍ତୁ |
 | `S12cc59` | detail | Add a comment (no decision) | ମନ୍ତବ୍ୟ ଯୋଡ଼ନ୍ତୁ (ନିଷ୍ପତ୍ତି ବିନା) |
@@ -13300,7 +13598,9 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S25f8c5` | detail, export, form | Alarm | ଆଲାରମ୍ |
 | `Sd87c44` | detail, export, hub_consolidation | all | ସମସ୍ତ |
 | `S484388` | detail, export_center | all columns | ସମସ୍ତ ସ୍ତମ୍ଭ |
+| `S2e73c3` | detail | All languages and all access levels are included. Use the export above for a single language or access level. | ସମସ୍ତ ଭାଷା ଓ ସମସ୍ତ ପ୍ରବେଶ ସ୍ତର ଅନ୍ତର୍ଭୁକ୍ତ। ଗୋଟିଏ ଭାଷା କିମ୍ବା ଗୋଟିଏ ପ୍ରବେଶ ସ୍ତର ପାଇଁ ଉପରର ଏକ୍ସପୋର୍ଟ ବ୍ୟବହାର କରନ୍ତୁ। |
 | `S432284` | detail | All required sign-offs are in, but this is still a Draft — the Reviewer and Administrator only see it after you choose Submit for Review below. | ସମସ୍ତ ଆବଶ୍ୟକ ସ୍ୱାକ୍ଷର ଆସିଛି, କିନ୍ତୁ ଏହା ଏବେ ବି ଖସଡ଼ା — ଆପଣ ତଳେ ସମୀକ୍ଷା ପାଇଁ ଦାଖଲ କରନ୍ତୁ ବାଛିଲେ ହିଁ ସମୀକ୍ଷକ ଓ ପ୍ରଶାସକ ଏହାକୁ ଦେଖିବେ। |
+| `S9b0b4c` | detail | also the files without an access level (all columns) | ପ୍ରବେଶ ସ୍ତର ନଥିବା ଫାଇଲ୍ ମଧ୍ୟ (ସମସ୍ତ ସ୍ତମ୍ଭ) |
 | `Sf24c44` | detail | Any %(code)s Engineer | ଯେକୌଣସି %(code)s ଇଞ୍ଜିନିୟର |
 | `Sb99a01` | detail | Applies to software versions | ସଫ୍ଟୱେର୍ ସଂସ୍କରଣ ପ୍ରତି ପ୍ରଯୁଜ୍ୟ |
 | `S7b2c7f` | detail, language | Approve | ଅନୁମୋଦନ କରନ୍ତୁ |
@@ -13317,12 +13617,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S416869` | detail | Auto Reset Program | ସ୍ୱୟଂ ରିସେଟ୍ ପ୍ରୋଗ୍ରାମ୍ |
 | `Sd71897` | detail, form | Available Group | ଉପଲବ୍ଧତା ଗୋଷ୍ଠୀ |
 | `S928e2e` | detail | Brake Program | ବ୍ରେକ୍ ପ୍ରୋଗ୍ରାମ୍ |
+| `Sab2e8a` | detail | Build package | ପ୍ୟାକେଜ୍ ତିଆରି କରନ୍ତୁ |
 | `Scfadbd` | detail | By | ଦ୍ୱାରା |
 | `S9c8393` | detail, mine | Change Request | ପରିବର୍ତ୍ତନ ଅନୁରୋଧ |
 | `S4572f4` | detail | Change request | ପରିବର୍ତ୍ତନ ଅନୁରୋଧ |
 | `S3295be` | detail | Change requests in this set | ଏହି ସମୂହର ପରିବର୍ତ୍ତନ ଅନୁରୋଧ |
 | `S4d8006` | detail | Change set | ପରିବର୍ତ୍ତନ ସମୂହ |
 | `S8aa57d` | detail | Changes | ପରିବର୍ତ୍ତନ |
+| `S3d14ea` | detail, export | Changes of this release only | କେବଳ ଏହି ରିଲିଜ୍‌ର ପରିବର୍ତ୍ତନ |
 | `Sbd95c0` | detail | Checklist confirmed at sign-off | ସ୍ୱାକ୍ଷର ସମୟରେ ନିଶ୍ଚିତ ଚେକ୍‌ଲିଷ୍ଟ |
 | `S074d62` | detail, role badge | Chief Engineer | ମୁଖ୍ୟ ଇଞ୍ଜିନିୟର |
 | `S03695d` | detail | Chief Engineer decision | ମୁଖ୍ୟ ଇଞ୍ଜିନିୟର ନିଷ୍ପତ୍ତି |
@@ -13335,8 +13637,11 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sfce06e` | detail | Comments | ମନ୍ତବ୍ୟ |
 | `S8d105c` | detail, reconciliation | Compare | ତୁଳନା କରନ୍ତୁ |
 | `Sc9a03b` | detail | Compare Revisions | ସଂସ୍କରଣ ତୁଳନା କରନ୍ତୁ |
+| `S0ff7e5` | detail, export | Complete baseline | ସମ୍ପୂର୍ଣ୍ଣ ଆଧାର ସ୍ଥିତି |
 | `S1798b3` | detail | Completed | ସମ୍ପୂର୍ଣ୍ଣ ହେଲା |
 | `S7671b5` | detail | Confirm or override Audience Access | ଲକ୍ଷ୍ୟ ଗୋଷ୍ଠୀ ପ୍ରବେଶ ନିଶ୍ଚିତ ବା ଅତିକ୍ରମ କରନ୍ତୁ |
+| `S4f9be0` | detail | Content | ବିଷୟବସ୍ତୁ |
+| `Sa36a5f` | detail, legacy_mapping, st_new | Controller | ନିୟନ୍ତ୍ରକ |
 | `Scd293f` | detail | Converter Reactive Power Program | କନଭର୍ଟର୍ ରିଆକ୍ଟିଭ୍ ପାୱାର୍ ପ୍ରୋଗ୍ରାମ୍ |
 | `S3998a7` | detail | Copies the descriptive fields into a new Draft in a Main Controller group (a new number is allocated at submit; this code's identifier is kept as the legacy reference). | ବର୍ଣ୍ଣନାତ୍ମକ କ୍ଷେତ୍ର ମୁଖ୍ୟ ନିୟନ୍ତ୍ରକ ଗୋଷ୍ଠୀର ନୂଆ ଖସଡ଼ାକୁ ନକଲ କରେ (ଦାଖଲ ସମୟରେ ନୂଆ ସଂଖ୍ୟା ଦିଆଯାଏ; ଏହି କୋଡ୍‌ର ପରିଚୟକ ପୁରୁଣା ସନ୍ଦର୍ଭ ଭାବେ ରଖାଯାଏ)। |
 | `S54b051` | detail | Copy this code for another turbine platform. The copy is a new Draft that links back here and goes through the normal review. | ଏହି କୋଡ୍ ଅନ୍ୟ ଟର୍ବାଇନ୍ ପ୍ଲାଟଫର୍ମ ପାଇଁ ନକଲ କରନ୍ତୁ। ନକଲ ଏଠାକୁ ଫେରି ଯୋଡ଼ିହେଉଥିବା ନୂଆ ଖସଡ଼ା ଏବଂ ସାଧାରଣ ସମୀକ୍ଷା ଦେଇ ଯାଏ। |
@@ -13367,6 +13672,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S4c17aa` | detail | Development | ବିକାଶ |
 | `S552a2b` | detail | Documented reason | ଦସ୍ତାବିଜ୍ କାରଣ |
 | `S9b1091` | detail, mine | Domain | ଡୋମେନ୍ |
+| `Sa479c9` | detail | Download | ଡାଉନଲୋଡ୍ |
 | `S056839` | detail | Download Error Report | ତ୍ରୁଟି ରିପୋର୍ଟ ଡାଉନଲୋଡ୍ କରନ୍ତୁ |
 | `S23d33e` | detail, index | Draft | ଖସଡ଼ା |
 | `S3c7a50` | detail | Edit Candidates | ପ୍ରାର୍ଥୀ ସମ୍ପାଦନ କରନ୍ତୁ |
@@ -13388,6 +13694,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sdd7b7e` | detail | failed validation | ବୈଧତା ଯାଞ୍ଚରେ ବିଫଳ |
 | `Sd106a6` | detail | Field comments | କ୍ଷେତ୍ର ମନ୍ତବ୍ୟ |
 | `S2c3caf` | detail, export_verify, operations | File | ଫାଇଲ୍ |
+| `S6ce6c5` | detail | Files | ଫାଇଲ୍ |
 | `Se0996a` | detail, form | first | ପ୍ରଥମ |
 | `S041a5d` | detail, export_center | Format | ଫର୍ମାଟ୍ |
 | `S9e3c65` | detail | From revision | ସଂସ୍କରଣରୁ |
@@ -13395,6 +13702,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sb8c4c9` | detail, form | Further Program References | ଅଧିକ ପ୍ରୋଗ୍ରାମ୍ ସନ୍ଦର୍ଭ |
 | `S636c41` | detail | Grid Operator | ଗ୍ରିଡ୍ ଅପରେଟର୍ |
 | `S90ccd6` | detail | History | ଇତିହାସ |
+| `S0dfe7b` | detail | Hub controller | ହବ୍ କଣ୍ଟ୍ରୋଲର୍ |
 | `Sfec8b7` | detail | Hub Controller group | ହବ୍ ନିୟନ୍ତ୍ରକ ଗୋଷ୍ଠୀ |
 | `S00ccae` | detail, form | Hub Controller only | କେବଳ ହବ୍ ନିୟନ୍ତ୍ରକ |
 | `S3c883f` | detail | I have reviewed these dependants | ମୁଁ ଏହି ନିର୍ଭରଶୀଳଗୁଡ଼ିକୁ ସମୀକ୍ଷା କରିଛି |
@@ -13409,6 +13717,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S693272` | detail, withdrawn_codes | Legacy Reference Number | ପୁରୁଣା ସନ୍ଦର୍ଭ ସଂଖ୍ୟା |
 | `S43d5c5` | detail, form | Loadless Spinning Permitted | ଭାରହୀନ ଘୂର୍ଣ୍ଣନ ଅନୁମତିପ୍ରାପ୍ତ |
 | `S193786` | detail | Logical Node | ତାର୍କିକ ନୋଡ୍ |
+| `Sc3f827` | detail | Main controller | ମୁଖ୍ୟ କଣ୍ଟ୍ରୋଲର୍ |
 | `S578b78` | detail | Main Controller group | ମୁଖ୍ୟ ନିୟନ୍ତ୍ରକ ଗୋଷ୍ଠୀ |
 | `Sa7512d` | detail, form | Main Controller only | କେବଳ ମୁଖ୍ୟ ନିୟନ୍ତ୍ରକ |
 | `Seb9a6d` | detail | Manage translations | ଅନୁବାଦ ପରିଚାଳନା କରନ୍ତୁ |
@@ -13434,6 +13743,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sde04fa` | detail, fleet_feedback, success_metrics | of | ମଧ୍ୟରୁ |
 | `S19f611` | detail | Offline lookup (HTML) | ଅଫଲାଇନ୍ ଲୁକଅପ୍ (HTML) |
 | `S2ff2ae` | detail | Offline lookup + manifest (ZIP) | ଅଫଲାଇନ୍ ଲୁକଅପ୍ + ମ୍ୟାନିଫେଷ୍ଟ (ZIP) |
+| `S3f0e3e` | detail | One ZIP with the complete baseline in every language and for every access level, plus the release notes and a manifest with a SHA-256 for each file. Building it takes a few minutes; the page shows the progress. | ପ୍ରତ୍ୟେକ ଭାଷାରେ ଓ ପ୍ରତ୍ୟେକ ପ୍ରବେଶ ସ୍ତର ପାଇଁ ସମ୍ପୂର୍ଣ୍ଣ ଆଧାର ସ୍ଥିତି ସହିତ ଗୋଟିଏ ZIP, ସହିତ ରିଲିଜ୍ ନୋଟ୍ ଓ ପ୍ରତ୍ୟେକ ଫାଇଲ୍‌ର SHA-256 ଥିବା ମ୍ୟାନିଫେଷ୍ଟ। ତିଆରି କରିବାକୁ କିଛି ମିନିଟ୍ ଲାଗେ; ପୃଷ୍ଠା ଅଗ୍ରଗତି ଦେଖାଏ। |
 | `S12aa03` | detail | only translated codes | କେବଳ ଅନୁବାଦିତ କୋଡ୍ |
 | `S5fc7e3` | detail | open | ଖୋଲା |
 | `Sf61187` | detail | Open New Revision | ନୂଆ ସଂସ୍କରଣ ଖୋଲନ୍ତୁ |
@@ -13445,11 +13755,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S780d35` | detail | Override identifier (migration / reservation only) | ପରିଚୟକ ଅତିକ୍ରମ କରନ୍ତୁ (କେବଳ ସ୍ଥାନାନ୍ତର / ସଂରକ୍ଷଣ ପାଇଁ) |
 | `S89ff31` | detail | Owner | ମାଲିକ |
 | `S2d20ee` | detail | Package overview | ପ୍ୟାକେଜ୍ ସମୀକ୍ଷା |
+| `S4d1a47` | detail | Package: all languages and access levels | ପ୍ୟାକେଜ୍: ସମସ୍ତ ଭାଷା ଓ ପ୍ରବେଶ ସ୍ତର |
+| `Sc49bd0` | detail | Packages of this Release | ଏହି ରିଲିଜ୍‌ର ପ୍ୟାକେଜ୍ |
 | `S96f608` | detail, review_queue | Pending | ବାକି |
 | `Sc983b6` | detail | Pick a profile (columns and labels), an audience, a language or a software version. Every file comes with a manifest of SHA-256 hashes; "bundle" packs both into one ZIP. | ଏକ ପ୍ରୋଫାଇଲ୍ (ସ୍ତମ୍ଭ ଓ ଲେବଲ୍), ଲକ୍ଷ୍ୟ ଗୋଷ୍ଠୀ, ଭାଷା ବା ସଫ୍ଟୱେର୍ ସଂସ୍କରଣ ବାଛନ୍ତୁ। ପ୍ରତ୍ୟେକ ଫାଇଲ୍ SHA-256 ହ୍ୟାସ୍‌ର ମ୍ୟାନିଫେଷ୍ଟ ସହ ଆସେ; "bundle" ଦୁହିଁଙ୍କୁ ଗୋଟିଏ ZIP ରେ ବାନ୍ଧେ। |
 | `S72383d` | detail | Planned dates | ଯୋଜନାବଦ୍ଧ ତାରିଖ |
 | `Sfb14b0` | detail | Planned deprecation date | ଯୋଜନାବଦ୍ଧ ପ୍ରଚଳନ ବନ୍ଦ ତାରିଖ |
 | `S00e733` | detail | Planned effective date | ଯୋଜନାବଦ୍ଧ କାର୍ଯ୍ୟକାରୀ ତାରିଖ |
+| `S123a7f` | detail | Platform | ପ୍ଲାଟଫର୍ମ |
 | `Sfc8d58` | detail | Platform variant | ପ୍ଲାଟଫର୍ମ ରୂପାନ୍ତର |
 | `Scd8926` | detail | Platform variants | ପ୍ଲାଟଫର୍ମ ରୂପାନ୍ତର |
 | `S141f0c` | detail | Processing in the background... | ପୃଷ୍ଠଭୂମିରେ ପ୍ରକ୍ରିୟାକରଣ ହେଉଛି... |
@@ -13470,6 +13783,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S9b44a2` | detail | Release notes (PDF) | ରିଲିଜ୍ ନୋଟ୍ (PDF) |
 | `S3dfa01` | detail | Release notes and offline lookup | ରିଲିଜ୍ ନୋଟ୍ ଓ ଅଫଲାଇନ୍ ଲୁକଅପ୍ |
 | `Sdcddb7` | detail | Release notes list what was added, changed (field by field) and deprecated since the previous Release. The offline page is one self-contained HTML file for use at the turbine without a connection. | ରିଲିଜ୍ ନୋଟ୍ ପୂର୍ବ ରିଲିଜ୍ ପରେ କ’ଣ ଯୋଡ଼ାଗଲା, ବଦଳିଲା (କ୍ଷେତ୍ର କ୍ଷେତ୍ର) ଓ ପ୍ରଚଳନ ବନ୍ଦ ହେଲା ତାହା ତାଲିକାଭୁକ୍ତ କରେ। ଅଫଲାଇନ୍ ପୃଷ୍ଠା ସଂଯୋଗ ବିନା ଟର୍ବାଇନ୍‌ରେ ବ୍ୟବହାର ପାଇଁ ଏକ ସ୍ୱୟଂସମ୍ପୂର୍ଣ୍ଣ HTML ଫାଇଲ୍। |
+| `Scce715` | detail | Reload | ପୁଣି ଲୋଡ୍ କରନ୍ତୁ |
 | `S0544a3` | detail | Reload this page to see the progress. | ଅଗ୍ରଗତି ଦେଖିବାକୁ ଏହି ପୃଷ୍ଠା ପୁନଃଲୋଡ୍ କରନ୍ତୁ। |
 | `S99e347` | detail | Remedy | ପ୍ରତିକାର |
 | `Se96390` | detail, list | Remove | ହଟାନ୍ତୁ |
@@ -13519,9 +13833,11 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S08e643` | detail, list | Target software version | ଲକ୍ଷ୍ୟ ସଫ୍ଟୱେର୍ ସଂସ୍କରଣ |
 | `S44203c` | detail, form, status code fields | Task Call Frequency | ଟାସ୍କ୍ କଲ୍ ଫ୍ରିକ୍ୱେନ୍ସି |
 | `S8fc804` | detail | The author has to submit it for review before the Reviewer or Administrator can see it. | ସମୀକ୍ଷକ ବା ପ୍ରଶାସକ ଦେଖିବା ପୂର୍ବରୁ ଲେଖକ ଏହାକୁ ସମୀକ୍ଷା ପାଇଁ ଦାଖଲ କରିବା ଆବଶ୍ୟକ। |
+| `Sa5f3f8` | detail | These files contain the complete baseline: every status code that is valid as of this Release, not only the ones it changed. | ଏହି ଫାଇଲ୍‌ଗୁଡ଼ିକରେ ସମ୍ପୂର୍ଣ୍ଣ ଆଧାର ସ୍ଥିତି ଅଛି: ଏହି ରିଲିଜ୍ ଅନୁଯାୟୀ ବୈଧ ପ୍ରତ୍ୟେକ ସ୍ଥିତି କୋଡ୍, କେବଳ ବଦଳିଥିବା ନୁହେଁ। |
 | `S091814` | detail | This change request has reached a terminal decision state | ଏହି ପରିବର୍ତ୍ତନ ଅନୁରୋଧ ଏକ ଅନ୍ତିମ ନିଷ୍ପତ୍ତି ସ୍ଥିତିରେ ପହଞ୍ଚିଛି |
 | `S6d5708` | detail | This is the one truly irreversible action in the system. Type the identifier to confirm. | ଏହା ସିଷ୍ଟମ୍‌ର ଏକମାତ୍ର ପ୍ରକୃତ ଅପରିବର୍ତ୍ତନୀୟ କାର୍ଯ୍ୟ। ନିଶ୍ଚିତ କରିବାକୁ ପରିଚୟକ ଟାଇପ୍ କରନ୍ତୁ। |
 | `Sb55f1f` | detail | To revision | ସଂସ୍କରଣ ପର୍ଯ୍ୟନ୍ତ |
+| `Sa2a321` | detail | Translated codes per language | ଭାଷା ଅନୁସାରେ ଅନୁବାଦିତ କୋଡ୍ |
 | `S8ad830` | detail, menu, overview | Translations | ଅନୁବାଦ |
 | `Seaf576` | detail, form | Trigger Snapshot | ସ୍ନାପ୍‌ଶଟ୍ ଟ୍ରିଗର୍ କରନ୍ତୁ |
 | `S285ec8` | detail, form | Troubleshooting | ତ୍ରୁଟି ନିବାରଣ |
@@ -13582,6 +13898,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Se51c55` | export | Records | ରେକର୍ଡ |
 | `Sd41f56` | export, export_center | Release | ରିଲିଜ୍ |
 | `S2e8fd6` | export | Reset delay | ରିସେଟ୍ ବିଳମ୍ବ |
+| `S4651a3` | export | Scope | ପରିସର |
 | `S89fdd5` | export | Set delay | ସେଟ୍ ବିଳମ୍ବ |
 | `S828d33` | export | source | ଉତ୍ସ |
 | `Sfcbb29` | export | Status code | ସ୍ଥିତି କୋଡ୍ |
@@ -13709,6 +14026,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S34b903` | help and messages | Not possible: the account has history (see above). Deactivate it instead; the person can no longer sign in and everything they did stays attributable. | ସମ୍ଭବ ନୁହେଁ: ଖାତାର ଇତିହାସ ଅଛି (ଉପରେ ଦେଖନ୍ତୁ)। ବଦଳରେ ନିଷ୍କ୍ରିୟ କରନ୍ତୁ; ବ୍ୟକ୍ତି ଆଉ ସାଇନ୍ ଇନ୍ କରିପାରିବେ ନାହିଁ ଏବଂ ସେମାନେ ଯାହା କରିଛନ୍ତି ତାହା ଚିହ୍ନଟଯୋଗ୍ୟ ରହେ। |
 | `Sce489f` | help and messages | The author gets any required cross-domain sign-offs, then submits the change request for review. | ଲେଖକ ଆବଶ୍ୟକ ଆନ୍ତଃ-ଡୋମେନ୍ ସ୍ୱାକ୍ଷର ପାଆନ୍ତି, ତା’ପରେ ପରିବର୍ତ୍ତନ ଅନୁରୋଧ ସମୀକ୍ଷା ପାଇଁ ଦାଖଲ କରନ୍ତି। |
 | `S1cdbdd` | help and messages | The Chief Engineer approves or rejects. Approval makes the revision Approved (or Deprecated for a deprecation request). | ମୁଖ୍ୟ ଇଞ୍ଜିନିୟର ଅନୁମୋଦନ ବା ପ୍ରତ୍ୟାଖ୍ୟାନ କରନ୍ତି। ଅନୁମୋଦନ ସଂସ୍କରଣକୁ ଅନୁମୋଦିତ (ବା ପ୍ରଚଳନ ବନ୍ଦ ଅନୁରୋଧ ପାଇଁ ପ୍ରଚଳନ ବନ୍ଦ) କରେ। |
+| `S2d6ac0` | help and messages | The package is being built. Reload this page to follow its progress. | ପ୍ୟାକେଜ୍ ତିଆରି ହେଉଛି। ଅଗ୍ରଗତି ଦେଖିବାକୁ ଏହି ପୃଷ୍ଠା ପୁଣି ଲୋଡ୍ କରନ୍ତୁ। |
 | `Scff3a3` | help and messages | User deleted; its name and address are erased, what it did stays attributable. | ଉପଯୋଗକର୍ତ୍ତା ଲିଭାଯାଇଛି; ତାଙ୍କ ନାମ ଓ ଠିକଣା ମାଡ଼ି ଦିଆଯାଇଛି, ସେ ଯାହା କରିଛନ୍ତି ତାହା ଚିହ୍ନଟଯୋଗ୍ୟ ରହେ। |
 | `Secfb3f` | hub_consolidation | Deprecate replaced Hub codes | ବଦଳାଯାଇଥିବା ହବ୍ କୋଡ୍ ପ୍ରଚଳନ ବନ୍ଦ କରନ୍ତୁ |
 | `S0e7766` | hub_consolidation, language | draft | ଖସଡ଼ା |
@@ -13788,7 +14106,6 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S863fd0` | language | Your own proposal: another person approves it. | ଆପଣଙ୍କ ନିଜ ପ୍ରସ୍ତାବ: ଅନ୍ୟ କେହି ଏହାକୁ ଅନୁମୋଦନ କରନ୍ତି। |
 | `Sf9d469` | legacy_mapping | All controllers | ସମସ୍ତ ନିୟନ୍ତ୍ରକ |
 | `Se61c2f` | legacy_mapping | Any number state | ଯେକୌଣସି ସଂଖ୍ୟା ସ୍ଥିତି |
-| `Sa36a5f` | legacy_mapping, st_new, st_preview | Controller | ନିୟନ୍ତ୍ରକ |
 | `S7c4f77` | legacy_mapping | issued | ପ୍ରଦତ୍ତ |
 | `Sfd5ec0` | legacy_mapping, menu, new | Legacy mapping | ପୁରୁଣା-ନୂଆ ମ୍ୟାପିଂ |
 | `S81f567` | legacy_mapping | Legacy number to new identifier | ପୁରୁଣା ସଂଖ୍ୟାରୁ ନୂଆ ପରିଚୟକକୁ |
@@ -13938,6 +14255,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S751ff5` | message: export_profile_service | Export profile not found | ରପ୍ତାନି ପ୍ରୋଫାଇଲ୍ ମିଳିଲା ନାହିଁ |
 | `S4a8527` | message: export_profile_service | name must be 1-80 characters. | name 1-80 ଅକ୍ଷର ହେବା ଉଚିତ। |
 | `S506d0b` | message: export_service | An audience export is built from Released data only; it cannot be combined with the unapproved working set. | ଲକ୍ଷ୍ୟ ଗୋଷ୍ଠୀ ରପ୍ତାନି କେବଳ ମୁକ୍ତ ତଥ୍ୟରୁ ତିଆରି ହୁଏ; ଏହାକୁ ଅନନୁମୋଦିତ କାର୍ଯ୍ୟରତ ସମୂହ ସହ ମିଶାଯାଇପାରିବ ନାହିଁ। |
+| `S4bb9a3` | message: export_service | content must be 'baseline' or 'delta'. | content 'baseline' କିମ୍ବା 'delta' ହେବା ଆବଶ୍ୟକ। |
 | `Sf593c4` | message: export_service | language is required for a translated export | ଅନୁବାଦିତ ରପ୍ତାନି ପାଇଁ ଭାଷା ଆବଶ୍ୟକ |
 | `S42cee2` | message: field_review_service | A field comment must be between 1 and 2000 characters. | କ୍ଷେତ୍ର ମନ୍ତବ୍ୟ 1 ରୁ 2000 ଅକ୍ଷର ମଧ୍ୟରେ ହେବା ଉଚିତ। |
 | `S0168d7` | message: field_review_service | Checklist item not found | ଚେକ୍‌ଲିଷ୍ଟ ବିନ୍ଦୁ ମିଳିଲା ନାହିଁ |
@@ -13977,8 +14295,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sb68487` | message: occurrence_service | period_end must not be before period_start. | period_end, period_start ପୂର୍ବରୁ ହେବା ଉଚିତ ନୁହେଁ। |
 | `S682b0f` | message: occurrence_service | source_label must be 1-80 characters. | source_label 1-80 ଅକ୍ଷର ହେବା ଉଚିତ। |
 | `S3b0e31` | message: occurrence_service | The file needs the columns status_code_identifier and occurrences. | ଫାଇଲ୍‌ରେ status_code_identifier ଓ occurrences ସ୍ତମ୍ଭ ଦରକାର। |
+| `Sbdd594` | message: package_service | Choose at least one access level or the unfiltered files. | ଅତିକମରେ ଗୋଟିଏ ପ୍ରବେଶ ସ୍ତର କିମ୍ବା ଫିଲ୍ଟର୍ ନହୋଇଥିବା ଫାଇଲ୍ ବାଛନ୍ତୁ। |
+| `S4af5c1` | message: package_service | Choose at least one format. | ଅତିକମରେ ଗୋଟିଏ ଫର୍ମାଟ୍ ବାଛନ୍ତୁ। |
+| `S8865f4` | message: package_service | Only a published Release can be packaged. | କେବଳ ପ୍ରକାଶିତ ରିଲିଜ୍‌ର ପ୍ୟାକେଜ୍ କରାଯାଇପାରିବ। |
+| `S9b6676` | message: package_service | Package not found | ପ୍ୟାକେଜ୍ ମିଳିଲା ନାହିଁ |
+| `S2ddbdd` | message: package_service, message: release_notes_service | Release not found | ରିଲିଜ୍ ମିଳିଲା ନାହିଁ |
+| `S3bc283` | message: package_service | The package file is no longer on the server. | ପ୍ୟାକେଜ୍ ଫାଇଲ୍ ଆଉ ସର୍ଭରରେ ନାହିଁ। |
+| `S310622` | message: package_service | The package is not ready. | ପ୍ୟାକେଜ୍ ଏପର୍ଯ୍ୟନ୍ତ ପ୍ରସ୍ତୁତ ନୁହେଁ। |
 | `S2142ac` | message: release_notes_service | format must be md, csv, pdf or json | format md, csv, pdf ବା json ହେବା ଉଚିତ |
-| `S2ddbdd` | message: release_notes_service | Release not found | ରିଲିଜ୍ ମିଳିଲା ନାହିଁ |
 | `S6e9bf7` | message: release_service | A published Release can never be deleted (BR-007). | ପ୍ରକାଶିତ ରିଲିଜ୍ କେବେ ଲିଭାଯାଇପାରିବ ନାହିଁ (BR-007)। |
 | `S06fb3b` | message: release_service | Cannot change items on a published Release (BR-007). | ପ୍ରକାଶିତ ରିଲିଜ୍‌ର ବିନ୍ଦୁ ବଦଳାଯାଇପାରିବ ନାହିଁ (BR-007)। |
 | `Sc1eab3` | message: release_service | Cannot change the targets of a published Release (BR-007). | ପ୍ରକାଶିତ ରିଲିଜ୍‌ର ଲକ୍ଷ୍ୟ ବଦଳାଯାଇପାରିବ ନାହିଁ (BR-007)। |
@@ -14289,7 +14613,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 
 ### 9.14 IN മലയാളം 🇮🇳 — Malayalam
 
-1162 of 1163 strings translated; direction left to right.
+1189 of 1190 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -14456,6 +14780,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sc3f104` | delegations, user_detail, users | Role | റോൾ |
 | `Sd5dcf0` | delegations | Until (inclusive) | വരെ (ഉൾപ്പെടെ) |
 | `Sa4aefa` | delegations | Valid | സാധുവായത് |
+| `Sc3dc5c` | detail | %(count)s codes have no confirmed access levels and are missing from every access-level file. | %(count)s കോഡുകൾക്ക് സ്ഥിരീകരിച്ച ആക്‌സസ് തലങ്ങളില്ല, അവ എല്ലാ ആക്‌സസ്-തല ഫയലിൽ നിന്നും ഒഴിവായിരിക്കുന്നു. |
 | `Sc3cd63` | detail, user_detail, users | Actions | പ്രവർത്തനങ്ങൾ |
 | `S61cc55` | detail, lookups, review_checklist | Add | ചേർക്കുക |
 | `S12cc59` | detail | Add a comment (no decision) | അഭിപ്രായം ചേർക്കുക (തീരുമാനമില്ലാതെ) |
@@ -14469,7 +14794,9 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S25f8c5` | detail, export, form | Alarm | അലാറം |
 | `Sd87c44` | detail, export, hub_consolidation | all | എല്ലാം |
 | `S484388` | detail, export_center | all columns | എല്ലാ കോളങ്ങളും |
+| `S2e73c3` | detail | All languages and all access levels are included. Use the export above for a single language or access level. | എല്ലാ ഭാഷകളും എല്ലാ ആക്‌സസ് തലങ്ങളും ഉൾപ്പെടുന്നു. ഒരു ഭാഷയ്ക്കോ ഒരു ആക്‌സസ് തലത്തിനോ മുകളിലെ എക്സ്പോർട്ട് ഉപയോഗിക്കുക. |
 | `S432284` | detail | All required sign-offs are in, but this is still a Draft — the Reviewer and Administrator only see it after you choose Submit for Review below. | ആവശ്യമായ എല്ലാ സൈൻ-ഓഫുകളും എത്തി, പക്ഷേ ഇത് ഇപ്പോഴും കരടാണ് — നിങ്ങൾ താഴെ അവലോകനത്തിനായി സമർപ്പിക്കുക തിരഞ്ഞെടുത്താൽ മാത്രമേ അവലോകകനും അഡ്മിനിസ്ട്രേറ്ററും ഇത് കാണൂ. |
+| `S9b0b4c` | detail | also the files without an access level (all columns) | ആക്‌സസ് തലമില്ലാത്ത ഫയലുകളും (എല്ലാ നിരകളും) |
 | `Sf24c44` | detail | Any %(code)s Engineer | ഏതെങ്കിലും %(code)s എൻജിനീയർ |
 | `Sb99a01` | detail | Applies to software versions | സോഫ്റ്റ്‌വെയർ പതിപ്പുകൾക്ക് ബാധകം |
 | `S7b2c7f` | detail, language | Approve | അംഗീകരിക്കുക |
@@ -14486,12 +14813,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S416869` | detail | Auto Reset Program | ഓട്ടോ റീസെറ്റ് പ്രോഗ്രാം |
 | `Sd71897` | detail, form | Available Group | ലഭ്യത ഗ്രൂപ്പ് |
 | `S928e2e` | detail | Brake Program | ബ്രേക്ക് പ്രോഗ്രാം |
+| `Sab2e8a` | detail | Build package | പാക്കേജ് ഉണ്ടാക്കുക |
 | `Scfadbd` | detail | By | ആര് |
 | `S9c8393` | detail, mine | Change Request | മാറ്റ അഭ്യർത്ഥന |
 | `S4572f4` | detail | Change request | മാറ്റ അഭ്യർത്ഥന |
 | `S3295be` | detail | Change requests in this set | ഈ സമൂഹത്തിലെ മാറ്റ അഭ്യർത്ഥനകൾ |
 | `S4d8006` | detail | Change set | മാറ്റ സമൂഹം |
 | `S8aa57d` | detail | Changes | മാറ്റങ്ങൾ |
+| `S3d14ea` | detail, export | Changes of this release only | ഈ റിലീസിലെ മാറ്റങ്ങൾ മാത്രം |
 | `Sbd95c0` | detail | Checklist confirmed at sign-off | സൈൻ-ഓഫ് സമയത്ത് സ്ഥിരീകരിച്ച ചെക്ക്‌ലിസ്റ്റ് |
 | `S074d62` | detail, role badge | Chief Engineer | ചീഫ് എൻജിനീയർ |
 | `S03695d` | detail | Chief Engineer decision | ചീഫ് എൻജിനീയറുടെ തീരുമാനം |
@@ -14504,8 +14833,11 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sfce06e` | detail | Comments | അഭിപ്രായങ്ങൾ |
 | `S8d105c` | detail, reconciliation | Compare | താരതമ്യം ചെയ്യുക |
 | `Sc9a03b` | detail | Compare Revisions | റിവിഷനുകൾ താരതമ്യം ചെയ്യുക |
+| `S0ff7e5` | detail, export | Complete baseline | പൂർണ്ണ അടിസ്ഥാന നില |
 | `S1798b3` | detail | Completed | പൂർത്തിയായി |
 | `S7671b5` | detail | Confirm or override Audience Access | ലക്ഷ്യ ഗ്രൂപ്പ് പ്രവേശനം സ്ഥിരീകരിക്കുക അല്ലെങ്കിൽ അസാധുവാക്കുക |
+| `S4f9be0` | detail | Content | ഉള്ളടക്കം |
+| `Sa36a5f` | detail, legacy_mapping, st_new | Controller | കൺട്രോളർ |
 | `Scd293f` | detail | Converter Reactive Power Program | കൺവെർട്ടർ റിയാക്ടീവ് പവർ പ്രോഗ്രാം |
 | `S3998a7` | detail | Copies the descriptive fields into a new Draft in a Main Controller group (a new number is allocated at submit; this code's identifier is kept as the legacy reference). | വിവരണ ഫീൽഡുകൾ മെയിൻ കൺട്രോളർ ഗ്രൂപ്പിലെ പുതിയ കരടിലേക്ക് പകർത്തുന്നു (സമർപ്പിക്കുമ്പോൾ പുതിയ നമ്പർ നൽകും; ഈ കോഡിന്റെ ഐഡന്റിഫയർ പഴയ റഫറൻസായി സൂക്ഷിക്കും). |
 | `S54b051` | detail | Copy this code for another turbine platform. The copy is a new Draft that links back here and goes through the normal review. | ഈ കോഡ് മറ്റൊരു ടർബൈൻ പ്ലാറ്റ്ഫോമിനായി പകർത്തുക. പകർപ്പ് ഇവിടേക്ക് തിരികെ ബന്ധിപ്പിക്കുന്ന പുതിയ കരടാണ്, സാധാരണ അവലോകനത്തിലൂടെ കടന്നുപോകുന്നു. |
@@ -14536,6 +14868,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S4c17aa` | detail | Development | വികസനം |
 | `S552a2b` | detail | Documented reason | രേഖപ്പെടുത്തിയ കാരണം |
 | `S9b1091` | detail, mine | Domain | ഡൊമെയ്ൻ |
+| `Sa479c9` | detail | Download | ഡൗൺലോഡ് |
 | `S056839` | detail | Download Error Report | പിശക് റിപ്പോർട്ട് ഡൗൺലോഡ് ചെയ്യുക |
 | `S23d33e` | detail, index | Draft | കരട് |
 | `S3c7a50` | detail | Edit Candidates | സ്ഥാനാർത്ഥികളെ എഡിറ്റ് ചെയ്യുക |
@@ -14557,6 +14890,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sdd7b7e` | detail | failed validation | സാധൂകരണത്തിൽ പരാജയപ്പെട്ടു |
 | `Sd106a6` | detail | Field comments | ഫീൽഡ് അഭിപ്രായങ്ങൾ |
 | `S2c3caf` | detail, export_verify, operations | File | ഫയൽ |
+| `S6ce6c5` | detail | Files | ഫയലുകൾ |
 | `Se0996a` | detail, form | first | ആദ്യത്തെ |
 | `S041a5d` | detail, export_center | Format | ഫോർമാറ്റ് |
 | `S9e3c65` | detail | From revision | റിവിഷനിൽ നിന്ന് |
@@ -14564,6 +14898,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sb8c4c9` | detail, form | Further Program References | കൂടുതൽ പ്രോഗ്രാം റഫറൻസുകൾ |
 | `S636c41` | detail | Grid Operator | ഗ്രിഡ് ഓപ്പറേറ്റർ |
 | `S90ccd6` | detail | History | ചരിത്രം |
+| `S0dfe7b` | detail | Hub controller | ഹബ് കൺട്രോളർ |
 | `Sfec8b7` | detail | Hub Controller group | ഹബ് കൺട്രോളർ ഗ്രൂപ്പ് |
 | `S00ccae` | detail, form | Hub Controller only | ഹബ് കൺട്രോളർ മാത്രം |
 | `S3c883f` | detail | I have reviewed these dependants | ഞാൻ ഈ ആശ്രിതങ്ങൾ അവലോകനം ചെയ്തിട്ടുണ്ട് |
@@ -14578,6 +14913,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S693272` | detail, withdrawn_codes | Legacy Reference Number | പഴയ റഫറൻസ് നമ്പർ |
 | `S43d5c5` | detail, form | Loadless Spinning Permitted | ലോഡില്ലാത്ത കറക്കം അനുവദനീയം |
 | `S193786` | detail | Logical Node | ലോജിക്കൽ നോഡ് |
+| `Sc3f827` | detail | Main controller | മെയിൻ കൺട്രോളർ |
 | `S578b78` | detail | Main Controller group | മെയിൻ കൺട്രോളർ ഗ്രൂപ്പ് |
 | `Sa7512d` | detail, form | Main Controller only | മെയിൻ കൺട്രോളർ മാത്രം |
 | `Seb9a6d` | detail | Manage translations | വിവർത്തനങ്ങൾ നിയന്ത്രിക്കുക |
@@ -14603,6 +14939,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sde04fa` | detail, fleet_feedback, success_metrics | of | ൽ |
 | `S19f611` | detail | Offline lookup (HTML) | ഓഫ്‌ലൈൻ ലുക്കപ്പ് (HTML) |
 | `S2ff2ae` | detail | Offline lookup + manifest (ZIP) | ഓഫ്‌ലൈൻ ലുക്കപ്പ് + മാനിഫെസ്റ്റ് (ZIP) |
+| `S3f0e3e` | detail | One ZIP with the complete baseline in every language and for every access level, plus the release notes and a manifest with a SHA-256 for each file. Building it takes a few minutes; the page shows the progress. | ഓരോ ഭാഷയിലും ഓരോ ആക്‌സസ് തലത്തിനും പൂർണ്ണ അടിസ്ഥാന നിലയുള്ള ഒരു ZIP, ഒപ്പം റിലീസ് നോട്ടുകളും ഓരോ ഫയലിന്റെയും SHA-256 ഉള്ള മാനിഫെസ്റ്റും. ഉണ്ടാക്കാൻ കുറച്ച് മിനിറ്റ് എടുക്കും; പേജ് പുരോഗതി കാണിക്കും. |
 | `S12aa03` | detail | only translated codes | വിവർത്തനം ചെയ്ത കോഡുകൾ മാത്രം |
 | `S5fc7e3` | detail | open | തുറന്നത് |
 | `Sf61187` | detail | Open New Revision | പുതിയ റിവിഷൻ തുറക്കുക |
@@ -14614,11 +14951,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S780d35` | detail | Override identifier (migration / reservation only) | ഐഡന്റിഫയർ അസാധുവാക്കുക (മൈഗ്രേഷൻ / റിസർവേഷൻ മാത്രം) |
 | `S89ff31` | detail | Owner | ഉടമ |
 | `S2d20ee` | detail | Package overview | പാക്കേജ് അവലോകനം |
+| `S4d1a47` | detail | Package: all languages and access levels | പാക്കേജ്: എല്ലാ ഭാഷകളും ആക്‌സസ് തലങ്ങളും |
+| `Sc49bd0` | detail | Packages of this Release | ഈ റിലീസിന്റെ പാക്കേജുകൾ |
 | `S96f608` | detail, review_queue | Pending | തീർപ്പാകാത്തത് |
 | `Sc983b6` | detail | Pick a profile (columns and labels), an audience, a language or a software version. Every file comes with a manifest of SHA-256 hashes; "bundle" packs both into one ZIP. | ഒരു പ്രൊഫൈൽ (കോളങ്ങളും ലേബലുകളും), ലക്ഷ്യ ഗ്രൂപ്പ്, ഭാഷ അല്ലെങ്കിൽ സോഫ്റ്റ്‌വെയർ പതിപ്പ് തിരഞ്ഞെടുക്കുക. ഓരോ ഫയലും SHA-256 ഹാഷുകളുടെ മാനിഫെസ്റ്റുമായി വരുന്നു; "bundle" രണ്ടും ഒരു ZIP ആയി പൊതിയുന്നു. |
 | `S72383d` | detail | Planned dates | ആസൂത്രിത തീയതികൾ |
 | `Sfb14b0` | detail | Planned deprecation date | ആസൂത്രിത കാലഹരണപ്പെടുത്തൽ തീയതി |
 | `S00e733` | detail | Planned effective date | ആസൂത്രിത പ്രാബല്യ തീയതി |
+| `S123a7f` | detail | Platform | പ്ലാറ്റ്ഫോം |
 | `Sfc8d58` | detail | Platform variant | പ്ലാറ്റ്ഫോം വകഭേദം |
 | `Scd8926` | detail | Platform variants | പ്ലാറ്റ്ഫോം വകഭേദങ്ങൾ |
 | `S141f0c` | detail | Processing in the background... | പശ്ചാത്തലത്തിൽ പ്രോസസ്സ് ചെയ്യുന്നു... |
@@ -14639,6 +14979,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S9b44a2` | detail | Release notes (PDF) | റിലീസ് കുറിപ്പുകൾ (PDF) |
 | `S3dfa01` | detail | Release notes and offline lookup | റിലീസ് കുറിപ്പുകളും ഓഫ്‌ലൈൻ ലുക്കപ്പും |
 | `Sdcddb7` | detail | Release notes list what was added, changed (field by field) and deprecated since the previous Release. The offline page is one self-contained HTML file for use at the turbine without a connection. | മുൻ റിലീസിന് ശേഷം എന്ത് ചേർത്തു, മാറ്റി (ഫീൽഡ് ഫീൽഡായി), കാലഹരണപ്പെട്ടു എന്ന് റിലീസ് കുറിപ്പുകൾ പട്ടികപ്പെടുത്തുന്നു. ഓഫ്‌ലൈൻ പേജ് കണക്ഷനില്ലാതെ ടർബൈനിൽ ഉപയോഗിക്കാനുള്ള ഒരു സ്വയംപര്യാപ്ത HTML ഫയലാണ്. |
+| `Scce715` | detail | Reload | വീണ്ടും ലോഡ് ചെയ്യുക |
 | `S0544a3` | detail | Reload this page to see the progress. | പുരോഗതി കാണാൻ ഈ പേജ് വീണ്ടും ലോഡ് ചെയ്യുക. |
 | `S99e347` | detail | Remedy | പരിഹാരം |
 | `Se96390` | detail, list | Remove | നീക്കം ചെയ്യുക |
@@ -14688,9 +15029,11 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S08e643` | detail, list | Target software version | ലക്ഷ്യ സോഫ്റ്റ്‌വെയർ പതിപ്പ് |
 | `S44203c` | detail, form, status code fields | Task Call Frequency | ടാസ്ക് കോൾ ആവൃത്തി |
 | `S8fc804` | detail | The author has to submit it for review before the Reviewer or Administrator can see it. | അവലോകകനോ അഡ്മിനിസ്ട്രേറ്ററോ കാണുന്നതിന് മുമ്പ് രചയിതാവ് ഇത് അവലോകനത്തിനായി സമർപ്പിക്കണം. |
+| `Sa5f3f8` | detail | These files contain the complete baseline: every status code that is valid as of this Release, not only the ones it changed. | ഈ ഫയലുകളിൽ പൂർണ്ണ അടിസ്ഥാന നിലയുണ്ട്: ഈ റിലീസ് പ്രകാരം സാധുവായ എല്ലാ സ്റ്റാറ്റസ് കോഡും, മാറിയവ മാത്രമല്ല. |
 | `S091814` | detail | This change request has reached a terminal decision state | ഈ മാറ്റ അഭ്യർത്ഥന അന്തിമ തീരുമാന നിലയിൽ എത്തിയിരിക്കുന്നു |
 | `S6d5708` | detail | This is the one truly irreversible action in the system. Type the identifier to confirm. | ഇത് സിസ്റ്റത്തിലെ യഥാർത്ഥത്തിൽ മാറ്റാനാവാത്ത ഒരേയൊരു പ്രവർത്തനമാണ്. സ്ഥിരീകരിക്കാൻ ഐഡന്റിഫയർ ടൈപ്പ് ചെയ്യുക. |
 | `Sb55f1f` | detail | To revision | റിവിഷനിലേക്ക് |
+| `Sa2a321` | detail | Translated codes per language | ഭാഷ പ്രകാരം വിവർത്തനം ചെയ്ത കോഡുകൾ |
 | `S8ad830` | detail, menu, overview | Translations | വിവർത്തനങ്ങൾ |
 | `Seaf576` | detail, form | Trigger Snapshot | സ്നാപ്ഷോട്ട് ട്രിഗർ ചെയ്യുക |
 | `S285ec8` | detail, form | Troubleshooting | പ്രശ്നപരിഹാരം |
@@ -14751,6 +15094,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Se51c55` | export | Records | രേഖകൾ |
 | `Sd41f56` | export, export_center | Release | റിലീസ് |
 | `S2e8fd6` | export | Reset delay | റീസെറ്റ് കാലതാമസം |
+| `S4651a3` | export | Scope | പരിധി |
 | `S89fdd5` | export | Set delay | സെറ്റ് കാലതാമസം |
 | `S828d33` | export | source | ഉറവിടം |
 | `Sfcbb29` | export | Status code | സ്റ്റാറ്റസ് കോഡ് |
@@ -14878,6 +15222,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S34b903` | help and messages | Not possible: the account has history (see above). Deactivate it instead; the person can no longer sign in and everything they did stays attributable. | സാധ്യമല്ല: അക്കൗണ്ടിന് ചരിത്രമുണ്ട് (മുകളിൽ കാണുക). പകരം നിഷ്ക്രിയമാക്കുക; വ്യക്തിക്ക് ഇനി സൈൻ ഇൻ ചെയ്യാനാവില്ല, അവർ ചെയ്തതെല്ലാം ആരോപിക്കാവുന്നതായി തുടരും. |
 | `Sce489f` | help and messages | The author gets any required cross-domain sign-offs, then submits the change request for review. | രചയിതാവ് ആവശ്യമായ ക്രോസ്-ഡൊമെയ്ൻ സൈൻ-ഓഫുകൾ നേടുന്നു, തുടർന്ന് മാറ്റ അഭ്യർത്ഥന അവലോകനത്തിനായി സമർപ്പിക്കുന്നു. |
 | `S1cdbdd` | help and messages | The Chief Engineer approves or rejects. Approval makes the revision Approved (or Deprecated for a deprecation request). | ചീഫ് എൻജിനീയർ അംഗീകരിക്കുകയോ നിരസിക്കുകയോ ചെയ്യുന്നു. അംഗീകാരം റിവിഷനെ അംഗീകരിച്ചതാക്കുന്നു (കാലഹരണപ്പെടുത്തൽ അഭ്യർത്ഥനയ്ക്ക് കാലഹരണപ്പെട്ടതാക്കുന്നു). |
+| `S2d6ac0` | help and messages | The package is being built. Reload this page to follow its progress. | പാക്കേജ് ഉണ്ടാക്കുകയാണ്. പുരോഗതി കാണാൻ ഈ പേജ് വീണ്ടും ലോഡ് ചെയ്യുക. |
 | `Scff3a3` | help and messages | User deleted; its name and address are erased, what it did stays attributable. | ഉപയോക്താവിനെ ഇല്ലാതാക്കി; പേരും വിലാസവും മായ്ച്ചു, അവർ ചെയ്തത് ആരോപിക്കാവുന്നതായി തുടരും. |
 | `Secfb3f` | hub_consolidation | Deprecate replaced Hub codes | മാറ്റിസ്ഥാപിച്ച ഹബ് കോഡുകൾ കാലഹരണപ്പെടുത്തുക |
 | `S0e7766` | hub_consolidation, language | draft | കരട് |
@@ -14957,7 +15302,6 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S863fd0` | language | Your own proposal: another person approves it. | നിങ്ങളുടെ സ്വന്തം നിർദ്ദേശം: മറ്റൊരാൾ അത് അംഗീകരിക്കുന്നു. |
 | `Sf9d469` | legacy_mapping | All controllers | എല്ലാ കൺട്രോളറുകളും |
 | `Se61c2f` | legacy_mapping | Any number state | ഏത് നമ്പർ നിലയും |
-| `Sa36a5f` | legacy_mapping, st_new, st_preview | Controller | കൺട്രോളർ |
 | `S7c4f77` | legacy_mapping | issued | നൽകിയത് |
 | `Sfd5ec0` | legacy_mapping, menu, new | Legacy mapping | പഴയത്-പുതിയത് മാപ്പിംഗ് |
 | `S81f567` | legacy_mapping | Legacy number to new identifier | പഴയ നമ്പറിൽ നിന്ന് പുതിയ ഐഡന്റിഫയറിലേക്ക് |
@@ -15107,6 +15451,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S751ff5` | message: export_profile_service | Export profile not found | എക്സ്പോർട്ട് പ്രൊഫൈൽ കണ്ടെത്തിയില്ല |
 | `S4a8527` | message: export_profile_service | name must be 1-80 characters. | name 1-80 അക്ഷരങ്ങൾ ആയിരിക്കണം. |
 | `S506d0b` | message: export_service | An audience export is built from Released data only; it cannot be combined with the unapproved working set. | ലക്ഷ്യ ഗ്രൂപ്പ് എക്സ്പോർട്ട് റിലീസ് ചെയ്ത ഡാറ്റയിൽ നിന്ന് മാത്രമേ നിർമ്മിക്കൂ; അംഗീകരിക്കാത്ത വർക്കിംഗ് സെറ്റുമായി കൂട്ടിച്ചേർക്കാനാവില്ല. |
+| `S4bb9a3` | message: export_service | content must be 'baseline' or 'delta'. | content 'baseline' അല്ലെങ്കിൽ 'delta' ആയിരിക്കണം. |
 | `Sf593c4` | message: export_service | language is required for a translated export | വിവർത്തനം ചെയ്ത എക്സ്പോർട്ടിന് ഭാഷ ആവശ്യമാണ് |
 | `S42cee2` | message: field_review_service | A field comment must be between 1 and 2000 characters. | ഫീൽഡ് അഭിപ്രായം 1 മുതൽ 2000 വരെ അക്ഷരങ്ങൾ ആയിരിക്കണം. |
 | `S0168d7` | message: field_review_service | Checklist item not found | ചെക്ക്‌ലിസ്റ്റ് ഇനം കണ്ടെത്തിയില്ല |
@@ -15146,8 +15491,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sb68487` | message: occurrence_service | period_end must not be before period_start. | period_end, period_start ന് മുമ്പ് ആയിരിക്കരുത്. |
 | `S682b0f` | message: occurrence_service | source_label must be 1-80 characters. | source_label 1-80 അക്ഷരങ്ങൾ ആയിരിക്കണം. |
 | `S3b0e31` | message: occurrence_service | The file needs the columns status_code_identifier and occurrences. | ഫയലിന് status_code_identifier, occurrences കോളങ്ങൾ വേണം. |
+| `Sbdd594` | message: package_service | Choose at least one access level or the unfiltered files. | ഒരു ആക്‌സസ് തലമെങ്കിലും അല്ലെങ്കിൽ ഫിൽട്ടർ ചെയ്യാത്ത ഫയലുകൾ തിരഞ്ഞെടുക്കുക. |
+| `S4af5c1` | message: package_service | Choose at least one format. | ഒരു ഫോർമാറ്റെങ്കിലും തിരഞ്ഞെടുക്കുക. |
+| `S8865f4` | message: package_service | Only a published Release can be packaged. | പ്രസിദ്ധീകരിച്ച റിലീസ് മാത്രമേ പാക്കേജ് ചെയ്യാനാകൂ. |
+| `S9b6676` | message: package_service | Package not found | പാക്കേജ് കണ്ടെത്തിയില്ല |
+| `S2ddbdd` | message: package_service, message: release_notes_service | Release not found | റിലീസ് കണ്ടെത്തിയില്ല |
+| `S3bc283` | message: package_service | The package file is no longer on the server. | പാക്കേജ് ഫയൽ ഇനി സെർവറിൽ ഇല്ല. |
+| `S310622` | message: package_service | The package is not ready. | പാക്കേജ് ഇതുവരെ തയ്യാറായിട്ടില്ല. |
 | `S2142ac` | message: release_notes_service | format must be md, csv, pdf or json | format md, csv, pdf അല്ലെങ്കിൽ json ആയിരിക്കണം |
-| `S2ddbdd` | message: release_notes_service | Release not found | റിലീസ് കണ്ടെത്തിയില്ല |
 | `S6e9bf7` | message: release_service | A published Release can never be deleted (BR-007). | പ്രസിദ്ധീകരിച്ച റിലീസ് ഒരിക്കലും ഇല്ലാതാക്കാനാവില്ല (BR-007). |
 | `S06fb3b` | message: release_service | Cannot change items on a published Release (BR-007). | പ്രസിദ്ധീകരിച്ച റിലീസിലെ ഇനങ്ങൾ മാറ്റാനാവില്ല (BR-007). |
 | `Sc1eab3` | message: release_service | Cannot change the targets of a published Release (BR-007). | പ്രസിദ്ധീകരിച്ച റിലീസിന്റെ ലക്ഷ്യങ്ങൾ മാറ്റാനാവില്ല (BR-007). |
@@ -15458,7 +15809,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 
 ### 9.15 IN ਪੰਜਾਬੀ 🇮🇳 — Punjabi
 
-1162 of 1163 strings translated; direction left to right.
+1189 of 1190 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -15625,6 +15976,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sc3f104` | delegations, user_detail, users | Role | ਭੂਮਿਕਾ |
 | `Sd5dcf0` | delegations | Until (inclusive) | ਤੱਕ (ਸਮੇਤ) |
 | `Sa4aefa` | delegations | Valid | ਵੈਧ |
+| `Sc3dc5c` | detail | %(count)s codes have no confirmed access levels and are missing from every access-level file. | %(count)s ਕੋਡਾਂ ਦੇ ਪੁਸ਼ਟ ਪਹੁੰਚ ਪੱਧਰ ਨਹੀਂ ਹਨ ਅਤੇ ਉਹ ਹਰ ਪਹੁੰਚ-ਪੱਧਰ ਫਾਈਲ ਵਿੱਚੋਂ ਗਾਇਬ ਹਨ। |
 | `Sc3cd63` | detail, user_detail, users | Actions | ਕਾਰਜ |
 | `S61cc55` | detail, lookups, review_checklist | Add | ਜੋੜੋ |
 | `S12cc59` | detail | Add a comment (no decision) | ਟਿੱਪਣੀ ਜੋੜੋ (ਬਿਨਾਂ ਫ਼ੈਸਲੇ ਦੇ) |
@@ -15638,7 +15990,9 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S25f8c5` | detail, export, form | Alarm | ਅਲਾਰਮ |
 | `Sd87c44` | detail, export, hub_consolidation | all | ਸਭ |
 | `S484388` | detail, export_center | all columns | ਸਾਰੇ ਕਾਲਮ |
+| `S2e73c3` | detail | All languages and all access levels are included. Use the export above for a single language or access level. | ਸਾਰੀਆਂ ਭਾਸ਼ਾਵਾਂ ਅਤੇ ਸਾਰੇ ਪਹੁੰਚ ਪੱਧਰ ਸ਼ਾਮਲ ਹਨ। ਇੱਕ ਭਾਸ਼ਾ ਜਾਂ ਇੱਕ ਪਹੁੰਚ ਪੱਧਰ ਲਈ ਉੱਪਰਲਾ ਐਕਸਪੋਰਟ ਵਰਤੋ। |
 | `S432284` | detail | All required sign-offs are in, but this is still a Draft — the Reviewer and Administrator only see it after you choose Submit for Review below. | ਸਾਰੇ ਲੋੜੀਂਦੇ ਦਸਤਖ਼ਤ ਆ ਗਏ ਹਨ, ਪਰ ਇਹ ਅਜੇ ਵੀ ਖਰੜਾ ਹੈ — ਸਮੀਖਿਅਕ ਅਤੇ ਪ੍ਰਸ਼ਾਸਕ ਇਸਨੂੰ ਤਾਂ ਹੀ ਵੇਖਦੇ ਹਨ ਜਦੋਂ ਤੁਸੀਂ ਹੇਠਾਂ ਸਮੀਖਿਆ ਲਈ ਜਮ੍ਹਾਂ ਕਰੋ ਚੁਣਦੇ ਹੋ। |
+| `S9b0b4c` | detail | also the files without an access level (all columns) | ਪਹੁੰਚ ਪੱਧਰ ਤੋਂ ਬਿਨਾਂ ਫਾਈਲਾਂ ਵੀ (ਸਾਰੇ ਕਾਲਮ) |
 | `Sf24c44` | detail | Any %(code)s Engineer | ਕੋਈ ਵੀ %(code)s ਇੰਜੀਨੀਅਰ |
 | `Sb99a01` | detail | Applies to software versions | ਸਾਫਟਵੇਅਰ ਸੰਸਕਰਣਾਂ ਉੱਤੇ ਲਾਗੂ |
 | `S7b2c7f` | detail, language | Approve | ਮਨਜ਼ੂਰ ਕਰੋ |
@@ -15655,12 +16009,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S416869` | detail | Auto Reset Program | ਆਟੋ ਰੀਸੈੱਟ ਪ੍ਰੋਗਰਾਮ |
 | `Sd71897` | detail, form | Available Group | ਉਪਲਬਧਤਾ ਸਮੂਹ |
 | `S928e2e` | detail | Brake Program | ਬ੍ਰੇਕ ਪ੍ਰੋਗਰਾਮ |
+| `Sab2e8a` | detail | Build package | ਪੈਕੇਜ ਬਣਾਓ |
 | `Scfadbd` | detail | By | ਵੱਲੋਂ |
 | `S9c8393` | detail, mine | Change Request | ਤਬਦੀਲੀ ਬੇਨਤੀ |
 | `S4572f4` | detail | Change request | ਤਬਦੀਲੀ ਬੇਨਤੀ |
 | `S3295be` | detail | Change requests in this set | ਇਸ ਸਮੂਹ ਦੀਆਂ ਤਬਦੀਲੀ ਬੇਨਤੀਆਂ |
 | `S4d8006` | detail | Change set | ਤਬਦੀਲੀ ਸਮੂਹ |
 | `S8aa57d` | detail | Changes | ਤਬਦੀਲੀਆਂ |
+| `S3d14ea` | detail, export | Changes of this release only | ਸਿਰਫ਼ ਇਸ ਰਿਲੀਜ਼ ਦੀਆਂ ਤਬਦੀਲੀਆਂ |
 | `Sbd95c0` | detail | Checklist confirmed at sign-off | ਦਸਤਖ਼ਤ ਵੇਲੇ ਪੁਸ਼ਟੀ ਕੀਤੀ ਚੈੱਕਲਿਸਟ |
 | `S074d62` | detail, role badge | Chief Engineer | ਮੁੱਖ ਇੰਜੀਨੀਅਰ |
 | `S03695d` | detail | Chief Engineer decision | ਮੁੱਖ ਇੰਜੀਨੀਅਰ ਦਾ ਫ਼ੈਸਲਾ |
@@ -15673,8 +16029,11 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sfce06e` | detail | Comments | ਟਿੱਪਣੀਆਂ |
 | `S8d105c` | detail, reconciliation | Compare | ਤੁਲਨਾ ਕਰੋ |
 | `Sc9a03b` | detail | Compare Revisions | ਸੋਧਾਂ ਦੀ ਤੁਲਨਾ ਕਰੋ |
+| `S0ff7e5` | detail, export | Complete baseline | ਪੂਰੀ ਆਧਾਰ ਸਥਿਤੀ |
 | `S1798b3` | detail | Completed | ਮੁਕੰਮਲ ਹੋਇਆ |
 | `S7671b5` | detail | Confirm or override Audience Access | ਨਿਸ਼ਾਨਾ ਸਮੂਹ ਪਹੁੰਚ ਦੀ ਪੁਸ਼ਟੀ ਜਾਂ ਓਵਰਰਾਈਡ ਕਰੋ |
+| `S4f9be0` | detail | Content | ਸਮੱਗਰੀ |
+| `Sa36a5f` | detail, legacy_mapping, st_new | Controller | ਕੰਟਰੋਲਰ |
 | `Scd293f` | detail | Converter Reactive Power Program | ਕਨਵਰਟਰ ਰਿਐਕਟਿਵ ਪਾਵਰ ਪ੍ਰੋਗਰਾਮ |
 | `S3998a7` | detail | Copies the descriptive fields into a new Draft in a Main Controller group (a new number is allocated at submit; this code's identifier is kept as the legacy reference). | ਵਰਣਨਾਤਮਕ ਖੇਤਰਾਂ ਨੂੰ ਮੁੱਖ ਕੰਟਰੋਲਰ ਸਮੂਹ ਦੇ ਨਵੇਂ ਖਰੜੇ ਵਿੱਚ ਕਾਪੀ ਕਰਦਾ ਹੈ (ਜਮ੍ਹਾਂ ਕਰਨ ਵੇਲੇ ਨਵਾਂ ਨੰਬਰ ਦਿੱਤਾ ਜਾਂਦਾ ਹੈ; ਇਸ ਕੋਡ ਦੀ ਪਛਾਣ ਪੁਰਾਣੇ ਹਵਾਲੇ ਵਜੋਂ ਰੱਖੀ ਜਾਂਦੀ ਹੈ)। |
 | `S54b051` | detail | Copy this code for another turbine platform. The copy is a new Draft that links back here and goes through the normal review. | ਇਸ ਕੋਡ ਨੂੰ ਕਿਸੇ ਹੋਰ ਟਰਬਾਈਨ ਪਲੇਟਫਾਰਮ ਲਈ ਕਾਪੀ ਕਰੋ। ਕਾਪੀ ਇੱਕ ਨਵਾਂ ਖਰੜਾ ਹੈ ਜੋ ਇੱਥੇ ਵਾਪਸ ਜੁੜਦਾ ਹੈ ਅਤੇ ਆਮ ਸਮੀਖਿਆ ਵਿੱਚੋਂ ਲੰਘਦਾ ਹੈ। |
@@ -15705,6 +16064,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S4c17aa` | detail | Development | ਵਿਕਾਸ |
 | `S552a2b` | detail | Documented reason | ਦਸਤਾਵੇਜ਼ੀ ਕਾਰਨ |
 | `S9b1091` | detail, mine | Domain | ਡੋਮੇਨ |
+| `Sa479c9` | detail | Download | ਡਾਊਨਲੋਡ |
 | `S056839` | detail | Download Error Report | ਗਲਤੀ ਰਿਪੋਰਟ ਡਾਊਨਲੋਡ ਕਰੋ |
 | `S23d33e` | detail, index | Draft | ਖਰੜਾ |
 | `S3c7a50` | detail | Edit Candidates | ਉਮੀਦਵਾਰ ਸੋਧੋ |
@@ -15726,6 +16086,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sdd7b7e` | detail | failed validation | ਪ੍ਰਮਾਣਿਕਤਾ ਵਿੱਚ ਅਸਫਲ |
 | `Sd106a6` | detail | Field comments | ਖੇਤਰ ਟਿੱਪਣੀਆਂ |
 | `S2c3caf` | detail, export_verify, operations | File | ਫਾਈਲ |
+| `S6ce6c5` | detail | Files | ਫਾਈਲਾਂ |
 | `Se0996a` | detail, form | first | ਪਹਿਲਾ |
 | `S041a5d` | detail, export_center | Format | ਫਾਰਮੈਟ |
 | `S9e3c65` | detail | From revision | ਸੋਧ ਤੋਂ |
@@ -15733,6 +16094,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sb8c4c9` | detail, form | Further Program References | ਹੋਰ ਪ੍ਰੋਗਰਾਮ ਹਵਾਲੇ |
 | `S636c41` | detail | Grid Operator | ਗਰਿੱਡ ਆਪਰੇਟਰ |
 | `S90ccd6` | detail | History | ਇਤਿਹਾਸ |
+| `S0dfe7b` | detail | Hub controller | ਹੱਬ ਕੰਟਰੋਲਰ |
 | `Sfec8b7` | detail | Hub Controller group | ਹੱਬ ਕੰਟਰੋਲਰ ਸਮੂਹ |
 | `S00ccae` | detail, form | Hub Controller only | ਸਿਰਫ਼ ਹੱਬ ਕੰਟਰੋਲਰ |
 | `S3c883f` | detail | I have reviewed these dependants | ਮੈਂ ਇਨ੍ਹਾਂ ਨਿਰਭਰ ਕੋਡਾਂ ਦੀ ਸਮੀਖਿਆ ਕਰ ਲਈ ਹੈ |
@@ -15747,6 +16109,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S693272` | detail, withdrawn_codes | Legacy Reference Number | ਪੁਰਾਣਾ ਹਵਾਲਾ ਨੰਬਰ |
 | `S43d5c5` | detail, form | Loadless Spinning Permitted | ਬਿਨਾਂ ਭਾਰ ਘੁੰਮਣ ਦੀ ਆਗਿਆ |
 | `S193786` | detail | Logical Node | ਤਰਕਸ਼ੀਲ ਨੋਡ |
+| `Sc3f827` | detail | Main controller | ਮੁੱਖ ਕੰਟਰੋਲਰ |
 | `S578b78` | detail | Main Controller group | ਮੁੱਖ ਕੰਟਰੋਲਰ ਸਮੂਹ |
 | `Sa7512d` | detail, form | Main Controller only | ਸਿਰਫ਼ ਮੁੱਖ ਕੰਟਰੋਲਰ |
 | `Seb9a6d` | detail | Manage translations | ਅਨੁਵਾਦ ਸੰਭਾਲੋ |
@@ -15772,6 +16135,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sde04fa` | detail, fleet_feedback, success_metrics | of | ਵਿੱਚੋਂ |
 | `S19f611` | detail | Offline lookup (HTML) | ਆਫ਼ਲਾਈਨ ਲੁੱਕਅਪ (HTML) |
 | `S2ff2ae` | detail | Offline lookup + manifest (ZIP) | ਆਫ਼ਲਾਈਨ ਲੁੱਕਅਪ + ਮੈਨੀਫੈਸਟ (ZIP) |
+| `S3f0e3e` | detail | One ZIP with the complete baseline in every language and for every access level, plus the release notes and a manifest with a SHA-256 for each file. Building it takes a few minutes; the page shows the progress. | ਹਰ ਭਾਸ਼ਾ ਅਤੇ ਹਰ ਪਹੁੰਚ ਪੱਧਰ ਲਈ ਪੂਰੀ ਆਧਾਰ ਸਥਿਤੀ ਵਾਲੀ ਇੱਕ ZIP, ਨਾਲ ਰਿਲੀਜ਼ ਨੋਟਸ ਅਤੇ ਹਰ ਫਾਈਲ ਦੇ SHA-256 ਵਾਲਾ ਮੈਨੀਫੈਸਟ। ਬਣਾਉਣ ਵਿੱਚ ਕੁਝ ਮਿੰਟ ਲੱਗਦੇ ਹਨ; ਸਫ਼ਾ ਪ੍ਰਗਤੀ ਦਿਖਾਉਂਦਾ ਹੈ। |
 | `S12aa03` | detail | only translated codes | ਸਿਰਫ਼ ਅਨੁਵਾਦ ਕੀਤੇ ਕੋਡ |
 | `S5fc7e3` | detail | open | ਖੁੱਲ੍ਹਾ |
 | `Sf61187` | detail | Open New Revision | ਨਵੀਂ ਸੋਧ ਖੋਲ੍ਹੋ |
@@ -15783,11 +16147,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S780d35` | detail | Override identifier (migration / reservation only) | ਪਛਾਣਕਰਤਾ ਓਵਰਰਾਈਡ ਕਰੋ (ਸਿਰਫ਼ ਮਾਈਗ੍ਰੇਸ਼ਨ / ਰਾਖਵੇਂਕਰਨ ਲਈ) |
 | `S89ff31` | detail | Owner | ਮਾਲਕ |
 | `S2d20ee` | detail | Package overview | ਪੈਕੇਜ ਸਮੀਖਿਆ |
+| `S4d1a47` | detail | Package: all languages and access levels | ਪੈਕੇਜ: ਸਾਰੀਆਂ ਭਾਸ਼ਾਵਾਂ ਅਤੇ ਪਹੁੰਚ ਪੱਧਰ |
+| `Sc49bd0` | detail | Packages of this Release | ਇਸ ਰਿਲੀਜ਼ ਦੇ ਪੈਕੇਜ |
 | `S96f608` | detail, review_queue | Pending | ਬਕਾਇਆ |
 | `Sc983b6` | detail | Pick a profile (columns and labels), an audience, a language or a software version. Every file comes with a manifest of SHA-256 hashes; "bundle" packs both into one ZIP. | ਇੱਕ ਪ੍ਰੋਫਾਈਲ (ਕਾਲਮ ਅਤੇ ਲੇਬਲ), ਨਿਸ਼ਾਨਾ ਸਮੂਹ, ਭਾਸ਼ਾ ਜਾਂ ਸਾਫਟਵੇਅਰ ਸੰਸਕਰਣ ਚੁਣੋ। ਹਰ ਫਾਈਲ SHA-256 ਹੈਸ਼ਾਂ ਦੇ ਮੈਨੀਫੈਸਟ ਨਾਲ ਆਉਂਦੀ ਹੈ; "bundle" ਦੋਵਾਂ ਨੂੰ ਇੱਕ ZIP ਵਿੱਚ ਬੰਨ੍ਹਦਾ ਹੈ। |
 | `S72383d` | detail | Planned dates | ਯੋਜਨਾਬੱਧ ਮਿਤੀਆਂ |
 | `Sfb14b0` | detail | Planned deprecation date | ਯੋਜਨਾਬੱਧ ਬੰਦ ਕਰਨ ਦੀ ਮਿਤੀ |
 | `S00e733` | detail | Planned effective date | ਯੋਜਨਾਬੱਧ ਲਾਗੂਕਰਨ ਮਿਤੀ |
+| `S123a7f` | detail | Platform | ਪਲੇਟਫਾਰਮ |
 | `Sfc8d58` | detail | Platform variant | ਪਲੇਟਫਾਰਮ ਰੂਪ |
 | `Scd8926` | detail | Platform variants | ਪਲੇਟਫਾਰਮ ਰੂਪ |
 | `S141f0c` | detail | Processing in the background... | ਪਿਛੋਕੜ ਵਿੱਚ ਪ੍ਰੋਸੈਸ ਹੋ ਰਿਹਾ ਹੈ... |
@@ -15808,6 +16175,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S9b44a2` | detail | Release notes (PDF) | ਰਿਲੀਜ਼ ਨੋਟ (PDF) |
 | `S3dfa01` | detail | Release notes and offline lookup | ਰਿਲੀਜ਼ ਨੋਟ ਅਤੇ ਆਫ਼ਲਾਈਨ ਲੁੱਕਅਪ |
 | `Sdcddb7` | detail | Release notes list what was added, changed (field by field) and deprecated since the previous Release. The offline page is one self-contained HTML file for use at the turbine without a connection. | ਰਿਲੀਜ਼ ਨੋਟ ਦੱਸਦੇ ਹਨ ਕਿ ਪਿਛਲੀ ਰਿਲੀਜ਼ ਤੋਂ ਬਾਅਦ ਕੀ ਜੋੜਿਆ, ਬਦਲਿਆ (ਖੇਤਰ ਦਰ ਖੇਤਰ) ਅਤੇ ਬੰਦ ਕੀਤਾ ਗਿਆ। ਆਫ਼ਲਾਈਨ ਸਫ਼ਾ ਕੁਨੈਕਸ਼ਨ ਤੋਂ ਬਿਨਾਂ ਟਰਬਾਈਨ ਉੱਤੇ ਵਰਤਣ ਲਈ ਇੱਕ ਸਵੈ-ਸੰਪੂਰਨ HTML ਫਾਈਲ ਹੈ। |
+| `Scce715` | detail | Reload | ਮੁੜ ਲੋਡ ਕਰੋ |
 | `S0544a3` | detail | Reload this page to see the progress. | ਪ੍ਰਗਤੀ ਵੇਖਣ ਲਈ ਇਹ ਸਫ਼ਾ ਦੁਬਾਰਾ ਲੋਡ ਕਰੋ। |
 | `S99e347` | detail | Remedy | ਉਪਾਅ |
 | `Se96390` | detail, list | Remove | ਹਟਾਓ |
@@ -15857,9 +16225,11 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S08e643` | detail, list | Target software version | ਨਿਸ਼ਾਨਾ ਸਾਫਟਵੇਅਰ ਸੰਸਕਰਣ |
 | `S44203c` | detail, form, status code fields | Task Call Frequency | ਟਾਸਕ ਕਾਲ ਫ੍ਰੀਕੁਐਂਸੀ |
 | `S8fc804` | detail | The author has to submit it for review before the Reviewer or Administrator can see it. | ਸਮੀਖਿਅਕ ਜਾਂ ਪ੍ਰਸ਼ਾਸਕ ਦੇ ਵੇਖਣ ਤੋਂ ਪਹਿਲਾਂ ਲੇਖਕ ਨੂੰ ਇਹ ਸਮੀਖਿਆ ਲਈ ਜਮ੍ਹਾਂ ਕਰਨਾ ਪਵੇਗਾ। |
+| `Sa5f3f8` | detail | These files contain the complete baseline: every status code that is valid as of this Release, not only the ones it changed. | ਇਨ੍ਹਾਂ ਫਾਈਲਾਂ ਵਿੱਚ ਪੂਰੀ ਆਧਾਰ ਸਥਿਤੀ ਹੈ: ਇਸ ਰਿਲੀਜ਼ ਅਨੁਸਾਰ ਜਾਇਜ਼ ਹਰ ਸਥਿਤੀ ਕੋਡ, ਸਿਰਫ਼ ਬਦਲੇ ਹੋਏ ਨਹੀਂ। |
 | `S091814` | detail | This change request has reached a terminal decision state | ਇਹ ਤਬਦੀਲੀ ਬੇਨਤੀ ਅੰਤਿਮ ਫ਼ੈਸਲੇ ਦੀ ਸਥਿਤੀ ਵਿੱਚ ਪਹੁੰਚ ਚੁੱਕੀ ਹੈ |
 | `S6d5708` | detail | This is the one truly irreversible action in the system. Type the identifier to confirm. | ਇਹ ਸਿਸਟਮ ਦੀ ਇੱਕੋ-ਇੱਕ ਸੱਚਮੁੱਚ ਅਟੱਲ ਕਾਰਵਾਈ ਹੈ। ਪੁਸ਼ਟੀ ਲਈ ਪਛਾਣਕਰਤਾ ਟਾਈਪ ਕਰੋ। |
 | `Sb55f1f` | detail | To revision | ਸੋਧ ਤੱਕ |
+| `Sa2a321` | detail | Translated codes per language | ਭਾਸ਼ਾ ਅਨੁਸਾਰ ਅਨੁਵਾਦ ਕੀਤੇ ਕੋਡ |
 | `S8ad830` | detail, menu, overview | Translations | ਅਨੁਵਾਦ |
 | `Seaf576` | detail, form | Trigger Snapshot | ਸਨੈਪਸ਼ਾਟ ਚਾਲੂ ਕਰੋ |
 | `S285ec8` | detail, form | Troubleshooting | ਨੁਕਸ ਨਿਵਾਰਨ |
@@ -15920,6 +16290,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Se51c55` | export | Records | ਰਿਕਾਰਡ |
 | `Sd41f56` | export, export_center | Release | ਰਿਲੀਜ਼ |
 | `S2e8fd6` | export | Reset delay | ਰੀਸੈੱਟ ਦੇਰੀ |
+| `S4651a3` | export | Scope | ਘੇਰਾ |
 | `S89fdd5` | export | Set delay | ਸੈੱਟ ਦੇਰੀ |
 | `S828d33` | export | source | ਸਰੋਤ |
 | `Sfcbb29` | export | Status code | ਸਥਿਤੀ ਕੋਡ |
@@ -16047,6 +16418,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S34b903` | help and messages | Not possible: the account has history (see above). Deactivate it instead; the person can no longer sign in and everything they did stays attributable. | ਸੰਭਵ ਨਹੀਂ: ਖਾਤੇ ਦਾ ਇਤਿਹਾਸ ਹੈ (ਉੱਪਰ ਵੇਖੋ)। ਇਸਦੀ ਥਾਂ ਨਾ-ਸਰਗਰਮ ਕਰੋ; ਵਿਅਕਤੀ ਹੁਣ ਸਾਈਨ ਇਨ ਨਹੀਂ ਕਰ ਸਕਦਾ ਅਤੇ ਜੋ ਉਸਨੇ ਕੀਤਾ ਉਹ ਪਛਾਣਯੋਗ ਰਹਿੰਦਾ ਹੈ। |
 | `Sce489f` | help and messages | The author gets any required cross-domain sign-offs, then submits the change request for review. | ਲੇਖਕ ਲੋੜੀਂਦੇ ਅੰਤਰ-ਡੋਮੇਨ ਦਸਤਖ਼ਤ ਲੈਂਦਾ ਹੈ, ਫਿਰ ਤਬਦੀਲੀ ਬੇਨਤੀ ਸਮੀਖਿਆ ਲਈ ਜਮ੍ਹਾਂ ਕਰਦਾ ਹੈ। |
 | `S1cdbdd` | help and messages | The Chief Engineer approves or rejects. Approval makes the revision Approved (or Deprecated for a deprecation request). | ਮੁੱਖ ਇੰਜੀਨੀਅਰ ਮਨਜ਼ੂਰ ਜਾਂ ਰੱਦ ਕਰਦਾ ਹੈ। ਮਨਜ਼ੂਰੀ ਸੋਧ ਨੂੰ ਮਨਜ਼ੂਰ (ਜਾਂ ਬੰਦ ਕਰਨ ਦੀ ਬੇਨਤੀ ਲਈ ਬੰਦ) ਬਣਾ ਦਿੰਦੀ ਹੈ। |
+| `S2d6ac0` | help and messages | The package is being built. Reload this page to follow its progress. | ਪੈਕੇਜ ਬਣ ਰਿਹਾ ਹੈ। ਪ੍ਰਗਤੀ ਦੇਖਣ ਲਈ ਇਹ ਸਫ਼ਾ ਮੁੜ ਲੋਡ ਕਰੋ। |
 | `Scff3a3` | help and messages | User deleted; its name and address are erased, what it did stays attributable. | ਵਰਤੋਂਕਾਰ ਮਿਟਾਇਆ ਗਿਆ; ਉਸਦਾ ਨਾਮ ਅਤੇ ਪਤਾ ਮਿਟਾ ਦਿੱਤੇ ਗਏ, ਜੋ ਉਸਨੇ ਕੀਤਾ ਉਹ ਪਛਾਣਯੋਗ ਰਹਿੰਦਾ ਹੈ। |
 | `Secfb3f` | hub_consolidation | Deprecate replaced Hub codes | ਬਦਲੇ ਗਏ ਹੱਬ ਕੋਡ ਬੰਦ ਕਰੋ |
 | `S0e7766` | hub_consolidation, language | draft | ਖਰੜਾ |
@@ -16126,7 +16498,6 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S863fd0` | language | Your own proposal: another person approves it. | ਤੁਹਾਡਾ ਆਪਣਾ ਸੁਝਾਅ: ਕੋਈ ਹੋਰ ਇਸਨੂੰ ਮਨਜ਼ੂਰ ਕਰਦਾ ਹੈ। |
 | `Sf9d469` | legacy_mapping | All controllers | ਸਾਰੇ ਕੰਟਰੋਲਰ |
 | `Se61c2f` | legacy_mapping | Any number state | ਕੋਈ ਵੀ ਨੰਬਰ ਅਵਸਥਾ |
-| `Sa36a5f` | legacy_mapping, st_new, st_preview | Controller | ਕੰਟਰੋਲਰ |
 | `S7c4f77` | legacy_mapping | issued | ਜਾਰੀ ਕੀਤਾ |
 | `Sfd5ec0` | legacy_mapping, menu, new | Legacy mapping | ਪੁਰਾਣੇ-ਨਵੇਂ ਦੀ ਮੈਪਿੰਗ |
 | `S81f567` | legacy_mapping | Legacy number to new identifier | ਪੁਰਾਣੇ ਨੰਬਰ ਤੋਂ ਨਵੇਂ ਪਛਾਣਕਰਤਾ ਤੱਕ |
@@ -16276,6 +16647,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S751ff5` | message: export_profile_service | Export profile not found | ਐਕਸਪੋਰਟ ਪ੍ਰੋਫਾਈਲ ਨਹੀਂ ਮਿਲਿਆ |
 | `S4a8527` | message: export_profile_service | name must be 1-80 characters. | name 1-80 ਅੱਖਰਾਂ ਦਾ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ। |
 | `S506d0b` | message: export_service | An audience export is built from Released data only; it cannot be combined with the unapproved working set. | ਨਿਸ਼ਾਨਾ ਸਮੂਹ ਐਕਸਪੋਰਟ ਸਿਰਫ਼ ਜਾਰੀ ਡੇਟਾ ਤੋਂ ਬਣਦਾ ਹੈ; ਇਸਨੂੰ ਗੈਰ-ਮਨਜ਼ੂਰ ਕਾਰਜਸ਼ੀਲ ਸਮੂਹ ਨਾਲ ਮਿਲਾਇਆ ਨਹੀਂ ਜਾ ਸਕਦਾ। |
+| `S4bb9a3` | message: export_service | content must be 'baseline' or 'delta'. | content 'baseline' ਜਾਂ 'delta' ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ। |
 | `Sf593c4` | message: export_service | language is required for a translated export | ਅਨੁਵਾਦ ਕੀਤੇ ਐਕਸਪੋਰਟ ਲਈ ਭਾਸ਼ਾ ਲੋੜੀਂਦੀ ਹੈ |
 | `S42cee2` | message: field_review_service | A field comment must be between 1 and 2000 characters. | ਖੇਤਰ ਟਿੱਪਣੀ 1 ਤੋਂ 2000 ਅੱਖਰਾਂ ਵਿਚਕਾਰ ਹੋਣੀ ਚਾਹੀਦੀ ਹੈ। |
 | `S0168d7` | message: field_review_service | Checklist item not found | ਚੈੱਕਲਿਸਟ ਨੁਕਤਾ ਨਹੀਂ ਮਿਲਿਆ |
@@ -16315,8 +16687,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sb68487` | message: occurrence_service | period_end must not be before period_start. | period_end, period_start ਤੋਂ ਪਹਿਲਾਂ ਨਹੀਂ ਹੋਣਾ ਚਾਹੀਦਾ। |
 | `S682b0f` | message: occurrence_service | source_label must be 1-80 characters. | source_label 1-80 ਅੱਖਰਾਂ ਦਾ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ। |
 | `S3b0e31` | message: occurrence_service | The file needs the columns status_code_identifier and occurrences. | ਫਾਈਲ ਨੂੰ status_code_identifier ਅਤੇ occurrences ਕਾਲਮ ਚਾਹੀਦੇ ਹਨ। |
+| `Sbdd594` | message: package_service | Choose at least one access level or the unfiltered files. | ਘੱਟੋ-ਘੱਟ ਇੱਕ ਪਹੁੰਚ ਪੱਧਰ ਜਾਂ ਬਿਨਾਂ ਫ਼ਿਲਟਰ ਵਾਲੀਆਂ ਫਾਈਲਾਂ ਚੁਣੋ। |
+| `S4af5c1` | message: package_service | Choose at least one format. | ਘੱਟੋ-ਘੱਟ ਇੱਕ ਫਾਰਮੈਟ ਚੁਣੋ। |
+| `S8865f4` | message: package_service | Only a published Release can be packaged. | ਸਿਰਫ਼ ਪ੍ਰਕਾਸ਼ਿਤ ਰਿਲੀਜ਼ ਦਾ ਪੈਕੇਜ ਬਣਾਇਆ ਜਾ ਸਕਦਾ ਹੈ। |
+| `S9b6676` | message: package_service | Package not found | ਪੈਕੇਜ ਨਹੀਂ ਮਿਲਿਆ |
+| `S2ddbdd` | message: package_service, message: release_notes_service | Release not found | ਰਿਲੀਜ਼ ਨਹੀਂ ਮਿਲੀ |
+| `S3bc283` | message: package_service | The package file is no longer on the server. | ਪੈਕੇਜ ਫਾਈਲ ਹੁਣ ਸਰਵਰ ਉੱਤੇ ਨਹੀਂ ਹੈ। |
+| `S310622` | message: package_service | The package is not ready. | ਪੈਕੇਜ ਅਜੇ ਤਿਆਰ ਨਹੀਂ ਹੈ। |
 | `S2142ac` | message: release_notes_service | format must be md, csv, pdf or json | format md, csv, pdf ਜਾਂ json ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ |
-| `S2ddbdd` | message: release_notes_service | Release not found | ਰਿਲੀਜ਼ ਨਹੀਂ ਮਿਲੀ |
 | `S6e9bf7` | message: release_service | A published Release can never be deleted (BR-007). | ਪ੍ਰਕਾਸ਼ਿਤ ਰਿਲੀਜ਼ ਕਦੇ ਮਿਟਾਈ ਨਹੀਂ ਜਾ ਸਕਦੀ (BR-007)। |
 | `S06fb3b` | message: release_service | Cannot change items on a published Release (BR-007). | ਪ੍ਰਕਾਸ਼ਿਤ ਰਿਲੀਜ਼ ਦੀਆਂ ਆਈਟਮਾਂ ਬਦਲੀਆਂ ਨਹੀਂ ਜਾ ਸਕਦੀਆਂ (BR-007)। |
 | `Sc1eab3` | message: release_service | Cannot change the targets of a published Release (BR-007). | ਪ੍ਰਕਾਸ਼ਿਤ ਰਿਲੀਜ਼ ਦੇ ਨਿਸ਼ਾਨੇ ਬਦਲੇ ਨਹੀਂ ਜਾ ਸਕਦੇ (BR-007)। |
@@ -16627,7 +17005,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 
 ### 9.16 ES Español 🇪🇸 — Spanish
 
-1162 of 1163 strings translated; direction left to right.
+1189 of 1190 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -16794,6 +17172,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sc3f104` | delegations, user_detail, users | Role | Rol |
 | `Sd5dcf0` | delegations | Until (inclusive) | Hasta (inclusive) |
 | `Sa4aefa` | delegations | Valid | Vigente |
+| `Sc3dc5c` | detail | %(count)s codes have no confirmed access levels and are missing from every access-level file. | %(count)s códigos no tienen niveles de acceso confirmados y faltan en todos los archivos por nivel de acceso. |
 | `Sc3cd63` | detail, user_detail, users | Actions | Acciones |
 | `S61cc55` | detail, lookups, review_checklist | Add | Añadir |
 | `S12cc59` | detail | Add a comment (no decision) | Añadir un comentario (sin decisión) |
@@ -16807,7 +17186,9 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S25f8c5` | detail, export, form | Alarm | Alarma |
 | `Sd87c44` | detail, export, hub_consolidation | all | todos |
 | `S484388` | detail, export_center | all columns | todas las columnas |
+| `S2e73c3` | detail | All languages and all access levels are included. Use the export above for a single language or access level. | Se incluyen todos los idiomas y todos los niveles de acceso. Para un solo idioma o nivel de acceso, use la exportación de arriba. |
 | `S432284` | detail | All required sign-offs are in, but this is still a Draft — the Reviewer and Administrator only see it after you choose Submit for Review below. | Todas las conformidades requeridas están, pero sigue siendo un borrador — el revisor y el administrador solo lo ven después de que elija Enviar a revisión más abajo. |
+| `S9b0b4c` | detail | also the files without an access level (all columns) | también los archivos sin nivel de acceso (todas las columnas) |
 | `Sf24c44` | detail | Any %(code)s Engineer | Cualquier ingeniero %(code)s |
 | `Sb99a01` | detail | Applies to software versions | Se aplica a versiones de software |
 | `S7b2c7f` | detail, language | Approve | Aprobar |
@@ -16824,12 +17205,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S416869` | detail | Auto Reset Program | Programa de reposición automática |
 | `Sd71897` | detail, form | Available Group | Grupo de disponibilidad |
 | `S928e2e` | detail | Brake Program | Programa de frenado |
+| `Sab2e8a` | detail | Build package | Crear paquete |
 | `Scfadbd` | detail | By | Por |
 | `S9c8393` | detail, mine | Change Request | Solicitud de cambio |
 | `S4572f4` | detail | Change request | Solicitud de cambio |
 | `S3295be` | detail | Change requests in this set | Solicitudes de cambio de este conjunto |
 | `S4d8006` | detail | Change set | Conjunto de cambios |
 | `S8aa57d` | detail | Changes | Cambios |
+| `S3d14ea` | detail, export | Changes of this release only | Solo los cambios de esta versión |
 | `Sbd95c0` | detail | Checklist confirmed at sign-off | Lista de comprobación confirmada en la conformidad |
 | `S074d62` | detail, role badge | Chief Engineer | Ingeniero jefe |
 | `S03695d` | detail | Chief Engineer decision | Decisión del ingeniero jefe |
@@ -16842,8 +17225,11 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sfce06e` | detail | Comments | Comentarios |
 | `S8d105c` | detail, reconciliation | Compare | Comparar |
 | `Sc9a03b` | detail | Compare Revisions | Comparar revisiones |
+| `S0ff7e5` | detail, export | Complete baseline | Estado completo |
 | `S1798b3` | detail | Completed | Completado |
 | `S7671b5` | detail | Confirm or override Audience Access | Confirmar o sobrescribir el acceso por destinatarios |
+| `S4f9be0` | detail | Content | Contenido |
+| `Sa36a5f` | detail, legacy_mapping, st_new | Controller | Controlador |
 | `Scd293f` | detail | Converter Reactive Power Program | Programa de potencia reactiva del convertidor |
 | `S3998a7` | detail | Copies the descriptive fields into a new Draft in a Main Controller group (a new number is allocated at submit; this code's identifier is kept as the legacy reference). | Copia los campos descriptivos a un nuevo borrador en un grupo del controlador principal (se asigna un número nuevo al enviar; el identificador de este código se conserva como referencia anterior). |
 | `S54b051` | detail | Copy this code for another turbine platform. The copy is a new Draft that links back here and goes through the normal review. | Copie este código para otra plataforma de aerogenerador. La copia es un nuevo borrador que remite a este y pasa la revisión normal. |
@@ -16874,6 +17260,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S4c17aa` | detail | Development | Desarrollo |
 | `S552a2b` | detail | Documented reason | Motivo documentado |
 | `S9b1091` | detail, mine | Domain | Ámbito |
+| `Sa479c9` | detail | Download | Descargar |
 | `S056839` | detail | Download Error Report | Descargar informe de errores |
 | `S23d33e` | detail, index | Draft | Borrador |
 | `S3c7a50` | detail | Edit Candidates | Editar candidatos |
@@ -16895,6 +17282,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sdd7b7e` | detail | failed validation | fallaron en la validación |
 | `Sd106a6` | detail | Field comments | Comentarios de campo |
 | `S2c3caf` | detail, export_verify, operations | File | Archivo |
+| `S6ce6c5` | detail | Files | Archivos |
 | `Se0996a` | detail, form | first | primera |
 | `S041a5d` | detail, export_center | Format | Formato |
 | `S9e3c65` | detail | From revision | De la revisión |
@@ -16902,6 +17290,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sb8c4c9` | detail, form | Further Program References | Más referencias de programa |
 | `S636c41` | detail | Grid Operator | Operador de red |
 | `S90ccd6` | detail | History | Historial |
+| `S0dfe7b` | detail | Hub controller | Controlador del buje |
 | `Sfec8b7` | detail | Hub Controller group | Grupo del controlador del buje |
 | `S00ccae` | detail, form | Hub Controller only | solo controlador del buje |
 | `S3c883f` | detail | I have reviewed these dependants | He revisado estos dependientes |
@@ -16916,6 +17305,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S693272` | detail, withdrawn_codes | Legacy Reference Number | Número de referencia anterior |
 | `S43d5c5` | detail, form | Loadless Spinning Permitted | Giro sin carga permitido |
 | `S193786` | detail | Logical Node | Nodo lógico |
+| `Sc3f827` | detail | Main controller | Controlador principal |
 | `S578b78` | detail | Main Controller group | Grupo del controlador principal |
 | `Sa7512d` | detail, form | Main Controller only | solo controlador principal |
 | `Seb9a6d` | detail | Manage translations | Gestionar traducciones |
@@ -16941,6 +17331,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sde04fa` | detail, fleet_feedback, success_metrics | of | de |
 | `S19f611` | detail | Offline lookup (HTML) | Consulta sin conexión (HTML) |
 | `S2ff2ae` | detail | Offline lookup + manifest (ZIP) | Consulta sin conexión + manifiesto (ZIP) |
+| `S3f0e3e` | detail | One ZIP with the complete baseline in every language and for every access level, plus the release notes and a manifest with a SHA-256 for each file. Building it takes a few minutes; the page shows the progress. | Un ZIP con el estado completo en cada idioma y para cada nivel de acceso, más las notas de la versión y un manifiesto con un SHA-256 por archivo. Crearlo lleva unos minutos; la página muestra el progreso. |
 | `S12aa03` | detail | only translated codes | solo códigos traducidos |
 | `S5fc7e3` | detail | open | abierto |
 | `Sf61187` | detail | Open New Revision | Abrir nueva revisión |
@@ -16952,11 +17343,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S780d35` | detail | Override identifier (migration / reservation only) | Sobrescribir identificador (solo migración / reserva) |
 | `S89ff31` | detail | Owner | Propietario |
 | `S2d20ee` | detail | Package overview | Resumen del paquete |
+| `S4d1a47` | detail | Package: all languages and access levels | Paquete: todos los idiomas y niveles de acceso |
+| `Sc49bd0` | detail | Packages of this Release | Paquetes de esta versión |
 | `S96f608` | detail, review_queue | Pending | Pendiente |
 | `Sc983b6` | detail | Pick a profile (columns and labels), an audience, a language or a software version. Every file comes with a manifest of SHA-256 hashes; "bundle" packs both into one ZIP. | Elija un perfil (columnas y etiquetas), un destinatario, un idioma o una versión de software. Cada archivo viene con un manifiesto de hashes SHA-256; «bundle» empaqueta ambos en un ZIP. |
 | `S72383d` | detail | Planned dates | Fechas planificadas |
 | `Sfb14b0` | detail | Planned deprecation date | Fecha de obsolescencia prevista |
 | `S00e733` | detail | Planned effective date | Fecha de entrada en vigor prevista |
+| `S123a7f` | detail | Platform | Plataforma |
 | `Sfc8d58` | detail | Platform variant | Variante de plataforma |
 | `Scd8926` | detail | Platform variants | Variantes de plataforma |
 | `S141f0c` | detail | Processing in the background... | Procesando en segundo plano... |
@@ -16977,6 +17371,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S9b44a2` | detail | Release notes (PDF) | Notas de versión (PDF) |
 | `S3dfa01` | detail | Release notes and offline lookup | Notas de versión y consulta sin conexión |
 | `Sdcddb7` | detail | Release notes list what was added, changed (field by field) and deprecated since the previous Release. The offline page is one self-contained HTML file for use at the turbine without a connection. | Las notas de versión enumeran lo añadido, cambiado (campo por campo) y declarado obsoleto desde la versión anterior. La página sin conexión es un único archivo HTML autónomo para usar en la turbina sin conexión. |
+| `Scce715` | detail | Reload | Recargar |
 | `S0544a3` | detail | Reload this page to see the progress. | Recargue esta página para ver el progreso. |
 | `S99e347` | detail | Remedy | Solución |
 | `Se96390` | detail, list | Remove | Quitar |
@@ -17026,9 +17421,11 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S08e643` | detail, list | Target software version | Versión de software de destino |
 | `S44203c` | detail, form, status code fields | Task Call Frequency | Frecuencia de llamada de la tarea |
 | `S8fc804` | detail | The author has to submit it for review before the Reviewer or Administrator can see it. | El autor debe enviarlo a revisión antes de que el revisor o el administrador puedan verlo. |
+| `Sa5f3f8` | detail | These files contain the complete baseline: every status code that is valid as of this Release, not only the ones it changed. | Estos archivos contienen el estado completo: todos los códigos de estado válidos en esta versión, no solo los que cambió. |
 | `S091814` | detail | This change request has reached a terminal decision state | Esta solicitud de cambio ha alcanzado un estado de decisión final |
 | `S6d5708` | detail | This is the one truly irreversible action in the system. Type the identifier to confirm. | Esta es la única acción realmente irreversible del sistema. Escriba el identificador para confirmar. |
 | `Sb55f1f` | detail | To revision | A la revisión |
+| `Sa2a321` | detail | Translated codes per language | Códigos traducidos por idioma |
 | `S8ad830` | detail, menu, overview | Translations | Traducciones |
 | `Seaf576` | detail, form | Trigger Snapshot | Disparar instantánea |
 | `S285ec8` | detail, form | Troubleshooting | Resolución de problemas |
@@ -17089,6 +17486,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Se51c55` | export | Records | Registros |
 | `Sd41f56` | export, export_center | Release | Versión publicada |
 | `S2e8fd6` | export | Reset delay | Retardo de reposición |
+| `S4651a3` | export | Scope | Alcance |
 | `S89fdd5` | export | Set delay | Retardo de activación |
 | `S828d33` | export | source | origen |
 | `Sfcbb29` | export | Status code | Código de estado |
@@ -17216,6 +17614,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S34b903` | help and messages | Not possible: the account has history (see above). Deactivate it instead; the person can no longer sign in and everything they did stays attributable. | No es posible: la cuenta tiene historial (véase arriba). Desactívela en su lugar; la persona ya no podrá iniciar sesión y todo lo que hizo sigue siendo atribuible. |
 | `Sce489f` | help and messages | The author gets any required cross-domain sign-offs, then submits the change request for review. | El autor obtiene las conformidades entre ámbitos requeridas y luego envía la solicitud de cambio a revisión. |
 | `S1cdbdd` | help and messages | The Chief Engineer approves or rejects. Approval makes the revision Approved (or Deprecated for a deprecation request). | El ingeniero jefe aprueba o rechaza. La aprobación hace que la revisión pase a Aprobado (u Obsoleto en una solicitud de obsolescencia). |
+| `S2d6ac0` | help and messages | The package is being built. Reload this page to follow its progress. | El paquete se está creando. Recargue esta página para seguir el progreso. |
 | `Scff3a3` | help and messages | User deleted; its name and address are erased, what it did stays attributable. | Usuario eliminado; su nombre y dirección se borran, lo que hizo sigue siendo atribuible. |
 | `Secfb3f` | hub_consolidation | Deprecate replaced Hub codes | Declarar obsoletos los códigos del buje sustituidos |
 | `S0e7766` | hub_consolidation, language | draft | borrador |
@@ -17295,7 +17694,6 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S863fd0` | language | Your own proposal: another person approves it. | Su propia propuesta: la aprueba otra persona. |
 | `Sf9d469` | legacy_mapping | All controllers | Todos los controladores |
 | `Se61c2f` | legacy_mapping | Any number state | Cualquier estado de número |
-| `Sa36a5f` | legacy_mapping, st_new, st_preview | Controller | Controlador |
 | `S7c4f77` | legacy_mapping | issued | emitidos |
 | `Sfd5ec0` | legacy_mapping, menu, new | Legacy mapping | Correspondencia antiguo-nuevo |
 | `S81f567` | legacy_mapping | Legacy number to new identifier | Número anterior a nuevo identificador |
@@ -17445,6 +17843,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S751ff5` | message: export_profile_service | Export profile not found | Perfil de exportación no encontrado |
 | `S4a8527` | message: export_profile_service | name must be 1-80 characters. | name debe tener de 1 a 80 caracteres. |
 | `S506d0b` | message: export_service | An audience export is built from Released data only; it cannot be combined with the unapproved working set. | Una exportación por destinatarios se construye solo con datos publicados; no puede combinarse con el conjunto de trabajo no aprobado. |
+| `S4bb9a3` | message: export_service | content must be 'baseline' or 'delta'. | content debe ser 'baseline' o 'delta'. |
 | `Sf593c4` | message: export_service | language is required for a translated export | El idioma es obligatorio para una exportación traducida |
 | `S42cee2` | message: field_review_service | A field comment must be between 1 and 2000 characters. | Un comentario de campo debe tener entre 1 y 2000 caracteres. |
 | `S0168d7` | message: field_review_service | Checklist item not found | Punto de lista de comprobación no encontrado |
@@ -17484,8 +17883,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sb68487` | message: occurrence_service | period_end must not be before period_start. | period_end no debe ser anterior a period_start. |
 | `S682b0f` | message: occurrence_service | source_label must be 1-80 characters. | source_label debe tener de 1 a 80 caracteres. |
 | `S3b0e31` | message: occurrence_service | The file needs the columns status_code_identifier and occurrences. | El archivo necesita las columnas status_code_identifier y occurrences. |
+| `Sbdd594` | message: package_service | Choose at least one access level or the unfiltered files. | Elija al menos un nivel de acceso o los archivos sin filtrar. |
+| `S4af5c1` | message: package_service | Choose at least one format. | Elija al menos un formato. |
+| `S8865f4` | message: package_service | Only a published Release can be packaged. | Solo se puede empaquetar una versión publicada. |
+| `S9b6676` | message: package_service | Package not found | Paquete no encontrado |
+| `S2ddbdd` | message: package_service, message: release_notes_service | Release not found | Versión publicada no encontrada |
+| `S3bc283` | message: package_service | The package file is no longer on the server. | El archivo del paquete ya no está en el servidor. |
+| `S310622` | message: package_service | The package is not ready. | El paquete aún no está listo. |
 | `S2142ac` | message: release_notes_service | format must be md, csv, pdf or json | format debe ser md, csv, pdf o json |
-| `S2ddbdd` | message: release_notes_service | Release not found | Versión publicada no encontrada |
 | `S6e9bf7` | message: release_service | A published Release can never be deleted (BR-007). | Una versión publicada nunca puede eliminarse (BR-007). |
 | `S06fb3b` | message: release_service | Cannot change items on a published Release (BR-007). | No pueden cambiarse los elementos de una versión publicada (BR-007). |
 | `Sc1eab3` | message: release_service | Cannot change the targets of a published Release (BR-007). | No pueden cambiarse los destinos de una versión publicada (BR-007). |
@@ -17796,7 +18201,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 
 ### 9.17 IT Italiano 🇮🇹 — Italian
 
-1162 of 1163 strings translated; direction left to right.
+1189 of 1190 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -17963,6 +18368,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sc3f104` | delegations, user_detail, users | Role | Ruolo |
 | `Sd5dcf0` | delegations | Until (inclusive) | Fino al (incluso) |
 | `Sa4aefa` | delegations | Valid | Valida |
+| `Sc3dc5c` | detail | %(count)s codes have no confirmed access levels and are missing from every access-level file. | %(count)s codici non hanno livelli di accesso confermati e mancano in ogni file per livello di accesso. |
 | `Sc3cd63` | detail, user_detail, users | Actions | Azioni |
 | `S61cc55` | detail, lookups, review_checklist | Add | Aggiungi |
 | `S12cc59` | detail | Add a comment (no decision) | Aggiungi un commento (senza decisione) |
@@ -17976,7 +18382,9 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S25f8c5` | detail, export, form | Alarm | Allarme |
 | `Sd87c44` | detail, export, hub_consolidation | all | tutti |
 | `S484388` | detail, export_center | all columns | tutte le colonne |
+| `S2e73c3` | detail | All languages and all access levels are included. Use the export above for a single language or access level. | Sono incluse tutte le lingue e tutti i livelli di accesso. Per una sola lingua o un solo livello di accesso usa l'esportazione qui sopra. |
 | `S432284` | detail | All required sign-offs are in, but this is still a Draft — the Reviewer and Administrator only see it after you choose Submit for Review below. | Tutti i benestare richiesti ci sono, ma è ancora una bozza — il revisore e l'amministratore la vedono solo dopo che sceglie Invia in revisione qui sotto. |
+| `S9b0b4c` | detail | also the files without an access level (all columns) | anche i file senza livello di accesso (tutte le colonne) |
 | `Sf24c44` | detail | Any %(code)s Engineer | Qualsiasi ingegnere %(code)s |
 | `Sb99a01` | detail | Applies to software versions | Si applica alle versioni software |
 | `S7b2c7f` | detail, language | Approve | Approva |
@@ -17993,12 +18401,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S416869` | detail | Auto Reset Program | Programma di ripristino automatico |
 | `Sd71897` | detail, form | Available Group | Gruppo di disponibilità |
 | `S928e2e` | detail | Brake Program | Programma di frenata |
+| `Sab2e8a` | detail | Build package | Crea pacchetto |
 | `Scfadbd` | detail | By | Da |
 | `S9c8393` | detail, mine | Change Request | Richiesta di modifica |
 | `S4572f4` | detail | Change request | Richiesta di modifica |
 | `S3295be` | detail | Change requests in this set | Richieste di modifica in questo set |
 | `S4d8006` | detail | Change set | Set di modifiche |
 | `S8aa57d` | detail | Changes | Modifiche |
+| `S3d14ea` | detail, export | Changes of this release only | Solo le modifiche di questa versione |
 | `Sbd95c0` | detail | Checklist confirmed at sign-off | Lista di controllo confermata al benestare |
 | `S074d62` | detail, role badge | Chief Engineer | Capo ingegnere |
 | `S03695d` | detail | Chief Engineer decision | Decisione del capo ingegnere |
@@ -18011,8 +18421,11 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sfce06e` | detail | Comments | Commenti |
 | `S8d105c` | detail, reconciliation | Compare | Confronta |
 | `Sc9a03b` | detail | Compare Revisions | Confronta revisioni |
+| `S0ff7e5` | detail, export | Complete baseline | Stato completo |
 | `S1798b3` | detail | Completed | Completato |
 | `S7671b5` | detail | Confirm or override Audience Access | Conferma o sovrascrivi l'accesso per destinatari |
+| `S4f9be0` | detail | Content | Contenuto |
+| `Sa36a5f` | detail, legacy_mapping, st_new | Controller | Controller |
 | `Scd293f` | detail | Converter Reactive Power Program | Programma di potenza reattiva del convertitore |
 | `S3998a7` | detail | Copies the descriptive fields into a new Draft in a Main Controller group (a new number is allocated at submit; this code's identifier is kept as the legacy reference). | Copia i campi descrittivi in una nuova bozza in un gruppo del controllore principale (un nuovo numero viene assegnato all'invio; l'identificativo di questo codice è mantenuto come riferimento precedente). |
 | `S54b051` | detail | Copy this code for another turbine platform. The copy is a new Draft that links back here and goes through the normal review. | Copi questo codice per un'altra piattaforma di turbina. La copia è una nuova bozza che rimanda a questo codice e segue la normale revisione. |
@@ -18043,6 +18456,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S4c17aa` | detail | Development | Sviluppo |
 | `S552a2b` | detail | Documented reason | Motivo documentato |
 | `S9b1091` | detail, mine | Domain | Ambito |
+| `Sa479c9` | detail | Download | Scarica |
 | `S056839` | detail | Download Error Report | Scarica il rapporto degli errori |
 | `S23d33e` | detail, index | Draft | Bozza |
 | `S3c7a50` | detail | Edit Candidates | Modifica candidati |
@@ -18064,6 +18478,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sdd7b7e` | detail | failed validation | non hanno superato la convalida |
 | `Sd106a6` | detail | Field comments | Commenti di campo |
 | `S2c3caf` | detail, export_verify, operations | File | File |
+| `S6ce6c5` | detail | Files | File |
 | `Se0996a` | detail, form | first | prima |
 | `S041a5d` | detail, export_center | Format | Formato |
 | `S9e3c65` | detail | From revision | Dalla revisione |
@@ -18071,6 +18486,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sb8c4c9` | detail, form | Further Program References | Altri riferimenti di programma |
 | `S636c41` | detail | Grid Operator | Gestore di rete |
 | `S90ccd6` | detail | History | Storico |
+| `S0dfe7b` | detail | Hub controller | Controllore del mozzo |
 | `Sfec8b7` | detail | Hub Controller group | Gruppo del controllore del mozzo |
 | `S00ccae` | detail, form | Hub Controller only | solo controllore del mozzo |
 | `S3c883f` | detail | I have reviewed these dependants | Ho rivisto questi dipendenti |
@@ -18085,6 +18501,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S693272` | detail, withdrawn_codes | Legacy Reference Number | Numero di riferimento precedente |
 | `S43d5c5` | detail, form | Loadless Spinning Permitted | Rotazione a vuoto consentita |
 | `S193786` | detail | Logical Node | Nodo logico |
+| `Sc3f827` | detail | Main controller | Controllore principale |
 | `S578b78` | detail | Main Controller group | Gruppo del controllore principale |
 | `Sa7512d` | detail, form | Main Controller only | solo controllore principale |
 | `Seb9a6d` | detail | Manage translations | Gestisci traduzioni |
@@ -18110,6 +18527,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sde04fa` | detail, fleet_feedback, success_metrics | of | di |
 | `S19f611` | detail | Offline lookup (HTML) | Consultazione offline (HTML) |
 | `S2ff2ae` | detail | Offline lookup + manifest (ZIP) | Consultazione offline + manifesto (ZIP) |
+| `S3f0e3e` | detail | One ZIP with the complete baseline in every language and for every access level, plus the release notes and a manifest with a SHA-256 for each file. Building it takes a few minutes; the page shows the progress. | Uno ZIP con lo stato completo in ogni lingua e per ogni livello di accesso, più le note di rilascio e un manifesto con un SHA-256 per file. La creazione richiede alcuni minuti; la pagina mostra l'avanzamento. |
 | `S12aa03` | detail | only translated codes | solo codici tradotti |
 | `S5fc7e3` | detail | open | aperto |
 | `Sf61187` | detail | Open New Revision | Apri nuova revisione |
@@ -18121,11 +18539,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S780d35` | detail | Override identifier (migration / reservation only) | Sovrascrivi identificativo (solo migrazione / prenotazione) |
 | `S89ff31` | detail | Owner | Proprietario |
 | `S2d20ee` | detail | Package overview | Panoramica del pacchetto |
+| `S4d1a47` | detail | Package: all languages and access levels | Pacchetto: tutte le lingue e tutti i livelli di accesso |
+| `Sc49bd0` | detail | Packages of this Release | Pacchetti di questa versione |
 | `S96f608` | detail, review_queue | Pending | In sospeso |
 | `Sc983b6` | detail | Pick a profile (columns and labels), an audience, a language or a software version. Every file comes with a manifest of SHA-256 hashes; "bundle" packs both into one ZIP. | Scelga un profilo (colonne ed etichette), un destinatario, una lingua o una versione software. Ogni file è accompagnato da un manifesto di hash SHA-256; «bundle» li raccoglie in un unico ZIP. |
 | `S72383d` | detail | Planned dates | Date pianificate |
 | `Sfb14b0` | detail | Planned deprecation date | Data di obsolescenza pianificata |
 | `S00e733` | detail | Planned effective date | Data di entrata in vigore pianificata |
+| `S123a7f` | detail | Platform | Piattaforma |
 | `Sfc8d58` | detail | Platform variant | Variante di piattaforma |
 | `Scd8926` | detail | Platform variants | Varianti di piattaforma |
 | `S141f0c` | detail | Processing in the background... | Elaborazione in background... |
@@ -18146,6 +18567,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S9b44a2` | detail | Release notes (PDF) | Note di rilascio (PDF) |
 | `S3dfa01` | detail | Release notes and offline lookup | Note di rilascio e consultazione offline |
 | `Sdcddb7` | detail | Release notes list what was added, changed (field by field) and deprecated since the previous Release. The offline page is one self-contained HTML file for use at the turbine without a connection. | Le note di rilascio elencano ciò che è stato aggiunto, modificato (campo per campo) e dichiarato obsoleto dal rilascio precedente. La pagina offline è un unico file HTML autonomo da usare sulla turbina senza connessione. |
+| `Scce715` | detail | Reload | Ricarica |
 | `S0544a3` | detail | Reload this page to see the progress. | Ricarichi questa pagina per vedere l'avanzamento. |
 | `S99e347` | detail | Remedy | Rimedio |
 | `Se96390` | detail, list | Remove | Rimuovi |
@@ -18195,9 +18617,11 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S08e643` | detail, list | Target software version | Versione software di destinazione |
 | `S44203c` | detail, form, status code fields | Task Call Frequency | Frequenza di chiamata del task |
 | `S8fc804` | detail | The author has to submit it for review before the Reviewer or Administrator can see it. | L'autore deve inviarla in revisione prima che il revisore o l'amministratore possano vederla. |
+| `Sa5f3f8` | detail | These files contain the complete baseline: every status code that is valid as of this Release, not only the ones it changed. | Questi file contengono lo stato completo: tutti i codici di stato validi in questa versione, non solo quelli modificati. |
 | `S091814` | detail | This change request has reached a terminal decision state | Questa richiesta di modifica ha raggiunto uno stato di decisione finale |
 | `S6d5708` | detail | This is the one truly irreversible action in the system. Type the identifier to confirm. | Questa è l'unica azione davvero irreversibile del sistema. Digiti l'identificativo per confermare. |
 | `Sb55f1f` | detail | To revision | Alla revisione |
+| `Sa2a321` | detail | Translated codes per language | Codici tradotti per lingua |
 | `S8ad830` | detail, menu, overview | Translations | Traduzioni |
 | `Seaf576` | detail, form | Trigger Snapshot | Attiva snapshot |
 | `S285ec8` | detail, form | Troubleshooting | Risoluzione dei problemi |
@@ -18258,6 +18682,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Se51c55` | export | Records | Record |
 | `Sd41f56` | export, export_center | Release | Rilascio |
 | `S2e8fd6` | export | Reset delay | Ritardo di ripristino |
+| `S4651a3` | export | Scope | Ambito |
 | `S89fdd5` | export | Set delay | Ritardo di attivazione |
 | `S828d33` | export | source | origine |
 | `Sfcbb29` | export | Status code | Codice di stato |
@@ -18385,6 +18810,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S34b903` | help and messages | Not possible: the account has history (see above). Deactivate it instead; the person can no longer sign in and everything they did stays attributable. | Non possibile: l'account ha uno storico (vedi sopra). Lo disattivi invece; la persona non può più accedere e tutto ciò che ha fatto resta attribuibile. |
 | `Sce489f` | help and messages | The author gets any required cross-domain sign-offs, then submits the change request for review. | L'autore ottiene i benestare interdisciplinari richiesti, poi invia la richiesta di modifica in revisione. |
 | `S1cdbdd` | help and messages | The Chief Engineer approves or rejects. Approval makes the revision Approved (or Deprecated for a deprecation request). | Il capo ingegnere approva o rifiuta. L'approvazione porta la revisione ad Approvato (oppure a Obsoleto per una richiesta di obsolescenza). |
+| `S2d6ac0` | help and messages | The package is being built. Reload this page to follow its progress. | Il pacchetto è in costruzione. Ricarica questa pagina per seguirne l'avanzamento. |
 | `Scff3a3` | help and messages | User deleted; its name and address are erased, what it did stays attributable. | Utente eliminato; nome e indirizzo sono cancellati, ciò che ha fatto resta attribuibile. |
 | `Secfb3f` | hub_consolidation | Deprecate replaced Hub codes | Dichiara obsoleti i codici del mozzo sostituiti |
 | `S0e7766` | hub_consolidation, language | draft | bozza |
@@ -18464,7 +18890,6 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S863fd0` | language | Your own proposal: another person approves it. | La sua proposta: la approva un'altra persona. |
 | `Sf9d469` | legacy_mapping | All controllers | Tutti i controllori |
 | `Se61c2f` | legacy_mapping | Any number state | Qualsiasi stato del numero |
-| `Sa36a5f` | legacy_mapping, st_new, st_preview | Controller | Controller |
 | `S7c4f77` | legacy_mapping | issued | assegnati |
 | `Sfd5ec0` | legacy_mapping, menu, new | Legacy mapping | Corrispondenza vecchio-nuovo |
 | `S81f567` | legacy_mapping | Legacy number to new identifier | Numero precedente → nuovo identificativo |
@@ -18614,6 +19039,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S751ff5` | message: export_profile_service | Export profile not found | Profilo di esportazione non trovato |
 | `S4a8527` | message: export_profile_service | name must be 1-80 characters. | name deve avere 1-80 caratteri. |
 | `S506d0b` | message: export_service | An audience export is built from Released data only; it cannot be combined with the unapproved working set. | Un'esportazione per destinatari si costruisce solo da dati rilasciati; non può essere combinata con l'insieme di lavoro non approvato. |
+| `S4bb9a3` | message: export_service | content must be 'baseline' or 'delta'. | content deve essere 'baseline' o 'delta'. |
 | `Sf593c4` | message: export_service | language is required for a translated export | La lingua è obbligatoria per un'esportazione tradotta |
 | `S42cee2` | message: field_review_service | A field comment must be between 1 and 2000 characters. | Un commento di campo deve avere tra 1 e 2000 caratteri. |
 | `S0168d7` | message: field_review_service | Checklist item not found | Punto della lista di controllo non trovato |
@@ -18653,8 +19079,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sb68487` | message: occurrence_service | period_end must not be before period_start. | period_end non deve essere precedente a period_start. |
 | `S682b0f` | message: occurrence_service | source_label must be 1-80 characters. | source_label deve avere 1-80 caratteri. |
 | `S3b0e31` | message: occurrence_service | The file needs the columns status_code_identifier and occurrences. | Il file richiede le colonne status_code_identifier e occurrences. |
+| `Sbdd594` | message: package_service | Choose at least one access level or the unfiltered files. | Scegli almeno un livello di accesso o i file non filtrati. |
+| `S4af5c1` | message: package_service | Choose at least one format. | Scegli almeno un formato. |
+| `S8865f4` | message: package_service | Only a published Release can be packaged. | Si può impacchettare solo una versione pubblicata. |
+| `S9b6676` | message: package_service | Package not found | Pacchetto non trovato |
+| `S2ddbdd` | message: package_service, message: release_notes_service | Release not found | Rilascio non trovato |
+| `S3bc283` | message: package_service | The package file is no longer on the server. | Il file del pacchetto non è più sul server. |
+| `S310622` | message: package_service | The package is not ready. | Il pacchetto non è ancora pronto. |
 | `S2142ac` | message: release_notes_service | format must be md, csv, pdf or json | format deve essere md, csv, pdf o json |
-| `S2ddbdd` | message: release_notes_service | Release not found | Rilascio non trovato |
 | `S6e9bf7` | message: release_service | A published Release can never be deleted (BR-007). | Un rilascio pubblicato non può mai essere eliminato (BR-007). |
 | `S06fb3b` | message: release_service | Cannot change items on a published Release (BR-007). | Gli elementi di un rilascio pubblicato non possono essere modificati (BR-007). |
 | `Sc1eab3` | message: release_service | Cannot change the targets of a published Release (BR-007). | Le destinazioni di un rilascio pubblicato non possono essere modificate (BR-007). |
@@ -18965,7 +19397,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 
 ### 9.18 DK Dansk 🇩🇰 — Danish
 
-1162 of 1163 strings translated; direction left to right.
+1189 of 1190 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -19132,6 +19564,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sc3f104` | delegations, user_detail, users | Role | Rolle |
 | `Sd5dcf0` | delegations | Until (inclusive) | Til og med |
 | `Sa4aefa` | delegations | Valid | Gyldig |
+| `Sc3dc5c` | detail | %(count)s codes have no confirmed access levels and are missing from every access-level file. | %(count)s koder har ingen bekræftede adgangsniveauer og mangler i hver fil pr. adgangsniveau. |
 | `Sc3cd63` | detail, user_detail, users | Actions | Handlinger |
 | `S61cc55` | detail, lookups, review_checklist | Add | Tilføj |
 | `S12cc59` | detail | Add a comment (no decision) | Tilføj en kommentar (uden beslutning) |
@@ -19145,7 +19578,9 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S25f8c5` | detail, export, form | Alarm | Alarm |
 | `Sd87c44` | detail, export, hub_consolidation | all | alle |
 | `S484388` | detail, export_center | all columns | alle kolonner |
+| `S2e73c3` | detail | All languages and all access levels are included. Use the export above for a single language or access level. | Alle sprog og alle adgangsniveauer er med. Brug eksporten ovenfor til ét sprog eller ét adgangsniveau. |
 | `S432284` | detail | All required sign-offs are in, but this is still a Draft — the Reviewer and Administrator only see it after you choose Submit for Review below. | Alle nødvendige underskrifter er på plads, men det er stadig en kladde — reviewer og administrator ser den først, når du vælger Indsend til gennemgang nedenfor. |
+| `S9b0b4c` | detail | also the files without an access level (all columns) | også filerne uden adgangsniveau (alle kolonner) |
 | `Sf24c44` | detail | Any %(code)s Engineer | Enhver %(code)s-ingeniør |
 | `Sb99a01` | detail | Applies to software versions | Gælder for softwareversioner |
 | `S7b2c7f` | detail, language | Approve | Godkend |
@@ -19162,12 +19597,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S416869` | detail | Auto Reset Program | Program til automatisk nulstilling |
 | `Sd71897` | detail, form | Available Group | Tilgængelighedsgruppe |
 | `S928e2e` | detail | Brake Program | Bremseprogram |
+| `Sab2e8a` | detail | Build package | Opret pakke |
 | `Scfadbd` | detail | By | Af |
 | `S9c8393` | detail, mine | Change Request | Ændringsanmodning |
 | `S4572f4` | detail | Change request | Ændringsanmodning |
 | `S3295be` | detail | Change requests in this set | Ændringsanmodninger i dette sæt |
 | `S4d8006` | detail | Change set | Ændringssæt |
 | `S8aa57d` | detail | Changes | Ændringer |
+| `S3d14ea` | detail, export | Changes of this release only | Kun ændringerne i denne udgave |
 | `Sbd95c0` | detail | Checklist confirmed at sign-off | Tjeklisten bekræftet ved underskrift |
 | `S074d62` | detail, role badge | Chief Engineer | Chefingeniør |
 | `S03695d` | detail | Chief Engineer decision | Chefingeniørens beslutning |
@@ -19180,8 +19617,11 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sfce06e` | detail | Comments | Kommentarer |
 | `S8d105c` | detail, reconciliation | Compare | Sammenlign |
 | `Sc9a03b` | detail | Compare Revisions | Sammenlign revisioner |
+| `S0ff7e5` | detail, export | Complete baseline | Komplet grundstand |
 | `S1798b3` | detail | Completed | Fuldført |
 | `S7671b5` | detail | Confirm or override Audience Access | Bekræft eller overstyr målgruppeadgang |
+| `S4f9be0` | detail | Content | Indhold |
+| `Sa36a5f` | detail, legacy_mapping, st_new | Controller | Controller |
 | `Scd293f` | detail | Converter Reactive Power Program | Program for konverterens reaktive effekt |
 | `S3998a7` | detail | Copies the descriptive fields into a new Draft in a Main Controller group (a new number is allocated at submit; this code's identifier is kept as the legacy reference). | Kopierer de beskrivende felter til en ny kladde i en hovedstyringsgruppe (et nyt nummer tildeles ved indsendelse; denne kodes identifikator bevares som gammel reference). |
 | `S54b051` | detail | Copy this code for another turbine platform. The copy is a new Draft that links back here and goes through the normal review. | Kopiér denne kode til en anden turbineplatform. Kopien er en ny kladde, der henviser hertil og går gennem den normale gennemgang. |
@@ -19212,6 +19652,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S4c17aa` | detail | Development | Udvikling |
 | `S552a2b` | detail | Documented reason | Dokumenteret årsag |
 | `S9b1091` | detail, mine | Domain | Disciplin |
+| `Sa479c9` | detail | Download | Download |
 | `S056839` | detail | Download Error Report | Download fejlrapport |
 | `S23d33e` | detail, index | Draft | Kladde |
 | `S3c7a50` | detail | Edit Candidates | Rediger kandidater |
@@ -19233,6 +19674,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sdd7b7e` | detail | failed validation | bestod ikke valideringen |
 | `Sd106a6` | detail | Field comments | Feltkommentarer |
 | `S2c3caf` | detail, export_verify, operations | File | Fil |
+| `S6ce6c5` | detail | Files | Filer |
 | `Se0996a` | detail, form | first | første |
 | `S041a5d` | detail, export_center | Format | Format |
 | `S9e3c65` | detail | From revision | Fra revision |
@@ -19240,6 +19682,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sb8c4c9` | detail, form | Further Program References | Flere programhenvisninger |
 | `S636c41` | detail | Grid Operator | Netoperatør |
 | `S90ccd6` | detail | History | Historik |
+| `S0dfe7b` | detail | Hub controller | Nav-controller |
 | `Sfec8b7` | detail | Hub Controller group | Navstyringsgruppe |
 | `S00ccae` | detail, form | Hub Controller only | kun navstyring |
 | `S3c883f` | detail | I have reviewed these dependants | Jeg har gennemgået disse afhængige koder |
@@ -19254,6 +19697,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S693272` | detail, withdrawn_codes | Legacy Reference Number | Gammelt referencenummer |
 | `S43d5c5` | detail, form | Loadless Spinning Permitted | Tomgangsdrejning tilladt |
 | `S193786` | detail | Logical Node | Logisk node |
+| `Sc3f827` | detail | Main controller | Hovedcontroller |
 | `S578b78` | detail | Main Controller group | Hovedstyringsgruppe |
 | `Sa7512d` | detail, form | Main Controller only | kun hovedstyring |
 | `Seb9a6d` | detail | Manage translations | Administrér oversættelser |
@@ -19279,6 +19723,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sde04fa` | detail, fleet_feedback, success_metrics | of | af |
 | `S19f611` | detail | Offline lookup (HTML) | Offline-opslag (HTML) |
 | `S2ff2ae` | detail | Offline lookup + manifest (ZIP) | Offline-opslag + manifest (ZIP) |
+| `S3f0e3e` | detail | One ZIP with the complete baseline in every language and for every access level, plus the release notes and a manifest with a SHA-256 for each file. Building it takes a few minutes; the page shows the progress. | Én ZIP med den komplette grundstand på alle sprog og for alle adgangsniveauer, plus udgivelsesnoter og et manifest med en SHA-256 pr. fil. Oprettelsen tager nogle minutter; siden viser fremdriften. |
 | `S12aa03` | detail | only translated codes | kun oversatte koder |
 | `S5fc7e3` | detail | open | åben |
 | `Sf61187` | detail | Open New Revision | Åbn ny revision |
@@ -19290,11 +19735,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S780d35` | detail | Override identifier (migration / reservation only) | Overstyr identifikator (kun migrering / reservation) |
 | `S89ff31` | detail | Owner | Ejer |
 | `S2d20ee` | detail | Package overview | Pakkeoversigt |
+| `S4d1a47` | detail | Package: all languages and access levels | Pakke: alle sprog og adgangsniveauer |
+| `Sc49bd0` | detail | Packages of this Release | Pakker til denne udgave |
 | `S96f608` | detail, review_queue | Pending | Afventer |
 | `Sc983b6` | detail | Pick a profile (columns and labels), an audience, a language or a software version. Every file comes with a manifest of SHA-256 hashes; "bundle" packs both into one ZIP. | Vælg en profil (kolonner og etiketter), en målgruppe, et sprog eller en softwareversion. Hver fil leveres med et manifest af SHA-256-hashes; »bundle« pakker begge i én ZIP. |
 | `S72383d` | detail | Planned dates | Planlagte datoer |
 | `Sfb14b0` | detail | Planned deprecation date | Planlagt forældelsesdato |
 | `S00e733` | detail | Planned effective date | Planlagt ikrafttrædelsesdato |
+| `S123a7f` | detail | Platform | Platform |
 | `Sfc8d58` | detail | Platform variant | Platformsvariant |
 | `Scd8926` | detail | Platform variants | Platformsvarianter |
 | `S141f0c` | detail | Processing in the background... | Behandles i baggrunden... |
@@ -19315,6 +19763,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S9b44a2` | detail | Release notes (PDF) | Udgivelsesnoter (PDF) |
 | `S3dfa01` | detail | Release notes and offline lookup | Udgivelsesnoter og offline-opslag |
 | `Sdcddb7` | detail | Release notes list what was added, changed (field by field) and deprecated since the previous Release. The offline page is one self-contained HTML file for use at the turbine without a connection. | Udgivelsesnoter viser, hvad der er tilføjet, ændret (felt for felt) og erklæret forældet siden forrige udgivelse. Offline-siden er én selvstændig HTML-fil til brug ved turbinen uden forbindelse. |
+| `Scce715` | detail | Reload | Genindlæs |
 | `S0544a3` | detail | Reload this page to see the progress. | Genindlæs siden for at se fremdriften. |
 | `S99e347` | detail | Remedy | Afhjælpning |
 | `Se96390` | detail, list | Remove | Fjern |
@@ -19364,9 +19813,11 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S08e643` | detail, list | Target software version | Målsoftwareversion |
 | `S44203c` | detail, form, status code fields | Task Call Frequency | Task-kaldefrekvens |
 | `S8fc804` | detail | The author has to submit it for review before the Reviewer or Administrator can see it. | Forfatteren skal indsende den til gennemgang, før reviewer eller administrator kan se den. |
+| `Sa5f3f8` | detail | These files contain the complete baseline: every status code that is valid as of this Release, not only the ones it changed. | Disse filer indeholder den komplette grundstand: alle statuskoder, der er gyldige i denne udgave, ikke kun de ændrede. |
 | `S091814` | detail | This change request has reached a terminal decision state | Denne ændringsanmodning har nået en endelig beslutningstilstand |
 | `S6d5708` | detail | This is the one truly irreversible action in the system. Type the identifier to confirm. | Dette er den eneste virkelig uigenkaldelige handling i systemet. Skriv identifikatoren for at bekræfte. |
 | `Sb55f1f` | detail | To revision | Til revision |
+| `Sa2a321` | detail | Translated codes per language | Oversatte koder pr. sprog |
 | `S8ad830` | detail, menu, overview | Translations | Oversættelser |
 | `Seaf576` | detail, form | Trigger Snapshot | Udløs snapshot |
 | `S285ec8` | detail, form | Troubleshooting | Fejlfinding |
@@ -19427,6 +19878,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Se51c55` | export | Records | Poster |
 | `Sd41f56` | export, export_center | Release | Udgivelse |
 | `S2e8fd6` | export | Reset delay | Nulstillingsforsinkelse |
+| `S4651a3` | export | Scope | Omfang |
 | `S89fdd5` | export | Set delay | Aktiveringsforsinkelse |
 | `S828d33` | export | source | kilde |
 | `Sfcbb29` | export | Status code | Statuskode |
@@ -19554,6 +20006,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S34b903` | help and messages | Not possible: the account has history (see above). Deactivate it instead; the person can no longer sign in and everything they did stays attributable. | Ikke muligt: kontoen har historik (se ovenfor). Deaktivér den i stedet; personen kan ikke længere logge ind, og alt, vedkommende har gjort, kan stadig henføres. |
 | `Sce489f` | help and messages | The author gets any required cross-domain sign-offs, then submits the change request for review. | Forfatteren indhenter de nødvendige tværfaglige underskrifter og indsender derefter ændringsanmodningen til gennemgang. |
 | `S1cdbdd` | help and messages | The Chief Engineer approves or rejects. Approval makes the revision Approved (or Deprecated for a deprecation request). | Chefingeniøren godkender eller afviser. Godkendelsen gør revisionen Godkendt (eller Forældet ved en forældelsesanmodning). |
+| `S2d6ac0` | help and messages | The package is being built. Reload this page to follow its progress. | Pakken oprettes. Genindlæs siden for at følge fremdriften. |
 | `Scff3a3` | help and messages | User deleted; its name and address are erased, what it did stays attributable. | Bruger slettet; navn og adresse er slettet, det brugeren har gjort, kan stadig henføres. |
 | `Secfb3f` | hub_consolidation | Deprecate replaced Hub codes | Erklær erstattede navkoder forældede |
 | `S0e7766` | hub_consolidation, language | draft | kladde |
@@ -19633,7 +20086,6 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S863fd0` | language | Your own proposal: another person approves it. | Dit eget forslag: en anden godkender det. |
 | `Sf9d469` | legacy_mapping | All controllers | Alle styringer |
 | `Se61c2f` | legacy_mapping | Any number state | Enhver nummertilstand |
-| `Sa36a5f` | legacy_mapping, st_new, st_preview | Controller | Controller |
 | `S7c4f77` | legacy_mapping | issued | udstedt |
 | `Sfd5ec0` | legacy_mapping, menu, new | Legacy mapping | Gammel-ny-kobling |
 | `S81f567` | legacy_mapping | Legacy number to new identifier | Gammelt nummer til ny identifikator |
@@ -19783,6 +20235,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S751ff5` | message: export_profile_service | Export profile not found | Eksportprofil ikke fundet |
 | `S4a8527` | message: export_profile_service | name must be 1-80 characters. | name skal være 1-80 tegn. |
 | `S506d0b` | message: export_service | An audience export is built from Released data only; it cannot be combined with the unapproved working set. | En målgruppeeksport bygges kun af udgivne data; den kan ikke kombineres med det ikke-godkendte arbejdssæt. |
+| `S4bb9a3` | message: export_service | content must be 'baseline' or 'delta'. | content skal være 'baseline' eller 'delta'. |
 | `Sf593c4` | message: export_service | language is required for a translated export | Sprog er påkrævet for en oversat eksport |
 | `S42cee2` | message: field_review_service | A field comment must be between 1 and 2000 characters. | En feltkommentar skal være mellem 1 og 2000 tegn. |
 | `S0168d7` | message: field_review_service | Checklist item not found | Tjeklistepunkt ikke fundet |
@@ -19822,8 +20275,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sb68487` | message: occurrence_service | period_end must not be before period_start. | period_end må ikke ligge før period_start. |
 | `S682b0f` | message: occurrence_service | source_label must be 1-80 characters. | source_label skal være 1-80 tegn. |
 | `S3b0e31` | message: occurrence_service | The file needs the columns status_code_identifier and occurrences. | Filen skal have kolonnerne status_code_identifier og occurrences. |
+| `Sbdd594` | message: package_service | Choose at least one access level or the unfiltered files. | Vælg mindst ét adgangsniveau eller de ufiltrerede filer. |
+| `S4af5c1` | message: package_service | Choose at least one format. | Vælg mindst ét format. |
+| `S8865f4` | message: package_service | Only a published Release can be packaged. | Kun en udgivet udgave kan pakkes. |
+| `S9b6676` | message: package_service | Package not found | Pakken blev ikke fundet |
+| `S2ddbdd` | message: package_service, message: release_notes_service | Release not found | Udgivelse ikke fundet |
+| `S3bc283` | message: package_service | The package file is no longer on the server. | Pakkefilen findes ikke længere på serveren. |
+| `S310622` | message: package_service | The package is not ready. | Pakken er ikke klar endnu. |
 | `S2142ac` | message: release_notes_service | format must be md, csv, pdf or json | format skal være md, csv, pdf eller json |
-| `S2ddbdd` | message: release_notes_service | Release not found | Udgivelse ikke fundet |
 | `S6e9bf7` | message: release_service | A published Release can never be deleted (BR-007). | En udgivet udgivelse kan aldrig slettes (BR-007). |
 | `S06fb3b` | message: release_service | Cannot change items on a published Release (BR-007). | Posterne i en udgivet udgivelse kan ikke ændres (BR-007). |
 | `Sc1eab3` | message: release_service | Cannot change the targets of a published Release (BR-007). | Målene for en udgivet udgivelse kan ikke ændres (BR-007). |
@@ -20134,7 +20593,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 
 ### 9.19 GE ქართული 🇬🇪 — Georgian
 
-1162 of 1163 strings translated; direction left to right.
+1189 of 1190 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -20301,6 +20760,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sc3f104` | delegations, user_detail, users | Role | როლი |
 | `Sd5dcf0` | delegations | Until (inclusive) | ჩათვლით |
 | `Sa4aefa` | delegations | Valid | მოქმედი |
+| `Sc3dc5c` | detail | %(count)s codes have no confirmed access levels and are missing from every access-level file. | %(count)s კოდს არ აქვს დადასტურებული წვდომის დონეები და ისინი არ არის წვდომის დონის არცერთ ფაილში. |
 | `Sc3cd63` | detail, user_detail, users | Actions | მოქმედებები |
 | `S61cc55` | detail, lookups, review_checklist | Add | დამატება |
 | `S12cc59` | detail | Add a comment (no decision) | კომენტარის დამატება (გადაწყვეტილების გარეშე) |
@@ -20314,7 +20774,9 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S25f8c5` | detail, export, form | Alarm | განგაში |
 | `Sd87c44` | detail, export, hub_consolidation | all | ყველა |
 | `S484388` | detail, export_center | all columns | ყველა სვეტი |
+| `S2e73c3` | detail | All languages and all access levels are included. Use the export above for a single language or access level. | ჩართულია ყველა ენა და წვდომის ყველა დონე. ერთი ენისთვის ან ერთი წვდომის დონისთვის გამოიყენეთ ზემოთ მოცემული ექსპორტი. |
 | `S432284` | detail | All required sign-offs are in, but this is still a Draft — the Reviewer and Administrator only see it after you choose Submit for Review below. | ყველა საჭირო ხელმოწერა არის, მაგრამ ჯერ კიდევ დრაფტია — მიმომხილველი და ადმინისტრატორი მას მხოლოდ მაშინ ხედავენ, როცა ქვემოთ აირჩევთ „განხილვაზე წარდგენას“. |
+| `S9b0b4c` | detail | also the files without an access level (all columns) | ასევე ფაილები წვდომის დონის გარეშე (ყველა სვეტი) |
 | `Sf24c44` | detail | Any %(code)s Engineer | ნებისმიერი %(code)s ინჟინერი |
 | `Sb99a01` | detail | Applies to software versions | ვრცელდება პროგრამის ვერსიებზე |
 | `S7b2c7f` | detail, language | Approve | დამტკიცება |
@@ -20331,12 +20793,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S416869` | detail | Auto Reset Program | ავტომატური გადატვირთვის პროგრამა |
 | `Sd71897` | detail, form | Available Group | ხელმისაწვდომობის ჯგუფი |
 | `S928e2e` | detail | Brake Program | დამუხრუჭების პროგრამა |
+| `Sab2e8a` | detail | Build package | პაკეტის შექმნა |
 | `Scfadbd` | detail | By | ავტორი |
 | `S9c8393` | detail, mine | Change Request | ცვლილების მოთხოვნა |
 | `S4572f4` | detail | Change request | ცვლილების მოთხოვნა |
 | `S3295be` | detail | Change requests in this set | ცვლილების მოთხოვნები ამ ნაკრებში |
 | `S4d8006` | detail | Change set | ცვლილებების ნაკრები |
 | `S8aa57d` | detail | Changes | ცვლილებები |
+| `S3d14ea` | detail, export | Changes of this release only | მხოლოდ ამ რელიზის ცვლილებები |
 | `Sbd95c0` | detail | Checklist confirmed at sign-off | საკონტროლო სია, დადასტურებული ხელმოწერისას |
 | `S074d62` | detail, role badge | Chief Engineer | მთავარი ინჟინერი |
 | `S03695d` | detail | Chief Engineer decision | მთავარი ინჟინრის გადაწყვეტილება |
@@ -20349,8 +20813,11 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sfce06e` | detail | Comments | კომენტარები |
 | `S8d105c` | detail, reconciliation | Compare | შედარება |
 | `Sc9a03b` | detail | Compare Revisions | რევიზიების შედარება |
+| `S0ff7e5` | detail, export | Complete baseline | სრული საბაზისო მდგომარეობა |
 | `S1798b3` | detail | Completed | დასრულებულია |
 | `S7671b5` | detail | Confirm or override Audience Access | სამიზნე ჯგუფის წვდომის დადასტურება ან გადაფარვა |
+| `S4f9be0` | detail | Content | შინაარსი |
+| `Sa36a5f` | detail, legacy_mapping, st_new | Controller | კონტროლერი |
 | `Scd293f` | detail | Converter Reactive Power Program | გარდამქმნელის რეაქტიული სიმძლავრის პროგრამა |
 | `S3998a7` | detail | Copies the descriptive fields into a new Draft in a Main Controller group (a new number is allocated at submit; this code's identifier is kept as the legacy reference). | აკოპირებს აღწერით ველებს ახალ დრაფტში მთავარი კონტროლერის ჯგუფში (ახალი ნომერი ენიჭება წარდგენისას; ამ კოდის იდენტიფიკატორი ინახება ძველ მითითებად). |
 | `S54b051` | detail | Copy this code for another turbine platform. The copy is a new Draft that links back here and goes through the normal review. | დააკოპირეთ ეს კოდი სხვა ტურბინის პლატფორმისთვის. ასლი ახალი დრაფტია, რომელიც აქ ბრუნდება და ჩვეულებრივ განხილვას გადის. |
@@ -20381,6 +20848,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S4c17aa` | detail | Development | განვითარება |
 | `S552a2b` | detail | Documented reason | დოკუმენტირებული მიზეზი |
 | `S9b1091` | detail, mine | Domain | სფერო |
+| `Sa479c9` | detail | Download | ჩამოტვირთვა |
 | `S056839` | detail | Download Error Report | შეცდომების ანგარიშის ჩამოტვირთვა |
 | `S23d33e` | detail, index | Draft | დრაფტი |
 | `S3c7a50` | detail | Edit Candidates | კანდიდატების რედაქტირება |
@@ -20402,6 +20870,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sdd7b7e` | detail | failed validation | ვალიდაცია ვერ გაიარა |
 | `Sd106a6` | detail | Field comments | ველის კომენტარები |
 | `S2c3caf` | detail, export_verify, operations | File | ფაილი |
+| `S6ce6c5` | detail | Files | ფაილები |
 | `Se0996a` | detail, form | first | პირველი |
 | `S041a5d` | detail, export_center | Format | ფორმატი |
 | `S9e3c65` | detail | From revision | რევიზიიდან |
@@ -20409,6 +20878,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sb8c4c9` | detail, form | Further Program References | დამატებითი პროგრამის მითითებები |
 | `S636c41` | detail | Grid Operator | ქსელის ოპერატორი |
 | `S90ccd6` | detail | History | ისტორია |
+| `S0dfe7b` | detail | Hub controller | ჰაბის კონტროლერი |
 | `Sfec8b7` | detail | Hub Controller group | კერის კონტროლერის ჯგუფი |
 | `S00ccae` | detail, form | Hub Controller only | მხოლოდ ჰაბის კონტროლერი |
 | `S3c883f` | detail | I have reviewed these dependants | გადავხედე ამ დამოკიდებულ კოდებს |
@@ -20423,6 +20893,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S693272` | detail, withdrawn_codes | Legacy Reference Number | ძველი საცნობარო ნომერი |
 | `S43d5c5` | detail, form | Loadless Spinning Permitted | დატვირთვის გარეშე ბრუნვა დაშვებულია |
 | `S193786` | detail | Logical Node | ლოგიკური კვანძი |
+| `Sc3f827` | detail | Main controller | მთავარი კონტროლერი |
 | `S578b78` | detail | Main Controller group | მთავარი კონტროლერის ჯგუფი |
 | `Sa7512d` | detail, form | Main Controller only | მხოლოდ მთავარი კონტროლერი |
 | `Seb9a6d` | detail | Manage translations | თარგმანების მართვა |
@@ -20448,6 +20919,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sde04fa` | detail, fleet_feedback, success_metrics | of | -დან |
 | `S19f611` | detail | Offline lookup (HTML) | ოფლაინ ძიება (HTML) |
 | `S2ff2ae` | detail | Offline lookup + manifest (ZIP) | ოფლაინ ძიება + მანიფესტი (ZIP) |
+| `S3f0e3e` | detail | One ZIP with the complete baseline in every language and for every access level, plus the release notes and a manifest with a SHA-256 for each file. Building it takes a few minutes; the page shows the progress. | ერთი ZIP სრული საბაზისო მდგომარეობით ყველა ენაზე და წვდომის ყველა დონისთვის, ასევე რელიზის შენიშვნები და მანიფესტი თითოეული ფაილის SHA-256-ით. შექმნას რამდენიმე წუთი სჭირდება; გვერდი აჩვენებს პროგრესს. |
 | `S12aa03` | detail | only translated codes | მხოლოდ ნათარგმნი კოდები |
 | `S5fc7e3` | detail | open | ღია |
 | `Sf61187` | detail | Open New Revision | ახალი რევიზიის გახსნა |
@@ -20459,11 +20931,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S780d35` | detail | Override identifier (migration / reservation only) | იდენტიფიკატორის გადაფარვა (მხოლოდ მიგრაცია / დაჯავშნა) |
 | `S89ff31` | detail | Owner | მფლობელი |
 | `S2d20ee` | detail | Package overview | პაკეტის მიმოხილვა |
+| `S4d1a47` | detail | Package: all languages and access levels | პაკეტი: ყველა ენა და წვდომის დონე |
+| `Sc49bd0` | detail | Packages of this Release | ამ რელიზის პაკეტები |
 | `S96f608` | detail, review_queue | Pending | მოლოდინში |
 | `Sc983b6` | detail | Pick a profile (columns and labels), an audience, a language or a software version. Every file comes with a manifest of SHA-256 hashes; "bundle" packs both into one ZIP. | აირჩიეთ პროფილი (სვეტები და ეტიკეტები), სამიზნე ჯგუფი, ენა ან პროგრამის ვერსია. ყოველ ფაილს თან ახლავს SHA-256 ჰეშების მანიფესტი; „bundle“ ორივეს ერთ ZIP-ში აერთიანებს. |
 | `S72383d` | detail | Planned dates | დაგეგმილი თარიღები |
 | `Sfb14b0` | detail | Planned deprecation date | დაგეგმილი მოძველების თარიღი |
 | `S00e733` | detail | Planned effective date | დაგეგმილი ძალაში შესვლის თარიღი |
+| `S123a7f` | detail | Platform | პლატფორმა |
 | `Sfc8d58` | detail | Platform variant | პლატფორმის ვარიანტი |
 | `Scd8926` | detail | Platform variants | პლატფორმის ვარიანტები |
 | `S141f0c` | detail | Processing in the background... | მუშავდება ფონურად... |
@@ -20484,6 +20959,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S9b44a2` | detail | Release notes (PDF) | რელიზის შენიშვნები (PDF) |
 | `S3dfa01` | detail | Release notes and offline lookup | რელიზის შენიშვნები და ოფლაინ ძიება |
 | `Sdcddb7` | detail | Release notes list what was added, changed (field by field) and deprecated since the previous Release. The offline page is one self-contained HTML file for use at the turbine without a connection. | რელიზის შენიშვნები ჩამოთვლის, რა დაემატა, შეიცვალა (ველების მიხედვით) და მოძველდა წინა რელიზის შემდეგ. ოფლაინ გვერდი ერთი თვითკმარი HTML ფაილია ტურბინასთან კავშირის გარეშე გამოსაყენებლად. |
+| `Scce715` | detail | Reload | გადატვირთვა |
 | `S0544a3` | detail | Reload this page to see the progress. | პროგრესის სანახავად გვერდი თავიდან ჩატვირთეთ. |
 | `S99e347` | detail | Remedy | გამოსწორება |
 | `Se96390` | detail, list | Remove | წაშლა |
@@ -20533,9 +21009,11 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S08e643` | detail, list | Target software version | სამიზნე პროგრამული ვერსია |
 | `S44203c` | detail, form, status code fields | Task Call Frequency | ამოცანის გამოძახების სიხშირე |
 | `S8fc804` | detail | The author has to submit it for review before the Reviewer or Administrator can see it. | ავტორმა უნდა წარადგინოს განხილვაზე, სანამ მიმომხილველი ან ადმინისტრატორი მას ნახავს. |
+| `Sa5f3f8` | detail | These files contain the complete baseline: every status code that is valid as of this Release, not only the ones it changed. | ეს ფაილები შეიცავს სრულ საბაზისო მდგომარეობას: ამ რელიზით მოქმედ ყველა სტატუსის კოდს და არა მხოლოდ შეცვლილებს. |
 | `S091814` | detail | This change request has reached a terminal decision state | ეს ცვლილების მოთხოვნა საბოლოო გადაწყვეტილების მდგომარეობას მიაღწია |
 | `S6d5708` | detail | This is the one truly irreversible action in the system. Type the identifier to confirm. | ეს სისტემის ერთადერთი ნამდვილად შეუქცევადი მოქმედებაა. დასადასტურებლად ჩაწერეთ იდენტიფიკატორი. |
 | `Sb55f1f` | detail | To revision | რევიზიამდე |
+| `Sa2a321` | detail | Translated codes per language | ენების მიხედვით თარგმნილი კოდები |
 | `S8ad830` | detail, menu, overview | Translations | თარგმანები |
 | `Seaf576` | detail, form | Trigger Snapshot | სნეფშოტის გააქტიურება |
 | `S285ec8` | detail, form | Troubleshooting | პრობლემების გადაჭრა |
@@ -20596,6 +21074,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Se51c55` | export | Records | ჩანაწერები |
 | `Sd41f56` | export, export_center | Release | რელიზი |
 | `S2e8fd6` | export | Reset delay | გადატვირთვის დაყოვნება |
+| `S4651a3` | export | Scope | მოცულობა |
 | `S89fdd5` | export | Set delay | ჩართვის დაყოვნება |
 | `S828d33` | export | source | წყარო |
 | `Sfcbb29` | export | Status code | სტატუსის კოდი |
@@ -20723,6 +21202,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S34b903` | help and messages | Not possible: the account has history (see above). Deactivate it instead; the person can no longer sign in and everything they did stays attributable. | შეუძლებელია: ანგარიშს ისტორია აქვს (იხ. ზემოთ). გამორთეთ ის; პირი ვეღარ შევა და ყველაფერი, რაც გააკეთა, მიკუთვნებადი რჩება. |
 | `Sce489f` | help and messages | The author gets any required cross-domain sign-offs, then submits the change request for review. | ავტორი იღებს საჭირო ჯვარედინი სფეროების ხელმოწერებს, შემდეგ კი ცვლილების მოთხოვნას განხილვაზე წარადგენს. |
 | `S1cdbdd` | help and messages | The Chief Engineer approves or rejects. Approval makes the revision Approved (or Deprecated for a deprecation request). | მთავარი ინჟინერი ამტკიცებს ან უარყოფს. დამტკიცება რევიზიას დამტკიცებულად აქცევს (ან მოძველებულად მოძველების მოთხოვნისას). |
+| `S2d6ac0` | help and messages | The package is being built. Reload this page to follow its progress. | პაკეტი იქმნება. პროგრესის სანახავად გადატვირთეთ ეს გვერდი. |
 | `Scff3a3` | help and messages | User deleted; its name and address are erased, what it did stays attributable. | მომხმარებელი წაიშალა; მისი სახელი და მისამართი წაშლილია, მისი ქმედებები კვლავ მიეკუთვნება. |
 | `Secfb3f` | hub_consolidation | Deprecate replaced Hub codes | შეცვლილი კერის კოდების მოძველებულად გამოცხადება |
 | `S0e7766` | hub_consolidation, language | draft | დრაფტი |
@@ -20802,7 +21282,6 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S863fd0` | language | Your own proposal: another person approves it. | თქვენი საკუთარი წინადადება: მას სხვა პირი ამტკიცებს. |
 | `Sf9d469` | legacy_mapping | All controllers | ყველა კონტროლერი |
 | `Se61c2f` | legacy_mapping | Any number state | ნომრის ნებისმიერი მდგომარეობა |
-| `Sa36a5f` | legacy_mapping, st_new, st_preview | Controller | კონტროლერი |
 | `S7c4f77` | legacy_mapping | issued | გაცემულია |
 | `Sfd5ec0` | legacy_mapping, menu, new | Legacy mapping | ძველი-ახალის შესაბამისობა |
 | `S81f567` | legacy_mapping | Legacy number to new identifier | ძველი ნომერი ახალ იდენტიფიკატორზე |
@@ -20952,6 +21431,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `S751ff5` | message: export_profile_service | Export profile not found | ექსპორტის პროფილი ვერ მოიძებნა |
 | `S4a8527` | message: export_profile_service | name must be 1-80 characters. | name უნდა იყოს 1-80 სიმბოლო. |
 | `S506d0b` | message: export_service | An audience export is built from Released data only; it cannot be combined with the unapproved working set. | სამიზნე ჯგუფის ექსპორტი აიგება მხოლოდ გამოშვებული მონაცემებიდან; მისი შეხამება დაუმტკიცებელ სამუშაო ნაკრებთან შეუძლებელია. |
+| `S4bb9a3` | message: export_service | content must be 'baseline' or 'delta'. | content უნდა იყოს 'baseline' ან 'delta'. |
 | `Sf593c4` | message: export_service | language is required for a translated export | თარგმნილი ექსპორტისთვის ენა სავალდებულოა |
 | `S42cee2` | message: field_review_service | A field comment must be between 1 and 2000 characters. | ველის კომენტარი უნდა იყოს 1-დან 2000 სიმბოლომდე. |
 | `S0168d7` | message: field_review_service | Checklist item not found | საკონტროლო სიის პუნქტი ვერ მოიძებნა |
@@ -20991,8 +21471,14 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | `Sb68487` | message: occurrence_service | period_end must not be before period_start. | period_end არ უნდა იყოს period_start-მდე. |
 | `S682b0f` | message: occurrence_service | source_label must be 1-80 characters. | source_label უნდა იყოს 1-80 სიმბოლო. |
 | `S3b0e31` | message: occurrence_service | The file needs the columns status_code_identifier and occurrences. | ფაილს სჭირდება სვეტები status_code_identifier და occurrences. |
+| `Sbdd594` | message: package_service | Choose at least one access level or the unfiltered files. | აირჩიეთ მინიმუმ ერთი წვდომის დონე ან გაუფილტრავი ფაილები. |
+| `S4af5c1` | message: package_service | Choose at least one format. | აირჩიეთ მინიმუმ ერთი ფორმატი. |
+| `S8865f4` | message: package_service | Only a published Release can be packaged. | დაპაკეტება შეიძლება მხოლოდ გამოქვეყნებული რელიზისა. |
+| `S9b6676` | message: package_service | Package not found | პაკეტი ვერ მოიძებნა |
+| `S2ddbdd` | message: package_service, message: release_notes_service | Release not found | რელიზი ვერ მოიძებნა |
+| `S3bc283` | message: package_service | The package file is no longer on the server. | პაკეტის ფაილი სერვერზე აღარ არის. |
+| `S310622` | message: package_service | The package is not ready. | პაკეტი ჯერ მზად არ არის. |
 | `S2142ac` | message: release_notes_service | format must be md, csv, pdf or json | format უნდა იყოს md, csv, pdf ან json |
-| `S2ddbdd` | message: release_notes_service | Release not found | რელიზი ვერ მოიძებნა |
 | `S6e9bf7` | message: release_service | A published Release can never be deleted (BR-007). | გამოქვეყნებული რელიზი არასდროს იშლება (BR-007). |
 | `S06fb3b` | message: release_service | Cannot change items on a published Release (BR-007). | გამოქვეყნებული რელიზის ელემენტების შეცვლა შეუძლებელია (BR-007). |
 | `Sc1eab3` | message: release_service | Cannot change the targets of a published Release (BR-007). | გამოქვეყნებული რელიზის სამიზნეების შეცვლა შეუძლებელია (BR-007). |
@@ -21307,6 +21793,7 @@ Every string of the interface with the templates that use it. A native speaker a
 
 | Id | English | Screens | Languages |
 |---|---|---|---|
+| `Sc3dc5c` | %(count)s codes have no confirmed access levels and are missing from every access-level file. | detail | 18 of 18 |
 | `S2cbacd` | %(n)s total | audit_log | 18 of 18 |
 | `S6d29d9` | %(n)s withdrawn code(s) deleted. | help and messages | 18 of 18 |
 | `S1a4626` | ...or just the expected number of rows | reconciliation | 18 of 18 |
@@ -21373,10 +21860,12 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S2693e5` | All Drafts of this import join one change set, so they can be reviewed and decided together. | st_preview | 18 of 18 |
 | `Sdf42bb` | all groups | new, review_checklist | 18 of 18 |
 | `S56488c` | All languages | language | 18 of 18 |
+| `S2e73c3` | All languages and all access levels are included. Use the export above for a single language or access level. | detail | 18 of 18 |
 | `S66d6c2` | All Released Status Codes | export_center | 18 of 18 |
 | `S432284` | All required sign-offs are in, but this is still a Draft — the Reviewer and Administrator only see it after you choose Submit for Review below. | detail | 18 of 18 |
 | `S5d4358` | All rows are clean. | dry_run | 18 of 18 |
 | `Scbc694` | already in the catalogue | st_preview | 18 of 18 |
+| `S9b0b4c` | also the files without an access level (all columns) | detail | 18 of 18 |
 | `S9eb13d` | amber after | _macros | 18 of 18 |
 | `S2f1bed` | An Administrator includes the revision in a Release and publishes it; then it is Released. | help and messages | 18 of 18 |
 | `Sa2ca0f` | An archived revision cannot be changed. | message: status_code_service | 18 of 18 |
@@ -21449,6 +21938,7 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S928e2e` | Brake Program | detail | 18 of 18 |
 | `S452d9f` | Browse published and in-progress releases | dashboard | 18 of 18 |
 | `Scf72d4` | Browse Status Codes | dashboard | 18 of 18 |
+| `Sab2e8a` | Build package | detail | 18 of 18 |
 | `S228d5f` | business days | _macros, stalled, success_metrics | 18 of 18 |
 | `Scfadbd` | By | detail | 18 of 18 |
 | `S77dfd2` | Cancel | form, st_preview | 18 of 18 |
@@ -21480,6 +21970,7 @@ Every string of the interface with the templates that use it. A native speaker a
 | `Scb5424` | Changed | software_versions | 18 of 18 |
 | `S6f7703` | Changed and withdrawn programs are not ticked: tick the ones you want to update, revise or restore. | st_preview | 18 of 18 |
 | `S8aa57d` | Changes | detail | 18 of 18 |
+| `S3d14ea` | Changes of this release only | detail, export | 18 of 18 |
 | `S4825bc` | Changing the English text reopens every approved translation of the term. | index | 18 of 18 |
 | `S4b5e84` | Check | index | 18 of 18 |
 | `Sedd46e` | Check against the interface | language | 18 of 18 |
@@ -21493,6 +21984,8 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S03695d` | Chief Engineer decision | detail | 18 of 18 |
 | `S1ae983` | Choose a category. | message: terminology_service | 18 of 18 |
 | `S08fb99` | Choose an active user. | message: translation_review_service | 18 of 18 |
+| `Sbdd594` | Choose at least one access level or the unfiltered files. | message: package_service | 18 of 18 |
+| `S4af5c1` | Choose at least one format. | message: package_service | 18 of 18 |
 | `S94c2a3` | Classification | form | 18 of 18 |
 | `S7c9afd` | Classification only — a Sandbox code's identifier is still drawn from the isolated StCd-T##### band, never from this group's numeric range. | form | 18 of 18 |
 | `Sf0a89f` | Close change set | detail | 18 of 18 |
@@ -21518,12 +22011,15 @@ Every string of the interface with the templates that use it. A native speaker a
 | `Sc9a03b` | Compare Revisions | detail | 18 of 18 |
 | `Sac0d4a` | Compare with (what changed) | software_versions | 18 of 18 |
 | `Sf0a8d6` | Compare with the legacy master list | reconciliation | 18 of 18 |
+| `S0ff7e5` | Complete baseline | detail, export | 18 of 18 |
 | `S1798b3` | Completed | detail | 18 of 18 |
 | `S754164` | Configuration | menu | 18 of 18 |
 | `S7671b5` | Confirm or override Audience Access | detail | 18 of 18 |
 | `S141763` | Confirm with your password | _macros | 18 of 18 |
+| `S4f9be0` | Content | detail | 18 of 18 |
 | `S437f95` | Content digest (SHA-256 of the data rows) | export | 18 of 18 |
-| `Sa36a5f` | Controller | legacy_mapping, st_new, st_preview | 18 of 18 |
+| `S4bb9a3` | content must be 'baseline' or 'delta'. | message: export_service | 18 of 18 |
+| `Sa36a5f` | Controller | detail, legacy_mapping, st_new, st_preview | 18 of 18 |
 | `Saa4de2` | controller must be auto, MC or HC | message: st_import_service | 18 of 18 |
 | `S382b49` | Controller software versions this Release is for (optional) | new | 18 of 18 |
 | `Scd293f` | Converter Reactive Power Program | detail | 18 of 18 |
@@ -21603,6 +22099,7 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S9b1091` | Domain | detail, mine | 18 of 18 |
 | `S102b4d` | Domain sign-off can only be requested while the CR is in Draft. | message: domain_signoff_service | 18 of 18 |
 | `Sa0d641` | Domains | users | 18 of 18 |
+| `Sa479c9` | Download | detail | 18 of 18 |
 | `S056839` | Download Error Report | detail | 18 of 18 |
 | `S9468a1` | Download Full Database Backup | export_center | 18 of 18 |
 | `S0e7766` | draft | hub_consolidation, language | 18 of 18 |
@@ -21679,6 +22176,7 @@ Every string of the interface with the templates that use it. A native speaker a
 | `Sec1717` | File (.csv or .xlsx) | new | 18 of 18 |
 | `S32ac07` | File (.csv/.xlsx with status_code_identifier, occurrences) | fleet_feedback | 18 of 18 |
 | `S4bc4cc` | file(s) | st_preview | 18 of 18 |
+| `S6ce6c5` | Files | detail | 18 of 18 |
 | `Sd7decf` | Filter | audit_log, index, language, legacy_mapping | 18 of 18 |
 | `S759686` | Filter status codes | list | 18 of 18 |
 | `S962725` | Filter the list | st_preview | 18 of 18 |
@@ -21729,6 +22227,7 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S036d00` | Hub codes and their replacements | hub_consolidation | 18 of 18 |
 | `S2fa8ef` | Hub Consolidation | hub_consolidation, menu | 18 of 18 |
 | `Sb4aadc` | Hub Controller | catalogue_health, legacy_mapping | 18 of 18 |
+| `S0dfe7b` | Hub controller | detail | 18 of 18 |
 | `S3b9e43` | Hub Controller (legacy numbers, mapped to the new ones) | st_new | 18 of 18 |
 | `Sfec8b7` | Hub Controller group | detail | 18 of 18 |
 | `S00ccae` | Hub Controller only | detail, form | 18 of 18 |
@@ -21818,6 +22317,7 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S36a883` | low | catalogue_health | 18 of 18 |
 | `Sa24877` | Lower-case letters, digits and hyphens; it never changes. | index | 18 of 18 |
 | `S1b123c` | Main Controller | catalogue_health, legacy_mapping, st_new | 18 of 18 |
+| `Sc3f827` | Main controller | detail | 18 of 18 |
 | `S578b78` | Main Controller group | detail | 18 of 18 |
 | `Sa7512d` | Main Controller only | detail, form | 18 of 18 |
 | `Sefd197` | Main navigation | base | 18 of 18 |
@@ -21958,12 +22458,14 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S7a85f4` | ok | catalogue_health, operations | 18 of 18 |
 | `S9ce3bd` | OK | export_verify | 18 of 18 |
 | `S464e43` | on track | _macros | 18 of 18 |
+| `S3f0e3e` | One ZIP with the complete baseline in every language and for every access level, plus the release notes and a manifest with a SHA-256 for each file. Building it takes a few minutes; the page shows the progress. | detail | 18 of 18 |
 | `S80bce3` | Only .csv and .xlsx files are accepted. | message: import_service, message: occurrence_service | 18 of 18 |
 | `Sd8fad1` | Only a CR that is still open can join a change set. | message: change_set_service | 18 of 18 |
 | `S94fede` | Only a Deprecated Status Code can be archived. | message: status_code_service | 18 of 18 |
 | `S96a1e5` | Only a Deprecated Status Code can be reinstated. | message: status_code_service | 18 of 18 |
 | `S9211d8` | Only a Draft revision may be edited in place (FR-025). | message: status_code_service | 18 of 18 |
 | `S6d188a` | Only a proposed change can be accepted. | message: translation_review_service | 18 of 18 |
+| `S8865f4` | Only a published Release can be packaged. | message: package_service | 18 of 18 |
 | `Sd84ed6` | Only a Released Status Code can be deprecated. | message: status_code_service | 18 of 18 |
 | `Sd7df4c` | Only an Administrator or an StCd Owner may do this. | message: translation_review_service | 18 of 18 |
 | `S0c55eb` | Only an Approved or Released Hub Controller code can be carried over. | message: hub_consolidation_service | 18 of 18 |
@@ -22004,7 +22506,10 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S780d35` | Override identifier (migration / reservation only) | detail | 18 of 18 |
 | `S6166d2` | Override not found | message: translation_review_service | 18 of 18 |
 | `S89ff31` | Owner | detail | 18 of 18 |
+| `S9b6676` | Package not found | message: package_service | 18 of 18 |
 | `S2d20ee` | Package overview | detail | 18 of 18 |
+| `S4d1a47` | Package: all languages and access levels | detail | 18 of 18 |
+| `Sc49bd0` | Packages of this Release | detail | 18 of 18 |
 | `Sa5d386` | Page %(page)s of %(total)s | export | 18 of 18 |
 | `S600584` | Pages | _macros | 18 of 18 |
 | `S8be3c9` | Password | login, users | 18 of 18 |
@@ -22029,6 +22534,7 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S75ee24` | Planned effective date (optional) | form | 18 of 18 |
 | `Sf6fea0` | Planned in the future: | builder | 18 of 18 |
 | `S73b158` | Planned in the next | catalogue_health | 18 of 18 |
+| `S123a7f` | Platform | detail | 18 of 18 |
 | `Sfc8d58` | Platform variant | detail | 18 of 18 |
 | `Scd8926` | Platform variants | detail | 18 of 18 |
 | `Sac1a42` | Platforms | export | 18 of 18 |
@@ -22090,7 +22596,7 @@ Every string of the interface with the templates that use it. A native speaker a
 | `Sb1fe0b` | Release Builder | builder | 18 of 18 |
 | `S3a7272` | Release Export | export_center | 18 of 18 |
 | `Sebb307` | Release is already published. | message: release_service | 18 of 18 |
-| `S2ddbdd` | Release not found | message: release_notes_service | 18 of 18 |
+| `S2ddbdd` | Release not found | message: package_service, message: release_notes_service | 18 of 18 |
 | `Se1fcfa` | Release notes (CSV) | detail | 18 of 18 |
 | `Sa26c4a` | Release notes (Markdown) | detail | 18 of 18 |
 | `S9b44a2` | Release notes (PDF) | detail | 18 of 18 |
@@ -22098,6 +22604,7 @@ Every string of the interface with the templates that use it. A native speaker a
 | `Sdcddb7` | Release notes list what was added, changed (field by field) and deprecated since the previous Release. The offline page is one self-contained HTML file for use at the turbine without a connection. | detail | 18 of 18 |
 | `Sc011aa` | Released revisions have the full trail: submit, both review sign-offs, approval and publish. | success_metrics | 18 of 18 |
 | `S8fa41d` | Releases | dashboard, list, menu | 18 of 18 |
+| `Scce715` | Reload | detail | 18 of 18 |
 | `S0544a3` | Reload this page to see the progress. | detail | 18 of 18 |
 | `S99e347` | Remedy | detail | 18 of 18 |
 | `S86971e` | Remedy / recommended action (optional) | form, translations | 18 of 18 |
@@ -22176,6 +22683,7 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S6a6d41` | Saving again keeps your entries and replaces the stored values. | form | 18 of 18 |
 | `S38db0c` | Say what the term means, so that a translator who does not know the product can choose the right word. | index | 18 of 18 |
 | `S809383` | Say why in the note. | message: terminology_service | 18 of 18 |
+| `S4651a3` | Scope | export | 18 of 18 |
 | `S13c61c` | Scope Filter | detail | 18 of 18 |
 | `S154964` | Scope: Functional System Group (optional) | new | 18 of 18 |
 | `S01f79f` | Scoped view: showing only actions you performed. | audit_log | 18 of 18 |
@@ -22304,6 +22812,9 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S6d8e34` | The file is empty. | message: attachment_service | 18 of 18 |
 | `S3b0e31` | The file needs the columns status_code_identifier and occurrences. | message: occurrence_service | 18 of 18 |
 | `S689b33` | The full manual is docs/23-user-manual.md in the project folder; the glossary below is the same one the tooltips use. | help | 18 of 18 |
+| `S3bc283` | The package file is no longer on the server. | message: package_service | 18 of 18 |
+| `S2d6ac0` | The package is being built. Reload this page to follow its progress. | help and messages | 18 of 18 |
+| `S310622` | The package is not ready. | message: package_service | 18 of 18 |
 | `Sa3d64b` | The password is wrong; the action was not carried out. | message: auth_service | 18 of 18 |
 | `S9a1b35` | The pre-migration status code number, if any — for traceability only, never the governed StCd identifier. | form | 18 of 18 |
 | `S65168f` | The preview has expired or is unknown. Upload the files again. | message: st_import_service | 18 of 18 |
@@ -22323,6 +22834,7 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S9e4b4a` | The webhook URL must be an http(s) URL. | message: integration_service | 18 of 18 |
 | `S1b0006` | The Windows sign-in is not enabled (AUTH_MODE). | message: auth_service | 18 of 18 |
 | `S3d5194` | There is no translation to approve. | message: translation_service | 18 of 18 |
+| `Sa5f3f8` | These files contain the complete baseline: every status code that is valid as of this Release, not only the ones it changed. | detail | 18 of 18 |
 | `S44c2c4` | These rows point at the account. They are history that must stay attributable, so the account can be deactivated but not deleted. | user_detail | 18 of 18 |
 | `S091814` | This change request has reached a terminal decision state | detail | 18 of 18 |
 | `S8fcbfc` | This CR already has the maximum number of attachments. | message: attachment_service | 18 of 18 |
@@ -22349,6 +22861,7 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S805790` | Tower Fan Program | status code fields | 18 of 18 |
 | `Sef9b9e` | Transformer Oil Pump Program | status code fields | 18 of 18 |
 | `S622d09` | Translate a revision once its source text is Approved (or Released). | message: translation_service | 18 of 18 |
+| `Sa2a321` | Translated codes per language | detail | 18 of 18 |
 | `Sac26a7` | Translation | check, language | 18 of 18 |
 | `S74e196` | Translation not found | message: terminology_service | 18 of 18 |
 | `Sae9e5d` | Translation of %(x)s | language | 18 of 18 |

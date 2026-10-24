@@ -834,6 +834,9 @@ paths:
       - { name: strict_language, in: query, schema: { type: boolean }, description: "With language: omit codes that have no approved translation" }
       - { name: software_version, in: query, schema: { type: string }, description: "Only codes that apply to this controller software version (I-07)" }
       - { name: bundle, in: query, schema: { type: boolean }, description: "Return a ZIP with the file and MANIFEST.json (SHA-256 of every file, optional HMAC signature, I-06)" }
+      - { name: content, in: query, schema: { type: string, enum: [baseline, delta], default: baseline }, description: "baseline (default): every code valid as of the Release; delta: only the revisions the Release carries (FR-173)" }
+      - { name: platform, in: query, schema: { type: string, enum: ['2XM', '3XM', '4XM'] }, description: "Only codes for this turbine platform (FR-173)" }
+      - { name: controller, in: query, schema: { type: string, enum: [MC, HC] }, description: "Only the Main or the Hub Controller codes (FR-173)" }
     get:
       tags: [Exports]
       summary: Export a release catalogue as a flat table (role-scoped, per 11-security-architecture.md §3). All formats, including JSON, are flat row-per-status-code, not nested.
@@ -880,8 +883,8 @@ paths:
     get:
       tags: [Exports]
       summary: >
-        Ad-hoc filtered working set in any lifecycle state (never sandbox), for Engineer, Reviewer,
-        Administrator and Chief Engineer only (FR-046). Every row carries a `distribution_notice`
+        Ad-hoc filtered working set in any lifecycle state (never sandbox), for the StCd Owner and the
+        Administrator only (FR-046, FR-175). Every row carries a `distribution_notice`
         column "Not for distribution - unapproved data"; the file name and PDF banner repeat it.
       responses:
         '200':
@@ -1681,6 +1684,71 @@ paths:
       responses:
         '200': { description: Targets, content: { application/json: { schema: { type: object, properties: { release_id: { type: integer }, software_versions: { type: array, items: { type: string } } } } } } }
         '409': { description: Release already published }
+
+  /releases/{releaseId}/baseline:
+    parameters: [{ $ref: '#/components/parameters/ReleaseId' }]
+    get:
+      tags: [Releases]
+      summary: Counts of the complete baseline of a Release - every code valid as of it - by controller and platform (FR-173). Any authenticated role.
+      responses:
+        '200': { description: Counts, content: { application/json: { schema: { type: object, properties: { baseline: { type: integer }, in_release: { type: integer }, by_controller: { type: object, properties: { MC: { type: integer }, HC: { type: integer } } }, by_platform: { type: object, additionalProperties: { type: integer } } } } } } }
+        '404': { $ref: '#/components/responses/NotFound' }
+
+  /releases/{releaseId}/readiness:
+    parameters: [{ $ref: '#/components/parameters/ReleaseId' }]
+    get:
+      tags: [Releases]
+      summary: What is still missing before the documents of a Release are complete - translated codes per language and codes without confirmed access levels (FR-173). Engineer, Reviewer, Chief Engineer, Administrator, StCd Owner.
+      responses:
+        '200': { description: Coverage, content: { application/json: { schema: { type: object, properties: { baseline: { type: integer }, translation_coverage: { type: object, additionalProperties: { type: object, properties: { translated: { type: integer }, of: { type: integer } } } }, unconfirmed_access: { type: object, properties: { count: { type: integer }, examples: { type: array, items: { type: string } } } } } } } } }
+        '404': { $ref: '#/components/responses/NotFound' }
+
+  /releases/{releaseId}/packages:
+    parameters: [{ $ref: '#/components/parameters/ReleaseId' }]
+    post:
+      tags: [Exports]
+      summary: Build the package of a published Release - the complete baseline in every language for every access level, with release notes and a manifest - as a ZIP (FR-174). Any authenticated role (FR-175).
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                formats: { type: array, items: { type: string, enum: [csv, json, xlsx, pdf] }, default: [csv, xlsx, pdf] }
+                languages: { type: array, items: { type: string }, description: "Default: every language" }
+                audiences: { type: array, items: { type: string }, description: "Default: all eight audiences" }
+                include_unfiltered: { type: boolean, default: true }
+                platform: { type: string, enum: ['2XM', '3XM', '4XM'] }
+                controller: { type: string, enum: [MC, HC] }
+                strict_language: { type: boolean }
+      responses:
+        '201': { description: Built already, content: { application/json: { schema: { $ref: '#/components/schemas/PackageJob' } } } }
+        '202': { description: "Being built; poll /packages/{jobId}", content: { application/json: { schema: { $ref: '#/components/schemas/PackageJob' } } } }
+        '422': { $ref: '#/components/responses/ValidationError' }
+    get:
+      tags: [Exports]
+      summary: The packages built for a Release, newest first (FR-174). Any authenticated role (FR-175).
+      responses:
+        '200': { description: Packages, content: { application/json: { schema: { type: object, properties: { items: { type: array, items: { $ref: '#/components/schemas/PackageJob' } } } } } } }
+
+  /packages/{jobId}:
+    parameters: [{ name: jobId, in: path, required: true, schema: { type: integer } }]
+    get:
+      tags: [Exports]
+      summary: State and progress of a package (FR-174). Any authenticated role (FR-175).
+      responses:
+        '200': { description: Package job, content: { application/json: { schema: { $ref: '#/components/schemas/PackageJob' } } } }
+        '404': { $ref: '#/components/responses/NotFound' }
+
+  /packages/{jobId}/download:
+    parameters: [{ name: jobId, in: path, required: true, schema: { type: integer } }]
+    get:
+      tags: [Exports]
+      summary: Download the finished package as a ZIP (FR-174). Any authenticated role (FR-175).
+      responses:
+        '200': { description: ZIP file, content: { application/zip: {} } }
+        '404': { $ref: '#/components/responses/NotFound' }
+        '422': { $ref: '#/components/responses/ValidationError' }
 
   /exports/{jobId}/manifest:
     parameters: [{ name: jobId, in: path, required: true, schema: { type: integer } }]
@@ -2647,6 +2715,19 @@ components:
         title_page: { type: boolean }
         pdf_orientation: { type: string, enum: [L, P] }
         is_active: { type: boolean }
+    PackageJob:
+      type: object
+      properties:
+        id: { type: integer }
+        status: { type: string, enum: [PENDING, COMPLETE, FAILED] }
+        done: { type: integer, description: Files written so far }
+        total: { type: integer }
+        error: { type: string, nullable: true }
+        size_bytes: { type: integer, nullable: true }
+        sha256: { type: string, nullable: true }
+        created_at: { type: string }
+        completed_at: { type: string, nullable: true }
+
     ExportRecord:
       type: object
       properties:

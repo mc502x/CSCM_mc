@@ -1,6 +1,6 @@
 # 09. API Specification — CSCM Tool
 
-Full machine-readable contract: [artifacts/openapi.yaml](artifacts/openapi.yaml) (OpenAPI 3.0.3, **v4.0.0**, 143 operations — field set corrected 2026-09-17 against a real export of the live status code library, extended 2026-10-23 by the improvement pack). A test (`test_openapi_conformance`) fails when the code and this contract differ, and the endpoint table in §7 is generated from the code (`scripts/gen_api_summary.py`). This document explains the conventions that apply across every endpoint.
+Full machine-readable contract: [artifacts/openapi.yaml](artifacts/openapi.yaml) (OpenAPI 3.0.3, **v4.0.0**, 149 operations — field set corrected 2026-09-17 against a real export of the live status code library, extended 2026-10-23 by the improvement pack). A test (`test_openapi_conformance`) fails when the code and this contract differ, and the endpoint table in §7 is generated from the code (`scripts/gen_api_summary.py`). This document explains the conventions that apply across every endpoint.
 
 ## 1. Versioning
 
@@ -122,7 +122,7 @@ Generated from `docs/artifacts/openapi.yaml` and the access declared on each rou
 | POST | `/releases/{releaseId}/publish` | Publish the release (atomic; Administrator only) | Administrator |
 | GET | `/releases/{releaseId}/export` | Export a release catalogue as a flat table (role-scoped, per 11-security-architecture.md §3) | Any signed-in user; API token `catalogue:read` |
 | GET | `/exports/released` | Export the current set of all Released (non-sandbox) status codes as a flat table (any authenticated role; FR-045) | Any signed-in user; API token `catalogue:read` |
-| GET | `/exports/working-set` | Ad-hoc filtered working set in any lifecycle state (never sandbox), for Engineer, Reviewer, Administrator and Chief Engineer only (FR-046) | Working roles (not Viewer) |
+| GET | `/exports/working-set` | Ad-hoc filtered working set in any lifecycle state (never sandbox), for the StCd Owner and the Administrator only (FR-046, FR-175) | Administrator, StCd Owner |
 | POST | `/exports/full-database` | Export a full raw database backup (Administrator only) | Administrator |
 | GET | `/lookups/{vocabulary}` | List active values of a controlled vocabulary | Any signed-in user |
 | POST | `/lookups/{vocabulary}` | Add a value to a simple controlled vocabulary (Administrator only; functional groups/subgroups have their own endpoints) | Administrator |
@@ -193,6 +193,12 @@ Generated from `docs/artifacts/openapi.yaml` and the access declared on each rou
 | GET | `/releases/{releaseId}/offline-bundle` | One self-contained HTML lookup page for the Release, for use at the turbine without connectivity (I-24) | Any signed-in user |
 | GET | `/releases/{releaseId}/exports` | Every export recorded for the Release with its SHA-256 (I-06) | Working roles (not Viewer) |
 | PUT | `/releases/{releaseId}/target-versions` | Set the controller software versions a Release is published for (I-07, Administrator, before publish only) | Administrator |
+| GET | `/releases/{releaseId}/baseline` | Counts of the complete baseline of a Release - every code valid as of it - by controller and platform (FR-173) | Any signed-in user |
+| GET | `/releases/{releaseId}/readiness` | What is still missing before the documents of a Release are complete - translated codes per language and codes without confirmed access l... | Working roles (not Viewer) and StCd Owner (read only) |
+| POST | `/releases/{releaseId}/packages` | Build the package of a published Release - the complete baseline in every language for every access level, with release notes and a manif... | Any signed-in user |
+| GET | `/releases/{releaseId}/packages` | The packages built for a Release, newest first (FR-174) | Any signed-in user |
+| GET | `/packages/{jobId}` | State and progress of a package (FR-174) | Any signed-in user |
+| GET | `/packages/{jobId}/download` | Download the finished package as a ZIP (FR-174) | Any signed-in user |
 | GET | `/exports/{jobId}/manifest` | The manifest recorded for an export (I-06) | Working roles (not Viewer) |
 | POST | `/exports/verify` | Is this file one the system produced (I-06)? | Any signed-in user |
 | GET | `/software-versions/matrix` | Which Released codes apply to a controller software version (I-07) | Any signed-in user |

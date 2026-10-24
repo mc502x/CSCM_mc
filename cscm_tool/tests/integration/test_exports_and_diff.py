@@ -109,7 +109,7 @@ def test_working_set_is_labelled_and_excludes_sandbox(app, client, make_user, wc
     login_as(client, cast["admin"])
     client.post("/api/v1/status-codes", json=valid_payload(*wcnv_ids, is_sandbox=True))
 
-    login_as(client, cast["reviewer"])
+    login_as(client, cast["stcd_owner"])
     response = client.get("/api/v1/exports/working-set?format=csv")
     assert response.status_code == 200
     assert "NOT_FOR_DISTRIBUTION" in response.headers["Content-Disposition"]
@@ -122,7 +122,7 @@ def test_working_set_is_labelled_and_excludes_sandbox(app, client, make_user, wc
 def test_working_set_filters_by_lifecycle_state(app, client, make_user, wcnv_ids):
     cast = make_cast(make_user)
     create_draft(app, client, cast, wcnv_ids, title="Unapproved Draft Code")
-    login_as(client, cast["engineer"])
+    login_as(client, cast["admin"])
     none = client.get("/api/v1/exports/working-set?format=csv&lifecycle_status=REVIEW")
     assert _csv_rows(none) == []
     some = client.get("/api/v1/exports/working-set?format=csv&lifecycle_status=DRAFT&q=Unapproved")
@@ -132,14 +132,15 @@ def test_working_set_filters_by_lifecycle_state(app, client, make_user, wcnv_ids
 def test_working_set_not_available_to_viewers_or_anonymous(app, client, make_user):
     cast = make_cast(make_user)
     assert client.get("/api/v1/exports/working-set?format=csv").status_code == 401
-    login_as(client, cast["viewer"])
-    assert client.get("/api/v1/exports/working-set?format=csv").status_code == 403
+    for who in ("viewer", "engineer", "reviewer", "chief_engineer"):  # FR-175: not released yet
+        login_as(client, cast[who])
+        assert client.get("/api/v1/exports/working-set?format=csv").status_code == 403, who
 
 
 def test_working_set_pdf_and_xlsx_render(app, client, make_user, wcnv_ids):
     cast = make_cast(make_user)
     create_draft(app, client, cast, wcnv_ids)
-    login_as(client, cast["chief_engineer"])
+    login_as(client, cast["stcd_owner"])
     assert client.get("/api/v1/exports/working-set?format=pdf").status_code == 200
     xlsx = client.get("/api/v1/exports/working-set?format=xlsx")
     sheet = load_workbook(io.BytesIO(xlsx.data)).active
@@ -152,7 +153,7 @@ def test_working_set_pdf_and_xlsx_render(app, client, make_user, wcnv_ids):
 def test_exports_neutralise_formula_injection(app, client, make_user, wcnv_ids):
     cast = make_cast(make_user)
     create_draft(app, client, cast, wcnv_ids, title='=HYPERLINK("http://evil","x")')
-    login_as(client, cast["engineer"])
+    login_as(client, cast["admin"])
 
     rows = _csv_rows(client.get("/api/v1/exports/working-set?format=csv"))
     assert rows[0]["title"].startswith("'=")

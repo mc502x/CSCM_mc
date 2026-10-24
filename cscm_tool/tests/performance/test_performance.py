@@ -62,7 +62,7 @@ def _seed(app, total: int):
             username="perf",
             email="perf@example.com",
             full_name="Perf User",
-            role_code="ENGINEER",
+            role_code="ADMINISTRATOR",
             password=PASSWORD,
             actor=None,
         )

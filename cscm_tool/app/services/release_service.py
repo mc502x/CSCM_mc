@@ -3,7 +3,7 @@
 import json
 
 from app.domain.authz import require_roles
-from app.domain.errors import DomainError, InvalidTransitionError
+from app.domain.errors import DomainError, InvalidTransitionError, NotFoundError
 from app.extensions import db
 from app.models.export_job import ExportJob
 from app.models.lookup import (
@@ -18,6 +18,13 @@ from app.services.audit_service import AuditService
 from app.services.auth_service import AuthService
 from app.services.lookup_service import LookupService
 from app.utils import utcnow_iso
+
+
+def require_released_or_owner(release: Release, actor) -> None:
+    """FR-175: the files of a Release are for everybody once it is published; before that only the
+    StCd Owner and the Administrator may take them."""
+    if release.status != "PUBLISHED" and actor.role_code not in ("STCD_OWNER", "ADMINISTRATOR"):
+        raise NotFoundError("Release not found")
 
 
 class ReleaseService:

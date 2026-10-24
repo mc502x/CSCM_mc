@@ -281,7 +281,7 @@ def test_customer_profile_applies_its_default_audience_and_working_set_refuses_a
         client.get(f"/api/v1/releases/{release_id}/export?format=csv&profile=CUSTOMER_LIST")
     )
     assert [r["Title"] for r in rows] == ["For customers"]
-    login_as(client, cast["engineer"])
+    login_as(client, cast["admin"])
     refused = client.get("/api/v1/exports/working-set?format=csv&audience=customer")
     assert refused.status_code == 422
     assert len(client.get("/api/v1/audiences").get_json()["items"]) == 8

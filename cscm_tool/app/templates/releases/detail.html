@@ -21,6 +21,7 @@
     <dt>{{ _('Scope Filter') }}</dt><dd>{{ release.scope_filter }}</dd>
     <dt>{{ _('Target software versions') }}</dt><dd>{{ release.target_software_versions|join(', ') if release.target_software_versions else '—' }}</dd>
     <dt>{{ _('Item Count') }}</dt><dd>{{ release.item_count }}</dd>
+    <dt>{{ _('Complete baseline') }}</dt><dd>{{ baseline.baseline }} ({{ _('Main controller') }} {{ baseline.by_controller.MC }}, {{ _('Hub controller') }} {{ baseline.by_controller.HC }}{% for code, n in baseline.by_platform.items() %}, {{ code }} {{ n }}{% endfor %})</dd>
     <dt>{{ _('Published') }}</dt><dd>{{ release.published_at or _('Not yet published') }}</dd>
   </dl>
 </div>
@@ -28,6 +29,7 @@
 {% if release.status == 'PUBLISHED' %}
 <div class="card">
   <h2>{{ _('Export') }}</h2>
+  <p class="muted">{{ _('These files contain the complete baseline: every status code that is valid as of this Release, not only the ones it changed.') }}</p>
   <div class="btn-row">
     <a class="btn" href="{{ url_for('api_v1.export_release', release_id=release.id, format='csv') }}">{{ _('Export CSV') }}</a>
     <a class="btn" href="{{ url_for('api_v1.export_release', release_id=release.id, format='json') }}">{{ _('Export JSON') }}</a>
@@ -57,6 +59,18 @@
       <select id="x_version" name="software_version"><option value="">({{ _('all') }})</option>{% for v in versions %}<option value="{{ v.code }}">{{ v.code }}</option>{% endfor %}</select>
     </div>
     <div class="field">
+      <label for="x_content">{{ _('Content') }}</label>
+      <select id="x_content" name="content"><option value="baseline">{{ _('Complete baseline') }}</option><option value="delta">{{ _('Changes of this release only') }}</option></select>
+    </div>
+    <div class="field">
+      <label for="x_platform">{{ _('Platform') }}</label>
+      <select id="x_platform" name="platform"><option value="">({{ _('all') }})</option>{% for p in platforms %}<option value="{{ p.code }}">{{ p.code }}</option>{% endfor %}</select>
+    </div>
+    <div class="field">
+      <label for="x_controller">{{ _('Controller') }}</label>
+      <select id="x_controller" name="controller"><option value="">({{ _('all') }})</option><option value="MC">{{ _('Main controller') }}</option><option value="HC">{{ _('Hub controller') }}</option></select>
+    </div>
+    <div class="field">
       <label for="x_format">{{ _('Format') }}</label>
       <select id="x_format" name="format"><option value="csv">CSV</option><option value="xlsx">XLSX</option><option value="pdf">PDF</option><option value="json">JSON</option></select>
     </div>
@@ -67,6 +81,60 @@
     <div class="field" style="align-self:end"><button class="btn btn--primary" type="submit">{{ _('Export') }}</button></div>
   </form>
 </div>
+
+{% if can_package %}
+<div class="card">
+  <h2>{{ _('Package: all languages and access levels') }}</h2>
+  <p class="muted">{{ _('One ZIP with the complete baseline in every language and for every access level, plus the release notes and a manifest with a SHA-256 for each file. Building it takes a few minutes; the page shows the progress.') }}</p>
+  {% if readiness %}
+  <p>{{ _('Translated codes per language') }}:
+    {% for code, c in readiness.translation_coverage.items() %}<span class="badge badge--{{ 'RELEASED' if c.translated == c.of else 'DRAFT' }}" title="{{ c.translated }} / {{ c.of }}">{{ code }} {{ c.translated }}/{{ c.of }}</span> {% endfor %}
+  </p>
+  {% if readiness.unconfirmed_access.count %}
+  <p class="muted">{{ _('%(count)s codes have no confirmed access levels and are missing from every access-level file.', count=readiness.unconfirmed_access.count) }}</p>
+  {% endif %}
+  {% endif %}
+  <form method="post" action="{{ url_for('ui.release_package_create', release_id=release.id) }}" class="form-row">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    <div class="field checkbox-list">
+      <span class="label">{{ _('Format') }}</span>
+      <label><input type="checkbox" name="formats" value="pdf" checked> PDF</label>
+      <label><input type="checkbox" name="formats" value="xlsx" checked> XLSX</label>
+      <label><input type="checkbox" name="formats" value="csv" checked> CSV</label>
+      <label><input type="checkbox" name="formats" value="json"> JSON</label>
+    </div>
+    <div class="field">
+      <label for="p_platform">{{ _('Platform') }}</label>
+      <select id="p_platform" name="platform"><option value="">({{ _('all') }})</option>{% for p in platforms %}<option value="{{ p.code }}">{{ p.code }}</option>{% endfor %}</select>
+    </div>
+    <div class="field">
+      <label for="p_controller">{{ _('Controller') }}</label>
+      <select id="p_controller" name="controller"><option value="">({{ _('all') }})</option><option value="MC">{{ _('Main controller') }}</option><option value="HC">{{ _('Hub controller') }}</option></select>
+    </div>
+    <div class="field checkbox-list" style="align-self:end">
+      <label><input type="checkbox" name="include_unfiltered" checked> {{ _('also the files without an access level (all columns)') }}</label>
+      <label><input type="checkbox" name="strict_language"> {{ _('only translated codes') }}</label>
+    </div>
+    <div class="field" style="align-self:end"><button class="btn btn--primary" type="submit">{{ _('Build package') }}</button></div>
+  </form>
+  <p class="muted">{{ _('All languages and all access levels are included. Use the export above for a single language or access level.') }}</p>
+  {% if packages %}
+  <table>
+    <caption class="visually-hidden">{{ _('Packages of this Release') }}</caption>
+    <thead><tr><th scope="col">#</th><th scope="col">{{ _('Status') }}</th><th scope="col">{{ _('Files') }}</th><th scope="col">SHA-256</th><th scope="col">{{ _('When') }}</th><th scope="col"></th></tr></thead>
+    <tbody>
+      {% for pk in packages %}
+      <tr>
+        <td>{{ pk.id }}</td><td>{{ pk.status }}{% if pk.error %}: {{ pk.error }}{% endif %}</td><td>{{ pk.done }} / {{ pk.total }}</td>
+        <td>{% if pk.sha256 %}<code title="{{ pk.sha256 }}">{{ pk.sha256[:16] }}…</code>{% else %}—{% endif %}</td><td>{{ pk.created_at }}</td>
+        <td>{% if pk.status == 'COMPLETE' %}<a href="{{ url_for('ui.release_package_download', job_id=pk.id) }}">{{ _('Download') }}</a>{% else %}<a href="{{ url_for('ui.release_detail', release_id=release.id) }}">{{ _('Reload') }}</a>{% endif %}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% endif %}
+</div>
+{% endif %}
 
 <div class="card">
   <h2>{{ _('Release notes and offline lookup') }}</h2>

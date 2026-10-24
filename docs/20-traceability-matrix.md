@@ -15,7 +15,7 @@ A ✅ means "an automated test exercises it", not "a person signed it off". Test
 | Security (SEC) — 24 | 24 | 0 | 0 (TLS termination and key custody are deployment checks, §6) |
 | Audit (AUD) — 8 | 8 | 0 | 0 |
 | Non-functional (NFR) — 14 | 12 | 1 (NFR-002 availability) | 1 (NFR-007 usability needs UAT) |
-| Test matrix (every TC in 13-test-strategy.md §8 and §8a, TC-001 … TC-065) | all | 0 | TC-030: scripted ✅, human sign-off 🧑 |
+| Test matrix (every TC in 13-test-strategy.md §8 and §8a, TC-001 … TC-066) | all | 0 | TC-030: scripted ✅, human sign-off 🧑 |
 
 ## 1a. The v4 pass (2026-10-23)
 
@@ -215,6 +215,9 @@ Also: `record_property` measurements are now carried into the report (`junit_fam
 | FR-170 | ✅ | `test_menu::test_the_working_roles_see_every_language_and_the_unreviewed_ones_are_marked_beta`, `…a_review_of_the_current_text_removes_the_mark_and_an_older_one_does_not_count`, `…the_marker_can_be_switched_off_in_the_settings` |
 | FR-171 | ✅ | `test_export_language::test_a_pdf_in_french_prints_its_own_words_in_french`, `…english_and_no_language_leave_the_text_as_it_is`, `…every_word_around_an_export_exists_in_every_language`, `…a_placeholder_survives_in_every_language` |
 | FR-172 | ✅ | `test_menu::test_a_viewer_sees_only_the_reviewed_languages_and_nothing_marked`, `…a_viewer_cannot_choose_or_keep_a_language_nobody_has_reviewed`, `…a_viewer_who_reviews_a_language_sees_that_one`, `…the_login_page_offers_only_the_reviewed_languages`, `…the_working_roles_see_every_language_and_the_unreviewed_ones_are_marked_beta` |
+| FR-173 | ✅ | `test_baseline_and_packages::test_the_baseline_of_a_release_holds_every_code_valid_at_that_release`, `…a_release_can_still_be_exported_as_only_its_own_changes`, `…the_baseline_narrows_to_a_platform`, `…the_baseline_narrows_to_a_controller`, `…the_summary_counts_the_baseline_by_controller_and_platform`, `…an_unpublished_release_previews_what_its_manual_will_contain`, `…the_title_page_names_the_scope`, `…the_readiness_check_shows_what_is_still_missing` |
+| FR-174 | ✅ | `test_baseline_and_packages::test_a_package_holds_every_language_for_every_access_level`, `…the_manifest_vouches_for_every_file_and_reports_the_coverage`, `…a_package_can_be_narrowed_to_a_platform_and_a_controller`, `…everybody_may_download_what_is_released_and_only_owner_and_admin_what_is_not`, `…a_package_needs_a_published_release_and_valid_choices`, `…the_release_page_offers_the_baseline_and_the_package`, `…the_package_is_audited` |
+| FR-175 | ✅ | `test_baseline_and_packages::test_everybody_may_download_what_is_released_and_only_owner_and_admin_what_is_not`, `test_exports_and_diff::test_working_set_not_available_to_viewers_or_anonymous`, `test_permission_grid` |
 
 ## 4. Business rules, security, non-functional
 

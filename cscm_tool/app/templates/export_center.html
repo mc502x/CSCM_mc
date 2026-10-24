@@ -30,7 +30,7 @@
   </form>
 </div>
 
-{% if current_user.role_code != 'VIEWER' %}
+{% if current_user.role_code in ('ADMINISTRATOR', 'STCD_OWNER') %}
 <div class="card">
   <h2>{{ _('Working-Set Export') }} <span class="badge badge--DRAFT">{{ _('Not for distribution') }}</span></h2>
   <p class="muted">{{ _('Every current status code in any lifecycle state, including unapproved Drafts. Every row and the file name carry a "Not for distribution — unapproved data" notice.') }}</p>
