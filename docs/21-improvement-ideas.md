@@ -83,7 +83,7 @@ All seven quick wins and the four-step sequencing of the original document are d
 | I-37 | Unicode font for the PDF export **(observed)** — ✅ delivered in v4.7 (FR-165) | 🔴 HIGH | S | EPIC-20 |
 | I-38 | Complete interface coverage in every language: flash messages, admin pages, service-layer sentences **(observed)** — ✅ delivered in v4.9 (FR-167); the text of the exports outside the catalogue is still English (26-translations.md §5) | 🔴 HIGH | M | EPIC-15 |
 | I-39 | Asymmetric (Ed25519) manifest signatures and key rotation **(observed)** | 🟠 MEDIUM | M | EPIC-18, EPIC-12 |
-| I-40 | Holiday calendar for business days **(observed)** | 🟠 MEDIUM | S | EPIC-19 |
+| I-40 | Holiday calendar for business days **(observed)** — ✖ not needed (decision of 2026-10-24) | — | — | EPIC-19 |
 | I-41 | Run and test on PostgreSQL (execute the port prepared by I-34) | 🟠 MEDIUM | L | EPIC-13 |
 | I-42 | Git-linked status code library versions and tag proposals | 🟠 MEDIUM | L | new EPIC-26 |
 | I-43 | Template-driven DOCX export (customer / brand templates) — ◐ the data side (complete baseline, platform and controller filter, package) is delivered in v4.10 (FR-173, FR-174); the Word output waits for the templates | 🟠 MEDIUM | L | EPIC-20 |
@@ -222,6 +222,21 @@ The concept and the eleven open items for checking the translations by native sp
 | I-69 | A manual edition number and document properties (library version, Release, hash) printed on every file of a package | 🟢 LOW | S | EPIC-20 |
 
 **I-43 now.** The baseline, the platform and controller filter and the package are the data side of it and are built. What is missing is the Word output itself: the three templates (2XM, 3XM, 4XM; assumed to be the turbine platforms, which the templates will confirm) are to be put in the project folder or uploaded in the application (I-66), together with their style names, the cover fields and an example entry page.
+
+## B.12 What would benefit the controls team most (2026-10-24)
+
+Weighed from the work of a wind turbine controls team - getting ~1,250 codes (about 900 Main, 350 Hub) into governed use, keeping the manual equal to what the turbine does, and helping the technician at the turbine - not from the list of what is easy to build. The holiday calendar (I-40) is dropped: not needed.
+
+| Rank | ID | Idea | Why it matters to the team | Size |
+|---|---|---|---|---|
+| 1 | I-70 | **Bulk workflow for the migration**: bulk edit (I-61), bulk submit and bulk cross-domain sign-off (I-62) and a bulk decision with a sample check for a change set of imported codes | The three decisions per code are right for a new code and impossible for 1,250 imported ones; without a bulk path go-live stalls in the queues of four roles | M |
+| 2 | I-71 | **Build-against-catalogue check**: upload the generated programs of a controller software build and get a drift report against the released baseline for that software version (extends I-63 and the first step of I-42) | Closes the loop *manual = turbine*: the one question the whole tool exists to answer, asked at every software release instead of once at import | M |
+| 3 | I-72 | **Definition linter with turbine rules** (extends I-55 and I-67): alarm without remedy text, set or reset delay inconsistent with the category, a repeat counter without a replacement code, a Hub code without a Main counterpart, a missing program field, duplicate titles; shown per code and as a gate on the Release | Catches the defects that cost service technicians time, before they are published; gives the Release a measurable completeness | S - M |
+| 4 | I-73 | **Change propagation across platform variants**: when a code of 3XM is revised, list its 2XM and 4XM variants with the same change prefilled for review | The same fault is maintained three times today; this is the main source of drift between platforms | M |
+| 5 | I-74 | **Technician lookup at the turbine**: the offline page (I-24) as an installable page with search by symptom and free text, the remedy steps first, related codes, and the language of the technician | The people who read the codes most are at the turbine without a network, not at a desk | M |
+| 6 | I-67 / I-68 / I-69 | Release hardening: publish gate on coverage, package retention and resumable builds, edition number | Keeps what v4.10 delivered dependable for Technical Publications | S - M |
+
+Items that wait for input from outside the project (templates for I-43 and I-66, the directory for I-47, the Git host for I-42, a PostgreSQL environment for I-41) stay where they are.
 
 ## B.7 Suggested sequencing
 
