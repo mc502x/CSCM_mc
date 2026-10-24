@@ -26,7 +26,7 @@ from app.auth.roles import OVERSIGHT_ROLES
 from app.domain.errors import DomainError, NotFoundError
 from app.extensions import db
 from app.help_content import NEXT_STEP, QUICK_START, ROLE_GLOSSARY, STATE_GLOSSARY, TERM_GLOSSARY
-from app.i18n import LANGUAGES
+from app.i18n import LANGUAGES, hidden_languages
 from app.i18n import translate as _
 from app.models.change_request import ChangeRequest
 from app.models.lookup import LookupFunctionalSystemGroup, Role
@@ -74,7 +74,7 @@ def notifications_read():
 @ui_bp.route("/language", methods=["POST"])
 def set_language():
     language = request.form.get("lang", "")
-    if language in LANGUAGES:
+    if language in LANGUAGES and language not in hidden_languages():
         session["ui_lang"] = language
         if current_user:
             user = db.session.get(User, current_user.id)

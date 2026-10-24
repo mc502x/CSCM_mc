@@ -18,6 +18,8 @@ from tests.helpers import PASSWORD, login_as, make_cast
 TEMPLATES = Path(__file__).resolve().parents[2] / "app" / "templates"
 PLACEHOLDER = re.compile(r"%\((\w+)\)[sd]")
 
+pytestmark = pytest.mark.usefixtures("languages_open")
+
 
 def _template_strings() -> dict[str, list[str]]:
     found: dict[str, list[str]] = {}

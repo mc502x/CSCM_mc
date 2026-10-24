@@ -45,6 +45,9 @@ def test_the_levels_order_the_roles_and_red_is_the_highest():
     assert role_info("nobody").level == 0  # an unknown role is drawn, not a crash
 
 
+pytestmark = pytest.mark.usefixtures("languages_open")
+
+
 def test_who_may_change_which_role_to_which():
     assert assignable_roles("ADMINISTRATOR") == ROLE_CODES
     assert assignable_roles("STCD_OWNER") == ("VIEWER", "ENGINEER", "REVIEWER")

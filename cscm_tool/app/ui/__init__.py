@@ -33,7 +33,7 @@ def _inject_current_user():
     help lookups (I-35) every page needs."""
     from app import status_code_fields
     from app.auth.roles import role_info
-    from app.i18n import LANGUAGE_META, LANGUAGES, RTL_LANGUAGES, current_language
+    from app.i18n import LANGUAGE_META, RTL_LANGUAGES, current_language, usable_languages
 
     unread = 0
     if _current_user:
@@ -41,13 +41,12 @@ def _inject_current_user():
 
         unread = NotificationService.unread_count(_current_user.id)
     beta_languages: frozenset[str] = frozenset()
-    if _current_user:
-        try:
-            from app.services.translation_review_service import TranslationReviewService
+    try:
+        from app.services.translation_review_service import TranslationReviewService
 
-            beta_languages = TranslationReviewService.beta_languages()
-        except Exception:  # noqa: BLE001 - a database that has not been upgraded yet
-            beta_languages = frozenset()
+        beta_languages = TranslationReviewService.beta_languages()
+    except Exception:  # noqa: BLE001 - a database that has not been upgraded yet
+        beta_languages = frozenset()
     nav_groups: list[dict] = []
     if _current_user:
         from flask import request
@@ -65,7 +64,7 @@ def _inject_current_user():
         "beta_languages": beta_languages,
         "current_user": _current_user,
         "ui_lang": current_language(),
-        "languages": LANGUAGES,
+        "languages": usable_languages(),  # a Viewer sees only the reviewed ones (FR-172)
         "language_meta": LANGUAGE_META,
         "ui_dir": "rtl" if current_language() in RTL_LANGUAGES else "ltr",
         "role_info": role_info,

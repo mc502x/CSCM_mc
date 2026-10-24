@@ -74,8 +74,12 @@ class TranslationReviewService:
     def beta_languages() -> frozenset[str]:
         """Languages (besides the source English) that no native speaker has reviewed, or whose
         text changed since the review (FR-170). Cheap while no review exists: nothing to compare."""
+        from flask import g, has_request_context
+
         from app.services.settings_service import SettingsService
 
+        if has_request_context() and g.get("beta_languages") is not None:
+            return g.beta_languages
         if SettingsService.get("languages.beta_marker") != "1":
             return frozenset()
         done = {
@@ -91,7 +95,10 @@ class TranslationReviewService:
         for code, fp in done.items():
             if code in beta and fp == fingerprint(effective(code)):
                 beta.discard(code)
-        return frozenset(beta)
+        result = frozenset(beta)
+        if has_request_context():
+            g.beta_languages = result
+        return result
 
     @staticmethod
     def assigned_languages(user_id: int) -> list[str]:

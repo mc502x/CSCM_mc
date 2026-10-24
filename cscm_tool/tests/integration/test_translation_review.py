@@ -23,6 +23,8 @@ from app.services.translation_review_service import TranslationReviewService as 
 from app.translation_catalogue import effective, screens, string_id
 from tests.helpers import login_as, make_cast
 
+pytestmark = pytest.mark.usefixtures("languages_open")
+
 
 @pytest.fixture()
 def cast(client, make_user):

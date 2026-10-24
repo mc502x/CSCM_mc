@@ -2,7 +2,7 @@
 sees, the groups, the counts of what waits, the link of the current page and the Menu button of narrow
 windows.
 
-TC-064. Requirements: FR-169, FR-170, SEC-010, NFR-010.
+TC-064. Requirements: FR-169, FR-170, FR-172, SEC-010, NFR-010.
 """
 
 import re
@@ -210,44 +210,122 @@ def _language_menu(client):
     return page.split('<details class="lang-menu">', 1)[1].split("</details>", 1)[0]
 
 
-def test_a_language_nobody_has_reviewed_is_marked_beta_and_a_review_removes_the_mark(
-    app, client, cast
-):
+def _review(app, cast, language, fingerprint_value=None):
     from app.extensions import db
     from app.models.translation import TranslationReview
     from app.translation_catalogue import effective, fingerprint
     from app.utils import utcnow_iso
 
-    login_as(client, cast["viewer"])
+    with app.app_context():
+        db.session.add(
+            TranslationReview(
+                language_code=language,
+                reviewer_id=cast["reviewer"].id,
+                status="COMPLETED",
+                started_at=utcnow_iso(),
+                completed_at=utcnow_iso(),
+                fingerprint=fingerprint_value or fingerprint(effective(language)),
+                string_count=1,
+            )
+        )
+        db.session.commit()
+
+
+def _codes(menu):
+    return re.findall(r'<button type="submit" name="lang" value="(\w+)"', menu)
+
+
+@pytest.mark.parametrize("role", ["engineer", "reviewer", "admin", "chief_engineer", "stcd_owner"])
+def test_the_working_roles_see_every_language_and_the_unreviewed_ones_are_marked_beta(
+    app, client, cast, role
+):
+    login_as(client, cast[role])
     menu = _language_menu(client)
+    assert len(_codes(menu)) == 19
     assert menu.count('class="beta-tag"') == 18  # every language but the English source
     en_item = menu.split('lang="en"', 1)[1].split("</li>", 1)[0]
     assert "beta-tag" not in en_item
     assert 'lang="fr"' in menu and "beta-tag" in menu.split('lang="fr"', 1)[1].split("</li>", 1)[0]
 
-    with app.app_context():
-        db.session.add(
-            TranslationReview(
-                language_code="fr",
-                reviewer_id=cast["reviewer"].id,
-                status="COMPLETED",
-                started_at=utcnow_iso(),
-                completed_at=utcnow_iso(),
-                fingerprint=fingerprint(effective("fr")),
-                string_count=1,
-            )
-        )
-        db.session.commit()
+
+def test_a_review_of_the_current_text_removes_the_mark_and_an_older_one_does_not_count(
+    app, client, cast
+):
+    from app.extensions import db
+    from app.models.translation import TranslationReview
+
+    login_as(client, cast["engineer"])
+    _review(app, cast, "fr")
     menu = _language_menu(client)
     assert menu.count('class="beta-tag"') == 17
     assert "beta-tag" not in menu.split('lang="fr"', 1)[1].split("</li>", 1)[0]
 
-    # a review of an older text does not count: the language is beta again
     with app.app_context():
         review = db.session.query(TranslationReview).one()
-        review.fingerprint = "00000000"
+        review.fingerprint = "00000000"  # the text changed since the review
         db.session.commit()
     assert _language_menu(client).count('class="beta-tag"') == 18
+
+
+def test_a_viewer_sees_only_the_reviewed_languages_and_nothing_marked(app, client, cast):
+    login_as(client, cast["viewer"])
+    assert _codes(_language_menu(client)) == ["en"]
+    _review(app, cast, "fr")
+    _review(app, cast, "de")
+    menu = _language_menu(client)
+    assert sorted(_codes(menu)) == ["de", "en", "fr"] and "beta-tag" not in menu
+
+
+def test_a_viewer_cannot_choose_or_keep_a_language_nobody_has_reviewed(app, client, cast):
+    from app.extensions import db
+    from app.models.user import User
+
+    login_as(client, cast["viewer"])
+    client.post("/language", data={"lang": "hi"})  # refused: nobody reviewed Hindi
+    page = client.get("/").get_data(as_text=True)
+    assert '<html lang="en"' in page
+    with app.app_context():
+        assert db.session.get(User, cast["viewer"].id).ui_language == "en"
+        # a preference stored before the rule (or while the person had another role) reads as English
+        db.session.get(User, cast["viewer"].id).ui_language = "de"
+        db.session.commit()
+    assert '<html lang="en"' in client.get("/").get_data(as_text=True)
+    _review(app, cast, "de")
+    assert '<html lang="de"' in client.get("/").get_data(as_text=True)
+
+
+def test_a_viewer_who_reviews_a_language_sees_that_one(app, client, cast):
+    from app.extensions import db
+    from app.models.translation import LanguageReviewer
+    from app.utils import utcnow_iso
+
+    with app.app_context():
+        db.session.add(
+            LanguageReviewer(
+                user_id=cast["viewer"].id,
+                language_code="ur",
+                assigned_by=cast["admin"].id,
+                assigned_at=utcnow_iso(),
+            )
+        )
+        db.session.commit()
+    login_as(client, cast["viewer"])
+    assert sorted(_codes(_language_menu(client))) == ["en", "ur"]
+
+
+def test_the_login_page_offers_only_the_reviewed_languages(app, client, cast):
+    page = client.get("/login").get_data(as_text=True)
+    options = (
+        re.findall(
+            r'<option value="(\w+)"', page.split('id="lang"', 1)[-1].split("</select>", 1)[0]
+        )
+        if 'id="lang"' in page
+        else re.findall(r'<option value="(\w\w)"', page)
+    )
+    assert set(options) <= {"en"}
+    _review(app, cast, "fr")
+    page = client.get("/login").get_data(as_text=True)
+    assert 'value="fr"' in page and 'value="hi"' not in page
 
 
 def test_the_marker_can_be_switched_off_in_the_settings(app, client, cast):
@@ -259,3 +337,6 @@ def test_the_marker_can_be_switched_off_in_the_settings(app, client, cast):
     )
     assert "Settings saved." in saved.get_data(as_text=True)
     assert 'class="beta-tag"' not in _language_menu(client)
+    # with the mark off nothing is hidden either
+    login_as(client, cast["viewer"])
+    assert len(_codes(_language_menu(client))) == 19

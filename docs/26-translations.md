@@ -180,7 +180,7 @@ Since v4.9.2 (FR-171) the text of this list is part of the catalogues (`pdf_expo
 
 | # | Item | Why | Priority |
 |---|---|---|---|
-| 1 | ~~Mark languages that are not reviewed as beta in the language menu, behind a setting~~ **built (v4.9.2, FR-170)**; open: hide them from customers | people must know that the text is unchecked | high |
+| 1 | ~~Mark languages that are not reviewed as beta in the language menu, behind a setting~~ **built (v4.9.2, FR-170, FR-172)**: Viewers and guests see only reviewed languages | people must know that the text is unchecked | high |
 | 2 | Find the native-speaker reviewers: one per language, 19 in all (18 besides English) | nothing in this concept works without them | high |
 | 3 | ~~Write the terminology list of section 4.3 for every language~~ **built (v4.9, FR-166, section 8a)**; open: a native speaker approves the 78 draft translations of each language | one vocabulary for interface, content and manual | high |
 | 4 | Language competence on the user and the approval rule of section 4.4 | otherwise nobody can responsibly approve Georgian or Odia | high |
@@ -192,7 +192,7 @@ Since v4.9.2 (FR-171) the text of this list is part of the catalogues (`pdf_expo
 | 10 | ~~Unicode fonts and shaping in the PDF, right-to-left layout (I-37)~~ **done (v4.7, FR-165)**; open: bold type, a taller line for Nastaliq | the PDF now prints every script | done |
 | 11 | Translate the in-application help and, last, the user manual (layer D) | after layers A to C are stable | low |
 
-Items 2, 4 to 7, 9 and 11 are not built (1 in part; 3, 8 and 10 are done). What is built is the catalogue file, the generator, the review sheets, the in-application review with assignments, decisions and overrides (FR-164) the checks of section 7 (FR-161), the complete catalogues of all languages (FR-167) and the terminology (FR-166).
+Items 2, 4 to 7, 9 and 11 are not built (1, 3, 8 and 10 are done). What is built is the catalogue file, the generator, the review sheets, the in-application review with assignments, decisions and overrides (FR-164) the checks of section 7 (FR-161), the complete catalogues of all languages (FR-167) and the terminology (FR-166).
 
 ## 8a. The technical nomenclature (v4.9)
 

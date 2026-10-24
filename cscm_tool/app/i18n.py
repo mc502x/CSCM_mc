@@ -57,6 +57,37 @@ DEFAULT_LANGUAGE = "en"
 TEMPLATE_STRING_RE = re.compile(r"""\b_\(\s*(?:'((?:[^'\\]|\\.)*)'|"((?:[^"\\]|\\.)*)")""")
 
 
+def hidden_languages() -> frozenset[str]:
+    """The languages this request may not use (FR-172): no native speaker has reviewed them, and the
+    person is a Viewer or not signed in. Everybody else sees every language, marked beta (FR-170); a
+    Viewer who was assigned a language to review sees that one."""
+    if not has_request_context():
+        return frozenset()
+    cached = g.get("hidden_languages")
+    if cached is not None:
+        return cached
+    from app.auth.decorators import current_user
+
+    hidden: frozenset[str] = frozenset()
+    if not current_user or current_user.role_code == "VIEWER":
+        try:
+            from app.services.translation_review_service import TranslationReviewService
+
+            hidden = TranslationReviewService.beta_languages()
+            if current_user:
+                hidden -= set(TranslationReviewService.assigned_languages(current_user.id))
+        except Exception:  # noqa: BLE001 - a database that has not been upgraded yet
+            hidden = frozenset()
+    g.hidden_languages = hidden
+    return hidden
+
+
+def usable_languages() -> dict[str, str]:
+    """{code: label} of the languages this request may choose."""
+    hidden = hidden_languages()
+    return {code: label for code, label in LANGUAGES.items() if code not in hidden}
+
+
 def current_language() -> str:
     if not has_request_context():
         return DEFAULT_LANGUAGE
@@ -73,6 +104,8 @@ def current_language() -> str:
     if language not in LANGUAGES:
         best = request.accept_languages.best_match(list(LANGUAGES))
         language = best or DEFAULT_LANGUAGE
+    if language in hidden_languages():  # a language a Viewer may not see reads as English
+        language = DEFAULT_LANGUAGE
     g.ui_language = language
     return language
 

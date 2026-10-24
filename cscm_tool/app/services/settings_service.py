@@ -60,7 +60,7 @@ SETTINGS: dict[str, tuple[str, Callable[[str], str], str]] = {
     "languages.beta_marker": (
         "1",
         _boolean,
-        "Mark a language that no native speaker has reviewed as beta in the language menu",
+        "Mark unreviewed languages as beta; Viewers see only reviewed languages",
     ),
     "health.capacity_alert_numbers": (
         "20",

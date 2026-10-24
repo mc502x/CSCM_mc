@@ -29,7 +29,7 @@
         <details class="lang-menu">
           <summary aria-label="{{ _('Language') }}"><span class="lang-code">{{ language_meta[ui_lang][0] }}</span> {{ language_meta[ui_lang][1] }} {{ flag(ui_lang) }}{% if ui_lang in beta_languages %} <span class="beta-tag" title="{{ _('No native speaker has reviewed this language yet; the text may contain mistakes.') }}">{{ _('beta') }}</span>{% endif %}</summary>
           <ul>
-            {% for code, meta in language_meta.items() %}
+            {% for code, meta in language_meta.items() if code in languages %}
             <li><button type="submit" name="lang" value="{{ code }}" lang="{{ code }}"{% if ui_lang == code %} aria-current="true"{% endif %}><span class="lang-code">{{ meta[0] }}</span> <span class="lang-name">{{ meta[1] }}</span> {{ flag(code) }}{% if code in beta_languages %} <span class="beta-tag" title="{{ _('No native speaker has reviewed this language yet; the text may contain mistakes.') }}">{{ _('beta') }}</span>{% endif %}</button></li>
             {% endfor %}
           </ul>

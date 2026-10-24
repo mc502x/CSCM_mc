@@ -216,3 +216,16 @@ def login(client):
         return client.post("/api/v1/auth/login", json={"username": username, "password": password})
 
     return _login
+
+
+@pytest.fixture()
+def languages_open(app):
+    """The beta mark and the hiding of unreviewed languages from Viewers (FR-170, FR-172) switched
+    off: for the tests that exercise every language without a review of it."""
+    with app.app_context():
+        from app.extensions import db
+        from app.models.operations import AppSetting
+        from app.utils import utcnow_iso
+
+        db.session.add(AppSetting(key="languages.beta_marker", value="0", updated_at=utcnow_iso()))
+        db.session.commit()
