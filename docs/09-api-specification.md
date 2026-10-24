@@ -1,6 +1,6 @@
 # 09. API Specification — CSCM Tool
 
-Full machine-readable contract: [artifacts/openapi.yaml](artifacts/openapi.yaml) (OpenAPI 3.0.3, **v4.0.0**, 149 operations — field set corrected 2026-09-17 against a real export of the live status code library, extended 2026-10-23 by the improvement pack). A test (`test_openapi_conformance`) fails when the code and this contract differ, and the endpoint table in §7 is generated from the code (`scripts/gen_api_summary.py`). This document explains the conventions that apply across every endpoint.
+Full machine-readable contract: [artifacts/openapi.yaml](artifacts/openapi.yaml) (OpenAPI 3.0.3, **v4.0.0**, 151 operations — field set corrected 2026-09-17 against a real export of the live status code library, extended 2026-10-23 by the improvement pack). A test (`test_openapi_conformance`) fails when the code and this contract differ, and the endpoint table in §7 is generated from the code (`scripts/gen_api_summary.py`). This document explains the conventions that apply across every endpoint.
 
 ## 1. Versioning
 
@@ -134,6 +134,8 @@ Generated from `docs/artifacts/openapi.yaml` and the access declared on each rou
 | GET | `/health/ready` | Readiness probe (no authentication, I-21): database reachable, schema at the expected Alembic head, newest audit rows chain correctly, la... | Public |
 | GET | `/status-codes/similar` | Existing codes of a subgroup with a similar title ("did you mean to revise ...?", I-12) | Administrator, Engineer |
 | GET | `/status-codes/{statusCodeId}/where-used` | Every other code whose current revision refers to this one (repeated-error pointer, related codes, supersession, platform variant) - I-04 | Working roles (not Viewer) and StCd Owner (read only) |
+| GET | `/status-codes/{statusCodeId}/connections` | What suppresses this code, what it suppresses, what it requires and where it escalates, read from the imported programs, with the chain o... | Working roles (not Viewer) and StCd Owner (read only) |
+| GET | `/status-codes/connections` | The causes with the codes they suppress (a tree), the escalation targets and what looks wrong in the connections between codes (FR-179) | Working roles (not Viewer) and StCd Owner (read only) |
 | GET | `/status-codes/{statusCodeId}/family` | The code and its platform variants (I-25) | Any signed-in user |
 | POST | `/status-codes/{statusCodeId}/platform-variants` | Copy the latest decided revision into a new Draft for another turbine platform, linked to the source (I-25) | Administrator, Engineer |
 | PUT | `/status-codes/{statusCodeId}/planned-dates` | Set planned effective / deprecation dates on the current revision (I-27, Administrator) | Administrator |

@@ -48,6 +48,12 @@ MENU: tuple[Group, ...] = (
                 "Status Codes",
                 active=("ui.status_code",),
             ),
+            Item(
+                "ui.status_code_connections",
+                "Connections",
+                roles=WORKING,
+                active=("ui.status_code_connections",),
+            ),
             Item("ui.release_list", "Releases", active=("ui.release",)),
             Item("ui.export_center", "Export Center", active=("ui.export_center",)),
             Item(

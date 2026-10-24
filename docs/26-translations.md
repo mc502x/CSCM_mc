@@ -266,31 +266,31 @@ A notice is sent once per change and person; a failing notice never undoes the c
 
 <!-- translations:start -->
 
-The interface has **1190 strings** (every text a template wraps in `_()`, the role names and the help texts). English is the source; the other languages are listed below. A string without a translation is shown in English.
+The interface has **1217 strings** (every text a template wraps in `_()`, the role names and the help texts). English is the source; the other languages are listed below. A string without a translation is shown in English.
 
 ### 9.1 Coverage
 
 | Language | Code | Direction | Translated | Share | Pre-check confidence | Fingerprint |
 |---|---|---|---|---|---|---|
 | GB English 🇬🇧 | `en` | ltr | source | — | — | — |
-| DE Deutsch 🇩🇪 (German) | `de` | ltr | 1190 | 100 % | <span style="background:#7fc561;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>94 %</b></span> | `027fdaf635ca` |
-| FR Français 🇫🇷 (French) | `fr` | ltr | 1189 | 99 % | <span style="background:#7fc561;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>94 %</b></span> | `68859c1dda92` |
-| IN हिन्दी 🇮🇳 (Hindi) | `hi` | ltr | 1189 | 99 % | <span style="background:#9ccf5c;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>88 %</b></span> | `3029cad298a5` |
-| SA العربية 🇸🇦 (Arabic) | `ar` | rtl | 1189 | 99 % | <span style="background:#9ccf5c;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>88 %</b></span> | `eec22ebbabb7` |
-| IN বাংলা 🇮🇳 (Bengali) | `bn` | ltr | 1189 | 99 % | <span style="background:#9ccf5c;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>87 %</b></span> | `21f13e9b24f0` |
-| IN मराठी 🇮🇳 (Marathi) | `mr` | ltr | 1189 | 99 % | <span style="background:#9ccf5c;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>87 %</b></span> | `71fdab40aa3a` |
-| IN తెలుగు 🇮🇳 (Telugu) | `te` | ltr | 1189 | 99 % | <span style="background:#9ccf5c;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>85 %</b></span> | `846e5d8db4b7` |
-| IN தமிழ் 🇮🇳 (Tamil) | `ta` | ltr | 1189 | 99 % | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>84 %</b></span> | `7eb2e8b9dffe` |
-| IN ગુજરાતી 🇮🇳 (Gujarati) | `gu` | ltr | 1189 | 99 % | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>84 %</b></span> | `49fb4a601bff` |
-| PK اردو 🇵🇰 (Urdu) | `ur` | rtl | 1189 | 99 % | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>85 %</b></span> | `912739aead4b` |
-| IN ಕನ್ನಡ 🇮🇳 (Kannada) | `kn` | ltr | 1189 | 99 % | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>84 %</b></span> | `f02753392c02` |
-| IN ଓଡ଼ିଆ 🇮🇳 (Odia) | `or` | ltr | 1189 | 99 % | <span style="background:#d9e050;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>78 %</b></span> | `6b02541854dc` |
-| IN മലയാളം 🇮🇳 (Malayalam) | `ml` | ltr | 1189 | 99 % | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>83 %</b></span> | `ce900969c22c` |
-| IN ਪੰਜਾਬੀ 🇮🇳 (Punjabi) | `pa` | ltr | 1189 | 99 % | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>83 %</b></span> | `fa36c61a0322` |
-| ES Español 🇪🇸 (Spanish) | `es` | ltr | 1189 | 99 % | <span style="background:#7fc561;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>94 %</b></span> | `df96da35934d` |
-| IT Italiano 🇮🇹 (Italian) | `it` | ltr | 1189 | 99 % | <span style="background:#7fc561;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>94 %</b></span> | `b8bd0de24a57` |
-| DK Dansk 🇩🇰 (Danish) | `da` | ltr | 1189 | 99 % | <span style="background:#7fc561;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>92 %</b></span> | `53a225f4f32b` |
-| GE ქართული 🇬🇪 (Georgian) | `ka` | ltr | 1189 | 99 % | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>83 %</b></span> | `2672bf1c4c6e` |
+| DE Deutsch 🇩🇪 (German) | `de` | ltr | 1217 | 100 % | <span style="background:#7fc561;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>94 %</b></span> | `a3f55f2709bb` |
+| FR Français 🇫🇷 (French) | `fr` | ltr | 1216 | 99 % | <span style="background:#7fc561;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>94 %</b></span> | `3d6f948fecfc` |
+| IN हिन्दी 🇮🇳 (Hindi) | `hi` | ltr | 1216 | 99 % | <span style="background:#9ccf5c;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>88 %</b></span> | `76c7dc56621c` |
+| SA العربية 🇸🇦 (Arabic) | `ar` | rtl | 1216 | 99 % | <span style="background:#9ccf5c;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>88 %</b></span> | `45358c63a097` |
+| IN বাংলা 🇮🇳 (Bengali) | `bn` | ltr | 1216 | 99 % | <span style="background:#9ccf5c;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>87 %</b></span> | `ea52c364573a` |
+| IN मराठी 🇮🇳 (Marathi) | `mr` | ltr | 1216 | 99 % | <span style="background:#9ccf5c;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>86 %</b></span> | `5d4c124a5912` |
+| IN తెలుగు 🇮🇳 (Telugu) | `te` | ltr | 1216 | 99 % | <span style="background:#9ccf5c;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>85 %</b></span> | `f52cf7c790ce` |
+| IN தமிழ் 🇮🇳 (Tamil) | `ta` | ltr | 1216 | 99 % | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>84 %</b></span> | `f8d32b28ff59` |
+| IN ગુજરાતી 🇮🇳 (Gujarati) | `gu` | ltr | 1216 | 99 % | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>84 %</b></span> | `bffc46f357ae` |
+| PK اردو 🇵🇰 (Urdu) | `ur` | rtl | 1216 | 99 % | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>84 %</b></span> | `c92c3fc592a0` |
+| IN ಕನ್ನಡ 🇮🇳 (Kannada) | `kn` | ltr | 1216 | 99 % | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>83 %</b></span> | `c4633c5f629c` |
+| IN ଓଡ଼ିଆ 🇮🇳 (Odia) | `or` | ltr | 1216 | 99 % | <span style="background:#d9e050;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>78 %</b></span> | `8d5b2f9dab7a` |
+| IN മലയാളം 🇮🇳 (Malayalam) | `ml` | ltr | 1216 | 99 % | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>83 %</b></span> | `2a584acbe8dd` |
+| IN ਪੰਜਾਬੀ 🇮🇳 (Punjabi) | `pa` | ltr | 1216 | 99 % | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>83 %</b></span> | `f8fcffae48cb` |
+| ES Español 🇪🇸 (Spanish) | `es` | ltr | 1216 | 99 % | <span style="background:#7fc561;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>94 %</b></span> | `d2efc3171ab3` |
+| IT Italiano 🇮🇹 (Italian) | `it` | ltr | 1216 | 99 % | <span style="background:#7fc561;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>94 %</b></span> | `0484c13330b0` |
+| DK Dansk 🇩🇰 (Danish) | `da` | ltr | 1216 | 99 % | <span style="background:#7fc561;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>92 %</b></span> | `3afeacb98e5c` |
+| GE ქართული 🇬🇪 (Georgian) | `ka` | ltr | 1216 | 99 % | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>83 %</b></span> | `8bf67fdbf8f0` |
 
 The pre-check confidence is the estimate of section 8c - the share of strings a native speaker is expected to accept unchanged, by an AI checker and not by a native speaker; red is 50 % or less, green above 95 %.
 
@@ -305,12 +305,12 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | IN हिन्दी 🇮🇳 | 1 | 7 | 4 | 9 | <span style="background:#9ccf5c;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>88 %</b></span> |
 | SA العربية 🇸🇦 | 1 | 3 | 7 | 10 | <span style="background:#9ccf5c;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>88 %</b></span> |
 | IN বাংলা 🇮🇳 | 0 | 6 | 3 | 11 | <span style="background:#9ccf5c;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>87 %</b></span> |
-| IN मराठी 🇮🇳 | 1 | 5 | 5 | 11 | <span style="background:#9ccf5c;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>87 %</b></span> |
+| IN मराठी 🇮🇳 | 1 | 5 | 5 | 11 | <span style="background:#9ccf5c;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>86 %</b></span> |
 | IN తెలుగు 🇮🇳 | 0 | 5 | 4 | 13 | <span style="background:#9ccf5c;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>85 %</b></span> |
 | IN தமிழ் 🇮🇳 | 1 | 6 | 7 | 13 | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>84 %</b></span> |
 | IN ગુજરાતી 🇮🇳 | 1 | 6 | 6 | 13 | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>84 %</b></span> |
-| PK اردو 🇵🇰 | 1 | 5 | 2 | 13 | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>85 %</b></span> |
-| IN ಕನ್ನಡ 🇮🇳 | 1 | 7 | 15 | 13 | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>84 %</b></span> |
+| PK اردو 🇵🇰 | 1 | 5 | 2 | 13 | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>84 %</b></span> |
+| IN ಕನ್ನಡ 🇮🇳 | 1 | 7 | 15 | 13 | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>83 %</b></span> |
 | IN ଓଡ଼ିଆ 🇮🇳 | 6 | 4 | 18 | 16 | <span style="background:#d9e050;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>78 %</b></span> |
 | IN മലയാളം 🇮🇳 | 1 | 5 | 16 | 14 | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>83 %</b></span> |
 | IN ਪੰਜਾਬੀ 🇮🇳 | 1 | 6 | 15 | 14 | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>83 %</b></span> |
@@ -438,7 +438,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 
 ### 9.2 DE Deutsch 🇩🇪 — German
 
-1190 of 1190 strings translated; direction left to right.
+1217 of 1217 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -538,13 +538,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Scaf0f4` | catalogue_health | Capacity per subgroup | Kapazität je Untergruppe |
 | `Sa28e96` | catalogue_health, menu | Catalogue Health | Katalog-Gesundheit |
 | `S25d185` | catalogue_health | Catalogue health | Katalog-Gesundheit |
-| `S199993` | catalogue_health, fleet_feedback | Codes | Codes |
+| `S199993` | catalogue_health, connections, fleet_feedback | Codes | Codes |
 | `S5548ae` | catalogue_health | days | Tage |
 | `S34730e` | catalogue_health | Deprecations | Außerbetriebnahmen |
 | `S19582d` | catalogue_health | Effective dates | Geplante Gültigkeitsdaten |
 | `Seb01bf` | catalogue_health | Examples | Beispiele |
 | `S4105cf` | catalogue_health | exhausted | erschöpft |
-| `S57e8be` | catalogue_health | Finding | Befund |
+| `S57e8be` | catalogue_health, connections | Finding | Befund |
 | `S1150a1` | catalogue_health | Gaps | Lücken |
 | `S171a06` | catalogue_health, export, withdrawn_codes | Group | Gruppe |
 | `Sb4aadc` | catalogue_health, legacy_mapping | Hub Controller | Nabensteuerung |
@@ -579,6 +579,31 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sc9c9de` | check | Terminology check | Terminologie-Prüfung |
 | `S6bd377` | check | to look at | zu prüfen |
 | `Sac26a7` | check, language | Translation | Übersetzung |
+| `S876180` | connections | A code is not raised while its cause is active. The top of each tree is a cause that nothing suppresses. | Ein Code wird nicht ausgelöst, solange seine Ursache aktiv ist. An der Spitze jedes Baums steht eine Ursache, die nichts unterdrückt. |
+| `S3f50cd` | connections | A code that is raised again and again is replaced by its repeat code. Repeat codes outside the catalogue are marked external. | Ein Code, der immer wieder ausgelöst wird, wird durch seinen Wiederholcode ersetzt. Wiederholcodes außerhalb des Katalogs sind als extern gekennzeichnet. |
+| `Sd87c44` | connections, detail, export | all | alle |
+| `S3e00c3` | connections | Causes and the codes they suppress | Ursachen und die Codes, die sie unterdrücken |
+| `Sadac69` | connections, detail, export_profiles | Code | Code |
+| `Se54fe8` | connections | Codes with a connection | Codes mit Verbindung |
+| `S8f3509` | connections, detail, menu | Connections | Verbindungen |
+| `Se90ccc` | connections, detail | Escalated from | Eskaliert von |
+| `S61bd26` | connections, detail | Escalates to | Eskaliert zu |
+| `S78586c` | connections | Escalates to %(code)s, which is deprecated or archived. | Eskaliert zu %(code)s, der veraltet oder archiviert ist. |
+| `S59d8f3` | connections | external | extern |
+| `Sb7c028` | connections | How the status codes are connected, read from the set conditions and the repeat codes of the imported programs. A text reading, not an interpretation of the controller logic. | Wie die Statuscodes verbunden sind, gelesen aus den Setzbedingungen und den Wiederholcodes der importierten Programme. Eine Textlesung, keine Deutung der Steuerungslogik. |
+| `S0dfe7b` | connections, detail | Hub controller | Hub-Controller |
+| `S1df823` | connections | loop | Schleife |
+| `Sc3f827` | connections, detail | Main controller | Main-Controller |
+| `S2f385e` | connections | No connections are known yet. They come from the programs imported from .st files. | Noch keine Verbindungen bekannt. Sie stammen aus den Programmen, die aus .st-Dateien importiert wurden. |
+| `S136e29` | connections | Only set while %(number)s is active, which is not in the catalogue. | Wird nur gesetzt, solange %(number)s aktiv ist; dieser Code ist nicht im Katalog. |
+| `S355d4b` | connections, detail | Only set while active | Nur gesetzt, solange aktiv |
+| `Sfa38ca` | connections | Part of a loop of suppressions: each code is suppressed by another one of the loop. | Teil einer Unterdrückungsschleife: Jeder Code der Schleife wird von einem anderen der Schleife unterdrückt. |
+| `Se382c2` | connections | Repeat code | Wiederholcode |
+| `Sc199d7` | connections, detail | Suppressed by | Unterdrückt von |
+| `S0e08e5` | connections | Suppressed by %(code)s, which is deprecated or archived. | Unterdrückt von %(code)s, der veraltet oder archiviert ist. |
+| `S1bc026` | connections | Suppressed by %(number)s, which is not in the catalogue. | Unterdrückt von %(number)s, der nicht im Katalog ist. |
+| `S844394` | connections | What looks wrong | Was auffällt |
+| `S52fc2b` | connections | Where repeated codes escalate to | Wohin wiederholte Codes eskalieren |
 | `S66dc40` | dashboard | Awaiting Administrator Sign-Off | Warten auf Freigabe durch den Administrator |
 | `S33a0d3` | dashboard | Awaiting Chief Engineer Approval | Warten auf Genehmigung durch den Chefingenieur |
 | `S04cc8e` | dashboard | Awaiting Cross-Domain Sign-Off | Warten auf fachübergreifende Freigabe |
@@ -618,7 +643,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S212856` | detail | advanced, controller firmware programs | erweitert, Firmware-Programme der Steuerung |
 | `Sfbde82` | detail | Affected component | Betroffene Komponente |
 | `S25f8c5` | detail, export, form | Alarm | Alarm |
-| `Sd87c44` | detail, export, hub_consolidation | all | alle |
 | `S484388` | detail, export_center | all columns | alle Spalten |
 | `S2e73c3` | detail | All languages and all access levels are included. Use the export above for a single language or access level. | Alle Sprachen und alle Zugriffsstufen sind enthalten. Für eine einzelne Sprache oder Zugriffsstufe nutzen Sie den Export oben. |
 | `S432284` | detail | All required sign-offs are in, but this is still a Draft — the Reviewer and Administrator only see it after you choose Submit for Review below. | Alle erforderlichen Freigaben liegen vor, aber der Antrag ist noch ein Entwurf – Prüfer und Administrator sehen ihn erst, wenn Sie unten "Zur Prüfung einreichen" wählen. |
@@ -641,6 +665,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S928e2e` | detail | Brake Program | Bremsprogramm |
 | `Sab2e8a` | detail | Build package | Paket erstellen |
 | `Scfadbd` | detail | By | Von |
+| `Se7bab1` | detail | Chain of causes | Ursachenkette |
 | `S9c8393` | detail, mine | Change Request | Änderungsantrag |
 | `S4572f4` | detail | Change request | Änderungsantrag |
 | `S3295be` | detail | Change requests in this set | Änderungsanträge in diesem Paket |
@@ -652,7 +677,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S03695d` | detail | Chief Engineer decision | Entscheidung des Chefingenieurs |
 | `Sf0a89f` | detail | Close change set | Änderungspaket schließen |
 | `S7c0c39` | detail | Close this change set? | Dieses Änderungspaket schließen? |
-| `Sadac69` | detail, export_profiles, fleet_feedback | Code | Code |
 | `S153d7a` | detail | Comment | Kommentar |
 | `S611578` | detail | Comment (required for rejection) | Kommentar (bei Ablehnung erforderlich) |
 | `Sc38432` | detail | Comment on this field | Kommentar zu diesem Feld |
@@ -662,6 +686,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S0ff7e5` | detail, export | Complete baseline | Vollständiger Stand |
 | `S1798b3` | detail | Completed | Abgeschlossen |
 | `S7671b5` | detail | Confirm or override Audience Access | Zielgruppen-Zugriff bestätigen oder überschreiben |
+| `S6512ee` | detail | Connection | Verbindung |
 | `S4f9be0` | detail | Content | Inhalt |
 | `Sa36a5f` | detail, legacy_mapping, st_new | Controller | Steuerung |
 | `Scd293f` | detail | Converter Reactive Power Program | Umrichter-Blindleistungsprogramm |
@@ -724,7 +749,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sb8c4c9` | detail, form | Further Program References | Weitere Programmverweise |
 | `S636c41` | detail | Grid Operator | Netzbetreiber |
 | `S90ccd6` | detail | History | Verlauf |
-| `S0dfe7b` | detail | Hub controller | Hub-Controller |
 | `Sfec8b7` | detail | Hub Controller group | Hub-Controller-Gruppe |
 | `S00ccae` | detail, form | Hub Controller only | nur Nabensteuerung |
 | `S3c883f` | detail | I have reviewed these dependants | Ich habe diese abhängigen Codes geprüft |
@@ -739,7 +763,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S693272` | detail, withdrawn_codes | Legacy Reference Number | Alt-Referenznummer |
 | `S43d5c5` | detail, form | Loadless Spinning Permitted | Lastfreies Drehen erlaubt |
 | `S193786` | detail | Logical Node | Logischer Knoten |
-| `Sc3f827` | detail | Main controller | Main-Controller |
 | `S578b78` | detail | Main Controller group | Hauptsteuerungs-Gruppe |
 | `Sa7512d` | detail, form | Main Controller only | nur Hauptsteuerung |
 | `Seb9a6d` | detail | Manage translations | Übersetzungen verwalten |
@@ -759,6 +782,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S4bddd5` | detail | Nobody can review it until it is submitted. | Niemand kann ihn prüfen, bevor er eingereicht ist. |
 | `S2d8f60` | detail | node value | Knotenwert |
 | `S71f8e7` | detail, form | none | keine |
+| `S7d24f7` | detail | not in the catalogue | nicht im Katalog |
 | `S4467d4` | detail | Not yet published | Noch nicht veröffentlicht |
 | `S23402a` | detail | Not yet submitted. | Noch nicht eingereicht. |
 | `Scd7430` | detail, form | Number of Times Repeated | Anzahl der Wiederholungen |
@@ -792,6 +816,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sa4ab7b` | detail | Program References | Programmverweise |
 | `S70cbd1` | detail | Proposed | Vorgeschlagen |
 | `S483bf2` | detail, list | Published | Veröffentlicht |
+| `S2b85e8` | detail | Read from the set condition and the repeat code of the imported program. A text reading, not an interpretation of the controller logic. | Gelesen aus der Setzbedingung und dem Wiederholcode des importierten Programms. Eine Textlesung, keine Deutung der Steuerungslogik. |
 | `S6a9c56` | detail, form | Read level | Lesestufe |
 | `Sf5ca9d` | detail | Recorded exports | Aufgezeichnete Exporte |
 | `Sa3f757` | detail | Reinstate to Released | Wieder auf Veröffentlicht setzen |
@@ -815,6 +840,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S4aed03` | detail | Request | Anfragen |
 | `Sf3421a` | detail | Request a Sign-Off | Freigabe anfordern |
 | `Sc26bf6` | detail, mine | Requested | Angefragt |
+| `S2706ed` | detail | Required by | Benötigt von |
 | `S619e87` | detail, form | Reset Delay | Rücksetzverzögerung |
 | `S026ab2` | detail | resolved | erledigt |
 | `S68c61f` | detail | Rev # | Rev.-Nr. |
@@ -852,6 +878,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S98a377` | detail | Still a Draft. | Noch ein Entwurf. |
 | `S123f6c` | detail | Submit for Review | Zur Prüfung einreichen |
 | `S3dca68` | detail | Superseded by Status Code id (optional) | Abgelöst durch Statuscode-ID (optional) |
+| `Sb17da5` | detail | Suppresses | Unterdrückt |
 | `S08e643` | detail, list | Target software version | Ziel-Software-Version |
 | `S44203c` | detail, form, status code fields | Task Call Frequency | Task-Aufruffrequenz |
 | `S8fc804` | detail | The author has to submit it for review before the Reviewer or Administrator can see it. | Der Autor muss ihn zur Prüfung einreichen, bevor Prüfer oder Administrator ihn sehen können. |
@@ -1635,7 +1662,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 
 ### 9.3 FR Français 🇫🇷 — French
 
-1189 of 1190 strings translated; direction left to right.
+1216 of 1217 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -1734,13 +1761,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Scaf0f4` | catalogue_health | Capacity per subgroup | Capacité par sous-groupe |
 | `S25d185` | catalogue_health | Catalogue health | Santé du catalogue |
 | `Sa28e96` | catalogue_health, menu | Catalogue Health | Santé du catalogue |
-| `S199993` | catalogue_health, fleet_feedback | Codes | Codes |
+| `S199993` | catalogue_health, connections, fleet_feedback | Codes | Codes |
 | `S5548ae` | catalogue_health | days | jours |
 | `S34730e` | catalogue_health | Deprecations | Obsolescences |
 | `S19582d` | catalogue_health | Effective dates | Dates d'entrée en vigueur |
 | `Seb01bf` | catalogue_health | Examples | Exemples |
 | `S4105cf` | catalogue_health | exhausted | épuisé |
-| `S57e8be` | catalogue_health | Finding | Constat |
+| `S57e8be` | catalogue_health, connections | Finding | Constat |
 | `S1150a1` | catalogue_health | Gaps | Trous |
 | `S171a06` | catalogue_health, export, withdrawn_codes | Group | Groupe |
 | `Sb4aadc` | catalogue_health, legacy_mapping | Hub Controller | Contrôleur de moyeu |
@@ -1775,6 +1802,31 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sc9c9de` | check | Terminology check | Contrôle de la terminologie |
 | `S6bd377` | check | to look at | à examiner |
 | `Sac26a7` | check, language | Translation | Traduction |
+| `S876180` | connections | A code is not raised while its cause is active. The top of each tree is a cause that nothing suppresses. | Un code n'est pas déclenché tant que sa cause est active. Le sommet de chaque arbre est une cause que rien ne supprime. |
+| `S3f50cd` | connections | A code that is raised again and again is replaced by its repeat code. Repeat codes outside the catalogue are marked external. | Un code qui se déclenche sans cesse est remplacé par son code de répétition. Les codes de répétition hors du catalogue sont marqués externes. |
+| `Sd87c44` | connections, detail, export | all | tous |
+| `S3e00c3` | connections | Causes and the codes they suppress | Causes et codes qu'elles suppriment |
+| `Sadac69` | connections, detail, export_profiles | Code | Code |
+| `Se54fe8` | connections | Codes with a connection | Codes avec une liaison |
+| `S8f3509` | connections, detail, menu | Connections | Liaisons |
+| `Se90ccc` | connections, detail | Escalated from | Escaladé depuis |
+| `S61bd26` | connections, detail | Escalates to | Escalade vers |
+| `S78586c` | connections | Escalates to %(code)s, which is deprecated or archived. | Escalade vers %(code)s, qui est obsolète ou archivé. |
+| `S59d8f3` | connections | external | externe |
+| `Sb7c028` | connections | How the status codes are connected, read from the set conditions and the repeat codes of the imported programs. A text reading, not an interpretation of the controller logic. | Comment les codes de statut sont reliés, lu dans les conditions d'activation et les codes de répétition des programmes importés. Une lecture du texte, pas une interprétation de la logique du contrôleur. |
+| `S0dfe7b` | connections, detail | Hub controller | Contrôleur de moyeu |
+| `S1df823` | connections | loop | boucle |
+| `Sc3f827` | connections, detail | Main controller | Contrôleur principal |
+| `S2f385e` | connections | No connections are known yet. They come from the programs imported from .st files. | Aucune liaison connue pour l'instant. Elles viennent des programmes importés depuis des fichiers .st. |
+| `S136e29` | connections | Only set while %(number)s is active, which is not in the catalogue. | Activé seulement tant que %(number)s est actif ; ce code n'est pas dans le catalogue. |
+| `S355d4b` | connections, detail | Only set while active | Activé seulement tant qu'actif |
+| `Sfa38ca` | connections | Part of a loop of suppressions: each code is suppressed by another one of the loop. | Fait partie d'une boucle de suppressions : chaque code de la boucle est supprimé par un autre de la boucle. |
+| `Se382c2` | connections | Repeat code | Code de répétition |
+| `Sc199d7` | connections, detail | Suppressed by | Supprimé par |
+| `S0e08e5` | connections | Suppressed by %(code)s, which is deprecated or archived. | Supprimé par %(code)s, qui est obsolète ou archivé. |
+| `S1bc026` | connections | Suppressed by %(number)s, which is not in the catalogue. | Supprimé par %(number)s, qui n'est pas dans le catalogue. |
+| `S844394` | connections | What looks wrong | Ce qui semble anormal |
+| `S52fc2b` | connections | Where repeated codes escalate to | Vers où les codes répétés escaladent |
 | `S66dc40` | dashboard | Awaiting Administrator Sign-Off | En attente de la validation de l'administrateur |
 | `S33a0d3` | dashboard | Awaiting Chief Engineer Approval | En attente de l'approbation de l'ingénieur en chef |
 | `S04cc8e` | dashboard | Awaiting Cross-Domain Sign-Off | En attente de validation inter-domaines |
@@ -1814,7 +1866,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S212856` | detail | advanced, controller firmware programs | avancé, programmes du micrologiciel du contrôleur |
 | `Sfbde82` | detail | Affected component | Composant concerné |
 | `S25f8c5` | detail, export, form | Alarm | Alarme |
-| `Sd87c44` | detail, export, hub_consolidation | all | tous |
 | `S484388` | detail, export_center | all columns | toutes les colonnes |
 | `S2e73c3` | detail | All languages and all access levels are included. Use the export above for a single language or access level. | Toutes les langues et tous les niveaux d'accès sont inclus. Pour une seule langue ou un seul niveau d'accès, utilisez l'export ci-dessus. |
 | `S432284` | detail | All required sign-offs are in, but this is still a Draft — the Reviewer and Administrator only see it after you choose Submit for Review below. | Toutes les validations requises sont là, mais il s'agit toujours d'un brouillon — le relecteur et l'administrateur ne le voient qu'après que vous avez choisi Soumettre pour relecture ci-dessous. |
@@ -1837,6 +1888,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S928e2e` | detail | Brake Program | Programme de freinage |
 | `Sab2e8a` | detail | Build package | Créer le paquet |
 | `Scfadbd` | detail | By | Par |
+| `Se7bab1` | detail | Chain of causes | Chaîne de causes |
 | `S9c8393` | detail, mine | Change Request | Demande de modification |
 | `S4572f4` | detail | Change request | Demande de modification |
 | `S3295be` | detail | Change requests in this set | Demandes de modification de ce lot |
@@ -1848,7 +1900,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S03695d` | detail | Chief Engineer decision | Décision de l'ingénieur en chef |
 | `Sf0a89f` | detail | Close change set | Clore le lot de modifications |
 | `S7c0c39` | detail | Close this change set? | Clore ce lot de modifications ? |
-| `Sadac69` | detail, export_profiles, fleet_feedback | Code | Code |
 | `S153d7a` | detail | Comment | Commentaire |
 | `S611578` | detail | Comment (required for rejection) | Commentaire (obligatoire pour un rejet) |
 | `Sc38432` | detail | Comment on this field | Commenter ce champ |
@@ -1858,6 +1909,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S0ff7e5` | detail, export | Complete baseline | État complet |
 | `S1798b3` | detail | Completed | Terminé |
 | `S7671b5` | detail | Confirm or override Audience Access | Confirmer ou remplacer l'accès par public |
+| `S6512ee` | detail | Connection | Liaison |
 | `S4f9be0` | detail | Content | Contenu |
 | `Sa36a5f` | detail, legacy_mapping, st_new | Controller | Contrôleur |
 | `Scd293f` | detail | Converter Reactive Power Program | Programme de puissance réactive du convertisseur |
@@ -1920,7 +1972,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sb8c4c9` | detail, form | Further Program References | Autres références de programme |
 | `S636c41` | detail | Grid Operator | Gestionnaire de réseau |
 | `S90ccd6` | detail | History | Historique |
-| `S0dfe7b` | detail | Hub controller | Contrôleur de moyeu |
 | `Sfec8b7` | detail | Hub Controller group | Groupe du contrôleur de moyeu |
 | `S00ccae` | detail, form | Hub Controller only | contrôleur de moyeu uniquement |
 | `S3c883f` | detail | I have reviewed these dependants | J'ai relu ces dépendances |
@@ -1935,7 +1986,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S693272` | detail, withdrawn_codes | Legacy Reference Number | Ancien numéro de référence |
 | `S43d5c5` | detail, form | Loadless Spinning Permitted | Rotation à vide autorisée |
 | `S193786` | detail | Logical Node | Nœud logique |
-| `Sc3f827` | detail | Main controller | Contrôleur principal |
 | `S578b78` | detail | Main Controller group | Groupe du contrôleur principal |
 | `Sa7512d` | detail, form | Main Controller only | contrôleur principal uniquement |
 | `Seb9a6d` | detail | Manage translations | Gérer les traductions |
@@ -1955,6 +2005,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S4bddd5` | detail | Nobody can review it until it is submitted. | Personne ne peut le relire avant qu'il soit soumis. |
 | `S2d8f60` | detail | node value | valeur du nœud |
 | `S71f8e7` | detail, form | none | aucun |
+| `S7d24f7` | detail | not in the catalogue | pas dans le catalogue |
 | `S4467d4` | detail | Not yet published | Pas encore publiée |
 | `S23402a` | detail | Not yet submitted. | Pas encore soumis. |
 | `Scd7430` | detail, form | Number of Times Repeated | Nombre de répétitions |
@@ -1988,6 +2039,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sa4ab7b` | detail | Program References | Références de programme |
 | `S70cbd1` | detail | Proposed | Proposé |
 | `S483bf2` | detail, list | Published | Publié |
+| `S2b85e8` | detail | Read from the set condition and the repeat code of the imported program. A text reading, not an interpretation of the controller logic. | Lu dans la condition d'activation et le code de répétition du programme importé. Une lecture du texte, pas une interprétation de la logique du contrôleur. |
 | `S6a9c56` | detail, form | Read level | Niveau de lecture |
 | `Sf5ca9d` | detail | Recorded exports | Exports enregistrés |
 | `Sa3f757` | detail | Reinstate to Released | Rétablir à Publié |
@@ -2011,6 +2063,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S4aed03` | detail | Request | Demander |
 | `Sf3421a` | detail | Request a Sign-Off | Demander une validation |
 | `Sc26bf6` | detail, mine | Requested | Demandé |
+| `S2706ed` | detail | Required by | Requis par |
 | `S619e87` | detail, form | Reset Delay | Temporisation de réarmement |
 | `S026ab2` | detail | resolved | résolu |
 | `S68c61f` | detail | Rev # | Rév. n° |
@@ -2048,6 +2101,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S98a377` | detail | Still a Draft. | Toujours un brouillon. |
 | `S123f6c` | detail | Submit for Review | Soumettre pour relecture |
 | `S3dca68` | detail | Superseded by Status Code id (optional) | Remplacé par l'id du code de statut (facultatif) |
+| `Sb17da5` | detail | Suppresses | Supprime |
 | `S08e643` | detail, list | Target software version | Version logicielle cible |
 | `S44203c` | detail, form, status code fields | Task Call Frequency | Fréquence d'appel de la tâche |
 | `S8fc804` | detail | The author has to submit it for review before the Reviewer or Administrator can see it. | L'auteur doit le soumettre pour relecture avant que le relecteur ou l'administrateur puisse le voir. |
@@ -2831,7 +2885,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 
 ### 9.4 IN हिन्दी 🇮🇳 — Hindi
 
-1189 of 1190 strings translated; direction left to right.
+1216 of 1217 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -2930,13 +2984,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Scaf0f4` | catalogue_health | Capacity per subgroup | प्रति उपसमूह क्षमता |
 | `S25d185` | catalogue_health | Catalogue health | कैटलॉग स्वास्थ्य |
 | `Sa28e96` | catalogue_health, menu | Catalogue Health | कैटलॉग स्वास्थ्य |
-| `S199993` | catalogue_health, fleet_feedback | Codes | कोड |
+| `S199993` | catalogue_health, connections, fleet_feedback | Codes | कोड |
 | `S5548ae` | catalogue_health | days | दिन |
 | `S34730e` | catalogue_health | Deprecations | अप्रचलन |
 | `S19582d` | catalogue_health | Effective dates | प्रभावी तिथियाँ |
 | `Seb01bf` | catalogue_health | Examples | उदाहरण |
 | `S4105cf` | catalogue_health | exhausted | समाप्त |
-| `S57e8be` | catalogue_health | Finding | निष्कर्ष |
+| `S57e8be` | catalogue_health, connections | Finding | निष्कर्ष |
 | `S1150a1` | catalogue_health | Gaps | रिक्त स्थान |
 | `S171a06` | catalogue_health, export, withdrawn_codes | Group | समूह |
 | `Sb4aadc` | catalogue_health, legacy_mapping | Hub Controller | हब नियंत्रक |
@@ -2971,6 +3025,31 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sc9c9de` | check | Terminology check | शब्दावली जाँच |
 | `S6bd377` | check | to look at | देखने योग्य |
 | `Sac26a7` | check, language | Translation | अनुवाद |
+| `S876180` | connections | A code is not raised while its cause is active. The top of each tree is a cause that nothing suppresses. | जब तक किसी कोड का कारण सक्रिय है, वह कोड नहीं उठाया जाता। हर वृक्ष के शीर्ष पर ऐसा कारण है जिसे कोई दबाता नहीं। |
+| `S3f50cd` | connections | A code that is raised again and again is replaced by its repeat code. Repeat codes outside the catalogue are marked external. | बार-बार उठने वाले कोड की जगह उसका पुनरावृत्ति कोड आ जाता है। कैटलॉग से बाहर के पुनरावृत्ति कोड बाहरी चिह्नित होते हैं। |
+| `Sd87c44` | connections, detail, export | all | सभी |
+| `S3e00c3` | connections | Causes and the codes they suppress | कारण और वे कोड जिन्हें वे दबाते हैं |
+| `Sadac69` | connections, detail, export_profiles | Code | कोड |
+| `Se54fe8` | connections | Codes with a connection | संबंध वाले कोड |
+| `S8f3509` | connections, detail, menu | Connections | संबंध |
+| `Se90ccc` | connections, detail | Escalated from | इससे उन्नत |
+| `S61bd26` | connections, detail | Escalates to | इसमें उन्नत होता है |
+| `S78586c` | connections | Escalates to %(code)s, which is deprecated or archived. | %(code)s में उन्नत होता है, जो अप्रचलित या संग्रहीत है। |
+| `S59d8f3` | connections | external | बाहरी |
+| `Sb7c028` | connections | How the status codes are connected, read from the set conditions and the repeat codes of the imported programs. A text reading, not an interpretation of the controller logic. | स्थिति कोड कैसे जुड़े हैं, आयात किए गए प्रोग्रामों की सेट शर्तों और पुनरावृत्ति कोड से पढ़कर। पाठ का पठन, नियंत्रक तर्क की व्याख्या नहीं। |
+| `S0dfe7b` | connections, detail | Hub controller | हब कंट्रोलर |
+| `S1df823` | connections | loop | चक्र |
+| `Sc3f827` | connections, detail | Main controller | मुख्य कंट्रोलर |
+| `S2f385e` | connections | No connections are known yet. They come from the programs imported from .st files. | अभी कोई संबंध ज्ञात नहीं। वे .st फ़ाइलों से आयात किए गए प्रोग्रामों से आते हैं। |
+| `S136e29` | connections | Only set while %(number)s is active, which is not in the catalogue. | केवल तब सेट होता है जब %(number)s सक्रिय हो; यह कोड कैटलॉग में नहीं है। |
+| `S355d4b` | connections, detail | Only set while active | केवल सक्रिय रहने पर सेट |
+| `Sfa38ca` | connections | Part of a loop of suppressions: each code is suppressed by another one of the loop. | दमन के चक्र का हिस्सा: चक्र का हर कोड चक्र के किसी दूसरे कोड द्वारा दबाया जाता है। |
+| `Se382c2` | connections | Repeat code | पुनरावृत्ति कोड |
+| `Sc199d7` | connections, detail | Suppressed by | इनके द्वारा दबाया गया |
+| `S0e08e5` | connections | Suppressed by %(code)s, which is deprecated or archived. | %(code)s द्वारा दबाया गया, जो अप्रचलित या संग्रहीत है। |
+| `S1bc026` | connections | Suppressed by %(number)s, which is not in the catalogue. | %(number)s द्वारा दबाया गया, जो कैटलॉग में नहीं है। |
+| `S844394` | connections | What looks wrong | क्या गड़बड़ दिखता है |
+| `S52fc2b` | connections | Where repeated codes escalate to | दोहराए गए कोड कहाँ बढ़ते हैं |
 | `S66dc40` | dashboard | Awaiting Administrator Sign-Off | प्रशासक की स्वीकृति की प्रतीक्षा में |
 | `S33a0d3` | dashboard | Awaiting Chief Engineer Approval | मुख्य अभियंता के अनुमोदन की प्रतीक्षा में |
 | `S04cc8e` | dashboard | Awaiting Cross-Domain Sign-Off | क्रॉस-डोमेन स्वीकृति की प्रतीक्षा में |
@@ -3010,7 +3089,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S212856` | detail | advanced, controller firmware programs | उन्नत, नियंत्रक फ़र्मवेयर प्रोग्राम |
 | `Sfbde82` | detail | Affected component | प्रभावित घटक |
 | `S25f8c5` | detail, export, form | Alarm | अलार्म |
-| `Sd87c44` | detail, export, hub_consolidation | all | सभी |
 | `S484388` | detail, export_center | all columns | सभी कॉलम |
 | `S2e73c3` | detail | All languages and all access levels are included. Use the export above for a single language or access level. | सभी भाषाएँ और सभी पहुँच स्तर शामिल हैं। किसी एक भाषा या पहुँच स्तर के लिए ऊपर का एक्सपोर्ट उपयोग करें। |
 | `S432284` | detail | All required sign-offs are in, but this is still a Draft — the Reviewer and Administrator only see it after you choose Submit for Review below. | सभी आवश्यक साइन-ऑफ मिल चुके हैं, पर यह अभी भी मसौदा है — समीक्षक और प्रशासक इसे तभी देखते हैं जब आप नीचे समीक्षा के लिए जमा करें चुनते हैं। |
@@ -3033,6 +3111,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S928e2e` | detail | Brake Program | ब्रेक प्रोग्राम |
 | `Sab2e8a` | detail | Build package | पैकेज बनाएँ |
 | `Scfadbd` | detail | By | द्वारा |
+| `Se7bab1` | detail | Chain of causes | कारणों की शृंखला |
 | `S9c8393` | detail, mine | Change Request | परिवर्तन अनुरोध |
 | `S4572f4` | detail | Change request | परिवर्तन अनुरोध |
 | `S3295be` | detail | Change requests in this set | इस समुच्चय के परिवर्तन अनुरोध |
@@ -3044,7 +3123,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S03695d` | detail | Chief Engineer decision | मुख्य अभियंता का निर्णय |
 | `Sf0a89f` | detail | Close change set | परिवर्तन समुच्चय बंद करें |
 | `S7c0c39` | detail | Close this change set? | इस परिवर्तन समुच्चय को बंद करें? |
-| `Sadac69` | detail, export_profiles, fleet_feedback | Code | कोड |
 | `S153d7a` | detail | Comment | टिप्पणी |
 | `S611578` | detail | Comment (required for rejection) | टिप्पणी (अस्वीकृति के लिए आवश्यक) |
 | `Sc38432` | detail | Comment on this field | इस फ़ील्ड पर टिप्पणी करें |
@@ -3054,6 +3132,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S0ff7e5` | detail, export | Complete baseline | पूर्ण आधार स्थिति |
 | `S1798b3` | detail | Completed | पूर्ण |
 | `S7671b5` | detail | Confirm or override Audience Access | लक्षित समूह पहुँच की पुष्टि करें या अधिलेखित करें |
+| `S6512ee` | detail | Connection | संबंध |
 | `S4f9be0` | detail | Content | सामग्री |
 | `Sa36a5f` | detail, legacy_mapping, st_new | Controller | नियंत्रक |
 | `Scd293f` | detail | Converter Reactive Power Program | कन्वर्टर रिएक्टिव पावर प्रोग्राम |
@@ -3116,7 +3195,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sb8c4c9` | detail, form | Further Program References | अन्य प्रोग्राम संदर्भ |
 | `S636c41` | detail | Grid Operator | ग्रिड ऑपरेटर |
 | `S90ccd6` | detail | History | इतिहास |
-| `S0dfe7b` | detail | Hub controller | हब कंट्रोलर |
 | `Sfec8b7` | detail | Hub Controller group | हब नियंत्रक समूह |
 | `S00ccae` | detail, form | Hub Controller only | केवल हब नियंत्रक |
 | `S3c883f` | detail | I have reviewed these dependants | मैंने इन निर्भर कोड की समीक्षा कर ली है |
@@ -3131,7 +3209,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S693272` | detail, withdrawn_codes | Legacy Reference Number | पुराना संदर्भ क्रमांक |
 | `S43d5c5` | detail, form | Loadless Spinning Permitted | बिना लोड के घूमना अनुमत |
 | `S193786` | detail | Logical Node | लॉजिकल नोड |
-| `Sc3f827` | detail | Main controller | मुख्य कंट्रोलर |
 | `S578b78` | detail | Main Controller group | मुख्य नियंत्रक समूह |
 | `Sa7512d` | detail, form | Main Controller only | केवल मुख्य नियंत्रक |
 | `Seb9a6d` | detail | Manage translations | अनुवाद प्रबंधित करें |
@@ -3151,6 +3228,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S4bddd5` | detail | Nobody can review it until it is submitted. | जमा किए जाने तक कोई इसकी समीक्षा नहीं कर सकता। |
 | `S2d8f60` | detail | node value | नोड मान |
 | `S71f8e7` | detail, form | none | कोई नहीं |
+| `S7d24f7` | detail | not in the catalogue | कैटलॉग में नहीं |
 | `S4467d4` | detail | Not yet published | अभी प्रकाशित नहीं |
 | `S23402a` | detail | Not yet submitted. | अभी जमा नहीं किया गया। |
 | `Scd7430` | detail, form | Number of Times Repeated | दोहराव की संख्या |
@@ -3184,6 +3262,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sa4ab7b` | detail | Program References | प्रोग्राम संदर्भ |
 | `S70cbd1` | detail | Proposed | प्रस्तावित |
 | `S483bf2` | detail, list | Published | प्रकाशित |
+| `S2b85e8` | detail | Read from the set condition and the repeat code of the imported program. A text reading, not an interpretation of the controller logic. | आयात किए गए प्रोग्राम की सेट शर्त और पुनरावृत्ति कोड से पढ़ा गया। पाठ का पठन, नियंत्रक तर्क की व्याख्या नहीं। |
 | `S6a9c56` | detail, form | Read level | पढ़ने का स्तर |
 | `Sf5ca9d` | detail | Recorded exports | दर्ज निर्यात |
 | `Sa3f757` | detail | Reinstate to Released | जारी में पुनर्स्थापित करें |
@@ -3207,6 +3286,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S4aed03` | detail | Request | अनुरोध करें |
 | `Sf3421a` | detail | Request a Sign-Off | साइन-ऑफ का अनुरोध करें |
 | `Sc26bf6` | detail, mine | Requested | अनुरोधित |
+| `S2706ed` | detail | Required by | इनके लिए आवश्यक |
 | `S619e87` | detail, form | Reset Delay | रीसेट विलंब |
 | `S026ab2` | detail | resolved | हल किया गया |
 | `S68c61f` | detail | Rev # | संशोधन क्र. |
@@ -3244,6 +3324,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S98a377` | detail | Still a Draft. | अभी भी मसौदा है। |
 | `S123f6c` | detail | Submit for Review | समीक्षा के लिए जमा करें |
 | `S3dca68` | detail | Superseded by Status Code id (optional) | इसके स्थान पर स्थिति कोड आईडी (वैकल्पिक) |
+| `Sb17da5` | detail | Suppresses | दबाता है |
 | `S08e643` | detail, list | Target software version | लक्षित सॉफ़्टवेयर संस्करण |
 | `S44203c` | detail, form, status code fields | Task Call Frequency | टास्क कॉल आवृत्ति |
 | `S8fc804` | detail | The author has to submit it for review before the Reviewer or Administrator can see it. | समीक्षक या प्रशासक के इसे देख पाने से पहले लेखक को इसे समीक्षा के लिए जमा करना होगा। |
@@ -4027,7 +4108,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 
 ### 9.5 SA العربية 🇸🇦 — Arabic
 
-1189 of 1190 strings translated; direction right to left.
+1216 of 1217 strings translated; direction right to left.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -4126,13 +4207,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Scaf0f4` | catalogue_health | Capacity per subgroup | السعة لكل مجموعة فرعية |
 | `S25d185` | catalogue_health | Catalogue health | سلامة الكتالوج |
 | `Sa28e96` | catalogue_health, menu | Catalogue Health | سلامة الكتالوج |
-| `S199993` | catalogue_health, fleet_feedback | Codes | الرموز |
+| `S199993` | catalogue_health, connections, fleet_feedback | Codes | الرموز |
 | `S5548ae` | catalogue_health | days | أيام |
 | `S34730e` | catalogue_health | Deprecations | حالات التقادم |
 | `S19582d` | catalogue_health | Effective dates | التواريخ الفعلية |
 | `Seb01bf` | catalogue_health | Examples | أمثلة |
 | `S4105cf` | catalogue_health | exhausted | نفد |
-| `S57e8be` | catalogue_health | Finding | النتيجة |
+| `S57e8be` | catalogue_health, connections | Finding | النتيجة |
 | `S1150a1` | catalogue_health | Gaps | فجوات |
 | `S171a06` | catalogue_health, export, withdrawn_codes | Group | المجموعة |
 | `Sb4aadc` | catalogue_health, legacy_mapping | Hub Controller | وحدة تحكم المحور |
@@ -4167,6 +4248,31 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sc9c9de` | check | Terminology check | فحص المصطلحات |
 | `S6bd377` | check | to look at | للنظر فيه |
 | `Sac26a7` | check, language | Translation | الترجمة |
+| `S876180` | connections | A code is not raised while its cause is active. The top of each tree is a cause that nothing suppresses. | لا يُطلَق الرمز ما دام سببه نشطًا. وفي قمة كل شجرة سبب لا يكبته شيء. |
+| `S3f50cd` | connections | A code that is raised again and again is replaced by its repeat code. Repeat codes outside the catalogue are marked external. | الرمز الذي يتكرر إطلاقه يُستبدل برمز التكرار الخاص به. تُوسَم رموز التكرار خارج الفهرس بأنها خارجية. |
+| `Sd87c44` | connections, detail, export | all | الكل |
+| `S3e00c3` | connections | Causes and the codes they suppress | الأسباب والرموز التي تكبتها |
+| `Sadac69` | connections, detail, export_profiles | Code | الرمز |
+| `Se54fe8` | connections | Codes with a connection | الرموز ذات الصلة |
+| `S8f3509` | connections, detail, menu | Connections | الصلات |
+| `Se90ccc` | connections, detail | Escalated from | يتصاعد من |
+| `S61bd26` | connections, detail | Escalates to | يتصاعد إلى |
+| `S78586c` | connections | Escalates to %(code)s, which is deprecated or archived. | يتصاعد إلى %(code)s وهو متقادم أو مؤرشف. |
+| `S59d8f3` | connections | external | خارجي |
+| `Sb7c028` | connections | How the status codes are connected, read from the set conditions and the repeat codes of the imported programs. A text reading, not an interpretation of the controller logic. | كيف ترتبط رموز الحالة، مقروءة من شروط الضبط ورموز التكرار في البرامج المستوردة. قراءة للنص وليست تفسيرًا لمنطق وحدة التحكم. |
+| `S0dfe7b` | connections, detail | Hub controller | وحدة تحكم المحور |
+| `S1df823` | connections | loop | حلقة |
+| `Sc3f827` | connections, detail | Main controller | وحدة التحكم الرئيسية |
+| `S2f385e` | connections | No connections are known yet. They come from the programs imported from .st files. | لا توجد صلات معروفة بعد. وهي تأتي من البرامج المستوردة من ملفات ‎.st. |
+| `S136e29` | connections | Only set while %(number)s is active, which is not in the catalogue. | يُضبط فقط ما دام %(number)s نشطًا، وهذا الرمز ليس في الفهرس. |
+| `S355d4b` | connections, detail | Only set while active | يُضبط فقط ما دام نشطًا |
+| `Sfa38ca` | connections | Part of a loop of suppressions: each code is suppressed by another one of the loop. | جزء من حلقة كبت: كل رمز في الحلقة يكبته رمز آخر منها. |
+| `Se382c2` | connections | Repeat code | رمز التكرار |
+| `Sc199d7` | connections, detail | Suppressed by | مكبوت بواسطة |
+| `S0e08e5` | connections | Suppressed by %(code)s, which is deprecated or archived. | مكبوت بواسطة %(code)s وهو متقادم أو مؤرشف. |
+| `S1bc026` | connections | Suppressed by %(number)s, which is not in the catalogue. | مكبوت بواسطة %(number)s وهو ليس في الفهرس. |
+| `S844394` | connections | What looks wrong | ما يبدو خاطئًا |
+| `S52fc2b` | connections | Where repeated codes escalate to | إلى أين تتصاعد الرموز المتكررة |
 | `S66dc40` | dashboard | Awaiting Administrator Sign-Off | بانتظار موافقة المسؤول |
 | `S33a0d3` | dashboard | Awaiting Chief Engineer Approval | بانتظار اعتماد كبير المهندسين |
 | `S04cc8e` | dashboard | Awaiting Cross-Domain Sign-Off | بانتظار الموافقة المشتركة بين المجالات |
@@ -4206,7 +4312,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S212856` | detail | advanced, controller firmware programs | متقدم، برامج البرنامج الثابت لوحدة التحكم |
 | `Sfbde82` | detail | Affected component | المكوّن المتأثر |
 | `S25f8c5` | detail, export, form | Alarm | إنذار |
-| `Sd87c44` | detail, export, hub_consolidation | all | الكل |
 | `S484388` | detail, export_center | all columns | كل الأعمدة |
 | `S2e73c3` | detail | All languages and all access levels are included. Use the export above for a single language or access level. | جميع اللغات وجميع مستويات الوصول مشمولة. للغة واحدة أو مستوى وصول واحد استخدم التصدير أعلاه. |
 | `S432284` | detail | All required sign-offs are in, but this is still a Draft — the Reviewer and Administrator only see it after you choose Submit for Review below. | جميع الاعتمادات المطلوبة موجودة، لكنه ما زال مسودة — لا يراه المراجع والمسؤول إلا بعد أن تختار «تقديم للمراجعة» أدناه. |
@@ -4229,6 +4334,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S928e2e` | detail | Brake Program | برنامج الفرملة |
 | `Sab2e8a` | detail | Build package | إنشاء الحزمة |
 | `Scfadbd` | detail | By | بواسطة |
+| `Se7bab1` | detail | Chain of causes | سلسلة الأسباب |
 | `S9c8393` | detail, mine | Change Request | طلب تغيير |
 | `S4572f4` | detail | Change request | طلب التغيير |
 | `S3295be` | detail | Change requests in this set | طلبات التغيير في هذه المجموعة |
@@ -4240,7 +4346,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S03695d` | detail | Chief Engineer decision | قرار كبير المهندسين |
 | `Sf0a89f` | detail | Close change set | إغلاق مجموعة التغييرات |
 | `S7c0c39` | detail | Close this change set? | إغلاق مجموعة التغييرات هذه؟ |
-| `Sadac69` | detail, export_profiles, fleet_feedback | Code | الرمز |
 | `S153d7a` | detail | Comment | تعليق |
 | `S611578` | detail | Comment (required for rejection) | تعليق (مطلوب للرفض) |
 | `Sc38432` | detail | Comment on this field | علّق على هذا الحقل |
@@ -4250,6 +4355,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S0ff7e5` | detail, export | Complete baseline | الحالة الكاملة |
 | `S1798b3` | detail | Completed | اكتمل |
 | `S7671b5` | detail | Confirm or override Audience Access | تأكيد أو تجاوز وصول الجمهور |
+| `S6512ee` | detail | Connection | الصلة |
 | `S4f9be0` | detail | Content | المحتوى |
 | `Sa36a5f` | detail, legacy_mapping, st_new | Controller | وحدة التحكم |
 | `Scd293f` | detail | Converter Reactive Power Program | برنامج القدرة غير الفعالة للمحوّل |
@@ -4312,7 +4418,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sb8c4c9` | detail, form | Further Program References | مراجع برامج إضافية |
 | `S636c41` | detail | Grid Operator | مشغّل الشبكة |
 | `S90ccd6` | detail | History | السجل |
-| `S0dfe7b` | detail | Hub controller | وحدة تحكم المحور |
 | `Sfec8b7` | detail | Hub Controller group | مجموعة وحدة تحكم المحور |
 | `S00ccae` | detail, form | Hub Controller only | وحدة تحكم المحور فقط |
 | `S3c883f` | detail | I have reviewed these dependants | راجعتُ هذه الرموز التابعة |
@@ -4327,7 +4432,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S693272` | detail, withdrawn_codes | Legacy Reference Number | الرقم المرجعي القديم |
 | `S43d5c5` | detail, form | Loadless Spinning Permitted | الدوران دون حمل مسموح |
 | `S193786` | detail | Logical Node | العقدة المنطقية |
-| `Sc3f827` | detail | Main controller | وحدة التحكم الرئيسية |
 | `S578b78` | detail | Main Controller group | مجموعة وحدة التحكم الرئيسية |
 | `Sa7512d` | detail, form | Main Controller only | وحدة التحكم الرئيسية فقط |
 | `Seb9a6d` | detail | Manage translations | إدارة الترجمات |
@@ -4347,6 +4451,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S4bddd5` | detail | Nobody can review it until it is submitted. | لا يستطيع أحد مراجعته قبل تقديمه. |
 | `S2d8f60` | detail | node value | قيمة العقدة |
 | `S71f8e7` | detail, form | none | لا شيء |
+| `S7d24f7` | detail | not in the catalogue | ليس في الفهرس |
 | `S4467d4` | detail | Not yet published | لم يُنشر بعد |
 | `S23402a` | detail | Not yet submitted. | لم يُقدَّم بعد. |
 | `Scd7430` | detail, form | Number of Times Repeated | عدد مرات التكرار |
@@ -4380,6 +4485,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sa4ab7b` | detail | Program References | مراجع البرامج |
 | `S70cbd1` | detail | Proposed | مقترح |
 | `S483bf2` | detail, list | Published | منشور |
+| `S2b85e8` | detail | Read from the set condition and the repeat code of the imported program. A text reading, not an interpretation of the controller logic. | مقروء من شرط الضبط ورمز التكرار في البرنامج المستورد. قراءة للنص وليست تفسيرًا لمنطق وحدة التحكم. |
 | `S6a9c56` | detail, form | Read level | مستوى القراءة |
 | `Sf5ca9d` | detail | Recorded exports | عمليات التصدير المسجلة |
 | `Sa3f757` | detail | Reinstate to Released | إعادة إلى منشور |
@@ -4403,6 +4509,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S4aed03` | detail | Request | طلب |
 | `Sf3421a` | detail | Request a Sign-Off | طلب اعتماد |
 | `Sc26bf6` | detail, mine | Requested | مطلوب |
+| `S2706ed` | detail | Required by | مطلوب من |
 | `S619e87` | detail, form | Reset Delay | تأخير إعادة الضبط |
 | `S026ab2` | detail | resolved | تم الحل |
 | `S68c61f` | detail | Rev # | رقم المراجعة |
@@ -4440,6 +4547,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S98a377` | detail | Still a Draft. | ما زال مسودة. |
 | `S123f6c` | detail | Submit for Review | تقديم للمراجعة |
 | `S3dca68` | detail | Superseded by Status Code id (optional) | استُبدل بمعرّف رمز الحالة (اختياري) |
+| `Sb17da5` | detail | Suppresses | يكبت |
 | `S08e643` | detail, list | Target software version | إصدار البرنامج المستهدف |
 | `S44203c` | detail, form, status code fields | Task Call Frequency | تردد استدعاء المهمة |
 | `S8fc804` | detail | The author has to submit it for review before the Reviewer or Administrator can see it. | على المؤلف تقديمه للمراجعة قبل أن يتمكن المراجع أو المسؤول من رؤيته. |
@@ -5223,7 +5331,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 
 ### 9.6 IN বাংলা 🇮🇳 — Bengali
 
-1189 of 1190 strings translated; direction left to right.
+1216 of 1217 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -5322,13 +5430,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Scaf0f4` | catalogue_health | Capacity per subgroup | উপগ্রুপ অনুযায়ী ধারণক্ষমতা |
 | `S25d185` | catalogue_health | Catalogue health | ক্যাটালগের স্বাস্থ্য |
 | `Sa28e96` | catalogue_health, menu | Catalogue Health | ক্যাটালগের স্বাস্থ্য |
-| `S199993` | catalogue_health, fleet_feedback | Codes | কোড |
+| `S199993` | catalogue_health, connections, fleet_feedback | Codes | কোড |
 | `S5548ae` | catalogue_health | days | দিন |
 | `S34730e` | catalogue_health | Deprecations | অপ্রচলন |
 | `S19582d` | catalogue_health | Effective dates | কার্যকরের তারিখ |
 | `Seb01bf` | catalogue_health | Examples | উদাহরণ |
 | `S4105cf` | catalogue_health | exhausted | নিঃশেষিত |
-| `S57e8be` | catalogue_health | Finding | পর্যবেক্ষণ |
+| `S57e8be` | catalogue_health, connections | Finding | পর্যবেক্ষণ |
 | `S1150a1` | catalogue_health | Gaps | ফাঁক |
 | `S171a06` | catalogue_health, export, withdrawn_codes | Group | গ্রুপ |
 | `Sb4aadc` | catalogue_health, legacy_mapping | Hub Controller | হাব নিয়ন্ত্রক |
@@ -5363,6 +5471,31 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sc9c9de` | check | Terminology check | পরিভাষা যাচাই |
 | `S6bd377` | check | to look at | দেখার মতো |
 | `Sac26a7` | check, language | Translation | অনুবাদ |
+| `S876180` | connections | A code is not raised while its cause is active. The top of each tree is a cause that nothing suppresses. | যতক্ষণ কোনো কোডের কারণ সক্রিয়, ততক্ষণ সেই কোড ওঠে না। প্রতিটি গাছের মাথায় এমন কারণ থাকে যাকে কেউ দমন করে না। |
+| `S3f50cd` | connections | A code that is raised again and again is replaced by its repeat code. Repeat codes outside the catalogue are marked external. | যে কোড বারবার ওঠে তার জায়গায় তার পুনরাবৃত্তি কোড আসে। ক্যাটালগের বাইরের পুনরাবৃত্তি কোডকে বাহ্যিক চিহ্নিত করা হয়। |
+| `Sd87c44` | connections, detail, export | all | সব |
+| `S3e00c3` | connections | Causes and the codes they suppress | কারণ এবং যে কোডগুলো তারা দমন করে |
+| `Sadac69` | connections, detail, export_profiles | Code | কোড |
+| `Se54fe8` | connections | Codes with a connection | সংযোগযুক্ত কোড |
+| `S8f3509` | connections, detail, menu | Connections | সংযোগসমূহ |
+| `Se90ccc` | connections, detail | Escalated from | যা থেকে উন্নীত |
+| `S61bd26` | connections, detail | Escalates to | উন্নীত হয় |
+| `S78586c` | connections | Escalates to %(code)s, which is deprecated or archived. | %(code)s-এ উন্নীত হয়, যেটি অপ্রচলিত বা সংরক্ষণাগারভুক্ত। |
+| `S59d8f3` | connections | external | বাহ্যিক |
+| `Sb7c028` | connections | How the status codes are connected, read from the set conditions and the repeat codes of the imported programs. A text reading, not an interpretation of the controller logic. | স্ট্যাটাস কোড কীভাবে সংযুক্ত, আমদানি করা প্রোগ্রামের সেট শর্ত ও পুনরাবৃত্তি কোড থেকে পড়া। লেখার পাঠ, নিয়ন্ত্রকের যুক্তির ব্যাখ্যা নয়। |
+| `S0dfe7b` | connections, detail | Hub controller | হাব কন্ট্রোলার |
+| `S1df823` | connections | loop | চক্র |
+| `Sc3f827` | connections, detail | Main controller | মেইন কন্ট্রোলার |
+| `S2f385e` | connections | No connections are known yet. They come from the programs imported from .st files. | এখনো কোনো সংযোগ জানা নেই। সেগুলো .st ফাইল থেকে আমদানি করা প্রোগ্রাম থেকে আসে। |
+| `S136e29` | connections | Only set while %(number)s is active, which is not in the catalogue. | শুধু তখনই সেট হয় যখন %(number)s সক্রিয়; এই কোড ক্যাটালগে নেই। |
+| `S355d4b` | connections, detail | Only set while active | শুধু সক্রিয় থাকলে সেট |
+| `Sfa38ca` | connections | Part of a loop of suppressions: each code is suppressed by another one of the loop. | দমনচক্রের অংশ: চক্রের প্রতিটি কোড চক্রের অন্য একটি কোড দ্বারা দমিত। |
+| `Se382c2` | connections | Repeat code | পুনরাবৃত্তি কোড |
+| `Sc199d7` | connections, detail | Suppressed by | যার দ্বারা দমিত |
+| `S0e08e5` | connections | Suppressed by %(code)s, which is deprecated or archived. | %(code)s দ্বারা দমিত, যেটি অপ্রচলিত বা সংরক্ষণাগারভুক্ত। |
+| `S1bc026` | connections | Suppressed by %(number)s, which is not in the catalogue. | %(number)s দ্বারা দমিত, যেটি ক্যাটালগে নেই। |
+| `S844394` | connections | What looks wrong | যা ঠিক মনে হচ্ছে না |
+| `S52fc2b` | connections | Where repeated codes escalate to | পুনরাবৃত্ত কোড কোথায় উন্নীত হয় |
 | `S66dc40` | dashboard | Awaiting Administrator Sign-Off | প্রশাসক সাইন-অফের অপেক্ষায় |
 | `S33a0d3` | dashboard | Awaiting Chief Engineer Approval | প্রধান প্রকৌশলীর অনুমোদনের অপেক্ষায় |
 | `S04cc8e` | dashboard | Awaiting Cross-Domain Sign-Off | আন্তঃডোমেইন সাইন-অফের অপেক্ষায় |
@@ -5402,7 +5535,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S212856` | detail | advanced, controller firmware programs | উন্নত, নিয়ন্ত্রক ফার্মওয়্যার প্রোগ্রাম |
 | `Sfbde82` | detail | Affected component | প্রভাবিত উপাদান |
 | `S25f8c5` | detail, export, form | Alarm | অ্যালার্ম |
-| `Sd87c44` | detail, export, hub_consolidation | all | সব |
 | `S484388` | detail, export_center | all columns | সব কলাম |
 | `S2e73c3` | detail | All languages and all access levels are included. Use the export above for a single language or access level. | সব ভাষা ও সব অ্যাক্সেস স্তর অন্তর্ভুক্ত। একটি ভাষা বা অ্যাক্সেস স্তরের জন্য উপরের এক্সপোর্ট ব্যবহার করুন। |
 | `S432284` | detail | All required sign-offs are in, but this is still a Draft — the Reviewer and Administrator only see it after you choose Submit for Review below. | সব প্রয়োজনীয় সাইন-অফ এসেছে, কিন্তু এটি এখনো খসড়া — আপনি নিচে পর্যালোচনার জন্য জমা দিন বেছে নেওয়ার পরই পর্যালোচক ও প্রশাসক এটি দেখতে পান। |
@@ -5425,6 +5557,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S928e2e` | detail | Brake Program | ব্রেক প্রোগ্রাম |
 | `Sab2e8a` | detail | Build package | প্যাকেজ তৈরি করুন |
 | `Scfadbd` | detail | By | দ্বারা |
+| `Se7bab1` | detail | Chain of causes | কারণের শৃঙ্খল |
 | `S9c8393` | detail, mine | Change Request | পরিবর্তন অনুরোধ |
 | `S4572f4` | detail | Change request | পরিবর্তন অনুরোধ |
 | `S3295be` | detail | Change requests in this set | এই সেটের পরিবর্তন অনুরোধ |
@@ -5436,7 +5569,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S03695d` | detail | Chief Engineer decision | প্রধান প্রকৌশলীর সিদ্ধান্ত |
 | `Sf0a89f` | detail | Close change set | পরিবর্তন সেট বন্ধ করুন |
 | `S7c0c39` | detail | Close this change set? | এই পরিবর্তন সেট বন্ধ করবেন? |
-| `Sadac69` | detail, export_profiles, fleet_feedback | Code | কোড |
 | `S153d7a` | detail | Comment | মন্তব্য |
 | `S611578` | detail | Comment (required for rejection) | মন্তব্য (প্রত্যাখ্যানের জন্য আবশ্যক) |
 | `Sc38432` | detail | Comment on this field | এই ফিল্ডে মন্তব্য করুন |
@@ -5446,6 +5578,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S0ff7e5` | detail, export | Complete baseline | সম্পূর্ণ ভিত্তি অবস্থা |
 | `S1798b3` | detail | Completed | সম্পন্ন হয়েছে |
 | `S7671b5` | detail | Confirm or override Audience Access | লক্ষ্য গোষ্ঠীর অ্যাক্সেস নিশ্চিত বা অগ্রাহ্য করুন |
+| `S6512ee` | detail | Connection | সংযোগ |
 | `S4f9be0` | detail | Content | বিষয়বস্তু |
 | `Sa36a5f` | detail, legacy_mapping, st_new | Controller | নিয়ন্ত্রক |
 | `Scd293f` | detail | Converter Reactive Power Program | কনভার্টার রিঅ্যাক্টিভ পাওয়ার প্রোগ্রাম |
@@ -5508,7 +5641,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sb8c4c9` | detail, form | Further Program References | আরও প্রোগ্রাম উল্লেখ |
 | `S636c41` | detail | Grid Operator | গ্রিড অপারেটর |
 | `S90ccd6` | detail | History | ইতিহাস |
-| `S0dfe7b` | detail | Hub controller | হাব কন্ট্রোলার |
 | `Sfec8b7` | detail | Hub Controller group | হাব নিয়ন্ত্রক গ্রুপ |
 | `S00ccae` | detail, form | Hub Controller only | শুধু হাব নিয়ন্ত্রক |
 | `S3c883f` | detail | I have reviewed these dependants | আমি এই নির্ভরশীলগুলো পর্যালোচনা করেছি |
@@ -5523,7 +5655,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S693272` | detail, withdrawn_codes | Legacy Reference Number | পুরোনো রেফারেন্স নম্বর |
 | `S43d5c5` | detail, form | Loadless Spinning Permitted | লোড ছাড়া ঘোরা অনুমোদিত |
 | `S193786` | detail | Logical Node | লজিক্যাল নোড |
-| `Sc3f827` | detail | Main controller | মেইন কন্ট্রোলার |
 | `S578b78` | detail | Main Controller group | প্রধান নিয়ন্ত্রক গ্রুপ |
 | `Sa7512d` | detail, form | Main Controller only | শুধু প্রধান নিয়ন্ত্রক |
 | `Seb9a6d` | detail | Manage translations | অনুবাদ পরিচালনা করুন |
@@ -5543,6 +5674,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S4bddd5` | detail | Nobody can review it until it is submitted. | জমা না দেওয়া পর্যন্ত কেউ এটি পর্যালোচনা করতে পারে না। |
 | `S2d8f60` | detail | node value | নোড মান |
 | `S71f8e7` | detail, form | none | কিছু নয় |
+| `S7d24f7` | detail | not in the catalogue | ক্যাটালগে নেই |
 | `S4467d4` | detail | Not yet published | এখনো প্রকাশিত হয়নি |
 | `S23402a` | detail | Not yet submitted. | এখনো জমা দেওয়া হয়নি। |
 | `Scd7430` | detail, form | Number of Times Repeated | পুনরাবৃত্তির সংখ্যা |
@@ -5576,6 +5708,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sa4ab7b` | detail | Program References | প্রোগ্রাম রেফারেন্স |
 | `S70cbd1` | detail | Proposed | প্রস্তাবিত |
 | `S483bf2` | detail, list | Published | প্রকাশিত |
+| `S2b85e8` | detail | Read from the set condition and the repeat code of the imported program. A text reading, not an interpretation of the controller logic. | আমদানি করা প্রোগ্রামের সেট শর্ত ও পুনরাবৃত্তি কোড থেকে পড়া। লেখার পাঠ, নিয়ন্ত্রকের যুক্তির ব্যাখ্যা নয়। |
 | `S6a9c56` | detail, form | Read level | পড়ার স্তর |
 | `Sf5ca9d` | detail | Recorded exports | নথিভুক্ত রপ্তানি |
 | `Sa3f757` | detail | Reinstate to Released | প্রকাশিতে পুনঃস্থাপন করুন |
@@ -5599,6 +5732,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S4aed03` | detail | Request | অনুরোধ |
 | `Sf3421a` | detail | Request a Sign-Off | সাইন-অফের অনুরোধ করুন |
 | `Sc26bf6` | detail, mine | Requested | অনুরোধকৃত |
+| `S2706ed` | detail | Required by | যাদের জন্য প্রয়োজনীয় |
 | `S619e87` | detail, form | Reset Delay | রিসেট বিলম্ব |
 | `S026ab2` | detail | resolved | সমাধান হয়েছে |
 | `S68c61f` | detail | Rev # | সংশোধন নং |
@@ -5636,6 +5770,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S98a377` | detail | Still a Draft. | এখনো খসড়া। |
 | `S123f6c` | detail | Submit for Review | পর্যালোচনার জন্য জমা দিন |
 | `S3dca68` | detail | Superseded by Status Code id (optional) | এর দ্বারা প্রতিস্থাপিত স্ট্যাটাস কোড আইডি (ঐচ্ছিক) |
+| `Sb17da5` | detail | Suppresses | দমন করে |
 | `S08e643` | detail, list | Target software version | লক্ষ্য সফটওয়্যার সংস্করণ |
 | `S44203c` | detail, form, status code fields | Task Call Frequency | টাস্ক কল ফ্রিকোয়েন্সি |
 | `S8fc804` | detail | The author has to submit it for review before the Reviewer or Administrator can see it. | পর্যালোচক বা প্রশাসক দেখার আগে লেখককে এটি পর্যালোচনার জন্য জমা দিতে হবে। |
@@ -6419,7 +6554,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 
 ### 9.7 IN मराठी 🇮🇳 — Marathi
 
-1189 of 1190 strings translated; direction left to right.
+1216 of 1217 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -6518,13 +6653,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Scaf0f4` | catalogue_health | Capacity per subgroup | उपगटानुसार क्षमता |
 | `S25d185` | catalogue_health | Catalogue health | कॅटलॉगचे आरोग्य |
 | `Sa28e96` | catalogue_health, menu | Catalogue Health | कॅटलॉग आरोग्य |
-| `S199993` | catalogue_health, fleet_feedback | Codes | कोड |
+| `S199993` | catalogue_health, connections, fleet_feedback | Codes | कोड |
 | `S5548ae` | catalogue_health | days | दिवस |
 | `S34730e` | catalogue_health | Deprecations | कालबाह्यता |
 | `S19582d` | catalogue_health | Effective dates | प्रभावी तारखा |
 | `Seb01bf` | catalogue_health | Examples | उदाहरणे |
 | `S4105cf` | catalogue_health | exhausted | संपले |
-| `S57e8be` | catalogue_health | Finding | निष्कर्ष |
+| `S57e8be` | catalogue_health, connections | Finding | निष्कर्ष |
 | `S1150a1` | catalogue_health | Gaps | फटी |
 | `S171a06` | catalogue_health, export, withdrawn_codes | Group | गट |
 | `Sb4aadc` | catalogue_health, legacy_mapping | Hub Controller | हब नियंत्रक |
@@ -6559,6 +6694,31 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sc9c9de` | check | Terminology check | शब्दावली तपासणी |
 | `S6bd377` | check | to look at | पाहण्यासारखे |
 | `Sac26a7` | check, language | Translation | भाषांतर |
+| `S876180` | connections | A code is not raised while its cause is active. The top of each tree is a cause that nothing suppresses. | कोडचे कारण सक्रिय असेपर्यंत तो कोड उठवला जात नाही. प्रत्येक वृक्षाच्या शिखरावर असे कारण असते ज्याला कोणीही दाबत नाही. |
+| `S3f50cd` | connections | A code that is raised again and again is replaced by its repeat code. Repeat codes outside the catalogue are marked external. | वारंवार उठणाऱ्या कोडऐवजी त्याचा पुनरावृत्ती कोड येतो. कॅटलॉगबाहेरील पुनरावृत्ती कोड बाह्य म्हणून चिन्हांकित असतात. |
+| `Sd87c44` | connections, detail, export | all | सर्व |
+| `S3e00c3` | connections | Causes and the codes they suppress | कारणे आणि ती दाबत असलेले कोड |
+| `Sadac69` | connections, detail, export_profiles | Code | कोड |
+| `Se54fe8` | connections | Codes with a connection | संबंध असलेले कोड |
+| `S8f3509` | connections, detail, menu | Connections | संबंध |
+| `Se90ccc` | connections, detail | Escalated from | यातून वाढवलेले |
+| `S61bd26` | connections, detail | Escalates to | यात वाढवते |
+| `S78586c` | connections | Escalates to %(code)s, which is deprecated or archived. | %(code)s मध्ये वाढवते, जो कालबाह्य किंवा संग्रहित आहे. |
+| `S59d8f3` | connections | external | बाह्य |
+| `Sb7c028` | connections | How the status codes are connected, read from the set conditions and the repeat codes of the imported programs. A text reading, not an interpretation of the controller logic. | स्थिती कोड कसे जोडलेले आहेत, आयात केलेल्या प्रोग्रामच्या सेट अटी आणि पुनरावृत्ती कोडवरून वाचलेले. मजकुराचे वाचन, नियंत्रक तर्काचा अर्थ नाही. |
+| `S0dfe7b` | connections, detail | Hub controller | हब कंट्रोलर |
+| `S1df823` | connections | loop | चक्र |
+| `Sc3f827` | connections, detail | Main controller | मुख्य कंट्रोलर |
+| `S2f385e` | connections | No connections are known yet. They come from the programs imported from .st files. | अद्याप कोणतेही संबंध माहीत नाहीत. ते .st फाइलमधून आयात केलेल्या प्रोग्रामवरून येतात. |
+| `S136e29` | connections | Only set while %(number)s is active, which is not in the catalogue. | %(number)s सक्रिय असतानाच सेट होतो; हा कोड कॅटलॉगमध्ये नाही. |
+| `S355d4b` | connections, detail | Only set while active | सक्रिय असतानाच सेट |
+| `Sfa38ca` | connections | Part of a loop of suppressions: each code is suppressed by another one of the loop. | दडपण्याच्या चक्राचा भाग: चक्रातील प्रत्येक कोड चक्रातील दुसऱ्या कोडने दाबला जातो. |
+| `Se382c2` | connections | Repeat code | पुनरावृत्ती कोड |
+| `Sc199d7` | connections, detail | Suppressed by | यांनी दाबलेले |
+| `S0e08e5` | connections | Suppressed by %(code)s, which is deprecated or archived. | %(code)s ने दाबलेले, जो कालबाह्य किंवा संग्रहित आहे. |
+| `S1bc026` | connections | Suppressed by %(number)s, which is not in the catalogue. | %(number)s ने दाबलेले, जो कॅटलॉगमध्ये नाही. |
+| `S844394` | connections | What looks wrong | काय चुकीचे दिसते |
+| `S52fc2b` | connections | Where repeated codes escalate to | पुनरावृत्त कोड कुठे वाढतात |
 | `S66dc40` | dashboard | Awaiting Administrator Sign-Off | प्रशासक साइन-ऑफची प्रतीक्षा |
 | `S33a0d3` | dashboard | Awaiting Chief Engineer Approval | मुख्य अभियंत्याच्या मंजुरीची प्रतीक्षा |
 | `S04cc8e` | dashboard | Awaiting Cross-Domain Sign-Off | आंतर-क्षेत्र साइन-ऑफची प्रतीक्षा |
@@ -6598,7 +6758,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S212856` | detail | advanced, controller firmware programs | प्रगत, नियंत्रक फर्मवेअर प्रोग्राम |
 | `Sfbde82` | detail | Affected component | बाधित घटक |
 | `S25f8c5` | detail, export, form | Alarm | अलार्म |
-| `Sd87c44` | detail, export, hub_consolidation | all | सर्व |
 | `S484388` | detail, export_center | all columns | सर्व स्तंभ |
 | `S2e73c3` | detail | All languages and all access levels are included. Use the export above for a single language or access level. | सर्व भाषा आणि सर्व अॅक्सेस स्तर समाविष्ट आहेत. एका भाषेसाठी किंवा अॅक्सेस स्तरासाठी वरील एक्स्पोर्ट वापरा. |
 | `S432284` | detail | All required sign-offs are in, but this is still a Draft — the Reviewer and Administrator only see it after you choose Submit for Review below. | सर्व आवश्यक साइन-ऑफ आले आहेत, पण हा अजूनही मसुदा आहे — तुम्ही खाली पुनरावलोकनासाठी सादर करा निवडल्यानंतरच पुनरावलोकक व प्रशासक तो पाहतात. |
@@ -6621,6 +6780,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S928e2e` | detail | Brake Program | ब्रेक प्रोग्राम |
 | `Sab2e8a` | detail | Build package | पॅकेज तयार करा |
 | `Scfadbd` | detail | By | द्वारे |
+| `Se7bab1` | detail | Chain of causes | कारणांची साखळी |
 | `S9c8393` | detail, mine | Change Request | बदल विनंती |
 | `S4572f4` | detail | Change request | बदल विनंती |
 | `S3295be` | detail | Change requests in this set | या संचातील बदल विनंत्या |
@@ -6632,7 +6792,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S03695d` | detail | Chief Engineer decision | मुख्य अभियंत्याचा निर्णय |
 | `Sf0a89f` | detail | Close change set | बदल संच बंद करा |
 | `S7c0c39` | detail | Close this change set? | हा बदल संच बंद करायचा? |
-| `Sadac69` | detail, export_profiles, fleet_feedback | Code | कोड |
 | `S153d7a` | detail | Comment | टिप्पणी |
 | `S611578` | detail | Comment (required for rejection) | टिप्पणी (नाकारण्यासाठी आवश्यक) |
 | `Sc38432` | detail | Comment on this field | या फील्डवर टिप्पणी करा |
@@ -6642,6 +6801,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S0ff7e5` | detail, export | Complete baseline | संपूर्ण आधारस्थिती |
 | `S1798b3` | detail | Completed | पूर्ण झाले |
 | `S7671b5` | detail | Confirm or override Audience Access | लक्ष्य गट प्रवेशाची पुष्टी किंवा अधिलिखित करा |
+| `S6512ee` | detail | Connection | संबंध |
 | `S4f9be0` | detail | Content | आशय |
 | `Sa36a5f` | detail, legacy_mapping, st_new | Controller | नियंत्रक |
 | `Scd293f` | detail | Converter Reactive Power Program | कन्व्हर्टर रिअ‍ॅक्टिव्ह पॉवर प्रोग्राम |
@@ -6704,7 +6864,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sb8c4c9` | detail, form | Further Program References | इतर प्रोग्राम संदर्भ |
 | `S636c41` | detail | Grid Operator | ग्रिड ऑपरेटर |
 | `S90ccd6` | detail | History | इतिहास |
-| `S0dfe7b` | detail | Hub controller | हब कंट्रोलर |
 | `Sfec8b7` | detail | Hub Controller group | हब नियंत्रक गट |
 | `S00ccae` | detail, form | Hub Controller only | फक्त हब नियंत्रक |
 | `S3c883f` | detail | I have reviewed these dependants | मी या अवलंबित कोडचे पुनरावलोकन केले आहे |
@@ -6719,7 +6878,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S693272` | detail, withdrawn_codes | Legacy Reference Number | जुना संदर्भ क्रमांक |
 | `S43d5c5` | detail, form | Loadless Spinning Permitted | भाराशिवाय फिरणे अनुमत |
 | `S193786` | detail | Logical Node | लॉजिकल नोड |
-| `Sc3f827` | detail | Main controller | मुख्य कंट्रोलर |
 | `S578b78` | detail | Main Controller group | मुख्य नियंत्रक गट |
 | `Sa7512d` | detail, form | Main Controller only | फक्त मुख्य नियंत्रक |
 | `Seb9a6d` | detail | Manage translations | भाषांतरे व्यवस्थापित करा |
@@ -6739,6 +6897,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S4bddd5` | detail | Nobody can review it until it is submitted. | सादर होईपर्यंत कोणीही त्याचे पुनरावलोकन करू शकत नाही. |
 | `S2d8f60` | detail | node value | नोड मूल्य |
 | `S71f8e7` | detail, form | none | काहीही नाही |
+| `S7d24f7` | detail | not in the catalogue | कॅटलॉगमध्ये नाही |
 | `S4467d4` | detail | Not yet published | अद्याप प्रकाशित नाही |
 | `S23402a` | detail | Not yet submitted. | अद्याप सादर केलेले नाही. |
 | `Scd7430` | detail, form | Number of Times Repeated | पुनरावृत्तींची संख्या |
@@ -6772,6 +6931,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sa4ab7b` | detail | Program References | प्रोग्राम संदर्भ |
 | `S70cbd1` | detail | Proposed | प्रस्तावित |
 | `S483bf2` | detail, list | Published | प्रकाशित |
+| `S2b85e8` | detail | Read from the set condition and the repeat code of the imported program. A text reading, not an interpretation of the controller logic. | आयात केलेल्या प्रोग्रामच्या सेट अटी आणि पुनरावृत्ती कोडवरून वाचलेले. मजकुराचे वाचन, नियंत्रक तर्काचा अर्थ नाही. |
 | `S6a9c56` | detail, form | Read level | वाचन पातळी |
 | `Sf5ca9d` | detail | Recorded exports | नोंदवलेल्या निर्यात |
 | `Sa3f757` | detail | Reinstate to Released | प्रकाशितवर पुनर्स्थापित करा |
@@ -6795,6 +6955,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S4aed03` | detail | Request | विनंती |
 | `Sf3421a` | detail | Request a Sign-Off | साइन-ऑफची विनंती करा |
 | `Sc26bf6` | detail, mine | Requested | विनंती केलेले |
+| `S2706ed` | detail | Required by | यांना आवश्यक |
 | `S619e87` | detail, form | Reset Delay | रीसेट विलंब |
 | `S026ab2` | detail | resolved | निराकरण झाले |
 | `S68c61f` | detail | Rev # | सुधारणा क्र. |
@@ -6832,6 +6993,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S98a377` | detail | Still a Draft. | अजूनही मसुदा आहे. |
 | `S123f6c` | detail | Submit for Review | पुनरावलोकनासाठी सादर करा |
 | `S3dca68` | detail | Superseded by Status Code id (optional) | याने बदललेला स्थिती कोड आयडी (पर्यायी) |
+| `Sb17da5` | detail | Suppresses | दाबतो |
 | `S08e643` | detail, list | Target software version | लक्ष्य सॉफ्टवेअर आवृत्ती |
 | `S44203c` | detail, form, status code fields | Task Call Frequency | टास्क कॉल वारंवारता |
 | `S8fc804` | detail | The author has to submit it for review before the Reviewer or Administrator can see it. | पुनरावलोकक किंवा प्रशासक पाहण्यापूर्वी लेखकाने तो पुनरावलोकनासाठी सादर केला पाहिजे. |
@@ -7615,7 +7777,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 
 ### 9.8 IN తెలుగు 🇮🇳 — Telugu
 
-1189 of 1190 strings translated; direction left to right.
+1216 of 1217 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -7714,13 +7876,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Scaf0f4` | catalogue_health | Capacity per subgroup | సబ్‌గ్రూప్ వారీ సామర్థ్యం |
 | `S25d185` | catalogue_health | Catalogue health | కేటలాగ్ ఆరోగ్యం |
 | `Sa28e96` | catalogue_health, menu | Catalogue Health | కేటలాగ్ ఆరోగ్యం |
-| `S199993` | catalogue_health, fleet_feedback | Codes | కోడ్‌లు |
+| `S199993` | catalogue_health, connections, fleet_feedback | Codes | కోడ్‌లు |
 | `S5548ae` | catalogue_health | days | రోజులు |
 | `S34730e` | catalogue_health | Deprecations | వాడుకలో లేనివి |
 | `S19582d` | catalogue_health | Effective dates | అమలు తేదీలు |
 | `Seb01bf` | catalogue_health | Examples | ఉదాహరణలు |
 | `S4105cf` | catalogue_health | exhausted | అయిపోయింది |
-| `S57e8be` | catalogue_health | Finding | కనుగొన్నది |
+| `S57e8be` | catalogue_health, connections | Finding | కనుగొన్నది |
 | `S1150a1` | catalogue_health | Gaps | ఖాళీలు |
 | `S171a06` | catalogue_health, export, withdrawn_codes | Group | గ్రూప్ |
 | `Sb4aadc` | catalogue_health, legacy_mapping | Hub Controller | హబ్ కంట్రోలర్ |
@@ -7755,6 +7917,31 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sc9c9de` | check | Terminology check | పదజాల తనిఖీ |
 | `S6bd377` | check | to look at | చూడాల్సినవి |
 | `Sac26a7` | check, language | Translation | అనువాదం |
+| `S876180` | connections | A code is not raised while its cause is active. The top of each tree is a cause that nothing suppresses. | ఒక కోడ్ కారణం చురుకుగా ఉన్నంతవరకు ఆ కోడ్ రాదు. ప్రతి చెట్టు శిఖరంలో దేనివల్లా అణచబడని కారణం ఉంటుంది. |
+| `S3f50cd` | connections | A code that is raised again and again is replaced by its repeat code. Repeat codes outside the catalogue are marked external. | మళ్లీ మళ్లీ వచ్చే కోడ్ స్థానంలో దాని పునరావృత కోడ్ వస్తుంది. కేటలాగ్ బయటి పునరావృత కోడ్‌లు బాహ్యమని గుర్తించబడతాయి. |
+| `Sd87c44` | connections, detail, export | all | అన్నీ |
+| `S3e00c3` | connections | Causes and the codes they suppress | కారణాలు మరియు అవి అణచే కోడ్‌లు |
+| `Sadac69` | connections, detail, export_profiles | Code | కోడ్ |
+| `Se54fe8` | connections | Codes with a connection | అనుసంధానం ఉన్న కోడ్‌లు |
+| `S8f3509` | connections, detail, menu | Connections | అనుసంధానాలు |
+| `Se90ccc` | connections, detail | Escalated from | దీని నుండి ఉన్నతీకరణ |
+| `S61bd26` | connections, detail | Escalates to | దీనికి ఉన్నతీకరిస్తుంది |
+| `S78586c` | connections | Escalates to %(code)s, which is deprecated or archived. | %(code)s కు ఉన్నతీకరిస్తుంది, అది వాడుకలో లేదు లేదా ఆర్కైవ్ చేయబడింది. |
+| `S59d8f3` | connections | external | బాహ్యం |
+| `Sb7c028` | connections | How the status codes are connected, read from the set conditions and the repeat codes of the imported programs. A text reading, not an interpretation of the controller logic. | స్థితి కోడ్‌లు ఎలా అనుసంధానమయ్యాయో, దిగుమతి చేసిన ప్రోగ్రామ్‌ల సెట్ షరతులు మరియు పునరావృత కోడ్‌ల నుండి చదివినది. పాఠం చదవడమే, కంట్రోలర్ తర్కం యొక్క వివరణ కాదు. |
+| `S0dfe7b` | connections, detail | Hub controller | హబ్ కంట్రోలర్ |
+| `S1df823` | connections | loop | చక్రం |
+| `Sc3f827` | connections, detail | Main controller | ప్రధాన కంట్రోలర్ |
+| `S2f385e` | connections | No connections are known yet. They come from the programs imported from .st files. | ఇంకా అనుసంధానాలు తెలియవు. అవి .st ఫైళ్ల నుండి దిగుమతి చేసిన ప్రోగ్రామ్‌ల నుండి వస్తాయి. |
+| `S136e29` | connections | Only set while %(number)s is active, which is not in the catalogue. | %(number)s చురుకుగా ఉన్నప్పుడు మాత్రమే సెట్ అవుతుంది; ఈ కోడ్ కేటలాగ్‌లో లేదు. |
+| `S355d4b` | connections, detail | Only set while active | చురుకుగా ఉన్నప్పుడు మాత్రమే సెట్ |
+| `Sfa38ca` | connections | Part of a loop of suppressions: each code is suppressed by another one of the loop. | అణచివేత చక్రంలో భాగం: చక్రంలోని ప్రతి కోడ్‌ను చక్రంలోని మరో కోడ్ అణచివేస్తుంది. |
+| `Se382c2` | connections | Repeat code | పునరావృత కోడ్ |
+| `Sc199d7` | connections, detail | Suppressed by | వీటి ద్వారా అణచబడింది |
+| `S0e08e5` | connections | Suppressed by %(code)s, which is deprecated or archived. | %(code)s ద్వారా అణచబడింది, అది వాడుకలో లేదు లేదా ఆర్కైవ్ చేయబడింది. |
+| `S1bc026` | connections | Suppressed by %(number)s, which is not in the catalogue. | %(number)s ద్వారా అణచబడింది, అది కేటలాగ్‌లో లేదు. |
+| `S844394` | connections | What looks wrong | ఏది సరిగా లేదనిపిస్తోంది |
+| `S52fc2b` | connections | Where repeated codes escalate to | పునరావృత కోడ్‌లు ఎక్కడికి ఉన్నతీకరిస్తాయి |
 | `S66dc40` | dashboard | Awaiting Administrator Sign-Off | నిర్వాహకుడి సైన్-ఆఫ్ కోసం వేచి ఉన్నవి |
 | `S33a0d3` | dashboard | Awaiting Chief Engineer Approval | చీఫ్ ఇంజనీర్ ఆమోదం కోసం వేచి ఉన్నవి |
 | `S04cc8e` | dashboard | Awaiting Cross-Domain Sign-Off | క్రాస్-డొమైన్ సైన్-ఆఫ్ కోసం వేచి ఉన్నవి |
@@ -7794,7 +7981,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S212856` | detail | advanced, controller firmware programs | అధునాతన, కంట్రోలర్ ఫర్మ్‌వేర్ ప్రోగ్రామ్‌లు |
 | `Sfbde82` | detail | Affected component | ప్రభావిత భాగం |
 | `S25f8c5` | detail, export, form | Alarm | అలారం |
-| `Sd87c44` | detail, export, hub_consolidation | all | అన్నీ |
 | `S484388` | detail, export_center | all columns | అన్ని నిలువు వరుసలు |
 | `S2e73c3` | detail | All languages and all access levels are included. Use the export above for a single language or access level. | అన్ని భాషలు, అన్ని యాక్సెస్ స్థాయిలు చేర్చబడ్డాయి. ఒక భాష లేదా ఒక యాక్సెస్ స్థాయి కోసం పై ఎగుమతిని ఉపయోగించండి. |
 | `S432284` | detail | All required sign-offs are in, but this is still a Draft — the Reviewer and Administrator only see it after you choose Submit for Review below. | అవసరమైన అన్ని సైన్-ఆఫ్‌లు వచ్చాయి, కానీ ఇది ఇంకా ముసాయిదా — మీరు క్రింద సమీక్ష కోసం సమర్పించండి ఎంచుకున్న తర్వాతే సమీక్షకుడు మరియు నిర్వాహకుడు దీన్ని చూస్తారు. |
@@ -7817,6 +8003,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S928e2e` | detail | Brake Program | బ్రేక్ ప్రోగ్రామ్ |
 | `Sab2e8a` | detail | Build package | ప్యాకేజీ రూపొందించండి |
 | `Scfadbd` | detail | By | ద్వారా |
+| `Se7bab1` | detail | Chain of causes | కారణాల గొలుసు |
 | `S9c8393` | detail, mine | Change Request | మార్పు అభ్యర్థన |
 | `S4572f4` | detail | Change request | మార్పు అభ్యర్థన |
 | `S3295be` | detail | Change requests in this set | ఈ సమితిలోని మార్పు అభ్యర్థనలు |
@@ -7828,7 +8015,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S03695d` | detail | Chief Engineer decision | చీఫ్ ఇంజనీర్ నిర్ణయం |
 | `Sf0a89f` | detail | Close change set | మార్పుల సమితిని మూసివేయండి |
 | `S7c0c39` | detail | Close this change set? | ఈ మార్పుల సమితిని మూసివేయాలా? |
-| `Sadac69` | detail, export_profiles, fleet_feedback | Code | కోడ్ |
 | `S153d7a` | detail | Comment | వ్యాఖ్య |
 | `S611578` | detail | Comment (required for rejection) | వ్యాఖ్య (తిరస్కరణకు తప్పనిసరి) |
 | `Sc38432` | detail | Comment on this field | ఈ ఫీల్డ్‌పై వ్యాఖ్యానించండి |
@@ -7838,6 +8024,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S0ff7e5` | detail, export | Complete baseline | పూర్తి ఆధార స్థితి |
 | `S1798b3` | detail | Completed | పూర్తయింది |
 | `S7671b5` | detail | Confirm or override Audience Access | లక్ష్య సమూహ ప్రాప్యతను నిర్ధారించండి లేదా ఓవర్‌రైడ్ చేయండి |
+| `S6512ee` | detail | Connection | అనుసంధానం |
 | `S4f9be0` | detail | Content | విషయం |
 | `Sa36a5f` | detail, legacy_mapping, st_new | Controller | కంట్రోలర్ |
 | `Scd293f` | detail | Converter Reactive Power Program | కన్వర్టర్ రియాక్టివ్ పవర్ ప్రోగ్రామ్ |
@@ -7900,7 +8087,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sb8c4c9` | detail, form | Further Program References | మరిన్ని ప్రోగ్రామ్ సూచనలు |
 | `S636c41` | detail | Grid Operator | గ్రిడ్ ఆపరేటర్ |
 | `S90ccd6` | detail | History | చరిత్ర |
-| `S0dfe7b` | detail | Hub controller | హబ్ కంట్రోలర్ |
 | `Sfec8b7` | detail | Hub Controller group | హబ్ కంట్రోలర్ గ్రూప్ |
 | `S00ccae` | detail, form | Hub Controller only | హబ్ కంట్రోలర్ మాత్రమే |
 | `S3c883f` | detail | I have reviewed these dependants | నేను ఈ ఆధారిత కోడ్‌లను సమీక్షించాను |
@@ -7915,7 +8101,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S693272` | detail, withdrawn_codes | Legacy Reference Number | పాత రిఫరెన్స్ సంఖ్య |
 | `S43d5c5` | detail, form | Loadless Spinning Permitted | లోడ్ లేకుండా తిరగడం అనుమతించబడింది |
 | `S193786` | detail | Logical Node | లాజికల్ నోడ్ |
-| `Sc3f827` | detail | Main controller | ప్రధాన కంట్రోలర్ |
 | `S578b78` | detail | Main Controller group | ప్రధాన కంట్రోలర్ గ్రూప్ |
 | `Sa7512d` | detail, form | Main Controller only | ప్రధాన కంట్రోలర్ మాత్రమే |
 | `Seb9a6d` | detail | Manage translations | అనువాదాలను నిర్వహించండి |
@@ -7935,6 +8120,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S4bddd5` | detail | Nobody can review it until it is submitted. | సమర్పించే వరకు ఎవరూ దీన్ని సమీక్షించలేరు. |
 | `S2d8f60` | detail | node value | నోడ్ విలువ |
 | `S71f8e7` | detail, form | none | ఏదీ లేదు |
+| `S7d24f7` | detail | not in the catalogue | కేటలాగ్‌లో లేదు |
 | `S4467d4` | detail | Not yet published | ఇంకా ప్రచురించలేదు |
 | `S23402a` | detail | Not yet submitted. | ఇంకా సమర్పించలేదు. |
 | `Scd7430` | detail, form | Number of Times Repeated | పునరావృతాల సంఖ్య |
@@ -7968,6 +8154,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sa4ab7b` | detail | Program References | ప్రోగ్రామ్ సూచనలు |
 | `S70cbd1` | detail | Proposed | ప్రతిపాదించినది |
 | `S483bf2` | detail, list | Published | ప్రచురించినది |
+| `S2b85e8` | detail | Read from the set condition and the repeat code of the imported program. A text reading, not an interpretation of the controller logic. | దిగుమతి చేసిన ప్రోగ్రామ్ సెట్ షరతు మరియు పునరావృత కోడ్ నుండి చదివినది. పాఠం చదవడమే, కంట్రోలర్ తర్కం యొక్క వివరణ కాదు. |
 | `S6a9c56` | detail, form | Read level | చదివే స్థాయి |
 | `Sf5ca9d` | detail | Recorded exports | నమోదు చేసిన ఎగుమతులు |
 | `Sa3f757` | detail | Reinstate to Released | విడుదల చేసినదిగా పునఃస్థాపించండి |
@@ -7991,6 +8178,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S4aed03` | detail | Request | అభ్యర్థన |
 | `Sf3421a` | detail | Request a Sign-Off | సైన్-ఆఫ్ అభ్యర్థించండి |
 | `Sc26bf6` | detail, mine | Requested | అభ్యర్థించినది |
+| `S2706ed` | detail | Required by | వీటికి అవసరం |
 | `S619e87` | detail, form | Reset Delay | రీసెట్ ఆలస్యం |
 | `S026ab2` | detail | resolved | పరిష్కరించబడింది |
 | `S68c61f` | detail | Rev # | పునర్వి. సం. |
@@ -8028,6 +8216,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S98a377` | detail | Still a Draft. | ఇంకా ముసాయిదాగానే ఉంది. |
 | `S123f6c` | detail | Submit for Review | సమీక్ష కోసం సమర్పించండి |
 | `S3dca68` | detail | Superseded by Status Code id (optional) | దీనితో భర్తీ చేసిన స్థితి కోడ్ ఐడి (ఐచ్ఛికం) |
+| `Sb17da5` | detail | Suppresses | అణచివేస్తుంది |
 | `S08e643` | detail, list | Target software version | లక్ష్య సాఫ్ట్‌వేర్ వెర్షన్ |
 | `S44203c` | detail, form, status code fields | Task Call Frequency | టాస్క్ కాల్ ఫ్రీక్వెన్సీ |
 | `S8fc804` | detail | The author has to submit it for review before the Reviewer or Administrator can see it. | సమీక్షకుడు లేదా నిర్వాహకుడు చూడకముందే రచయిత దీన్ని సమీక్ష కోసం సమర్పించాలి. |
@@ -8811,7 +9000,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 
 ### 9.9 IN தமிழ் 🇮🇳 — Tamil
 
-1189 of 1190 strings translated; direction left to right.
+1216 of 1217 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -8910,13 +9099,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Scaf0f4` | catalogue_health | Capacity per subgroup | துணைக் குழு வாரி கொள்ளளவு |
 | `S25d185` | catalogue_health | Catalogue health | பட்டியலின் நலம் |
 | `Sa28e96` | catalogue_health, menu | Catalogue Health | பட்டியல் நலம் |
-| `S199993` | catalogue_health, fleet_feedback | Codes | குறியீடுகள் |
+| `S199993` | catalogue_health, connections, fleet_feedback | Codes | குறியீடுகள் |
 | `S5548ae` | catalogue_health | days | நாட்கள் |
 | `S34730e` | catalogue_health | Deprecations | வழக்கொழிவுகள் |
 | `S19582d` | catalogue_health | Effective dates | அமலாக்கத் தேதிகள் |
 | `Seb01bf` | catalogue_health | Examples | எடுத்துக்காட்டுகள் |
 | `S4105cf` | catalogue_health | exhausted | தீர்ந்தது |
-| `S57e8be` | catalogue_health | Finding | கண்டுபிடிப்பு |
+| `S57e8be` | catalogue_health, connections | Finding | கண்டுபிடிப்பு |
 | `S1150a1` | catalogue_health | Gaps | இடைவெளிகள் |
 | `S171a06` | catalogue_health, export, withdrawn_codes | Group | குழு |
 | `Sb4aadc` | catalogue_health, legacy_mapping | Hub Controller | ஹப் கட்டுப்படுத்தி |
@@ -8951,6 +9140,31 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sc9c9de` | check | Terminology check | சொற்களஞ்சியச் சரிபார்ப்பு |
 | `S6bd377` | check | to look at | பார்க்க வேண்டியவை |
 | `Sac26a7` | check, language | Translation | மொழிபெயர்ப்பு |
+| `S876180` | connections | A code is not raised while its cause is active. The top of each tree is a cause that nothing suppresses. | ஒரு குறியீட்டின் காரணம் செயலில் இருக்கும்வரை அந்தக் குறியீடு எழுப்பப்படாது. ஒவ்வொரு மரத்தின் உச்சியிலும் எதனாலும் அடக்கப்படாத காரணம் இருக்கும். |
+| `S3f50cd` | connections | A code that is raised again and again is replaced by its repeat code. Repeat codes outside the catalogue are marked external. | மீண்டும் மீண்டும் எழுப்பப்படும் குறியீட்டுக்குப் பதிலாக அதன் மீள்குறியீடு வரும். பட்டியலுக்கு வெளியே உள்ள மீள்குறியீடுகள் வெளிப்புறம் எனக் குறிக்கப்படும். |
+| `Sd87c44` | connections, detail, export | all | அனைத்தும் |
+| `S3e00c3` | connections | Causes and the codes they suppress | காரணங்களும் அவை அடக்கும் குறியீடுகளும் |
+| `Sadac69` | connections, detail, export_profiles | Code | குறியீடு |
+| `Se54fe8` | connections | Codes with a connection | இணைப்புள்ள குறியீடுகள் |
+| `S8f3509` | connections, detail, menu | Connections | இணைப்புகள் |
+| `Se90ccc` | connections, detail | Escalated from | இதிலிருந்து உயர்த்தப்பட்டது |
+| `S61bd26` | connections, detail | Escalates to | இதற்கு உயர்த்துகிறது |
+| `S78586c` | connections | Escalates to %(code)s, which is deprecated or archived. | %(code)s க்கு உயர்த்துகிறது; அது வழக்கொழிந்தது அல்லது காப்பகப்படுத்தப்பட்டது. |
+| `S59d8f3` | connections | external | வெளிப்புறம் |
+| `Sb7c028` | connections | How the status codes are connected, read from the set conditions and the repeat codes of the imported programs. A text reading, not an interpretation of the controller logic. | நிலைக் குறியீடுகள் எவ்வாறு இணைந்துள்ளன, இறக்குமதி செய்த நிரல்களின் அமைப்பு நிபந்தனைகள் மற்றும் மீள்குறியீடுகளிலிருந்து படித்தது. உரையைப் படித்தது மட்டுமே; கட்டுப்படுத்தி தர்க்கத்தின் விளக்கம் அல்ல. |
+| `S0dfe7b` | connections, detail | Hub controller | ஹப் கட்டுப்படுத்தி |
+| `S1df823` | connections | loop | சுழற்சி |
+| `Sc3f827` | connections, detail | Main controller | முதன்மை கட்டுப்படுத்தி |
+| `S2f385e` | connections | No connections are known yet. They come from the programs imported from .st files. | இன்னும் இணைப்புகள் தெரியவில்லை. அவை .st கோப்புகளிலிருந்து இறக்குமதி செய்த நிரல்களிலிருந்து வருகின்றன. |
+| `S136e29` | connections | Only set while %(number)s is active, which is not in the catalogue. | %(number)s செயலில் இருக்கும்போது மட்டுமே அமைக்கப்படும்; இந்தக் குறியீடு பட்டியலில் இல்லை. |
+| `S355d4b` | connections, detail | Only set while active | செயலில் இருக்கும்போது மட்டும் அமைக்கப்படும் |
+| `Sfa38ca` | connections | Part of a loop of suppressions: each code is suppressed by another one of the loop. | அடக்குதல் சுழற்சியின் பகுதி: சுழற்சியின் ஒவ்வொரு குறியீடும் சுழற்சியின் வேறொரு குறியீட்டால் அடக்கப்படுகிறது. |
+| `Se382c2` | connections | Repeat code | மீள்குறியீடு |
+| `Sc199d7` | connections, detail | Suppressed by | இவற்றால் அடக்கப்பட்டது |
+| `S0e08e5` | connections | Suppressed by %(code)s, which is deprecated or archived. | %(code)s ஆல் அடக்கப்பட்டது; அது வழக்கொழிந்தது அல்லது காப்பகப்படுத்தப்பட்டது. |
+| `S1bc026` | connections | Suppressed by %(number)s, which is not in the catalogue. | %(number)s ஆல் அடக்கப்பட்டது; அது பட்டியலில் இல்லை. |
+| `S844394` | connections | What looks wrong | தவறாகத் தோன்றுவது |
+| `S52fc2b` | connections | Where repeated codes escalate to | மீண்ட குறியீடுகள் எங்கு உயர்த்தப்படுகின்றன |
 | `S66dc40` | dashboard | Awaiting Administrator Sign-Off | நிர்வாகி கையொப்பத்துக்காகக் காத்திருப்பவை |
 | `S33a0d3` | dashboard | Awaiting Chief Engineer Approval | தலைமைப் பொறியாளர் ஒப்புதலுக்காகக் காத்திருப்பவை |
 | `S04cc8e` | dashboard | Awaiting Cross-Domain Sign-Off | துறைகள் கடந்த கையொப்பத்துக்காகக் காத்திருப்பவை |
@@ -8990,7 +9204,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S212856` | detail | advanced, controller firmware programs | மேம்பட்ட, கட்டுப்படுத்தி நிலைபொருள் நிரல்கள் |
 | `Sfbde82` | detail | Affected component | பாதிக்கப்பட்ட கூறு |
 | `S25f8c5` | detail, export, form | Alarm | அலாரம் |
-| `Sd87c44` | detail, export, hub_consolidation | all | அனைத்தும் |
 | `S484388` | detail, export_center | all columns | அனைத்து நெடுவரிசைகள் |
 | `S2e73c3` | detail | All languages and all access levels are included. Use the export above for a single language or access level. | அனைத்து மொழிகளும் அனைத்து அணுகல் நிலைகளும் சேர்க்கப்பட்டுள்ளன. ஒரு மொழி அல்லது ஒரு அணுகல் நிலைக்கு மேலுள்ள ஏற்றுமதியைப் பயன்படுத்தவும். |
 | `S432284` | detail | All required sign-offs are in, but this is still a Draft — the Reviewer and Administrator only see it after you choose Submit for Review below. | தேவையான அனைத்து கையொப்பங்களும் வந்துவிட்டன, ஆனால் இது இன்னும் வரைவு — நீங்கள் கீழே மதிப்பாய்வுக்குச் சமர்ப்பி என்பதைத் தேர்ந்தெடுத்த பிறகே மதிப்பாய்வாளரும் நிர்வாகியும் இதைப் பார்க்கிறார்கள். |
@@ -9013,6 +9226,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S928e2e` | detail | Brake Program | பிரேக் நிரல் |
 | `Sab2e8a` | detail | Build package | தொகுப்பை உருவாக்கு |
 | `Scfadbd` | detail | By | மூலம் |
+| `Se7bab1` | detail | Chain of causes | காரணங்களின் சங்கிலி |
 | `S9c8393` | detail, mine | Change Request | மாற்றக் கோரிக்கை |
 | `S4572f4` | detail | Change request | மாற்றக் கோரிக்கை |
 | `S3295be` | detail | Change requests in this set | இந்தத் தொகுப்பிலுள்ள மாற்றக் கோரிக்கைகள் |
@@ -9024,7 +9238,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S03695d` | detail | Chief Engineer decision | தலைமைப் பொறியாளர் முடிவு |
 | `Sf0a89f` | detail | Close change set | மாற்றத் தொகுப்பை மூடு |
 | `S7c0c39` | detail | Close this change set? | இந்த மாற்றத் தொகுப்பை மூடவா? |
-| `Sadac69` | detail, export_profiles, fleet_feedback | Code | குறியீடு |
 | `S153d7a` | detail | Comment | கருத்து |
 | `S611578` | detail | Comment (required for rejection) | கருத்து (நிராகரிப்புக்குக் கட்டாயம்) |
 | `Sc38432` | detail | Comment on this field | இந்தப் புலத்தில் கருத்திடுங்கள் |
@@ -9034,6 +9247,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S0ff7e5` | detail, export | Complete baseline | முழுமையான அடிப்படை நிலை |
 | `S1798b3` | detail | Completed | முடிந்தது |
 | `S7671b5` | detail | Confirm or override Audience Access | இலக்குப் பார்வையாளர் அணுகலை உறுதிப்படுத்து அல்லது மேலெழுது |
+| `S6512ee` | detail | Connection | இணைப்பு |
 | `S4f9be0` | detail | Content | உள்ளடக்கம் |
 | `Sa36a5f` | detail, legacy_mapping, st_new | Controller | கட்டுப்படுத்தி |
 | `Scd293f` | detail | Converter Reactive Power Program | மாற்றி எதிர்வினை மின்திறன் நிரல் |
@@ -9096,7 +9310,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sb8c4c9` | detail, form | Further Program References | மேலும் நிரல் குறிப்புகள் |
 | `S636c41` | detail | Grid Operator | மின்தொகுப்பு இயக்குநர் |
 | `S90ccd6` | detail | History | வரலாறு |
-| `S0dfe7b` | detail | Hub controller | ஹப் கட்டுப்படுத்தி |
 | `Sfec8b7` | detail | Hub Controller group | ஹப் கட்டுப்படுத்தி குழு |
 | `S00ccae` | detail, form | Hub Controller only | ஹப் கட்டுப்படுத்தி மட்டும் |
 | `S3c883f` | detail | I have reviewed these dependants | இந்தச் சார்ந்தவற்றை நான் மதிப்பாய்வு செய்துவிட்டேன் |
@@ -9111,7 +9324,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S693272` | detail, withdrawn_codes | Legacy Reference Number | பழைய குறிப்பு எண் |
 | `S43d5c5` | detail, form | Loadless Spinning Permitted | சுமையின்றிச் சுழல்வது அனுமதிக்கப்பட்டது |
 | `S193786` | detail | Logical Node | தருக்க முனை |
-| `Sc3f827` | detail | Main controller | முதன்மை கட்டுப்படுத்தி |
 | `S578b78` | detail | Main Controller group | முதன்மைக் கட்டுப்படுத்தி குழு |
 | `Sa7512d` | detail, form | Main Controller only | முதன்மை கட்டுப்படுத்தி மட்டும் |
 | `Seb9a6d` | detail | Manage translations | மொழிபெயர்ப்புகளை நிர்வகி |
@@ -9131,6 +9343,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S4bddd5` | detail | Nobody can review it until it is submitted. | சமர்ப்பிக்கும் வரை யாரும் இதை மதிப்பாய்வு செய்ய முடியாது. |
 | `S2d8f60` | detail | node value | முனை மதிப்பு |
 | `S71f8e7` | detail, form | none | எதுவுமில்லை |
+| `S7d24f7` | detail | not in the catalogue | பட்டியலில் இல்லை |
 | `S4467d4` | detail | Not yet published | இன்னும் வெளியிடப்படவில்லை |
 | `S23402a` | detail | Not yet submitted. | இன்னும் சமர்ப்பிக்கப்படவில்லை. |
 | `Scd7430` | detail, form | Number of Times Repeated | திரும்பவருதல்களின் எண்ணிக்கை |
@@ -9164,6 +9377,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sa4ab7b` | detail | Program References | நிரல் குறிப்புகள் |
 | `S70cbd1` | detail | Proposed | முன்மொழியப்பட்டது |
 | `S483bf2` | detail, list | Published | வெளியிடப்பட்டது |
+| `S2b85e8` | detail | Read from the set condition and the repeat code of the imported program. A text reading, not an interpretation of the controller logic. | இறக்குமதி செய்த நிரலின் அமைப்பு நிபந்தனை மற்றும் மீள்குறியீட்டிலிருந்து படித்தது. உரையைப் படித்தது மட்டுமே; கட்டுப்படுத்தி தர்க்கத்தின் விளக்கம் அல்ல. |
 | `S6a9c56` | detail, form | Read level | படிக்கும் நிலை |
 | `Sf5ca9d` | detail | Recorded exports | பதிவான ஏற்றுமதிகள் |
 | `Sa3f757` | detail | Reinstate to Released | வெளியிடப்பட்டதாக மீட்டெடு |
@@ -9187,6 +9401,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S4aed03` | detail | Request | கோரிக்கை |
 | `Sf3421a` | detail | Request a Sign-Off | கையொப்பத்தைக் கோரு |
 | `Sc26bf6` | detail, mine | Requested | கோரப்பட்டது |
+| `S2706ed` | detail | Required by | இவற்றுக்குத் தேவை |
 | `S619e87` | detail, form | Reset Delay | மீட்டமை தாமதம் |
 | `S026ab2` | detail | resolved | தீர்க்கப்பட்டது |
 | `S68c61f` | detail | Rev # | திருத்த எண் |
@@ -9224,6 +9439,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S98a377` | detail | Still a Draft. | இன்னும் வரைவாகவே உள்ளது. |
 | `S123f6c` | detail | Submit for Review | மதிப்பாய்வுக்குச் சமர்ப்பி |
 | `S3dca68` | detail | Superseded by Status Code id (optional) | இதனால் மாற்றப்பட்ட நிலைக் குறியீடு ஐடி (விருப்பம்) |
+| `Sb17da5` | detail | Suppresses | அடக்குகிறது |
 | `S08e643` | detail, list | Target software version | இலக்கு மென்பொருள் பதிப்பு |
 | `S44203c` | detail, form, status code fields | Task Call Frequency | பணி அழைப்பு அதிர்வெண் |
 | `S8fc804` | detail | The author has to submit it for review before the Reviewer or Administrator can see it. | மதிப்பாய்வாளர் அல்லது நிர்வாகி பார்க்கும் முன் ஆசிரியர் இதை மதிப்பாய்வுக்குச் சமர்ப்பிக்க வேண்டும். |
@@ -10007,7 +10223,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 
 ### 9.10 IN ગુજરાતી 🇮🇳 — Gujarati
 
-1189 of 1190 strings translated; direction left to right.
+1216 of 1217 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -10106,13 +10322,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Scaf0f4` | catalogue_health | Capacity per subgroup | પેટાજૂથ પ્રમાણે ક્ષમતા |
 | `S25d185` | catalogue_health | Catalogue health | કૅટલૉગનું સ્વાસ્થ્ય |
 | `Sa28e96` | catalogue_health, menu | Catalogue Health | કેટલોગ આરોગ્ય |
-| `S199993` | catalogue_health, fleet_feedback | Codes | કોડ |
+| `S199993` | catalogue_health, connections, fleet_feedback | Codes | કોડ |
 | `S5548ae` | catalogue_health | days | દિવસ |
 | `S34730e` | catalogue_health | Deprecations | અપ્રચલનો |
 | `S19582d` | catalogue_health | Effective dates | અમલની તારીખો |
 | `Seb01bf` | catalogue_health | Examples | ઉદાહરણો |
 | `S4105cf` | catalogue_health | exhausted | ખલાસ |
-| `S57e8be` | catalogue_health | Finding | તારણ |
+| `S57e8be` | catalogue_health, connections | Finding | તારણ |
 | `S1150a1` | catalogue_health | Gaps | ખાલી જગ્યાઓ |
 | `S171a06` | catalogue_health, export, withdrawn_codes | Group | જૂથ |
 | `Sb4aadc` | catalogue_health, legacy_mapping | Hub Controller | હબ નિયંત્રક |
@@ -10147,6 +10363,31 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sc9c9de` | check | Terminology check | પરિભાષા તપાસ |
 | `S6bd377` | check | to look at | જોવા જેવા |
 | `Sac26a7` | check, language | Translation | અનુવાદ |
+| `S876180` | connections | A code is not raised while its cause is active. The top of each tree is a cause that nothing suppresses. | કોડનું કારણ સક્રિય હોય ત્યાં સુધી તે કોડ ઊઠતો નથી. દરેક વૃક્ષની ટોચે એવું કારણ છે જેને કોઈ દબાવતું નથી. |
+| `S3f50cd` | connections | A code that is raised again and again is replaced by its repeat code. Repeat codes outside the catalogue are marked external. | વારંવાર ઊઠતા કોડની જગ્યાએ તેનો પુનરાવર્તન કોડ આવે છે. કેટલોગ બહારના પુનરાવર્તન કોડ બાહ્ય તરીકે ચિહ્નિત થાય છે. |
+| `Sd87c44` | connections, detail, export | all | બધા |
+| `S3e00c3` | connections | Causes and the codes they suppress | કારણો અને તેઓ દબાવતા કોડ |
+| `Sadac69` | connections, detail, export_profiles | Code | કોડ |
+| `Se54fe8` | connections | Codes with a connection | જોડાણ ધરાવતા કોડ |
+| `S8f3509` | connections, detail, menu | Connections | જોડાણો |
+| `Se90ccc` | connections, detail | Escalated from | આમાંથી ઉન્નત |
+| `S61bd26` | connections, detail | Escalates to | આમાં ઉન્નત થાય છે |
+| `S78586c` | connections | Escalates to %(code)s, which is deprecated or archived. | %(code)s માં ઉન્નત થાય છે, જે અપ્રચલિત અથવા આર્કાઇવ કરેલ છે. |
+| `S59d8f3` | connections | external | બાહ્ય |
+| `Sb7c028` | connections | How the status codes are connected, read from the set conditions and the repeat codes of the imported programs. A text reading, not an interpretation of the controller logic. | સ્ટેટસ કોડ કેવી રીતે જોડાયેલા છે, આયાત કરેલા પ્રોગ્રામની સેટ શરતો અને પુનરાવર્તન કોડ પરથી વાંચેલું. લખાણનું વાંચન, કંટ્રોલર તર્કનું અર્થઘટન નથી. |
+| `S0dfe7b` | connections, detail | Hub controller | હબ કંટ્રોલર |
+| `S1df823` | connections | loop | ચક્ર |
+| `Sc3f827` | connections, detail | Main controller | મુખ્ય કંટ્રોલર |
+| `S2f385e` | connections | No connections are known yet. They come from the programs imported from .st files. | હજી કોઈ જોડાણ જાણીતા નથી. તે .st ફાઇલોમાંથી આયાત કરેલા પ્રોગ્રામમાંથી આવે છે. |
+| `S136e29` | connections | Only set while %(number)s is active, which is not in the catalogue. | %(number)s સક્રિય હોય ત્યારે જ સેટ થાય છે; આ કોડ કેટલોગમાં નથી. |
+| `S355d4b` | connections, detail | Only set while active | સક્રિય હોય ત્યારે જ સેટ |
+| `Sfa38ca` | connections | Part of a loop of suppressions: each code is suppressed by another one of the loop. | દમનના ચક્રનો ભાગ: ચક્રનો દરેક કોડ ચક્રના બીજા કોડથી દબાયેલો છે. |
+| `Se382c2` | connections | Repeat code | પુનરાવર્તન કોડ |
+| `Sc199d7` | connections, detail | Suppressed by | આનાથી દબાયેલ |
+| `S0e08e5` | connections | Suppressed by %(code)s, which is deprecated or archived. | %(code)s થી દબાયેલ, જે અપ્રચલિત અથવા આર્કાઇવ કરેલ છે. |
+| `S1bc026` | connections | Suppressed by %(number)s, which is not in the catalogue. | %(number)s થી દબાયેલ, જે કેટલોગમાં નથી. |
+| `S844394` | connections | What looks wrong | શું ખોટું લાગે છે |
+| `S52fc2b` | connections | Where repeated codes escalate to | પુનરાવર્તિત કોડ ક્યાં ઉન્નત થાય છે |
 | `S66dc40` | dashboard | Awaiting Administrator Sign-Off | સંચાલક સાઇન-ઑફની રાહ |
 | `S33a0d3` | dashboard | Awaiting Chief Engineer Approval | મુખ્ય ઇજનેરની મંજૂરીની રાહ |
 | `S04cc8e` | dashboard | Awaiting Cross-Domain Sign-Off | આંતર-ક્ષેત્ર સાઇન-ઑફની રાહ |
@@ -10186,7 +10427,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S212856` | detail | advanced, controller firmware programs | અદ્યતન, નિયંત્રક ફર્મવેર પ્રોગ્રામ |
 | `Sfbde82` | detail | Affected component | અસરગ્રસ્ત ઘટક |
 | `S25f8c5` | detail, export, form | Alarm | એલાર્મ |
-| `Sd87c44` | detail, export, hub_consolidation | all | બધા |
 | `S484388` | detail, export_center | all columns | બધા કૉલમ |
 | `S2e73c3` | detail | All languages and all access levels are included. Use the export above for a single language or access level. | બધી ભાષાઓ અને બધા એક્સેસ સ્તર સામેલ છે. એક ભાષા કે એક એક્સેસ સ્તર માટે ઉપરનું એક્સપોર્ટ વાપરો. |
 | `S432284` | detail | All required sign-offs are in, but this is still a Draft — the Reviewer and Administrator only see it after you choose Submit for Review below. | બધા જરૂરી સાઇન-ઑફ આવી ગયા છે, પણ આ હજુ મુસદ્દો છે — તમે નીચે સમીક્ષા માટે સબમિટ કરો પસંદ કરો પછી જ સમીક્ષક અને સંચાલક તે જુએ છે. |
@@ -10209,6 +10449,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S928e2e` | detail | Brake Program | બ્રેક પ્રોગ્રામ |
 | `Sab2e8a` | detail | Build package | પેકેજ બનાવો |
 | `Scfadbd` | detail | By | દ્વારા |
+| `Se7bab1` | detail | Chain of causes | કારણોની સાંકળ |
 | `S9c8393` | detail, mine | Change Request | ફેરફાર વિનંતી |
 | `S4572f4` | detail | Change request | ફેરફાર વિનંતી |
 | `S3295be` | detail | Change requests in this set | આ સમૂહની ફેરફાર વિનંતીઓ |
@@ -10220,7 +10461,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S03695d` | detail | Chief Engineer decision | મુખ્ય ઇજનેરનો નિર્ણય |
 | `Sf0a89f` | detail | Close change set | ફેરફાર સમૂહ બંધ કરો |
 | `S7c0c39` | detail | Close this change set? | આ ફેરફાર સમૂહ બંધ કરવો? |
-| `Sadac69` | detail, export_profiles, fleet_feedback | Code | કોડ |
 | `S153d7a` | detail | Comment | ટિપ્પણી |
 | `S611578` | detail | Comment (required for rejection) | ટિપ્પણી (નામંજૂરી માટે જરૂરી) |
 | `Sc38432` | detail | Comment on this field | આ ફીલ્ડ પર ટિપ્પણી કરો |
@@ -10230,6 +10470,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S0ff7e5` | detail, export | Complete baseline | સંપૂર્ણ આધાર સ્થિતિ |
 | `S1798b3` | detail | Completed | પૂર્ણ થયું |
 | `S7671b5` | detail | Confirm or override Audience Access | લક્ષિત જૂથ ઍક્સેસની પુષ્ટિ કરો અથવા અધિલેખિત કરો |
+| `S6512ee` | detail | Connection | જોડાણ |
 | `S4f9be0` | detail | Content | સામગ્રી |
 | `Sa36a5f` | detail, legacy_mapping, st_new | Controller | નિયંત્રક |
 | `Scd293f` | detail | Converter Reactive Power Program | કન્વર્ટર રિએક્ટિવ પાવર પ્રોગ્રામ |
@@ -10292,7 +10533,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sb8c4c9` | detail, form | Further Program References | વધુ પ્રોગ્રામ સંદર્ભો |
 | `S636c41` | detail | Grid Operator | ગ્રિડ ઓપરેટર |
 | `S90ccd6` | detail | History | ઇતિહાસ |
-| `S0dfe7b` | detail | Hub controller | હબ કંટ્રોલર |
 | `Sfec8b7` | detail | Hub Controller group | હબ નિયંત્રક જૂથ |
 | `S00ccae` | detail, form | Hub Controller only | ફક્ત હબ નિયંત્રક |
 | `S3c883f` | detail | I have reviewed these dependants | મેં આ આશ્રિતોની સમીક્ષા કરી છે |
@@ -10307,7 +10547,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S693272` | detail, withdrawn_codes | Legacy Reference Number | જૂનો સંદર્ભ નંબર |
 | `S43d5c5` | detail, form | Loadless Spinning Permitted | ભાર વગર ફરવું માન્ય |
 | `S193786` | detail | Logical Node | લૉજિકલ નોડ |
-| `Sc3f827` | detail | Main controller | મુખ્ય કંટ્રોલર |
 | `S578b78` | detail | Main Controller group | મુખ્ય નિયંત્રક જૂથ |
 | `Sa7512d` | detail, form | Main Controller only | ફક્ત મુખ્ય નિયંત્રક |
 | `Seb9a6d` | detail | Manage translations | અનુવાદો સંચાલિત કરો |
@@ -10327,6 +10566,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S4bddd5` | detail | Nobody can review it until it is submitted. | સબમિટ થાય ત્યાં સુધી કોઈ તેની સમીક્ષા કરી શકતું નથી. |
 | `S2d8f60` | detail | node value | નોડ મૂલ્ય |
 | `S71f8e7` | detail, form | none | કોઈ નહીં |
+| `S7d24f7` | detail | not in the catalogue | કેટલોગમાં નથી |
 | `S4467d4` | detail | Not yet published | હજુ પ્રકાશિત નથી |
 | `S23402a` | detail | Not yet submitted. | હજુ સબમિટ થયું નથી. |
 | `Scd7430` | detail, form | Number of Times Repeated | પુનરાવર્તનોની સંખ્યા |
@@ -10360,6 +10600,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sa4ab7b` | detail | Program References | પ્રોગ્રામ સંદર્ભો |
 | `S70cbd1` | detail | Proposed | પ્રસ્તાવિત |
 | `S483bf2` | detail, list | Published | પ્રકાશિત |
+| `S2b85e8` | detail | Read from the set condition and the repeat code of the imported program. A text reading, not an interpretation of the controller logic. | આયાત કરેલા પ્રોગ્રામની સેટ શરત અને પુનરાવર્તન કોડ પરથી વાંચેલું. લખાણનું વાંચન, કંટ્રોલર તર્કનું અર્થઘટન નથી. |
 | `S6a9c56` | detail, form | Read level | વાંચન સ્તર |
 | `Sf5ca9d` | detail | Recorded exports | નોંધાયેલ નિકાસ |
 | `Sa3f757` | detail | Reinstate to Released | પ્રકાશિત પર પુનઃસ્થાપિત કરો |
@@ -10383,6 +10624,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S4aed03` | detail | Request | વિનંતી |
 | `Sf3421a` | detail | Request a Sign-Off | સાઇન-ઑફની વિનંતી કરો |
 | `Sc26bf6` | detail, mine | Requested | વિનંતી કરેલ |
+| `S2706ed` | detail | Required by | આમના માટે જરૂરી |
 | `S619e87` | detail, form | Reset Delay | રીસેટ વિલંબ |
 | `S026ab2` | detail | resolved | ઉકેલાયું |
 | `S68c61f` | detail | Rev # | સુધારો નં. |
@@ -10420,6 +10662,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S98a377` | detail | Still a Draft. | હજુ મુસદ્દો છે. |
 | `S123f6c` | detail | Submit for Review | સમીક્ષા માટે સબમિટ કરો |
 | `S3dca68` | detail | Superseded by Status Code id (optional) | આનાથી બદલાયેલ સ્ટેટસ કોડ ID (વૈકલ્પિક) |
+| `Sb17da5` | detail | Suppresses | દબાવે છે |
 | `S08e643` | detail, list | Target software version | લક્ષ્ય સૉફ્ટવેર આવૃત્તિ |
 | `S44203c` | detail, form, status code fields | Task Call Frequency | ટાસ્ક કોલ આવર્તન |
 | `S8fc804` | detail | The author has to submit it for review before the Reviewer or Administrator can see it. | સમીક્ષક કે સંચાલક જુએ તે પહેલાં લેખકે તેને સમીક્ષા માટે સબમિટ કરવો જોઈએ. |
@@ -11203,7 +11446,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 
 ### 9.11 PK اردو 🇵🇰 — Urdu
 
-1189 of 1190 strings translated; direction right to left.
+1216 of 1217 strings translated; direction right to left.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -11302,13 +11545,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Scaf0f4` | catalogue_health | Capacity per subgroup | ذیلی گروپ کے لحاظ سے گنجائش |
 | `S25d185` | catalogue_health | Catalogue health | فہرست کی صحت |
 | `Sa28e96` | catalogue_health, menu | Catalogue Health | کیٹلاگ کی صحت |
-| `S199993` | catalogue_health, fleet_feedback | Codes | کوڈ |
+| `S199993` | catalogue_health, connections, fleet_feedback | Codes | کوڈ |
 | `S5548ae` | catalogue_health | days | دن |
 | `S34730e` | catalogue_health | Deprecations | متروکیتیں |
 | `S19582d` | catalogue_health | Effective dates | نفاذ کی تاریخیں |
 | `Seb01bf` | catalogue_health | Examples | مثالیں |
 | `S4105cf` | catalogue_health | exhausted | ختم |
-| `S57e8be` | catalogue_health | Finding | نتیجہ |
+| `S57e8be` | catalogue_health, connections | Finding | نتیجہ |
 | `S1150a1` | catalogue_health | Gaps | خلا |
 | `S171a06` | catalogue_health, export, withdrawn_codes | Group | گروپ |
 | `Sb4aadc` | catalogue_health, legacy_mapping | Hub Controller | ہب کنٹرولر |
@@ -11343,6 +11586,31 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sc9c9de` | check | Terminology check | اصطلاحات کی جانچ |
 | `S6bd377` | check | to look at | دیکھنے کے قابل |
 | `Sac26a7` | check, language | Translation | ترجمہ |
+| `S876180` | connections | A code is not raised while its cause is active. The top of each tree is a cause that nothing suppresses. | جب تک کسی کوڈ کی وجہ فعال ہو وہ کوڈ نہیں اٹھایا جاتا۔ ہر درخت کی چوٹی پر ایسی وجہ ہوتی ہے جسے کوئی نہیں دباتا۔ |
+| `S3f50cd` | connections | A code that is raised again and again is replaced by its repeat code. Repeat codes outside the catalogue are marked external. | بار بار اٹھنے والے کوڈ کی جگہ اس کا تکرار کوڈ آ جاتا ہے۔ کیٹلاگ سے باہر کے تکرار کوڈ بیرونی کے طور پر نشان زد ہوتے ہیں۔ |
+| `Sd87c44` | connections, detail, export | all | سب |
+| `S3e00c3` | connections | Causes and the codes they suppress | وجوہات اور وہ کوڈ جنہیں وہ دباتی ہیں |
+| `Sadac69` | connections, detail, export_profiles | Code | کوڈ |
+| `Se54fe8` | connections | Codes with a connection | تعلق والے کوڈ |
+| `S8f3509` | connections, detail, menu | Connections | تعلقات |
+| `Se90ccc` | connections, detail | Escalated from | جس سے بڑھایا گیا |
+| `S61bd26` | connections, detail | Escalates to | اس تک بڑھاتا ہے |
+| `S78586c` | connections | Escalates to %(code)s, which is deprecated or archived. | %(code)s تک بڑھاتا ہے، جو متروک یا آرکائیو شدہ ہے۔ |
+| `S59d8f3` | connections | external | بیرونی |
+| `Sb7c028` | connections | How the status codes are connected, read from the set conditions and the repeat codes of the imported programs. A text reading, not an interpretation of the controller logic. | اسٹیٹس کوڈ کیسے جڑے ہیں، درآمد شدہ پروگراموں کی سیٹ شرائط اور تکرار کوڈ سے پڑھا گیا۔ متن کی قرأت، کنٹرولر منطق کی تعبیر نہیں۔ |
+| `S0dfe7b` | connections, detail | Hub controller | ہب کنٹرولر |
+| `S1df823` | connections | loop | چکر |
+| `Sc3f827` | connections, detail | Main controller | مین کنٹرولر |
+| `S2f385e` | connections | No connections are known yet. They come from the programs imported from .st files. | ابھی کوئی تعلق معلوم نہیں۔ وہ .st فائلوں سے درآمد شدہ پروگراموں سے آتے ہیں۔ |
+| `S136e29` | connections | Only set while %(number)s is active, which is not in the catalogue. | صرف تب سیٹ ہوتا ہے جب %(number)s فعال ہو؛ یہ کوڈ کیٹلاگ میں نہیں ہے۔ |
+| `S355d4b` | connections, detail | Only set while active | صرف فعال ہونے پر سیٹ |
+| `Sfa38ca` | connections | Part of a loop of suppressions: each code is suppressed by another one of the loop. | دباؤ کے چکر کا حصہ: چکر کا ہر کوڈ چکر کے کسی دوسرے کوڈ سے دبا ہوا ہے۔ |
+| `Se382c2` | connections | Repeat code | تکرار کوڈ |
+| `Sc199d7` | connections, detail | Suppressed by | جس کے ذریعے دبایا گیا |
+| `S0e08e5` | connections | Suppressed by %(code)s, which is deprecated or archived. | %(code)s کے ذریعے دبایا گیا، جو متروک یا آرکائیو شدہ ہے۔ |
+| `S1bc026` | connections | Suppressed by %(number)s, which is not in the catalogue. | %(number)s کے ذریعے دبایا گیا، جو کیٹلاگ میں نہیں ہے۔ |
+| `S844394` | connections | What looks wrong | کیا ٹھیک نہیں لگتا |
+| `S52fc2b` | connections | Where repeated codes escalate to | دہرائے گئے کوڈ کہاں بڑھتے ہیں |
 | `S66dc40` | dashboard | Awaiting Administrator Sign-Off | منتظم کے سائن آف کے منتظر |
 | `S33a0d3` | dashboard | Awaiting Chief Engineer Approval | چیف انجینئر کی منظوری کے منتظر |
 | `S04cc8e` | dashboard | Awaiting Cross-Domain Sign-Off | بین الشعبہ سائن آف کے منتظر |
@@ -11382,7 +11650,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S212856` | detail | advanced, controller firmware programs | جدید، کنٹرولر فرم ویئر پروگرام |
 | `Sfbde82` | detail | Affected component | متاثرہ جزو |
 | `S25f8c5` | detail, export, form | Alarm | الارم |
-| `Sd87c44` | detail, export, hub_consolidation | all | سب |
 | `S484388` | detail, export_center | all columns | تمام کالم |
 | `S2e73c3` | detail | All languages and all access levels are included. Use the export above for a single language or access level. | تمام زبانیں اور تمام رسائی کی سطحیں شامل ہیں۔ ایک زبان یا ایک رسائی سطح کے لیے اوپر کی برآمد استعمال کریں۔ |
 | `S432284` | detail | All required sign-offs are in, but this is still a Draft — the Reviewer and Administrator only see it after you choose Submit for Review below. | تمام مطلوبہ سائن آف آ چکے ہیں، مگر یہ ابھی مسودہ ہے — جائزہ کار اور منتظم اسے تبھی دیکھتے ہیں جب آپ نیچے جائزے کے لیے جمع کرائیں منتخب کریں۔ |
@@ -11405,6 +11672,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S928e2e` | detail | Brake Program | بریک پروگرام |
 | `Sab2e8a` | detail | Build package | پیکیج بنائیں |
 | `Scfadbd` | detail | By | بذریعہ |
+| `Se7bab1` | detail | Chain of causes | وجوہات کی زنجیر |
 | `S9c8393` | detail, mine | Change Request | تبدیلی کی درخواست |
 | `S4572f4` | detail | Change request | تبدیلی کی درخواست |
 | `S3295be` | detail | Change requests in this set | اس مجموعے کی تبدیلی کی درخواستیں |
@@ -11416,7 +11684,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S03695d` | detail | Chief Engineer decision | چیف انجینئر کا فیصلہ |
 | `Sf0a89f` | detail | Close change set | تبدیلیوں کا مجموعہ بند کریں |
 | `S7c0c39` | detail | Close this change set? | کیا یہ تبدیلیوں کا مجموعہ بند کرنا ہے؟ |
-| `Sadac69` | detail, export_profiles, fleet_feedback | Code | کوڈ |
 | `S153d7a` | detail | Comment | تبصرہ |
 | `S611578` | detail | Comment (required for rejection) | تبصرہ (مسترد کرنے کے لیے لازمی) |
 | `Sc38432` | detail | Comment on this field | اس فیلڈ پر تبصرہ کریں |
@@ -11426,6 +11693,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S0ff7e5` | detail, export | Complete baseline | مکمل بنیادی حالت |
 | `S1798b3` | detail | Completed | مکمل ہوا |
 | `S7671b5` | detail | Confirm or override Audience Access | ہدف گروہ تک رسائی کی تصدیق یا اوور رائیڈ کریں |
+| `S6512ee` | detail | Connection | تعلق |
 | `S4f9be0` | detail | Content | مواد |
 | `Sa36a5f` | detail, legacy_mapping, st_new | Controller | کنٹرولر |
 | `Scd293f` | detail | Converter Reactive Power Program | کنورٹر ری ایکٹو پاور پروگرام |
@@ -11488,7 +11756,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sb8c4c9` | detail, form | Further Program References | مزید پروگرام حوالے |
 | `S636c41` | detail | Grid Operator | گرڈ آپریٹر |
 | `S90ccd6` | detail | History | تاریخ |
-| `S0dfe7b` | detail | Hub controller | ہب کنٹرولر |
 | `Sfec8b7` | detail | Hub Controller group | ہب کنٹرولر گروپ |
 | `S00ccae` | detail, form | Hub Controller only | صرف ہب کنٹرولر |
 | `S3c883f` | detail | I have reviewed these dependants | میں نے ان منحصر کوڈ کا جائزہ لے لیا ہے |
@@ -11503,7 +11770,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S693272` | detail, withdrawn_codes | Legacy Reference Number | پرانا حوالہ نمبر |
 | `S43d5c5` | detail, form | Loadless Spinning Permitted | بغیر بوجھ گھومنا مجاز |
 | `S193786` | detail | Logical Node | منطقی نوڈ |
-| `Sc3f827` | detail | Main controller | مین کنٹرولر |
 | `S578b78` | detail | Main Controller group | مرکزی کنٹرولر گروپ |
 | `Sa7512d` | detail, form | Main Controller only | صرف مرکزی کنٹرولر |
 | `Seb9a6d` | detail | Manage translations | تراجم کا انتظام کریں |
@@ -11523,6 +11789,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S4bddd5` | detail | Nobody can review it until it is submitted. | جمع کرائے جانے تک کوئی اس کا جائزہ نہیں لے سکتا۔ |
 | `S2d8f60` | detail | node value | نوڈ کی قدر |
 | `S71f8e7` | detail, form | none | کوئی نہیں |
+| `S7d24f7` | detail | not in the catalogue | کیٹلاگ میں نہیں |
 | `S4467d4` | detail | Not yet published | ابھی شائع نہیں ہوا |
 | `S23402a` | detail | Not yet submitted. | ابھی جمع نہیں کرایا گیا۔ |
 | `Scd7430` | detail, form | Number of Times Repeated | تکرار کی تعداد |
@@ -11556,6 +11823,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sa4ab7b` | detail | Program References | پروگرام کے حوالے |
 | `S70cbd1` | detail | Proposed | مجوزہ |
 | `S483bf2` | detail, list | Published | شائع شدہ |
+| `S2b85e8` | detail | Read from the set condition and the repeat code of the imported program. A text reading, not an interpretation of the controller logic. | درآمد شدہ پروگرام کی سیٹ شرط اور تکرار کوڈ سے پڑھا گیا۔ متن کی قرأت، کنٹرولر منطق کی تعبیر نہیں۔ |
 | `S6a9c56` | detail, form | Read level | پڑھنے کی سطح |
 | `Sf5ca9d` | detail | Recorded exports | درج شدہ برآمدات |
 | `Sa3f757` | detail | Reinstate to Released | جاری شدہ پر بحال کریں |
@@ -11579,6 +11847,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S4aed03` | detail | Request | درخواست |
 | `Sf3421a` | detail | Request a Sign-Off | سائن آف کی درخواست کریں |
 | `Sc26bf6` | detail, mine | Requested | درخواست شدہ |
+| `S2706ed` | detail | Required by | ان کے لیے درکار |
 | `S619e87` | detail, form | Reset Delay | ری سیٹ تاخیر |
 | `S026ab2` | detail | resolved | حل شدہ |
 | `S68c61f` | detail | Rev # | ترمیم نمبر |
@@ -11616,6 +11885,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S98a377` | detail | Still a Draft. | ابھی مسودہ ہے۔ |
 | `S123f6c` | detail | Submit for Review | جائزے کے لیے جمع کرائیں |
 | `S3dca68` | detail | Superseded by Status Code id (optional) | اس سے بدلا گیا اسٹیٹس کوڈ شناخت (اختیاری) |
+| `Sb17da5` | detail | Suppresses | دباتا ہے |
 | `S08e643` | detail, list | Target software version | ہدف سافٹ ویئر ورژن |
 | `S44203c` | detail, form, status code fields | Task Call Frequency | ٹاسک کال فریکوئنسی |
 | `S8fc804` | detail | The author has to submit it for review before the Reviewer or Administrator can see it. | جائزہ کار یا منتظم کے دیکھنے سے پہلے مصنف کو اسے جائزے کے لیے جمع کرانا ہوگا۔ |
@@ -12399,7 +12669,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 
 ### 9.12 IN ಕನ್ನಡ 🇮🇳 — Kannada
 
-1189 of 1190 strings translated; direction left to right.
+1216 of 1217 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -12498,13 +12768,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Scaf0f4` | catalogue_health | Capacity per subgroup | ಉಪಗುಂಪಿಗೆ ಸಾಮರ್ಥ್ಯ |
 | `S25d185` | catalogue_health | Catalogue health | ಕ್ಯಾಟಲಾಗ್ ಆರೋಗ್ಯ |
 | `Sa28e96` | catalogue_health, menu | Catalogue Health | ಕ್ಯಾಟಲಾಗ್ ಆರೋಗ್ಯ |
-| `S199993` | catalogue_health, fleet_feedback | Codes | ಕೋಡ್‌ಗಳು |
+| `S199993` | catalogue_health, connections, fleet_feedback | Codes | ಕೋಡ್‌ಗಳು |
 | `S5548ae` | catalogue_health | days | ದಿನಗಳು |
 | `S34730e` | catalogue_health | Deprecations | ಹಳತಾಗಿಸುವಿಕೆಗಳು |
 | `S19582d` | catalogue_health | Effective dates | ಜಾರಿ ದಿನಾಂಕಗಳು |
 | `Seb01bf` | catalogue_health | Examples | ಉದಾಹರಣೆಗಳು |
 | `S4105cf` | catalogue_health | exhausted | ಮುಗಿದಿದೆ |
-| `S57e8be` | catalogue_health | Finding | ಕಂಡುಕೊಂಡದ್ದು |
+| `S57e8be` | catalogue_health, connections | Finding | ಕಂಡುಕೊಂಡದ್ದು |
 | `S1150a1` | catalogue_health | Gaps | ಅಂತರಗಳು |
 | `S171a06` | catalogue_health, export, withdrawn_codes | Group | ಗುಂಪು |
 | `Sb4aadc` | catalogue_health, legacy_mapping | Hub Controller | ಹಬ್ ನಿಯಂತ್ರಕ |
@@ -12539,6 +12809,31 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sc9c9de` | check | Terminology check | ಪರಿಭಾಷೆ ಪರಿಶೀಲನೆ |
 | `S6bd377` | check | to look at | ನೋಡಬೇಕಾದದ್ದು |
 | `Sac26a7` | check, language | Translation | ಅನುವಾದ |
+| `S876180` | connections | A code is not raised while its cause is active. The top of each tree is a cause that nothing suppresses. | ಕೋಡ್‌ನ ಕಾರಣ ಸಕ್ರಿಯವಾಗಿರುವವರೆಗೆ ಆ ಕೋಡ್ ಎದ್ದೇಳುವುದಿಲ್ಲ. ಪ್ರತಿ ಮರದ ತುದಿಯಲ್ಲಿ ಯಾವುದೂ ಅದುಮದ ಕಾರಣ ಇರುತ್ತದೆ. |
+| `S3f50cd` | connections | A code that is raised again and again is replaced by its repeat code. Repeat codes outside the catalogue are marked external. | ಮತ್ತೆ ಮತ್ತೆ ಎದ್ದೇಳುವ ಕೋಡ್‌ನ ಬದಲು ಅದರ ಪುನರಾವರ್ತನೆ ಕೋಡ್ ಬರುತ್ತದೆ. ಕ್ಯಾಟಲಾಗ್ ಹೊರಗಿನ ಪುನರಾವರ್ತನೆ ಕೋಡ್‌ಗಳನ್ನು ಬಾಹ್ಯ ಎಂದು ಗುರುತಿಸಲಾಗುತ್ತದೆ. |
+| `Sd87c44` | connections, detail, export | all | ಎಲ್ಲಾ |
+| `S3e00c3` | connections | Causes and the codes they suppress | ಕಾರಣಗಳು ಮತ್ತು ಅವು ಅದುಮುವ ಕೋಡ್‌ಗಳು |
+| `Sadac69` | connections, detail, export_profiles | Code | ಕೋಡ್ |
+| `Se54fe8` | connections | Codes with a connection | ಸಂಪರ್ಕ ಇರುವ ಕೋಡ್‌ಗಳು |
+| `S8f3509` | connections, detail, menu | Connections | ಸಂಪರ್ಕಗಳು |
+| `Se90ccc` | connections, detail | Escalated from | ಇದರಿಂದ ಉನ್ನತೀಕರಣ |
+| `S61bd26` | connections, detail | Escalates to | ಇದಕ್ಕೆ ಉನ್ನತೀಕರಿಸುತ್ತದೆ |
+| `S78586c` | connections | Escalates to %(code)s, which is deprecated or archived. | %(code)s ಗೆ ಉನ್ನತೀಕರಿಸುತ್ತದೆ, ಅದು ಹಳೆಯದಾಗಿದೆ ಅಥವಾ ಆರ್ಕೈವ್ ಆಗಿದೆ. |
+| `S59d8f3` | connections | external | ಬಾಹ್ಯ |
+| `Sb7c028` | connections | How the status codes are connected, read from the set conditions and the repeat codes of the imported programs. A text reading, not an interpretation of the controller logic. | ಸ್ಥಿತಿ ಕೋಡ್‌ಗಳು ಹೇಗೆ ಸಂಪರ್ಕಗೊಂಡಿವೆ, ಆಮದು ಮಾಡಿದ ಪ್ರೋಗ್ರಾಂಗಳ ಸೆಟ್ ಷರತ್ತುಗಳು ಮತ್ತು ಪುನರಾವರ್ತನೆ ಕೋಡ್‌ಗಳಿಂದ ಓದಿದ್ದು. ಪಠ್ಯದ ಓದು, ನಿಯಂತ್ರಕ ತರ್ಕದ ವ್ಯಾಖ್ಯಾನವಲ್ಲ. |
+| `S0dfe7b` | connections, detail | Hub controller | ಹಬ್ ಕಂಟ್ರೋಲರ್ |
+| `S1df823` | connections | loop | ಚಕ್ರ |
+| `Sc3f827` | connections, detail | Main controller | ಮುಖ್ಯ ಕಂಟ್ರೋಲರ್ |
+| `S2f385e` | connections | No connections are known yet. They come from the programs imported from .st files. | ಇನ್ನೂ ಯಾವುದೇ ಸಂಪರ್ಕ ತಿಳಿದಿಲ್ಲ. ಅವು .st ಫೈಲ್‌ಗಳಿಂದ ಆಮದು ಮಾಡಿದ ಪ್ರೋಗ್ರಾಂಗಳಿಂದ ಬರುತ್ತವೆ. |
+| `S136e29` | connections | Only set while %(number)s is active, which is not in the catalogue. | %(number)s ಸಕ್ರಿಯವಾಗಿರುವಾಗ ಮಾತ್ರ ಸೆಟ್ ಆಗುತ್ತದೆ; ಈ ಕೋಡ್ ಕ್ಯಾಟಲಾಗ್‌ನಲ್ಲಿ ಇಲ್ಲ. |
+| `S355d4b` | connections, detail | Only set while active | ಸಕ್ರಿಯವಾಗಿರುವಾಗ ಮಾತ್ರ ಸೆಟ್ |
+| `Sfa38ca` | connections | Part of a loop of suppressions: each code is suppressed by another one of the loop. | ಅದುಮುವಿಕೆಯ ಚಕ್ರದ ಭಾಗ: ಚಕ್ರದ ಪ್ರತಿ ಕೋಡ್ ಅನ್ನು ಚಕ್ರದ ಇನ್ನೊಂದು ಕೋಡ್ ಅದುಮುತ್ತದೆ. |
+| `Se382c2` | connections | Repeat code | ಪುನರಾವರ್ತನೆ ಕೋಡ್ |
+| `Sc199d7` | connections, detail | Suppressed by | ಇವುಗಳಿಂದ ಅದುಮಲ್ಪಟ್ಟಿದೆ |
+| `S0e08e5` | connections | Suppressed by %(code)s, which is deprecated or archived. | %(code)s ನಿಂದ ಅದುಮಲ್ಪಟ್ಟಿದೆ, ಅದು ಹಳೆಯದಾಗಿದೆ ಅಥವಾ ಆರ್ಕೈವ್ ಆಗಿದೆ. |
+| `S1bc026` | connections | Suppressed by %(number)s, which is not in the catalogue. | %(number)s ನಿಂದ ಅದುಮಲ್ಪಟ್ಟಿದೆ, ಅದು ಕ್ಯಾಟಲಾಗ್‌ನಲ್ಲಿ ಇಲ್ಲ. |
+| `S844394` | connections | What looks wrong | ಏನು ತಪ್ಪಾಗಿ ಕಾಣುತ್ತದೆ |
+| `S52fc2b` | connections | Where repeated codes escalate to | ಪುನರಾವರ್ತಿತ ಕೋಡ್‌ಗಳು ಎಲ್ಲಿಗೆ ಉನ್ನತೀಕರಿಸುತ್ತವೆ |
 | `S66dc40` | dashboard | Awaiting Administrator Sign-Off | ನಿರ್ವಾಹಕರ ಸಹಿಗಾಗಿ ಕಾಯುತ್ತಿದೆ |
 | `S33a0d3` | dashboard | Awaiting Chief Engineer Approval | ಮುಖ್ಯ ಎಂಜಿನಿಯರ್ ಅನುಮೋದನೆಗಾಗಿ ಕಾಯುತ್ತಿದೆ |
 | `S04cc8e` | dashboard | Awaiting Cross-Domain Sign-Off | ಅಂತರ-ಡೊಮೇನ್ ಸಹಿಗಾಗಿ ಕಾಯುತ್ತಿದೆ |
@@ -12578,7 +12873,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S212856` | detail | advanced, controller firmware programs | ಸುಧಾರಿತ, ನಿಯಂತ್ರಕ ಫರ್ಮ್‌ವೇರ್ ಪ್ರೋಗ್ರಾಂಗಳು |
 | `Sfbde82` | detail | Affected component | ಬಾಧಿತ ಘಟಕ |
 | `S25f8c5` | detail, export, form | Alarm | ಅಲಾರಂ |
-| `Sd87c44` | detail, export, hub_consolidation | all | ಎಲ್ಲಾ |
 | `S484388` | detail, export_center | all columns | ಎಲ್ಲಾ ಕಾಲಮ್‌ಗಳು |
 | `S2e73c3` | detail | All languages and all access levels are included. Use the export above for a single language or access level. | ಎಲ್ಲಾ ಭಾಷೆಗಳು ಮತ್ತು ಎಲ್ಲಾ ಪ್ರವೇಶ ಹಂತಗಳು ಸೇರಿವೆ. ಒಂದು ಭಾಷೆ ಅಥವಾ ಒಂದು ಪ್ರವೇಶ ಹಂತಕ್ಕೆ ಮೇಲಿನ ರಫ್ತು ಬಳಸಿ. |
 | `S432284` | detail | All required sign-offs are in, but this is still a Draft — the Reviewer and Administrator only see it after you choose Submit for Review below. | ಅಗತ್ಯ ಎಲ್ಲಾ ಸಹಿಗಳು ಬಂದಿವೆ, ಆದರೆ ಇದು ಇನ್ನೂ ಕರಡು — ನೀವು ಕೆಳಗೆ ಪರಿಶೀಲನೆಗಾಗಿ ಸಲ್ಲಿಸಿ ಆಯ್ಕೆ ಮಾಡಿದ ನಂತರವೇ ಪರಿಶೀಲಕ ಮತ್ತು ನಿರ್ವಾಹಕರು ಇದನ್ನು ನೋಡುತ್ತಾರೆ. |
@@ -12601,6 +12895,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S928e2e` | detail | Brake Program | ಬ್ರೇಕ್ ಪ್ರೋಗ್ರಾಂ |
 | `Sab2e8a` | detail | Build package | ಪ್ಯಾಕೇಜ್ ರಚಿಸಿ |
 | `Scfadbd` | detail | By | ಇವರಿಂದ |
+| `Se7bab1` | detail | Chain of causes | ಕಾರಣಗಳ ಸರಪಳಿ |
 | `S9c8393` | detail, mine | Change Request | ಬದಲಾವಣೆ ವಿನಂತಿ |
 | `S4572f4` | detail | Change request | ಬದಲಾವಣೆ ವಿನಂತಿ |
 | `S3295be` | detail | Change requests in this set | ಈ ಸಮೂಹದ ಬದಲಾವಣೆ ವಿನಂತಿಗಳು |
@@ -12612,7 +12907,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S03695d` | detail | Chief Engineer decision | ಮುಖ್ಯ ಎಂಜಿನಿಯರ್ ನಿರ್ಧಾರ |
 | `Sf0a89f` | detail | Close change set | ಬದಲಾವಣೆ ಸಮೂಹ ಮುಚ್ಚಿ |
 | `S7c0c39` | detail | Close this change set? | ಈ ಬದಲಾವಣೆ ಸಮೂಹವನ್ನು ಮುಚ್ಚಬೇಕೇ? |
-| `Sadac69` | detail, export_profiles, fleet_feedback | Code | ಕೋಡ್ |
 | `S153d7a` | detail | Comment | ಟಿಪ್ಪಣಿ |
 | `S611578` | detail | Comment (required for rejection) | ಟಿಪ್ಪಣಿ (ತಿರಸ್ಕಾರಕ್ಕೆ ಕಡ್ಡಾಯ) |
 | `Sc38432` | detail | Comment on this field | ಈ ಕ್ಷೇತ್ರದ ಬಗ್ಗೆ ಟಿಪ್ಪಣಿ ಮಾಡಿ |
@@ -12622,6 +12916,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S0ff7e5` | detail, export | Complete baseline | ಸಂಪೂರ್ಣ ಆಧಾರ ಸ್ಥಿತಿ |
 | `S1798b3` | detail | Completed | ಪೂರ್ಣಗೊಂಡಿತು |
 | `S7671b5` | detail | Confirm or override Audience Access | ಉದ್ದೇಶಿತ ಬಳಕೆದಾರರ ಪ್ರವೇಶವನ್ನು ದೃಢೀಕರಿಸಿ ಅಥವಾ ಅತಿಕ್ರಮಿಸಿ |
+| `S6512ee` | detail | Connection | ಸಂಪರ್ಕ |
 | `S4f9be0` | detail | Content | ವಿಷಯ |
 | `Sa36a5f` | detail, legacy_mapping, st_new | Controller | ನಿಯಂತ್ರಕ |
 | `Scd293f` | detail | Converter Reactive Power Program | ಕನ್ವರ್ಟರ್ ರಿಯಾಕ್ಟಿವ್ ಪವರ್ ಪ್ರೋಗ್ರಾಂ |
@@ -12684,7 +12979,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sb8c4c9` | detail, form | Further Program References | ಇನ್ನಷ್ಟು ಪ್ರೋಗ್ರಾಂ ಉಲ್ಲೇಖಗಳು |
 | `S636c41` | detail | Grid Operator | ಗ್ರಿಡ್ ಆಪರೇಟರ್ |
 | `S90ccd6` | detail | History | ಇತಿಹಾಸ |
-| `S0dfe7b` | detail | Hub controller | ಹಬ್ ಕಂಟ್ರೋಲರ್ |
 | `Sfec8b7` | detail | Hub Controller group | ಹಬ್ ನಿಯಂತ್ರಕ ಗುಂಪು |
 | `S00ccae` | detail, form | Hub Controller only | ಹಬ್ ನಿಯಂತ್ರಕ ಮಾತ್ರ |
 | `S3c883f` | detail | I have reviewed these dependants | ನಾನು ಈ ಅವಲಂಬಿತಗಳನ್ನು ಪರಿಶೀಲಿಸಿದ್ದೇನೆ |
@@ -12699,7 +12993,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S693272` | detail, withdrawn_codes | Legacy Reference Number | ಹಳೆಯ ಉಲ್ಲೇಖ ಸಂಖ್ಯೆ |
 | `S43d5c5` | detail, form | Loadless Spinning Permitted | ಹೊರೆರಹಿತ ತಿರುಗುವಿಕೆ ಅನುಮತಿಸಲಾಗಿದೆ |
 | `S193786` | detail | Logical Node | ತಾರ್ಕಿಕ ನೋಡ್ |
-| `Sc3f827` | detail | Main controller | ಮುಖ್ಯ ಕಂಟ್ರೋಲರ್ |
 | `S578b78` | detail | Main Controller group | ಮುಖ್ಯ ನಿಯಂತ್ರಕ ಗುಂಪು |
 | `Sa7512d` | detail, form | Main Controller only | ಮುಖ್ಯ ನಿಯಂತ್ರಕ ಮಾತ್ರ |
 | `Seb9a6d` | detail | Manage translations | ಅನುವಾದಗಳನ್ನು ನಿರ್ವಹಿಸಿ |
@@ -12719,6 +13012,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S4bddd5` | detail | Nobody can review it until it is submitted. | ಸಲ್ಲಿಸುವವರೆಗೆ ಯಾರೂ ಇದನ್ನು ಪರಿಶೀಲಿಸಲಾರರು. |
 | `S2d8f60` | detail | node value | ನೋಡ್ ಮೌಲ್ಯ |
 | `S71f8e7` | detail, form | none | ಯಾವುದೂ ಇಲ್ಲ |
+| `S7d24f7` | detail | not in the catalogue | ಕ್ಯಾಟಲಾಗ್‌ನಲ್ಲಿ ಇಲ್ಲ |
 | `S4467d4` | detail | Not yet published | ಇನ್ನೂ ಪ್ರಕಟಿಸಿಲ್ಲ |
 | `S23402a` | detail | Not yet submitted. | ಇನ್ನೂ ಸಲ್ಲಿಸಿಲ್ಲ. |
 | `Scd7430` | detail, form | Number of Times Repeated | ಪುನರಾವರ್ತನೆಗಳ ಸಂಖ್ಯೆ |
@@ -12752,6 +13046,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sa4ab7b` | detail | Program References | ಪ್ರೋಗ್ರಾಂ ಉಲ್ಲೇಖಗಳು |
 | `S70cbd1` | detail | Proposed | ಪ್ರಸ್ತಾವಿತ |
 | `S483bf2` | detail, list | Published | ಪ್ರಕಟಿತ |
+| `S2b85e8` | detail | Read from the set condition and the repeat code of the imported program. A text reading, not an interpretation of the controller logic. | ಆಮದು ಮಾಡಿದ ಪ್ರೋಗ್ರಾಂನ ಸೆಟ್ ಷರತ್ತು ಮತ್ತು ಪುನರಾವರ್ತನೆ ಕೋಡ್‌ನಿಂದ ಓದಿದ್ದು. ಪಠ್ಯದ ಓದು, ನಿಯಂತ್ರಕ ತರ್ಕದ ವ್ಯಾಖ್ಯಾನವಲ್ಲ. |
 | `S6a9c56` | detail, form | Read level | ಓದುವ ಮಟ್ಟ |
 | `Sf5ca9d` | detail | Recorded exports | ದಾಖಲಿತ ರಫ್ತುಗಳು |
 | `Sa3f757` | detail | Reinstate to Released | ಬಿಡುಗಡೆಯಾದದ್ದಕ್ಕೆ ಮರುಸ್ಥಾಪಿಸಿ |
@@ -12775,6 +13070,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S4aed03` | detail | Request | ವಿನಂತಿ |
 | `Sf3421a` | detail | Request a Sign-Off | ಸಹಿಯನ್ನು ವಿನಂತಿಸಿ |
 | `Sc26bf6` | detail, mine | Requested | ವಿನಂತಿಸಲಾಗಿದೆ |
+| `S2706ed` | detail | Required by | ಇವುಗಳಿಗೆ ಅಗತ್ಯ |
 | `S619e87` | detail, form | Reset Delay | ರೀಸೆಟ್ ವಿಳಂಬ |
 | `S026ab2` | detail | resolved | ಪರಿಹರಿಸಲಾಗಿದೆ |
 | `S68c61f` | detail | Rev # | ಪರಿಷ್ಕರಣೆ ಸಂ. |
@@ -12812,6 +13108,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S98a377` | detail | Still a Draft. | ಇನ್ನೂ ಕರಡು. |
 | `S123f6c` | detail | Submit for Review | ಪರಿಶೀಲನೆಗಾಗಿ ಸಲ್ಲಿಸಿ |
 | `S3dca68` | detail | Superseded by Status Code id (optional) | ಇದರಿಂದ ಬದಲಿಸಲಾದ ಸ್ಥಿತಿ ಕೋಡ್ ಗುರುತು (ಐಚ್ಛಿಕ) |
+| `Sb17da5` | detail | Suppresses | ಅದುಮುತ್ತದೆ |
 | `S08e643` | detail, list | Target software version | ಗುರಿ ಸಾಫ್ಟ್‌ವೇರ್ ಆವೃತ್ತಿ |
 | `S44203c` | detail, form, status code fields | Task Call Frequency | ಟಾಸ್ಕ್ ಕಾಲ್ ಆವರ್ತನ |
 | `S8fc804` | detail | The author has to submit it for review before the Reviewer or Administrator can see it. | ಪರಿಶೀಲಕ ಅಥವಾ ನಿರ್ವಾಹಕರು ನೋಡುವ ಮೊದಲು ಲೇಖಕರು ಇದನ್ನು ಪರಿಶೀಲನೆಗಾಗಿ ಸಲ್ಲಿಸಬೇಕು. |
@@ -13595,7 +13892,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 
 ### 9.13 IN ଓଡ଼ିଆ 🇮🇳 — Odia
 
-1189 of 1190 strings translated; direction left to right.
+1216 of 1217 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -13694,13 +13991,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Scaf0f4` | catalogue_health | Capacity per subgroup | ଉପଗୋଷ୍ଠୀ ପ୍ରତି କ୍ଷମତା |
 | `S25d185` | catalogue_health | Catalogue health | କ୍ୟାଟାଲଗ୍ ସ୍ୱାସ୍ଥ୍ୟ |
 | `Sa28e96` | catalogue_health, menu | Catalogue Health | କାଟାଲଗ୍ ସ୍ୱାସ୍ଥ୍ୟ |
-| `S199993` | catalogue_health, fleet_feedback | Codes | କୋଡ୍ |
+| `S199993` | catalogue_health, connections, fleet_feedback | Codes | କୋଡ୍ |
 | `S5548ae` | catalogue_health | days | ଦିନ |
 | `S34730e` | catalogue_health | Deprecations | ପ୍ରଚଳନ ବନ୍ଦ |
 | `S19582d` | catalogue_health | Effective dates | କାର୍ଯ୍ୟକାରୀ ତାରିଖ |
 | `Seb01bf` | catalogue_health | Examples | ଉଦାହରଣ |
 | `S4105cf` | catalogue_health | exhausted | ଶେଷ |
-| `S57e8be` | catalogue_health | Finding | ଉପଲବ୍ଧି |
+| `S57e8be` | catalogue_health, connections | Finding | ଉପଲବ୍ଧି |
 | `S1150a1` | catalogue_health | Gaps | ଫାଙ୍କ |
 | `S171a06` | catalogue_health, export, withdrawn_codes | Group | ଗୋଷ୍ଠୀ |
 | `Sb4aadc` | catalogue_health, legacy_mapping | Hub Controller | ହବ୍ ନିୟନ୍ତ୍ରକ |
@@ -13735,6 +14032,31 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sc9c9de` | check | Terminology check | ପରିଭାଷା ଯାଞ୍ଚ |
 | `S6bd377` | check | to look at | ଦେଖିବାକୁ ଥିବା |
 | `Sac26a7` | check, language | Translation | ଅନୁବାଦ |
+| `S876180` | connections | A code is not raised while its cause is active. The top of each tree is a cause that nothing suppresses. | କୋଡ୍‌ର କାରଣ ସକ୍ରିୟ ଥିବା ପର୍ଯ୍ୟନ୍ତ ସେହି କୋଡ୍ ଉଠେ ନାହିଁ। ପ୍ରତ୍ୟେକ ଗଛର ଶୀର୍ଷରେ ଏପରି କାରଣ ଅଛି ଯାହାକୁ କେହି ଦବାଏ ନାହିଁ। |
+| `S3f50cd` | connections | A code that is raised again and again is replaced by its repeat code. Repeat codes outside the catalogue are marked external. | ବାରମ୍ବାର ଉଠୁଥିବା କୋଡ୍‌ ବଦଳରେ ତାହାର ପୁନରାବୃତ୍ତି କୋଡ୍ ଆସେ। କ୍ୟାଟାଲଗ୍ ବାହାରର ପୁନରାବୃତ୍ତି କୋଡ୍ ବାହ୍ୟ ବୋଲି ଚିହ୍ନିତ ହୁଏ। |
+| `Sd87c44` | connections, detail, export | all | ସମସ୍ତ |
+| `S3e00c3` | connections | Causes and the codes they suppress | କାରଣ ଓ ସେମାନେ ଦବାଉଥିବା କୋଡ୍ |
+| `Sadac69` | connections, detail, export_profiles | Code | କୋଡ୍ |
+| `Se54fe8` | connections | Codes with a connection | ସଂଯୋଗ ଥିବା କୋଡ୍ |
+| `S8f3509` | connections, detail, menu | Connections | ସଂଯୋଗଗୁଡ଼ିକ |
+| `Se90ccc` | connections, detail | Escalated from | ଯେଉଁଠାରୁ ଉନ୍ନୀତ |
+| `S61bd26` | connections, detail | Escalates to | ଯାହାକୁ ଉନ୍ନୀତ କରେ |
+| `S78586c` | connections | Escalates to %(code)s, which is deprecated or archived. | %(code)s କୁ ଉନ୍ନୀତ କରେ, ଯାହା ଅପ୍ରଚଳିତ କିମ୍ବା ଆର୍କାଇଭ୍ ହୋଇଛି। |
+| `S59d8f3` | connections | external | ବାହ୍ୟ |
+| `Sb7c028` | connections | How the status codes are connected, read from the set conditions and the repeat codes of the imported programs. A text reading, not an interpretation of the controller logic. | ସ୍ଥିତି କୋଡ୍ କିପରି ସଂଯୁକ୍ତ, ଆମଦାନି ହୋଇଥିବା ପ୍ରୋଗ୍ରାମ୍‌ର ସେଟ୍ ସର୍ତ୍ତ ଓ ପୁନରାବୃତ୍ତି କୋଡ୍‌ରୁ ପଢ଼ାଯାଇଥିବା। ପାଠ୍ୟର ପଠନ, କଣ୍ଟ୍ରୋଲର୍ ଯୁକ୍ତିର ବ୍ୟାଖ୍ୟା ନୁହେଁ। |
+| `S0dfe7b` | connections, detail | Hub controller | ହବ୍ କଣ୍ଟ୍ରୋଲର୍ |
+| `S1df823` | connections | loop | ଚକ୍ର |
+| `Sc3f827` | connections, detail | Main controller | ମୁଖ୍ୟ କଣ୍ଟ୍ରୋଲର୍ |
+| `S2f385e` | connections | No connections are known yet. They come from the programs imported from .st files. | ଏପର୍ଯ୍ୟନ୍ତ କୌଣସି ସଂଯୋଗ ଜଣା ନାହିଁ। ସେଗୁଡ଼ିକ .st ଫାଇଲ୍‌ରୁ ଆମଦାନି ହୋଇଥିବା ପ୍ରୋଗ୍ରାମ୍‌ରୁ ଆସେ। |
+| `S136e29` | connections | Only set while %(number)s is active, which is not in the catalogue. | %(number)s ସକ୍ରିୟ ଥିବା ବେଳେ ହିଁ ସେଟ୍ ହୁଏ; ଏହି କୋଡ୍ କ୍ୟାଟାଲଗ୍‌ରେ ନାହିଁ। |
+| `S355d4b` | connections, detail | Only set while active | ସକ୍ରିୟ ଥିବା ବେଳେ ହିଁ ସେଟ୍ |
+| `Sfa38ca` | connections | Part of a loop of suppressions: each code is suppressed by another one of the loop. | ଦମନ ଚକ୍ରର ଅଂଶ: ଚକ୍ରର ପ୍ରତ୍ୟେକ କୋଡ୍ ଚକ୍ରର ଅନ୍ୟ ଏକ କୋଡ୍ ଦ୍ୱାରା ଦମିତ। |
+| `Se382c2` | connections | Repeat code | ପୁନରାବୃତ୍ତି କୋଡ୍ |
+| `Sc199d7` | connections, detail | Suppressed by | ଏହାଦ୍ୱାରା ଦମିତ |
+| `S0e08e5` | connections | Suppressed by %(code)s, which is deprecated or archived. | %(code)s ଦ୍ୱାରା ଦମିତ, ଯାହା ଅପ୍ରଚଳିତ କିମ୍ବା ଆର୍କାଇଭ୍ ହୋଇଛି। |
+| `S1bc026` | connections | Suppressed by %(number)s, which is not in the catalogue. | %(number)s ଦ୍ୱାରା ଦମିତ, ଯାହା କ୍ୟାଟାଲଗ୍‌ରେ ନାହିଁ। |
+| `S844394` | connections | What looks wrong | କଣ ଠିକ୍ ଲାଗୁନାହିଁ |
+| `S52fc2b` | connections | Where repeated codes escalate to | ପୁନରାବୃତ୍ତ କୋଡ୍ କେଉଁଠାକୁ ଉନ୍ନୀତ ହୁଏ |
 | `S66dc40` | dashboard | Awaiting Administrator Sign-Off | ପ୍ରଶାସକ ସ୍ୱାକ୍ଷର ପାଇଁ ଅପେକ୍ଷା |
 | `S33a0d3` | dashboard | Awaiting Chief Engineer Approval | ମୁଖ୍ୟ ଇଞ୍ଜିନିୟର ଅନୁମୋଦନ ପାଇଁ ଅପେକ୍ଷା |
 | `S04cc8e` | dashboard | Awaiting Cross-Domain Sign-Off | ଆନ୍ତଃ-ଡୋମେନ୍ ସ୍ୱାକ୍ଷର ପାଇଁ ଅପେକ୍ଷା |
@@ -13774,7 +14096,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S212856` | detail | advanced, controller firmware programs | ଉନ୍ନତ, କଣ୍ଟ୍ରୋଲର୍ ଫର୍ମୱେର୍ ପ୍ରୋଗ୍ରାମ୍ |
 | `Sfbde82` | detail | Affected component | ପ୍ରଭାବିତ ଉପାଦାନ |
 | `S25f8c5` | detail, export, form | Alarm | ଆଲାରମ୍ |
-| `Sd87c44` | detail, export, hub_consolidation | all | ସମସ୍ତ |
 | `S484388` | detail, export_center | all columns | ସମସ୍ତ ସ୍ତମ୍ଭ |
 | `S2e73c3` | detail | All languages and all access levels are included. Use the export above for a single language or access level. | ସମସ୍ତ ଭାଷା ଓ ସମସ୍ତ ପ୍ରବେଶ ସ୍ତର ଅନ୍ତର୍ଭୁକ୍ତ। ଗୋଟିଏ ଭାଷା କିମ୍ବା ଗୋଟିଏ ପ୍ରବେଶ ସ୍ତର ପାଇଁ ଉପରର ଏକ୍ସପୋର୍ଟ ବ୍ୟବହାର କରନ୍ତୁ। |
 | `S432284` | detail | All required sign-offs are in, but this is still a Draft — the Reviewer and Administrator only see it after you choose Submit for Review below. | ସମସ୍ତ ଆବଶ୍ୟକ ସ୍ୱାକ୍ଷର ଆସିଛି, କିନ୍ତୁ ଏହା ଏବେ ବି ଖସଡ଼ା — ଆପଣ ତଳେ ସମୀକ୍ଷା ପାଇଁ ଦାଖଲ କରନ୍ତୁ ବାଛିଲେ ହିଁ ସମୀକ୍ଷକ ଓ ପ୍ରଶାସକ ଏହାକୁ ଦେଖିବେ। |
@@ -13797,6 +14118,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S928e2e` | detail | Brake Program | ବ୍ରେକ୍ ପ୍ରୋଗ୍ରାମ୍ |
 | `Sab2e8a` | detail | Build package | ପ୍ୟାକେଜ୍ ତିଆରି କରନ୍ତୁ |
 | `Scfadbd` | detail | By | ଦ୍ୱାରା |
+| `Se7bab1` | detail | Chain of causes | କାରଣର ଶୃଙ୍ଖଳ |
 | `S9c8393` | detail, mine | Change Request | ପରିବର୍ତ୍ତନ ଅନୁରୋଧ |
 | `S4572f4` | detail | Change request | ପରିବର୍ତ୍ତନ ଅନୁରୋଧ |
 | `S3295be` | detail | Change requests in this set | ଏହି ସମୂହର ପରିବର୍ତ୍ତନ ଅନୁରୋଧ |
@@ -13808,7 +14130,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S03695d` | detail | Chief Engineer decision | ମୁଖ୍ୟ ଇଞ୍ଜିନିୟର ନିଷ୍ପତ୍ତି |
 | `Sf0a89f` | detail | Close change set | ପରିବର୍ତ୍ତନ ସମୂହ ବନ୍ଦ କରନ୍ତୁ |
 | `S7c0c39` | detail | Close this change set? | ଏହି ପରିବର୍ତ୍ତନ ସମୂହ ବନ୍ଦ କରିବେ? |
-| `Sadac69` | detail, export_profiles, fleet_feedback | Code | କୋଡ୍ |
 | `S153d7a` | detail | Comment | ମନ୍ତବ୍ୟ |
 | `S611578` | detail | Comment (required for rejection) | ମନ୍ତବ୍ୟ (ପ୍ରତ୍ୟାଖ୍ୟାନ ପାଇଁ ବାଧ୍ୟତାମୂଳକ) |
 | `Sc38432` | detail | Comment on this field | ଏହି କ୍ଷେତ୍ର ଉପରେ ମନ୍ତବ୍ୟ ଦିଅନ୍ତୁ |
@@ -13818,6 +14139,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S0ff7e5` | detail, export | Complete baseline | ସମ୍ପୂର୍ଣ୍ଣ ଆଧାର ସ୍ଥିତି |
 | `S1798b3` | detail | Completed | ସମ୍ପୂର୍ଣ୍ଣ ହେଲା |
 | `S7671b5` | detail | Confirm or override Audience Access | ଲକ୍ଷ୍ୟ ଗୋଷ୍ଠୀ ପ୍ରବେଶ ନିଶ୍ଚିତ ବା ଅତିକ୍ରମ କରନ୍ତୁ |
+| `S6512ee` | detail | Connection | ସଂଯୋଗ |
 | `S4f9be0` | detail | Content | ବିଷୟବସ୍ତୁ |
 | `Sa36a5f` | detail, legacy_mapping, st_new | Controller | ନିୟନ୍ତ୍ରକ |
 | `Scd293f` | detail | Converter Reactive Power Program | କନଭର୍ଟର୍ ରିଆକ୍ଟିଭ୍ ପାୱାର୍ ପ୍ରୋଗ୍ରାମ୍ |
@@ -13880,7 +14202,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sb8c4c9` | detail, form | Further Program References | ଅଧିକ ପ୍ରୋଗ୍ରାମ୍ ସନ୍ଦର୍ଭ |
 | `S636c41` | detail | Grid Operator | ଗ୍ରିଡ୍ ଅପରେଟର୍ |
 | `S90ccd6` | detail | History | ଇତିହାସ |
-| `S0dfe7b` | detail | Hub controller | ହବ୍ କଣ୍ଟ୍ରୋଲର୍ |
 | `Sfec8b7` | detail | Hub Controller group | ହବ୍ ନିୟନ୍ତ୍ରକ ଗୋଷ୍ଠୀ |
 | `S00ccae` | detail, form | Hub Controller only | କେବଳ ହବ୍ ନିୟନ୍ତ୍ରକ |
 | `S3c883f` | detail | I have reviewed these dependants | ମୁଁ ଏହି ନିର୍ଭରଶୀଳଗୁଡ଼ିକୁ ସମୀକ୍ଷା କରିଛି |
@@ -13895,7 +14216,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S693272` | detail, withdrawn_codes | Legacy Reference Number | ପୁରୁଣା ସନ୍ଦର୍ଭ ସଂଖ୍ୟା |
 | `S43d5c5` | detail, form | Loadless Spinning Permitted | ଭାରହୀନ ଘୂର୍ଣ୍ଣନ ଅନୁମତିପ୍ରାପ୍ତ |
 | `S193786` | detail | Logical Node | ତାର୍କିକ ନୋଡ୍ |
-| `Sc3f827` | detail | Main controller | ମୁଖ୍ୟ କଣ୍ଟ୍ରୋଲର୍ |
 | `S578b78` | detail | Main Controller group | ମୁଖ୍ୟ ନିୟନ୍ତ୍ରକ ଗୋଷ୍ଠୀ |
 | `Sa7512d` | detail, form | Main Controller only | କେବଳ ମୁଖ୍ୟ ନିୟନ୍ତ୍ରକ |
 | `Seb9a6d` | detail | Manage translations | ଅନୁବାଦ ପରିଚାଳନା କରନ୍ତୁ |
@@ -13915,6 +14235,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S4bddd5` | detail | Nobody can review it until it is submitted. | ଦାଖଲ ନହେବା ପର୍ଯ୍ୟନ୍ତ କେହି ଏହାକୁ ସମୀକ୍ଷା କରିପାରିବେ ନାହିଁ। |
 | `S2d8f60` | detail | node value | ନୋଡ୍ ମୂଲ୍ୟ |
 | `S71f8e7` | detail, form | none | କିଛି ନାହିଁ |
+| `S7d24f7` | detail | not in the catalogue | କ୍ୟାଟାଲଗ୍‌ରେ ନାହିଁ |
 | `S4467d4` | detail | Not yet published | ଏପର୍ଯ୍ୟନ୍ତ ପ୍ରକାଶିତ ହୋଇନାହିଁ |
 | `S23402a` | detail | Not yet submitted. | ଏପର୍ଯ୍ୟନ୍ତ ଦାଖଲ ହୋଇନାହିଁ। |
 | `Scd7430` | detail, form | Number of Times Repeated | ପୁନରାବୃତ୍ତି ସଂଖ୍ୟା |
@@ -13948,6 +14269,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sa4ab7b` | detail | Program References | ପ୍ରୋଗ୍ରାମ୍ ସନ୍ଦର୍ଭ |
 | `S70cbd1` | detail | Proposed | ପ୍ରସ୍ତାବିତ |
 | `S483bf2` | detail, list | Published | ପ୍ରକାଶିତ |
+| `S2b85e8` | detail | Read from the set condition and the repeat code of the imported program. A text reading, not an interpretation of the controller logic. | ଆମଦାନି ହୋଇଥିବା ପ୍ରୋଗ୍ରାମ୍‌ର ସେଟ୍ ସର୍ତ୍ତ ଓ ପୁନରାବୃତ୍ତି କୋଡ୍‌ରୁ ପଢ଼ାଯାଇଥିବା। ପାଠ୍ୟର ପଠନ, କଣ୍ଟ୍ରୋଲର୍ ଯୁକ୍ତିର ବ୍ୟାଖ୍ୟା ନୁହେଁ। |
 | `S6a9c56` | detail, form | Read level | ପଢ଼ିବା ସ୍ତର |
 | `Sf5ca9d` | detail | Recorded exports | ରେକର୍ଡ ହୋଇଥିବା ରପ୍ତାନି |
 | `Sa3f757` | detail | Reinstate to Released | ମୁକ୍ତକୁ ପୁନଃସ୍ଥାପନ କରନ୍ତୁ |
@@ -13971,6 +14293,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S4aed03` | detail | Request | ଅନୁରୋଧ |
 | `Sf3421a` | detail | Request a Sign-Off | ସ୍ୱାକ୍ଷର ଅନୁରୋଧ କରନ୍ତୁ |
 | `Sc26bf6` | detail, mine | Requested | ଅନୁରୋଧିତ |
+| `S2706ed` | detail | Required by | ଏଗୁଡ଼ିକ ପାଇଁ ଆବଶ୍ୟକ |
 | `S619e87` | detail, form | Reset Delay | ରିସେଟ୍ ବିଳମ୍ବ |
 | `S026ab2` | detail | resolved | ସମାଧାନ ହୋଇଛି |
 | `S68c61f` | detail | Rev # | ସଂସ୍କରଣ ସଂ. |
@@ -14008,6 +14331,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S98a377` | detail | Still a Draft. | ଏପର୍ଯ୍ୟନ୍ତ ଖସଡ଼ା। |
 | `S123f6c` | detail | Submit for Review | ସମୀକ୍ଷା ପାଇଁ ଦାଖଲ କରନ୍ତୁ |
 | `S3dca68` | detail | Superseded by Status Code id (optional) | ଏହା ଦ୍ୱାରା ବଦଳାଯାଇଥିବା ସ୍ଥିତି କୋଡ୍ ପରିଚୟକ (ବିକଳ୍ପ) |
+| `Sb17da5` | detail | Suppresses | ଦମନ କରେ |
 | `S08e643` | detail, list | Target software version | ଲକ୍ଷ୍ୟ ସଫ୍ଟୱେର୍ ସଂସ୍କରଣ |
 | `S44203c` | detail, form, status code fields | Task Call Frequency | ଟାସ୍କ୍ କଲ୍ ଫ୍ରିକ୍ୱେନ୍ସି |
 | `S8fc804` | detail | The author has to submit it for review before the Reviewer or Administrator can see it. | ସମୀକ୍ଷକ ବା ପ୍ରଶାସକ ଦେଖିବା ପୂର୍ବରୁ ଲେଖକ ଏହାକୁ ସମୀକ୍ଷା ପାଇଁ ଦାଖଲ କରିବା ଆବଶ୍ୟକ। |
@@ -14791,7 +15115,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 
 ### 9.14 IN മലയാളം 🇮🇳 — Malayalam
 
-1189 of 1190 strings translated; direction left to right.
+1216 of 1217 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -14890,13 +15214,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Scaf0f4` | catalogue_health | Capacity per subgroup | ഉപഗ്രൂപ്പ് തിരിച്ചുള്ള ശേഷി |
 | `S25d185` | catalogue_health | Catalogue health | കാറ്റലോഗ് ആരോഗ്യം |
 | `Sa28e96` | catalogue_health, menu | Catalogue Health | കാറ്റലോഗ് ആരോഗ്യം |
-| `S199993` | catalogue_health, fleet_feedback | Codes | കോഡുകൾ |
+| `S199993` | catalogue_health, connections, fleet_feedback | Codes | കോഡുകൾ |
 | `S5548ae` | catalogue_health | days | ദിവസം |
 | `S34730e` | catalogue_health | Deprecations | കാലഹരണപ്പെടുത്തലുകൾ |
 | `S19582d` | catalogue_health | Effective dates | പ്രാബല്യ തീയതികൾ |
 | `Seb01bf` | catalogue_health | Examples | ഉദാഹരണങ്ങൾ |
 | `S4105cf` | catalogue_health | exhausted | തീർന്നു |
-| `S57e8be` | catalogue_health | Finding | കണ്ടെത്തൽ |
+| `S57e8be` | catalogue_health, connections | Finding | കണ്ടെത്തൽ |
 | `S1150a1` | catalogue_health | Gaps | വിടവുകൾ |
 | `S171a06` | catalogue_health, export, withdrawn_codes | Group | ഗ്രൂപ്പ് |
 | `Sb4aadc` | catalogue_health, legacy_mapping | Hub Controller | ഹബ് കൺട്രോളർ |
@@ -14931,6 +15255,31 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sc9c9de` | check | Terminology check | പദാവലി പരിശോധന |
 | `S6bd377` | check | to look at | നോക്കാനുള്ളത് |
 | `Sac26a7` | check, language | Translation | വിവർത്തനം |
+| `S876180` | connections | A code is not raised while its cause is active. The top of each tree is a cause that nothing suppresses. | ഒരു കോഡിന്റെ കാരണം സജീവമായിരിക്കുന്നിടത്തോളം ആ കോഡ് ഉയരില്ല. ഓരോ മരത്തിന്റെയും മുകളിൽ ഒന്നും അടിച്ചമർത്താത്ത ഒരു കാരണമാണ്. |
+| `S3f50cd` | connections | A code that is raised again and again is replaced by its repeat code. Repeat codes outside the catalogue are marked external. | വീണ്ടും വീണ്ടും ഉയരുന്ന കോഡിനു പകരം അതിന്റെ ആവർത്തന കോഡ് വരും. കാറ്റലോഗിനു പുറത്തുള്ള ആവർത്തന കോഡുകൾ ബാഹ്യം എന്ന് അടയാളപ്പെടുത്തും. |
+| `Sd87c44` | connections, detail, export | all | എല്ലാം |
+| `S3e00c3` | connections | Causes and the codes they suppress | കാരണങ്ങളും അവ അടിച്ചമർത്തുന്ന കോഡുകളും |
+| `Sadac69` | connections, detail, export_profiles | Code | കോഡ് |
+| `Se54fe8` | connections | Codes with a connection | ബന്ധമുള്ള കോഡുകൾ |
+| `S8f3509` | connections, detail, menu | Connections | ബന്ധങ്ങൾ |
+| `Se90ccc` | connections, detail | Escalated from | ഇതിൽ നിന്ന് ഉയർത്തിയത് |
+| `S61bd26` | connections, detail | Escalates to | ഇതിലേക്ക് ഉയർത്തുന്നു |
+| `S78586c` | connections | Escalates to %(code)s, which is deprecated or archived. | %(code)s ലേക്ക് ഉയർത്തുന്നു, അത് കാലഹരണപ്പെട്ടതോ ആർക്കൈവ് ചെയ്തതോ ആണ്. |
+| `S59d8f3` | connections | external | ബാഹ്യം |
+| `Sb7c028` | connections | How the status codes are connected, read from the set conditions and the repeat codes of the imported programs. A text reading, not an interpretation of the controller logic. | സ്റ്റാറ്റസ് കോഡുകൾ എങ്ങനെ ബന്ധിപ്പിച്ചിരിക്കുന്നു, ഇറക്കുമതി ചെയ്ത പ്രോഗ്രാമുകളുടെ സെറ്റ് വ്യവസ്ഥകളിൽ നിന്നും ആവർത്തന കോഡുകളിൽ നിന്നും വായിച്ചത്. വാചകത്തിന്റെ വായന മാത്രം, കൺട്രോളർ ലോജിക്കിന്റെ വ്യാഖ്യാനമല്ല. |
+| `S0dfe7b` | connections, detail | Hub controller | ഹബ് കൺട്രോളർ |
+| `S1df823` | connections | loop | ചക്രം |
+| `Sc3f827` | connections, detail | Main controller | മെയിൻ കൺട്രോളർ |
+| `S2f385e` | connections | No connections are known yet. They come from the programs imported from .st files. | ഇതുവരെ ബന്ധങ്ങളൊന്നും അറിയില്ല. അവ .st ഫയലുകളിൽ നിന്ന് ഇറക്കുമതി ചെയ്ത പ്രോഗ്രാമുകളിൽ നിന്നാണ് വരുന്നത്. |
+| `S136e29` | connections | Only set while %(number)s is active, which is not in the catalogue. | %(number)s സജീവമായിരിക്കുമ്പോൾ മാത്രം സെറ്റ് ആകുന്നു; ഈ കോഡ് കാറ്റലോഗിൽ ഇല്ല. |
+| `S355d4b` | connections, detail | Only set while active | സജീവമായിരിക്കുമ്പോൾ മാത്രം സെറ്റ് |
+| `Sfa38ca` | connections | Part of a loop of suppressions: each code is suppressed by another one of the loop. | അടിച്ചമർത്തൽ ചക്രത്തിന്റെ ഭാഗം: ചക്രത്തിലെ ഓരോ കോഡിനെയും ചക്രത്തിലെ മറ്റൊരു കോഡ് അടിച്ചമർത്തുന്നു. |
+| `Se382c2` | connections | Repeat code | ആവർത്തന കോഡ് |
+| `Sc199d7` | connections, detail | Suppressed by | ഇവയാൽ അടിച്ചമർത്തപ്പെട്ടു |
+| `S0e08e5` | connections | Suppressed by %(code)s, which is deprecated or archived. | %(code)s അടിച്ചമർത്തി, അത് കാലഹരണപ്പെട്ടതോ ആർക്കൈവ് ചെയ്തതോ ആണ്. |
+| `S1bc026` | connections | Suppressed by %(number)s, which is not in the catalogue. | %(number)s അടിച്ചമർത്തി, അത് കാറ്റലോഗിൽ ഇല്ല. |
+| `S844394` | connections | What looks wrong | എന്താണ് ശരിയല്ലാത്തതായി തോന്നുന്നത് |
+| `S52fc2b` | connections | Where repeated codes escalate to | ആവർത്തിച്ച കോഡുകൾ എവിടേക്ക് ഉയർത്തുന്നു |
 | `S66dc40` | dashboard | Awaiting Administrator Sign-Off | അഡ്മിനിസ്ട്രേറ്ററുടെ സൈൻ-ഓഫിനായി കാത്തിരിക്കുന്നു |
 | `S33a0d3` | dashboard | Awaiting Chief Engineer Approval | ചീഫ് എൻജിനീയറുടെ അംഗീകാരത്തിനായി കാത്തിരിക്കുന്നു |
 | `S04cc8e` | dashboard | Awaiting Cross-Domain Sign-Off | ക്രോസ്-ഡൊമെയ്ൻ സൈൻ-ഓഫിനായി കാത്തിരിക്കുന്നു |
@@ -14970,7 +15319,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S212856` | detail | advanced, controller firmware programs | അഡ്വാൻസ്ഡ്, കൺട്രോളർ ഫേംവെയർ പ്രോഗ്രാമുകൾ |
 | `Sfbde82` | detail | Affected component | ബാധിച്ച ഘടകം |
 | `S25f8c5` | detail, export, form | Alarm | അലാറം |
-| `Sd87c44` | detail, export, hub_consolidation | all | എല്ലാം |
 | `S484388` | detail, export_center | all columns | എല്ലാ കോളങ്ങളും |
 | `S2e73c3` | detail | All languages and all access levels are included. Use the export above for a single language or access level. | എല്ലാ ഭാഷകളും എല്ലാ ആക്‌സസ് തലങ്ങളും ഉൾപ്പെടുന്നു. ഒരു ഭാഷയ്ക്കോ ഒരു ആക്‌സസ് തലത്തിനോ മുകളിലെ എക്സ്പോർട്ട് ഉപയോഗിക്കുക. |
 | `S432284` | detail | All required sign-offs are in, but this is still a Draft — the Reviewer and Administrator only see it after you choose Submit for Review below. | ആവശ്യമായ എല്ലാ സൈൻ-ഓഫുകളും എത്തി, പക്ഷേ ഇത് ഇപ്പോഴും കരടാണ് — നിങ്ങൾ താഴെ അവലോകനത്തിനായി സമർപ്പിക്കുക തിരഞ്ഞെടുത്താൽ മാത്രമേ അവലോകകനും അഡ്മിനിസ്ട്രേറ്ററും ഇത് കാണൂ. |
@@ -14993,6 +15341,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S928e2e` | detail | Brake Program | ബ്രേക്ക് പ്രോഗ്രാം |
 | `Sab2e8a` | detail | Build package | പാക്കേജ് ഉണ്ടാക്കുക |
 | `Scfadbd` | detail | By | ആര് |
+| `Se7bab1` | detail | Chain of causes | കാരണങ്ങളുടെ ശൃംഖല |
 | `S9c8393` | detail, mine | Change Request | മാറ്റ അഭ്യർത്ഥന |
 | `S4572f4` | detail | Change request | മാറ്റ അഭ്യർത്ഥന |
 | `S3295be` | detail | Change requests in this set | ഈ സമൂഹത്തിലെ മാറ്റ അഭ്യർത്ഥനകൾ |
@@ -15004,7 +15353,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S03695d` | detail | Chief Engineer decision | ചീഫ് എൻജിനീയറുടെ തീരുമാനം |
 | `Sf0a89f` | detail | Close change set | മാറ്റ സമൂഹം അടയ്ക്കുക |
 | `S7c0c39` | detail | Close this change set? | ഈ മാറ്റ സമൂഹം അടയ്ക്കണോ? |
-| `Sadac69` | detail, export_profiles, fleet_feedback | Code | കോഡ് |
 | `S153d7a` | detail | Comment | അഭിപ്രായം |
 | `S611578` | detail | Comment (required for rejection) | അഭിപ്രായം (നിരസിക്കാൻ നിർബന്ധം) |
 | `Sc38432` | detail | Comment on this field | ഈ ഫീൽഡിൽ അഭിപ്രായം പറയുക |
@@ -15014,6 +15362,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S0ff7e5` | detail, export | Complete baseline | പൂർണ്ണ അടിസ്ഥാന നില |
 | `S1798b3` | detail | Completed | പൂർത്തിയായി |
 | `S7671b5` | detail | Confirm or override Audience Access | ലക്ഷ്യ ഗ്രൂപ്പ് പ്രവേശനം സ്ഥിരീകരിക്കുക അല്ലെങ്കിൽ അസാധുവാക്കുക |
+| `S6512ee` | detail | Connection | ബന്ധം |
 | `S4f9be0` | detail | Content | ഉള്ളടക്കം |
 | `Sa36a5f` | detail, legacy_mapping, st_new | Controller | കൺട്രോളർ |
 | `Scd293f` | detail | Converter Reactive Power Program | കൺവെർട്ടർ റിയാക്ടീവ് പവർ പ്രോഗ്രാം |
@@ -15076,7 +15425,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sb8c4c9` | detail, form | Further Program References | കൂടുതൽ പ്രോഗ്രാം റഫറൻസുകൾ |
 | `S636c41` | detail | Grid Operator | ഗ്രിഡ് ഓപ്പറേറ്റർ |
 | `S90ccd6` | detail | History | ചരിത്രം |
-| `S0dfe7b` | detail | Hub controller | ഹബ് കൺട്രോളർ |
 | `Sfec8b7` | detail | Hub Controller group | ഹബ് കൺട്രോളർ ഗ്രൂപ്പ് |
 | `S00ccae` | detail, form | Hub Controller only | ഹബ് കൺട്രോളർ മാത്രം |
 | `S3c883f` | detail | I have reviewed these dependants | ഞാൻ ഈ ആശ്രിതങ്ങൾ അവലോകനം ചെയ്തിട്ടുണ്ട് |
@@ -15091,7 +15439,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S693272` | detail, withdrawn_codes | Legacy Reference Number | പഴയ റഫറൻസ് നമ്പർ |
 | `S43d5c5` | detail, form | Loadless Spinning Permitted | ലോഡില്ലാത്ത കറക്കം അനുവദനീയം |
 | `S193786` | detail | Logical Node | ലോജിക്കൽ നോഡ് |
-| `Sc3f827` | detail | Main controller | മെയിൻ കൺട്രോളർ |
 | `S578b78` | detail | Main Controller group | മെയിൻ കൺട്രോളർ ഗ്രൂപ്പ് |
 | `Sa7512d` | detail, form | Main Controller only | മെയിൻ കൺട്രോളർ മാത്രം |
 | `Seb9a6d` | detail | Manage translations | വിവർത്തനങ്ങൾ നിയന്ത്രിക്കുക |
@@ -15111,6 +15458,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S4bddd5` | detail | Nobody can review it until it is submitted. | സമർപ്പിക്കുന്നതുവരെ ആർക്കും ഇത് അവലോകനം ചെയ്യാനാവില്ല. |
 | `S2d8f60` | detail | node value | നോഡ് മൂല്യം |
 | `S71f8e7` | detail, form | none | ഒന്നുമില്ല |
+| `S7d24f7` | detail | not in the catalogue | കാറ്റലോഗിൽ ഇല്ല |
 | `S4467d4` | detail | Not yet published | ഇതുവരെ പ്രസിദ്ധീകരിച്ചിട്ടില്ല |
 | `S23402a` | detail | Not yet submitted. | ഇതുവരെ സമർപ്പിച്ചിട്ടില്ല. |
 | `Scd7430` | detail, form | Number of Times Repeated | ആവർത്തനങ്ങളുടെ എണ്ണം |
@@ -15144,6 +15492,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sa4ab7b` | detail | Program References | പ്രോഗ്രാം റഫറൻസുകൾ |
 | `S70cbd1` | detail | Proposed | നിർദ്ദേശിച്ചത് |
 | `S483bf2` | detail, list | Published | പ്രസിദ്ധീകരിച്ചത് |
+| `S2b85e8` | detail | Read from the set condition and the repeat code of the imported program. A text reading, not an interpretation of the controller logic. | ഇറക്കുമതി ചെയ്ത പ്രോഗ്രാമിന്റെ സെറ്റ് വ്യവസ്ഥയിൽ നിന്നും ആവർത്തന കോഡിൽ നിന്നും വായിച്ചത്. വാചകത്തിന്റെ വായന മാത്രം, കൺട്രോളർ ലോജിക്കിന്റെ വ്യാഖ്യാനമല്ല. |
 | `S6a9c56` | detail, form | Read level | വായന നില |
 | `Sf5ca9d` | detail | Recorded exports | രേഖപ്പെടുത്തിയ എക്സ്പോർട്ടുകൾ |
 | `Sa3f757` | detail | Reinstate to Released | റിലീസ് ചെയ്തതിലേക്ക് പുനഃസ്ഥാപിക്കുക |
@@ -15167,6 +15516,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S4aed03` | detail | Request | അഭ്യർത്ഥന |
 | `Sf3421a` | detail | Request a Sign-Off | സൈൻ-ഓഫ് അഭ്യർത്ഥിക്കുക |
 | `Sc26bf6` | detail, mine | Requested | അഭ്യർത്ഥിച്ചത് |
+| `S2706ed` | detail | Required by | ഇവയ്ക്ക് ആവശ്യം |
 | `S619e87` | detail, form | Reset Delay | റീസെറ്റ് കാലതാമസം |
 | `S026ab2` | detail | resolved | പരിഹരിച്ചു |
 | `S68c61f` | detail | Rev # | റിവിഷൻ നം. |
@@ -15204,6 +15554,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S98a377` | detail | Still a Draft. | ഇപ്പോഴും കരട്. |
 | `S123f6c` | detail | Submit for Review | അവലോകനത്തിനായി സമർപ്പിക്കുക |
 | `S3dca68` | detail | Superseded by Status Code id (optional) | ഇതിനാൽ മാറ്റിസ്ഥാപിച്ച സ്റ്റാറ്റസ് കോഡ് ഐഡി (ഓപ്ഷണൽ) |
+| `Sb17da5` | detail | Suppresses | അടിച്ചമർത്തുന്നു |
 | `S08e643` | detail, list | Target software version | ലക്ഷ്യ സോഫ്റ്റ്‌വെയർ പതിപ്പ് |
 | `S44203c` | detail, form, status code fields | Task Call Frequency | ടാസ്ക് കോൾ ആവൃത്തി |
 | `S8fc804` | detail | The author has to submit it for review before the Reviewer or Administrator can see it. | അവലോകകനോ അഡ്മിനിസ്ട്രേറ്ററോ കാണുന്നതിന് മുമ്പ് രചയിതാവ് ഇത് അവലോകനത്തിനായി സമർപ്പിക്കണം. |
@@ -15987,7 +16338,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 
 ### 9.15 IN ਪੰਜਾਬੀ 🇮🇳 — Punjabi
 
-1189 of 1190 strings translated; direction left to right.
+1216 of 1217 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -16086,13 +16437,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Scaf0f4` | catalogue_health | Capacity per subgroup | ਉਪ-ਸਮੂਹ ਅਨੁਸਾਰ ਸਮਰੱਥਾ |
 | `S25d185` | catalogue_health | Catalogue health | ਕੈਟਾਲਾਗ ਦੀ ਸਿਹਤ |
 | `Sa28e96` | catalogue_health, menu | Catalogue Health | ਕੈਟਾਲਾਗ ਦੀ ਸਿਹਤ |
-| `S199993` | catalogue_health, fleet_feedback | Codes | ਕੋਡ |
+| `S199993` | catalogue_health, connections, fleet_feedback | Codes | ਕੋਡ |
 | `S5548ae` | catalogue_health | days | ਦਿਨ |
 | `S34730e` | catalogue_health | Deprecations | ਬੰਦ ਕਰਨ ਦੀਆਂ ਕਾਰਵਾਈਆਂ |
 | `S19582d` | catalogue_health | Effective dates | ਲਾਗੂਕਰਨ ਮਿਤੀਆਂ |
 | `Seb01bf` | catalogue_health | Examples | ਉਦਾਹਰਣਾਂ |
 | `S4105cf` | catalogue_health | exhausted | ਮੁੱਕ ਗਏ |
-| `S57e8be` | catalogue_health | Finding | ਖੋਜ |
+| `S57e8be` | catalogue_health, connections | Finding | ਖੋਜ |
 | `S1150a1` | catalogue_health | Gaps | ਖਾਲੀ ਥਾਵਾਂ |
 | `S171a06` | catalogue_health, export, withdrawn_codes | Group | ਸਮੂਹ |
 | `Sb4aadc` | catalogue_health, legacy_mapping | Hub Controller | ਹੱਬ ਕੰਟਰੋਲਰ |
@@ -16127,6 +16478,31 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sc9c9de` | check | Terminology check | ਸ਼ਬਦਾਵਲੀ ਜਾਂਚ |
 | `S6bd377` | check | to look at | ਵੇਖਣ ਯੋਗ |
 | `Sac26a7` | check, language | Translation | ਅਨੁਵਾਦ |
+| `S876180` | connections | A code is not raised while its cause is active. The top of each tree is a cause that nothing suppresses. | ਜਦੋਂ ਤੱਕ ਕਿਸੇ ਕੋਡ ਦਾ ਕਾਰਨ ਸਰਗਰਮ ਹੈ, ਉਹ ਕੋਡ ਨਹੀਂ ਉੱਠਦਾ। ਹਰ ਰੁੱਖ ਦੀ ਚੋਟੀ ਉੱਤੇ ਅਜਿਹਾ ਕਾਰਨ ਹੈ ਜਿਸਨੂੰ ਕੋਈ ਨਹੀਂ ਦਬਾਉਂਦਾ। |
+| `S3f50cd` | connections | A code that is raised again and again is replaced by its repeat code. Repeat codes outside the catalogue are marked external. | ਵਾਰ-ਵਾਰ ਉੱਠਣ ਵਾਲੇ ਕੋਡ ਦੀ ਥਾਂ ਉਸਦਾ ਦੁਹਰਾਓ ਕੋਡ ਆ ਜਾਂਦਾ ਹੈ। ਕੈਟਾਲਾਗ ਤੋਂ ਬਾਹਰ ਦੇ ਦੁਹਰਾਓ ਕੋਡ ਬਾਹਰੀ ਵਜੋਂ ਨਿਸ਼ਾਨਦੇਹ ਹੁੰਦੇ ਹਨ। |
+| `Sd87c44` | connections, detail, export | all | ਸਭ |
+| `S3e00c3` | connections | Causes and the codes they suppress | ਕਾਰਨ ਅਤੇ ਉਹ ਕੋਡ ਜੋ ਉਹ ਦਬਾਉਂਦੇ ਹਨ |
+| `Sadac69` | connections, detail, export_profiles | Code | ਕੋਡ |
+| `Se54fe8` | connections | Codes with a connection | ਸੰਬੰਧ ਵਾਲੇ ਕੋਡ |
+| `S8f3509` | connections, detail, menu | Connections | ਸੰਬੰਧ |
+| `Se90ccc` | connections, detail | Escalated from | ਜਿੱਥੋਂ ਵਧਾਇਆ ਗਿਆ |
+| `S61bd26` | connections, detail | Escalates to | ਇਸ ਤੱਕ ਵਧਾਉਂਦਾ ਹੈ |
+| `S78586c` | connections | Escalates to %(code)s, which is deprecated or archived. | %(code)s ਤੱਕ ਵਧਾਉਂਦਾ ਹੈ, ਜੋ ਪੁਰਾਣਾ ਹੋ ਚੁੱਕਾ ਜਾਂ ਆਰਕਾਈਵ ਹੈ। |
+| `S59d8f3` | connections | external | ਬਾਹਰੀ |
+| `Sb7c028` | connections | How the status codes are connected, read from the set conditions and the repeat codes of the imported programs. A text reading, not an interpretation of the controller logic. | ਸਥਿਤੀ ਕੋਡ ਕਿਵੇਂ ਜੁੜੇ ਹਨ, ਦਰਾਮਦ ਕੀਤੇ ਪ੍ਰੋਗਰਾਮਾਂ ਦੀਆਂ ਸੈੱਟ ਸ਼ਰਤਾਂ ਅਤੇ ਦੁਹਰਾਓ ਕੋਡਾਂ ਤੋਂ ਪੜ੍ਹਿਆ। ਪਾਠ ਦੀ ਪੜ੍ਹਤ, ਕੰਟਰੋਲਰ ਤਰਕ ਦੀ ਵਿਆਖਿਆ ਨਹੀਂ। |
+| `S0dfe7b` | connections, detail | Hub controller | ਹੱਬ ਕੰਟਰੋਲਰ |
+| `S1df823` | connections | loop | ਚੱਕਰ |
+| `Sc3f827` | connections, detail | Main controller | ਮੁੱਖ ਕੰਟਰੋਲਰ |
+| `S2f385e` | connections | No connections are known yet. They come from the programs imported from .st files. | ਅਜੇ ਕੋਈ ਸੰਬੰਧ ਪਤਾ ਨਹੀਂ। ਇਹ .st ਫਾਈਲਾਂ ਤੋਂ ਦਰਾਮਦ ਕੀਤੇ ਪ੍ਰੋਗਰਾਮਾਂ ਤੋਂ ਆਉਂਦੇ ਹਨ। |
+| `S136e29` | connections | Only set while %(number)s is active, which is not in the catalogue. | ਸਿਰਫ਼ ਉਦੋਂ ਸੈੱਟ ਹੁੰਦਾ ਹੈ ਜਦੋਂ %(number)s ਸਰਗਰਮ ਹੋਵੇ; ਇਹ ਕੋਡ ਕੈਟਾਲਾਗ ਵਿੱਚ ਨਹੀਂ ਹੈ। |
+| `S355d4b` | connections, detail | Only set while active | ਸਿਰਫ਼ ਸਰਗਰਮ ਹੋਣ ਤੇ ਸੈੱਟ |
+| `Sfa38ca` | connections | Part of a loop of suppressions: each code is suppressed by another one of the loop. | ਦਬਾਉਣ ਦੇ ਚੱਕਰ ਦਾ ਹਿੱਸਾ: ਚੱਕਰ ਦਾ ਹਰ ਕੋਡ ਚੱਕਰ ਦੇ ਕਿਸੇ ਹੋਰ ਕੋਡ ਦੁਆਰਾ ਦਬਾਇਆ ਜਾਂਦਾ ਹੈ। |
+| `Se382c2` | connections | Repeat code | ਦੁਹਰਾਓ ਕੋਡ |
+| `Sc199d7` | connections, detail | Suppressed by | ਇਨ੍ਹਾਂ ਦੁਆਰਾ ਦਬਾਇਆ ਗਿਆ |
+| `S0e08e5` | connections | Suppressed by %(code)s, which is deprecated or archived. | %(code)s ਦੁਆਰਾ ਦਬਾਇਆ ਗਿਆ, ਜੋ ਪੁਰਾਣਾ ਹੋ ਚੁੱਕਾ ਜਾਂ ਆਰਕਾਈਵ ਹੈ। |
+| `S1bc026` | connections | Suppressed by %(number)s, which is not in the catalogue. | %(number)s ਦੁਆਰਾ ਦਬਾਇਆ ਗਿਆ, ਜੋ ਕੈਟਾਲਾਗ ਵਿੱਚ ਨਹੀਂ ਹੈ। |
+| `S844394` | connections | What looks wrong | ਕੀ ਠੀਕ ਨਹੀਂ ਲੱਗਦਾ |
+| `S52fc2b` | connections | Where repeated codes escalate to | ਦੁਹਰਾਏ ਕੋਡ ਕਿੱਥੇ ਵਧਦੇ ਹਨ |
 | `S66dc40` | dashboard | Awaiting Administrator Sign-Off | ਪ੍ਰਸ਼ਾਸਕ ਦਸਤਖ਼ਤ ਦੀ ਉਡੀਕ ਵਿੱਚ |
 | `S33a0d3` | dashboard | Awaiting Chief Engineer Approval | ਮੁੱਖ ਇੰਜੀਨੀਅਰ ਦੀ ਮਨਜ਼ੂਰੀ ਦੀ ਉਡੀਕ ਵਿੱਚ |
 | `S04cc8e` | dashboard | Awaiting Cross-Domain Sign-Off | ਅੰਤਰ-ਡੋਮੇਨ ਦਸਤਖ਼ਤ ਦੀ ਉਡੀਕ ਵਿੱਚ |
@@ -16166,7 +16542,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S212856` | detail | advanced, controller firmware programs | ਉੱਨਤ, ਕੰਟਰੋਲਰ ਫਰਮਵੇਅਰ ਪ੍ਰੋਗਰਾਮ |
 | `Sfbde82` | detail | Affected component | ਪ੍ਰਭਾਵਿਤ ਹਿੱਸਾ |
 | `S25f8c5` | detail, export, form | Alarm | ਅਲਾਰਮ |
-| `Sd87c44` | detail, export, hub_consolidation | all | ਸਭ |
 | `S484388` | detail, export_center | all columns | ਸਾਰੇ ਕਾਲਮ |
 | `S2e73c3` | detail | All languages and all access levels are included. Use the export above for a single language or access level. | ਸਾਰੀਆਂ ਭਾਸ਼ਾਵਾਂ ਅਤੇ ਸਾਰੇ ਪਹੁੰਚ ਪੱਧਰ ਸ਼ਾਮਲ ਹਨ। ਇੱਕ ਭਾਸ਼ਾ ਜਾਂ ਇੱਕ ਪਹੁੰਚ ਪੱਧਰ ਲਈ ਉੱਪਰਲਾ ਐਕਸਪੋਰਟ ਵਰਤੋ। |
 | `S432284` | detail | All required sign-offs are in, but this is still a Draft — the Reviewer and Administrator only see it after you choose Submit for Review below. | ਸਾਰੇ ਲੋੜੀਂਦੇ ਦਸਤਖ਼ਤ ਆ ਗਏ ਹਨ, ਪਰ ਇਹ ਅਜੇ ਵੀ ਖਰੜਾ ਹੈ — ਸਮੀਖਿਅਕ ਅਤੇ ਪ੍ਰਸ਼ਾਸਕ ਇਸਨੂੰ ਤਾਂ ਹੀ ਵੇਖਦੇ ਹਨ ਜਦੋਂ ਤੁਸੀਂ ਹੇਠਾਂ ਸਮੀਖਿਆ ਲਈ ਜਮ੍ਹਾਂ ਕਰੋ ਚੁਣਦੇ ਹੋ। |
@@ -16189,6 +16564,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S928e2e` | detail | Brake Program | ਬ੍ਰੇਕ ਪ੍ਰੋਗਰਾਮ |
 | `Sab2e8a` | detail | Build package | ਪੈਕੇਜ ਬਣਾਓ |
 | `Scfadbd` | detail | By | ਵੱਲੋਂ |
+| `Se7bab1` | detail | Chain of causes | ਕਾਰਨਾਂ ਦੀ ਲੜੀ |
 | `S9c8393` | detail, mine | Change Request | ਤਬਦੀਲੀ ਬੇਨਤੀ |
 | `S4572f4` | detail | Change request | ਤਬਦੀਲੀ ਬੇਨਤੀ |
 | `S3295be` | detail | Change requests in this set | ਇਸ ਸਮੂਹ ਦੀਆਂ ਤਬਦੀਲੀ ਬੇਨਤੀਆਂ |
@@ -16200,7 +16576,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S03695d` | detail | Chief Engineer decision | ਮੁੱਖ ਇੰਜੀਨੀਅਰ ਦਾ ਫ਼ੈਸਲਾ |
 | `Sf0a89f` | detail | Close change set | ਤਬਦੀਲੀ ਸਮੂਹ ਬੰਦ ਕਰੋ |
 | `S7c0c39` | detail | Close this change set? | ਕੀ ਇਹ ਤਬਦੀਲੀ ਸਮੂਹ ਬੰਦ ਕਰਨਾ ਹੈ? |
-| `Sadac69` | detail, export_profiles, fleet_feedback | Code | ਕੋਡ |
 | `S153d7a` | detail | Comment | ਟਿੱਪਣੀ |
 | `S611578` | detail | Comment (required for rejection) | ਟਿੱਪਣੀ (ਰੱਦ ਕਰਨ ਲਈ ਲਾਜ਼ਮੀ) |
 | `Sc38432` | detail | Comment on this field | ਇਸ ਖੇਤਰ ਉੱਤੇ ਟਿੱਪਣੀ ਕਰੋ |
@@ -16210,6 +16585,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S0ff7e5` | detail, export | Complete baseline | ਪੂਰੀ ਆਧਾਰ ਸਥਿਤੀ |
 | `S1798b3` | detail | Completed | ਮੁਕੰਮਲ ਹੋਇਆ |
 | `S7671b5` | detail | Confirm or override Audience Access | ਨਿਸ਼ਾਨਾ ਸਮੂਹ ਪਹੁੰਚ ਦੀ ਪੁਸ਼ਟੀ ਜਾਂ ਓਵਰਰਾਈਡ ਕਰੋ |
+| `S6512ee` | detail | Connection | ਸੰਬੰਧ |
 | `S4f9be0` | detail | Content | ਸਮੱਗਰੀ |
 | `Sa36a5f` | detail, legacy_mapping, st_new | Controller | ਕੰਟਰੋਲਰ |
 | `Scd293f` | detail | Converter Reactive Power Program | ਕਨਵਰਟਰ ਰਿਐਕਟਿਵ ਪਾਵਰ ਪ੍ਰੋਗਰਾਮ |
@@ -16272,7 +16648,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sb8c4c9` | detail, form | Further Program References | ਹੋਰ ਪ੍ਰੋਗਰਾਮ ਹਵਾਲੇ |
 | `S636c41` | detail | Grid Operator | ਗਰਿੱਡ ਆਪਰੇਟਰ |
 | `S90ccd6` | detail | History | ਇਤਿਹਾਸ |
-| `S0dfe7b` | detail | Hub controller | ਹੱਬ ਕੰਟਰੋਲਰ |
 | `Sfec8b7` | detail | Hub Controller group | ਹੱਬ ਕੰਟਰੋਲਰ ਸਮੂਹ |
 | `S00ccae` | detail, form | Hub Controller only | ਸਿਰਫ਼ ਹੱਬ ਕੰਟਰੋਲਰ |
 | `S3c883f` | detail | I have reviewed these dependants | ਮੈਂ ਇਨ੍ਹਾਂ ਨਿਰਭਰ ਕੋਡਾਂ ਦੀ ਸਮੀਖਿਆ ਕਰ ਲਈ ਹੈ |
@@ -16287,7 +16662,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S693272` | detail, withdrawn_codes | Legacy Reference Number | ਪੁਰਾਣਾ ਹਵਾਲਾ ਨੰਬਰ |
 | `S43d5c5` | detail, form | Loadless Spinning Permitted | ਬਿਨਾਂ ਭਾਰ ਘੁੰਮਣ ਦੀ ਆਗਿਆ |
 | `S193786` | detail | Logical Node | ਤਰਕਸ਼ੀਲ ਨੋਡ |
-| `Sc3f827` | detail | Main controller | ਮੁੱਖ ਕੰਟਰੋਲਰ |
 | `S578b78` | detail | Main Controller group | ਮੁੱਖ ਕੰਟਰੋਲਰ ਸਮੂਹ |
 | `Sa7512d` | detail, form | Main Controller only | ਸਿਰਫ਼ ਮੁੱਖ ਕੰਟਰੋਲਰ |
 | `Seb9a6d` | detail | Manage translations | ਅਨੁਵਾਦ ਸੰਭਾਲੋ |
@@ -16307,6 +16681,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S4bddd5` | detail | Nobody can review it until it is submitted. | ਜਮ੍ਹਾਂ ਹੋਣ ਤੱਕ ਕੋਈ ਇਸਦੀ ਸਮੀਖਿਆ ਨਹੀਂ ਕਰ ਸਕਦਾ। |
 | `S2d8f60` | detail | node value | ਨੋਡ ਮੁੱਲ |
 | `S71f8e7` | detail, form | none | ਕੋਈ ਨਹੀਂ |
+| `S7d24f7` | detail | not in the catalogue | ਕੈਟਾਲਾਗ ਵਿੱਚ ਨਹੀਂ |
 | `S4467d4` | detail | Not yet published | ਅਜੇ ਪ੍ਰਕਾਸ਼ਿਤ ਨਹੀਂ |
 | `S23402a` | detail | Not yet submitted. | ਅਜੇ ਜਮ੍ਹਾਂ ਨਹੀਂ ਹੋਇਆ। |
 | `Scd7430` | detail, form | Number of Times Repeated | ਦੁਹਰਾਈਆਂ ਦੀ ਗਿਣਤੀ |
@@ -16340,6 +16715,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sa4ab7b` | detail | Program References | ਪ੍ਰੋਗਰਾਮ ਹਵਾਲੇ |
 | `S70cbd1` | detail | Proposed | ਪ੍ਰਸਤਾਵਿਤ |
 | `S483bf2` | detail, list | Published | ਪ੍ਰਕਾਸ਼ਿਤ |
+| `S2b85e8` | detail | Read from the set condition and the repeat code of the imported program. A text reading, not an interpretation of the controller logic. | ਦਰਾਮਦ ਕੀਤੇ ਪ੍ਰੋਗਰਾਮ ਦੀ ਸੈੱਟ ਸ਼ਰਤ ਅਤੇ ਦੁਹਰਾਓ ਕੋਡ ਤੋਂ ਪੜ੍ਹਿਆ। ਪਾਠ ਦੀ ਪੜ੍ਹਤ, ਕੰਟਰੋਲਰ ਤਰਕ ਦੀ ਵਿਆਖਿਆ ਨਹੀਂ। |
 | `S6a9c56` | detail, form | Read level | ਪੜ੍ਹਨ ਦਾ ਪੱਧਰ |
 | `Sf5ca9d` | detail | Recorded exports | ਦਰਜ ਐਕਸਪੋਰਟ |
 | `Sa3f757` | detail | Reinstate to Released | ਜਾਰੀ ਵਿੱਚ ਬਹਾਲ ਕਰੋ |
@@ -16363,6 +16739,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S4aed03` | detail | Request | ਬੇਨਤੀ |
 | `Sf3421a` | detail | Request a Sign-Off | ਦਸਤਖ਼ਤ ਦੀ ਬੇਨਤੀ ਕਰੋ |
 | `Sc26bf6` | detail, mine | Requested | ਬੇਨਤੀ ਕੀਤੀ |
+| `S2706ed` | detail | Required by | ਇਨ੍ਹਾਂ ਲਈ ਲੋੜੀਂਦਾ |
 | `S619e87` | detail, form | Reset Delay | ਰੀਸੈੱਟ ਦੇਰੀ |
 | `S026ab2` | detail | resolved | ਹੱਲ ਹੋਇਆ |
 | `S68c61f` | detail | Rev # | ਸੋਧ ਨੰ. |
@@ -16400,6 +16777,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S98a377` | detail | Still a Draft. | ਅਜੇ ਵੀ ਖਰੜਾ। |
 | `S123f6c` | detail | Submit for Review | ਸਮੀਖਿਆ ਲਈ ਜਮ੍ਹਾਂ ਕਰੋ |
 | `S3dca68` | detail | Superseded by Status Code id (optional) | ਇਸ ਦੁਆਰਾ ਬਦਲਿਆ ਸਥਿਤੀ ਕੋਡ ਪਛਾਣ (ਵਿਕਲਪਿਕ) |
+| `Sb17da5` | detail | Suppresses | ਦਬਾਉਂਦਾ ਹੈ |
 | `S08e643` | detail, list | Target software version | ਨਿਸ਼ਾਨਾ ਸਾਫਟਵੇਅਰ ਸੰਸਕਰਣ |
 | `S44203c` | detail, form, status code fields | Task Call Frequency | ਟਾਸਕ ਕਾਲ ਫ੍ਰੀਕੁਐਂਸੀ |
 | `S8fc804` | detail | The author has to submit it for review before the Reviewer or Administrator can see it. | ਸਮੀਖਿਅਕ ਜਾਂ ਪ੍ਰਸ਼ਾਸਕ ਦੇ ਵੇਖਣ ਤੋਂ ਪਹਿਲਾਂ ਲੇਖਕ ਨੂੰ ਇਹ ਸਮੀਖਿਆ ਲਈ ਜਮ੍ਹਾਂ ਕਰਨਾ ਪਵੇਗਾ। |
@@ -17183,7 +17561,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 
 ### 9.16 ES Español 🇪🇸 — Spanish
 
-1189 of 1190 strings translated; direction left to right.
+1216 of 1217 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -17282,13 +17660,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Scaf0f4` | catalogue_health | Capacity per subgroup | Capacidad por subgrupo |
 | `S25d185` | catalogue_health | Catalogue health | Salud del catálogo |
 | `Sa28e96` | catalogue_health, menu | Catalogue Health | Estado del catálogo |
-| `S199993` | catalogue_health, fleet_feedback | Codes | Códigos |
+| `S199993` | catalogue_health, connections, fleet_feedback | Codes | Códigos |
 | `S5548ae` | catalogue_health | days | días |
 | `S34730e` | catalogue_health | Deprecations | Obsolescencias |
 | `S19582d` | catalogue_health | Effective dates | Fechas de entrada en vigor |
 | `Seb01bf` | catalogue_health | Examples | Ejemplos |
 | `S4105cf` | catalogue_health | exhausted | agotado |
-| `S57e8be` | catalogue_health | Finding | Hallazgo |
+| `S57e8be` | catalogue_health, connections | Finding | Hallazgo |
 | `S1150a1` | catalogue_health | Gaps | Huecos |
 | `S171a06` | catalogue_health, export, withdrawn_codes | Group | Grupo |
 | `Sb4aadc` | catalogue_health, legacy_mapping | Hub Controller | Controlador del buje |
@@ -17323,6 +17701,31 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sc9c9de` | check | Terminology check | Comprobación de terminología |
 | `S6bd377` | check | to look at | por revisar |
 | `Sac26a7` | check, language | Translation | Traducción |
+| `S876180` | connections | A code is not raised while its cause is active. The top of each tree is a cause that nothing suppresses. | Un código no se activa mientras su causa esté activa. En la cima de cada árbol hay una causa que nada suprime. |
+| `S3f50cd` | connections | A code that is raised again and again is replaced by its repeat code. Repeat codes outside the catalogue are marked external. | Un código que se activa una y otra vez se sustituye por su código de repetición. Los códigos de repetición fuera del catálogo se marcan como externos. |
+| `Sd87c44` | connections, detail, export | all | todos |
+| `S3e00c3` | connections | Causes and the codes they suppress | Causas y los códigos que suprimen |
+| `Sadac69` | connections, detail, export_profiles | Code | Código |
+| `Se54fe8` | connections | Codes with a connection | Códigos con conexión |
+| `S8f3509` | connections, detail, menu | Connections | Conexiones |
+| `Se90ccc` | connections, detail | Escalated from | Escalado desde |
+| `S61bd26` | connections, detail | Escalates to | Escala a |
+| `S78586c` | connections | Escalates to %(code)s, which is deprecated or archived. | Escala a %(code)s, que está obsoleto o archivado. |
+| `S59d8f3` | connections | external | externo |
+| `Sb7c028` | connections | How the status codes are connected, read from the set conditions and the repeat codes of the imported programs. A text reading, not an interpretation of the controller logic. | Cómo están conectados los códigos de estado, leído de las condiciones de activación y de los códigos de repetición de los programas importados. Una lectura del texto, no una interpretación de la lógica del controlador. |
+| `S0dfe7b` | connections, detail | Hub controller | Controlador del buje |
+| `S1df823` | connections | loop | bucle |
+| `Sc3f827` | connections, detail | Main controller | Controlador principal |
+| `S2f385e` | connections | No connections are known yet. They come from the programs imported from .st files. | Todavía no se conoce ninguna conexión. Proceden de los programas importados de archivos .st. |
+| `S136e29` | connections | Only set while %(number)s is active, which is not in the catalogue. | Solo se activa mientras %(number)s esté activo; este código no está en el catálogo. |
+| `S355d4b` | connections, detail | Only set while active | Solo se activa mientras esté activo |
+| `Sfa38ca` | connections | Part of a loop of suppressions: each code is suppressed by another one of the loop. | Parte de un bucle de supresiones: cada código del bucle es suprimido por otro del bucle. |
+| `Se382c2` | connections | Repeat code | Código de repetición |
+| `Sc199d7` | connections, detail | Suppressed by | Suprimido por |
+| `S0e08e5` | connections | Suppressed by %(code)s, which is deprecated or archived. | Suprimido por %(code)s, que está obsoleto o archivado. |
+| `S1bc026` | connections | Suppressed by %(number)s, which is not in the catalogue. | Suprimido por %(number)s, que no está en el catálogo. |
+| `S844394` | connections | What looks wrong | Lo que parece incorrecto |
+| `S52fc2b` | connections | Where repeated codes escalate to | A dónde escalan los códigos repetidos |
 | `S66dc40` | dashboard | Awaiting Administrator Sign-Off | Pendiente de aprobación del administrador |
 | `S33a0d3` | dashboard | Awaiting Chief Engineer Approval | Pendiente de aprobación del ingeniero jefe |
 | `S04cc8e` | dashboard | Awaiting Cross-Domain Sign-Off | Pendiente de aprobación entre dominios |
@@ -17362,7 +17765,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S212856` | detail | advanced, controller firmware programs | avanzado, programas del firmware del controlador |
 | `Sfbde82` | detail | Affected component | Componente afectado |
 | `S25f8c5` | detail, export, form | Alarm | Alarma |
-| `Sd87c44` | detail, export, hub_consolidation | all | todos |
 | `S484388` | detail, export_center | all columns | todas las columnas |
 | `S2e73c3` | detail | All languages and all access levels are included. Use the export above for a single language or access level. | Se incluyen todos los idiomas y todos los niveles de acceso. Para un solo idioma o nivel de acceso, use la exportación de arriba. |
 | `S432284` | detail | All required sign-offs are in, but this is still a Draft — the Reviewer and Administrator only see it after you choose Submit for Review below. | Todas las conformidades requeridas están, pero sigue siendo un borrador — el revisor y el administrador solo lo ven después de que elija Enviar a revisión más abajo. |
@@ -17385,6 +17787,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S928e2e` | detail | Brake Program | Programa de frenado |
 | `Sab2e8a` | detail | Build package | Crear paquete |
 | `Scfadbd` | detail | By | Por |
+| `Se7bab1` | detail | Chain of causes | Cadena de causas |
 | `S9c8393` | detail, mine | Change Request | Solicitud de cambio |
 | `S4572f4` | detail | Change request | Solicitud de cambio |
 | `S3295be` | detail | Change requests in this set | Solicitudes de cambio de este conjunto |
@@ -17396,7 +17799,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S03695d` | detail | Chief Engineer decision | Decisión del ingeniero jefe |
 | `Sf0a89f` | detail | Close change set | Cerrar el conjunto de cambios |
 | `S7c0c39` | detail | Close this change set? | ¿Cerrar este conjunto de cambios? |
-| `Sadac69` | detail, export_profiles, fleet_feedback | Code | Código |
 | `S153d7a` | detail | Comment | Comentario |
 | `S611578` | detail | Comment (required for rejection) | Comentario (obligatorio para rechazar) |
 | `Sc38432` | detail | Comment on this field | Comentar este campo |
@@ -17406,6 +17808,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S0ff7e5` | detail, export | Complete baseline | Estado completo |
 | `S1798b3` | detail | Completed | Completado |
 | `S7671b5` | detail | Confirm or override Audience Access | Confirmar o sobrescribir el acceso por destinatarios |
+| `S6512ee` | detail | Connection | Conexión |
 | `S4f9be0` | detail | Content | Contenido |
 | `Sa36a5f` | detail, legacy_mapping, st_new | Controller | Controlador |
 | `Scd293f` | detail | Converter Reactive Power Program | Programa de potencia reactiva del convertidor |
@@ -17468,7 +17871,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sb8c4c9` | detail, form | Further Program References | Más referencias de programa |
 | `S636c41` | detail | Grid Operator | Operador de red |
 | `S90ccd6` | detail | History | Historial |
-| `S0dfe7b` | detail | Hub controller | Controlador del buje |
 | `Sfec8b7` | detail | Hub Controller group | Grupo del controlador del buje |
 | `S00ccae` | detail, form | Hub Controller only | solo controlador del buje |
 | `S3c883f` | detail | I have reviewed these dependants | He revisado estos dependientes |
@@ -17483,7 +17885,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S693272` | detail, withdrawn_codes | Legacy Reference Number | Número de referencia anterior |
 | `S43d5c5` | detail, form | Loadless Spinning Permitted | Giro sin carga permitido |
 | `S193786` | detail | Logical Node | Nodo lógico |
-| `Sc3f827` | detail | Main controller | Controlador principal |
 | `S578b78` | detail | Main Controller group | Grupo del controlador principal |
 | `Sa7512d` | detail, form | Main Controller only | solo controlador principal |
 | `Seb9a6d` | detail | Manage translations | Gestionar traducciones |
@@ -17503,6 +17904,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S4bddd5` | detail | Nobody can review it until it is submitted. | Nadie puede revisarlo hasta que se envíe. |
 | `S2d8f60` | detail | node value | valor del nodo |
 | `S71f8e7` | detail, form | none | ninguno |
+| `S7d24f7` | detail | not in the catalogue | no está en el catálogo |
 | `S4467d4` | detail | Not yet published | Aún no publicada |
 | `S23402a` | detail | Not yet submitted. | Aún no enviado. |
 | `Scd7430` | detail, form | Number of Times Repeated | Número de repeticiones |
@@ -17536,6 +17938,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sa4ab7b` | detail | Program References | Referencias de programa |
 | `S70cbd1` | detail | Proposed | Propuesto |
 | `S483bf2` | detail, list | Published | Publicado |
+| `S2b85e8` | detail | Read from the set condition and the repeat code of the imported program. A text reading, not an interpretation of the controller logic. | Leído de la condición de activación y del código de repetición del programa importado. Una lectura del texto, no una interpretación de la lógica del controlador. |
 | `S6a9c56` | detail, form | Read level | Nivel de lectura |
 | `Sf5ca9d` | detail | Recorded exports | Exportaciones registradas |
 | `Sa3f757` | detail | Reinstate to Released | Reponer a Publicado |
@@ -17559,6 +17962,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S4aed03` | detail | Request | Solicitar |
 | `Sf3421a` | detail | Request a Sign-Off | Solicitar conformidad |
 | `Sc26bf6` | detail, mine | Requested | Solicitado |
+| `S2706ed` | detail | Required by | Requerido por |
 | `S619e87` | detail, form | Reset Delay | Retardo de reposición |
 | `S026ab2` | detail | resolved | resuelto |
 | `S68c61f` | detail | Rev # | N.º de rev. |
@@ -17596,6 +18000,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S98a377` | detail | Still a Draft. | Sigue siendo un borrador. |
 | `S123f6c` | detail | Submit for Review | Enviar a revisión |
 | `S3dca68` | detail | Superseded by Status Code id (optional) | Sustituido por el id de código de estado (opcional) |
+| `Sb17da5` | detail | Suppresses | Suprime |
 | `S08e643` | detail, list | Target software version | Versión de software de destino |
 | `S44203c` | detail, form, status code fields | Task Call Frequency | Frecuencia de llamada de la tarea |
 | `S8fc804` | detail | The author has to submit it for review before the Reviewer or Administrator can see it. | El autor debe enviarlo a revisión antes de que el revisor o el administrador puedan verlo. |
@@ -18379,7 +18784,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 
 ### 9.17 IT Italiano 🇮🇹 — Italian
 
-1189 of 1190 strings translated; direction left to right.
+1216 of 1217 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -18478,13 +18883,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Scaf0f4` | catalogue_health | Capacity per subgroup | Capacità per sottogruppo |
 | `S25d185` | catalogue_health | Catalogue health | Salute del catalogo |
 | `Sa28e96` | catalogue_health, menu | Catalogue Health | Stato del catalogo |
-| `S199993` | catalogue_health, fleet_feedback | Codes | Codici |
+| `S199993` | catalogue_health, connections, fleet_feedback | Codes | Codici |
 | `S5548ae` | catalogue_health | days | giorni |
 | `S34730e` | catalogue_health | Deprecations | Obsolescenze |
 | `S19582d` | catalogue_health | Effective dates | Date di entrata in vigore |
 | `Seb01bf` | catalogue_health | Examples | Esempi |
 | `S4105cf` | catalogue_health | exhausted | esaurito |
-| `S57e8be` | catalogue_health | Finding | Riscontro |
+| `S57e8be` | catalogue_health, connections | Finding | Riscontro |
 | `S1150a1` | catalogue_health | Gaps | Vuoti |
 | `S171a06` | catalogue_health, export, withdrawn_codes | Group | Gruppo |
 | `Sb4aadc` | catalogue_health, legacy_mapping | Hub Controller | Controllore del mozzo |
@@ -18519,6 +18924,31 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sc9c9de` | check | Terminology check | Controllo della terminologia |
 | `S6bd377` | check | to look at | da esaminare |
 | `Sac26a7` | check, language | Translation | Traduzione |
+| `S876180` | connections | A code is not raised while its cause is active. The top of each tree is a cause that nothing suppresses. | Un codice non viene generato finché la sua causa è attiva. In cima a ogni albero c'è una causa che nulla sopprime. |
+| `S3f50cd` | connections | A code that is raised again and again is replaced by its repeat code. Repeat codes outside the catalogue are marked external. | Un codice che si ripete continuamente viene sostituito dal suo codice di ripetizione. I codici di ripetizione fuori dal catalogo sono contrassegnati come esterni. |
+| `Sd87c44` | connections, detail, export | all | tutti |
+| `S3e00c3` | connections | Causes and the codes they suppress | Cause e codici che sopprimono |
+| `Sadac69` | connections, detail, export_profiles | Code | Codice |
+| `Se54fe8` | connections | Codes with a connection | Codici con un collegamento |
+| `S8f3509` | connections, detail, menu | Connections | Collegamenti |
+| `Se90ccc` | connections, detail | Escalated from | Escalato da |
+| `S61bd26` | connections, detail | Escalates to | Escala a |
+| `S78586c` | connections | Escalates to %(code)s, which is deprecated or archived. | Escala a %(code)s, che è obsoleto o archiviato. |
+| `S59d8f3` | connections | external | esterno |
+| `Sb7c028` | connections | How the status codes are connected, read from the set conditions and the repeat codes of the imported programs. A text reading, not an interpretation of the controller logic. | Come sono collegati i codici di stato, letto dalle condizioni di attivazione e dai codici di ripetizione dei programmi importati. Una lettura del testo, non un'interpretazione della logica del controllore. |
+| `S0dfe7b` | connections, detail | Hub controller | Controllore del mozzo |
+| `S1df823` | connections | loop | ciclo |
+| `Sc3f827` | connections, detail | Main controller | Controllore principale |
+| `S2f385e` | connections | No connections are known yet. They come from the programs imported from .st files. | Nessun collegamento noto per ora. Provengono dai programmi importati da file .st. |
+| `S136e29` | connections | Only set while %(number)s is active, which is not in the catalogue. | Viene attivato solo finché %(number)s è attivo; questo codice non è nel catalogo. |
+| `S355d4b` | connections, detail | Only set while active | Attivato solo finché è attivo |
+| `Sfa38ca` | connections | Part of a loop of suppressions: each code is suppressed by another one of the loop. | Parte di un ciclo di soppressioni: ogni codice del ciclo è soppresso da un altro del ciclo. |
+| `Se382c2` | connections | Repeat code | Codice di ripetizione |
+| `Sc199d7` | connections, detail | Suppressed by | Soppresso da |
+| `S0e08e5` | connections | Suppressed by %(code)s, which is deprecated or archived. | Soppresso da %(code)s, che è obsoleto o archiviato. |
+| `S1bc026` | connections | Suppressed by %(number)s, which is not in the catalogue. | Soppresso da %(number)s, che non è nel catalogo. |
+| `S844394` | connections | What looks wrong | Cosa sembra sbagliato |
+| `S52fc2b` | connections | Where repeated codes escalate to | Dove escalano i codici ripetuti |
 | `S66dc40` | dashboard | Awaiting Administrator Sign-Off | In attesa dell'approvazione dell'amministratore |
 | `S33a0d3` | dashboard | Awaiting Chief Engineer Approval | In attesa dell'approvazione del capo ingegnere |
 | `S04cc8e` | dashboard | Awaiting Cross-Domain Sign-Off | In attesa dell'approvazione interdominio |
@@ -18558,7 +18988,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S212856` | detail | advanced, controller firmware programs | avanzato, programmi del firmware del controllore |
 | `Sfbde82` | detail | Affected component | Componente interessato |
 | `S25f8c5` | detail, export, form | Alarm | Allarme |
-| `Sd87c44` | detail, export, hub_consolidation | all | tutti |
 | `S484388` | detail, export_center | all columns | tutte le colonne |
 | `S2e73c3` | detail | All languages and all access levels are included. Use the export above for a single language or access level. | Sono incluse tutte le lingue e tutti i livelli di accesso. Per una sola lingua o un solo livello di accesso usa l'esportazione qui sopra. |
 | `S432284` | detail | All required sign-offs are in, but this is still a Draft — the Reviewer and Administrator only see it after you choose Submit for Review below. | Tutti i benestare richiesti ci sono, ma è ancora una bozza — il revisore e l'amministratore la vedono solo dopo che sceglie Invia in revisione qui sotto. |
@@ -18581,6 +19010,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S928e2e` | detail | Brake Program | Programma di frenata |
 | `Sab2e8a` | detail | Build package | Crea pacchetto |
 | `Scfadbd` | detail | By | Da |
+| `Se7bab1` | detail | Chain of causes | Catena di cause |
 | `S9c8393` | detail, mine | Change Request | Richiesta di modifica |
 | `S4572f4` | detail | Change request | Richiesta di modifica |
 | `S3295be` | detail | Change requests in this set | Richieste di modifica in questo set |
@@ -18592,7 +19022,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S03695d` | detail | Chief Engineer decision | Decisione del capo ingegnere |
 | `Sf0a89f` | detail | Close change set | Chiudi set di modifiche |
 | `S7c0c39` | detail | Close this change set? | Chiudere questo set di modifiche? |
-| `Sadac69` | detail, export_profiles, fleet_feedback | Code | Codice |
 | `S153d7a` | detail | Comment | Commento |
 | `S611578` | detail | Comment (required for rejection) | Commento (obbligatorio per il rifiuto) |
 | `Sc38432` | detail | Comment on this field | Commenta questo campo |
@@ -18602,6 +19031,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S0ff7e5` | detail, export | Complete baseline | Stato completo |
 | `S1798b3` | detail | Completed | Completato |
 | `S7671b5` | detail | Confirm or override Audience Access | Conferma o sovrascrivi l'accesso per destinatari |
+| `S6512ee` | detail | Connection | Collegamento |
 | `S4f9be0` | detail | Content | Contenuto |
 | `Sa36a5f` | detail, legacy_mapping, st_new | Controller | Controller |
 | `Scd293f` | detail | Converter Reactive Power Program | Programma di potenza reattiva del convertitore |
@@ -18664,7 +19094,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sb8c4c9` | detail, form | Further Program References | Altri riferimenti di programma |
 | `S636c41` | detail | Grid Operator | Gestore di rete |
 | `S90ccd6` | detail | History | Storico |
-| `S0dfe7b` | detail | Hub controller | Controllore del mozzo |
 | `Sfec8b7` | detail | Hub Controller group | Gruppo del controllore del mozzo |
 | `S00ccae` | detail, form | Hub Controller only | solo controllore del mozzo |
 | `S3c883f` | detail | I have reviewed these dependants | Ho rivisto questi dipendenti |
@@ -18679,7 +19108,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S693272` | detail, withdrawn_codes | Legacy Reference Number | Numero di riferimento precedente |
 | `S43d5c5` | detail, form | Loadless Spinning Permitted | Rotazione a vuoto consentita |
 | `S193786` | detail | Logical Node | Nodo logico |
-| `Sc3f827` | detail | Main controller | Controllore principale |
 | `S578b78` | detail | Main Controller group | Gruppo del controllore principale |
 | `Sa7512d` | detail, form | Main Controller only | solo controllore principale |
 | `Seb9a6d` | detail | Manage translations | Gestisci traduzioni |
@@ -18699,6 +19127,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S4bddd5` | detail | Nobody can review it until it is submitted. | Nessuno può rivederla finché non viene inviata. |
 | `S2d8f60` | detail | node value | valore del nodo |
 | `S71f8e7` | detail, form | none | nessuno |
+| `S7d24f7` | detail | not in the catalogue | non nel catalogo |
 | `S4467d4` | detail | Not yet published | Non ancora pubblicato |
 | `S23402a` | detail | Not yet submitted. | Non ancora inviata. |
 | `Scd7430` | detail, form | Number of Times Repeated | Numero di ripetizioni |
@@ -18732,6 +19161,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sa4ab7b` | detail | Program References | Riferimenti ai programmi |
 | `S70cbd1` | detail | Proposed | Proposto |
 | `S483bf2` | detail, list | Published | Pubblicato |
+| `S2b85e8` | detail | Read from the set condition and the repeat code of the imported program. A text reading, not an interpretation of the controller logic. | Letto dalla condizione di attivazione e dal codice di ripetizione del programma importato. Una lettura del testo, non un'interpretazione della logica del controllore. |
 | `S6a9c56` | detail, form | Read level | Livello di lettura |
 | `Sf5ca9d` | detail | Recorded exports | Esportazioni registrate |
 | `Sa3f757` | detail | Reinstate to Released | Ripristina a Rilasciato |
@@ -18755,6 +19185,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S4aed03` | detail | Request | Richiedi |
 | `Sf3421a` | detail | Request a Sign-Off | Richiedi un benestare |
 | `Sc26bf6` | detail, mine | Requested | Richiesto |
+| `S2706ed` | detail | Required by | Richiesto da |
 | `S619e87` | detail, form | Reset Delay | Ritardo di ripristino |
 | `S026ab2` | detail | resolved | risolto |
 | `S68c61f` | detail | Rev # | N. rev. |
@@ -18792,6 +19223,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S98a377` | detail | Still a Draft. | È ancora una bozza. |
 | `S123f6c` | detail | Submit for Review | Invia in revisione |
 | `S3dca68` | detail | Superseded by Status Code id (optional) | Sostituito dall'id del codice di stato (facoltativo) |
+| `Sb17da5` | detail | Suppresses | Sopprime |
 | `S08e643` | detail, list | Target software version | Versione software di destinazione |
 | `S44203c` | detail, form, status code fields | Task Call Frequency | Frequenza di chiamata del task |
 | `S8fc804` | detail | The author has to submit it for review before the Reviewer or Administrator can see it. | L'autore deve inviarla in revisione prima che il revisore o l'amministratore possano vederla. |
@@ -19575,7 +20007,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 
 ### 9.18 DK Dansk 🇩🇰 — Danish
 
-1189 of 1190 strings translated; direction left to right.
+1216 of 1217 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -19674,13 +20106,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Scaf0f4` | catalogue_health | Capacity per subgroup | Kapacitet pr. undergruppe |
 | `S25d185` | catalogue_health | Catalogue health | Katalogets sundhed |
 | `Sa28e96` | catalogue_health, menu | Catalogue Health | Katalogets tilstand |
-| `S199993` | catalogue_health, fleet_feedback | Codes | Koder |
+| `S199993` | catalogue_health, connections, fleet_feedback | Codes | Koder |
 | `S5548ae` | catalogue_health | days | dage |
 | `S34730e` | catalogue_health | Deprecations | Forældelser |
 | `S19582d` | catalogue_health | Effective dates | Ikrafttrædelsesdatoer |
 | `Seb01bf` | catalogue_health | Examples | Eksempler |
 | `S4105cf` | catalogue_health | exhausted | opbrugt |
-| `S57e8be` | catalogue_health | Finding | Fund |
+| `S57e8be` | catalogue_health, connections | Finding | Fund |
 | `S1150a1` | catalogue_health | Gaps | Huller |
 | `S171a06` | catalogue_health, export, withdrawn_codes | Group | Gruppe |
 | `Sb4aadc` | catalogue_health, legacy_mapping | Hub Controller | Navstyring |
@@ -19715,6 +20147,31 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sc9c9de` | check | Terminology check | Terminologikontrol |
 | `S6bd377` | check | to look at | at se på |
 | `Sac26a7` | check, language | Translation | Oversættelse |
+| `S876180` | connections | A code is not raised while its cause is active. The top of each tree is a cause that nothing suppresses. | En kode udløses ikke, så længe dens årsag er aktiv. Øverst i hvert træ står en årsag, som intet undertrykker. |
+| `S3f50cd` | connections | A code that is raised again and again is replaced by its repeat code. Repeat codes outside the catalogue are marked external. | En kode, der udløses igen og igen, erstattes af sin gentagelseskode. Gentagelseskoder uden for kataloget er markeret som eksterne. |
+| `Sd87c44` | connections, detail, export | all | alle |
+| `S3e00c3` | connections | Causes and the codes they suppress | Årsager og de koder, de undertrykker |
+| `Sadac69` | connections, detail, export_profiles | Code | Kode |
+| `Se54fe8` | connections | Codes with a connection | Koder med en forbindelse |
+| `S8f3509` | connections, detail, menu | Connections | Forbindelser |
+| `Se90ccc` | connections, detail | Escalated from | Eskaleret fra |
+| `S61bd26` | connections, detail | Escalates to | Eskalerer til |
+| `S78586c` | connections | Escalates to %(code)s, which is deprecated or archived. | Eskalerer til %(code)s, som er forældet eller arkiveret. |
+| `S59d8f3` | connections | external | ekstern |
+| `Sb7c028` | connections | How the status codes are connected, read from the set conditions and the repeat codes of the imported programs. A text reading, not an interpretation of the controller logic. | Hvordan statuskoderne hænger sammen, læst ud af sætbetingelserne og gentagelseskoderne i de importerede programmer. En tekstlæsning, ikke en fortolkning af controllerens logik. |
+| `S0dfe7b` | connections, detail | Hub controller | Nav-controller |
+| `S1df823` | connections | loop | løkke |
+| `Sc3f827` | connections, detail | Main controller | Hovedcontroller |
+| `S2f385e` | connections | No connections are known yet. They come from the programs imported from .st files. | Ingen forbindelser kendes endnu. De kommer fra programmerne importeret fra .st-filer. |
+| `S136e29` | connections | Only set while %(number)s is active, which is not in the catalogue. | Sættes kun, mens %(number)s er aktiv; denne kode er ikke i kataloget. |
+| `S355d4b` | connections, detail | Only set while active | Sættes kun, mens aktiv |
+| `Sfa38ca` | connections | Part of a loop of suppressions: each code is suppressed by another one of the loop. | Del af en løkke af undertrykkelser: hver kode i løkken undertrykkes af en anden i løkken. |
+| `Se382c2` | connections | Repeat code | Gentagelseskode |
+| `Sc199d7` | connections, detail | Suppressed by | Undertrykt af |
+| `S0e08e5` | connections | Suppressed by %(code)s, which is deprecated or archived. | Undertrykt af %(code)s, som er forældet eller arkiveret. |
+| `S1bc026` | connections | Suppressed by %(number)s, which is not in the catalogue. | Undertrykt af %(number)s, som ikke er i kataloget. |
+| `S844394` | connections | What looks wrong | Hvad der ser forkert ud |
+| `S52fc2b` | connections | Where repeated codes escalate to | Hvor gentagne koder eskalerer til |
 | `S66dc40` | dashboard | Awaiting Administrator Sign-Off | Afventer administratorens godkendelse |
 | `S33a0d3` | dashboard | Awaiting Chief Engineer Approval | Afventer chefingeniørens godkendelse |
 | `S04cc8e` | dashboard | Awaiting Cross-Domain Sign-Off | Afventer tværfaglig godkendelse |
@@ -19754,7 +20211,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S212856` | detail | advanced, controller firmware programs | avanceret, styringens firmwareprogrammer |
 | `Sfbde82` | detail | Affected component | Berørt komponent |
 | `S25f8c5` | detail, export, form | Alarm | Alarm |
-| `Sd87c44` | detail, export, hub_consolidation | all | alle |
 | `S484388` | detail, export_center | all columns | alle kolonner |
 | `S2e73c3` | detail | All languages and all access levels are included. Use the export above for a single language or access level. | Alle sprog og alle adgangsniveauer er med. Brug eksporten ovenfor til ét sprog eller ét adgangsniveau. |
 | `S432284` | detail | All required sign-offs are in, but this is still a Draft — the Reviewer and Administrator only see it after you choose Submit for Review below. | Alle nødvendige underskrifter er på plads, men det er stadig en kladde — reviewer og administrator ser den først, når du vælger Indsend til gennemgang nedenfor. |
@@ -19777,6 +20233,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S928e2e` | detail | Brake Program | Bremseprogram |
 | `Sab2e8a` | detail | Build package | Opret pakke |
 | `Scfadbd` | detail | By | Af |
+| `Se7bab1` | detail | Chain of causes | Årsagskæde |
 | `S9c8393` | detail, mine | Change Request | Ændringsanmodning |
 | `S4572f4` | detail | Change request | Ændringsanmodning |
 | `S3295be` | detail | Change requests in this set | Ændringsanmodninger i dette sæt |
@@ -19788,7 +20245,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S03695d` | detail | Chief Engineer decision | Chefingeniørens beslutning |
 | `Sf0a89f` | detail | Close change set | Luk ændringssæt |
 | `S7c0c39` | detail | Close this change set? | Luk dette ændringssæt? |
-| `Sadac69` | detail, export_profiles, fleet_feedback | Code | Kode |
 | `S153d7a` | detail | Comment | Kommentar |
 | `S611578` | detail | Comment (required for rejection) | Kommentar (påkrævet ved afvisning) |
 | `Sc38432` | detail | Comment on this field | Kommentér dette felt |
@@ -19798,6 +20254,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S0ff7e5` | detail, export | Complete baseline | Komplet grundstand |
 | `S1798b3` | detail | Completed | Fuldført |
 | `S7671b5` | detail | Confirm or override Audience Access | Bekræft eller overstyr målgruppeadgang |
+| `S6512ee` | detail | Connection | Forbindelse |
 | `S4f9be0` | detail | Content | Indhold |
 | `Sa36a5f` | detail, legacy_mapping, st_new | Controller | Controller |
 | `Scd293f` | detail | Converter Reactive Power Program | Program for konverterens reaktive effekt |
@@ -19860,7 +20317,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sb8c4c9` | detail, form | Further Program References | Flere programhenvisninger |
 | `S636c41` | detail | Grid Operator | Netoperatør |
 | `S90ccd6` | detail | History | Historik |
-| `S0dfe7b` | detail | Hub controller | Nav-controller |
 | `Sfec8b7` | detail | Hub Controller group | Navstyringsgruppe |
 | `S00ccae` | detail, form | Hub Controller only | kun navstyring |
 | `S3c883f` | detail | I have reviewed these dependants | Jeg har gennemgået disse afhængige koder |
@@ -19875,7 +20331,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S693272` | detail, withdrawn_codes | Legacy Reference Number | Gammelt referencenummer |
 | `S43d5c5` | detail, form | Loadless Spinning Permitted | Tomgangsdrejning tilladt |
 | `S193786` | detail | Logical Node | Logisk node |
-| `Sc3f827` | detail | Main controller | Hovedcontroller |
 | `S578b78` | detail | Main Controller group | Hovedstyringsgruppe |
 | `Sa7512d` | detail, form | Main Controller only | kun hovedstyring |
 | `Seb9a6d` | detail | Manage translations | Administrér oversættelser |
@@ -19895,6 +20350,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S4bddd5` | detail | Nobody can review it until it is submitted. | Ingen kan gennemgå den, før den er indsendt. |
 | `S2d8f60` | detail | node value | nodeværdi |
 | `S71f8e7` | detail, form | none | ingen |
+| `S7d24f7` | detail | not in the catalogue | ikke i kataloget |
 | `S4467d4` | detail | Not yet published | Endnu ikke udgivet |
 | `S23402a` | detail | Not yet submitted. | Endnu ikke indsendt. |
 | `Scd7430` | detail, form | Number of Times Repeated | Antal gentagelser |
@@ -19928,6 +20384,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sa4ab7b` | detail | Program References | Programreferencer |
 | `S70cbd1` | detail | Proposed | Foreslået |
 | `S483bf2` | detail, list | Published | Udgivet |
+| `S2b85e8` | detail | Read from the set condition and the repeat code of the imported program. A text reading, not an interpretation of the controller logic. | Læst ud af sætbetingelsen og gentagelseskoden i det importerede program. En tekstlæsning, ikke en fortolkning af controllerens logik. |
 | `S6a9c56` | detail, form | Read level | Læseniveau |
 | `Sf5ca9d` | detail | Recorded exports | Registrerede eksporter |
 | `Sa3f757` | detail | Reinstate to Released | Genindsæt som Udgivet |
@@ -19951,6 +20408,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S4aed03` | detail | Request | Anmod |
 | `Sf3421a` | detail | Request a Sign-Off | Anmod om underskrift |
 | `Sc26bf6` | detail, mine | Requested | Anmodet |
+| `S2706ed` | detail | Required by | Krævet af |
 | `S619e87` | detail, form | Reset Delay | Nulstillingsforsinkelse |
 | `S026ab2` | detail | resolved | løst |
 | `S68c61f` | detail | Rev # | Rev. nr. |
@@ -19988,6 +20446,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S98a377` | detail | Still a Draft. | Stadig en kladde. |
 | `S123f6c` | detail | Submit for Review | Indsend til gennemgang |
 | `S3dca68` | detail | Superseded by Status Code id (optional) | Erstattet af statuskode-id (valgfrit) |
+| `Sb17da5` | detail | Suppresses | Undertrykker |
 | `S08e643` | detail, list | Target software version | Målsoftwareversion |
 | `S44203c` | detail, form, status code fields | Task Call Frequency | Task-kaldefrekvens |
 | `S8fc804` | detail | The author has to submit it for review before the Reviewer or Administrator can see it. | Forfatteren skal indsende den til gennemgang, før reviewer eller administrator kan se den. |
@@ -20771,7 +21230,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 
 ### 9.19 GE ქართული 🇬🇪 — Georgian
 
-1189 of 1190 strings translated; direction left to right.
+1216 of 1217 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -20870,13 +21329,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Scaf0f4` | catalogue_health | Capacity per subgroup | ტევადობა ქვეჯგუფების მიხედვით |
 | `S25d185` | catalogue_health | Catalogue health | კატალოგის მდგომარეობა |
 | `Sa28e96` | catalogue_health, menu | Catalogue Health | კატალოგის მდგომარეობა |
-| `S199993` | catalogue_health, fleet_feedback | Codes | კოდები |
+| `S199993` | catalogue_health, connections, fleet_feedback | Codes | კოდები |
 | `S5548ae` | catalogue_health | days | დღეში |
 | `S34730e` | catalogue_health | Deprecations | მოძველებები |
 | `S19582d` | catalogue_health | Effective dates | ძალაში შესვლის თარიღები |
 | `Seb01bf` | catalogue_health | Examples | მაგალითები |
 | `S4105cf` | catalogue_health | exhausted | ამოწურულია |
-| `S57e8be` | catalogue_health | Finding | დასკვნა |
+| `S57e8be` | catalogue_health, connections | Finding | დასკვნა |
 | `S1150a1` | catalogue_health | Gaps | ხვრელები |
 | `S171a06` | catalogue_health, export, withdrawn_codes | Group | ჯგუფი |
 | `Sb4aadc` | catalogue_health, legacy_mapping | Hub Controller | კერის კონტროლერი |
@@ -20911,6 +21370,31 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sc9c9de` | check | Terminology check | ტერმინოლოგიის შემოწმება |
 | `S6bd377` | check | to look at | სანახავი |
 | `Sac26a7` | check, language | Translation | თარგმანი |
+| `S876180` | connections | A code is not raised while its cause is active. The top of each tree is a cause that nothing suppresses. | კოდი არ ირთვება, სანამ მისი მიზეზი აქტიურია. ყოველი ხის თავში არის მიზეზი, რომელსაც არაფერი თრგუნავს. |
+| `S3f50cd` | connections | A code that is raised again and again is replaced by its repeat code. Repeat codes outside the catalogue are marked external. | კოდი, რომელიც განუწყვეტლივ ირთვება, იცვლება თავისი გამეორების კოდით. კატალოგს გარეთ არსებული გამეორების კოდები აღნიშნულია როგორც გარე. |
+| `Sd87c44` | connections, detail, export | all | ყველა |
+| `S3e00c3` | connections | Causes and the codes they suppress | მიზეზები და კოდები, რომლებსაც ისინი თრგუნავენ |
+| `Sadac69` | connections, detail, export_profiles | Code | კოდი |
+| `Se54fe8` | connections | Codes with a connection | კოდები კავშირით |
+| `S8f3509` | connections, detail, menu | Connections | კავშირები |
+| `Se90ccc` | connections, detail | Escalated from | ესკალირებულია აქედან |
+| `S61bd26` | connections, detail | Escalates to | ესკალირდება აქეთ |
+| `S78586c` | connections | Escalates to %(code)s, which is deprecated or archived. | ესკალირდება %(code)s-ზე, რომელიც მოძველებულია ან დაარქივებულია. |
+| `S59d8f3` | connections | external | გარე |
+| `Sb7c028` | connections | How the status codes are connected, read from the set conditions and the repeat codes of the imported programs. A text reading, not an interpretation of the controller logic. | როგორ არის დაკავშირებული სტატუსის კოდები, წაკითხული იმპორტირებული პროგრამების ჩართვის პირობებიდან და გამეორების კოდებიდან. ტექსტის წაკითხვაა და არა კონტროლერის ლოგიკის ინტერპრეტაცია. |
+| `S0dfe7b` | connections, detail | Hub controller | ჰაბის კონტროლერი |
+| `S1df823` | connections | loop | ციკლი |
+| `Sc3f827` | connections, detail | Main controller | მთავარი კონტროლერი |
+| `S2f385e` | connections | No connections are known yet. They come from the programs imported from .st files. | კავშირები ჯერ არ არის ცნობილი. ისინი მოდის .st ფაილებიდან იმპორტირებული პროგრამებიდან. |
+| `S136e29` | connections | Only set while %(number)s is active, which is not in the catalogue. | ირთვება მხოლოდ მაშინ, როცა %(number)s აქტიურია; ეს კოდი კატალოგში არ არის. |
+| `S355d4b` | connections, detail | Only set while active | ირთვება მხოლოდ აქტიურობისას |
+| `Sfa38ca` | connections | Part of a loop of suppressions: each code is suppressed by another one of the loop. | ჩახშობის ციკლის ნაწილი: ციკლის ყოველ კოდს თრგუნავს ციკლის სხვა კოდი. |
+| `Se382c2` | connections | Repeat code | გამეორების კოდი |
+| `Sc199d7` | connections, detail | Suppressed by | ჩახშულია ამით |
+| `S0e08e5` | connections | Suppressed by %(code)s, which is deprecated or archived. | ჩახშულია %(code)s-ით, რომელიც მოძველებულია ან დაარქივებულია. |
+| `S1bc026` | connections | Suppressed by %(number)s, which is not in the catalogue. | ჩახშულია %(number)s-ით, რომელიც კატალოგში არ არის. |
+| `S844394` | connections | What looks wrong | რა ჩანს არასწორად |
+| `S52fc2b` | connections | Where repeated codes escalate to | სად ესკალირდება განმეორებითი კოდები |
 | `S66dc40` | dashboard | Awaiting Administrator Sign-Off | ელოდება ადმინისტრატორის დადასტურებას |
 | `S33a0d3` | dashboard | Awaiting Chief Engineer Approval | ელოდება მთავარი ინჟინრის დამტკიცებას |
 | `S04cc8e` | dashboard | Awaiting Cross-Domain Sign-Off | ელოდება დომენთაშორის დადასტურებას |
@@ -20950,7 +21434,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S212856` | detail | advanced, controller firmware programs | გაფართოებული, კონტროლერის ფირმვერის პროგრამები |
 | `Sfbde82` | detail | Affected component | დაზარალებული კომპონენტი |
 | `S25f8c5` | detail, export, form | Alarm | განგაში |
-| `Sd87c44` | detail, export, hub_consolidation | all | ყველა |
 | `S484388` | detail, export_center | all columns | ყველა სვეტი |
 | `S2e73c3` | detail | All languages and all access levels are included. Use the export above for a single language or access level. | ჩართულია ყველა ენა და წვდომის ყველა დონე. ერთი ენისთვის ან ერთი წვდომის დონისთვის გამოიყენეთ ზემოთ მოცემული ექსპორტი. |
 | `S432284` | detail | All required sign-offs are in, but this is still a Draft — the Reviewer and Administrator only see it after you choose Submit for Review below. | ყველა საჭირო ხელმოწერა არის, მაგრამ ჯერ კიდევ დრაფტია — მიმომხილველი და ადმინისტრატორი მას მხოლოდ მაშინ ხედავენ, როცა ქვემოთ აირჩევთ „განხილვაზე წარდგენას“. |
@@ -20973,6 +21456,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S928e2e` | detail | Brake Program | დამუხრუჭების პროგრამა |
 | `Sab2e8a` | detail | Build package | პაკეტის შექმნა |
 | `Scfadbd` | detail | By | ავტორი |
+| `Se7bab1` | detail | Chain of causes | მიზეზების ჯაჭვი |
 | `S9c8393` | detail, mine | Change Request | ცვლილების მოთხოვნა |
 | `S4572f4` | detail | Change request | ცვლილების მოთხოვნა |
 | `S3295be` | detail | Change requests in this set | ცვლილების მოთხოვნები ამ ნაკრებში |
@@ -20984,7 +21468,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S03695d` | detail | Chief Engineer decision | მთავარი ინჟინრის გადაწყვეტილება |
 | `Sf0a89f` | detail | Close change set | ცვლილებების ნაკრების დახურვა |
 | `S7c0c39` | detail | Close this change set? | დაიხუროს ცვლილებების ეს ნაკრები? |
-| `Sadac69` | detail, export_profiles, fleet_feedback | Code | კოდი |
 | `S153d7a` | detail | Comment | კომენტარი |
 | `S611578` | detail | Comment (required for rejection) | კომენტარი (უარყოფისთვის სავალდებულოა) |
 | `Sc38432` | detail | Comment on this field | ამ ველის კომენტირება |
@@ -20994,6 +21477,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S0ff7e5` | detail, export | Complete baseline | სრული საბაზისო მდგომარეობა |
 | `S1798b3` | detail | Completed | დასრულებულია |
 | `S7671b5` | detail | Confirm or override Audience Access | სამიზნე ჯგუფის წვდომის დადასტურება ან გადაფარვა |
+| `S6512ee` | detail | Connection | კავშირი |
 | `S4f9be0` | detail | Content | შინაარსი |
 | `Sa36a5f` | detail, legacy_mapping, st_new | Controller | კონტროლერი |
 | `Scd293f` | detail | Converter Reactive Power Program | გარდამქმნელის რეაქტიული სიმძლავრის პროგრამა |
@@ -21056,7 +21540,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sb8c4c9` | detail, form | Further Program References | დამატებითი პროგრამის მითითებები |
 | `S636c41` | detail | Grid Operator | ქსელის ოპერატორი |
 | `S90ccd6` | detail | History | ისტორია |
-| `S0dfe7b` | detail | Hub controller | ჰაბის კონტროლერი |
 | `Sfec8b7` | detail | Hub Controller group | კერის კონტროლერის ჯგუფი |
 | `S00ccae` | detail, form | Hub Controller only | მხოლოდ ჰაბის კონტროლერი |
 | `S3c883f` | detail | I have reviewed these dependants | გადავხედე ამ დამოკიდებულ კოდებს |
@@ -21071,7 +21554,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S693272` | detail, withdrawn_codes | Legacy Reference Number | ძველი საცნობარო ნომერი |
 | `S43d5c5` | detail, form | Loadless Spinning Permitted | დატვირთვის გარეშე ბრუნვა დაშვებულია |
 | `S193786` | detail | Logical Node | ლოგიკური კვანძი |
-| `Sc3f827` | detail | Main controller | მთავარი კონტროლერი |
 | `S578b78` | detail | Main Controller group | მთავარი კონტროლერის ჯგუფი |
 | `Sa7512d` | detail, form | Main Controller only | მხოლოდ მთავარი კონტროლერი |
 | `Seb9a6d` | detail | Manage translations | თარგმანების მართვა |
@@ -21091,6 +21573,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S4bddd5` | detail | Nobody can review it until it is submitted. | არავის შეუძლია მისი განხილვა, სანამ არ წარედგინება. |
 | `S2d8f60` | detail | node value | კვანძის მნიშვნელობა |
 | `S71f8e7` | detail, form | none | არცერთი |
+| `S7d24f7` | detail | not in the catalogue | კატალოგში არ არის |
 | `S4467d4` | detail | Not yet published | ჯერ არ არის გამოქვეყნებული |
 | `S23402a` | detail | Not yet submitted. | ჯერ არ არის წარდგენილი. |
 | `Scd7430` | detail, form | Number of Times Repeated | გამეორებების რაოდენობა |
@@ -21124,6 +21607,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sa4ab7b` | detail | Program References | პროგრამების მითითებები |
 | `S70cbd1` | detail | Proposed | შემოთავაზებული |
 | `S483bf2` | detail, list | Published | გამოქვეყნებული |
+| `S2b85e8` | detail | Read from the set condition and the repeat code of the imported program. A text reading, not an interpretation of the controller logic. | წაკითხულია იმპორტირებული პროგრამის ჩართვის პირობიდან და გამეორების კოდიდან. ტექსტის წაკითხვაა და არა კონტროლერის ლოგიკის ინტერპრეტაცია. |
 | `S6a9c56` | detail, form | Read level | წაკითხვის დონე |
 | `Sf5ca9d` | detail | Recorded exports | ჩაწერილი ექსპორტები |
 | `Sa3f757` | detail | Reinstate to Released | გამოშვებულად აღდგენა |
@@ -21147,6 +21631,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S4aed03` | detail | Request | მოთხოვნა |
 | `Sf3421a` | detail | Request a Sign-Off | ხელმოწერის მოთხოვნა |
 | `Sc26bf6` | detail, mine | Requested | მოთხოვნილია |
+| `S2706ed` | detail | Required by | საჭიროა ამისთვის |
 | `S619e87` | detail, form | Reset Delay | გადატვირთვის დაყოვნება |
 | `S026ab2` | detail | resolved | გადაწყვეტილია |
 | `S68c61f` | detail | Rev # | რევ. № |
@@ -21184,6 +21669,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S98a377` | detail | Still a Draft. | ჯერ კიდევ დრაფტია. |
 | `S123f6c` | detail | Submit for Review | განხილვაზე წარდგენა |
 | `S3dca68` | detail | Superseded by Status Code id (optional) | ჩანაცვლებულია სტატუსის კოდის id-ით (არასავალდებულო) |
+| `Sb17da5` | detail | Suppresses | თრგუნავს |
 | `S08e643` | detail, list | Target software version | სამიზნე პროგრამული ვერსია |
 | `S44203c` | detail, form, status code fields | Task Call Frequency | ამოცანის გამოძახების სიხშირე |
 | `S8fc804` | detail | The author has to submit it for review before the Reviewer or Administrator can see it. | ავტორმა უნდა წარადგინოს განხილვაზე, სანამ მიმომხილველი ან ადმინისტრატორი მას ნახავს. |
@@ -21978,6 +22464,8 @@ Every string of the interface with the templates that use it. A native speaker a
 | `Seba07b` | A change set groups the change requests that ship with one controller software release, so reviewers see the whole package. Each request is still decided on its own. | list | 18 of 18 |
 | `S7a758c` | A change set needs a name of 1-120 characters. | message: change_set_service | 18 of 18 |
 | `S0240d7` | A code can be translated once its source text is Approved. | translations | 18 of 18 |
+| `S876180` | A code is not raised while its cause is active. The top of each tree is a cause that nothing suppresses. | connections | 18 of 18 |
+| `S3f50cd` | A code that is raised again and again is replaced by its repeat code. Repeat codes outside the catalogue are marked external. | connections | 18 of 18 |
 | `Scfb147` | A code whose change request was withdrawn stays as an empty shell: it keeps its number, legacy number and PrgIdx_GUi, so the same program or row cannot be imported again. Delete it here to free them. Deleting is final and is written to the audit log. | withdrawn_codes | 18 of 18 |
 | `Sca2391` | A comment must be between 1 and 4000 characters. | message: change_request_service | 18 of 18 |
 | `S42cee2` | A field comment must be between 1 and 2000 characters. | message: field_review_service | 18 of 18 |
@@ -22031,7 +22519,7 @@ Every string of the interface with the templates that use it. A native speaker a
 | `Sff9f1f` | Age | success_metrics | 18 of 18 |
 | `Sf03c0a` | ago | operations | 18 of 18 |
 | `S25f8c5` | Alarm | detail, export, form | 18 of 18 |
-| `Sd87c44` | all | detail, export, hub_consolidation | 18 of 18 |
+| `Sd87c44` | all | connections, detail, export, hub_consolidation | 18 of 18 |
 | `S22e640` | all categories | index, language | 18 of 18 |
 | `S484388` | all columns | detail, export_center | 18 of 18 |
 | `Sf9d469` | All controllers | legacy_mapping | 18 of 18 |
@@ -22132,6 +22620,8 @@ Every string of the interface with the templates that use it. A native speaker a
 | `Sa28e96` | Catalogue Health | catalogue_health, menu | 18 of 18 |
 | `S25d185` | Catalogue health | catalogue_health | 18 of 18 |
 | `Sa3c686` | Category | export, index, language | 18 of 18 |
+| `S3e00c3` | Causes and the codes they suppress | connections | 18 of 18 |
+| `Se7bab1` | Chain of causes | detail | 18 of 18 |
 | `S49289d` | Change Password | account_settings | 18 of 18 |
 | `S9c8393` | Change Request | detail, mine | 18 of 18 |
 | `S4572f4` | Change request | detail | 18 of 18 |
@@ -22168,12 +22658,13 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S7c9afd` | Classification only — a Sandbox code's identifier is still drawn from the isolated StCd-T##### band, never from this group's numeric range. | form | 18 of 18 |
 | `Sf0a89f` | Close change set | detail | 18 of 18 |
 | `S7c0c39` | Close this change set? | detail | 18 of 18 |
-| `Sadac69` | Code | detail, export_profiles, fleet_feedback, index | 18 of 18 |
+| `Sadac69` | Code | connections, detail, export_profiles, fleet_feedback | 18 of 18 |
 | `S761b8e` | code and label are required | message: lookup_admin_service | 18 of 18 |
 | `S3a9ae6` | code must be 2-40 letters, digits or underscores. | message: export_profile_service | 18 of 18 |
 | `S48dd6b` | code, label, range_start, and range_end are required | message: lookup_admin_service | 18 of 18 |
-| `S199993` | Codes | catalogue_health, fleet_feedback | 18 of 18 |
+| `S199993` | Codes | catalogue_health, connections, fleet_feedback | 18 of 18 |
 | `S37d298` | codes apply to | software_versions | 18 of 18 |
+| `Se54fe8` | Codes with a connection | connections | 18 of 18 |
 | `Sc1d0d9` | Codes without an active owner | success_metrics | 18 of 18 |
 | `Scc6146` | Colour = level, red is the highest. As StCd Owner you may move a user between Viewer, Engineer and Reviewer; creating users and every other role needs an Administrator. | users | 18 of 18 |
 | `Sd02137` | Colour = level, red is the highest. You may create users and give every role. | users | 18 of 18 |
@@ -22194,6 +22685,8 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S754164` | Configuration | menu | 18 of 18 |
 | `S7671b5` | Confirm or override Audience Access | detail | 18 of 18 |
 | `S141763` | Confirm with your password | _macros | 18 of 18 |
+| `S6512ee` | Connection | detail | 18 of 18 |
+| `S8f3509` | Connections | connections, detail, menu | 18 of 18 |
 | `S4f9be0` | Content | detail | 18 of 18 |
 | `S437f95` | Content digest (SHA-256 of the data rows) | export | 18 of 18 |
 | `S4bb9a3` | content must be 'baseline' or 'delta'. | message: export_service | 18 of 18 |
@@ -22307,6 +22800,9 @@ Every string of the interface with the templates that use it. A native speaker a
 | `Sc2e311` | entries | operations | 18 of 18 |
 | `S11f957` | error | dry_run | 18 of 18 |
 | `S805e86` | Errors | reconciliation | 18 of 18 |
+| `Se90ccc` | Escalated from | connections, detail | 18 of 18 |
+| `S61bd26` | Escalates to | connections, detail | 18 of 18 |
+| `S78586c` | Escalates to %(code)s, which is deprecated or archived. | connections | 18 of 18 |
 | `Sc5497b` | Events | integrations | 18 of 18 |
 | `Sefd55c` | Every audit entry carries a hash of its predecessor; a removed, reordered or edited entry breaks the chain. | operations | 18 of 18 |
 | `Sd24ec2` | Every comment and decision on every change request of this status code, oldest first. Comments of withdrawn requests are kept in the Audit Log (action WITHDRAW). | detail | 18 of 18 |
@@ -22342,6 +22838,7 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S93f3f8` | Export XLSX | detail | 18 of 18 |
 | `S53af3d` | Exported file | export_center | 18 of 18 |
 | `S32aa79` | Exports of this Release | detail | 18 of 18 |
+| `S59d8f3` | external | connections | 18 of 18 |
 | `S8d33f3` | FAILED | operations | 18 of 18 |
 | `S09fef5` | Failed | detail | 18 of 18 |
 | `Sdd7b7e` | failed validation | detail | 18 of 18 |
@@ -22358,7 +22855,7 @@ Every string of the interface with the templates that use it. A native speaker a
 | `Sd7decf` | Filter | audit_log, index, language, legacy_mapping | 18 of 18 |
 | `S759686` | Filter status codes | list | 18 of 18 |
 | `S962725` | Filter the list | st_preview | 18 of 18 |
-| `S57e8be` | Finding | catalogue_health | 18 of 18 |
+| `S57e8be` | Finding | catalogue_health, connections | 18 of 18 |
 | `Sca9b7e` | Findings | check | 18 of 18 |
 | `Se0996a` | first | detail, form | 18 of 18 |
 | `S9eac73` | first bad entry | operations | 18 of 18 |
@@ -22401,11 +22898,12 @@ Every string of the interface with the templates that use it. A native speaker a
 | `Sac7f67` | headers only | new | 18 of 18 |
 | `Sc47ae1` | Help | help, menu | 18 of 18 |
 | `S90ccd6` | History | detail | 18 of 18 |
+| `Sb7c028` | How the status codes are connected, read from the set conditions and the repeat codes of the imported programs. A text reading, not an interpretation of the controller logic. | connections | 18 of 18 |
 | `Sb17ab7` | Hub code | hub_consolidation | 18 of 18 |
 | `S036d00` | Hub codes and their replacements | hub_consolidation | 18 of 18 |
 | `S2fa8ef` | Hub Consolidation | hub_consolidation, menu | 18 of 18 |
 | `Sb4aadc` | Hub Controller | catalogue_health, legacy_mapping | 18 of 18 |
-| `S0dfe7b` | Hub controller | detail | 18 of 18 |
+| `S0dfe7b` | Hub controller | connections, detail | 18 of 18 |
 | `S3b9e43` | Hub Controller (legacy numbers, mapped to the new ones) | st_new | 18 of 18 |
 | `Sfec8b7` | Hub Controller group | detail | 18 of 18 |
 | `S00ccae` | Hub Controller only | detail, form | 18 of 18 |
@@ -22492,10 +22990,11 @@ Every string of the interface with the templates that use it. A native speaker a
 | `Sb12fd2` | Lookup / Vocabulary Management | lookups | 18 of 18 |
 | `Sd9748d` | Lookup Management | lookups | 18 of 18 |
 | `S3871af` | Lookups | menu | 18 of 18 |
+| `S1df823` | loop | connections | 18 of 18 |
 | `S36a883` | low | catalogue_health | 18 of 18 |
 | `Sa24877` | Lower-case letters, digits and hyphens; it never changes. | index | 18 of 18 |
 | `S1b123c` | Main Controller | catalogue_health, legacy_mapping, st_new | 18 of 18 |
-| `Sc3f827` | Main controller | detail | 18 of 18 |
+| `Sc3f827` | Main controller | connections, detail | 18 of 18 |
 | `S578b78` | Main Controller group | detail | 18 of 18 |
 | `Sa7512d` | Main Controller only | detail, form | 18 of 18 |
 | `Sefd197` | Main navigation | base | 18 of 18 |
@@ -22564,6 +23063,7 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S1c1f74` | No checklist items configured. | review_checklist | 18 of 18 |
 | `S7e1129` | No comments or decisions yet. | detail | 18 of 18 |
 | `S207b24` | No comments yet. | detail | 18 of 18 |
+| `S2f385e` | No connections are known yet. They come from the programs imported from .st files. | connections | 18 of 18 |
 | `S3b0b47` | No data yet. | fleet_feedback, success_metrics | 18 of 18 |
 | `S30d2d7` | No delegations. | delegations | 18 of 18 |
 | `S64463a` | No DEPRECATE audit entry found; cannot verify retention period. | message: status_code_service | 18 of 18 |
@@ -22602,6 +23102,7 @@ Every string of the interface with the templates that use it. A native speaker a
 | `Sd856bd` | Not deleted (it has a revision again or is still referenced): %(x)s | help and messages | 18 of 18 |
 | `S5af0a0` | Not for distribution | export_center | 18 of 18 |
 | `S7b8d80` | Not for distribution - unapproved data | export | 18 of 18 |
+| `S7d24f7` | not in the catalogue | detail | 18 of 18 |
 | `Sa8c86d` | NOT met | success_metrics | 18 of 18 |
 | `S357953` | NOT OK | export_verify | 18 of 18 |
 | `S34b903` | Not possible: the account has history (see above). Deactivate it instead; the person can no longer sign in and everything they did stays attributable. | help and messages | 18 of 18 |
@@ -22651,6 +23152,8 @@ Every string of the interface with the templates that use it. A native speaker a
 | `Sd26573` | Only an unclear string is noted. | message: translation_review_service | 18 of 18 |
 | `S16c9a4` | Only Reviewers, Administrators and Chief Engineers can delegate. | message: delegation_service | 18 of 18 |
 | `S59c5fe` | Only sandbox status codes may be deleted (FR-055). | message: status_code_service | 18 of 18 |
+| `S136e29` | Only set while %(number)s is active, which is not in the catalogue. | connections | 18 of 18 |
+| `S355d4b` | Only set while active | connections, detail | 18 of 18 |
 | `S590681` | Only the author of the CR or an Administrator may attach evidence. | message: attachment_service | 18 of 18 |
 | `S990d51` | Only the author of the CR or an Administrator may group it. | message: change_set_service | 18 of 18 |
 | `S69e4d1` | Only the author of the CR or an Administrator may ungroup it. | message: change_set_service | 18 of 18 |
@@ -22690,6 +23193,7 @@ Every string of the interface with the templates that use it. A native speaker a
 | `Sc49bd0` | Packages of this Release | detail | 18 of 18 |
 | `Sa5d386` | Page %(page)s of %(total)s | export | 18 of 18 |
 | `S600584` | Pages | _macros | 18 of 18 |
+| `Sfa38ca` | Part of a loop of suppressions: each code is suppressed by another one of the loop. | connections | 18 of 18 |
 | `S8be3c9` | Password | login, users | 18 of 18 |
 | `S781961` | Pause | integrations | 18 of 18 |
 | `S8af321` | PDF orientation | export_profiles | 18 of 18 |
@@ -22754,6 +23258,7 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S8cb56e` | range_end must be greater than range_start | message: lookup_admin_service | 18 of 18 |
 | `Se25b5d` | Raw SQLite backup of the complete governed dataset. Handle per data-at-rest access-control requirements — this file carries the same sensitivity as the live database. | export_center | 18 of 18 |
 | `S67640d` | Read files and preview | st_new | 18 of 18 |
+| `S2b85e8` | Read from the set condition and the repeat code of the imported program. A text reading, not an interpretation of the controller logic. | detail | 18 of 18 |
 | `S6a9c56` | Read level | detail, form | 18 of 18 |
 | `S75c053` | ready | st_preview | 18 of 18 |
 | `S55843f` | Reassign | stalled | 18 of 18 |
@@ -22791,6 +23296,7 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S400ad0` | Remove this file? | detail | 18 of 18 |
 | `S69992f` | removed | software_versions | 18 of 18 |
 | `Sb5e77c` | Removed | software_versions | 18 of 18 |
+| `Se382c2` | Repeat code | connections | 18 of 18 |
 | `S51c87d` | Repeated Over the Course | detail, form | 18 of 18 |
 | `S4c1aa6` | Repeated-Error Escalation | detail | 18 of 18 |
 | `S2202ce` | Repeated-Error Escalation (optional) | form | 18 of 18 |
@@ -22800,6 +23306,7 @@ Every string of the interface with the templates that use it. A native speaker a
 | `Sc26bf6` | Requested | detail, mine | 18 of 18 |
 | `Sf7194e` | Requests | list | 18 of 18 |
 | `S950eaf` | Requests waiting longer than the configured thresholds. Review: amber after | stalled | 18 of 18 |
+| `S2706ed` | Required by | detail | 18 of 18 |
 | `Sc3fed1` | reserved | legacy_mapping | 18 of 18 |
 | `S619e87` | Reset Delay | detail, form | 18 of 18 |
 | `S2e8fd6` | Reset delay | export | 18 of 18 |
@@ -22955,6 +23462,10 @@ Every string of the interface with the templates that use it. A native speaker a
 | `Sa4a761` | Success Metrics | menu, success_metrics | 18 of 18 |
 | `Se08405` | Success metrics | success_metrics | 18 of 18 |
 | `S3dca68` | Superseded by Status Code id (optional) | detail | 18 of 18 |
+| `Sc199d7` | Suppressed by | connections, detail | 18 of 18 |
+| `S0e08e5` | Suppressed by %(code)s, which is deprecated or archived. | connections | 18 of 18 |
+| `S1bc026` | Suppressed by %(number)s, which is not in the catalogue. | connections | 18 of 18 |
+| `Sb17da5` | Suppresses | detail | 18 of 18 |
 | `S1a633f` | switched off | index | 18 of 18 |
 | `S0e8a3a` | target | success_metrics | 18 of 18 |
 | `S08e643` | Target software version | detail, list | 18 of 18 |
@@ -23113,11 +23624,13 @@ Every string of the interface with the templates that use it. A native speaker a
 | `Sfdfe2d` | Webhooks | integrations | 18 of 18 |
 | `S51ecc5` | What happens next | detail | 18 of 18 |
 | `S439914` | What happens next on a change request | help | 18 of 18 |
+| `S844394` | What looks wrong | connections | 18 of 18 |
 | `Sed412e` | What service staff should do. Feeds the service manual. | form | 18 of 18 |
 | `Sdbc1fc` | What this account has done | user_detail | 18 of 18 |
 | `S769bb1` | When | audit_log, detail | 18 of 18 |
 | `Se90e89` | When set, only codes that apply to one of these versions are offered as candidates. | new | 18 of 18 |
 | `S525f61` | Where | user_detail | 18 of 18 |
+| `S52fc2b` | Where repeated codes escalate to | connections | 18 of 18 |
 | `Sf323c0` | Where used | detail | 18 of 18 |
 | `S3bd89c` | Which codes exist in which software version | software_versions | 18 of 18 |
 | `Sf57807` | Which new status code replaces which legacy number. The mapping runs from legacy to new only: the new library holds more codes than the old one, so a code without a legacy number is normal and there is no way back. | legacy_mapping | 18 of 18 |

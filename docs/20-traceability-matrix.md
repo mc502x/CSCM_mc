@@ -15,7 +15,7 @@ A ✅ means "an automated test exercises it", not "a person signed it off". Test
 | Security (SEC) — 24 | 24 | 0 | 0 (TLS termination and key custody are deployment checks, §6) |
 | Audit (AUD) — 8 | 8 | 0 | 0 |
 | Non-functional (NFR) — 14 | 12 | 1 (NFR-002 availability) | 1 (NFR-007 usability needs UAT) |
-| Test matrix (every TC in 13-test-strategy.md §8 and §8a, TC-001 … TC-068) | all | 0 | TC-030: scripted ✅, human sign-off 🧑 |
+| Test matrix (every TC in 13-test-strategy.md §8 and §8a, TC-001 … TC-069) | all | 0 | TC-030: scripted ✅, human sign-off 🧑 |
 
 ## 1a. The v4 pass (2026-10-23)
 
@@ -221,6 +221,7 @@ Also: `record_property` measurements are now carried into the report (`junit_fam
 | FR-176 | ✅ | `test_translation_approval::test_a_reviewed_language_has_nothing_pending_until_a_string_changes`, `…a_viewer_reads_a_changed_string_in_english_until_it_is_approved`, `…a_language_never_reviewed_stays_hidden_from_a_viewer`, `…a_follow_up_review_covers_only_what_is_new_or_changed`, `…an_accepted_proposal_is_approved_and_an_undecided_one_is_not`, `test_translation_review::test_a_proposal_awaits_approval_until_it_is_decided` |
 | FR-177 | ✅ | `test_translation_approval::test_the_colour_intervals_run_from_red_to_green`, `…the_overview_shows_the_confidence_of_every_language_in_colour`, `…the_record_holds_a_confidence_for_every_language_with_its_findings`, `…every_change_of_the_text_or_the_nomenclature_has_been_through_the_check`, `…a_changed_string_must_get_a_verdict_before_the_record_is_current`, `…a_change_of_the_nomenclature_needs_the_flag_as_well`, `…a_delta_read_one_by_one_can_lower_or_keep_the_confidence` |
 | FR-178 | ✅ | `test_translation_impact::test_a_new_term_tells_the_stcd_owner_which_languages_need_attention`, `…the_reviewer_of_an_affected_language_is_told_too`, `…a_term_that_stays_in_english_touches_no_language`, `…a_changed_term_and_an_approved_translation_are_reported_again`, `…a_failing_notice_never_undoes_the_change`, `…the_notice_appears_on_the_notices_page_of_the_stcd_owner`, `…nothing_is_reported_while_the_confidence_check_is_current`, `…changed_shipped_text_is_reported_once_per_change`, `…a_changed_nomenclature_is_named_in_the_notice`, `…the_command_for_the_deployment_reports_and_notifies`, `…the_start_of_the_server_and_the_installers_run_the_check`, `test_translation_approval::test_every_change_of_the_text_or_the_nomenclature_has_been_through_the_check` |
+| FR-179 | ✅ | `test_connections::test_a_negated_active_flag_is_a_cause_and_a_plain_one_a_precondition`, `…the_real_programs_name_their_cause_and_their_repeat_code`, `…one_code_shows_what_it_depends_on_and_what_depends_on_it`, `…the_hierarchy_puts_the_cause_on_top_with_what_it_suppresses_below`, `…escalation_targets_say_which_are_outside_the_catalogue`, `…what_looks_wrong_is_listed`, `…the_hub_and_main_controller_can_be_looked_at_separately`, `…the_code_page_and_the_overview_show_the_connections`, `…a_viewer_does_not_see_the_connections`, `…the_api_returns_the_connections_of_a_code_and_of_the_catalogue`, `…the_menu_offers_the_connections_to_the_working_roles_only`, `…an_imported_program_brings_its_cause_and_its_repeat_code` |
 
 ## 4. Business rules, security, non-functional
 

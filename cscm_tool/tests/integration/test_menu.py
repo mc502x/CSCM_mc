@@ -48,6 +48,7 @@ def test_a_viewer_sees_the_catalogue_and_nothing_to_work_with(client, cast):
         "Library Import",
         "Users",
         "Audit Log",
+        "Connections",
     }
     assert "+ New Status Code" not in nav
     assert titles == ["Catalogue", "Languages"] or set(titles) <= {"Catalogue", "Languages"}
@@ -58,6 +59,7 @@ EXPECTED = {
         "present": {
             "My Change Requests",
             "Change Sets",
+            "Connections",
             "Library Import",
             "Import from .st files",
             "Legacy mapping",

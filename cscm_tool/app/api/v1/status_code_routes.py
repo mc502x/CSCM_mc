@@ -206,6 +206,33 @@ def where_used(status_code_id: int):
     return jsonify(items=ReferenceService.where_used(status_code_id))
 
 
+@api_v1_bp.get("/status-codes/<int:status_code_id>/connections")
+@require_role(*OVERSIGHT_ROLES)
+def code_connections(status_code_id: int):
+    """FR-179: what suppresses this code, what it suppresses, what it requires and where it
+    escalates, read from the imported programs."""
+    from app.services.connection_service import ConnectionService
+
+    try:
+        StatusCodeService.get_current_revision(status_code_id, current_user)
+    except NotFoundError:
+        return jsonify(error="not_found", message="Status code not found"), 404
+    return jsonify(ConnectionService.for_code(status_code_id))
+
+
+@api_v1_bp.get("/status-codes/connections")
+@require_role(*OVERSIGHT_ROLES)
+def catalogue_connections():
+    """FR-179: causes with the consequences they suppress (a tree), the escalation targets and what
+    looks wrong. Optional controller=MC|HC."""
+    from app.services.connection_service import ConnectionService
+
+    controller = request.args.get("controller") or None
+    if controller not in (None, "MC", "HC"):
+        return jsonify(error="validation_error", message="controller must be MC or HC"), 422
+    return jsonify(ConnectionService.hierarchy(controller))
+
+
 @api_v1_bp.get("/status-codes/<int:status_code_id>/family")
 @login_required
 def platform_family(status_code_id: int):

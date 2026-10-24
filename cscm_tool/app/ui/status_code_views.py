@@ -347,8 +347,12 @@ def status_code_detail(status_code_id):
             flash(_("Revision not found."), "error")
 
     where_used = []
+    connections = None
     if current_user.role_code != "VIEWER" and not revision.status_code.is_sandbox:
         where_used = ReferenceService.where_used(status_code_id)
+        from app.services.connection_service import ConnectionService
+
+        connections = ConnectionService.for_code(status_code_id)
     family = []
     if not revision.status_code.is_sandbox:
         for member in StatusCodeService.family(status_code_id):
@@ -377,6 +381,7 @@ def status_code_detail(status_code_id):
         rev_a=rev_a,
         rev_b=rev_b,
         where_used=where_used,
+        connections=connections,
         family=family,
         translations=translations,
         reference_warnings=(
@@ -390,6 +395,22 @@ def status_code_detail(status_code_id):
         ],
         is_hub=revision.status_code.functional_system_group.controller_type == "HUB",
         main_groups=LookupService.list_vocabulary("functional-system-groups"),
+    )
+
+
+# ---------------------------------------------------------------- connections (FR-179)
+@ui_bp.route("/status-codes/connections")
+@require_role_web("ENGINEER", "REVIEWER", "ADMINISTRATOR", "CHIEF_ENGINEER", "STCD_OWNER")
+def status_code_connections():
+    from app.services.connection_service import ConnectionService
+
+    controller = request.args.get("controller") or None
+    if controller not in (None, "MC", "HC"):
+        controller = None
+    return render_template(
+        "status_codes/connections.html",
+        data=ConnectionService.hierarchy(controller),
+        controller=controller,
     )
 
 

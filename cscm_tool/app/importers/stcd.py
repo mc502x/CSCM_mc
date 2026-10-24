@@ -1,3 +1,4 @@
+# ruff: noqa: E501  (docstring lines)
 """Reader for the generated status code programs (`PROGRAM StCd_<n>`, IEC 61131-3 Structured Text).
 
 Each file written by StatuscodeGeneratorEuros holds one or more programs. Per program the reader
@@ -55,6 +56,11 @@ _SET_TIMER_RE = re.compile(r"\bSetTimer\s*\(\s*PT\s*:=\s*([^,)]+)")
 _RESET_TIMER_RE = re.compile(r"\bResetTimer\s*\(\s*PT\s*:=\s*([^,)]+)")
 _DISABLE_RE = re.compile(r"\bStCd\d+DisableGpBo\b")
 _OTHER_PROGRAM_RE = re.compile(r"\bStCd_(\d+)\b")
+# a reference to the active flag of another code: StatuscodeActiveArBo[StCd_1045.Idx]
+_ACTIVE_REF_RE = re.compile(
+    r"\bStatuscodeActiveArBo\s*\[\s*StCd_(\d+)\s*\.\s*Idx\s*\]", re.IGNORECASE
+)
+_NOT_BEFORE_RE = re.compile(r"\bNOT\s*\(?\s*$", re.IGNORECASE)
 
 # generator attribute -> field
 _SCALARS = {
@@ -114,6 +120,8 @@ class StatusCode:
     reset_delay_ms: int | None = None
     disable_variable: str = ""
     depends_on: list[int] = field(default_factory=list)
+    suppressed_by: list[int] = field(default_factory=list)  # not set while these are active
+    requires: list[int] = field(default_factory=list)  # only set while these are active
     programs: dict[str, int | str | bool] = field(default_factory=dict)
     user_groups: dict[int, dict[str, int]] = field(default_factory=dict)
     other: dict[str, int | str | bool] = field(default_factory=dict)
@@ -121,6 +129,20 @@ class StatusCode:
 
     def as_dict(self) -> dict:
         return asdict(self)
+
+
+def condition_links(condition: str) -> tuple[list[int], list[int]]:
+    """(suppressed_by, requires) read from a set condition: a code whose active flag appears behind a
+    NOT suppresses this one (a consequence that is silenced while its cause is present); one that
+    appears without a NOT is a precondition. A text reading of the generated line, never an
+    interpretation of the logic: an unusual construction (an OR, a double negation) is read the
+    same way, and whoever looks at the connections is told that they come from the text."""
+    suppressed: set[int] = set()
+    required: set[int] = set()
+    for match in _ACTIVE_REF_RE.finditer(condition):
+        before = condition[: match.start()]
+        (suppressed if _NOT_BEFORE_RE.search(before) else required).add(int(match.group(1)))
+    return sorted(suppressed), sorted(required - suppressed)
 
 
 def identifier_for(number: int) -> str:
@@ -252,6 +274,7 @@ def _parse_program(
     if m := _DISABLE_RE.search(logic):
         code.disable_variable = m.group(0)
     code.depends_on = sorted({int(n) for n in _OTHER_PROGRAM_RE.findall(logic)} - {program})
+    code.suppressed_by, code.requires = condition_links(code.set_condition)
     code.warnings = warnings
     return code
 

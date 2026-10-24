@@ -1111,6 +1111,25 @@ paths:
         '200': { description: Dependants, content: { application/json: { schema: { type: object, properties: { items: { type: array, items: { $ref: '#/components/schemas/WhereUsedEntry' } } } } } } }
         '404': { $ref: '#/components/responses/NotFound' }
 
+  /status-codes/{statusCodeId}/connections:
+    parameters: [{ $ref: '#/components/parameters/StatusCodeId' }]
+    get:
+      tags: [StatusCodes]
+      summary: What suppresses this code, what it suppresses, what it requires and where it escalates, read from the imported programs, with the chain of causes above it (FR-179). Not available to Viewers.
+      responses:
+        '200': { description: Connections, content: { application/json: { schema: { type: object, properties: { outgoing: { type: array, items: { type: object } }, incoming: { type: array, items: { type: object } }, causes: { type: array, items: { type: object } }, escalation: { type: array, items: { type: object } }, known: { type: boolean } } } } } }
+        '404': { $ref: '#/components/responses/NotFound' }
+
+  /status-codes/connections:
+    get:
+      tags: [StatusCodes]
+      summary: The causes with the codes they suppress (a tree), the escalation targets and what looks wrong in the connections between codes (FR-179). Not available to Viewers.
+      parameters:
+        - { name: controller, in: query, schema: { type: string, enum: [MC, HC] } }
+      responses:
+        '200': { description: Hierarchy, content: { application/json: { schema: { type: object, properties: { trees: { type: array, items: { type: object } }, escalation: { type: array, items: { type: object } }, findings: { type: array, items: { type: object } }, counts: { type: object, properties: { SUPPRESSED_BY: { type: integer }, REQUIRES: { type: integer }, ESCALATES_TO: { type: integer } } }, codes_with_connections: { type: integer } } } } } }
+        '422': { $ref: '#/components/responses/ValidationError' }
+
   /status-codes/{statusCodeId}/family:
     parameters: [{ $ref: '#/components/parameters/StatusCodeId' }]
     get:

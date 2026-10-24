@@ -11,19 +11,24 @@
    "date": "2026-10-24",
    "by": "AI pre-check (Claude)",
    "note": "baseline: sample of 160 strings per language"
+  },
+  {
+   "date": "2026-10-24",
+   "by": "AI pre-check (Claude), read one by one 2026-10-24",
+   "note": "delta: 486 changed strings read one by one"
   }
  ],
  "languages": {
   "de": {
    "confidence": 93.7,
-   "accuracy": 98.1,
+   "accuracy": 98.2,
    "haircut": 4.0,
    "sample_size": 160,
    "sample_rate": 0.01875,
    "errors": 0,
    "awkward": 6,
    "mechanical": {
-    "strings": 1190,
+    "strings": 1217,
     "missing": 0,
     "placeholders": 0,
     "identical": 0,
@@ -79,7 +84,170 @@
      "hash": "ae8a91"
     }
    ],
-   "checked": {},
+   "checked": {
+    "S876180": {
+     "english": "A code is not raised while its cause is active. The top of each tree is a cause that nothing suppresses.",
+     "hash": "d07b7a",
+     "kind": "OK",
+     "note": ""
+    },
+    "S3f50cd": {
+     "english": "A code that is raised again and again is replaced by its repeat code. Repeat codes outside the catalogue are marked external.",
+     "hash": "411127",
+     "kind": "OK",
+     "note": ""
+    },
+    "S3e00c3": {
+     "english": "Causes and the codes they suppress",
+     "hash": "8a784f",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se7bab1": {
+     "english": "Chain of causes",
+     "hash": "9a74ba",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se54fe8": {
+     "english": "Codes with a connection",
+     "hash": "853b80",
+     "kind": "OK",
+     "note": ""
+    },
+    "S6512ee": {
+     "english": "Connection",
+     "hash": "5d5291",
+     "kind": "OK",
+     "note": ""
+    },
+    "S8f3509": {
+     "english": "Connections",
+     "hash": "ea01ca",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se90ccc": {
+     "english": "Escalated from",
+     "hash": "942565",
+     "kind": "OK",
+     "note": ""
+    },
+    "S61bd26": {
+     "english": "Escalates to",
+     "hash": "804876",
+     "kind": "OK",
+     "note": ""
+    },
+    "S78586c": {
+     "english": "Escalates to %(code)s, which is deprecated or archived.",
+     "hash": "af041f",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sb7c028": {
+     "english": "How the status codes are connected, read from the set conditions and the repeat codes of the imported programs. A text reading, not an interpretation of the controller logic.",
+     "hash": "c61223",
+     "kind": "OK",
+     "note": ""
+    },
+    "S2f385e": {
+     "english": "No connections are known yet. They come from the programs imported from .st files.",
+     "hash": "7f3eea",
+     "kind": "OK",
+     "note": ""
+    },
+    "S136e29": {
+     "english": "Only set while %(number)s is active, which is not in the catalogue.",
+     "hash": "3906a8",
+     "kind": "OK",
+     "note": ""
+    },
+    "S355d4b": {
+     "english": "Only set while active",
+     "hash": "6b35b0",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sfa38ca": {
+     "english": "Part of a loop of suppressions: each code is suppressed by another one of the loop.",
+     "hash": "7c14e0",
+     "kind": "OK",
+     "note": ""
+    },
+    "S2b85e8": {
+     "english": "Read from the set condition and the repeat code of the imported program. A text reading, not an interpretation of the controller logic.",
+     "hash": "1eab4c",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se382c2": {
+     "english": "Repeat code",
+     "hash": "f82575",
+     "kind": "OK",
+     "note": ""
+    },
+    "S2706ed": {
+     "english": "Required by",
+     "hash": "5d83d3",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sc199d7": {
+     "english": "Suppressed by",
+     "hash": "f5d8ec",
+     "kind": "OK",
+     "note": ""
+    },
+    "S0e08e5": {
+     "english": "Suppressed by %(code)s, which is deprecated or archived.",
+     "hash": "16be3c",
+     "kind": "OK",
+     "note": ""
+    },
+    "S1bc026": {
+     "english": "Suppressed by %(number)s, which is not in the catalogue.",
+     "hash": "c493b9",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sb17da5": {
+     "english": "Suppresses",
+     "hash": "2bebec",
+     "kind": "OK",
+     "note": ""
+    },
+    "S844394": {
+     "english": "What looks wrong",
+     "hash": "fe6a5f",
+     "kind": "OK",
+     "note": ""
+    },
+    "S52fc2b": {
+     "english": "Where repeated codes escalate to",
+     "hash": "9f4e61",
+     "kind": "OK",
+     "note": ""
+    },
+    "S59d8f3": {
+     "english": "external",
+     "hash": "fa1252",
+     "kind": "OK",
+     "note": ""
+    },
+    "S1df823": {
+     "english": "loop",
+     "hash": "836966",
+     "kind": "OK",
+     "note": ""
+    },
+    "S7d24f7": {
+     "english": "not in the catalogue",
+     "hash": "2cef24",
+     "kind": "OK",
+     "note": ""
+    }
+   },
    "checked_at": "2026-10-24"
   },
   "fr": {
@@ -91,7 +259,7 @@
    "errors": 0,
    "awkward": 4,
    "mechanical": {
-    "strings": 1189,
+    "strings": 1216,
     "missing": 0,
     "placeholders": 0,
     "identical": 0,
@@ -131,19 +299,182 @@
      "hash": "4da661"
     }
    ],
-   "checked": {},
+   "checked": {
+    "S876180": {
+     "english": "A code is not raised while its cause is active. The top of each tree is a cause that nothing suppresses.",
+     "hash": "48f809",
+     "kind": "OK",
+     "note": ""
+    },
+    "S3f50cd": {
+     "english": "A code that is raised again and again is replaced by its repeat code. Repeat codes outside the catalogue are marked external.",
+     "hash": "73c3b3",
+     "kind": "OK",
+     "note": ""
+    },
+    "S3e00c3": {
+     "english": "Causes and the codes they suppress",
+     "hash": "3f36dc",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se7bab1": {
+     "english": "Chain of causes",
+     "hash": "6a284b",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se54fe8": {
+     "english": "Codes with a connection",
+     "hash": "2f2cef",
+     "kind": "OK",
+     "note": ""
+    },
+    "S6512ee": {
+     "english": "Connection",
+     "hash": "54fa5b",
+     "kind": "OK",
+     "note": ""
+    },
+    "S8f3509": {
+     "english": "Connections",
+     "hash": "0636ad",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se90ccc": {
+     "english": "Escalated from",
+     "hash": "26d91f",
+     "kind": "OK",
+     "note": ""
+    },
+    "S61bd26": {
+     "english": "Escalates to",
+     "hash": "248e98",
+     "kind": "OK",
+     "note": ""
+    },
+    "S78586c": {
+     "english": "Escalates to %(code)s, which is deprecated or archived.",
+     "hash": "a1476c",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sb7c028": {
+     "english": "How the status codes are connected, read from the set conditions and the repeat codes of the imported programs. A text reading, not an interpretation of the controller logic.",
+     "hash": "118e27",
+     "kind": "OK",
+     "note": ""
+    },
+    "S2f385e": {
+     "english": "No connections are known yet. They come from the programs imported from .st files.",
+     "hash": "1a7cd5",
+     "kind": "OK",
+     "note": ""
+    },
+    "S136e29": {
+     "english": "Only set while %(number)s is active, which is not in the catalogue.",
+     "hash": "0424d9",
+     "kind": "OK",
+     "note": ""
+    },
+    "S355d4b": {
+     "english": "Only set while active",
+     "hash": "5c2abf",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sfa38ca": {
+     "english": "Part of a loop of suppressions: each code is suppressed by another one of the loop.",
+     "hash": "ea98ef",
+     "kind": "OK",
+     "note": ""
+    },
+    "S2b85e8": {
+     "english": "Read from the set condition and the repeat code of the imported program. A text reading, not an interpretation of the controller logic.",
+     "hash": "c3775c",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se382c2": {
+     "english": "Repeat code",
+     "hash": "8e69d2",
+     "kind": "OK",
+     "note": ""
+    },
+    "S2706ed": {
+     "english": "Required by",
+     "hash": "200f85",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sc199d7": {
+     "english": "Suppressed by",
+     "hash": "333db3",
+     "kind": "OK",
+     "note": ""
+    },
+    "S0e08e5": {
+     "english": "Suppressed by %(code)s, which is deprecated or archived.",
+     "hash": "620d21",
+     "kind": "OK",
+     "note": ""
+    },
+    "S1bc026": {
+     "english": "Suppressed by %(number)s, which is not in the catalogue.",
+     "hash": "47ca6c",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sb17da5": {
+     "english": "Suppresses",
+     "hash": "e94238",
+     "kind": "OK",
+     "note": ""
+    },
+    "S844394": {
+     "english": "What looks wrong",
+     "hash": "34ad89",
+     "kind": "OK",
+     "note": ""
+    },
+    "S52fc2b": {
+     "english": "Where repeated codes escalate to",
+     "hash": "23d062",
+     "kind": "OK",
+     "note": ""
+    },
+    "S59d8f3": {
+     "english": "external",
+     "hash": "c618e4",
+     "kind": "OK",
+     "note": ""
+    },
+    "S1df823": {
+     "english": "loop",
+     "hash": "cd9e09",
+     "kind": "OK",
+     "note": ""
+    },
+    "S7d24f7": {
+     "english": "not in the catalogue",
+     "hash": "7e3b97",
+     "kind": "OK",
+     "note": ""
+    }
+   },
    "checked_at": "2026-10-24"
   },
   "es": {
-   "confidence": 93.9,
-   "accuracy": 98.1,
+   "confidence": 94.0,
+   "accuracy": 98.2,
    "haircut": 4.0,
    "sample_size": 160,
    "sample_rate": 0.01875,
    "errors": 0,
    "awkward": 6,
    "mechanical": {
-    "strings": 1189,
+    "strings": 1216,
     "missing": 0,
     "placeholders": 0,
     "identical": 0,
@@ -199,19 +530,182 @@
      "hash": "4a9a3f"
     }
    ],
-   "checked": {},
+   "checked": {
+    "S876180": {
+     "english": "A code is not raised while its cause is active. The top of each tree is a cause that nothing suppresses.",
+     "hash": "71d612",
+     "kind": "OK",
+     "note": ""
+    },
+    "S3f50cd": {
+     "english": "A code that is raised again and again is replaced by its repeat code. Repeat codes outside the catalogue are marked external.",
+     "hash": "be48df",
+     "kind": "OK",
+     "note": ""
+    },
+    "S3e00c3": {
+     "english": "Causes and the codes they suppress",
+     "hash": "4df3a0",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se7bab1": {
+     "english": "Chain of causes",
+     "hash": "fc4860",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se54fe8": {
+     "english": "Codes with a connection",
+     "hash": "c81882",
+     "kind": "OK",
+     "note": ""
+    },
+    "S6512ee": {
+     "english": "Connection",
+     "hash": "19f93c",
+     "kind": "OK",
+     "note": ""
+    },
+    "S8f3509": {
+     "english": "Connections",
+     "hash": "f08595",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se90ccc": {
+     "english": "Escalated from",
+     "hash": "a999bc",
+     "kind": "OK",
+     "note": ""
+    },
+    "S61bd26": {
+     "english": "Escalates to",
+     "hash": "7ba9be",
+     "kind": "OK",
+     "note": ""
+    },
+    "S78586c": {
+     "english": "Escalates to %(code)s, which is deprecated or archived.",
+     "hash": "b1f3c5",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sb7c028": {
+     "english": "How the status codes are connected, read from the set conditions and the repeat codes of the imported programs. A text reading, not an interpretation of the controller logic.",
+     "hash": "eb9866",
+     "kind": "OK",
+     "note": ""
+    },
+    "S2f385e": {
+     "english": "No connections are known yet. They come from the programs imported from .st files.",
+     "hash": "b08b66",
+     "kind": "OK",
+     "note": ""
+    },
+    "S136e29": {
+     "english": "Only set while %(number)s is active, which is not in the catalogue.",
+     "hash": "2230bf",
+     "kind": "OK",
+     "note": ""
+    },
+    "S355d4b": {
+     "english": "Only set while active",
+     "hash": "94dc84",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sfa38ca": {
+     "english": "Part of a loop of suppressions: each code is suppressed by another one of the loop.",
+     "hash": "a72c38",
+     "kind": "OK",
+     "note": ""
+    },
+    "S2b85e8": {
+     "english": "Read from the set condition and the repeat code of the imported program. A text reading, not an interpretation of the controller logic.",
+     "hash": "9ff82a",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se382c2": {
+     "english": "Repeat code",
+     "hash": "bdb8fc",
+     "kind": "OK",
+     "note": ""
+    },
+    "S2706ed": {
+     "english": "Required by",
+     "hash": "456c4a",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sc199d7": {
+     "english": "Suppressed by",
+     "hash": "66624d",
+     "kind": "OK",
+     "note": ""
+    },
+    "S0e08e5": {
+     "english": "Suppressed by %(code)s, which is deprecated or archived.",
+     "hash": "aa6963",
+     "kind": "OK",
+     "note": ""
+    },
+    "S1bc026": {
+     "english": "Suppressed by %(number)s, which is not in the catalogue.",
+     "hash": "f2ce2c",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sb17da5": {
+     "english": "Suppresses",
+     "hash": "ef3d2f",
+     "kind": "OK",
+     "note": ""
+    },
+    "S844394": {
+     "english": "What looks wrong",
+     "hash": "bab4b5",
+     "kind": "OK",
+     "note": ""
+    },
+    "S52fc2b": {
+     "english": "Where repeated codes escalate to",
+     "hash": "ed001e",
+     "kind": "OK",
+     "note": ""
+    },
+    "S59d8f3": {
+     "english": "external",
+     "hash": "66dd8a",
+     "kind": "OK",
+     "note": ""
+    },
+    "S1df823": {
+     "english": "loop",
+     "hash": "c7f1ee",
+     "kind": "OK",
+     "note": ""
+    },
+    "S7d24f7": {
+     "english": "not in the catalogue",
+     "hash": "ab62d3",
+     "kind": "OK",
+     "note": ""
+    }
+   },
    "checked_at": "2026-10-24"
   },
   "it": {
    "confidence": 94.3,
-   "accuracy": 98.4,
+   "accuracy": 98.5,
    "haircut": 4.0,
    "sample_size": 160,
    "sample_rate": 0.01562,
    "errors": 0,
    "awkward": 5,
    "mechanical": {
-    "strings": 1189,
+    "strings": 1216,
     "missing": 0,
     "placeholders": 0,
     "identical": 0,
@@ -259,19 +753,182 @@
      "hash": "5a8e72"
     }
    ],
-   "checked": {},
+   "checked": {
+    "S876180": {
+     "english": "A code is not raised while its cause is active. The top of each tree is a cause that nothing suppresses.",
+     "hash": "594633",
+     "kind": "OK",
+     "note": ""
+    },
+    "S3f50cd": {
+     "english": "A code that is raised again and again is replaced by its repeat code. Repeat codes outside the catalogue are marked external.",
+     "hash": "b7b615",
+     "kind": "OK",
+     "note": ""
+    },
+    "S3e00c3": {
+     "english": "Causes and the codes they suppress",
+     "hash": "e56b4a",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se7bab1": {
+     "english": "Chain of causes",
+     "hash": "4c0399",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se54fe8": {
+     "english": "Codes with a connection",
+     "hash": "528233",
+     "kind": "OK",
+     "note": ""
+    },
+    "S6512ee": {
+     "english": "Connection",
+     "hash": "704946",
+     "kind": "OK",
+     "note": ""
+    },
+    "S8f3509": {
+     "english": "Connections",
+     "hash": "483d23",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se90ccc": {
+     "english": "Escalated from",
+     "hash": "a14f29",
+     "kind": "OK",
+     "note": ""
+    },
+    "S61bd26": {
+     "english": "Escalates to",
+     "hash": "7ba9be",
+     "kind": "OK",
+     "note": ""
+    },
+    "S78586c": {
+     "english": "Escalates to %(code)s, which is deprecated or archived.",
+     "hash": "9444b2",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sb7c028": {
+     "english": "How the status codes are connected, read from the set conditions and the repeat codes of the imported programs. A text reading, not an interpretation of the controller logic.",
+     "hash": "daae58",
+     "kind": "OK",
+     "note": ""
+    },
+    "S2f385e": {
+     "english": "No connections are known yet. They come from the programs imported from .st files.",
+     "hash": "275783",
+     "kind": "OK",
+     "note": ""
+    },
+    "S136e29": {
+     "english": "Only set while %(number)s is active, which is not in the catalogue.",
+     "hash": "c3935e",
+     "kind": "OK",
+     "note": ""
+    },
+    "S355d4b": {
+     "english": "Only set while active",
+     "hash": "8eba08",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sfa38ca": {
+     "english": "Part of a loop of suppressions: each code is suppressed by another one of the loop.",
+     "hash": "054da6",
+     "kind": "OK",
+     "note": ""
+    },
+    "S2b85e8": {
+     "english": "Read from the set condition and the repeat code of the imported program. A text reading, not an interpretation of the controller logic.",
+     "hash": "9844b4",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se382c2": {
+     "english": "Repeat code",
+     "hash": "8c234d",
+     "kind": "OK",
+     "note": ""
+    },
+    "S2706ed": {
+     "english": "Required by",
+     "hash": "dab7d7",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sc199d7": {
+     "english": "Suppressed by",
+     "hash": "96550d",
+     "kind": "OK",
+     "note": ""
+    },
+    "S0e08e5": {
+     "english": "Suppressed by %(code)s, which is deprecated or archived.",
+     "hash": "714cae",
+     "kind": "OK",
+     "note": ""
+    },
+    "S1bc026": {
+     "english": "Suppressed by %(number)s, which is not in the catalogue.",
+     "hash": "3f711c",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sb17da5": {
+     "english": "Suppresses",
+     "hash": "f78636",
+     "kind": "OK",
+     "note": ""
+    },
+    "S844394": {
+     "english": "What looks wrong",
+     "hash": "3450f7",
+     "kind": "OK",
+     "note": ""
+    },
+    "S52fc2b": {
+     "english": "Where repeated codes escalate to",
+     "hash": "ba37e8",
+     "kind": "OK",
+     "note": ""
+    },
+    "S59d8f3": {
+     "english": "external",
+     "hash": "d61073",
+     "kind": "OK",
+     "note": ""
+    },
+    "S1df823": {
+     "english": "loop",
+     "hash": "72e849",
+     "kind": "OK",
+     "note": ""
+    },
+    "S7d24f7": {
+     "english": "not in the catalogue",
+     "hash": "c69326",
+     "kind": "OK",
+     "note": ""
+    }
+   },
    "checked_at": "2026-10-24"
   },
   "da": {
-   "confidence": 92.2,
-   "accuracy": 98.4,
+   "confidence": 92.3,
+   "accuracy": 98.5,
    "haircut": 6.0,
    "sample_size": 160,
    "sample_rate": 0.01562,
    "errors": 1,
    "awkward": 3,
    "mechanical": {
-    "strings": 1189,
+    "strings": 1216,
     "missing": 0,
     "placeholders": 0,
     "identical": 0,
@@ -311,19 +968,182 @@
      "hash": "f2fc99"
     }
    ],
-   "checked": {},
+   "checked": {
+    "S876180": {
+     "english": "A code is not raised while its cause is active. The top of each tree is a cause that nothing suppresses.",
+     "hash": "b26850",
+     "kind": "OK",
+     "note": ""
+    },
+    "S3f50cd": {
+     "english": "A code that is raised again and again is replaced by its repeat code. Repeat codes outside the catalogue are marked external.",
+     "hash": "9e9f99",
+     "kind": "OK",
+     "note": ""
+    },
+    "S3e00c3": {
+     "english": "Causes and the codes they suppress",
+     "hash": "11f2cc",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se7bab1": {
+     "english": "Chain of causes",
+     "hash": "61785d",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se54fe8": {
+     "english": "Codes with a connection",
+     "hash": "605bc0",
+     "kind": "OK",
+     "note": ""
+    },
+    "S6512ee": {
+     "english": "Connection",
+     "hash": "413a9a",
+     "kind": "OK",
+     "note": ""
+    },
+    "S8f3509": {
+     "english": "Connections",
+     "hash": "12069b",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se90ccc": {
+     "english": "Escalated from",
+     "hash": "365d57",
+     "kind": "OK",
+     "note": ""
+    },
+    "S61bd26": {
+     "english": "Escalates to",
+     "hash": "1d90f4",
+     "kind": "OK",
+     "note": ""
+    },
+    "S78586c": {
+     "english": "Escalates to %(code)s, which is deprecated or archived.",
+     "hash": "67e5b7",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sb7c028": {
+     "english": "How the status codes are connected, read from the set conditions and the repeat codes of the imported programs. A text reading, not an interpretation of the controller logic.",
+     "hash": "db849b",
+     "kind": "OK",
+     "note": ""
+    },
+    "S2f385e": {
+     "english": "No connections are known yet. They come from the programs imported from .st files.",
+     "hash": "aefde3",
+     "kind": "OK",
+     "note": ""
+    },
+    "S136e29": {
+     "english": "Only set while %(number)s is active, which is not in the catalogue.",
+     "hash": "7e5f65",
+     "kind": "OK",
+     "note": ""
+    },
+    "S355d4b": {
+     "english": "Only set while active",
+     "hash": "efed2b",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sfa38ca": {
+     "english": "Part of a loop of suppressions: each code is suppressed by another one of the loop.",
+     "hash": "9d2c0c",
+     "kind": "OK",
+     "note": ""
+    },
+    "S2b85e8": {
+     "english": "Read from the set condition and the repeat code of the imported program. A text reading, not an interpretation of the controller logic.",
+     "hash": "14ba1c",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se382c2": {
+     "english": "Repeat code",
+     "hash": "1d1280",
+     "kind": "OK",
+     "note": ""
+    },
+    "S2706ed": {
+     "english": "Required by",
+     "hash": "0f71e8",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sc199d7": {
+     "english": "Suppressed by",
+     "hash": "394d3f",
+     "kind": "OK",
+     "note": ""
+    },
+    "S0e08e5": {
+     "english": "Suppressed by %(code)s, which is deprecated or archived.",
+     "hash": "ff6ecc",
+     "kind": "OK",
+     "note": ""
+    },
+    "S1bc026": {
+     "english": "Suppressed by %(number)s, which is not in the catalogue.",
+     "hash": "b946f6",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sb17da5": {
+     "english": "Suppresses",
+     "hash": "452251",
+     "kind": "OK",
+     "note": ""
+    },
+    "S844394": {
+     "english": "What looks wrong",
+     "hash": "e8ce3a",
+     "kind": "OK",
+     "note": ""
+    },
+    "S52fc2b": {
+     "english": "Where repeated codes escalate to",
+     "hash": "2124d6",
+     "kind": "OK",
+     "note": ""
+    },
+    "S59d8f3": {
+     "english": "external",
+     "hash": "2f5055",
+     "kind": "OK",
+     "note": ""
+    },
+    "S1df823": {
+     "english": "loop",
+     "hash": "f0d3ce",
+     "kind": "OK",
+     "note": ""
+    },
+    "S7d24f7": {
+     "english": "not in the catalogue",
+     "hash": "319cef",
+     "kind": "OK",
+     "note": ""
+    }
+   },
    "checked_at": "2026-10-24"
   },
   "hi": {
-   "confidence": 88.0,
-   "accuracy": 97.2,
+   "confidence": 87.8,
+   "accuracy": 97.0,
    "haircut": 9.0,
    "sample_size": 160,
    "sample_rate": 0.02813,
    "errors": 1,
    "awkward": 7,
    "mechanical": {
-    "strings": 1189,
+    "strings": 1216,
     "missing": 0,
     "placeholders": 0,
     "identical": 0,
@@ -395,7 +1215,170 @@
      "hash": "30ccda"
     }
    ],
-   "checked": {},
+   "checked": {
+    "S876180": {
+     "english": "A code is not raised while its cause is active. The top of each tree is a cause that nothing suppresses.",
+     "hash": "861067",
+     "kind": "A",
+     "note": "'raised' for a code that is triggered reads unnatural; 'triggered' is usual"
+    },
+    "S3f50cd": {
+     "english": "A code that is raised again and again is replaced by its repeat code. Repeat codes outside the catalogue are marked external.",
+     "hash": "814edf",
+     "kind": "A",
+     "note": "'raised' for a code that is triggered reads unnatural; 'triggered' is usual"
+    },
+    "S3e00c3": {
+     "english": "Causes and the codes they suppress",
+     "hash": "a81353",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se7bab1": {
+     "english": "Chain of causes",
+     "hash": "6987e7",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se54fe8": {
+     "english": "Codes with a connection",
+     "hash": "97d43a",
+     "kind": "OK",
+     "note": ""
+    },
+    "S6512ee": {
+     "english": "Connection",
+     "hash": "291b5c",
+     "kind": "OK",
+     "note": ""
+    },
+    "S8f3509": {
+     "english": "Connections",
+     "hash": "e11da9",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se90ccc": {
+     "english": "Escalated from",
+     "hash": "93c984",
+     "kind": "A",
+     "note": "escalation is rendered as raising or promoting; a loan word or 'forward' is clearer"
+    },
+    "S61bd26": {
+     "english": "Escalates to",
+     "hash": "e67067",
+     "kind": "A",
+     "note": "escalation is rendered as raising or promoting; a loan word or 'forward' is clearer"
+    },
+    "S78586c": {
+     "english": "Escalates to %(code)s, which is deprecated or archived.",
+     "hash": "be0ea0",
+     "kind": "A",
+     "note": "escalation is rendered as raising or promoting; a loan word or 'forward' is clearer"
+    },
+    "Sb7c028": {
+     "english": "How the status codes are connected, read from the set conditions and the repeat codes of the imported programs. A text reading, not an interpretation of the controller logic.",
+     "hash": "48a149",
+     "kind": "OK",
+     "note": ""
+    },
+    "S2f385e": {
+     "english": "No connections are known yet. They come from the programs imported from .st files.",
+     "hash": "072f38",
+     "kind": "OK",
+     "note": ""
+    },
+    "S136e29": {
+     "english": "Only set while %(number)s is active, which is not in the catalogue.",
+     "hash": "4087f3",
+     "kind": "OK",
+     "note": ""
+    },
+    "S355d4b": {
+     "english": "Only set while active",
+     "hash": "3e5c19",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sfa38ca": {
+     "english": "Part of a loop of suppressions: each code is suppressed by another one of the loop.",
+     "hash": "5c87c4",
+     "kind": "OK",
+     "note": ""
+    },
+    "S2b85e8": {
+     "english": "Read from the set condition and the repeat code of the imported program. A text reading, not an interpretation of the controller logic.",
+     "hash": "f23c8f",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se382c2": {
+     "english": "Repeat code",
+     "hash": "2f1ee0",
+     "kind": "OK",
+     "note": ""
+    },
+    "S2706ed": {
+     "english": "Required by",
+     "hash": "bc309f",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sc199d7": {
+     "english": "Suppressed by",
+     "hash": "840110",
+     "kind": "OK",
+     "note": ""
+    },
+    "S0e08e5": {
+     "english": "Suppressed by %(code)s, which is deprecated or archived.",
+     "hash": "a87669",
+     "kind": "OK",
+     "note": ""
+    },
+    "S1bc026": {
+     "english": "Suppressed by %(number)s, which is not in the catalogue.",
+     "hash": "c83642",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sb17da5": {
+     "english": "Suppresses",
+     "hash": "6803c9",
+     "kind": "OK",
+     "note": ""
+    },
+    "S844394": {
+     "english": "What looks wrong",
+     "hash": "9c532b",
+     "kind": "OK",
+     "note": ""
+    },
+    "S52fc2b": {
+     "english": "Where repeated codes escalate to",
+     "hash": "031bca",
+     "kind": "A",
+     "note": "escalation is rendered as raising or promoting; a loan word or 'forward' is clearer"
+    },
+    "S59d8f3": {
+     "english": "external",
+     "hash": "5c5dd3",
+     "kind": "OK",
+     "note": ""
+    },
+    "S1df823": {
+     "english": "loop",
+     "hash": "befa9c",
+     "kind": "OK",
+     "note": ""
+    },
+    "S7d24f7": {
+     "english": "not in the catalogue",
+     "hash": "7b010a",
+     "kind": "OK",
+     "note": ""
+    }
+   },
    "checked_at": "2026-10-24"
   },
   "ar": {
@@ -407,7 +1390,7 @@
    "errors": 1,
    "awkward": 3,
    "mechanical": {
-    "strings": 1189,
+    "strings": 1216,
     "missing": 0,
     "placeholders": 0,
     "identical": 0,
@@ -447,19 +1430,182 @@
      "hash": "a8b726"
     }
    ],
-   "checked": {},
+   "checked": {
+    "S876180": {
+     "english": "A code is not raised while its cause is active. The top of each tree is a cause that nothing suppresses.",
+     "hash": "4eb414",
+     "kind": "OK",
+     "note": ""
+    },
+    "S3f50cd": {
+     "english": "A code that is raised again and again is replaced by its repeat code. Repeat codes outside the catalogue are marked external.",
+     "hash": "6dfddd",
+     "kind": "OK",
+     "note": ""
+    },
+    "S3e00c3": {
+     "english": "Causes and the codes they suppress",
+     "hash": "76890e",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se7bab1": {
+     "english": "Chain of causes",
+     "hash": "14ade4",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se54fe8": {
+     "english": "Codes with a connection",
+     "hash": "9d2bd8",
+     "kind": "A",
+     "note": "'ذات الصلة' (related) is weaker than 'with a connection'"
+    },
+    "S6512ee": {
+     "english": "Connection",
+     "hash": "77d2e4",
+     "kind": "OK",
+     "note": ""
+    },
+    "S8f3509": {
+     "english": "Connections",
+     "hash": "cd37d7",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se90ccc": {
+     "english": "Escalated from",
+     "hash": "c6113c",
+     "kind": "OK",
+     "note": ""
+    },
+    "S61bd26": {
+     "english": "Escalates to",
+     "hash": "425d63",
+     "kind": "OK",
+     "note": ""
+    },
+    "S78586c": {
+     "english": "Escalates to %(code)s, which is deprecated or archived.",
+     "hash": "0b0f14",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sb7c028": {
+     "english": "How the status codes are connected, read from the set conditions and the repeat codes of the imported programs. A text reading, not an interpretation of the controller logic.",
+     "hash": "424eeb",
+     "kind": "OK",
+     "note": ""
+    },
+    "S2f385e": {
+     "english": "No connections are known yet. They come from the programs imported from .st files.",
+     "hash": "ce2b58",
+     "kind": "OK",
+     "note": ""
+    },
+    "S136e29": {
+     "english": "Only set while %(number)s is active, which is not in the catalogue.",
+     "hash": "fa0862",
+     "kind": "OK",
+     "note": ""
+    },
+    "S355d4b": {
+     "english": "Only set while active",
+     "hash": "e39d96",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sfa38ca": {
+     "english": "Part of a loop of suppressions: each code is suppressed by another one of the loop.",
+     "hash": "d648cc",
+     "kind": "OK",
+     "note": ""
+    },
+    "S2b85e8": {
+     "english": "Read from the set condition and the repeat code of the imported program. A text reading, not an interpretation of the controller logic.",
+     "hash": "ac1f25",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se382c2": {
+     "english": "Repeat code",
+     "hash": "98e0d5",
+     "kind": "OK",
+     "note": ""
+    },
+    "S2706ed": {
+     "english": "Required by",
+     "hash": "1f709d",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sc199d7": {
+     "english": "Suppressed by",
+     "hash": "e9c189",
+     "kind": "OK",
+     "note": ""
+    },
+    "S0e08e5": {
+     "english": "Suppressed by %(code)s, which is deprecated or archived.",
+     "hash": "7c2b31",
+     "kind": "OK",
+     "note": ""
+    },
+    "S1bc026": {
+     "english": "Suppressed by %(number)s, which is not in the catalogue.",
+     "hash": "4a9f72",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sb17da5": {
+     "english": "Suppresses",
+     "hash": "fea64c",
+     "kind": "OK",
+     "note": ""
+    },
+    "S844394": {
+     "english": "What looks wrong",
+     "hash": "9f2aa4",
+     "kind": "OK",
+     "note": ""
+    },
+    "S52fc2b": {
+     "english": "Where repeated codes escalate to",
+     "hash": "3de3fc",
+     "kind": "OK",
+     "note": ""
+    },
+    "S59d8f3": {
+     "english": "external",
+     "hash": "580a6a",
+     "kind": "OK",
+     "note": ""
+    },
+    "S1df823": {
+     "english": "loop",
+     "hash": "ae7643",
+     "kind": "OK",
+     "note": ""
+    },
+    "S7d24f7": {
+     "english": "not in the catalogue",
+     "hash": "515237",
+     "kind": "OK",
+     "note": ""
+    }
+   },
    "checked_at": "2026-10-24"
   },
   "bn": {
-   "confidence": 87.0,
-   "accuracy": 98.1,
+   "confidence": 86.8,
+   "accuracy": 97.9,
    "haircut": 11.0,
    "sample_size": 160,
    "sample_rate": 0.01875,
    "errors": 0,
    "awkward": 6,
    "mechanical": {
-    "strings": 1189,
+    "strings": 1216,
     "missing": 0,
     "placeholders": 0,
     "identical": 0,
@@ -515,19 +1661,182 @@
      "hash": "9cba8a"
     }
    ],
-   "checked": {},
+   "checked": {
+    "S876180": {
+     "english": "A code is not raised while its cause is active. The top of each tree is a cause that nothing suppresses.",
+     "hash": "5eedf3",
+     "kind": "A",
+     "note": "'raised' for a code that is triggered reads unnatural; 'triggered' is usual"
+    },
+    "S3f50cd": {
+     "english": "A code that is raised again and again is replaced by its repeat code. Repeat codes outside the catalogue are marked external.",
+     "hash": "7ca23d",
+     "kind": "A",
+     "note": "'raised' for a code that is triggered reads unnatural; 'triggered' is usual"
+    },
+    "S3e00c3": {
+     "english": "Causes and the codes they suppress",
+     "hash": "5d6f85",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se7bab1": {
+     "english": "Chain of causes",
+     "hash": "9d507e",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se54fe8": {
+     "english": "Codes with a connection",
+     "hash": "c6ece0",
+     "kind": "OK",
+     "note": ""
+    },
+    "S6512ee": {
+     "english": "Connection",
+     "hash": "795f0d",
+     "kind": "OK",
+     "note": ""
+    },
+    "S8f3509": {
+     "english": "Connections",
+     "hash": "19ffbc",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se90ccc": {
+     "english": "Escalated from",
+     "hash": "c42f05",
+     "kind": "A",
+     "note": "escalation is rendered as raising or promoting; a loan word or 'forward' is clearer"
+    },
+    "S61bd26": {
+     "english": "Escalates to",
+     "hash": "645743",
+     "kind": "A",
+     "note": "escalation is rendered as raising or promoting; a loan word or 'forward' is clearer"
+    },
+    "S78586c": {
+     "english": "Escalates to %(code)s, which is deprecated or archived.",
+     "hash": "553906",
+     "kind": "A",
+     "note": "escalation is rendered as raising or promoting; a loan word or 'forward' is clearer"
+    },
+    "Sb7c028": {
+     "english": "How the status codes are connected, read from the set conditions and the repeat codes of the imported programs. A text reading, not an interpretation of the controller logic.",
+     "hash": "6eeb84",
+     "kind": "OK",
+     "note": ""
+    },
+    "S2f385e": {
+     "english": "No connections are known yet. They come from the programs imported from .st files.",
+     "hash": "0dc207",
+     "kind": "OK",
+     "note": ""
+    },
+    "S136e29": {
+     "english": "Only set while %(number)s is active, which is not in the catalogue.",
+     "hash": "91d3fc",
+     "kind": "OK",
+     "note": ""
+    },
+    "S355d4b": {
+     "english": "Only set while active",
+     "hash": "5a3664",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sfa38ca": {
+     "english": "Part of a loop of suppressions: each code is suppressed by another one of the loop.",
+     "hash": "da0516",
+     "kind": "OK",
+     "note": ""
+    },
+    "S2b85e8": {
+     "english": "Read from the set condition and the repeat code of the imported program. A text reading, not an interpretation of the controller logic.",
+     "hash": "3032c2",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se382c2": {
+     "english": "Repeat code",
+     "hash": "c96444",
+     "kind": "OK",
+     "note": ""
+    },
+    "S2706ed": {
+     "english": "Required by",
+     "hash": "e6d9f5",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sc199d7": {
+     "english": "Suppressed by",
+     "hash": "2172dd",
+     "kind": "OK",
+     "note": ""
+    },
+    "S0e08e5": {
+     "english": "Suppressed by %(code)s, which is deprecated or archived.",
+     "hash": "8dc389",
+     "kind": "OK",
+     "note": ""
+    },
+    "S1bc026": {
+     "english": "Suppressed by %(number)s, which is not in the catalogue.",
+     "hash": "882f87",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sb17da5": {
+     "english": "Suppresses",
+     "hash": "52cd10",
+     "kind": "OK",
+     "note": ""
+    },
+    "S844394": {
+     "english": "What looks wrong",
+     "hash": "6fc554",
+     "kind": "OK",
+     "note": ""
+    },
+    "S52fc2b": {
+     "english": "Where repeated codes escalate to",
+     "hash": "c62b54",
+     "kind": "A",
+     "note": "escalation is rendered as raising or promoting; a loan word or 'forward' is clearer"
+    },
+    "S59d8f3": {
+     "english": "external",
+     "hash": "b5cc04",
+     "kind": "OK",
+     "note": ""
+    },
+    "S1df823": {
+     "english": "loop",
+     "hash": "878944",
+     "kind": "OK",
+     "note": ""
+    },
+    "S7d24f7": {
+     "english": "not in the catalogue",
+     "hash": "af2ceb",
+     "kind": "OK",
+     "note": ""
+    }
+   },
    "checked_at": "2026-10-24"
   },
   "mr": {
-   "confidence": 86.6,
-   "accuracy": 97.8,
+   "confidence": 86.4,
+   "accuracy": 97.6,
    "haircut": 11.0,
    "sample_size": 160,
    "sample_rate": 0.02187,
    "errors": 1,
    "awkward": 5,
    "mechanical": {
-    "strings": 1189,
+    "strings": 1216,
     "missing": 0,
     "placeholders": 0,
     "identical": 0,
@@ -583,19 +1892,182 @@
      "hash": "732ff4"
     }
    ],
-   "checked": {},
+   "checked": {
+    "S876180": {
+     "english": "A code is not raised while its cause is active. The top of each tree is a cause that nothing suppresses.",
+     "hash": "078ce8",
+     "kind": "A",
+     "note": "'raised' for a code that is triggered reads unnatural; 'triggered' is usual"
+    },
+    "S3f50cd": {
+     "english": "A code that is raised again and again is replaced by its repeat code. Repeat codes outside the catalogue are marked external.",
+     "hash": "93f6fd",
+     "kind": "A",
+     "note": "'raised' for a code that is triggered reads unnatural; 'triggered' is usual"
+    },
+    "S3e00c3": {
+     "english": "Causes and the codes they suppress",
+     "hash": "f6113f",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se7bab1": {
+     "english": "Chain of causes",
+     "hash": "9ebb48",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se54fe8": {
+     "english": "Codes with a connection",
+     "hash": "2a82f9",
+     "kind": "OK",
+     "note": ""
+    },
+    "S6512ee": {
+     "english": "Connection",
+     "hash": "291b5c",
+     "kind": "OK",
+     "note": ""
+    },
+    "S8f3509": {
+     "english": "Connections",
+     "hash": "e11da9",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se90ccc": {
+     "english": "Escalated from",
+     "hash": "fbdcfd",
+     "kind": "A",
+     "note": "escalation is rendered as raising or promoting; a loan word or 'forward' is clearer"
+    },
+    "S61bd26": {
+     "english": "Escalates to",
+     "hash": "692e2d",
+     "kind": "A",
+     "note": "escalation is rendered as raising or promoting; a loan word or 'forward' is clearer"
+    },
+    "S78586c": {
+     "english": "Escalates to %(code)s, which is deprecated or archived.",
+     "hash": "9db078",
+     "kind": "A",
+     "note": "escalation is rendered as raising or promoting; a loan word or 'forward' is clearer"
+    },
+    "Sb7c028": {
+     "english": "How the status codes are connected, read from the set conditions and the repeat codes of the imported programs. A text reading, not an interpretation of the controller logic.",
+     "hash": "a31148",
+     "kind": "OK",
+     "note": ""
+    },
+    "S2f385e": {
+     "english": "No connections are known yet. They come from the programs imported from .st files.",
+     "hash": "fd84b4",
+     "kind": "OK",
+     "note": ""
+    },
+    "S136e29": {
+     "english": "Only set while %(number)s is active, which is not in the catalogue.",
+     "hash": "4bc34e",
+     "kind": "OK",
+     "note": ""
+    },
+    "S355d4b": {
+     "english": "Only set while active",
+     "hash": "bd335a",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sfa38ca": {
+     "english": "Part of a loop of suppressions: each code is suppressed by another one of the loop.",
+     "hash": "a50302",
+     "kind": "OK",
+     "note": ""
+    },
+    "S2b85e8": {
+     "english": "Read from the set condition and the repeat code of the imported program. A text reading, not an interpretation of the controller logic.",
+     "hash": "118aea",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se382c2": {
+     "english": "Repeat code",
+     "hash": "af25cc",
+     "kind": "OK",
+     "note": ""
+    },
+    "S2706ed": {
+     "english": "Required by",
+     "hash": "cf0a6c",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sc199d7": {
+     "english": "Suppressed by",
+     "hash": "2bf777",
+     "kind": "OK",
+     "note": ""
+    },
+    "S0e08e5": {
+     "english": "Suppressed by %(code)s, which is deprecated or archived.",
+     "hash": "5e261b",
+     "kind": "OK",
+     "note": ""
+    },
+    "S1bc026": {
+     "english": "Suppressed by %(number)s, which is not in the catalogue.",
+     "hash": "a5c625",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sb17da5": {
+     "english": "Suppresses",
+     "hash": "cc391d",
+     "kind": "OK",
+     "note": ""
+    },
+    "S844394": {
+     "english": "What looks wrong",
+     "hash": "1becb3",
+     "kind": "OK",
+     "note": ""
+    },
+    "S52fc2b": {
+     "english": "Where repeated codes escalate to",
+     "hash": "8ceb26",
+     "kind": "A",
+     "note": "escalation is rendered as raising or promoting; a loan word or 'forward' is clearer"
+    },
+    "S59d8f3": {
+     "english": "external",
+     "hash": "bb5525",
+     "kind": "OK",
+     "note": ""
+    },
+    "S1df823": {
+     "english": "loop",
+     "hash": "befa9c",
+     "kind": "OK",
+     "note": ""
+    },
+    "S7d24f7": {
+     "english": "not in the catalogue",
+     "hash": "e1d9e6",
+     "kind": "OK",
+     "note": ""
+    }
+   },
    "checked_at": "2026-10-24"
   },
   "te": {
-   "confidence": 85.3,
-   "accuracy": 98.4,
+   "confidence": 85.1,
+   "accuracy": 98.2,
    "haircut": 13.0,
    "sample_size": 160,
    "sample_rate": 0.01562,
    "errors": 0,
    "awkward": 5,
    "mechanical": {
-    "strings": 1189,
+    "strings": 1216,
     "missing": 0,
     "placeholders": 0,
     "identical": 0,
@@ -643,19 +2115,182 @@
      "hash": "8b84d4"
     }
    ],
-   "checked": {},
+   "checked": {
+    "S876180": {
+     "english": "A code is not raised while its cause is active. The top of each tree is a cause that nothing suppresses.",
+     "hash": "f44666",
+     "kind": "A",
+     "note": "'raised' for a code that is triggered reads unnatural; 'triggered' is usual"
+    },
+    "S3f50cd": {
+     "english": "A code that is raised again and again is replaced by its repeat code. Repeat codes outside the catalogue are marked external.",
+     "hash": "d53d38",
+     "kind": "A",
+     "note": "'raised' for a code that is triggered reads unnatural; 'triggered' is usual"
+    },
+    "S3e00c3": {
+     "english": "Causes and the codes they suppress",
+     "hash": "f7ecd9",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se7bab1": {
+     "english": "Chain of causes",
+     "hash": "43d9e6",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se54fe8": {
+     "english": "Codes with a connection",
+     "hash": "7f7b7a",
+     "kind": "OK",
+     "note": ""
+    },
+    "S6512ee": {
+     "english": "Connection",
+     "hash": "e76ec3",
+     "kind": "OK",
+     "note": ""
+    },
+    "S8f3509": {
+     "english": "Connections",
+     "hash": "900311",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se90ccc": {
+     "english": "Escalated from",
+     "hash": "57b57b",
+     "kind": "A",
+     "note": "escalation is rendered as raising or promoting; a loan word or 'forward' is clearer"
+    },
+    "S61bd26": {
+     "english": "Escalates to",
+     "hash": "ae9221",
+     "kind": "A",
+     "note": "escalation is rendered as raising or promoting; a loan word or 'forward' is clearer"
+    },
+    "S78586c": {
+     "english": "Escalates to %(code)s, which is deprecated or archived.",
+     "hash": "0b075b",
+     "kind": "A",
+     "note": "escalation is rendered as raising or promoting; a loan word or 'forward' is clearer"
+    },
+    "Sb7c028": {
+     "english": "How the status codes are connected, read from the set conditions and the repeat codes of the imported programs. A text reading, not an interpretation of the controller logic.",
+     "hash": "0789ab",
+     "kind": "OK",
+     "note": ""
+    },
+    "S2f385e": {
+     "english": "No connections are known yet. They come from the programs imported from .st files.",
+     "hash": "5f8bc1",
+     "kind": "OK",
+     "note": ""
+    },
+    "S136e29": {
+     "english": "Only set while %(number)s is active, which is not in the catalogue.",
+     "hash": "5f3c07",
+     "kind": "OK",
+     "note": ""
+    },
+    "S355d4b": {
+     "english": "Only set while active",
+     "hash": "2d6fa3",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sfa38ca": {
+     "english": "Part of a loop of suppressions: each code is suppressed by another one of the loop.",
+     "hash": "7b422d",
+     "kind": "OK",
+     "note": ""
+    },
+    "S2b85e8": {
+     "english": "Read from the set condition and the repeat code of the imported program. A text reading, not an interpretation of the controller logic.",
+     "hash": "3db62d",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se382c2": {
+     "english": "Repeat code",
+     "hash": "0325a9",
+     "kind": "OK",
+     "note": ""
+    },
+    "S2706ed": {
+     "english": "Required by",
+     "hash": "137f82",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sc199d7": {
+     "english": "Suppressed by",
+     "hash": "2e9037",
+     "kind": "OK",
+     "note": ""
+    },
+    "S0e08e5": {
+     "english": "Suppressed by %(code)s, which is deprecated or archived.",
+     "hash": "a40640",
+     "kind": "OK",
+     "note": ""
+    },
+    "S1bc026": {
+     "english": "Suppressed by %(number)s, which is not in the catalogue.",
+     "hash": "56ba70",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sb17da5": {
+     "english": "Suppresses",
+     "hash": "b149f9",
+     "kind": "OK",
+     "note": ""
+    },
+    "S844394": {
+     "english": "What looks wrong",
+     "hash": "edd867",
+     "kind": "OK",
+     "note": ""
+    },
+    "S52fc2b": {
+     "english": "Where repeated codes escalate to",
+     "hash": "33e53e",
+     "kind": "A",
+     "note": "escalation is rendered as raising or promoting; a loan word or 'forward' is clearer"
+    },
+    "S59d8f3": {
+     "english": "external",
+     "hash": "db409b",
+     "kind": "OK",
+     "note": ""
+    },
+    "S1df823": {
+     "english": "loop",
+     "hash": "20503a",
+     "kind": "OK",
+     "note": ""
+    },
+    "S7d24f7": {
+     "english": "not in the catalogue",
+     "hash": "ea1bee",
+     "kind": "OK",
+     "note": ""
+    }
+   },
    "checked_at": "2026-10-24"
   },
   "ta": {
-   "confidence": 84.2,
-   "accuracy": 97.5,
+   "confidence": 84.1,
+   "accuracy": 97.4,
    "haircut": 13.0,
    "sample_size": 160,
    "sample_rate": 0.025,
    "errors": 1,
    "awkward": 6,
    "mechanical": {
-    "strings": 1189,
+    "strings": 1216,
     "missing": 0,
     "placeholders": 0,
     "identical": 0,
@@ -719,19 +2354,182 @@
      "hash": "96ea03"
     }
    ],
-   "checked": {},
+   "checked": {
+    "S876180": {
+     "english": "A code is not raised while its cause is active. The top of each tree is a cause that nothing suppresses.",
+     "hash": "433a55",
+     "kind": "OK",
+     "note": ""
+    },
+    "S3f50cd": {
+     "english": "A code that is raised again and again is replaced by its repeat code. Repeat codes outside the catalogue are marked external.",
+     "hash": "33b783",
+     "kind": "OK",
+     "note": ""
+    },
+    "S3e00c3": {
+     "english": "Causes and the codes they suppress",
+     "hash": "139273",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se7bab1": {
+     "english": "Chain of causes",
+     "hash": "22d3e0",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se54fe8": {
+     "english": "Codes with a connection",
+     "hash": "71c231",
+     "kind": "OK",
+     "note": ""
+    },
+    "S6512ee": {
+     "english": "Connection",
+     "hash": "1baf33",
+     "kind": "OK",
+     "note": ""
+    },
+    "S8f3509": {
+     "english": "Connections",
+     "hash": "f3cf0b",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se90ccc": {
+     "english": "Escalated from",
+     "hash": "90e665",
+     "kind": "A",
+     "note": "escalation is rendered as raising or promoting; a loan word or 'forward' is clearer"
+    },
+    "S61bd26": {
+     "english": "Escalates to",
+     "hash": "acc295",
+     "kind": "A",
+     "note": "escalation is rendered as raising or promoting; a loan word or 'forward' is clearer"
+    },
+    "S78586c": {
+     "english": "Escalates to %(code)s, which is deprecated or archived.",
+     "hash": "7ebad8",
+     "kind": "A",
+     "note": "escalation is rendered as raising or promoting; a loan word or 'forward' is clearer"
+    },
+    "Sb7c028": {
+     "english": "How the status codes are connected, read from the set conditions and the repeat codes of the imported programs. A text reading, not an interpretation of the controller logic.",
+     "hash": "8c9261",
+     "kind": "OK",
+     "note": ""
+    },
+    "S2f385e": {
+     "english": "No connections are known yet. They come from the programs imported from .st files.",
+     "hash": "d20d0e",
+     "kind": "OK",
+     "note": ""
+    },
+    "S136e29": {
+     "english": "Only set while %(number)s is active, which is not in the catalogue.",
+     "hash": "6e06ed",
+     "kind": "OK",
+     "note": ""
+    },
+    "S355d4b": {
+     "english": "Only set while active",
+     "hash": "66598e",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sfa38ca": {
+     "english": "Part of a loop of suppressions: each code is suppressed by another one of the loop.",
+     "hash": "5e6a45",
+     "kind": "OK",
+     "note": ""
+    },
+    "S2b85e8": {
+     "english": "Read from the set condition and the repeat code of the imported program. A text reading, not an interpretation of the controller logic.",
+     "hash": "f0bdcd",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se382c2": {
+     "english": "Repeat code",
+     "hash": "25f90a",
+     "kind": "OK",
+     "note": ""
+    },
+    "S2706ed": {
+     "english": "Required by",
+     "hash": "fc3e73",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sc199d7": {
+     "english": "Suppressed by",
+     "hash": "bba877",
+     "kind": "OK",
+     "note": ""
+    },
+    "S0e08e5": {
+     "english": "Suppressed by %(code)s, which is deprecated or archived.",
+     "hash": "310bd9",
+     "kind": "OK",
+     "note": ""
+    },
+    "S1bc026": {
+     "english": "Suppressed by %(number)s, which is not in the catalogue.",
+     "hash": "500e23",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sb17da5": {
+     "english": "Suppresses",
+     "hash": "24edd5",
+     "kind": "OK",
+     "note": ""
+    },
+    "S844394": {
+     "english": "What looks wrong",
+     "hash": "67f9f6",
+     "kind": "OK",
+     "note": ""
+    },
+    "S52fc2b": {
+     "english": "Where repeated codes escalate to",
+     "hash": "f453ad",
+     "kind": "A",
+     "note": "escalation is rendered as raising or promoting; a loan word or 'forward' is clearer"
+    },
+    "S59d8f3": {
+     "english": "external",
+     "hash": "f77315",
+     "kind": "OK",
+     "note": ""
+    },
+    "S1df823": {
+     "english": "loop",
+     "hash": "ceb58e",
+     "kind": "OK",
+     "note": ""
+    },
+    "S7d24f7": {
+     "english": "not in the catalogue",
+     "hash": "11287a",
+     "kind": "OK",
+     "note": ""
+    }
+   },
    "checked_at": "2026-10-24"
   },
   "gu": {
-   "confidence": 84.2,
-   "accuracy": 97.5,
+   "confidence": 84.1,
+   "accuracy": 97.3,
    "haircut": 13.0,
    "sample_size": 160,
    "sample_rate": 0.025,
    "errors": 1,
    "awkward": 6,
    "mechanical": {
-    "strings": 1189,
+    "strings": 1216,
     "missing": 0,
     "placeholders": 0,
     "identical": 0,
@@ -795,19 +2593,182 @@
      "hash": "6a3f2a"
     }
    ],
-   "checked": {},
+   "checked": {
+    "S876180": {
+     "english": "A code is not raised while its cause is active. The top of each tree is a cause that nothing suppresses.",
+     "hash": "38a1b2",
+     "kind": "A",
+     "note": "'raised' for a code that is triggered reads unnatural; 'triggered' is usual"
+    },
+    "S3f50cd": {
+     "english": "A code that is raised again and again is replaced by its repeat code. Repeat codes outside the catalogue are marked external.",
+     "hash": "a7dfdc",
+     "kind": "A",
+     "note": "'raised' for a code that is triggered reads unnatural; 'triggered' is usual"
+    },
+    "S3e00c3": {
+     "english": "Causes and the codes they suppress",
+     "hash": "9ba09f",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se7bab1": {
+     "english": "Chain of causes",
+     "hash": "ed1e58",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se54fe8": {
+     "english": "Codes with a connection",
+     "hash": "5d6725",
+     "kind": "OK",
+     "note": ""
+    },
+    "S6512ee": {
+     "english": "Connection",
+     "hash": "d6ccb6",
+     "kind": "OK",
+     "note": ""
+    },
+    "S8f3509": {
+     "english": "Connections",
+     "hash": "9521c4",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se90ccc": {
+     "english": "Escalated from",
+     "hash": "b8a4f5",
+     "kind": "A",
+     "note": "escalation is rendered as raising or promoting; a loan word or 'forward' is clearer"
+    },
+    "S61bd26": {
+     "english": "Escalates to",
+     "hash": "d01f09",
+     "kind": "A",
+     "note": "escalation is rendered as raising or promoting; a loan word or 'forward' is clearer"
+    },
+    "S78586c": {
+     "english": "Escalates to %(code)s, which is deprecated or archived.",
+     "hash": "212cbc",
+     "kind": "A",
+     "note": "escalation is rendered as raising or promoting; a loan word or 'forward' is clearer"
+    },
+    "Sb7c028": {
+     "english": "How the status codes are connected, read from the set conditions and the repeat codes of the imported programs. A text reading, not an interpretation of the controller logic.",
+     "hash": "96a35d",
+     "kind": "OK",
+     "note": ""
+    },
+    "S2f385e": {
+     "english": "No connections are known yet. They come from the programs imported from .st files.",
+     "hash": "46b9b2",
+     "kind": "OK",
+     "note": ""
+    },
+    "S136e29": {
+     "english": "Only set while %(number)s is active, which is not in the catalogue.",
+     "hash": "a2808e",
+     "kind": "OK",
+     "note": ""
+    },
+    "S355d4b": {
+     "english": "Only set while active",
+     "hash": "0ba79d",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sfa38ca": {
+     "english": "Part of a loop of suppressions: each code is suppressed by another one of the loop.",
+     "hash": "df768e",
+     "kind": "OK",
+     "note": ""
+    },
+    "S2b85e8": {
+     "english": "Read from the set condition and the repeat code of the imported program. A text reading, not an interpretation of the controller logic.",
+     "hash": "19ee6d",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se382c2": {
+     "english": "Repeat code",
+     "hash": "980003",
+     "kind": "OK",
+     "note": ""
+    },
+    "S2706ed": {
+     "english": "Required by",
+     "hash": "119f69",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sc199d7": {
+     "english": "Suppressed by",
+     "hash": "31b427",
+     "kind": "OK",
+     "note": ""
+    },
+    "S0e08e5": {
+     "english": "Suppressed by %(code)s, which is deprecated or archived.",
+     "hash": "44b317",
+     "kind": "OK",
+     "note": ""
+    },
+    "S1bc026": {
+     "english": "Suppressed by %(number)s, which is not in the catalogue.",
+     "hash": "4c7d41",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sb17da5": {
+     "english": "Suppresses",
+     "hash": "51885b",
+     "kind": "OK",
+     "note": ""
+    },
+    "S844394": {
+     "english": "What looks wrong",
+     "hash": "837347",
+     "kind": "OK",
+     "note": ""
+    },
+    "S52fc2b": {
+     "english": "Where repeated codes escalate to",
+     "hash": "f1d390",
+     "kind": "A",
+     "note": "escalation is rendered as raising or promoting; a loan word or 'forward' is clearer"
+    },
+    "S59d8f3": {
+     "english": "external",
+     "hash": "dd7173",
+     "kind": "OK",
+     "note": ""
+    },
+    "S1df823": {
+     "english": "loop",
+     "hash": "9806cf",
+     "kind": "OK",
+     "note": ""
+    },
+    "S7d24f7": {
+     "english": "not in the catalogue",
+     "hash": "14a075",
+     "kind": "OK",
+     "note": ""
+    }
+   },
    "checked_at": "2026-10-24"
   },
   "ur": {
-   "confidence": 84.7,
-   "accuracy": 97.8,
+   "confidence": 84.5,
+   "accuracy": 97.6,
    "haircut": 13.0,
    "sample_size": 160,
    "sample_rate": 0.02187,
    "errors": 1,
    "awkward": 5,
    "mechanical": {
-    "strings": 1189,
+    "strings": 1216,
     "missing": 0,
     "placeholders": 0,
     "identical": 0,
@@ -863,19 +2824,182 @@
      "hash": "84fe60"
     }
    ],
-   "checked": {},
+   "checked": {
+    "S876180": {
+     "english": "A code is not raised while its cause is active. The top of each tree is a cause that nothing suppresses.",
+     "hash": "793ce9",
+     "kind": "A",
+     "note": "'raised' for a code that is triggered reads unnatural; 'triggered' is usual"
+    },
+    "S3f50cd": {
+     "english": "A code that is raised again and again is replaced by its repeat code. Repeat codes outside the catalogue are marked external.",
+     "hash": "2b632a",
+     "kind": "A",
+     "note": "'raised' for a code that is triggered reads unnatural; 'triggered' is usual"
+    },
+    "S3e00c3": {
+     "english": "Causes and the codes they suppress",
+     "hash": "38fcaa",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se7bab1": {
+     "english": "Chain of causes",
+     "hash": "5ede54",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se54fe8": {
+     "english": "Codes with a connection",
+     "hash": "a5bbd8",
+     "kind": "OK",
+     "note": ""
+    },
+    "S6512ee": {
+     "english": "Connection",
+     "hash": "e0b4ea",
+     "kind": "OK",
+     "note": ""
+    },
+    "S8f3509": {
+     "english": "Connections",
+     "hash": "e29568",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se90ccc": {
+     "english": "Escalated from",
+     "hash": "b5daa4",
+     "kind": "A",
+     "note": "escalation is rendered as raising or promoting; a loan word or 'forward' is clearer"
+    },
+    "S61bd26": {
+     "english": "Escalates to",
+     "hash": "48e46e",
+     "kind": "A",
+     "note": "escalation is rendered as raising or promoting; a loan word or 'forward' is clearer"
+    },
+    "S78586c": {
+     "english": "Escalates to %(code)s, which is deprecated or archived.",
+     "hash": "4474d6",
+     "kind": "A",
+     "note": "escalation is rendered as raising or promoting; a loan word or 'forward' is clearer"
+    },
+    "Sb7c028": {
+     "english": "How the status codes are connected, read from the set conditions and the repeat codes of the imported programs. A text reading, not an interpretation of the controller logic.",
+     "hash": "8e4951",
+     "kind": "OK",
+     "note": ""
+    },
+    "S2f385e": {
+     "english": "No connections are known yet. They come from the programs imported from .st files.",
+     "hash": "c5d065",
+     "kind": "OK",
+     "note": ""
+    },
+    "S136e29": {
+     "english": "Only set while %(number)s is active, which is not in the catalogue.",
+     "hash": "53c98e",
+     "kind": "OK",
+     "note": ""
+    },
+    "S355d4b": {
+     "english": "Only set while active",
+     "hash": "55622c",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sfa38ca": {
+     "english": "Part of a loop of suppressions: each code is suppressed by another one of the loop.",
+     "hash": "de4b29",
+     "kind": "OK",
+     "note": ""
+    },
+    "S2b85e8": {
+     "english": "Read from the set condition and the repeat code of the imported program. A text reading, not an interpretation of the controller logic.",
+     "hash": "2f6ef0",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se382c2": {
+     "english": "Repeat code",
+     "hash": "0e0be9",
+     "kind": "OK",
+     "note": ""
+    },
+    "S2706ed": {
+     "english": "Required by",
+     "hash": "39e19a",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sc199d7": {
+     "english": "Suppressed by",
+     "hash": "fe78ec",
+     "kind": "OK",
+     "note": ""
+    },
+    "S0e08e5": {
+     "english": "Suppressed by %(code)s, which is deprecated or archived.",
+     "hash": "d0aaad",
+     "kind": "OK",
+     "note": ""
+    },
+    "S1bc026": {
+     "english": "Suppressed by %(number)s, which is not in the catalogue.",
+     "hash": "247390",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sb17da5": {
+     "english": "Suppresses",
+     "hash": "7d49f4",
+     "kind": "OK",
+     "note": ""
+    },
+    "S844394": {
+     "english": "What looks wrong",
+     "hash": "e91fc6",
+     "kind": "OK",
+     "note": ""
+    },
+    "S52fc2b": {
+     "english": "Where repeated codes escalate to",
+     "hash": "a7722d",
+     "kind": "A",
+     "note": "escalation is rendered as raising or promoting; a loan word or 'forward' is clearer"
+    },
+    "S59d8f3": {
+     "english": "external",
+     "hash": "863386",
+     "kind": "OK",
+     "note": ""
+    },
+    "S1df823": {
+     "english": "loop",
+     "hash": "8b32f5",
+     "kind": "OK",
+     "note": ""
+    },
+    "S7d24f7": {
+     "english": "not in the catalogue",
+     "hash": "21d38b",
+     "kind": "OK",
+     "note": ""
+    }
+   },
    "checked_at": "2026-10-24"
   },
   "kn": {
-   "confidence": 83.6,
-   "accuracy": 97.2,
+   "confidence": 83.4,
+   "accuracy": 97.0,
    "haircut": 13.0,
    "sample_size": 160,
    "sample_rate": 0.02813,
    "errors": 1,
    "awkward": 7,
    "mechanical": {
-    "strings": 1189,
+    "strings": 1216,
     "missing": 0,
     "placeholders": 0,
     "identical": 0,
@@ -947,19 +3071,182 @@
      "hash": "6181b0"
     }
    ],
-   "checked": {},
+   "checked": {
+    "S876180": {
+     "english": "A code is not raised while its cause is active. The top of each tree is a cause that nothing suppresses.",
+     "hash": "4c96c7",
+     "kind": "A",
+     "note": "'raised' for a code that is triggered reads unnatural; 'triggered' is usual"
+    },
+    "S3f50cd": {
+     "english": "A code that is raised again and again is replaced by its repeat code. Repeat codes outside the catalogue are marked external.",
+     "hash": "68fb77",
+     "kind": "A",
+     "note": "'raised' for a code that is triggered reads unnatural; 'triggered' is usual"
+    },
+    "S3e00c3": {
+     "english": "Causes and the codes they suppress",
+     "hash": "1b4a31",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se7bab1": {
+     "english": "Chain of causes",
+     "hash": "cc1dd8",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se54fe8": {
+     "english": "Codes with a connection",
+     "hash": "fbea3c",
+     "kind": "OK",
+     "note": ""
+    },
+    "S6512ee": {
+     "english": "Connection",
+     "hash": "c883d3",
+     "kind": "OK",
+     "note": ""
+    },
+    "S8f3509": {
+     "english": "Connections",
+     "hash": "b4dce2",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se90ccc": {
+     "english": "Escalated from",
+     "hash": "bb8d68",
+     "kind": "A",
+     "note": "escalation is rendered as raising or promoting; a loan word or 'forward' is clearer"
+    },
+    "S61bd26": {
+     "english": "Escalates to",
+     "hash": "4cfe20",
+     "kind": "A",
+     "note": "escalation is rendered as raising or promoting; a loan word or 'forward' is clearer"
+    },
+    "S78586c": {
+     "english": "Escalates to %(code)s, which is deprecated or archived.",
+     "hash": "df9203",
+     "kind": "A",
+     "note": "escalation is rendered as raising or promoting; a loan word or 'forward' is clearer"
+    },
+    "Sb7c028": {
+     "english": "How the status codes are connected, read from the set conditions and the repeat codes of the imported programs. A text reading, not an interpretation of the controller logic.",
+     "hash": "e4ed5b",
+     "kind": "OK",
+     "note": ""
+    },
+    "S2f385e": {
+     "english": "No connections are known yet. They come from the programs imported from .st files.",
+     "hash": "86a05c",
+     "kind": "OK",
+     "note": ""
+    },
+    "S136e29": {
+     "english": "Only set while %(number)s is active, which is not in the catalogue.",
+     "hash": "dbff82",
+     "kind": "OK",
+     "note": ""
+    },
+    "S355d4b": {
+     "english": "Only set while active",
+     "hash": "731bfb",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sfa38ca": {
+     "english": "Part of a loop of suppressions: each code is suppressed by another one of the loop.",
+     "hash": "6dc11f",
+     "kind": "OK",
+     "note": ""
+    },
+    "S2b85e8": {
+     "english": "Read from the set condition and the repeat code of the imported program. A text reading, not an interpretation of the controller logic.",
+     "hash": "154816",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se382c2": {
+     "english": "Repeat code",
+     "hash": "37cda0",
+     "kind": "OK",
+     "note": ""
+    },
+    "S2706ed": {
+     "english": "Required by",
+     "hash": "8d0905",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sc199d7": {
+     "english": "Suppressed by",
+     "hash": "7e8b5e",
+     "kind": "OK",
+     "note": ""
+    },
+    "S0e08e5": {
+     "english": "Suppressed by %(code)s, which is deprecated or archived.",
+     "hash": "1bd19a",
+     "kind": "OK",
+     "note": ""
+    },
+    "S1bc026": {
+     "english": "Suppressed by %(number)s, which is not in the catalogue.",
+     "hash": "4f7483",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sb17da5": {
+     "english": "Suppresses",
+     "hash": "2707e0",
+     "kind": "OK",
+     "note": ""
+    },
+    "S844394": {
+     "english": "What looks wrong",
+     "hash": "a52b24",
+     "kind": "OK",
+     "note": ""
+    },
+    "S52fc2b": {
+     "english": "Where repeated codes escalate to",
+     "hash": "14b39a",
+     "kind": "A",
+     "note": "escalation is rendered as raising or promoting; a loan word or 'forward' is clearer"
+    },
+    "S59d8f3": {
+     "english": "external",
+     "hash": "43e4af",
+     "kind": "OK",
+     "note": ""
+    },
+    "S1df823": {
+     "english": "loop",
+     "hash": "91e24e",
+     "kind": "OK",
+     "note": ""
+    },
+    "S7d24f7": {
+     "english": "not in the catalogue",
+     "hash": "55702c",
+     "kind": "OK",
+     "note": ""
+    }
+   },
    "checked_at": "2026-10-24"
   },
   "ml": {
-   "confidence": 83.1,
-   "accuracy": 97.8,
+   "confidence": 83.0,
+   "accuracy": 97.6,
    "haircut": 14.0,
    "sample_size": 160,
    "sample_rate": 0.02187,
    "errors": 1,
    "awkward": 5,
    "mechanical": {
-    "strings": 1189,
+    "strings": 1216,
     "missing": 0,
     "placeholders": 0,
     "identical": 0,
@@ -1015,19 +3302,182 @@
      "hash": "da84ad"
     }
    ],
-   "checked": {},
+   "checked": {
+    "S876180": {
+     "english": "A code is not raised while its cause is active. The top of each tree is a cause that nothing suppresses.",
+     "hash": "48eac6",
+     "kind": "A",
+     "note": "'raised' for a code that is triggered reads unnatural; 'triggered' is usual"
+    },
+    "S3f50cd": {
+     "english": "A code that is raised again and again is replaced by its repeat code. Repeat codes outside the catalogue are marked external.",
+     "hash": "986937",
+     "kind": "A",
+     "note": "'raised' for a code that is triggered reads unnatural; 'triggered' is usual"
+    },
+    "S3e00c3": {
+     "english": "Causes and the codes they suppress",
+     "hash": "993953",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se7bab1": {
+     "english": "Chain of causes",
+     "hash": "e8cf7f",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se54fe8": {
+     "english": "Codes with a connection",
+     "hash": "d0f6f1",
+     "kind": "OK",
+     "note": ""
+    },
+    "S6512ee": {
+     "english": "Connection",
+     "hash": "625ef6",
+     "kind": "OK",
+     "note": ""
+    },
+    "S8f3509": {
+     "english": "Connections",
+     "hash": "e9fad9",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se90ccc": {
+     "english": "Escalated from",
+     "hash": "f904c8",
+     "kind": "A",
+     "note": "escalation is rendered as raising or promoting; a loan word or 'forward' is clearer"
+    },
+    "S61bd26": {
+     "english": "Escalates to",
+     "hash": "64b730",
+     "kind": "A",
+     "note": "escalation is rendered as raising or promoting; a loan word or 'forward' is clearer"
+    },
+    "S78586c": {
+     "english": "Escalates to %(code)s, which is deprecated or archived.",
+     "hash": "5c2088",
+     "kind": "A",
+     "note": "escalation is rendered as raising or promoting; a loan word or 'forward' is clearer"
+    },
+    "Sb7c028": {
+     "english": "How the status codes are connected, read from the set conditions and the repeat codes of the imported programs. A text reading, not an interpretation of the controller logic.",
+     "hash": "782102",
+     "kind": "OK",
+     "note": ""
+    },
+    "S2f385e": {
+     "english": "No connections are known yet. They come from the programs imported from .st files.",
+     "hash": "8f378c",
+     "kind": "OK",
+     "note": ""
+    },
+    "S136e29": {
+     "english": "Only set while %(number)s is active, which is not in the catalogue.",
+     "hash": "3421e8",
+     "kind": "OK",
+     "note": ""
+    },
+    "S355d4b": {
+     "english": "Only set while active",
+     "hash": "391fdb",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sfa38ca": {
+     "english": "Part of a loop of suppressions: each code is suppressed by another one of the loop.",
+     "hash": "abf454",
+     "kind": "OK",
+     "note": ""
+    },
+    "S2b85e8": {
+     "english": "Read from the set condition and the repeat code of the imported program. A text reading, not an interpretation of the controller logic.",
+     "hash": "1e512e",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se382c2": {
+     "english": "Repeat code",
+     "hash": "313b4f",
+     "kind": "OK",
+     "note": ""
+    },
+    "S2706ed": {
+     "english": "Required by",
+     "hash": "621f44",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sc199d7": {
+     "english": "Suppressed by",
+     "hash": "f96074",
+     "kind": "OK",
+     "note": ""
+    },
+    "S0e08e5": {
+     "english": "Suppressed by %(code)s, which is deprecated or archived.",
+     "hash": "b1e6a7",
+     "kind": "OK",
+     "note": ""
+    },
+    "S1bc026": {
+     "english": "Suppressed by %(number)s, which is not in the catalogue.",
+     "hash": "9868f5",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sb17da5": {
+     "english": "Suppresses",
+     "hash": "913984",
+     "kind": "OK",
+     "note": ""
+    },
+    "S844394": {
+     "english": "What looks wrong",
+     "hash": "7c36eb",
+     "kind": "OK",
+     "note": ""
+    },
+    "S52fc2b": {
+     "english": "Where repeated codes escalate to",
+     "hash": "ffe4a7",
+     "kind": "A",
+     "note": "escalation is rendered as raising or promoting; a loan word or 'forward' is clearer"
+    },
+    "S59d8f3": {
+     "english": "external",
+     "hash": "3fb725",
+     "kind": "OK",
+     "note": ""
+    },
+    "S1df823": {
+     "english": "loop",
+     "hash": "02f48b",
+     "kind": "OK",
+     "note": ""
+    },
+    "S7d24f7": {
+     "english": "not in the catalogue",
+     "hash": "58579a",
+     "kind": "OK",
+     "note": ""
+    }
+   },
    "checked_at": "2026-10-24"
   },
   "pa": {
-   "confidence": 82.9,
-   "accuracy": 97.5,
+   "confidence": 82.7,
+   "accuracy": 97.3,
    "haircut": 14.0,
    "sample_size": 160,
    "sample_rate": 0.025,
    "errors": 1,
    "awkward": 6,
    "mechanical": {
-    "strings": 1189,
+    "strings": 1216,
     "missing": 0,
     "placeholders": 0,
     "identical": 0,
@@ -1091,19 +3541,182 @@
      "hash": "c5ff30"
     }
    ],
-   "checked": {},
+   "checked": {
+    "S876180": {
+     "english": "A code is not raised while its cause is active. The top of each tree is a cause that nothing suppresses.",
+     "hash": "d878e1",
+     "kind": "A",
+     "note": "'raised' for a code that is triggered reads unnatural; 'triggered' is usual"
+    },
+    "S3f50cd": {
+     "english": "A code that is raised again and again is replaced by its repeat code. Repeat codes outside the catalogue are marked external.",
+     "hash": "b2e412",
+     "kind": "A",
+     "note": "'raised' for a code that is triggered reads unnatural; 'triggered' is usual"
+    },
+    "S3e00c3": {
+     "english": "Causes and the codes they suppress",
+     "hash": "10492e",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se7bab1": {
+     "english": "Chain of causes",
+     "hash": "dab5e7",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se54fe8": {
+     "english": "Codes with a connection",
+     "hash": "983893",
+     "kind": "OK",
+     "note": ""
+    },
+    "S6512ee": {
+     "english": "Connection",
+     "hash": "d68c59",
+     "kind": "OK",
+     "note": ""
+    },
+    "S8f3509": {
+     "english": "Connections",
+     "hash": "3f06d0",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se90ccc": {
+     "english": "Escalated from",
+     "hash": "c861f8",
+     "kind": "A",
+     "note": "escalation is rendered as raising or promoting; a loan word or 'forward' is clearer"
+    },
+    "S61bd26": {
+     "english": "Escalates to",
+     "hash": "4e3507",
+     "kind": "A",
+     "note": "escalation is rendered as raising or promoting; a loan word or 'forward' is clearer"
+    },
+    "S78586c": {
+     "english": "Escalates to %(code)s, which is deprecated or archived.",
+     "hash": "953a9c",
+     "kind": "A",
+     "note": "escalation is rendered as raising or promoting; a loan word or 'forward' is clearer"
+    },
+    "Sb7c028": {
+     "english": "How the status codes are connected, read from the set conditions and the repeat codes of the imported programs. A text reading, not an interpretation of the controller logic.",
+     "hash": "933114",
+     "kind": "OK",
+     "note": ""
+    },
+    "S2f385e": {
+     "english": "No connections are known yet. They come from the programs imported from .st files.",
+     "hash": "49e257",
+     "kind": "OK",
+     "note": ""
+    },
+    "S136e29": {
+     "english": "Only set while %(number)s is active, which is not in the catalogue.",
+     "hash": "a2cb5f",
+     "kind": "OK",
+     "note": ""
+    },
+    "S355d4b": {
+     "english": "Only set while active",
+     "hash": "527b43",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sfa38ca": {
+     "english": "Part of a loop of suppressions: each code is suppressed by another one of the loop.",
+     "hash": "2a5a3e",
+     "kind": "OK",
+     "note": ""
+    },
+    "S2b85e8": {
+     "english": "Read from the set condition and the repeat code of the imported program. A text reading, not an interpretation of the controller logic.",
+     "hash": "2a58d2",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se382c2": {
+     "english": "Repeat code",
+     "hash": "7c276c",
+     "kind": "OK",
+     "note": ""
+    },
+    "S2706ed": {
+     "english": "Required by",
+     "hash": "b68b59",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sc199d7": {
+     "english": "Suppressed by",
+     "hash": "d67845",
+     "kind": "OK",
+     "note": ""
+    },
+    "S0e08e5": {
+     "english": "Suppressed by %(code)s, which is deprecated or archived.",
+     "hash": "a49b57",
+     "kind": "OK",
+     "note": ""
+    },
+    "S1bc026": {
+     "english": "Suppressed by %(number)s, which is not in the catalogue.",
+     "hash": "ddf717",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sb17da5": {
+     "english": "Suppresses",
+     "hash": "db0f35",
+     "kind": "OK",
+     "note": ""
+    },
+    "S844394": {
+     "english": "What looks wrong",
+     "hash": "4f917f",
+     "kind": "OK",
+     "note": ""
+    },
+    "S52fc2b": {
+     "english": "Where repeated codes escalate to",
+     "hash": "fc467d",
+     "kind": "A",
+     "note": "escalation is rendered as raising or promoting; a loan word or 'forward' is clearer"
+    },
+    "S59d8f3": {
+     "english": "external",
+     "hash": "e19622",
+     "kind": "OK",
+     "note": ""
+    },
+    "S1df823": {
+     "english": "loop",
+     "hash": "9901af",
+     "kind": "OK",
+     "note": ""
+    },
+    "S7d24f7": {
+     "english": "not in the catalogue",
+     "hash": "961b22",
+     "kind": "OK",
+     "note": ""
+    }
+   },
    "checked_at": "2026-10-24"
   },
   "ka": {
-   "confidence": 82.7,
-   "accuracy": 97.8,
+   "confidence": 82.6,
+   "accuracy": 97.7,
    "haircut": 15.0,
    "sample_size": 160,
    "sample_rate": 0.02187,
    "errors": 0,
    "awkward": 7,
    "mechanical": {
-    "strings": 1189,
+    "strings": 1216,
     "missing": 0,
     "placeholders": 0,
     "identical": 0,
@@ -1167,19 +3780,182 @@
      "hash": "778c86"
     }
    ],
-   "checked": {},
+   "checked": {
+    "S876180": {
+     "english": "A code is not raised while its cause is active. The top of each tree is a cause that nothing suppresses.",
+     "hash": "d1e783",
+     "kind": "OK",
+     "note": ""
+    },
+    "S3f50cd": {
+     "english": "A code that is raised again and again is replaced by its repeat code. Repeat codes outside the catalogue are marked external.",
+     "hash": "8535ec",
+     "kind": "OK",
+     "note": ""
+    },
+    "S3e00c3": {
+     "english": "Causes and the codes they suppress",
+     "hash": "8d0336",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se7bab1": {
+     "english": "Chain of causes",
+     "hash": "d3435e",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se54fe8": {
+     "english": "Codes with a connection",
+     "hash": "40d39f",
+     "kind": "OK",
+     "note": ""
+    },
+    "S6512ee": {
+     "english": "Connection",
+     "hash": "330478",
+     "kind": "OK",
+     "note": ""
+    },
+    "S8f3509": {
+     "english": "Connections",
+     "hash": "a7fc48",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se90ccc": {
+     "english": "Escalated from",
+     "hash": "c709c7",
+     "kind": "A",
+     "note": "'ესკალირებულია აქედან' (from here) is awkward as a label"
+    },
+    "S61bd26": {
+     "english": "Escalates to",
+     "hash": "010200",
+     "kind": "A",
+     "note": "'ესკალირდება აქეთ' (hither) is awkward as a label"
+    },
+    "S78586c": {
+     "english": "Escalates to %(code)s, which is deprecated or archived.",
+     "hash": "7064e9",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sb7c028": {
+     "english": "How the status codes are connected, read from the set conditions and the repeat codes of the imported programs. A text reading, not an interpretation of the controller logic.",
+     "hash": "8cfd9e",
+     "kind": "OK",
+     "note": ""
+    },
+    "S2f385e": {
+     "english": "No connections are known yet. They come from the programs imported from .st files.",
+     "hash": "056905",
+     "kind": "OK",
+     "note": ""
+    },
+    "S136e29": {
+     "english": "Only set while %(number)s is active, which is not in the catalogue.",
+     "hash": "023f2c",
+     "kind": "OK",
+     "note": ""
+    },
+    "S355d4b": {
+     "english": "Only set while active",
+     "hash": "614ec2",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sfa38ca": {
+     "english": "Part of a loop of suppressions: each code is suppressed by another one of the loop.",
+     "hash": "b97ee4",
+     "kind": "OK",
+     "note": ""
+    },
+    "S2b85e8": {
+     "english": "Read from the set condition and the repeat code of the imported program. A text reading, not an interpretation of the controller logic.",
+     "hash": "422a9d",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se382c2": {
+     "english": "Repeat code",
+     "hash": "f51031",
+     "kind": "OK",
+     "note": ""
+    },
+    "S2706ed": {
+     "english": "Required by",
+     "hash": "37d10e",
+     "kind": "A",
+     "note": "'საჭიროა ამისთვის' (for this) is awkward as a label"
+    },
+    "Sc199d7": {
+     "english": "Suppressed by",
+     "hash": "319d3a",
+     "kind": "A",
+     "note": "'ჩახშულია ამით' (by this) is awkward as a label"
+    },
+    "S0e08e5": {
+     "english": "Suppressed by %(code)s, which is deprecated or archived.",
+     "hash": "cf5455",
+     "kind": "OK",
+     "note": ""
+    },
+    "S1bc026": {
+     "english": "Suppressed by %(number)s, which is not in the catalogue.",
+     "hash": "a017cc",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sb17da5": {
+     "english": "Suppresses",
+     "hash": "5a147c",
+     "kind": "OK",
+     "note": ""
+    },
+    "S844394": {
+     "english": "What looks wrong",
+     "hash": "2158c6",
+     "kind": "OK",
+     "note": ""
+    },
+    "S52fc2b": {
+     "english": "Where repeated codes escalate to",
+     "hash": "35a7de",
+     "kind": "OK",
+     "note": ""
+    },
+    "S59d8f3": {
+     "english": "external",
+     "hash": "7fd58a",
+     "kind": "OK",
+     "note": ""
+    },
+    "S1df823": {
+     "english": "loop",
+     "hash": "2655fd",
+     "kind": "OK",
+     "note": ""
+    },
+    "S7d24f7": {
+     "english": "not in the catalogue",
+     "hash": "42df28",
+     "kind": "OK",
+     "note": ""
+    }
+   },
    "checked_at": "2026-10-24"
   },
   "or": {
-   "confidence": 78.2,
-   "accuracy": 95.0,
+   "confidence": 78.1,
+   "accuracy": 94.9,
    "haircut": 16.0,
    "sample_size": 160,
    "sample_rate": 0.05,
    "errors": 6,
    "awkward": 4,
    "mechanical": {
-    "strings": 1189,
+    "strings": 1216,
     "missing": 0,
     "placeholders": 0,
     "identical": 0,
@@ -1267,7 +4043,170 @@
      "hash": "1bff20"
     }
    ],
-   "checked": {},
+   "checked": {
+    "S876180": {
+     "english": "A code is not raised while its cause is active. The top of each tree is a cause that nothing suppresses.",
+     "hash": "53d9b9",
+     "kind": "A",
+     "note": "'raised' for a code that is triggered reads unnatural; 'triggered' is usual"
+    },
+    "S3f50cd": {
+     "english": "A code that is raised again and again is replaced by its repeat code. Repeat codes outside the catalogue are marked external.",
+     "hash": "a9c1bb",
+     "kind": "A",
+     "note": "'raised' for a code that is triggered reads unnatural; 'triggered' is usual"
+    },
+    "S3e00c3": {
+     "english": "Causes and the codes they suppress",
+     "hash": "9ffb9b",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se7bab1": {
+     "english": "Chain of causes",
+     "hash": "3064a5",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se54fe8": {
+     "english": "Codes with a connection",
+     "hash": "e7ec07",
+     "kind": "OK",
+     "note": ""
+    },
+    "S6512ee": {
+     "english": "Connection",
+     "hash": "7fc263",
+     "kind": "OK",
+     "note": ""
+    },
+    "S8f3509": {
+     "english": "Connections",
+     "hash": "038feb",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se90ccc": {
+     "english": "Escalated from",
+     "hash": "22bd03",
+     "kind": "A",
+     "note": "escalation is rendered as raising or promoting; a loan word or 'forward' is clearer"
+    },
+    "S61bd26": {
+     "english": "Escalates to",
+     "hash": "f96342",
+     "kind": "A",
+     "note": "escalation is rendered as raising or promoting; a loan word or 'forward' is clearer"
+    },
+    "S78586c": {
+     "english": "Escalates to %(code)s, which is deprecated or archived.",
+     "hash": "f88bd9",
+     "kind": "A",
+     "note": "escalation is rendered as raising or promoting; a loan word or 'forward' is clearer"
+    },
+    "Sb7c028": {
+     "english": "How the status codes are connected, read from the set conditions and the repeat codes of the imported programs. A text reading, not an interpretation of the controller logic.",
+     "hash": "0384c3",
+     "kind": "OK",
+     "note": ""
+    },
+    "S2f385e": {
+     "english": "No connections are known yet. They come from the programs imported from .st files.",
+     "hash": "1d5b2b",
+     "kind": "OK",
+     "note": ""
+    },
+    "S136e29": {
+     "english": "Only set while %(number)s is active, which is not in the catalogue.",
+     "hash": "fd2a37",
+     "kind": "OK",
+     "note": ""
+    },
+    "S355d4b": {
+     "english": "Only set while active",
+     "hash": "413c09",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sfa38ca": {
+     "english": "Part of a loop of suppressions: each code is suppressed by another one of the loop.",
+     "hash": "572a34",
+     "kind": "OK",
+     "note": ""
+    },
+    "S2b85e8": {
+     "english": "Read from the set condition and the repeat code of the imported program. A text reading, not an interpretation of the controller logic.",
+     "hash": "ff4a4c",
+     "kind": "OK",
+     "note": ""
+    },
+    "Se382c2": {
+     "english": "Repeat code",
+     "hash": "2ea20c",
+     "kind": "OK",
+     "note": ""
+    },
+    "S2706ed": {
+     "english": "Required by",
+     "hash": "fec55c",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sc199d7": {
+     "english": "Suppressed by",
+     "hash": "e12122",
+     "kind": "OK",
+     "note": ""
+    },
+    "S0e08e5": {
+     "english": "Suppressed by %(code)s, which is deprecated or archived.",
+     "hash": "7c5acf",
+     "kind": "OK",
+     "note": ""
+    },
+    "S1bc026": {
+     "english": "Suppressed by %(number)s, which is not in the catalogue.",
+     "hash": "d6026a",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sb17da5": {
+     "english": "Suppresses",
+     "hash": "f5b79b",
+     "kind": "OK",
+     "note": ""
+    },
+    "S844394": {
+     "english": "What looks wrong",
+     "hash": "cb1323",
+     "kind": "OK",
+     "note": ""
+    },
+    "S52fc2b": {
+     "english": "Where repeated codes escalate to",
+     "hash": "110469",
+     "kind": "A",
+     "note": "escalation is rendered as raising or promoting; a loan word or 'forward' is clearer"
+    },
+    "S59d8f3": {
+     "english": "external",
+     "hash": "6504b8",
+     "kind": "OK",
+     "note": ""
+    },
+    "S1df823": {
+     "english": "loop",
+     "hash": "d6bfe7",
+     "kind": "OK",
+     "note": ""
+    },
+    "S7d24f7": {
+     "english": "not in the catalogue",
+     "hash": "563c97",
+     "kind": "OK",
+     "note": ""
+    }
+   },
    "checked_at": "2026-10-24"
   }
  }

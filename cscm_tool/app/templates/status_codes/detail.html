@@ -159,6 +159,34 @@
 </div>
 {% endif %}
 
+{% if connections and connections.known %}
+<div class="card">
+  <h2>{{ _('Connections') }}</h2>
+  <p class="muted">{{ _('Read from the set condition and the repeat code of the imported program. A text reading, not an interpretation of the controller logic.') }}</p>
+  {% set labels = {'SUPPRESSED_BY': _('Suppressed by'), 'REQUIRES': _('Only set while active'), 'ESCALATES_TO': _('Escalates to')} %}
+  {% set reverse = {'SUPPRESSED_BY': _('Suppresses'), 'REQUIRES': _('Required by'), 'ESCALATES_TO': _('Escalated from')} %}
+  <table>
+    <thead><tr><th scope="col">{{ _('Connection') }}</th><th scope="col">{{ _('Code') }}</th><th scope="col">{{ _('Title') }}</th><th scope="col">{{ _('State') }}</th></tr></thead>
+    <tbody>
+      {% for c in connections.outgoing %}
+      <tr>
+        <td>{{ labels[c.kind] }}</td>
+        {% if c.code %}<td><a href="{{ url_for('ui.status_code_detail', status_code_id=c.code.id) }}">{{ c.code.identifier }}</a></td><td>{{ c.code.title }}</td><td>{{ macros.lifecycle_badge(c.code.state) if c.code.state else '' }}</td>
+        {% else %}<td>{{ c.number }}</td><td class="muted">{{ _('not in the catalogue') }}</td><td></td>{% endif %}
+      </tr>
+      {% endfor %}
+      {% for c in connections.incoming %}
+      <tr>
+        <td>{{ reverse[c.kind] }}</td>
+        <td><a href="{{ url_for('ui.status_code_detail', status_code_id=c.code.id) }}">{{ c.code.identifier }}</a></td><td>{{ c.code.title }}</td><td>{{ macros.lifecycle_badge(c.code.state) if c.code.state else '' }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% if connections.causes %}<p>{{ _('Chain of causes') }}: {% for n in connections.causes %}<a href="{{ url_for('ui.status_code_detail', status_code_id=n.id) }}">{{ n.identifier }}</a>{% if not loop.last %} → {% endif %}{% endfor %}</p>{% endif %}
+</div>
+{% endif %}
+
 {% if family %}
 <div class="card">
   <h2>{{ _('Platform variants') }}</h2>
