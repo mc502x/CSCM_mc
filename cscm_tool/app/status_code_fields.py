@@ -154,12 +154,8 @@ def fill_default_levels(revision: Any) -> None:
         value_id = getattr(revision, f"{field}_id")
         if value_id is None or slot in levels:
             continue
-        row = db.session.execute(
-            text(  # noqa: S608  # nosec B608 - the table names are the constants above
-                f"SELECT default_read_level, default_write_level FROM {table} WHERE id = :i"
-            ),
-            {"i": value_id},
-        ).first()
+        statement = f"SELECT default_read_level, default_write_level FROM {table} WHERE id = :i"  # nosec B608  # the table names are the constants of AUDIENCE_SLOTS
+        row = db.session.execute(text(statement), {"i": value_id}).first()
         if row is not None and row[0] is not None and row[1] is not None:
             levels[slot] = {"read": row[0], "write": row[1]}
             added = True
