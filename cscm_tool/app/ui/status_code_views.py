@@ -15,9 +15,11 @@ stale save is refused with the user's entries intact (I-01); saves report soft w
 detail page shows where-used (I-04), the platform family (I-25), planned dates (I-27) and
 the translation status (I-15)."""
 
+from typing import Any
+
 from flask import flash, redirect, render_template, request, url_for
 
-from app import status_code_fields
+from app import db, status_code_fields
 from app.api.v1.serializers import revision_payload
 from app.auth.decorators import current_user, login_required_web, require_role_web
 from app.domain.errors import (
@@ -28,6 +30,7 @@ from app.domain.errors import (
     SegregationOfDutiesViolation,
 )
 from app.i18n import translate as _
+from app.models.change_request import ChangeRequest
 from app.services.change_request_service import ChangeRequestService
 from app.services.field_review_service import FieldReviewService
 from app.services.lookup_service import LookupService
@@ -176,6 +179,36 @@ def _flash_validation(exc: ValidationFailed) -> None:
 
 
 # ---------------------------------------------------------------- list (S3, I-26)
+def _list_filters(source) -> dict:
+    """The search filters of the list, read from a query string or from the bulk-delete form."""
+    return {
+        "q": source.get("q") or None,
+        "functional_system_group_id": source.get("functional_system_group", type=int),
+        "functional_subgroup_id": source.get("functional_subgroup", type=int),
+        "turbine_platform_code": source.get("turbine_platform") or None,
+        "lifecycle_status": source.get("lifecycle_status") or None,
+        "status_category": source.get("status_category") or None,
+        "is_sandbox": source.get("is_sandbox") == "true",
+    }
+
+
+def _own_drafts(revisions) -> dict[int, int]:
+    """revision id -> change request id, for the Drafts the current user wrote themselves (only
+    the author may withdraw, FR-026)."""
+    ids = [r.id for r in revisions if r.lifecycle_status == "DRAFT"]
+    if not ids:
+        return {}
+    rows = (
+        db.session.query(ChangeRequest.status_code_revision_id, ChangeRequest.id)
+        .filter(
+            ChangeRequest.status_code_revision_id.in_(ids),
+            ChangeRequest.requested_by == current_user.id,
+        )
+        .all()
+    )
+    return dict(rows)
+
+
 @ui_bp.route("/status-codes")
 @login_required_web
 def status_code_list():
@@ -184,18 +217,10 @@ def status_code_list():
     if sort and sort.lstrip("-") not in SORTABLE:
         sort = None
     items, total = StatusCodeService.search(
-        current_user,
-        q=request.args.get("q") or None,
-        functional_system_group_id=request.args.get("functional_system_group", type=int),
-        functional_subgroup_id=request.args.get("functional_subgroup", type=int),
-        turbine_platform_code=request.args.get("turbine_platform") or None,
-        lifecycle_status=request.args.get("lifecycle_status") or None,
-        status_category=request.args.get("status_category") or None,
-        is_sandbox=request.args.get("is_sandbox") == "true",
-        page=page,
-        page_size=50,
-        sort=sort,
+        current_user, **_list_filters(request.args), page=page, page_size=50, sort=sort
     )
+    can_withdraw = current_user.role_code in ("ENGINEER", "ADMINISTRATOR")
+    own_drafts = _own_drafts(items) if can_withdraw else {}
     columns = clean_definition({"columns": request.args.get("cols")})["columns"]
     filters = {
         k: v
@@ -216,6 +241,8 @@ def status_code_list():
     return render_template(
         "status_codes/list.html",
         items=[revision_payload(r) for r in items],
+        can_withdraw=can_withdraw,
+        own_drafts=own_drafts,
         total=total,
         page=page,
         groups=LookupService.list_vocabulary("functional-system-groups"),
@@ -228,6 +255,49 @@ def status_code_list():
         saved_definition=SavedSearchService.definition_of,
         saved_query=lambda row: query_string(SavedSearchService.definition_of(row)),
     )
+
+
+@ui_bp.route("/status-codes/withdraw-selected", methods=["POST"])
+@require_role_web("ADMINISTRATOR", "ENGINEER")
+def status_code_withdraw_selected():
+    """Delete several of the user's own Drafts from the list: the ticked rows, or - after the
+    "all Drafts of this filter" button - every own Draft the filter finds, on all pages."""
+    kept: dict[str, Any] = {k: v for k, v in request.form.items() if k in _KEEP}
+    back = url_for("ui.status_code_list", **kept)
+    if request.form.get("all_filtered") == "1":
+        rows, _total = StatusCodeService.search(
+            current_user,
+            **{**_list_filters(request.form), "lifecycle_status": "DRAFT"},
+            page=1,
+            page_size=5000,
+        )
+        ids = list(_own_drafts(rows).values())
+    else:
+        ids = [int(v) for v in request.form.getlist("cr_id") if v.isdigit()]
+    if not ids:
+        flash(_("Tick at least one of your own Drafts to delete."), "error")
+        return redirect(back)
+    results = ChangeRequestService.withdraw_many(ids, current_user)
+    done = sum(1 for r in results if r["ok"])
+    if done:
+        flash(_("%(n)s Draft(s) deleted.", n=done), "success")
+    for r in results:
+        if not r["ok"]:
+            flash(f"#{r['cr_id']}: {r['message']}", "error")
+    return redirect(back)
+
+
+_KEEP = (
+    "q",
+    "functional_system_group",
+    "functional_subgroup",
+    "turbine_platform",
+    "lifecycle_status",
+    "status_category",
+    "sort",
+    "is_sandbox",
+    "cols",
+)
 
 
 @ui_bp.route("/saved-searches", methods=["POST"])

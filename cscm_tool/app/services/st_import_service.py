@@ -265,6 +265,8 @@ def _clean_options(options: dict | None) -> dict[str, Any]:
     category = str(options.get("default_category") or "ERROR").upper()
     if category not in CATEGORIES:
         raise ValueError("default_category must be ERROR, WARNING or INFO")
+    by_alarm_type = _clean_categories(options.get("alarm_type_categories"), "alarm type")
+    by_program = _clean_categories(options.get("categories"), "program")
     known = [p.code for p in db.session.query(LookupTurbinePlatform).filter_by(is_active=1)]
     platforms = options.get("platforms")
     if isinstance(platforms, str):
@@ -277,8 +279,37 @@ def _clean_options(options: dict | None) -> dict[str, Any]:
         "controller": controller,
         "hc_proposal": proposal,
         "default_category": category,
+        "alarm_type_categories": by_alarm_type,
+        "categories": by_program,
         "platforms": platforms,
     }
+
+
+def _clean_categories(raw: Any, what: str) -> dict[str, str]:
+    """A map of alarm type (or of program key) to a status category; blank entries are dropped, so
+    a form can submit every row and only the chosen ones count."""
+    if not raw:
+        return {}
+    if not isinstance(raw, dict):
+        raise ValueError(f"The categories per {what} must be a mapping.")
+    cleaned: dict[str, str] = {}
+    for key, value in raw.items():
+        value = str(value or "").strip().upper()
+        if not value:
+            continue
+        if value not in CATEGORIES:
+            raise ValueError(f"The category of {what} {key} must be ERROR, WARNING or INFO.")
+        cleaned[str(key)] = value
+    return cleaned
+
+
+def _category_of(code: stcd.StatusCode, key: str, options: dict) -> str:
+    """Per program (the user's choice), else by the program's alarm type, else the default."""
+    return (
+        options.get("categories", {}).get(key)
+        or options.get("alarm_type_categories", {}).get(str(code.alarm_type))
+        or options["default_category"]
+    )
 
 
 # ------------------------------------------------------------------------------ evaluation
@@ -385,6 +416,8 @@ def _evaluate_one(
         "group": None,
         "subgroup": None,
         "prg_idx": code.prg_idx,
+        "alarm_type": code.alarm_type,
+        "category": None,
         "state": "blocked",
         "issues": [],
         "warnings": list(code.warnings),
@@ -559,6 +592,7 @@ def _to_data(
     mapping: dict[int, tuple],
 ) -> dict[str, Any]:
     warnings: list[str] = view["warnings"]
+    view["category"] = _category_of(code, view["key"], options)
     set_delay = format_delay(code.set_delay_ms)
     reset_delay = format_delay(code.reset_delay_ms)
     for label, raw, value in (
@@ -586,7 +620,7 @@ def _to_data(
         "title": code.name[:120],
         "description": _description(code),
         "software_version": None,
-        "status_category": options["default_category"],
+        "status_category": view["category"],
         "available_group": code.availability_group,
         "alarm_flag": bool(code.alarm),
         "set_delay": set_delay or "0ms",
@@ -779,12 +813,23 @@ class StImportService:
         *,
         change_set_name: str | None = None,
         asynchronous: bool | None = None,
+        categories: dict[str, str] | None = None,
     ) -> ImportJob:
         """Creates the Drafts for the chosen programs (`selected` = keys of the preview; None
-        takes every program that is ready)."""
+        takes every program that is ready). `categories` sets the status category per program
+        (key of the preview -> ERROR/WARNING/INFO) and wins over the alarm type and the default."""
         require_roles(actor, "ADMINISTRATOR", "ENGINEER")
         manifest, parsed = StImportService._load_staged(token, actor)
-        items = _evaluate(parsed, manifest["options"], _mapping())
+        opts = manifest["options"]
+        if categories:
+            opts = {
+                **opts,
+                "categories": {
+                    **opts.get("categories", {}),
+                    **_clean_categories(categories, "program"),
+                },
+            }
+        items = _evaluate(parsed, opts, _mapping())
         by_key = {i.view["key"]: i for i in items}
         if selected is None:
             chosen = [i for i in items if i.view["state"] == "ready"]

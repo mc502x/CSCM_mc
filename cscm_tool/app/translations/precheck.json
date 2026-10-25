@@ -1,5 +1,5 @@
 {
- "date": "2026-10-24",
+ "date": "2026-10-25",
  "method": "Every string is checked mechanically; a sample of 160 strings per language is read for meaning, register and consistency (a wrong meaning counts 1, an awkward or inconsistent wording 0.5); the rate is carried over to the whole catalogue, reduced by the haircut (what the checker cannot see in that language) and by the terms the interface renders differently from the nomenclature. A string that changed later is read one by one.",
  "history": [
   {
@@ -26,6 +26,11 @@
    "date": "2026-10-24",
    "by": "AI pre-check (Claude), read one by one 2026-10-25",
    "note": "delta: 36 changed strings read one by one"
+  },
+  {
+   "date": "2026-10-25",
+   "by": "AI pre-check (Claude), read one by one 2026-10-25",
+   "note": "delta: 180 changed strings read one by one"
   }
  ],
  "languages": {
@@ -38,7 +43,7 @@
    "errors": 0,
    "awkward": 6,
    "mechanical": {
-    "strings": 1280,
+    "strings": 1290,
     "missing": 0,
     "placeholders": 0,
     "identical": 0,
@@ -634,9 +639,69 @@
      "hash": "646d1e",
      "kind": "OK",
      "note": ""
+    },
+    "S16e5d4": {
+     "english": "Alarm type",
+     "hash": "c5dba0",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sc00673": {
+     "english": "Apply to the ticked programs",
+     "hash": "04a10a",
+     "kind": "OK",
+     "note": ""
+    },
+    "S36f212": {
+     "english": "Delete ALL of your own Drafts that match this filter, on every page?",
+     "hash": "455093",
+     "kind": "OK",
+     "note": ""
+    },
+    "Seb0fd2": {
+     "english": "Delete all my Drafts of this filter",
+     "hash": "84ba76",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sc554a1": {
+     "english": "Delete selected Drafts",
+     "hash": "aad79c",
+     "kind": "OK",
+     "note": ""
+    },
+    "S2d8627": {
+     "english": "Delete the ticked Drafts? A deleted Draft is gone; its number is only kept if it was already issued.",
+     "hash": "027af0",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sbda77c": {
+     "english": "Every program names an alarm type. A type left at \"as above\" gets the category chosen above; the next page lets you set the category of single programs or of all ticked ones.",
+     "hash": "99f22a",
+     "kind": "OK",
+     "note": ""
+    },
+    "S0af4fc": {
+     "english": "Status category by alarm type (optional)",
+     "hash": "2d3cae",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sd7a322": {
+     "english": "Status category of the ticked programs",
+     "hash": "c7093f",
+     "kind": "OK",
+     "note": ""
+    },
+    "S726d7a": {
+     "english": "as above",
+     "hash": "ce4916",
+     "kind": "OK",
+     "note": ""
     }
    },
-   "checked_at": "2026-10-24"
+   "checked_at": "2026-10-25"
   },
   "fr": {
    "confidence": 94.6,
@@ -647,7 +712,7 @@
    "errors": 0,
    "awkward": 4,
    "mechanical": {
-    "strings": 1279,
+    "strings": 1289,
     "missing": 0,
     "placeholders": 0,
     "identical": 0,
@@ -1227,9 +1292,69 @@
      "hash": "30bfe0",
      "kind": "OK",
      "note": ""
+    },
+    "S16e5d4": {
+     "english": "Alarm type",
+     "hash": "c0d331",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sc00673": {
+     "english": "Apply to the ticked programs",
+     "hash": "b84122",
+     "kind": "OK",
+     "note": ""
+    },
+    "S36f212": {
+     "english": "Delete ALL of your own Drafts that match this filter, on every page?",
+     "hash": "3d2642",
+     "kind": "OK",
+     "note": ""
+    },
+    "Seb0fd2": {
+     "english": "Delete all my Drafts of this filter",
+     "hash": "e9856e",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sc554a1": {
+     "english": "Delete selected Drafts",
+     "hash": "1403b9",
+     "kind": "OK",
+     "note": ""
+    },
+    "S2d8627": {
+     "english": "Delete the ticked Drafts? A deleted Draft is gone; its number is only kept if it was already issued.",
+     "hash": "b9f0b1",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sbda77c": {
+     "english": "Every program names an alarm type. A type left at \"as above\" gets the category chosen above; the next page lets you set the category of single programs or of all ticked ones.",
+     "hash": "fba75d",
+     "kind": "OK",
+     "note": ""
+    },
+    "S0af4fc": {
+     "english": "Status category by alarm type (optional)",
+     "hash": "168ded",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sd7a322": {
+     "english": "Status category of the ticked programs",
+     "hash": "c2f0f4",
+     "kind": "OK",
+     "note": ""
+    },
+    "S726d7a": {
+     "english": "as above",
+     "hash": "8c6be9",
+     "kind": "OK",
+     "note": ""
     }
    },
-   "checked_at": "2026-10-24"
+   "checked_at": "2026-10-25"
   },
   "es": {
    "confidence": 93.7,
@@ -1240,7 +1365,7 @@
    "errors": 0,
    "awkward": 6,
    "mechanical": {
-    "strings": 1279,
+    "strings": 1289,
     "missing": 0,
     "placeholders": 0,
     "identical": 0,
@@ -1836,20 +1961,80 @@
      "hash": "c008b7",
      "kind": "OK",
      "note": ""
+    },
+    "S16e5d4": {
+     "english": "Alarm type",
+     "hash": "8a8e6b",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sc00673": {
+     "english": "Apply to the ticked programs",
+     "hash": "3f0c16",
+     "kind": "OK",
+     "note": ""
+    },
+    "S36f212": {
+     "english": "Delete ALL of your own Drafts that match this filter, on every page?",
+     "hash": "0fdf12",
+     "kind": "OK",
+     "note": ""
+    },
+    "Seb0fd2": {
+     "english": "Delete all my Drafts of this filter",
+     "hash": "3e8268",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sc554a1": {
+     "english": "Delete selected Drafts",
+     "hash": "737238",
+     "kind": "OK",
+     "note": ""
+    },
+    "S2d8627": {
+     "english": "Delete the ticked Drafts? A deleted Draft is gone; its number is only kept if it was already issued.",
+     "hash": "2192b4",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sbda77c": {
+     "english": "Every program names an alarm type. A type left at \"as above\" gets the category chosen above; the next page lets you set the category of single programs or of all ticked ones.",
+     "hash": "7d1435",
+     "kind": "OK",
+     "note": ""
+    },
+    "S0af4fc": {
+     "english": "Status category by alarm type (optional)",
+     "hash": "977bb2",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sd7a322": {
+     "english": "Status category of the ticked programs",
+     "hash": "c64f80",
+     "kind": "OK",
+     "note": ""
+    },
+    "S726d7a": {
+     "english": "as above",
+     "hash": "7705e6",
+     "kind": "A",
+     "note": "'como arriba' is understandable; 'igual que arriba' is a little more usual"
     }
    },
-   "checked_at": "2026-10-24"
+   "checked_at": "2026-10-25"
   },
   "it": {
    "confidence": 94.4,
-   "accuracy": 98.5,
+   "accuracy": 98.6,
    "haircut": 4.0,
    "sample_size": 160,
    "sample_rate": 0.01562,
    "errors": 0,
    "awkward": 5,
    "mechanical": {
-    "strings": 1279,
+    "strings": 1289,
     "missing": 0,
     "placeholders": 0,
     "identical": 0,
@@ -2437,9 +2622,69 @@
      "hash": "0f5db8",
      "kind": "OK",
      "note": ""
+    },
+    "S16e5d4": {
+     "english": "Alarm type",
+     "hash": "22283a",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sc00673": {
+     "english": "Apply to the ticked programs",
+     "hash": "906a87",
+     "kind": "OK",
+     "note": ""
+    },
+    "S36f212": {
+     "english": "Delete ALL of your own Drafts that match this filter, on every page?",
+     "hash": "d7b25f",
+     "kind": "OK",
+     "note": ""
+    },
+    "Seb0fd2": {
+     "english": "Delete all my Drafts of this filter",
+     "hash": "fe2196",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sc554a1": {
+     "english": "Delete selected Drafts",
+     "hash": "238f52",
+     "kind": "OK",
+     "note": ""
+    },
+    "S2d8627": {
+     "english": "Delete the ticked Drafts? A deleted Draft is gone; its number is only kept if it was already issued.",
+     "hash": "02650d",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sbda77c": {
+     "english": "Every program names an alarm type. A type left at \"as above\" gets the category chosen above; the next page lets you set the category of single programs or of all ticked ones.",
+     "hash": "69b527",
+     "kind": "OK",
+     "note": ""
+    },
+    "S0af4fc": {
+     "english": "Status category by alarm type (optional)",
+     "hash": "5203b7",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sd7a322": {
+     "english": "Status category of the ticked programs",
+     "hash": "9ea62f",
+     "kind": "OK",
+     "note": ""
+    },
+    "S726d7a": {
+     "english": "as above",
+     "hash": "9ccd76",
+     "kind": "OK",
+     "note": ""
     }
    },
-   "checked_at": "2026-10-24"
+   "checked_at": "2026-10-25"
   },
   "da": {
    "confidence": 92.2,
@@ -2450,7 +2695,7 @@
    "errors": 1,
    "awkward": 3,
    "mechanical": {
-    "strings": 1279,
+    "strings": 1289,
     "missing": 0,
     "placeholders": 0,
     "identical": 0,
@@ -3030,20 +3275,80 @@
      "hash": "151252",
      "kind": "OK",
      "note": ""
+    },
+    "S16e5d4": {
+     "english": "Alarm type",
+     "hash": "a2f505",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sc00673": {
+     "english": "Apply to the ticked programs",
+     "hash": "2040e6",
+     "kind": "OK",
+     "note": ""
+    },
+    "S36f212": {
+     "english": "Delete ALL of your own Drafts that match this filter, on every page?",
+     "hash": "c98150",
+     "kind": "OK",
+     "note": ""
+    },
+    "Seb0fd2": {
+     "english": "Delete all my Drafts of this filter",
+     "hash": "73e4f8",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sc554a1": {
+     "english": "Delete selected Drafts",
+     "hash": "279dfb",
+     "kind": "OK",
+     "note": ""
+    },
+    "S2d8627": {
+     "english": "Delete the ticked Drafts? A deleted Draft is gone; its number is only kept if it was already issued.",
+     "hash": "7a4bc9",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sbda77c": {
+     "english": "Every program names an alarm type. A type left at \"as above\" gets the category chosen above; the next page lets you set the category of single programs or of all ticked ones.",
+     "hash": "28c35d",
+     "kind": "OK",
+     "note": ""
+    },
+    "S0af4fc": {
+     "english": "Status category by alarm type (optional)",
+     "hash": "0e8536",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sd7a322": {
+     "english": "Status category of the ticked programs",
+     "hash": "fb65a9",
+     "kind": "OK",
+     "note": ""
+    },
+    "S726d7a": {
+     "english": "as above",
+     "hash": "85fbdb",
+     "kind": "OK",
+     "note": ""
     }
    },
-   "checked_at": "2026-10-24"
+   "checked_at": "2026-10-25"
   },
   "hi": {
-   "confidence": 87.8,
-   "accuracy": 97.0,
+   "confidence": 87.9,
+   "accuracy": 97.1,
    "haircut": 9.0,
    "sample_size": 160,
    "sample_rate": 0.02813,
    "errors": 1,
    "awkward": 7,
    "mechanical": {
-    "strings": 1279,
+    "strings": 1289,
     "missing": 0,
     "placeholders": 0,
     "identical": 0,
@@ -3655,9 +3960,69 @@
      "hash": "eb0b10",
      "kind": "OK",
      "note": ""
+    },
+    "S16e5d4": {
+     "english": "Alarm type",
+     "hash": "1a648a",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sc00673": {
+     "english": "Apply to the ticked programs",
+     "hash": "df169c",
+     "kind": "OK",
+     "note": ""
+    },
+    "S36f212": {
+     "english": "Delete ALL of your own Drafts that match this filter, on every page?",
+     "hash": "3385ec",
+     "kind": "OK",
+     "note": ""
+    },
+    "Seb0fd2": {
+     "english": "Delete all my Drafts of this filter",
+     "hash": "740d4e",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sc554a1": {
+     "english": "Delete selected Drafts",
+     "hash": "57b44e",
+     "kind": "OK",
+     "note": ""
+    },
+    "S2d8627": {
+     "english": "Delete the ticked Drafts? A deleted Draft is gone; its number is only kept if it was already issued.",
+     "hash": "75ece9",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sbda77c": {
+     "english": "Every program names an alarm type. A type left at \"as above\" gets the category chosen above; the next page lets you set the category of single programs or of all ticked ones.",
+     "hash": "d1d1c5",
+     "kind": "OK",
+     "note": ""
+    },
+    "S0af4fc": {
+     "english": "Status category by alarm type (optional)",
+     "hash": "fec74e",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sd7a322": {
+     "english": "Status category of the ticked programs",
+     "hash": "88edea",
+     "kind": "OK",
+     "note": ""
+    },
+    "S726d7a": {
+     "english": "as above",
+     "hash": "52f543",
+     "kind": "OK",
+     "note": ""
     }
    },
-   "checked_at": "2026-10-24"
+   "checked_at": "2026-10-25"
   },
   "ar": {
    "confidence": 88.2,
@@ -3668,7 +4033,7 @@
    "errors": 1,
    "awkward": 3,
    "mechanical": {
-    "strings": 1279,
+    "strings": 1289,
     "missing": 0,
     "placeholders": 0,
     "identical": 0,
@@ -4248,9 +4613,69 @@
      "hash": "94c485",
      "kind": "OK",
      "note": ""
+    },
+    "S16e5d4": {
+     "english": "Alarm type",
+     "hash": "a4dd32",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sc00673": {
+     "english": "Apply to the ticked programs",
+     "hash": "dd4f0e",
+     "kind": "OK",
+     "note": ""
+    },
+    "S36f212": {
+     "english": "Delete ALL of your own Drafts that match this filter, on every page?",
+     "hash": "18ebf5",
+     "kind": "OK",
+     "note": ""
+    },
+    "Seb0fd2": {
+     "english": "Delete all my Drafts of this filter",
+     "hash": "27f67d",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sc554a1": {
+     "english": "Delete selected Drafts",
+     "hash": "c70a36",
+     "kind": "OK",
+     "note": ""
+    },
+    "S2d8627": {
+     "english": "Delete the ticked Drafts? A deleted Draft is gone; its number is only kept if it was already issued.",
+     "hash": "a2b3bf",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sbda77c": {
+     "english": "Every program names an alarm type. A type left at \"as above\" gets the category chosen above; the next page lets you set the category of single programs or of all ticked ones.",
+     "hash": "7377ad",
+     "kind": "OK",
+     "note": ""
+    },
+    "S0af4fc": {
+     "english": "Status category by alarm type (optional)",
+     "hash": "fb10ec",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sd7a322": {
+     "english": "Status category of the ticked programs",
+     "hash": "c19c70",
+     "kind": "OK",
+     "note": ""
+    },
+    "S726d7a": {
+     "english": "as above",
+     "hash": "edc2d0",
+     "kind": "OK",
+     "note": ""
     }
    },
-   "checked_at": "2026-10-24"
+   "checked_at": "2026-10-25"
   },
   "bn": {
    "confidence": 86.9,
@@ -4261,7 +4686,7 @@
    "errors": 0,
    "awkward": 6,
    "mechanical": {
-    "strings": 1279,
+    "strings": 1289,
     "missing": 0,
     "placeholders": 0,
     "identical": 0,
@@ -4857,9 +5282,69 @@
      "hash": "9c7c81",
      "kind": "OK",
      "note": ""
+    },
+    "S16e5d4": {
+     "english": "Alarm type",
+     "hash": "155f5e",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sc00673": {
+     "english": "Apply to the ticked programs",
+     "hash": "3ecce3",
+     "kind": "OK",
+     "note": ""
+    },
+    "S36f212": {
+     "english": "Delete ALL of your own Drafts that match this filter, on every page?",
+     "hash": "6c5f3c",
+     "kind": "OK",
+     "note": ""
+    },
+    "Seb0fd2": {
+     "english": "Delete all my Drafts of this filter",
+     "hash": "1b4f09",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sc554a1": {
+     "english": "Delete selected Drafts",
+     "hash": "d7d8e1",
+     "kind": "OK",
+     "note": ""
+    },
+    "S2d8627": {
+     "english": "Delete the ticked Drafts? A deleted Draft is gone; its number is only kept if it was already issued.",
+     "hash": "3357f6",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sbda77c": {
+     "english": "Every program names an alarm type. A type left at \"as above\" gets the category chosen above; the next page lets you set the category of single programs or of all ticked ones.",
+     "hash": "444a20",
+     "kind": "OK",
+     "note": ""
+    },
+    "S0af4fc": {
+     "english": "Status category by alarm type (optional)",
+     "hash": "b25ade",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sd7a322": {
+     "english": "Status category of the ticked programs",
+     "hash": "cd6414",
+     "kind": "OK",
+     "note": ""
+    },
+    "S726d7a": {
+     "english": "as above",
+     "hash": "16a38c",
+     "kind": "OK",
+     "note": ""
     }
    },
-   "checked_at": "2026-10-24"
+   "checked_at": "2026-10-25"
   },
   "mr": {
    "confidence": 86.4,
@@ -4870,7 +5355,7 @@
    "errors": 1,
    "awkward": 5,
    "mechanical": {
-    "strings": 1279,
+    "strings": 1289,
     "missing": 0,
     "placeholders": 0,
     "identical": 0,
@@ -5466,9 +5951,69 @@
      "hash": "9ead9c",
      "kind": "OK",
      "note": ""
+    },
+    "S16e5d4": {
+     "english": "Alarm type",
+     "hash": "e2f24e",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sc00673": {
+     "english": "Apply to the ticked programs",
+     "hash": "d295ad",
+     "kind": "OK",
+     "note": ""
+    },
+    "S36f212": {
+     "english": "Delete ALL of your own Drafts that match this filter, on every page?",
+     "hash": "baae8b",
+     "kind": "OK",
+     "note": ""
+    },
+    "Seb0fd2": {
+     "english": "Delete all my Drafts of this filter",
+     "hash": "1609ac",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sc554a1": {
+     "english": "Delete selected Drafts",
+     "hash": "a5abd2",
+     "kind": "OK",
+     "note": ""
+    },
+    "S2d8627": {
+     "english": "Delete the ticked Drafts? A deleted Draft is gone; its number is only kept if it was already issued.",
+     "hash": "bedec4",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sbda77c": {
+     "english": "Every program names an alarm type. A type left at \"as above\" gets the category chosen above; the next page lets you set the category of single programs or of all ticked ones.",
+     "hash": "23fb6d",
+     "kind": "OK",
+     "note": ""
+    },
+    "S0af4fc": {
+     "english": "Status category by alarm type (optional)",
+     "hash": "2fc5c8",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sd7a322": {
+     "english": "Status category of the ticked programs",
+     "hash": "c85410",
+     "kind": "OK",
+     "note": ""
+    },
+    "S726d7a": {
+     "english": "as above",
+     "hash": "977ec7",
+     "kind": "OK",
+     "note": ""
     }
    },
-   "checked_at": "2026-10-24"
+   "checked_at": "2026-10-25"
   },
   "te": {
    "confidence": 85.2,
@@ -5479,7 +6024,7 @@
    "errors": 0,
    "awkward": 5,
    "mechanical": {
-    "strings": 1279,
+    "strings": 1289,
     "missing": 0,
     "placeholders": 0,
     "identical": 0,
@@ -6067,12 +6612,72 @@
      "hash": "c029f4",
      "kind": "OK",
      "note": ""
+    },
+    "S16e5d4": {
+     "english": "Alarm type",
+     "hash": "3ae12a",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sc00673": {
+     "english": "Apply to the ticked programs",
+     "hash": "6bb760",
+     "kind": "OK",
+     "note": ""
+    },
+    "S36f212": {
+     "english": "Delete ALL of your own Drafts that match this filter, on every page?",
+     "hash": "517f51",
+     "kind": "OK",
+     "note": ""
+    },
+    "Seb0fd2": {
+     "english": "Delete all my Drafts of this filter",
+     "hash": "7f0e4d",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sc554a1": {
+     "english": "Delete selected Drafts",
+     "hash": "f87dfc",
+     "kind": "OK",
+     "note": ""
+    },
+    "S2d8627": {
+     "english": "Delete the ticked Drafts? A deleted Draft is gone; its number is only kept if it was already issued.",
+     "hash": "51b2be",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sbda77c": {
+     "english": "Every program names an alarm type. A type left at \"as above\" gets the category chosen above; the next page lets you set the category of single programs or of all ticked ones.",
+     "hash": "3c7726",
+     "kind": "OK",
+     "note": ""
+    },
+    "S0af4fc": {
+     "english": "Status category by alarm type (optional)",
+     "hash": "31602a",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sd7a322": {
+     "english": "Status category of the ticked programs",
+     "hash": "64c471",
+     "kind": "OK",
+     "note": ""
+    },
+    "S726d7a": {
+     "english": "as above",
+     "hash": "d16d96",
+     "kind": "OK",
+     "note": ""
     }
    },
-   "checked_at": "2026-10-24"
+   "checked_at": "2026-10-25"
   },
   "ta": {
-   "confidence": 84.2,
+   "confidence": 84.3,
    "accuracy": 97.5,
    "haircut": 13.0,
    "sample_size": 160,
@@ -6080,7 +6685,7 @@
    "errors": 1,
    "awkward": 6,
    "mechanical": {
-    "strings": 1279,
+    "strings": 1289,
     "missing": 0,
     "placeholders": 0,
     "identical": 0,
@@ -6684,20 +7289,80 @@
      "hash": "bcf9e5",
      "kind": "OK",
      "note": ""
+    },
+    "S16e5d4": {
+     "english": "Alarm type",
+     "hash": "3ff656",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sc00673": {
+     "english": "Apply to the ticked programs",
+     "hash": "283486",
+     "kind": "OK",
+     "note": ""
+    },
+    "S36f212": {
+     "english": "Delete ALL of your own Drafts that match this filter, on every page?",
+     "hash": "e782f6",
+     "kind": "OK",
+     "note": ""
+    },
+    "Seb0fd2": {
+     "english": "Delete all my Drafts of this filter",
+     "hash": "a1498a",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sc554a1": {
+     "english": "Delete selected Drafts",
+     "hash": "dc154a",
+     "kind": "OK",
+     "note": ""
+    },
+    "S2d8627": {
+     "english": "Delete the ticked Drafts? A deleted Draft is gone; its number is only kept if it was already issued.",
+     "hash": "9de122",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sbda77c": {
+     "english": "Every program names an alarm type. A type left at \"as above\" gets the category chosen above; the next page lets you set the category of single programs or of all ticked ones.",
+     "hash": "51f067",
+     "kind": "OK",
+     "note": ""
+    },
+    "S0af4fc": {
+     "english": "Status category by alarm type (optional)",
+     "hash": "1a3f72",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sd7a322": {
+     "english": "Status category of the ticked programs",
+     "hash": "7247ef",
+     "kind": "OK",
+     "note": ""
+    },
+    "S726d7a": {
+     "english": "as above",
+     "hash": "c0438b",
+     "kind": "OK",
+     "note": ""
     }
    },
-   "checked_at": "2026-10-24"
+   "checked_at": "2026-10-25"
   },
   "gu": {
    "confidence": 84.2,
-   "accuracy": 97.4,
+   "accuracy": 97.5,
    "haircut": 13.0,
    "sample_size": 160,
    "sample_rate": 0.025,
    "errors": 1,
    "awkward": 6,
    "mechanical": {
-    "strings": 1279,
+    "strings": 1289,
     "missing": 0,
     "placeholders": 0,
     "identical": 0,
@@ -7301,12 +7966,72 @@
      "hash": "9bc7e3",
      "kind": "OK",
      "note": ""
+    },
+    "S16e5d4": {
+     "english": "Alarm type",
+     "hash": "a2180f",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sc00673": {
+     "english": "Apply to the ticked programs",
+     "hash": "ce78c9",
+     "kind": "OK",
+     "note": ""
+    },
+    "S36f212": {
+     "english": "Delete ALL of your own Drafts that match this filter, on every page?",
+     "hash": "d6bd58",
+     "kind": "OK",
+     "note": ""
+    },
+    "Seb0fd2": {
+     "english": "Delete all my Drafts of this filter",
+     "hash": "aaabc9",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sc554a1": {
+     "english": "Delete selected Drafts",
+     "hash": "555707",
+     "kind": "OK",
+     "note": ""
+    },
+    "S2d8627": {
+     "english": "Delete the ticked Drafts? A deleted Draft is gone; its number is only kept if it was already issued.",
+     "hash": "fc2c33",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sbda77c": {
+     "english": "Every program names an alarm type. A type left at \"as above\" gets the category chosen above; the next page lets you set the category of single programs or of all ticked ones.",
+     "hash": "53cf23",
+     "kind": "OK",
+     "note": ""
+    },
+    "S0af4fc": {
+     "english": "Status category by alarm type (optional)",
+     "hash": "ee8b01",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sd7a322": {
+     "english": "Status category of the ticked programs",
+     "hash": "e5cc49",
+     "kind": "OK",
+     "note": ""
+    },
+    "S726d7a": {
+     "english": "as above",
+     "hash": "05fe74",
+     "kind": "OK",
+     "note": ""
     }
    },
-   "checked_at": "2026-10-24"
+   "checked_at": "2026-10-25"
   },
   "ur": {
-   "confidence": 84.5,
+   "confidence": 84.6,
    "accuracy": 97.6,
    "haircut": 13.0,
    "sample_size": 160,
@@ -7314,7 +8039,7 @@
    "errors": 1,
    "awkward": 5,
    "mechanical": {
-    "strings": 1279,
+    "strings": 1289,
     "missing": 0,
     "placeholders": 0,
     "identical": 0,
@@ -7910,12 +8635,72 @@
      "hash": "2e9a75",
      "kind": "OK",
      "note": ""
+    },
+    "S16e5d4": {
+     "english": "Alarm type",
+     "hash": "c99f7b",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sc00673": {
+     "english": "Apply to the ticked programs",
+     "hash": "6d93bc",
+     "kind": "OK",
+     "note": ""
+    },
+    "S36f212": {
+     "english": "Delete ALL of your own Drafts that match this filter, on every page?",
+     "hash": "a5dd54",
+     "kind": "OK",
+     "note": ""
+    },
+    "Seb0fd2": {
+     "english": "Delete all my Drafts of this filter",
+     "hash": "c1a69a",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sc554a1": {
+     "english": "Delete selected Drafts",
+     "hash": "b464af",
+     "kind": "OK",
+     "note": ""
+    },
+    "S2d8627": {
+     "english": "Delete the ticked Drafts? A deleted Draft is gone; its number is only kept if it was already issued.",
+     "hash": "f98f72",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sbda77c": {
+     "english": "Every program names an alarm type. A type left at \"as above\" gets the category chosen above; the next page lets you set the category of single programs or of all ticked ones.",
+     "hash": "c8f0b0",
+     "kind": "OK",
+     "note": ""
+    },
+    "S0af4fc": {
+     "english": "Status category by alarm type (optional)",
+     "hash": "a31393",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sd7a322": {
+     "english": "Status category of the ticked programs",
+     "hash": "6c134b",
+     "kind": "OK",
+     "note": ""
+    },
+    "S726d7a": {
+     "english": "as above",
+     "hash": "6f489b",
+     "kind": "OK",
+     "note": ""
     }
    },
-   "checked_at": "2026-10-24"
+   "checked_at": "2026-10-25"
   },
   "kn": {
-   "confidence": 83.5,
+   "confidence": 83.6,
    "accuracy": 97.2,
    "haircut": 13.0,
    "sample_size": 160,
@@ -7923,7 +8708,7 @@
    "errors": 1,
    "awkward": 7,
    "mechanical": {
-    "strings": 1279,
+    "strings": 1289,
     "missing": 0,
     "placeholders": 0,
     "identical": 0,
@@ -8535,9 +9320,69 @@
      "hash": "fcf02b",
      "kind": "OK",
      "note": ""
+    },
+    "S16e5d4": {
+     "english": "Alarm type",
+     "hash": "e89ab3",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sc00673": {
+     "english": "Apply to the ticked programs",
+     "hash": "e9cdee",
+     "kind": "OK",
+     "note": ""
+    },
+    "S36f212": {
+     "english": "Delete ALL of your own Drafts that match this filter, on every page?",
+     "hash": "555b09",
+     "kind": "OK",
+     "note": ""
+    },
+    "Seb0fd2": {
+     "english": "Delete all my Drafts of this filter",
+     "hash": "ffb415",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sc554a1": {
+     "english": "Delete selected Drafts",
+     "hash": "62db31",
+     "kind": "OK",
+     "note": ""
+    },
+    "S2d8627": {
+     "english": "Delete the ticked Drafts? A deleted Draft is gone; its number is only kept if it was already issued.",
+     "hash": "7e24c4",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sbda77c": {
+     "english": "Every program names an alarm type. A type left at \"as above\" gets the category chosen above; the next page lets you set the category of single programs or of all ticked ones.",
+     "hash": "0c18d9",
+     "kind": "OK",
+     "note": ""
+    },
+    "S0af4fc": {
+     "english": "Status category by alarm type (optional)",
+     "hash": "1fa036",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sd7a322": {
+     "english": "Status category of the ticked programs",
+     "hash": "3cd4af",
+     "kind": "OK",
+     "note": ""
+    },
+    "S726d7a": {
+     "english": "as above",
+     "hash": "bb9825",
+     "kind": "OK",
+     "note": ""
     }
    },
-   "checked_at": "2026-10-24"
+   "checked_at": "2026-10-25"
   },
   "ml": {
    "confidence": 83.1,
@@ -8548,7 +9393,7 @@
    "errors": 1,
    "awkward": 5,
    "mechanical": {
-    "strings": 1279,
+    "strings": 1289,
     "missing": 0,
     "placeholders": 0,
     "identical": 0,
@@ -9144,9 +9989,69 @@
      "hash": "0f0c1a",
      "kind": "OK",
      "note": ""
+    },
+    "S16e5d4": {
+     "english": "Alarm type",
+     "hash": "3a0ae6",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sc00673": {
+     "english": "Apply to the ticked programs",
+     "hash": "1becd4",
+     "kind": "OK",
+     "note": ""
+    },
+    "S36f212": {
+     "english": "Delete ALL of your own Drafts that match this filter, on every page?",
+     "hash": "33bdc0",
+     "kind": "OK",
+     "note": ""
+    },
+    "Seb0fd2": {
+     "english": "Delete all my Drafts of this filter",
+     "hash": "f54311",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sc554a1": {
+     "english": "Delete selected Drafts",
+     "hash": "016adf",
+     "kind": "OK",
+     "note": ""
+    },
+    "S2d8627": {
+     "english": "Delete the ticked Drafts? A deleted Draft is gone; its number is only kept if it was already issued.",
+     "hash": "e04ef5",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sbda77c": {
+     "english": "Every program names an alarm type. A type left at \"as above\" gets the category chosen above; the next page lets you set the category of single programs or of all ticked ones.",
+     "hash": "fbd8ae",
+     "kind": "OK",
+     "note": ""
+    },
+    "S0af4fc": {
+     "english": "Status category by alarm type (optional)",
+     "hash": "f41540",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sd7a322": {
+     "english": "Status category of the ticked programs",
+     "hash": "070973",
+     "kind": "OK",
+     "note": ""
+    },
+    "S726d7a": {
+     "english": "as above",
+     "hash": "6e3431",
+     "kind": "OK",
+     "note": ""
     }
    },
-   "checked_at": "2026-10-24"
+   "checked_at": "2026-10-25"
   },
   "pa": {
    "confidence": 82.7,
@@ -9157,7 +10062,7 @@
    "errors": 1,
    "awkward": 6,
    "mechanical": {
-    "strings": 1279,
+    "strings": 1289,
     "missing": 0,
     "placeholders": 0,
     "identical": 0,
@@ -9761,12 +10666,72 @@
      "hash": "cc32e6",
      "kind": "OK",
      "note": ""
+    },
+    "S16e5d4": {
+     "english": "Alarm type",
+     "hash": "6c8ccb",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sc00673": {
+     "english": "Apply to the ticked programs",
+     "hash": "79cbed",
+     "kind": "OK",
+     "note": ""
+    },
+    "S36f212": {
+     "english": "Delete ALL of your own Drafts that match this filter, on every page?",
+     "hash": "4cc273",
+     "kind": "OK",
+     "note": ""
+    },
+    "Seb0fd2": {
+     "english": "Delete all my Drafts of this filter",
+     "hash": "a855cb",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sc554a1": {
+     "english": "Delete selected Drafts",
+     "hash": "12d4bb",
+     "kind": "OK",
+     "note": ""
+    },
+    "S2d8627": {
+     "english": "Delete the ticked Drafts? A deleted Draft is gone; its number is only kept if it was already issued.",
+     "hash": "1444d2",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sbda77c": {
+     "english": "Every program names an alarm type. A type left at \"as above\" gets the category chosen above; the next page lets you set the category of single programs or of all ticked ones.",
+     "hash": "4ce187",
+     "kind": "OK",
+     "note": ""
+    },
+    "S0af4fc": {
+     "english": "Status category by alarm type (optional)",
+     "hash": "1311ad",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sd7a322": {
+     "english": "Status category of the ticked programs",
+     "hash": "56d04f",
+     "kind": "OK",
+     "note": ""
+    },
+    "S726d7a": {
+     "english": "as above",
+     "hash": "e147a2",
+     "kind": "OK",
+     "note": ""
     }
    },
-   "checked_at": "2026-10-24"
+   "checked_at": "2026-10-25"
   },
   "ka": {
-   "confidence": 82.5,
+   "confidence": 82.6,
    "accuracy": 97.7,
    "haircut": 15.0,
    "sample_size": 160,
@@ -9774,7 +10739,7 @@
    "errors": 0,
    "awkward": 7,
    "mechanical": {
-    "strings": 1279,
+    "strings": 1289,
     "missing": 0,
     "placeholders": 0,
     "identical": 0,
@@ -10378,9 +11343,69 @@
      "hash": "63a844",
      "kind": "OK",
      "note": ""
+    },
+    "S16e5d4": {
+     "english": "Alarm type",
+     "hash": "991c61",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sc00673": {
+     "english": "Apply to the ticked programs",
+     "hash": "784ae7",
+     "kind": "OK",
+     "note": ""
+    },
+    "S36f212": {
+     "english": "Delete ALL of your own Drafts that match this filter, on every page?",
+     "hash": "fbd1f6",
+     "kind": "OK",
+     "note": ""
+    },
+    "Seb0fd2": {
+     "english": "Delete all my Drafts of this filter",
+     "hash": "5b39d2",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sc554a1": {
+     "english": "Delete selected Drafts",
+     "hash": "e1e794",
+     "kind": "OK",
+     "note": ""
+    },
+    "S2d8627": {
+     "english": "Delete the ticked Drafts? A deleted Draft is gone; its number is only kept if it was already issued.",
+     "hash": "aedf6c",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sbda77c": {
+     "english": "Every program names an alarm type. A type left at \"as above\" gets the category chosen above; the next page lets you set the category of single programs or of all ticked ones.",
+     "hash": "8f495e",
+     "kind": "OK",
+     "note": ""
+    },
+    "S0af4fc": {
+     "english": "Status category by alarm type (optional)",
+     "hash": "80af62",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sd7a322": {
+     "english": "Status category of the ticked programs",
+     "hash": "7dbc45",
+     "kind": "OK",
+     "note": ""
+    },
+    "S726d7a": {
+     "english": "as above",
+     "hash": "171be7",
+     "kind": "OK",
+     "note": ""
     }
    },
-   "checked_at": "2026-10-24"
+   "checked_at": "2026-10-25"
   },
   "or": {
    "confidence": 78.3,
@@ -10391,7 +11416,7 @@
    "errors": 6,
    "awkward": 4,
    "mechanical": {
-    "strings": 1279,
+    "strings": 1289,
     "missing": 0,
     "placeholders": 0,
     "identical": 0,
@@ -11019,9 +12044,69 @@
      "hash": "76404b",
      "kind": "OK",
      "note": ""
+    },
+    "S16e5d4": {
+     "english": "Alarm type",
+     "hash": "4341af",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sc00673": {
+     "english": "Apply to the ticked programs",
+     "hash": "bf21f6",
+     "kind": "OK",
+     "note": ""
+    },
+    "S36f212": {
+     "english": "Delete ALL of your own Drafts that match this filter, on every page?",
+     "hash": "b50591",
+     "kind": "OK",
+     "note": ""
+    },
+    "Seb0fd2": {
+     "english": "Delete all my Drafts of this filter",
+     "hash": "d372b9",
+     "kind": "A",
+     "note": "'ବିଲୋପ' is formal for delete; an everyday verb may read more natural"
+    },
+    "Sc554a1": {
+     "english": "Delete selected Drafts",
+     "hash": "076e38",
+     "kind": "A",
+     "note": "'ବିଲୋପ' is formal for delete; an everyday verb such as 'ଲିଭାନ୍ତୁ' may read more natural"
+    },
+    "S2d8627": {
+     "english": "Delete the ticked Drafts? A deleted Draft is gone; its number is only kept if it was already issued.",
+     "hash": "247aaf",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sbda77c": {
+     "english": "Every program names an alarm type. A type left at \"as above\" gets the category chosen above; the next page lets you set the category of single programs or of all ticked ones.",
+     "hash": "8109e2",
+     "kind": "OK",
+     "note": ""
+    },
+    "S0af4fc": {
+     "english": "Status category by alarm type (optional)",
+     "hash": "888023",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sd7a322": {
+     "english": "Status category of the ticked programs",
+     "hash": "81cca7",
+     "kind": "OK",
+     "note": ""
+    },
+    "S726d7a": {
+     "english": "as above",
+     "hash": "79d607",
+     "kind": "OK",
+     "note": ""
     }
    },
-   "checked_at": "2026-10-24"
+   "checked_at": "2026-10-25"
   }
  }
 }

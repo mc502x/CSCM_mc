@@ -266,31 +266,31 @@ A notice is sent once per change and person; a failing notice never undoes the c
 
 <!-- translations:start -->
 
-The interface has **1280 strings** (every text a template wraps in `_()`, the role names and the help texts). English is the source; the other languages are listed below. A string without a translation is shown in English.
+The interface has **1290 strings** (every text a template wraps in `_()`, the role names and the help texts). English is the source; the other languages are listed below. A string without a translation is shown in English.
 
 ### 9.1 Coverage
 
 | Language | Code | Direction | Translated | Share | Pre-check confidence | Fingerprint |
 |---|---|---|---|---|---|---|
 | GB English 🇬🇧 | `en` | ltr | source | — | — | — |
-| DE Deutsch 🇩🇪 (German) | `de` | ltr | 1280 | 100 % | <span style="background:#7fc561;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>94 %</b></span> | `cc7560ad60e1` |
-| FR Français 🇫🇷 (French) | `fr` | ltr | 1279 | 99 % | <span style="background:#7fc561;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>95 %</b></span> | `8d5530487ba5` |
-| IN हिन्दी 🇮🇳 (Hindi) | `hi` | ltr | 1279 | 99 % | <span style="background:#9ccf5c;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>88 %</b></span> | `7c352271016e` |
-| SA العربية 🇸🇦 (Arabic) | `ar` | rtl | 1279 | 99 % | <span style="background:#9ccf5c;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>88 %</b></span> | `de02b0586215` |
-| IN বাংলা 🇮🇳 (Bengali) | `bn` | ltr | 1279 | 99 % | <span style="background:#9ccf5c;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>87 %</b></span> | `220b2458cdcb` |
-| IN मराठी 🇮🇳 (Marathi) | `mr` | ltr | 1279 | 99 % | <span style="background:#9ccf5c;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>86 %</b></span> | `0f937b252ad9` |
-| IN తెలుగు 🇮🇳 (Telugu) | `te` | ltr | 1279 | 99 % | <span style="background:#9ccf5c;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>85 %</b></span> | `90512c76293e` |
-| IN தமிழ் 🇮🇳 (Tamil) | `ta` | ltr | 1279 | 99 % | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>84 %</b></span> | `83416d96b66b` |
-| IN ગુજરાતી 🇮🇳 (Gujarati) | `gu` | ltr | 1279 | 99 % | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>84 %</b></span> | `5145d3935f1b` |
-| PK اردو 🇵🇰 (Urdu) | `ur` | rtl | 1279 | 99 % | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>84 %</b></span> | `cd6cd4dd9ec2` |
-| IN ಕನ್ನಡ 🇮🇳 (Kannada) | `kn` | ltr | 1279 | 99 % | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>84 %</b></span> | `434da363a8fa` |
-| IN ଓଡ଼ିଆ 🇮🇳 (Odia) | `or` | ltr | 1279 | 99 % | <span style="background:#d9e050;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>78 %</b></span> | `63515fc04444` |
-| IN മലയാളം 🇮🇳 (Malayalam) | `ml` | ltr | 1279 | 99 % | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>83 %</b></span> | `2e2018887892` |
-| IN ਪੰਜਾਬੀ 🇮🇳 (Punjabi) | `pa` | ltr | 1279 | 99 % | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>83 %</b></span> | `e977c980ba84` |
-| ES Español 🇪🇸 (Spanish) | `es` | ltr | 1279 | 99 % | <span style="background:#7fc561;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>94 %</b></span> | `e54d745c155a` |
-| IT Italiano 🇮🇹 (Italian) | `it` | ltr | 1279 | 99 % | <span style="background:#7fc561;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>94 %</b></span> | `3570613bf48d` |
-| DK Dansk 🇩🇰 (Danish) | `da` | ltr | 1279 | 99 % | <span style="background:#7fc561;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>92 %</b></span> | `bf3c08ae6c80` |
-| GE ქართული 🇬🇪 (Georgian) | `ka` | ltr | 1279 | 99 % | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>82 %</b></span> | `5857d0c74620` |
+| DE Deutsch 🇩🇪 (German) | `de` | ltr | 1290 | 100 % | <span style="background:#7fc561;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>94 %</b></span> | `435264f5ff90` |
+| FR Français 🇫🇷 (French) | `fr` | ltr | 1289 | 99 % | <span style="background:#7fc561;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>95 %</b></span> | `6e27e92ee68e` |
+| IN हिन्दी 🇮🇳 (Hindi) | `hi` | ltr | 1289 | 99 % | <span style="background:#9ccf5c;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>88 %</b></span> | `46601abb9642` |
+| SA العربية 🇸🇦 (Arabic) | `ar` | rtl | 1289 | 99 % | <span style="background:#9ccf5c;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>88 %</b></span> | `4ce88457394c` |
+| IN বাংলা 🇮🇳 (Bengali) | `bn` | ltr | 1289 | 99 % | <span style="background:#9ccf5c;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>87 %</b></span> | `fc1a7847accc` |
+| IN मराठी 🇮🇳 (Marathi) | `mr` | ltr | 1289 | 99 % | <span style="background:#9ccf5c;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>86 %</b></span> | `3874c1b8da23` |
+| IN తెలుగు 🇮🇳 (Telugu) | `te` | ltr | 1289 | 99 % | <span style="background:#9ccf5c;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>85 %</b></span> | `a7a350bccdd4` |
+| IN தமிழ் 🇮🇳 (Tamil) | `ta` | ltr | 1289 | 99 % | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>84 %</b></span> | `c11c6dc30773` |
+| IN ગુજરાતી 🇮🇳 (Gujarati) | `gu` | ltr | 1289 | 99 % | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>84 %</b></span> | `4cc3148f3a89` |
+| PK اردو 🇵🇰 (Urdu) | `ur` | rtl | 1289 | 99 % | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>85 %</b></span> | `43967ee7ab3e` |
+| IN ಕನ್ನಡ 🇮🇳 (Kannada) | `kn` | ltr | 1289 | 99 % | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>84 %</b></span> | `3881b474072f` |
+| IN ଓଡ଼ିଆ 🇮🇳 (Odia) | `or` | ltr | 1289 | 99 % | <span style="background:#d9e050;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>78 %</b></span> | `37150043f101` |
+| IN മലയാളം 🇮🇳 (Malayalam) | `ml` | ltr | 1289 | 99 % | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>83 %</b></span> | `40aa3b0d939d` |
+| IN ਪੰਜਾਬੀ 🇮🇳 (Punjabi) | `pa` | ltr | 1289 | 99 % | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>83 %</b></span> | `04c5cf98be5d` |
+| ES Español 🇪🇸 (Spanish) | `es` | ltr | 1289 | 99 % | <span style="background:#7fc561;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>94 %</b></span> | `a75702e7154b` |
+| IT Italiano 🇮🇹 (Italian) | `it` | ltr | 1289 | 99 % | <span style="background:#7fc561;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>94 %</b></span> | `bd116dc2f1d0` |
+| DK Dansk 🇩🇰 (Danish) | `da` | ltr | 1289 | 99 % | <span style="background:#7fc561;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>92 %</b></span> | `aee63126eb09` |
+| GE ქართული 🇬🇪 (Georgian) | `ka` | ltr | 1289 | 99 % | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>83 %</b></span> | `e2bd5498c190` |
 
 The pre-check confidence is the estimate of section 8c - the share of strings a native speaker is expected to accept unchanged, by an AI checker and not by a native speaker; red is 50 % or less, green above 95 %.
 
@@ -309,7 +309,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | IN తెలుగు 🇮🇳 | 0 | 5 | 4 | 13 | <span style="background:#9ccf5c;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>85 %</b></span> |
 | IN தமிழ் 🇮🇳 | 1 | 6 | 7 | 13 | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>84 %</b></span> |
 | IN ગુજરાતી 🇮🇳 | 1 | 6 | 7 | 13 | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>84 %</b></span> |
-| PK اردو 🇵🇰 | 1 | 5 | 2 | 13 | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>84 %</b></span> |
+| PK اردو 🇵🇰 | 1 | 5 | 2 | 13 | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>85 %</b></span> |
 | IN ಕನ್ನಡ 🇮🇳 | 1 | 7 | 16 | 13 | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>84 %</b></span> |
 | IN ଓଡ଼ିଆ 🇮🇳 | 6 | 4 | 20 | 16 | <span style="background:#d9e050;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>78 %</b></span> |
 | IN മലയാളം 🇮🇳 | 1 | 5 | 17 | 14 | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>83 %</b></span> |
@@ -317,7 +317,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | ES Español 🇪🇸 | 0 | 6 | 6 | 4 | <span style="background:#7fc561;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>94 %</b></span> |
 | IT Italiano 🇮🇹 | 0 | 5 | 5 | 4 | <span style="background:#7fc561;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>94 %</b></span> |
 | DK Dansk 🇩🇰 | 1 | 3 | 6 | 6 | <span style="background:#7fc561;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>92 %</b></span> |
-| GE ქართული 🇬🇪 | 0 | 7 | 4 | 15 | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>82 %</b></span> |
+| GE ქართული 🇬🇪 | 0 | 7 | 4 | 15 | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>83 %</b></span> |
 
 The wrong and awkward counts are findings in the sample of 160 strings, the same strings in every language. The strings that were flagged, for the native speaker to look at first:
 
@@ -438,7 +438,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 
 ### 9.2 DE Deutsch 🇩🇪 — German
 
-1280 of 1280 strings translated; direction left to right.
+1290 of 1290 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -529,7 +529,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sb1fe0b` | builder | Release Builder | Release-Assistent |
 | `S5997c5` | builder | Save Candidate Set | Kandidatenauswahl speichern |
 | `Scc8a3c` | builder | Save targets | Ziele speichern |
-| `S913aff` | builder, detail, mine | Select all | Alle auswählen |
+| `S913aff` | builder, detail, list | Select all | Alle auswählen |
 | `S85e466` | builder | Select the Approved, non-sandbox revisions to include, then Save. Publishing is immutable — a correction requires a new Release. | Wählen Sie die freigegebenen Revisionen (ohne Sandbox) aus und speichern Sie. Eine Veröffentlichung ist unveränderlich – eine Korrektur erfordert ein neues Release. |
 | `Sd64b6e` | builder, detail | Target software versions | Ziel-Software-Versionen |
 | `S6ba0fc` | builder | View Release | Release ansehen |
@@ -1182,6 +1182,10 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S162a45` | list, menu | Change Sets | Änderungspakete |
 | `S9e895f` | list | Change sets | Änderungspakete |
 | `Scf723c` | list | Columns | Spalten |
+| `Seb0fd2` | list | Delete all my Drafts of this filter | Alle meine Entwürfe dieses Filters löschen |
+| `S36f212` | list | Delete ALL of your own Drafts that match this filter, on every page? | ALLE Ihre eigenen Entwürfe löschen, die zu diesem Filter passen, auf jeder Seite? |
+| `Sc554a1` | list | Delete selected Drafts | Gewählte Entwürfe löschen |
+| `S2d8627` | list | Delete the ticked Drafts? A deleted Draft is gone; its number is only kept if it was already issued. | Die markierten Entwürfe löschen? Ein gelöschter Entwurf ist weg; seine Nummer bleibt nur erhalten, wenn sie schon vergeben war. |
 | `S759686` | list | Filter status codes | Statuscodes filtern |
 | `Sfd327d` | list | Identifier, title, description | Kennung, Titel, Beschreibung |
 | `S44d25b` | list | Items | Einträge |
@@ -1200,6 +1204,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S1db747` | list | Save search | Suche speichern |
 | `Sff86e9` | list | Save the current filters as | Aktuelle Filter speichern als |
 | `Sed1d84` | list | Saved searches | Gespeicherte Suchen |
+| `S859822` | list, mine | Select | Auswählen |
 | `S7f5583` | list, menu | Status Codes | Statuscodes |
 | `S20bff1` | list | Status codes | Statuscodes |
 | `Se90eb0` | list | Turbine Platform | Anlagenplattform |
@@ -1467,7 +1472,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd72b71` | message: user_service | That e-mail address or username is already in use. | Diese E-Mail-Adresse oder dieser Benutzername wird bereits verwendet. |
 | `Sd54517` | message: user_service, user_detail | You cannot delete your own account. | Sie können Ihr eigenes Konto nicht löschen. |
 | `S6a8896` | mine | Review & sign off | Prüfen & freigeben |
-| `S859822` | mine | Select | Auswählen |
 | `S50a279` | mine | Show all | Alle anzeigen |
 | `Se48471` | mine | Showing only Drafts created by Import Job #%(id)s. | Es werden nur Entwürfe angezeigt, die vom Importauftrag #%(id)s erzeugt wurden. |
 | `Sff9480` | mine | Sign-Off Requests For You | Freigabeanfragen an Sie |
@@ -1558,8 +1562,11 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd97d1e` | software_versions | Show | Anzeigen |
 | `S42ea2e` | software_versions | Software Versions | Software-Versionen |
 | `S3bd89c` | software_versions | Which codes exist in which software version | Welche Codes in welcher Software-Version existieren |
+| `S16e5d4` | st_new, st_preview | Alarm type | Alarmtyp |
+| `S726d7a` | st_new | as above | wie oben |
 | `Sb149ca` | st_new | Detect: a number from 10000 up is a Hub Controller program | Erkennen: Eine Nummer ab 10000 ist ein Programm der Nabensteuerung |
 | `S7d06d0` | st_new | Every imported program becomes an ordinary Draft with the number it carries reserved. It still needs Cross-Domain Sign-Off, dual review and Chief Engineer approval before Release, and all Drafts of one import share a change set. | Jedes importierte Programm wird ein gewöhnlicher Entwurf, dessen Nummer reserviert ist. Er braucht vor der Veröffentlichung weiterhin die fachübergreifende Freigabe, die doppelte Prüfung und die Genehmigung des Chefingenieurs; alle Entwürfe eines Imports gehören zu einem Änderungspaket. |
+| `Sbda77c` | st_new | Every program names an alarm type. A type left at "as above" gets the category chosen above; the next page lets you set the category of single programs or of all ticked ones. | Jedes Programm nennt einen Alarmtyp. Ein Typ mit „wie oben“ erhält die oben gewählte Kategorie; auf der nächsten Seite können Sie die Kategorie einzelner oder aller markierten Programme setzen. |
 | `S3b9e43` | st_new | Hub Controller (legacy numbers, mapped to the new ones) | Nabensteuerung (Altnummern, auf die neuen abgebildet) |
 | `Sd7333f` | st_new | Import status codes from .st files | Statuscodes aus .st-Dateien importieren |
 | `S6640a6` | st_new | New number of Hub Controller programs | Neue Nummer der Programme der Nabensteuerung |
@@ -1568,12 +1575,14 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd99e2a` | st_new | Proposal 1: five-digit numbers (11000 and up) | Vorschlag 1: fünfstellige Nummern (ab 11000) |
 | `S2744b0` | st_new | Proposal 2: inside the Main Controller scheme | Vorschlag 2: innerhalb des Schemas der Hauptsteuerung |
 | `S67640d` | st_new | Read files and preview | Dateien lesen und Vorschau anzeigen |
+| `S0af4fc` | st_new | Status category by alarm type (optional) | Statuskategorie nach Alarmtyp (optional) |
 | `S234237` | st_new | Status category of the new codes | Statuskategorie der neuen Codes |
 | `Sde7a5b` | st_new | The program files do not carry a category; you can change it in each Draft. | Die Programmdateien enthalten keine Kategorie; Sie können sie in jedem Entwurf ändern. |
 | `S8f4c21` | st_new | Turbine platforms | Turbinenplattformen |
 | `S9ad4d4` | st_new | Upload the generated StCd_<n>.st programs — several files at once, a whole folder, or one ZIP. Nothing is created yet: the next page lists every program so you can tick the ones to import. | Laden Sie die erzeugten StCd_<n>.st-Programme hoch — mehrere Dateien auf einmal, einen ganzen Ordner oder ein ZIP. Es wird noch nichts angelegt: Die nächste Seite listet jedes Programm auf, damit Sie die zu importierenden ankreuzen können. |
 | `S2693e5` | st_preview | All Drafts of this import join one change set, so they can be reviewed and decided together. | Alle Entwürfe dieses Imports kommen in ein Änderungspaket, damit sie gemeinsam geprüft und entschieden werden können. |
 | `Scbc694` | st_preview | already in the catalogue | bereits im Katalog |
+| `Sc00673` | st_preview | Apply to the ticked programs | Auf die markierten Programme anwenden |
 | `Sdf88b8` | st_preview | blocked | gesperrt |
 | `S6f7703` | st_preview | Changed and withdrawn programs are not ticked: tick the ones you want to update, revise or restore. | Geänderte und zurückgezogene Programme sind nicht angekreuzt: Kreuzen Sie die an, die aktualisiert, überarbeitet oder wiederhergestellt werden sollen. |
 | `S78bb8b` | st_preview | Create Drafts for the ticked programs | Entwürfe für die angekreuzten Programme anlegen |
@@ -1591,6 +1600,8 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se58289` | st_preview | Programs found in the uploaded files | In den hochgeladenen Dateien gefundene Programme |
 | `S75c053` | st_preview, workbench | ready | bereit |
 | `S0723bf` | st_preview | Select all programs that are ready | Alle bereiten Programme auswählen |
+| `Sae12bc` | st_preview, workbench | Status category | Statuskategorie |
+| `Sd7a322` | st_preview | Status category of the ticked programs | Statuskategorie der markierten Programme |
 | `S1a767a` | st_preview | updates the open Draft | aktualisiert den offenen Entwurf |
 | `S02499f` | st_preview | withdrawn | zurückgezogen |
 | `Sf0c3cf` | st_preview | without a legacy number | ohne Altnummer |
@@ -1712,7 +1723,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sa58dac` | workbench | Set values on the Drafts | Werte der Entwürfe setzen |
 | `Sa443bb` | workbench | Sign off the Drafts | Entwürfe freigeben |
 | `S53f47f` | workbench | Sign-off pending | Freigabe ausstehend |
-| `Sae12bc` | workbench | Status category | Statuskategorie |
 | `Sdc416e` | workbench | Step | Schritt |
 | `Sf7710d` | workbench | Submit for review | Zur Prüfung einreichen |
 | `Sa45adc` | workbench | Submit the Drafts | Entwürfe einreichen |
@@ -1725,7 +1735,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 
 ### 9.3 FR Français 🇫🇷 — French
 
-1279 of 1280 strings translated; direction left to right.
+1289 of 1290 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -1815,7 +1825,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sb1fe0b` | builder | Release Builder | Constructeur de version |
 | `S5997c5` | builder | Save Candidate Set | Enregistrer l'ensemble candidat |
 | `Scc8a3c` | builder | Save targets | Enregistrer les cibles |
-| `S913aff` | builder, detail, mine | Select all | Tout sélectionner |
+| `S913aff` | builder, detail, list | Select all | Tout sélectionner |
 | `S85e466` | builder | Select the Approved, non-sandbox revisions to include, then Save. Publishing is immutable — a correction requires a new Release. | Sélectionnez les révisions approuvées, hors bac à sable, à inclure, puis enregistrez. La publication est irréversible — une correction exige une nouvelle version. |
 | `Sd64b6e` | builder, detail | Target software versions | Versions cibles du logiciel |
 | `S6ba0fc` | builder | View Release | Voir la version |
@@ -2468,6 +2478,10 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S162a45` | list, menu | Change Sets | Lots de modifications |
 | `S9e895f` | list | Change sets | Lots de modifications |
 | `Scf723c` | list | Columns | Colonnes |
+| `Seb0fd2` | list | Delete all my Drafts of this filter | Supprimer tous mes brouillons de ce filtre |
+| `S36f212` | list | Delete ALL of your own Drafts that match this filter, on every page? | Supprimer TOUS vos propres brouillons qui correspondent à ce filtre, sur toutes les pages ? |
+| `Sc554a1` | list | Delete selected Drafts | Supprimer les brouillons sélectionnés |
+| `S2d8627` | list | Delete the ticked Drafts? A deleted Draft is gone; its number is only kept if it was already issued. | Supprimer les brouillons cochés ? Un brouillon supprimé est perdu ; son numéro n'est conservé que s'il avait déjà été attribué. |
 | `S759686` | list | Filter status codes | Filtrer les codes de statut |
 | `Sfd327d` | list | Identifier, title, description | Identifiant, titre, description |
 | `S44d25b` | list | Items | Éléments |
@@ -2486,6 +2500,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S1db747` | list | Save search | Enregistrer la recherche |
 | `Sff86e9` | list | Save the current filters as | Enregistrer les filtres actuels sous |
 | `Sed1d84` | list | Saved searches | Recherches enregistrées |
+| `S859822` | list, mine | Select | Sélectionner |
 | `S7f5583` | list, menu | Status Codes | Codes de statut |
 | `S20bff1` | list | Status codes | Codes de statut |
 | `Se90eb0` | list | Turbine Platform | Plateforme d'éolienne |
@@ -2753,7 +2768,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd72b71` | message: user_service | That e-mail address or username is already in use. | Cette adresse e-mail ou ce nom d'utilisateur est déjà utilisé. |
 | `Sd54517` | message: user_service, user_detail | You cannot delete your own account. | Vous ne pouvez pas supprimer votre propre compte. |
 | `S6a8896` | mine | Review & sign off | Relire et valider |
-| `S859822` | mine | Select | Sélectionner |
 | `S50a279` | mine | Show all | Tout afficher |
 | `Se48471` | mine | Showing only Drafts created by Import Job #%(id)s. | Seuls les brouillons créés par la tâche d'import n° %(id)s sont affichés. |
 | `Sff9480` | mine | Sign-Off Requests For You | Demandes de validation à votre intention |
@@ -2844,8 +2858,11 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd97d1e` | software_versions | Show | Afficher |
 | `S42ea2e` | software_versions | Software Versions | Versions du logiciel |
 | `S3bd89c` | software_versions | Which codes exist in which software version | Quels codes existent dans quelle version du logiciel |
+| `S16e5d4` | st_new, st_preview | Alarm type | Type d'alarme |
+| `S726d7a` | st_new | as above | comme ci-dessus |
 | `Sb149ca` | st_new | Detect: a number from 10000 up is a Hub Controller program | Détecter : un numéro à partir de 10000 est un programme du contrôleur de moyeu |
 | `S7d06d0` | st_new | Every imported program becomes an ordinary Draft with the number it carries reserved. It still needs Cross-Domain Sign-Off, dual review and Chief Engineer approval before Release, and all Drafts of one import share a change set. | Chaque programme importé devient un brouillon ordinaire dont le numéro qu'il porte est réservé. Il exige encore la validation inter-domaines, la double relecture et l'approbation de l'ingénieur en chef avant publication, et tous les brouillons d'un même import partagent un lot de modifications. |
+| `Sbda77c` | st_new | Every program names an alarm type. A type left at "as above" gets the category chosen above; the next page lets you set the category of single programs or of all ticked ones. | Chaque programme indique un type d'alarme. Un type laissé sur « comme ci-dessus » reçoit la catégorie choisie plus haut ; la page suivante permet de définir la catégorie de programmes isolés ou de tous ceux qui sont cochés. |
 | `S3b9e43` | st_new | Hub Controller (legacy numbers, mapped to the new ones) | Contrôleur de moyeu (anciens numéros, mis en correspondance avec les nouveaux) |
 | `Sd7333f` | st_new | Import status codes from .st files | Importer des codes de statut depuis des fichiers .st |
 | `S6640a6` | st_new | New number of Hub Controller programs | Nouveau numéro des programmes du contrôleur de moyeu |
@@ -2854,12 +2871,14 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd99e2a` | st_new | Proposal 1: five-digit numbers (11000 and up) | Proposition 1 : numéros à cinq chiffres (à partir de 11000) |
 | `S2744b0` | st_new | Proposal 2: inside the Main Controller scheme | Proposition 2 : dans le schéma du contrôleur principal |
 | `S67640d` | st_new | Read files and preview | Lire les fichiers et afficher l'aperçu |
+| `S0af4fc` | st_new | Status category by alarm type (optional) | Catégorie de statut par type d'alarme (facultatif) |
 | `S234237` | st_new | Status category of the new codes | Catégorie de statut des nouveaux codes |
 | `Sde7a5b` | st_new | The program files do not carry a category; you can change it in each Draft. | Les fichiers de programme ne portent pas de catégorie ; vous pouvez la modifier dans chaque brouillon. |
 | `S8f4c21` | st_new | Turbine platforms | Plateformes d'éolienne |
 | `S9ad4d4` | st_new | Upload the generated StCd_<n>.st programs — several files at once, a whole folder, or one ZIP. Nothing is created yet: the next page lists every program so you can tick the ones to import. | Téléversez les programmes StCd_<n>.st générés — plusieurs fichiers à la fois, un dossier entier ou un seul ZIP. Rien n'est encore créé : la page suivante liste chaque programme pour que vous cochiez ceux à importer. |
 | `S2693e5` | st_preview | All Drafts of this import join one change set, so they can be reviewed and decided together. | Tous les brouillons de cet import rejoignent un même lot de modifications, afin d'être relus et décidés ensemble. |
 | `Scbc694` | st_preview | already in the catalogue | déjà dans le catalogue |
+| `Sc00673` | st_preview | Apply to the ticked programs | Appliquer aux programmes cochés |
 | `Sdf88b8` | st_preview | blocked | bloqués |
 | `S6f7703` | st_preview | Changed and withdrawn programs are not ticked: tick the ones you want to update, revise or restore. | Les programmes modifiés et retirés ne sont pas cochés : cochez ceux que vous voulez mettre à jour, réviser ou rétablir. |
 | `S78bb8b` | st_preview | Create Drafts for the ticked programs | Créer des brouillons pour les programmes cochés |
@@ -2877,6 +2896,8 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se58289` | st_preview | Programs found in the uploaded files | Programmes trouvés dans les fichiers téléversés |
 | `S75c053` | st_preview, workbench | ready | prêts |
 | `S0723bf` | st_preview | Select all programs that are ready | Sélectionner tous les programmes prêts |
+| `Sae12bc` | st_preview, workbench | Status category | Catégorie de statut |
+| `Sd7a322` | st_preview | Status category of the ticked programs | Catégorie de statut des programmes cochés |
 | `S1a767a` | st_preview | updates the open Draft | met à jour le brouillon ouvert |
 | `S02499f` | st_preview | withdrawn | retirés |
 | `Sf0c3cf` | st_preview | without a legacy number | sans ancien numéro |
@@ -2998,7 +3019,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sa58dac` | workbench | Set values on the Drafts | Définir des valeurs sur les brouillons |
 | `Sa443bb` | workbench | Sign off the Drafts | Valider les brouillons |
 | `S53f47f` | workbench | Sign-off pending | Validation en attente |
-| `Sae12bc` | workbench | Status category | Catégorie de statut |
 | `Sdc416e` | workbench | Step | Étape |
 | `Sf7710d` | workbench | Submit for review | Soumettre pour relecture |
 | `Sa45adc` | workbench | Submit the Drafts | Soumettre les brouillons |
@@ -3011,7 +3031,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 
 ### 9.4 IN हिन्दी 🇮🇳 — Hindi
 
-1279 of 1280 strings translated; direction left to right.
+1289 of 1290 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -3101,7 +3121,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sb1fe0b` | builder | Release Builder | रिलीज़ बिल्डर |
 | `S5997c5` | builder | Save Candidate Set | उम्मीदवार समुच्चय सहेजें |
 | `Scc8a3c` | builder | Save targets | लक्ष्य सहेजें |
-| `S913aff` | builder, detail, mine | Select all | सभी चुनें |
+| `S913aff` | builder, detail, list | Select all | सभी चुनें |
 | `S85e466` | builder | Select the Approved, non-sandbox revisions to include, then Save. Publishing is immutable — a correction requires a new Release. | शामिल करने के लिए अनुमोदित, गैर-सैंडबॉक्स संशोधन चुनें, फिर सहेजें। प्रकाशन अपरिवर्तनीय है — सुधार के लिए नई रिलीज़ चाहिए। |
 | `Sd64b6e` | builder, detail | Target software versions | लक्षित सॉफ़्टवेयर संस्करण |
 | `S6ba0fc` | builder | View Release | रिलीज़ देखें |
@@ -3754,6 +3774,10 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S162a45` | list, menu | Change Sets | परिवर्तन समूह |
 | `S9e895f` | list | Change sets | परिवर्तन समूह |
 | `Scf723c` | list | Columns | स्तंभ |
+| `Seb0fd2` | list | Delete all my Drafts of this filter | इस फ़िल्टर के मेरे सभी मसौदे हटाएँ |
+| `S36f212` | list | Delete ALL of your own Drafts that match this filter, on every page? | इस फ़िल्टर से मेल खाने वाले अपने सभी मसौदे, हर पृष्ठ पर, हटा दें? |
+| `Sc554a1` | list | Delete selected Drafts | चयनित मसौदे हटाएँ |
+| `S2d8627` | list | Delete the ticked Drafts? A deleted Draft is gone; its number is only kept if it was already issued. | चिह्नित मसौदे हटाएँ? हटाया गया मसौदा चला जाता है; उसका नंबर तभी सुरक्षित रहता है जब वह पहले ही जारी हो चुका हो। |
 | `S759686` | list | Filter status codes | स्थिति कोड फ़िल्टर करें |
 | `Sfd327d` | list | Identifier, title, description | पहचानकर्ता, शीर्षक, विवरण |
 | `S44d25b` | list | Items | आइटम |
@@ -3772,6 +3796,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S1db747` | list | Save search | खोज सहेजें |
 | `Sff86e9` | list | Save the current filters as | वर्तमान फ़िल्टर इस नाम से सहेजें |
 | `Sed1d84` | list | Saved searches | सहेजी गई खोजें |
+| `S859822` | list, mine | Select | चुनें |
 | `S7f5583` | list, menu | Status Codes | स्थिति कोड |
 | `S20bff1` | list | Status codes | स्थिति कोड |
 | `Se90eb0` | list | Turbine Platform | टर्बाइन प्लेटफ़ॉर्म |
@@ -4039,7 +4064,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd72b71` | message: user_service | That e-mail address or username is already in use. | यह ई-मेल पता या उपयोगकर्ता नाम पहले से उपयोग में है। |
 | `Sd54517` | message: user_service, user_detail | You cannot delete your own account. | आप अपना खाता नहीं हटा सकते। |
 | `S6a8896` | mine | Review & sign off | समीक्षा करें और साइन ऑफ करें |
-| `S859822` | mine | Select | चुनें |
 | `S50a279` | mine | Show all | सभी दिखाएँ |
 | `Se48471` | mine | Showing only Drafts created by Import Job #%(id)s. | केवल आयात कार्य #%(id)s से बने मसौदे दिखाए जा रहे हैं। |
 | `Sff9480` | mine | Sign-Off Requests For You | आपके लिए साइन-ऑफ अनुरोध |
@@ -4130,8 +4154,11 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd97d1e` | software_versions | Show | दिखाएँ |
 | `S42ea2e` | software_versions | Software Versions | सॉफ़्टवेयर संस्करण |
 | `S3bd89c` | software_versions | Which codes exist in which software version | कौन-से कोड किस सॉफ़्टवेयर संस्करण में हैं |
+| `S16e5d4` | st_new, st_preview | Alarm type | अलार्म प्रकार |
+| `S726d7a` | st_new | as above | ऊपर के अनुसार |
 | `Sb149ca` | st_new | Detect: a number from 10000 up is a Hub Controller program | पहचानें: 10000 से ऊपर की संख्या हब नियंत्रक प्रोग्राम है |
 | `S7d06d0` | st_new | Every imported program becomes an ordinary Draft with the number it carries reserved. It still needs Cross-Domain Sign-Off, dual review and Chief Engineer approval before Release, and all Drafts of one import share a change set. | हर आयात किया गया प्रोग्राम एक सामान्य मसौदा बनता है जिसमें उसका अपना नंबर आरक्षित रहता है। रिलीज़ से पहले उसे अंतर-डोमेन साइन-ऑफ, दोहरी समीक्षा और मुख्य अभियंता अनुमोदन फिर भी चाहिए, और एक आयात के सभी मसौदे एक परिवर्तन समुच्चय साझा करते हैं। |
+| `Sbda77c` | st_new | Every program names an alarm type. A type left at "as above" gets the category chosen above; the next page lets you set the category of single programs or of all ticked ones. | हर प्रोग्राम एक अलार्म प्रकार बताता है। "ऊपर के अनुसार" पर छोड़े गए प्रकार को ऊपर चुनी गई श्रेणी मिलती है; अगले पृष्ठ पर आप अलग-अलग प्रोग्रामों या सभी चिह्नित प्रोग्रामों की श्रेणी तय कर सकते हैं। |
 | `S3b9e43` | st_new | Hub Controller (legacy numbers, mapped to the new ones) | हब नियंत्रक (पुराने नंबर, नए नंबरों से मैप किए गए) |
 | `Sd7333f` | st_new | Import status codes from .st files | .st फ़ाइलों से स्थिति कोड आयात करें |
 | `S6640a6` | st_new | New number of Hub Controller programs | हब नियंत्रक प्रोग्रामों का नया नंबर |
@@ -4140,12 +4167,14 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd99e2a` | st_new | Proposal 1: five-digit numbers (11000 and up) | प्रस्ताव 1: पाँच अंकों के नंबर (11000 से) |
 | `S2744b0` | st_new | Proposal 2: inside the Main Controller scheme | प्रस्ताव 2: मुख्य नियंत्रक योजना के भीतर |
 | `S67640d` | st_new | Read files and preview | फ़ाइलें पढ़ें और पूर्वावलोकन देखें |
+| `S0af4fc` | st_new | Status category by alarm type (optional) | अलार्म प्रकार के अनुसार स्थिति श्रेणी (वैकल्पिक) |
 | `S234237` | st_new | Status category of the new codes | नए कोड की स्थिति श्रेणी |
 | `Sde7a5b` | st_new | The program files do not carry a category; you can change it in each Draft. | प्रोग्राम फ़ाइलों में श्रेणी नहीं होती; आप उसे हर मसौदे में बदल सकते हैं। |
 | `S8f4c21` | st_new | Turbine platforms | टर्बाइन प्लेटफ़ॉर्म |
 | `S9ad4d4` | st_new | Upload the generated StCd_<n>.st programs — several files at once, a whole folder, or one ZIP. Nothing is created yet: the next page lists every program so you can tick the ones to import. | बनाए गए StCd_<n>.st प्रोग्राम अपलोड करें — एक साथ कई फ़ाइलें, पूरा फ़ोल्डर या एक ZIP। अभी कुछ नहीं बनता: अगला पृष्ठ हर प्रोग्राम की सूची देता है ताकि आप आयात करने वालों पर निशान लगा सकें। |
 | `S2693e5` | st_preview | All Drafts of this import join one change set, so they can be reviewed and decided together. | इस आयात के सभी मसौदे एक परिवर्तन समुच्चय में जुड़ते हैं, ताकि उनकी साथ-साथ समीक्षा और निर्णय हो सके। |
 | `Scbc694` | st_preview | already in the catalogue | कैटलॉग में पहले से |
+| `Sc00673` | st_preview | Apply to the ticked programs | चिह्नित प्रोग्रामों पर लागू करें |
 | `Sdf88b8` | st_preview | blocked | अवरुद्ध |
 | `S6f7703` | st_preview | Changed and withdrawn programs are not ticked: tick the ones you want to update, revise or restore. | बदले हुए और वापस लिए गए प्रोग्राम चिह्नित नहीं होते: जिन्हें अद्यतन, संशोधित या बहाल करना चाहते हैं उन पर निशान लगाएँ। |
 | `S78bb8b` | st_preview | Create Drafts for the ticked programs | चिह्नित प्रोग्रामों के लिए मसौदे बनाएँ |
@@ -4163,6 +4192,8 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se58289` | st_preview | Programs found in the uploaded files | अपलोड की गई फ़ाइलों में मिले प्रोग्राम |
 | `S75c053` | st_preview, workbench | ready | तैयार |
 | `S0723bf` | st_preview | Select all programs that are ready | सभी तैयार प्रोग्राम चुनें |
+| `Sae12bc` | st_preview, workbench | Status category | स्थिति श्रेणी |
+| `Sd7a322` | st_preview | Status category of the ticked programs | चिह्नित प्रोग्रामों की स्थिति श्रेणी |
 | `S1a767a` | st_preview | updates the open Draft | खुला मसौदा अद्यतन करता है |
 | `S02499f` | st_preview | withdrawn | वापस लिए गए |
 | `Sf0c3cf` | st_preview | without a legacy number | पुराने नंबर के बिना |
@@ -4284,7 +4315,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sa58dac` | workbench | Set values on the Drafts | मसौदों पर मान सेट करें |
 | `Sa443bb` | workbench | Sign off the Drafts | मसौदों का साइन-ऑफ करें |
 | `S53f47f` | workbench | Sign-off pending | साइन-ऑफ लंबित |
-| `Sae12bc` | workbench | Status category | स्थिति श्रेणी |
 | `Sdc416e` | workbench | Step | चरण |
 | `Sf7710d` | workbench | Submit for review | समीक्षा के लिए जमा करें |
 | `Sa45adc` | workbench | Submit the Drafts | मसौदे जमा करें |
@@ -4297,7 +4327,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 
 ### 9.5 SA العربية 🇸🇦 — Arabic
 
-1279 of 1280 strings translated; direction right to left.
+1289 of 1290 strings translated; direction right to left.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -4387,7 +4417,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sb1fe0b` | builder | Release Builder | منشئ الإصدارات |
 | `S5997c5` | builder | Save Candidate Set | حفظ مجموعة المرشحين |
 | `Scc8a3c` | builder | Save targets | حفظ الأهداف |
-| `S913aff` | builder, detail, mine | Select all | تحديد الكل |
+| `S913aff` | builder, detail, list | Select all | تحديد الكل |
 | `S85e466` | builder | Select the Approved, non-sandbox revisions to include, then Save. Publishing is immutable — a correction requires a new Release. | اختر المراجعات المعتمدة غير التجريبية لتضمينها ثم احفظ. النشر غير قابل للتراجع — التصحيح يتطلب إصدارًا جديدًا. |
 | `Sd64b6e` | builder, detail | Target software versions | إصدارات البرنامج المستهدفة |
 | `S6ba0fc` | builder | View Release | عرض الإصدار |
@@ -5040,6 +5070,10 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S162a45` | list, menu | Change Sets | مجموعات التغيير |
 | `S9e895f` | list | Change sets | مجموعات التغيير |
 | `Scf723c` | list | Columns | الأعمدة |
+| `Seb0fd2` | list | Delete all my Drafts of this filter | حذف كل مسوداتي في هذا المرشح |
+| `S36f212` | list | Delete ALL of your own Drafts that match this filter, on every page? | هل تريد حذف جميع مسوداتك التي تطابق هذا المرشح في كل الصفحات؟ |
+| `Sc554a1` | list | Delete selected Drafts | حذف المسودات المحددة |
+| `S2d8627` | list | Delete the ticked Drafts? A deleted Draft is gone; its number is only kept if it was already issued. | هل تريد حذف المسودات المحددة؟ المسودة المحذوفة تضيع، ولا يبقى رقمها محفوظًا إلا إذا كان قد صدر بالفعل. |
 | `S759686` | list | Filter status codes | تصفية رموز الحالة |
 | `Sfd327d` | list | Identifier, title, description | المعرّف أو العنوان أو الوصف |
 | `S44d25b` | list | Items | العناصر |
@@ -5058,6 +5092,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S1db747` | list | Save search | حفظ البحث |
 | `Sff86e9` | list | Save the current filters as | حفظ عوامل التصفية الحالية باسم |
 | `Sed1d84` | list | Saved searches | عمليات البحث المحفوظة |
+| `S859822` | list, mine | Select | تحديد |
 | `S7f5583` | list, menu | Status Codes | رموز الحالة |
 | `S20bff1` | list | Status codes | رموز الحالة |
 | `Se90eb0` | list | Turbine Platform | منصة التوربين |
@@ -5325,7 +5360,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd72b71` | message: user_service | That e-mail address or username is already in use. | عنوان البريد الإلكتروني أو اسم المستخدم هذا مستخدم بالفعل. |
 | `Sd54517` | message: user_service, user_detail | You cannot delete your own account. | لا يمكنك حذف حسابك. |
 | `S6a8896` | mine | Review & sign off | مراجعة واعتماد |
-| `S859822` | mine | Select | تحديد |
 | `S50a279` | mine | Show all | عرض الكل |
 | `Se48471` | mine | Showing only Drafts created by Import Job #%(id)s. | تُعرض فقط المسودات التي أنشأتها مهمة الاستيراد #%(id)s. |
 | `Sff9480` | mine | Sign-Off Requests For You | طلبات اعتماد موجهة إليك |
@@ -5416,8 +5450,11 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd97d1e` | software_versions | Show | عرض |
 | `S42ea2e` | software_versions | Software Versions | إصدارات البرنامج |
 | `S3bd89c` | software_versions | Which codes exist in which software version | أي الرموز موجودة في أي إصدار برنامج |
+| `S16e5d4` | st_new, st_preview | Alarm type | نوع الإنذار |
+| `S726d7a` | st_new | as above | كما سبق |
 | `Sb149ca` | st_new | Detect: a number from 10000 up is a Hub Controller program | اكتشاف: الرقم من 10000 فأكثر برنامج لوحدة تحكم المحور |
 | `S7d06d0` | st_new | Every imported program becomes an ordinary Draft with the number it carries reserved. It still needs Cross-Domain Sign-Off, dual review and Chief Engineer approval before Release, and all Drafts of one import share a change set. | يصبح كل برنامج مستورد مسودة عادية يُحجز له الرقم الذي يحمله. ما زال يتطلب اعتمادًا متعدد المجالات ومراجعة مزدوجة وموافقة كبير المهندسين قبل الإصدار، وتشترك كل مسودات استيراد واحد في مجموعة تغييرات. |
+| `Sbda77c` | st_new | Every program names an alarm type. A type left at "as above" gets the category chosen above; the next page lets you set the category of single programs or of all ticked ones. | يذكر كل برنامج نوع إنذار. النوع المتروك عند «كما سبق» يحصل على الفئة المختارة أعلاه؛ وفي الصفحة التالية يمكنك تعيين فئة برامج منفردة أو كل البرامج المحددة. |
 | `S3b9e43` | st_new | Hub Controller (legacy numbers, mapped to the new ones) | وحدة تحكم المحور (أرقام قديمة، مربوطة بالجديدة) |
 | `Sd7333f` | st_new | Import status codes from .st files | استيراد رموز الحالة من ملفات .st |
 | `S6640a6` | st_new | New number of Hub Controller programs | الرقم الجديد لبرامج وحدة تحكم المحور |
@@ -5426,12 +5463,14 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd99e2a` | st_new | Proposal 1: five-digit numbers (11000 and up) | الاقتراح 1: أرقام من خمس خانات (من 11000 فأكثر) |
 | `S2744b0` | st_new | Proposal 2: inside the Main Controller scheme | الاقتراح 2: ضمن مخطط وحدة التحكم الرئيسية |
 | `S67640d` | st_new | Read files and preview | قراءة الملفات والمعاينة |
+| `S0af4fc` | st_new | Status category by alarm type (optional) | فئة الحالة حسب نوع الإنذار (اختياري) |
 | `S234237` | st_new | Status category of the new codes | فئة الحالة للرموز الجديدة |
 | `Sde7a5b` | st_new | The program files do not carry a category; you can change it in each Draft. | لا تحمل ملفات البرامج فئة؛ ويمكنك تغييرها في كل مسودة. |
 | `S8f4c21` | st_new | Turbine platforms | منصات التوربين |
 | `S9ad4d4` | st_new | Upload the generated StCd_<n>.st programs — several files at once, a whole folder, or one ZIP. Nothing is created yet: the next page lists every program so you can tick the ones to import. | ارفع برامج StCd_<n>.st المولَّدة — عدة ملفات دفعة واحدة أو مجلدًا كاملًا أو ملف ZIP واحدًا. لا يُنشأ شيء بعد: تسرد الصفحة التالية كل برنامج لتحدد ما تريد استيراده. |
 | `S2693e5` | st_preview | All Drafts of this import join one change set, so they can be reviewed and decided together. | تنضم كل مسودات هذا الاستيراد إلى مجموعة تغييرات واحدة، لتُراجَع وتُقرَّر معًا. |
 | `Scbc694` | st_preview | already in the catalogue | موجودة في الكتالوج |
+| `Sc00673` | st_preview | Apply to the ticked programs | تطبيق على البرامج المحددة |
 | `Sdf88b8` | st_preview | blocked | محظورة |
 | `S6f7703` | st_preview | Changed and withdrawn programs are not ticked: tick the ones you want to update, revise or restore. | لا تُحدَّد البرامج المتغيّرة والمسحوبة: حدّد ما تريد تحديثه أو تنقيحه أو استعادته. |
 | `S78bb8b` | st_preview | Create Drafts for the ticked programs | إنشاء مسودات للبرامج المحددة |
@@ -5449,6 +5488,8 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se58289` | st_preview | Programs found in the uploaded files | البرامج الموجودة في الملفات المرفوعة |
 | `S75c053` | st_preview, workbench | ready | جاهزة |
 | `S0723bf` | st_preview | Select all programs that are ready | تحديد كل البرامج الجاهزة |
+| `Sae12bc` | st_preview, workbench | Status category | فئة الحالة |
+| `Sd7a322` | st_preview | Status category of the ticked programs | فئة الحالة للبرامج المحددة |
 | `S1a767a` | st_preview | updates the open Draft | يحدّث المسودة المفتوحة |
 | `S02499f` | st_preview | withdrawn | مسحوبة |
 | `Sf0c3cf` | st_preview | without a legacy number | بلا رقم قديم |
@@ -5570,7 +5611,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sa58dac` | workbench | Set values on the Drafts | تعيين قيم على المسودات |
 | `Sa443bb` | workbench | Sign off the Drafts | اعتماد المسودات |
 | `S53f47f` | workbench | Sign-off pending | اعتماد معلّق |
-| `Sae12bc` | workbench | Status category | فئة الحالة |
 | `Sdc416e` | workbench | Step | الخطوة |
 | `Sf7710d` | workbench | Submit for review | تقديم للمراجعة |
 | `Sa45adc` | workbench | Submit the Drafts | تقديم المسودات |
@@ -5583,7 +5623,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 
 ### 9.6 IN বাংলা 🇮🇳 — Bengali
 
-1279 of 1280 strings translated; direction left to right.
+1289 of 1290 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -5673,7 +5713,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sb1fe0b` | builder | Release Builder | রিলিজ বিল্ডার |
 | `S5997c5` | builder | Save Candidate Set | প্রার্থী সেট সংরক্ষণ করুন |
 | `Scc8a3c` | builder | Save targets | লক্ষ্য সংরক্ষণ করুন |
-| `S913aff` | builder, detail, mine | Select all | সব বেছে নিন |
+| `S913aff` | builder, detail, list | Select all | সব বেছে নিন |
 | `S85e466` | builder | Select the Approved, non-sandbox revisions to include, then Save. Publishing is immutable — a correction requires a new Release. | অন্তর্ভুক্ত করতে অনুমোদিত, স্যান্ডবক্সবহির্ভূত সংশোধনগুলো বাছুন, তারপর সংরক্ষণ করুন। প্রকাশ অপরিবর্তনীয় — সংশোধনের জন্য নতুন রিলিজ লাগে। |
 | `Sd64b6e` | builder, detail | Target software versions | লক্ষ্য সফটওয়্যার সংস্করণ |
 | `S6ba0fc` | builder | View Release | রিলিজ দেখুন |
@@ -6326,6 +6366,10 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S9e895f` | list | Change sets | পরিবর্তন সেট |
 | `S162a45` | list, menu | Change Sets | পরিবর্তন সেট |
 | `Scf723c` | list | Columns | কলাম |
+| `Seb0fd2` | list | Delete all my Drafts of this filter | এই ফিল্টারের আমার সব খসড়া মুছুন |
+| `S36f212` | list | Delete ALL of your own Drafts that match this filter, on every page? | এই ফিল্টারের সাথে মেলে এমন আপনার নিজের সব খসড়া, সব পাতায়, মুছে ফেলবেন? |
+| `Sc554a1` | list | Delete selected Drafts | বাছাই করা খসড়া মুছুন |
+| `S2d8627` | list | Delete the ticked Drafts? A deleted Draft is gone; its number is only kept if it was already issued. | টিক দেওয়া খসড়া মুছবেন? মুছে ফেলা খসড়া হারিয়ে যায়; তার নম্বর কেবল তখনই থাকে যদি তা আগেই ইস্যু হয়ে থাকে। |
 | `S759686` | list | Filter status codes | স্ট্যাটাস কোড ছাঁকুন |
 | `Sfd327d` | list | Identifier, title, description | শনাক্তকারী, শিরোনাম, বিবরণ |
 | `S44d25b` | list | Items | আইটেম |
@@ -6344,6 +6388,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S1db747` | list | Save search | অনুসন্ধান সংরক্ষণ করুন |
 | `Sff86e9` | list | Save the current filters as | বর্তমান ফিল্টার এই নামে সংরক্ষণ করুন |
 | `Sed1d84` | list | Saved searches | সংরক্ষিত অনুসন্ধান |
+| `S859822` | list, mine | Select | বাছুন |
 | `S7f5583` | list, menu | Status Codes | স্ট্যাটাস কোড |
 | `S20bff1` | list | Status codes | স্ট্যাটাস কোড |
 | `Se90eb0` | list | Turbine Platform | টারবাইন প্ল্যাটফর্ম |
@@ -6611,7 +6656,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd72b71` | message: user_service | That e-mail address or username is already in use. | এই ই-মেইল ঠিকানা বা ব্যবহারকারীর নাম ইতিমধ্যে ব্যবহৃত। |
 | `Sd54517` | message: user_service, user_detail | You cannot delete your own account. | আপনি আপনার নিজের অ্যাকাউন্ট মুছতে পারবেন না। |
 | `S6a8896` | mine | Review & sign off | পর্যালোচনা ও সাইন অফ |
-| `S859822` | mine | Select | বাছুন |
 | `S50a279` | mine | Show all | সব দেখান |
 | `Se48471` | mine | Showing only Drafts created by Import Job #%(id)s. | শুধু আমদানি কাজ #%(id)s থেকে তৈরি খসড়া দেখানো হচ্ছে। |
 | `Sff9480` | mine | Sign-Off Requests For You | আপনার জন্য সাইন-অফ অনুরোধ |
@@ -6702,8 +6746,11 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd97d1e` | software_versions | Show | দেখান |
 | `S42ea2e` | software_versions | Software Versions | সফটওয়্যার সংস্করণ |
 | `S3bd89c` | software_versions | Which codes exist in which software version | কোন কোড কোন সফটওয়্যার সংস্করণে আছে |
+| `S16e5d4` | st_new, st_preview | Alarm type | অ্যালার্মের ধরন |
+| `S726d7a` | st_new | as above | উপরের মতো |
 | `Sb149ca` | st_new | Detect: a number from 10000 up is a Hub Controller program | শনাক্ত করুন: ১০০০০ থেকে উপরের নম্বর হাব নিয়ন্ত্রক প্রোগ্রাম |
 | `S7d06d0` | st_new | Every imported program becomes an ordinary Draft with the number it carries reserved. It still needs Cross-Domain Sign-Off, dual review and Chief Engineer approval before Release, and all Drafts of one import share a change set. | প্রতিটি আমদানি করা প্রোগ্রাম একটি সাধারণ খসড়া হয় যার বহন করা নম্বর সংরক্ষিত থাকে। রিলিজের আগে এতে তবু আন্তঃডোমেইন সাইন-অফ, দ্বিগুণ পর্যালোচনা ও প্রধান প্রকৌশলীর অনুমোদন লাগে, এবং এক আমদানির সব খসড়া একটি পরিবর্তন সেট ভাগ করে। |
+| `Sbda77c` | st_new | Every program names an alarm type. A type left at "as above" gets the category chosen above; the next page lets you set the category of single programs or of all ticked ones. | প্রতিটি প্রোগ্রাম একটি অ্যালার্মের ধরন জানায়। "উপরের মতো" রাখা ধরন উপরে বাছা বিভাগ পায়; পরের পাতায় আপনি আলাদা প্রোগ্রামের বা টিক দেওয়া সবগুলোর বিভাগ ঠিক করতে পারবেন। |
 | `S3b9e43` | st_new | Hub Controller (legacy numbers, mapped to the new ones) | হাব নিয়ন্ত্রক (পুরোনো নম্বর, নতুনগুলোর সঙ্গে ম্যাপ করা) |
 | `Sd7333f` | st_new | Import status codes from .st files | .st ফাইল থেকে স্ট্যাটাস কোড আমদানি করুন |
 | `S6640a6` | st_new | New number of Hub Controller programs | হাব নিয়ন্ত্রক প্রোগ্রামের নতুন নম্বর |
@@ -6712,12 +6759,14 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd99e2a` | st_new | Proposal 1: five-digit numbers (11000 and up) | প্রস্তাব ১: পাঁচ অঙ্কের নম্বর (১১০০০ থেকে) |
 | `S2744b0` | st_new | Proposal 2: inside the Main Controller scheme | প্রস্তাব ২: প্রধান নিয়ন্ত্রক পরিকল্পনার ভেতরে |
 | `S67640d` | st_new | Read files and preview | ফাইল পড়ুন ও প্রিভিউ দেখুন |
+| `S0af4fc` | st_new | Status category by alarm type (optional) | অ্যালার্মের ধরন অনুযায়ী স্ট্যাটাস বিভাগ (ঐচ্ছিক) |
 | `S234237` | st_new | Status category of the new codes | নতুন কোডের স্ট্যাটাস বিভাগ |
 | `Sde7a5b` | st_new | The program files do not carry a category; you can change it in each Draft. | প্রোগ্রাম ফাইলে বিভাগ থাকে না; আপনি প্রতিটি খসড়ায় তা বদলাতে পারেন। |
 | `S8f4c21` | st_new | Turbine platforms | টারবাইন প্ল্যাটফর্ম |
 | `S9ad4d4` | st_new | Upload the generated StCd_<n>.st programs — several files at once, a whole folder, or one ZIP. Nothing is created yet: the next page lists every program so you can tick the ones to import. | তৈরি করা StCd_<n>.st প্রোগ্রাম আপলোড করুন — একসঙ্গে কয়েকটি ফাইল, পুরো ফোল্ডার বা একটি ZIP। এখনো কিছু তৈরি হয় না: পরের পৃষ্ঠা প্রতিটি প্রোগ্রাম তালিকাভুক্ত করে, যাতে আপনি আমদানির জন্য টিক দিতে পারেন। |
 | `S2693e5` | st_preview | All Drafts of this import join one change set, so they can be reviewed and decided together. | এই আমদানির সব খসড়া একটি পরিবর্তন সেটে যোগ দেয়, যাতে একসঙ্গে পর্যালোচনা ও সিদ্ধান্ত হতে পারে। |
 | `Scbc694` | st_preview | already in the catalogue | ইতিমধ্যে ক্যাটালগে |
+| `Sc00673` | st_preview | Apply to the ticked programs | টিক দেওয়া প্রোগ্রামে প্রয়োগ করুন |
 | `Sdf88b8` | st_preview | blocked | অবরুদ্ধ |
 | `S6f7703` | st_preview | Changed and withdrawn programs are not ticked: tick the ones you want to update, revise or restore. | পরিবর্তিত ও প্রত্যাহৃত প্রোগ্রামে টিক দেওয়া থাকে না: যেগুলো হালনাগাদ, সংশোধন বা পুনরুদ্ধার করতে চান সেগুলোতে টিক দিন। |
 | `S78bb8b` | st_preview | Create Drafts for the ticked programs | টিক দেওয়া প্রোগ্রামের জন্য খসড়া তৈরি করুন |
@@ -6735,6 +6784,8 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se58289` | st_preview | Programs found in the uploaded files | আপলোড করা ফাইলে পাওয়া প্রোগ্রাম |
 | `S75c053` | st_preview, workbench | ready | প্রস্তুত |
 | `S0723bf` | st_preview | Select all programs that are ready | সব প্রস্তুত প্রোগ্রাম বাছুন |
+| `Sae12bc` | st_preview, workbench | Status category | স্ট্যাটাস বিভাগ |
+| `Sd7a322` | st_preview | Status category of the ticked programs | টিক দেওয়া প্রোগ্রামের স্ট্যাটাস বিভাগ |
 | `S1a767a` | st_preview | updates the open Draft | খোলা খসড়া হালনাগাদ করে |
 | `S02499f` | st_preview | withdrawn | প্রত্যাহৃত |
 | `Sf0c3cf` | st_preview | without a legacy number | পুরোনো নম্বর ছাড়া |
@@ -6856,7 +6907,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sa58dac` | workbench | Set values on the Drafts | খসড়াগুলোতে মান সেট করুন |
 | `Sa443bb` | workbench | Sign off the Drafts | খসড়াগুলোর সাইন-অফ করুন |
 | `S53f47f` | workbench | Sign-off pending | সাইন-অফ মুলতুবি |
-| `Sae12bc` | workbench | Status category | স্ট্যাটাস বিভাগ |
 | `Sdc416e` | workbench | Step | ধাপ |
 | `Sf7710d` | workbench | Submit for review | পর্যালোচনার জন্য জমা দিন |
 | `Sa45adc` | workbench | Submit the Drafts | খসড়া জমা দিন |
@@ -6869,7 +6919,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 
 ### 9.7 IN मराठी 🇮🇳 — Marathi
 
-1279 of 1280 strings translated; direction left to right.
+1289 of 1290 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -6959,7 +7009,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sb1fe0b` | builder | Release Builder | प्रकाशन बिल्डर |
 | `S5997c5` | builder | Save Candidate Set | उमेदवार संच जतन करा |
 | `Scc8a3c` | builder | Save targets | लक्ष्य जतन करा |
-| `S913aff` | builder, detail, mine | Select all | सर्व निवडा |
+| `S913aff` | builder, detail, list | Select all | सर्व निवडा |
 | `S85e466` | builder | Select the Approved, non-sandbox revisions to include, then Save. Publishing is immutable — a correction requires a new Release. | समाविष्ट करण्यासाठी मंजूर, सँडबॉक्सेतर सुधारणा निवडा, मग जतन करा. प्रकाशन अपरिवर्तनीय आहे — दुरुस्तीसाठी नवीन प्रकाशन लागते. |
 | `Sd64b6e` | builder, detail | Target software versions | लक्ष्य सॉफ्टवेअर आवृत्त्या |
 | `S6ba0fc` | builder | View Release | प्रकाशन पहा |
@@ -7612,6 +7662,10 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S9e895f` | list | Change sets | बदल संच |
 | `S162a45` | list, menu | Change Sets | बदल संच |
 | `Scf723c` | list | Columns | स्तंभ |
+| `Seb0fd2` | list | Delete all my Drafts of this filter | या फिल्टरचे माझे सर्व मसुदे हटवा |
+| `S36f212` | list | Delete ALL of your own Drafts that match this filter, on every page? | या फिल्टरशी जुळणारे तुमचे सर्व मसुदे, सर्व पानांवर, हटवायचे? |
+| `Sc554a1` | list | Delete selected Drafts | निवडलेले मसुदे हटवा |
+| `S2d8627` | list | Delete the ticked Drafts? A deleted Draft is gone; its number is only kept if it was already issued. | खूण केलेले मसुदे हटवायचे? हटवलेला मसुदा जातो; त्याचा क्रमांक आधीच दिला गेला असेल तरच राहतो. |
 | `S759686` | list | Filter status codes | स्थिती कोड गाळा |
 | `Sfd327d` | list | Identifier, title, description | ओळखकर्ता, शीर्षक, वर्णन |
 | `S44d25b` | list | Items | घटक |
@@ -7630,6 +7684,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S1db747` | list | Save search | शोध जतन करा |
 | `Sff86e9` | list | Save the current filters as | सध्याचे फिल्टर या नावाने जतन करा |
 | `Sed1d84` | list | Saved searches | जतन केलेले शोध |
+| `S859822` | list, mine | Select | निवडा |
 | `S7f5583` | list, menu | Status Codes | स्थिती कोड |
 | `S20bff1` | list | Status codes | स्थिती कोड |
 | `Se90eb0` | list | Turbine Platform | टर्बाइन प्लॅटफॉर्म |
@@ -7897,7 +7952,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd72b71` | message: user_service | That e-mail address or username is already in use. | हा ई-मेल पत्ता किंवा वापरकर्तानाव आधीच वापरात आहे. |
 | `Sd54517` | message: user_service, user_detail | You cannot delete your own account. | तुम्ही तुमचे स्वतःचे खाते हटवू शकत नाही. |
 | `S6a8896` | mine | Review & sign off | पुनरावलोकन करा आणि साइन ऑफ करा |
-| `S859822` | mine | Select | निवडा |
 | `S50a279` | mine | Show all | सर्व दाखवा |
 | `Se48471` | mine | Showing only Drafts created by Import Job #%(id)s. | फक्त आयात काम #%(id)s ने तयार केलेले मसुदे दाखवले आहेत. |
 | `Sff9480` | mine | Sign-Off Requests For You | तुमच्यासाठी साइन-ऑफ विनंत्या |
@@ -7988,8 +8042,11 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd97d1e` | software_versions | Show | दाखवा |
 | `S42ea2e` | software_versions | Software Versions | सॉफ्टवेअर आवृत्त्या |
 | `S3bd89c` | software_versions | Which codes exist in which software version | कोणता कोड कोणत्या सॉफ्टवेअर आवृत्तीत आहे |
+| `S16e5d4` | st_new, st_preview | Alarm type | अलार्मचा प्रकार |
+| `S726d7a` | st_new | as above | वरीलप्रमाणे |
 | `Sb149ca` | st_new | Detect: a number from 10000 up is a Hub Controller program | ओळखा: १०००० पासून पुढील क्रमांक हब नियंत्रक प्रोग्राम आहे |
 | `S7d06d0` | st_new | Every imported program becomes an ordinary Draft with the number it carries reserved. It still needs Cross-Domain Sign-Off, dual review and Chief Engineer approval before Release, and all Drafts of one import share a change set. | प्रत्येक आयात केलेला प्रोग्राम सामान्य मसुदा बनतो ज्यात त्याचा स्वतःचा क्रमांक आरक्षित असतो. प्रकाशनापूर्वी त्याला तरीही आंतर-क्षेत्र साइन-ऑफ, दुहेरी पुनरावलोकन आणि मुख्य अभियंत्याची मंजुरी लागते, आणि एका आयातीचे सर्व मसुदे एक बदल संच वाटून घेतात. |
+| `Sbda77c` | st_new | Every program names an alarm type. A type left at "as above" gets the category chosen above; the next page lets you set the category of single programs or of all ticked ones. | प्रत्येक प्रोग्राम एक अलार्म प्रकार सांगतो. "वरीलप्रमाणे" ठेवलेल्या प्रकाराला वर निवडलेला वर्ग मिळतो; पुढच्या पानावर तुम्ही एकेका प्रोग्रामचा किंवा खूण केलेल्या सर्वांचा वर्ग ठरवू शकता. |
 | `S3b9e43` | st_new | Hub Controller (legacy numbers, mapped to the new ones) | हब नियंत्रक (जुने क्रमांक, नव्यांशी नकाशित) |
 | `Sd7333f` | st_new | Import status codes from .st files | .st फाइलमधून स्थिती कोड आयात करा |
 | `S6640a6` | st_new | New number of Hub Controller programs | हब नियंत्रक प्रोग्रामचा नवीन क्रमांक |
@@ -7998,12 +8055,14 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd99e2a` | st_new | Proposal 1: five-digit numbers (11000 and up) | प्रस्ताव १: पाच अंकी क्रमांक (११००० पासून) |
 | `S2744b0` | st_new | Proposal 2: inside the Main Controller scheme | प्रस्ताव २: मुख्य नियंत्रक योजनेच्या आत |
 | `S67640d` | st_new | Read files and preview | फाइल वाचा आणि पूर्वावलोकन पहा |
+| `S0af4fc` | st_new | Status category by alarm type (optional) | अलार्म प्रकारानुसार स्थिती वर्ग (ऐच्छिक) |
 | `S234237` | st_new | Status category of the new codes | नवीन कोडचा स्थिती वर्ग |
 | `Sde7a5b` | st_new | The program files do not carry a category; you can change it in each Draft. | प्रोग्राम फाइलमध्ये वर्ग नसतो; तुम्ही प्रत्येक मसुद्यात तो बदलू शकता. |
 | `S8f4c21` | st_new | Turbine platforms | टर्बाइन प्लॅटफॉर्म |
 | `S9ad4d4` | st_new | Upload the generated StCd_<n>.st programs — several files at once, a whole folder, or one ZIP. Nothing is created yet: the next page lists every program so you can tick the ones to import. | तयार केलेले StCd_<n>.st प्रोग्राम अपलोड करा — एकाच वेळी अनेक फाइल, संपूर्ण फोल्डर किंवा एक ZIP. अद्याप काहीही तयार होत नाही: पुढील पृष्ठ प्रत्येक प्रोग्राम सूचीबद्ध करते जेणेकरून तुम्ही आयात करायचे ते निवडू शकता. |
 | `S2693e5` | st_preview | All Drafts of this import join one change set, so they can be reviewed and decided together. | या आयातीचे सर्व मसुदे एका बदल संचात सामील होतात, जेणेकरून त्यांचे एकत्र पुनरावलोकन आणि निर्णय होऊ शकतो. |
 | `Scbc694` | st_preview | already in the catalogue | आधीच कॅटलॉगमध्ये |
+| `Sc00673` | st_preview | Apply to the ticked programs | खूण केलेल्या प्रोग्रामवर लागू करा |
 | `Sdf88b8` | st_preview | blocked | अवरोधित |
 | `S6f7703` | st_preview | Changed and withdrawn programs are not ticked: tick the ones you want to update, revise or restore. | बदललेले आणि मागे घेतलेले प्रोग्राम निवडलेले नसतात: जे अद्ययावत, सुधारित किंवा पुनर्संचयित करायचे आहेत त्यांना खूण करा. |
 | `S78bb8b` | st_preview | Create Drafts for the ticked programs | खूण केलेल्या प्रोग्रामसाठी मसुदे तयार करा |
@@ -8021,6 +8080,8 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se58289` | st_preview | Programs found in the uploaded files | अपलोड केलेल्या फाइलमध्ये सापडलेले प्रोग्राम |
 | `S75c053` | st_preview, workbench | ready | तयार |
 | `S0723bf` | st_preview | Select all programs that are ready | सर्व तयार प्रोग्राम निवडा |
+| `Sae12bc` | st_preview, workbench | Status category | स्थिती वर्ग |
+| `Sd7a322` | st_preview | Status category of the ticked programs | खूण केलेल्या प्रोग्रामचा स्थिती वर्ग |
 | `S1a767a` | st_preview | updates the open Draft | खुला मसुदा अद्ययावत करते |
 | `S02499f` | st_preview | withdrawn | मागे घेतलेले |
 | `Sf0c3cf` | st_preview | without a legacy number | जुन्या क्रमांकाशिवाय |
@@ -8142,7 +8203,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sa58dac` | workbench | Set values on the Drafts | मसुद्यांवर मूल्ये सेट करा |
 | `Sa443bb` | workbench | Sign off the Drafts | मसुद्यांचा साइन-ऑफ करा |
 | `S53f47f` | workbench | Sign-off pending | साइन-ऑफ प्रलंबित |
-| `Sae12bc` | workbench | Status category | स्थिती वर्ग |
 | `Sdc416e` | workbench | Step | टप्पा |
 | `Sf7710d` | workbench | Submit for review | पुनरावलोकनासाठी सादर करा |
 | `Sa45adc` | workbench | Submit the Drafts | मसुदे सादर करा |
@@ -8155,7 +8215,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 
 ### 9.8 IN తెలుగు 🇮🇳 — Telugu
 
-1279 of 1280 strings translated; direction left to right.
+1289 of 1290 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -8245,7 +8305,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sb1fe0b` | builder | Release Builder | విడుదల బిల్డర్ |
 | `S5997c5` | builder | Save Candidate Set | అభ్యర్థి సమితిని సేవ్ చేయండి |
 | `Scc8a3c` | builder | Save targets | లక్ష్యాలను సేవ్ చేయండి |
-| `S913aff` | builder, detail, mine | Select all | అన్నీ ఎంచుకోండి |
+| `S913aff` | builder, detail, list | Select all | అన్నీ ఎంచుకోండి |
 | `S85e466` | builder | Select the Approved, non-sandbox revisions to include, then Save. Publishing is immutable — a correction requires a new Release. | చేర్చడానికి ఆమోదించిన, శాండ్‌బాక్స్ కాని పునర్విమర్శలను ఎంచుకుని, సేవ్ చేయండి. ప్రచురణ మార్చలేనిది — సవరణకు కొత్త విడుదల అవసరం. |
 | `Sd64b6e` | builder, detail | Target software versions | లక్ష్య సాఫ్ట్‌వేర్ వెర్షన్లు |
 | `S6ba0fc` | builder | View Release | విడుదల చూడండి |
@@ -8898,6 +8958,10 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S9e895f` | list | Change sets | మార్పుల సమితులు |
 | `S162a45` | list, menu | Change Sets | మార్పు సెట్‌లు |
 | `Scf723c` | list | Columns | నిలువు వరుసలు |
+| `Seb0fd2` | list | Delete all my Drafts of this filter | ఈ ఫిల్టర్‌లోని నా అన్ని ముసాయిదాలను తొలగించండి |
+| `S36f212` | list | Delete ALL of your own Drafts that match this filter, on every page? | ఈ ఫిల్టర్‌కు సరిపోయే మీ అన్ని ముసాయిదాలను, అన్ని పేజీల్లో, తొలగించాలా? |
+| `Sc554a1` | list | Delete selected Drafts | ఎంచుకున్న ముసాయిదాలను తొలగించండి |
+| `S2d8627` | list | Delete the ticked Drafts? A deleted Draft is gone; its number is only kept if it was already issued. | టిక్ చేసిన ముసాయిదాలను తొలగించాలా? తొలగించిన ముసాయిదా పోతుంది; దాని నంబర్ ఇప్పటికే జారీ అయి ఉంటే మాత్రమే మిగులుతుంది. |
 | `S759686` | list | Filter status codes | స్థితి కోడ్‌లను వడపోయండి |
 | `Sfd327d` | list | Identifier, title, description | గుర్తింపు, శీర్షిక, వివరణ |
 | `S44d25b` | list | Items | అంశాలు |
@@ -8916,6 +8980,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S1db747` | list | Save search | శోధనను సేవ్ చేయండి |
 | `Sff86e9` | list | Save the current filters as | ప్రస్తుత ఫిల్టర్‌లను ఈ పేరుతో సేవ్ చేయండి |
 | `Sed1d84` | list | Saved searches | సేవ్ చేసిన శోధనలు |
+| `S859822` | list, mine | Select | ఎంచుకోండి |
 | `S7f5583` | list, menu | Status Codes | స్థితి కోడ్‌లు |
 | `S20bff1` | list | Status codes | స్థితి కోడ్‌లు |
 | `Se90eb0` | list | Turbine Platform | టర్బైన్ ప్లాట్‌ఫారమ్ |
@@ -9183,7 +9248,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd72b71` | message: user_service | That e-mail address or username is already in use. | ఈ ఈ-మెయిల్ చిరునామా లేదా వినియోగదారు పేరు ఇప్పటికే వాడుకలో ఉంది. |
 | `Sd54517` | message: user_service, user_detail | You cannot delete your own account. | మీరు మీ స్వంత ఖాతాను తొలగించలేరు. |
 | `S6a8896` | mine | Review & sign off | సమీక్షించి సైన్ ఆఫ్ చేయండి |
-| `S859822` | mine | Select | ఎంచుకోండి |
 | `S50a279` | mine | Show all | అన్నీ చూపండి |
 | `Se48471` | mine | Showing only Drafts created by Import Job #%(id)s. | దిగుమతి పని #%(id)s సృష్టించిన ముసాయిదాలు మాత్రమే చూపబడుతున్నాయి. |
 | `Sff9480` | mine | Sign-Off Requests For You | మీ కోసం సైన్-ఆఫ్ అభ్యర్థనలు |
@@ -9274,8 +9338,11 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd97d1e` | software_versions | Show | చూపండి |
 | `S42ea2e` | software_versions | Software Versions | సాఫ్ట్‌వేర్ వెర్షన్లు |
 | `S3bd89c` | software_versions | Which codes exist in which software version | ఏ సాఫ్ట్‌వేర్ వెర్షన్‌లో ఏ కోడ్‌లు ఉన్నాయి |
+| `S16e5d4` | st_new, st_preview | Alarm type | అలారం రకం |
+| `S726d7a` | st_new | as above | పైన ఉన్నట్లు |
 | `Sb149ca` | st_new | Detect: a number from 10000 up is a Hub Controller program | గుర్తించండి: 10000 నుండి పైన ఉన్న సంఖ్య హబ్ కంట్రోలర్ ప్రోగ్రామ్ |
 | `S7d06d0` | st_new | Every imported program becomes an ordinary Draft with the number it carries reserved. It still needs Cross-Domain Sign-Off, dual review and Chief Engineer approval before Release, and all Drafts of one import share a change set. | దిగుమతి చేసిన ప్రతి ప్రోగ్రామ్ సాధారణ ముసాయిదా అవుతుంది, అది కలిగి ఉన్న సంఖ్య రిజర్వ్ అవుతుంది. విడుదలకు ముందు దీనికి ఇంకా క్రాస్-డొమైన్ సైన్-ఆఫ్, ద్వంద్వ సమీక్ష మరియు చీఫ్ ఇంజనీర్ ఆమోదం అవసరం, మరియు ఒక దిగుమతిలోని అన్ని ముసాయిదాలు ఒక మార్పుల సమితిని పంచుకుంటాయి. |
+| `Sbda77c` | st_new | Every program names an alarm type. A type left at "as above" gets the category chosen above; the next page lets you set the category of single programs or of all ticked ones. | ప్రతి ప్రోగ్రామ్ ఒక అలారం రకాన్ని పేర్కొంటుంది. "పైన ఉన్నట్లు" అని వదిలిన రకానికి పైన ఎంచుకున్న వర్గం వస్తుంది; తదుపరి పేజీలో ఒక్కో ప్రోగ్రామ్‌కు లేదా టిక్ చేసిన అన్నింటికీ వర్గాన్ని సెట్ చేయవచ్చు. |
 | `S3b9e43` | st_new | Hub Controller (legacy numbers, mapped to the new ones) | హబ్ కంట్రోలర్ (పాత సంఖ్యలు, కొత్తవాటికి మ్యాప్ చేయబడినవి) |
 | `Sd7333f` | st_new | Import status codes from .st files | .st ఫైళ్ల నుండి స్థితి కోడ్‌లను దిగుమతి చేయండి |
 | `S6640a6` | st_new | New number of Hub Controller programs | హబ్ కంట్రోలర్ ప్రోగ్రామ్‌ల కొత్త సంఖ్య |
@@ -9284,12 +9351,14 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd99e2a` | st_new | Proposal 1: five-digit numbers (11000 and up) | ప్రతిపాదన 1: ఐదు అంకెల సంఖ్యలు (11000 నుండి) |
 | `S2744b0` | st_new | Proposal 2: inside the Main Controller scheme | ప్రతిపాదన 2: ప్రధాన కంట్రోలర్ పథకం లోపల |
 | `S67640d` | st_new | Read files and preview | ఫైళ్లు చదివి ప్రివ్యూ చూడండి |
+| `S0af4fc` | st_new | Status category by alarm type (optional) | అలారం రకం ప్రకారం స్థితి వర్గం (ఐచ్ఛికం) |
 | `S234237` | st_new | Status category of the new codes | కొత్త కోడ్‌ల స్థితి వర్గం |
 | `Sde7a5b` | st_new | The program files do not carry a category; you can change it in each Draft. | ప్రోగ్రామ్ ఫైళ్లకు వర్గం ఉండదు; మీరు ప్రతి ముసాయిదాలో దాన్ని మార్చవచ్చు. |
 | `S8f4c21` | st_new | Turbine platforms | టర్బైన్ ప్లాట్‌ఫారమ్‌లు |
 | `S9ad4d4` | st_new | Upload the generated StCd_<n>.st programs — several files at once, a whole folder, or one ZIP. Nothing is created yet: the next page lists every program so you can tick the ones to import. | సృష్టించిన StCd_<n>.st ప్రోగ్రామ్‌లను అప్‌లోడ్ చేయండి — ఒకేసారి అనేక ఫైళ్లు, మొత్తం ఫోల్డర్ లేదా ఒక ZIP. ఇంకా ఏదీ సృష్టించబడదు: తదుపరి పేజీ ప్రతి ప్రోగ్రామ్‌ను జాబితా చేస్తుంది, దిగుమతి చేయాల్సినవి టిక్ చేయడానికి. |
 | `S2693e5` | st_preview | All Drafts of this import join one change set, so they can be reviewed and decided together. | ఈ దిగుమతిలోని అన్ని ముసాయిదాలు ఒక మార్పుల సమితిలో చేరతాయి, తద్వారా వాటిని కలిసి సమీక్షించి నిర్ణయించవచ్చు. |
 | `Scbc694` | st_preview | already in the catalogue | ఇప్పటికే కేటలాగ్‌లో |
+| `Sc00673` | st_preview | Apply to the ticked programs | టిక్ చేసిన ప్రోగ్రామ్‌లకు వర్తింపజేయండి |
 | `Sdf88b8` | st_preview | blocked | నిరోధించబడినవి |
 | `S6f7703` | st_preview | Changed and withdrawn programs are not ticked: tick the ones you want to update, revise or restore. | మార్చిన మరియు ఉపసంహరించిన ప్రోగ్రామ్‌లు టిక్ చేయబడవు: నవీకరించాలనుకున్న, సవరించాలనుకున్న లేదా పునరుద్ధరించాలనుకున్నవాటిని టిక్ చేయండి. |
 | `S78bb8b` | st_preview | Create Drafts for the ticked programs | టిక్ చేసిన ప్రోగ్రామ్‌లకు ముసాయిదాలు సృష్టించండి |
@@ -9307,6 +9376,8 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se58289` | st_preview | Programs found in the uploaded files | అప్‌లోడ్ చేసిన ఫైళ్లలో దొరికిన ప్రోగ్రామ్‌లు |
 | `S75c053` | st_preview, workbench | ready | సిద్ధం |
 | `S0723bf` | st_preview | Select all programs that are ready | సిద్ధంగా ఉన్న అన్ని ప్రోగ్రామ్‌లను ఎంచుకోండి |
+| `Sae12bc` | st_preview, workbench | Status category | స్థితి వర్గం |
+| `Sd7a322` | st_preview | Status category of the ticked programs | టిక్ చేసిన ప్రోగ్రామ్‌ల స్థితి వర్గం |
 | `S1a767a` | st_preview | updates the open Draft | తెరిచిన ముసాయిదాను నవీకరిస్తుంది |
 | `S02499f` | st_preview | withdrawn | ఉపసంహరించినవి |
 | `Sf0c3cf` | st_preview | without a legacy number | పాత సంఖ్య లేనివి |
@@ -9428,7 +9499,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sa58dac` | workbench | Set values on the Drafts | ముసాయిదాలపై విలువలు సెట్ చేయండి |
 | `Sa443bb` | workbench | Sign off the Drafts | ముసాయిదాలకు సైన్-ఆఫ్ ఇవ్వండి |
 | `S53f47f` | workbench | Sign-off pending | సైన్-ఆఫ్ పెండింగ్ |
-| `Sae12bc` | workbench | Status category | స్థితి వర్గం |
 | `Sdc416e` | workbench | Step | దశ |
 | `Sf7710d` | workbench | Submit for review | సమీక్ష కోసం సమర్పించండి |
 | `Sa45adc` | workbench | Submit the Drafts | ముసాయిదాలను సమర్పించండి |
@@ -9441,7 +9511,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 
 ### 9.9 IN தமிழ் 🇮🇳 — Tamil
 
-1279 of 1280 strings translated; direction left to right.
+1289 of 1290 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -9531,7 +9601,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sb1fe0b` | builder | Release Builder | வெளியீட்டு உருவாக்கி |
 | `S5997c5` | builder | Save Candidate Set | வேட்பாளர் தொகுப்பைச் சேமி |
 | `Scc8a3c` | builder | Save targets | இலக்குகளைச் சேமி |
-| `S913aff` | builder, detail, mine | Select all | அனைத்தையும் தேர்ந்தெடு |
+| `S913aff` | builder, detail, list | Select all | அனைத்தையும் தேர்ந்தெடு |
 | `S85e466` | builder | Select the Approved, non-sandbox revisions to include, then Save. Publishing is immutable — a correction requires a new Release. | சேர்க்க அங்கீகரிக்கப்பட்ட, சாண்ட்பாக்ஸ் அல்லாத திருத்தங்களைத் தேர்ந்தெடுத்து, சேமியுங்கள். வெளியீடு மாற்ற முடியாதது — திருத்தத்துக்குப் புதிய வெளியீடு தேவை. |
 | `Sd64b6e` | builder, detail | Target software versions | இலக்கு மென்பொருள் பதிப்புகள் |
 | `S6ba0fc` | builder | View Release | வெளியீட்டைப் பார் |
@@ -10184,6 +10254,10 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S9e895f` | list | Change sets | மாற்றத் தொகுப்புகள் |
 | `S162a45` | list, menu | Change Sets | மாற்றத் தொகுப்புகள் |
 | `Scf723c` | list | Columns | நெடுவரிசைகள் |
+| `Seb0fd2` | list | Delete all my Drafts of this filter | இந்த வடிகட்டியில் உள்ள என் அனைத்து வரைவுகளையும் நீக்கு |
+| `S36f212` | list | Delete ALL of your own Drafts that match this filter, on every page? | இந்த வடிகட்டிக்குப் பொருந்தும் உங்கள் அனைத்து வரைவுகளையும், எல்லாப் பக்கங்களிலும், நீக்கவா? |
+| `Sc554a1` | list | Delete selected Drafts | தேர்ந்தெடுத்த வரைவுகளை நீக்கு |
+| `S2d8627` | list | Delete the ticked Drafts? A deleted Draft is gone; its number is only kept if it was already issued. | குறிக்கப்பட்ட வரைவுகளை நீக்கவா? நீக்கிய வரைவு போய்விடும்; அதன் எண் ஏற்கெனவே வழங்கப்பட்டிருந்தால் மட்டுமே இருக்கும். |
 | `S759686` | list | Filter status codes | நிலைக் குறியீடுகளை வடிகட்டு |
 | `Sfd327d` | list | Identifier, title, description | அடையாளங்காட்டி, தலைப்பு, விளக்கம் |
 | `S44d25b` | list | Items | உருப்படிகள் |
@@ -10202,6 +10276,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S1db747` | list | Save search | தேடலைச் சேமி |
 | `Sff86e9` | list | Save the current filters as | தற்போதைய வடிகட்டிகளை இந்தப் பெயரில் சேமி |
 | `Sed1d84` | list | Saved searches | சேமித்த தேடல்கள் |
+| `S859822` | list, mine | Select | தேர்ந்தெடு |
 | `S7f5583` | list, menu | Status Codes | நிலைக் குறியீடுகள் |
 | `S20bff1` | list | Status codes | நிலைக் குறியீடுகள் |
 | `Se90eb0` | list | Turbine Platform | டர்பைன் தளம் |
@@ -10469,7 +10544,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd72b71` | message: user_service | That e-mail address or username is already in use. | இந்த மின்னஞ்சல் முகவரி அல்லது பயனர் பெயர் ஏற்கனவே பயன்பாட்டில் உள்ளது. |
 | `Sd54517` | message: user_service, user_detail | You cannot delete your own account. | உங்கள் சொந்தக் கணக்கை நீக்க முடியாது. |
 | `S6a8896` | mine | Review & sign off | மதிப்பாய்வு செய்து கையொப்பமிடு |
-| `S859822` | mine | Select | தேர்ந்தெடு |
 | `S50a279` | mine | Show all | அனைத்தையும் காட்டு |
 | `Se48471` | mine | Showing only Drafts created by Import Job #%(id)s. | இறக்குமதிப் பணி #%(id)s உருவாக்கிய வரைவுகள் மட்டும் காட்டப்படுகின்றன. |
 | `Sff9480` | mine | Sign-Off Requests For You | உங்களுக்கான கையொப்பக் கோரிக்கைகள் |
@@ -10560,8 +10634,11 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd97d1e` | software_versions | Show | காட்டு |
 | `S42ea2e` | software_versions | Software Versions | மென்பொருள் பதிப்புகள் |
 | `S3bd89c` | software_versions | Which codes exist in which software version | எந்த மென்பொருள் பதிப்பில் எந்தக் குறியீடுகள் உள்ளன |
+| `S16e5d4` | st_new, st_preview | Alarm type | அலாரம் வகை |
+| `S726d7a` | st_new | as above | மேலே உள்ளபடி |
 | `Sb149ca` | st_new | Detect: a number from 10000 up is a Hub Controller program | கண்டறி: 10000 முதல் மேலுள்ள எண் ஹப் கட்டுப்படுத்தி நிரல் |
 | `S7d06d0` | st_new | Every imported program becomes an ordinary Draft with the number it carries reserved. It still needs Cross-Domain Sign-Off, dual review and Chief Engineer approval before Release, and all Drafts of one import share a change set. | இறக்குமதி செய்த ஒவ்வொரு நிரலும் அது கொண்டுள்ள எண் ஒதுக்கப்பட்ட சாதாரண வரைவாகிறது. வெளியீட்டுக்கு முன் அதற்கு இன்னும் துறைகள் கடந்த கையொப்பம், இரட்டை மதிப்பாய்வு, தலைமைப் பொறியாளர் ஒப்புதல் தேவை; ஒரு இறக்குமதியின் அனைத்து வரைவுகளும் ஒரு மாற்றத் தொகுப்பைப் பகிர்கின்றன. |
+| `Sbda77c` | st_new | Every program names an alarm type. A type left at "as above" gets the category chosen above; the next page lets you set the category of single programs or of all ticked ones. | ஒவ்வொரு நிரலும் ஒரு அலாரம் வகையைக் குறிப்பிடுகிறது. "மேலே உள்ளபடி" என விடப்பட்ட வகை மேலே தேர்ந்த வகையைப் பெறும்; அடுத்த பக்கத்தில் தனித்தனி நிரல்களுக்கோ குறிக்கப்பட்ட அனைத்திற்குமோ வகையை அமைக்கலாம். |
 | `S3b9e43` | st_new | Hub Controller (legacy numbers, mapped to the new ones) | ஹப் கட்டுப்படுத்தி (பழைய எண்கள், புதியவற்றுடன் இணைக்கப்பட்டவை) |
 | `Sd7333f` | st_new | Import status codes from .st files | .st கோப்புகளிலிருந்து நிலைக் குறியீடுகளை இறக்குமதி செய் |
 | `S6640a6` | st_new | New number of Hub Controller programs | ஹப் கட்டுப்படுத்தி நிரல்களின் புதிய எண் |
@@ -10570,12 +10647,14 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd99e2a` | st_new | Proposal 1: five-digit numbers (11000 and up) | முன்மொழிவு 1: ஐந்து இலக்க எண்கள் (11000 முதல்) |
 | `S2744b0` | st_new | Proposal 2: inside the Main Controller scheme | முன்மொழிவு 2: முதன்மைக் கட்டுப்படுத்தித் திட்டத்துக்குள் |
 | `S67640d` | st_new | Read files and preview | கோப்புகளைப் படித்து முன்னோட்டம் காண் |
+| `S0af4fc` | st_new | Status category by alarm type (optional) | அலாரம் வகைப்படி நிலை வகை (விருப்பம்) |
 | `S234237` | st_new | Status category of the new codes | புதிய குறியீடுகளின் நிலை வகை |
 | `Sde7a5b` | st_new | The program files do not carry a category; you can change it in each Draft. | நிரல் கோப்புகளில் வகை இல்லை; ஒவ்வொரு வரைவிலும் அதை மாற்றலாம். |
 | `S8f4c21` | st_new | Turbine platforms | டர்பைன் தளங்கள் |
 | `S9ad4d4` | st_new | Upload the generated StCd_<n>.st programs — several files at once, a whole folder, or one ZIP. Nothing is created yet: the next page lists every program so you can tick the ones to import. | உருவாக்கப்பட்ட StCd_<n>.st நிரல்களைப் பதிவேற்றுங்கள் — ஒரே நேரத்தில் பல கோப்புகள், முழுக் கோப்புறை அல்லது ஒரு ZIP. இன்னும் எதுவும் உருவாக்கப்படாது: அடுத்த பக்கம் ஒவ்வொரு நிரலையும் பட்டியலிடும், இறக்குமதிக்கானவற்றைக் குறிக்கலாம். |
 | `S2693e5` | st_preview | All Drafts of this import join one change set, so they can be reviewed and decided together. | இந்த இறக்குமதியின் அனைத்து வரைவுகளும் ஒரு மாற்றத் தொகுப்பில் சேரும், அவற்றை ஒன்றாக மதிப்பாய்வு செய்து முடிவு செய்ய. |
 | `Scbc694` | st_preview | already in the catalogue | ஏற்கனவே பட்டியலில் |
+| `Sc00673` | st_preview | Apply to the ticked programs | குறிக்கப்பட்ட நிரல்களுக்குப் பயன்படுத்து |
 | `Sdf88b8` | st_preview | blocked | தடுக்கப்பட்டவை |
 | `S6f7703` | st_preview | Changed and withdrawn programs are not ticked: tick the ones you want to update, revise or restore. | மாறிய மற்றும் திரும்பப் பெற்ற நிரல்கள் குறிக்கப்படவில்லை: புதுப்பிக்க, திருத்த அல்லது மீட்க விரும்புவனவற்றைக் குறிக்கவும். |
 | `S78bb8b` | st_preview | Create Drafts for the ticked programs | குறிக்கப்பட்ட நிரல்களுக்கு வரைவுகளை உருவாக்கு |
@@ -10593,6 +10672,8 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se58289` | st_preview | Programs found in the uploaded files | பதிவேற்றிய கோப்புகளில் கண்ட நிரல்கள் |
 | `S75c053` | st_preview, workbench | ready | தயார் |
 | `S0723bf` | st_preview | Select all programs that are ready | தயாராக உள்ள அனைத்து நிரல்களையும் தேர்ந்தெடு |
+| `Sae12bc` | st_preview, workbench | Status category | நிலை வகை |
+| `Sd7a322` | st_preview | Status category of the ticked programs | குறிக்கப்பட்ட நிரல்களின் நிலை வகை |
 | `S1a767a` | st_preview | updates the open Draft | திறந்த வரைவைப் புதுப்பிக்கிறது |
 | `S02499f` | st_preview | withdrawn | திரும்பப் பெற்றவை |
 | `Sf0c3cf` | st_preview | without a legacy number | பழைய எண் இல்லாதவை |
@@ -10714,7 +10795,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sa58dac` | workbench | Set values on the Drafts | வரைவுகளில் மதிப்புகளை அமை |
 | `Sa443bb` | workbench | Sign off the Drafts | வரைவுகளுக்குக் கையொப்பமிடு |
 | `S53f47f` | workbench | Sign-off pending | கையொப்பம் நிலுவையில் |
-| `Sae12bc` | workbench | Status category | நிலை வகை |
 | `Sdc416e` | workbench | Step | படி |
 | `Sf7710d` | workbench | Submit for review | மதிப்பாய்வுக்குச் சமர்ப்பி |
 | `Sa45adc` | workbench | Submit the Drafts | வரைவுகளைச் சமர்ப்பி |
@@ -10727,7 +10807,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 
 ### 9.10 IN ગુજરાતી 🇮🇳 — Gujarati
 
-1279 of 1280 strings translated; direction left to right.
+1289 of 1290 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -10817,7 +10897,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sb1fe0b` | builder | Release Builder | રિલીઝ બિલ્ડર |
 | `S5997c5` | builder | Save Candidate Set | ઉમેદવાર સમૂહ સાચવો |
 | `Scc8a3c` | builder | Save targets | લક્ષ્યો સાચવો |
-| `S913aff` | builder, detail, mine | Select all | બધું પસંદ કરો |
+| `S913aff` | builder, detail, list | Select all | બધું પસંદ કરો |
 | `S85e466` | builder | Select the Approved, non-sandbox revisions to include, then Save. Publishing is immutable — a correction requires a new Release. | સમાવવા માટે મંજૂર, બિન-સેન્ડબોક્સ સુધારા પસંદ કરો, પછી સાચવો. પ્રકાશન અપરિવર્તનીય છે — સુધારા માટે નવી રિલીઝ જોઈએ. |
 | `Sd64b6e` | builder, detail | Target software versions | લક્ષ્ય સૉફ્ટવેર આવૃત્તિઓ |
 | `S6ba0fc` | builder | View Release | રિલીઝ જુઓ |
@@ -11470,6 +11550,10 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S9e895f` | list | Change sets | ફેરફાર સમૂહો |
 | `S162a45` | list, menu | Change Sets | ફેરફાર સમૂહો |
 | `Scf723c` | list | Columns | કૉલમ |
+| `Seb0fd2` | list | Delete all my Drafts of this filter | આ ફિલ્ટરના મારા બધા મુસદ્દા કાઢી નાખો |
+| `S36f212` | list | Delete ALL of your own Drafts that match this filter, on every page? | આ ફિલ્ટર સાથે મેળ ખાતા તમારા પોતાના બધા મુસદ્દા, દરેક પાના પર, કાઢી નાખવા છે? |
+| `Sc554a1` | list | Delete selected Drafts | પસંદ કરેલા મુસદ્દા કાઢી નાખો |
+| `S2d8627` | list | Delete the ticked Drafts? A deleted Draft is gone; its number is only kept if it was already issued. | ટિક કરેલા મુસદ્દા કાઢી નાખવા છે? કાઢી નાખેલો મુસદ્દો જતો રહે છે; તેનો નંબર ફક્ત ત્યારે જ રહે છે જો તે પહેલેથી આપી દેવાયો હોય. |
 | `S759686` | list | Filter status codes | સ્ટેટસ કોડ ગાળો |
 | `Sfd327d` | list | Identifier, title, description | ઓળખકર્તા, શીર્ષક, વર્ણન |
 | `S44d25b` | list | Items | બાબતો |
@@ -11488,6 +11572,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S1db747` | list | Save search | શોધ સાચવો |
 | `Sff86e9` | list | Save the current filters as | વર્તમાન ફિલ્ટર આ નામે સાચવો |
 | `Sed1d84` | list | Saved searches | સાચવેલી શોધો |
+| `S859822` | list, mine | Select | પસંદ કરો |
 | `S7f5583` | list, menu | Status Codes | સ્ટેટસ કોડ |
 | `S20bff1` | list | Status codes | સ્ટેટસ કોડ |
 | `Se90eb0` | list | Turbine Platform | ટર્બાઇન પ્લેટફોર્મ |
@@ -11755,7 +11840,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd72b71` | message: user_service | That e-mail address or username is already in use. | આ ઈ-મેલ સરનામું અથવા વપરાશકર્તા નામ પહેલેથી વપરાશમાં છે. |
 | `Sd54517` | message: user_service, user_detail | You cannot delete your own account. | તમે તમારું પોતાનું એકાઉન્ટ કાઢી શકતા નથી. |
 | `S6a8896` | mine | Review & sign off | સમીક્ષા કરો અને સાઇન ઑફ કરો |
-| `S859822` | mine | Select | પસંદ કરો |
 | `S50a279` | mine | Show all | બધું બતાવો |
 | `Se48471` | mine | Showing only Drafts created by Import Job #%(id)s. | ફક્ત આયાત કાર્ય #%(id)s એ બનાવેલા મુસદ્દા બતાવાયા છે. |
 | `Sff9480` | mine | Sign-Off Requests For You | તમારા માટે સાઇન-ઑફ વિનંતીઓ |
@@ -11846,8 +11930,11 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd97d1e` | software_versions | Show | બતાવો |
 | `S42ea2e` | software_versions | Software Versions | સૉફ્ટવેર આવૃત્તિઓ |
 | `S3bd89c` | software_versions | Which codes exist in which software version | કયો કોડ કઈ સૉફ્ટવેર આવૃત્તિમાં છે |
+| `S16e5d4` | st_new, st_preview | Alarm type | એલાર્મનો પ્રકાર |
+| `S726d7a` | st_new | as above | ઉપર મુજબ |
 | `Sb149ca` | st_new | Detect: a number from 10000 up is a Hub Controller program | શોધો: 10000 થી ઉપરનો નંબર હબ નિયંત્રક પ્રોગ્રામ છે |
 | `S7d06d0` | st_new | Every imported program becomes an ordinary Draft with the number it carries reserved. It still needs Cross-Domain Sign-Off, dual review and Chief Engineer approval before Release, and all Drafts of one import share a change set. | દરેક આયાત કરેલો પ્રોગ્રામ સામાન્ય મુસદ્દો બને છે જેમાં તે જે નંબર ધરાવે છે તે આરક્ષિત રહે છે. રિલીઝ પહેલાં તેને હજુ આંતર-ક્ષેત્ર સાઇન-ઑફ, બેવડી સમીક્ષા અને મુખ્ય ઇજનેરની મંજૂરી જોઈએ, અને એક આયાતના બધા મુસદ્દા એક ફેરફાર સમૂહ વહેંચે છે. |
+| `Sbda77c` | st_new | Every program names an alarm type. A type left at "as above" gets the category chosen above; the next page lets you set the category of single programs or of all ticked ones. | દરેક પ્રોગ્રામ એક એલાર્મ પ્રકાર જણાવે છે. "ઉપર મુજબ" પર રાખેલા પ્રકારને ઉપર પસંદ કરેલી શ્રેણી મળે છે; આગલા પાના પર તમે અલગ પ્રોગ્રામની અથવા બધા ટિક કરેલાની શ્રેણી નક્કી કરી શકો છો. |
 | `S3b9e43` | st_new | Hub Controller (legacy numbers, mapped to the new ones) | હબ નિયંત્રક (જૂના નંબર, નવા સાથે મેપ કરેલા) |
 | `Sd7333f` | st_new | Import status codes from .st files | .st ફાઇલોમાંથી સ્ટેટસ કોડ આયાત કરો |
 | `S6640a6` | st_new | New number of Hub Controller programs | હબ નિયંત્રક પ્રોગ્રામનો નવો નંબર |
@@ -11856,12 +11943,14 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd99e2a` | st_new | Proposal 1: five-digit numbers (11000 and up) | પ્રસ્તાવ 1: પાંચ અંકના નંબર (11000 થી) |
 | `S2744b0` | st_new | Proposal 2: inside the Main Controller scheme | પ્રસ્તાવ 2: મુખ્ય નિયંત્રક યોજનાની અંદર |
 | `S67640d` | st_new | Read files and preview | ફાઇલો વાંચો અને પૂર્વાવલોકન જુઓ |
+| `S0af4fc` | st_new | Status category by alarm type (optional) | એલાર્મ પ્રકાર મુજબ સ્ટેટસ શ્રેણી (વૈકલ્પિક) |
 | `S234237` | st_new | Status category of the new codes | નવા કોડની સ્ટેટસ શ્રેણી |
 | `Sde7a5b` | st_new | The program files do not carry a category; you can change it in each Draft. | પ્રોગ્રામ ફાઇલો શ્રેણી ધરાવતી નથી; તમે દરેક મુસદ્દામાં તે બદલી શકો છો. |
 | `S8f4c21` | st_new | Turbine platforms | ટર્બાઇન પ્લેટફોર્મ |
 | `S9ad4d4` | st_new | Upload the generated StCd_<n>.st programs — several files at once, a whole folder, or one ZIP. Nothing is created yet: the next page lists every program so you can tick the ones to import. | જનરેટ કરેલા StCd_<n>.st પ્રોગ્રામ અપલોડ કરો — એકસાથે ઘણી ફાઇલો, આખું ફોલ્ડર અથવા એક ZIP. હજુ કંઈ બનતું નથી: આગલું પૃષ્ઠ દરેક પ્રોગ્રામ યાદીમાં બતાવે છે જેથી તમે આયાત કરવાના પર ટિક કરી શકો. |
 | `S2693e5` | st_preview | All Drafts of this import join one change set, so they can be reviewed and decided together. | આ આયાતના બધા મુસદ્દા એક ફેરફાર સમૂહમાં જોડાય છે, જેથી તેમની સાથે સમીક્ષા અને નિર્ણય થઈ શકે. |
 | `Scbc694` | st_preview | already in the catalogue | પહેલેથી કૅટલૉગમાં |
+| `Sc00673` | st_preview | Apply to the ticked programs | ટિક કરેલા પ્રોગ્રામ પર લાગુ કરો |
 | `Sdf88b8` | st_preview | blocked | અવરોધિત |
 | `S6f7703` | st_preview | Changed and withdrawn programs are not ticked: tick the ones you want to update, revise or restore. | બદલાયેલા અને પાછા ખેંચાયેલા પ્રોગ્રામ ટિક થતા નથી: જેને અદ્યતન, સુધારવા કે પુનઃસ્થાપિત કરવા માગો તેના પર ટિક કરો. |
 | `S78bb8b` | st_preview | Create Drafts for the ticked programs | ટિક કરેલા પ્રોગ્રામ માટે મુસદ્દા બનાવો |
@@ -11879,6 +11968,8 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se58289` | st_preview | Programs found in the uploaded files | અપલોડ કરેલી ફાઇલોમાં મળેલા પ્રોગ્રામ |
 | `S75c053` | st_preview, workbench | ready | તૈયાર |
 | `S0723bf` | st_preview | Select all programs that are ready | બધા તૈયાર પ્રોગ્રામ પસંદ કરો |
+| `Sae12bc` | st_preview, workbench | Status category | સ્ટેટસ શ્રેણી |
+| `Sd7a322` | st_preview | Status category of the ticked programs | ટિક કરેલા પ્રોગ્રામની સ્ટેટસ શ્રેણી |
 | `S1a767a` | st_preview | updates the open Draft | ખુલ્લો મુસદ્દો અદ્યતન કરે છે |
 | `S02499f` | st_preview | withdrawn | પાછા ખેંચાયેલા |
 | `Sf0c3cf` | st_preview | without a legacy number | જૂના નંબર વગરના |
@@ -12000,7 +12091,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sa58dac` | workbench | Set values on the Drafts | મુસદ્દાઓ પર મૂલ્યો સેટ કરો |
 | `Sa443bb` | workbench | Sign off the Drafts | મુસદ્દાઓનું સાઇન-ઑફ કરો |
 | `S53f47f` | workbench | Sign-off pending | સાઇન-ઑફ બાકી |
-| `Sae12bc` | workbench | Status category | સ્ટેટસ શ્રેણી |
 | `Sdc416e` | workbench | Step | પગલું |
 | `Sf7710d` | workbench | Submit for review | સમીક્ષા માટે સબમિટ કરો |
 | `Sa45adc` | workbench | Submit the Drafts | મુસદ્દા સબમિટ કરો |
@@ -12013,7 +12103,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 
 ### 9.11 PK اردو 🇵🇰 — Urdu
 
-1279 of 1280 strings translated; direction right to left.
+1289 of 1290 strings translated; direction right to left.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -12103,7 +12193,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sb1fe0b` | builder | Release Builder | ریلیز بلڈر |
 | `S5997c5` | builder | Save Candidate Set | امیدواروں کا مجموعہ محفوظ کریں |
 | `Scc8a3c` | builder | Save targets | اہداف محفوظ کریں |
-| `S913aff` | builder, detail, mine | Select all | سب منتخب کریں |
+| `S913aff` | builder, detail, list | Select all | سب منتخب کریں |
 | `S85e466` | builder | Select the Approved, non-sandbox revisions to include, then Save. Publishing is immutable — a correction requires a new Release. | شامل کرنے کے لیے منظور شدہ، غیر سینڈ باکس ترامیم منتخب کریں، پھر محفوظ کریں۔ اشاعت ناقابلِ واپسی ہے — درستی کے لیے نئی ریلیز درکار ہے۔ |
 | `Sd64b6e` | builder, detail | Target software versions | ہدف سافٹ ویئر ورژن |
 | `S6ba0fc` | builder | View Release | ریلیز دیکھیں |
@@ -12756,6 +12846,10 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S9e895f` | list | Change sets | تبدیلیوں کے مجموعے |
 | `S162a45` | list, menu | Change Sets | تبدیلی سیٹس |
 | `Scf723c` | list | Columns | کالم |
+| `Seb0fd2` | list | Delete all my Drafts of this filter | اس فلٹر کے میرے تمام مسودے حذف کریں |
+| `S36f212` | list | Delete ALL of your own Drafts that match this filter, on every page? | اس فلٹر سے ملتے آپ کے تمام اپنے مسودے، ہر صفحے پر، حذف کریں؟ |
+| `Sc554a1` | list | Delete selected Drafts | منتخب مسودے حذف کریں |
+| `S2d8627` | list | Delete the ticked Drafts? A deleted Draft is gone; its number is only kept if it was already issued. | نشان زد مسودے حذف کریں؟ حذف شدہ مسودہ ضائع ہو جاتا ہے؛ اس کا نمبر صرف اسی صورت برقرار رہتا ہے جب وہ پہلے ہی جاری ہو چکا ہو۔ |
 | `S759686` | list | Filter status codes | اسٹیٹس کوڈ چھانٹیں |
 | `Sfd327d` | list | Identifier, title, description | شناخت کنندہ، عنوان، تفصیل |
 | `S44d25b` | list | Items | اشیاء |
@@ -12774,6 +12868,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S1db747` | list | Save search | تلاش محفوظ کریں |
 | `Sff86e9` | list | Save the current filters as | موجودہ فلٹر اس نام سے محفوظ کریں |
 | `Sed1d84` | list | Saved searches | محفوظ شدہ تلاشیں |
+| `S859822` | list, mine | Select | منتخب کریں |
 | `S7f5583` | list, menu | Status Codes | اسٹیٹس کوڈز |
 | `S20bff1` | list | Status codes | اسٹیٹس کوڈز |
 | `Se90eb0` | list | Turbine Platform | ٹربائن پلیٹ فارم |
@@ -13041,7 +13136,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd72b71` | message: user_service | That e-mail address or username is already in use. | یہ ای میل پتا یا صارف نام پہلے سے استعمال میں ہے۔ |
 | `Sd54517` | message: user_service, user_detail | You cannot delete your own account. | آپ اپنا اکاؤنٹ حذف نہیں کر سکتے۔ |
 | `S6a8896` | mine | Review & sign off | جائزہ لیں اور سائن آف کریں |
-| `S859822` | mine | Select | منتخب کریں |
 | `S50a279` | mine | Show all | سب دکھائیں |
 | `Se48471` | mine | Showing only Drafts created by Import Job #%(id)s. | صرف درآمدی کام #%(id)s کے بنائے ہوئے مسودے دکھائے جا رہے ہیں۔ |
 | `Sff9480` | mine | Sign-Off Requests For You | آپ کے لیے سائن آف کی درخواستیں |
@@ -13132,8 +13226,11 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd97d1e` | software_versions | Show | دکھائیں |
 | `S42ea2e` | software_versions | Software Versions | سافٹ ویئر ورژن |
 | `S3bd89c` | software_versions | Which codes exist in which software version | کون سے کوڈ کس سافٹ ویئر ورژن میں ہیں |
+| `S16e5d4` | st_new, st_preview | Alarm type | الارم کی قسم |
+| `S726d7a` | st_new | as above | اوپر کی طرح |
 | `Sb149ca` | st_new | Detect: a number from 10000 up is a Hub Controller program | شناخت کریں: 10000 سے اوپر کا نمبر ہب کنٹرولر پروگرام ہے |
 | `S7d06d0` | st_new | Every imported program becomes an ordinary Draft with the number it carries reserved. It still needs Cross-Domain Sign-Off, dual review and Chief Engineer approval before Release, and all Drafts of one import share a change set. | ہر درآمد شدہ پروگرام عام مسودہ بنتا ہے جس میں اس کا اپنا نمبر مخصوص رہتا ہے۔ ریلیز سے پہلے اسے پھر بھی بین الشعبہ سائن آف، دوہرا جائزہ اور چیف انجینئر کی منظوری درکار ہے، اور ایک درآمد کے تمام مسودے ایک تبدیلیوں کا مجموعہ بانٹتے ہیں۔ |
+| `Sbda77c` | st_new | Every program names an alarm type. A type left at "as above" gets the category chosen above; the next page lets you set the category of single programs or of all ticked ones. | ہر پروگرام ایک الارم کی قسم بتاتا ہے۔ "اوپر کی طرح" چھوڑی گئی قسم کو اوپر منتخب کردہ زمرہ ملتا ہے؛ اگلے صفحے پر آپ الگ الگ پروگراموں یا تمام نشان زد پروگراموں کا زمرہ طے کر سکتے ہیں۔ |
 | `S3b9e43` | st_new | Hub Controller (legacy numbers, mapped to the new ones) | ہب کنٹرولر (پرانے نمبر، نئے سے نقشہ بند) |
 | `Sd7333f` | st_new | Import status codes from .st files | .st فائلوں سے اسٹیٹس کوڈ درآمد کریں |
 | `S6640a6` | st_new | New number of Hub Controller programs | ہب کنٹرولر پروگراموں کا نیا نمبر |
@@ -13142,12 +13239,14 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd99e2a` | st_new | Proposal 1: five-digit numbers (11000 and up) | تجویز 1: پانچ ہندسوں کے نمبر (11000 سے) |
 | `S2744b0` | st_new | Proposal 2: inside the Main Controller scheme | تجویز 2: مرکزی کنٹرولر کی اسکیم کے اندر |
 | `S67640d` | st_new | Read files and preview | فائلیں پڑھیں اور پیش منظر دیکھیں |
+| `S0af4fc` | st_new | Status category by alarm type (optional) | الارم کی قسم کے مطابق اسٹیٹس زمرہ (اختیاری) |
 | `S234237` | st_new | Status category of the new codes | نئے کوڈ کا اسٹیٹس زمرہ |
 | `Sde7a5b` | st_new | The program files do not carry a category; you can change it in each Draft. | پروگرام فائلوں میں زمرہ نہیں ہوتا؛ آپ اسے ہر مسودے میں بدل سکتے ہیں۔ |
 | `S8f4c21` | st_new | Turbine platforms | ٹربائن پلیٹ فارم |
 | `S9ad4d4` | st_new | Upload the generated StCd_<n>.st programs — several files at once, a whole folder, or one ZIP. Nothing is created yet: the next page lists every program so you can tick the ones to import. | تیار کردہ StCd_<n>.st پروگرام اپ لوڈ کریں — ایک ساتھ کئی فائلیں، پورا فولڈر یا ایک ZIP۔ ابھی کچھ نہیں بنتا: اگلا صفحہ ہر پروگرام کی فہرست دیتا ہے تاکہ آپ درآمد کرنے والوں پر نشان لگا سکیں۔ |
 | `S2693e5` | st_preview | All Drafts of this import join one change set, so they can be reviewed and decided together. | اس درآمد کے تمام مسودے ایک تبدیلیوں کے مجموعے میں شامل ہوتے ہیں، تاکہ ان کا اکٹھے جائزہ اور فیصلہ ہو سکے۔ |
 | `Scbc694` | st_preview | already in the catalogue | پہلے سے فہرست میں |
+| `Sc00673` | st_preview | Apply to the ticked programs | نشان زد پروگراموں پر لاگو کریں |
 | `Sdf88b8` | st_preview | blocked | مسدود |
 | `S6f7703` | st_preview | Changed and withdrawn programs are not ticked: tick the ones you want to update, revise or restore. | تبدیل شدہ اور واپس لیے گئے پروگرام نشان زد نہیں ہوتے: جنہیں اپ ڈیٹ، نظرِ ثانی یا بحال کرنا چاہتے ہیں ان پر نشان لگائیں۔ |
 | `S78bb8b` | st_preview | Create Drafts for the ticked programs | نشان زد پروگراموں کے لیے مسودے بنائیں |
@@ -13165,6 +13264,8 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se58289` | st_preview | Programs found in the uploaded files | اپ لوڈ کی گئی فائلوں میں ملے پروگرام |
 | `S75c053` | st_preview, workbench | ready | تیار |
 | `S0723bf` | st_preview | Select all programs that are ready | تمام تیار پروگرام منتخب کریں |
+| `Sae12bc` | st_preview, workbench | Status category | اسٹیٹس زمرہ |
+| `Sd7a322` | st_preview | Status category of the ticked programs | نشان زد پروگراموں کا اسٹیٹس زمرہ |
 | `S1a767a` | st_preview | updates the open Draft | کھلے مسودے کو اپ ڈیٹ کرتا ہے |
 | `S02499f` | st_preview | withdrawn | واپس لیے گئے |
 | `Sf0c3cf` | st_preview | without a legacy number | پرانے نمبر کے بغیر |
@@ -13286,7 +13387,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sa58dac` | workbench | Set values on the Drafts | مسودوں پر قدریں سیٹ کریں |
 | `Sa443bb` | workbench | Sign off the Drafts | مسودوں کا سائن آف کریں |
 | `S53f47f` | workbench | Sign-off pending | سائن آف زیر التوا |
-| `Sae12bc` | workbench | Status category | اسٹیٹس زمرہ |
 | `Sdc416e` | workbench | Step | مرحلہ |
 | `Sf7710d` | workbench | Submit for review | جائزے کے لیے جمع کرائیں |
 | `Sa45adc` | workbench | Submit the Drafts | مسودے جمع کرائیں |
@@ -13299,7 +13399,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 
 ### 9.12 IN ಕನ್ನಡ 🇮🇳 — Kannada
 
-1279 of 1280 strings translated; direction left to right.
+1289 of 1290 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -13389,7 +13489,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sb1fe0b` | builder | Release Builder | ಬಿಡುಗಡೆ ನಿರ್ಮಾಪಕ |
 | `S5997c5` | builder | Save Candidate Set | ಅಭ್ಯರ್ಥಿ ಸಮೂಹ ಉಳಿಸಿ |
 | `Scc8a3c` | builder | Save targets | ಗುರಿಗಳನ್ನು ಉಳಿಸಿ |
-| `S913aff` | builder, detail, mine | Select all | ಎಲ್ಲವನ್ನೂ ಆಯ್ಕೆಮಾಡಿ |
+| `S913aff` | builder, detail, list | Select all | ಎಲ್ಲವನ್ನೂ ಆಯ್ಕೆಮಾಡಿ |
 | `S85e466` | builder | Select the Approved, non-sandbox revisions to include, then Save. Publishing is immutable — a correction requires a new Release. | ಸೇರಿಸಲು ಅನುಮೋದಿತ, ಸ್ಯಾಂಡ್‌ಬಾಕ್ಸ್ ಅಲ್ಲದ ಪರಿಷ್ಕರಣೆಗಳನ್ನು ಆಯ್ಕೆಮಾಡಿ, ನಂತರ ಉಳಿಸಿ. ಪ್ರಕಟಣೆ ಬದಲಾಗದು — ತಿದ್ದುಪಡಿಗೆ ಹೊಸ ಬಿಡುಗಡೆ ಬೇಕು. |
 | `Sd64b6e` | builder, detail | Target software versions | ಗುರಿ ಸಾಫ್ಟ್‌ವೇರ್ ಆವೃತ್ತಿಗಳು |
 | `S6ba0fc` | builder | View Release | ಬಿಡುಗಡೆ ವೀಕ್ಷಿಸಿ |
@@ -14042,6 +14142,10 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S9e895f` | list | Change sets | ಬದಲಾವಣೆ ಸಮೂಹಗಳು |
 | `S162a45` | list, menu | Change Sets | ಬದಲಾವಣೆ ಸೆಟ್‌ಗಳು |
 | `Scf723c` | list | Columns | ಕಾಲಮ್‌ಗಳು |
+| `Seb0fd2` | list | Delete all my Drafts of this filter | ಈ ಫಿಲ್ಟರ್‌ನ ನನ್ನ ಎಲ್ಲಾ ಕರಡುಗಳನ್ನು ಅಳಿಸಿ |
+| `S36f212` | list | Delete ALL of your own Drafts that match this filter, on every page? | ಈ ಫಿಲ್ಟರ್‌ಗೆ ಹೊಂದುವ ನಿಮ್ಮ ಎಲ್ಲಾ ಕರಡುಗಳನ್ನು, ಎಲ್ಲಾ ಪುಟಗಳಲ್ಲಿ, ಅಳಿಸಬೇಕೇ? |
+| `Sc554a1` | list | Delete selected Drafts | ಆಯ್ದ ಕರಡುಗಳನ್ನು ಅಳಿಸಿ |
+| `S2d8627` | list | Delete the ticked Drafts? A deleted Draft is gone; its number is only kept if it was already issued. | ಗುರುತಿಸಿದ ಕರಡುಗಳನ್ನು ಅಳಿಸಬೇಕೇ? ಅಳಿಸಿದ ಕರಡು ಹೋಗುತ್ತದೆ; ಅದರ ಸಂಖ್ಯೆ ಈಗಾಗಲೇ ನೀಡಿದ್ದರೆ ಮಾತ್ರ ಉಳಿಯುತ್ತದೆ. |
 | `S759686` | list | Filter status codes | ಸ್ಥಿತಿ ಕೋಡ್‌ಗಳನ್ನು ಫಿಲ್ಟರ್ ಮಾಡಿ |
 | `Sfd327d` | list | Identifier, title, description | ಗುರುತು, ಶೀರ್ಷಿಕೆ, ವಿವರಣೆ |
 | `S44d25b` | list | Items | ಅಂಶಗಳು |
@@ -14060,6 +14164,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S1db747` | list | Save search | ಹುಡುಕಾಟ ಉಳಿಸಿ |
 | `Sff86e9` | list | Save the current filters as | ಪ್ರಸ್ತುತ ಫಿಲ್ಟರ್‌ಗಳನ್ನು ಈ ಹೆಸರಿನಲ್ಲಿ ಉಳಿಸಿ |
 | `Sed1d84` | list | Saved searches | ಉಳಿಸಿದ ಹುಡುಕಾಟಗಳು |
+| `S859822` | list, mine | Select | ಆಯ್ಕೆಮಾಡಿ |
 | `S7f5583` | list, menu | Status Codes | ಸ್ಥಿತಿ ಕೋಡ್‌ಗಳು |
 | `S20bff1` | list | Status codes | ಸ್ಥಿತಿ ಕೋಡ್‌ಗಳು |
 | `Se90eb0` | list | Turbine Platform | ಟರ್ಬೈನ್ ವೇದಿಕೆ |
@@ -14327,7 +14432,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd72b71` | message: user_service | That e-mail address or username is already in use. | ಆ ಇ-ಮೇಲ್ ವಿಳಾಸ ಅಥವಾ ಬಳಕೆದಾರ ಹೆಸರು ಈಗಾಗಲೇ ಬಳಕೆಯಲ್ಲಿದೆ. |
 | `Sd54517` | message: user_service, user_detail | You cannot delete your own account. | ನಿಮ್ಮ ಸ್ವಂತ ಖಾತೆಯನ್ನು ಅಳಿಸಲಾಗದು. |
 | `S6a8896` | mine | Review & sign off | ಪರಿಶೀಲಿಸಿ ಮತ್ತು ಸಹಿ ಮಾಡಿ |
-| `S859822` | mine | Select | ಆಯ್ಕೆಮಾಡಿ |
 | `S50a279` | mine | Show all | ಎಲ್ಲವನ್ನೂ ತೋರಿಸಿ |
 | `Se48471` | mine | Showing only Drafts created by Import Job #%(id)s. | ಆಮದು ಕೆಲಸ #%(id)s ರಚಿಸಿದ ಕರಡುಗಳನ್ನು ಮಾತ್ರ ತೋರಿಸಲಾಗುತ್ತಿದೆ. |
 | `Sff9480` | mine | Sign-Off Requests For You | ನಿಮಗಾಗಿ ಸಹಿ ವಿನಂತಿಗಳು |
@@ -14418,8 +14522,11 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd97d1e` | software_versions | Show | ತೋರಿಸಿ |
 | `S42ea2e` | software_versions | Software Versions | ಸಾಫ್ಟ್‌ವೇರ್ ಆವೃತ್ತಿಗಳು |
 | `S3bd89c` | software_versions | Which codes exist in which software version | ಯಾವ ಕೋಡ್‌ಗಳು ಯಾವ ಸಾಫ್ಟ್‌ವೇರ್ ಆವೃತ್ತಿಯಲ್ಲಿವೆ |
+| `S16e5d4` | st_new, st_preview | Alarm type | ಅಲಾರಂ ಪ್ರಕಾರ |
+| `S726d7a` | st_new | as above | ಮೇಲಿನಂತೆ |
 | `Sb149ca` | st_new | Detect: a number from 10000 up is a Hub Controller program | ಪತ್ತೆ: 10000 ರಿಂದ ಮೇಲಿನ ಸಂಖ್ಯೆ ಹಬ್ ನಿಯಂತ್ರಕ ಪ್ರೋಗ್ರಾಂ |
 | `S7d06d0` | st_new | Every imported program becomes an ordinary Draft with the number it carries reserved. It still needs Cross-Domain Sign-Off, dual review and Chief Engineer approval before Release, and all Drafts of one import share a change set. | ಆಮದಾದ ಪ್ರತಿ ಪ್ರೋಗ್ರಾಂ ತನ್ನ ಸಂಖ್ಯೆಯನ್ನು ಕಾಯ್ದಿರಿಸಿದ ಸಾಮಾನ್ಯ ಕರಡಾಗುತ್ತದೆ. ಬಿಡುಗಡೆಗೆ ಮೊದಲು ಅದಕ್ಕೆ ಇನ್ನೂ ಅಂತರ-ಡೊಮೇನ್ ಸಹಿ, ದ್ವಿಗುಣ ಪರಿಶೀಲನೆ ಮತ್ತು ಮುಖ್ಯ ಎಂಜಿನಿಯರ್ ಅನುಮೋದನೆ ಬೇಕು, ಮತ್ತು ಒಂದು ಆಮದಿನ ಎಲ್ಲಾ ಕರಡುಗಳು ಒಂದು ಬದಲಾವಣೆ ಸಮೂಹವನ್ನು ಹಂಚಿಕೊಳ್ಳುತ್ತವೆ. |
+| `Sbda77c` | st_new | Every program names an alarm type. A type left at "as above" gets the category chosen above; the next page lets you set the category of single programs or of all ticked ones. | ಪ್ರತಿ ಪ್ರೋಗ್ರಾಂ ಒಂದು ಅಲಾರಂ ಪ್ರಕಾರವನ್ನು ಹೇಳುತ್ತದೆ. "ಮೇಲಿನಂತೆ" ಇರುವ ಪ್ರಕಾರಕ್ಕೆ ಮೇಲೆ ಆರಿಸಿದ ವರ್ಗ ಸಿಗುತ್ತದೆ; ಮುಂದಿನ ಪುಟದಲ್ಲಿ ನೀವು ಒಂದೊಂದು ಪ್ರೋಗ್ರಾಂನ ಅಥವಾ ಗುರುತಿಸಿದ ಎಲ್ಲವುಗಳ ವರ್ಗವನ್ನು ಹೊಂದಿಸಬಹುದು. |
 | `S3b9e43` | st_new | Hub Controller (legacy numbers, mapped to the new ones) | ಹಬ್ ನಿಯಂತ್ರಕ (ಹಳೆಯ ಸಂಖ್ಯೆಗಳು, ಹೊಸದಕ್ಕೆ ನಕ್ಷೆ ಮಾಡಲಾಗಿದೆ) |
 | `Sd7333f` | st_new | Import status codes from .st files | .st ಫೈಲ್‌ಗಳಿಂದ ಸ್ಥಿತಿ ಕೋಡ್‌ಗಳನ್ನು ಆಮದು ಮಾಡಿ |
 | `S6640a6` | st_new | New number of Hub Controller programs | ಹಬ್ ನಿಯಂತ್ರಕ ಪ್ರೋಗ್ರಾಂಗಳ ಹೊಸ ಸಂಖ್ಯೆ |
@@ -14428,12 +14535,14 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd99e2a` | st_new | Proposal 1: five-digit numbers (11000 and up) | ಪ್ರಸ್ತಾವನೆ 1: ಐದು ಅಂಕಿಯ ಸಂಖ್ಯೆಗಳು (11000 ರಿಂದ) |
 | `S2744b0` | st_new | Proposal 2: inside the Main Controller scheme | ಪ್ರಸ್ತಾವನೆ 2: ಮುಖ್ಯ ನಿಯಂತ್ರಕ ಯೋಜನೆಯೊಳಗೆ |
 | `S67640d` | st_new | Read files and preview | ಫೈಲ್‌ಗಳನ್ನು ಓದಿ ಮತ್ತು ಪೂರ್ವವೀಕ್ಷಣೆ ನೋಡಿ |
+| `S0af4fc` | st_new | Status category by alarm type (optional) | ಅಲಾರಂ ಪ್ರಕಾರದ ಪ್ರಕಾರ ಸ್ಥಿತಿ ವರ್ಗ (ಐಚ್ಛಿಕ) |
 | `S234237` | st_new | Status category of the new codes | ಹೊಸ ಕೋಡ್‌ಗಳ ಸ್ಥಿತಿ ವರ್ಗ |
 | `Sde7a5b` | st_new | The program files do not carry a category; you can change it in each Draft. | ಪ್ರೋಗ್ರಾಂ ಫೈಲ್‌ಗಳು ವರ್ಗವನ್ನು ಹೊಂದಿರುವುದಿಲ್ಲ; ಪ್ರತಿ ಕರಡಿನಲ್ಲಿ ಅದನ್ನು ಬದಲಿಸಬಹುದು. |
 | `S8f4c21` | st_new | Turbine platforms | ಟರ್ಬೈನ್ ವೇದಿಕೆಗಳು |
 | `S9ad4d4` | st_new | Upload the generated StCd_<n>.st programs — several files at once, a whole folder, or one ZIP. Nothing is created yet: the next page lists every program so you can tick the ones to import. | ರಚಿಸಿದ StCd_<n>.st ಪ್ರೋಗ್ರಾಂಗಳನ್ನು ಅಪ್‌ಲೋಡ್ ಮಾಡಿ — ಒಮ್ಮೆಗೇ ಹಲವು ಫೈಲ್‌ಗಳು, ಪೂರ್ಣ ಫೋಲ್ಡರ್ ಅಥವಾ ಒಂದು ZIP. ಇನ್ನೂ ಏನೂ ರಚಿಸಲಾಗುವುದಿಲ್ಲ: ಮುಂದಿನ ಪುಟ ಪ್ರತಿ ಪ್ರೋಗ್ರಾಂ ಅನ್ನು ಪಟ್ಟಿಮಾಡುತ್ತದೆ, ಆಮದು ಮಾಡಬೇಕಾದವುಗಳನ್ನು ಗುರುತಿಸಬಹುದು. |
 | `S2693e5` | st_preview | All Drafts of this import join one change set, so they can be reviewed and decided together. | ಈ ಆಮದಿನ ಎಲ್ಲಾ ಕರಡುಗಳು ಒಂದು ಬದಲಾವಣೆ ಸಮೂಹವನ್ನು ಸೇರುತ್ತವೆ, ಇದರಿಂದ ಅವನ್ನು ಒಟ್ಟಿಗೆ ಪರಿಶೀಲಿಸಿ ನಿರ್ಧರಿಸಬಹುದು. |
 | `Scbc694` | st_preview | already in the catalogue | ಈಗಾಗಲೇ ಕ್ಯಾಟಲಾಗ್‌ನಲ್ಲಿದೆ |
+| `Sc00673` | st_preview | Apply to the ticked programs | ಗುರುತಿಸಿದ ಪ್ರೋಗ್ರಾಂಗಳಿಗೆ ಅನ್ವಯಿಸಿ |
 | `Sdf88b8` | st_preview | blocked | ನಿರ್ಬಂಧಿತ |
 | `S6f7703` | st_preview | Changed and withdrawn programs are not ticked: tick the ones you want to update, revise or restore. | ಬದಲಾದ ಮತ್ತು ಹಿಂಪಡೆದ ಪ್ರೋಗ್ರಾಂಗಳನ್ನು ಗುರುತಿಸಲಾಗಿಲ್ಲ: ನವೀಕರಿಸಲು, ಪರಿಷ್ಕರಿಸಲು ಅಥವಾ ಮರುಸ್ಥಾಪಿಸಲು ಬಯಸುವವನ್ನು ಗುರುತಿಸಿ. |
 | `S78bb8b` | st_preview | Create Drafts for the ticked programs | ಗುರುತಿಸಿದ ಪ್ರೋಗ್ರಾಂಗಳಿಗೆ ಕರಡುಗಳನ್ನು ರಚಿಸಿ |
@@ -14451,6 +14560,8 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se58289` | st_preview | Programs found in the uploaded files | ಅಪ್‌ಲೋಡ್ ಮಾಡಿದ ಫೈಲ್‌ಗಳಲ್ಲಿ ಸಿಕ್ಕ ಪ್ರೋಗ್ರಾಂಗಳು |
 | `S75c053` | st_preview, workbench | ready | ಸಿದ್ಧ |
 | `S0723bf` | st_preview | Select all programs that are ready | ಸಿದ್ಧವಿರುವ ಎಲ್ಲಾ ಪ್ರೋಗ್ರಾಂಗಳನ್ನು ಆಯ್ಕೆಮಾಡಿ |
+| `Sae12bc` | st_preview, workbench | Status category | ಸ್ಥಿತಿ ವರ್ಗ |
+| `Sd7a322` | st_preview | Status category of the ticked programs | ಗುರುತಿಸಿದ ಪ್ರೋಗ್ರಾಂಗಳ ಸ್ಥಿತಿ ವರ್ಗ |
 | `S1a767a` | st_preview | updates the open Draft | ತೆರೆದ ಕರಡನ್ನು ನವೀಕರಿಸುತ್ತದೆ |
 | `S02499f` | st_preview | withdrawn | ಹಿಂಪಡೆಯಲಾಗಿದೆ |
 | `Sf0c3cf` | st_preview | without a legacy number | ಹಳೆಯ ಸಂಖ್ಯೆ ಇಲ್ಲದೆ |
@@ -14572,7 +14683,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sa58dac` | workbench | Set values on the Drafts | ಕರಡುಗಳಲ್ಲಿ ಮೌಲ್ಯಗಳನ್ನು ಸೆಟ್ ಮಾಡಿ |
 | `Sa443bb` | workbench | Sign off the Drafts | ಕರಡುಗಳಿಗೆ ಸಹಿ ಮಾಡಿ |
 | `S53f47f` | workbench | Sign-off pending | ಸಹಿ ಬಾಕಿ |
-| `Sae12bc` | workbench | Status category | ಸ್ಥಿತಿ ವರ್ಗ |
 | `Sdc416e` | workbench | Step | ಹಂತ |
 | `Sf7710d` | workbench | Submit for review | ಪರಿಶೀಲನೆಗೆ ಸಲ್ಲಿಸಿ |
 | `Sa45adc` | workbench | Submit the Drafts | ಕರಡುಗಳನ್ನು ಸಲ್ಲಿಸಿ |
@@ -14585,7 +14695,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 
 ### 9.13 IN ଓଡ଼ିଆ 🇮🇳 — Odia
 
-1279 of 1280 strings translated; direction left to right.
+1289 of 1290 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -14675,7 +14785,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sb1fe0b` | builder | Release Builder | ରିଲିଜ୍ ନିର୍ମାତା |
 | `S5997c5` | builder | Save Candidate Set | ପ୍ରାର୍ଥୀ ସମୂହ ସଞ୍ଚୟ କରନ୍ତୁ |
 | `Scc8a3c` | builder | Save targets | ଲକ୍ଷ୍ୟ ସଞ୍ଚୟ କରନ୍ତୁ |
-| `S913aff` | builder, detail, mine | Select all | ସବୁ ବାଛନ୍ତୁ |
+| `S913aff` | builder, detail, list | Select all | ସବୁ ବାଛନ୍ତୁ |
 | `S85e466` | builder | Select the Approved, non-sandbox revisions to include, then Save. Publishing is immutable — a correction requires a new Release. | ଅନ୍ତର୍ଭୁକ୍ତ କରିବାକୁ ଅନୁମୋଦିତ, ସ୍ୟାଣ୍ଡବକ୍ସ ନୁହେଁ ଏପରି ସଂସ୍କରଣ ବାଛନ୍ତୁ, ତା’ପରେ ସଞ୍ଚୟ କରନ୍ତୁ। ପ୍ରକାଶନ ଅପରିବର୍ତ୍ତନୀୟ — ସଂଶୋଧନ ପାଇଁ ନୂଆ ରିଲିଜ୍ ଦରକାର। |
 | `Sd64b6e` | builder, detail | Target software versions | ଲକ୍ଷ୍ୟ ସଫ୍ଟୱେର୍ ସଂସ୍କରଣ |
 | `S6ba0fc` | builder | View Release | ରିଲିଜ୍ ଦେଖନ୍ତୁ |
@@ -15328,6 +15438,10 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S9e895f` | list | Change sets | ପରିବର୍ତ୍ତନ ସମୂହ |
 | `S162a45` | list, menu | Change Sets | ପରିବର୍ତ୍ତନ ସେଟ୍ |
 | `Scf723c` | list | Columns | ସ୍ତମ୍ଭ |
+| `Seb0fd2` | list | Delete all my Drafts of this filter | ଏହି ଫିଲ୍ଟର୍‌ର ମୋର ସମସ୍ତ ଖସଡ଼ା ବିଲୋପ କରନ୍ତୁ |
+| `S36f212` | list | Delete ALL of your own Drafts that match this filter, on every page? | ଏହି ଫିଲ୍ଟର୍‌ ସହ ମେଳ ଖାଉଥିବା ଆପଣଙ୍କ ସମସ୍ତ ଖସଡ଼ା, ସବୁ ପୃଷ୍ଠାରେ, ବିଲୋପ କରିବେ? |
+| `Sc554a1` | list | Delete selected Drafts | ବଛାଯାଇଥିବା ଖସଡ଼ା ବିଲୋପ କରନ୍ତୁ |
+| `S2d8627` | list | Delete the ticked Drafts? A deleted Draft is gone; its number is only kept if it was already issued. | ଚିହ୍ନିତ ଖସଡ଼ା ବିଲୋପ କରିବେ? ବିଲୋପ ହୋଇଥିବା ଖସଡ଼ା ହଜିଯାଏ; ତାହାର ସଂଖ୍ୟା ପୂର୍ବରୁ ଜାରି ହୋଇଥିଲେ ହିଁ ରହେ। |
 | `S759686` | list | Filter status codes | ସ୍ଥିତି କୋଡ୍ ଫିଲ୍ଟର୍ କରନ୍ତୁ |
 | `Sfd327d` | list | Identifier, title, description | ପରିଚୟକ, ଶୀର୍ଷକ, ବିବରଣୀ |
 | `S44d25b` | list | Items | ବିନ୍ଦୁ |
@@ -15346,6 +15460,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S1db747` | list | Save search | ସନ୍ଧାନ ସଞ୍ଚୟ କରନ୍ତୁ |
 | `Sff86e9` | list | Save the current filters as | ବର୍ତ୍ତମାନ ଫିଲ୍ଟର୍‌କୁ ଏହି ନାମରେ ସଞ୍ଚୟ କରନ୍ତୁ |
 | `Sed1d84` | list | Saved searches | ସଞ୍ଚିତ ସନ୍ଧାନ |
+| `S859822` | list, mine | Select | ବାଛନ୍ତୁ |
 | `S7f5583` | list, menu | Status Codes | ଅବସ୍ଥା କୋଡ୍ |
 | `S20bff1` | list | Status codes | ଅବସ୍ଥା କୋଡ୍ |
 | `Se90eb0` | list | Turbine Platform | ଟର୍ବାଇନ୍ ପ୍ଲାଟଫର୍ମ |
@@ -15613,7 +15728,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd72b71` | message: user_service | That e-mail address or username is already in use. | ସେହି ଇ-ମେଲ୍ ଠିକଣା ବା ଉପଯୋଗକର୍ତ୍ତା ନାମ ପୂର୍ବରୁ ବ୍ୟବହୃତ। |
 | `Sd54517` | message: user_service, user_detail | You cannot delete your own account. | ଆପଣ ନିଜ ଖାତା ଲିଭାଇପାରିବେ ନାହିଁ। |
 | `S6a8896` | mine | Review & sign off | ସମୀକ୍ଷା କରି ସ୍ୱାକ୍ଷର କରନ୍ତୁ |
-| `S859822` | mine | Select | ବାଛନ୍ତୁ |
 | `S50a279` | mine | Show all | ସବୁ ଦେଖାନ୍ତୁ |
 | `Se48471` | mine | Showing only Drafts created by Import Job #%(id)s. | ଆମଦାନି କାମ #%(id)s ଦ୍ୱାରା ତିଆରି ଖସଡ଼ା ମାତ୍ର ଦେଖାଯାଉଛି। |
 | `Sff9480` | mine | Sign-Off Requests For You | ଆପଣଙ୍କ ପାଇଁ ସ୍ୱାକ୍ଷର ଅନୁରୋଧ |
@@ -15704,8 +15818,11 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd97d1e` | software_versions | Show | ଦେଖାନ୍ତୁ |
 | `S42ea2e` | software_versions | Software Versions | ସଫ୍ଟୱେର୍ ସଂସ୍କରଣ |
 | `S3bd89c` | software_versions | Which codes exist in which software version | କେଉଁ କୋଡ୍ କେଉଁ ସଫ୍ଟୱେର୍ ସଂସ୍କରଣରେ ଅଛି |
+| `S16e5d4` | st_new, st_preview | Alarm type | ଆଲାର୍ମ ପ୍ରକାର |
+| `S726d7a` | st_new | as above | ଉପରେ ପରି |
 | `Sb149ca` | st_new | Detect: a number from 10000 up is a Hub Controller program | ଚିହ୍ନଟ: 10000 ରୁ ଉପରର ସଂଖ୍ୟା ହବ୍ ନିୟନ୍ତ୍ରକ ପ୍ରୋଗ୍ରାମ୍ |
 | `S7d06d0` | st_new | Every imported program becomes an ordinary Draft with the number it carries reserved. It still needs Cross-Domain Sign-Off, dual review and Chief Engineer approval before Release, and all Drafts of one import share a change set. | ପ୍ରତ୍ୟେକ ଆମଦାନି ହୋଇଥିବା ପ୍ରୋଗ୍ରାମ୍ ନିଜ ସଂଖ୍ୟା ସଂରକ୍ଷିତ ଥିବା ସାଧାରଣ ଖସଡ଼ା ହୁଏ। ରିଲିଜ୍ ପୂର୍ବରୁ ଏହା ପାଇଁ ଏବେ ବି ଆନ୍ତଃ-ଡୋମେନ୍ ସ୍ୱାକ୍ଷର, ଦ୍ୱିଗୁଣ ସମୀକ୍ଷା ଓ ମୁଖ୍ୟ ଇଞ୍ଜିନିୟର ଅନୁମୋଦନ ଦରକାର, ଏବଂ ଗୋଟିଏ ଆମଦାନିର ସମସ୍ତ ଖସଡ଼ା ଗୋଟିଏ ପରିବର୍ତ୍ତନ ସମୂହ ଅଂଶୀଦାର କରେ। |
+| `Sbda77c` | st_new | Every program names an alarm type. A type left at "as above" gets the category chosen above; the next page lets you set the category of single programs or of all ticked ones. | ପ୍ରତ୍ୟେକ ପ୍ରୋଗ୍ରାମ୍ ଏକ ଆଲାର୍ମ ପ୍ରକାର କହେ। "ଉପରେ ପରି" ରହିଥିବା ପ୍ରକାରକୁ ଉପରେ ବଛାଯାଇଥିବା ବର୍ଗ ମିଳେ; ପରବର୍ତ୍ତୀ ପୃଷ୍ଠାରେ ଆପଣ ଏକ ଏକ ପ୍ରୋଗ୍ରାମ୍ର କିମ୍ବା ସମସ୍ତ ଚିହ୍ନିତର ବର୍ଗ ସ୍ଥିର କରିପାରିବେ। |
 | `S3b9e43` | st_new | Hub Controller (legacy numbers, mapped to the new ones) | ହବ୍ ନିୟନ୍ତ୍ରକ (ପୁରୁଣା ସଂଖ୍ୟା, ନୂଆ ସହ ମାନଚିତ୍ରିତ) |
 | `Sd7333f` | st_new | Import status codes from .st files | .st ଫାଇଲ୍‌ରୁ ସ୍ଥିତି କୋଡ୍ ଆମଦାନି କରନ୍ତୁ |
 | `S6640a6` | st_new | New number of Hub Controller programs | ହବ୍ ନିୟନ୍ତ୍ରକ ପ୍ରୋଗ୍ରାମ୍‌ର ନୂଆ ସଂଖ୍ୟା |
@@ -15714,12 +15831,14 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd99e2a` | st_new | Proposal 1: five-digit numbers (11000 and up) | ପ୍ରସ୍ତାବ 1: ପାଞ୍ଚ ଅଙ୍କର ସଂଖ୍ୟା (11000 ରୁ) |
 | `S2744b0` | st_new | Proposal 2: inside the Main Controller scheme | ପ୍ରସ୍ତାବ 2: ମୁଖ୍ୟ ନିୟନ୍ତ୍ରକ ଯୋଜନା ଭିତରେ |
 | `S67640d` | st_new | Read files and preview | ଫାଇଲ୍ ପଢ଼ନ୍ତୁ ଓ ପୂର୍ବାବଲୋକନ ଦେଖନ୍ତୁ |
+| `S0af4fc` | st_new | Status category by alarm type (optional) | ଆଲାର୍ମ ପ୍ରକାର ଅନୁସାରେ ସ୍ଥିତି ବର୍ଗ (ଇଚ୍ଛାଧୀନ) |
 | `S234237` | st_new | Status category of the new codes | ନୂଆ କୋଡ୍‌ର ସ୍ଥିତି ବର୍ଗ |
 | `Sde7a5b` | st_new | The program files do not carry a category; you can change it in each Draft. | ପ୍ରୋଗ୍ରାମ୍ ଫାଇଲ୍ ବର୍ଗ ବହନ କରେ ନାହିଁ; ପ୍ରତ୍ୟେକ ଖସଡ଼ାରେ ଆପଣ ଏହାକୁ ବଦଳାଇପାରିବେ। |
 | `S8f4c21` | st_new | Turbine platforms | ଟର୍ବାଇନ୍ ପ୍ଲାଟଫର୍ମ |
 | `S9ad4d4` | st_new | Upload the generated StCd_<n>.st programs — several files at once, a whole folder, or one ZIP. Nothing is created yet: the next page lists every program so you can tick the ones to import. | ପ୍ରସ୍ତୁତ StCd_<n>.st ପ୍ରୋଗ୍ରାମ୍ ଅପଲୋଡ୍ କରନ୍ତୁ — ଥରକେ ଅନେକ ଫାଇଲ୍, ପୂର୍ଣ୍ଣ ଫୋଲ୍ଡର୍ ବା ଗୋଟିଏ ZIP। ଏପର୍ଯ୍ୟନ୍ତ କିଛି ତିଆରି ହୁଏ ନାହିଁ: ପରବର୍ତ୍ତୀ ପୃଷ୍ଠା ପ୍ରତ୍ୟେକ ପ୍ରୋଗ୍ରାମ୍ ତାଲିକାଭୁକ୍ତ କରେ ଯାହା ଦ୍ୱାରା ଆମଦାନି ହେବାକୁ ଥିବାଗୁଡ଼ିକୁ ଚିହ୍ନିତ କରିପାରିବେ। |
 | `S2693e5` | st_preview | All Drafts of this import join one change set, so they can be reviewed and decided together. | ଏହି ଆମଦାନିର ସମସ୍ତ ଖସଡ଼ା ଗୋଟିଏ ପରିବର୍ତ୍ତନ ସମୂହରେ ଯୋଗ ଦିଏ, ଯାହା ଦ୍ୱାରା ସେଗୁଡ଼ିକୁ ଏକାଠି ସମୀକ୍ଷା ଓ ନିଷ୍ପତ୍ତି କରାଯାଇପାରିବ। |
 | `Scbc694` | st_preview | already in the catalogue | ପୂର୍ବରୁ କ୍ୟାଟାଲଗ୍‌ରେ |
+| `Sc00673` | st_preview | Apply to the ticked programs | ଚିହ୍ନିତ ପ୍ରୋଗ୍ରାମ୍‌ରେ ଲାଗୁ କରନ୍ତୁ |
 | `Sdf88b8` | st_preview | blocked | ଅବରୁଦ୍ଧ |
 | `S6f7703` | st_preview | Changed and withdrawn programs are not ticked: tick the ones you want to update, revise or restore. | ବଦଳିଥିବା ଓ ପ୍ରତ୍ୟାହୃତ ପ୍ରୋଗ୍ରାମ୍ ଚିହ୍ନିତ ନୁହେଁ: ଅଦ୍ୟତନ, ସଂଶୋଧନ ବା ପୁନଃସ୍ଥାପନ କରିବାକୁ ଚାହୁଁଥିବାଗୁଡ଼ିକୁ ଚିହ୍ନିତ କରନ୍ତୁ। |
 | `S78bb8b` | st_preview | Create Drafts for the ticked programs | ଚିହ୍ନିତ ପ୍ରୋଗ୍ରାମ୍ ପାଇଁ ଖସଡ଼ା ତିଆରି କରନ୍ତୁ |
@@ -15737,6 +15856,8 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se58289` | st_preview | Programs found in the uploaded files | ଅପଲୋଡ୍ ହୋଇଥିବା ଫାଇଲରେ ମିଳିଥିବା ପ୍ରୋଗ୍ରାମ୍ |
 | `S75c053` | st_preview, workbench | ready | ପ୍ରସ୍ତୁତ |
 | `S0723bf` | st_preview | Select all programs that are ready | ପ୍ରସ୍ତୁତ ଥିବା ସମସ୍ତ ପ୍ରୋଗ୍ରାମ୍ ବାଛନ୍ତୁ |
+| `Sae12bc` | st_preview, workbench | Status category | ସ୍ଥିତି ବର୍ଗ |
+| `Sd7a322` | st_preview | Status category of the ticked programs | ଚିହ୍ନିତ ପ୍ରୋଗ୍ରାମ୍‌ର ସ୍ଥିତି ବର୍ଗ |
 | `S1a767a` | st_preview | updates the open Draft | ଖୋଲା ଖସଡ଼ା ଅଦ୍ୟତନ କରେ |
 | `S02499f` | st_preview | withdrawn | ପ୍ରତ୍ୟାହୃତ |
 | `Sf0c3cf` | st_preview | without a legacy number | ପୁରୁଣା ସଂଖ୍ୟା ବିନା |
@@ -15858,7 +15979,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sa58dac` | workbench | Set values on the Drafts | ଖସଡ଼ାରେ ମୂଲ୍ୟ ସେଟ୍ କରନ୍ତୁ |
 | `Sa443bb` | workbench | Sign off the Drafts | ଖସଡ଼ାର ସ୍ୱାକ୍ଷର କରନ୍ତୁ |
 | `S53f47f` | workbench | Sign-off pending | ସ୍ୱାକ୍ଷର ବାକି |
-| `Sae12bc` | workbench | Status category | ସ୍ଥିତି ବର୍ଗ |
 | `Sdc416e` | workbench | Step | ପଦକ୍ଷେପ |
 | `Sf7710d` | workbench | Submit for review | ସମୀକ୍ଷା ପାଇଁ ଦାଖଲ କରନ୍ତୁ |
 | `Sa45adc` | workbench | Submit the Drafts | ଖସଡ଼ା ଦାଖଲ କରନ୍ତୁ |
@@ -15871,7 +15991,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 
 ### 9.14 IN മലയാളം 🇮🇳 — Malayalam
 
-1279 of 1280 strings translated; direction left to right.
+1289 of 1290 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -15961,7 +16081,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sb1fe0b` | builder | Release Builder | റിലീസ് ബിൽഡർ |
 | `S5997c5` | builder | Save Candidate Set | സ്ഥാനാർത്ഥി സമുച്ചയം സംരക്ഷിക്കുക |
 | `Scc8a3c` | builder | Save targets | ലക്ഷ്യങ്ങൾ സംരക്ഷിക്കുക |
-| `S913aff` | builder, detail, mine | Select all | എല്ലാം തിരഞ്ഞെടുക്കുക |
+| `S913aff` | builder, detail, list | Select all | എല്ലാം തിരഞ്ഞെടുക്കുക |
 | `S85e466` | builder | Select the Approved, non-sandbox revisions to include, then Save. Publishing is immutable — a correction requires a new Release. | ഉൾപ്പെടുത്താൻ അംഗീകരിച്ച, സാൻഡ്ബോക്സ് അല്ലാത്ത റിവിഷനുകൾ തിരഞ്ഞെടുക്കുക, തുടർന്ന് സംരക്ഷിക്കുക. പ്രസിദ്ധീകരണം മാറ്റാനാവാത്തതാണ് — തിരുത്തലിന് പുതിയ റിലീസ് വേണം. |
 | `Sd64b6e` | builder, detail | Target software versions | ലക്ഷ്യ സോഫ്റ്റ്‌വെയർ പതിപ്പുകൾ |
 | `S6ba0fc` | builder | View Release | റിലീസ് കാണുക |
@@ -16614,6 +16734,10 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S9e895f` | list | Change sets | മാറ്റ സമൂഹങ്ങൾ |
 | `S162a45` | list, menu | Change Sets | മാറ്റ സെറ്റുകൾ |
 | `Scf723c` | list | Columns | കോളങ്ങൾ |
+| `Seb0fd2` | list | Delete all my Drafts of this filter | ഈ ഫിൽട്ടറിലെ എന്റെ എല്ലാ കരടുകളും ഇല്ലാതാക്കുക |
+| `S36f212` | list | Delete ALL of your own Drafts that match this filter, on every page? | ഈ ഫിൽട്ടറുമായി ചേരുന്ന നിങ്ങളുടെ എല്ലാ കരടുകളും, എല്ലാ പേജുകളിലും, ഇല്ലാതാക്കണോ? |
+| `Sc554a1` | list | Delete selected Drafts | തിരഞ്ഞെടുത്ത കരടുകൾ ഇല്ലാതാക്കുക |
+| `S2d8627` | list | Delete the ticked Drafts? A deleted Draft is gone; its number is only kept if it was already issued. | ടിക്ക് ചെയ്ത കരടുകൾ ഇല്ലാതാക്കണോ? ഇല്ലാതാക്കിയ കരട് നഷ്ടപ്പെടും; അതിന്റെ നമ്പർ നേരത്തേ നൽകിയതാണെങ്കിൽ മാത്രമേ നിലനിൽക്കൂ. |
 | `S759686` | list | Filter status codes | സ്റ്റാറ്റസ് കോഡുകൾ ഫിൽട്ടർ ചെയ്യുക |
 | `Sfd327d` | list | Identifier, title, description | ഐഡന്റിഫയർ, ശീർഷകം, വിവരണം |
 | `S44d25b` | list | Items | ഇനങ്ങൾ |
@@ -16632,6 +16756,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S1db747` | list | Save search | തിരയൽ സംരക്ഷിക്കുക |
 | `Sff86e9` | list | Save the current filters as | നിലവിലെ ഫിൽട്ടറുകൾ ഈ പേരിൽ സംരക്ഷിക്കുക |
 | `Sed1d84` | list | Saved searches | സംരക്ഷിച്ച തിരയലുകൾ |
+| `S859822` | list, mine | Select | തിരഞ്ഞെടുക്കുക |
 | `S7f5583` | list, menu | Status Codes | സ്റ്റാറ്റസ് കോഡുകൾ |
 | `S20bff1` | list | Status codes | സ്റ്റാറ്റസ് കോഡുകൾ |
 | `Se90eb0` | list | Turbine Platform | ടർബൈൻ പ്ലാറ്റ്ഫോം |
@@ -16899,7 +17024,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd72b71` | message: user_service | That e-mail address or username is already in use. | ആ ഇ-മെയിൽ വിലാസമോ ഉപയോക്തൃനാമമോ ഇതിനകം ഉപയോഗത്തിലാണ്. |
 | `Sd54517` | message: user_service, user_detail | You cannot delete your own account. | നിങ്ങളുടെ സ്വന്തം അക്കൗണ്ട് ഇല്ലാതാക്കാനാവില്ല. |
 | `S6a8896` | mine | Review & sign off | അവലോകനം ചെയ്ത് സൈൻ ഓഫ് ചെയ്യുക |
-| `S859822` | mine | Select | തിരഞ്ഞെടുക്കുക |
 | `S50a279` | mine | Show all | എല്ലാം കാണിക്കുക |
 | `Se48471` | mine | Showing only Drafts created by Import Job #%(id)s. | ഇറക്കുമതി ജോലി #%(id)s സൃഷ്ടിച്ച കരടുകൾ മാത്രം കാണിക്കുന്നു. |
 | `Sff9480` | mine | Sign-Off Requests For You | നിങ്ങൾക്കുള്ള സൈൻ-ഓഫ് അഭ്യർത്ഥനകൾ |
@@ -16990,8 +17114,11 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd97d1e` | software_versions | Show | കാണിക്കുക |
 | `S42ea2e` | software_versions | Software Versions | സോഫ്റ്റ്‌വെയർ പതിപ്പുകൾ |
 | `S3bd89c` | software_versions | Which codes exist in which software version | ഏത് കോഡുകൾ ഏത് സോഫ്റ്റ്‌വെയർ പതിപ്പിൽ ഉണ്ട് |
+| `S16e5d4` | st_new, st_preview | Alarm type | അലാറം തരം |
+| `S726d7a` | st_new | as above | മുകളിലെ പോലെ |
 | `Sb149ca` | st_new | Detect: a number from 10000 up is a Hub Controller program | കണ്ടെത്തൽ: 10000 മുതൽ മുകളിലുള്ള നമ്പർ ഹബ് കൺട്രോളർ പ്രോഗ്രാമാണ് |
 | `S7d06d0` | st_new | Every imported program becomes an ordinary Draft with the number it carries reserved. It still needs Cross-Domain Sign-Off, dual review and Chief Engineer approval before Release, and all Drafts of one import share a change set. | ഇറക്കുമതി ചെയ്ത ഓരോ പ്രോഗ്രാമും അതിന്റെ നമ്പർ റിസർവ് ചെയ്ത സാധാരണ കരടാകുന്നു. റിലീസിന് മുമ്പ് ഇതിന് ഇപ്പോഴും ക്രോസ്-ഡൊമെയ്ൻ സൈൻ-ഓഫ്, ഇരട്ട അവലോകനം, ചീഫ് എൻജിനീയറുടെ അംഗീകാരം എന്നിവ വേണം, ഒരു ഇറക്കുമതിയിലെ എല്ലാ കരടുകളും ഒരു മാറ്റ സമൂഹം പങ്കിടുന്നു. |
+| `Sbda77c` | st_new | Every program names an alarm type. A type left at "as above" gets the category chosen above; the next page lets you set the category of single programs or of all ticked ones. | ഓരോ പ്രോഗ്രാമും ഒരു അലാറം തരം പറയുന്നു. "മുകളിലെ പോലെ" എന്ന് വിട്ട തരത്തിന് മുകളിൽ തിരഞ്ഞെടുത്ത വിഭാഗം ലഭിക്കും; അടുത്ത പേജിൽ ഓരോ പ്രോഗ്രാമിന്റെയോ ടിക്ക് ചെയ്ത എല്ലാറ്റിന്റെയോ വിഭാഗം സജ്ജമാക്കാം. |
 | `S3b9e43` | st_new | Hub Controller (legacy numbers, mapped to the new ones) | ഹബ് കൺട്രോളർ (പഴയ നമ്പറുകൾ, പുതിയവയുമായി മാപ്പ് ചെയ്തത്) |
 | `Sd7333f` | st_new | Import status codes from .st files | .st ഫയലുകളിൽ നിന്ന് സ്റ്റാറ്റസ് കോഡുകൾ ഇറക്കുമതി ചെയ്യുക |
 | `S6640a6` | st_new | New number of Hub Controller programs | ഹബ് കൺട്രോളർ പ്രോഗ്രാമുകളുടെ പുതിയ നമ്പർ |
@@ -17000,12 +17127,14 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd99e2a` | st_new | Proposal 1: five-digit numbers (11000 and up) | നിർദ്ദേശം 1: അഞ്ചക്ക നമ്പറുകൾ (11000 മുതൽ) |
 | `S2744b0` | st_new | Proposal 2: inside the Main Controller scheme | നിർദ്ദേശം 2: മെയിൻ കൺട്രോളർ പദ്ധതിക്കുള്ളിൽ |
 | `S67640d` | st_new | Read files and preview | ഫയലുകൾ വായിച്ച് പ്രിവ്യൂ കാണുക |
+| `S0af4fc` | st_new | Status category by alarm type (optional) | അലാറം തരം അനുസരിച്ച് സ്റ്റാറ്റസ് വിഭാഗം (ഓപ്ഷണൽ) |
 | `S234237` | st_new | Status category of the new codes | പുതിയ കോഡുകളുടെ സ്റ്റാറ്റസ് വിഭാഗം |
 | `Sde7a5b` | st_new | The program files do not carry a category; you can change it in each Draft. | പ്രോഗ്രാം ഫയലുകളിൽ വിഭാഗമില്ല; ഓരോ കരടിലും നിങ്ങൾക്ക് മാറ്റാം. |
 | `S8f4c21` | st_new | Turbine platforms | ടർബൈൻ പ്ലാറ്റ്ഫോമുകൾ |
 | `S9ad4d4` | st_new | Upload the generated StCd_<n>.st programs — several files at once, a whole folder, or one ZIP. Nothing is created yet: the next page lists every program so you can tick the ones to import. | സൃഷ്ടിച്ച StCd_<n>.st പ്രോഗ്രാമുകൾ അപ്‌ലോഡ് ചെയ്യുക — ഒരേസമയം പല ഫയലുകൾ, ഒരു മുഴുവൻ ഫോൾഡർ അല്ലെങ്കിൽ ഒരു ZIP. ഇതുവരെ ഒന്നും സൃഷ്ടിക്കുന്നില്ല: അടുത്ത പേജ് ഓരോ പ്രോഗ്രാമും പട്ടികപ്പെടുത്തുന്നു, ഇറക്കുമതി ചെയ്യേണ്ടവ ടിക്ക് ചെയ്യാം. |
 | `S2693e5` | st_preview | All Drafts of this import join one change set, so they can be reviewed and decided together. | ഈ ഇറക്കുമതിയിലെ എല്ലാ കരടുകളും ഒരു മാറ്റ സമൂഹത്തിൽ ചേരുന്നു, അതിനാൽ അവ ഒരുമിച്ച് അവലോകനം ചെയ്ത് തീരുമാനിക്കാം. |
 | `Scbc694` | st_preview | already in the catalogue | ഇതിനകം കാറ്റലോഗിൽ |
+| `Sc00673` | st_preview | Apply to the ticked programs | ടിക്ക് ചെയ്ത പ്രോഗ്രാമുകൾക്ക് പ്രയോഗിക്കുക |
 | `Sdf88b8` | st_preview | blocked | തടഞ്ഞത് |
 | `S6f7703` | st_preview | Changed and withdrawn programs are not ticked: tick the ones you want to update, revise or restore. | മാറിയതും പിൻവലിച്ചതുമായ പ്രോഗ്രാമുകൾ ടിക്ക് ചെയ്തിട്ടില്ല: അപ്‌ഡേറ്റ്, പുതുക്കൽ അല്ലെങ്കിൽ പുനഃസ്ഥാപനം വേണ്ടവ ടിക്ക് ചെയ്യുക. |
 | `S78bb8b` | st_preview | Create Drafts for the ticked programs | ടിക്ക് ചെയ്ത പ്രോഗ്രാമുകൾക്കായി കരടുകൾ സൃഷ്ടിക്കുക |
@@ -17023,6 +17152,8 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se58289` | st_preview | Programs found in the uploaded files | അപ്‌ലോഡ് ചെയ്ത ഫയലുകളിൽ കണ്ടെത്തിയ പ്രോഗ്രാമുകൾ |
 | `S75c053` | st_preview, workbench | ready | തയ്യാർ |
 | `S0723bf` | st_preview | Select all programs that are ready | തയ്യാറായ എല്ലാ പ്രോഗ്രാമുകളും തിരഞ്ഞെടുക്കുക |
+| `Sae12bc` | st_preview, workbench | Status category | സ്റ്റാറ്റസ് വിഭാഗം |
+| `Sd7a322` | st_preview | Status category of the ticked programs | ടിക്ക് ചെയ്ത പ്രോഗ്രാമുകളുടെ സ്റ്റാറ്റസ് വിഭാഗം |
 | `S1a767a` | st_preview | updates the open Draft | തുറന്ന കരട് അപ്‌ഡേറ്റ് ചെയ്യുന്നു |
 | `S02499f` | st_preview | withdrawn | പിൻവലിച്ചത് |
 | `Sf0c3cf` | st_preview | without a legacy number | പഴയ നമ്പർ ഇല്ലാതെ |
@@ -17144,7 +17275,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sa58dac` | workbench | Set values on the Drafts | കരടുകളിൽ മൂല്യങ്ങൾ സെറ്റ് ചെയ്യുക |
 | `Sa443bb` | workbench | Sign off the Drafts | കരടുകൾക്ക് സൈൻ-ഓഫ് നൽകുക |
 | `S53f47f` | workbench | Sign-off pending | സൈൻ-ഓഫ് ബാക്കി |
-| `Sae12bc` | workbench | Status category | സ്റ്റാറ്റസ് വിഭാഗം |
 | `Sdc416e` | workbench | Step | ഘട്ടം |
 | `Sf7710d` | workbench | Submit for review | അവലോകനത്തിനായി സമർപ്പിക്കുക |
 | `Sa45adc` | workbench | Submit the Drafts | കരടുകൾ സമർപ്പിക്കുക |
@@ -17157,7 +17287,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 
 ### 9.15 IN ਪੰਜਾਬੀ 🇮🇳 — Punjabi
 
-1279 of 1280 strings translated; direction left to right.
+1289 of 1290 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -17247,7 +17377,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sb1fe0b` | builder | Release Builder | ਰਿਲੀਜ਼ ਬਿਲਡਰ |
 | `S5997c5` | builder | Save Candidate Set | ਉਮੀਦਵਾਰ ਸਮੂਹ ਸੁਰੱਖਿਅਤ ਕਰੋ |
 | `Scc8a3c` | builder | Save targets | ਨਿਸ਼ਾਨੇ ਸੁਰੱਖਿਅਤ ਕਰੋ |
-| `S913aff` | builder, detail, mine | Select all | ਸਭ ਚੁਣੋ |
+| `S913aff` | builder, detail, list | Select all | ਸਭ ਚੁਣੋ |
 | `S85e466` | builder | Select the Approved, non-sandbox revisions to include, then Save. Publishing is immutable — a correction requires a new Release. | ਸ਼ਾਮਲ ਕਰਨ ਲਈ ਮਨਜ਼ੂਰ, ਗੈਰ-ਸੈਂਡਬਾਕਸ ਸੋਧਾਂ ਚੁਣੋ, ਫਿਰ ਸੁਰੱਖਿਅਤ ਕਰੋ। ਪ੍ਰਕਾਸ਼ਨ ਅਟੱਲ ਹੈ — ਸੁਧਾਈ ਲਈ ਨਵੀਂ ਰਿਲੀਜ਼ ਚਾਹੀਦੀ ਹੈ। |
 | `Sd64b6e` | builder, detail | Target software versions | ਨਿਸ਼ਾਨਾ ਸਾਫਟਵੇਅਰ ਸੰਸਕਰਣ |
 | `S6ba0fc` | builder | View Release | ਰਿਲੀਜ਼ ਵੇਖੋ |
@@ -17900,6 +18030,10 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S9e895f` | list | Change sets | ਤਬਦੀਲੀ ਸਮੂਹ |
 | `S162a45` | list, menu | Change Sets | ਤਬਦੀਲੀ ਸੈੱਟ |
 | `Scf723c` | list | Columns | ਕਾਲਮ |
+| `Seb0fd2` | list | Delete all my Drafts of this filter | ਇਸ ਫਿਲਟਰ ਦੇ ਮੇਰੇ ਸਾਰੇ ਖਰੜੇ ਮਿਟਾਓ |
+| `S36f212` | list | Delete ALL of your own Drafts that match this filter, on every page? | ਇਸ ਫਿਲਟਰ ਨਾਲ ਮੇਲ ਖਾਂਦੇ ਤੁਹਾਡੇ ਸਾਰੇ ਖਰੜੇ, ਹਰ ਸਫ਼ੇ 'ਤੇ, ਮਿਟਾਉਣੇ ਹਨ? |
+| `Sc554a1` | list | Delete selected Drafts | ਚੁਣੇ ਹੋਏ ਖਰੜੇ ਮਿਟਾਓ |
+| `S2d8627` | list | Delete the ticked Drafts? A deleted Draft is gone; its number is only kept if it was already issued. | ਨਿਸ਼ਾਨ ਲੱਗੇ ਖਰੜੇ ਮਿਟਾਉਣੇ ਹਨ? ਮਿਟਾਇਆ ਖਰੜਾ ਚਲਾ ਜਾਂਦਾ ਹੈ; ਉਸ ਦਾ ਨੰਬਰ ਤਾਂ ਹੀ ਰਹਿੰਦਾ ਹੈ ਜੇ ਉਹ ਪਹਿਲਾਂ ਹੀ ਜਾਰੀ ਹੋ ਚੁੱਕਾ ਹੋਵੇ। |
 | `S759686` | list | Filter status codes | ਸਥਿਤੀ ਕੋਡ ਫਿਲਟਰ ਕਰੋ |
 | `Sfd327d` | list | Identifier, title, description | ਪਛਾਣਕਰਤਾ, ਸਿਰਲੇਖ, ਵੇਰਵਾ |
 | `S44d25b` | list | Items | ਆਈਟਮਾਂ |
@@ -17918,6 +18052,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S1db747` | list | Save search | ਖੋਜ ਸੁਰੱਖਿਅਤ ਕਰੋ |
 | `Sff86e9` | list | Save the current filters as | ਮੌਜੂਦਾ ਫਿਲਟਰ ਇਸ ਨਾਮ ਨਾਲ ਸੁਰੱਖਿਅਤ ਕਰੋ |
 | `Sed1d84` | list | Saved searches | ਸੁਰੱਖਿਅਤ ਖੋਜਾਂ |
+| `S859822` | list, mine | Select | ਚੁਣੋ |
 | `S7f5583` | list, menu | Status Codes | ਸਥਿਤੀ ਕੋਡ |
 | `S20bff1` | list | Status codes | ਸਥਿਤੀ ਕੋਡ |
 | `Se90eb0` | list | Turbine Platform | ਟਰਬਾਈਨ ਪਲੇਟਫਾਰਮ |
@@ -18185,7 +18320,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd72b71` | message: user_service | That e-mail address or username is already in use. | ਇਹ ਈ-ਮੇਲ ਪਤਾ ਜਾਂ ਵਰਤੋਂਕਾਰ ਨਾਮ ਪਹਿਲਾਂ ਹੀ ਵਰਤੋਂ ਵਿੱਚ ਹੈ। |
 | `Sd54517` | message: user_service, user_detail | You cannot delete your own account. | ਤੁਸੀਂ ਆਪਣਾ ਖਾਤਾ ਨਹੀਂ ਮਿਟਾ ਸਕਦੇ। |
 | `S6a8896` | mine | Review & sign off | ਸਮੀਖਿਆ ਕਰੋ ਅਤੇ ਦਸਤਖ਼ਤ ਕਰੋ |
-| `S859822` | mine | Select | ਚੁਣੋ |
 | `S50a279` | mine | Show all | ਸਭ ਦਿਖਾਓ |
 | `Se48471` | mine | Showing only Drafts created by Import Job #%(id)s. | ਦਰਾਮਦ ਕੰਮ #%(id)s ਦੇ ਬਣਾਏ ਖਰੜੇ ਹੀ ਦਿਖਾਏ ਜਾ ਰਹੇ ਹਨ। |
 | `Sff9480` | mine | Sign-Off Requests For You | ਤੁਹਾਡੇ ਲਈ ਦਸਤਖ਼ਤ ਬੇਨਤੀਆਂ |
@@ -18276,8 +18410,11 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd97d1e` | software_versions | Show | ਦਿਖਾਓ |
 | `S42ea2e` | software_versions | Software Versions | ਸਾਫਟਵੇਅਰ ਸੰਸਕਰਣ |
 | `S3bd89c` | software_versions | Which codes exist in which software version | ਕਿਹੜੇ ਕੋਡ ਕਿਹੜੇ ਸਾਫਟਵੇਅਰ ਸੰਸਕਰਣ ਵਿੱਚ ਹਨ |
+| `S16e5d4` | st_new, st_preview | Alarm type | ਅਲਾਰਮ ਦੀ ਕਿਸਮ |
+| `S726d7a` | st_new | as above | ਉੱਪਰ ਵਾਂਗ |
 | `Sb149ca` | st_new | Detect: a number from 10000 up is a Hub Controller program | ਪਛਾਣੋ: 10000 ਤੋਂ ਉੱਪਰ ਦਾ ਨੰਬਰ ਹੱਬ ਕੰਟਰੋਲਰ ਪ੍ਰੋਗਰਾਮ ਹੈ |
 | `S7d06d0` | st_new | Every imported program becomes an ordinary Draft with the number it carries reserved. It still needs Cross-Domain Sign-Off, dual review and Chief Engineer approval before Release, and all Drafts of one import share a change set. | ਹਰ ਦਰਾਮਦ ਪ੍ਰੋਗਰਾਮ ਆਮ ਖਰੜਾ ਬਣਦਾ ਹੈ ਜਿਸਦਾ ਆਪਣਾ ਨੰਬਰ ਰਾਖਵਾਂ ਰਹਿੰਦਾ ਹੈ। ਰਿਲੀਜ਼ ਤੋਂ ਪਹਿਲਾਂ ਇਸਨੂੰ ਅਜੇ ਵੀ ਅੰਤਰ-ਡੋਮੇਨ ਦਸਤਖ਼ਤ, ਦੋਹਰੀ ਸਮੀਖਿਆ ਅਤੇ ਮੁੱਖ ਇੰਜੀਨੀਅਰ ਦੀ ਮਨਜ਼ੂਰੀ ਚਾਹੀਦੀ ਹੈ, ਅਤੇ ਇੱਕ ਦਰਾਮਦ ਦੇ ਸਾਰੇ ਖਰੜੇ ਇੱਕ ਤਬਦੀਲੀ ਸਮੂਹ ਸਾਂਝਾ ਕਰਦੇ ਹਨ। |
+| `Sbda77c` | st_new | Every program names an alarm type. A type left at "as above" gets the category chosen above; the next page lets you set the category of single programs or of all ticked ones. | ਹਰ ਪ੍ਰੋਗਰਾਮ ਇੱਕ ਅਲਾਰਮ ਕਿਸਮ ਦੱਸਦਾ ਹੈ। "ਉੱਪਰ ਵਾਂਗ" ਛੱਡੀ ਕਿਸਮ ਨੂੰ ਉੱਪਰ ਚੁਣੀ ਸ਼੍ਰੇਣੀ ਮਿਲਦੀ ਹੈ; ਅਗਲੇ ਸਫ਼ੇ 'ਤੇ ਤੁਸੀਂ ਇੱਕ-ਇੱਕ ਪ੍ਰੋਗਰਾਮ ਜਾਂ ਸਾਰੇ ਨਿਸ਼ਾਨ ਲੱਗਿਆਂ ਦੀ ਸ਼੍ਰੇਣੀ ਤੈਅ ਕਰ ਸਕਦੇ ਹੋ। |
 | `S3b9e43` | st_new | Hub Controller (legacy numbers, mapped to the new ones) | ਹੱਬ ਕੰਟਰੋਲਰ (ਪੁਰਾਣੇ ਨੰਬਰ, ਨਵਿਆਂ ਨਾਲ ਮੈਪ ਕੀਤੇ) |
 | `Sd7333f` | st_new | Import status codes from .st files | .st ਫਾਈਲਾਂ ਤੋਂ ਸਥਿਤੀ ਕੋਡ ਦਰਾਮਦ ਕਰੋ |
 | `S6640a6` | st_new | New number of Hub Controller programs | ਹੱਬ ਕੰਟਰੋਲਰ ਪ੍ਰੋਗਰਾਮਾਂ ਦਾ ਨਵਾਂ ਨੰਬਰ |
@@ -18286,12 +18423,14 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd99e2a` | st_new | Proposal 1: five-digit numbers (11000 and up) | ਤਜਵੀਜ਼ 1: ਪੰਜ ਅੰਕਾਂ ਦੇ ਨੰਬਰ (11000 ਤੋਂ) |
 | `S2744b0` | st_new | Proposal 2: inside the Main Controller scheme | ਤਜਵੀਜ਼ 2: ਮੁੱਖ ਕੰਟਰੋਲਰ ਸਕੀਮ ਦੇ ਅੰਦਰ |
 | `S67640d` | st_new | Read files and preview | ਫਾਈਲਾਂ ਪੜ੍ਹੋ ਅਤੇ ਪੂਰਵ-ਝਲਕ ਵੇਖੋ |
+| `S0af4fc` | st_new | Status category by alarm type (optional) | ਅਲਾਰਮ ਕਿਸਮ ਅਨੁਸਾਰ ਸਥਿਤੀ ਸ਼੍ਰੇਣੀ (ਵਿਕਲਪਿਕ) |
 | `S234237` | st_new | Status category of the new codes | ਨਵੇਂ ਕੋਡਾਂ ਦੀ ਸਥਿਤੀ ਸ਼੍ਰੇਣੀ |
 | `Sde7a5b` | st_new | The program files do not carry a category; you can change it in each Draft. | ਪ੍ਰੋਗਰਾਮ ਫਾਈਲਾਂ ਵਿੱਚ ਸ਼੍ਰੇਣੀ ਨਹੀਂ ਹੁੰਦੀ; ਤੁਸੀਂ ਹਰ ਖਰੜੇ ਵਿੱਚ ਇਸਨੂੰ ਬਦਲ ਸਕਦੇ ਹੋ। |
 | `S8f4c21` | st_new | Turbine platforms | ਟਰਬਾਈਨ ਪਲੇਟਫਾਰਮ |
 | `S9ad4d4` | st_new | Upload the generated StCd_<n>.st programs — several files at once, a whole folder, or one ZIP. Nothing is created yet: the next page lists every program so you can tick the ones to import. | ਤਿਆਰ ਕੀਤੇ StCd_<n>.st ਪ੍ਰੋਗਰਾਮ ਅੱਪਲੋਡ ਕਰੋ — ਇੱਕੋ ਵਾਰ ਕਈ ਫਾਈਲਾਂ, ਪੂਰਾ ਫੋਲਡਰ ਜਾਂ ਇੱਕ ZIP। ਅਜੇ ਕੁਝ ਨਹੀਂ ਬਣਦਾ: ਅਗਲਾ ਸਫ਼ਾ ਹਰ ਪ੍ਰੋਗਰਾਮ ਦੀ ਸੂਚੀ ਦਿੰਦਾ ਹੈ ਤਾਂ ਜੋ ਤੁਸੀਂ ਦਰਾਮਦ ਕਰਨ ਵਾਲਿਆਂ ਉੱਤੇ ਨਿਸ਼ਾਨ ਲਾ ਸਕੋ। |
 | `S2693e5` | st_preview | All Drafts of this import join one change set, so they can be reviewed and decided together. | ਇਸ ਦਰਾਮਦ ਦੇ ਸਾਰੇ ਖਰੜੇ ਇੱਕ ਤਬਦੀਲੀ ਸਮੂਹ ਵਿੱਚ ਸ਼ਾਮਲ ਹੁੰਦੇ ਹਨ, ਤਾਂ ਜੋ ਉਨ੍ਹਾਂ ਦੀ ਇਕੱਠਿਆਂ ਸਮੀਖਿਆ ਅਤੇ ਫ਼ੈਸਲਾ ਹੋ ਸਕੇ। |
 | `Scbc694` | st_preview | already in the catalogue | ਪਹਿਲਾਂ ਹੀ ਕੈਟਾਲਾਗ ਵਿੱਚ |
+| `Sc00673` | st_preview | Apply to the ticked programs | ਨਿਸ਼ਾਨ ਲੱਗੇ ਪ੍ਰੋਗਰਾਮਾਂ 'ਤੇ ਲਾਗੂ ਕਰੋ |
 | `Sdf88b8` | st_preview | blocked | ਰੋਕੇ ਗਏ |
 | `S6f7703` | st_preview | Changed and withdrawn programs are not ticked: tick the ones you want to update, revise or restore. | ਬਦਲੇ ਅਤੇ ਵਾਪਸ ਲਏ ਪ੍ਰੋਗਰਾਮਾਂ ਉੱਤੇ ਨਿਸ਼ਾਨ ਨਹੀਂ ਹੁੰਦਾ: ਜਿਨ੍ਹਾਂ ਨੂੰ ਅੱਪਡੇਟ, ਸੋਧ ਜਾਂ ਬਹਾਲ ਕਰਨਾ ਹੈ ਉਨ੍ਹਾਂ ਉੱਤੇ ਨਿਸ਼ਾਨ ਲਾਓ। |
 | `S78bb8b` | st_preview | Create Drafts for the ticked programs | ਨਿਸ਼ਾਨ ਲੱਗੇ ਪ੍ਰੋਗਰਾਮਾਂ ਲਈ ਖਰੜੇ ਬਣਾਓ |
@@ -18309,6 +18448,8 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se58289` | st_preview | Programs found in the uploaded files | ਅੱਪਲੋਡ ਕੀਤੀਆਂ ਫਾਈਲਾਂ ਵਿੱਚ ਮਿਲੇ ਪ੍ਰੋਗਰਾਮ |
 | `S75c053` | st_preview, workbench | ready | ਤਿਆਰ |
 | `S0723bf` | st_preview | Select all programs that are ready | ਸਾਰੇ ਤਿਆਰ ਪ੍ਰੋਗਰਾਮ ਚੁਣੋ |
+| `Sae12bc` | st_preview, workbench | Status category | ਸਥਿਤੀ ਸ਼੍ਰੇਣੀ |
+| `Sd7a322` | st_preview | Status category of the ticked programs | ਨਿਸ਼ਾਨ ਲੱਗੇ ਪ੍ਰੋਗਰਾਮਾਂ ਦੀ ਸਥਿਤੀ ਸ਼੍ਰੇਣੀ |
 | `S1a767a` | st_preview | updates the open Draft | ਖੁੱਲ੍ਹੇ ਖਰੜੇ ਨੂੰ ਅੱਪਡੇਟ ਕਰਦਾ ਹੈ |
 | `S02499f` | st_preview | withdrawn | ਵਾਪਸ ਲਏ |
 | `Sf0c3cf` | st_preview | without a legacy number | ਪੁਰਾਣੇ ਨੰਬਰ ਤੋਂ ਬਿਨਾਂ |
@@ -18430,7 +18571,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sa58dac` | workbench | Set values on the Drafts | ਖਰੜਿਆਂ ਉੱਤੇ ਮੁੱਲ ਸੈੱਟ ਕਰੋ |
 | `Sa443bb` | workbench | Sign off the Drafts | ਖਰੜਿਆਂ ਦਾ ਸਾਈਨ-ਆਫ਼ ਕਰੋ |
 | `S53f47f` | workbench | Sign-off pending | ਸਾਈਨ-ਆਫ਼ ਬਾਕੀ |
-| `Sae12bc` | workbench | Status category | ਸਥਿਤੀ ਸ਼੍ਰੇਣੀ |
 | `Sdc416e` | workbench | Step | ਪੜਾਅ |
 | `Sf7710d` | workbench | Submit for review | ਸਮੀਖਿਆ ਲਈ ਜਮ੍ਹਾਂ ਕਰੋ |
 | `Sa45adc` | workbench | Submit the Drafts | ਖਰੜੇ ਜਮ੍ਹਾਂ ਕਰੋ |
@@ -18443,7 +18583,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 
 ### 9.16 ES Español 🇪🇸 — Spanish
 
-1279 of 1280 strings translated; direction left to right.
+1289 of 1290 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -18533,7 +18673,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sb1fe0b` | builder | Release Builder | Generador de versiones |
 | `S5997c5` | builder | Save Candidate Set | Guardar conjunto de candidatos |
 | `Scc8a3c` | builder | Save targets | Guardar destinos |
-| `S913aff` | builder, detail, mine | Select all | Seleccionar todo |
+| `S913aff` | builder, detail, list | Select all | Seleccionar todo |
 | `S85e466` | builder | Select the Approved, non-sandbox revisions to include, then Save. Publishing is immutable — a correction requires a new Release. | Seleccione las revisiones aprobadas, no de entorno de pruebas, que incluir y guarde. La publicación es inmutable: una corrección requiere una versión nueva. |
 | `Sd64b6e` | builder, detail | Target software versions | Versiones de software de destino |
 | `S6ba0fc` | builder | View Release | Ver versión |
@@ -19186,6 +19326,10 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S162a45` | list, menu | Change Sets | Conjuntos de cambios |
 | `S9e895f` | list | Change sets | Conjuntos de cambios |
 | `Scf723c` | list | Columns | Columnas |
+| `Seb0fd2` | list | Delete all my Drafts of this filter | Eliminar todos mis borradores de este filtro |
+| `S36f212` | list | Delete ALL of your own Drafts that match this filter, on every page? | ¿Eliminar TODOS sus propios borradores que coincidan con este filtro, en todas las páginas? |
+| `Sc554a1` | list | Delete selected Drafts | Eliminar los borradores seleccionados |
+| `S2d8627` | list | Delete the ticked Drafts? A deleted Draft is gone; its number is only kept if it was already issued. | ¿Eliminar los borradores marcados? Un borrador eliminado se pierde; su número solo se conserva si ya se había asignado. |
 | `S759686` | list | Filter status codes | Filtrar códigos de estado |
 | `Sfd327d` | list | Identifier, title, description | Identificador, título, descripción |
 | `S44d25b` | list | Items | Elementos |
@@ -19204,6 +19348,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S1db747` | list | Save search | Guardar búsqueda |
 | `Sff86e9` | list | Save the current filters as | Guardar los filtros actuales como |
 | `Sed1d84` | list | Saved searches | Búsquedas guardadas |
+| `S859822` | list, mine | Select | Seleccionar |
 | `S7f5583` | list, menu | Status Codes | Códigos de estado |
 | `S20bff1` | list | Status codes | Códigos de estado |
 | `Se90eb0` | list | Turbine Platform | Plataforma de turbina |
@@ -19471,7 +19616,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd72b71` | message: user_service | That e-mail address or username is already in use. | Esta dirección de correo o nombre de usuario ya está en uso. |
 | `Sd54517` | message: user_service, user_detail | You cannot delete your own account. | No puede eliminar su propia cuenta. |
 | `S6a8896` | mine | Review & sign off | Revisar y dar conformidad |
-| `S859822` | mine | Select | Seleccionar |
 | `S50a279` | mine | Show all | Mostrar todo |
 | `Se48471` | mine | Showing only Drafts created by Import Job #%(id)s. | Solo se muestran los borradores creados por la tarea de importación n.º %(id)s. |
 | `Sff9480` | mine | Sign-Off Requests For You | Solicitudes de conformidad para usted |
@@ -19562,8 +19706,11 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd97d1e` | software_versions | Show | Mostrar |
 | `S42ea2e` | software_versions | Software Versions | Versiones de software |
 | `S3bd89c` | software_versions | Which codes exist in which software version | Qué códigos existen en qué versión de software |
+| `S16e5d4` | st_new, st_preview | Alarm type | Tipo de alarma |
+| `S726d7a` | st_new | as above | como arriba |
 | `Sb149ca` | st_new | Detect: a number from 10000 up is a Hub Controller program | Detectar: un número a partir de 10000 es un programa del controlador del buje |
 | `S7d06d0` | st_new | Every imported program becomes an ordinary Draft with the number it carries reserved. It still needs Cross-Domain Sign-Off, dual review and Chief Engineer approval before Release, and all Drafts of one import share a change set. | Cada programa importado se convierte en un borrador ordinario con el número que lleva reservado. Aún necesita conformidad entre ámbitos, doble revisión y aprobación del ingeniero jefe antes de publicarse, y todos los borradores de una importación comparten un conjunto de cambios. |
+| `Sbda77c` | st_new | Every program names an alarm type. A type left at "as above" gets the category chosen above; the next page lets you set the category of single programs or of all ticked ones. | Cada programa indica un tipo de alarma. Un tipo que se deja en «como arriba» recibe la categoría elegida arriba; en la página siguiente puede fijar la categoría de programas sueltos o de todos los marcados. |
 | `S3b9e43` | st_new | Hub Controller (legacy numbers, mapped to the new ones) | Controlador del buje (números anteriores, asignados a los nuevos) |
 | `Sd7333f` | st_new | Import status codes from .st files | Importar códigos de estado desde archivos .st |
 | `S6640a6` | st_new | New number of Hub Controller programs | Nuevo número de los programas del controlador del buje |
@@ -19572,12 +19719,14 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd99e2a` | st_new | Proposal 1: five-digit numbers (11000 and up) | Propuesta 1: números de cinco cifras (desde 11000) |
 | `S2744b0` | st_new | Proposal 2: inside the Main Controller scheme | Propuesta 2: dentro del esquema del controlador principal |
 | `S67640d` | st_new | Read files and preview | Leer archivos y mostrar vista previa |
+| `S0af4fc` | st_new | Status category by alarm type (optional) | Categoría de estado por tipo de alarma (opcional) |
 | `S234237` | st_new | Status category of the new codes | Categoría de estado de los códigos nuevos |
 | `Sde7a5b` | st_new | The program files do not carry a category; you can change it in each Draft. | Los archivos de programa no llevan categoría; puede cambiarla en cada borrador. |
 | `S8f4c21` | st_new | Turbine platforms | Plataformas de aerogenerador |
 | `S9ad4d4` | st_new | Upload the generated StCd_<n>.st programs — several files at once, a whole folder, or one ZIP. Nothing is created yet: the next page lists every program so you can tick the ones to import. | Suba los programas StCd_<n>.st generados: varios archivos a la vez, una carpeta entera o un ZIP. Aún no se crea nada: la página siguiente lista cada programa para que marque los que desea importar. |
 | `S2693e5` | st_preview | All Drafts of this import join one change set, so they can be reviewed and decided together. | Todos los borradores de esta importación se unen a un conjunto de cambios, para revisarse y decidirse juntos. |
 | `Scbc694` | st_preview | already in the catalogue | ya en el catálogo |
+| `Sc00673` | st_preview | Apply to the ticked programs | Aplicar a los programas marcados |
 | `Sdf88b8` | st_preview | blocked | bloqueados |
 | `S6f7703` | st_preview | Changed and withdrawn programs are not ticked: tick the ones you want to update, revise or restore. | Los programas modificados y retirados no se marcan: marque los que desee actualizar, revisar o restaurar. |
 | `S78bb8b` | st_preview | Create Drafts for the ticked programs | Crear borradores para los programas marcados |
@@ -19595,6 +19744,8 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se58289` | st_preview | Programs found in the uploaded files | Programas encontrados en los archivos subidos |
 | `S75c053` | st_preview, workbench | ready | listos |
 | `S0723bf` | st_preview | Select all programs that are ready | Seleccionar todos los programas listos |
+| `Sae12bc` | st_preview, workbench | Status category | Categoría de estado |
+| `Sd7a322` | st_preview | Status category of the ticked programs | Categoría de estado de los programas marcados |
 | `S1a767a` | st_preview | updates the open Draft | actualiza el borrador abierto |
 | `S02499f` | st_preview | withdrawn | retirados |
 | `Sf0c3cf` | st_preview | without a legacy number | sin número anterior |
@@ -19716,7 +19867,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sa58dac` | workbench | Set values on the Drafts | Establecer valores en los borradores |
 | `Sa443bb` | workbench | Sign off the Drafts | Dar conformidad a los borradores |
 | `S53f47f` | workbench | Sign-off pending | Conformidad pendiente |
-| `Sae12bc` | workbench | Status category | Categoría de estado |
 | `Sdc416e` | workbench | Step | Paso |
 | `Sf7710d` | workbench | Submit for review | Enviar a revisión |
 | `Sa45adc` | workbench | Submit the Drafts | Enviar los borradores |
@@ -19729,7 +19879,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 
 ### 9.17 IT Italiano 🇮🇹 — Italian
 
-1279 of 1280 strings translated; direction left to right.
+1289 of 1290 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -19819,7 +19969,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sb1fe0b` | builder | Release Builder | Generatore di rilasci |
 | `S5997c5` | builder | Save Candidate Set | Salva insieme di candidati |
 | `Scc8a3c` | builder | Save targets | Salva destinazioni |
-| `S913aff` | builder, detail, mine | Select all | Seleziona tutto |
+| `S913aff` | builder, detail, list | Select all | Seleziona tutto |
 | `S85e466` | builder | Select the Approved, non-sandbox revisions to include, then Save. Publishing is immutable — a correction requires a new Release. | Selezioni le revisioni approvate, non sandbox, da includere, poi salvi. La pubblicazione è immutabile: una correzione richiede un nuovo rilascio. |
 | `Sd64b6e` | builder, detail | Target software versions | Versioni software di destinazione |
 | `S6ba0fc` | builder | View Release | Visualizza rilascio |
@@ -20472,6 +20622,10 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S162a45` | list, menu | Change Sets | Set di modifiche |
 | `S9e895f` | list | Change sets | Set di modifiche |
 | `Scf723c` | list | Columns | Colonne |
+| `Seb0fd2` | list | Delete all my Drafts of this filter | Elimina tutte le mie bozze di questo filtro |
+| `S36f212` | list | Delete ALL of your own Drafts that match this filter, on every page? | Eliminare TUTTE le proprie bozze che corrispondono a questo filtro, in tutte le pagine? |
+| `Sc554a1` | list | Delete selected Drafts | Elimina le bozze selezionate |
+| `S2d8627` | list | Delete the ticked Drafts? A deleted Draft is gone; its number is only kept if it was already issued. | Eliminare le bozze selezionate? Una bozza eliminata è persa; il suo numero resta riservato solo se era già stato assegnato. |
 | `S759686` | list | Filter status codes | Filtra i codici di stato |
 | `Sfd327d` | list | Identifier, title, description | Identificatore, titolo, descrizione |
 | `S44d25b` | list | Items | Elementi |
@@ -20490,6 +20644,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S1db747` | list | Save search | Salva ricerca |
 | `Sff86e9` | list | Save the current filters as | Salva i filtri attuali come |
 | `Sed1d84` | list | Saved searches | Ricerche salvate |
+| `S859822` | list, mine | Select | Seleziona |
 | `S7f5583` | list, menu | Status Codes | Codici di stato |
 | `S20bff1` | list | Status codes | Codici di stato |
 | `Se90eb0` | list | Turbine Platform | Piattaforma della turbina |
@@ -20757,7 +20912,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd72b71` | message: user_service | That e-mail address or username is already in use. | Questo indirizzo e-mail o nome utente è già in uso. |
 | `Sd54517` | message: user_service, user_detail | You cannot delete your own account. | Non può eliminare il proprio account. |
 | `S6a8896` | mine | Review & sign off | Rivedi e dai il benestare |
-| `S859822` | mine | Select | Seleziona |
 | `S50a279` | mine | Show all | Mostra tutto |
 | `Se48471` | mine | Showing only Drafts created by Import Job #%(id)s. | Vengono mostrate solo le bozze create dall'attività di importazione n. %(id)s. |
 | `Sff9480` | mine | Sign-Off Requests For You | Richieste di benestare per lei |
@@ -20848,8 +21002,11 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd97d1e` | software_versions | Show | Mostra |
 | `S42ea2e` | software_versions | Software Versions | Versioni software |
 | `S3bd89c` | software_versions | Which codes exist in which software version | Quali codici esistono in quale versione software |
+| `S16e5d4` | st_new, st_preview | Alarm type | Tipo di allarme |
+| `S726d7a` | st_new | as above | come sopra |
 | `Sb149ca` | st_new | Detect: a number from 10000 up is a Hub Controller program | Rileva: un numero da 10000 in su è un programma del controllore del mozzo |
 | `S7d06d0` | st_new | Every imported program becomes an ordinary Draft with the number it carries reserved. It still needs Cross-Domain Sign-Off, dual review and Chief Engineer approval before Release, and all Drafts of one import share a change set. | Ogni programma importato diventa una bozza ordinaria con il numero che porta riservato. Richiede ancora benestare interdisciplinare, doppia revisione e approvazione del capo ingegnere prima del rilascio, e tutte le bozze di un'importazione condividono un set di modifiche. |
+| `Sbda77c` | st_new | Every program names an alarm type. A type left at "as above" gets the category chosen above; the next page lets you set the category of single programs or of all ticked ones. | Ogni programma indica un tipo di allarme. Un tipo lasciato su «come sopra» riceve la categoria scelta sopra; nella pagina successiva si può impostare la categoria di singoli programmi o di tutti quelli selezionati. |
 | `S3b9e43` | st_new | Hub Controller (legacy numbers, mapped to the new ones) | Controllore del mozzo (numeri precedenti, associati ai nuovi) |
 | `Sd7333f` | st_new | Import status codes from .st files | Importa codici di stato da file .st |
 | `S6640a6` | st_new | New number of Hub Controller programs | Nuovo numero dei programmi del controllore del mozzo |
@@ -20858,12 +21015,14 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd99e2a` | st_new | Proposal 1: five-digit numbers (11000 and up) | Proposta 1: numeri a cinque cifre (da 11000) |
 | `S2744b0` | st_new | Proposal 2: inside the Main Controller scheme | Proposta 2: all'interno dello schema del controllore principale |
 | `S67640d` | st_new | Read files and preview | Leggi i file e mostra l'anteprima |
+| `S0af4fc` | st_new | Status category by alarm type (optional) | Categoria di stato per tipo di allarme (facoltativo) |
 | `S234237` | st_new | Status category of the new codes | Categoria di stato dei nuovi codici |
 | `Sde7a5b` | st_new | The program files do not carry a category; you can change it in each Draft. | I file di programma non riportano una categoria; può cambiarla in ogni bozza. |
 | `S8f4c21` | st_new | Turbine platforms | Piattaforme di turbina |
 | `S9ad4d4` | st_new | Upload the generated StCd_<n>.st programs — several files at once, a whole folder, or one ZIP. Nothing is created yet: the next page lists every program so you can tick the ones to import. | Carichi i programmi StCd_<n>.st generati: più file insieme, un'intera cartella o un unico ZIP. Non viene ancora creato nulla: la pagina successiva elenca ogni programma così potrà selezionare quelli da importare. |
 | `S2693e5` | st_preview | All Drafts of this import join one change set, so they can be reviewed and decided together. | Tutte le bozze di questa importazione entrano in un unico set di modifiche, così possono essere riviste e decise insieme. |
 | `Scbc694` | st_preview | already in the catalogue | già nel catalogo |
+| `Sc00673` | st_preview | Apply to the ticked programs | Applica ai programmi selezionati |
 | `Sdf88b8` | st_preview | blocked | bloccati |
 | `S6f7703` | st_preview | Changed and withdrawn programs are not ticked: tick the ones you want to update, revise or restore. | I programmi modificati e ritirati non sono selezionati: selezioni quelli che vuole aggiornare, rivedere o ripristinare. |
 | `S78bb8b` | st_preview | Create Drafts for the ticked programs | Crea bozze per i programmi selezionati |
@@ -20881,6 +21040,8 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se58289` | st_preview | Programs found in the uploaded files | Programmi trovati nei file caricati |
 | `S75c053` | st_preview, workbench | ready | pronti |
 | `S0723bf` | st_preview | Select all programs that are ready | Seleziona tutti i programmi pronti |
+| `Sae12bc` | st_preview, workbench | Status category | Categoria di stato |
+| `Sd7a322` | st_preview | Status category of the ticked programs | Categoria di stato dei programmi selezionati |
 | `S1a767a` | st_preview | updates the open Draft | aggiorna la bozza aperta |
 | `S02499f` | st_preview | withdrawn | ritirati |
 | `Sf0c3cf` | st_preview | without a legacy number | senza numero precedente |
@@ -21002,7 +21163,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sa58dac` | workbench | Set values on the Drafts | Imposta valori sulle bozze |
 | `Sa443bb` | workbench | Sign off the Drafts | Dai il benestare alle bozze |
 | `S53f47f` | workbench | Sign-off pending | Benestare in attesa |
-| `Sae12bc` | workbench | Status category | Categoria di stato |
 | `Sdc416e` | workbench | Step | Passo |
 | `Sf7710d` | workbench | Submit for review | Invia in revisione |
 | `Sa45adc` | workbench | Submit the Drafts | Invia le bozze |
@@ -21015,7 +21175,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 
 ### 9.18 DK Dansk 🇩🇰 — Danish
 
-1279 of 1280 strings translated; direction left to right.
+1289 of 1290 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -21105,7 +21265,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sb1fe0b` | builder | Release Builder | Udgivelsesbygger |
 | `S5997c5` | builder | Save Candidate Set | Gem kandidatsæt |
 | `Scc8a3c` | builder | Save targets | Gem mål |
-| `S913aff` | builder, detail, mine | Select all | Vælg alle |
+| `S913aff` | builder, detail, list | Select all | Vælg alle |
 | `S85e466` | builder | Select the Approved, non-sandbox revisions to include, then Save. Publishing is immutable — a correction requires a new Release. | Vælg de godkendte revisioner uden sandkasse, der skal med, og gem derefter. Udgivelse kan ikke fortrydes — en rettelse kræver en ny udgivelse. |
 | `Sd64b6e` | builder, detail | Target software versions | Mål-softwareversioner |
 | `S6ba0fc` | builder | View Release | Vis udgivelse |
@@ -21758,6 +21918,10 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S162a45` | list, menu | Change Sets | Ændringssæt |
 | `S9e895f` | list | Change sets | Ændringssæt |
 | `Scf723c` | list | Columns | Kolonner |
+| `Seb0fd2` | list | Delete all my Drafts of this filter | Slet alle mine kladder i dette filter |
+| `S36f212` | list | Delete ALL of your own Drafts that match this filter, on every page? | Slet ALLE dine egne kladder, der passer til dette filter, på alle sider? |
+| `Sc554a1` | list | Delete selected Drafts | Slet valgte kladder |
+| `S2d8627` | list | Delete the ticked Drafts? A deleted Draft is gone; its number is only kept if it was already issued. | Slet de afkrydsede kladder? En slettet kladde er væk; dens nummer bevares kun, hvis det allerede var udstedt. |
 | `S759686` | list | Filter status codes | Filtrér statuskoder |
 | `Sfd327d` | list | Identifier, title, description | Identifikator, titel, beskrivelse |
 | `S44d25b` | list | Items | Elementer |
@@ -21776,6 +21940,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S1db747` | list | Save search | Gem søgning |
 | `Sff86e9` | list | Save the current filters as | Gem de aktuelle filtre som |
 | `Sed1d84` | list | Saved searches | Gemte søgninger |
+| `S859822` | list, mine | Select | Vælg |
 | `S7f5583` | list, menu | Status Codes | Statuskoder |
 | `S20bff1` | list | Status codes | Statuskoder |
 | `Se90eb0` | list | Turbine Platform | Turbineplatform |
@@ -22043,7 +22208,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd72b71` | message: user_service | That e-mail address or username is already in use. | Denne e-mailadresse eller dette brugernavn er allerede i brug. |
 | `Sd54517` | message: user_service, user_detail | You cannot delete your own account. | Du kan ikke slette din egen konto. |
 | `S6a8896` | mine | Review & sign off | Gennemgå og underskriv |
-| `S859822` | mine | Select | Vælg |
 | `S50a279` | mine | Show all | Vis alle |
 | `Se48471` | mine | Showing only Drafts created by Import Job #%(id)s. | Kun kladder oprettet af importopgave nr. %(id)s vises. |
 | `Sff9480` | mine | Sign-Off Requests For You | Underskriftsanmodninger til dig |
@@ -22134,8 +22298,11 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd97d1e` | software_versions | Show | Vis |
 | `S42ea2e` | software_versions | Software Versions | Softwareversioner |
 | `S3bd89c` | software_versions | Which codes exist in which software version | Hvilke koder der findes i hvilken softwareversion |
+| `S16e5d4` | st_new, st_preview | Alarm type | Alarmtype |
+| `S726d7a` | st_new | as above | som ovenfor |
 | `Sb149ca` | st_new | Detect: a number from 10000 up is a Hub Controller program | Registrér: et nummer fra 10000 og op er et navstyringsprogram |
 | `S7d06d0` | st_new | Every imported program becomes an ordinary Draft with the number it carries reserved. It still needs Cross-Domain Sign-Off, dual review and Chief Engineer approval before Release, and all Drafts of one import share a change set. | Hvert importeret program bliver en almindelig kladde med det nummer, det bærer, reserveret. Den kræver stadig tværfaglig underskrift, dobbelt gennemgang og chefingeniørens godkendelse før udgivelse, og alle kladder fra én import deler et ændringssæt. |
+| `Sbda77c` | st_new | Every program names an alarm type. A type left at "as above" gets the category chosen above; the next page lets you set the category of single programs or of all ticked ones. | Hvert program angiver en alarmtype. En type, der står på "som ovenfor", får den kategori, der er valgt ovenfor; på næste side kan du sætte kategorien for enkelte programmer eller for alle afkrydsede. |
 | `S3b9e43` | st_new | Hub Controller (legacy numbers, mapped to the new ones) | Navstyring (gamle numre, afbildet til de nye) |
 | `Sd7333f` | st_new | Import status codes from .st files | Importér statuskoder fra .st-filer |
 | `S6640a6` | st_new | New number of Hub Controller programs | Nyt nummer til navstyringsprogrammer |
@@ -22144,12 +22311,14 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd99e2a` | st_new | Proposal 1: five-digit numbers (11000 and up) | Forslag 1: femcifrede numre (fra 11000) |
 | `S2744b0` | st_new | Proposal 2: inside the Main Controller scheme | Forslag 2: inden for hovedstyringens skema |
 | `S67640d` | st_new | Read files and preview | Læs filer og vis forhåndsvisning |
+| `S0af4fc` | st_new | Status category by alarm type (optional) | Statuskategori efter alarmtype (valgfri) |
 | `S234237` | st_new | Status category of the new codes | Statuskategori for de nye koder |
 | `Sde7a5b` | st_new | The program files do not carry a category; you can change it in each Draft. | Programfilerne har ingen kategori; du kan ændre den i hver kladde. |
 | `S8f4c21` | st_new | Turbine platforms | Turbineplatforme |
 | `S9ad4d4` | st_new | Upload the generated StCd_<n>.st programs — several files at once, a whole folder, or one ZIP. Nothing is created yet: the next page lists every program so you can tick the ones to import. | Upload de genererede StCd_<n>.st-programmer — flere filer ad gangen, en hel mappe eller én ZIP. Intet oprettes endnu: næste side viser hvert program, så du kan afkrydse dem, der skal importeres. |
 | `S2693e5` | st_preview | All Drafts of this import join one change set, so they can be reviewed and decided together. | Alle kladder fra denne import kommer i ét ændringssæt, så de kan gennemgås og afgøres sammen. |
 | `Scbc694` | st_preview | already in the catalogue | allerede i kataloget |
+| `Sc00673` | st_preview | Apply to the ticked programs | Anvend på de afkrydsede programmer |
 | `Sdf88b8` | st_preview | blocked | blokeret |
 | `S6f7703` | st_preview | Changed and withdrawn programs are not ticked: tick the ones you want to update, revise or restore. | Ændrede og tilbagetrukne programmer er ikke afkrydset: afkryds dem, du vil opdatere, revidere eller genskabe. |
 | `S78bb8b` | st_preview | Create Drafts for the ticked programs | Opret kladder for de afkrydsede programmer |
@@ -22167,6 +22336,8 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se58289` | st_preview | Programs found in the uploaded files | Programmer fundet i de uploadede filer |
 | `S75c053` | st_preview, workbench | ready | klar |
 | `S0723bf` | st_preview | Select all programs that are ready | Vælg alle programmer, der er klar |
+| `Sae12bc` | st_preview, workbench | Status category | Statuskategori |
+| `Sd7a322` | st_preview | Status category of the ticked programs | Statuskategori for de afkrydsede programmer |
 | `S1a767a` | st_preview | updates the open Draft | opdaterer den åbne kladde |
 | `S02499f` | st_preview | withdrawn | trukket tilbage |
 | `Sf0c3cf` | st_preview | without a legacy number | uden gammelt nummer |
@@ -22288,7 +22459,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sa58dac` | workbench | Set values on the Drafts | Sæt værdier på kladderne |
 | `Sa443bb` | workbench | Sign off the Drafts | Godkend kladderne |
 | `S53f47f` | workbench | Sign-off pending | Godkendelse afventer |
-| `Sae12bc` | workbench | Status category | Statuskategori |
 | `Sdc416e` | workbench | Step | Trin |
 | `Sf7710d` | workbench | Submit for review | Indsend til gennemgang |
 | `Sa45adc` | workbench | Submit the Drafts | Indsend kladderne |
@@ -22301,7 +22471,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 
 ### 9.19 GE ქართული 🇬🇪 — Georgian
 
-1279 of 1280 strings translated; direction left to right.
+1289 of 1290 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -22391,7 +22561,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sb1fe0b` | builder | Release Builder | რელიზის შემდგენელი |
 | `S5997c5` | builder | Save Candidate Set | კანდიდატების ნაკრების შენახვა |
 | `Scc8a3c` | builder | Save targets | სამიზნეების შენახვა |
-| `S913aff` | builder, detail, mine | Select all | ყველას მონიშვნა |
+| `S913aff` | builder, detail, list | Select all | ყველას მონიშვნა |
 | `S85e466` | builder | Select the Approved, non-sandbox revisions to include, then Save. Publishing is immutable — a correction requires a new Release. | აირჩიეთ დამტკიცებული, არასანდბოქს რევიზიები ჩასართავად, შემდეგ შეინახეთ. გამოქვეყნება შეუქცევადია — შესწორებას ახალი რელიზი სჭირდება. |
 | `Sd64b6e` | builder, detail | Target software versions | სამიზნე პროგრამის ვერსიები |
 | `S6ba0fc` | builder | View Release | რელიზის ნახვა |
@@ -23044,6 +23214,10 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S162a45` | list, menu | Change Sets | ცვლილებების ჯგუფები |
 | `S9e895f` | list | Change sets | ცვლილებების ჯგუფები |
 | `Scf723c` | list | Columns | სვეტები |
+| `Seb0fd2` | list | Delete all my Drafts of this filter | ამ ფილტრის ჩემი ყველა დრაფტის წაშლა |
+| `S36f212` | list | Delete ALL of your own Drafts that match this filter, on every page? | წაიშალოს თქვენი ყველა დრაფტი, რომელიც ამ ფილტრს შეესაბამება, ყველა გვერდზე? |
+| `Sc554a1` | list | Delete selected Drafts | არჩეული დრაფტების წაშლა |
+| `S2d8627` | list | Delete the ticked Drafts? A deleted Draft is gone; its number is only kept if it was already issued. | წაიშალოს მონიშნული დრაფტები? წაშლილი დრაფტი იკარგება; მისი ნომერი რჩება მხოლოდ იმ შემთხვევაში, თუ უკვე გაცემული იყო. |
 | `S759686` | list | Filter status codes | სტატუსის კოდების გაფილტვრა |
 | `Sfd327d` | list | Identifier, title, description | იდენტიფიკატორი, სათაური, აღწერა |
 | `S44d25b` | list | Items | ელემენტები |
@@ -23062,6 +23236,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S1db747` | list | Save search | ძიების შენახვა |
 | `Sff86e9` | list | Save the current filters as | მიმდინარე ფილტრების შენახვა სახელით |
 | `Sed1d84` | list | Saved searches | შენახული ძიებები |
+| `S859822` | list, mine | Select | არჩევა |
 | `S7f5583` | list, menu | Status Codes | სტატუსის კოდები |
 | `S20bff1` | list | Status codes | სტატუსის კოდები |
 | `Se90eb0` | list | Turbine Platform | ტურბინის პლატფორმა |
@@ -23329,7 +23504,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd72b71` | message: user_service | That e-mail address or username is already in use. | ეს ელფოსტის მისამართი ან მომხმარებლის სახელი უკვე გამოიყენება. |
 | `Sd54517` | message: user_service, user_detail | You cannot delete your own account. | თქვენს საკუთარ ანგარიშს ვერ წაშლით. |
 | `S6a8896` | mine | Review & sign off | განხილვა და ხელმოწერა |
-| `S859822` | mine | Select | არჩევა |
 | `S50a279` | mine | Show all | ყველას ჩვენება |
 | `Se48471` | mine | Showing only Drafts created by Import Job #%(id)s. | ნაჩვენებია მხოლოდ იმპორტის დავალება #%(id)s-ით შექმნილი დრაფტები. |
 | `Sff9480` | mine | Sign-Off Requests For You | ხელმოწერის მოთხოვნები თქვენთვის |
@@ -23420,8 +23594,11 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd97d1e` | software_versions | Show | ჩვენება |
 | `S42ea2e` | software_versions | Software Versions | პროგრამის ვერსიები |
 | `S3bd89c` | software_versions | Which codes exist in which software version | რომელი კოდი რომელ პროგრამის ვერსიაშია |
+| `S16e5d4` | st_new, st_preview | Alarm type | განგაშის ტიპი |
+| `S726d7a` | st_new | as above | ზემოთ მითითებულის მიხედვით |
 | `Sb149ca` | st_new | Detect: a number from 10000 up is a Hub Controller program | ამოცნობა: 10000-დან ზემოთ ნომერი კერის კონტროლერის პროგრამაა |
 | `S7d06d0` | st_new | Every imported program becomes an ordinary Draft with the number it carries reserved. It still needs Cross-Domain Sign-Off, dual review and Chief Engineer approval before Release, and all Drafts of one import share a change set. | ყოველი შემოტანილი პროგრამა ჩვეულებრივი დრაფტი ხდება, მასში არსებული ნომრის დაჯავშნით. რელიზამდე მას მაინც სჭირდება ჯვარედინი სფეროების ხელმოწერა, ორმაგი განხილვა და მთავარი ინჟინრის დამტკიცება, ერთი იმპორტის ყველა დრაფტი კი ერთ ცვლილებების ნაკრებს იზიარებს. |
+| `Sbda77c` | st_new | Every program names an alarm type. A type left at "as above" gets the category chosen above; the next page lets you set the category of single programs or of all ticked ones. | თითოეული პროგრამა განგაშის ტიპს ასახელებს. ტიპი, რომელიც „ზემოთ მითითებულის მიხედვით“ რჩება, იღებს ზემოთ არჩეულ კატეგორიას; შემდეგ გვერდზე შეგიძლიათ დააყენოთ ცალკეული ან ყველა მონიშნული პროგრამის კატეგორია. |
 | `S3b9e43` | st_new | Hub Controller (legacy numbers, mapped to the new ones) | კერის კონტროლერი (ძველი ნომრები, ახალთან დაკავშირებული) |
 | `Sd7333f` | st_new | Import status codes from .st files | სტატუსის კოდების იმპორტი .st ფაილებიდან |
 | `S6640a6` | st_new | New number of Hub Controller programs | კერის კონტროლერის პროგრამების ახალი ნომერი |
@@ -23430,12 +23607,14 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd99e2a` | st_new | Proposal 1: five-digit numbers (11000 and up) | წინადადება 1: ხუთნიშნა ნომრები (11000-დან) |
 | `S2744b0` | st_new | Proposal 2: inside the Main Controller scheme | წინადადება 2: მთავარი კონტროლერის სქემაში |
 | `S67640d` | st_new | Read files and preview | ფაილების წაკითხვა და წინასწარი ნახვა |
+| `S0af4fc` | st_new | Status category by alarm type (optional) | სტატუსის კატეგორია განგაშის ტიპის მიხედვით (არასავალდებულო) |
 | `S234237` | st_new | Status category of the new codes | ახალი კოდების სტატუსის კატეგორია |
 | `Sde7a5b` | st_new | The program files do not carry a category; you can change it in each Draft. | პროგრამის ფაილები კატეგორიას არ შეიცავს; შეგიძლიათ შეცვალოთ თითოეულ დრაფტში. |
 | `S8f4c21` | st_new | Turbine platforms | ტურბინის პლატფორმები |
 | `S9ad4d4` | st_new | Upload the generated StCd_<n>.st programs — several files at once, a whole folder, or one ZIP. Nothing is created yet: the next page lists every program so you can tick the ones to import. | ატვირთეთ გენერირებული StCd_<n>.st პროგრამები — რამდენიმე ფაილი ერთად, მთელი საქაღალდე ან ერთი ZIP. ჯერ არაფერი იქმნება: შემდეგი გვერდი ჩამოთვლის თითოეულ პროგრამას, რათა მონიშნოთ იმპორტისთვის საჭირო. |
 | `S2693e5` | st_preview | All Drafts of this import join one change set, so they can be reviewed and decided together. | ამ იმპორტის ყველა დრაფტი ერთ ცვლილებების ნაკრებს უერთდება, რათა ერთად განიხილონ და გადაწყვიტონ. |
 | `Scbc694` | st_preview | already in the catalogue | უკვე კატალოგშია |
+| `Sc00673` | st_preview | Apply to the ticked programs | მონიშნულ პროგრამებზე გამოყენება |
 | `Sdf88b8` | st_preview | blocked | დაბლოკილი |
 | `S6f7703` | st_preview | Changed and withdrawn programs are not ticked: tick the ones you want to update, revise or restore. | შეცვლილი და გამოთხოვილი პროგრამები არ არის მონიშნული: მონიშნეთ ისინი, რომლებიც გსურთ განაახლოთ, გადასინჯოთ ან აღადგინოთ. |
 | `S78bb8b` | st_preview | Create Drafts for the ticked programs | დრაფტების შექმნა მონიშნული პროგრამებისთვის |
@@ -23453,6 +23632,8 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se58289` | st_preview | Programs found in the uploaded files | ატვირთულ ფაილებში ნაპოვნი პროგრამები |
 | `S75c053` | st_preview, workbench | ready | მზადაა |
 | `S0723bf` | st_preview | Select all programs that are ready | ყველა მზა პროგრამის მონიშვნა |
+| `Sae12bc` | st_preview, workbench | Status category | სტატუსის კატეგორია |
+| `Sd7a322` | st_preview | Status category of the ticked programs | მონიშნული პროგრამების სტატუსის კატეგორია |
 | `S1a767a` | st_preview | updates the open Draft | ანახლებს ღია დრაფტს |
 | `S02499f` | st_preview | withdrawn | გამოთხოვილი |
 | `Sf0c3cf` | st_preview | without a legacy number | ძველი ნომრის გარეშე |
@@ -23574,7 +23755,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sa58dac` | workbench | Set values on the Drafts | დრაფტებზე მნიშვნელობების დაყენება |
 | `Sa443bb` | workbench | Sign off the Drafts | დრაფტების ხელმოწერა |
 | `S53f47f` | workbench | Sign-off pending | ხელმოწერა მოლოდინშია |
-| `Sae12bc` | workbench | Status category | სტატუსის კატეგორია |
 | `Sdc416e` | workbench | Step | ეტაპი |
 | `Sf7710d` | workbench | Submit for review | განხილვაზე წარდგენა |
 | `Sa45adc` | workbench | Submit the Drafts | დრაფტების წარდგენა |
@@ -23659,6 +23839,7 @@ Every string of the interface with the templates that use it. A native speaker a
 | `Sff9f1f` | Age | success_metrics | 18 of 18 |
 | `Sf03c0a` | ago | operations | 18 of 18 |
 | `S25f8c5` | Alarm | detail, export, form | 18 of 18 |
+| `S16e5d4` | Alarm type | st_new, st_preview | 18 of 18 |
 | `Sd87c44` | all | connections, detail, export, hub_consolidation | 18 of 18 |
 | `S22e640` | all categories | index, language | 18 of 18 |
 | `S484388` | all columns | detail, export_center | 18 of 18 |
@@ -23688,6 +23869,7 @@ Every string of the interface with the templates that use it. A native speaker a
 | `Sb99a01` | Applies to software versions | detail | 18 of 18 |
 | `Sa30242` | Applies up to software version (optional) | form | 18 of 18 |
 | `Sef5415` | Apply columns | list | 18 of 18 |
+| `Sc00673` | Apply to the ticked programs | st_preview | 18 of 18 |
 | `S8cc047` | Approval | success_metrics | 18 of 18 |
 | `Sc452ad` | Approval Queue | approval_queue, menu | 18 of 18 |
 | `S8e9c89` | approval: amber after | stalled | 18 of 18 |
@@ -23703,6 +23885,7 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S754eae` | approved or released codes checked | catalogue_health | 18 of 18 |
 | `Scf2999` | Approving confirms these values; any change you make here is applied and audited. Rejecting ignores them. | detail | 18 of 18 |
 | `Sf7f2d5` | Archive (requires 180-day retention elapsed) | detail | 18 of 18 |
+| `S726d7a` | as above | st_new | 18 of 18 |
 | `S244492` | Assign | stalled | 18 of 18 |
 | `S5d71d2` | Assign least-loaded Reviewer | detail | 18 of 18 |
 | `Se29915` | Assign Reviewer | detail | 18 of 18 |
@@ -23895,9 +24078,13 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S0c681f` | Delegation not found | message: delegation_service | 18 of 18 |
 | `S114c56` | Delegations | delegations | 18 of 18 |
 | `Sf6fdbe` | Delete | user_detail, users | 18 of 18 |
+| `Seb0fd2` | Delete all my Drafts of this filter | list | 18 of 18 |
+| `S36f212` | Delete ALL of your own Drafts that match this filter, on every page? | list | 18 of 18 |
 | `Sa9ec7c` | Delete Permanently | detail | 18 of 18 |
 | `S7d1c7a` | Delete Release | detail | 18 of 18 |
 | `S8516a7` | Delete selected | withdrawn_codes | 18 of 18 |
+| `Sc554a1` | Delete selected Drafts | list | 18 of 18 |
+| `S2d8627` | Delete the ticked Drafts? A deleted Draft is gone; its number is only kept if it was already issued. | list | 18 of 18 |
 | `Sa2f8f5` | Delete this unpublished Release? | detail | 18 of 18 |
 | `S9afe6c` | Delete user | user_detail | 18 of 18 |
 | `S524e17` | Deprecate | detail | 18 of 18 |
@@ -23966,6 +24153,7 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S4e7cfe` | Every Hub code is deprecated - the group can be deactivated under Lookups. | hub_consolidation | 18 of 18 |
 | `S7d06d0` | Every imported program becomes an ordinary Draft with the number it carries reserved. It still needs Cross-Domain Sign-Off, dual review and Chief Engineer approval before Release, and all Drafts of one import share a change set. | st_new | 18 of 18 |
 | `S873802` | Every item must be confirmed to approve; rejecting needs no confirmation. | detail | 18 of 18 |
+| `Sbda77c` | Every program names an alarm type. A type left at "as above" gets the category chosen above; the next page lets you set the category of single programs or of all ticked ones. | st_new | 18 of 18 |
 | `S2bac4d` | Every request is still decided on its own: it gets its own check that you did not write or already sign it, its own comment and its own audit entry. Requests you may not decide are reported and skipped. | detail | 18 of 18 |
 | `S2e7908` | Every row is valid. Nothing has been created yet. | dry_run | 18 of 18 |
 | `Sae0114` | Every row that passes validation becomes an ordinary Draft, subject to the full Cross-Domain Sign-Off, dual-review, and Chief Engineer approval cycle before it can be Released — import is a faster data-entry path, never a governance bypass. | new | 18 of 18 |
@@ -24553,10 +24741,10 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S2d8d46` | SEC-010: only Engineers and Administrators can translate. | message: translation_service | 18 of 18 |
 | `S9d603f` | SEC-010: only reviewing roles may comment on a field. | message: field_review_service | 18 of 18 |
 | `Sb27613` | SEC-010: your role cannot create change sets. | message: change_set_service | 18 of 18 |
-| `S859822` | Select | mine | 18 of 18 |
+| `S859822` | Select | list, mine | 18 of 18 |
 | `S81448f` | select | detail, form | 18 of 18 |
 | `S535bd8` | Select a Functional System Group first | detail, form | 18 of 18 |
-| `S913aff` | Select all | builder, detail, mine, withdrawn_codes | 18 of 18 |
+| `S913aff` | Select all | builder, detail, list, mine | 18 of 18 |
 | `S0723bf` | Select all programs that are ready | st_preview | 18 of 18 |
 | `S85e466` | Select the Approved, non-sandbox revisions to include, then Save. Publishing is immutable — a correction requires a new Release. | builder | 18 of 18 |
 | `S0aa2a5` | Send back | language | 18 of 18 |
@@ -24610,8 +24798,10 @@ Every string of the interface with the templates that use it. A native speaker a
 | `Sbae7d5` | Status | catalogue_health, detail, list, reconciliation | 18 of 18 |
 | `S82b5dd` | Status & Timing | form | 18 of 18 |
 | `Se246b6` | Status Category | detail, form, list | 18 of 18 |
-| `Sae12bc` | Status category | workbench | 18 of 18 |
+| `Sae12bc` | Status category | st_preview, workbench | 18 of 18 |
+| `S0af4fc` | Status category by alarm type (optional) | st_new | 18 of 18 |
 | `S234237` | Status category of the new codes | st_new | 18 of 18 |
+| `Sd7a322` | Status category of the ticked programs | st_preview | 18 of 18 |
 | `Sfcbb29` | Status code | export | 18 of 18 |
 | `S98c645` | Status code catalogue | export | 18 of 18 |
 | `S779953` | Status Code for Repeated Error | detail, form | 18 of 18 |

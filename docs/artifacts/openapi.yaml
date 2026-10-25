@@ -1636,7 +1636,8 @@ paths:
                 files: { type: array, items: { type: string, format: binary }, description: "StCd_<n>.st files, or one .zip holding them" }
                 controller: { type: string, enum: [auto, MC, HC], default: auto, description: "auto: a file number from 10000 up is a Hub Controller program" }
                 hc_proposal: { type: integer, enum: [1, 2], default: 1, description: "Which new Hub number becomes the identifier: 1 = five-digit, 2 = inside the Main scheme" }
-                default_category: { type: string, enum: [ERROR, WARNING, INFO], default: ERROR, description: "The files carry no status category; this one is set on every Draft" }
+                default_category: { type: string, enum: [ERROR, WARNING, INFO], default: ERROR, description: "The files carry no status category; this one is set on every Draft whose alarm type has no category of its own" }
+                alarm_type_categories: { type: string, description: "FR-181: JSON object, alarm type -> category, e.g. {\"1\": \"ERROR\", \"2\": \"WARNING\"}; an unlisted type gets default_category" }
                 platforms: { type: string, description: "Turbine platform codes, comma separated (default: all active platforms)" }
       responses:
         '200':
@@ -1665,6 +1666,7 @@ paths:
               properties:
                 token: { type: string, description: "From the preview" }
                 selected: { type: array, nullable: true, items: { type: string }, description: "Item keys to import; omitted or null = every item that is ready" }
+                categories: { type: object, additionalProperties: { type: string, enum: [ERROR, WARNING, INFO] }, description: "FR-181: status category per item key; wins over the alarm type and the default" }
                 change_set_name: { type: string, description: "Default: ST import <job> (<date>)" }
                 async: { type: boolean, default: false, description: "Force background processing; more than IMPORT_ASYNC_ROW_THRESHOLD programs get it automatically" }
       responses:

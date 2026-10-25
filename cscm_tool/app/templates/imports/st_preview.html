@@ -26,6 +26,19 @@
       <label for="filter">{{ _('Filter the list') }}</label>
       <input type="search" id="filter" data-filter-rows="st-table" placeholder="{{ _('number, name, file ...') }}">
     </div>
+    <div class="form-row" style="margin:10px 0">
+      <div class="field">
+        <label for="bulk_category">{{ _('Status category of the ticked programs') }}</label>
+        <select id="bulk_category">
+          <option value="ERROR">ERROR</option>
+          <option value="WARNING">WARNING</option>
+          <option value="INFO">INFO</option>
+        </select>
+      </div>
+      <div class="field" style="align-self:end">
+        <button class="btn" type="button" data-bulk-category="bulk_category" data-rows="st-row-check">{{ _('Apply to the ticked programs') }}</button>
+      </div>
+    </div>
     <table id="st-table">
       <caption class="visually-hidden">{{ _('Programs found in the uploaded files') }}</caption>
       <thead>
@@ -36,6 +49,8 @@
           <th scope="col">{{ _('Controller') }}</th>
           <th scope="col">{{ _('Name') }}</th>
           <th scope="col">{{ _('Group / Subgroup') }}</th>
+          <th scope="col">{{ _('Alarm type') }}</th>
+          <th scope="col">{{ _('Status category') }}</th>
           <th scope="col">{{ _('State') }}</th>
           <th scope="col">{{ _('Problems and warnings') }}</th>
         </tr>
@@ -49,6 +64,14 @@
           <td>{{ i.controller }}</td>
           <td>{{ i.name }}<div class="muted">{{ i.file }}:{{ i.line }}</div></td>
           <td>{% if i.group %}{{ i.group }} / {{ i.subgroup }}{% else %}—{% endif %}</td>
+          <td>{% if i.alarm_type is not none %}{{ i.alarm_type }}{% else %}<span class="muted">—</span>{% endif %}</td>
+          <td>
+            {% if i.state in ('ready', 'changed', 'restorable') %}
+            <select class="st-cat" name="cat:{{ i.key }}" aria-label="{{ _('Status category') }} {{ i.identifier or i.file }}">
+              {% for c in ('ERROR', 'WARNING', 'INFO') %}<option value="{{ c }}"{% if c == i.category %} selected{% endif %}>{{ c }}</option>{% endfor %}
+            </select>
+            {% else %}{{ i.category or '—' }}{% endif %}
+          </td>
           <td>
             {% if i.state == 'ready' %}{{ _('ready') }}
             {% elif i.state == 'changed' %}{{ _('changed') }} ({{ i.existing.identifier }}, {{ i.existing.lifecycle_state }}): {% if i.action == 'update' %}{{ _('updates the open Draft') }}{% else %}{{ _('opens a new revision') }}{% endif %}
@@ -63,7 +86,7 @@
           </td>
         </tr>
         {% else %}
-        <tr><td colspan="8" class="table-empty">{{ _('No programs found.') }}</td></tr>
+        <tr><td colspan="10" class="table-empty">{{ _('No programs found.') }}</td></tr>
         {% endfor %}
       </tbody>
     </table>

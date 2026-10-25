@@ -108,7 +108,7 @@ All seven quick wins and the four-step sequencing of the original document are d
 | I-62 | Bulk submit for review and bulk cross-domain sign-off for a change set — ✅ delivered in v4.13 (FR-180) | 🟠 MEDIUM | M | EPIC-19 |
 | I-63 | Re-import from the programs: show what changed against the catalogue (drift) and revise the codes | 🟠 MEDIUM | M | EPIC-14 |
 | I-64 | Wire the parsed user-group levels, the remaining subsystem programs and the operating-mode mask from `import_source_item` into catalogue columns — ✅ delivered in v4.9.1 (FR-168) | 🟠 MEDIUM | M | EPIC-14 |
-| I-65 | Per-program status category in the preview (derived from the alarm type once the business defines the mapping) | 🟢 LOW | S | EPIC-14 |
+| I-65 | Per-program status category in the preview (derived from the alarm type, or set per program) — ✅ delivered in v4.13.2 (FR-181) | 🟢 LOW | S | EPIC-14 |
 
 ## B.2 🔴 HIGH priority
 
@@ -214,6 +214,7 @@ The concept and the eleven open items for checking the translations by native sp
 | **Confidence check of the translations**, separate approval of new and changed strings, language impact notices to the StCd Owner | v4.11.0 | FR-176 … FR-178 |
 | **Connections** between status codes (suppression, preconditions, escalation) read from the imported programs | v4.12.0 | FR-179 |
 | **Bulk workflow for the migration — I-70 with I-61 and I-62**: the workbench of a change set (readiness, bulk edit, bulk submit, bulk domain sign-off, bulk decisions), the sample inspection (stratified, 10 % / at least 8, one defect blocks), and the dossier (XLSX) for an auditor | v4.13.0 | FR-180 |
+| **Select-all on every list with tick boxes; a status category per program of a `.st` import (by alarm type, per row or for the ticked rows); delete several own Drafts at once from the Status Codes list — I-65** | v4.13.1 / v4.13.2 | FR-181, FR-182 |
 
 **New ideas from the review of the release process** (not built):
 

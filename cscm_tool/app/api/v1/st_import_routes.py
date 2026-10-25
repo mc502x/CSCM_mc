@@ -1,6 +1,8 @@
 """FR-048o..FR-048w: status code import from the generated StCd_<n>.st programs, and the legacy ->
 new mapping. See docs/artifacts/openapi.yaml /imports/st*, /legacy-mapping*."""
 
+import json
+
 from flask import Response, jsonify, request
 
 from app.api.v1 import api_v1_bp
@@ -26,6 +28,12 @@ def _options_from(source) -> dict:
     platforms = source.get("platforms")
     if platforms:
         options["platforms"] = platforms
+    by_type = source.get("alarm_type_categories")
+    if by_type:
+        try:
+            options["alarm_type_categories"] = json.loads(by_type)
+        except ValueError as exc:
+            raise ValueError('alarm_type_categories must be JSON, e.g. {"1": "ERROR"}') from exc
     return options
 
 
@@ -36,7 +44,8 @@ def preview_st_import():
     created. The answer lists every program with its state (ready, exists, blocked), the
     legacy -> new number, the placement and the problems, plus a `token` for the confirmation.
     Form fields: `controller` (auto | MC | HC), `hc_proposal` (1 | 2), `default_category`,
-    `platforms` (comma separated)."""
+    `alarm_type_categories` (JSON, alarm type -> ERROR | WARNING | INFO), `platforms` (comma
+    separated)."""
     uploads = [(f.filename or "upload", f.read()) for f in request.files.getlist("files") if f]
     uploads += [(f.filename or "upload", f.read()) for f in request.files.getlist("file") if f]
     if not uploads:
@@ -50,8 +59,9 @@ def preview_st_import():
 @api_v1_bp.post("/imports/st")
 @require_role(*_IMPORT_ROLES)
 def create_st_import():
-    """Confirm a preview: JSON `{token, selected?, change_set_name?, async?}`. `selected` is a
-    list of the item keys to import (default: every item that is ready). Every chosen program
+    """Confirm a preview: JSON `{token, selected?, categories?, change_set_name?, async?}`.
+    `selected` is a list of the item keys to import (default: every item that is ready);
+    `categories` maps item keys to the status category of that program. Every chosen program
     becomes a Draft; all of them join one new change set. 202 with the import job."""
     body = request.get_json(silent=True) or {}
     token = body.get("token")
@@ -69,6 +79,7 @@ def create_st_import():
             selected,
             change_set_name=body.get("change_set_name"),
             asynchronous=True if body.get("async") else None,
+            categories=body.get("categories"),
         )
     except (DomainError, ValueError) as exc:
         return error_response(exc)

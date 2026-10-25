@@ -46,6 +46,21 @@
       <div class="hint">{{ _('The program files do not carry a category; you can change it in each Draft.') }}</div>
     </div>
     <fieldset class="field">
+      <legend>{{ _('Status category by alarm type (optional)') }}</legend>
+      {% for n in (1, 2, 3) %}
+      <div class="form-row">
+        <label for="alarm_type_{{ n }}">{{ _('Alarm type') }} {{ n }}</label>
+        <select id="alarm_type_{{ n }}" name="alarm_type_{{ n }}">
+          <option value="">({{ _('as above') }})</option>
+          <option value="ERROR">ERROR</option>
+          <option value="WARNING">WARNING</option>
+          <option value="INFO">INFO</option>
+        </select>
+      </div>
+      {% endfor %}
+      <div class="hint">{{ _('Every program names an alarm type. A type left at "as above" gets the category chosen above; the next page lets you set the category of single programs or of all ticked ones.') }}</div>
+    </fieldset>
+    <fieldset class="field">
       <legend>{{ _('Turbine platforms') }}</legend>
       {% for p in platforms %}
       <label><input type="checkbox" name="platforms" value="{{ p.code }}" checked> {{ p.code }}</label>

@@ -109,10 +109,18 @@
 
 <div class="card">
   {% if items %}
+  {% set selectable = can_withdraw and own_drafts %}
+  {% if can_withdraw %}
+  <form method="post" id="withdraw_form" action="{{ url_for('ui.status_code_withdraw_selected') }}" data-confirm="{{ _('Delete the ticked Drafts? A deleted Draft is gone; its number is only kept if it was already issued.') }}">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    {% for key, value in request.args.items() if key in ('q', 'functional_system_group', 'functional_subgroup', 'turbine_platform', 'lifecycle_status', 'status_category', 'sort', 'is_sandbox', 'cols') %}<input type="hidden" name="{{ key }}" value="{{ value }}">{% endfor %}
+  </form>
+  {% endif %}
   <table>
     <caption class="visually-hidden">{{ _('Status codes') }}</caption>
     <thead>
       <tr>
+        {% if selectable %}<th scope="col"><input type="checkbox" data-check-all="sc-row-check" aria-label="{{ _('Select all') }}"></th>{% endif %}
         {% for key in columns %}
         {% set sortable = key in ('title', 'status_category', 'lifecycle_status') %}
         <th scope="col">
@@ -124,6 +132,7 @@
     <tbody>
       {% for r in items %}
       <tr data-href="{{ url_for('ui.status_code_detail', status_code_id=r.status_code_id) }}" class="row-link">
+        {% if selectable %}<td>{% if r.id in own_drafts %}<input type="checkbox" class="sc-row-check" name="cr_id" form="withdraw_form" value="{{ own_drafts[r.id] }}" aria-label="{{ _('Select') }} {{ r.title }}">{% endif %}</td>{% endif %}
         {% for key in columns %}
         <td>
           {% if key == 'status_code_identifier' %}<a href="{{ url_for('ui.status_code_detail', status_code_id=r.status_code_id) }}">{{ r.status_code_identifier or _('Not yet assigned') }}</a>{% if r.is_sandbox %} {{ macros.sandbox_badge() }}{% endif %}
@@ -138,6 +147,14 @@
       {% endfor %}
     </tbody>
   </table>
+  {% if selectable %}
+  <div class="btn-row" style="margin-top:12px">
+    <button class="btn btn--danger" type="submit" form="withdraw_form">{{ _('Delete selected Drafts') }}</button>
+    {% if request.args.get('lifecycle_status') == 'DRAFT' %}
+    <button class="btn btn--outline" type="submit" form="withdraw_form" name="all_filtered" value="1" data-confirm="{{ _('Delete ALL of your own Drafts that match this filter, on every page?') }}">{{ _('Delete all my Drafts of this filter') }}</button>
+    {% endif %}
+  </div>
+  {% endif %}
   <div class="muted" style="margin-top:10px">{{ total }} {{ _('results') if total != 1 else _('result') }}</div>
   {{ macros.pager(page, total, 50) }}
   {% else %}
