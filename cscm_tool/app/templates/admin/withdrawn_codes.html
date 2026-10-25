@@ -11,11 +11,11 @@
     <div class="table-scroll">
     <table>
       <caption class="visually-hidden">{{ _('Withdrawn Codes') }}</caption>
-      <thead><tr><th scope="col">{{ _('Select') }}</th><th scope="col">{{ _('Identifier') }}</th><th scope="col">{{ _('Legacy Reference Number') }}</th><th scope="col">PrgIdx_GUi</th><th scope="col">{{ _('Group') }} / {{ _('Subgroup') }}</th><th scope="col">{{ _('Withdrawn on') }}</th></tr></thead>
+      <thead><tr><th scope="col"><input type="checkbox" data-check-all="wd-row-check" aria-label="{{ _('Select all') }}"></th><th scope="col">{{ _('Identifier') }}</th><th scope="col">{{ _('Legacy Reference Number') }}</th><th scope="col">PrgIdx_GUi</th><th scope="col">{{ _('Group') }} / {{ _('Subgroup') }}</th><th scope="col">{{ _('Withdrawn on') }}</th></tr></thead>
       <tbody>
         {% for c in codes %}
         <tr>
-          <td><input type="checkbox" name="ids" value="{{ c.id }}" aria-label="{{ c.identifier or c.id }}"></td>
+          <td><input type="checkbox" class="wd-row-check" name="ids" value="{{ c.id }}" aria-label="{{ c.identifier or c.id }}"></td>
           <td>{{ c.identifier or '—' }}</td>
           <td>{{ c.legacy_reference_number or '—' }}</td>
           <td>{{ c.prg_idx or '—' }}</td>

@@ -34,11 +34,11 @@
     <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
     <table>
       <caption class="visually-hidden">{{ _('Candidate revisions') }}</caption>
-      <thead><tr><th><span class="visually-hidden">{{ _('Include') }}</span></th><th scope="col">{{ _('Identifier') }}</th><th scope="col">{{ _('Title') }}</th><th scope="col">{{ _('Functional Group / Subgroup') }}</th><th scope="col">{{ _('Planned effective') }}</th></tr></thead>
+      <thead><tr><th scope="col"><input type="checkbox" data-check-all="rb-row-check" aria-label="{{ _('Select all') }}"></th><th scope="col">{{ _('Identifier') }}</th><th scope="col">{{ _('Title') }}</th><th scope="col">{{ _('Functional Group / Subgroup') }}</th><th scope="col">{{ _('Planned effective') }}</th></tr></thead>
       <tbody>
         {% for c in candidates %}
         <tr>
-          <td><input type="checkbox" name="revision_ids" value="{{ c.id }}" {{ 'checked' if c.id in included_ids }} aria-label="{{ c.status_code_identifier }}"></td>
+          <td><input type="checkbox" class="rb-row-check" name="revision_ids" value="{{ c.id }}" {{ 'checked' if c.id in included_ids }} aria-label="{{ c.status_code_identifier }}"></td>
           <td>{{ c.status_code_identifier }}</td>
           <td>{{ c.title }}</td>
           <td>{{ c.functional_system_group }} / {{ c.functional_subgroup }}</td>

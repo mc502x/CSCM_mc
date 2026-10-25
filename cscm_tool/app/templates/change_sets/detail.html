@@ -26,11 +26,11 @@
     <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
     <table>
       <caption class="visually-hidden">{{ _('Change requests in this set') }}</caption>
-      <thead><tr><th scope="col"><span class="visually-hidden">{{ _('Select') }}</span></th><th scope="col">{{ _('Identifier') }}</th><th scope="col">{{ _('Title') }}</th><th scope="col">{{ _('State') }}</th><th scope="col">{{ _('Waiting') }}</th><th scope="col"></th></tr></thead>
+      <thead><tr><th scope="col"><input type="checkbox" data-check-all="cs-row-check" aria-label="{{ _('Select all') }}"></th><th scope="col">{{ _('Identifier') }}</th><th scope="col">{{ _('Title') }}</th><th scope="col">{{ _('State') }}</th><th scope="col">{{ _('Waiting') }}</th><th scope="col"></th></tr></thead>
       <tbody>
         {% for row in overview.rows %}
         <tr>
-          <td><input type="checkbox" name="cr_ids" value="{{ row.cr.id }}" aria-label="CR #{{ row.cr.id }}"></td>
+          <td><input type="checkbox" class="cs-row-check" name="cr_ids" value="{{ row.cr.id }}" aria-label="CR #{{ row.cr.id }}"></td>
           <td><a href="{{ url_for('ui.change_request_detail', cr_id=row.cr.id) }}">{{ row.identifier or ('#' ~ row.cr.id) }}</a></td>
           <td>{{ row.title }}</td>
           <td>{{ macros.lifecycle_badge(row.state) }}</td>

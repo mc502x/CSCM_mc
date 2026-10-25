@@ -11,4 +11,4 @@ sys.path.insert(0, BASE_DIR)
 from wsgi import app  # noqa: E402
 
 if __name__ == "__main__":
-    app.run(host="127.0.0.1", port=5000)
+    app.run(host="127.0.0.1", port=int(sys.argv[1]) if len(sys.argv) > 1 else 5000)

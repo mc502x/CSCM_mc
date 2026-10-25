@@ -5,9 +5,10 @@
       "name": "cscm-tool-dev",
       "runtimeExecutable": "Z:/CSCM_mc/cscm_tool/.venv/Scripts/python.exe",
       "runtimeArgs": [
-        "Z:/CSCM_mc/cscm_tool/dev_server.py"
+        "Z:/CSCM_mc/cscm_tool/dev_server.py",
+        "5001"
       ],
-      "port": 5000,
+      "port": 5001,
       "cwd": "Z:/CSCM_mc/cscm_tool"
     }
   ]

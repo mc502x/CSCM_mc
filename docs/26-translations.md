@@ -519,7 +519,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S5a4692` | base | You are covering for a colleague | Sie vertreten eine Kollegin / einen Kollegen |
 | `S8e9c15` | builder | Candidate revisions | Kandidaten-Revisionen |
 | `Sdf2aa0` | builder | Functional Group / Subgroup | Funktionsgruppe / Untergruppe |
-| `S11c54a` | builder | Include | Aufnehmen |
 | `S12b701` | builder | No Approved candidates match this Release's scope. | Keine freigegebenen Kandidaten passen zum Umfang dieses Releases. |
 | `S1359d4` | builder | Planned effective | Geplant gültig ab |
 | `Sf6fea0` | builder | Planned in the future: | In der Zukunft geplant: |
@@ -530,6 +529,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sb1fe0b` | builder | Release Builder | Release-Assistent |
 | `S5997c5` | builder | Save Candidate Set | Kandidatenauswahl speichern |
 | `Scc8a3c` | builder | Save targets | Ziele speichern |
+| `S913aff` | builder, detail, mine | Select all | Alle auswählen |
 | `S85e466` | builder | Select the Approved, non-sandbox revisions to include, then Save. Publishing is immutable — a correction requires a new Release. | Wählen Sie die freigegebenen Revisionen (ohne Sandbox) aus und speichern Sie. Eine Veröffentlichung ist unveränderlich – eine Korrektur erfordert ein neues Release. |
 | `Sd64b6e` | builder, detail | Target software versions | Ziel-Software-Versionen |
 | `S6ba0fc` | builder | View Release | Release ansehen |
@@ -855,7 +855,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S241bf5` | detail, workbench | Sample number | Stichprobennummer |
 | `Sda38c6` | detail | Save planned dates | Geplante Daten speichern |
 | `S13c61c` | detail | Scope Filter | Umfangsfilter |
-| `S859822` | detail, mine, withdrawn_codes | Select | Auswählen |
 | `S81448f` | detail, form | select | auswählen |
 | `S535bd8` | detail, form | Select a Functional System Group first | Wählen Sie zuerst eine Funktionssystemgruppe |
 | `S329cb8` | detail | Service | Service |
@@ -1079,6 +1078,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se2bbd9` | help and messages | Drafts saved | Entwürfe gespeichert |
 | `S0ddfa5` | help and messages | Drafts signed off | Entwürfe freigegeben |
 | `Sf90ab8` | help and messages | Drafts submitted for review | Entwürfe zur Prüfung eingereicht |
+| `S11c54a` | help and messages | Include | Aufnehmen |
 | `Sd856bd` | help and messages | Not deleted (it has a revision again or is still referenced): %(x)s | Nicht gelöscht (er hat wieder eine Revision oder wird noch referenziert): %(x)s |
 | `S34b903` | help and messages | Not possible: the account has history (see above). Deactivate it instead; the person can no longer sign in and everything they did stays attributable. | Nicht möglich: Das Konto hat einen Verlauf (siehe oben). Deaktivieren Sie es stattdessen; die Person kann sich dann nicht mehr anmelden, und alles, was sie getan hat, bleibt zuordenbar. |
 | `S6a26de` | help and messages | Sample %(id)s drawn: %(n)s of %(total)s codes to inspect. | Stichprobe %(id)s gezogen: %(n)s von %(total)s Codes zu prüfen. |
@@ -1467,7 +1467,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd72b71` | message: user_service | That e-mail address or username is already in use. | Diese E-Mail-Adresse oder dieser Benutzername wird bereits verwendet. |
 | `Sd54517` | message: user_service, user_detail | You cannot delete your own account. | Sie können Ihr eigenes Konto nicht löschen. |
 | `S6a8896` | mine | Review & sign off | Prüfen & freigeben |
-| `S913aff` | mine | Select all | Alle auswählen |
+| `S859822` | mine | Select | Auswählen |
 | `S50a279` | mine | Show all | Alle anzeigen |
 | `Se48471` | mine | Showing only Drafts created by Import Job #%(id)s. | Es werden nur Entwürfe angezeigt, die vom Importauftrag #%(id)s erzeugt wurden. |
 | `Sff9480` | mine | Sign-Off Requests For You | Freigabeanfragen an Sie |
@@ -1805,7 +1805,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S5a4692` | base | You are covering for a colleague | Vous remplacez un collègue |
 | `S8e9c15` | builder | Candidate revisions | Révisions candidates |
 | `Sdf2aa0` | builder | Functional Group / Subgroup | Groupe fonctionnel / sous-groupe |
-| `S11c54a` | builder | Include | Inclure |
 | `S12b701` | builder | No Approved candidates match this Release's scope. | Aucun candidat approuvé ne correspond au périmètre de cette version. |
 | `S1359d4` | builder | Planned effective | Entrée en vigueur prévue |
 | `Sf6fea0` | builder | Planned in the future: | Planifié dans le futur : |
@@ -1816,6 +1815,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sb1fe0b` | builder | Release Builder | Constructeur de version |
 | `S5997c5` | builder | Save Candidate Set | Enregistrer l'ensemble candidat |
 | `Scc8a3c` | builder | Save targets | Enregistrer les cibles |
+| `S913aff` | builder, detail, mine | Select all | Tout sélectionner |
 | `S85e466` | builder | Select the Approved, non-sandbox revisions to include, then Save. Publishing is immutable — a correction requires a new Release. | Sélectionnez les révisions approuvées, hors bac à sable, à inclure, puis enregistrez. La publication est irréversible — une correction exige une nouvelle version. |
 | `Sd64b6e` | builder, detail | Target software versions | Versions cibles du logiciel |
 | `S6ba0fc` | builder | View Release | Voir la version |
@@ -2141,7 +2141,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S241bf5` | detail, workbench | Sample number | Numéro d'échantillon |
 | `Sda38c6` | detail | Save planned dates | Enregistrer les dates prévues |
 | `S13c61c` | detail | Scope Filter | Filtre de périmètre |
-| `S859822` | detail, mine, withdrawn_codes | Select | Sélectionner |
 | `S81448f` | detail, form | select | choisir |
 | `S535bd8` | detail, form | Select a Functional System Group first | Choisissez d'abord un groupe de systèmes fonctionnels |
 | `S329cb8` | detail | Service | Service |
@@ -2365,6 +2364,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se2bbd9` | help and messages | Drafts saved | Brouillons enregistrés |
 | `S0ddfa5` | help and messages | Drafts signed off | Brouillons validés |
 | `Sf90ab8` | help and messages | Drafts submitted for review | Brouillons soumis pour relecture |
+| `S11c54a` | help and messages | Include | Inclure |
 | `Sd856bd` | help and messages | Not deleted (it has a revision again or is still referenced): %(x)s | Non supprimé (il a de nouveau une révision ou il est encore référencé) : %(x)s |
 | `S34b903` | help and messages | Not possible: the account has history (see above). Deactivate it instead; the person can no longer sign in and everything they did stays attributable. | Impossible : le compte a un historique (voir ci-dessus). Désactivez-le plutôt ; la personne ne peut plus se connecter et tout ce qu'elle a fait reste attribuable. |
 | `S6a26de` | help and messages | Sample %(id)s drawn: %(n)s of %(total)s codes to inspect. | Échantillon %(id)s tiré : %(n)s codes sur %(total)s à contrôler. |
@@ -2753,7 +2753,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd72b71` | message: user_service | That e-mail address or username is already in use. | Cette adresse e-mail ou ce nom d'utilisateur est déjà utilisé. |
 | `Sd54517` | message: user_service, user_detail | You cannot delete your own account. | Vous ne pouvez pas supprimer votre propre compte. |
 | `S6a8896` | mine | Review & sign off | Relire et valider |
-| `S913aff` | mine | Select all | Tout sélectionner |
+| `S859822` | mine | Select | Sélectionner |
 | `S50a279` | mine | Show all | Tout afficher |
 | `Se48471` | mine | Showing only Drafts created by Import Job #%(id)s. | Seuls les brouillons créés par la tâche d'import n° %(id)s sont affichés. |
 | `Sff9480` | mine | Sign-Off Requests For You | Demandes de validation à votre intention |
@@ -3091,7 +3091,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S5a4692` | base | You are covering for a colleague | आप एक सहकर्मी की जगह काम कर रहे हैं |
 | `S8e9c15` | builder | Candidate revisions | उम्मीदवार संशोधन |
 | `Sdf2aa0` | builder | Functional Group / Subgroup | कार्यात्मक समूह / उपसमूह |
-| `S11c54a` | builder | Include | शामिल करें |
 | `S12b701` | builder | No Approved candidates match this Release's scope. | इस रिलीज़ के दायरे से कोई अनुमोदित उम्मीदवार मेल नहीं खाता। |
 | `S1359d4` | builder | Planned effective | नियोजित प्रभावी |
 | `Sf6fea0` | builder | Planned in the future: | भविष्य में नियोजित: |
@@ -3102,6 +3101,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sb1fe0b` | builder | Release Builder | रिलीज़ बिल्डर |
 | `S5997c5` | builder | Save Candidate Set | उम्मीदवार समुच्चय सहेजें |
 | `Scc8a3c` | builder | Save targets | लक्ष्य सहेजें |
+| `S913aff` | builder, detail, mine | Select all | सभी चुनें |
 | `S85e466` | builder | Select the Approved, non-sandbox revisions to include, then Save. Publishing is immutable — a correction requires a new Release. | शामिल करने के लिए अनुमोदित, गैर-सैंडबॉक्स संशोधन चुनें, फिर सहेजें। प्रकाशन अपरिवर्तनीय है — सुधार के लिए नई रिलीज़ चाहिए। |
 | `Sd64b6e` | builder, detail | Target software versions | लक्षित सॉफ़्टवेयर संस्करण |
 | `S6ba0fc` | builder | View Release | रिलीज़ देखें |
@@ -3427,7 +3427,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S241bf5` | detail, workbench | Sample number | नमूना क्रमांक |
 | `Sda38c6` | detail | Save planned dates | नियोजित तिथियाँ सहेजें |
 | `S13c61c` | detail | Scope Filter | दायरा फ़िल्टर |
-| `S859822` | detail, mine, withdrawn_codes | Select | चुनें |
 | `S81448f` | detail, form | select | चुनें |
 | `S535bd8` | detail, form | Select a Functional System Group first | पहले कार्यात्मक प्रणाली समूह चुनें |
 | `S329cb8` | detail | Service | सर्विस |
@@ -3651,6 +3650,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se2bbd9` | help and messages | Drafts saved | मसौदे सहेजे गए |
 | `S0ddfa5` | help and messages | Drafts signed off | मसौदों का साइन-ऑफ हुआ |
 | `Sf90ab8` | help and messages | Drafts submitted for review | मसौदे समीक्षा के लिए जमा किए गए |
+| `S11c54a` | help and messages | Include | शामिल करें |
 | `Sd856bd` | help and messages | Not deleted (it has a revision again or is still referenced): %(x)s | हटाया नहीं गया (उसका फिर से संशोधन है या उसका अब भी संदर्भ है): %(x)s |
 | `S34b903` | help and messages | Not possible: the account has history (see above). Deactivate it instead; the person can no longer sign in and everything they did stays attributable. | संभव नहीं: खाते का इतिहास है (ऊपर देखें)। इसके बजाय उसे निष्क्रिय करें; व्यक्ति अब साइन इन नहीं कर सकता और उसने जो भी किया वह उत्तरदायी बना रहता है। |
 | `S6a26de` | help and messages | Sample %(id)s drawn: %(n)s of %(total)s codes to inspect. | नमूना %(id)s निकाला गया: %(n)s / %(total)s कोड जाँचने हैं। |
@@ -4039,7 +4039,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd72b71` | message: user_service | That e-mail address or username is already in use. | यह ई-मेल पता या उपयोगकर्ता नाम पहले से उपयोग में है। |
 | `Sd54517` | message: user_service, user_detail | You cannot delete your own account. | आप अपना खाता नहीं हटा सकते। |
 | `S6a8896` | mine | Review & sign off | समीक्षा करें और साइन ऑफ करें |
-| `S913aff` | mine | Select all | सभी चुनें |
+| `S859822` | mine | Select | चुनें |
 | `S50a279` | mine | Show all | सभी दिखाएँ |
 | `Se48471` | mine | Showing only Drafts created by Import Job #%(id)s. | केवल आयात कार्य #%(id)s से बने मसौदे दिखाए जा रहे हैं। |
 | `Sff9480` | mine | Sign-Off Requests For You | आपके लिए साइन-ऑफ अनुरोध |
@@ -4377,7 +4377,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S5a4692` | base | You are covering for a colleague | أنت تنوب عن زميل |
 | `S8e9c15` | builder | Candidate revisions | المراجعات المرشحة |
 | `Sdf2aa0` | builder | Functional Group / Subgroup | المجموعة الوظيفية / المجموعة الفرعية |
-| `S11c54a` | builder | Include | تضمين |
 | `S12b701` | builder | No Approved candidates match this Release's scope. | لا مرشحين معتمدين يطابقون نطاق هذا الإصدار. |
 | `S1359d4` | builder | Planned effective | التاريخ الفعلي المخطط |
 | `Sf6fea0` | builder | Planned in the future: | مخطط له في المستقبل: |
@@ -4388,6 +4387,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sb1fe0b` | builder | Release Builder | منشئ الإصدارات |
 | `S5997c5` | builder | Save Candidate Set | حفظ مجموعة المرشحين |
 | `Scc8a3c` | builder | Save targets | حفظ الأهداف |
+| `S913aff` | builder, detail, mine | Select all | تحديد الكل |
 | `S85e466` | builder | Select the Approved, non-sandbox revisions to include, then Save. Publishing is immutable — a correction requires a new Release. | اختر المراجعات المعتمدة غير التجريبية لتضمينها ثم احفظ. النشر غير قابل للتراجع — التصحيح يتطلب إصدارًا جديدًا. |
 | `Sd64b6e` | builder, detail | Target software versions | إصدارات البرنامج المستهدفة |
 | `S6ba0fc` | builder | View Release | عرض الإصدار |
@@ -4713,7 +4713,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S241bf5` | detail, workbench | Sample number | رقم العيّنة |
 | `Sda38c6` | detail | Save planned dates | حفظ التواريخ المخطط لها |
 | `S13c61c` | detail | Scope Filter | مرشح النطاق |
-| `S859822` | detail, mine, withdrawn_codes | Select | تحديد |
 | `S81448f` | detail, form | select | اختر |
 | `S535bd8` | detail, form | Select a Functional System Group first | اختر مجموعة نظام وظيفي أولًا |
 | `S329cb8` | detail | Service | الخدمة |
@@ -4937,6 +4936,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se2bbd9` | help and messages | Drafts saved | حُفظت المسودات |
 | `S0ddfa5` | help and messages | Drafts signed off | اعتُمدت المسودات |
 | `Sf90ab8` | help and messages | Drafts submitted for review | قُدّمت المسودات للمراجعة |
+| `S11c54a` | help and messages | Include | تضمين |
 | `Sd856bd` | help and messages | Not deleted (it has a revision again or is still referenced): %(x)s | لم يُحذف (لديه مراجعة من جديد أو لا يزال مُشاراً إليه): %(x)s |
 | `S34b903` | help and messages | Not possible: the account has history (see above). Deactivate it instead; the person can no longer sign in and everything they did stays attributable. | غير ممكن: للحساب سجل (انظر أعلاه). عطّله بدلًا من ذلك؛ فلا يستطيع الشخص تسجيل الدخول ويبقى كل ما فعله منسوبًا. |
 | `S6a26de` | help and messages | Sample %(id)s drawn: %(n)s of %(total)s codes to inspect. | سُحبت العيّنة %(id)s: %(n)s من %(total)s رمزًا للفحص. |
@@ -5325,7 +5325,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd72b71` | message: user_service | That e-mail address or username is already in use. | عنوان البريد الإلكتروني أو اسم المستخدم هذا مستخدم بالفعل. |
 | `Sd54517` | message: user_service, user_detail | You cannot delete your own account. | لا يمكنك حذف حسابك. |
 | `S6a8896` | mine | Review & sign off | مراجعة واعتماد |
-| `S913aff` | mine | Select all | تحديد الكل |
+| `S859822` | mine | Select | تحديد |
 | `S50a279` | mine | Show all | عرض الكل |
 | `Se48471` | mine | Showing only Drafts created by Import Job #%(id)s. | تُعرض فقط المسودات التي أنشأتها مهمة الاستيراد #%(id)s. |
 | `Sff9480` | mine | Sign-Off Requests For You | طلبات اعتماد موجهة إليك |
@@ -5663,7 +5663,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S5a4692` | base | You are covering for a colleague | আপনি একজন সহকর্মীর জায়গায় কাজ করছেন |
 | `S8e9c15` | builder | Candidate revisions | প্রার্থী সংশোধন |
 | `Sdf2aa0` | builder | Functional Group / Subgroup | কার্যকরী গ্রুপ / উপগ্রুপ |
-| `S11c54a` | builder | Include | অন্তর্ভুক্ত করুন |
 | `S12b701` | builder | No Approved candidates match this Release's scope. | এই রিলিজের পরিধির সঙ্গে মেলে এমন কোনো অনুমোদিত প্রার্থী নেই। |
 | `S1359d4` | builder | Planned effective | পরিকল্পিত কার্যকর |
 | `Sf6fea0` | builder | Planned in the future: | ভবিষ্যতে পরিকল্পিত: |
@@ -5674,6 +5673,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sb1fe0b` | builder | Release Builder | রিলিজ বিল্ডার |
 | `S5997c5` | builder | Save Candidate Set | প্রার্থী সেট সংরক্ষণ করুন |
 | `Scc8a3c` | builder | Save targets | লক্ষ্য সংরক্ষণ করুন |
+| `S913aff` | builder, detail, mine | Select all | সব বেছে নিন |
 | `S85e466` | builder | Select the Approved, non-sandbox revisions to include, then Save. Publishing is immutable — a correction requires a new Release. | অন্তর্ভুক্ত করতে অনুমোদিত, স্যান্ডবক্সবহির্ভূত সংশোধনগুলো বাছুন, তারপর সংরক্ষণ করুন। প্রকাশ অপরিবর্তনীয় — সংশোধনের জন্য নতুন রিলিজ লাগে। |
 | `Sd64b6e` | builder, detail | Target software versions | লক্ষ্য সফটওয়্যার সংস্করণ |
 | `S6ba0fc` | builder | View Release | রিলিজ দেখুন |
@@ -5999,7 +5999,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S241bf5` | detail, workbench | Sample number | নমুনা নম্বর |
 | `Sda38c6` | detail | Save planned dates | পরিকল্পিত তারিখ সংরক্ষণ করুন |
 | `S13c61c` | detail | Scope Filter | পরিধি ফিল্টার |
-| `S859822` | detail, mine, withdrawn_codes | Select | বাছুন |
 | `S81448f` | detail, form | select | বাছুন |
 | `S535bd8` | detail, form | Select a Functional System Group first | আগে একটি কার্যকরী সিস্টেম গ্রুপ বাছুন |
 | `S329cb8` | detail | Service | সার্ভিস |
@@ -6223,6 +6222,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se2bbd9` | help and messages | Drafts saved | খসড়া সংরক্ষিত হয়েছে |
 | `S0ddfa5` | help and messages | Drafts signed off | খসড়ার সাইন-অফ হয়েছে |
 | `Sf90ab8` | help and messages | Drafts submitted for review | খসড়া পর্যালোচনার জন্য জমা হয়েছে |
+| `S11c54a` | help and messages | Include | অন্তর্ভুক্ত করুন |
 | `Sd856bd` | help and messages | Not deleted (it has a revision again or is still referenced): %(x)s | মোছা হয়নি (এর আবার সংশোধন আছে বা এখনও উল্লেখ আছে): %(x)s |
 | `S34b903` | help and messages | Not possible: the account has history (see above). Deactivate it instead; the person can no longer sign in and everything they did stays attributable. | সম্ভব নয়: অ্যাকাউন্টের ইতিহাস আছে (উপরে দেখুন)। এর পরিবর্তে নিষ্ক্রিয় করুন; ব্যক্তিটি আর সাইন ইন করতে পারবেন না এবং তিনি যা করেছেন তা দায়বদ্ধ থাকবে। |
 | `S6a26de` | help and messages | Sample %(id)s drawn: %(n)s of %(total)s codes to inspect. | নমুনা %(id)s তোলা হয়েছে: %(n)s / %(total)s টি কোড পরিদর্শন করতে হবে। |
@@ -6611,7 +6611,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd72b71` | message: user_service | That e-mail address or username is already in use. | এই ই-মেইল ঠিকানা বা ব্যবহারকারীর নাম ইতিমধ্যে ব্যবহৃত। |
 | `Sd54517` | message: user_service, user_detail | You cannot delete your own account. | আপনি আপনার নিজের অ্যাকাউন্ট মুছতে পারবেন না। |
 | `S6a8896` | mine | Review & sign off | পর্যালোচনা ও সাইন অফ |
-| `S913aff` | mine | Select all | সব বেছে নিন |
+| `S859822` | mine | Select | বাছুন |
 | `S50a279` | mine | Show all | সব দেখান |
 | `Se48471` | mine | Showing only Drafts created by Import Job #%(id)s. | শুধু আমদানি কাজ #%(id)s থেকে তৈরি খসড়া দেখানো হচ্ছে। |
 | `Sff9480` | mine | Sign-Off Requests For You | আপনার জন্য সাইন-অফ অনুরোধ |
@@ -6949,7 +6949,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S5a4692` | base | You are covering for a colleague | तुम्ही सहकाऱ्याच्या जागी काम करत आहात |
 | `S8e9c15` | builder | Candidate revisions | उमेदवार सुधारणा |
 | `Sdf2aa0` | builder | Functional Group / Subgroup | कार्यात्मक गट / उपगट |
-| `S11c54a` | builder | Include | समाविष्ट करा |
 | `S12b701` | builder | No Approved candidates match this Release's scope. | या प्रकाशनाच्या व्याप्तीशी जुळणारा कोणताही मंजूर उमेदवार नाही. |
 | `S1359d4` | builder | Planned effective | नियोजित प्रभावी |
 | `Sf6fea0` | builder | Planned in the future: | भविष्यात नियोजित: |
@@ -6960,6 +6959,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sb1fe0b` | builder | Release Builder | प्रकाशन बिल्डर |
 | `S5997c5` | builder | Save Candidate Set | उमेदवार संच जतन करा |
 | `Scc8a3c` | builder | Save targets | लक्ष्य जतन करा |
+| `S913aff` | builder, detail, mine | Select all | सर्व निवडा |
 | `S85e466` | builder | Select the Approved, non-sandbox revisions to include, then Save. Publishing is immutable — a correction requires a new Release. | समाविष्ट करण्यासाठी मंजूर, सँडबॉक्सेतर सुधारणा निवडा, मग जतन करा. प्रकाशन अपरिवर्तनीय आहे — दुरुस्तीसाठी नवीन प्रकाशन लागते. |
 | `Sd64b6e` | builder, detail | Target software versions | लक्ष्य सॉफ्टवेअर आवृत्त्या |
 | `S6ba0fc` | builder | View Release | प्रकाशन पहा |
@@ -7285,7 +7285,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S241bf5` | detail, workbench | Sample number | नमुना क्रमांक |
 | `Sda38c6` | detail | Save planned dates | नियोजित तारखा जतन करा |
 | `S13c61c` | detail | Scope Filter | व्याप्ती फिल्टर |
-| `S859822` | detail, mine, withdrawn_codes | Select | निवडा |
 | `S81448f` | detail, form | select | निवडा |
 | `S535bd8` | detail, form | Select a Functional System Group first | आधी कार्यात्मक प्रणाली गट निवडा |
 | `S329cb8` | detail | Service | सेवा |
@@ -7509,6 +7508,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se2bbd9` | help and messages | Drafts saved | मसुदे जतन केले |
 | `S0ddfa5` | help and messages | Drafts signed off | मसुद्यांचा साइन-ऑफ झाला |
 | `Sf90ab8` | help and messages | Drafts submitted for review | मसुदे पुनरावलोकनासाठी सादर केले |
+| `S11c54a` | help and messages | Include | समाविष्ट करा |
 | `Sd856bd` | help and messages | Not deleted (it has a revision again or is still referenced): %(x)s | हटवले नाही (त्याला पुन्हा सुधारणा आहे किंवा अजून संदर्भ आहे): %(x)s |
 | `S34b903` | help and messages | Not possible: the account has history (see above). Deactivate it instead; the person can no longer sign in and everything they did stays attributable. | शक्य नाही: खात्याचा इतिहास आहे (वर पहा). त्याऐवजी निष्क्रिय करा; ती व्यक्ती आता साइन इन करू शकत नाही आणि तिने जे केले ते जबाबदार राहते. |
 | `S6a26de` | help and messages | Sample %(id)s drawn: %(n)s of %(total)s codes to inspect. | नमुना %(id)s काढला: %(n)s / %(total)s कोड तपासायचे आहेत. |
@@ -7897,7 +7897,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd72b71` | message: user_service | That e-mail address or username is already in use. | हा ई-मेल पत्ता किंवा वापरकर्तानाव आधीच वापरात आहे. |
 | `Sd54517` | message: user_service, user_detail | You cannot delete your own account. | तुम्ही तुमचे स्वतःचे खाते हटवू शकत नाही. |
 | `S6a8896` | mine | Review & sign off | पुनरावलोकन करा आणि साइन ऑफ करा |
-| `S913aff` | mine | Select all | सर्व निवडा |
+| `S859822` | mine | Select | निवडा |
 | `S50a279` | mine | Show all | सर्व दाखवा |
 | `Se48471` | mine | Showing only Drafts created by Import Job #%(id)s. | फक्त आयात काम #%(id)s ने तयार केलेले मसुदे दाखवले आहेत. |
 | `Sff9480` | mine | Sign-Off Requests For You | तुमच्यासाठी साइन-ऑफ विनंत्या |
@@ -8235,7 +8235,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S5a4692` | base | You are covering for a colleague | మీరు ఒక సహోద్యోగి స్థానంలో పనిచేస్తున్నారు |
 | `S8e9c15` | builder | Candidate revisions | అభ్యర్థి పునర్విమర్శలు |
 | `Sdf2aa0` | builder | Functional Group / Subgroup | ఫంక్షనల్ గ్రూప్ / సబ్‌గ్రూప్ |
-| `S11c54a` | builder | Include | చేర్చండి |
 | `S12b701` | builder | No Approved candidates match this Release's scope. | ఈ విడుదల పరిధికి సరిపోలే ఆమోదించిన అభ్యర్థులు లేరు. |
 | `S1359d4` | builder | Planned effective | ప్రణాళిక చేసిన అమలు |
 | `Sf6fea0` | builder | Planned in the future: | భవిష్యత్తులో ప్రణాళిక: |
@@ -8246,6 +8245,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sb1fe0b` | builder | Release Builder | విడుదల బిల్డర్ |
 | `S5997c5` | builder | Save Candidate Set | అభ్యర్థి సమితిని సేవ్ చేయండి |
 | `Scc8a3c` | builder | Save targets | లక్ష్యాలను సేవ్ చేయండి |
+| `S913aff` | builder, detail, mine | Select all | అన్నీ ఎంచుకోండి |
 | `S85e466` | builder | Select the Approved, non-sandbox revisions to include, then Save. Publishing is immutable — a correction requires a new Release. | చేర్చడానికి ఆమోదించిన, శాండ్‌బాక్స్ కాని పునర్విమర్శలను ఎంచుకుని, సేవ్ చేయండి. ప్రచురణ మార్చలేనిది — సవరణకు కొత్త విడుదల అవసరం. |
 | `Sd64b6e` | builder, detail | Target software versions | లక్ష్య సాఫ్ట్‌వేర్ వెర్షన్లు |
 | `S6ba0fc` | builder | View Release | విడుదల చూడండి |
@@ -8571,7 +8571,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S241bf5` | detail, workbench | Sample number | నమూనా సంఖ్య |
 | `Sda38c6` | detail | Save planned dates | ప్రణాళిక చేసిన తేదీలను సేవ్ చేయండి |
 | `S13c61c` | detail | Scope Filter | పరిధి ఫిల్టర్ |
-| `S859822` | detail, mine, withdrawn_codes | Select | ఎంచుకోండి |
 | `S81448f` | detail, form | select | ఎంచుకోండి |
 | `S535bd8` | detail, form | Select a Functional System Group first | ముందుగా ఫంక్షనల్ సిస్టమ్ గ్రూప్ ఎంచుకోండి |
 | `S329cb8` | detail | Service | సర్వీస్ |
@@ -8795,6 +8794,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se2bbd9` | help and messages | Drafts saved | ముసాయిదాలు సేవ్ చేయబడ్డాయి |
 | `S0ddfa5` | help and messages | Drafts signed off | ముసాయిదాలకు సైన్-ఆఫ్ ఇవ్వబడింది |
 | `Sf90ab8` | help and messages | Drafts submitted for review | ముసాయిదాలు సమీక్ష కోసం సమర్పించబడ్డాయి |
+| `S11c54a` | help and messages | Include | చేర్చండి |
 | `Sd856bd` | help and messages | Not deleted (it has a revision again or is still referenced): %(x)s | తొలగించలేదు (దానికి మళ్లీ సవరణ ఉంది లేదా ఇంకా సూచన ఉంది): %(x)s |
 | `S34b903` | help and messages | Not possible: the account has history (see above). Deactivate it instead; the person can no longer sign in and everything they did stays attributable. | సాధ్యం కాదు: ఖాతాకు చరిత్ర ఉంది (పైన చూడండి). బదులుగా నిష్క్రియం చేయండి; ఆ వ్యక్తి ఇక సైన్ ఇన్ చేయలేరు మరియు వారు చేసినదంతా బాధ్యతతో నిలిచి ఉంటుంది. |
 | `S6a26de` | help and messages | Sample %(id)s drawn: %(n)s of %(total)s codes to inspect. | నమూనా %(id)s తీయబడింది: %(n)s / %(total)s కోడ్‌లు తనిఖీ చేయాలి. |
@@ -9183,7 +9183,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd72b71` | message: user_service | That e-mail address or username is already in use. | ఈ ఈ-మెయిల్ చిరునామా లేదా వినియోగదారు పేరు ఇప్పటికే వాడుకలో ఉంది. |
 | `Sd54517` | message: user_service, user_detail | You cannot delete your own account. | మీరు మీ స్వంత ఖాతాను తొలగించలేరు. |
 | `S6a8896` | mine | Review & sign off | సమీక్షించి సైన్ ఆఫ్ చేయండి |
-| `S913aff` | mine | Select all | అన్నీ ఎంచుకోండి |
+| `S859822` | mine | Select | ఎంచుకోండి |
 | `S50a279` | mine | Show all | అన్నీ చూపండి |
 | `Se48471` | mine | Showing only Drafts created by Import Job #%(id)s. | దిగుమతి పని #%(id)s సృష్టించిన ముసాయిదాలు మాత్రమే చూపబడుతున్నాయి. |
 | `Sff9480` | mine | Sign-Off Requests For You | మీ కోసం సైన్-ఆఫ్ అభ్యర్థనలు |
@@ -9521,7 +9521,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S5a4692` | base | You are covering for a colleague | நீங்கள் ஒரு சக ஊழியருக்குப் பதிலாகச் செயல்படுகிறீர்கள் |
 | `S8e9c15` | builder | Candidate revisions | வேட்பாளர் திருத்தங்கள் |
 | `Sdf2aa0` | builder | Functional Group / Subgroup | செயல்பாட்டுக் குழு / துணைக் குழு |
-| `S11c54a` | builder | Include | சேர் |
 | `S12b701` | builder | No Approved candidates match this Release's scope. | இந்த வெளியீட்டின் வரம்புக்குப் பொருந்தும் அங்கீகரிக்கப்பட்ட வேட்பாளர்கள் இல்லை. |
 | `S1359d4` | builder | Planned effective | திட்டமிட்ட அமலாக்கம் |
 | `Sf6fea0` | builder | Planned in the future: | எதிர்காலத்தில் திட்டமிடப்பட்டது: |
@@ -9532,6 +9531,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sb1fe0b` | builder | Release Builder | வெளியீட்டு உருவாக்கி |
 | `S5997c5` | builder | Save Candidate Set | வேட்பாளர் தொகுப்பைச் சேமி |
 | `Scc8a3c` | builder | Save targets | இலக்குகளைச் சேமி |
+| `S913aff` | builder, detail, mine | Select all | அனைத்தையும் தேர்ந்தெடு |
 | `S85e466` | builder | Select the Approved, non-sandbox revisions to include, then Save. Publishing is immutable — a correction requires a new Release. | சேர்க்க அங்கீகரிக்கப்பட்ட, சாண்ட்பாக்ஸ் அல்லாத திருத்தங்களைத் தேர்ந்தெடுத்து, சேமியுங்கள். வெளியீடு மாற்ற முடியாதது — திருத்தத்துக்குப் புதிய வெளியீடு தேவை. |
 | `Sd64b6e` | builder, detail | Target software versions | இலக்கு மென்பொருள் பதிப்புகள் |
 | `S6ba0fc` | builder | View Release | வெளியீட்டைப் பார் |
@@ -9857,7 +9857,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S241bf5` | detail, workbench | Sample number | மாதிரி எண் |
 | `Sda38c6` | detail | Save planned dates | திட்டமிட்ட தேதிகளைச் சேமி |
 | `S13c61c` | detail | Scope Filter | வரம்பு வடிகட்டி |
-| `S859822` | detail, mine, withdrawn_codes | Select | தேர்ந்தெடு |
 | `S81448f` | detail, form | select | தேர்ந்தெடு |
 | `S535bd8` | detail, form | Select a Functional System Group first | முதலில் செயல்பாட்டு அமைப்புக் குழுவைத் தேர்ந்தெடுங்கள் |
 | `S329cb8` | detail | Service | சேவை |
@@ -10081,6 +10080,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se2bbd9` | help and messages | Drafts saved | வரைவுகள் சேமிக்கப்பட்டன |
 | `S0ddfa5` | help and messages | Drafts signed off | வரைவுகளுக்குக் கையொப்பமிடப்பட்டது |
 | `Sf90ab8` | help and messages | Drafts submitted for review | வரைவுகள் மதிப்பாய்வுக்குச் சமர்ப்பிக்கப்பட்டன |
+| `S11c54a` | help and messages | Include | சேர் |
 | `Sd856bd` | help and messages | Not deleted (it has a revision again or is still referenced): %(x)s | நீக்கப்படவில்லை (அதற்கு மீண்டும் திருத்தம் உள்ளது அல்லது இன்னும் குறிப்பிடப்படுகிறது): %(x)s |
 | `S34b903` | help and messages | Not possible: the account has history (see above). Deactivate it instead; the person can no longer sign in and everything they did stays attributable. | சாத்தியமில்லை: கணக்குக்கு வரலாறு உள்ளது (மேலே பார்க்கவும்). அதற்குப் பதிலாகச் செயலிழக்கச் செய்யுங்கள்; அந்த நபர் இனி உள்நுழைய முடியாது, அவர் செய்தவை அனைத்தும் பொறுப்புடன் இருக்கும். |
 | `S6a26de` | help and messages | Sample %(id)s drawn: %(n)s of %(total)s codes to inspect. | மாதிரி %(id)s எடுக்கப்பட்டது: %(n)s / %(total)s குறியீடுகள் ஆய்வுக்கு. |
@@ -10469,7 +10469,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd72b71` | message: user_service | That e-mail address or username is already in use. | இந்த மின்னஞ்சல் முகவரி அல்லது பயனர் பெயர் ஏற்கனவே பயன்பாட்டில் உள்ளது. |
 | `Sd54517` | message: user_service, user_detail | You cannot delete your own account. | உங்கள் சொந்தக் கணக்கை நீக்க முடியாது. |
 | `S6a8896` | mine | Review & sign off | மதிப்பாய்வு செய்து கையொப்பமிடு |
-| `S913aff` | mine | Select all | அனைத்தையும் தேர்ந்தெடு |
+| `S859822` | mine | Select | தேர்ந்தெடு |
 | `S50a279` | mine | Show all | அனைத்தையும் காட்டு |
 | `Se48471` | mine | Showing only Drafts created by Import Job #%(id)s. | இறக்குமதிப் பணி #%(id)s உருவாக்கிய வரைவுகள் மட்டும் காட்டப்படுகின்றன. |
 | `Sff9480` | mine | Sign-Off Requests For You | உங்களுக்கான கையொப்பக் கோரிக்கைகள் |
@@ -10807,7 +10807,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S5a4692` | base | You are covering for a colleague | તમે એક સહકર્મીની જગ્યાએ કામ કરી રહ્યા છો |
 | `S8e9c15` | builder | Candidate revisions | ઉમેદવાર સુધારા |
 | `Sdf2aa0` | builder | Functional Group / Subgroup | કાર્યાત્મક જૂથ / પેટાજૂથ |
-| `S11c54a` | builder | Include | સમાવો |
 | `S12b701` | builder | No Approved candidates match this Release's scope. | આ રિલીઝના વ્યાપ સાથે મેળ ખાતો કોઈ મંજૂર ઉમેદવાર નથી. |
 | `S1359d4` | builder | Planned effective | આયોજિત અમલ |
 | `Sf6fea0` | builder | Planned in the future: | ભવિષ્યમાં આયોજિત: |
@@ -10818,6 +10817,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sb1fe0b` | builder | Release Builder | રિલીઝ બિલ્ડર |
 | `S5997c5` | builder | Save Candidate Set | ઉમેદવાર સમૂહ સાચવો |
 | `Scc8a3c` | builder | Save targets | લક્ષ્યો સાચવો |
+| `S913aff` | builder, detail, mine | Select all | બધું પસંદ કરો |
 | `S85e466` | builder | Select the Approved, non-sandbox revisions to include, then Save. Publishing is immutable — a correction requires a new Release. | સમાવવા માટે મંજૂર, બિન-સેન્ડબોક્સ સુધારા પસંદ કરો, પછી સાચવો. પ્રકાશન અપરિવર્તનીય છે — સુધારા માટે નવી રિલીઝ જોઈએ. |
 | `Sd64b6e` | builder, detail | Target software versions | લક્ષ્ય સૉફ્ટવેર આવૃત્તિઓ |
 | `S6ba0fc` | builder | View Release | રિલીઝ જુઓ |
@@ -11143,7 +11143,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S241bf5` | detail, workbench | Sample number | નમૂના નંબર |
 | `Sda38c6` | detail | Save planned dates | આયોજિત તારીખો સાચવો |
 | `S13c61c` | detail | Scope Filter | વ્યાપ ફિલ્ટર |
-| `S859822` | detail, mine, withdrawn_codes | Select | પસંદ કરો |
 | `S81448f` | detail, form | select | પસંદ કરો |
 | `S535bd8` | detail, form | Select a Functional System Group first | પહેલાં કાર્યાત્મક સિસ્ટમ જૂથ પસંદ કરો |
 | `S329cb8` | detail | Service | સર્વિસ |
@@ -11367,6 +11366,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se2bbd9` | help and messages | Drafts saved | મુસદ્દા સાચવ્યા |
 | `S0ddfa5` | help and messages | Drafts signed off | મુસદ્દાઓનું સાઇન-ઑફ થયું |
 | `Sf90ab8` | help and messages | Drafts submitted for review | મુસદ્દા સમીક્ષા માટે સબમિટ કર્યા |
+| `S11c54a` | help and messages | Include | સમાવો |
 | `Sd856bd` | help and messages | Not deleted (it has a revision again or is still referenced): %(x)s | કાઢ્યો નથી (તેની ફરી સુધારણા છે અથવા હજી સંદર્ભ છે): %(x)s |
 | `S34b903` | help and messages | Not possible: the account has history (see above). Deactivate it instead; the person can no longer sign in and everything they did stays attributable. | શક્ય નથી: એકાઉન્ટનો ઇતિહાસ છે (ઉપર જુઓ). તેના બદલે નિષ્ક્રિય કરો; વ્યક્તિ હવે સાઇન ઇન કરી શકશે નહીં અને તેણે જે કર્યું તે જવાબદાર રહે છે. |
 | `S6a26de` | help and messages | Sample %(id)s drawn: %(n)s of %(total)s codes to inspect. | નમૂનો %(id)s ખેંચાયો: %(n)s / %(total)s કોડ તપાસવાના છે. |
@@ -11755,7 +11755,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd72b71` | message: user_service | That e-mail address or username is already in use. | આ ઈ-મેલ સરનામું અથવા વપરાશકર્તા નામ પહેલેથી વપરાશમાં છે. |
 | `Sd54517` | message: user_service, user_detail | You cannot delete your own account. | તમે તમારું પોતાનું એકાઉન્ટ કાઢી શકતા નથી. |
 | `S6a8896` | mine | Review & sign off | સમીક્ષા કરો અને સાઇન ઑફ કરો |
-| `S913aff` | mine | Select all | બધું પસંદ કરો |
+| `S859822` | mine | Select | પસંદ કરો |
 | `S50a279` | mine | Show all | બધું બતાવો |
 | `Se48471` | mine | Showing only Drafts created by Import Job #%(id)s. | ફક્ત આયાત કાર્ય #%(id)s એ બનાવેલા મુસદ્દા બતાવાયા છે. |
 | `Sff9480` | mine | Sign-Off Requests For You | તમારા માટે સાઇન-ઑફ વિનંતીઓ |
@@ -12093,7 +12093,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S5a4692` | base | You are covering for a colleague | آپ ایک ساتھی کی جگہ کام کر رہے ہیں |
 | `S8e9c15` | builder | Candidate revisions | امیدوار ترامیم |
 | `Sdf2aa0` | builder | Functional Group / Subgroup | فنکشنل گروپ / ذیلی گروپ |
-| `S11c54a` | builder | Include | شامل کریں |
 | `S12b701` | builder | No Approved candidates match this Release's scope. | اس ریلیز کے دائرے سے کوئی منظور شدہ امیدوار مطابقت نہیں رکھتا۔ |
 | `S1359d4` | builder | Planned effective | منصوبہ بند نفاذ |
 | `Sf6fea0` | builder | Planned in the future: | مستقبل میں منصوبہ بند: |
@@ -12104,6 +12103,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sb1fe0b` | builder | Release Builder | ریلیز بلڈر |
 | `S5997c5` | builder | Save Candidate Set | امیدواروں کا مجموعہ محفوظ کریں |
 | `Scc8a3c` | builder | Save targets | اہداف محفوظ کریں |
+| `S913aff` | builder, detail, mine | Select all | سب منتخب کریں |
 | `S85e466` | builder | Select the Approved, non-sandbox revisions to include, then Save. Publishing is immutable — a correction requires a new Release. | شامل کرنے کے لیے منظور شدہ، غیر سینڈ باکس ترامیم منتخب کریں، پھر محفوظ کریں۔ اشاعت ناقابلِ واپسی ہے — درستی کے لیے نئی ریلیز درکار ہے۔ |
 | `Sd64b6e` | builder, detail | Target software versions | ہدف سافٹ ویئر ورژن |
 | `S6ba0fc` | builder | View Release | ریلیز دیکھیں |
@@ -12429,7 +12429,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S241bf5` | detail, workbench | Sample number | نمونہ نمبر |
 | `Sda38c6` | detail | Save planned dates | منصوبہ بند تاریخیں محفوظ کریں |
 | `S13c61c` | detail | Scope Filter | دائرے کا فلٹر |
-| `S859822` | detail, mine, withdrawn_codes | Select | منتخب کریں |
 | `S81448f` | detail, form | select | منتخب کریں |
 | `S535bd8` | detail, form | Select a Functional System Group first | پہلے فنکشنل سسٹم گروپ منتخب کریں |
 | `S329cb8` | detail | Service | سروس |
@@ -12653,6 +12652,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se2bbd9` | help and messages | Drafts saved | مسودے محفوظ ہو گئے |
 | `S0ddfa5` | help and messages | Drafts signed off | مسودوں کا سائن آف ہو گیا |
 | `Sf90ab8` | help and messages | Drafts submitted for review | مسودے جائزے کے لیے جمع کرائے گئے |
+| `S11c54a` | help and messages | Include | شامل کریں |
 | `Sd856bd` | help and messages | Not deleted (it has a revision again or is still referenced): %(x)s | حذف نہیں ہوا (اس کی دوبارہ ترمیم ہے یا اب بھی حوالہ موجود ہے): %(x)s |
 | `S34b903` | help and messages | Not possible: the account has history (see above). Deactivate it instead; the person can no longer sign in and everything they did stays attributable. | ممکن نہیں: اکاؤنٹ کی تاریخ ہے (اوپر دیکھیں)۔ اس کے بجائے غیر فعال کریں؛ وہ شخص اب سائن اِن نہیں کر سکتا اور اس نے جو کیا وہ قابلِ نسبت رہتا ہے۔ |
 | `S6a26de` | help and messages | Sample %(id)s drawn: %(n)s of %(total)s codes to inspect. | نمونہ %(id)s نکالا گیا: %(n)s / %(total)s کوڈ جانچنے ہیں۔ |
@@ -13041,7 +13041,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd72b71` | message: user_service | That e-mail address or username is already in use. | یہ ای میل پتا یا صارف نام پہلے سے استعمال میں ہے۔ |
 | `Sd54517` | message: user_service, user_detail | You cannot delete your own account. | آپ اپنا اکاؤنٹ حذف نہیں کر سکتے۔ |
 | `S6a8896` | mine | Review & sign off | جائزہ لیں اور سائن آف کریں |
-| `S913aff` | mine | Select all | سب منتخب کریں |
+| `S859822` | mine | Select | منتخب کریں |
 | `S50a279` | mine | Show all | سب دکھائیں |
 | `Se48471` | mine | Showing only Drafts created by Import Job #%(id)s. | صرف درآمدی کام #%(id)s کے بنائے ہوئے مسودے دکھائے جا رہے ہیں۔ |
 | `Sff9480` | mine | Sign-Off Requests For You | آپ کے لیے سائن آف کی درخواستیں |
@@ -13379,7 +13379,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S5a4692` | base | You are covering for a colleague | ನೀವು ಸಹೋದ್ಯೋಗಿಯ ಬದಲಿಗೆ ಕೆಲಸ ಮಾಡುತ್ತಿದ್ದೀರಿ |
 | `S8e9c15` | builder | Candidate revisions | ಅಭ್ಯರ್ಥಿ ಪರಿಷ್ಕರಣೆಗಳು |
 | `Sdf2aa0` | builder | Functional Group / Subgroup | ಕ್ರಿಯಾತ್ಮಕ ಗುಂಪು / ಉಪಗುಂಪು |
-| `S11c54a` | builder | Include | ಸೇರಿಸಿ |
 | `S12b701` | builder | No Approved candidates match this Release's scope. | ಈ ಬಿಡುಗಡೆಯ ವ್ಯಾಪ್ತಿಗೆ ಯಾವುದೇ ಅನುಮೋದಿತ ಅಭ್ಯರ್ಥಿ ಹೊಂದುವುದಿಲ್ಲ. |
 | `S1359d4` | builder | Planned effective | ಯೋಜಿತ ಜಾರಿ |
 | `Sf6fea0` | builder | Planned in the future: | ಭವಿಷ್ಯದಲ್ಲಿ ಯೋಜಿತ: |
@@ -13390,6 +13389,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sb1fe0b` | builder | Release Builder | ಬಿಡುಗಡೆ ನಿರ್ಮಾಪಕ |
 | `S5997c5` | builder | Save Candidate Set | ಅಭ್ಯರ್ಥಿ ಸಮೂಹ ಉಳಿಸಿ |
 | `Scc8a3c` | builder | Save targets | ಗುರಿಗಳನ್ನು ಉಳಿಸಿ |
+| `S913aff` | builder, detail, mine | Select all | ಎಲ್ಲವನ್ನೂ ಆಯ್ಕೆಮಾಡಿ |
 | `S85e466` | builder | Select the Approved, non-sandbox revisions to include, then Save. Publishing is immutable — a correction requires a new Release. | ಸೇರಿಸಲು ಅನುಮೋದಿತ, ಸ್ಯಾಂಡ್‌ಬಾಕ್ಸ್ ಅಲ್ಲದ ಪರಿಷ್ಕರಣೆಗಳನ್ನು ಆಯ್ಕೆಮಾಡಿ, ನಂತರ ಉಳಿಸಿ. ಪ್ರಕಟಣೆ ಬದಲಾಗದು — ತಿದ್ದುಪಡಿಗೆ ಹೊಸ ಬಿಡುಗಡೆ ಬೇಕು. |
 | `Sd64b6e` | builder, detail | Target software versions | ಗುರಿ ಸಾಫ್ಟ್‌ವೇರ್ ಆವೃತ್ತಿಗಳು |
 | `S6ba0fc` | builder | View Release | ಬಿಡುಗಡೆ ವೀಕ್ಷಿಸಿ |
@@ -13715,7 +13715,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S241bf5` | detail, workbench | Sample number | ಮಾದರಿ ಸಂಖ್ಯೆ |
 | `Sda38c6` | detail | Save planned dates | ಯೋಜಿತ ದಿನಾಂಕಗಳನ್ನು ಉಳಿಸಿ |
 | `S13c61c` | detail | Scope Filter | ವ್ಯಾಪ್ತಿ ಫಿಲ್ಟರ್ |
-| `S859822` | detail, mine, withdrawn_codes | Select | ಆಯ್ಕೆಮಾಡಿ |
 | `S81448f` | detail, form | select | ಆಯ್ಕೆಮಾಡಿ |
 | `S535bd8` | detail, form | Select a Functional System Group first | ಮೊದಲು ಕ್ರಿಯಾತ್ಮಕ ವ್ಯವಸ್ಥೆ ಗುಂಪನ್ನು ಆಯ್ಕೆಮಾಡಿ |
 | `S329cb8` | detail | Service | ಸೇವೆ |
@@ -13939,6 +13938,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se2bbd9` | help and messages | Drafts saved | ಕರಡುಗಳನ್ನು ಉಳಿಸಲಾಗಿದೆ |
 | `S0ddfa5` | help and messages | Drafts signed off | ಕರಡುಗಳಿಗೆ ಸಹಿ ಮಾಡಲಾಗಿದೆ |
 | `Sf90ab8` | help and messages | Drafts submitted for review | ಕರಡುಗಳನ್ನು ಪರಿಶೀಲನೆಗೆ ಸಲ್ಲಿಸಲಾಗಿದೆ |
+| `S11c54a` | help and messages | Include | ಸೇರಿಸಿ |
 | `Sd856bd` | help and messages | Not deleted (it has a revision again or is still referenced): %(x)s | ಅಳಿಸಲಿಲ್ಲ (ಅದಕ್ಕೆ ಮತ್ತೆ ಪರಿಷ್ಕರಣೆ ಇದೆ ಅಥವಾ ಇನ್ನೂ ಉಲ್ಲೇಖವಿದೆ): %(x)s |
 | `S34b903` | help and messages | Not possible: the account has history (see above). Deactivate it instead; the person can no longer sign in and everything they did stays attributable. | ಸಾಧ್ಯವಿಲ್ಲ: ಖಾತೆಗೆ ಇತಿಹಾಸವಿದೆ (ಮೇಲೆ ನೋಡಿ). ಬದಲಿಗೆ ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಿ; ವ್ಯಕ್ತಿ ಇನ್ನು ಸೈನ್ ಇನ್ ಮಾಡಲಾರರು ಮತ್ತು ಅವರು ಮಾಡಿದ್ದೆಲ್ಲವೂ ಗುರುತಿಸಬಹುದಾದಂತೆಯೇ ಉಳಿಯುತ್ತದೆ. |
 | `S6a26de` | help and messages | Sample %(id)s drawn: %(n)s of %(total)s codes to inspect. | ಮಾದರಿ %(id)s ತೆಗೆಯಲಾಗಿದೆ: %(n)s / %(total)s ಕೋಡ್‌ಗಳನ್ನು ತಪಾಸಿಸಬೇಕು. |
@@ -14327,7 +14327,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd72b71` | message: user_service | That e-mail address or username is already in use. | ಆ ಇ-ಮೇಲ್ ವಿಳಾಸ ಅಥವಾ ಬಳಕೆದಾರ ಹೆಸರು ಈಗಾಗಲೇ ಬಳಕೆಯಲ್ಲಿದೆ. |
 | `Sd54517` | message: user_service, user_detail | You cannot delete your own account. | ನಿಮ್ಮ ಸ್ವಂತ ಖಾತೆಯನ್ನು ಅಳಿಸಲಾಗದು. |
 | `S6a8896` | mine | Review & sign off | ಪರಿಶೀಲಿಸಿ ಮತ್ತು ಸಹಿ ಮಾಡಿ |
-| `S913aff` | mine | Select all | ಎಲ್ಲವನ್ನೂ ಆಯ್ಕೆಮಾಡಿ |
+| `S859822` | mine | Select | ಆಯ್ಕೆಮಾಡಿ |
 | `S50a279` | mine | Show all | ಎಲ್ಲವನ್ನೂ ತೋರಿಸಿ |
 | `Se48471` | mine | Showing only Drafts created by Import Job #%(id)s. | ಆಮದು ಕೆಲಸ #%(id)s ರಚಿಸಿದ ಕರಡುಗಳನ್ನು ಮಾತ್ರ ತೋರಿಸಲಾಗುತ್ತಿದೆ. |
 | `Sff9480` | mine | Sign-Off Requests For You | ನಿಮಗಾಗಿ ಸಹಿ ವಿನಂತಿಗಳು |
@@ -14665,7 +14665,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S5a4692` | base | You are covering for a colleague | ଆପଣ ଜଣେ ସହକର୍ମୀଙ୍କ ବଦଳରେ କାମ କରୁଛନ୍ତି |
 | `S8e9c15` | builder | Candidate revisions | ପ୍ରାର୍ଥୀ ସଂସ୍କରଣ |
 | `Sdf2aa0` | builder | Functional Group / Subgroup | କାର୍ଯ୍ୟକ୍ଷମ ଗୋଷ୍ଠୀ / ଉପଗୋଷ୍ଠୀ |
-| `S11c54a` | builder | Include | ଅନ୍ତର୍ଭୁକ୍ତ କରନ୍ତୁ |
 | `S12b701` | builder | No Approved candidates match this Release's scope. | ଏହି ରିଲିଜ୍‌ର ପରିସର ସହ କୌଣସି ଅନୁମୋଦିତ ପ୍ରାର୍ଥୀ ମେଳ ଖାଏ ନାହିଁ। |
 | `S1359d4` | builder | Planned effective | ଯୋଜନାବଦ୍ଧ କାର୍ଯ୍ୟକାରୀ |
 | `Sf6fea0` | builder | Planned in the future: | ଭବିଷ୍ୟତରେ ଯୋଜନାବଦ୍ଧ: |
@@ -14676,6 +14675,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sb1fe0b` | builder | Release Builder | ରିଲିଜ୍ ନିର୍ମାତା |
 | `S5997c5` | builder | Save Candidate Set | ପ୍ରାର୍ଥୀ ସମୂହ ସଞ୍ଚୟ କରନ୍ତୁ |
 | `Scc8a3c` | builder | Save targets | ଲକ୍ଷ୍ୟ ସଞ୍ଚୟ କରନ୍ତୁ |
+| `S913aff` | builder, detail, mine | Select all | ସବୁ ବାଛନ୍ତୁ |
 | `S85e466` | builder | Select the Approved, non-sandbox revisions to include, then Save. Publishing is immutable — a correction requires a new Release. | ଅନ୍ତର୍ଭୁକ୍ତ କରିବାକୁ ଅନୁମୋଦିତ, ସ୍ୟାଣ୍ଡବକ୍ସ ନୁହେଁ ଏପରି ସଂସ୍କରଣ ବାଛନ୍ତୁ, ତା’ପରେ ସଞ୍ଚୟ କରନ୍ତୁ। ପ୍ରକାଶନ ଅପରିବର୍ତ୍ତନୀୟ — ସଂଶୋଧନ ପାଇଁ ନୂଆ ରିଲିଜ୍ ଦରକାର। |
 | `Sd64b6e` | builder, detail | Target software versions | ଲକ୍ଷ୍ୟ ସଫ୍ଟୱେର୍ ସଂସ୍କରଣ |
 | `S6ba0fc` | builder | View Release | ରିଲିଜ୍ ଦେଖନ୍ତୁ |
@@ -15001,7 +15001,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S241bf5` | detail, workbench | Sample number | ନମୁନା ନମ୍ବର |
 | `Sda38c6` | detail | Save planned dates | ଯୋଜନାବଦ୍ଧ ତାରିଖ ସଞ୍ଚୟ କରନ୍ତୁ |
 | `S13c61c` | detail | Scope Filter | ପରିସର ଫିଲ୍ଟର୍ |
-| `S859822` | detail, mine, withdrawn_codes | Select | ବାଛନ୍ତୁ |
 | `S81448f` | detail, form | select | ବାଛନ୍ତୁ |
 | `S535bd8` | detail, form | Select a Functional System Group first | ପ୍ରଥମେ କାର୍ଯ୍ୟକ୍ଷମ ସିଷ୍ଟମ୍ ଗୋଷ୍ଠୀ ବାଛନ୍ତୁ |
 | `S329cb8` | detail | Service | ସେବା |
@@ -15225,6 +15224,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se2bbd9` | help and messages | Drafts saved | ଖସଡ଼ା ସଞ୍ଚିତ ହେଲା |
 | `S0ddfa5` | help and messages | Drafts signed off | ଖସଡ଼ାର ସ୍ୱାକ୍ଷର ହେଲା |
 | `Sf90ab8` | help and messages | Drafts submitted for review | ଖସଡ଼ା ସମୀକ୍ଷା ପାଇଁ ଦାଖଲ ହେଲା |
+| `S11c54a` | help and messages | Include | ଅନ୍ତର୍ଭୁକ୍ତ କରନ୍ତୁ |
 | `Sd856bd` | help and messages | Not deleted (it has a revision again or is still referenced): %(x)s | ଲିଭାଯାଇନାହିଁ (ଏହାର ପୁଣି ସଂସ୍କରଣ ଅଛି ବା ଏବେ ବି ସୂଚିତ): %(x)s |
 | `S34b903` | help and messages | Not possible: the account has history (see above). Deactivate it instead; the person can no longer sign in and everything they did stays attributable. | ସମ୍ଭବ ନୁହେଁ: ଖାତାର ଇତିହାସ ଅଛି (ଉପରେ ଦେଖନ୍ତୁ)। ବଦଳରେ ନିଷ୍କ୍ରିୟ କରନ୍ତୁ; ବ୍ୟକ୍ତି ଆଉ ସାଇନ୍ ଇନ୍ କରିପାରିବେ ନାହିଁ ଏବଂ ସେମାନେ ଯାହା କରିଛନ୍ତି ତାହା ଚିହ୍ନଟଯୋଗ୍ୟ ରହେ। |
 | `S6a26de` | help and messages | Sample %(id)s drawn: %(n)s of %(total)s codes to inspect. | ନମୁନା %(id)s ବାହାର କରାଗଲା: %(n)s / %(total)s କୋଡ୍ ଯାଞ୍ଚ କରିବାକୁ। |
@@ -15613,7 +15613,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd72b71` | message: user_service | That e-mail address or username is already in use. | ସେହି ଇ-ମେଲ୍ ଠିକଣା ବା ଉପଯୋଗକର୍ତ୍ତା ନାମ ପୂର୍ବରୁ ବ୍ୟବହୃତ। |
 | `Sd54517` | message: user_service, user_detail | You cannot delete your own account. | ଆପଣ ନିଜ ଖାତା ଲିଭାଇପାରିବେ ନାହିଁ। |
 | `S6a8896` | mine | Review & sign off | ସମୀକ୍ଷା କରି ସ୍ୱାକ୍ଷର କରନ୍ତୁ |
-| `S913aff` | mine | Select all | ସବୁ ବାଛନ୍ତୁ |
+| `S859822` | mine | Select | ବାଛନ୍ତୁ |
 | `S50a279` | mine | Show all | ସବୁ ଦେଖାନ୍ତୁ |
 | `Se48471` | mine | Showing only Drafts created by Import Job #%(id)s. | ଆମଦାନି କାମ #%(id)s ଦ୍ୱାରା ତିଆରି ଖସଡ଼ା ମାତ୍ର ଦେଖାଯାଉଛି। |
 | `Sff9480` | mine | Sign-Off Requests For You | ଆପଣଙ୍କ ପାଇଁ ସ୍ୱାକ୍ଷର ଅନୁରୋଧ |
@@ -15951,7 +15951,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S5a4692` | base | You are covering for a colleague | നിങ്ങൾ ഒരു സഹപ്രവർത്തകനു പകരം പ്രവർത്തിക്കുന്നു |
 | `S8e9c15` | builder | Candidate revisions | സ്ഥാനാർത്ഥി റിവിഷനുകൾ |
 | `Sdf2aa0` | builder | Functional Group / Subgroup | ഫങ്ഷണൽ ഗ്രൂപ്പ് / ഉപഗ്രൂപ്പ് |
-| `S11c54a` | builder | Include | ഉൾപ്പെടുത്തുക |
 | `S12b701` | builder | No Approved candidates match this Release's scope. | ഈ റിലീസിന്റെ വ്യാപ്തിയുമായി അംഗീകരിച്ച സ്ഥാനാർത്ഥികളൊന്നും പൊരുത്തപ്പെടുന്നില്ല. |
 | `S1359d4` | builder | Planned effective | ആസൂത്രിത പ്രാബല്യം |
 | `Sf6fea0` | builder | Planned in the future: | ഭാവിയിൽ ആസൂത്രണം ചെയ്തത്: |
@@ -15962,6 +15961,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sb1fe0b` | builder | Release Builder | റിലീസ് ബിൽഡർ |
 | `S5997c5` | builder | Save Candidate Set | സ്ഥാനാർത്ഥി സമുച്ചയം സംരക്ഷിക്കുക |
 | `Scc8a3c` | builder | Save targets | ലക്ഷ്യങ്ങൾ സംരക്ഷിക്കുക |
+| `S913aff` | builder, detail, mine | Select all | എല്ലാം തിരഞ്ഞെടുക്കുക |
 | `S85e466` | builder | Select the Approved, non-sandbox revisions to include, then Save. Publishing is immutable — a correction requires a new Release. | ഉൾപ്പെടുത്താൻ അംഗീകരിച്ച, സാൻഡ്ബോക്സ് അല്ലാത്ത റിവിഷനുകൾ തിരഞ്ഞെടുക്കുക, തുടർന്ന് സംരക്ഷിക്കുക. പ്രസിദ്ധീകരണം മാറ്റാനാവാത്തതാണ് — തിരുത്തലിന് പുതിയ റിലീസ് വേണം. |
 | `Sd64b6e` | builder, detail | Target software versions | ലക്ഷ്യ സോഫ്റ്റ്‌വെയർ പതിപ്പുകൾ |
 | `S6ba0fc` | builder | View Release | റിലീസ് കാണുക |
@@ -16287,7 +16287,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S241bf5` | detail, workbench | Sample number | സാമ്പിൾ നമ്പർ |
 | `Sda38c6` | detail | Save planned dates | ആസൂത്രിത തീയതികൾ സംരക്ഷിക്കുക |
 | `S13c61c` | detail | Scope Filter | വ്യാപ്തി ഫിൽട്ടർ |
-| `S859822` | detail, mine, withdrawn_codes | Select | തിരഞ്ഞെടുക്കുക |
 | `S81448f` | detail, form | select | തിരഞ്ഞെടുക്കുക |
 | `S535bd8` | detail, form | Select a Functional System Group first | ആദ്യം ഫങ്ഷണൽ സിസ്റ്റം ഗ്രൂപ്പ് തിരഞ്ഞെടുക്കുക |
 | `S329cb8` | detail | Service | സേവനം |
@@ -16511,6 +16510,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se2bbd9` | help and messages | Drafts saved | കരടുകൾ സംരക്ഷിച്ചു |
 | `S0ddfa5` | help and messages | Drafts signed off | കരടുകൾക്ക് സൈൻ-ഓഫ് നൽകി |
 | `Sf90ab8` | help and messages | Drafts submitted for review | കരടുകൾ അവലോകനത്തിനായി സമർപ്പിച്ചു |
+| `S11c54a` | help and messages | Include | ഉൾപ്പെടുത്തുക |
 | `Sd856bd` | help and messages | Not deleted (it has a revision again or is still referenced): %(x)s | ഇല്ലാതാക്കിയില്ല (വീണ്ടും റിവിഷൻ ഉണ്ട് അല്ലെങ്കിൽ ഇപ്പോഴും പരാമർശിക്കപ്പെടുന്നു): %(x)s |
 | `S34b903` | help and messages | Not possible: the account has history (see above). Deactivate it instead; the person can no longer sign in and everything they did stays attributable. | സാധ്യമല്ല: അക്കൗണ്ടിന് ചരിത്രമുണ്ട് (മുകളിൽ കാണുക). പകരം നിഷ്ക്രിയമാക്കുക; വ്യക്തിക്ക് ഇനി സൈൻ ഇൻ ചെയ്യാനാവില്ല, അവർ ചെയ്തതെല്ലാം ആരോപിക്കാവുന്നതായി തുടരും. |
 | `S6a26de` | help and messages | Sample %(id)s drawn: %(n)s of %(total)s codes to inspect. | സാമ്പിൾ %(id)s എടുത്തു: %(n)s / %(total)s കോഡുകൾ പരിശോധിക്കണം. |
@@ -16899,7 +16899,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd72b71` | message: user_service | That e-mail address or username is already in use. | ആ ഇ-മെയിൽ വിലാസമോ ഉപയോക്തൃനാമമോ ഇതിനകം ഉപയോഗത്തിലാണ്. |
 | `Sd54517` | message: user_service, user_detail | You cannot delete your own account. | നിങ്ങളുടെ സ്വന്തം അക്കൗണ്ട് ഇല്ലാതാക്കാനാവില്ല. |
 | `S6a8896` | mine | Review & sign off | അവലോകനം ചെയ്ത് സൈൻ ഓഫ് ചെയ്യുക |
-| `S913aff` | mine | Select all | എല്ലാം തിരഞ്ഞെടുക്കുക |
+| `S859822` | mine | Select | തിരഞ്ഞെടുക്കുക |
 | `S50a279` | mine | Show all | എല്ലാം കാണിക്കുക |
 | `Se48471` | mine | Showing only Drafts created by Import Job #%(id)s. | ഇറക്കുമതി ജോലി #%(id)s സൃഷ്ടിച്ച കരടുകൾ മാത്രം കാണിക്കുന്നു. |
 | `Sff9480` | mine | Sign-Off Requests For You | നിങ്ങൾക്കുള്ള സൈൻ-ഓഫ് അഭ്യർത്ഥനകൾ |
@@ -17237,7 +17237,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S5a4692` | base | You are covering for a colleague | ਤੁਸੀਂ ਇੱਕ ਸਾਥੀ ਦੀ ਥਾਂ ਕੰਮ ਕਰ ਰਹੇ ਹੋ |
 | `S8e9c15` | builder | Candidate revisions | ਉਮੀਦਵਾਰ ਸੋਧਾਂ |
 | `Sdf2aa0` | builder | Functional Group / Subgroup | ਕਾਰਜਸ਼ੀਲ ਸਮੂਹ / ਉਪ-ਸਮੂਹ |
-| `S11c54a` | builder | Include | ਸ਼ਾਮਲ ਕਰੋ |
 | `S12b701` | builder | No Approved candidates match this Release's scope. | ਇਸ ਰਿਲੀਜ਼ ਦੇ ਦਾਇਰੇ ਨਾਲ ਕੋਈ ਮਨਜ਼ੂਰ ਉਮੀਦਵਾਰ ਮੇਲ ਨਹੀਂ ਖਾਂਦਾ। |
 | `S1359d4` | builder | Planned effective | ਯੋਜਨਾਬੱਧ ਲਾਗੂਕਰਨ |
 | `Sf6fea0` | builder | Planned in the future: | ਭਵਿੱਖ ਵਿੱਚ ਯੋਜਨਾਬੱਧ: |
@@ -17248,6 +17247,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sb1fe0b` | builder | Release Builder | ਰਿਲੀਜ਼ ਬਿਲਡਰ |
 | `S5997c5` | builder | Save Candidate Set | ਉਮੀਦਵਾਰ ਸਮੂਹ ਸੁਰੱਖਿਅਤ ਕਰੋ |
 | `Scc8a3c` | builder | Save targets | ਨਿਸ਼ਾਨੇ ਸੁਰੱਖਿਅਤ ਕਰੋ |
+| `S913aff` | builder, detail, mine | Select all | ਸਭ ਚੁਣੋ |
 | `S85e466` | builder | Select the Approved, non-sandbox revisions to include, then Save. Publishing is immutable — a correction requires a new Release. | ਸ਼ਾਮਲ ਕਰਨ ਲਈ ਮਨਜ਼ੂਰ, ਗੈਰ-ਸੈਂਡਬਾਕਸ ਸੋਧਾਂ ਚੁਣੋ, ਫਿਰ ਸੁਰੱਖਿਅਤ ਕਰੋ। ਪ੍ਰਕਾਸ਼ਨ ਅਟੱਲ ਹੈ — ਸੁਧਾਈ ਲਈ ਨਵੀਂ ਰਿਲੀਜ਼ ਚਾਹੀਦੀ ਹੈ। |
 | `Sd64b6e` | builder, detail | Target software versions | ਨਿਸ਼ਾਨਾ ਸਾਫਟਵੇਅਰ ਸੰਸਕਰਣ |
 | `S6ba0fc` | builder | View Release | ਰਿਲੀਜ਼ ਵੇਖੋ |
@@ -17573,7 +17573,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S241bf5` | detail, workbench | Sample number | ਨਮੂਨਾ ਨੰਬਰ |
 | `Sda38c6` | detail | Save planned dates | ਯੋਜਨਾਬੱਧ ਮਿਤੀਆਂ ਸੁਰੱਖਿਅਤ ਕਰੋ |
 | `S13c61c` | detail | Scope Filter | ਦਾਇਰਾ ਫਿਲਟਰ |
-| `S859822` | detail, mine, withdrawn_codes | Select | ਚੁਣੋ |
 | `S81448f` | detail, form | select | ਚੁਣੋ |
 | `S535bd8` | detail, form | Select a Functional System Group first | ਪਹਿਲਾਂ ਕਾਰਜਸ਼ੀਲ ਸਿਸਟਮ ਸਮੂਹ ਚੁਣੋ |
 | `S329cb8` | detail | Service | ਸੇਵਾ |
@@ -17797,6 +17796,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se2bbd9` | help and messages | Drafts saved | ਖਰੜੇ ਸੁਰੱਖਿਅਤ ਹੋ ਗਏ |
 | `S0ddfa5` | help and messages | Drafts signed off | ਖਰੜਿਆਂ ਦਾ ਸਾਈਨ-ਆਫ਼ ਹੋ ਗਿਆ |
 | `Sf90ab8` | help and messages | Drafts submitted for review | ਖਰੜੇ ਸਮੀਖਿਆ ਲਈ ਜਮ੍ਹਾਂ ਹੋਏ |
+| `S11c54a` | help and messages | Include | ਸ਼ਾਮਲ ਕਰੋ |
 | `Sd856bd` | help and messages | Not deleted (it has a revision again or is still referenced): %(x)s | ਮਿਟਾਇਆ ਨਹੀਂ ਗਿਆ (ਇਸਦੀ ਦੁਬਾਰਾ ਸੋਧ ਹੈ ਜਾਂ ਅਜੇ ਹਵਾਲਾ ਹੈ): %(x)s |
 | `S34b903` | help and messages | Not possible: the account has history (see above). Deactivate it instead; the person can no longer sign in and everything they did stays attributable. | ਸੰਭਵ ਨਹੀਂ: ਖਾਤੇ ਦਾ ਇਤਿਹਾਸ ਹੈ (ਉੱਪਰ ਵੇਖੋ)। ਇਸਦੀ ਥਾਂ ਨਾ-ਸਰਗਰਮ ਕਰੋ; ਵਿਅਕਤੀ ਹੁਣ ਸਾਈਨ ਇਨ ਨਹੀਂ ਕਰ ਸਕਦਾ ਅਤੇ ਜੋ ਉਸਨੇ ਕੀਤਾ ਉਹ ਪਛਾਣਯੋਗ ਰਹਿੰਦਾ ਹੈ। |
 | `S6a26de` | help and messages | Sample %(id)s drawn: %(n)s of %(total)s codes to inspect. | ਨਮੂਨਾ %(id)s ਕੱਢਿਆ ਗਿਆ: %(n)s / %(total)s ਕੋਡ ਜਾਂਚਣੇ ਹਨ। |
@@ -18185,7 +18185,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd72b71` | message: user_service | That e-mail address or username is already in use. | ਇਹ ਈ-ਮੇਲ ਪਤਾ ਜਾਂ ਵਰਤੋਂਕਾਰ ਨਾਮ ਪਹਿਲਾਂ ਹੀ ਵਰਤੋਂ ਵਿੱਚ ਹੈ। |
 | `Sd54517` | message: user_service, user_detail | You cannot delete your own account. | ਤੁਸੀਂ ਆਪਣਾ ਖਾਤਾ ਨਹੀਂ ਮਿਟਾ ਸਕਦੇ। |
 | `S6a8896` | mine | Review & sign off | ਸਮੀਖਿਆ ਕਰੋ ਅਤੇ ਦਸਤਖ਼ਤ ਕਰੋ |
-| `S913aff` | mine | Select all | ਸਭ ਚੁਣੋ |
+| `S859822` | mine | Select | ਚੁਣੋ |
 | `S50a279` | mine | Show all | ਸਭ ਦਿਖਾਓ |
 | `Se48471` | mine | Showing only Drafts created by Import Job #%(id)s. | ਦਰਾਮਦ ਕੰਮ #%(id)s ਦੇ ਬਣਾਏ ਖਰੜੇ ਹੀ ਦਿਖਾਏ ਜਾ ਰਹੇ ਹਨ। |
 | `Sff9480` | mine | Sign-Off Requests For You | ਤੁਹਾਡੇ ਲਈ ਦਸਤਖ਼ਤ ਬੇਨਤੀਆਂ |
@@ -18523,7 +18523,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S5a4692` | base | You are covering for a colleague | Está sustituyendo a un compañero |
 | `S8e9c15` | builder | Candidate revisions | Revisiones candidatas |
 | `Sdf2aa0` | builder | Functional Group / Subgroup | Grupo funcional / subgrupo |
-| `S11c54a` | builder | Include | Incluir |
 | `S12b701` | builder | No Approved candidates match this Release's scope. | Ningún candidato aprobado coincide con el alcance de esta versión. |
 | `S1359d4` | builder | Planned effective | Entrada en vigor prevista |
 | `Sf6fea0` | builder | Planned in the future: | Planificado en el futuro: |
@@ -18534,6 +18533,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sb1fe0b` | builder | Release Builder | Generador de versiones |
 | `S5997c5` | builder | Save Candidate Set | Guardar conjunto de candidatos |
 | `Scc8a3c` | builder | Save targets | Guardar destinos |
+| `S913aff` | builder, detail, mine | Select all | Seleccionar todo |
 | `S85e466` | builder | Select the Approved, non-sandbox revisions to include, then Save. Publishing is immutable — a correction requires a new Release. | Seleccione las revisiones aprobadas, no de entorno de pruebas, que incluir y guarde. La publicación es inmutable: una corrección requiere una versión nueva. |
 | `Sd64b6e` | builder, detail | Target software versions | Versiones de software de destino |
 | `S6ba0fc` | builder | View Release | Ver versión |
@@ -18859,7 +18859,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S241bf5` | detail, workbench | Sample number | Número de muestra |
 | `Sda38c6` | detail | Save planned dates | Guardar fechas previstas |
 | `S13c61c` | detail | Scope Filter | Filtro de alcance |
-| `S859822` | detail, mine, withdrawn_codes | Select | Seleccionar |
 | `S81448f` | detail, form | select | seleccionar |
 | `S535bd8` | detail, form | Select a Functional System Group first | Seleccione primero un grupo de sistemas funcionales |
 | `S329cb8` | detail | Service | Servicio |
@@ -19083,6 +19082,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se2bbd9` | help and messages | Drafts saved | Borradores guardados |
 | `S0ddfa5` | help and messages | Drafts signed off | Borradores con conformidad |
 | `Sf90ab8` | help and messages | Drafts submitted for review | Borradores enviados a revisión |
+| `S11c54a` | help and messages | Include | Incluir |
 | `Sd856bd` | help and messages | Not deleted (it has a revision again or is still referenced): %(x)s | No eliminado (vuelve a tener una revisión o aún se hace referencia a él): %(x)s |
 | `S34b903` | help and messages | Not possible: the account has history (see above). Deactivate it instead; the person can no longer sign in and everything they did stays attributable. | No es posible: la cuenta tiene historial (véase arriba). Desactívela en su lugar; la persona ya no podrá iniciar sesión y todo lo que hizo sigue siendo atribuible. |
 | `S6a26de` | help and messages | Sample %(id)s drawn: %(n)s of %(total)s codes to inspect. | Muestra %(id)s extraída: %(n)s de %(total)s códigos por inspeccionar. |
@@ -19471,7 +19471,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd72b71` | message: user_service | That e-mail address or username is already in use. | Esta dirección de correo o nombre de usuario ya está en uso. |
 | `Sd54517` | message: user_service, user_detail | You cannot delete your own account. | No puede eliminar su propia cuenta. |
 | `S6a8896` | mine | Review & sign off | Revisar y dar conformidad |
-| `S913aff` | mine | Select all | Seleccionar todo |
+| `S859822` | mine | Select | Seleccionar |
 | `S50a279` | mine | Show all | Mostrar todo |
 | `Se48471` | mine | Showing only Drafts created by Import Job #%(id)s. | Solo se muestran los borradores creados por la tarea de importación n.º %(id)s. |
 | `Sff9480` | mine | Sign-Off Requests For You | Solicitudes de conformidad para usted |
@@ -19809,7 +19809,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S5a4692` | base | You are covering for a colleague | Stai sostituendo un collega |
 | `S8e9c15` | builder | Candidate revisions | Revisioni candidate |
 | `Sdf2aa0` | builder | Functional Group / Subgroup | Gruppo funzionale / sottogruppo |
-| `S11c54a` | builder | Include | Includi |
 | `S12b701` | builder | No Approved candidates match this Release's scope. | Nessun candidato approvato corrisponde all'ambito di questo rilascio. |
 | `S1359d4` | builder | Planned effective | Entrata in vigore pianificata |
 | `Sf6fea0` | builder | Planned in the future: | Pianificato nel futuro: |
@@ -19820,6 +19819,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sb1fe0b` | builder | Release Builder | Generatore di rilasci |
 | `S5997c5` | builder | Save Candidate Set | Salva insieme di candidati |
 | `Scc8a3c` | builder | Save targets | Salva destinazioni |
+| `S913aff` | builder, detail, mine | Select all | Seleziona tutto |
 | `S85e466` | builder | Select the Approved, non-sandbox revisions to include, then Save. Publishing is immutable — a correction requires a new Release. | Selezioni le revisioni approvate, non sandbox, da includere, poi salvi. La pubblicazione è immutabile: una correzione richiede un nuovo rilascio. |
 | `Sd64b6e` | builder, detail | Target software versions | Versioni software di destinazione |
 | `S6ba0fc` | builder | View Release | Visualizza rilascio |
@@ -20145,7 +20145,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S241bf5` | detail, workbench | Sample number | Numero del campione |
 | `Sda38c6` | detail | Save planned dates | Salva date pianificate |
 | `S13c61c` | detail | Scope Filter | Filtro di ambito |
-| `S859822` | detail, mine, withdrawn_codes | Select | Seleziona |
 | `S81448f` | detail, form | select | seleziona |
 | `S535bd8` | detail, form | Select a Functional System Group first | Selezioni prima un gruppo di sistemi funzionali |
 | `S329cb8` | detail | Service | Assistenza |
@@ -20369,6 +20368,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se2bbd9` | help and messages | Drafts saved | Bozze salvate |
 | `S0ddfa5` | help and messages | Drafts signed off | Bozze con benestare |
 | `Sf90ab8` | help and messages | Drafts submitted for review | Bozze inviate in revisione |
+| `S11c54a` | help and messages | Include | Includi |
 | `Sd856bd` | help and messages | Not deleted (it has a revision again or is still referenced): %(x)s | Non eliminato (ha di nuovo una revisione o è ancora referenziato): %(x)s |
 | `S34b903` | help and messages | Not possible: the account has history (see above). Deactivate it instead; the person can no longer sign in and everything they did stays attributable. | Non possibile: l'account ha uno storico (vedi sopra). Lo disattivi invece; la persona non può più accedere e tutto ciò che ha fatto resta attribuibile. |
 | `S6a26de` | help and messages | Sample %(id)s drawn: %(n)s of %(total)s codes to inspect. | Campione %(id)s estratto: %(n)s codici su %(total)s da ispezionare. |
@@ -20757,7 +20757,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd72b71` | message: user_service | That e-mail address or username is already in use. | Questo indirizzo e-mail o nome utente è già in uso. |
 | `Sd54517` | message: user_service, user_detail | You cannot delete your own account. | Non può eliminare il proprio account. |
 | `S6a8896` | mine | Review & sign off | Rivedi e dai il benestare |
-| `S913aff` | mine | Select all | Seleziona tutto |
+| `S859822` | mine | Select | Seleziona |
 | `S50a279` | mine | Show all | Mostra tutto |
 | `Se48471` | mine | Showing only Drafts created by Import Job #%(id)s. | Vengono mostrate solo le bozze create dall'attività di importazione n. %(id)s. |
 | `Sff9480` | mine | Sign-Off Requests For You | Richieste di benestare per lei |
@@ -21095,7 +21095,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S5a4692` | base | You are covering for a colleague | Du vikarierer for en kollega |
 | `S8e9c15` | builder | Candidate revisions | Kandidatrevisioner |
 | `Sdf2aa0` | builder | Functional Group / Subgroup | Funktionel gruppe / undergruppe |
-| `S11c54a` | builder | Include | Medtag |
 | `S12b701` | builder | No Approved candidates match this Release's scope. | Ingen godkendte kandidater matcher denne udgivelses omfang. |
 | `S1359d4` | builder | Planned effective | Planlagt ikrafttræden |
 | `Sf6fea0` | builder | Planned in the future: | Planlagt i fremtiden: |
@@ -21106,6 +21105,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sb1fe0b` | builder | Release Builder | Udgivelsesbygger |
 | `S5997c5` | builder | Save Candidate Set | Gem kandidatsæt |
 | `Scc8a3c` | builder | Save targets | Gem mål |
+| `S913aff` | builder, detail, mine | Select all | Vælg alle |
 | `S85e466` | builder | Select the Approved, non-sandbox revisions to include, then Save. Publishing is immutable — a correction requires a new Release. | Vælg de godkendte revisioner uden sandkasse, der skal med, og gem derefter. Udgivelse kan ikke fortrydes — en rettelse kræver en ny udgivelse. |
 | `Sd64b6e` | builder, detail | Target software versions | Mål-softwareversioner |
 | `S6ba0fc` | builder | View Release | Vis udgivelse |
@@ -21431,7 +21431,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S241bf5` | detail, workbench | Sample number | Stikprøvenummer |
 | `Sda38c6` | detail | Save planned dates | Gem planlagte datoer |
 | `S13c61c` | detail | Scope Filter | Omfangsfilter |
-| `S859822` | detail, mine, withdrawn_codes | Select | Vælg |
 | `S81448f` | detail, form | select | vælg |
 | `S535bd8` | detail, form | Select a Functional System Group first | Vælg først en funktionel systemgruppe |
 | `S329cb8` | detail | Service | Service |
@@ -21655,6 +21654,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se2bbd9` | help and messages | Drafts saved | Kladder gemt |
 | `S0ddfa5` | help and messages | Drafts signed off | Kladder godkendt |
 | `Sf90ab8` | help and messages | Drafts submitted for review | Kladder indsendt til gennemgang |
+| `S11c54a` | help and messages | Include | Medtag |
 | `Sd856bd` | help and messages | Not deleted (it has a revision again or is still referenced): %(x)s | Ikke slettet (den har igen en revision eller henvises der stadig til): %(x)s |
 | `S34b903` | help and messages | Not possible: the account has history (see above). Deactivate it instead; the person can no longer sign in and everything they did stays attributable. | Ikke muligt: kontoen har historik (se ovenfor). Deaktivér den i stedet; personen kan ikke længere logge ind, og alt, vedkommende har gjort, kan stadig henføres. |
 | `S6a26de` | help and messages | Sample %(id)s drawn: %(n)s of %(total)s codes to inspect. | Stikprøve %(id)s udtrukket: %(n)s af %(total)s koder skal kontrolleres. |
@@ -22043,7 +22043,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd72b71` | message: user_service | That e-mail address or username is already in use. | Denne e-mailadresse eller dette brugernavn er allerede i brug. |
 | `Sd54517` | message: user_service, user_detail | You cannot delete your own account. | Du kan ikke slette din egen konto. |
 | `S6a8896` | mine | Review & sign off | Gennemgå og underskriv |
-| `S913aff` | mine | Select all | Vælg alle |
+| `S859822` | mine | Select | Vælg |
 | `S50a279` | mine | Show all | Vis alle |
 | `Se48471` | mine | Showing only Drafts created by Import Job #%(id)s. | Kun kladder oprettet af importopgave nr. %(id)s vises. |
 | `Sff9480` | mine | Sign-Off Requests For You | Underskriftsanmodninger til dig |
@@ -22381,7 +22381,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S5a4692` | base | You are covering for a colleague | თქვენ კოლეგას ცვლით |
 | `S8e9c15` | builder | Candidate revisions | კანდიდატი რევიზიები |
 | `Sdf2aa0` | builder | Functional Group / Subgroup | ფუნქციური ჯგუფი / ქვეჯგუფი |
-| `S11c54a` | builder | Include | ჩართვა |
 | `S12b701` | builder | No Approved candidates match this Release's scope. | არც ერთი დამტკიცებული კანდიდატი არ ემთხვევა ამ რელიზის ფარგლებს. |
 | `S1359d4` | builder | Planned effective | დაგეგმილი ძალაში შესვლა |
 | `Sf6fea0` | builder | Planned in the future: | დაგეგმილია მომავალში: |
@@ -22392,6 +22391,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sb1fe0b` | builder | Release Builder | რელიზის შემდგენელი |
 | `S5997c5` | builder | Save Candidate Set | კანდიდატების ნაკრების შენახვა |
 | `Scc8a3c` | builder | Save targets | სამიზნეების შენახვა |
+| `S913aff` | builder, detail, mine | Select all | ყველას მონიშვნა |
 | `S85e466` | builder | Select the Approved, non-sandbox revisions to include, then Save. Publishing is immutable — a correction requires a new Release. | აირჩიეთ დამტკიცებული, არასანდბოქს რევიზიები ჩასართავად, შემდეგ შეინახეთ. გამოქვეყნება შეუქცევადია — შესწორებას ახალი რელიზი სჭირდება. |
 | `Sd64b6e` | builder, detail | Target software versions | სამიზნე პროგრამის ვერსიები |
 | `S6ba0fc` | builder | View Release | რელიზის ნახვა |
@@ -22717,7 +22717,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S241bf5` | detail, workbench | Sample number | ნიმუშის ნომერი |
 | `Sda38c6` | detail | Save planned dates | დაგეგმილი თარიღების შენახვა |
 | `S13c61c` | detail | Scope Filter | ფარგლების ფილტრი |
-| `S859822` | detail, mine, withdrawn_codes | Select | არჩევა |
 | `S81448f` | detail, form | select | არჩევა |
 | `S535bd8` | detail, form | Select a Functional System Group first | ჯერ აირჩიეთ ფუნქციური სისტემური ჯგუფი |
 | `S329cb8` | detail | Service | სერვისი |
@@ -22941,6 +22940,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se2bbd9` | help and messages | Drafts saved | დრაფტები შენახულია |
 | `S0ddfa5` | help and messages | Drafts signed off | დრაფტებს ხელი მოეწერა |
 | `Sf90ab8` | help and messages | Drafts submitted for review | დრაფტები განხილვაზე წარდგენილია |
+| `S11c54a` | help and messages | Include | ჩართვა |
 | `Sd856bd` | help and messages | Not deleted (it has a revision again or is still referenced): %(x)s | არ წაიშალა (მას ისევ აქვს რევიზია ან კვლავ მითითებულია): %(x)s |
 | `S34b903` | help and messages | Not possible: the account has history (see above). Deactivate it instead; the person can no longer sign in and everything they did stays attributable. | შეუძლებელია: ანგარიშს ისტორია აქვს (იხ. ზემოთ). გამორთეთ ის; პირი ვეღარ შევა და ყველაფერი, რაც გააკეთა, მიკუთვნებადი რჩება. |
 | `S6a26de` | help and messages | Sample %(id)s drawn: %(n)s of %(total)s codes to inspect. | ნიმუში %(id)s ამოღებულია: %(n)s / %(total)s კოდი შესამოწმებელია. |
@@ -23329,7 +23329,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd72b71` | message: user_service | That e-mail address or username is already in use. | ეს ელფოსტის მისამართი ან მომხმარებლის სახელი უკვე გამოიყენება. |
 | `Sd54517` | message: user_service, user_detail | You cannot delete your own account. | თქვენს საკუთარ ანგარიშს ვერ წაშლით. |
 | `S6a8896` | mine | Review & sign off | განხილვა და ხელმოწერა |
-| `S913aff` | mine | Select all | ყველას მონიშვნა |
+| `S859822` | mine | Select | არჩევა |
 | `S50a279` | mine | Show all | ყველას ჩვენება |
 | `Se48471` | mine | Showing only Drafts created by Import Job #%(id)s. | ნაჩვენებია მხოლოდ იმპორტის დავალება #%(id)s-ით შექმნილი დრაფტები. |
 | `Sff9480` | mine | Sign-Off Requests For You | ხელმოწერის მოთხოვნები თქვენთვის |
@@ -24087,7 +24087,7 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S4c518c` | Imported rows are ordinary Drafts — they still require Cross-Domain Sign-Off, dual review, and Chief Engineer approval before Release. | detail | 18 of 18 |
 | `S7b6084` | In a deployment the browser hands over your Windows identity and you are signed in without this page. Here, type the identity the Windows gateway would have supplied. | login_windows | 18 of 18 |
 | `Sd436a3` | inactive | export_profiles | 18 of 18 |
-| `S11c54a` | Include | builder | 18 of 18 |
+| `S11c54a` | Include | help and messages | 18 of 18 |
 | `Sd028de` | Incomplete, e.g. | success_metrics | 18 of 18 |
 | `S35abd8` | Informative only: a future effective date makes the release builder warn; nothing changes state on its own. | detail | 18 of 18 |
 | `S54c522` | Initiate Deprecation | detail | 18 of 18 |
@@ -24553,10 +24553,10 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S2d8d46` | SEC-010: only Engineers and Administrators can translate. | message: translation_service | 18 of 18 |
 | `S9d603f` | SEC-010: only reviewing roles may comment on a field. | message: field_review_service | 18 of 18 |
 | `Sb27613` | SEC-010: your role cannot create change sets. | message: change_set_service | 18 of 18 |
-| `S859822` | Select | detail, mine, withdrawn_codes, workbench | 18 of 18 |
+| `S859822` | Select | mine | 18 of 18 |
 | `S81448f` | select | detail, form | 18 of 18 |
 | `S535bd8` | Select a Functional System Group first | detail, form | 18 of 18 |
-| `S913aff` | Select all | mine | 18 of 18 |
+| `S913aff` | Select all | builder, detail, mine, withdrawn_codes | 18 of 18 |
 | `S0723bf` | Select all programs that are ready | st_preview | 18 of 18 |
 | `S85e466` | Select the Approved, non-sandbox revisions to include, then Save. Publishing is immutable — a correction requires a new Release. | builder | 18 of 18 |
 | `S0aa2a5` | Send back | language | 18 of 18 |
