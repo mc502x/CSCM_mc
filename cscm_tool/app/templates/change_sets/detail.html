@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+{% import "_macros.html" as macros %}
+{% block title %}{{ overview.change_set.name }} — CSCM Tool{% endblock %}
+{% block content %}
+{% set cs = overview.change_set %}
+<div class="page-header">
+  <div>
+    <h1>{{ cs.name }} <span class="chip">{{ cs.status|title }}</span></h1>
+    <div class="muted"><a href="{{ url_for('ui.change_set_workbench', change_set_id=cs.id) }}">{{ _('Workbench') }}</a> &middot; {{ cs.description or '' }}{% if cs.target_software_version %} &middot; {{ _('Target software version') }}: {{ cs.target_software_version.code }}{% endif %}</div>
+  </div>
+  {% if current_user.role_code == 'ADMINISTRATOR' and cs.status == 'OPEN' %}
+  <form method="post" action="{{ url_for('ui.change_set_close', change_set_id=cs.id) }}" data-confirm="{{ _('Close this change set?') }}">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    <button class="btn" type="submit">{{ _('Close change set') }}</button>
+  </form>
+  {% endif %}
+</div>
+
+<div class="card">
+  <h2>{{ _('Package overview') }}</h2>
+  <p>
+    {% for state, n in overview.tally.items() %}<span class="chip">{{ state.replace('_', ' ')|title }}: {{ n }}</span>{% endfor %}
+    {% if not overview.tally %}<span class="muted">{{ _('No change requests in this set yet.') }}</span>{% endif %}
+  </p>
+  <form method="post" action="{{ url_for('ui.change_set_decide', change_set_id=cs.id) }}" id="bulk-form">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    <table>
+      <caption class="visually-hidden">{{ _('Change requests in this set') }}</caption>
+      <thead><tr><th scope="col"><input type="checkbox" data-check-all="cs-row-check" aria-label="{{ _('Select all') }}"></th><th scope="col">{{ _('Identifier') }}</th><th scope="col">{{ _('Title') }}</th><th scope="col">{{ _('State') }}</th><th scope="col">{{ _('Waiting') }}</th><th scope="col"></th></tr></thead>
+      <tbody>
+        {% for row in overview.rows %}
+        <tr>
+          <td><input type="checkbox" class="cs-row-check" name="cr_ids" value="{{ row.cr.id }}" aria-label="CR #{{ row.cr.id }}"></td>
+          <td><a href="{{ url_for('ui.change_request_detail', cr_id=row.cr.id) }}">{{ row.identifier or ('#' ~ row.cr.id) }}</a></td>
+          <td>{{ row.title }}</td>
+          <td>{{ macros.lifecycle_badge(row.state) }}</td>
+          <td>{{ macros.sla_badge(row.sla) }}</td>
+          <td>{% if cs.status == 'OPEN' and (current_user.role_code == 'ADMINISTRATOR' or row.cr.requested_by == current_user.id) %}
+            <button class="btn btn--outline" type="submit" formaction="{{ url_for('ui.change_set_remove', change_set_id=cs.id, cr_id=row.cr.id) }}" formnovalidate>{{ _('Remove') }}</button>{% endif %}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+
+    {% if overview.rows and (current_user.can_act_as('REVIEWER') or current_user.can_act_as('ADMINISTRATOR') or current_user.can_act_as('CHIEF_ENGINEER')) %}
+    <fieldset>
+      <legend>{{ _('Decide the selected requests in one sitting') }}</legend>
+      <p class="muted">{{ _('Every request is still decided on its own: it gets its own check that you did not write or already sign it, its own comment and its own audit entry. Requests you may not decide are reported and skipped.') }}</p>
+      <p class="muted">{{ _('More than a few codes need a sample inspection first; use the workbench.') }}</p>
+      <div class="form-row">
+        <div class="field"><label for="bulk_sample">{{ _('Sample number') }}</label><input type="number" id="bulk_sample" name="sample_id" min="1"></div>
+        <div class="field">
+          <label for="bulk_step">{{ _('Your decision step') }}</label>
+          <select id="bulk_step" name="step">
+            {% if current_user.can_act_as('REVIEWER') %}<option value="reviewer">{{ _('Reviewer sign-off') }}</option>{% endif %}
+            {% if current_user.can_act_as('ADMINISTRATOR') %}<option value="admin">{{ _('Administrator sign-off') }}</option>{% endif %}
+            {% if current_user.can_act_as('CHIEF_ENGINEER') %}<option value="chief-engineer">{{ _('Chief Engineer decision') }}</option>{% endif %}
+          </select>
+        </div>
+        <div class="field"><label for="bulk_comment">{{ _('Comment (required for rejection)') }}</label><input type="text" id="bulk_comment" name="comment"></div>
+      </div>
+      {{ macros.password_field('bulk_pw') }}
+      <div class="btn-row">
+        <button class="btn btn--primary" type="submit" name="decision" value="APPROVE">{{ _('Approve selected') }}</button>
+        <button class="btn btn--danger" type="submit" name="decision" value="REJECT">{{ _('Reject selected') }}</button>
+      </div>
+    </fieldset>
+    {% endif %}
+  </form>
+</div>
+
+{% if cs.status == 'OPEN' and addable %}
+<div class="card">
+  <h2>{{ _('Add one of your change requests') }}</h2>
+  <form method="post" action="{{ url_for('ui.change_set_add', change_set_id=cs.id) }}" class="btn-row">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    <label for="add_cr" class="visually-hidden">{{ _('Change request') }}</label>
+    <select id="add_cr" name="cr_id">{% for cr in addable %}<option value="{{ cr.id }}">#{{ cr.id }} {{ cr.revision.title }}</option>{% endfor %}</select>
+    <button class="btn" type="submit">{{ _('Add') }}</button>
+  </form>
+</div>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,24 @@
+{
+  "last_attempt_at": "2026-10-23T07:08:46.906Z",
+  "last_success_at": "2026-10-23T07:08:46.906Z",
+  "last_file": "cscm_backup_20261023_070846.db",
+  "size_bytes": 524288,
+  "sha256": "3ece9af038aca5abbefaf933492a266f1e367f57d5f1f0f0bd5c6d5f1a96c418",
+  "ok": true,
+  "integrity_ok": true,
+  "restore_ok": true,
+  "audit_chain_ok": true,
+  "schema_version": "f8b2d4e6a012",
+  "row_counts": {
+    "user": 0,
+    "status_code": 0,
+    "status_code_revision": 0,
+    "change_request": 0,
+    "release": 0,
+    "audit_log_entry": 0
+  },
+  "last_good_file": "cscm_backup_20261023_070846.db",
+  "generations": [
+    "cscm_backup_20261023_070846.db"
+  ]
+}

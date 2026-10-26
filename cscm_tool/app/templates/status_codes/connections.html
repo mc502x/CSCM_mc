@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+{% import "_macros.html" as macros %}
+{% block title %}{{ _('Connections') }} — CSCM Tool{% endblock %}
+{% macro branch(b) %}
+  <li>
+    <a href="{{ url_for('ui.status_code_detail', status_code_id=b.code.id) }}">{{ b.code.identifier }}</a> {{ b.code.title }}
+    {% if b.code.state %}{{ macros.lifecycle_badge(b.code.state) }}{% endif %}
+    {% if b.loop %}<span class="chip">{{ _('loop') }}</span>{% endif %}
+    {% if b.children %}<ul>{% for child in b.children %}{{ branch(child) }}{% endfor %}</ul>{% endif %}
+  </li>
+{% endmacro %}
+{% block content %}
+<div class="page-header"><h1>{{ _('Connections') }}</h1></div>
+
+<div class="card">
+  <p class="muted">{{ _('How the status codes are connected, read from the set conditions and the repeat codes of the imported programs. A text reading, not an interpretation of the controller logic.') }}</p>
+  <div class="btn-row">
+    <a class="btn{% if not controller %} btn--primary{% endif %}" href="{{ url_for('ui.status_code_connections') }}">{{ _('all') }}</a>
+    <a class="btn{% if controller == 'MC' %} btn--primary{% endif %}" href="{{ url_for('ui.status_code_connections', controller='MC') }}">{{ _('Main controller') }}</a>
+    <a class="btn{% if controller == 'HC' %} btn--primary{% endif %}" href="{{ url_for('ui.status_code_connections', controller='HC') }}">{{ _('Hub controller') }}</a>
+  </div>
+  <dl class="kv">
+    <dt>{{ _('Codes with a connection') }}</dt><dd>{{ data.codes_with_connections }}</dd>
+    <dt>{{ _('Suppressed by') }}</dt><dd>{{ data.counts.SUPPRESSED_BY }}</dd>
+    <dt>{{ _('Only set while active') }}</dt><dd>{{ data.counts.REQUIRES }}</dd>
+    <dt>{{ _('Escalates to') }}</dt><dd>{{ data.counts.ESCALATES_TO }}</dd>
+  </dl>
+</div>
+
+{% if not data.codes_with_connections %}
+<div class="card"><div class="table-empty">{{ _('No connections are known yet. They come from the programs imported from .st files.') }}</div></div>
+{% endif %}
+
+{% if data.trees %}
+<div class="card">
+  <h2>{{ _('Causes and the codes they suppress') }}</h2>
+  <p class="muted">{{ _('A code is not raised while its cause is active. The top of each tree is a cause that nothing suppresses.') }}</p>
+  <ul class="connection-tree">
+    {% for t in data.trees %}{{ branch(t) }}{% endfor %}
+  </ul>
+</div>
+{% endif %}
+
+{% if data.escalation %}
+<div class="card">
+  <h2>{{ _('Where repeated codes escalate to') }}</h2>
+  <p class="muted">{{ _('A code that is raised again and again is replaced by its repeat code. Repeat codes outside the catalogue are marked external.') }}</p>
+  <table>
+    <thead><tr><th scope="col">{{ _('Repeat code') }}</th><th scope="col">{{ _('Codes') }}</th><th scope="col">{{ _('Escalated from') }}</th></tr></thead>
+    <tbody>
+      {% for e in data.escalation %}
+      <tr>
+        <td>{% if e.code %}<a href="{{ url_for('ui.status_code_detail', status_code_id=e.code.id) }}">{{ e.code.identifier }}</a>{% else %}{{ e.number }} <span class="chip">{{ _('external') }}</span>{% endif %}</td>
+        <td>{{ e.sources|length }}</td>
+        <td>{% for s in e.sources[:12] %}<a href="{{ url_for('ui.status_code_detail', status_code_id=s.id) }}">{{ s.identifier }}</a>{% if not loop.last %}, {% endif %}{% endfor %}{% if e.sources|length > 12 %} …{% endif %}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endif %}
+
+{% if data.findings %}
+<div class="card">
+  <h2>{{ _('What looks wrong') }}</h2>
+  <table>
+    <thead><tr><th scope="col">{{ _('Code') }}</th><th scope="col">{{ _('Finding') }}</th></tr></thead>
+    <tbody>
+      {% for f in data.findings %}
+      <tr>
+        <td><a href="{{ url_for('ui.status_code_detail', status_code_id=f.code.id) }}">{{ f.code.identifier }}</a></td>
+        <td>
+          {% if f.type == 'UNKNOWN_CAUSE' %}{{ _('Suppressed by %(number)s, which is not in the catalogue.', number=f.number) }}
+          {% elif f.type == 'UNKNOWN_REQUIREMENT' %}{{ _('Only set while %(number)s is active, which is not in the catalogue.', number=f.number) }}
+          {% elif f.type == 'DEAD_CAUSE' %}{{ _('Suppressed by %(code)s, which is deprecated or archived.', code=f.other.identifier) }}
+          {% elif f.type == 'DEAD_ESCALATION' %}{{ _('Escalates to %(code)s, which is deprecated or archived.', code=f.other.identifier) }}
+          {% elif f.type == 'LOOP' %}{{ _('Part of a loop of suppressions: each code is suppressed by another one of the loop.') }}
+          {% endif %}
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endif %}
+{% endblock %}

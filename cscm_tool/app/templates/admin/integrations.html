@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+{% block title %}{{ _('Integrations') }} — CSCM Tool{% endblock %}
+{% block content %}
+<div class="page-header"><h1>{{ _('Integrations') }}</h1></div>
+<p class="muted">{{ _('Internal network only. Tokens can only read; webhooks can only reach private addresses.') }}</p>
+
+{% if new_token %}
+<div class="flash flash--success" role="alert">
+  <strong>{{ _('Copy the token now - it is shown only once:') }}</strong>
+  <pre class="secret" id="new-token">{{ new_token }}</pre>
+</div>
+{% endif %}
+{% if new_webhook_secret %}
+<div class="flash flash--success" role="alert">
+  <strong>{{ _('Copy the signing secret now - it is shown only once:') }}</strong>
+  <pre class="secret" id="new-webhook-secret">{{ new_webhook_secret }}</pre>
+</div>
+{% endif %}
+
+<div class="card">
+  <h2>{{ _('API tokens') }}</h2>
+  {% if tokens %}
+  <table>
+    <caption class="visually-hidden">{{ _('API tokens') }}</caption>
+    <thead><tr><th scope="col">{{ _('Name') }}</th><th scope="col">{{ _('Prefix') }}</th><th scope="col">{{ _('Scopes') }}</th><th scope="col">{{ _('Expires') }}</th><th scope="col">{{ _('Last used') }}</th><th scope="col"></th></tr></thead>
+    <tbody>
+      {% for t in tokens %}
+      <tr>
+        <td>{{ t.name }}</td><td><code>{{ t.token_prefix }}…</code></td><td>{{ t.scopes }}</td><td>{{ t.expires_at }}</td><td>{{ t.last_used_at or '—' }}</td>
+        <td>{% if t.revoked_at %}{{ _('revoked') }}{% else %}
+          <form method="post" action="{{ url_for('ui.integration_token_revoke', token_id=t.id) }}" class="inline-form"><input type="hidden" name="csrf_token" value="{{ csrf_token() }}"><button class="btn btn--outline" type="submit">{{ _('Revoke') }}</button></form>{% endif %}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% else %}
+  <div class="table-empty">{{ _('No tokens.') }}</div>
+  {% endif %}
+  <form method="post" action="{{ url_for('ui.integration_token_create') }}" class="form-row" style="margin-top:12px">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    <div class="field"><label for="tok_name">{{ _('Name') }}</label><input type="text" id="tok_name" name="name" required maxlength="80"></div>
+    <div class="field"><label for="tok_days">{{ _('Valid for (days, max 365)') }}</label><input type="number" id="tok_days" name="expires_in_days" value="90" min="1" max="365"></div>
+    <div class="field">
+      <label id="scope-label">{{ _('Scopes') }}</label>
+      <div class="checkbox-list" role="group" aria-labelledby="scope-label">
+        {% for scope, description in scopes.items() %}<label><input type="checkbox" name="scopes" value="{{ scope }}" checked> {{ scope }} <span class="muted">— {{ description }}</span></label>{% endfor %}
+      </div>
+    </div>
+    <div class="field" style="align-self:end"><button class="btn btn--primary" type="submit">{{ _('Create token') }}</button></div>
+  </form>
+</div>
+
+<div class="card">
+  <h2>{{ _('Webhooks') }}</h2>
+  {% if webhooks %}
+  <table>
+    <caption class="visually-hidden">{{ _('Webhooks') }}</caption>
+    <thead><tr><th scope="col">{{ _('Name') }}</th><th scope="col">URL</th><th scope="col">{{ _('Events') }}</th><th scope="col">{{ _('Last delivery') }}</th><th scope="col"></th></tr></thead>
+    <tbody>
+      {% for w in webhooks %}
+      <tr>
+        <td>{{ w.name }}</td><td>{{ w.url }}</td><td>{{ w.events }}</td><td>{{ w.last_delivery_at or '—' }} {{ w.last_status or '' }}</td>
+        <td><form method="post" action="{{ url_for('ui.integration_webhook_toggle', webhook_id=w.id) }}" class="inline-form"><input type="hidden" name="csrf_token" value="{{ csrf_token() }}"><input type="hidden" name="active" value="{{ '0' if w.is_active else '1' }}"><button class="btn btn--outline" type="submit">{{ _('Pause') if w.is_active else _('Resume') }}</button></form></td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% else %}
+  <div class="table-empty">{{ _('No webhooks.') }}</div>
+  {% endif %}
+  <form method="post" action="{{ url_for('ui.integration_webhook_create') }}" class="form-row" style="margin-top:12px">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    <div class="field"><label for="wh_name">{{ _('Name') }}</label><input type="text" id="wh_name" name="name" required maxlength="80"></div>
+    <div class="field"><label for="wh_url">URL</label><input type="text" id="wh_url" name="url" required placeholder="http://tech-pubs.internal/hooks/cscm"></div>
+    <div class="field" style="align-self:end"><button class="btn btn--primary" type="submit">{{ _('Add webhook') }}</button></div>
+  </form>
+  <p class="muted">{{ _('Sent on release publish as JSON with the header X-CSCM-Signature: sha256=<HMAC of the body with the secret>.') }}</p>
+</div>
+{% endblock %}

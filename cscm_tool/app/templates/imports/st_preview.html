@@ -1,0 +1,109 @@
+{% extends "base.html" %}
+{% block title %}{{ _('Preview: status codes from .st files') }} — CSCM Tool{% endblock %}
+{% block content %}
+{% set s = preview.summary %}
+<div class="page-header"><h1>{{ _('Preview: status codes from .st files') }}</h1></div>
+
+<div class="card">
+  <p>
+    <span class="chip">{{ s.files }} {{ _('file(s)') }}</span>
+    <span class="chip">{{ s.programs }} {{ _('program(s)') }}</span>
+    <span class="chip">{{ s.ready }} {{ _('ready') }}</span>
+    <span class="chip">{{ s.changed }} {{ _('changed') }}</span>
+    <span class="chip">{{ s.restorable }} {{ _('withdrawn') }}</span>
+    <span class="chip">{{ s.exists }} {{ _('already in the catalogue') }}</span>
+    <span class="chip">{{ s.blocked }} {{ _('blocked') }}</span>
+    <span class="chip">{{ s.warnings }} {{ _('warning(s)') }}</span>
+    <span class="chip">{{ s.without_legacy }} {{ _('without a legacy number') }}</span>
+  </p>
+  {% for note in preview.notes %}<div class="muted">{{ note }}</div>{% endfor %}
+  {% for e in preview.file_errors %}<div class="flash flash--error" role="alert"><strong>{{ e.file }}</strong>: {{ e.message }}</div>{% endfor %}
+
+  <form method="post" action="{{ url_for('ui.st_import_confirm') }}">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    <input type="hidden" name="token" value="{{ preview.token }}">
+    <div class="field" style="max-width:420px">
+      <label for="filter">{{ _('Filter the list') }}</label>
+      <input type="search" id="filter" data-filter-rows="st-table" placeholder="{{ _('number, name, file ...') }}">
+    </div>
+    <div class="form-row" style="margin:10px 0">
+      <div class="field">
+        <label for="bulk_category">{{ _('Status category of the ticked programs') }}</label>
+        <select id="bulk_category">
+          <option value="ERROR">ERROR</option>
+          <option value="WARNING">WARNING</option>
+          <option value="INFO">INFO</option>
+        </select>
+      </div>
+      <div class="field" style="align-self:end">
+        <button class="btn" type="button" data-bulk-category="bulk_category" data-rows="st-row-check">{{ _('Apply to the ticked programs') }}</button>
+      </div>
+    </div>
+    <table id="st-table">
+      <caption class="visually-hidden">{{ _('Programs found in the uploaded files') }}</caption>
+      <thead>
+        <tr>
+          <th scope="col"><input type="checkbox" data-check-all="st-row-check" aria-label="{{ _('Select all programs that are ready') }}" checked></th>
+          <th scope="col">{{ _('New identifier') }}</th>
+          <th scope="col">{{ _('Legacy no.') }}</th>
+          <th scope="col">{{ _('Controller') }}</th>
+          <th scope="col">{{ _('Name') }}</th>
+          <th scope="col">{{ _('Group / Subgroup') }}</th>
+          <th scope="col">{{ _('Alarm type') }}</th>
+          <th scope="col">{{ _('Status category') }}</th>
+          <th scope="col">{{ _('State') }}</th>
+          <th scope="col">{{ _('Problems and warnings') }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for i in preview['items'] %}
+        <tr>
+          <td><input type="checkbox" class="st-row-check" name="selected" value="{{ i.key }}" aria-label="{{ _('Import') }} {{ i.identifier or i.file }}"{% if i.state not in ('ready', 'changed', 'restorable') %} disabled{% elif i.state == 'ready' %} checked{% endif %}></td>
+          <td>{{ i.identifier or '—' }}</td>
+          <td>{% if i.legacy_number is not none %}{{ i.legacy_number }}{% else %}<span class="muted">n/a</span>{% endif %}</td>
+          <td>{{ i.controller }}</td>
+          <td>{{ i.name }}<div class="muted">{{ i.file }}:{{ i.line }}</div></td>
+          <td>{% if i.group %}{{ i.group }} / {{ i.subgroup }}{% else %}—{% endif %}</td>
+          <td>{% if i.alarm_type is not none %}{{ i.alarm_type }}{% else %}<span class="muted">—</span>{% endif %}</td>
+          <td>
+            {% if i.state in ('ready', 'changed', 'restorable') %}
+            <select class="st-cat" name="cat:{{ i.key }}" aria-label="{{ _('Status category') }} {{ i.identifier or i.file }}">
+              {% for c in ('ERROR', 'WARNING', 'INFO') %}<option value="{{ c }}"{% if c == i.category %} selected{% endif %}>{{ c }}</option>{% endfor %}
+            </select>
+            {% else %}{{ i.category or '—' }}{% endif %}
+          </td>
+          <td>
+            {% if i.state == 'ready' %}{{ _('ready') }}
+            {% elif i.state == 'changed' %}{{ _('changed') }} ({{ i.existing.identifier }}, {{ i.existing.lifecycle_state }}): {% if i.action == 'update' %}{{ _('updates the open Draft') }}{% else %}{{ _('opens a new revision') }}{% endif %}
+            {% elif i.state == 'restorable' %}{{ _('withdrawn') }} ({{ i.existing.identifier }}): {{ _('opens a new Draft on the same number') }}
+            {% elif i.state == 'exists' %}{{ _('already in the catalogue') }}{% if i.existing %} ({{ i.existing.identifier }}){% endif %}
+            {% else %}{{ _('blocked') }}{% endif %}
+          </td>
+          <td>
+            {% if i.changes %}<div class="muted">{{ _('differs in') }}: {{ i.changes|join(', ') }}</div>{% endif %}
+            {% for e in i.issues %}<div><strong>{{ e.column }}</strong>: {{ e.message }}</div>{% endfor %}
+            {% for w in i.warnings %}<div class="muted">⚠ {{ w }}</div>{% endfor %}
+          </td>
+        </tr>
+        {% else %}
+        <tr><td colspan="10" class="table-empty">{{ _('No programs found.') }}</td></tr>
+        {% endfor %}
+      </tbody>
+    </table>
+
+    <div class="field" style="max-width:420px; margin-top:12px">
+      <label for="change_set_name">{{ _('Name of the change set (optional)') }}</label>
+      <input type="text" id="change_set_name" name="change_set_name" maxlength="120">
+      <div class="hint">{{ _('All Drafts of this import join one change set, so they can be reviewed and decided together.') }} {{ _('Changed and withdrawn programs are not ticked: tick the ones you want to update, revise or restore.') }}</div>
+    </div>
+    <div class="btn-row">
+      <button class="btn btn--primary" type="submit"{% if not (s.ready or s.changed or s.restorable) %} disabled{% endif %}>{{ _('Create Drafts for the ticked programs') }}</button>
+    </div>
+  </form>
+  <form method="post" action="{{ url_for('ui.st_import_cancel') }}" style="margin-top:8px">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    <input type="hidden" name="token" value="{{ preview.token }}">
+    <button class="btn" type="submit">{{ _('Cancel') }}</button>
+  </form>
+</div>
+{% endblock %}

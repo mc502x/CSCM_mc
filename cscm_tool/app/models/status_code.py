@@ -3,6 +3,14 @@ CHECK constraints and triggers enforcing lifecycle/sandbox rules live in
 docs/artifacts/schema.sql and are applied by the schema migration, not
 duplicated here (defense-in-depth is DB-layer + service-layer, not ORM-layer).
 
+v3 (2026-09-17): the field set is grounded in a real export of the live
+status code library (docs/06-data-dictionary.md provenance note). Note that
+`status_category`, `available_group`, and the eight "program reference"
+fields are plain columns, not lookup-table foreign keys — the real data
+either uses a closed 3-value enum (status_category) or numeric ranges that
+are only soft-validated against a currently-observed set (available_group,
+program references), not hard-enforced closed vocabularies.
+
 Relationships use explicit cast(...) annotations (see app/models/user.py for
 why) wherever service/route code dots into them."""
 
@@ -10,15 +18,17 @@ from typing import cast
 
 from app.extensions import Base, db
 from app.models.lookup import (
-    LookupAccessRights,
-    LookupAlarmBehaviour,
-    LookupAvailabilityGroup,
-    LookupBrakeProgram,
+    LookupControllerSoftwareVersion,
+    LookupCustomerAccess,
+    LookupDevelopmentAccess,
     LookupFunctionalSubgroup,
     LookupFunctionalSystemGroup,
-    LookupOperationalState,
-    LookupResetProgram,
-    LookupStatusCategory,
+    LookupGridOperatorAccess,
+    LookupSalesAccess,
+    LookupServiceAccess,
+    LookupServicePartnerAccess,
+    LookupTccAccess,
+    LookupTopAccess,
     LookupTurbinePlatform,
 )
 from app.models.user import User
@@ -32,17 +42,24 @@ class StatusCode(Base):
     functional_system_group_id = db.Column(
         db.Integer, db.ForeignKey("lookup_functional_system_group.id"), nullable=False
     )
-    functional_subgroup_id = db.Column(db.Integer, db.ForeignKey("lookup_functional_subgroup.id"))
+    functional_subgroup_id = db.Column(
+        db.Integer, db.ForeignKey("lookup_functional_subgroup.id"), nullable=False
+    )
     is_sandbox = db.Column(db.Integer, nullable=False, default=0)
     platform_variant_of_status_code_id = db.Column(db.Integer, db.ForeignKey("status_code.id"))
+    legacy_reference_number = db.Column(db.Text)
+    # v4.2: the number an imported StCd_<n>.st program carries; issued unchanged at Submit
+    reserved_identifier = db.Column(db.Text)
     owner_id = db.Column(db.Integer, db.ForeignKey("user.id"), nullable=False)
     created_at = db.Column(db.Text, nullable=False)
+    withdrawn_at = db.Column(db.Text)  # v4.9: the last revision was withdrawn (BR-026)
+    deleted_at = db.Column(db.Text)  # v4.9.2: a withdrawn code erased in place (BR-026)
 
     functional_system_group: LookupFunctionalSystemGroup = cast(
         LookupFunctionalSystemGroup, db.relationship("LookupFunctionalSystemGroup")
     )
-    functional_subgroup: LookupFunctionalSubgroup | None = cast(
-        "LookupFunctionalSubgroup | None", db.relationship("LookupFunctionalSubgroup")
+    functional_subgroup: LookupFunctionalSubgroup = cast(
+        LookupFunctionalSubgroup, db.relationship("LookupFunctionalSubgroup")
     )
     owner: User = cast(User, db.relationship("User"))
     revisions: list["StatusCodeRevision"] = cast(
@@ -63,32 +80,53 @@ class StatusCodeRevision(Base):
     status_code_id = db.Column(db.Integer, db.ForeignKey("status_code.id"), nullable=False)
     revision_number = db.Column(db.Integer, nullable=False)
     is_current = db.Column(db.Integer, nullable=False, default=1)
+
     title = db.Column(db.Text, nullable=False)
     description = db.Column(db.Text, nullable=False)
-    status_category_id = db.Column(
-        db.Integer, db.ForeignKey("lookup_status_category.id"), nullable=False
+    software_version = db.Column(db.Text)  # nullable — open item, see 06-data-dictionary.md
+    status_category = db.Column(db.Text, nullable=False)  # ERROR | WARNING | INFO
+    available_group = db.Column(db.Integer, nullable=False)  # soft-validated, not an FK
+    alarm_flag = db.Column(db.Integer, nullable=False, default=0)
+    set_delay = db.Column(db.Text, nullable=False)
+    reset_delay = db.Column(db.Text, nullable=False)
+    up_down_counter = db.Column(db.Integer, nullable=False, default=0)
+    trigger_snapshot = db.Column(db.Integer, nullable=False, default=0)
+    loadless_spinning_permitted = db.Column(db.Integer, nullable=False, default=0)
+
+    number_of_times_repeated = db.Column(db.Integer)
+    repeated_over_the_course = db.Column(db.Text)
+    status_code_for_repeated_error = db.Column(db.Integer)  # opaque, NOT a FK
+
+    yaw_program = db.Column(db.Integer, nullable=False, default=0)
+    manual_reset_program = db.Column(db.Integer, nullable=False, default=0)
+    auto_reset_program = db.Column(db.Integer, nullable=False, default=0)
+    converter_reactive_power_program = db.Column(db.Integer, nullable=False, default=0)
+    brake_program = db.Column(db.Integer, nullable=False, default=0)
+    umrichterprogramm_gsc = db.Column(db.Integer, nullable=False, default=0)
+    umrichterprogramm_msc = db.Column(db.Integer, nullable=False, default=0)
+    yaw_bearing_lubrication_program = db.Column(db.Integer, nullable=False, default=0)
+
+    development_access_id = db.Column(
+        "development_access", db.Integer, db.ForeignKey("lookup_development_access.id")
     )
-    availability_group_id = db.Column(
-        db.Integer, db.ForeignKey("lookup_availability_group.id"), nullable=False
+    sales_access_id = db.Column("sales_access", db.Integer, db.ForeignKey("lookup_sales_access.id"))
+    tcc_access_id = db.Column("tcc_access", db.Integer, db.ForeignKey("lookup_tcc_access.id"))
+    service_access_id = db.Column(
+        "service_access", db.Integer, db.ForeignKey("lookup_service_access.id")
     )
-    brake_program_id = db.Column(
-        db.Integer, db.ForeignKey("lookup_brake_program.id"), nullable=False
+    turbine_operator_package_access_id = db.Column(
+        "turbine_operator_package_access", db.Integer, db.ForeignKey("lookup_top_access.id")
     )
-    reset_program_id = db.Column(
-        db.Integer, db.ForeignKey("lookup_reset_program.id"), nullable=False
+    grid_operator_access_id = db.Column(
+        "grid_operator_access", db.Integer, db.ForeignKey("lookup_grid_operator_access.id")
     )
-    software_version = db.Column(db.Text, nullable=False)
-    operational_state_id = db.Column(
-        db.Integer, db.ForeignKey("lookup_operational_state.id"), nullable=False
+    service_partner_access_id = db.Column(
+        "service_partner_access", db.Integer, db.ForeignKey("lookup_service_partner_access.id")
     )
-    access_rights_id = db.Column(
-        db.Integer, db.ForeignKey("lookup_access_rights.id"), nullable=False
+    customer_access_id = db.Column(
+        "customer_access", db.Integer, db.ForeignKey("lookup_customer_access.id")
     )
-    delay_before_alarm_seconds = db.Column(db.Integer, nullable=False, default=0)
-    delay_before_reset_seconds = db.Column(db.Integer, nullable=False, default=0)
-    alarm_behaviour_id = db.Column(
-        db.Integer, db.ForeignKey("lookup_alarm_behaviour.id"), nullable=False
-    )
+
     owner_id = db.Column(db.Integer, db.ForeignKey("user.id"), nullable=False)
     lifecycle_status = db.Column(db.Text, nullable=False, default="DRAFT")
     created_by = db.Column(db.Integer, db.ForeignKey("user.id"), nullable=False)
@@ -103,30 +141,85 @@ class StatusCodeRevision(Base):
     deprecated_reason = db.Column(db.Text)
     superseded_by_status_code_id = db.Column(db.Integer, db.ForeignKey("status_code.id"))
 
+    row_version = db.Column(db.Integer, nullable=False, default=1)  # I-01
+    updated_at = db.Column(db.Text)  # I-01
+    remedy_text = db.Column(db.Text)  # I-14
+    affected_component = db.Column(db.Text)  # I-14
+    related_status_codes = db.Column(db.Text)  # I-14, comma separated identifiers
+    standard_references = db.Column(db.Text)  # I-14
+    applies_from_version_id = db.Column(
+        db.Integer, db.ForeignKey("lookup_controller_software_version.id")
+    )  # I-07
+    applies_to_version_id = db.Column(
+        db.Integer, db.ForeignKey("lookup_controller_software_version.id")
+    )  # I-07
+    planned_effective_date = db.Column(db.Text)  # I-27
+    planned_deprecation_date = db.Column(db.Text)  # I-27
+    converter_reset_program = db.Column(db.Integer, nullable=False, default=0)  # v4.1
+    hydraulic_pump_program = db.Column(db.Integer, nullable=False, default=0)  # v4.1
+    gearbox_oil_pump_program = db.Column(db.Integer, nullable=False, default=0)  # v4.1
+    gearbox_oil_fan_program = db.Column(db.Integer, nullable=False, default=0)  # v4.1
+    gearbox_oil_heating_program = db.Column(db.Integer, nullable=False, default=0)  # v4.1
+    generator_fan_program = db.Column(db.Integer, nullable=False, default=0)  # v4.1
+    generator_heating_program = db.Column(db.Integer, nullable=False, default=0)  # v4.1
+    generator_bearing_lubrication_program = db.Column(db.Integer, nullable=False, default=0)  # v4.1
+    rotor_bearing_lubrication_program = db.Column(db.Integer, nullable=False, default=0)  # v4.1
+    anemometer_heating_program = db.Column(db.Integer, nullable=False, default=0)  # v4.1
+    medium_voltage_cb_program = db.Column(db.Integer, nullable=False, default=0)  # v4.1
+    tower_fan_program = db.Column(db.Integer, nullable=False, default=0)  # v4.1
+    transformer_oil_pump_program = db.Column(db.Integer, nullable=False, default=0)  # v4.1
+    pitch_error_program = db.Column(db.Integer, nullable=False, default=0)  # v4.1
+    pitch_warning_program = db.Column(db.Integer, nullable=False, default=0)  # v4.1
+    rotor_brake_program = db.Column(db.Integer, nullable=False, default=0)  # v4.1
+    zero_load_operation = db.Column(db.Integer)  # v4.1, NULL = not captured
+    stop_program_40_flag = db.Column(db.Integer)  # v4.1, NULL = not captured
+    stop_program_80_flag = db.Column(db.Integer)  # v4.1, NULL = not captured
+    manual_operation_flag = db.Column(db.Integer)  # v4.1, NULL = not captured
+    automatic_operation_flag = db.Column(db.Integer)  # v4.1, NULL = not captured
+    vane_position_flag = db.Column(db.Integer)  # v4.1, NULL = not captured
+    operating_mode_mask = db.Column(db.Integer)  # v4.1, NULL = not captured
+    task_call_frequency = db.Column(db.Integer)  # v4.1, NULL = not captured
+    availability_calc = db.Column(db.Integer)  # v4.1, NULL = not captured
+
     status_code: StatusCode = cast(
         StatusCode,
         db.relationship("StatusCode", back_populates="revisions", foreign_keys=[status_code_id]),
     )
-    status_category: LookupStatusCategory = cast(
-        LookupStatusCategory, db.relationship("LookupStatusCategory")
+    user_group_rows: list["StatusCodeRevisionUserGroup"] = cast(
+        "list[StatusCodeRevisionUserGroup]",
+        db.relationship("StatusCodeRevisionUserGroup", lazy="selectin", viewonly=True),
     )
-    availability_group: LookupAvailabilityGroup = cast(
-        LookupAvailabilityGroup, db.relationship("LookupAvailabilityGroup")
+    development_access: LookupDevelopmentAccess | None = cast(
+        "LookupDevelopmentAccess | None", db.relationship("LookupDevelopmentAccess")
     )
-    brake_program: LookupBrakeProgram = cast(
-        LookupBrakeProgram, db.relationship("LookupBrakeProgram")
+    sales_access: LookupSalesAccess | None = cast(
+        "LookupSalesAccess | None", db.relationship("LookupSalesAccess")
     )
-    reset_program: LookupResetProgram = cast(
-        LookupResetProgram, db.relationship("LookupResetProgram")
+    tcc_access: LookupTccAccess | None = cast(
+        "LookupTccAccess | None", db.relationship("LookupTccAccess")
     )
-    operational_state: LookupOperationalState = cast(
-        LookupOperationalState, db.relationship("LookupOperationalState")
+    service_access: LookupServiceAccess | None = cast(
+        "LookupServiceAccess | None", db.relationship("LookupServiceAccess")
     )
-    access_rights: LookupAccessRights = cast(
-        LookupAccessRights, db.relationship("LookupAccessRights")
+    turbine_operator_package_access: LookupTopAccess | None = cast(
+        "LookupTopAccess | None", db.relationship("LookupTopAccess")
     )
-    alarm_behaviour: LookupAlarmBehaviour = cast(
-        LookupAlarmBehaviour, db.relationship("LookupAlarmBehaviour")
+    grid_operator_access: LookupGridOperatorAccess | None = cast(
+        "LookupGridOperatorAccess | None", db.relationship("LookupGridOperatorAccess")
+    )
+    service_partner_access: LookupServicePartnerAccess | None = cast(
+        "LookupServicePartnerAccess | None", db.relationship("LookupServicePartnerAccess")
+    )
+    customer_access: LookupCustomerAccess | None = cast(
+        "LookupCustomerAccess | None", db.relationship("LookupCustomerAccess")
+    )
+    applies_from_version: LookupControllerSoftwareVersion | None = cast(
+        "LookupControllerSoftwareVersion | None",
+        db.relationship("LookupControllerSoftwareVersion", foreign_keys=[applies_from_version_id]),
+    )
+    applies_to_version: LookupControllerSoftwareVersion | None = cast(
+        "LookupControllerSoftwareVersion | None",
+        db.relationship("LookupControllerSoftwareVersion", foreign_keys=[applies_to_version_id]),
     )
     platforms: list["StatusCodeRevisionPlatform"] = cast(
         "list[StatusCodeRevisionPlatform]",
@@ -156,3 +249,37 @@ class StatusCodeRevisionPlatform(Base):
     )
 
     __table_args__ = (db.UniqueConstraint("status_code_revision_id", "turbine_platform_id"),)
+
+
+class LookupUserGroupSlot(Base):
+    """One of the 16 user-group slots of the controller (schema v4.1, FR-168)."""
+
+    __tablename__ = "lookup_user_group_slot"
+
+    id = db.Column(db.Integer, primary_key=True)
+    slot = db.Column(db.Integer, nullable=False, unique=True)
+    audience_code = db.Column(db.Text)
+    label = db.Column(db.Text, nullable=False)
+    description = db.Column(db.Text)
+    is_active = db.Column(db.Integer, nullable=False, default=1)
+    sort_order = db.Column(db.Integer, nullable=False, default=0)
+
+
+class StatusCodeRevisionUserGroup(Base):
+    """The read and write level (BYTE) of one user-group slot of one revision."""
+
+    __tablename__ = "status_code_revision_user_group"
+
+    id = db.Column(db.Integer, primary_key=True)
+    status_code_revision_id = db.Column(
+        db.Integer, db.ForeignKey("status_code_revision.id"), nullable=False
+    )
+    user_group_slot_id = db.Column(
+        db.Integer, db.ForeignKey("lookup_user_group_slot.id"), nullable=False
+    )
+    read_level = db.Column(db.Integer, nullable=False)
+    write_level = db.Column(db.Integer, nullable=False)
+
+    slot_row: LookupUserGroupSlot = cast(
+        LookupUserGroupSlot, db.relationship("LookupUserGroupSlot", lazy="joined")
+    )

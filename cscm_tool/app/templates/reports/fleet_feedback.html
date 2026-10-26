@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block title %}{{ _('Fleet Feedback') }} — CSCM Tool{% endblock %}
+{% block content %}
+<div class="page-header"><h1>{{ _('Fleet feedback') }}</h1></div>
+<p class="muted">{{ _('Occurrence counts per status code, aggregated and anonymised, imported from the internal monitoring side. They show which codes never fire (candidates for deprecation) and which fire most (candidates for better remedy text).') }}</p>
+
+<div class="card">
+  <h2>{{ _('Import occurrence counts') }}</h2>
+  <form method="post" enctype="multipart/form-data" class="form-row">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    <div class="field"><label for="source_label">{{ _('Source') }}</label><input type="text" id="source_label" name="source_label" required placeholder="SCADA export Q3"></div>
+    <div class="field"><label for="period_start">{{ _('Period start') }}</label><input type="text" id="period_start" name="period_start" required placeholder="2026-07-01"></div>
+    <div class="field"><label for="period_end">{{ _('Period end') }}</label><input type="text" id="period_end" name="period_end" required placeholder="2026-09-30"></div>
+    <div class="field"><label for="file">{{ _('File (.csv/.xlsx with status_code_identifier, occurrences)') }}</label><input type="file" id="file" name="file" accept=".csv,.xlsx" required></div>
+    <div class="field" style="align-self:end"><button class="btn btn--primary" type="submit">{{ _('Import') }}</button></div>
+  </form>
+  {% if imports %}
+  <table>
+    <thead><tr><th scope="col">{{ _('Source') }}</th><th scope="col">{{ _('Period') }}</th><th scope="col">{{ _('Codes') }}</th><th scope="col">{{ _('Unmatched rows') }}</th></tr></thead>
+    <tbody>{% for i in imports %}<tr><td>{{ i.source_label }}</td><td>{{ i.period_start }} – {{ i.period_end }}</td><td>{{ i.row_count }}</td><td>{{ i.unmatched_count }}</td></tr>{% endfor %}</tbody>
+  </table>
+  {% endif %}
+</div>
+
+<div class="card">
+  <h2>{{ _('Never fired') }} <span class="muted">({{ report.never_fired|length }} {{ _('of') }} {{ report.live_codes }} {{ _('live codes') }}, {{ report.periods_imported }} {{ _('period(s)') }})</span></h2>
+  {% if report.never_fired %}
+  <ul class="plain-list">{% for e in report.never_fired[:100] %}<li>{{ e.status_code_identifier }} — {{ e.title }}</li>{% endfor %}</ul>
+  {% else %}<div class="table-empty">{{ _('No candidates (or no data imported yet).') }}</div>{% endif %}
+</div>
+
+<div class="card">
+  <h2>{{ _('Most frequent') }}</h2>
+  {% if report.most_frequent %}
+  <table>
+    <thead><tr><th scope="col">{{ _('Code') }}</th><th scope="col">{{ _('Title') }}</th><th scope="col">{{ _('Occurrences') }}</th><th scope="col">{{ _('Remedy text') }}</th></tr></thead>
+    <tbody>{% for e in report.most_frequent %}<tr><td>{{ e.status_code_identifier }}</td><td>{{ e.title }}</td><td>{{ e.occurrences }}</td><td>{{ _('yes') if e.has_remedy_text else _('MISSING') }}</td></tr>{% endfor %}</tbody>
+  </table>
+  {% else %}<div class="table-empty">{{ _('No data yet.') }}</div>{% endif %}
+</div>
+{% endblock %}

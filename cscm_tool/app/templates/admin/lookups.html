@@ -1,72 +1,115 @@
 {% extends "base.html" %}
-{% block title %}Lookup Management — CSCM Tool{% endblock %}
+{% block title %}{{ _('Lookup Management') }} — CSCM Tool{% endblock %}
 {% block content %}
-<div class="page-header"><h1>Lookup / Vocabulary Management</h1></div>
+<div class="page-header"><h1>{{ _('Lookup / Vocabulary Management') }}</h1></div>
 
 <div class="card">
   <form method="get" class="field" style="max-width:320px">
-    <label for="vocabulary">Vocabulary</label>
-    <select id="vocabulary" name="vocabulary" onchange="this.form.submit()">
+    <label for="vocabulary">{{ _('Vocabulary') }}</label>
+    <select id="vocabulary" name="vocabulary" data-autosubmit>
       {% for v in vocabularies %}
       <option value="{{ v }}" {{ 'selected' if v == vocabulary }}>{{ v }}</option>
       {% endfor %}
     </select>
   </form>
+  {% if vocabulary == 'functional-subgroups' %}
+  <form method="get" class="field" style="max-width:420px;margin-top:10px">
+    <input type="hidden" name="vocabulary" value="functional-subgroups">
+    <label for="functional_system_group">{{ _('Functional System Group') }}</label>
+    <select id="functional_system_group" name="functional_system_group" data-autosubmit>
+      {% for g in groups %}
+      <option value="{{ g.id }}" {{ 'selected' if selected_group_id == g.id }}>{{ g.code }} — {{ g.label }} ({{ g.range_start }}-{{ g.range_end }})</option>
+      {% endfor %}
+    </select>
+  </form>
+  {% endif %}
 </div>
 
 <div class="card">
   <table>
-    <thead><tr><th>Code</th><th>Label</th><th>Active</th><th></th></tr></thead>
+    <thead>
+      <tr>
+        <th scope="col">{{ _('Code') }}</th><th scope="col">{{ _('Label') }}</th>
+        {% if vocabulary in ('functional-system-groups', 'functional-subgroups') %}<th scope="col">{{ _('Range') }}</th>{% endif %}
+        <th scope="col">{{ _('Active') }}</th><th scope="col"></th>
+      </tr>
+    </thead>
     <tbody>
       {% for v in values %}
       <tr>
         <td>{{ v.code }}</td>
         <td>{{ v.label }}</td>
+        {% if vocabulary in ('functional-system-groups', 'functional-subgroups') %}
+        <td>{{ v.range_start if vocabulary == 'functional-system-groups' else v.sub_range_start }}-{{ v.range_end if vocabulary == 'functional-system-groups' else v.sub_range_end }}</td>
+        {% endif %}
         <td>{{ 'Yes' if v.is_active else 'No' }}</td>
         <td>
           <details>
-            <summary class="btn" style="display:inline-block">Edit</summary>
+            <summary class="btn" style="display:inline-block">{{ _('Edit') }}</summary>
             <form method="post" action="{{ url_for('ui.lookup_value_update', vocabulary=vocabulary, value_id=v.id) }}" style="margin-top:8px">
               <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
-              <div class="field"><label>Label</label><input type="text" name="label" value="{{ v.label }}"></div>
-              <div class="field"><label><input type="checkbox" name="is_active" {{ 'checked' if v.is_active }}> Active</label></div>
-              <button class="btn btn--primary" type="submit">Save</button>
+              <div class="field"><label>{{ _('Label') }}</label><input type="text" name="label" value="{{ v.label }}" aria-label="{{ _('Label of %(x)s', x=v.code) }}"></div>
+              <div class="field"><label>{{ _('Description (shown as inline help)') }}</label><textarea name="description" maxlength="1000" aria-label="{{ _('Description of %(x)s', x=v.code) }}">{{ v.description or '' }}</textarea></div>
+              <div class="field"><label><input type="checkbox" name="is_active" {{ 'checked' if v.is_active }}> {{ _('Active') }}</label></div>
+              <button class="btn btn--primary" type="submit">{{ _('Save') }}</button>
             </form>
+            {% if vocabulary in ('functional-system-groups', 'functional-subgroups') %}
+            <div class="hint">{{ _('Numeric range is immutable once created (BR-001).') }}</div>
+            {% endif %}
           </details>
         </td>
       </tr>
       {% endfor %}
       {% if not values %}
-      <tr><td colspan="4" class="table-empty">No values.</td></tr>
+      <tr><td colspan="5" class="table-empty">{{ _('No values.') }}</td></tr>
       {% endif %}
     </tbody>
   </table>
 </div>
 
-{% if vocabulary != 'functional-system-groups' %}
+{% if vocabulary == 'functional-system-groups' %}
 <div class="card" style="max-width:480px">
-  <h2>Add Value</h2>
-  <form method="post" action="{{ url_for('ui.lookup_value_new', vocabulary=vocabulary) }}">
+  <h2>{{ _('Add Functional System Group') }}</h2>
+  <p class="hint">{{ _('Into any currently free range — confirmed as of 2026-09-17: 10000-10999, 14000-14999, 15000-15999, 16000-16999.') }}</p>
+  <form method="post" action="{{ url_for('ui.functional_system_group_new') }}">
     <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
-    <div class="field"><label for="code">Code</label><input type="text" id="code" name="code" required></div>
-    <div class="field"><label for="label">Label</label><input type="text" id="label" name="label" required></div>
-    {% if vocabulary == 'functional-subgroups' %}
-    <div class="field"><label for="functional_system_group">Functional System Group</label>
-      <select id="functional_system_group" name="functional_system_group" required>
-        {% for g in groups %}<option value="{{ g.code }}">{{ g.code }} — {{ g.label }}</option>{% endfor %}
+    <div class="field"><label for="new_group_code">{{ _('Code') }}</label><input type="text" id="new_group_code" name="code" required placeholder="WNEW"></div>
+    <div class="field"><label for="new_group_label">{{ _('Label') }}</label><input type="text" id="new_group_label" name="label" required placeholder="{{ _('New Subsystem') }}"></div>
+    <div class="form-row">
+      <div class="field"><label for="new_group_range_start">{{ _('Range start') }}</label><input type="number" id="new_group_range_start" name="range_start" required></div>
+      <div class="field"><label for="new_group_range_end">{{ _('Range end') }}</label><input type="number" id="new_group_range_end" name="range_end" required></div>
+    </div>
+    <button class="btn btn--primary" type="submit">{{ _('Add Functional System Group') }}</button>
+  </form>
+</div>
+{% elif vocabulary == 'functional-subgroups' %}
+<div class="card" style="max-width:480px">
+  <h2>{{ _('Add Subgroup') }}</h2>
+  <form method="post" action="{{ url_for('ui.functional_subgroup_new') }}">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    <div class="field"><label for="new_subgroup_group">{{ _('Functional System Group') }}</label>
+      <select id="new_subgroup_group" name="functional_system_group" required>
+        {% for g in groups %}<option value="{{ g.id }}" {{ 'selected' if selected_group_id == g.id }}>{{ g.code }} — {{ g.label }} ({{ g.range_start }}-{{ g.range_end }})</option>{% endfor %}
       </select>
     </div>
+    <div class="field"><label for="new_subgroup_code">{{ _('Code') }}</label><input type="text" id="new_subgroup_code" name="code" required></div>
+    <div class="field"><label for="new_subgroup_label">{{ _('Label') }}</label><input type="text" id="new_subgroup_label" name="label" required></div>
     <div class="form-row">
-      <div class="field"><label for="sub_range_start">Sub-range start</label><input type="number" id="sub_range_start" name="sub_range_start" required></div>
-      <div class="field"><label for="sub_range_end">Sub-range end</label><input type="number" id="sub_range_end" name="sub_range_end" required></div>
+      <div class="field"><label for="new_subgroup_range_start">{{ _('Sub-range start') }}</label><input type="number" id="new_subgroup_range_start" name="sub_range_start" required></div>
+      <div class="field"><label for="new_subgroup_range_end">{{ _('Sub-range end') }}</label><input type="number" id="new_subgroup_range_end" name="sub_range_end" required></div>
     </div>
-    {% else %}
-    <div class="field"><label for="description">Description (optional)</label><input type="text" id="description" name="description"></div>
-    {% endif %}
-    <button class="btn btn--primary" type="submit">Add</button>
+    <button class="btn btn--primary" type="submit">{{ _('Add Subgroup') }}</button>
   </form>
 </div>
 {% else %}
-<p class="muted">Functional System Groups are a fixed structural set (docs/05-governance-handbook.md §2) and cannot be created here.</p>
+<div class="card" style="max-width:480px">
+  <h2>{{ _('Add Value') }}</h2>
+  <form method="post" action="{{ url_for('ui.lookup_value_new', vocabulary=vocabulary) }}">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    <div class="field"><label for="code">{{ _('Code') }}</label><input type="text" id="code" name="code" required></div>
+    <div class="field"><label for="label">{{ _('Label') }}</label><input type="text" id="label" name="label" required></div>
+    <button class="btn btn--primary" type="submit">{{ _('Add') }}</button>
+  </form>
+</div>
 {% endif %}
 {% endblock %}

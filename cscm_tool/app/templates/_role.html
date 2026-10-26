@@ -1,0 +1,6 @@
+{#- A role drawn as a coloured badge: red = Administrator (highest level), then StCd Owner, Chief
+    Engineer, Reviewer, Engineer, Viewer. The colour is the level (app/auth/roles.py). -#}
+{% macro role_badge(code) -%}
+{%- set r = role_info(code) -%}
+<span class="role-badge role-badge--{{ r.css }}" title="{{ _(r.label) }} · {{ _('level') }} {{ r.level }}">{{ _(r.label) }}</span>
+{%- endmacro %}

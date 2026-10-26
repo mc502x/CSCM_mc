@@ -4,9 +4,11 @@ This document is the implementation-facing companion to the rest of this package
 
 ## 1. Recommended Architecture Patterns
 
-Unchanged in principle from v1 (18-claude-code-implementation-guide.md v1 §1): layered monolith (Presentation → Service → Repository → Data), repository pattern per aggregate root, service layer owning all business rules, Application Factory pattern, DTOs at the service boundary. The v2 model adds no new architectural pattern — it adds more service-layer state machine complexity (7 lifecycle states, three decision points instead of one) and one new cross-cutting concern (Cross-Domain Sign-Off gating), both of which fit cleanly inside the existing service layer.
+Layered monolith (Presentation → Service → Repository → Data), repository pattern per aggregate root, service layer owning all business rules, Application Factory pattern, DTOs at the service boundary. The v2 model adds no new architectural pattern — it adds more service-layer state machine complexity (7 lifecycle states, three decision points instead of one) and one new cross-cutting concern (Cross-Domain Sign-Off gating), both of which fit cleanly inside the existing service layer.
 
 ## 2. Recommended Folder Structure
+
+*(v4)* The tree below is the original recommendation; the layout **as built** — including the v4 services (`publication`, `governance`, `operations`, `integration`), `scripts/`, `deploy/` and `tests/` — is in 15-development-standards.md §1, and 08-system-architecture.md §2 maps each component to its modules. Notable deviations from the recommendation: the subgroup/group administration lives in `lookup_admin_service.py` (there is no `subgroup_admin_service.py`), the routes are one module per area under `app/api/v1/`, and the UI blueprints are split by area under `app/ui/`.
 
 ```
 cscm_tool/
@@ -46,6 +48,8 @@ cscm_tool/
 │   │   ├── release_service.py
 │   │   ├── lookup_service.py
 │   │   ├── export_service.py          # catalogue + full-database export
+│   │   ├── import_service.py          # CSV/XLSX library import -> Draft CRs (new)
+│   │   ├── subgroup_admin_service.py  # new-subgroup creation, overlap validation (new)
 │   │   ├── audit_service.py
 │   │   └── validation.py
 │   │
@@ -79,17 +83,20 @@ cscm_tool/
 │   ├── export/
 │   │   ├── csv_exporter.py
 │   │   ├── json_exporter.py
+│   │   ├── xlsx_exporter.py
 │   │   ├── pdf_exporter.py
 │   │   └── full_database_exporter.py  # SQLite Online Backup API wrapper, Administrator only
 │   │
 │   ├── templates/
 │   ├── static/                        # local-only assets, no CDN references (11-security-architecture.md §12)
+│   │   ├── css/onetool-tokens.css     # OneTool design tokens (10-ui-ux-specification.md §0), vendored locally
+│   │   └── vendor/manrope, inter, material-symbols/  # self-hosted fonts/icons, per the no-CDN rule
 │   └── errors.py
 │
 ├── migrations/
 ├── tests/{unit,integration,system}/
 ├── docs/
-├── seed_data/lookup_seed.sql          # matches artifacts/schema.sql's seed inserts, incl. placeholder subgroups
+├── seed_data/lookup_seed.sql          # matches artifacts/schema.sql's seed inserts, incl. the real Functional Subgroup taxonomy
 ├── requirements.txt
 ├── pyproject.toml
 ├── wsgi.py
@@ -98,7 +105,7 @@ cscm_tool/
 
 ## 3. Flask Blueprint Structure
 
-Unchanged in mechanism from v1 §3. Route handlers stay thin; the new decision endpoints follow the same pattern as the original `decide` example, now split into three distinct, narrowly-scoped handlers rather than one generic one, because each has a different authorization check:
+Route handlers stay thin; the new decision endpoints follow the same pattern as the original `decide` example, now split into three distinct, narrowly-scoped handlers rather than one generic one, because each has a different authorization check:
 
 ```python
 # app/api/v1/change_request_routes.py
@@ -145,7 +152,7 @@ The segregation-of-duties check (actor ≠ author, and for the Chief Engineer st
 
 ## 4. Repository Pattern
 
-Unchanged in mechanism from v1 §4 (`BaseRepository` generic CRUD helpers, no business rules in repositories). New repository method of note:
+Repositories hold queries and generic CRUD helpers, no business rules. A repository method of note:
 
 ```python
 # app/repositories/status_code_repository.py
@@ -245,11 +252,11 @@ class ChangeRequestService:
 
 ## 6. Database Migration Strategy
 
-Unchanged in mechanism from v1 §6 (Alembic baseline from `artifacts/schema.sql`, hand-reviewed autogenerate for `CHECK`/triggers/partial indexes, `PRAGMA foreign_keys = ON` on every connection). New note: the placeholder Functional Subgroup data (06-data-dictionary.md §9a) is seeded by the same baseline migration as every other lookup, so replacing it with the real taxonomy later is a **data migration** (an `UPDATE`/re-seed script), never a schema migration — call this out explicitly in that future migration's docstring so nobody mistakes it for a breaking change.
+Alembic baseline from `artifacts/schema.sql` (executed verbatim, so a fresh database is by construction the documented schema; later revisions are guarded and idempotent — 07-database-design.md §11; hand-reviewed autogenerate for `CHECK`/triggers/partial indexes, `PRAGMA foreign_keys = ON` on every SQLite connection). *(v4)* Every new migration is tested against a frozen copy of the previous schema (`tests/fixtures/`), including the downgrade; a back-fill that touches append-only data (the audit chain) drops and restores the protecting trigger inside the same migration, and the application and the migration share one canonical form (`app/audit_hash.py`). Note: the real Functional Subgroup data (06-data-dictionary.md §9a) is seeded by the same baseline migration as every other lookup; any future addition (a new subgroup into a currently-reserved hundred-block, or a whole new Functional System Group into one of the confirmed free ranges — `10000–10999`, `14000–14999`, `15000–15999`, `16000–16999`) is a **data migration** (an `INSERT`/re-seed script), never a schema migration — call this out explicitly in that future migration's docstring so nobody mistakes it for a breaking change.
 
 ## 7. Testing Framework
 
-Unchanged in mechanism from v1 §7 (`pytest`, `pytest-cov`, role-scoped authenticated-client fixtures — now five: `engineer_client`, `reviewer_client`, `administrator_client`, `chief_engineer_client`, `viewer_client`, plus fixtures for Engineers tagged with specific Engineering Domains for Cross-Domain Sign-Off tests). `schemathesis` (or equivalent) against `artifacts/openapi.yaml` v2.0.0. `bandit -r app/` and `pip-audit`, plus the new no-cloud-import grep check (13-test-strategy.md §6, TC-029) wired into the same CI stage.
+`pytest` and `pytest-cov`; role users are made with the `make_user(role, engineering_domains=…)` factory or `make_cast` (one user per role, plus a Controls-tagged Engineer for Cross-Domain Sign-Off tests) and logged in with `login_as`. `schemathesis` against `artifacts/openapi.yaml` v4.0.0. *(v4)* Fixtures: `StepUpClient` (answers the password prompt), `raw_client`, `file_app` (a real SQLite file for background threads, backups, upgrades and processes), `make_user`, `wcnv_ids`; helpers in `tests/helpers.py` (`drive_to_approved`, `release_revisions`, …). Three verification methodologies — sequential with gates, reversed/shuffled with property tests, whole suite on a file database — are defined in 13-test-strategy.md §11. `bandit -r app/` and `pip-audit`, plus the new no-cloud-import grep check (13-test-strategy.md §6, TC-029) wired into the same CI stage.
 
 ## 8. Suggested Coding Order
 
@@ -259,7 +266,7 @@ Updated sequencing reflecting the new epics (17-implementation-backlog.md depend
 2. `app/models/` in full (all v2 tables from `artifacts/schema.sql`), then the baseline Alembic migration incl. seed data (US-003, US-004).
 3. Auth: password hashing, `SessionPasswordAuthProvider`, `auth_service`, decorators (US-005–US-008).
 4. `user_repository`, `user_service`, minimal user list/create UI+API, **including Engineering Domain tagging** (US-009–US-012) — needed early since Cross-Domain Sign-Off tests require tagged users.
-5. `audit_service` as shared infrastructure before any consuming service (unchanged rationale from v1 §8 step 5).
+5. `audit_service` as shared infrastructure before any consuming service (every service writes audit entries, so it must exist first).
 6. `numbering_service` (Functional Group/Subgroup allocation, §5, §6) and `validation.py`, then `status_code_repository`/`status_code_service` for Draft creation (EPIC-02).
 7. `domain_signoff_service` and its API/UI (EPIC-03) — build this **before** the submit/review workflow, since Submit-for-Review depends on it, not after.
 8. `change_request_repository`, `change_request_service` covering `submit`, `reviewer_signoff`, `admin_signoff`, `chief_engineer_decide`, `withdraw` (EPIC-04) — the most transaction-sensitive service in the system; write the atomic-second-signoff and segregation-of-duties integration tests alongside this code, not after.
@@ -271,4 +278,15 @@ Updated sequencing reflecting the new epics (17-implementation-backlog.md depend
 14. Audit search/reporting UI/API, extended to the Chief Engineer role (EPIC-10's consumer-facing half).
 15. Fill in remaining OpenAPI-contract gaps, `schemathesis` conformance (EPIC-11).
 16. Security headers, CSRF, `bandit`/`pip-audit`, manual OWASP + no-cloud checklist sign-off (EPIC-12).
-17. Performance testing (incl. identifier-allocation contention, TC-025), deployment scripts, backup/restore drill, monitoring (EPIC-13), immediately preceding go-live — at which point the placeholder Functional Subgroup data must be replaced with Controls Engineering's real taxonomy (16-mvp-roadmap.md §2 exit criterion).
+17. Performance testing (incl. identifier-allocation contention, TC-025), deployment scripts, backup/restore drill, monitoring (EPIC-13), immediately preceding go-live.
+18. `import_service.py` and the Library Import UI/API (EPIC-14), reusing the validation logic already built in step 6 — an import row and a manually typed Draft go through the exact same validators.
+19. `subgroup_admin_service.py` and its group-level counterpart (EPIC-16) — straightforward once the lookup administration screens from step 13 exist; the group-level "create a new Functional System Group into a free range" capability (FR-048g/h) is the lowest-priority piece of this epic and can slip past MVP if time is tight.
+20. OneTool shell integration and the two explicit UX fixes — no-data-loss-on-failure and inline lookup descriptions (EPIC-15) — applied as a pass across every existing form, not a new module; do this once the forms it touches are stable, to avoid rework.
+21. *(v4)* Foundations that other v4 features rely on, in this order: the schema v4 migration and `app/schema_sql.py`; `settings_service`; `audit_hash` / `audit_chain` (the hash chain must exist before more audit-writing code does); `auth_service.step_up` and the `StepUpClient` test fixture; `delegation_service`.
+22. *(v4)* Content integrity (EPIC-17): `row_version` checks in `status_code_service`, `reference_service`, `duplicate_service`, platform variants, planned dates — each with its tests in `test_content_integrity`.
+23. *(v4)* Workflow aids (EPIC-19, EPIC-23): `sla_service`, `notification_service`/`mail_service`, `kpi_service`, `change_set_service`, `field_review_service`, `attachment_service`, reviewer balancing in `change_request_service`.
+24. *(v4)* Publication (EPIC-18, EPIC-20, EPIC-22): `software_version_service`, `translation_service`, `audience_service`, `export_profile_service`, the rewritten `export_service` pipeline with `manifest_service`, release notes, offline bundle, wrapped PDF.
+25. *(v4)* Import toolkit (EPIC-14 extension): template, dry run, update mode, reconciliation, error reports, background worker — the dry run and the real run share the same `_evaluate` path so they cannot disagree.
+26. *(v4)* Insight and integration: `health_report_service`, `saved_search_service`, `occurrence_service`, `integration_service` (tokens, feed, webhooks), `hub_consolidation_service`, FTS5 search.
+27. *(v4)* Operations (EPIC-25): `backup_service`, `observability`, readiness, the CLI jobs, `scripts/serve.py`, `deploy/`, CI definitions, `pg_readiness`.
+28. *(v4)* UI pass: new screens (10-ui-ux-specification.md S20–S38), `app/i18n_de.py`, `app/help_content.py`, accessibility fixes; then regenerate the documents' generated blocks and the test report.

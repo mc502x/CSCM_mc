@@ -18,9 +18,17 @@ class AuthenticatedUser:
     full_name: str
     role_code: str
     engineering_domain_codes: frozenset[str] = field(default_factory=frozenset)
+    # I-16: decision roles this user covers today for an absent colleague.
+    delegated_role_codes: frozenset[str] = field(default_factory=frozenset)
+    ui_language: str = "en"
+
+    def can_act_as(self, role: str) -> bool:
+        return self.role_code == role or role in self.delegated_role_codes
 
     @staticmethod
     def from_model(user: User) -> "AuthenticatedUser":
+        from app.services.delegation_service import DelegationService
+
         return AuthenticatedUser(
             id=user.id,
             username=user.username,
@@ -30,6 +38,8 @@ class AuthenticatedUser:
             engineering_domain_codes=frozenset(
                 ued.engineering_domain.code for ued in user.engineering_domains
             ),
+            delegated_role_codes=DelegationService.active_roles_for(user.id),
+            ui_language=user.ui_language or "en",
         )
 
 

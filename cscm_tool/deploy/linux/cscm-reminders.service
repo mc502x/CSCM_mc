@@ -1,0 +1,16 @@
+[Unit]
+Description=CSCM Tool reminders for stalled change requests (I-08)
+After=cscm.service
+
+[Service]
+Type=oneshot
+User=cscm
+Group=cscm
+WorkingDirectory=/opt/cscm/app
+EnvironmentFile=/etc/cscm/cscm.env
+ExecStart=/opt/cscm/venv/bin/flask send-reminders
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/lib/cscm /var/log/cscm

@@ -1,0 +1,113 @@
+{% extends "base.html" %}
+{% block title %}Review {{ title }} — CSCM Tool{% endblock %}
+{% block content %}
+<div class="page-header">
+  <h1>Review: {{ title }}</h1>
+  <a class="btn" href="{{ url_for('ui.translations_overview') }}">All languages</a>
+</div>
+
+<div class="card">
+  <p>
+    <span class="chip">{{ data.answered }} of {{ data.to_answer }} answered</span>
+    <progress max="{{ data.to_answer or 1 }}" value="{{ data.answered }}" aria-label="Answered"></progress>
+    <span class="chip">{{ data.missing_total }} without a translation</span>
+  </p>
+  <details>
+    <summary class="btn" style="display:inline-block">What to check</summary>
+    <ul class="plain-list">
+      <li><strong>Meaning</strong> - says what the English says, no more, no less.</li>
+      <li><strong>Terminology</strong> - the same word for the same thing everywhere (Status Code, Draft, Release, Reviewer).</li>
+      <li><strong>Fit</strong> - short enough for a button or a column heading.</li>
+      <li><strong>Register</strong> - formal and neutral, like a technical tool.</li>
+      <li><strong>Placeholders</strong> - markers such as %(n)s stay exactly as they are.</li>
+      <li><strong>Script and direction</strong> - digits and identifiers stay Latin; right to left reads correctly.</li>
+      <li><strong>Spelling and punctuation.</strong></li>
+    </ul>
+    <p class="muted">OK = fine as it is. CHANGE = write your version in the proposal box. UNCLEAR = the English or its context is not clear; say why in the comment.</p>
+  </details>
+
+  <div class="btn-row" style="margin-top:10px">
+    <a class="btn{% if f.scope == 'translated' %} btn--primary{% endif %}" href="{{ url_for('ui.translation_review', language=language) }}">{{ 'New and changed translations' if data.followup else 'Check translations' }} ({{ data.to_answer }})</a>
+    {% if data.followup %}<a class="btn{% if f.scope == 'all' %} btn--primary{% endif %}" href="{{ url_for('ui.translation_review', language=language, scope='all') }}">All translations ({{ data.all_total }})</a>{% endif %}
+    <a class="btn{% if f.scope == 'missing' %} btn--primary{% endif %}" href="{{ url_for('ui.translation_review', language=language, scope='missing') }}">Missing translations ({{ data.missing_total }})</a>
+    <a class="btn" href="{{ url_for('ui.translation_sheet', language=language) }}">Download the sheet (XLSX)</a>
+  </div>
+  <form method="post" action="{{ url_for('ui.translation_upload', language=language) }}" enctype="multipart/form-data" class="btn-row" style="margin-top:8px">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    <label for="sheet" class="muted">Worked offline? Upload the completed sheet:</label>
+    <input type="file" id="sheet" name="sheet" accept=".xlsx">
+    <button class="btn" type="submit">Upload</button>
+  </form>
+</div>
+
+<div class="card">
+  <form method="get" class="btn-row">
+    <input type="hidden" name="scope" value="{{ f.scope }}">
+    <label for="q" class="visually-hidden">Search</label>
+    <input type="search" id="q" name="q" value="{{ f.q }}" placeholder="search the English or the translation">
+    <label for="screen" class="visually-hidden">Screen</label>
+    <select id="screen" name="screen"><option value="">all screens</option>{% for s in data.screens %}<option value="{{ s }}"{% if f.screen == s %} selected{% endif %}>{{ s }}</option>{% endfor %}</select>
+    <label for="state" class="visually-hidden">Answer</label>
+    <select id="state" name="state">
+      <option value="">any answer</option>
+      {% for value, text in (('unanswered', 'not answered'), ('answered', 'answered'), ('OK', 'OK'), ('CHANGE', 'CHANGE'), ('UNCLEAR', 'UNCLEAR')) %}<option value="{{ value }}"{% if f.state == value %} selected{% endif %}>{{ text }}</option>{% endfor %}
+    </select>
+    <button class="btn" type="submit">Filter</button>
+  </form>
+
+  <form method="post" action="{{ url_for('ui.translation_save', language=language) }}">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    <input type="hidden" name="scope" value="{{ f.scope }}"><input type="hidden" name="q" value="{{ f.q }}">
+    <input type="hidden" name="screen" value="{{ f.screen }}"><input type="hidden" name="state" value="{{ f.state }}">
+    <input type="hidden" name="page" value="{{ data.page }}">
+    <div class="table-scroll"><table class="review-table" id="review-rows">
+      <caption class="visually-hidden">Strings of {{ title }}</caption>
+      <thead><tr><th scope="col">Screen</th><th scope="col">English</th><th scope="col">{{ 'Current translation' if f.scope != 'missing' else 'Your translation' }}</th><th scope="col">Verdict</th><th scope="col">Proposal</th><th scope="col">Comment</th></tr></thead>
+      <tbody>
+        {% for row in data.rows %}
+        {% set item = row.item %}
+        <tr>
+          <td class="muted">{{ row.screens[:2]|join(', ') }}<div><code>{{ row.id }}</code></div></td>
+          <td>{{ row.english }}</td>
+          <td{% if rtl %} dir="rtl" lang="{{ language }}" class="rtl-text"{% else %} lang="{{ language }}"{% endif %}>{{ row.current or '—' }}</td>
+          <td>
+            <input type="hidden" name="sid" value="{{ row.id }}">
+            {% if f.scope != 'missing' %}
+            <fieldset class="verdicts">
+              <legend class="visually-hidden">Verdict for {{ row.id }}</legend>
+              {% for v in ('OK', 'CHANGE', 'UNCLEAR') %}<label><input type="radio" name="v_{{ row.id }}" value="{{ v }}"{% if item and item.verdict == v %} checked{% endif %}{% if item and item.decision != 'PENDING' %} disabled{% endif %}> {{ v }}</label>{% endfor %}
+            </fieldset>
+            {% else %}<span class="muted">proposal</span>{% endif %}
+            {% if item and item.decision != 'PENDING' %}<div class="chip">{{ item.decision|lower }}</div>{% endif %}
+          </td>
+          <td><textarea name="p_{{ row.id }}" rows="2" maxlength="1000"{% if rtl %} dir="rtl" class="rtl-text"{% endif %} lang="{{ language }}" aria-label="{{ _('Proposal for %(x)s', x=row.id) }}"{% if item and item.decision != 'PENDING' %} disabled{% endif %}>{{ item.proposal if item and item.proposal else '' }}</textarea></td>
+          <td><input type="text" name="c_{{ row.id }}" maxlength="1000" value="{{ item.comment if item and item.comment else '' }}" aria-label="{{ _('Comment for %(x)s', x=row.id) }}"{% if item and item.decision != 'PENDING' %} disabled{% endif %}></td>
+        </tr>
+        {% else %}
+        <tr><td colspan="6" class="table-empty">Nothing here for this filter.</td></tr>
+        {% endfor %}
+      </tbody>
+    </table></div>
+    <div class="btn-row" style="margin-top:12px">
+      {% if f.scope != 'missing' %}<button class="btn" type="button" data-set-verdict="OK" data-in="review-rows">Mark the rest of this page OK</button>{% endif %}
+      <button class="btn btn--primary" type="submit" name="go" value="stay">Save</button>
+      <button class="btn" type="submit" name="go" value="next"{% if data.page >= data.pages %} disabled{% endif %}>Save and next page</button>
+      <span class="muted">Page {{ data.page }} of {{ data.pages }} ({{ data.total }} rows)</span>
+    </div>
+  </form>
+  <p class="btn-row" style="margin-top:8px">
+    {% if data.page > 1 %}<a class="btn" href="{{ url_for('ui.translation_review', language=language, scope=f.scope, q=f.q, screen=f.screen, state=f.state, page=data.page - 1) }}">Previous page</a>{% endif %}
+    {% if data.page < data.pages %}<a class="btn" href="{{ url_for('ui.translation_review', language=language, scope=f.scope, q=f.q, screen=f.screen, state=f.state, page=data.page + 1) }}">Next page</a>{% endif %}
+  </p>
+</div>
+
+<div class="card">
+  <h2>Complete the review</h2>
+  <p class="muted">When every translated string has a verdict, complete the review. It is then recorded with its date and the version of the text you saw.</p>
+  <form method="post" action="{{ url_for('ui.translation_complete', language=language) }}" data-confirm="Complete the review of {{ title }}? You can start a new one later.">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    <button class="btn btn--primary" type="submit"{% if data.answered < data.to_answer %} title="{{ data.to_answer - data.answered }} strings still need a verdict"{% endif %}>Complete the review</button>
+    <span class="muted">{{ data.answered }} of {{ data.to_answer }} answered</span>
+  </form>
+</div>
+{% endblock %}

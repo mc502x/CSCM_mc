@@ -1,0 +1,4 @@
+# Files executed on Linux servers must keep LF endings whatever core.autocrlf says.
+*.sh text eol=lf
+cscm_tool/deploy/linux/* text eol=lf
+*.ps1 text eol=crlf

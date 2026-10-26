@@ -1,0 +1,24 @@
+{
+  "note": "SQLite-specific construct counts; see scripts/pg_readiness.py",
+  "counts": {
+    "trigger": 18,
+    "raise-abort": 14,
+    "strftime-default": 35,
+    "autoincrement": 60,
+    "partial-index": 5,
+    "insert-or": 0,
+    "collate-nocase": 0,
+    "fts5": 4,
+    "pragma-migration": 10,
+    "sqlite-master-migration": 6,
+    "executescript": 16,
+    "sqlite3-module": 5,
+    "pragma-app": 5,
+    "begin-immediate": 2,
+    "glob": 2,
+    "sqlite-master-app": 1,
+    "online-backup": 2,
+    "fts-query": 2,
+    "rowid": 2
+  }
+}

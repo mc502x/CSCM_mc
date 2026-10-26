@@ -1,6 +1,6 @@
 [project]
 name = "cscm-tool"
-version = "0.1.0"
+version = "4.16.0"
 description = "Controller Status Code Management Tool"
 requires-python = ">=3.12"
 
@@ -15,6 +15,10 @@ target-version = "py312"
 [tool.ruff.lint]
 select = ["E", "F", "I", "UP", "B"]
 
+[tool.ruff.lint.per-file-ignores]
+# long SQL strings and section banners in tests are clearer unbroken
+"tests/**" = ["E501"]
+
 [tool.mypy]
 python_version = "3.12"
 ignore_missing_imports = true
@@ -23,6 +27,8 @@ check_untyped_defs = true
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+junit_family = "xunit1"  # lets record_property measurements reach the test report
+markers = ["performance: NFR-001 / TC-024 / TC-025 load tests (deselect with -m \"not performance\")"]
 
 [tool.coverage.run]
 source = ["app"]

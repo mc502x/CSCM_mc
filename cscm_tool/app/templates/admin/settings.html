@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}{{ _('Settings') }} — CSCM Tool{% endblock %}
+{% block content %}
+<div class="page-header"><h1>{{ _('Settings') }}</h1></div>
+<div class="card" style="max-width:720px">
+  <form method="post">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    {% for s in settings %}
+    <div class="field">
+      <label for="s_{{ s.key }}">{{ s.description }}</label>
+      <input type="text" id="s_{{ s.key }}" name="s_{{ s.key }}" value="{{ s.value }}">
+      <div class="hint"><code>{{ s.key }}</code> &middot; {{ _('default') }} {{ s.default }}</div>
+    </div>
+    {% endfor %}
+    <button class="btn btn--primary" type="submit">{{ _('Save settings') }}</button>
+  </form>
+</div>
+{% endblock %}

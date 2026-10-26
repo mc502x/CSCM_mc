@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block title %}{{ _('Import check') }} — CSCM Tool{% endblock %}
+{% block content %}
+<div class="page-header"><h1>{{ _('Import check') }}: {{ filename }}</h1></div>
+<div class="card">
+  <div class="flash flash--{{ 'success' if report.ok else 'error' }}" role="status">
+    {% if report.ok %}{{ _('Every row is valid. Nothing has been created yet.') }}{% else %}{{ report.error_count }} {{ _('row(s) have problems. Nothing has been created.') }}{% endif %}
+  </div>
+  <p>
+    <span class="chip">{{ report.row_count }} {{ _('rows') }}</span>
+    <span class="chip">{{ report.would_create }} {{ _('would be created') }}</span>
+    <span class="chip">{{ report.would_update }} {{ _('would be revised') }}</span>
+    <span class="chip">{{ report.unchanged }} {{ _('unchanged') }}</span>
+    <span class="chip">{{ report.warning_count }} {{ _('warning(s)') }}</span>
+    <span class="chip">{{ _('mode') }}: {{ report.mode }}</span>
+  </p>
+  <table>
+    <caption class="visually-hidden">{{ _('Result per row') }}</caption>
+    <thead><tr><th scope="col">{{ _('Row') }}</th><th scope="col">{{ _('Result') }}</th><th scope="col">{{ _('Problems and warnings') }}</th></tr></thead>
+    <tbody>
+      {% for r in report.rows if r.errors or r.warnings or r.action != 'create' %}
+      <tr>
+        <td>{{ r.row }}</td>
+        <td>{{ _('error') if r.errors else r.action }}</td>
+        <td>
+          {% for e in r.errors %}<div><strong>{{ e.column or '—' }}</strong>{% if e.value %} = "{{ e.value }}"{% endif %}: {{ e.message }}{% if e.hint %} <span class="muted">— {{ e.hint }}</span>{% endif %}</div>{% endfor %}
+          {% for w in r.warnings %}<div class="muted">⚠ {{ w }}</div>{% endfor %}
+        </td>
+      </tr>
+      {% else %}
+      <tr><td colspan="3" class="table-empty">{{ _('All rows are clean.') }}</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  <div class="btn-row" style="margin-top:12px"><a class="btn" href="{{ url_for('ui.import_new') }}">{{ _('Back to import') }}</a></div>
+</div>
+{% endblock %}

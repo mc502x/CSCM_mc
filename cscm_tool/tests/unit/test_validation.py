@@ -1,4 +1,9 @@
-"""FR-022, FR-027 cross-field rules from docs/06-data-dictionary.md."""
+"""FR-022, FR-027 field rules from docs/06-data-dictionary.md, v3
+(2026-09-17). Note: the old Safety-category/Alarm-Behaviour and Auto-reset/
+delay cross-field rules are retired (docs/13-test-strategy.md) since the
+real data model doesn't support them — status_category is now a 3-value
+enum, alarm is a plain boolean, and reset/brake are numeric program
+references, none of which carry the old semantics."""
 
 from app.services.validation import validate_revision_fields
 
@@ -6,12 +11,11 @@ BASE_VALID_DATA = {
     "title": "Converter Grid Undervoltage Trip",
     "description": "Triggered when converter DC-link voltage falls below threshold.",
     "software_version": "4.12.0",
-    "status_category": "FAULT",
-    "reset_program": "MANUAL",
-    "alarm_behaviour": "SELF_CLEARING",
-    "brake_program": "BP-NONE",
-    "delay_before_alarm_seconds": 0,
-    "delay_before_reset_seconds": 0,
+    "status_category": "ERROR",
+    "available_group": 27,
+    "alarm_flag": True,
+    "set_delay": "10ms",
+    "reset_delay": "2min",
     "turbine_platforms": ["3XM"],
 }
 
@@ -37,55 +41,40 @@ def test_title_must_not_equal_description():
     assert any(e["field"] == "title" for e in errors)
 
 
-def test_software_version_format():
-    errors = validate_revision_fields({**BASE_VALID_DATA, "software_version": "not-a-version"})
-    assert any(e["field"] == "software_version" for e in errors)
-    assert validate_revision_fields({**BASE_VALID_DATA, "software_version": "4.12"}) == []
+def test_status_category_must_be_error_warning_or_info():
+    errors = validate_revision_fields({**BASE_VALID_DATA, "status_category": "SAFETY"})
+    assert any(e["field"] == "status_category" for e in errors)
+    for value in ("ERROR", "WARNING", "INFO"):
+        assert validate_revision_fields({**BASE_VALID_DATA, "status_category": value}) == []
 
 
-def test_escalating_alarm_requires_delay():
-    errors = validate_revision_fields(
-        {**BASE_VALID_DATA, "alarm_behaviour": "ESCALATING", "delay_before_alarm_seconds": 0}
-    )
-    assert any(e["field"] == "delay_before_alarm_seconds" for e in errors)
-
-    ok = validate_revision_fields(
-        {**BASE_VALID_DATA, "alarm_behaviour": "ESCALATING", "delay_before_alarm_seconds": 5}
-    )
-    assert ok == []
+def test_set_delay_rejects_missing_unit():
+    errors = validate_revision_fields({**BASE_VALID_DATA, "set_delay": "10"})
+    assert any(e["field"] == "set_delay" for e in errors)
 
 
-def test_auto_reset_requires_delay():
-    errors = validate_revision_fields(
-        {**BASE_VALID_DATA, "reset_program": "AUTO", "delay_before_reset_seconds": 0}
-    )
-    assert any(e["field"] == "delay_before_reset_seconds" for e in errors)
+def test_set_delay_accepts_leading_star_and_units():
+    for value in ("10ms", "*500ms", "2min", "*0 ms", "1.5h", "3d"):
+        assert validate_revision_fields({**BASE_VALID_DATA, "set_delay": value}) == []
 
 
-def test_safety_category_requires_latching_or_escalating_alarm():
-    errors = validate_revision_fields(
-        {**BASE_VALID_DATA, "status_category": "SAFETY", "alarm_behaviour": "SILENT"}
-    )
-    assert any(e["field"] == "alarm_behaviour" for e in errors)
-
-    ok = validate_revision_fields(
-        {**BASE_VALID_DATA, "status_category": "SAFETY", "alarm_behaviour": "LATCHING"}
-    )
-    assert ok == []
-
-
-def test_emergency_brake_requires_fault_or_safety_category():
-    errors = validate_revision_fields(
-        {**BASE_VALID_DATA, "brake_program": "BP-4", "status_category": "OPERATIONAL"}
-    )
-    assert any(e["field"] == "brake_program" for e in errors)
-
-    ok = validate_revision_fields(
-        {**BASE_VALID_DATA, "brake_program": "BP-4", "status_category": "FAULT"}
-    )
-    assert ok == []
+def test_reset_delay_rejects_missing_unit():
+    errors = validate_revision_fields({**BASE_VALID_DATA, "reset_delay": "abc"})
+    assert any(e["field"] == "reset_delay" for e in errors)
 
 
 def test_turbine_platforms_required_when_provided_empty():
     errors = validate_revision_fields({**BASE_VALID_DATA, "turbine_platforms": []})
     assert any(e["field"] == "turbine_platforms" for e in errors)
+
+
+def test_number_of_times_repeated_must_be_at_least_one():
+    errors = validate_revision_fields({**BASE_VALID_DATA, "number_of_times_repeated": 0})
+    assert any(e["field"] == "number_of_times_repeated" for e in errors)
+    assert validate_revision_fields({**BASE_VALID_DATA, "number_of_times_repeated": 10}) == []
+
+
+def test_repeated_over_the_course_format():
+    errors = validate_revision_fields({**BASE_VALID_DATA, "repeated_over_the_course": "1day"})
+    assert any(e["field"] == "repeated_over_the_course" for e in errors)
+    assert validate_revision_fields({**BASE_VALID_DATA, "repeated_over_the_course": "1d"}) == []

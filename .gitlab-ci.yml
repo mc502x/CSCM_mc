@@ -1,0 +1,28 @@
+# GitLab CI on the internal GitLab server. docs/14 section 4.
+# Set PIP_INDEX_URL (CI/CD variable) to the internal package mirror when runners have no internet.
+stages: [verify, deploy-scripts]
+
+variables:
+  PIP_DISABLE_PIP_VERSION_CHECK: "1"
+
+verify:
+  stage: verify
+  image: python:3.12
+  before_script:
+    - cd cscm_tool
+    - python -m pip install -r requirements.txt
+  script:
+    # generate_test_report.py (pytest + coverage + black, ruff, mypy, bandit, pip-audit),
+    # then pg_readiness.py --check. Non-zero exit fails the pipeline.
+    - python scripts/ci.py --order shuffle:$CI_PIPELINE_IID
+  artifacts:
+    when: always
+    paths:
+      - docs/24-test-report.md
+
+deploy-scripts:
+  stage: deploy-scripts
+  image: python:3.12
+  script:
+    - bash -n cscm_tool/deploy/linux/install.sh
+    - PYTHON=python3 bash cscm_tool/deploy/linux/install.sh --dry-run

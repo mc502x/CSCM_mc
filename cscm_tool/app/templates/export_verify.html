@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}{{ _('Verify an export') }} — CSCM Tool{% endblock %}
+{% block content %}
+<div class="page-header"><h1>{{ _('Verify an exported file') }}</h1></div>
+<div class="card">
+  <dl class="kv">
+    <dt>{{ _('File') }}</dt><dd>{{ filename }}</dd>
+    <dt>SHA-256</dt><dd><code>{{ digest }}</code></dd>
+    <dt>{{ _('Produced by this system') }}</dt><dd>{% if matches %}<strong>{{ _('Yes') }}</strong> — {{ _('export') }} #{{ matches|map(attribute='id')|join(', #') }}, {{ matches[0].created_at }}{% else %}<strong>{{ _('No record of this exact file') }}</strong> ({{ _('it was changed after export, or it came from somewhere else') }}){% endif %}</dd>
+    {% if verification %}
+    <dt>{{ _('Listed in manifest') }}</dt><dd>{{ _('Yes') if verification.file_listed else _('No') }}</dd>
+    <dt>{{ _('Manifest signature') }}</dt><dd>{{ verification.signature }}</dd>
+    <dt>{{ _('Overall') }}</dt><dd><strong>{{ _('OK') if verification.ok else _('NOT OK') }}</strong></dd>
+    {% endif %}
+  </dl>
+  <a class="btn" href="{{ url_for('ui.export_center') }}">{{ _('Back to Export Center') }}</a>
+</div>
+{% endblock %}

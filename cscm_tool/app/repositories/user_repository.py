@@ -1,6 +1,7 @@
 """See docs/17-implementation-backlog.md US-009 (RBAC + Engineering Domain tags)."""
 
 from sqlalchemy import func, or_
+from werkzeug.exceptions import NotFound
 
 from app.extensions import db
 from app.models.lookup import LookupEngineeringDomain, Role
@@ -10,6 +11,13 @@ from app.repositories.base import BaseRepository
 
 class UserRepository(BaseRepository[User]):
     model = User
+
+    def get_or_404(self, id_: int) -> User:
+        """A deleted account (BR-025) is gone for every screen and every call."""
+        user = super().get_or_404(id_)
+        if user.deleted_at is not None:
+            raise NotFound(f"User {id_} not found")
+        return user
 
     def get_by_identifier(self, identifier: str) -> User | None:
         """Looks up by username or email, per FR-001 ("username/email and password")."""
@@ -48,3 +56,6 @@ class UserRepository(BaseRepository[User]):
             raise ValueError(f"Unknown engineering domain code(s): {sorted(missing)}")
         for domain in domains:
             db.session.add(UserEngineeringDomain(user_id=user.id, engineering_domain_id=domain.id))
+
+    def list(self) -> list[User]:
+        return list(db.session.query(User).filter(User.deleted_at.is_(None)).all())

@@ -1,0 +1,736 @@
+{
+ "date": "2026-10-24",
+ "method": "sample-of-160+mechanical",
+ "sample_size": 160,
+ "sample_seed": 410,
+ "haircut": {
+  "de": 4,
+  "fr": 4,
+  "es": 4,
+  "it": 4,
+  "da": 6,
+  "hi": 9,
+  "ar": 10,
+  "bn": 11,
+  "mr": 11,
+  "te": 13,
+  "ta": 13,
+  "gu": 13,
+  "ur": 13,
+  "kn": 13,
+  "ml": 14,
+  "pa": 14,
+  "ka": 15,
+  "or": 16
+ },
+ "findings": {
+  "de": [
+   {
+    "english": "Never translated",
+    "translation": "Nie übersetzen",
+    "kind": "A",
+    "note": "reads as an instruction ('never translate'), not as a state"
+   },
+   {
+    "english": "Hub Controller group",
+    "translation": "Hub-Controller-Gruppe",
+    "kind": "A",
+    "note": "'Hub-Controller' here, 'Nabensteuerung' elsewhere"
+   },
+   {
+    "english": "Create Main Controller draft from this Hub code",
+    "translation": "Hauptsteuerungs-Entwurf aus diesem Hub-Code anlegen",
+    "kind": "A",
+    "note": "'Hauptsteuerung' here, 'Main-Controller' in the glossary"
+   },
+   {
+    "english": "Copy the signing secret now - it is shown only once:",
+    "translation": "Kopieren Sie das Signatur-Geheimnis jetzt – es wird nur einmal angezeigt:",
+    "kind": "A",
+    "note": "'Signatur-Geheimnis' is stiff; 'Signaturschlüssel' is usual"
+   },
+   {
+    "english": "Only a proposed change can be accepted.",
+    "translation": "Nur ein vorgeschlagener Änderungswunsch kann angenommen werden.",
+    "kind": "A",
+    "note": "'Änderungswunsch' where the rest says 'Änderungsantrag'"
+   },
+   {
+    "english": "SEC-010: only an Administrator closes a change set.",
+    "translation": "SEC-010: Nur ein Administrator schließt ein Änderungsset.",
+    "kind": "A",
+    "note": "'Änderungsset' where the rest says 'Änderungspaket'"
+   }
+  ],
+  "fr": [
+   {
+    "english": "Not yet published",
+    "translation": "Pas encore publiée",
+    "kind": "A",
+    "note": "feminine 'publiée' for a neutral label"
+   },
+   {
+    "english": "Deprecations",
+    "translation": "Obsolescences",
+    "kind": "A",
+    "note": "'Obsolescences' is stiff"
+   },
+   {
+    "english": "All rows are clean.",
+    "translation": "Toutes les lignes sont propres.",
+    "kind": "A",
+    "note": "'propres' for rows without errors; 'sans erreur' is usual"
+   },
+   {
+    "english": "I have reviewed these dependants",
+    "translation": "J'ai relu ces dépendances",
+    "kind": "A",
+    "note": "'dépendances' instead of 'codes dépendants'"
+   }
+  ],
+  "es": [
+   {
+    "english": "Request a Sign-Off",
+    "translation": "Solicitar conformidad",
+    "kind": "A",
+    "note": "'conformidad' for sign-off; 'visto bueno' or 'firma' is usual"
+   },
+   {
+    "english": "Deprecations",
+    "translation": "Obsolescencias",
+    "kind": "A",
+    "note": "'Obsolescencias' is stiff"
+   },
+   {
+    "english": "All rows are clean.",
+    "translation": "Todas las filas están limpias.",
+    "kind": "A",
+    "note": "'limpias' for rows without errors"
+   },
+   {
+    "english": "All required sign-offs are in, but this is still a Draft — the Reviewer and Administrator only see it after you choose Submit for Review below.",
+    "translation": "Todas las conformidades requeridas están, pero sigue siendo un borrador — el revisor y el administrador solo lo ven después de que elija Enviar a revisión más abajo.",
+    "kind": "A",
+    "note": "'conformidades', as in 34"
+   },
+   {
+    "english": "Cross-domain sign-off (last 90 days)",
+    "translation": "Conformidad entre ámbitos (últimos 90 días)",
+    "kind": "A",
+    "note": "'entre ámbitos' for cross-domain is vague"
+   },
+   {
+    "english": "I have reviewed these dependants",
+    "translation": "He revisado estos dependientes",
+    "kind": "A",
+    "note": "'dependientes' instead of 'códigos dependientes'"
+   }
+  ],
+  "it": [
+   {
+    "english": "Deprecations",
+    "translation": "Obsolescenze",
+    "kind": "A",
+    "note": "'Obsolescenze' is stiff"
+   },
+   {
+    "english": "All rows are clean.",
+    "translation": "Tutte le righe sono a posto.",
+    "kind": "A",
+    "note": "'a posto' is colloquial"
+   },
+   {
+    "english": "A code whose change request was withdrawn stays as an empty shell: it keeps its number, legacy number and PrgIdx_GUi, so the same program or row cannot be imported again. Delete it here to free them. Deleting is final and is written to the audit log.",
+    "translation": "Un codice la cui richiesta di modifica è stata ritirata resta come guscio vuoto: conserva il suo numero, il vecchio numero e il PrgIdx_GUi, quindi lo stesso programma o la stessa riga non può essere importato di nuovo. Eliminalo qui per liberarli. L'eliminazione è definitiva e viene scritta nel registro di audit.",
+    "kind": "A",
+    "note": "informal address (tu) in an interface that otherwise uses Lei"
+   },
+   {
+    "english": "Copy the signing secret now - it is shown only once:",
+    "translation": "Copiare ora il segreto di firma: viene mostrato una sola volta:",
+    "kind": "A",
+    "note": "infinitive 'Copiare' where the rest uses the formal imperative"
+   },
+   {
+    "english": "I have reviewed these dependants",
+    "translation": "Ho rivisto questi dipendenti",
+    "kind": "A",
+    "note": "'dipendenti' instead of 'codici dipendenti'"
+   }
+  ],
+  "da": [
+   {
+    "english": "Full Name",
+    "translation": "Fulde navn",
+    "kind": "E",
+    "note": "'Fulde navn' should be 'Fuldt navn'"
+   },
+   {
+    "english": "Deprecations",
+    "translation": "Forældelser",
+    "kind": "A",
+    "note": "'Forældelser' is stiff"
+   },
+   {
+    "english": "All rows are clean.",
+    "translation": "Alle rækker er rene.",
+    "kind": "A",
+    "note": "'rene' for rows without errors"
+   },
+   {
+    "english": "Controller software versions this Release is for (optional)",
+    "translation": "Styringssoftwareversioner, denne udgivelse er til (valgfrit)",
+    "kind": "A",
+    "note": "awkward relative clause"
+   }
+  ],
+  "hi": [
+   {
+    "english": "Reference number in the separate escalation code pool — not a CSCM Tool status code.",
+    "translation": "अलग वृद्धिकरण कोड पूल में संदर्भ क्रमांक — CSCM Tool का स्थिति कोड नहीं।",
+    "kind": "E",
+    "note": "'वृद्धिकरण' means increase, not escalation"
+   },
+   {
+    "english": "New change set",
+    "translation": "नया परिवर्तन समूह",
+    "kind": "A",
+    "note": "'परिवर्तन समूह' here, 'समुच्चय' in 123 and 149"
+   },
+   {
+    "english": "All rows are clean.",
+    "translation": "सभी पंक्तियाँ साफ़ हैं।",
+    "kind": "A",
+    "note": "'साफ़' for rows without errors"
+   },
+   {
+    "english": "Copy the signing secret now - it is shown only once:",
+    "translation": "हस्ताक्षर रहस्य अभी कॉपी करें - यह केवल एक बार दिखाया जाता है:",
+    "kind": "A",
+    "note": "literal rendering of 'signing secret'"
+   },
+   {
+    "english": "Controller software versions this Release is for (optional)",
+    "translation": "नियंत्रक सॉफ़्टवेयर संस्करण जिनके लिए यह रिलीज़ है (वैकल्पिक)",
+    "kind": "A",
+    "note": "word order"
+   },
+   {
+    "english": "Opens a Draft that must go through the full dual-review and Chief Engineer approval cycle before it takes effect.",
+    "translation": "एक मसौदा खोलता है जिसे प्रभावी होने से पहले पूरे दोहरी समीक्षा और मुख्य अभियंता अनुमोदन चक्र से गुज़रना होता है।",
+    "kind": "A",
+    "note": "gender agreement ('पूरे दोहरी')"
+   },
+   {
+    "english": "Your entries compared with the stored values",
+    "translation": "आपकी प्रविष्टियाँ संग्रहीत मानों से तुलना में",
+    "kind": "A",
+    "note": "fragment"
+   },
+   {
+    "english": "Name of the change set (optional)",
+    "translation": "परिवर्तन समुच्चय का नाम (वैकल्पिक)",
+    "kind": "A",
+    "note": "'समुच्चय' where 44 says 'समूह'"
+   }
+  ],
+  "ar": [
+   {
+    "english": "opens a new revision",
+    "translation": "يفتح تنقيحًا جديدًا",
+    "kind": "E",
+    "note": "revision is 'تنقيح' here and 'مراجعة' elsewhere, which also means review"
+   },
+   {
+    "english": "Send back",
+    "translation": "إعادة",
+    "kind": "A",
+    "note": "'إعادة' alone for Send back is incomplete"
+   },
+   {
+    "english": "Webhook not found",
+    "translation": "خطاف الويب غير موجود",
+    "kind": "A",
+    "note": "'خطاف الويب' is a literal rendering of webhook"
+   },
+   {
+    "english": "Reinstatement reason",
+    "translation": "سبب إعادة العمل",
+    "kind": "A",
+    "note": "'إعادة العمل' for reinstatement is vague"
+   }
+  ],
+  "bn": [
+   {
+    "english": "All rows are clean.",
+    "translation": "সব সারি পরিষ্কার।",
+    "kind": "A",
+    "note": "'পরিষ্কার' for rows without errors"
+   },
+   {
+    "english": "A code whose change request was withdrawn stays as an empty shell: it keeps its number, legacy number and PrgIdx_GUi, so the same program or row cannot be imported again. Delete it here to free them. Deleting is final and is written to the audit log.",
+    "translation": "যে কোডের পরিবর্তন অনুরোধ প্রত্যাহার করা হয়েছে সেটি খালি খোলস হিসেবে থেকে যায়: এটি তার নম্বর, পুরনো নম্বর ও PrgIdx_GUi ধরে রাখে, ফলে একই প্রোগ্রাম বা সারি আবার আমদানি করা যায় না। এগুলি মুক্ত করতে এখানে মুছে ফেলুন। মোছা চূড়ান্ত এবং অডিট লগে লেখা হয়।",
+    "kind": "A",
+    "note": "'এগুলি' and 'এগুলো' mixed"
+   },
+   {
+    "english": "Copy the signing secret now - it is shown only once:",
+    "translation": "সাইনিং সিক্রেট এখনই কপি করুন - এটি শুধু একবার দেখানো হয়:",
+    "kind": "A",
+    "note": "transliterated 'সিক্রেট'"
+   },
+   {
+    "english": "User deleted; its name and address are erased, what it did stays attributable.",
+    "translation": "ব্যবহারকারী মুছে ফেলা হয়েছে; তার নাম ও ঠিকানা মুছে ফেলা হয়েছে, সে যা করেছে তা আরোপযোগ্য থাকে।",
+    "kind": "A",
+    "note": "'আরোপযোগ্য' is unusual"
+   },
+   {
+    "english": "Opens a Draft that must go through the full dual-review and Chief Engineer approval cycle before it takes effect.",
+    "translation": "একটি খসড়া খোলে যা কার্যকর হওয়ার আগে দ্বিগুণ পর্যালোচনা ও প্রধান প্রকৌশলীর অনুমোদনের পূর্ণ চক্র পার করতে হবে।",
+    "kind": "A",
+    "note": "'দ্বিগুণ' means doubled"
+   },
+   {
+    "english": "Your entries compared with the stored values",
+    "translation": "আপনার এন্ট্রি সংরক্ষিত মানের সঙ্গে তুলনায়",
+    "kind": "A",
+    "note": "fragment"
+   }
+  ],
+  "mr": [
+   {
+    "english": "Reference number in the separate escalation code pool — not a CSCM Tool status code.",
+    "translation": "वेगळ्या वाढ कोड संचातील संदर्भ क्रमांक — CSCM Tool चा स्थिती कोड नाही.",
+    "kind": "E",
+    "note": "'वाढ' (growth) for escalation"
+   },
+   {
+    "english": "Configuration",
+    "translation": "संरचना",
+    "kind": "A",
+    "note": "'संरचना' (structure) for Configuration"
+   },
+   {
+    "english": "All rows are clean.",
+    "translation": "सर्व ओळी स्वच्छ आहेत.",
+    "kind": "A",
+    "note": "'स्वच्छ' for rows without errors"
+   },
+   {
+    "english": "Copy the signing secret now - it is shown only once:",
+    "translation": "स्वाक्षरी गुपित आत्ताच कॉपी करा - ते फक्त एकदाच दाखवले जाते:",
+    "kind": "A",
+    "note": "literal rendering of 'signing secret'"
+   },
+   {
+    "english": "%(count)s codes have no confirmed access levels and are missing from every access-level file.",
+    "translation": "%(count)s कोडचे अॅक्सेस स्तर निश्चित नाहीत आणि ते प्रत्येक अॅक्सेस-स्तर फाइलमधून गायब आहेत.",
+    "kind": "A",
+    "note": "'अॅक्सेस' where the rest says 'प्रवेश'"
+   },
+   {
+    "english": "Your entries compared with the stored values",
+    "translation": "तुमच्या नोंदी जतन केलेल्या मूल्यांशी तुलनेत",
+    "kind": "A",
+    "note": "fragment"
+   }
+  ],
+  "te": [
+   {
+    "english": "All rows are clean.",
+    "translation": "అన్ని వరుసలు శుభ్రంగా ఉన్నాయి.",
+    "kind": "A",
+    "note": "'శుభ్రంగా' for rows without errors"
+   },
+   {
+    "english": "A code whose change request was withdrawn stays as an empty shell: it keeps its number, legacy number and PrgIdx_GUi, so the same program or row cannot be imported again. Delete it here to free them. Deleting is final and is written to the audit log.",
+    "translation": "మార్పు అభ్యర్థన ఉపసంహరించిన కోడ్ ఖాళీ గూడుగా మిగులుతుంది: అది తన సంఖ్య, పాత సంఖ్య, PrgIdx_GUi ను ఉంచుకుంటుంది, అందువల్ల అదే ప్రోగ్రామ్ లేదా అడ్డు వరస మళ్లీ దిగుమతి కాదు. వాటిని విడిపించడానికి ఇక్కడ తొలగించండి. తొలగింపు తుది నిర్ణయం మరియు ఆడిట్ లాగ్‌లో నమోదవుతుంది.",
+    "kind": "A",
+    "note": "'అడ్డు వరస' where the rest says 'వరుస'"
+   },
+   {
+    "english": "Copy the signing secret now - it is shown only once:",
+    "translation": "సంతకం రహస్యాన్ని ఇప్పుడే కాపీ చేయండి - ఇది ఒక్కసారి మాత్రమే చూపబడుతుంది:",
+    "kind": "A",
+    "note": "literal rendering of 'signing secret'"
+   },
+   {
+    "english": "Internal network only. Tokens can only read; webhooks can only reach private addresses.",
+    "translation": "అంతర్గత నెట్‌వర్క్ మాత్రమే. టోకెన్లు చదవగలవు మాత్రమే; వెబ్‌హుక్‌లు ప్రైవేట్ చిరునామాలను మాత్రమే చేరగలవు.",
+    "kind": "A",
+    "note": "word order of 'చదవగలవు మాత్రమే'"
+   },
+   {
+    "english": "Your entries compared with the stored values",
+    "translation": "మీ నమోదులు నిల్వ చేసిన విలువలతో పోలిక",
+    "kind": "A",
+    "note": "fragment"
+   }
+  ],
+  "ta": [
+   {
+    "english": "Reference number in the separate escalation code pool — not a CSCM Tool status code.",
+    "translation": "தனி மேல்முறையீட்டுக் குறியீட்டுத் தொகுப்பிலுள்ள குறிப்பு எண் — CSCM Tool நிலைக் குறியீடு அல்ல.",
+    "kind": "E",
+    "note": "'மேல்முறையீடு' means appeal, not escalation"
+   },
+   {
+    "english": "Change thresholds",
+    "translation": "வரம்புகளை மாற்றவும்",
+    "kind": "A",
+    "note": "'மாற்றவும்' where the buttons say 'மாற்று'"
+   },
+   {
+    "english": "All rows are clean.",
+    "translation": "அனைத்து வரிசைகளும் சுத்தமானவை.",
+    "kind": "A",
+    "note": "'சுத்தமானவை' for rows without errors"
+   },
+   {
+    "english": "Cross-domain sign-off (last 90 days)",
+    "translation": "துறைகள் கடந்த கையொப்பம் (கடந்த 90 நாட்கள்)",
+    "kind": "A",
+    "note": "'துறைகள் கடந்த' is stiff"
+   },
+   {
+    "english": "Copy the signing secret now - it is shown only once:",
+    "translation": "கையொப்ப ரகசியத்தை இப்போதே நகலெடுக்கவும் - இது ஒருமுறை மட்டுமே காட்டப்படும்:",
+    "kind": "A",
+    "note": "literal rendering of 'signing secret'"
+   },
+   {
+    "english": "Opens a Draft that must go through the full dual-review and Chief Engineer approval cycle before it takes effect.",
+    "translation": "நடைமுறைக்கு வரும் முன் முழு இரட்டை மதிப்பாய்வு, தலைமைப் பொறியாளர் ஒப்புதல் சுழற்சியைக் கடக்க வேண்டிய வரைவைத் திறக்கிறது.",
+    "kind": "A",
+    "note": "long, hard to read"
+   },
+   {
+    "english": "I have reviewed these dependants",
+    "translation": "இந்தச் சார்ந்தவற்றை நான் மதிப்பாய்வு செய்துவிட்டேன்",
+    "kind": "A",
+    "note": "'சார்ந்தவற்றை' without a noun"
+   }
+  ],
+  "gu": [
+   {
+    "english": "would be revised",
+    "translation": "સુધારાત",
+    "kind": "E",
+    "note": "'સુધારાત' is not a usual form of 'would be revised'"
+   },
+   {
+    "english": "All rows are clean.",
+    "translation": "બધી પંક્તિઓ સ્વચ્છ છે.",
+    "kind": "A",
+    "note": "'સ્વચ્છ' for rows without errors"
+   },
+   {
+    "english": "Copy the signing secret now - it is shown only once:",
+    "translation": "સહી રહસ્ય હમણાં જ કૉપિ કરો - તે ફક્ત એક જ વાર બતાવાય છે:",
+    "kind": "A",
+    "note": "literal rendering of 'signing secret'"
+   },
+   {
+    "english": "User deleted; its name and address are erased, what it did stays attributable.",
+    "translation": "વપરાશકર્તા કાઢી નાખ્યો; તેનું નામ અને સરનામું ભૂંસાયા છે, તેણે જે કર્યું તે આરોપણીય રહે છે.",
+    "kind": "A",
+    "note": "'આરોપણીય' is unusual"
+   },
+   {
+    "english": "Opens a Draft that must go through the full dual-review and Chief Engineer approval cycle before it takes effect.",
+    "translation": "એક મુસદ્દો ખોલે છે જેણે અમલમાં આવતા પહેલાં બેવડી સમીક્ષા અને મુખ્ય ઇજનેરની મંજૂરીના સંપૂર્ણ ચક્રમાંથી પસાર થવું પડે.",
+    "kind": "A",
+    "note": "grammar of the relative clause"
+   },
+   {
+    "english": "Your entries compared with the stored values",
+    "translation": "તમારી નોંધો સંગ્રહિત મૂલ્યો સાથે સરખામણીમાં",
+    "kind": "A",
+    "note": "fragment"
+   },
+   {
+    "english": "I have reviewed these dependants",
+    "translation": "મેં આ આશ્રિતોની સમીક્ષા કરી છે",
+    "kind": "A",
+    "note": "'આશ્રિતો' without a noun"
+   }
+  ],
+  "ur": [
+   {
+    "english": "Reference number in the separate escalation code pool — not a CSCM Tool status code.",
+    "translation": "الگ اضافی کوڈ پول میں حوالہ نمبر — CSCM Tool کا اسٹیٹس کوڈ نہیں۔",
+    "kind": "E",
+    "note": "'اضافی' means additional, not escalation"
+   },
+   {
+    "english": "New change set",
+    "translation": "نیا تبدیلیوں کا مجموعہ",
+    "kind": "A",
+    "note": "gender and number agreement ('نیا ... مجموعہ')"
+   },
+   {
+    "english": "All rows are clean.",
+    "translation": "تمام سطریں صاف ہیں۔",
+    "kind": "A",
+    "note": "'صاف' for rows without errors"
+   },
+   {
+    "english": "Copy the signing secret now - it is shown only once:",
+    "translation": "دستخطی راز ابھی کاپی کریں - یہ صرف ایک بار دکھایا جاتا ہے:",
+    "kind": "A",
+    "note": "literal rendering of 'signing secret'"
+   },
+   {
+    "english": "No change sets yet.",
+    "translation": "ابھی کوئی تبدیلیوں کا مجموعہ نہیں۔",
+    "kind": "A",
+    "note": "word order"
+   },
+   {
+    "english": "I have reviewed these dependants",
+    "translation": "میں نے ان منحصر کوڈ کا جائزہ لے لیا ہے",
+    "kind": "A",
+    "note": "'منحصر' without a noun"
+   }
+  ],
+  "kn": [
+   {
+    "english": "User deleted; its name and address are erased, what it did stays attributable.",
+    "translation": "ಬಳಕೆದಾರರನ್ನು ಅಳಿಸಲಾಗಿದೆ; ಅವರ ಹೆಸರು ಮತ್ತು ವಿಳಾಸ ಅಳಿಸಲ್ಪಟ್ಟಿವೆ, ಅವರು ಮಾಡಿದ್ದು ಆರೋಪಿಸಬಹುದಾದಂತೆ ಉಳಿಯುತ್ತದೆ.",
+    "kind": "E",
+    "note": "'ಆರೋಪಿಸಬಹುದಾದ' means accusable, not attributable"
+   },
+   {
+    "english": "Deprecations",
+    "translation": "ಹಳತಾಗಿಸುವಿಕೆಗಳು",
+    "kind": "A",
+    "note": "'ಹಳತಾಗಿಸುವಿಕೆಗಳು' is unnatural"
+   },
+   {
+    "english": "Deprecate replaced Hub codes",
+    "translation": "ಬದಲಾಯಿಸಿದ ಹಬ್ ಕೋಡ್‌ಗಳನ್ನು ಹಳತಾಗಿಸಿ",
+    "kind": "A",
+    "note": "'ಹಳತಾಗಿಸಿ' is unnatural"
+   },
+   {
+    "english": "Reference number in the separate escalation code pool — not a CSCM Tool status code.",
+    "translation": "ಪ್ರತ್ಯೇಕ ಉಲ್ಬಣ ಕೋಡ್ ಪೂಲ್‌ನಲ್ಲಿರುವ ಉಲ್ಲೇಖ ಸಂಖ್ಯೆ — CSCM Tool ಸ್ಥಿತಿ ಕೋಡ್ ಅಲ್ಲ.",
+    "kind": "A",
+    "note": "'ಉಲ್ಬಣ' (aggravation) for escalation"
+   },
+   {
+    "english": "All rows are clean.",
+    "translation": "ಎಲ್ಲಾ ಸಾಲುಗಳು ಸ್ವಚ್ಛವಾಗಿವೆ.",
+    "kind": "A",
+    "note": "'ಸ್ವಚ್ಛ' for rows without errors"
+   },
+   {
+    "english": "Copy the signing secret now - it is shown only once:",
+    "translation": "ಸಹಿ ರಹಸ್ಯವನ್ನು ಈಗಲೇ ನಕಲಿಸಿ - ಇದನ್ನು ಒಮ್ಮೆ ಮಾತ್ರ ತೋರಿಸಲಾಗುತ್ತದೆ:",
+    "kind": "A",
+    "note": "literal rendering of 'signing secret'"
+   },
+   {
+    "english": "%(count)s codes have no confirmed access levels and are missing from every access-level file.",
+    "translation": "%(count)s ಕೋಡ್‌ಗಳಿಗೆ ದೃಢೀಕೃತ ಪ್ರವೇಶ ಹಂತಗಳಿಲ್ಲ ಮತ್ತು ಅವು ಪ್ರತಿ ಪ್ರವೇಶ-ಹಂತ ಫೈಲ್‌ನಿಂದ ಕಾಣೆಯಾಗಿವೆ.",
+    "kind": "A",
+    "note": "'ಪ್ರವೇಶ' and 'ಆಕ್ಸೆಸ್' mixed"
+   },
+   {
+    "english": "I have reviewed these dependants",
+    "translation": "ನಾನು ಈ ಅವಲಂಬಿತಗಳನ್ನು ಪರಿಶೀಲಿಸಿದ್ದೇನೆ",
+    "kind": "A",
+    "note": "'ಅವಲಂಬಿತ' without a noun"
+   }
+  ],
+  "ml": [
+   {
+    "english": "User deleted; its name and address are erased, what it did stays attributable.",
+    "translation": "ഉപയോക്താവിനെ ഇല്ലാതാക്കി; പേരും വിലാസവും മായ്ച്ചു, അവർ ചെയ്തത് ആരോപിക്കാവുന്നതായി തുടരും.",
+    "kind": "E",
+    "note": "'ആരോപിക്കാവുന്ന' means accusable, not attributable"
+   },
+   {
+    "english": "Reference number in the separate escalation code pool — not a CSCM Tool status code.",
+    "translation": "വേറിട്ട വർദ്ധന കോഡ് പൂളിലെ റഫറൻസ് നമ്പർ — CSCM Tool സ്റ്റാറ്റസ് കോഡ് അല്ല.",
+    "kind": "A",
+    "note": "'വർദ്ധന' (increase) for escalation"
+   },
+   {
+    "english": "FR-021a: an identifier override requires a documented reason.",
+    "translation": "FR-021a: ഐഡന്റിഫയർ അസാധുവാക്കലിന് രേഖപ്പെടുത്തിയ കാരണം വേണം.",
+    "kind": "A",
+    "note": "'അസാധുവാക്കൽ' means invalidation, not override"
+   },
+   {
+    "english": "Copy the signing secret now - it is shown only once:",
+    "translation": "ഒപ്പിടൽ രഹസ്യം ഇപ്പോൾ പകർത്തുക - ഇത് ഒരു തവണ മാത്രമേ കാണിക്കൂ:",
+    "kind": "A",
+    "note": "literal rendering of 'signing secret'"
+   },
+   {
+    "english": "All rows are clean.",
+    "translation": "എല്ലാ വരികളും വൃത്തിയാണ്.",
+    "kind": "A",
+    "note": "'വൃത്തിയാണ്' for rows without errors"
+   },
+   {
+    "english": "fixed: it identifies you, also for the Windows sign-in",
+    "translation": "സ്ഥിരം: ഇത് നിങ്ങളുടെ തിരിച്ചറിയൽ ആണ്, വിൻഡോസ് സൈൻ-ഇനും ഇതുതന്നെ",
+    "kind": "A",
+    "note": "meaning shifts ('ഇതുതന്നെ')"
+   }
+  ],
+  "pa": [
+   {
+    "english": "Copy the signing secret now - it is shown only once:",
+    "translation": "ਦਸਤਖ਼ਤ ਗੁਪਤ ਹੁਣੇ ਕਾਪੀ ਕਰੋ - ਇਹ ਸਿਰਫ਼ ਇੱਕ ਵਾਰ ਦਿਖਾਇਆ ਜਾਂਦਾ ਹੈ:",
+    "kind": "E",
+    "note": "incomplete phrase 'ਦਸਤਖ਼ਤ ਗੁਪਤ'"
+   },
+   {
+    "english": "Verify",
+    "translation": "ਪੜਤਾਲੋ",
+    "kind": "A",
+    "note": "'ਪੜਤਾਲੋ' is an informal imperative; the rest uses 'ਕਰੋ'"
+   },
+   {
+    "english": "Deprecations",
+    "translation": "ਬੰਦ ਕਰਨ ਦੀਆਂ ਕਾਰਵਾਈਆਂ",
+    "kind": "A",
+    "note": "'ਬੰਦ ਕਰਨ ਦੀਆਂ ਕਾਰਵਾਈਆਂ' means closing actions"
+   },
+   {
+    "english": "Reference number in the separate escalation code pool — not a CSCM Tool status code.",
+    "translation": "ਵੱਖਰੇ ਵਾਧਾ ਕੋਡ ਪੂਲ ਵਿੱਚ ਹਵਾਲਾ ਨੰਬਰ — CSCM Tool ਦਾ ਸਥਿਤੀ ਕੋਡ ਨਹੀਂ।",
+    "kind": "A",
+    "note": "'ਵਾਧਾ' (increase) for escalation"
+   },
+   {
+    "english": "User deleted; its name and address are erased, what it did stays attributable.",
+    "translation": "ਵਰਤੋਂਕਾਰ ਮਿਟਾਇਆ ਗਿਆ; ਉਸਦਾ ਨਾਮ ਅਤੇ ਪਤਾ ਮਿਟਾ ਦਿੱਤੇ ਗਏ, ਜੋ ਉਸਨੇ ਕੀਤਾ ਉਹ ਪਛਾਣਯੋਗ ਰਹਿੰਦਾ ਹੈ।",
+    "kind": "A",
+    "note": "'ਮਿਟਾਇਆ' repeated in one sentence"
+   },
+   {
+    "english": "Saving again keeps your entries and replaces the stored values.",
+    "translation": "ਮੁੜ ਸੁਰੱਖਿਅਤ ਕਰਨ ਨਾਲ ਤੁਹਾਡੀਆਂ ਐਂਟਰੀਆਂ ਰਹਿੰਦੀਆਂ ਹਨ ਅਤੇ ਸਟੋਰ ਮੁੱਲ ਬਦਲ ਜਾਂਦੇ ਹਨ।",
+    "kind": "A",
+    "note": "'ਸਟੋਰ' and 'ਸੁਰੱਖਿਅਤ' mixed"
+   },
+   {
+    "english": "Deprecate replaced Hub codes",
+    "translation": "ਬਦਲੇ ਗਏ ਹੱਬ ਕੋਡ ਬੰਦ ਕਰੋ",
+    "kind": "A",
+    "note": "'ਬੰਦ ਕਰੋ' means close, not deprecate"
+   }
+  ],
+  "ka": [
+   {
+    "english": "Deprecations",
+    "translation": "მოძველებები",
+    "kind": "A",
+    "note": "'მოძველებები' is stiff"
+   },
+   {
+    "english": "Hub Controller group",
+    "translation": "კერის კონტროლერის ჯგუფი",
+    "kind": "A",
+    "note": "'კერის' where the glossary says 'ჰაბის'"
+   },
+   {
+    "english": "All rows are clean.",
+    "translation": "ყველა სტრიქონი სუფთაა.",
+    "kind": "A",
+    "note": "'სუფთაა' for rows without errors"
+   },
+   {
+    "english": "User deleted; its name and address are erased, what it did stays attributable.",
+    "translation": "მომხმარებელი წაიშალა; მისი სახელი და მისამართი წაშლილია, მისი ქმედებები კვლავ მიეკუთვნება.",
+    "kind": "A",
+    "note": "'მიეკუთვნება' is incomplete"
+   },
+   {
+    "english": "No Released codes yet.",
+    "translation": "გამოშვებული კოდები ჯერ არ არის.",
+    "kind": "A",
+    "note": "'გამოშვებული' where the rest says 'გამოქვეყნებული'"
+   },
+   {
+    "english": "Select the Approved, non-sandbox revisions to include, then Save. Publishing is immutable — a correction requires a new Release.",
+    "translation": "აირჩიეთ დამტკიცებული, არასანდბოქს რევიზიები ჩასართავად, შემდეგ შეინახეთ. გამოქვეყნება შეუქცევადია — შესწორებას ახალი რელიზი სჭირდება.",
+    "kind": "A",
+    "note": "word order"
+   },
+   {
+    "english": "fixed: it identifies you, also for the Windows sign-in",
+    "translation": "ფიქსირებულია: ის გაიდენტიფიცირებთ, Windows-ით შესვლისთვისაც",
+    "kind": "A",
+    "note": "'გაიდენტიფიცირებთ' is awkward"
+   }
+  ],
+  "or": [
+   {
+    "english": "A profile fixes the columns, their order and header labels, and optionally a default audience and language. Profiles are data: change them here, no deployment needed.",
+    "translation": "ପ୍ରୋଫାଇଲ୍ ସ୍ତମ୍ଭ, ସେମାନଙ୍କ କ୍ରମ ଓ ଶୀର୍ଷକ ଲେବଲ୍ ଏବଂ ବିକଳ୍ପ ଭାବେ ଡିଫଲ୍ଟ ଲକ୍ଷ୍ୟ ଗୋଷ୍ଠୀ ଓ ଭାଷା ସ୍ଥିର କରେ। ପ୍ରୋଫାଇଲ୍ ଡାଟା: ଏଠାରେ ବଦଳାନ୍ତୁ, ମୁତୟନ ଦରକାର ନାହିଁ।",
+    "kind": "E",
+    "note": "'ମୁତୟନ' is not a word for deployment"
+   },
+   {
+    "english": "Reference number in the separate escalation code pool — not a CSCM Tool status code.",
+    "translation": "ପୃଥକ ଉତ୍କଟତା କୋଡ୍ ପୁଲ୍‌ରେ ସନ୍ଦର୍ଭ ସଂଖ୍ୟା — CSCM Tool ସ୍ଥିତି କୋଡ୍ ନୁହେଁ।",
+    "kind": "E",
+    "note": "'ଉତ୍କଟତା' means intensity, not escalation"
+   },
+   {
+    "english": "Copy the signing secret now - it is shown only once:",
+    "translation": "ସାଇନିଂ ଗୁପ୍ତ ଏବେ କପି କରନ୍ତୁ - ଏହା କେବଳ ଥରେ ଦେଖାଯାଏ:",
+    "kind": "E",
+    "note": "incomplete phrase 'ସାଇନିଂ ଗୁପ୍ତ'"
+   },
+   {
+    "english": "User deleted; its name and address are erased, what it did stays attributable.",
+    "translation": "ଉପଯୋଗକର୍ତ୍ତା ଲିଭାଯାଇଛି; ତାଙ୍କ ନାମ ଓ ଠିକଣା ମାଡ଼ି ଦିଆଯାଇଛି, ସେ ଯାହା କରିଛନ୍ତି ତାହା ଚିହ୍ନଟଯୋଗ୍ୟ ରହେ।",
+    "kind": "E",
+    "note": "'ମାଡ଼ି ଦିଆଯାଇଛି' means pressed down, not erased"
+   },
+   {
+    "english": "No Released codes yet.",
+    "translation": "ଏପର୍ଯ୍ୟନ୍ତ ମୁକ୍ତ କୋଡ୍ ନାହିଁ।",
+    "kind": "E",
+    "note": "'ମୁକ୍ତ' means free, not released"
+   },
+   {
+    "english": "The current set of every Released status code, independent of any single Release.",
+    "translation": "ଗୋଟିଏ ରିଲିଜ୍‌ରୁ ସ୍ୱାଧୀନ ଭାବେ, ମୁକ୍ତ ହୋଇଥିବା ସମସ୍ତ ସ୍ଥିତି କୋଡ୍‌ର ବର୍ତ୍ତମାନ ସମୂହ।",
+    "kind": "E",
+    "note": "'ମୁକ୍ତ' means free, not released"
+   },
+   {
+    "english": "Deprecations",
+    "translation": "ପ୍ରଚଳନ ବନ୍ଦ",
+    "kind": "A",
+    "note": "'ପ୍ରଚଳନ ବନ୍ଦ' is a description, not a term"
+   },
+   {
+    "english": "All rows are clean.",
+    "translation": "ସମସ୍ତ ଧାଡ଼ି ସଫା।",
+    "kind": "A",
+    "note": "'ସଫା' for rows without errors"
+   },
+   {
+    "english": "opens a new revision",
+    "translation": "ନୂଆ ସଂସ୍କରଣ ଖୋଲେ",
+    "kind": "A",
+    "note": "'ସଂସ୍କରଣ' means version, not revision"
+   },
+   {
+    "english": "Copy from previous revision",
+    "translation": "ପୂର୍ବ ସଂସ୍କରଣରୁ ନକଲ କରନ୍ତୁ",
+    "kind": "A",
+    "note": "'ସଂସ୍କରଣ' means version, not revision"
+   }
+  ]
+ }
+}

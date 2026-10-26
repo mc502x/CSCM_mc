@@ -10,8 +10,8 @@ instance/
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
-.hypothesis/
 htmlcov/
+dist/
 .coverage
 .coverage.*
 
@@ -30,7 +30,6 @@ backups/
 # --- Environment / secrets ---
 .env
 .env.*
-!.env.example
 *.local
 
 # --- Editor / IDE ---
@@ -46,3 +45,12 @@ desktop.ini
 # --- Logs ---
 *.log
 logs/
+
+# --- Git ---
+git/
+.git/
+
+.obsidian/
+.claude/
+# a one-off check workbook
+stcd_check.xlsx

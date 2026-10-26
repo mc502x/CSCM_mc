@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% import "_macros.html" as macros %}
+{% block title %}{{ _('Stalled Requests') }} — CSCM Tool{% endblock %}
+{% block content %}
+<div class="page-header"><h1>{{ _('Stalled change requests') }}</h1></div>
+<p class="muted">{{ _('Requests waiting longer than the configured thresholds. Review: amber after') }} {{ thresholds.review.amber }}, {{ _('red after') }} {{ thresholds.review.red }} {{ _('business days') }}; {{ _('approval: amber after') }} {{ thresholds.approval.amber }}, {{ _('red after') }} {{ thresholds.approval.red }}. <a href="{{ url_for('ui.app_settings') }}">{{ _('Change thresholds') }}</a></p>
+
+<div class="card">
+  {% if rows %}
+  <table>
+    <caption class="visually-hidden">{{ _('Stalled change requests') }}</caption>
+    <thead><tr><th scope="col">CR</th><th scope="col">{{ _('Title') }}</th><th scope="col">{{ _('Stage') }}</th><th scope="col">{{ _('Waiting') }}</th><th scope="col">{{ _('Assigned Reviewer') }}</th><th scope="col">{{ _('Reassign') }}</th></tr></thead>
+    <tbody>
+      {% for cr, info in rows %}
+      <tr>
+        <td><a href="{{ url_for('ui.change_request_detail', cr_id=cr.id) }}">#{{ cr.id }}</a></td>
+        <td>{{ cr.revision.title }}</td>
+        <td>{{ info.stage }}</td>
+        <td>{{ macros.sla_badge(info) }}</td>
+        <td>{{ cr.assigned_reviewer.full_name if cr.assigned_reviewer else '—' }}</td>
+        <td>
+          {% if info.stage == 'review' and not cr.revision.reviewer_signoff_by %}
+          <form method="post" action="{{ url_for('ui.cr_assign_reviewer', cr_id=cr.id) }}" class="btn-row">
+            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+            <label class="visually-hidden" for="rv_{{ cr.id }}">{{ _('Reviewer') }}</label>
+            <select id="rv_{{ cr.id }}" name="reviewer_id">
+              <option value="">({{ _('unassigned') }})</option>
+              {% for u in reviewers if u.id != cr.requested_by %}<option value="{{ u.id }}" {{ 'selected' if cr.assigned_reviewer_id == u.id }}>{{ u.full_name }}</option>{% endfor %}
+            </select>
+            <button class="btn" type="submit">{{ _('Assign') }}</button>
+          </form>
+          {% else %}—{% endif %}
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% else %}
+  <div class="table-empty">{{ _('Nothing is stalled.') }}</div>
+  {% endif %}
+</div>
+
+<div class="card">
+  <h2>{{ _('Reviewer workload') }}</h2>
+  <table>
+    <thead><tr><th scope="col">{{ _('Reviewer') }}</th><th scope="col">{{ _('Open reviews') }}</th></tr></thead>
+    <tbody>{% for w in workloads %}<tr><td>{{ w.user.full_name }}</td><td>{{ w.load }}</td></tr>{% endfor %}</tbody>
+  </table>
+  <p class="muted">{{ _('Reviewers who are out of office (they have delegated) are left out.') }}</p>
+</div>
+{% endblock %}

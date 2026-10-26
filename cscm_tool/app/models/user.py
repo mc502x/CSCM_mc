@@ -20,6 +20,8 @@ class User(Base):
     last_login_at = db.Column(db.Text)
     failed_login_count = db.Column(db.Integer, nullable=False, default=0)
     locked_until = db.Column(db.Text)
+    ui_language = db.Column(db.Text, nullable=False, default="en")  # I-22
+    deleted_at = db.Column(db.Text)  # v4.9: an account deleted while it has history (BR-025)
 
     # cast(...) rather than a bare `: Role = db.relationship(...)` annotation:
     # db.relationship()'s declared return type is RelationshipProperty[Any],
@@ -31,6 +33,17 @@ class User(Base):
     engineering_domains: list["UserEngineeringDomain"] = cast(
         "list[UserEngineeringDomain]", db.relationship("UserEngineeringDomain", backref="user")
     )
+
+
+class UserPasswordHistory(Base):
+    """Hash of a retired password, for the last-5 reuse block (SEC policy §4)."""
+
+    __tablename__ = "user_password_history"
+
+    id = db.Column(db.Integer, primary_key=True)
+    user_id = db.Column(db.Integer, db.ForeignKey("user.id"), nullable=False)
+    password_hash = db.Column(db.Text, nullable=False)
+    retired_at = db.Column(db.Text, nullable=False)
 
 
 class UserEngineeringDomain(Base):

@@ -1,6 +1,8 @@
 """Password hashing and policy. SEC-001: Argon2id, plaintext/reversible
 storage prohibited absolutely. Policy per docs/11-security-architecture.md §4."""
 
+from pathlib import Path
+
 from argon2 import PasswordHasher
 from argon2.exceptions import VerifyMismatchError
 
@@ -8,13 +10,14 @@ _hasher = PasswordHasher()
 
 MIN_PASSWORD_LENGTH = 12
 
-# Placeholder blocklist pending a real breach-corpus source (a full corpus
-# cannot be bundled here without an internet fetch, which the no-cloud/
-# on-premises constraint prohibits at runtime — see docs/11-security-
-# architecture.md §12). Mirrors the Functional Subgroup placeholder pattern
-# in docs/06-data-dictionary.md §9a: replace with a real local corpus file
-# before go-live; this is a data change, not a code change.
-_COMMON_PASSWORD_BLOCKLIST = frozenset(
+# Breach-corpus blocklist. A full corpus cannot be fetched at runtime (the
+# no-cloud constraint, docs/11-security-architecture.md §12), so the list is
+# local data: the built-in entries below plus every line of
+# `seed_data/common_passwords.txt`. To use a larger corpus, replace that file
+# with one lowercase password per line before go-live — a data change, not a
+# code change. Only entries of at least MIN_PASSWORD_LENGTH characters can
+# ever match, so shorter ones are ignored.
+_BUILTIN_BLOCKLIST = frozenset(
     {
         "password123456",
         "123456789012",
@@ -25,6 +28,20 @@ _COMMON_PASSWORD_BLOCKLIST = frozenset(
         "letmein123456",
     }
 )
+
+
+def _load_blocklist() -> frozenset[str]:
+    path = Path(__file__).resolve().parents[2] / "seed_data" / "common_passwords.txt"
+    extra: set[str] = set()
+    if path.exists():
+        for line in path.read_text(encoding="utf-8").splitlines():
+            entry = line.strip().lower()
+            if entry and not entry.startswith("#") and len(entry) >= MIN_PASSWORD_LENGTH:
+                extra.add(entry)
+    return _BUILTIN_BLOCKLIST | extra
+
+
+_COMMON_PASSWORD_BLOCKLIST = _load_blocklist()
 
 
 def hash_password(plain_password: str) -> str:

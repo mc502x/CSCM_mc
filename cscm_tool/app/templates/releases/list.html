@@ -1,20 +1,21 @@
 {% extends "base.html" %}
-{% block title %}Releases — CSCM Tool{% endblock %}
+{% block title %}{{ _('Releases') }} — CSCM Tool{% endblock %}
 {% block content %}
 <div class="page-header">
-  <h1>Releases</h1>
+  <h1>{{ _('Releases') }}</h1>
   {% if current_user.role_code == 'ADMINISTRATOR' %}
-  <a class="btn btn--primary" href="{{ url_for('ui.release_new') }}">New Release</a>
+  <a class="btn btn--primary" href="{{ url_for('ui.release_new') }}">{{ _('New Release') }}</a>
   {% endif %}
 </div>
 <div class="card">
   {% if releases %}
   <table>
-    <thead><tr><th>Name</th><th>Version</th><th>Status</th><th>Items</th><th>Published</th></tr></thead>
+    <caption class="visually-hidden">{{ _('Releases') }}</caption>
+    <thead><tr><th scope="col">{{ _('Name') }}</th><th scope="col">{{ _('Version') }}</th><th scope="col">{{ _('Status') }}</th><th scope="col">{{ _('Items') }}</th><th scope="col">{{ _('Published') }}</th></tr></thead>
     <tbody>
       {% for r in releases %}
-      <tr onclick="window.location='{{ url_for('ui.release_detail', release_id=r.id) }}'" style="cursor:pointer">
-        <td>{{ r.name }}</td>
+      <tr data-href="{{ url_for('ui.release_detail', release_id=r.id) }}" class="row-link">
+        <td><a href="{{ url_for('ui.release_detail', release_id=r.id) }}">{{ r.name }}</a></td>
         <td>{{ r.version_label }}</td>
         <td>{{ r.status }}</td>
         <td>{{ r.item_count }}</td>
@@ -24,7 +25,7 @@
     </tbody>
   </table>
   {% else %}
-  <div class="table-empty">No releases yet.</div>
+  <div class="table-empty">{{ _('No releases yet.') }}</div>
   {% endif %}
 </div>
 {% endblock %}

@@ -1,13 +1,53 @@
 """User & RBAC administration. FR-010-FR-014, SEC-012, US-009/US-011/US-012."""
 
+import re
+
+from sqlalchemy import inspect as sa_inspect
+from sqlalchemy import text
+
 from app.auth.password import hash_password, validate_password_policy, verify_password
-from app.domain.errors import LastAdministratorError, PasswordPolicyError
+from app.auth.roles import OWNER_ASSIGNABLE, may_change_role
+from app.domain.authz import require_roles
+from app.domain.errors import (
+    ForbiddenError,
+    LastAdministratorError,
+    PasswordPolicyError,
+)
 from app.extensions import db
 from app.models.lookup import Role
-from app.models.user import User
+from app.models.user import User, UserPasswordHistory
 from app.repositories.user_repository import UserRepository
 from app.services.audit_service import AuditService
+from app.services.auth_service import AuthService
 from app.utils import utcnow_iso
+
+PASSWORD_HISTORY_DEPTH = 5  # 11-security-architecture.md §4
+
+EMAIL_FIXED = (
+    "The e-mail address cannot be changed: it identifies the person, also for the Windows sign-in "
+    "(FR-162). Deactivate the account or, if it was never used, delete it and create it again."
+)
+_EMAIL_RE = re.compile(r"^[^@\s]+@[^@\s]+\.[^@\s]+$")
+
+
+def normalise_email(value: str) -> str:
+    """The form an address is stored in: trimmed and lower-case (a Windows user name is not case
+    sensitive, so the match with it must not be either)."""
+    email = (value or "").strip().lower()
+    if not _EMAIL_RE.match(email):
+        raise ValueError("Enter a valid e-mail address (name@domain).")
+    return email
+
+
+# Rows that belong to the user alone and go with the account (BR-025). Anything else that points at
+# the user - a change request, a review, a release, an audit entry - is history that must stay
+# attributable, so a user with such rows is deactivated, never deleted.
+OWN_TABLES: tuple[tuple[str, str], ...] = (
+    ("user_engineering_domain", "user_id"),
+    ("user_password_history", "user_id"),
+    ("saved_search", "user_id"),
+    ("notification", "user_id"),
+)
 
 
 class UserService:
@@ -40,7 +80,19 @@ class UserService:
         if violations:
             raise PasswordPolicyError(violations)
 
-        role = db.session.query(Role).filter(Role.code == role_code).first()
+        email = normalise_email(email)
+        taken = db.session.execute(
+            text("SELECT 1 FROM user WHERE lower(email) = :e OR lower(username) = :u"),
+            {"e": email, "u": username.strip().lower()},
+        ).first()
+        if taken is not None:
+            raise ValueError("That e-mail address or username is already in use.")
+
+        role = (
+            db.session.query(Role).filter(Role.code == role_code).first()
+            if isinstance(role_code, str)
+            else None
+        )
         if role is None:
             raise ValueError(f"Unknown role code: {role_code}")
 
@@ -80,8 +132,21 @@ class UserService:
         role_code: str | None = None,
         engineering_domain_codes: list[str] | None = None,
         is_active: bool | None = None,
+        email: str | None = None,
         actor,
     ) -> User:
+        require_roles(actor, "ADMINISTRATOR", "STCD_OWNER")
+        if email is not None:
+            raise ValueError(EMAIL_FIXED)
+        if actor.role_code == "STCD_OWNER" and (
+            full_name is not None or engineering_domain_codes is not None or is_active is not None
+        ):
+            # BR-024: the owner changes roles, nothing else about a person.
+            raise ForbiddenError(
+                "BR-024: an StCd Owner may only change the role of a user, between "
+                + ", ".join(OWNER_ASSIGNABLE)
+                + "."
+            )
         user = UserService._repo.get_or_404(user_id)
 
         if full_name is not None and full_name != user.full_name:
@@ -97,9 +162,20 @@ class UserService:
             )
 
         if role_code is not None and role_code != user.role.code:
-            role = db.session.query(Role).filter(Role.code == role_code).first()
+            role = (
+                db.session.query(Role).filter(Role.code == role_code).first()
+                if isinstance(role_code, str)
+                else None
+            )
             if role is None:
                 raise ValueError(f"Unknown role code: {role_code}")
+            if not may_change_role(actor.role_code, user.role.code, role_code):
+                raise ForbiddenError(
+                    f"BR-024: a role change from {user.role.code} to {role_code} needs an "
+                    "Administrator; an StCd Owner may only move users between "
+                    + ", ".join(OWNER_ASSIGNABLE)
+                    + "."
+                )
             if (
                 user.role.code == "ADMINISTRATOR"
                 and UserService._repo.count_active_administrators(exclude_user_id=user.id) == 0
@@ -154,25 +230,154 @@ class UserService:
         return user
 
     @staticmethod
+    def usage(user_id: int) -> dict:
+        """What the user has done in the tool: the rows of every other table that point at them.
+        `deletable` is true only when there is none (BR-025)."""
+        user = UserService._repo.get_or_404(user_id)
+        own = {t for t, _ in OWN_TABLES}
+        references: dict[str, int] = {}
+        inspector = sa_inspect(db.engine)
+        for table in inspector.get_table_names():
+            if table in own or table.startswith(("sqlite_", "status_code_fts", "alembic_")):
+                continue
+            for fk in inspector.get_foreign_keys(table):
+                if fk["referred_table"] != "user":
+                    continue
+                for column in fk["constrained_columns"]:
+                    count = db.session.execute(
+                        text(f'SELECT COUNT(*) FROM "{table}" WHERE "{column}" = :i'),  # nosec B608
+                        {"i": user.id},
+                    ).scalar()
+                    if count:
+                        references[f"{table}.{column}"] = int(count)
+        return {
+            "user_id": user.id,
+            "references": references,
+            "reference_total": sum(references.values()),
+            "deletable": not references,
+        }
+
+    @staticmethod
+    def delete_user(user_id: int, actor, reauth_password: str | None = None) -> dict:
+        """Deletes an account (BR-025). Only an Administrator, never the own account, never the last
+        active Administrator, and only with the Administrator's password again (SEC-026).
+
+        An account nothing points at is removed. An account with history is **erased**: name,
+        address and password go, it can no longer sign in, it disappears from every list and its
+        user name and address are free again - but the row stays, so nothing it did loses its
+        author and the audit log, which is never changed, still resolves every actor. Either way
+        the audit entry `USER_DELETE` keeps what the account held."""
+        require_roles(actor, "ADMINISTRATOR")
+        user = UserService._repo.get_or_404(user_id)
+        if user.id == actor.id:
+            raise ForbiddenError("You cannot delete your own account.")
+        AuthService.step_up(actor, reauth_password, "USER_DELETE")
+        if (
+            user.role.code == "ADMINISTRATOR"
+            and user.is_active
+            and UserService._repo.count_active_administrators(exclude_user_id=user.id) == 0
+        ):
+            raise LastAdministratorError("Cannot delete the last active Administrator.")
+        report = UserService.usage(user.id)
+        snapshot = {
+            "username": user.username,
+            "email": user.email,
+            "full_name": user.full_name,
+            "role": user.role.code,
+            "engineering_domains": sorted(
+                d.engineering_domain.code for d in user.engineering_domains
+            ),
+        }
+        for table, column in OWN_TABLES:
+            statement = (
+                f'DELETE FROM "{table}" WHERE "{column}" = :i'  # nosec B608 - fixed OWN_TABLES
+            )
+            db.session.execute(text(statement), {"i": user.id})
+        db.session.expire(user)
+        if report["deletable"]:
+            db.session.execute(text("DELETE FROM user WHERE id = :i"), {"i": user.id})
+            mode = "removed"
+        else:
+            # the reviewer assignments of the account end; what others assigned stays
+            db.session.execute(
+                text("DELETE FROM language_reviewer WHERE user_id = :i"), {"i": user.id}
+            )
+            db.session.execute(
+                text(
+                    "UPDATE user SET username = :u, email = :e, full_name = 'Deleted user', "
+                    "password_hash = '!', is_active = 0, failed_login_count = 0, "
+                    "locked_until = NULL, deleted_at = :t WHERE id = :i"
+                ),
+                {
+                    "u": f"deleted-{user.id}",
+                    "e": f"deleted-{user.id}@deleted.invalid",
+                    "t": utcnow_iso(),
+                    "i": user.id,
+                },
+            )
+            mode = "erased"
+        AuditService.log(
+            "User",
+            user_id,
+            "USER_DELETE",
+            actor=actor,
+            before=snapshot,
+            after={"mode": mode, "references": report["reference_total"]},
+        )
+        db.session.commit()
+        return {"mode": mode, "references": report["reference_total"]}
+
+    @staticmethod
+    def _check_not_reused(user: User, new_password: str) -> list[str]:
+        """Policy: a new password may not repeat any of the last
+        PASSWORD_HISTORY_DEPTH passwords (the current one plus the newest retired ones)."""
+        retired = (
+            db.session.query(UserPasswordHistory)
+            .filter(UserPasswordHistory.user_id == user.id)
+            .order_by(UserPasswordHistory.id.desc())
+            .limit(PASSWORD_HISTORY_DEPTH - 1)
+            .all()
+        )
+        previous = [user.password_hash, *(row.password_hash for row in retired)]
+        if any(verify_password(new_password, h) for h in previous):
+            return [f"Password must differ from your last {PASSWORD_HISTORY_DEPTH} passwords."]
+        return []
+
+    @staticmethod
+    def _replace_password(user: User, new_password: str) -> None:
+        """Retire the current hash into the history, then store the new one."""
+        db.session.add(
+            UserPasswordHistory(
+                user_id=user.id, password_hash=user.password_hash, retired_at=utcnow_iso()
+            )
+        )
+        user.password_hash = hash_password(new_password)
+
+    @staticmethod
     def change_own_password(user: User, current_password: str, new_password: str) -> None:
         """FR-013: self password change, own password policy enforced."""
         if not verify_password(current_password, user.password_hash):
             raise ValueError("Current password is incorrect.")
-        violations = validate_password_policy(new_password)
+        violations = validate_password_policy(new_password) + UserService._check_not_reused(
+            user, new_password
+        )
         if violations:
             raise PasswordPolicyError(violations)
-        user.password_hash = hash_password(new_password)
+        UserService._replace_password(user, new_password)
         AuditService.log("User", user.id, "PASSWORD_CHANGE", actor=user)
         db.session.commit()
 
     @staticmethod
     def force_reset_password(user_id: int, new_password: str, actor) -> None:
         """FR-014: Administrator-forced reset for any user."""
+        require_roles(actor, "ADMINISTRATOR")
         user = UserService._repo.get_or_404(user_id)
-        violations = validate_password_policy(new_password)
+        violations = validate_password_policy(new_password) + UserService._check_not_reused(
+            user, new_password
+        )
         if violations:
             raise PasswordPolicyError(violations)
-        user.password_hash = hash_password(new_password)
+        UserService._replace_password(user, new_password)
         user.failed_login_count = 0
         user.locked_until = None
         AuditService.log("User", user.id, "PASSWORD_RESET", actor=actor)

@@ -1,0 +1,108 @@
+{% extends "base.html" %}
+{% block title %}Decisions {{ title }} — CSCM Tool{% endblock %}
+{% block content %}
+<div class="page-header">
+  <h1>Decisions and reviewers: {{ title }}</h1>
+  <a class="btn" href="{{ url_for('ui.translations_overview') }}">All languages</a>
+</div>
+
+<div class="card">
+  <h2>Reviewers of this language</h2>
+  <p class="muted">Any active account can be assigned; an external native speaker gets a Viewer account and sees only this section.</p>
+  <div class="table-scroll"><table>
+    <thead><tr><th scope="col">Reviewer</th><th scope="col"></th></tr></thead>
+    <tbody>
+      {% for r in reviewers %}
+      <tr><td>{{ r.name }}</td><td>
+        <form method="post" action="{{ url_for('ui.translation_unassign', language=language) }}" class="inline-form">
+          <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"><input type="hidden" name="user_id" value="{{ r.id }}">
+          <button class="btn" type="submit">Remove</button>
+        </form></td></tr>
+      {% else %}
+      <tr><td colspan="2" class="table-empty">Nobody is assigned yet.</td></tr>
+      {% endfor %}
+    </tbody>
+  </table></div>
+  <form method="post" action="{{ url_for('ui.translation_assign', language=language) }}" class="btn-row" style="margin-top:10px">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    <label for="user_id" class="visually-hidden">User</label>
+    <select id="user_id" name="user_id" required>
+      <option value="">choose a user</option>
+      {% for u in candidates %}<option value="{{ u.id }}">{{ u.full_name }} ({{ u.username }})</option>{% endfor %}
+    </select>
+    <button class="btn btn--primary" type="submit">Assign</button>
+  </form>
+</div>
+
+<div class="card">
+  <h2>Proposals waiting for a decision</h2>
+  {% if data.pending %}
+  <div class="table-scroll"><table>
+    <thead><tr><th scope="col">String</th><th scope="col">Current</th><th scope="col">Reviewer says</th><th scope="col">Decision</th></tr></thead>
+    <tbody>
+      {% for e in data.pending %}
+      {% set i = e.item %}
+      <tr>
+        <td>{{ i.english }}<div class="muted"><code>{{ i.string_id }}</code></div></td>
+        <td{% if rtl %} dir="rtl" class="rtl-text"{% endif %}>{{ i.current_text or '—' }}</td>
+        <td>
+          <span class="chip">{{ i.verdict }}</span> <span class="muted">{{ e.reviewer.full_name }}</span>
+          {% if i.proposal %}<div{% if rtl %} dir="rtl" class="rtl-text"{% endif %}><strong>{{ i.proposal }}</strong></div>{% endif %}
+          {% if i.comment %}<div class="muted">{{ i.comment }}</div>{% endif %}
+        </td>
+        <td>
+          {% if e.review.reviewer_id == me %}<span class="muted">Your own proposal: another Administrator or StCd Owner decides.</span>
+          {% else %}
+          <form method="post" action="{{ url_for('ui.translation_decide', language=language, item_id=i.id) }}">
+            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+            {% if i.verdict == 'CHANGE' %}
+            <label for="t{{ i.id }}" class="visually-hidden">Text to use</label>
+            <input type="text" id="t{{ i.id }}" name="text" value="{{ i.proposal }}"{% if rtl %} dir="rtl" class="rtl-text"{% endif %} maxlength="1000">
+            <div class="btn-row"><button class="btn btn--primary" type="submit" name="action" value="accept">Accept</button><button class="btn" type="submit" name="action" value="reject">Reject</button></div>
+            {% else %}
+            <div class="btn-row"><button class="btn" type="submit" name="action" value="note">Noted</button><button class="btn" type="submit" name="action" value="reject">Dismiss</button></div>
+            {% endif %}
+          </form>
+          {% endif %}
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table></div>
+  {% else %}
+  <div class="table-empty">No proposal is waiting.</div>
+  {% endif %}
+</div>
+
+<div class="card">
+  <h2>Accepted changes (overrides)</h2>
+  <p class="muted">The application shows these instead of the shipped text. Removing one brings the shipped text back.</p>
+  {% if data.overrides %}
+  <div class="table-scroll"><table>
+    <thead><tr><th scope="col">String</th><th scope="col">Shown text</th><th scope="col"></th></tr></thead>
+    <tbody>
+      {% for o in data.overrides %}
+      <tr>
+        <td>{{ o.english }}<div class="muted"><code>{{ o.string_id }}</code></div></td>
+        <td{% if rtl %} dir="rtl" class="rtl-text"{% endif %}>{{ o.text }}</td>
+        <td><form method="post" action="{{ url_for('ui.translation_override_remove', language=language, override_id=o.id) }}" class="inline-form" data-confirm="Bring back the shipped text?">
+          <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"><button class="btn" type="submit">Remove</button></form></td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table></div>
+  {% else %}
+  <div class="table-empty">None.</div>
+  {% endif %}
+</div>
+
+{% if data.decided %}
+<div class="card">
+  <h2>Recently decided</h2>
+  <div class="table-scroll"><table>
+    <thead><tr><th scope="col">String</th><th scope="col">Verdict</th><th scope="col">Decision</th><th scope="col">When</th></tr></thead>
+    <tbody>{% for e in data.decided %}<tr><td>{{ e.item.english }}</td><td>{{ e.item.verdict }} <span class="muted">{{ e.reviewer.full_name }}</span></td><td>{{ e.item.decision|lower }}</td><td>{{ (e.item.decided_at or '')[:16] }}</td></tr>{% endfor %}</tbody>
+  </table></div>
+</div>
+{% endif %}
+{% endblock %}

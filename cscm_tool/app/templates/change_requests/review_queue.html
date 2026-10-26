@@ -1,27 +1,31 @@
 {% extends "base.html" %}
 {% import "_macros.html" as macros %}
-{% block title %}Review Queue — CSCM Tool{% endblock %}
+{% block title %}{{ _('Review Queue') }} — CSCM Tool{% endblock %}
 {% block content %}
-<div class="page-header"><h1>Review Queue</h1></div>
+<div class="page-header"><h1>{{ _('Review Queue') }}</h1></div>
 <div class="card">
   {% if crs %}
   <table>
-    <thead><tr><th>Identifier</th><th>Title</th><th>Type</th><th>Reviewer</th><th>Administrator</th><th></th></tr></thead>
+    <caption class="visually-hidden">{{ _('Change requests waiting for review') }}</caption>
+    <thead><tr><th scope="col">{{ _('Identifier') }}</th><th scope="col">{{ _('Title') }}</th><th scope="col">{{ _('Author') }}</th><th scope="col">{{ _('Type') }}</th><th scope="col">{{ _('Assigned') }}</th><th scope="col">{{ _('Reviewer') }}</th><th scope="col">{{ _('Administrator') }}</th><th scope="col">{{ _('Waiting') }}</th><th scope="col"></th></tr></thead>
     <tbody>
       {% for cr in crs %}
       <tr>
         <td>{{ cr.revision.status_code.status_code_identifier }}</td>
         <td>{{ cr.revision.title }}</td>
+        <td>{{ user_label(cr.requested_by) }}</td>
         <td>{{ cr.cr_type }}</td>
-        <td>{{ 'Signed' if cr.revision.reviewer_signoff_by else 'Pending' }}</td>
-        <td>{{ 'Signed' if cr.revision.admin_signoff_by else 'Pending' }}</td>
-        <td><a href="{{ url_for('ui.change_request_detail', cr_id=cr.id) }}">Review</a></td>
+        <td>{{ cr.assigned_reviewer.full_name if cr.assigned_reviewer else '—' }}</td>
+        <td>{{ _('Signed') if cr.revision.reviewer_signoff_by else _('Pending') }}</td>
+        <td>{{ _('Signed') if cr.revision.admin_signoff_by else _('Pending') }}</td>
+        <td>{{ macros.sla_badge(slas[cr.id]) }}</td>
+        <td><a href="{{ url_for('ui.change_request_detail', cr_id=cr.id) }}">{{ _('Review') }}</a></td>
       </tr>
       {% endfor %}
     </tbody>
   </table>
   {% else %}
-  <div class="table-empty">Nothing is awaiting Review sign-off.</div>
+  <div class="table-empty">{{ _('Nothing is awaiting Review sign-off.') }}</div>
   {% endif %}
 </div>
 {% endblock %}

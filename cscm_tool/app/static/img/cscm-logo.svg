@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-label="CSCM Tool">
+<title>CSCM Tool - Controller Status Code Management Tool</title>
+<rect x="6" y="6" width="244" height="244" rx="52" fill="#002e6d"/>
+<path d="M 46 70 L 30 70 L 30 168 L 46 168" fill="none" stroke="#8ab4f8" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 210 70 L 226 70 L 226 168 L 210 168" fill="none" stroke="#8ab4f8" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="124.0,112.0 132.0,112.0 138.0,206.0 118.0,206.0" fill="#ffffff"/>
+<rect x="96" y="204" width="64" height="7" rx="3.5" fill="#ffffff"/>
+<polygon points="137.6,85.8 139.0,57.8 136.0,24.4 126.2,60.7 122.7,84.5" fill="#ffffff"/>
+<polygon points="133.8,112.4 157.3,127.7 187.7,141.8 161.2,115.1 142.4,100.1" fill="#ffffff"/>
+<polygon points="112.6,95.8 87.7,108.5 60.3,127.8 96.6,118.2 119.0,109.4" fill="#ffffff"/>
+<circle cx="128.0" cy="98.0" r="26.0" fill="#002e6d"/>
+<path d="M 131.6 77.3 A 21.0 21.0 0 0 1 146.2 108.5" fill="none" stroke="#3ecf8e" stroke-width="6.5" stroke-linecap="round"/>
+<path d="M 144.1 111.5 A 21.0 21.0 0 0 1 109.8 108.5" fill="none" stroke="#f2b01e" stroke-width="6.5" stroke-linecap="round"/>
+<path d="M 108.3 105.2 A 21.0 21.0 0 0 1 128.0 77.0" fill="none" stroke="#ff6b5e" stroke-width="6.5" stroke-linecap="round"/>
+<circle cx="128.0" cy="98.0" r="11" fill="#8ab4f8"/>
+<circle cx="128.0" cy="98.0" r="4.5" fill="#ffffff"/>
+<circle cx="100.0" cy="228.0" r="6.0" fill="#3ecf8e"/>
+<circle cx="128.0" cy="228.0" r="6.0" fill="#f2b01e"/>
+<circle cx="156.0" cy="228.0" r="6.0" fill="#ff6b5e"/>
+</svg>

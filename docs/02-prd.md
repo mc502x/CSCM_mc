@@ -6,7 +6,7 @@ CSCM Tool is the master system of record for wind turbine Main Controller and Hu
 
 ## 2. Goals
 
-1. Provide one authoritative, versioned record per status code, classified and numbered by Functional System Group (and, optionally, Functional Subgroup) rather than an arbitrary series.
+1. Provide one authoritative, versioned record per status code, classified and numbered by Functional System Group and Functional Subgroup — both mandatory — rather than an arbitrary series.
 2. Enforce a mandatory, three-decision-point review/approval workflow before any code becomes Released.
 3. Preserve complete, immutable revision history for every status code.
 4. Provide release management so a specific, named, dated snapshot of approved codes can be exported and referenced by manuals, SCADA configuration, and future integrations.
@@ -45,7 +45,7 @@ Technical writer, service technician, or other stakeholder who looks up current 
 ## 5. User Journeys
 
 ### 5.1 Engineer creates a new status code
-1. Engineer logs in, navigates to "New Status Code," selects Functional System Group (e.g. Converter/Grid Interface) and, optionally, Functional Subgroup, plus at least one Turbine Platform. No identifier is shown yet.
+1. Engineer logs in, navigates to "New Status Code," selects Functional System Group (e.g. Converter & Grid Interface) and Functional Subgroup (e.g. Converter) — both mandatory — plus at least one Turbine Platform. No identifier is shown yet.
 2. Engineer completes all mandatory attributes; validation blocks submission until the record is complete and internally consistent.
 3. If fields owned by a domain the Engineer does not hold are still unset, the system flags them and lets the Engineer request sign-off from a colleague holding that domain.
 4. Once complete, Engineer submits for Review; the system allocates a fixed `StCd-XXXXX` identifier at that moment, not before.
@@ -63,34 +63,57 @@ Technical writer, service technician, or other stakeholder who looks up current 
 ### 5.4 Administrator builds and publishes a Release
 1. Administrator creates a Release scoped by Functional System Group/Subgroup, reviews the Approved (non-sandbox) candidate list, confirms the set, and publishes.
 2. Publishing atomically transitions included revisions to Released, stamps Effective Date, and locks the Release's contents.
-3. Administrator exports the Release catalogue (CSV/JSON/PDF) for Technical Publications.
+3. Administrator exports the Release catalogue (CSV/JSON/XLSX/PDF) for Technical Publications. *(v4)* The Administrator may first set the controller software versions the Release targets, sees warnings for items whose planned effective date is still in the future, and confirms the publish with their password (step-up). Each export can use an export profile, an audience, a language and a software version, ships with a manifest of SHA-256 hashes, and the Release has generated release notes against the previous Release.
 
 ### 5.5 Viewer looks up a status code
-Unchanged from the original journey: search, view current Released definition and history, export a filtered read-only catalogue.
+Search, view current Released definition and history, export a filtered read-only catalogue. *(v4)* Search is ranked and tolerates typos; filters and visible columns can be saved and shared as a link; the interface can be switched to German; state and role tooltips and a per-role quick start explain the process.
 
 ### 5.6 Administrator deprecates an obsolete code
-Unchanged in outcome, now routed through the full three-decision-point cycle when initiated as an Engineer Change Request.
+Deprecation is routed through the full three-decision-point cycle when initiated as an Engineer Change Request.
 
 ### 5.7 Administrator uses a sandbox status code
 1. Administrator creates a sandbox status code for testing an export template or training a new Reviewer, drawing an isolated `StCd-T#####` identifier that can never enter a real Functional System Group range.
 2. Administrator exercises it through the lifecycle as needed; it can never be added to a real Release.
 3. Administrator permanently deletes it when done; the deletion itself remains in the audit trail forever, even though the record does not.
 
+### 5.8 Administrator migrates the legacy library *(v4)*
+1. Downloads the import template, fills it, and runs a **dry run**: every problem is listed per row and column with a fix hint and nothing is created.
+2. Imports the corrected file (large files run in the background with a progress bar); similar titles and clashing legacy numbers are reported.
+3. Re-uploads corrected rows in **update mode**: open Drafts are revised in place, Released codes get a new revision.
+4. Opens the **reconciliation report** to see how many legacy rows are imported, in review, released and still missing.
+
+### 5.9 Reviewer works the queue *(v4)*
+Each request shows how long it has waited (amber/red). The Reviewer reads the field diff, comments on single fields, ticks the Administrator-defined review checklist, and signs off with their password. Out of office, they name a delegate for the dates; the delegate acts as themselves and the audit trail shows both.
+
+### 5.10 Engineer prepares a software release *(v4)*
+Groups the change requests that ship together into a **change set**, attaches evidence (test reports, safety assessment), checks reference warnings and the Where-used list, optionally stamps planned dates, and states the software-version range the code applies to.
+
+### 5.11 Service technician looks up a code at the turbine *(v4)*
+Opens the **offline bundle** generated from a Release — one HTML file with search, needing no server — and finds the code, its remedy text and affected component.
+
+### 5.12 Technical Publications and integrators consume releases *(v4)*
+Download an audience-scoped, language-specific profile export with its manifest and verify it later without the database; poll the change feed or receive a signed webhook on publish using a scoped read-only API token.
+
+### 5.13 Technical Publications builds the manuals of a Release *(v4.10)*
+Open a published Release, see how many codes it holds in total (the complete baseline, by controller and platform), export the baseline for one platform and controller in one language and access level, or build the package: one ZIP with every language for every access level, the release notes and a manifest that lists each file with its SHA-256. Anybody signed in may do this for a released Release; the working set and unpublished Releases are for the StCd Owner and the Administrator only.
+
 ## 6. Functional Scope
 
-**In scope (MVP):** status code CRUD via the governed three-decision-point Change Request workflow; Functional System Group/Subgroup classification and numbering (`StCd-XXXXX`, allocated at Draft→Review, not before); Turbine Platform multi-select; Cross-Domain Sign-Off; full attribute set per 06-data-dictionary.md; seven-state lifecycle with enforced valid transitions; revision history and field-level diffing; role-based access control across five roles; sandbox status codes (create/delete, Administrator-only); Release management (build, publish, lock, export); search/filter/sort; full audit trail; session-based authentication and internal user management; catalogue export (role-scoped) and full-database export (Administrator-only); REST API covering all core resources, internal-network-only.
+**In scope (MVP):** status code CRUD via the governed three-decision-point Change Request workflow; Functional System Group **and mandatory** Subgroup classification and numbering (`StCd-XXXXX`, allocated at Draft→Review, not before); Administrator-created new subgroups, non-overlap validated; Turbine Platform multi-select; Cross-Domain Sign-Off; full attribute set per 06-data-dictionary.md (corrected 2026-09-17 against a real library export); seven-state lifecycle with enforced valid transitions; revision history and field-level diffing; role-based access control across five roles; sandbox status codes (create/delete, Administrator-only); CSV/XLSX library import producing governed Drafts (05-governance-handbook.md §6b); Release management (build, publish, lock, export); search/filter/sort; full audit trail; session-based authentication and internal user management; catalogue export (CSV/JSON/XLSX/PDF, role-scoped) and full-database export (Administrator-only); REST API covering all core resources, internal-network-only; OneTool shared design system for the visual shell (10-ui-ux-specification.md §0), with CSCM Tool retaining its own authentication.
 
-**Out of scope (MVP):** on-premises Active Directory/ADFS SSO integration itself (the `AuthProvider` hook is built; the integration is not); live/automated push integration to documentation generation tools, code repositories, or SCADA systems; multi-language localization; multi-OEM/multi-tenant data partitioning; mobile native applications; configurable/multi-stage approval chains beyond the fixed Reviewer+Administrator+Chief-Engineer model; the final Functional Subgroup taxonomy (placeholder until Controls Engineering supplies it — a data-only gap, not a feature gap); any public-cloud component of any kind, at any phase.
+**In scope since v4 (2026-10-23):** the improvement pack I-01 … I-36 (03-srs.md §1.10–§1.15): optimistic concurrency, reference warnings and Where-used, duplicate detection, platform variants, the import toolkit, export profiles / audiences / manifests / release notes / offline bundle, software-version binding, planned dates, translations (English source, German), SLA ageing and reminders, KPIs, change sets, delegation, step-up, field comments and checklists, evidence, remedy fields, catalogue health and capacity, saved searches, fleet feedback, API tokens / change feed / webhooks, Hub-to-Main consolidation, ranked search, backups, audit hash chain, readiness and metrics, German UI and accessibility, installers and CI.
+
+**Out of scope (MVP and v4):** on-premises Active Directory/ADFS SSO integration itself (the `AuthProvider` hook is built; the integration is not); live/automated *push* integration into documentation generation tools, code repositories or SCADA systems (v4 offers internal pull — tokens, change feed, signed webhooks — instead); content in languages other than English and German; multi-OEM/multi-tenant data partitioning; mobile native applications; configurable/multi-stage approval chains beyond the fixed Reviewer+Administrator+Chief-Engineer model; any public-cloud component of any kind, at any phase.
 
 ## 7. Out-of-Scope Items (Explicit Exclusions)
 
 | Item | Reason |
 |---|---|
 | Cloud-hosted SSO (e.g. Azure AD) | Explicitly excluded by the no-cloud-infrastructure requirement; the future SSO path is on-premises Active Directory/ADFS only (16-mvp-roadmap.md, 11-security-architecture.md §2) |
-| Automated SCADA tag sync | Requires SCADA-side integration work outside CSCM Tool's control; API contract only in MVP, internal-network-only |
+| Automated SCADA tag sync | Requires SCADA-side integration work outside CSCM Tool's control; v4 provides the pull interfaces (API tokens, change feed, webhooks, fleet-feedback import) on the internal network only |
 | Configurable/multi-stage approval chains | The fixed Reviewer→Administrator (parallel)→Chief Engineer model is sufficient for current governance need |
-| Bulk import of legacy status codes | Explicitly against the "codes are created in CSCM Tool, not imported from documents" principle; any legacy reconciliation is a one-time, human-reviewed project activity, not a product feature |
-| Real-time collaborative editing | Not required; optimistic concurrency control is sufficient |
+| *(removed 2026-09-17)* Bulk import was previously excluded here on principle | The business explicitly requested CSV/XLSX library import; it is now in scope (§6), on the condition that every imported row still passes the full governance cycle before Release (05-governance-handbook.md §6b) — the "codes are governed in CSCM Tool, not imported pre-approved" principle survives, the "no import mechanism at all" position does not |
+| Real-time collaborative editing | Not required; optimistic concurrency control (FR-090) is sufficient |
 | Public-cloud infrastructure of any kind | Hard deployment constraint (00-INDEX.md "Deployment Principle"); every environment is on-premises |
 
 ## 8. Acceptance Criteria (Product-Level)
@@ -106,6 +129,12 @@ Unchanged in outcome, now routed through the full three-decision-point cycle whe
 9. Search returns results across all major attributes (identifier, title, category, Functional System Group, lifecycle status, owner) within NFR-001 performance targets.
 10. An exported catalogue contains only Approved or Released, non-sandbox records, correctly scoped to the export filter and reproducible.
 11. A sandbox status code can be permanently deleted only by an Administrator, and only while flagged sandbox; the deletion is itself permanently audited with a full before-state snapshot.
+12. *(v4)* A save based on an outdated Draft is refused with 409 and nothing is overwritten; the user's entries are shown beside the current values.
+13. *(v4)* Reviewer and Administrator sign-off, Chief Engineer approval, publishing and the full-database export are refused without the actor's password; delegates and change-set decisions never bypass segregation of duties.
+14. *(v4)* An audience export contains no code whose confirmed value for that audience is not *visible*, and none of the other audiences' columns; every export has a manifest whose hashes verify, and a changed file is detected.
+15. *(v4)* An edited, removed, reordered or truncated audit entry is detected by the verification; backups are proven restorable and the readiness probe reports their age.
+16. *(v4)* A dry run creates nothing; an update-mode re-import never creates a duplicate; the reconciliation report names the legacy numbers still missing.
+17. *(v4)* Every page is operable in English and German and meets the WCAG 2.1 AA checks of NFR-010; all requirements of 03-srs.md are cited by a test or listed as not testable in the test report.
 
 ## 9. KPIs (Product Health, Ongoing)
 
@@ -118,3 +147,6 @@ Unchanged in outcome, now routed through the full three-decision-point cycle whe
 | API error rate (5xx) | < 0.1% of requests |
 | Audit log completeness (state-changing actions with a corresponding log entry) | 100% |
 | Cloud-infrastructure findings in any architecture review | 0 (standing check, 11-security-architecture.md §12) |
+| Verified backup younger than 36 h (readiness probe) | 100% of days |
+| Change requests past their red SLA threshold | < 5% of open requests |
+| Released codes with an approved German translation (once German manuals are in scope) | tracked on the translation worklist |

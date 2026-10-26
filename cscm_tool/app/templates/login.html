@@ -1,21 +1,35 @@
 {% extends "base.html" %}
-{% block title %}Log in — CSCM Tool{% endblock %}
+{% block title %}{{ _('Log in') }} — CSCM Tool{% endblock %}
 {% block guest_content %}
 <div class="login-shell">
   <div class="card login-card">
-    <h2>CSCM Tool</h2>
+    <img class="login-logo" src="{{ url_for('static', filename='img/cscm-logo.svg') }}" alt="" width="84" height="84">
+    <h1 class="login-title">CSCM Tool</h1>
     {% include "_flashes.html" %}
+    {% if windows_login %}
+    <a class="btn btn--primary" href="{{ url_for('ui.login_windows', next=request.args.get('next')) }}" style="width:100%; text-align:center; box-sizing:border-box">{{ _('Sign in with Windows') }}{% if simulated %} ({{ _('simulated') }}){% endif %}</a>
+    {% if password_login %}<p class="muted" style="text-align:center; margin:10px 0">{{ _('or') }}</p>{% endif %}
+    {% endif %}
+    {% if password_login %}
     <form method="post">
       <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
       <div class="field">
-        <label for="username">Username or email</label>
-        <input type="text" id="username" name="username" required autofocus>
+        <label for="username">{{ _('Username or email') }}</label>
+        <input type="text" id="username" name="username" required autofocus autocomplete="username">
       </div>
       <div class="field">
-        <label for="password">Password</label>
-        <input type="password" id="password" name="password" required>
+        <label for="password">{{ _('Password') }}</label>
+        <input type="password" id="password" name="password" required autocomplete="current-password">
       </div>
-      <button class="btn btn--primary" type="submit" style="width:100%">Log in</button>
+      <button class="btn btn--primary" type="submit" style="width:100%">{{ _('Log in') }}</button>
+    </form>
+    {% endif %}
+    <form method="post" action="{{ url_for('ui.set_language') }}" class="inline-form" style="margin-top:12px">
+      <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+      <label for="lang_switch" class="visually-hidden">{{ _('Language') }}</label>
+      <select id="lang_switch" name="lang" data-autosubmit>
+        {% for code, label in languages.items() %}<option value="{{ code }}" {{ 'selected' if ui_lang == code }}>{{ label }}</option>{% endfor %}
+      </select>
     </form>
   </div>
 </div>

@@ -1,66 +1,164 @@
 {% extends "base.html" %}
 {% import "_macros.html" as macros %}
-{% block title %}Status Codes — CSCM Tool{% endblock %}
+{% block title %}{{ _('Status Codes') }} — CSCM Tool{% endblock %}
 {% block content %}
 <div class="page-header">
-  <h1>Status Codes</h1>
+  <h1>{{ _('Status Codes') }}</h1>
   {% if current_user.role_code in ('ENGINEER', 'ADMINISTRATOR') %}
-  <a class="btn btn--primary" href="{{ url_for('ui.status_code_new') }}">New Status Code</a>
+  <a class="btn btn--primary" href="{{ url_for('ui.status_code_new') }}">{{ _('New Status Code') }}</a>
   {% endif %}
 </div>
 
 <div class="card">
-  <form method="get" class="form-row" style="align-items:end">
-    <div class="field" style="margin-bottom:0">
-      <label for="q">Search</label>
-      <input type="search" id="q" name="q" value="{{ request.args.get('q', '') }}" placeholder="Identifier, title, description">
+  <form method="get" class="form-row" data-subgroup-dependency="functional_system_group,functional_subgroup" role="search" aria-label="{{ _('Filter status codes') }}">
+    <div class="field">
+      <label for="q">{{ _('Search') }}</label>
+      <input type="search" id="q" name="q" value="{{ request.args.get('q', '') }}" placeholder="{{ _('Identifier, title, description') }}">
+      <div class="hint">{{ _('Typos are tolerated: "convertor" still finds "converter".') }}</div>
     </div>
-    <div class="field" style="margin-bottom:0">
-      <label for="functional_system_group">Functional System Group</label>
+    <div class="field">
+      <label for="functional_system_group">{{ _('Functional System Group') }}</label>
       <select id="functional_system_group" name="functional_system_group">
-        <option value="">(any)</option>
+        <option value="">({{ _('any') }})</option>
         {% for g in groups %}
-        <option value="{{ g.code }}" {{ 'selected' if request.args.get('functional_system_group') == g.code }}>{{ g.code }} — {{ g.label }}</option>
+        <option value="{{ g.id }}" {{ 'selected' if request.args.get('functional_system_group')|string == g.id|string }}>{{ g.code }} — {{ g.label }} ({{ g.range_start }}-{{ g.range_end }})</option>
         {% endfor %}
       </select>
     </div>
-    <div class="field" style="margin-bottom:0">
-      <label for="lifecycle_status">Lifecycle</label>
+    <div class="field">
+      <label for="functional_subgroup">{{ _('Functional Subgroup') }}</label>
+      <select id="functional_subgroup" name="functional_subgroup" data-selected="{{ request.args.get('functional_subgroup', '') }}">
+        <option value="">({{ _('any') }})</option>
+      </select>
+    </div>
+    <div class="field">
+      <label for="turbine_platform">{{ _('Turbine Platform') }}</label>
+      <select id="turbine_platform" name="turbine_platform">
+        <option value="">({{ _('any') }})</option>
+        {% for p in platforms %}<option value="{{ p.code }}" {{ 'selected' if request.args.get('turbine_platform') == p.code }}>{{ p.code }}</option>{% endfor %}
+      </select>
+    </div>
+    <div class="field">
+      <label for="lifecycle_status">{{ _('Lifecycle') }}</label>
       <select id="lifecycle_status" name="lifecycle_status">
-        <option value="">(any)</option>
+        <option value="">({{ _('any') }})</option>
         {% for s in ['DRAFT','REVIEW','PENDING_APPROVAL','APPROVED','RELEASED','DEPRECATED','ARCHIVED'] %}
         <option value="{{ s }}" {{ 'selected' if request.args.get('lifecycle_status') == s }}>{{ s.replace('_',' ')|title }}</option>
         {% endfor %}
       </select>
     </div>
+    <div class="field">
+      <label for="status_category">{{ _('Status Category') }}</label>
+      <select id="status_category" name="status_category">
+        <option value="">({{ _('any') }})</option>
+        {% for s in ['ERROR','WARNING','INFO'] %}<option value="{{ s }}" {{ 'selected' if request.args.get('status_category') == s }}>{{ s|title }}</option>{% endfor %}
+      </select>
+    </div>
     {% if current_user.role_code == 'ADMINISTRATOR' %}
-    <div class="field" style="margin-bottom:0">
-      <label><input type="checkbox" name="is_sandbox" value="true" {{ 'checked' if request.args.get('is_sandbox') == 'true' }}> Sandbox only</label>
+    <div class="field">
+      <label><input type="checkbox" name="is_sandbox" value="true" {{ 'checked' if request.args.get('is_sandbox') == 'true' }}> {{ _('Sandbox only') }}</label>
     </div>
     {% endif %}
-    <div class="field" style="margin-bottom:0"><button class="btn" type="submit">Filter</button></div>
+    <input type="hidden" name="cols" value="{{ columns|join(',') }}">
+    <div class="field"><button class="btn" type="submit">{{ _('Filter') }}</button></div>
+  </form>
+
+  <details class="fieldset-collapsible">
+    <summary>{{ _('Columns') }}</summary>
+    <form method="get" class="checkbox-list">
+      {% for key, value in request.args.items() if key != 'cols' and key != 'page' %}<input type="hidden" name="{{ key }}" value="{{ value }}">{% endfor %}
+      {% for key, label in all_columns.items() %}
+      <label><input type="checkbox" class="col-check" value="{{ key }}" {{ 'checked' if key in columns }}> {{ label }}</label>
+      {% endfor %}
+      <input type="hidden" name="cols" id="cols_value" value="{{ columns|join(',') }}">
+      <button class="btn" type="submit" data-collect-columns="cols_value">{{ _('Apply columns') }}</button>
+    </form>
+  </details>
+
+  <div class="share-row">
+    <label for="share_link">{{ _('Link to this view') }}</label>
+    <input type="text" id="share_link" readonly value="{{ url_for('ui.status_code_list', _external=False) }}{{ '?' ~ share_query if share_query }}">
+  </div>
+</div>
+
+<div class="card">
+  <h2>{{ _('Saved searches') }}</h2>
+  {% if saved %}
+  <ul class="plain-list">
+    {% for s in saved %}
+    <li>
+      <a href="{{ url_for('ui.status_code_list') }}{{ '?' ~ saved_query(s) if saved_query(s) }}">{{ s.name }}</a>
+      <form method="post" action="{{ url_for('ui.saved_search_delete', search_id=s.id) }}" class="inline-form">
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+        <button class="btn btn--outline" type="submit" aria-label="{{ _('Remove') }} {{ s.name }}">{{ _('Remove') }}</button>
+      </form>
+    </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+  <div class="muted">{{ _('No saved searches yet.') }}</div>
+  {% endif %}
+  <form method="post" action="{{ url_for('ui.saved_search_create') }}" class="form-row" style="margin-top:10px">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    {% for key, value in request.args.items() if key != 'page' and key != 'cols' %}<input type="hidden" name="{{ key }}" value="{{ value }}">{% endfor %}
+    <input type="hidden" name="cols" value="{{ columns|join(',') }}">
+    <div class="field"><label for="search_name">{{ _('Save the current filters as') }}</label><input type="text" id="search_name" name="name" required maxlength="80"></div>
+    <div class="field" style="align-self:end"><button class="btn" type="submit">{{ _('Save search') }}</button></div>
   </form>
 </div>
 
 <div class="card">
   {% if items %}
+  {% set selectable = can_withdraw and own_drafts %}
+  {% if can_withdraw %}
+  <form method="post" id="withdraw_form" action="{{ url_for('ui.status_code_withdraw_selected') }}" data-confirm="{{ _('Delete the ticked Drafts? A deleted Draft is gone; its number is only kept if it was already issued.') }}">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    {% for key, value in request.args.items() if key in ('q', 'functional_system_group', 'functional_subgroup', 'turbine_platform', 'lifecycle_status', 'status_category', 'sort', 'is_sandbox', 'cols') %}<input type="hidden" name="{{ key }}" value="{{ value }}">{% endfor %}
+  </form>
+  {% endif %}
   <table>
-    <thead><tr><th>Identifier</th><th>Title</th><th>Group</th><th>State</th><th>Platforms</th></tr></thead>
+    <caption class="visually-hidden">{{ _('Status codes') }}</caption>
+    <thead>
+      <tr>
+        {% if selectable %}<th scope="col"><input type="checkbox" data-check-all="sc-row-check" aria-label="{{ _('Select all') }}"></th>{% endif %}
+        {% for key in columns %}
+        {% set sortable = key in ('title', 'status_category', 'lifecycle_status') %}
+        <th scope="col">
+          {% if sortable %}<a href="{{ sort_url(key) }}">{{ all_columns[key] }}</a>{% else %}{{ all_columns[key] }}{% endif %}
+        </th>
+        {% endfor %}
+      </tr>
+    </thead>
     <tbody>
       {% for r in items %}
-      <tr onclick="window.location='{{ url_for('ui.status_code_detail', status_code_id=r.status_code_id) }}'" style="cursor:pointer">
-        <td>{{ r.status_code_identifier or 'Not yet assigned' }}{% if r.is_sandbox %} {{ macros.sandbox_badge() }}{% endif %}</td>
-        <td>{{ r.title }}</td>
-        <td>{{ r.functional_system_group }}</td>
-        <td>{{ macros.lifecycle_badge(r.lifecycle_status) }}</td>
-        <td>{% for p in r.turbine_platforms %}<span class="chip">{{ p }}</span>{% endfor %}</td>
+      <tr data-href="{{ url_for('ui.status_code_detail', status_code_id=r.status_code_id) }}" class="row-link">
+        {% if selectable %}<td>{% if r.id in own_drafts %}<input type="checkbox" class="sc-row-check" name="cr_id" form="withdraw_form" value="{{ own_drafts[r.id] }}" aria-label="{{ _('Select') }} {{ r.title }}">{% endif %}</td>{% endif %}
+        {% for key in columns %}
+        <td>
+          {% if key == 'status_code_identifier' %}<a href="{{ url_for('ui.status_code_detail', status_code_id=r.status_code_id) }}">{{ r.status_code_identifier or _('Not yet assigned') }}</a>{% if r.is_sandbox %} {{ macros.sandbox_badge() }}{% endif %}
+          {% elif key == 'functional_system_group' %}{{ r.functional_system_group }} ({{ r.functional_system_group_range_start }}-{{ r.functional_system_group_range_end }})
+          {% elif key == 'lifecycle_status' %}{{ macros.lifecycle_badge(r.lifecycle_status) }}
+          {% elif key == 'turbine_platforms' %}{% for p in r.turbine_platforms %}<span class="chip">{{ p }}</span>{% endfor %}
+          {% elif key == 'alarm_flag' %}{{ _('Yes') if r.alarm_flag else _('No') }}
+          {% else %}{{ r[key] if r[key] is not none else '—' }}{% endif %}
+        </td>
+        {% endfor %}
       </tr>
       {% endfor %}
     </tbody>
   </table>
-  <div class="muted" style="margin-top:10px">{{ total }} result{{ 's' if total != 1 }}</div>
+  {% if selectable %}
+  <div class="btn-row" style="margin-top:12px">
+    <button class="btn btn--danger" type="submit" form="withdraw_form">{{ _('Delete selected Drafts') }}</button>
+    {% if request.args.get('lifecycle_status') == 'DRAFT' %}
+    <button class="btn btn--outline" type="submit" form="withdraw_form" name="all_filtered" value="1" data-confirm="{{ _('Delete ALL of your own Drafts that match this filter, on every page?') }}">{{ _('Delete all my Drafts of this filter') }}</button>
+    {% endif %}
+  </div>
+  {% endif %}
+  <div class="muted" style="margin-top:10px">{{ total }} {{ _('results') if total != 1 else _('result') }}</div>
+  {{ macros.pager(page, total, 50) }}
   {% else %}
-  <div class="table-empty">No status codes match these filters.</div>
+  <div class="table-empty">{{ _('No status codes match these filters.') }}</div>
   {% endif %}
 </div>
 {% endblock %}

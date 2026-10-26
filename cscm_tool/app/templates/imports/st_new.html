@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+{% block title %}{{ _('Import status codes from .st files') }} — CSCM Tool{% endblock %}
+{% block content %}
+<div class="page-header">
+  <h1>{{ _('Import status codes from .st files') }}</h1>
+  <div class="btn-row">
+    <a class="btn" href="{{ url_for('ui.import_new') }}">{{ _('Library Import') }}</a>
+    <a class="btn" href="{{ url_for('ui.legacy_mapping') }}">{{ _('Legacy mapping') }}</a>
+  </div>
+</div>
+
+<div class="card" style="max-width:720px">
+  <p class="muted">{{ _('Upload the generated StCd_<n>.st programs — several files at once, a whole folder, or one ZIP. Nothing is created yet: the next page lists every program so you can tick the ones to import.') }}</p>
+  <form method="post" enctype="multipart/form-data">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    <div class="field">
+      <label for="files">{{ _('Program files (.st) or a ZIP') }}</label>
+      <input type="file" id="files" name="files" accept=".st,.scl,.exp,.txt,.zip" multiple>
+    </div>
+    <div class="field">
+      <label for="folder">{{ _('Or a whole folder') }}</label>
+      <input type="file" id="folder" name="files" webkitdirectory multiple>
+    </div>
+    <div class="field">
+      <label for="controller">{{ _('Controller') }}</label>
+      <select id="controller" name="controller">
+        <option value="auto">{{ _('Detect: a number from 10000 up is a Hub Controller program') }}</option>
+        <option value="MC">{{ _('Main Controller') }}</option>
+        <option value="HC">{{ _('Hub Controller (legacy numbers, mapped to the new ones)') }}</option>
+      </select>
+    </div>
+    <div class="field">
+      <label for="hc_proposal">{{ _('New number of Hub Controller programs') }}</label>
+      <select id="hc_proposal" name="hc_proposal">
+        <option value="1">{{ _('Proposal 1: five-digit numbers (11000 and up)') }}</option>
+        <option value="2">{{ _('Proposal 2: inside the Main Controller scheme') }}</option>
+      </select>
+    </div>
+    <div class="field">
+      <label for="default_category">{{ _('Status category of the new codes') }}</label>
+      <select id="default_category" name="default_category">
+        <option value="ERROR">ERROR</option>
+        <option value="WARNING">WARNING</option>
+        <option value="INFO">INFO</option>
+      </select>
+      <div class="hint">{{ _('The program files do not carry a category; you can change it in each Draft.') }}</div>
+    </div>
+    <fieldset class="field">
+      <legend>{{ _('Status category by alarm type (optional)') }}</legend>
+      {% for n in (1, 2, 3) %}
+      <div class="form-row">
+        <label for="alarm_type_{{ n }}">{{ _('Alarm type') }} {{ n }}</label>
+        <select id="alarm_type_{{ n }}" name="alarm_type_{{ n }}">
+          <option value="">({{ _('as above') }})</option>
+          <option value="ERROR">ERROR</option>
+          <option value="WARNING">WARNING</option>
+          <option value="INFO">INFO</option>
+        </select>
+      </div>
+      {% endfor %}
+      <div class="hint">{{ _('Every program names an alarm type. A type left at "as above" gets the category chosen above; the next page lets you set the category of single programs or of all ticked ones.') }}</div>
+    </fieldset>
+    <fieldset class="field">
+      <legend>{{ _('Turbine platforms') }}</legend>
+      {% for p in platforms %}
+      <label><input type="checkbox" name="platforms" value="{{ p.code }}" checked> {{ p.code }}</label>
+      {% endfor %}
+    </fieldset>
+    <div class="btn-row">
+      <button class="btn btn--primary" type="submit">{{ _('Read files and preview') }}</button>
+    </div>
+  </form>
+  <div class="hint" style="margin-top:10px">{{ _('Every imported program becomes an ordinary Draft with the number it carries reserved. It still needs Cross-Domain Sign-Off, dual review and Chief Engineer approval before Release, and all Drafts of one import share a change set.') }}</div>
+</div>
+{% endblock %}

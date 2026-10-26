@@ -1,7 +1,66 @@
 {% macro lifecycle_badge(status) -%}
-<span class="badge badge--{{ status }}">{{ status.replace('_', ' ')|title }}</span>
+<abbr class="badge badge--{{ status }}" tabindex="0" title="{{ state_help(status) }}">{{ status.replace('_', ' ')|title }}</abbr>
 {%- endmacro %}
 
 {% macro sandbox_badge() -%}
 <span class="badge badge--sandbox">SANDBOX</span>
 {%- endmacro %}
+
+{# I-08: how long a request has waited at its stage; colour is never the only cue (text carries the level) #}
+{% macro sla_badge(info) -%}
+{% if info -%}
+<span class="sla sla--{{ info.level }}" title="{{ _('Waiting since') }} {{ info.entered_at }}; {{ _('amber after') }} {{ info.amber_days }}, {{ _('red after') }} {{ info.red_days }} {{ _('business days') }}">{{ info.age_days }} {{ _('d') }} &middot; {{ {'ok': _('on track'), 'amber': _('slow'), 'red': _('overdue')}[info.level] }}</span>
+{%- endif %}
+{%- endmacro %}
+
+{# I-04 / I-12: soft findings that never block a save #}
+{% macro warning_list(warnings) %}
+{% if warnings %}
+<div class="flash flash--info" role="status">
+  <strong>{{ _('Please check') }}</strong>
+  <ul class="plain-list">
+    {% for w in warnings %}<li>{{ w.message if w.message is defined else w }}</li>{% endfor %}
+  </ul>
+</div>
+{% endif %}
+{% endmacro %}
+
+{# I-17: every sensitive action asks for the password again #}
+{% macro password_field(field_id, label=none) %}
+<div class="field">
+  <label for="{{ field_id }}">{{ label or _('Confirm with your password') }}</label>
+  <input type="password" id="{{ field_id }}" name="current_password" autocomplete="current-password" required>
+</div>
+{% endmacro %}
+
+{# I-35: glossary tooltip #}
+{% macro term(key, text=none) -%}
+<abbr class="term" tabindex="0" title="{{ term_help(key) }}">{{ text or key.split(':')[-1].replace('-', ' ').replace('_', ' ')|title }}</abbr>
+{%- endmacro %}
+
+{% macro field_diff(changes) %}
+{% if changes %}
+<table class="diff-table">
+  <caption class="visually-hidden">{{ _('Field differences') }}</caption>
+  <thead><tr><th scope="col">{{ _('Field') }}</th><th scope="col">{{ _('Before') }}</th><th scope="col">{{ _('After') }}</th></tr></thead>
+  <tbody>
+    {% for c in changes %}
+    <tr><td>{{ c.field }}</td><td class="diff-old">{{ c.old_value if c.old_value is not none else '—' }}</td><td class="diff-new">{{ c.new_value if c.new_value is not none else '—' }}</td></tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% else %}
+<div class="table-empty">{{ _('No field differences.') }}</div>
+{% endif %}
+{% endmacro %}
+
+{% macro pager(page, total, per_page=50) %}
+{% set pages = ((total + per_page - 1) // per_page) %}
+{% if pages > 1 %}
+<nav class="pager" aria-label="{{ _('Pages') }}">
+  {% if page > 1 %}<a href="{{ page_url(page - 1) }}">&laquo; {{ _('Previous') }}</a>{% endif %}
+  <span>{{ page }} / {{ pages }}</span>
+  {% if page < pages %}<a href="{{ page_url(page + 1) }}">{{ _('Next') }} &raquo;</a>{% endif %}
+</nav>
+{% endif %}
+{% endmacro %}

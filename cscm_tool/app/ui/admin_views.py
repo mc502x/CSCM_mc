@@ -1,32 +1,140 @@
-"""S14 User Management, S15 Lookup/Vocabulary Management, S16 Audit Log Search."""
-
-from typing import cast
+"""S14 User Management, S15 Lookup/Vocabulary Management (incl. Functional
+System Group / Subgroup administration, EPIC-16), S16 Audit Log Search."""
 
 from flask import flash, redirect, render_template, request, url_for
 
 from app.auth.decorators import current_user, require_role_web
+from app.auth.roles import ROLE_CODES, USER_LIST_ROLES, assignable_roles, may_change_role
 from app.domain.errors import (
     DomainError,
     LastAdministratorError,
     NotFoundError,
     PasswordPolicyError,
 )
-from app.models.lookup import LookupFunctionalSystemGroup
+from app.i18n import translate as _
 from app.services.audit_service import AuditService
 from app.services.lookup_admin_service import LookupAdminService
 from app.services.lookup_service import VOCABULARY_MODELS, LookupService
+from app.services.status_code_service import StatusCodeService
 from app.services.user_service import UserService
 from app.ui import ui_bp
 
-_ROLES = ["ADMINISTRATOR", "ENGINEER", "REVIEWER", "CHIEF_ENGINEER", "VIEWER"]
+_ROLES = list(ROLE_CODES)
 
 
 @ui_bp.route("/admin/users")
-@require_role_web("ADMINISTRATOR")
+@require_role_web(*USER_LIST_ROLES)
 def user_list():
     users = UserService.list_users()
     domains = LookupService.list_vocabulary("engineering-domains")
-    return render_template("admin/users.html", users=users, roles=_ROLES, domains=domains)
+    actor_role = current_user.role_code
+    return render_template(
+        "admin/users.html",
+        users=users,
+        roles=_ROLES,
+        domains=domains,
+        is_admin=actor_role == "ADMINISTRATOR",
+        assignable=assignable_roles(actor_role),
+        may_change_role=lambda user: any(
+            may_change_role(actor_role, user.role.code, r) for r in assignable_roles(actor_role)
+        ),
+    )
+
+
+@ui_bp.route("/admin/users/<int:user_id>")
+@require_role_web(*USER_LIST_ROLES)
+def user_detail(user_id):
+    try:
+        user = UserService.get_user(user_id)
+        usage = UserService.usage(user_id)
+    except NotFoundError:
+        flash(_("User not found."), "error")
+        return redirect(url_for("ui.user_list"))
+    actor_role = current_user.role_code
+    return render_template(
+        "admin/user_detail.html",
+        user=user,
+        usage=usage,
+        roles=_ROLES,
+        domains=LookupService.list_vocabulary("engineering-domains"),
+        is_admin=actor_role == "ADMINISTRATOR",
+        is_self=user.id == current_user.id,
+        assignable=assignable_roles(actor_role),
+        may_change_role=any(
+            may_change_role(actor_role, user.role.code, r) for r in assignable_roles(actor_role)
+        ),
+    )
+
+
+@ui_bp.route("/admin/users/<int:user_id>/active", methods=["POST"])
+@require_role_web("ADMINISTRATOR")
+def user_set_active(user_id):
+    """The Deactivate / Activate buttons. A deactivated account cannot sign in and an open session
+    ends with its next request; nothing it did is lost."""
+    active = request.form.get("active") == "1"
+    try:
+        UserService.update_user(user_id, is_active=active, actor=current_user)
+    except (LastAdministratorError, DomainError, ValueError) as exc:
+        flash(_(str(exc)), "error")
+    else:
+        flash(_("User activated.") if active else _("User deactivated."), "success")
+    return redirect(request.form.get("next") or url_for("ui.user_list"))
+
+
+@ui_bp.route("/admin/users/<int:user_id>/delete", methods=["POST"])
+@require_role_web("ADMINISTRATOR")
+def user_delete(user_id):
+    try:
+        result = UserService.delete_user(
+            user_id, current_user, request.form.get("current_password")
+        )
+    except (LastAdministratorError, DomainError, ValueError) as exc:
+        flash(_(str(exc)), "error")
+        return redirect(url_for("ui.user_detail", user_id=user_id))
+    if result["mode"] == "erased":
+        flash(
+            _("User deleted; its name and address are erased, what it did stays attributable."),
+            "success",
+        )
+    else:
+        flash(_("User deleted."), "success")
+    return redirect(url_for("ui.user_list"))
+
+
+@ui_bp.route("/admin/withdrawn-codes")
+@require_role_web("ADMINISTRATOR")
+def withdrawn_codes():
+    """S48: the codes whose change request was withdrawn and that still hold a number (BR-026)."""
+    return render_template(
+        "admin/withdrawn_codes.html", codes=StatusCodeService.list_withdrawn(current_user)
+    )
+
+
+@ui_bp.route("/admin/withdrawn-codes/delete", methods=["POST"])
+@require_role_web("ADMINISTRATOR")
+def withdrawn_codes_delete():
+    ids = [int(i) for i in request.form.getlist("ids") if i.isdigit()]
+    try:
+        result = StatusCodeService.delete_withdrawn(
+            ids, current_user, request.form.get("current_password")
+        )
+    except (DomainError, ValueError) as exc:
+        flash(_(str(exc)), "error")
+        return redirect(url_for("ui.withdrawn_codes"))
+    if result["deleted"]:
+        flash(
+            _("%(n)s withdrawn code(s) deleted.", n=len(result["deleted"])),
+            "success",
+        )
+    if result["skipped"]:
+        flash(
+            _(
+                "Not deleted (it has a revision again or is still referenced): %(x)s",
+                x=", ".join(result["skipped"]),
+            ),
+            "error",
+        )
+    return redirect(url_for("ui.withdrawn_codes"))
 
 
 @ui_bp.route("/admin/users/new", methods=["POST"])
@@ -46,30 +154,33 @@ def user_new():
         for v in exc.violations:
             flash(v, "error")
     except ValueError as exc:
-        flash(str(exc), "error")
+        flash(_(str(exc)), "error")
     else:
-        flash("User created.", "success")
+        flash(_("User created."), "success")
     return redirect(url_for("ui.user_list"))
 
 
 @ui_bp.route("/admin/users/<int:user_id>/update", methods=["POST"])
-@require_role_web("ADMINISTRATOR")
+@require_role_web(*USER_LIST_ROLES)
 def user_update(user_id):
     try:
-        UserService.update_user(
-            user_id,
-            full_name=request.form.get("full_name") or None,
-            role_code=request.form.get("role") or None,
-            engineering_domain_codes=request.form.getlist("engineering_domains"),
-            is_active=request.form.get("is_active") == "on",
-            actor=current_user,
-        )
-    except LastAdministratorError as exc:
-        flash(str(exc), "error")
-    except ValueError as exc:
-        flash(str(exc), "error")
+        if current_user.role_code == "ADMINISTRATOR":
+            UserService.update_user(
+                user_id,
+                full_name=request.form.get("full_name") or None,
+                role_code=request.form.get("role") or None,
+                engineering_domain_codes=request.form.getlist("engineering_domains"),
+                is_active=request.form.get("is_active") == "on",
+                actor=current_user,
+            )
+        else:  # StCd Owner: the role is all they may change (BR-024)
+            UserService.update_user(
+                user_id, role_code=request.form.get("role") or None, actor=current_user
+            )
+    except (LastAdministratorError, DomainError, ValueError) as exc:
+        flash(_(str(exc)), "error")
     else:
-        flash("User updated.", "success")
+        flash(_("User updated."), "success")
     return redirect(url_for("ui.user_list"))
 
 
@@ -83,7 +194,7 @@ def user_reset_password(user_id):
         for v in exc.violations:
             flash(v, "error")
     else:
-        flash("Password reset.", "success")
+        flash(_("Password reset."), "success")
     return redirect(url_for("ui.user_list"))
 
 
@@ -94,14 +205,20 @@ def lookup_admin():
     if vocabulary not in VOCABULARY_MODELS:
         vocabulary = "turbine-platforms"
 
+    selected_group_id = None
     if vocabulary == "functional-subgroups":
         groups = LookupService.list_vocabulary("functional-system-groups")
-        values = []
-        for group in groups:
-            group_code = cast(LookupFunctionalSystemGroup, group).code
-            values.extend(
-                LookupService.list_vocabulary(vocabulary, functional_system_group_code=group_code)
-            )
+        selected_group_id = request.args.get("functional_system_group", type=int) or (
+            groups[0].id if groups else None  # type: ignore[attr-defined]
+        )
+        values = (
+            LookupService.list_vocabulary(vocabulary, functional_system_group_id=selected_group_id)
+            if selected_group_id
+            else []
+        )
+    elif vocabulary == "functional-system-groups":
+        values = LookupService.list_vocabulary(vocabulary)
+        groups = []
     else:
         values = LookupService.list_vocabulary(vocabulary)
         groups = []
@@ -112,6 +229,7 @@ def lookup_admin():
         vocabulary=vocabulary,
         values=values,
         groups=groups,
+        selected_group_id=selected_group_id,
     )
 
 
@@ -121,18 +239,59 @@ def lookup_value_new(vocabulary):
     data = {
         "code": request.form.get("code", ""),
         "label": request.form.get("label", ""),
-        "description": request.form.get("description") or None,
-        "functional_system_group": request.form.get("functional_system_group") or None,
-        "sub_range_start": request.form.get("sub_range_start", type=int),
-        "sub_range_end": request.form.get("sub_range_end", type=int),
     }
     try:
         LookupAdminService.create_value(vocabulary, data, current_user)
     except (DomainError, ValueError) as exc:
-        flash(str(exc), "error")
+        flash(_(str(exc)), "error")
     else:
-        flash("Value added.", "success")
+        flash(_("Value added."), "success")
     return redirect(url_for("ui.lookup_admin", vocabulary=vocabulary))
+
+
+@ui_bp.route("/admin/lookups/functional-system-groups/new", methods=["POST"])
+@require_role_web("ADMINISTRATOR")
+def functional_system_group_new():
+    """FR-048g/h (EPIC-16): into any currently free range, non-overlap
+    validated (service layer + trg_prevent_group_overlap backstop)."""
+    data = {
+        "code": request.form.get("code", ""),
+        "label": request.form.get("label", ""),
+        "range_start": request.form.get("range_start", type=int),
+        "range_end": request.form.get("range_end", type=int),
+    }
+    try:
+        group = LookupAdminService.create_functional_system_group(data, current_user)
+    except (DomainError, ValueError) as exc:
+        flash(_(str(exc)), "error")
+    else:
+        flash(_("Functional System Group '%(code)s' created.", code=group.code), "success")
+    return redirect(url_for("ui.lookup_admin", vocabulary="functional-system-groups"))
+
+
+@ui_bp.route("/admin/lookups/functional-subgroups/new", methods=["POST"])
+@require_role_web("ADMINISTRATOR")
+def functional_subgroup_new():
+    """FR-048e/f (EPIC-16): within an existing group, non-overlap validated."""
+    group_id = request.form.get("functional_system_group", type=int)
+    data = {
+        "functional_system_group": group_id,
+        "code": request.form.get("code", ""),
+        "label": request.form.get("label", ""),
+        "sub_range_start": request.form.get("sub_range_start", type=int),
+        "sub_range_end": request.form.get("sub_range_end", type=int),
+    }
+    try:
+        LookupAdminService.create_functional_subgroup(data, current_user)
+    except (DomainError, ValueError) as exc:
+        flash(_(str(exc)), "error")
+    else:
+        flash(_("Functional Subgroup added."), "success")
+    return redirect(
+        url_for(
+            "ui.lookup_admin", vocabulary="functional-subgroups", functional_system_group=group_id
+        )
+    )
 
 
 @ui_bp.route("/admin/lookups/<vocabulary>/<int:value_id>/update", methods=["POST"])
@@ -140,16 +299,17 @@ def lookup_value_new(vocabulary):
 def lookup_value_update(vocabulary, value_id):
     data = {
         "label": request.form.get("label"),
+        "description": request.form.get("description") or None,
         "is_active": request.form.get("is_active") == "on",
     }
     try:
         LookupAdminService.update_value(vocabulary, value_id, data, current_user)
     except NotFoundError:
-        flash("Value not found.", "error")
+        flash(_("Value not found."), "error")
     except ValueError as exc:
-        flash(str(exc), "error")
+        flash(_(str(exc)), "error")
     else:
-        flash("Value updated.", "success")
+        flash(_("Value updated."), "success")
     return redirect(url_for("ui.lookup_admin", vocabulary=vocabulary))
 
 
@@ -162,6 +322,7 @@ def audit_log():
         entity_type=request.args.get("entity_type") or None,
         entity_id=request.args.get("entity_id", type=int),
         actor_id=request.args.get("actor_id", type=int),
+        action=request.args.get("action") or None,
         date_from=request.args.get("date_from") or None,
         date_to=request.args.get("date_to") or None,
         page=page,

@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block title %}{{ _('Import Job') }} #{{ job.id }} — CSCM Tool{% endblock %}
+{% block content %}
+<div class="page-header"><h1>{{ _('Import Job') }} #{{ job.id }}</h1></div>
+
+<div class="card" style="max-width:640px">
+  {% if job.status in ('PENDING', 'VALIDATING') %}
+  <div id="import-progress" data-progress-url="{{ url_for('ui.import_progress', import_job_id=job.id) }}">
+    <p>{{ _('Processing in the background...') }} <span id="import-progress-text">{{ progress.processed_count }} / {{ job.row_count }}</span></p>
+    <progress id="import-progress-bar" max="100" value="{{ progress.progress_percent }}" aria-label="{{ _('Import progress') }}"></progress>
+    <noscript><p class="muted">{{ _('Reload this page to see the progress.') }}</p></noscript>
+  </div>
+  {% endif %}
+  <dl class="kv">
+    <dt>{{ _('Source') }}</dt><dd>{{ job.source_format }}</dd>
+    <dt>{{ _('Mode') }}</dt><dd>{{ job.import_mode }}</dd>
+    <dt>{{ _('Status') }}</dt><dd id="import-status">{{ job.status }}</dd>
+    <dt>{{ _('Rows') }}</dt><dd>{{ job.row_count }}</dd>
+    <dt>{{ _('Created or revised') }}</dt><dd>{{ job.created_count }}</dd>
+    <dt>{{ _('Failed') }}</dt><dd>{{ job.error_count }}</dd>
+    <dt>{{ _('Warnings') }}</dt><dd>{{ job.warning_count }}</dd>
+    {% if job.change_set_id %}<dt>{{ _('Change set') }}</dt><dd><a href="{{ url_for('ui.change_set_detail', change_set_id=job.change_set_id) }}">#{{ job.change_set_id }}</a></dd>{% endif %}
+    <dt>{{ _('Started') }}</dt><dd>{{ job.created_at }}</dd>
+    <dt>{{ _('Completed') }}</dt><dd>{{ job.completed_at or '—' }}</dd>
+  </dl>
+
+  {% if job.status == 'COMPLETE' %}
+  <p class="muted">
+    {{ job.created_count }} {{ _('of') }} {{ job.row_count }} {{ _('row(s) imported as Drafts') }}
+    {%- if job.error_count %}, {{ job.error_count }} {{ _('failed validation') }}{% endif %}.
+    {{ _('Imported rows are ordinary Drafts — they still require Cross-Domain Sign-Off, dual review, and Chief Engineer approval before Release.') }}
+  </p>
+  <div class="btn-row">
+    {% if job.error_count %}
+    <a class="btn" href="{{ url_for('ui.import_errors', import_job_id=job.id) }}">{{ _('Download Error Report') }} (CSV)</a>
+    {% if job.error_report_xlsx_reference %}<a class="btn" href="{{ url_for('ui.import_errors', import_job_id=job.id, format='xlsx') }}">{{ _('Download Error Report') }} (XLSX)</a>{% endif %}
+    {% endif %}
+    {% if job.created_count %}
+    <a class="btn btn--primary" href="{{ url_for('ui.my_change_requests', import_job_id=job.id) }}">{{ _('View Imported Drafts') }}</a>
+    {% endif %}
+  </div>
+  {% endif %}
+</div>
+{% endblock %}
