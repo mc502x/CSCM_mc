@@ -1,5 +1,5 @@
 {
- "date": "2026-10-25",
+ "date": "2026-10-26",
  "method": "Every string is checked mechanically; a sample of 160 strings per language is read for meaning, register and consistency (a wrong meaning counts 1, an awkward or inconsistent wording 0.5); the rate is carried over to the whole catalogue, reduced by the haircut (what the checker cannot see in that language) and by the terms the interface renders differently from the nomenclature. A string that changed later is read one by one.",
  "history": [
   {
@@ -31,6 +31,11 @@
    "date": "2026-10-25",
    "by": "AI pre-check (Claude), read one by one 2026-10-25",
    "note": "delta: 180 changed strings read one by one"
+  },
+  {
+   "date": "2026-10-26",
+   "by": "AI pre-check (Claude), read one by one 2026-10-26",
+   "note": "delta: 72 changed strings read one by one"
   }
  ],
  "languages": {
@@ -43,7 +48,7 @@
    "errors": 0,
    "awkward": 6,
    "mechanical": {
-    "strings": 1290,
+    "strings": 1294,
     "missing": 0,
     "placeholders": 0,
     "identical": 0,
@@ -699,20 +704,44 @@
      "hash": "ce4916",
      "kind": "OK",
      "note": ""
+    },
+    "S579615": {
+     "english": "Automatic (system)",
+     "hash": "f7220c",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sae1ef0": {
+     "english": "Dark",
+     "hash": "973b6d",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa36ef8": {
+     "english": "Light",
+     "hash": "94f21d",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa797e3": {
+     "english": "Theme",
+     "hash": "ead836",
+     "kind": "OK",
+     "note": ""
     }
    },
-   "checked_at": "2026-10-25"
+   "checked_at": "2026-10-26"
   },
   "fr": {
    "confidence": 94.6,
-   "accuracy": 98.8,
+   "accuracy": 98.9,
    "haircut": 4.0,
    "sample_size": 160,
    "sample_rate": 0.0125,
    "errors": 0,
    "awkward": 4,
    "mechanical": {
-    "strings": 1289,
+    "strings": 1293,
     "missing": 0,
     "placeholders": 0,
     "identical": 0,
@@ -1352,9 +1381,33 @@
      "hash": "8c6be9",
      "kind": "OK",
      "note": ""
+    },
+    "S579615": {
+     "english": "Automatic (system)",
+     "hash": "af4c03",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sae1ef0": {
+     "english": "Dark",
+     "hash": "f47dd5",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa36ef8": {
+     "english": "Light",
+     "hash": "6e4393",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa797e3": {
+     "english": "Theme",
+     "hash": "148522",
+     "kind": "OK",
+     "note": ""
     }
    },
-   "checked_at": "2026-10-25"
+   "checked_at": "2026-10-26"
   },
   "es": {
    "confidence": 93.7,
@@ -1365,7 +1418,7 @@
    "errors": 0,
    "awkward": 6,
    "mechanical": {
-    "strings": 1289,
+    "strings": 1293,
     "missing": 0,
     "placeholders": 0,
     "identical": 0,
@@ -2021,9 +2074,33 @@
      "hash": "7705e6",
      "kind": "A",
      "note": "'como arriba' is understandable; 'igual que arriba' is a little more usual"
+    },
+    "S579615": {
+     "english": "Automatic (system)",
+     "hash": "cd1397",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sae1ef0": {
+     "english": "Dark",
+     "hash": "13077a",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa36ef8": {
+     "english": "Light",
+     "hash": "7eda4b",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa797e3": {
+     "english": "Theme",
+     "hash": "17e444",
+     "kind": "OK",
+     "note": ""
     }
    },
-   "checked_at": "2026-10-25"
+   "checked_at": "2026-10-26"
   },
   "it": {
    "confidence": 94.4,
@@ -2034,7 +2111,7 @@
    "errors": 0,
    "awkward": 5,
    "mechanical": {
-    "strings": 1289,
+    "strings": 1293,
     "missing": 0,
     "placeholders": 0,
     "identical": 0,
@@ -2682,12 +2759,36 @@
      "hash": "9ccd76",
      "kind": "OK",
      "note": ""
+    },
+    "S579615": {
+     "english": "Automatic (system)",
+     "hash": "eb0ff6",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sae1ef0": {
+     "english": "Dark",
+     "hash": "d6aca4",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa36ef8": {
+     "english": "Light",
+     "hash": "394a61",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa797e3": {
+     "english": "Theme",
+     "hash": "17e444",
+     "kind": "OK",
+     "note": ""
     }
    },
-   "checked_at": "2026-10-25"
+   "checked_at": "2026-10-26"
   },
   "da": {
-   "confidence": 92.2,
+   "confidence": 92.3,
    "accuracy": 98.5,
    "haircut": 6.0,
    "sample_size": 160,
@@ -2695,7 +2796,7 @@
    "errors": 1,
    "awkward": 3,
    "mechanical": {
-    "strings": 1289,
+    "strings": 1293,
     "missing": 0,
     "placeholders": 0,
     "identical": 0,
@@ -3335,9 +3436,33 @@
      "hash": "85fbdb",
      "kind": "OK",
      "note": ""
+    },
+    "S579615": {
+     "english": "Automatic (system)",
+     "hash": "4eb345",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sae1ef0": {
+     "english": "Dark",
+     "hash": "32d7e2",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa36ef8": {
+     "english": "Light",
+     "hash": "bf7b2c",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa797e3": {
+     "english": "Theme",
+     "hash": "17e444",
+     "kind": "OK",
+     "note": ""
     }
    },
-   "checked_at": "2026-10-25"
+   "checked_at": "2026-10-26"
   },
   "hi": {
    "confidence": 87.9,
@@ -3348,7 +3473,7 @@
    "errors": 1,
    "awkward": 7,
    "mechanical": {
-    "strings": 1289,
+    "strings": 1293,
     "missing": 0,
     "placeholders": 0,
     "identical": 0,
@@ -4020,9 +4145,33 @@
      "hash": "52f543",
      "kind": "OK",
      "note": ""
+    },
+    "S579615": {
+     "english": "Automatic (system)",
+     "hash": "d819dd",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sae1ef0": {
+     "english": "Dark",
+     "hash": "d740e2",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa36ef8": {
+     "english": "Light",
+     "hash": "267354",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa797e3": {
+     "english": "Theme",
+     "hash": "c14ed3",
+     "kind": "OK",
+     "note": ""
     }
    },
-   "checked_at": "2026-10-25"
+   "checked_at": "2026-10-26"
   },
   "ar": {
    "confidence": 88.2,
@@ -4033,7 +4182,7 @@
    "errors": 1,
    "awkward": 3,
    "mechanical": {
-    "strings": 1289,
+    "strings": 1293,
     "missing": 0,
     "placeholders": 0,
     "identical": 0,
@@ -4673,9 +4822,33 @@
      "hash": "edc2d0",
      "kind": "OK",
      "note": ""
+    },
+    "S579615": {
+     "english": "Automatic (system)",
+     "hash": "ff7335",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sae1ef0": {
+     "english": "Dark",
+     "hash": "4deecd",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa36ef8": {
+     "english": "Light",
+     "hash": "825697",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa797e3": {
+     "english": "Theme",
+     "hash": "dc3a2f",
+     "kind": "OK",
+     "note": ""
     }
    },
-   "checked_at": "2026-10-25"
+   "checked_at": "2026-10-26"
   },
   "bn": {
    "confidence": 86.9,
@@ -4686,7 +4859,7 @@
    "errors": 0,
    "awkward": 6,
    "mechanical": {
-    "strings": 1289,
+    "strings": 1293,
     "missing": 0,
     "placeholders": 0,
     "identical": 0,
@@ -5342,9 +5515,33 @@
      "hash": "16a38c",
      "kind": "OK",
      "note": ""
+    },
+    "S579615": {
+     "english": "Automatic (system)",
+     "hash": "81fba9",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sae1ef0": {
+     "english": "Dark",
+     "hash": "5161aa",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa36ef8": {
+     "english": "Light",
+     "hash": "713752",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa797e3": {
+     "english": "Theme",
+     "hash": "f3289c",
+     "kind": "OK",
+     "note": ""
     }
    },
-   "checked_at": "2026-10-25"
+   "checked_at": "2026-10-26"
   },
   "mr": {
    "confidence": 86.4,
@@ -5355,7 +5552,7 @@
    "errors": 1,
    "awkward": 5,
    "mechanical": {
-    "strings": 1289,
+    "strings": 1293,
     "missing": 0,
     "placeholders": 0,
     "identical": 0,
@@ -6011,9 +6208,33 @@
      "hash": "977ec7",
      "kind": "OK",
      "note": ""
+    },
+    "S579615": {
+     "english": "Automatic (system)",
+     "hash": "dd030c",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sae1ef0": {
+     "english": "Dark",
+     "hash": "668af4",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa36ef8": {
+     "english": "Light",
+     "hash": "7a667c",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa797e3": {
+     "english": "Theme",
+     "hash": "c14ed3",
+     "kind": "OK",
+     "note": ""
     }
    },
-   "checked_at": "2026-10-25"
+   "checked_at": "2026-10-26"
   },
   "te": {
    "confidence": 85.2,
@@ -6024,7 +6245,7 @@
    "errors": 0,
    "awkward": 5,
    "mechanical": {
-    "strings": 1289,
+    "strings": 1293,
     "missing": 0,
     "placeholders": 0,
     "identical": 0,
@@ -6672,12 +6893,36 @@
      "hash": "d16d96",
      "kind": "OK",
      "note": ""
+    },
+    "S579615": {
+     "english": "Automatic (system)",
+     "hash": "6a61e0",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sae1ef0": {
+     "english": "Dark",
+     "hash": "1631fc",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa36ef8": {
+     "english": "Light",
+     "hash": "489a39",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa797e3": {
+     "english": "Theme",
+     "hash": "a92eec",
+     "kind": "OK",
+     "note": ""
     }
    },
-   "checked_at": "2026-10-25"
+   "checked_at": "2026-10-26"
   },
   "ta": {
-   "confidence": 84.3,
+   "confidence": 84.2,
    "accuracy": 97.5,
    "haircut": 13.0,
    "sample_size": 160,
@@ -6685,7 +6930,7 @@
    "errors": 1,
    "awkward": 6,
    "mechanical": {
-    "strings": 1289,
+    "strings": 1293,
     "missing": 0,
     "placeholders": 0,
     "identical": 0,
@@ -7349,20 +7594,44 @@
      "hash": "c0438b",
      "kind": "OK",
      "note": ""
+    },
+    "S579615": {
+     "english": "Automatic (system)",
+     "hash": "e42c2a",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sae1ef0": {
+     "english": "Dark",
+     "hash": "d5a363",
+     "kind": "A",
+     "note": "'இருள்' means darkness; 'கரும்' or 'அடர்' reads more like a colour scheme"
+    },
+    "Sa36ef8": {
+     "english": "Light",
+     "hash": "da0bdd",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa797e3": {
+     "english": "Theme",
+     "hash": "afce89",
+     "kind": "OK",
+     "note": ""
     }
    },
-   "checked_at": "2026-10-25"
+   "checked_at": "2026-10-26"
   },
   "gu": {
    "confidence": 84.2,
-   "accuracy": 97.5,
+   "accuracy": 97.4,
    "haircut": 13.0,
    "sample_size": 160,
    "sample_rate": 0.025,
    "errors": 1,
    "awkward": 6,
    "mechanical": {
-    "strings": 1289,
+    "strings": 1293,
     "missing": 0,
     "placeholders": 0,
     "identical": 0,
@@ -8026,9 +8295,33 @@
      "hash": "05fe74",
      "kind": "OK",
      "note": ""
+    },
+    "S579615": {
+     "english": "Automatic (system)",
+     "hash": "9f8a03",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sae1ef0": {
+     "english": "Dark",
+     "hash": "112830",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa36ef8": {
+     "english": "Light",
+     "hash": "d9ab44",
+     "kind": "A",
+     "note": "'હળવી' is feminine to agree with 'થીમ'; check the gender in the menu"
+    },
+    "Sa797e3": {
+     "english": "Theme",
+     "hash": "5b6a2a",
+     "kind": "OK",
+     "note": ""
     }
    },
-   "checked_at": "2026-10-25"
+   "checked_at": "2026-10-26"
   },
   "ur": {
    "confidence": 84.6,
@@ -8039,7 +8332,7 @@
    "errors": 1,
    "awkward": 5,
    "mechanical": {
-    "strings": 1289,
+    "strings": 1293,
     "missing": 0,
     "placeholders": 0,
     "identical": 0,
@@ -8695,9 +8988,33 @@
      "hash": "6f489b",
      "kind": "OK",
      "note": ""
+    },
+    "S579615": {
+     "english": "Automatic (system)",
+     "hash": "a11ea3",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sae1ef0": {
+     "english": "Dark",
+     "hash": "b9a962",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa36ef8": {
+     "english": "Light",
+     "hash": "23a14b",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa797e3": {
+     "english": "Theme",
+     "hash": "f4b7fa",
+     "kind": "OK",
+     "note": ""
     }
    },
-   "checked_at": "2026-10-25"
+   "checked_at": "2026-10-26"
   },
   "kn": {
    "confidence": 83.6,
@@ -8708,7 +9025,7 @@
    "errors": 1,
    "awkward": 7,
    "mechanical": {
-    "strings": 1289,
+    "strings": 1293,
     "missing": 0,
     "placeholders": 0,
     "identical": 0,
@@ -9380,20 +9697,44 @@
      "hash": "bb9825",
      "kind": "OK",
      "note": ""
+    },
+    "S579615": {
+     "english": "Automatic (system)",
+     "hash": "c60170",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sae1ef0": {
+     "english": "Dark",
+     "hash": "90a7ce",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa36ef8": {
+     "english": "Light",
+     "hash": "5953a9",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa797e3": {
+     "english": "Theme",
+     "hash": "9e111c",
+     "kind": "OK",
+     "note": ""
     }
    },
-   "checked_at": "2026-10-25"
+   "checked_at": "2026-10-26"
   },
   "ml": {
    "confidence": 83.1,
-   "accuracy": 97.7,
+   "accuracy": 97.8,
    "haircut": 14.0,
    "sample_size": 160,
    "sample_rate": 0.02187,
    "errors": 1,
    "awkward": 5,
    "mechanical": {
-    "strings": 1289,
+    "strings": 1293,
     "missing": 0,
     "placeholders": 0,
     "identical": 0,
@@ -10049,20 +10390,44 @@
      "hash": "6e3431",
      "kind": "OK",
      "note": ""
+    },
+    "S579615": {
+     "english": "Automatic (system)",
+     "hash": "060623",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sae1ef0": {
+     "english": "Dark",
+     "hash": "a6a60a",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa36ef8": {
+     "english": "Light",
+     "hash": "f3b182",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa797e3": {
+     "english": "Theme",
+     "hash": "c90df6",
+     "kind": "OK",
+     "note": ""
     }
    },
-   "checked_at": "2026-10-25"
+   "checked_at": "2026-10-26"
   },
   "pa": {
    "confidence": 82.7,
-   "accuracy": 97.3,
+   "accuracy": 97.4,
    "haircut": 14.0,
    "sample_size": 160,
    "sample_rate": 0.025,
    "errors": 1,
    "awkward": 6,
    "mechanical": {
-    "strings": 1289,
+    "strings": 1293,
     "missing": 0,
     "placeholders": 0,
     "identical": 0,
@@ -10726,9 +11091,33 @@
      "hash": "e147a2",
      "kind": "OK",
      "note": ""
+    },
+    "S579615": {
+     "english": "Automatic (system)",
+     "hash": "9bc8ec",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sae1ef0": {
+     "english": "Dark",
+     "hash": "7215a0",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa36ef8": {
+     "english": "Light",
+     "hash": "5443fc",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa797e3": {
+     "english": "Theme",
+     "hash": "58b985",
+     "kind": "OK",
+     "note": ""
     }
    },
-   "checked_at": "2026-10-25"
+   "checked_at": "2026-10-26"
   },
   "ka": {
    "confidence": 82.6,
@@ -10739,7 +11128,7 @@
    "errors": 0,
    "awkward": 7,
    "mechanical": {
-    "strings": 1289,
+    "strings": 1293,
     "missing": 0,
     "placeholders": 0,
     "identical": 0,
@@ -11403,9 +11792,33 @@
      "hash": "171be7",
      "kind": "OK",
      "note": ""
+    },
+    "S579615": {
+     "english": "Automatic (system)",
+     "hash": "db7300",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sae1ef0": {
+     "english": "Dark",
+     "hash": "1a7d3a",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa36ef8": {
+     "english": "Light",
+     "hash": "abf1d6",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa797e3": {
+     "english": "Theme",
+     "hash": "9d78ce",
+     "kind": "OK",
+     "note": ""
     }
    },
-   "checked_at": "2026-10-25"
+   "checked_at": "2026-10-26"
   },
   "or": {
    "confidence": 78.3,
@@ -11416,7 +11829,7 @@
    "errors": 6,
    "awkward": 4,
    "mechanical": {
-    "strings": 1289,
+    "strings": 1293,
     "missing": 0,
     "placeholders": 0,
     "identical": 0,
@@ -12104,9 +12517,33 @@
      "hash": "79d607",
      "kind": "OK",
      "note": ""
+    },
+    "S579615": {
+     "english": "Automatic (system)",
+     "hash": "211f30",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sae1ef0": {
+     "english": "Dark",
+     "hash": "9a7fcf",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa36ef8": {
+     "english": "Light",
+     "hash": "9a35e2",
+     "kind": "OK",
+     "note": ""
+    },
+    "Sa797e3": {
+     "english": "Theme",
+     "hash": "2fb656",
+     "kind": "OK",
+     "note": ""
     }
    },
-   "checked_at": "2026-10-25"
+   "checked_at": "2026-10-26"
   }
  }
 }

@@ -215,6 +215,7 @@ The concept and the eleven open items for checking the translations by native sp
 | **Connections** between status codes (suppression, preconditions, escalation) read from the imported programs | v4.12.0 | FR-179 |
 | **Bulk workflow for the migration — I-70 with I-61 and I-62**: the workbench of a change set (readiness, bulk edit, bulk submit, bulk domain sign-off, bulk decisions), the sample inspection (stratified, 10 % / at least 8, one defect blocks), and the dossier (XLSX) for an auditor | v4.13.0 | FR-180 |
 | **Select-all on every list with tick boxes; a status category per program of a `.st` import (by alarm type, per row or for the ticked rows); delete several own Drafts at once from the Status Codes list — I-65** | v4.13.1 / v4.13.2 | FR-181, FR-182 |
+| **Dark mode**: Automatic (system) / Light / Dark in the top bar, every colour a token, the dark palette checked for contrast | v4.14.0 | FR-183 |
 
 **New ideas from the review of the release process** (not built):
 

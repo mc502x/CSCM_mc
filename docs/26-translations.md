@@ -266,31 +266,31 @@ A notice is sent once per change and person; a failing notice never undoes the c
 
 <!-- translations:start -->
 
-The interface has **1290 strings** (every text a template wraps in `_()`, the role names and the help texts). English is the source; the other languages are listed below. A string without a translation is shown in English.
+The interface has **1294 strings** (every text a template wraps in `_()`, the role names and the help texts). English is the source; the other languages are listed below. A string without a translation is shown in English.
 
 ### 9.1 Coverage
 
 | Language | Code | Direction | Translated | Share | Pre-check confidence | Fingerprint |
 |---|---|---|---|---|---|---|
 | GB English 🇬🇧 | `en` | ltr | source | — | — | — |
-| DE Deutsch 🇩🇪 (German) | `de` | ltr | 1290 | 100 % | <span style="background:#7fc561;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>94 %</b></span> | `435264f5ff90` |
-| FR Français 🇫🇷 (French) | `fr` | ltr | 1289 | 99 % | <span style="background:#7fc561;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>95 %</b></span> | `6e27e92ee68e` |
-| IN हिन्दी 🇮🇳 (Hindi) | `hi` | ltr | 1289 | 99 % | <span style="background:#9ccf5c;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>88 %</b></span> | `46601abb9642` |
-| SA العربية 🇸🇦 (Arabic) | `ar` | rtl | 1289 | 99 % | <span style="background:#9ccf5c;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>88 %</b></span> | `4ce88457394c` |
-| IN বাংলা 🇮🇳 (Bengali) | `bn` | ltr | 1289 | 99 % | <span style="background:#9ccf5c;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>87 %</b></span> | `fc1a7847accc` |
-| IN मराठी 🇮🇳 (Marathi) | `mr` | ltr | 1289 | 99 % | <span style="background:#9ccf5c;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>86 %</b></span> | `3874c1b8da23` |
-| IN తెలుగు 🇮🇳 (Telugu) | `te` | ltr | 1289 | 99 % | <span style="background:#9ccf5c;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>85 %</b></span> | `a7a350bccdd4` |
-| IN தமிழ் 🇮🇳 (Tamil) | `ta` | ltr | 1289 | 99 % | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>84 %</b></span> | `c11c6dc30773` |
-| IN ગુજરાતી 🇮🇳 (Gujarati) | `gu` | ltr | 1289 | 99 % | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>84 %</b></span> | `4cc3148f3a89` |
-| PK اردو 🇵🇰 (Urdu) | `ur` | rtl | 1289 | 99 % | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>85 %</b></span> | `43967ee7ab3e` |
-| IN ಕನ್ನಡ 🇮🇳 (Kannada) | `kn` | ltr | 1289 | 99 % | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>84 %</b></span> | `3881b474072f` |
-| IN ଓଡ଼ିଆ 🇮🇳 (Odia) | `or` | ltr | 1289 | 99 % | <span style="background:#d9e050;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>78 %</b></span> | `37150043f101` |
-| IN മലയാളം 🇮🇳 (Malayalam) | `ml` | ltr | 1289 | 99 % | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>83 %</b></span> | `40aa3b0d939d` |
-| IN ਪੰਜਾਬੀ 🇮🇳 (Punjabi) | `pa` | ltr | 1289 | 99 % | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>83 %</b></span> | `04c5cf98be5d` |
-| ES Español 🇪🇸 (Spanish) | `es` | ltr | 1289 | 99 % | <span style="background:#7fc561;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>94 %</b></span> | `a75702e7154b` |
-| IT Italiano 🇮🇹 (Italian) | `it` | ltr | 1289 | 99 % | <span style="background:#7fc561;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>94 %</b></span> | `bd116dc2f1d0` |
-| DK Dansk 🇩🇰 (Danish) | `da` | ltr | 1289 | 99 % | <span style="background:#7fc561;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>92 %</b></span> | `aee63126eb09` |
-| GE ქართული 🇬🇪 (Georgian) | `ka` | ltr | 1289 | 99 % | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>83 %</b></span> | `e2bd5498c190` |
+| DE Deutsch 🇩🇪 (German) | `de` | ltr | 1294 | 100 % | <span style="background:#7fc561;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>94 %</b></span> | `bc4fbe1e645f` |
+| FR Français 🇫🇷 (French) | `fr` | ltr | 1293 | 99 % | <span style="background:#7fc561;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>95 %</b></span> | `c3154822a629` |
+| IN हिन्दी 🇮🇳 (Hindi) | `hi` | ltr | 1293 | 99 % | <span style="background:#9ccf5c;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>88 %</b></span> | `2dac26700732` |
+| SA العربية 🇸🇦 (Arabic) | `ar` | rtl | 1293 | 99 % | <span style="background:#9ccf5c;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>88 %</b></span> | `13f0f9a2d163` |
+| IN বাংলা 🇮🇳 (Bengali) | `bn` | ltr | 1293 | 99 % | <span style="background:#9ccf5c;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>87 %</b></span> | `2cecd8026685` |
+| IN मराठी 🇮🇳 (Marathi) | `mr` | ltr | 1293 | 99 % | <span style="background:#9ccf5c;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>86 %</b></span> | `04b2c9b8186b` |
+| IN తెలుగు 🇮🇳 (Telugu) | `te` | ltr | 1293 | 99 % | <span style="background:#9ccf5c;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>85 %</b></span> | `7d2fc0e85603` |
+| IN தமிழ் 🇮🇳 (Tamil) | `ta` | ltr | 1293 | 99 % | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>84 %</b></span> | `43690ff4265f` |
+| IN ગુજરાતી 🇮🇳 (Gujarati) | `gu` | ltr | 1293 | 99 % | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>84 %</b></span> | `1c7a2e589192` |
+| PK اردو 🇵🇰 (Urdu) | `ur` | rtl | 1293 | 99 % | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>85 %</b></span> | `b5258c824eee` |
+| IN ಕನ್ನಡ 🇮🇳 (Kannada) | `kn` | ltr | 1293 | 99 % | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>84 %</b></span> | `ee6e429c33d4` |
+| IN ଓଡ଼ିଆ 🇮🇳 (Odia) | `or` | ltr | 1293 | 99 % | <span style="background:#d9e050;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>78 %</b></span> | `79b0df331cf6` |
+| IN മലയാളം 🇮🇳 (Malayalam) | `ml` | ltr | 1293 | 99 % | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>83 %</b></span> | `07f4103b94d4` |
+| IN ਪੰਜਾਬੀ 🇮🇳 (Punjabi) | `pa` | ltr | 1293 | 99 % | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>83 %</b></span> | `344e5b818900` |
+| ES Español 🇪🇸 (Spanish) | `es` | ltr | 1293 | 99 % | <span style="background:#7fc561;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>94 %</b></span> | `7ae90d7a4464` |
+| IT Italiano 🇮🇹 (Italian) | `it` | ltr | 1293 | 99 % | <span style="background:#7fc561;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>94 %</b></span> | `f2274f4c40cd` |
+| DK Dansk 🇩🇰 (Danish) | `da` | ltr | 1293 | 99 % | <span style="background:#7fc561;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>92 %</b></span> | `c8f0711c5c27` |
+| GE ქართული 🇬🇪 (Georgian) | `ka` | ltr | 1293 | 99 % | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>83 %</b></span> | `5430d2c64c98` |
 
 The pre-check confidence is the estimate of section 8c - the share of strings a native speaker is expected to accept unchanged, by an AI checker and not by a native speaker; red is 50 % or less, green above 95 %.
 
@@ -438,7 +438,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 
 ### 9.2 DE Deutsch 🇩🇪 — German
 
-1290 of 1290 strings translated; direction left to right.
+1294 of 1294 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -461,6 +461,10 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S57e8a7` | _macros, success_metrics | slow | langsam |
 | `S15198e` | _macros | Waiting since | Wartet seit |
 | `Sad60c5` | _role | level | Stufe |
+| `S579615` | _theme | Automatic (system) | Automatisch (System) |
+| `Sae1ef0` | _theme | Dark | Dunkel |
+| `Sa36ef8` | _theme | Light | Hell |
+| `Sa797e3` | _theme | Theme | Darstellung |
 | `Se32707` | account_settings | Account Settings | Kontoeinstellungen |
 | `Sd9e420` | account_settings | At least 12 characters. | Mindestens 12 Zeichen. |
 | `S49289d` | account_settings | Change Password | Passwort ändern |
@@ -1735,7 +1739,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 
 ### 9.3 FR Français 🇫🇷 — French
 
-1289 of 1290 strings translated; direction left to right.
+1293 of 1294 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -1757,6 +1761,10 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S57e8a7` | _macros, success_metrics | slow | lent |
 | `S15198e` | _macros | Waiting since | En attente depuis |
 | `Sad60c5` | _role | level | niveau |
+| `S579615` | _theme | Automatic (system) | Automatique (système) |
+| `Sae1ef0` | _theme | Dark | Sombre |
+| `Sa36ef8` | _theme | Light | Clair |
+| `Sa797e3` | _theme | Theme | Thème |
 | `Se32707` | account_settings | Account Settings | Paramètres du compte |
 | `Sd9e420` | account_settings | At least 12 characters. | Au moins 12 caractères. |
 | `S49289d` | account_settings | Change Password | Changer le mot de passe |
@@ -3031,7 +3039,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 
 ### 9.4 IN हिन्दी 🇮🇳 — Hindi
 
-1289 of 1290 strings translated; direction left to right.
+1293 of 1294 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -3053,6 +3061,10 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S57e8a7` | _macros, success_metrics | slow | धीमा |
 | `S15198e` | _macros | Waiting since | प्रतीक्षा में, तब से |
 | `Sad60c5` | _role | level | स्तर |
+| `S579615` | _theme | Automatic (system) | स्वचालित (सिस्टम) |
+| `Sae1ef0` | _theme | Dark | गहरा |
+| `Sa36ef8` | _theme | Light | हल्का |
+| `Sa797e3` | _theme | Theme | थीम |
 | `Se32707` | account_settings | Account Settings | खाता सेटिंग |
 | `Sd9e420` | account_settings | At least 12 characters. | कम से कम 12 अक्षर। |
 | `S49289d` | account_settings | Change Password | पासवर्ड बदलें |
@@ -4327,7 +4339,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 
 ### 9.5 SA العربية 🇸🇦 — Arabic
 
-1289 of 1290 strings translated; direction right to left.
+1293 of 1294 strings translated; direction right to left.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -4349,6 +4361,10 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S57e8a7` | _macros, success_metrics | slow | بطيء |
 | `S15198e` | _macros | Waiting since | في الانتظار منذ |
 | `Sad60c5` | _role | level | المستوى |
+| `S579615` | _theme | Automatic (system) | تلقائي (النظام) |
+| `Sae1ef0` | _theme | Dark | داكن |
+| `Sa36ef8` | _theme | Light | فاتح |
+| `Sa797e3` | _theme | Theme | المظهر |
 | `Se32707` | account_settings | Account Settings | إعدادات الحساب |
 | `Sd9e420` | account_settings | At least 12 characters. | 12 حرفًا على الأقل. |
 | `S49289d` | account_settings | Change Password | تغيير كلمة المرور |
@@ -5623,7 +5639,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 
 ### 9.6 IN বাংলা 🇮🇳 — Bengali
 
-1289 of 1290 strings translated; direction left to right.
+1293 of 1294 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -5645,6 +5661,10 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S57e8a7` | _macros, success_metrics | slow | ধীর |
 | `S15198e` | _macros | Waiting since | অপেক্ষায়, থেকে |
 | `Sad60c5` | _role | level | স্তর |
+| `S579615` | _theme | Automatic (system) | স্বয়ংক্রিয় (সিস্টেম) |
+| `Sae1ef0` | _theme | Dark | গাঢ় |
+| `Sa36ef8` | _theme | Light | হালকা |
+| `Sa797e3` | _theme | Theme | থিম |
 | `Se32707` | account_settings | Account Settings | অ্যাকাউন্ট সেটিংস |
 | `Sd9e420` | account_settings | At least 12 characters. | কমপক্ষে ১২টি অক্ষর। |
 | `S49289d` | account_settings | Change Password | পাসওয়ার্ড পরিবর্তন |
@@ -6919,7 +6939,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 
 ### 9.7 IN मराठी 🇮🇳 — Marathi
 
-1289 of 1290 strings translated; direction left to right.
+1293 of 1294 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -6941,6 +6961,10 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S57e8a7` | _macros, success_metrics | slow | मंद |
 | `S15198e` | _macros | Waiting since | प्रतीक्षेत, पासून |
 | `Sad60c5` | _role | level | पातळी |
+| `S579615` | _theme | Automatic (system) | स्वयंचलित (सिस्टीम) |
+| `Sae1ef0` | _theme | Dark | गडद |
+| `Sa36ef8` | _theme | Light | फिकट |
+| `Sa797e3` | _theme | Theme | थीम |
 | `Se32707` | account_settings | Account Settings | खाते सेटिंग्ज |
 | `Sd9e420` | account_settings | At least 12 characters. | किमान १२ अक्षरे. |
 | `S49289d` | account_settings | Change Password | पासवर्ड बदला |
@@ -8215,7 +8239,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 
 ### 9.8 IN తెలుగు 🇮🇳 — Telugu
 
-1289 of 1290 strings translated; direction left to right.
+1293 of 1294 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -8237,6 +8261,10 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S57e8a7` | _macros, success_metrics | slow | నెమ్మదిగా |
 | `S15198e` | _macros | Waiting since | ఎదురుచూస్తోంది, నుండి |
 | `Sad60c5` | _role | level | స్థాయి |
+| `S579615` | _theme | Automatic (system) | స్వయంచాలక (సిస్టమ్) |
+| `Sae1ef0` | _theme | Dark | ముదురు |
+| `Sa36ef8` | _theme | Light | లేత |
+| `Sa797e3` | _theme | Theme | థీమ్ |
 | `Se32707` | account_settings | Account Settings | ఖాతా సెట్టింగ్‌లు |
 | `Sd9e420` | account_settings | At least 12 characters. | కనీసం 12 అక్షరాలు. |
 | `S49289d` | account_settings | Change Password | పాస్‌వర్డ్ మార్చండి |
@@ -9511,7 +9539,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 
 ### 9.9 IN தமிழ் 🇮🇳 — Tamil
 
-1289 of 1290 strings translated; direction left to right.
+1293 of 1294 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -9533,6 +9561,10 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S57e8a7` | _macros, success_metrics | slow | மெதுவாக |
 | `S15198e` | _macros | Waiting since | காத்திருப்பு, முதல் |
 | `Sad60c5` | _role | level | நிலை |
+| `S579615` | _theme | Automatic (system) | தானியங்கி (அமைப்பு) |
+| `Sae1ef0` | _theme | Dark | இருள் |
+| `Sa36ef8` | _theme | Light | வெளிர் |
+| `Sa797e3` | _theme | Theme | தோற்றம் |
 | `Se32707` | account_settings | Account Settings | கணக்கு அமைப்புகள் |
 | `Sd9e420` | account_settings | At least 12 characters. | குறைந்தது 12 எழுத்துகள். |
 | `S49289d` | account_settings | Change Password | கடவுச்சொல்லை மாற்றவும் |
@@ -10807,7 +10839,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 
 ### 9.10 IN ગુજરાતી 🇮🇳 — Gujarati
 
-1289 of 1290 strings translated; direction left to right.
+1293 of 1294 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -10829,6 +10861,10 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S57e8a7` | _macros, success_metrics | slow | ધીમું |
 | `S15198e` | _macros | Waiting since | રાહ જોઈ રહ્યું છે, થી |
 | `Sad60c5` | _role | level | સ્તર |
+| `S579615` | _theme | Automatic (system) | આપોઆપ (સિસ્ટમ) |
+| `Sae1ef0` | _theme | Dark | ઘેરી |
+| `Sa36ef8` | _theme | Light | હળવી |
+| `Sa797e3` | _theme | Theme | થીમ |
 | `Se32707` | account_settings | Account Settings | એકાઉન્ટ સેટિંગ્સ |
 | `Sd9e420` | account_settings | At least 12 characters. | ઓછામાં ઓછા 12 અક્ષરો. |
 | `S49289d` | account_settings | Change Password | પાસવર્ડ બદલો |
@@ -12103,7 +12139,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 
 ### 9.11 PK اردو 🇵🇰 — Urdu
 
-1289 of 1290 strings translated; direction right to left.
+1293 of 1294 strings translated; direction right to left.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -12125,6 +12161,10 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S57e8a7` | _macros, success_metrics | slow | سست |
 | `S15198e` | _macros | Waiting since | انتظار میں، سے |
 | `Sad60c5` | _role | level | سطح |
+| `S579615` | _theme | Automatic (system) | خودکار (سسٹم) |
+| `Sae1ef0` | _theme | Dark | گہرا |
+| `Sa36ef8` | _theme | Light | ہلکا |
+| `Sa797e3` | _theme | Theme | تھیم |
 | `Se32707` | account_settings | Account Settings | اکاؤنٹ کی ترتیبات |
 | `Sd9e420` | account_settings | At least 12 characters. | کم از کم 12 حروف۔ |
 | `S49289d` | account_settings | Change Password | پاس ورڈ تبدیل کریں |
@@ -13399,7 +13439,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 
 ### 9.12 IN ಕನ್ನಡ 🇮🇳 — Kannada
 
-1289 of 1290 strings translated; direction left to right.
+1293 of 1294 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -13421,6 +13461,10 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S57e8a7` | _macros, success_metrics | slow | ನಿಧಾನ |
 | `S15198e` | _macros | Waiting since | ಇಂದಿನಿಂದ ಕಾಯುತ್ತಿದೆ |
 | `Sad60c5` | _role | level | ಮಟ್ಟ |
+| `S579615` | _theme | Automatic (system) | ಸ್ವಯಂಚಾಲಿತ (ಸಿಸ್ಟಮ್) |
+| `Sae1ef0` | _theme | Dark | ಗಾಢ |
+| `Sa36ef8` | _theme | Light | ತಿಳಿ |
+| `Sa797e3` | _theme | Theme | ಥೀಮ್ |
 | `Se32707` | account_settings | Account Settings | ಖಾತೆ ಸೆಟ್ಟಿಂಗ್‌ಗಳು |
 | `Sd9e420` | account_settings | At least 12 characters. | ಕನಿಷ್ಠ 12 ಅಕ್ಷರಗಳು. |
 | `S49289d` | account_settings | Change Password | ಪಾಸ್‌ವರ್ಡ್ ಬದಲಾಯಿಸಿ |
@@ -14695,7 +14739,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 
 ### 9.13 IN ଓଡ଼ିଆ 🇮🇳 — Odia
 
-1289 of 1290 strings translated; direction left to right.
+1293 of 1294 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -14717,6 +14761,10 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S57e8a7` | _macros, success_metrics | slow | ମନ୍ଥର |
 | `S15198e` | _macros | Waiting since | ଠାରୁ ଅପେକ୍ଷା କରୁଛି |
 | `Sad60c5` | _role | level | ସ୍ତର |
+| `S579615` | _theme | Automatic (system) | ସ୍ୱୟଂଚାଳିତ (ସିଷ୍ଟମ୍) |
+| `Sae1ef0` | _theme | Dark | ଗାଢ଼ |
+| `Sa36ef8` | _theme | Light | ହାଲୁକା |
+| `Sa797e3` | _theme | Theme | ଥିମ୍ |
 | `Se32707` | account_settings | Account Settings | ଖାତା ସେଟିଂସ୍ |
 | `Sd9e420` | account_settings | At least 12 characters. | ଅନ୍ତତଃ 12 ଅକ୍ଷର। |
 | `S49289d` | account_settings | Change Password | ପାସୱାର୍ଡ ବଦଳାନ୍ତୁ |
@@ -15991,7 +16039,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 
 ### 9.14 IN മലയാളം 🇮🇳 — Malayalam
 
-1289 of 1290 strings translated; direction left to right.
+1293 of 1294 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -16013,6 +16061,10 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S57e8a7` | _macros, success_metrics | slow | മന്ദഗതി |
 | `S15198e` | _macros | Waiting since | മുതൽ കാത്തിരിക്കുന്നു |
 | `Sad60c5` | _role | level | നില |
+| `S579615` | _theme | Automatic (system) | ഓട്ടോമാറ്റിക് (സിസ്റ്റം) |
+| `Sae1ef0` | _theme | Dark | ഇരുണ്ട |
+| `Sa36ef8` | _theme | Light | ഇളം |
+| `Sa797e3` | _theme | Theme | തീം |
 | `Se32707` | account_settings | Account Settings | അക്കൗണ്ട് ക്രമീകരണങ്ങൾ |
 | `Sd9e420` | account_settings | At least 12 characters. | കുറഞ്ഞത് 12 അക്ഷരങ്ങൾ. |
 | `S49289d` | account_settings | Change Password | പാസ്‌വേഡ് മാറ്റുക |
@@ -17287,7 +17339,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 
 ### 9.15 IN ਪੰਜਾਬੀ 🇮🇳 — Punjabi
 
-1289 of 1290 strings translated; direction left to right.
+1293 of 1294 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -17309,6 +17361,10 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S57e8a7` | _macros, success_metrics | slow | ਹੌਲੀ |
 | `S15198e` | _macros | Waiting since | ਤੋਂ ਉਡੀਕ ਵਿੱਚ |
 | `Sad60c5` | _role | level | ਪੱਧਰ |
+| `S579615` | _theme | Automatic (system) | ਆਪਣੇ-ਆਪ (ਸਿਸਟਮ) |
+| `Sae1ef0` | _theme | Dark | ਗੂੜ੍ਹਾ |
+| `Sa36ef8` | _theme | Light | ਹਲਕਾ |
+| `Sa797e3` | _theme | Theme | ਥੀਮ |
 | `Se32707` | account_settings | Account Settings | ਖਾਤਾ ਸੈਟਿੰਗਾਂ |
 | `Sd9e420` | account_settings | At least 12 characters. | ਘੱਟੋ-ਘੱਟ 12 ਅੱਖਰ। |
 | `S49289d` | account_settings | Change Password | ਪਾਸਵਰਡ ਬਦਲੋ |
@@ -18583,7 +18639,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 
 ### 9.16 ES Español 🇪🇸 — Spanish
 
-1289 of 1290 strings translated; direction left to right.
+1293 of 1294 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -18605,6 +18661,10 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S57e8a7` | _macros, success_metrics | slow | lento |
 | `S15198e` | _macros | Waiting since | En espera desde |
 | `Sad60c5` | _role | level | nivel |
+| `S579615` | _theme | Automatic (system) | Automático (sistema) |
+| `Sae1ef0` | _theme | Dark | Oscuro |
+| `Sa36ef8` | _theme | Light | Claro |
+| `Sa797e3` | _theme | Theme | Tema |
 | `Se32707` | account_settings | Account Settings | Ajustes de la cuenta |
 | `Sd9e420` | account_settings | At least 12 characters. | Al menos 12 caracteres. |
 | `S49289d` | account_settings | Change Password | Cambiar contraseña |
@@ -19879,7 +19939,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 
 ### 9.17 IT Italiano 🇮🇹 — Italian
 
-1289 of 1290 strings translated; direction left to right.
+1293 of 1294 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -19901,6 +19961,10 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S57e8a7` | _macros, success_metrics | slow | lento |
 | `S15198e` | _macros | Waiting since | In attesa da |
 | `Sad60c5` | _role | level | livello |
+| `S579615` | _theme | Automatic (system) | Automatico (sistema) |
+| `Sae1ef0` | _theme | Dark | Scuro |
+| `Sa36ef8` | _theme | Light | Chiaro |
+| `Sa797e3` | _theme | Theme | Tema |
 | `Se32707` | account_settings | Account Settings | Impostazioni dell'account |
 | `Sd9e420` | account_settings | At least 12 characters. | Almeno 12 caratteri. |
 | `S49289d` | account_settings | Change Password | Cambia password |
@@ -21175,7 +21239,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 
 ### 9.18 DK Dansk 🇩🇰 — Danish
 
-1289 of 1290 strings translated; direction left to right.
+1293 of 1294 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -21197,6 +21261,10 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S57e8a7` | _macros, success_metrics | slow | langsom |
 | `S15198e` | _macros | Waiting since | Venter siden |
 | `Sad60c5` | _role | level | niveau |
+| `S579615` | _theme | Automatic (system) | Automatisk (system) |
+| `Sae1ef0` | _theme | Dark | Mørk |
+| `Sa36ef8` | _theme | Light | Lys |
+| `Sa797e3` | _theme | Theme | Tema |
 | `Se32707` | account_settings | Account Settings | Kontoindstillinger |
 | `Sd9e420` | account_settings | At least 12 characters. | Mindst 12 tegn. |
 | `S49289d` | account_settings | Change Password | Skift adgangskode |
@@ -22471,7 +22539,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 
 ### 9.19 GE ქართული 🇬🇪 — Georgian
 
-1289 of 1290 strings translated; direction left to right.
+1293 of 1294 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -22493,6 +22561,10 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S57e8a7` | _macros, success_metrics | slow | ნელი |
 | `S15198e` | _macros | Waiting since | ელოდება |
 | `Sad60c5` | _role | level | დონე |
+| `S579615` | _theme | Automatic (system) | ავტომატური (სისტემა) |
+| `Sae1ef0` | _theme | Dark | მუქი |
+| `Sa36ef8` | _theme | Light | ღია |
+| `Sa797e3` | _theme | Theme | თემა |
 | `Se32707` | account_settings | Account Settings | ანგარიშის პარამეტრები |
 | `Sd9e420` | account_settings | At least 12 characters. | მინიმუმ 12 სიმბოლო. |
 | `S49289d` | account_settings | Change Password | პაროლის შეცვლა |
@@ -23903,6 +23975,7 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S273d62` | Audit trail completeness of Released codes | success_metrics | 18 of 18 |
 | `S5fda23` | Author | approval_queue, detail, mine, review_queue | 18 of 18 |
 | `S416869` | Auto Reset Program | detail | 18 of 18 |
+| `S579615` | Automatic (system) | _theme | 18 of 18 |
 | `S5387f1` | Automatic Operation | status code fields | 18 of 18 |
 | `S49412e` | Availability Calculation | status code fields | 18 of 18 |
 | `S94ea8c` | Available fields | export_profiles | 18 of 18 |
@@ -24057,6 +24130,7 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S3ae433` | Current password is incorrect. | message: user_service | 18 of 18 |
 | `S0e8574` | Customer | detail | 18 of 18 |
 | `S3c3638` | d | _macros | 1 of 18 |
+| `Sae1ef0` | Dark | _theme | 18 of 18 |
 | `Sd87f47` | Dashboard | dashboard, menu | 18 of 18 |
 | `S41ba99` | Database schema | operations | 18 of 18 |
 | `S5548ae` | days | catalogue_health | 18 of 18 |
@@ -24324,6 +24398,7 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S3c1c8a` | Library Import | menu, new, st_new | 18 of 18 |
 | `S033df3` | Lifecycle | list | 18 of 18 |
 | `Sc54d33` | Lifecycle states | help | 18 of 18 |
+| `Sa36ef8` | Light | _theme | 18 of 18 |
 | `Sb4cad6` | Link to this view | list | 18 of 18 |
 | `Sdde41f` | Listed in manifest | export_verify | 18 of 18 |
 | `Sfbee55` | live codes | fleet_feedback | 18 of 18 |
@@ -24898,6 +24973,7 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S3f60bb` | The webhook target must be on the internal network (a private or loopback address). | message: integration_service | 18 of 18 |
 | `S9e4b4a` | The webhook URL must be an http(s) URL. | message: integration_service | 18 of 18 |
 | `S1b0006` | The Windows sign-in is not enabled (AUTH_MODE). | message: auth_service | 18 of 18 |
+| `Sa797e3` | Theme | _theme | 18 of 18 |
 | `S3d5194` | There is no translation to approve. | message: translation_service | 18 of 18 |
 | `Sa5f3f8` | These files contain the complete baseline: every status code that is valid as of this Release, not only the ones it changed. | detail | 18 of 18 |
 | `S44c2c4` | These rows point at the account. They are history that must stay attributable, so the account can be deactivated but not deleted. | user_detail | 18 of 18 |
