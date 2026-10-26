@@ -40,7 +40,7 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument(
         "--pdf",
         action="store_true",
-        help="after a green pipeline build the four documents as PDF into dist/docs/v<version>/",
+        help="after a green pipeline build the four documents as PDF into releases/v<version>/",
     )
     args = parser.parse_args(argv)
     py = sys.executable

@@ -1,6 +1,6 @@
 """The documents of a release as PDF, with the version in every file name.
 
-    python scripts/build_docs_pdf.py                    all four, into dist/docs/v<version>/
+    python scripts/build_docs_pdf.py                    all four, into releases/v<version>/
     python scripts/build_docs_pdf.py --only manual,report
     python scripts/build_docs_pdf.py --out D:/release --with-translations
 
@@ -733,7 +733,7 @@ def build(
 
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description="The documents of a release as PDF.")
-    parser.add_argument("--out", type=Path, default=REPO / "dist" / "docs" / f"v{VERSION}")
+    parser.add_argument("--out", type=Path, default=REPO / "releases" / f"v{VERSION}")
     parser.add_argument(
         "--only", default=",".join(KINDS), help="comma separated: " + ", ".join(KINDS)
     )
