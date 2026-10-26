@@ -13,11 +13,12 @@ from app.api.v1 import api_v1_bp
 from app.audit_chain import AuditChainService
 from app.extensions import db
 from app.services import backup_service
+from app.version import VERSION
 
 
 @api_v1_bp.get("/health")
 def health():
-    return jsonify(status="ok"), 200
+    return jsonify(status="ok", version=VERSION), 200
 
 
 @api_v1_bp.get("/health/ready")
@@ -47,4 +48,4 @@ def ready():
     )
     degraded = backup["state"] in ("missing", "stale", "last_attempt_failed")
     status = "unavailable" if hard_failure else ("degraded" if degraded else "ok")
-    return jsonify(status=status, checks=checks), (503 if hard_failure else 200)
+    return jsonify(status=status, version=VERSION, checks=checks), (503 if hard_failure else 200)

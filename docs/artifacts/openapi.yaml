@@ -117,6 +117,7 @@ paths:
                 type: object
                 properties:
                   status: { type: string, example: ok }
+                  version: { type: string, example: "4.14.1", description: "Version of the running application (FR-184)" }
 
   /auth/me:
     get:
@@ -2582,6 +2583,7 @@ components:
       type: object
       properties:
         status: { type: string, enum: [ok, degraded, unavailable] }
+        version: { type: string, description: "Version of the running application (FR-184)" }
         checks: { type: object, description: "database, schema, audit_chain, backup - each with a `state`" }
     SimilarCode:
       type: object

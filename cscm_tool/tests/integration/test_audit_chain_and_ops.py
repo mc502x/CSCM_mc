@@ -476,7 +476,7 @@ def test_ready_is_503_when_the_chain_is_broken_or_the_schema_outdated(seeded_fil
 
 def test_ready_needs_no_login_and_reveals_no_business_data(client):
     body = client.get("/api/v1/health/ready").get_json()
-    assert set(body) == {"status", "checks"}
+    assert set(body) == {"status", "version", "checks"}
     assert "title" not in json.dumps(body)
 
 

@@ -519,6 +519,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se94865` | base, dashboard, notifications | Notices | Hinweise |
 | `Sbe504f` | base | Skip to main content | Zum Hauptinhalt springen |
 | `S1b9aeb` | base, dashboard | unread | ungelesen |
+| `S2da600` | base, export, export_center | Version | Version |
 | `S12625b` | base | waiting | wartend |
 | `S5a4692` | base | You are covering for a colleague | Sie vertreten eine Kollegin / einen Kollegen |
 | `S8e9c15` | builder | Candidate revisions | Kandidaten-Revisionen |
@@ -959,7 +960,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sfcbb29` | export | Status code | Statuscode |
 | `S98c645` | export | Status code catalogue | Statuscode-Katalog |
 | `Se87c1f` | export | The digest of the file itself is listed in the accompanying manifest (MANIFEST.json); verify it with `flask verify-export`. | Der Digest der Datei selbst steht im zugehörigen Manifest (MANIFEST.json); prüfen Sie ihn mit `flask verify-export`. |
-| `S2da600` | export, export_center, list | Version | Version |
 | `S66d6c2` | export_center | All Released Status Codes | Alle freigegebenen Statuscodes |
 | `S5ff781` | export_center | Check that a file you received is exactly what this system produced (and, with its MANIFEST.json, that nothing was changed). | Prüfen Sie, ob eine erhaltene Datei genau das ist, was dieses System erzeugt hat (und mit der MANIFEST.json, dass nichts verändert wurde). |
 | `S9468a1` | export_center | Download Full Database Backup | Vollständige Datenbanksicherung herunterladen |
@@ -1819,6 +1819,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se94865` | base, dashboard, notifications | Notices | Notifications |
 | `Sbe504f` | base | Skip to main content | Aller au contenu principal |
 | `S1b9aeb` | base, dashboard | unread | non lues |
+| `S2da600` | base, export, export_center | Version | Version |
 | `S12625b` | base | waiting | en attente |
 | `S5a4692` | base | You are covering for a colleague | Vous remplacez un collègue |
 | `S8e9c15` | builder | Candidate revisions | Révisions candidates |
@@ -2259,7 +2260,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sfcbb29` | export | Status code | Code de statut |
 | `S98c645` | export | Status code catalogue | Catalogue des codes de statut |
 | `Se87c1f` | export | The digest of the file itself is listed in the accompanying manifest (MANIFEST.json); verify it with `flask verify-export`. | L'empreinte du fichier lui-même figure dans le manifeste joint (MANIFEST.json) ; vérifiez-la avec `flask verify-export`. |
-| `S2da600` | export, export_center, list | Version | Version |
 | `S66d6c2` | export_center | All Released Status Codes | Tous les codes de statut publiés |
 | `S5ff781` | export_center | Check that a file you received is exactly what this system produced (and, with its MANIFEST.json, that nothing was changed). | Vérifiez qu'un fichier reçu est exactement ce que ce système a produit (et, avec son MANIFEST.json, que rien n'a été modifié). |
 | `S9468a1` | export_center | Download Full Database Backup | Télécharger la sauvegarde complète de la base |
@@ -3119,6 +3119,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se94865` | base, dashboard, notifications | Notices | सूचनाएँ |
 | `Sbe504f` | base | Skip to main content | मुख्य सामग्री पर जाएँ |
 | `S1b9aeb` | base, dashboard | unread | अपठित |
+| `S2da600` | base, export, export_center | Version | संस्करण |
 | `S12625b` | base | waiting | प्रतीक्षारत |
 | `S5a4692` | base | You are covering for a colleague | आप एक सहकर्मी की जगह काम कर रहे हैं |
 | `S8e9c15` | builder | Candidate revisions | उम्मीदवार संशोधन |
@@ -3559,7 +3560,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sfcbb29` | export | Status code | स्थिति कोड |
 | `S98c645` | export | Status code catalogue | स्थिति कोड सूची |
 | `Se87c1f` | export | The digest of the file itself is listed in the accompanying manifest (MANIFEST.json); verify it with `flask verify-export`. | फ़ाइल का अपना डाइजेस्ट साथ के मैनिफ़ेस्ट (MANIFEST.json) में दिया है; इसे `flask verify-export` से जाँचें। |
-| `S2da600` | export, export_center, list | Version | संस्करण |
 | `S66d6c2` | export_center | All Released Status Codes | सभी जारी स्थिति कोड |
 | `S5ff781` | export_center | Check that a file you received is exactly what this system produced (and, with its MANIFEST.json, that nothing was changed). | जाँचें कि आपको मिली फ़ाइल ठीक वही है जो इस सिस्टम ने बनाई थी (और, उसकी MANIFEST.json के साथ, कि कुछ बदला नहीं गया)। |
 | `S9468a1` | export_center | Download Full Database Backup | पूर्ण डेटाबेस बैकअप डाउनलोड करें |
@@ -4419,6 +4419,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se94865` | base, dashboard, notifications | Notices | الإشعارات |
 | `Sbe504f` | base | Skip to main content | انتقل إلى المحتوى الرئيسي |
 | `S1b9aeb` | base, dashboard | unread | غير مقروءة |
+| `S2da600` | base, export, export_center | Version | الإصدار |
 | `S12625b` | base | waiting | قيد الانتظار |
 | `S5a4692` | base | You are covering for a colleague | أنت تنوب عن زميل |
 | `S8e9c15` | builder | Candidate revisions | المراجعات المرشحة |
@@ -4859,7 +4860,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sfcbb29` | export | Status code | رمز الحالة |
 | `S98c645` | export | Status code catalogue | فهرس رموز الحالة |
 | `Se87c1f` | export | The digest of the file itself is listed in the accompanying manifest (MANIFEST.json); verify it with `flask verify-export`. | بصمة الملف نفسه مدرجة في البيان المرافق (MANIFEST.json)؛ تحقق منها بالأمر `flask verify-export`. |
-| `S2da600` | export, export_center, list | Version | الإصدار |
 | `S66d6c2` | export_center | All Released Status Codes | جميع رموز الحالة المنشورة |
 | `S5ff781` | export_center | Check that a file you received is exactly what this system produced (and, with its MANIFEST.json, that nothing was changed). | تأكد من أن الملف الذي تلقيته هو بالضبط ما أنتجه هذا النظام (ومع MANIFEST.json الخاص به، أن شيئًا لم يتغير). |
 | `S9468a1` | export_center | Download Full Database Backup | تنزيل النسخة الاحتياطية الكاملة لقاعدة البيانات |
@@ -5719,6 +5719,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se94865` | base, dashboard, notifications | Notices | বিজ্ঞপ্তি |
 | `Sbe504f` | base | Skip to main content | মূল বিষয়বস্তুতে যান |
 | `S1b9aeb` | base, dashboard | unread | অপঠিত |
+| `S2da600` | base, export, export_center | Version | সংস্করণ |
 | `S12625b` | base | waiting | অপেক্ষমাণ |
 | `S5a4692` | base | You are covering for a colleague | আপনি একজন সহকর্মীর জায়গায় কাজ করছেন |
 | `S8e9c15` | builder | Candidate revisions | প্রার্থী সংশোধন |
@@ -6159,7 +6160,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sfcbb29` | export | Status code | স্ট্যাটাস কোড |
 | `S98c645` | export | Status code catalogue | স্ট্যাটাস কোড ক্যাটালগ |
 | `Se87c1f` | export | The digest of the file itself is listed in the accompanying manifest (MANIFEST.json); verify it with `flask verify-export`. | ফাইলের নিজস্ব ডাইজেস্ট সঙ্গের ম্যানিফেস্টে (MANIFEST.json) আছে; `flask verify-export` দিয়ে যাচাই করুন। |
-| `S2da600` | export, export_center, list | Version | সংস্করণ |
 | `S66d6c2` | export_center | All Released Status Codes | সব প্রকাশিত স্ট্যাটাস কোড |
 | `S5ff781` | export_center | Check that a file you received is exactly what this system produced (and, with its MANIFEST.json, that nothing was changed). | যাচাই করুন যে পাওয়া ফাইলটি ঠিক সেটাই যা এই সিস্টেম তৈরি করেছে (এবং তার MANIFEST.json সহ, যে কিছু বদলানো হয়নি)। |
 | `S9468a1` | export_center | Download Full Database Backup | পূর্ণ ডেটাবেস ব্যাকআপ ডাউনলোড করুন |
@@ -7019,6 +7019,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se94865` | base, dashboard, notifications | Notices | सूचना |
 | `Sbe504f` | base | Skip to main content | मुख्य मजकुराकडे जा |
 | `S1b9aeb` | base, dashboard | unread | न वाचलेले |
+| `S2da600` | base, export, export_center | Version | आवृत्ती |
 | `S12625b` | base | waiting | प्रतीक्षेत |
 | `S5a4692` | base | You are covering for a colleague | तुम्ही सहकाऱ्याच्या जागी काम करत आहात |
 | `S8e9c15` | builder | Candidate revisions | उमेदवार सुधारणा |
@@ -7459,7 +7460,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sfcbb29` | export | Status code | स्थिती कोड |
 | `S98c645` | export | Status code catalogue | स्थिती कोड सूची |
 | `Se87c1f` | export | The digest of the file itself is listed in the accompanying manifest (MANIFEST.json); verify it with `flask verify-export`. | फाइलचा स्वतःचा डायजेस्ट सोबतच्या मॅनिफेस्टमध्ये (MANIFEST.json) आहे; `flask verify-export` ने तपासा. |
-| `S2da600` | export, export_center, list | Version | आवृत्ती |
 | `S66d6c2` | export_center | All Released Status Codes | सर्व प्रकाशित स्थिती कोड |
 | `S5ff781` | export_center | Check that a file you received is exactly what this system produced (and, with its MANIFEST.json, that nothing was changed). | मिळालेली फाइल या प्रणालीने तयार केलेली तीच आहे याची (आणि तिच्या MANIFEST.json सह, काहीही बदललेले नाही याची) खात्री करा. |
 | `S9468a1` | export_center | Download Full Database Backup | संपूर्ण डेटाबेस बॅकअप डाउनलोड करा |
@@ -8319,6 +8319,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se94865` | base, dashboard, notifications | Notices | నోటీసులు |
 | `Sbe504f` | base | Skip to main content | ప్రధాన కంటెంట్‌కు వెళ్లండి |
 | `S1b9aeb` | base, dashboard | unread | చదవనివి |
+| `S2da600` | base, export, export_center | Version | వెర్షన్ |
 | `S12625b` | base | waiting | వేచి ఉన్నవి |
 | `S5a4692` | base | You are covering for a colleague | మీరు ఒక సహోద్యోగి స్థానంలో పనిచేస్తున్నారు |
 | `S8e9c15` | builder | Candidate revisions | అభ్యర్థి పునర్విమర్శలు |
@@ -8759,7 +8760,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sfcbb29` | export | Status code | స్థితి కోడ్ |
 | `S98c645` | export | Status code catalogue | స్థితి కోడ్ కేటలాగ్ |
 | `Se87c1f` | export | The digest of the file itself is listed in the accompanying manifest (MANIFEST.json); verify it with `flask verify-export`. | ఫైల్ స్వంత డైజెస్ట్ జతచేసిన మానిఫెస్ట్‌లో (MANIFEST.json) ఉంది; `flask verify-export` తో తనిఖీ చేయండి. |
-| `S2da600` | export, export_center, list | Version | వెర్షన్ |
 | `S66d6c2` | export_center | All Released Status Codes | అన్ని విడుదల చేసిన స్థితి కోడ్‌లు |
 | `S5ff781` | export_center | Check that a file you received is exactly what this system produced (and, with its MANIFEST.json, that nothing was changed). | మీరు అందుకున్న ఫైల్ ఈ వ్యవస్థ తయారు చేసినదే అని (మరియు దాని MANIFEST.json తో, ఏదీ మార్చబడలేదని) తనిఖీ చేయండి. |
 | `S9468a1` | export_center | Download Full Database Backup | పూర్తి డేటాబేస్ బ్యాకప్ డౌన్‌లోడ్ చేయండి |
@@ -9619,6 +9619,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se94865` | base, dashboard, notifications | Notices | அறிவிப்புகள் |
 | `Sbe504f` | base | Skip to main content | முதன்மை உள்ளடக்கத்திற்குச் செல் |
 | `S1b9aeb` | base, dashboard | unread | படிக்காதவை |
+| `S2da600` | base, export, export_center | Version | பதிப்பு |
 | `S12625b` | base | waiting | காத்திருப்பவை |
 | `S5a4692` | base | You are covering for a colleague | நீங்கள் ஒரு சக ஊழியருக்குப் பதிலாகச் செயல்படுகிறீர்கள் |
 | `S8e9c15` | builder | Candidate revisions | வேட்பாளர் திருத்தங்கள் |
@@ -10059,7 +10060,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sfcbb29` | export | Status code | நிலைக் குறியீடு |
 | `S98c645` | export | Status code catalogue | நிலைக் குறியீடு பட்டியல் |
 | `Se87c1f` | export | The digest of the file itself is listed in the accompanying manifest (MANIFEST.json); verify it with `flask verify-export`. | கோப்பின் சுருக்கம் இணைந்த மேனிஃபெஸ்டில் (MANIFEST.json) உள்ளது; `flask verify-export` மூலம் சரிபார்க்கவும். |
-| `S2da600` | export, export_center, list | Version | பதிப்பு |
 | `S66d6c2` | export_center | All Released Status Codes | வெளியிடப்பட்ட அனைத்து நிலைக் குறியீடுகள் |
 | `S5ff781` | export_center | Check that a file you received is exactly what this system produced (and, with its MANIFEST.json, that nothing was changed). | நீங்கள் பெற்ற கோப்பு இந்த அமைப்பு உருவாக்கியதே என்றும் (அதன் MANIFEST.json உடன், எதுவும் மாற்றப்படவில்லை என்றும்) சரிபாருங்கள். |
 | `S9468a1` | export_center | Download Full Database Backup | முழுத் தரவுத்தளக் காப்புப் பிரதியைப் பதிவிறக்கு |
@@ -10919,6 +10919,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se94865` | base, dashboard, notifications | Notices | સૂચનાઓ |
 | `Sbe504f` | base | Skip to main content | મુખ્ય સામગ્રી પર જાઓ |
 | `S1b9aeb` | base, dashboard | unread | વણવાંચેલા |
+| `S2da600` | base, export, export_center | Version | આવૃત્તિ |
 | `S12625b` | base | waiting | પ્રતીક્ષામાં |
 | `S5a4692` | base | You are covering for a colleague | તમે એક સહકર્મીની જગ્યાએ કામ કરી રહ્યા છો |
 | `S8e9c15` | builder | Candidate revisions | ઉમેદવાર સુધારા |
@@ -11359,7 +11360,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sfcbb29` | export | Status code | સ્ટેટસ કોડ |
 | `S98c645` | export | Status code catalogue | સ્ટેટસ કોડ કેટલોગ |
 | `Se87c1f` | export | The digest of the file itself is listed in the accompanying manifest (MANIFEST.json); verify it with `flask verify-export`. | ફાઇલનું પોતાનું ડાયજેસ્ટ સાથેના મેનિફેસ્ટમાં (MANIFEST.json) છે; `flask verify-export` થી ચકાસો. |
-| `S2da600` | export, export_center, list | Version | આવૃત્તિ |
 | `S66d6c2` | export_center | All Released Status Codes | બધા પ્રકાશિત સ્ટેટસ કોડ |
 | `S5ff781` | export_center | Check that a file you received is exactly what this system produced (and, with its MANIFEST.json, that nothing was changed). | ચકાસો કે મળેલી ફાઇલ બરાબર એ જ છે જે આ સિસ્ટમે બનાવી હતી (અને, તેના MANIFEST.json સાથે, કે કંઈ બદલાયું નથી). |
 | `S9468a1` | export_center | Download Full Database Backup | સંપૂર્ણ ડેટાબેઝ બેકઅપ ડાઉનલોડ કરો |
@@ -12219,6 +12219,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se94865` | base, dashboard, notifications | Notices | اطلاعات |
 | `Sbe504f` | base | Skip to main content | مرکزی مواد پر جائیں |
 | `S1b9aeb` | base, dashboard | unread | غیر پڑھے ہوئے |
+| `S2da600` | base, export, export_center | Version | ورژن |
 | `S12625b` | base | waiting | زیرِ انتظار |
 | `S5a4692` | base | You are covering for a colleague | آپ ایک ساتھی کی جگہ کام کر رہے ہیں |
 | `S8e9c15` | builder | Candidate revisions | امیدوار ترامیم |
@@ -12659,7 +12660,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sfcbb29` | export | Status code | اسٹیٹس کوڈ |
 | `S98c645` | export | Status code catalogue | اسٹیٹس کوڈ کیٹلاگ |
 | `Se87c1f` | export | The digest of the file itself is listed in the accompanying manifest (MANIFEST.json); verify it with `flask verify-export`. | فائل کا اپنا ڈائجسٹ ساتھ کے مینی فیسٹ (MANIFEST.json) میں درج ہے؛ اسے `flask verify-export` سے جانچیں۔ |
-| `S2da600` | export, export_center, list | Version | ورژن |
 | `S66d6c2` | export_center | All Released Status Codes | تمام جاری شدہ اسٹیٹس کوڈ |
 | `S5ff781` | export_center | Check that a file you received is exactly what this system produced (and, with its MANIFEST.json, that nothing was changed). | جانچیں کہ موصولہ فائل بالکل وہی ہے جو اس نظام نے بنائی تھی (اور اس کی MANIFEST.json کے ساتھ، کہ کچھ بدلا نہیں گیا)۔ |
 | `S9468a1` | export_center | Download Full Database Backup | مکمل ڈیٹا بیس بیک اپ ڈاؤن لوڈ کریں |
@@ -13519,6 +13519,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se94865` | base, dashboard, notifications | Notices | ಸೂಚನೆಗಳು |
 | `Sbe504f` | base | Skip to main content | ಮುಖ್ಯ ವಿಷಯಕ್ಕೆ ಹೋಗಿ |
 | `S1b9aeb` | base, dashboard | unread | ಓದದಿರುವ |
+| `S2da600` | base, export, export_center | Version | ಆವೃತ್ತಿ |
 | `S12625b` | base | waiting | ಕಾಯುತ್ತಿವೆ |
 | `S5a4692` | base | You are covering for a colleague | ನೀವು ಸಹೋದ್ಯೋಗಿಯ ಬದಲಿಗೆ ಕೆಲಸ ಮಾಡುತ್ತಿದ್ದೀರಿ |
 | `S8e9c15` | builder | Candidate revisions | ಅಭ್ಯರ್ಥಿ ಪರಿಷ್ಕರಣೆಗಳು |
@@ -13959,7 +13960,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sfcbb29` | export | Status code | ಸ್ಥಿತಿ ಕೋಡ್ |
 | `S98c645` | export | Status code catalogue | ಸ್ಥಿತಿ ಕೋಡ್ ಕ್ಯಾಟಲಾಗ್ |
 | `Se87c1f` | export | The digest of the file itself is listed in the accompanying manifest (MANIFEST.json); verify it with `flask verify-export`. | ಫೈಲ್‌ನ ಸ್ವಂತ ಡೈಜೆಸ್ಟ್ ಜೊತೆಗಿನ ಮ್ಯಾನಿಫೆಸ್ಟ್‌ನಲ್ಲಿ (MANIFEST.json) ಇದೆ; `flask verify-export` ನಿಂದ ಪರಿಶೀಲಿಸಿ. |
-| `S2da600` | export, export_center, list | Version | ಆವೃತ್ತಿ |
 | `S66d6c2` | export_center | All Released Status Codes | ಎಲ್ಲಾ ಬಿಡುಗಡೆಯಾದ ಸ್ಥಿತಿ ಕೋಡ್‌ಗಳು |
 | `S5ff781` | export_center | Check that a file you received is exactly what this system produced (and, with its MANIFEST.json, that nothing was changed). | ನೀವು ಸ್ವೀಕರಿಸಿದ ಫೈಲ್ ಈ ವ್ಯವಸ್ಥೆ ತಯಾರಿಸಿದ್ದೇ ಎಂದು (ಮತ್ತು ಅದರ MANIFEST.json ಜೊತೆ, ಏನೂ ಬದಲಾಗಿಲ್ಲ ಎಂದು) ಪರಿಶೀಲಿಸಿ. |
 | `S9468a1` | export_center | Download Full Database Backup | ಸಂಪೂರ್ಣ ಡೇಟಾಬೇಸ್ ಬ್ಯಾಕಪ್ ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ |
@@ -14819,6 +14819,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se94865` | base, dashboard, notifications | Notices | ବିଜ୍ଞପ୍ତି |
 | `Sbe504f` | base | Skip to main content | ମୁଖ୍ୟ ବିଷୟବସ୍ତୁକୁ ଯାଆନ୍ତୁ |
 | `S1b9aeb` | base, dashboard | unread | ଅପଠିତ |
+| `S2da600` | base, export, export_center | Version | ସଂସ୍କରଣ |
 | `S12625b` | base | waiting | ଅପେକ୍ଷାରେ |
 | `S5a4692` | base | You are covering for a colleague | ଆପଣ ଜଣେ ସହକର୍ମୀଙ୍କ ବଦଳରେ କାମ କରୁଛନ୍ତି |
 | `S8e9c15` | builder | Candidate revisions | ପ୍ରାର୍ଥୀ ସଂସ୍କରଣ |
@@ -15259,7 +15260,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sfcbb29` | export | Status code | ସ୍ଥିତି କୋଡ୍ |
 | `S98c645` | export | Status code catalogue | ସ୍ଥିତି କୋଡ୍ କ୍ୟାଟାଲଗ୍ |
 | `Se87c1f` | export | The digest of the file itself is listed in the accompanying manifest (MANIFEST.json); verify it with `flask verify-export`. | ଫାଇଲ୍‌ର ନିଜ ଡାଇଜେଷ୍ଟ ସହିତ ଥିବା ମ୍ୟାନିଫେଷ୍ଟରେ (MANIFEST.json) ଅଛି; `flask verify-export` ଦ୍ୱାରା ଯାଞ୍ଚ କରନ୍ତୁ। |
-| `S2da600` | export, export_center, list | Version | ସଂସ୍କରଣ |
 | `S66d6c2` | export_center | All Released Status Codes | ସମସ୍ତ ମୁକ୍ତ ସ୍ଥିତି କୋଡ୍ |
 | `S5ff781` | export_center | Check that a file you received is exactly what this system produced (and, with its MANIFEST.json, that nothing was changed). | ଆପଣ ପାଇଥିବା ଫାଇଲ୍ ଠିକ୍ ଏହି ସିଷ୍ଟମ୍ ତିଆରି କରିଥିବା ଫାଇଲ୍ କି ନୁହେଁ (ଏବଂ ଏହାର MANIFEST.json ସହ, କିଛି ବଦଳିନାହିଁ) ଯାଞ୍ଚ କରନ୍ତୁ। |
 | `S9468a1` | export_center | Download Full Database Backup | ସମ୍ପୂର୍ଣ୍ଣ ଡାଟାବେସ୍ ବ୍ୟାକଅପ୍ ଡାଉନଲୋଡ୍ କରନ୍ତୁ |
@@ -16119,6 +16119,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se94865` | base, dashboard, notifications | Notices | അറിയിപ്പുകൾ |
 | `Sbe504f` | base | Skip to main content | പ്രധാന ഉള്ളടക്കത്തിലേക്ക് പോകുക |
 | `S1b9aeb` | base, dashboard | unread | വായിക്കാത്തവ |
+| `S2da600` | base, export, export_center | Version | പതിപ്പ് |
 | `S12625b` | base | waiting | കാത്തിരിക്കുന്നു |
 | `S5a4692` | base | You are covering for a colleague | നിങ്ങൾ ഒരു സഹപ്രവർത്തകനു പകരം പ്രവർത്തിക്കുന്നു |
 | `S8e9c15` | builder | Candidate revisions | സ്ഥാനാർത്ഥി റിവിഷനുകൾ |
@@ -16559,7 +16560,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sfcbb29` | export | Status code | സ്റ്റാറ്റസ് കോഡ് |
 | `S98c645` | export | Status code catalogue | സ്റ്റാറ്റസ് കോഡ് കാറ്റലോഗ് |
 | `Se87c1f` | export | The digest of the file itself is listed in the accompanying manifest (MANIFEST.json); verify it with `flask verify-export`. | ഫയലിന്റെ സ്വന്തം ഡൈജസ്റ്റ് ഒപ്പമുള്ള മാനിഫെസ്റ്റിൽ (MANIFEST.json) ഉണ്ട്; `flask verify-export` ഉപയോഗിച്ച് പരിശോധിക്കുക. |
-| `S2da600` | export, export_center, list | Version | പതിപ്പ് |
 | `S66d6c2` | export_center | All Released Status Codes | റിലീസ് ചെയ്ത എല്ലാ സ്റ്റാറ്റസ് കോഡുകളും |
 | `S5ff781` | export_center | Check that a file you received is exactly what this system produced (and, with its MANIFEST.json, that nothing was changed). | നിങ്ങൾക്ക് ലഭിച്ച ഫയൽ ഈ സിസ്റ്റം നിർമ്മിച്ചതുതന്നെയാണോ (അതിന്റെ MANIFEST.json ഉപയോഗിച്ച്, ഒന്നും മാറിയിട്ടില്ലെന്നും) പരിശോധിക്കുക. |
 | `S9468a1` | export_center | Download Full Database Backup | പൂർണ്ണ ഡാറ്റാബേസ് ബാക്കപ്പ് ഡൗൺലോഡ് ചെയ്യുക |
@@ -17419,6 +17419,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se94865` | base, dashboard, notifications | Notices | ਸੂਚਨਾਵਾਂ |
 | `Sbe504f` | base | Skip to main content | ਮੁੱਖ ਸਮੱਗਰੀ 'ਤੇ ਜਾਓ |
 | `S1b9aeb` | base, dashboard | unread | ਨਾ-ਪੜ੍ਹੇ |
+| `S2da600` | base, export, export_center | Version | ਸੰਸਕਰਣ |
 | `S12625b` | base | waiting | ਉਡੀਕ ਵਿੱਚ |
 | `S5a4692` | base | You are covering for a colleague | ਤੁਸੀਂ ਇੱਕ ਸਾਥੀ ਦੀ ਥਾਂ ਕੰਮ ਕਰ ਰਹੇ ਹੋ |
 | `S8e9c15` | builder | Candidate revisions | ਉਮੀਦਵਾਰ ਸੋਧਾਂ |
@@ -17859,7 +17860,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sfcbb29` | export | Status code | ਸਥਿਤੀ ਕੋਡ |
 | `S98c645` | export | Status code catalogue | ਸਥਿਤੀ ਕੋਡ ਕੈਟਾਲਾਗ |
 | `Se87c1f` | export | The digest of the file itself is listed in the accompanying manifest (MANIFEST.json); verify it with `flask verify-export`. | ਫਾਈਲ ਦਾ ਆਪਣਾ ਡਾਇਜੈਸਟ ਨਾਲ ਦੇ ਮੈਨੀਫੈਸਟ (MANIFEST.json) ਵਿੱਚ ਹੈ; ਇਸਨੂੰ `flask verify-export` ਨਾਲ ਜਾਂਚੋ। |
-| `S2da600` | export, export_center, list | Version | ਸੰਸਕਰਣ |
 | `S66d6c2` | export_center | All Released Status Codes | ਸਾਰੇ ਜਾਰੀ ਸਥਿਤੀ ਕੋਡ |
 | `S5ff781` | export_center | Check that a file you received is exactly what this system produced (and, with its MANIFEST.json, that nothing was changed). | ਜਾਂਚ ਕਰੋ ਕਿ ਤੁਹਾਨੂੰ ਮਿਲੀ ਫਾਈਲ ਬਿਲਕੁਲ ਉਹੀ ਹੈ ਜੋ ਇਸ ਸਿਸਟਮ ਨੇ ਬਣਾਈ ਸੀ (ਅਤੇ ਇਸਦੀ MANIFEST.json ਨਾਲ, ਕਿ ਕੁਝ ਬਦਲਿਆ ਨਹੀਂ)। |
 | `S9468a1` | export_center | Download Full Database Backup | ਪੂਰਾ ਡੇਟਾਬੇਸ ਬੈਕਅੱਪ ਡਾਊਨਲੋਡ ਕਰੋ |
@@ -18719,6 +18719,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se94865` | base, dashboard, notifications | Notices | Avisos |
 | `Sbe504f` | base | Skip to main content | Saltar al contenido principal |
 | `S1b9aeb` | base, dashboard | unread | sin leer |
+| `S2da600` | base, export, export_center | Version | Versión |
 | `S12625b` | base | waiting | en espera |
 | `S5a4692` | base | You are covering for a colleague | Está sustituyendo a un compañero |
 | `S8e9c15` | builder | Candidate revisions | Revisiones candidatas |
@@ -19159,7 +19160,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sfcbb29` | export | Status code | Código de estado |
 | `S98c645` | export | Status code catalogue | Catálogo de códigos de estado |
 | `Se87c1f` | export | The digest of the file itself is listed in the accompanying manifest (MANIFEST.json); verify it with `flask verify-export`. | El resumen del propio archivo figura en el manifiesto adjunto (MANIFEST.json); compruébelo con `flask verify-export`. |
-| `S2da600` | export, export_center, list | Version | Versión |
 | `S66d6c2` | export_center | All Released Status Codes | Todos los códigos de estado publicados |
 | `S5ff781` | export_center | Check that a file you received is exactly what this system produced (and, with its MANIFEST.json, that nothing was changed). | Compruebe que un archivo recibido es exactamente lo que produjo este sistema (y, con su MANIFEST.json, que nada se modificó). |
 | `S9468a1` | export_center | Download Full Database Backup | Descargar copia completa de la base de datos |
@@ -20019,6 +20019,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se94865` | base, dashboard, notifications | Notices | Avvisi |
 | `Sbe504f` | base | Skip to main content | Vai al contenuto principale |
 | `S1b9aeb` | base, dashboard | unread | non letti |
+| `S2da600` | base, export, export_center | Version | Versione |
 | `S12625b` | base | waiting | in attesa |
 | `S5a4692` | base | You are covering for a colleague | Stai sostituendo un collega |
 | `S8e9c15` | builder | Candidate revisions | Revisioni candidate |
@@ -20459,7 +20460,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sfcbb29` | export | Status code | Codice di stato |
 | `S98c645` | export | Status code catalogue | Catalogo dei codici di stato |
 | `Se87c1f` | export | The digest of the file itself is listed in the accompanying manifest (MANIFEST.json); verify it with `flask verify-export`. | Il digest del file stesso è riportato nel manifesto allegato (MANIFEST.json); verificalo con `flask verify-export`. |
-| `S2da600` | export, export_center, list | Version | Versione |
 | `S66d6c2` | export_center | All Released Status Codes | Tutti i codici di stato rilasciati |
 | `S5ff781` | export_center | Check that a file you received is exactly what this system produced (and, with its MANIFEST.json, that nothing was changed). | Verifichi che un file ricevuto sia esattamente ciò che questo sistema ha prodotto (e, con il suo MANIFEST.json, che nulla sia stato modificato). |
 | `S9468a1` | export_center | Download Full Database Backup | Scarica il backup completo del database |
@@ -21319,6 +21319,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se94865` | base, dashboard, notifications | Notices | Meddelelser |
 | `Sbe504f` | base | Skip to main content | Gå til hovedindholdet |
 | `S1b9aeb` | base, dashboard | unread | ulæste |
+| `S2da600` | base, export, export_center | Version | Version |
 | `S12625b` | base | waiting | afventer |
 | `S5a4692` | base | You are covering for a colleague | Du vikarierer for en kollega |
 | `S8e9c15` | builder | Candidate revisions | Kandidatrevisioner |
@@ -21759,7 +21760,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sfcbb29` | export | Status code | Statuskode |
 | `S98c645` | export | Status code catalogue | Katalog over statuskoder |
 | `Se87c1f` | export | The digest of the file itself is listed in the accompanying manifest (MANIFEST.json); verify it with `flask verify-export`. | Selve filens digest står i det medfølgende manifest (MANIFEST.json); kontrollér det med `flask verify-export`. |
-| `S2da600` | export, export_center, list | Version | Version |
 | `S66d6c2` | export_center | All Released Status Codes | Alle udgivne statuskoder |
 | `S5ff781` | export_center | Check that a file you received is exactly what this system produced (and, with its MANIFEST.json, that nothing was changed). | Kontrollér, at en modtaget fil er præcis det, dette system har produceret (og, med dens MANIFEST.json, at intet er ændret). |
 | `S9468a1` | export_center | Download Full Database Backup | Download fuld sikkerhedskopi af databasen |
@@ -22619,6 +22619,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se94865` | base, dashboard, notifications | Notices | შეტყობინებები |
 | `Sbe504f` | base | Skip to main content | ძირითად შინაარსზე გადასვლა |
 | `S1b9aeb` | base, dashboard | unread | წაუკითხავი |
+| `S2da600` | base, export, export_center | Version | ვერსია |
 | `S12625b` | base | waiting | მოლოდინში |
 | `S5a4692` | base | You are covering for a colleague | თქვენ კოლეგას ცვლით |
 | `S8e9c15` | builder | Candidate revisions | კანდიდატი რევიზიები |
@@ -23059,7 +23060,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sfcbb29` | export | Status code | სტატუსის კოდი |
 | `S98c645` | export | Status code catalogue | სტატუსის კოდების კატალოგი |
 | `Se87c1f` | export | The digest of the file itself is listed in the accompanying manifest (MANIFEST.json); verify it with `flask verify-export`. | თავად ფაილის დაიჯესტი მოცემულია თანმხლებ მანიფესტში (MANIFEST.json); შეამოწმეთ `flask verify-export`-ით. |
-| `S2da600` | export, export_center, list | Version | ვერსია |
 | `S66d6c2` | export_center | All Released Status Codes | ყველა გამოშვებული სტატუსის კოდი |
 | `S5ff781` | export_center | Check that a file you received is exactly what this system produced (and, with its MANIFEST.json, that nothing was changed). | შეამოწმეთ, რომ მიღებული ფაილი ზუსტად ის არის, რაც ამ სისტემამ შექმნა (და, მისი MANIFEST.json-ით, რომ არაფერი შეცვლილა). |
 | `S9468a1` | export_center | Download Full Database Backup | მონაცემთა ბაზის სრული სარეზერვო ასლის ჩამოტვირთვა |
@@ -25063,7 +25063,7 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S112d15` | Verify an export | export_verify | 18 of 18 |
 | `S7763b6` | Verify an exported file | export_verify | 18 of 18 |
 | `Sdbf641` | Verify now | operations | 18 of 18 |
-| `S2da600` | Version | export, export_center, list | 18 of 18 |
+| `S2da600` | Version | base, export, export_center, list | 18 of 18 |
 | `S45288a` | Version Label | detail, new | 18 of 18 |
 | `S69bd4e` | View | mine, users | 18 of 18 |
 | `S4993ae` | View Change Request | detail | 18 of 18 |

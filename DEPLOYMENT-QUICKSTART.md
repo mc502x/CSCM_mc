@@ -30,7 +30,7 @@ Open http://localhost:5001 and log in with the Administrator you just created. C
 
 **Check that it works**
 
-1. `http://localhost:5001/api/v1/health` shows `{"status": "ok"}`.
+1. `http://localhost:5001/api/v1/health` shows `{"status": "ok", "version": "4.14.1"}`; the same version is at the foot of the menu and of the login page.
 2. `http://localhost:5001/api/v1/health/ready` reports database, schema, audit chain and backup state.
 3. Import the sample programs: *Import from .st files* → choose `cscm_tool/tests/fixtures/st/*.st` → preview → create Drafts.
 4. Run the automated tests (about 20 minutes for everything, `-m "not performance"` skips the load tests):

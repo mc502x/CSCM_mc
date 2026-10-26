@@ -226,6 +226,7 @@ Also: `record_property` measurements are now carried into the report (`junit_fam
 | FR-181 | ✅ | `test_st_category_and_draft_delete::test_the_alarm_type_of_a_program_sets_its_category`, `…a_type_without_a_choice_gets_the_default_category`, `…a_category_chosen_for_one_program_wins`, `…an_unknown_category_is_refused`, `…the_preview_page_lets_the_user_set_the_category_per_program` |
 | FR-182 | ✅ | `test_st_category_and_draft_delete::test_the_list_offers_tick_boxes_for_the_own_drafts_and_deletes_the_ticked`, `…all_own_drafts_of_a_filter_are_deleted_on_every_page`, `…somebody_elses_drafts_cannot_be_ticked_or_deleted` |
 | FR-183 | ✅ | `test_dark_mode::test_the_dark_palette_meets_aa_on_its_backgrounds`, `…every_badge_and_sla_pill_meets_aa_in_the_dark_theme`, `…the_dark_theme_gives_every_light_tint_a_dark_value`, `…colours_are_only_written_out_where_the_dark_theme_cannot_matter`, `…the_dark_theme_is_for_the_screen_only`, `…theme_js_is_a_plain_file_that_follows_the_system_and_remembers_the_choice`, `…the_login_page_and_every_signed_in_page_offer_the_theme_choice`, `…the_theme_choice_is_translated` |
+| FR-184 | ✅ | `test_version::test_the_version_is_a_release_number_and_pyproject_agrees`, `…the_health_endpoints_name_the_version`, `…the_login_page_and_the_menu_show_the_version`, `…the_api_contract_documents_the_version_in_both_health_answers` |
 
 ## 4. Business rules, security, non-functional
 

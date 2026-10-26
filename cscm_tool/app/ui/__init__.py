@@ -34,6 +34,7 @@ def _inject_current_user():
     from app import status_code_fields
     from app.auth.roles import role_info
     from app.i18n import LANGUAGE_META, RTL_LANGUAGES, current_language, usable_languages
+    from app.version import VERSION
 
     unread = 0
     if _current_user:
@@ -71,6 +72,7 @@ def _inject_current_user():
         "scf": status_code_fields,  # the fields of the generated programs (FR-168)
         "translation_access": _translation_access(),
         "unread_notices": unread,
+        "app_version": VERSION,
     }
 
 

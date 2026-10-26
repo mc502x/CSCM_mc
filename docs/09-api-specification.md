@@ -263,6 +263,6 @@ Optimistic concurrency on Draft edits is real since v4 (§10, FR-090) and publis
 
 | Endpoint | Purpose | Access |
 |---|---|---|
-| `GET /api/v1/health` | Liveness | Public |
-| `GET /api/v1/health/ready` | Readiness: database, schema head, newest audit rows, last verified backup. `200` with `status` `ok` or `degraded`, `503` with `unavailable`. Reveals no business data. | Public (internal network) |
+| `GET /api/v1/health` | Liveness; answers `{status, version}` - the version of the running application (FR-184) | Public |
+| `GET /api/v1/health/ready` | Readiness: database, schema head, newest audit rows, last verified backup. `200` with `status` `ok` or `degraded`, `503` with `unavailable`; carries the `version` too. Reveals no business data. | Public (internal network) |
 | `GET /metrics` | Prometheus text: `cscm_http_requests_total`, `cscm_http_request_duration_seconds`, `cscm_db_lock_wait_seconds`, `cscm_change_requests`, `cscm_revisions`, `cscm_cr_waiting`, `cscm_backup_age_hours`, `cscm_backup_ok` | Allow-listed networks (`METRICS_ALLOWED_CIDRS`) or `Authorization: Bearer <METRICS_TOKEN>`; otherwise 403 (SEC-029) |

@@ -70,6 +70,7 @@
       </div>
       {% endif %}
       {% endfor %}
+      <div class="app-version" title="{{ _('Version') }}">CSCM Tool v{{ app_version }}</div>
     </nav>
     <main class="main" id="main" tabindex="-1">
       {% include "_flashes.html" %}
@@ -77,6 +78,7 @@
     </main>
   </div>
 {% else %}
+  <div class="app-version app-version--guest">CSCM Tool v{{ app_version }}</div>
   <div class="guest-tools">{% with where = 'guest' %}{% include "_theme.html" %}{% endwith %}</div>
   <main id="main">
   {% block guest_content %}{% endblock %}

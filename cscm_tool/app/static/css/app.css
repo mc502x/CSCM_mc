@@ -501,3 +501,7 @@ html[dir="rtl"] .error-list { padding-left: 0; padding-right: 18px; }
 /* the theme choice in the top bar and on the login page */
 .theme-select { width: auto; min-height: 40px; padding: 4px 8px; }
 .guest-tools { position: fixed; top: 12px; inset-inline-end: 16px; }
+
+/* the version of the application (FR-184): in the menu and on the login page */
+.app-version { padding: 14px 16px 6px; font-size: 11px; color: var(--color-muted); }
+.app-version--guest { position: fixed; bottom: 10px; inset-inline: 0; text-align: center; padding: 0; font-size: 12px; }
