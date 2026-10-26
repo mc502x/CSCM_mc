@@ -4,6 +4,7 @@
     python scripts/ci.py --fast          # tests only, stop at the first failure
     python scripts/ci.py --offline       # as the full pipeline; pip-audit reports "not run"
     python scripts/ci.py --order shuffle:3
+    python scripts/ci.py --pdf           # as the full pipeline, then the four release PDFs (FR-185)
 
 The full pipeline is `scripts/generate_test_report.py` (pytest with coverage, then black, ruff,
 mypy, bandit, pip-audit; it rewrites docs/24-test-report.md and the run history) followed by
@@ -36,6 +37,11 @@ def main(argv: list[str] | None = None) -> int:
         "--offline", action="store_true", help="same as the full run (pip-audit degrades itself)"
     )
     parser.add_argument("--order", default="file", help="file | reverse | shuffle[:SEED]")
+    parser.add_argument(
+        "--pdf",
+        action="store_true",
+        help="after a green pipeline build the four documents as PDF into dist/docs/v<version>/",
+    )
     args = parser.parse_args(argv)
     py = sys.executable
 
@@ -46,7 +52,9 @@ def main(argv: list[str] | None = None) -> int:
 
     status = run(py, "scripts/generate_test_report.py", "--order", args.order)
     ratchet = run(py, "scripts/pg_readiness.py", "--check")
-    return 1 if status or ratchet else 0
+    if status or ratchet:
+        return 1
+    return run(py, "scripts/build_docs_pdf.py") if args.pdf else 0
 
 
 if __name__ == "__main__":

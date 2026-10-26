@@ -217,6 +217,7 @@ The concept and the eleven open items for checking the translations by native sp
 | **Select-all on every list with tick boxes; a status category per program of a `.st` import (by alarm type, per row or for the ticked rows); delete several own Drafts at once from the Status Codes list — I-65** | v4.13.1 / v4.13.2 | FR-181, FR-182 |
 | **Dark mode**: Automatic (system) / Light / Dark in the top bar, every colour a token, the dark palette checked for contrast | v4.14.0 | FR-183 |
 | **Visible version**: in the menu, on the login page and in the health endpoints, from one place in the code | v4.14.1 | FR-184 |
+| **Release documents as PDF**: full documentation, software description, user manual and test report, each with the version in its file name | v4.15.0 | FR-185 |
 
 **New ideas from the review of the release process** (not built):
 

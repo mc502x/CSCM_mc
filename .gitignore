@@ -11,6 +11,7 @@ instance/
 .mypy_cache/
 .ruff_cache/
 htmlcov/
+dist/
 .coverage
 .coverage.*
 
