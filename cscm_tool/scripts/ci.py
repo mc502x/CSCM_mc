@@ -5,6 +5,7 @@
     python scripts/ci.py --offline       # as the full pipeline; pip-audit reports "not run"
     python scripts/ci.py --order shuffle:3
     python scripts/ci.py --pdf           # as the full pipeline, then the four release PDFs (FR-185)
+    python scripts/ci.py --showcase      # ... and the two design showcase decks (FR-186; needs Edge or Chrome)
 
 The full pipeline is `scripts/generate_test_report.py` (pytest with coverage, then black, ruff,
 mypy, bandit, pip-audit; it rewrites docs/24-test-report.md and the run history) followed by
@@ -42,6 +43,11 @@ def main(argv: list[str] | None = None) -> int:
         action="store_true",
         help="after a green pipeline build the four documents as PDF into releases/v<version>/",
     )
+    parser.add_argument(
+        "--showcase",
+        action="store_true",
+        help="after a green pipeline build the two design showcase decks into releases/v<version>/",
+    )
     args = parser.parse_args(argv)
     py = sys.executable
 
@@ -54,7 +60,10 @@ def main(argv: list[str] | None = None) -> int:
     ratchet = run(py, "scripts/pg_readiness.py", "--check")
     if status or ratchet:
         return 1
-    return run(py, "scripts/build_docs_pdf.py") if args.pdf else 0
+    code = run(py, "scripts/build_docs_pdf.py") if args.pdf else 0
+    if code == 0 and args.showcase:
+        code = run(py, "scripts/build_showcase.py", "--pdf")
+    return code
 
 
 if __name__ == "__main__":

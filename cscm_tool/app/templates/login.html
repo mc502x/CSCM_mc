@@ -3,6 +3,7 @@
 {% block guest_content %}
 <div class="login-shell">
   <div class="card login-card">
+    <img class="login-logo" src="{{ url_for('static', filename='img/cscm-logo.svg') }}" alt="" width="84" height="84">
     <h1 class="login-title">CSCM Tool</h1>
     {% include "_flashes.html" %}
     {% if windows_login %}

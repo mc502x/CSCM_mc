@@ -11,6 +11,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{% block title %}CSCM Tool{% endblock %}</title>
+  <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='img/cscm-logo.svg') }}">
   <script src="{{ url_for('static', filename='js/theme.js') }}"></script>
   <link rel="stylesheet" href="{{ url_for('static', filename='css/app.css') }}">
   <script src="{{ url_for('static', filename='js/app.js') }}" defer></script>
@@ -20,7 +21,7 @@
 {% if current_user %}
   <header class="topbar" role="banner">
     <button type="button" class="menu-toggle" data-menu-toggle aria-controls="sidebar" aria-expanded="false">{{ _('Menu') }}</button>
-    <div class="topbar__brand">CSCM Tool</div>
+    <div class="topbar__brand"><img class="brand-logo" src="{{ url_for('static', filename='img/cscm-logo.svg') }}" alt="" width="30" height="30">CSCM Tool</div>
     <div class="topbar__user">
       <a class="bell" href="{{ url_for('ui.notifications') }}" aria-label="{{ _('Notices') }}{% if unread_notices %} ({{ unread_notices }} {{ _('unread') }}){% endif %}">
         {{ _('Notices') }}{% if unread_notices %} <span class="bell__count">{{ unread_notices }}</span>{% endif %}

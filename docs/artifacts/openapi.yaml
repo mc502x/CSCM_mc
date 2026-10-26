@@ -117,7 +117,7 @@ paths:
                 type: object
                 properties:
                   status: { type: string, example: ok }
-                  version: { type: string, example: "4.15.0", description: "Version of the running application (FR-184)" }
+                  version: { type: string, example: "4.16.0", description: "Version of the running application (FR-184)" }
 
   /auth/me:
     get:

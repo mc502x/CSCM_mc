@@ -505,3 +505,8 @@ html[dir="rtl"] .error-list { padding-left: 0; padding-right: 18px; }
 /* the version of the application (FR-184): in the menu and on the login page */
 .app-version { padding: 14px 16px 6px; font-size: 11px; color: var(--color-muted); }
 .app-version--guest { position: fixed; bottom: 10px; inset-inline: 0; text-align: center; padding: 0; font-size: 12px; }
+
+/* the logo (FR-187): a navy tile that reads on the light and on the dark theme */
+.brand-logo { vertical-align: middle; margin-inline-end: 10px; border-radius: 7px; }
+.login-logo { display: block; margin: 0 auto 12px; border-radius: 18px; }
+.login-card .login-title { text-align: center; }

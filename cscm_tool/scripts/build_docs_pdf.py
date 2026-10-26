@@ -32,11 +32,13 @@ from pathlib import Path
 APP_DIR = Path(__file__).resolve().parents[1]
 REPO = APP_DIR.parent
 DOCS = REPO / "docs"
+LOGO = APP_DIR / "app" / "static" / "img" / "cscm-logo-512.png"
 sys.path.insert(0, str(APP_DIR))
 
 from fpdf.enums import TextMode, WrapMode  # noqa: E402
 from fpdf.fonts import FontFace  # noqa: E402
 
+from app import branding  # noqa: E402
 from app.export import pdf_exporter as px  # noqa: E402
 from app.version import VERSION  # noqa: E402
 
@@ -79,6 +81,7 @@ _WORDS = {
     "⌊": "[",
     "⌋": "]",
     "✖": "x",
+    "⏭": "SKIP",
     "◐": "(o)",
     "─": "-",
     "━": "-",
@@ -595,17 +598,31 @@ def digest_of(sources: list[Source]) -> str:
 def title_page(pdf: DocPdf, kind: str, when: datetime.date, commit: str, digest: str) -> None:
     _label, title, summary = KINDS[kind]
     pdf.add_page()
-    pdf.set_y(60)
+    # on top: who owns the software and whom to ask
+    pdf.set_xy(MARGIN, 12)
+    pdf.set_font(px.BASE_FONT, size=9)
+    pdf.set_text_color(*GREY)
+    pdf.cell(0, 5, branding.OWNER_LINE, new_x="LMARGIN", new_y="NEXT")
+    pdf.set_draw_color(200, 205, 212)
+    pdf.line(MARGIN, 19, pdf.w - MARGIN, 19)
+    # the logo, the name and the long name of the product
+    pdf.image(str(LOGO), x=MARGIN, y=42, w=34, alt_text="Logo of the CSCM Tool")
+    pdf.set_xy(MARGIN + 42, 42)
     pdf.set_text_color(*BLUE)
     pdf.set_font(px.BASE_FONT, size=34)
     with pdf.local_context(text_mode=TextMode.FILL_STROKE, line_width=0.3, draw_color=BLUE):
-        pdf.cell(0, 16, "CSCM Tool", new_x="LMARGIN", new_y="NEXT")
-    pdf.set_font(px.BASE_FONT, size=22)
-    pdf.cell(0, 12, title, new_x="LMARGIN", new_y="NEXT")
+        pdf.cell(0, 16, branding.PRODUCT, new_x="LMARGIN", new_y="NEXT")
+    pdf.set_x(MARGIN + 42)
+    pdf.set_font(px.BASE_FONT, size=15)
+    pdf.cell(0, 8, branding.LONG_NAME, new_x="LMARGIN", new_y="NEXT")
+    pdf.set_y(94)
+    pdf.set_font(px.BASE_FONT, size=24)
+    with pdf.local_context(text_mode=TextMode.FILL_STROKE, line_width=0.2, draw_color=BLUE):
+        pdf.cell(0, 12, title, new_x="LMARGIN", new_y="NEXT")
     pdf.set_font(px.BASE_FONT, size=12)
     pdf.set_text_color(*GREY)
     pdf.cell(0, 8, summary, new_x="LMARGIN", new_y="NEXT")
-    pdf.ln(14)
+    pdf.ln(12)
     facts = [("Version", VERSION), ("Date", when.isoformat())]
     if commit:
         facts.append(("Commit", commit))
@@ -674,7 +691,7 @@ def build(
     }
 
     pdf = DocPdf(f"CSCM Tool v{VERSION} - {title}", docs)
-    pdf.set_title(f"CSCM Tool - {title} - v{VERSION}")
+    pdf.set_title(f"CSCM Tool ({branding.LONG_NAME}) - {title} - v{VERSION}")
     pdf.set_author("CSCM Tool")
     pdf.set_subject(KINDS[kind][2])
     pdf.set_keywords(f"CSCM Tool, v{VERSION}, {title}")

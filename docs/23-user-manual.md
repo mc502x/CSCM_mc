@@ -331,7 +331,7 @@ Administrators only. **New Sandbox Code** creates a code with a `StCd-T#####` nu
 
 ## 23. Translations and language *(v4)*
 
-**Which version is this?** *(v4.14.1)* The version number is at the foot of the menu on the left (*CSCM Tool v4.15.0*) and at the foot of the login page; give it when you report a problem. An administrator can also read it in the answer of `/api/v1/health`.
+**Which version is this?** *(v4.14.1)* The version number is at the foot of the menu on the left (*CSCM Tool v4.16.0*) and at the foot of the login page; give it when you report a problem. An administrator can also read it in the answer of `/api/v1/health`.
 
 **Light or dark display** *(v4.14)*. The list *Automatic (system)* / *Light* / *Dark* in the top bar (and on the login page) sets the colours. *Automatic* follows your operating system, so the tool turns dark with your computer in the evening. The choice is remembered by the browser on this computer only; on another computer or in another browser you choose again. Printouts and exports are always light.
 
