@@ -4,10 +4,17 @@ For a new machine. Two paths: **A. try it** (about 10 minutes, one person, no se
 
 The tool runs entirely on-premises. The only thing it downloads is the Python packages of `cscm_tool/requirements.txt` (use `PIP_INDEX_URL` for an internal mirror).
 
+## Who to ask
+
+- **Software Owner:** Bastian Ritter
+- **Administrator:** Bastian Ritter
+
+They give you the address of the repository, access to it, and the first Administrator account of a team installation.
+
 ## What you need
 
 - **Python 3.12 or newer** — check with `python --version` (on Linux often `python3 --version`).
-- **Git**, and read access to https://github.com/mc502x/CSCM_mc (branch `dev`).
+- **Git**, and read access to the project repository (branch `dev`). The address of the repository is given by the Software Owner or the Administrator (see "Who to ask" below).
 - Windows 10/11/Server or Linux. SQLite is built in; there is no database server to install.
 
 ## A. Try it on a new machine (development mode)
@@ -17,11 +24,11 @@ The tool runs entirely on-premises. The only thing it downloads is the Python pa
 Use **any** terminal: PowerShell, Command Prompt, or Git Bash. The commands below are the same in all of them.
 
 ```bash
-git clone -b dev https://github.com/mc502x/CSCM_mc.git
-cd CSCM_mc
+git clone -b dev <address of the repository> cscm
+cd cscm
 ```
 
-If you already cloned it, you are probably in the right place. Check: the folder you are in must contain a folder named `cscm_tool` (`dir` in PowerShell/cmd, `ls` in Git Bash). **Do not `cd CSCM_mc` a second time**: if the prompt already ends in `CSCM_mc`, stay there.
+If you already cloned it, you are probably in the right place. Check: the folder you are in must contain a folder named `cscm_tool` (`dir` in PowerShell/cmd, `ls` in Git Bash). **Do not change into the folder a second time**: if the prompt already ends in the project folder, stay there.
 
 ### 2. Run the first start
 
@@ -82,14 +89,14 @@ Run from a checkout of the repository, as an administrator.
 
 **Windows Server**
 ```powershell
-cd CSCM_mc\cscm_tool
+cd cscm\cscm_tool
 powershell -ExecutionPolicy Bypass -File deploy\windows\install.ps1 -DryRun    # prints every step, changes nothing
 powershell -ExecutionPolicy Bypass -File deploy\windows\install.ps1             # installs to C:\CSCM
 ```
 
 **Linux (systemd)**
 ```bash
-cd CSCM_mc/cscm_tool
+cd cscm/cscm_tool
 sudo deploy/linux/install.sh --dry-run
 sudo deploy/linux/install.sh                                   # installs to /opt/cscm
 ```
@@ -110,7 +117,7 @@ Read the message, find it in the left column. **Most first-start problems are "w
 
 | Message | Cause and fix |
 |---|---|
-| `cd: CSCM_mc/cscm_tool: No such file or directory` | You are already inside `CSCM_mc`. Do not change folder again; run `python cscm_tool/scripts/first_start.py` from where you are. |
+| `cd: cscm/cscm_tool: No such file or directory` | You are already inside the project folder. Do not change folder again; run `python cscm_tool/scripts/first_start.py` from where you are. |
 | `Could not open requirements file` / `cp: cannot stat '.env.example'` / `can't open file '...dev_server.py'` | You are not in `cscm_tool`. Use the script (it finds the right folder itself), or `cd cscm_tool` first. |
 | `flask: command not found` / `'flask' is not recognized` | The virtual environment is not active or was not created. Use the script and the start command it prints; `.venv/.../python -m flask ...` needs no activation. |
 | `Permission denied: '...\.venv\Scripts\python.exe'` (while creating `.venv`) | You tried to recreate `.venv` while it is active or in use. Close other terminals using it, run `deactivate`, delete the `.venv` folder, run the script again. The script never recreates an existing `.venv`. |
