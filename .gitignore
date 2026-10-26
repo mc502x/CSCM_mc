@@ -50,7 +50,6 @@ git/
 .git/
 
 .obsidian/
-.claude/*
-!.claude/launch.json
+.claude/
 # a one-off check workbook
 stcd_check.xlsx
