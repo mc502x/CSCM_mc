@@ -1,42 +1,80 @@
 # CSCM Tool — Quick deployment guide
 
-For a new machine. Two paths: **A. try it** (10 minutes, one person, no server setup) and **B. install it for the team** (Windows Server or Linux, runs as a service). The full reference is [docs/14-deployment-architecture.md](docs/14-deployment-architecture.md) §4a.
+For a new machine. Two paths: **A. try it** (about 10 minutes, one person, no server setup) and **B. install it for the team** (Windows Server or Linux, runs as a service). The full reference is [docs/14-deployment-architecture.md](docs/14-deployment-architecture.md) §4a.
 
 The tool runs entirely on-premises. The only thing it downloads is the Python packages of `cscm_tool/requirements.txt` (use `PIP_INDEX_URL` for an internal mirror).
 
 ## What you need
 
-- **Python 3.12 or newer** (`python --version`)
-- **Git**, and read access to https://github.com/mc502x/CSCM_mc (branch `dev`)
-- Windows 10/11/Server or Linux. SQLite is built in, no database server to install.
+- **Python 3.12 or newer** — check with `python --version` (on Linux often `python3 --version`).
+- **Git**, and read access to https://github.com/mc502x/CSCM_mc (branch `dev`).
+- Windows 10/11/Server or Linux. SQLite is built in; there is no database server to install.
 
 ## A. Try it on a new machine (development mode)
 
+### 1. Get the code and find your place
+
+Use **any** terminal: PowerShell, Command Prompt, or Git Bash. The commands below are the same in all of them.
+
 ```bash
 git clone -b dev https://github.com/mc502x/CSCM_mc.git
-cd CSCM_mc/cscm_tool
-
-python -m venv .venv
-.venv\Scripts\activate            # Linux/macOS: source .venv/bin/activate
-pip install -r requirements.txt
-
-copy .env.example .env            # Linux/macOS: cp .env.example .env
-flask db upgrade                  # creates instance/cscm.db with the schema and seed data
-flask create-admin                # asks for the first Administrator (name, e-mail, password)
-python dev_server.py 5001         # or: flask run
+cd CSCM_mc
 ```
 
-Open http://localhost:5001 and log in with the Administrator you just created. Create the other users (Engineer, Reviewer, Chief Engineer, StCd Owner, Viewer) on the user administration page (`/admin/users`).
+If you already cloned it, you are probably in the right place. Check: the folder you are in must contain a folder named `cscm_tool` (`dir` in PowerShell/cmd, `ls` in Git Bash). **Do not `cd CSCM_mc` a second time**: if the prompt already ends in `CSCM_mc`, stay there.
 
-**Check that it works**
+### 2. Run the first start
 
-1. `http://localhost:5001/api/v1/health` shows `{"status": "ok", "version": "4.14.1"}`; the same version is at the foot of the menu and of the login page.
+```bash
+python cscm_tool/scripts/first_start.py
+```
+
+Linux or macOS: `python3 cscm_tool/scripts/first_start.py`.
+
+The script works from whatever folder you are in and does everything, in order, telling you each step:
+
+1. checks the Python version,
+2. creates the virtual environment `cscm_tool/.venv` (an existing one is left alone),
+3. installs the packages (about a minute),
+4. creates `cscm_tool/.env` from `.env.example` (an existing one is kept),
+5. creates the database `cscm_tool/instance/cscm.db`,
+6. asks for the **first Administrator** (name, e-mail, password) if there is none yet.
+
+It then prints the command that starts the tool. It is safe to run again: finished steps are skipped. `--dry-run` shows the steps without changing anything; `--port 5002` changes the printed port; `--no-admin` skips the Administrator.
+
+### 3. Start it
+
+Run the command the script printed, inside `cscm_tool`:
+
+| Shell | Start command |
+|---|---|
+| PowerShell or Command Prompt | `cd cscm_tool` then `.venv\Scripts\python.exe dev_server.py 5001` |
+| Git Bash | `cd cscm_tool` then `.venv/Scripts/python.exe dev_server.py 5001` |
+| Linux / macOS | `cd cscm_tool` then `.venv/bin/python dev_server.py 5001` |
+
+Open http://localhost:5001 and log in with the Administrator you created. Create the other users (Engineer, Reviewer, Chief Engineer, StCd Owner, Viewer) on the user administration page (`/admin/users`).
+
+You do not need to "activate" the virtual environment: these commands use its Python directly, which is why they work the same in every shell.
+
+### 4. Check that it works
+
+1. `http://localhost:5001/api/v1/health` shows `{"status": "ok", "version": "4.14.2"}`; the same version is at the foot of the menu and of the login page.
 2. `http://localhost:5001/api/v1/health/ready` reports database, schema, audit chain and backup state.
 3. Import the sample programs: *Import from .st files* → choose `cscm_tool/tests/fixtures/st/*.st` → preview → create Drafts.
-4. Run the automated tests (about 20 minutes for everything, `-m "not performance"` skips the load tests):
-   ```bash
-   pytest -m "not performance"
-   ```
+4. Run the automated tests (about 20 minutes for everything; `-m "not performance"` skips the load tests). Inside `cscm_tool`: `.venv\Scripts\python.exe -m pytest -m "not performance"` (Git Bash: `.venv/Scripts/python.exe`, Linux: `.venv/bin/python`).
+
+### The same by hand (only if you cannot use the script)
+
+Inside `cscm_tool`:
+
+| Step | PowerShell / cmd | Git Bash | Linux |
+|---|---|---|---|
+| Environment | `python -m venv .venv` | `python -m venv .venv` | `python3 -m venv .venv` |
+| Activate | `.venv\Scripts\activate` | `source .venv/Scripts/activate` | `source .venv/bin/activate` |
+| Packages | `pip install -r requirements.txt` | same | same |
+| Settings | `copy .env.example .env` | `cp .env.example .env` | `cp .env.example .env` |
+| Database | `flask db upgrade` | same | same |
+| Administrator | `flask create-admin` | same | same |
 
 ## B. Install for the team (production)
 
@@ -68,12 +106,19 @@ The installer creates the directories and service account, builds the virtual en
 
 ## If something goes wrong
 
+Read the message, find it in the left column. **Most first-start problems are "wrong folder" or "wrong shell".** `pwd` (Git Bash, Linux), `cd` (cmd) or `Get-Location` (PowerShell) tells you where you are.
+
 | Message | Cause and fix |
 |---|---|
-| `unable to open database file` | Fixed in v4.13.3. On an older checkout, open `.env` and delete or comment out the line `DATABASE_URL=sqlite:///instance/cscm.db`; the default puts the file at `cscm_tool/instance/cscm.db`. To put the database elsewhere use an **absolute** path whose folder exists, for example `DATABASE_URL=sqlite:///C:/CSCM/data/cscm.db`. |
-| `no such table` / empty pages | The database has not been created yet: run `flask db upgrade` once in `cscm_tool/` with the virtual environment active. |
+| `cd: CSCM_mc/cscm_tool: No such file or directory` | You are already inside `CSCM_mc`. Do not change folder again; run `python cscm_tool/scripts/first_start.py` from where you are. |
+| `Could not open requirements file` / `cp: cannot stat '.env.example'` / `can't open file '...dev_server.py'` | You are not in `cscm_tool`. Use the script (it finds the right folder itself), or `cd cscm_tool` first. |
+| `flask: command not found` / `'flask' is not recognized` | The virtual environment is not active or was not created. Use the script and the start command it prints; `.venv/.../python -m flask ...` needs no activation. |
+| `Permission denied: '...\.venv\Scripts\python.exe'` (while creating `.venv`) | You tried to recreate `.venv` while it is active or in use. Close other terminals using it, run `deactivate`, delete the `.venv` folder, run the script again. The script never recreates an existing `.venv`. |
+| `unable to open database file` | Fixed in v4.13.3: `git pull`. On an older checkout open `.env` and delete or comment out the line `DATABASE_URL=sqlite:///instance/cscm.db`. To put the database elsewhere use an **absolute** path, e.g. `DATABASE_URL=sqlite:///C:/CSCM/data/cscm.db`. |
+| `no such table` / empty pages | The database was not created: run the script again, or `flask db upgrade` in `cscm_tool`. |
 | `Refusing to start in production` | `SECRET_KEY` is missing, short, or still `change-me...`. Set 32+ random characters in `.env`. |
-| `flask` is not found | The virtual environment is not active: `.venv\Scriptsctivate`. |
+| `A new release of pip is available` | Only a notice. Ignore it. |
+| Python is older than 3.12 | Install Python 3.12 or newer and run the script with it (on Windows: `py -3.12 cscm_tool/scripts/first_start.py`). |
 
 ## Moving existing data to a new machine
 
@@ -81,8 +126,8 @@ On the old machine: `flask backup-db --dest <folder>`. Copy the backup file, ins
 
 ## Upgrading
 
-`git pull`, then run the installer again (production) or `pip install -r requirements.txt` and `flask db upgrade` (development). The installer takes a verified backup before it migrates.
+`git pull`, then run the installer again (production) or the first-start script again (development: it installs new packages and applies new migrations). The production installer takes a backup before it migrates.
 
 ## Known limits (be honest with yourself before go-live)
 
-The installers are tested in dry-run and by the automated tests, but **not yet on a clean Windows Server or Linux host**, and the Windows sign-in is proven against the Windows handshake of a test gateway, not against your domain controller or IIS. Do a trial installation on a spare machine first and work through the pre-go-live checklist in [docs/20-traceability-matrix.md](docs/20-traceability-matrix.md) §6.
+The installers are tested in dry-run and by the automated tests, but **not yet on a clean Windows Server or Linux host**, and the Windows sign-in is proven against the Windows handshake of a test gateway, not against your domain controller or IIS. Do a trial installation on a spare machine first and work through the pre-go-live checklist in [docs/20-traceability-matrix.md](docs/20-traceability-matrix.md) §6. The development first-start script was run end to end on a clean copy (new environment, packages, database, first Administrator, second run) and by an automated dry-run test.

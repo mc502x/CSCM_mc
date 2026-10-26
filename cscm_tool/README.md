@@ -10,6 +10,8 @@ Flask backend for the Controller Status Code Management Tool. See the root [../R
 
 ## Setup
 
+The quickest way, the same in every shell and from any folder: `python scripts/first_start.py` (from the repository root: `python cscm_tool/scripts/first_start.py`). It does the steps below and prints the start command; see [../DEPLOYMENT-QUICKSTART.md](../DEPLOYMENT-QUICKSTART.md) for the error messages and the production installers. By hand:
+
 ```bash
 python -m venv .venv
 .venv/Scripts/activate   # .venv/bin/activate on Linux/macOS
