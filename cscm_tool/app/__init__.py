@@ -7,7 +7,7 @@ import uuid
 
 from flask import Flask, g
 from sqlalchemy import event
-from sqlalchemy.engine import Engine
+from sqlalchemy.engine import Engine, make_url
 
 from app.config import CONFIG_BY_NAME, DEFAULT_SECRET_KEY, MIN_PRODUCTION_SECRET_LENGTH
 from app.extensions import csrf, db, migrate
@@ -56,6 +56,23 @@ def _begin_transaction(conn):
     observe_lock_wait(time.perf_counter() - started)  # I-21: lock-wait histogram
 
 
+def _anchor_sqlite_file(app: Flask) -> None:
+    """A relative SQLite path (`sqlite:///instance/cscm.db`, as the example .env had it) is read
+    from the application directory and its folder is created. Left alone, Flask-SQLAlchemy reads
+    it from the instance folder (instance/instance/cscm.db), which does not exist on a new
+    machine: "unable to open database file"."""
+    url = make_url(str(app.config.get("SQLALCHEMY_DATABASE_URI") or ""))
+    if url.get_backend_name() != "sqlite" or url.database in (None, "", ":memory:"):
+        return
+    path = str(url.database)
+    if not os.path.isabs(path):
+        path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), path)
+        app.config["SQLALCHEMY_DATABASE_URI"] = url.set(database=path).render_as_string(
+            hide_password=False
+        )
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+
+
 def create_app(config_name: str | None = None, overrides: dict | None = None) -> Flask:
     resolved_name: str = (
         config_name if config_name is not None else os.environ.get("FLASK_ENV", "development")
@@ -94,6 +111,7 @@ def create_app(config_name: str | None = None, overrides: dict | None = None) ->
         raise RuntimeError("AUTH_MODE must be password, windows or both.")
 
     os.makedirs(app.instance_path, exist_ok=True)
+    _anchor_sqlite_file(app)
 
     db.init_app(app)
     migrate.init_app(app, db)

@@ -66,6 +66,15 @@ The installer creates the directories and service account, builds the virtual en
 4. **Backups:** point `BACKUP_DIR` at storage on a different machine. Test a restore once: `flask verify-backup <file>`.
 5. Check `/api/v1/health/ready` through the proxy.
 
+## If something goes wrong
+
+| Message | Cause and fix |
+|---|---|
+| `unable to open database file` | Fixed in v4.13.3. On an older checkout, open `.env` and delete or comment out the line `DATABASE_URL=sqlite:///instance/cscm.db`; the default puts the file at `cscm_tool/instance/cscm.db`. To put the database elsewhere use an **absolute** path whose folder exists, for example `DATABASE_URL=sqlite:///C:/CSCM/data/cscm.db`. |
+| `no such table` / empty pages | The database has not been created yet: run `flask db upgrade` once in `cscm_tool/` with the virtual environment active. |
+| `Refusing to start in production` | `SECRET_KEY` is missing, short, or still `change-me...`. Set 32+ random characters in `.env`. |
+| `flask` is not found | The virtual environment is not active: `.venv\Scriptsctivate`. |
+
 ## Moving existing data to a new machine
 
 On the old machine: `flask backup-db --dest <folder>`. Copy the backup file, install the tool on the new machine as above, stop the web server, replace `cscm.db` in the data folder (`instance/` or `C:\CSCM\data`) with the backup, run `flask db upgrade`, start the server and run `flask audit-verify`. The new machine needs the **same** `AUDIT_HMAC_KEY` and `MANIFEST_SIGNING_KEY` as the old one.
