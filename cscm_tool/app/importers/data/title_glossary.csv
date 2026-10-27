@@ -1,0 +1,48 @@
+german,english
+umrichter,"converter, conv."
+umr.,"conv., converter"
+sicherung,fuse
+ausgelöst,"tripped, trip"
+kommunikation,"comm, communication"
+fehler,"error, fault, failure"
+störung,"fault, failure, error"
+rotor,rotor
+überdrehzahl,overspeed
+drehzahl,"speed, rpm"
+test,test
+stopp,stop
+sollwinkel,"setpoint angle, angle setpoint, angle sp"
+winkel,angle
+nicht bereit,not ready
+temperatur,"temp, temperature"
+druck,"press, pressure"
+öl,oil
+getriebe,"gearbox, gear, gearb"
+generator,"generator, gen"
+netz,"grid, mains"
+spannung,"voltage, volt"
+strom,current
+azimut,yaw
+blatt,blade
+turm,tower
+gondel,nacelle
+bremse,brake
+heizung,"heating, heater"
+lüfter,fan
+pumpe,pump
+schalter,"switch, breaker, cb"
+überwachung,"monitoring, monit."
+grenzwert,limit
+sollwert,"setpoint, setp."
+istwert,"actual value, actual"
+batterie,batter
+hydraulik,"hydraulic, hyd."
+windgeschwindigkeit,"wind speed, windspeed"
+kühl,cool
+schmier,"lubric, lube"
+leistung,power
+frequenz,"frequency, freq"
+not-aus,"emergency stop, e-stop, emergency"
+watchdog,watchdog
+neustart,"reboot, restart"
+reboot,reboot

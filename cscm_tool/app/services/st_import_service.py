@@ -1,3 +1,4 @@
+# ruff: noqa: E501  (docstring lines)
 """Status code import from the generated Structured Text programs (`StCd_<n>.st`).
 
 Docs: 03-srs.md FR-048o..FR-048w, 06-data-dictionary.md section 5a, 09-api-specification.md
@@ -22,8 +23,8 @@ What a program becomes:
 * the **number** the file carries is reserved for the code (`status_code.reserved_identifier`): the
   identifier issued at Submit for Review is exactly that number (NumberingService), and the group
   and subgroup follow from the subgroup band the number lies in;
-* Hub Controller programs carry the *legacy* HC number; the new number comes from the numbering
-  table (hc-numbering-proposal.xlsx, proposal 1 or 2);
+* Hub Controller programs carry the *legacy* HC number; the new number comes from the mapping
+  (MappingService; FR-191..FR-198);
 * the **legacy number** (Main Controller: the old number in the header comment; Hub Controller: the
   number in the file name) is stored as `legacy_reference_number`. That one field is the whole
   legacy -> new mapping (LegacyMappingService); codes without one simply have no legacy
@@ -32,10 +33,14 @@ What a program becomes:
   user-group levels and the subsystem programs without a catalogue column yet stay in the parsed
   JSON of `import_source_item`.
 
-The title is the program's name; the description is generated (a catalogue description needs 10
-characters and differs from the title) and names the file and the set condition. The status
-category is not in the file, so the uploader chooses one for the batch and refines it per code in
-the Draft."""
+What the programs do not carry comes from the **mapping** and nowhere else: the English title (checked
+against the German name of the program with the glossary), the type (the status category), the up/down
+counter, the eight named access levels (checked against the user-group numbers of the program), the
+cause and directive (the remedy text) and the value of a parameter delay. A program whose number is not
+in the mapping, or whose row has no type, is blocked; a row that the StCd Owner, the Chief Engineer and
+an Administrator have not approved yet is used with a warning. The description is generated (a
+catalogue description needs 10 characters and differs from the title) and names the file, the name in
+the program, what is not in the program and the set condition."""
 
 from __future__ import annotations
 
@@ -58,7 +63,7 @@ from app import status_code_fields
 from app.domain.authz import require_roles
 from app.domain.errors import DomainError, ForbiddenError, NotFoundError
 from app.extensions import db
-from app.importers import stcd
+from app.importers import glossary, stcd
 from app.models.change_request import ChangeRequest
 from app.models.import_job import ImportJob, ImportSourceItem
 from app.models.lookup import (
@@ -71,15 +76,15 @@ from app.models.user import User
 from app.services.audit_service import AuditService
 from app.services.change_set_service import ChangeSetService
 from app.services.import_service import ImportService, Issue, RowResult, changed_fields
+from app.services.mapping_service import MappingRow, MappingService, MappingTable
 from app.services.numbering_service import NumberingService
 from app.services.status_code_service import StatusCodeService, ValidationFailed
-from app.services.validation import NO_VALUE, validate_revision_fields
+from app.services.validation import MAX_REMEDY_CHARS, NO_VALUE, validate_revision_fields
 from app.utils import utcnow_iso
 
 STAGING_HOURS = 24
 MAX_UPLOAD_FILES = 2000
 MAX_UNZIPPED_BYTES = 50 * 1024 * 1024
-CATEGORIES = ("ERROR", "WARNING", "INFO")
 CONTROLLER_CHOICES = ("auto", "MC", "HC")
 _TOKEN_RE = re.compile(r"^[0-9a-f]{32}$")
 _DESCRIPTION_LIMIT = 4000
@@ -167,19 +172,17 @@ def format_window(seconds: int | None) -> str | None:
     return f"{seconds}s"
 
 
-def _description(code: stcd.StatusCode, unresolved: list[str], translated: list[str]) -> str:
-    """The comment of the Draft. What the program does not give is listed (FR-189), before the set
-    condition, so that a long condition can never cut it off."""
+def _description(code: stcd.StatusCode, unresolved: list[str], differences: list[str]) -> str:
+    """The comment of the Draft. What the program or the mapping does not give is listed (FR-189),
+    before the set condition, so that a long condition can never cut it off."""
     program = code.number if code.controller == "MC" else code.legacy_number
     parts = [f"Imported from {Path(code.file).name} (program StCd_{program})."]
     if code.legacy_number is not None:
         parts.append(f"Legacy {code.controller} number {code.legacy_number}.")
-    if translated:
-        parts.append(
-            "Access levels, proposed from the user-group numbers of the program: "
-            + "; ".join(translated)
-            + "."
-        )
+    if code.name:
+        parts.append(f"Name in the program: {code.name}.")
+    if differences:
+        parts.append("Mapping and program differ: " + "; ".join(differences) + ".")
     if unresolved:
         parts.append("Not resolved by the import: " + "; ".join(unresolved) + ".")
     head = " ".join(parts)
@@ -268,19 +271,6 @@ def _clean_options(options: dict | None) -> dict[str, Any]:
         controller = controller.upper()
     else:
         raise ValueError("controller must be auto, MC or HC")
-    try:
-        proposal = int(options.get("hc_proposal") or 1)
-    except (TypeError, ValueError) as exc:
-        raise ValueError("hc_proposal must be 1 or 2") from exc
-    if proposal not in (1, 2):
-        raise ValueError("hc_proposal must be 1 or 2")
-    # FR-189: no category is assumed. The files carry none; the user chooses a default, a category
-    # per alarm type or one per program, and a program without any of them is not imported.
-    category = str(options.get("default_category") or "").upper()
-    if category and category not in CATEGORIES:
-        raise ValueError("default_category must be ERROR, WARNING or INFO")
-    by_alarm_type = _clean_categories(options.get("alarm_type_categories"), "alarm type")
-    by_program = _clean_categories(options.get("categories"), "program")
     known = [p.code for p in db.session.query(LookupTurbinePlatform).filter_by(is_active=1)]
     platforms = options.get("platforms")
     if isinstance(platforms, str):
@@ -289,58 +279,24 @@ def _clean_options(options: dict | None) -> dict[str, Any]:
     unknown = [p for p in platforms if p not in known]
     if unknown:
         raise ValueError("Unknown turbine platform: " + ", ".join(unknown))
-    return {
-        "controller": controller,
-        "hc_proposal": proposal,
-        "default_category": category or None,
-        "alarm_type_categories": by_alarm_type,
-        "categories": by_program,
-        "platforms": platforms,
-    }
-
-
-def _clean_categories(raw: Any, what: str) -> dict[str, str]:
-    """A map of alarm type (or of program key) to a status category; blank entries are dropped, so
-    a form can submit every row and only the chosen ones count."""
-    if not raw:
-        return {}
-    if not isinstance(raw, dict):
-        raise ValueError(f"The categories per {what} must be a mapping.")
-    cleaned: dict[str, str] = {}
-    for key, value in raw.items():
-        value = str(value or "").strip().upper()
-        if not value:
-            continue
-        if value not in CATEGORIES:
-            raise ValueError(f"The category of {what} {key} must be ERROR, WARNING or INFO.")
-        cleaned[str(key)] = value
-    return cleaned
-
-
-def _category_of(code: stcd.StatusCode, key: str, options: dict) -> str | None:
-    """Per program (the user's choice), else by the program's alarm type, else the default; None
-    when the user has chosen none of them (the program is then not imported until they do)."""
-    return (
-        options.get("categories", {}).get(key)
-        or options.get("alarm_type_categories", {}).get(str(code.alarm_type))
-        or options.get("default_category")
-        or None
-    )
+    return {"controller": controller, "platforms": platforms}
 
 
 # ------------------------------------------------------------------------------ evaluation
-def _load_audiences() -> dict[str, list[tuple[int, str, int, int]]]:
-    """Per audience field: the named access levels that have numbers, as (id, label, read, write).
-    The numbers are the defaults of docs/06-data-dictionary.md section 9d.9."""
-    out: dict[str, list[tuple[int, str, int, int]]] = {}
+def _load_levels() -> dict[str, dict[str, tuple[int, str, int | None, int | None]]]:
+    """Per audience field: the active named access levels by lower-case label, as (id, label, read,
+    write). The numbers are the defaults of docs/06-data-dictionary.md section 9d.9; a level whose
+    numbers differ from code to code has none."""
+    out: dict[str, dict[str, tuple[int, str, int | None, int | None]]] = {}
     for field_name, (_slot, table) in status_code_fields.AUDIENCE_SLOTS.items():
         statement = (
             "SELECT id, label, default_read_level, default_write_level FROM "  # nosec B608
             + table
-            + " WHERE is_active = 1 AND default_read_level IS NOT NULL"
-            " AND default_write_level IS NOT NULL ORDER BY sort_order, id"
+            + " WHERE is_active = 1"
         )
-        out[field_name] = [(r[0], r[1], r[2], r[3]) for r in db.session.execute(text(statement))]
+        out[field_name] = {
+            r[1].lower(): (r[0], r[1], r[2], r[3]) for r in db.session.execute(text(statement))
+        }
     return out
 
 
@@ -382,7 +338,7 @@ class _Catalogue:
                 )
             ).all()
         }
-        self.audiences = _load_audiences()
+        self.levels = _load_levels()
         self.groups = {g.id: g for g in db.session.query(LookupFunctionalSystemGroup)}
         self.subgroups = {s.id: s for s in db.session.query(LookupFunctionalSubgroup)}
 
@@ -390,13 +346,22 @@ class _Catalogue:
         return self.identifier_of.get(code_id) or f"#{code_id}"
 
 
+def _hub_numbers(table: MappingTable) -> dict[int, int]:
+    return {
+        r.legacy_number: r.new_number
+        for r in table.rows
+        if r.family == "HC" and r.legacy_number is not None
+    }
+
+
 def _evaluate(
     parsed: list[tuple[int, str, str, list[stcd.StatusCode]]],
     options: dict[str, Any],
-    mapping: dict[int, tuple],
+    table: MappingTable,
 ) -> list[Evaluated]:
     """Checks every program. `parsed` is [(file index, name, sha256, programs)]."""
     catalogue = _Catalogue()
+    hub_numbers = _hub_numbers(table)
     seen_identifier: dict[str, str] = {}
     seen_prg: dict[int, str] = {}
     seen_legacy: dict[tuple[str, int], str] = {}
@@ -405,7 +370,7 @@ def _evaluate(
     for file_index, name, sha, programs in parsed:
         for code in programs:
             if code.controller == "HC":
-                stcd.apply_mapping(code, mapping, options["hc_proposal"])
+                stcd.apply_mapping(code, hub_numbers)
             out.append(
                 _evaluate_one(
                     file_index,
@@ -413,7 +378,7 @@ def _evaluate(
                     sha,
                     code,
                     options,
-                    mapping,
+                    table,
                     catalogue,
                     seen_identifier,
                     seen_prg,
@@ -423,13 +388,21 @@ def _evaluate(
     return out
 
 
+def _mapping_row(code: stcd.StatusCode, table: MappingTable) -> MappingRow | None:
+    """The row of the mapping a program belongs to: a Main Controller program by its number, a Hub
+    Controller program by its legacy number."""
+    if code.controller == "HC":
+        return table.for_hub(code.legacy_number) if code.legacy_number is not None else None
+    return table.for_main(code.number)
+
+
 def _evaluate_one(
     file_index: int,
     file_name: str,
     sha: str,
     code: stcd.StatusCode,
     options: dict[str, Any],
-    mapping: dict[int, tuple],
+    table: MappingTable,
     catalogue: _Catalogue,
     seen_identifier: dict[str, str],
     seen_prg: dict[int, str],
@@ -472,9 +445,10 @@ def _evaluate_one(
     # Already in the catalogue: unchanged is not a failure; a changed program can update the Draft
     # or open a new revision of the code, and a code whose change request was withdrawn can be
     # restored from the file (FR-048x).
+    row = _mapping_row(code, table)
     present = catalogue.by_identifier.get(identifier)
     if present is not None:
-        _evaluate_existing(item, present, code, options, mapping, catalogue)
+        _evaluate_existing(item, present, code, options, row, catalogue, table)
         return item
     if identifier in seen_identifier:
         problem(
@@ -542,17 +516,31 @@ def _evaluate_one(
     else:
         warnings.append("The program has no PrgIdx_GUi; enter it before the code can be released.")
 
-    data = _to_data(code, options, group, subgroup, view, mapping, catalogue.audiences)
+    if row is None:
+        other = table.by_new.get(number)
+        if other is not None and code.controller == "MC":
+            message = (
+                f"{identifier} is a Hub Controller row in the mapping, but the program is a Main "
+                "Controller program."
+            )
+        else:
+            legacy = (
+                f" (legacy {code.controller} number {code.legacy_number})"
+                if code.legacy_number is not None
+                else ""
+            )
+            message = (
+                f"{identifier}{legacy} is not in the mapping. The title, the type and the access "
+                "levels come from the mapping only: request the row under Mapping first (it needs "
+                "the approval of the StCd Owner, the Chief Engineer and an Administrator)."
+            )
+        problem("mapping", message)
+        return item
+    _check_row(code, row, group, identifier, view, problem)
+    data = _to_data(code, options, group, subgroup, view, row, catalogue.levels, table)
     item.data = data
     for error in validate_revision_fields(data):
-        if error["field"] == "status_category" and view["category"] is None:
-            continue  # not an error of the program: the user has not chosen one yet
         problem(error["field"], error["message"])
-    if view["category"] is None:
-        warnings.append(
-            "No status category is chosen. Choose one for this program, by alarm type or as the "
-            "default; the program cannot be imported without."
-        )
     if code.availability_group is None:
         problem("available_group", "The program has no availability group.")
 
@@ -566,8 +554,9 @@ def _evaluate_existing(
     code_id: int,
     code: stcd.StatusCode,
     options: dict[str, Any],
-    mapping: dict[int, tuple],
+    row: MappingRow | None,
     catalogue: _Catalogue,
+    table: MappingTable,
 ) -> None:
     view = item.view
     view["existing"] = {
@@ -583,14 +572,43 @@ def _evaluate_existing(
     subgroup = catalogue.subgroups[status_code.functional_subgroup_id]
     # the delay warnings of a program that already exists are not repeated on the screen
     data = _to_data(
-        code, options, group, subgroup, {**view, "warnings": []}, mapping, catalogue.audiences
+        code, options, group, subgroup, {**view, "warnings": []}, row, catalogue.levels, table
     )
     view["category"] = data.get("status_category")
     current = StatusCodeService._repo.get_current_revision(code_id)
-    if current is not None and data.get("status_category") is None:
-        # no category chosen: the code keeps the one it has, it is not compared with an assumption
-        data["status_category"] = view["category"] = current.status_category
+    if row is None and current is not None:
+        # not in the mapping (imported before it existed): the code keeps what the mapping would
+        # have given, it is not compared with an assumption
+        for name in (
+            "title",
+            "description",
+            "status_category",
+            "up_down_counter",
+            "remedy_text",
+            "set_delay",
+            "reset_delay",
+        ):
+            data[name] = getattr(current, name)
+        for name in _ACCESS_FIELDS:
+            data[name] = getattr(current, f"{name}_id")
+        view["category"] = current.status_category
+        view["warnings"].append(
+            f"{view['identifier']} is not in the mapping; its title, type and access levels stay "
+            "as they are."
+        )
     item.status_code_id = code_id
+    if current is None and row is None:
+        view["state"] = "blocked"
+        view["issues"].append(
+            {
+                "column": "mapping",
+                "message": (
+                    f"{view['identifier']} is not in the mapping, so the withdrawn code cannot be "
+                    "restored: the title and the type come from the mapping only."
+                ),
+            }
+        )
+        return
     if current is None:
         # the change request was withdrawn: the code row is still there (its number is kept)
         item.data, item.action = data, "restore"
@@ -640,50 +658,124 @@ _AUDIENCE_NAMES = {
 }
 
 
-def _translate_access(
+def _named_access(
     code: stcd.StatusCode,
-    audiences: dict[str, list[tuple[int, str, int, int]]],
-    translated: list[str],
+    row: MappingRow,
+    levels: dict[str, dict[str, tuple[int, str, int | None, int | None]]],
+    differences: list[str],
     unresolved: list[str],
 ) -> dict[str, int]:
-    """The user-group levels of the program (a read and a write number for each audience) as the
-    named access level of that audience - only where exactly one named level carries exactly these
-    numbers. Anything else stays empty and is listed in the comment (FR-189); the numbers
-    themselves are always kept with the Draft. The names are proposals until the Administrator
-    confirms them at the review sign-off."""
+    """The eight named access levels come from the mapping. The program carries the numbers of the
+    levels (read and write per audience); where the named level has numbers of its own and the program
+    gives other ones, the difference is listed and warned about - the numbers themselves are always
+    kept with the Draft (FR-190)."""
     found: dict[str, int] = {}
     absent: list[str] = []
     for field_name, (slot, _table) in status_code_fields.AUDIENCE_SLOTS.items():
         label = _AUDIENCE_NAMES[field_name]
-        levels = code.user_groups.get(slot) or {}
-        if "read" not in levels or "write" not in levels:
+        named = row.access.get(field_name)
+        if not named:
             absent.append(label)
             continue
-        read, write = levels["read"], levels["write"]
-        matches = [m for m in audiences.get(field_name, []) if m[2] == read and m[3] == write]
-        if len(matches) == 1:
-            found[field_name] = matches[0][0]
-            translated.append(f"{label} = {matches[0][1]} (read {read}, write {write})")
-        elif matches:
-            names = ", ".join(m[1] for m in matches)
+        entry = levels.get(field_name, {}).get(named.lower())
+        if entry is None:
             unresolved.append(
-                f"{label} access: read {read} / write {write} fits more than one level ({names})"
+                f"{label} access: the mapping names '{named}', which is not an active level"
             )
-        else:
-            unresolved.append(f"{label} access: read {read} / write {write} fits no named level")
+            continue
+        found[field_name] = entry[0]
+        given = code.user_groups.get(slot) or {}
+        if (
+            entry[2] is not None
+            and entry[3] is not None
+            and "read" in given
+            and "write" in given
+            and (given["read"], given["write"]) != (entry[2], entry[3])
+        ):
+            differences.append(
+                f"{label} access: the mapping says {named} (read {entry[2]} / write {entry[3]}), "
+                f"the program has read {given['read']} / write {given['write']}"
+            )
     if absent:
-        unresolved.append("access levels not in the program: " + ", ".join(absent))
+        unresolved.append("access levels not in the mapping: " + ", ".join(absent))
     return found
 
 
-def _delay(label: str, raw: str, ms: int | None, unresolved: list[str], warnings: list[str]) -> str:
-    """The delay as the program gives it: a time, else the name of the variable that sets it, else
-    the statement that the program has no timer. Never an assumed time."""
+def _check_row(
+    code: stcd.StatusCode,
+    row: MappingRow,
+    group: LookupFunctionalSystemGroup,
+    identifier: str,
+    view: dict[str, Any],
+    problem: Any,
+) -> None:
+    """What the mapping row says about this program: usable at all, approved, in agreement with the
+    program header and with the numbering band, and a title that matches the German name."""
+    warnings: list[str] = view["warnings"]
+    if row.status_type is None:
+        problem(
+            "status_category",
+            f"The mapping has no type for {identifier}. Complete the row under Mapping first.",
+        )
+    if row.status not in ("APPROVED", "ISSUED"):
+        warnings.append(
+            f"The mapping row of {identifier} is {row.status.replace('_', ' ').lower()}: the "
+            "number is not approved yet by the StCd Owner, the Chief Engineer and an Administrator."
+        )
+    if code.controller == "MC":
+        header, mapped = code.legacy_number, row.legacy_number
+        if header is not None and mapped is not None and header != mapped:
+            problem(
+                "legacy_reference_number",
+                f"The program header gives legacy number {header}, the mapping gives {mapped} "
+                f"for {identifier}.",
+            )
+        elif header is not None and mapped is None:
+            warnings.append(
+                f"The program header gives legacy number {header}; the mapping has none for "
+                f"{identifier}."
+            )
+        elif header is None and mapped is not None:
+            warnings.append(
+                f"The mapping gives legacy number {mapped} for {identifier}; the program header "
+                "has none."
+            )
+    if row.logical_node and row.logical_node != group.code:
+        warnings.append(
+            f"The mapping gives the logical node {row.logical_node}; the number range of "
+            f"{identifier} belongs to {group.code}."
+        )
+    for message in glossary.check(code.name, row.description):
+        warnings.append(f"Title and program name: {message}.")
+
+
+def _delay(
+    label: str,
+    raw: str,
+    ms: int | None,
+    mapped: str | None,
+    unresolved: list[str],
+    differences: list[str],
+    warnings: list[str],
+) -> str:
+    """The delay as the program gives it: a time; else - when the program names the parameter that
+    sets it - the value the mapping knows for that parameter; else the name of the parameter; else the
+    statement that the program has no timer. Never an assumed time."""
     if ms is not None:
         return format_delay(ms) or NO_VALUE
     if raw:
+        if mapped:
+            differences.append(
+                f"{label} = {mapped} from the mapping (the program sets it with the parameter {raw})"
+            )
+            warnings.append(
+                f"The {label} is set by the parameter {raw}; {mapped} is the value the mapping "
+                "gives. Check it before release."
+            )
+            return mapped
         unresolved.append(
-            f"{label} = {raw} (a variable or parameter; its value is not in the program)"
+            f"{label} = {raw} (a variable or parameter; its value is not in the program or the "
+            "mapping)"
         )
         warnings.append(
             f"The {label} is the parameter {raw}; the name is entered, "
@@ -695,25 +787,57 @@ def _delay(label: str, raw: str, ms: int | None, unresolved: list[str], warnings
     return NO_VALUE
 
 
+def _remedy(row: MappingRow | None) -> str | None:
+    """Cause and directive of the mapping as the remedy text; nothing when the mapping has neither."""
+    if row is None:
+        return None
+    parts = []
+    if row.cause:
+        parts.append("Cause: " + row.cause)
+    if row.directive:
+        parts.append("Directive: " + row.directive)
+    return "\n".join(parts)[:MAX_REMEDY_CHARS] or None
+
+
 def _to_data(
     code: stcd.StatusCode,
     options: dict[str, Any],
     group: LookupFunctionalSystemGroup,
     subgroup: LookupFunctionalSubgroup,
     view: dict[str, Any],
-    mapping: dict[int, tuple],
-    audiences: dict[str, list[tuple[int, str, int, int]]],
+    row: MappingRow | None,
+    levels: dict[str, dict[str, tuple[int, str, int | None, int | None]]],
+    table: MappingTable | None,
 ) -> dict[str, Any]:
     warnings: list[str] = view["warnings"]
-    view["category"] = _category_of(code, view["key"], options)
-    # FR-189: nothing is assumed. A value is read from the program, chosen by the user, or - when
-    # the program gives a variable instead of a value - the name of that variable. What the program
-    # does not give at all is listed in the comment of the Draft (description).
+    view["category"] = row.status_type if row else None
+    # FR-189: nothing is assumed. A value is read from the program, taken from the mapping, or - when
+    # neither has it - the name of the variable the program gives. What neither gives is listed in
+    # the comment of the Draft (description).
     unresolved: list[str] = []
-    translated: list[str] = []
-    access = _translate_access(code, audiences, translated, unresolved)
-    set_delay = _delay("set delay", code.set_delay, code.set_delay_ms, unresolved, warnings)
-    reset_delay = _delay("reset delay", code.reset_delay, code.reset_delay_ms, unresolved, warnings)
+    differences: list[str] = []
+    access = _named_access(code, row, levels, differences, unresolved) if row else {}
+    for line in differences:
+        if "access:" in line:
+            warnings.append(line[0].upper() + line[1:] + ".")
+    set_delay = _delay(
+        "set delay",
+        code.set_delay,
+        code.set_delay_ms,
+        row.parameter_set_delay if row else None,
+        unresolved,
+        differences,
+        warnings,
+    )
+    reset_delay = _delay(
+        "reset delay",
+        code.reset_delay,
+        code.reset_delay_ms,
+        row.parameter_reset_delay if row else None,
+        unresolved,
+        differences,
+        warnings,
+    )
     not_given_no: list[str] = []
     if code.alarm is None:
         not_given_no.append("alarm")
@@ -721,8 +845,10 @@ def _to_data(
         not_given_no.append("trigger snapshot")
     if "ZeroLoadPrg_ArBo" not in code.other:
         not_given_no.append("loadless spinning permitted")
-    not_given_no.append("up/down counter")  # no program carries it
-    unresolved.append("not in the program, entered as No: " + ", ".join(not_given_no))
+    if row is not None and row.up_down_counter is None:
+        not_given_no.append("up/down counter (not in the mapping)")
+    if not_given_no:
+        unresolved.append("not in the program, entered as No: " + ", ".join(not_given_no))
     missing_programs = [
         status_code_fields.LABELS.get(target, target.replace("_", " "))
         for source, target in _PROGRAM_FIELDS.items()
@@ -738,7 +864,7 @@ def _to_data(
 
     related = []
     for number in code.depends_on:
-        new_number = _dependency_number(code, number, options, mapping)
+        new_number = _dependency_number(code, number, table)
         if new_number is None:
             warnings.append(f"The set condition refers to StCd_{number}, which has no new number.")
         else:
@@ -747,15 +873,15 @@ def _to_data(
         "functional_system_group": group.id,
         "functional_subgroup": subgroup.id,
         "turbine_platforms": list(options["platforms"]),
-        "title": code.name[:120],
-        "description": _description(code, unresolved, translated),
+        "title": (row.description if row else code.name)[:120],
+        "description": _description(code, unresolved, differences),
         "software_version": None,
-        "status_category": view["category"],
+        "status_category": row.status_type if row else None,
         "available_group": code.availability_group,
         "alarm_flag": bool(code.alarm),  # None = not in the program, listed above
         "set_delay": set_delay,
         "reset_delay": reset_delay,
-        "up_down_counter": False,
+        "up_down_counter": bool(row.up_down_counter) if row else False,
         "trigger_snapshot": bool(code.snapshot),
         "loadless_spinning_permitted": bool(code.other.get("ZeroLoadPrg_ArBo")),
         "number_of_times_repeated": (
@@ -766,7 +892,7 @@ def _to_data(
         "legacy_reference_number": (
             str(code.legacy_number) if code.legacy_number is not None else None
         ),
-        "remedy_text": None,
+        "remedy_text": _remedy(row),
         "affected_component": None,
         "related_status_codes": ", ".join(related)[:500] or None,
         "standard_references": None,
@@ -821,16 +947,16 @@ def _generated_fields(
 
 
 def _dependency_number(
-    code: stcd.StatusCode, number: int, options: dict[str, Any], mapping: dict[int, tuple]
+    code: stcd.StatusCode, number: int, table: MappingTable | None
 ) -> int | None:
     """The new number of a program the set condition refers to. Main Controller programs refer to
     current numbers; a Hub Controller program refers to legacy numbers."""
     if code.controller == "MC":
         return number
-    entry = mapping.get(number)
-    if entry is None:
-        return None
-    return entry[0] if options["hc_proposal"] == 1 else entry[1]
+    row = table.for_hub(number) if table is not None else None
+    if row is not None:
+        return row.new_number
+    return None
 
 
 # ------------------------------------------------------------------------------ the service
@@ -838,8 +964,8 @@ def _hc_flag(controller_choice: str) -> bool | None:
     return {"auto": None, "MC": False, "HC": True}[controller_choice]
 
 
-def _mapping() -> dict[int, tuple]:
-    return stcd.load_bundled_mapping()
+def _mapping() -> MappingTable:
+    return MappingService.table()
 
 
 def _summary(items: list[Evaluated], file_count: int) -> dict[str, int]:
@@ -943,22 +1069,13 @@ class StImportService:
         *,
         change_set_name: str | None = None,
         asynchronous: bool | None = None,
-        categories: dict[str, str] | None = None,
     ) -> ImportJob:
         """Creates the Drafts for the chosen programs (`selected` = keys of the preview; None
-        takes every program that is ready). `categories` sets the status category per program
-        (key of the preview -> ERROR/WARNING/INFO) and wins over the alarm type and the default."""
+        takes every program that is ready). The programs are checked again against the mapping
+        as it is now."""
         require_roles(actor, "ADMINISTRATOR", "ENGINEER")
         manifest, parsed = StImportService._load_staged(token, actor)
         opts = manifest["options"]
-        if categories:
-            opts = {
-                **opts,
-                "categories": {
-                    **opts.get("categories", {}),
-                    **_clean_categories(categories, "program"),
-                },
-            }
         items = _evaluate(parsed, opts, _mapping())
         by_key = {i.view["key"]: i for i in items}
         if selected is None:
@@ -981,15 +1098,6 @@ class StImportService:
                 )
         if not chosen:
             raise ValueError("Nothing selected: tick at least one program that is ready.")
-        uncategorised = [i.view["key"] for i in chosen if i.view["category"] is None]
-        if uncategorised:
-            raise ValueError(
-                "These programs have no status category: "
-                + ", ".join(uncategorised[:5])
-                + ". The files carry none and none is assumed: choose a category for each program, "
-                "by alarm type or as the default, and try again."
-            )
-
         job = ImportJob(
             requested_by=actor.id,
             source_format="ST",
@@ -1130,6 +1238,8 @@ class StImportService:
             result = RowResult(row=index, identifier=item["identifier"])
             try:
                 revision = StImportService._apply(item, job_id, actor)
+                if item["action"] in ("create", "restore"):
+                    MappingService.mark_issued(_identifier_number(item["identifier"]), actor)
                 cr = (
                     db.session.query(ChangeRequest)
                     .filter_by(status_code_revision_id=revision.id)

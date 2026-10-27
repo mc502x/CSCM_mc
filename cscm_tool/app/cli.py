@@ -52,6 +52,28 @@ def register_cli_commands(app: Flask) -> None:
         click.echo(f"Created Administrator '{user.username}' (id={user.id}).")
 
 
+def register_mapping_commands(app: Flask) -> None:
+    @app.cli.command("mapping-seed")
+    @click.option(
+        "--file",
+        "workbook",
+        default=None,
+        help="Workbook (default: seed_data/legacy_mapping.xlsx).",
+    )
+    def mapping_seed(workbook: str | None) -> None:
+        """Load the initial legacy -> new mapping from the workbook (only into an empty table)."""
+        from app.services.mapping_service import MappingError, MappingService
+
+        try:
+            loaded = MappingService.seed(Path(workbook) if workbook else None)
+        except MappingError as exc:
+            raise click.ClickException(str(exc)) from exc
+        if loaded:
+            click.echo(f"Loaded {loaded} rows into the mapping.")
+        else:
+            click.echo("The mapping already has rows; nothing was loaded.")
+
+
 def register_operations_commands(app: Flask) -> None:
     @app.cli.command("backup-db")
     @click.option("--dest", default=None, help="Backup directory (default: BACKUP_DIR).")

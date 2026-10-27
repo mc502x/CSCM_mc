@@ -235,12 +235,13 @@ def _seed(demo: Demo) -> None:
     login("engineer")
     files = [(FIXTURES / n).read_bytes() for n in ST_FILES]
     from app.services.st_import_service import StImportService
+    from tests.helpers import seed_st_mapping
 
     with demo.app.app_context():
+        seed_st_mapping()  # the title, the type and the access levels come from the mapping
         preview = StImportService.preview(
             [(n, c) for n, c in zip(ST_FILES, files, strict=True)],
             _actor("engineer"),
-            {"alarm_type_categories": {"1": "ERROR", "2": "WARNING", "3": "INFO"}},
         )
         db.session.rollback()
     demo.preview_html_context = {"preview": preview}
@@ -251,6 +252,41 @@ def _seed(demo: Demo) -> None:
         )
     ).get_json()
     demo.ids["change_set"] = imported["change_set_id"]
+
+    # a request to change the mapping that has two of its three approvals (the Administrator is next)
+    login("engineer")
+    change = _ok(
+        client.post(
+            "/api/v1/mapping-changes",
+            json={
+                "title": "New code: converter fan fault",
+                "reason": "The new converter cabinet has a fan that the old library had no code for.",
+                "items": [
+                    {
+                        "action": "ADD",
+                        "fields": {
+                            "family": "MC",
+                            "legacy_number": 3100,
+                            "new_number": 1150,
+                            "description": "Converter fan fault",
+                            "functional_group": "Converter",
+                            "logical_node": "WCNV",
+                            "status_type": "WARNING",
+                            "up_down_counter": "No",
+                        },
+                    }
+                ],
+            },
+        )
+    ).get_json()
+    for name in ("owner", "chief"):
+        login(name)
+        _ok(
+            client.post(
+                f"/api/v1/mapping-changes/{change['id']}/decisions", json={"decision": "APPROVE"}
+            )
+        )
+    demo.ids["mapping_change"] = change["id"]
 
     # hand-made codes, taken through the governance as far as their stage says
     revisions = []

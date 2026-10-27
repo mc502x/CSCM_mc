@@ -2,7 +2,7 @@
 
 ## 1. Overview
 
-MVP persistence is **SQLite** (single file, per C-001 in 03-srs.md), accessed exclusively through a repository layer (18-claude-code-implementation-guide.md) so a future migration to PostgreSQL requires no changes above the repository interface. The database runs on a local, on-premises server only — see 14-deployment-architecture.md §1 — and is itself the Master Database referenced throughout this package; no external upstream system exists. The full DDL is maintained at [artifacts/schema.sql](artifacts/schema.sql) (schema v4.9: 61 tables, 14 triggers; the optional search index is in [artifacts/schema-fts5.sql](artifacts/schema-fts5.sql)) and is the executable source of truth; this document explains the design decisions behind it.
+MVP persistence is **SQLite** (single file, per C-001 in 03-srs.md), accessed exclusively through a repository layer (18-claude-code-implementation-guide.md) so a future migration to PostgreSQL requires no changes above the repository interface. The database runs on a local, on-premises server only — see 14-deployment-architecture.md §1 — and is itself the Master Database referenced throughout this package; no external upstream system exists. The full DDL is maintained at [artifacts/schema.sql](artifacts/schema.sql) (schema v4.9: 65 tables, 14 triggers; the optional search index is in [artifacts/schema-fts5.sql](artifacts/schema-fts5.sql)) and is the executable source of truth; this document explains the design decisions behind it.
 
 ## 2. Logical Schema
 

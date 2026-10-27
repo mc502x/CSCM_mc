@@ -101,6 +101,9 @@ def main(argv: list[str] | None = None) -> int:
     if run([str(python), "-m", "flask", "db", "upgrade"], dry):
         print("   The database could not be created; the message above says why.")
         return 1
+    print("   loading the initial mapping (only into an empty one)")
+    if run([str(python), "-m", "flask", "mapping-seed"], dry):
+        print("   The mapping was not loaded; an Administrator can load it from the Mapping page.")
 
     print("6. First Administrator")
     if args.no_admin:

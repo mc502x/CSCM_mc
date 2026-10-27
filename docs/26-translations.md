@@ -266,31 +266,31 @@ A notice is sent once per change and person; a failing notice never undoes the c
 
 <!-- translations:start -->
 
-The interface has **1296 strings** (every text a template wraps in `_()`, the role names and the help texts). English is the source; the other languages are listed below. A string without a translation is shown in English.
+The interface has **1356 strings** (every text a template wraps in `_()`, the role names and the help texts). English is the source; the other languages are listed below. A string without a translation is shown in English.
 
 ### 9.1 Coverage
 
 | Language | Code | Direction | Translated | Share | Pre-check confidence | Fingerprint |
 |---|---|---|---|---|---|---|
 | GB English 🇬🇧 | `en` | ltr | source | — | — | — |
-| DE Deutsch 🇩🇪 (German) | `de` | ltr | 1296 | 100 % | <span style="background:#7fc561;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>94 %</b></span> | `6a148cab7364` |
-| FR Français 🇫🇷 (French) | `fr` | ltr | 1295 | 99 % | <span style="background:#7fc561;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>95 %</b></span> | `2e671f70e690` |
-| IN हिन्दी 🇮🇳 (Hindi) | `hi` | ltr | 1295 | 99 % | <span style="background:#9ccf5c;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>88 %</b></span> | `9221a446f11a` |
-| SA العربية 🇸🇦 (Arabic) | `ar` | rtl | 1295 | 99 % | <span style="background:#9ccf5c;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>88 %</b></span> | `c3d0649cdcb8` |
-| IN বাংলা 🇮🇳 (Bengali) | `bn` | ltr | 1295 | 99 % | <span style="background:#9ccf5c;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>87 %</b></span> | `94729a31f708` |
-| IN मराठी 🇮🇳 (Marathi) | `mr` | ltr | 1295 | 99 % | <span style="background:#9ccf5c;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>86 %</b></span> | `f4d1a2fa4efc` |
-| IN తెలుగు 🇮🇳 (Telugu) | `te` | ltr | 1295 | 99 % | <span style="background:#9ccf5c;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>85 %</b></span> | `0ca4499fa478` |
-| IN தமிழ் 🇮🇳 (Tamil) | `ta` | ltr | 1295 | 99 % | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>84 %</b></span> | `9d87de7de0f3` |
-| IN ગુજરાતી 🇮🇳 (Gujarati) | `gu` | ltr | 1295 | 99 % | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>84 %</b></span> | `cd145cec57ed` |
-| PK اردو 🇵🇰 (Urdu) | `ur` | rtl | 1295 | 99 % | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>85 %</b></span> | `1cb668d916e1` |
-| IN ಕನ್ನಡ 🇮🇳 (Kannada) | `kn` | ltr | 1295 | 99 % | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>84 %</b></span> | `c61367d9637e` |
-| IN ଓଡ଼ିଆ 🇮🇳 (Odia) | `or` | ltr | 1295 | 99 % | <span style="background:#d9e050;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>78 %</b></span> | `8c277190636b` |
-| IN മലയാളം 🇮🇳 (Malayalam) | `ml` | ltr | 1295 | 99 % | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>83 %</b></span> | `afe41c7fae6b` |
-| IN ਪੰਜਾਬੀ 🇮🇳 (Punjabi) | `pa` | ltr | 1295 | 99 % | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>83 %</b></span> | `f3049206c0f3` |
-| ES Español 🇪🇸 (Spanish) | `es` | ltr | 1295 | 99 % | <span style="background:#7fc561;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>94 %</b></span> | `5a98a4233e19` |
-| IT Italiano 🇮🇹 (Italian) | `it` | ltr | 1295 | 99 % | <span style="background:#7fc561;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>94 %</b></span> | `5b588b294560` |
-| DK Dansk 🇩🇰 (Danish) | `da` | ltr | 1295 | 99 % | <span style="background:#7fc561;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>92 %</b></span> | `404944ab31e2` |
-| GE ქართული 🇬🇪 (Georgian) | `ka` | ltr | 1295 | 99 % | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>82 %</b></span> | `29b6734f7c74` |
+| DE Deutsch 🇩🇪 (German) | `de` | ltr | 1356 | 100 % | <span style="background:#7fc561;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>94 %</b></span> | `2eeeb38c87f8` |
+| FR Français 🇫🇷 (French) | `fr` | ltr | 1355 | 99 % | <span style="background:#7fc561;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>95 %</b></span> | `94badc2711a2` |
+| IN हिन्दी 🇮🇳 (Hindi) | `hi` | ltr | 1355 | 99 % | <span style="background:#9ccf5c;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>88 %</b></span> | `9d0c6978b157` |
+| SA العربية 🇸🇦 (Arabic) | `ar` | rtl | 1355 | 99 % | <span style="background:#9ccf5c;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>88 %</b></span> | `7b6172187e1e` |
+| IN বাংলা 🇮🇳 (Bengali) | `bn` | ltr | 1355 | 99 % | <span style="background:#9ccf5c;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>87 %</b></span> | `0ae648e57064` |
+| IN मराठी 🇮🇳 (Marathi) | `mr` | ltr | 1355 | 99 % | <span style="background:#9ccf5c;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>86 %</b></span> | `19c5c81569a5` |
+| IN తెలుగు 🇮🇳 (Telugu) | `te` | ltr | 1355 | 99 % | <span style="background:#9ccf5c;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>85 %</b></span> | `e901b1703842` |
+| IN தமிழ் 🇮🇳 (Tamil) | `ta` | ltr | 1355 | 99 % | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>84 %</b></span> | `9e067ecbb98c` |
+| IN ગુજરાતી 🇮🇳 (Gujarati) | `gu` | ltr | 1355 | 99 % | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>84 %</b></span> | `8090929e6aca` |
+| PK اردو 🇵🇰 (Urdu) | `ur` | rtl | 1355 | 99 % | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>85 %</b></span> | `f946af7b7c31` |
+| IN ಕನ್ನಡ 🇮🇳 (Kannada) | `kn` | ltr | 1355 | 99 % | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>84 %</b></span> | `884eaf0c8a44` |
+| IN ଓଡ଼ିଆ 🇮🇳 (Odia) | `or` | ltr | 1355 | 99 % | <span style="background:#d9e050;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>79 %</b></span> | `8026a05e6b35` |
+| IN മലയാളം 🇮🇳 (Malayalam) | `ml` | ltr | 1355 | 99 % | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>83 %</b></span> | `5082c36869f6` |
+| IN ਪੰਜਾਬੀ 🇮🇳 (Punjabi) | `pa` | ltr | 1355 | 99 % | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>83 %</b></span> | `37f463604edf` |
+| ES Español 🇪🇸 (Spanish) | `es` | ltr | 1355 | 99 % | <span style="background:#7fc561;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>94 %</b></span> | `776c175d7059` |
+| IT Italiano 🇮🇹 (Italian) | `it` | ltr | 1355 | 99 % | <span style="background:#7fc561;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>94 %</b></span> | `05db8d87a147` |
+| DK Dansk 🇩🇰 (Danish) | `da` | ltr | 1355 | 99 % | <span style="background:#7fc561;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>92 %</b></span> | `82e0a683334c` |
+| GE ქართული 🇬🇪 (Georgian) | `ka` | ltr | 1355 | 99 % | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>83 %</b></span> | `e0a61dde5f07` |
 
 The pre-check confidence is the estimate of section 8c - the share of strings a native speaker is expected to accept unchanged, by an AI checker and not by a native speaker; red is 50 % or less, green above 95 %.
 
@@ -311,13 +311,13 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | IN ગુજરાતી 🇮🇳 | 1 | 6 | 7 | 13 | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>84 %</b></span> |
 | PK اردو 🇵🇰 | 1 | 5 | 2 | 13 | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>85 %</b></span> |
 | IN ಕನ್ನಡ 🇮🇳 | 1 | 7 | 16 | 13 | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>84 %</b></span> |
-| IN ଓଡ଼ିଆ 🇮🇳 | 6 | 4 | 20 | 16 | <span style="background:#d9e050;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>78 %</b></span> |
+| IN ଓଡ଼ିଆ 🇮🇳 | 6 | 4 | 20 | 16 | <span style="background:#d9e050;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>79 %</b></span> |
 | IN മലയാളം 🇮🇳 | 1 | 5 | 17 | 14 | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>83 %</b></span> |
 | IN ਪੰਜਾਬੀ 🇮🇳 | 1 | 6 | 16 | 14 | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>83 %</b></span> |
 | ES Español 🇪🇸 | 0 | 6 | 6 | 4 | <span style="background:#7fc561;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>94 %</b></span> |
 | IT Italiano 🇮🇹 | 0 | 5 | 5 | 4 | <span style="background:#7fc561;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>94 %</b></span> |
 | DK Dansk 🇩🇰 | 1 | 3 | 6 | 6 | <span style="background:#7fc561;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>92 %</b></span> |
-| GE ქართული 🇬🇪 | 0 | 7 | 4 | 15 | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>82 %</b></span> |
+| GE ქართული 🇬🇪 | 0 | 7 | 4 | 15 | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>83 %</b></span> |
 
 The wrong and awkward counts are findings in the sample of 160 strings, the same strings in every language. The strings that were flagged, for the native speaker to look at first:
 
@@ -438,7 +438,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 
 ### 9.2 DE Deutsch 🇩🇪 — German
 
-1296 of 1296 strings translated; direction left to right.
+1356 of 1356 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -450,13 +450,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S3c3638` | _macros | d | T |
 | `Sc326a4` | _macros, detail, form | Field | Feld |
 | `S0a0f8a` | _macros | Field differences | Feldunterschiede |
-| `Sbc9819` | _macros | Next | Weiter |
+| `Sbc9819` | _macros, list | Next | Weiter |
 | `S27cea7` | _macros | No field differences. | Keine Feldunterschiede. |
 | `S464e43` | _macros | on track | im Plan |
 | `Sba2fff` | _macros, dashboard, success_metrics | overdue | überfällig |
-| `S600584` | _macros | Pages | Seiten |
+| `S600584` | _macros, list | Pages | Seiten |
 | `S810099` | _macros | Please check | Bitte prüfen |
-| `S50f942` | _macros | Previous | Zurück |
+| `S50f942` | _macros, list | Previous | Zurück |
 | `S83fd6e` | _macros, stalled | red after | rot nach |
 | `S57e8a7` | _macros, success_metrics | slow | langsam |
 | `S15198e` | _macros | Waiting since | Wartet seit |
@@ -487,10 +487,10 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S06b6ac` | approval_queue, builder, detail | Identifier | Kennung |
 | `S8e70d2` | approval_queue | Nothing is awaiting your approval. | Nichts wartet auf Ihre Genehmigung. |
 | `Sa74f16` | approval_queue, detail, review_queue | Reviewer | Prüfer |
-| `S768e0c` | approval_queue, builder, detail | Title | Titel |
+| `S768e0c` | approval_queue, builder, change | Title | Titel |
 | `S33d306` | approval_queue, detail, mine | Waiting | Wartezeit |
 | `S2cbacd` | audit_log | %(n)s total | %(n)s insgesamt |
-| `S97c89a` | audit_log | Action | Aktion |
+| `S97c89a` | audit_log, change | Action | Aktion |
 | `Scbd19b` | audit_log | Actor | Akteur |
 | `S811bdf` | audit_log | Actor ID | Akteur-ID |
 | `S8c85b1` | audit_log | after: | nachher: |
@@ -501,7 +501,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sc7fb31` | audit_log | Entity | Entität |
 | `S04d694` | audit_log | Entity ID | Entitäts-ID |
 | `Sbb4e99` | audit_log | Entity Type | Entitätstyp |
-| `Sd7decf` | audit_log, index, language | Filter | Filtern |
+| `Sd7decf` | audit_log, changes, index | Filter | Filtern |
 | `S3f6605` | audit_log, delegations, software_versions | From | Von |
 | `S0061b5` | audit_log | No matching audit entries. | Keine passenden Audit-Einträge. |
 | `S01f79f` | audit_log | Scoped view: showing only actions you performed. | Eingeschränkte Ansicht: Es werden nur Ihre eigenen Aktionen angezeigt. |
@@ -520,7 +520,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sbe504f` | base | Skip to main content | Zum Hauptinhalt springen |
 | `S1b9aeb` | base, dashboard | unread | ungelesen |
 | `S2da600` | base, export, export_center | Version | Version |
-| `S12625b` | base | waiting | wartend |
+| `S12625b` | base, change | waiting | wartend |
 | `S5a4692` | base | You are covering for a colleague | Sie vertreten eine Kollegin / einen Kollegen |
 | `S8e9c15` | builder | Candidate revisions | Kandidaten-Revisionen |
 | `Sdf2aa0` | builder | Functional Group / Subgroup | Funktionsgruppe / Untergruppe |
@@ -551,13 +551,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S4105cf` | catalogue_health | exhausted | erschöpft |
 | `S57e8be` | catalogue_health, connections | Finding | Befund |
 | `S1150a1` | catalogue_health | Gaps | Lücken |
-| `S171a06` | catalogue_health, export, withdrawn_codes | Group | Gruppe |
-| `Sb4aadc` | catalogue_health, legacy_mapping | Hub Controller | Nabensteuerung |
+| `S171a06` | catalogue_health, export, list | Group | Gruppe |
+| `Sb4aadc` | catalogue_health, legacy_mapping, list | Hub Controller | Nabensteuerung |
 | `S8ae1c3` | catalogue_health | Left | Übrig |
 | `S12c0f1` | catalogue_health | left | übrig |
 | `Sa7b60b` | catalogue_health | Left % | Übrig % |
 | `S36a883` | catalogue_health | low | knapp |
-| `S1b123c` | catalogue_health, legacy_mapping, st_new | Main Controller | Hauptsteuerung |
+| `S1b123c` | catalogue_health, legacy_mapping, list | Main Controller | Hauptsteuerung |
 | `S92185d` | catalogue_health, index | Missing | Fehlt |
 | `S57282a` | catalogue_health | Missing expected data | Fehlende erwartete Daten |
 | `Sb8e95b` | catalogue_health | None found. | Nichts gefunden. |
@@ -574,6 +574,31 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S75a804` | catalogue_health | subgroup(s) are running out of numbers: | Untergruppe(n) gehen die Nummern aus: |
 | `S5fec4f` | catalogue_health | Unused numbers inside a band | Ungenutzte Nummern innerhalb eines Bereichs |
 | `S02c0e4` | catalogue_health | Used | Belegt |
+| `S84f219` | change | All three, each by a different person who did not make the request. | Alle drei, jeweils von einer anderen Person, die den Antrag nicht gestellt hat. |
+| `S477aeb` | change, upload | and more | und weitere |
+| `Sdeb9d0` | change, changes | Approvals | Genehmigungen |
+| `S7b2c7f` | change, detail, language | Approve | Genehmigen |
+| `S8aa57d` | change, detail | Changes | Änderungen |
+| `S3fe5e1` | change | Comment (required to reject) | Kommentar (zum Ablehnen erforderlich) |
+| `Sb48001` | change | Mapping change | Änderung der Zuordnung |
+| `Sd7c1d0` | change, changes, list | Mapping changes | Änderungen der Zuordnung |
+| `Sf26140` | change, legacy_mapping, list | New identifier | Neue Kennung |
+| `Sf219cc` | change, list, row | Reason | Grund |
+| `S2b03b5` | change, detail | Reject | Ablehnen |
+| `S5108c2` | change, changes | Requested by | Beantragt von |
+| `S52d0b3` | change, changes, detail | Rows | Zeilen |
+| `S6c30d2` | change, dry_run, list | rows | Zeilen |
+| `Sfabd38` | change | These rows changed after the request was made; it cannot be applied. Withdraw it and make it again: | Diese Zeilen haben sich nach dem Antrag geändert; er kann nicht angewendet werden. Ziehen Sie ihn zurück und stellen Sie ihn neu: |
+| `S47e564` | change, detail | Withdraw | Zurückziehen |
+| `S30d359` | change | Withdraw this request? | Diesen Antrag zurückziehen? |
+| `S88c173` | change | You made this request; another person must decide. | Sie haben diesen Antrag gestellt; eine andere Person muss entscheiden. |
+| `S04e02f` | change | Your role has decided already. | Ihre Rolle hat bereits entschieden. |
+| `Sc7274c` | changes | Any state | Jeder Zustand |
+| `S2a560c` | changes | Every change of the mapping is a request. It takes effect when the StCd Owner, the Chief Engineer and an Administrator have each approved it; one rejection closes it. | Jede Änderung der Zuordnung ist ein Antrag. Er wird wirksam, wenn der StCd-Eigner, der Chefingenieur und ein Administrator ihn jeweils genehmigt haben; eine Ablehnung schließt ihn. |
+| `Sdef2eb` | changes, list, menu | Mapping | Zuordnung |
+| `Se03e43` | changes | No request yet. | Noch kein Antrag. |
+| `S5fc0e0` | changes | request(s) wait for your decision. | Antrag/Anträge warten auf Ihre Entscheidung. |
+| `Sa72502` | changes, detail, export | State | Zustand |
 | `S97fd13` | check | Back to the terms | Zurück zu den Begriffen |
 | `S1bc9e5` | check | English string | Englischer Text |
 | `S5d54b3` | check | Every string uses the translated terms. | Alle Texte verwenden die übersetzten Begriffe. |
@@ -654,7 +679,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S9b0b4c` | detail | also the files without an access level (all columns) | auch die Dateien ohne Zugriffsstufe (alle Spalten) |
 | `Sf24c44` | detail | Any %(code)s Engineer | Beliebiger Ingenieur (%(code)s) |
 | `Sb99a01` | detail | Applies to software versions | Gilt für Software-Versionen |
-| `S7b2c7f` | detail, language | Approve | Genehmigen |
 | `Sde38bf` | detail | Approve selected | Ausgewählte genehmigen |
 | `Scf2999` | detail | Approving confirms these values; any change you make here is applied and audited. Rejecting ignores them. | Mit der Genehmigung bestätigen Sie diese Werte; jede Änderung hier wird übernommen und protokolliert. Bei einer Ablehnung werden sie ignoriert. |
 | `Sf7f2d5` | detail | Archive (requires 180-day retention elapsed) | Archivieren (erst nach 180 Tagen Aufbewahrung) |
@@ -675,7 +699,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S4572f4` | detail | Change request | Änderungsantrag |
 | `S3295be` | detail, workbench | Change requests in this set | Änderungsanträge in diesem Paket |
 | `S4d8006` | detail | Change set | Änderungspaket |
-| `S8aa57d` | detail | Changes | Änderungen |
 | `S3d14ea` | detail, export | Changes of this release only | Nur die Änderungen dieses Release |
 | `Sbd95c0` | detail | Checklist confirmed at sign-off | Bei der Freigabe bestätigte Checkliste |
 | `S074d62` | detail, role badge | Chief Engineer | Chefingenieur |
@@ -693,7 +716,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S7671b5` | detail | Confirm or override Audience Access | Zielgruppen-Zugriff bestätigen oder überschreiben |
 | `S6512ee` | detail | Connection | Verbindung |
 | `S4f9be0` | detail | Content | Inhalt |
-| `Sa36a5f` | detail, legacy_mapping, st_new | Controller | Steuerung |
+| `Sa36a5f` | detail, legacy_mapping, list | Controller | Steuerung |
 | `Scd293f` | detail | Converter Reactive Power Program | Umrichter-Blindleistungsprogramm |
 | `S3998a7` | detail | Copies the descriptive fields into a new Draft in a Main Controller group (a new number is allocated at submit; this code's identifier is kept as the legacy reference). | Kopiert die beschreibenden Felder in einen neuen Entwurf in einer Hauptsteuerungs-Gruppe (die neue Nummer wird beim Einreichen vergeben; die Kennung dieses Codes bleibt als Altreferenz erhalten). |
 | `S54b051` | detail | Copy this code for another turbine platform. The copy is a new Draft that links back here and goes through the normal review. | Diesen Code für eine andere Anlagenplattform kopieren. Die Kopie ist ein neuer Entwurf, verweist hierher zurück und durchläuft die normale Prüfung. |
@@ -827,7 +850,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sf5ca9d` | detail | Recorded exports | Aufgezeichnete Exporte |
 | `Sa3f757` | detail | Reinstate to Released | Wieder auf Veröffentlicht setzen |
 | `S3238ca` | detail | Reinstatement reason | Grund der Wiederinbetriebnahme |
-| `S2b03b5` | detail | Reject | Ablehnen |
 | `S27fb5c` | detail | Reject selected | Ausgewählte ablehnen |
 | `S045c2c` | detail | Related codes | Verwandte Codes |
 | `S33a5a7` | detail | Relation | Beziehung |
@@ -845,7 +867,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S4c1aa6` | detail | Repeated-Error Escalation | Eskalation bei wiederholtem Fehler |
 | `S4aed03` | detail | Request | Anfragen |
 | `Sf3421a` | detail | Request a Sign-Off | Freigabe anfordern |
-| `Sc26bf6` | detail, mine | Requested | Angefragt |
+| `Sc26bf6` | detail, mine, row | Requested | Angefragt |
 | `S2706ed` | detail | Required by | Benötigt von |
 | `S619e87` | detail, form | Reset Delay | Rücksetzverzögerung |
 | `S026ab2` | detail | resolved | erledigt |
@@ -855,7 +877,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S3beb9a` | detail | Revision | Revision |
 | `Sa72973` | detail | Revision Fields | Revisionsfelder |
 | `Sfc1d6a` | detail | row(s) imported as Drafts | Zeile(n) als Entwürfe importiert |
-| `S52d0b3` | detail, reconciliation, user_detail | Rows | Zeilen |
 | `Sd0edfb` | detail | Sales | Vertrieb |
 | `S241bf5` | detail, workbench | Sample number | Stichprobennummer |
 | `Sda38c6` | detail | Save planned dates | Geplante Daten speichern |
@@ -874,11 +895,10 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sece2ac` | detail, form | Slot | Slot |
 | `Sff44d2` | detail | Software Version | Software-Version |
 | `S169bf7` | detail, export, software_versions | Software version | Software-Version |
-| `S6da13a` | detail, fleet_feedback | Source | Quelle |
+| `S6da13a` | detail, fleet_feedback, row | Source | Quelle |
 | `Sd3c56b` | detail, export_profiles | source language | Quellsprache |
 | `Sb3883f` | detail | Standards | Normen |
 | `Sfaa9e7` | detail, reconciliation | Started | Gestartet |
-| `Sa72502` | detail, export, hub_consolidation | State | Zustand |
 | `Se246b6` | detail, form, list | Status Category | Statuskategorie |
 | `S779953` | detail, form | Status Code for Repeated Error | Statuscode bei wiederholtem Fehler |
 | `S98a377` | detail | Still a Draft. | Noch ein Entwurf. |
@@ -897,7 +917,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Seaf576` | detail, form | Trigger Snapshot | Schnappschuss auslösen |
 | `S285ec8` | detail, form | Troubleshooting | Fehlersuche |
 | `S71bba4` | detail | Turbine Operator Package | Betreiberpaket |
-| `S3deb74` | detail, mine, review_queue | Type | Typ |
+| `S3deb74` | detail, list, mine | Type | Typ |
 | `Sab631e` | detail | Type %(id)s to confirm | Zur Bestätigung %(id)s eingeben |
 | `Sb5e264` | detail | Type the identifier to confirm | Kennung zur Bestätigung eingeben |
 | `S835f8a` | detail | Umrichterprogramm GSC | Umrichterprogramm GSC |
@@ -916,7 +936,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S51ecc5` | detail | What happens next | Wie es weitergeht |
 | `Sf323c0` | detail | Where used | Verwendung |
 | `S7d5316` | detail | Who | Wer |
-| `S47e564` | detail | Withdraw | Zurückziehen |
 | `S51a998` | detail | Withdraw this change request? | Diesen Änderungsantrag zurückziehen? |
 | `S93ef7c` | detail, workbench | Workbench | Arbeitsbereich |
 | `S95a2a4` | detail, form | Write level | Schreibstufe |
@@ -936,7 +955,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sec0298` | dry_run | Result per row | Ergebnis je Zeile |
 | `S9bf7a8` | dry_run | Row | Zeile |
 | `S3ff0b0` | dry_run | row(s) have problems. Nothing has been created. | Zeile(n) haben Probleme. Es wurde nichts angelegt. |
-| `S6c30d2` | dry_run | rows | Zeilen |
 | `S8012ff` | dry_run | unchanged | unverändert |
 | `S83d655` | dry_run, st_preview | warning(s) | Warnung(en) |
 | `S9ddad9` | dry_run | would be created | würden angelegt |
@@ -1078,6 +1096,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S285edc` | help and messages | %(ok)s of %(n)s: %(what)s. | %(ok)s von %(n)s: %(what)s. |
 | `Sb08e6c` | help and messages | A Reviewer and an Administrator each sign off (in any order). If either rejects, it goes back to the author. | Ein Prüfer und ein Administrator geben jeweils frei (in beliebiger Reihenfolge). Lehnt einer ab, geht der Antrag zurück an den Autor. |
 | `S2f1bed` | help and messages | An Administrator includes the revision in a Release and publishes it; then it is Released. | Ein Administrator nimmt die Revision in ein Release auf und veröffentlicht es; dann ist sie veröffentlicht. |
+| `S9477fd` | help and messages | choose | wählen |
 | `S1308dc` | help and messages | defective codes sent back | mangelhafte Codes zurückgegeben |
 | `Se2bbd9` | help and messages | Drafts saved | Entwürfe gespeichert |
 | `S0ddfa5` | help and messages | Drafts signed off | Entwürfe freigegeben |
@@ -1089,7 +1108,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sce489f` | help and messages | The author gets any required cross-domain sign-offs, then submits the change request for review. | Der Autor holt die erforderlichen fachübergreifenden Freigaben ein und reicht den Änderungsantrag dann zur Prüfung ein. |
 | `S1cdbdd` | help and messages | The Chief Engineer approves or rejects. Approval makes the revision Approved (or Deprecated for a deprecation request). | Der Chefingenieur genehmigt oder lehnt ab. Die Genehmigung macht die Revision freigegeben (bei einem Außerbetriebnahme-Antrag: außer Betrieb). |
 | `S2d6ac0` | help and messages | The package is being built. Reload this page to follow its progress. | Das Paket wird erstellt. Laden Sie diese Seite neu, um den Fortschritt zu sehen. |
-| `Sde7a5b` | help and messages | The program files do not carry a category; you can change it in each Draft. | Die Programmdateien enthalten keine Kategorie; Sie können sie in jedem Entwurf ändern. |
 | `Scff3a3` | help and messages | User deleted; its name and address are erased, what it did stays attributable. | Benutzer gelöscht; Name und Adresse sind gelöscht, was er getan hat, bleibt zuordenbar. |
 | `Secfb3f` | hub_consolidation | Deprecate replaced Hub codes | Ersetzte Hub-Codes außer Betrieb nehmen |
 | `S0e7766` | hub_consolidation, language | draft | Entwurf |
@@ -1100,7 +1118,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sc50c53` | hub_consolidation | Hub Controller to Main Controller consolidation | Konsolidierung Hub-Controller zu Hauptsteuerung |
 | `Scd189f` | hub_consolidation | Hub group | Hub-Gruppe |
 | `Sa5262b` | hub_consolidation | If the Hub Controller leaves the hardware setup, its codes are defined anew on the Main Controller side. Create an MC draft from an HC code on its detail page (Actions); this report shows how far each has come. Nothing is renumbered. | Entfällt der Hub-Controller aus dem Hardware-Aufbau, werden seine Codes auf der Hauptsteuerungs-Seite neu definiert. Legen Sie auf der Detailseite eines HC-Codes (Aktionen) einen MC-Entwurf an; dieser Bericht zeigt, wie weit jeder ist. Es wird nichts umnummeriert. |
-| `Sdd6555` | hub_consolidation, legacy_mapping, st_preview | Legacy no. | Alt-Nr. |
+| `Sdd6555` | hub_consolidation, legacy_mapping, list | Legacy no. | Alt-Nr. |
 | `S845a2b` | hub_consolidation | No Hub Controller codes yet. | Noch keine Hub-Controller-Codes. |
 | `S138665` | hub_consolidation | Open deprecation requests | Außerbetriebnahme-Anträge eröffnen |
 | `Sc8df93` | hub_consolidation | Open deprecation requests for all replaced Hub codes of this group? | Außerbetriebnahme-Anträge für alle ersetzten Hub-Codes dieser Gruppe eröffnen? |
@@ -1159,7 +1177,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sded18c` | language | approved by | genehmigt von |
 | `Sedd46e` | language | Check against the interface | Mit der Oberfläche abgleichen |
 | `S5a013c` | language | missing | fehlend |
-| `S2c924e` | language, workbench | Note | Hinweis |
+| `S2c924e` | language, row, workbench | Note | Hinweis |
 | `S2f09d0` | language | Note on %(x)s | Hinweis zu %(x)s |
 | `S75bf99` | language | proposed by | vorgeschlagen von |
 | `Sc68e32` | language | Save translations | Übersetzungen speichern |
@@ -1167,14 +1185,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S542818` | language | Terms of the language | Begriffe der Sprache |
 | `Sae9e5d` | language | Translation of %(x)s | Übersetzung von %(x)s |
 | `S863fd0` | language | Your own proposal: another person approves it. | Ihr eigener Vorschlag: Eine andere Person genehmigt ihn. |
-| `Sf9d469` | legacy_mapping | All controllers | Alle Steuerungen |
+| `Sf9d469` | legacy_mapping, list | All controllers | Alle Steuerungen |
 | `Se61c2f` | legacy_mapping | Any number state | Jeder Nummernstatus |
 | `S7c4f77` | legacy_mapping | issued | vergeben |
 | `Sfd5ec0` | legacy_mapping, menu, new | Legacy mapping | Alt-Neu-Zuordnung |
 | `S81f567` | legacy_mapping | Legacy number to new identifier | Altnummer zu neuer Kennung |
 | `S64b267` | legacy_mapping | legacy number, identifier or name | Altnummer, Kennung oder Name |
 | `S60fe6c` | legacy_mapping | new codes without a legacy number (n/a) | neue Codes ohne Altnummer (entfällt) |
-| `Sf26140` | legacy_mapping, st_preview | New identifier | Neue Kennung |
 | `Sf573c8` | legacy_mapping | no number yet | noch keine Nummer |
 | `S7877c5` | legacy_mapping | No status code carries a legacy number yet. | Noch kein Statuscode trägt eine Altnummer. |
 | `Sb7baa1` | legacy_mapping | Number | Nummer |
@@ -1183,10 +1200,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S8b0b7c` | legacy_mapping | with a legacy number | mit Altnummer |
 | `Seba07b` | list | A change set groups the change requests that ship with one controller software release, so reviewers see the whole package. Each request is still decided on its own. | Ein Änderungspaket fasst die Änderungsanträge zusammen, die mit einem Steuerungs-Software-Release ausgeliefert werden, damit Prüfer das ganze Paket sehen. Jeder Antrag wird weiterhin einzeln entschieden. |
 | `Sc5fe02` | list | any | beliebig |
+| `S55201a` | list | Any status | Jeder Status |
 | `Sef5415` | list | Apply columns | Spalten übernehmen |
+| `Sffb569` | list | Ask for approval of the ticked rows | Genehmigung der markierten Zeilen beantragen |
 | `S162a45` | list, menu | Change Sets | Änderungspakete |
 | `S9e895f` | list | Change sets | Änderungspakete |
 | `Scf723c` | list | Columns | Spalten |
+| `S2ddaf9` | list, upload | Compare a workbook | Arbeitsmappe vergleichen |
 | `Seb0fd2` | list | Delete all my Drafts of this filter | Alle meine Entwürfe dieses Filters löschen |
 | `S36f212` | list | Delete ALL of your own Drafts that match this filter, on every page? | ALLE Ihre eigenen Entwürfe löschen, die zu diesem Filter passen, auf jeder Seite? |
 | `Sc554a1` | list | Delete selected Drafts | Gewählte Entwürfe löschen |
@@ -1196,12 +1216,18 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S44d25b` | list | Items | Einträge |
 | `S033df3` | list | Lifecycle | Lebenszyklus |
 | `Sb4cad6` | list | Link to this view | Link zu dieser Ansicht |
+| `Sbdb4e1` | list | Load the initial mapping | Anfangszuordnung laden |
+| `Se07018` | list | Make the request | Antrag stellen |
 | `Se248d5` | list, new | New change set | Neues Änderungspaket |
 | `Se75aa1` | list, new | New Release | Neues Release |
+| `S9bb526` | list, row | New row | Neue Zeile |
 | `Se5076c` | list | No change sets yet. | Noch keine Änderungspakete. |
 | `Sd32c03` | list | No releases yet. | Noch keine Releases. |
+| `Sb5b22c` | list | No row matches. | Keine Zeile passt. |
 | `Sc3af43` | list | No saved searches yet. | Noch keine gespeicherten Suchen. |
 | `S0cb400` | list | No status codes match these filters. | Keine Statuscodes entsprechen diesen Filtern. |
+| `S260f7a` | list, row | Node | Knoten |
+| `S08250b` | list | number, title or group | Nummer, Titel oder Gruppe |
 | `Sf7194e` | list | Requests | Anträge |
 | `S37a530` | list | result | Ergebnis |
 | `Scdf7e9` | list | results | Ergebnisse |
@@ -1210,10 +1236,14 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sff86e9` | list | Save the current filters as | Aktuelle Filter speichern als |
 | `Sed1d84` | list | Saved searches | Gespeicherte Suchen |
 | `S859822` | list, mine | Select | Auswählen |
+| `S45b553` | list | Select all rows | Alle Zeilen auswählen |
 | `S7f5583` | list, menu | Status Codes | Statuscodes |
 | `S20bff1` | list | Status codes | Statuscodes |
+| `S3a1066` | list | The mapping is empty. | Die Zuordnung ist leer. |
+| `S27d95b` | list | The rows stay as they are. Once the StCd Owner, the Chief Engineer and an Administrator approve, they count as approved numbers. | Die Zeilen bleiben, wie sie sind. Sobald der StCd-Eigner, der Chefingenieur und ein Administrator zustimmen, gelten sie als genehmigte Nummern. |
 | `Se90eb0` | list | Turbine Platform | Anlagenplattform |
 | `S86b1e7` | list | Typos are tolerated: "convertor" still finds "converter". | Tippfehler werden toleriert: "convertor" findet weiterhin "converter". |
+| `Sb0c551` | list | Which legacy status code becomes which new one, with what the program files do not carry: the English title, the type, the up/down counter, the access levels, cause and directive. A row changes only by a request that the StCd Owner, the Chief Engineer and an Administrator all approve. | Welcher alte Statuscode zu welchem neuen wird, mit dem, was die Programmdateien nicht enthalten: englischer Titel, Typ, Auf-/Abwärtszähler, Zugriffsstufen, Ursache und Anweisung. Eine Zeile ändert sich nur durch einen Antrag, den der StCd-Eigner, der Chefingenieur und ein Administrator alle genehmigen. |
 | `Sf7c400` | login | Log in | Anmelden |
 | `S175835` | login | or | oder |
 | `S8be3c9` | login, users | Password | Passwort |
@@ -1375,6 +1405,23 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S8cb56e` | message: lookup_admin_service | range_end must be greater than range_start | range_end muss größer als range_start sein |
 | `Se3a971` | message: lookup_admin_service | sub_range_end must be greater than sub_range_start | sub_range_end muss größer als sub_range_start sein |
 | `S1404e3` | message: lookup_service | functional_system_group query parameter is required for functional-subgroups | Der Abfrageparameter functional_system_group ist für functional-subgroups erforderlich |
+| `Sf28681` | message: mapping_service | Give the reason for the change; the three approvers read it first. | Nennen Sie den Grund der Änderung; die drei Genehmigenden lesen ihn zuerst. |
+| `S062788` | message: mapping_service | Give the request a title of at most 120 characters. | Geben Sie dem Antrag einen Titel von höchstens 120 Zeichen. |
+| `S2ea56f` | message: mapping_service | Mapping change not found | Änderung der Zuordnung nicht gefunden |
+| `S2c9363` | message: mapping_service | Mapping row not found | Zeile der Zuordnung nicht gefunden |
+| `S2d5693` | message: mapping_service | Only the person who made the request can withdraw it. | Nur die Person, die den Antrag gestellt hat, kann ihn zurückziehen. |
+| `S682269` | message: mapping_service | Only the StCd Owner, the Chief Engineer and an Administrator decide on the mapping. | Nur der StCd-Eigner, der Chefingenieur und ein Administrator entscheiden über die Zuordnung. |
+| `S5e0f66` | message: mapping_service | Say why you reject the request. | Sagen Sie, warum Sie den Antrag ablehnen. |
+| `S3d5cfc` | message: mapping_service | The comment is longer than 1000 characters. | Der Kommentar ist länger als 1000 Zeichen. |
+| `S82b817` | message: mapping_service | The decision must be APPROVE or REJECT. | Die Entscheidung muss APPROVE oder REJECT sein. |
+| `S9ec08a` | message: mapping_service | The file is not a readable .xlsx workbook. | Die Datei ist keine lesbare .xlsx-Arbeitsmappe. |
+| `S3831f7` | message: mapping_service | The reason is longer than 2000 characters. | Der Grund ist länger als 2000 Zeichen. |
+| `Sa5de7d` | message: mapping_service | The request contains no row. | Der Antrag enthält keine Zeile. |
+| `S2116e4` | message: mapping_service | The request is already closed. | Der Antrag ist bereits geschlossen. |
+| `S8518e7` | message: mapping_service | The role has decided already. | Die Rolle hat bereits entschieden. |
+| `S2a15d7` | message: mapping_service | The workbook is larger than 5 MB. | Die Arbeitsmappe ist größer als 5 MB. |
+| `S8eb912` | message: mapping_service | The workbook unpacks to more than 80 MB. | Die Arbeitsmappe entpackt sich auf mehr als 80 MB. |
+| `S6c1d08` | message: mapping_service | Your role may not propose a change of the mapping. | Ihre Rolle darf keine Änderung der Zuordnung beantragen. |
 | `S4ada2b` | message: notification_service | Notification not found | Benachrichtigung nicht gefunden |
 | `Sd92b89` | message: notification_service | This notification belongs to someone else. | Diese Benachrichtigung gehört einer anderen Person. |
 | `Sb0cd00` | message: numbering_service | Identifier override must match StCd-NNNNN (five digits). | Eine überschriebene Kennung muss dem Muster StCd-NNNNN (fünf Ziffern) entsprechen. |
@@ -1406,8 +1453,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S9671fb` | message: settings_service | must be true or false | muss true oder false sein |
 | `S5166bb` | message: st_import_service | A staged file changed after the preview. Upload again. | Eine bereitgestellte Datei hat sich nach der Vorschau geändert. Laden Sie sie erneut hoch. |
 | `Saa4de2` | message: st_import_service | controller must be auto, MC or HC | controller muss auto, MC oder HC sein |
-| `Sa30251` | message: st_import_service | default_category must be ERROR, WARNING or INFO | default_category muss ERROR, WARNING oder INFO sein |
-| `Sfe694a` | message: st_import_service | hc_proposal must be 1 or 2 | hc_proposal muss 1 oder 2 sein |
 | `S58bec3` | message: st_import_service | No StCd program files found. Upload .st files or a ZIP of them. | Keine StCd-Programmdateien gefunden. Laden Sie .st-Dateien oder ein ZIP davon hoch. |
 | `Sd9c5b0` | message: st_import_service | Nothing selected: tick at least one program that is ready. | Nichts ausgewählt: Wählen Sie mindestens ein Programm, das bereit ist. |
 | `S5dbbd0` | message: st_import_service | The code is no longer an open Draft; preview the files again. | Der Statuscode ist kein offener Entwurf mehr; zeigen Sie die Dateien erneut in der Vorschau an. |
@@ -1554,6 +1599,23 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S05fc94` | role badge | Engineer | Ingenieur |
 | `S3c0e8a` | role badge | StCd Owner | StCd-Eigner |
 | `Sdbad9f` | role badge | Viewer | Betrachter |
+| `S7f2e4b` | row | Access levels | Zugriffsstufen |
+| `S08f985` | row | Cause | Ursache |
+| `S164e0b` | row | Directive | Anweisung |
+| `S283474` | row | New number | Neue Nummer |
+| `Sfa6fdd` | row | No request yet. The row is as it was loaded. | Noch kein Antrag. Die Zeile ist so, wie sie geladen wurde. |
+| `Sf790fc` | row | Nothing is changed here directly: the form makes a request, and the row changes after the StCd Owner, the Chief Engineer and an Administrator have approved it. | Hier wird nichts direkt geändert: Das Formular stellt einen Antrag, und die Zeile ändert sich, nachdem der StCd-Eigner, der Chefingenieur und ein Administrator ihn genehmigt haben. |
+| `S9d728f` | row | Request approval of the number | Genehmigung der Nummer beantragen |
+| `Sc8978f` | row | Request rejection of the number | Ablehnung der Nummer beantragen |
+| `Sc644eb` | row | Request that this number is never used? | Beantragen, dass diese Nummer nie verwendet wird? |
+| `Sb25913` | row | Request the new row | Die neue Zeile beantragen |
+| `Sb04301` | row | Request this change | Diese Änderung beantragen |
+| `Sae91b6` | row | Requests for this row | Anträge zu dieser Zeile |
+| `Sd59701` | row | Reset delay (parameter) | Rücksetzverzögerung (Parameter) |
+| `Sfd64cd` | row | Set delay (parameter) | Setzverzögerung (Parameter) |
+| `S9c0444` | row | The three approvers read the reason first. | Die drei Genehmigenden lesen zuerst den Grund. |
+| `Sc84745` | row | Title (English) | Titel (Englisch) |
+| `S711eea` | row | Up/down counter | Auf-/Abwärtszähler |
 | `S913aba` | settings | Save settings | Einstellungen speichern |
 | `Sb68734` | software_versions | Added | Hinzugefügt |
 | `S172415` | software_versions | added | hinzugefügt |
@@ -1567,28 +1629,19 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd97d1e` | software_versions | Show | Anzeigen |
 | `S42ea2e` | software_versions | Software Versions | Software-Versionen |
 | `S3bd89c` | software_versions | Which codes exist in which software version | Welche Codes in welcher Software-Version existieren |
-| `S16e5d4` | st_new, st_preview | Alarm type | Alarmtyp |
-| `S726d7a` | st_new | as above | wie oben |
-| `S9477fd` | st_new, st_preview | choose | wählen |
 | `Sb149ca` | st_new | Detect: a number from 10000 up is a Hub Controller program | Erkennen: Eine Nummer ab 10000 ist ein Programm der Nabensteuerung |
 | `S7d06d0` | st_new | Every imported program becomes an ordinary Draft with the number it carries reserved. It still needs Cross-Domain Sign-Off, dual review and Chief Engineer approval before Release, and all Drafts of one import share a change set. | Jedes importierte Programm wird ein gewöhnlicher Entwurf, dessen Nummer reserviert ist. Er braucht vor der Veröffentlichung weiterhin die fachübergreifende Freigabe, die doppelte Prüfung und die Genehmigung des Chefingenieurs; alle Entwürfe eines Imports gehören zu einem Änderungspaket. |
-| `Sbda77c` | st_new | Every program names an alarm type. A type left at "as above" gets the category chosen above; the next page lets you set the category of single programs or of all ticked ones. | Jedes Programm nennt einen Alarmtyp. Ein Typ mit „wie oben“ erhält die oben gewählte Kategorie; auf der nächsten Seite können Sie die Kategorie einzelner oder aller markierten Programme setzen. |
 | `S3b9e43` | st_new | Hub Controller (legacy numbers, mapped to the new ones) | Nabensteuerung (Altnummern, auf die neuen abgebildet) |
 | `Sd7333f` | st_new | Import status codes from .st files | Statuscodes aus .st-Dateien importieren |
-| `S6640a6` | st_new | New number of Hub Controller programs | Neue Nummer der Programme der Nabensteuerung |
 | `Sc0eff1` | st_new | Or a whole folder | Oder ein ganzer Ordner |
 | `S94ddc1` | st_new | Program files (.st) or a ZIP | Programmdateien (.st) oder ein ZIP |
-| `Sd99e2a` | st_new | Proposal 1: five-digit numbers (11000 and up) | Vorschlag 1: fünfstellige Nummern (ab 11000) |
-| `S2744b0` | st_new | Proposal 2: inside the Main Controller scheme | Vorschlag 2: innerhalb des Schemas der Hauptsteuerung |
 | `S67640d` | st_new | Read files and preview | Dateien lesen und Vorschau anzeigen |
-| `S0af4fc` | st_new | Status category by alarm type (optional) | Statuskategorie nach Alarmtyp (optional) |
-| `S234237` | st_new | Status category of the new codes | Statuskategorie der neuen Codes |
-| `S61fc52` | st_new | The program files do not carry a category and none is assumed: choose one here, by alarm type below, or for each program in the preview. A program without a category is not imported. | Die Programmdateien enthalten keine Kategorie, und es wird keine angenommen: Wählen Sie hier eine, unten je Alarmtyp oder in der Vorschau für jedes Programm. Ein Programm ohne Kategorie wird nicht importiert. |
+| `Saa9df6` | st_new | The title, the type and the access levels of every program come from the mapping, never from the files. A program whose number is not in the mapping is blocked. | Titel, Typ und Zugriffsstufen jedes Programms kommen aus der Zuordnung, nie aus den Dateien. Ein Programm, dessen Nummer nicht in der Zuordnung steht, ist gesperrt. |
 | `S8f4c21` | st_new | Turbine platforms | Turbinenplattformen |
 | `S9ad4d4` | st_new | Upload the generated StCd_<n>.st programs — several files at once, a whole folder, or one ZIP. Nothing is created yet: the next page lists every program so you can tick the ones to import. | Laden Sie die erzeugten StCd_<n>.st-Programme hoch — mehrere Dateien auf einmal, einen ganzen Ordner oder ein ZIP. Es wird noch nichts angelegt: Die nächste Seite listet jedes Programm auf, damit Sie die zu importierenden ankreuzen können. |
+| `S16e5d4` | st_preview | Alarm type | Alarmtyp |
 | `S2693e5` | st_preview | All Drafts of this import join one change set, so they can be reviewed and decided together. | Alle Entwürfe dieses Imports kommen in ein Änderungspaket, damit sie gemeinsam geprüft und entschieden werden können. |
 | `Scbc694` | st_preview | already in the catalogue | bereits im Katalog |
-| `Sc00673` | st_preview | Apply to the ticked programs | Auf die markierten Programme anwenden |
 | `Sdf88b8` | st_preview | blocked | gesperrt |
 | `S6f7703` | st_preview | Changed and withdrawn programs are not ticked: tick the ones you want to update, revise or restore. | Geänderte und zurückgezogene Programme sind nicht angekreuzt: Kreuzen Sie die an, die aktualisiert, überarbeitet oder wiederhergestellt werden sollen. |
 | `S78bb8b` | st_preview | Create Drafts for the ticked programs | Entwürfe für die angekreuzten Programme anlegen |
@@ -1606,8 +1659,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se58289` | st_preview | Programs found in the uploaded files | In den hochgeladenen Dateien gefundene Programme |
 | `S75c053` | st_preview, workbench | ready | bereit |
 | `S0723bf` | st_preview | Select all programs that are ready | Alle bereiten Programme auswählen |
-| `Sae12bc` | st_preview, workbench | Status category | Statuskategorie |
-| `Sd7a322` | st_preview | Status category of the ticked programs | Statuskategorie der markierten Programme |
+| `S9a2439` | st_preview | Type (from the mapping) | Typ (aus der Zuordnung) |
 | `S1a767a` | st_preview | updates the open Draft | aktualisiert den offenen Entwurf |
 | `S02499f` | st_preview | withdrawn | zurückgezogen |
 | `Sf0c3cf` | st_preview | without a legacy number | ohne Altnummer |
@@ -1670,6 +1722,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S2fd88e` | translations | Copy from previous revision | Aus vorheriger Revision kopieren |
 | `Se522f0` | translations | Save draft translation | Entwurfs-Übersetzung speichern |
 | `Scb0b87` | translations | source language text of revision | Quellsprachen-Text der Revision |
+| `S01209c` | upload | Also ask for approval of the unchanged rows that are only proposed | Auch die Genehmigung der unveränderten Zeilen beantragen, die nur vorgeschlagen sind |
+| `Sddf8d9` | upload | Compare and make the request | Vergleichen und Antrag stellen |
+| `S028ebe` | upload | Download the current mapping | Aktuelle Zuordnung herunterladen |
+| `S23bfbf` | upload | The workbook has problems. Nothing was requested. | Die Arbeitsmappe hat Probleme. Es wurde nichts beantragt. |
+| `S24d49d` | upload | Title of the request | Titel des Antrags |
+| `S88809a` | upload | Upload the corrected mapping as a workbook with the sheets MC and HC (download the current one as a model). Every new row and every row that differs becomes one request; rows the workbook does not mention stay as they are. The request takes effect only after the StCd Owner, the Chief Engineer and an Administrator have approved it. | Laden Sie die korrigierte Zuordnung als Arbeitsmappe mit den Blättern MC und HC hoch (die aktuelle als Vorlage herunterladen). Jede neue und jede abweichende Zeile wird zu einem Antrag; Zeilen, die die Arbeitsmappe nicht erwähnt, bleiben unverändert. Der Antrag wird erst wirksam, wenn der StCd-Eigner, der Chefingenieur und ein Administrator ihn genehmigt haben. |
+| `S09efdf` | upload | Workbook (.xlsx) | Arbeitsmappe (.xlsx) |
 | `S359a3b` | user_detail | Back to users | Zurück zu den Benutzern |
 | `Sf6fdbe` | user_detail, users | Delete | Löschen |
 | `S9afe6c` | user_detail | Delete user | Benutzer löschen |
@@ -1729,6 +1788,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sa58dac` | workbench | Set values on the Drafts | Werte der Entwürfe setzen |
 | `Sa443bb` | workbench | Sign off the Drafts | Entwürfe freigeben |
 | `S53f47f` | workbench | Sign-off pending | Freigabe ausstehend |
+| `Sae12bc` | workbench | Status category | Statuskategorie |
 | `Sdc416e` | workbench | Step | Schritt |
 | `Sf7710d` | workbench | Submit for review | Zur Prüfung einreichen |
 | `Sa45adc` | workbench | Submit the Drafts | Entwürfe einreichen |
@@ -1741,7 +1801,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 
 ### 9.3 FR Français 🇫🇷 — French
 
-1295 of 1296 strings translated; direction left to right.
+1355 of 1356 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -1752,13 +1812,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S141763` | _macros | Confirm with your password | Confirmez avec votre mot de passe |
 | `Sc326a4` | _macros, detail, form | Field | Champ |
 | `S0a0f8a` | _macros | Field differences | Différences de champs |
-| `Sbc9819` | _macros | Next | Suivant |
+| `Sbc9819` | _macros, list | Next | Suivant |
 | `S27cea7` | _macros | No field differences. | Aucune différence de champ. |
 | `S464e43` | _macros | on track | dans les temps |
 | `Sba2fff` | _macros, dashboard, success_metrics | overdue | en retard |
-| `S600584` | _macros | Pages | Pages |
+| `S600584` | _macros, list | Pages | Pages |
 | `S810099` | _macros | Please check | Veuillez vérifier |
-| `S50f942` | _macros | Previous | Précédent |
+| `S50f942` | _macros, list | Previous | Précédent |
 | `S83fd6e` | _macros, stalled | red after | rouge après |
 | `S57e8a7` | _macros, success_metrics | slow | lent |
 | `S15198e` | _macros | Waiting since | En attente depuis |
@@ -1789,10 +1849,10 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S06b6ac` | approval_queue, builder, detail | Identifier | Identifiant |
 | `S8e70d2` | approval_queue | Nothing is awaiting your approval. | Rien n'attend votre approbation. |
 | `Sa74f16` | approval_queue, detail, review_queue | Reviewer | Relecteur |
-| `S768e0c` | approval_queue, builder, detail | Title | Titre |
+| `S768e0c` | approval_queue, builder, change | Title | Titre |
 | `S33d306` | approval_queue, detail, mine | Waiting | En attente |
 | `S2cbacd` | audit_log | %(n)s total | %(n)s au total |
-| `S97c89a` | audit_log | Action | Action |
+| `S97c89a` | audit_log, change | Action | Action |
 | `Scbd19b` | audit_log | Actor | Acteur |
 | `S811bdf` | audit_log | Actor ID | ID de l'acteur |
 | `S8c85b1` | audit_log | after: | après : |
@@ -1803,7 +1863,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sc7fb31` | audit_log | Entity | Entité |
 | `S04d694` | audit_log | Entity ID | ID de l'entité |
 | `Sbb4e99` | audit_log | Entity Type | Type d'entité |
-| `Sd7decf` | audit_log, index, language | Filter | Filtrer |
+| `Sd7decf` | audit_log, changes, index | Filter | Filtrer |
 | `S3f6605` | audit_log, delegations, software_versions | From | De |
 | `S0061b5` | audit_log | No matching audit entries. | Aucune entrée d'audit correspondante. |
 | `S01f79f` | audit_log | Scoped view: showing only actions you performed. | Vue restreinte : seules vos propres actions sont affichées. |
@@ -1822,7 +1882,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sbe504f` | base | Skip to main content | Aller au contenu principal |
 | `S1b9aeb` | base, dashboard | unread | non lues |
 | `S2da600` | base, export, export_center | Version | Version |
-| `S12625b` | base | waiting | en attente |
+| `S12625b` | base, change | waiting | en attente |
 | `S5a4692` | base | You are covering for a colleague | Vous remplacez un collègue |
 | `S8e9c15` | builder | Candidate revisions | Révisions candidates |
 | `Sdf2aa0` | builder | Functional Group / Subgroup | Groupe fonctionnel / sous-groupe |
@@ -1853,13 +1913,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S4105cf` | catalogue_health | exhausted | épuisé |
 | `S57e8be` | catalogue_health, connections | Finding | Constat |
 | `S1150a1` | catalogue_health | Gaps | Trous |
-| `S171a06` | catalogue_health, export, withdrawn_codes | Group | Groupe |
-| `Sb4aadc` | catalogue_health, legacy_mapping | Hub Controller | Contrôleur de moyeu |
+| `S171a06` | catalogue_health, export, list | Group | Groupe |
+| `Sb4aadc` | catalogue_health, legacy_mapping, list | Hub Controller | Contrôleur de moyeu |
 | `S8ae1c3` | catalogue_health | Left | Restants |
 | `S12c0f1` | catalogue_health | left | restants |
 | `Sa7b60b` | catalogue_health | Left % | Restants % |
 | `S36a883` | catalogue_health | low | bas |
-| `S1b123c` | catalogue_health, legacy_mapping, st_new | Main Controller | Contrôleur principal |
+| `S1b123c` | catalogue_health, legacy_mapping, list | Main Controller | Contrôleur principal |
 | `S92185d` | catalogue_health, index | Missing | Manquant |
 | `S57282a` | catalogue_health | Missing expected data | Données attendues manquantes |
 | `Sb8e95b` | catalogue_health | None found. | Aucun constat. |
@@ -1876,6 +1936,31 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S75a804` | catalogue_health | subgroup(s) are running out of numbers: | sous-groupe(s) manquent bientôt de numéros : |
 | `S5fec4f` | catalogue_health | Unused numbers inside a band | Numéros inutilisés dans une bande |
 | `S02c0e4` | catalogue_health | Used | Utilisés |
+| `S84f219` | change | All three, each by a different person who did not make the request. | Les trois, chacun par une personne différente qui n'a pas fait la demande. |
+| `S477aeb` | change, upload | and more | et plus |
+| `Sdeb9d0` | change, changes | Approvals | Approbations |
+| `S7b2c7f` | change, detail, language | Approve | Approuver |
+| `S8aa57d` | change, detail | Changes | Modifications |
+| `S3fe5e1` | change | Comment (required to reject) | Commentaire (obligatoire pour rejeter) |
+| `Sb48001` | change | Mapping change | Modification de la correspondance |
+| `Sd7c1d0` | change, changes, list | Mapping changes | Modifications de la correspondance |
+| `Sf26140` | change, legacy_mapping, list | New identifier | Nouvel identifiant |
+| `Sf219cc` | change, list, row | Reason | Raison |
+| `S2b03b5` | change, detail | Reject | Rejeter |
+| `S5108c2` | change, changes | Requested by | Demandé par |
+| `S52d0b3` | change, changes, detail | Rows | Lignes |
+| `S6c30d2` | change, dry_run, list | rows | lignes |
+| `Sfabd38` | change | These rows changed after the request was made; it cannot be applied. Withdraw it and make it again: | Ces lignes ont changé après la demande ; elle ne peut pas être appliquée. Retirez-la et refaites-la : |
+| `S47e564` | change, detail | Withdraw | Retirer |
+| `S30d359` | change | Withdraw this request? | Retirer cette demande ? |
+| `S88c173` | change | You made this request; another person must decide. | Vous avez fait cette demande ; une autre personne doit décider. |
+| `S04e02f` | change | Your role has decided already. | Votre rôle a déjà décidé. |
+| `Sc7274c` | changes | Any state | Tout état |
+| `S2a560c` | changes | Every change of the mapping is a request. It takes effect when the StCd Owner, the Chief Engineer and an Administrator have each approved it; one rejection closes it. | Chaque modification de la correspondance est une demande. Elle prend effet quand le responsable StCd, l'ingénieur en chef et un administrateur l'ont chacun approuvée ; un rejet la clôt. |
+| `Sdef2eb` | changes, list, menu | Mapping | Correspondance |
+| `Se03e43` | changes | No request yet. | Aucune demande pour l'instant. |
+| `S5fc0e0` | changes | request(s) wait for your decision. | demande(s) attendent votre décision. |
+| `Sa72502` | changes, detail, export | State | État |
 | `S97fd13` | check | Back to the terms | Retour aux termes |
 | `S1bc9e5` | check | English string | Texte anglais |
 | `S5d54b3` | check | Every string uses the translated terms. | Tous les textes utilisent les termes traduits. |
@@ -1956,7 +2041,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S9b0b4c` | detail | also the files without an access level (all columns) | aussi les fichiers sans niveau d'accès (toutes les colonnes) |
 | `Sf24c44` | detail | Any %(code)s Engineer | N'importe quel ingénieur %(code)s |
 | `Sb99a01` | detail | Applies to software versions | S'applique aux versions du logiciel |
-| `S7b2c7f` | detail, language | Approve | Approuver |
 | `Sde38bf` | detail | Approve selected | Approuver la sélection |
 | `Scf2999` | detail | Approving confirms these values; any change you make here is applied and audited. Rejecting ignores them. | L'approbation confirme ces valeurs ; toute modification faite ici est appliquée et auditée. Un rejet les ignore. |
 | `Sf7f2d5` | detail | Archive (requires 180-day retention elapsed) | Archiver (exige 180 jours de conservation écoulés) |
@@ -1977,7 +2061,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S4572f4` | detail | Change request | Demande de modification |
 | `S3295be` | detail, workbench | Change requests in this set | Demandes de modification de ce lot |
 | `S4d8006` | detail | Change set | Lot de modifications |
-| `S8aa57d` | detail | Changes | Modifications |
 | `S3d14ea` | detail, export | Changes of this release only | Uniquement les modifications de cette version |
 | `Sbd95c0` | detail | Checklist confirmed at sign-off | Liste de contrôle confirmée lors de la validation |
 | `S074d62` | detail, role badge | Chief Engineer | Ingénieur en chef |
@@ -1995,7 +2078,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S7671b5` | detail | Confirm or override Audience Access | Confirmer ou remplacer l'accès par public |
 | `S6512ee` | detail | Connection | Liaison |
 | `S4f9be0` | detail | Content | Contenu |
-| `Sa36a5f` | detail, legacy_mapping, st_new | Controller | Contrôleur |
+| `Sa36a5f` | detail, legacy_mapping, list | Controller | Contrôleur |
 | `Scd293f` | detail | Converter Reactive Power Program | Programme de puissance réactive du convertisseur |
 | `S3998a7` | detail | Copies the descriptive fields into a new Draft in a Main Controller group (a new number is allocated at submit; this code's identifier is kept as the legacy reference). | Copie les champs descriptifs dans un nouveau brouillon d'un groupe du contrôleur principal (un nouveau numéro est attribué à la soumission ; l'identifiant de ce code est conservé comme référence héritée). |
 | `S54b051` | detail | Copy this code for another turbine platform. The copy is a new Draft that links back here and goes through the normal review. | Copiez ce code pour une autre plateforme d'éolienne. La copie est un nouveau brouillon qui renvoie ici et suit la relecture normale. |
@@ -2129,7 +2212,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sf5ca9d` | detail | Recorded exports | Exports enregistrés |
 | `Sa3f757` | detail | Reinstate to Released | Rétablir à Publié |
 | `S3238ca` | detail | Reinstatement reason | Motif de rétablissement |
-| `S2b03b5` | detail | Reject | Rejeter |
 | `S27fb5c` | detail | Reject selected | Rejeter la sélection |
 | `S045c2c` | detail | Related codes | Codes associés |
 | `S33a5a7` | detail | Relation | Relation |
@@ -2147,7 +2229,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S4c1aa6` | detail | Repeated-Error Escalation | Escalade des erreurs répétées |
 | `S4aed03` | detail | Request | Demander |
 | `Sf3421a` | detail | Request a Sign-Off | Demander une validation |
-| `Sc26bf6` | detail, mine | Requested | Demandé |
+| `Sc26bf6` | detail, mine, row | Requested | Demandé |
 | `S2706ed` | detail | Required by | Requis par |
 | `S619e87` | detail, form | Reset Delay | Temporisation de réarmement |
 | `S026ab2` | detail | resolved | résolu |
@@ -2157,7 +2239,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S3beb9a` | detail | Revision | Révision |
 | `Sa72973` | detail | Revision Fields | Champs de la révision |
 | `Sfc1d6a` | detail | row(s) imported as Drafts | ligne(s) importée(s) en brouillons |
-| `S52d0b3` | detail, reconciliation, user_detail | Rows | Lignes |
 | `Sd0edfb` | detail | Sales | Ventes |
 | `S241bf5` | detail, workbench | Sample number | Numéro d'échantillon |
 | `Sda38c6` | detail | Save planned dates | Enregistrer les dates prévues |
@@ -2176,11 +2257,10 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sece2ac` | detail, form | Slot | Emplacement |
 | `Sff44d2` | detail | Software Version | Version du logiciel |
 | `S169bf7` | detail, export, software_versions | Software version | Version du logiciel |
-| `S6da13a` | detail, fleet_feedback | Source | Source |
+| `S6da13a` | detail, fleet_feedback, row | Source | Source |
 | `Sd3c56b` | detail, export_profiles | source language | langue source |
 | `Sb3883f` | detail | Standards | Normes |
 | `Sfaa9e7` | detail, reconciliation | Started | Démarré |
-| `Sa72502` | detail, export, hub_consolidation | State | État |
 | `Se246b6` | detail, form, list | Status Category | Catégorie de statut |
 | `S779953` | detail, form | Status Code for Repeated Error | Code de statut pour erreur répétée |
 | `S98a377` | detail | Still a Draft. | Toujours un brouillon. |
@@ -2199,7 +2279,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Seaf576` | detail, form | Trigger Snapshot | Déclencher un instantané |
 | `S285ec8` | detail, form | Troubleshooting | Dépannage |
 | `S71bba4` | detail | Turbine Operator Package | Pack exploitant |
-| `S3deb74` | detail, mine, review_queue | Type | Type |
+| `S3deb74` | detail, list, mine | Type | Type |
 | `Sab631e` | detail | Type %(id)s to confirm | Saisissez %(id)s pour confirmer |
 | `Sb5e264` | detail | Type the identifier to confirm | Saisissez l'identifiant pour confirmer |
 | `S835f8a` | detail | Umrichterprogramm GSC | Programme du convertisseur GSC |
@@ -2218,7 +2298,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S51ecc5` | detail | What happens next | Et ensuite |
 | `Sf323c0` | detail | Where used | Où il est utilisé |
 | `S7d5316` | detail | Who | Qui |
-| `S47e564` | detail | Withdraw | Retirer |
 | `S51a998` | detail | Withdraw this change request? | Retirer cette demande de modification ? |
 | `S93ef7c` | detail, workbench | Workbench | Espace de travail |
 | `S95a2a4` | detail, form | Write level | Niveau d'écriture |
@@ -2238,7 +2317,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sec0298` | dry_run | Result per row | Résultat par ligne |
 | `S9bf7a8` | dry_run | Row | Ligne |
 | `S3ff0b0` | dry_run | row(s) have problems. Nothing has been created. | ligne(s) présentent des problèmes. Rien n'a été créé. |
-| `S6c30d2` | dry_run | rows | lignes |
 | `S8012ff` | dry_run | unchanged | inchangées |
 | `S83d655` | dry_run, st_preview | warning(s) | avertissement(s) |
 | `S9ddad9` | dry_run | would be created | seraient créées |
@@ -2380,6 +2458,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S285edc` | help and messages | %(ok)s of %(n)s: %(what)s. | %(ok)s sur %(n)s : %(what)s. |
 | `Sb08e6c` | help and messages | A Reviewer and an Administrator each sign off (in any order). If either rejects, it goes back to the author. | Un relecteur et un administrateur valident chacun (dans n'importe quel ordre). Si l'un des deux rejette, elle retourne à l'auteur. |
 | `S2f1bed` | help and messages | An Administrator includes the revision in a Release and publishes it; then it is Released. | Un administrateur inclut la révision dans une version et la publie ; elle est alors Publiée. |
+| `S9477fd` | help and messages | choose | choisir |
 | `S1308dc` | help and messages | defective codes sent back | codes défectueux renvoyés |
 | `Se2bbd9` | help and messages | Drafts saved | Brouillons enregistrés |
 | `S0ddfa5` | help and messages | Drafts signed off | Brouillons validés |
@@ -2391,7 +2470,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sce489f` | help and messages | The author gets any required cross-domain sign-offs, then submits the change request for review. | L'auteur obtient les validations inter-domaines requises, puis soumet la demande de modification pour relecture. |
 | `S1cdbdd` | help and messages | The Chief Engineer approves or rejects. Approval makes the revision Approved (or Deprecated for a deprecation request). | L'ingénieur en chef approuve ou rejette. L'approbation fait passer la révision à Approuvé (ou Obsolète pour une demande d'obsolescence). |
 | `S2d6ac0` | help and messages | The package is being built. Reload this page to follow its progress. | Le paquet est en cours de création. Rechargez cette page pour suivre sa progression. |
-| `Sde7a5b` | help and messages | The program files do not carry a category; you can change it in each Draft. | Les fichiers de programme ne portent pas de catégorie ; vous pouvez la modifier dans chaque brouillon. |
 | `Scff3a3` | help and messages | User deleted; its name and address are erased, what it did stays attributable. | Utilisateur supprimé ; son nom et son adresse sont effacés, ce qu'il a fait reste attribuable. |
 | `Secfb3f` | hub_consolidation | Deprecate replaced Hub codes | Déclarer obsolètes les codes de moyeu remplacés |
 | `S0e7766` | hub_consolidation, language | draft | brouillon |
@@ -2402,7 +2480,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sc50c53` | hub_consolidation | Hub Controller to Main Controller consolidation | Consolidation du contrôleur de moyeu vers le contrôleur principal |
 | `Scd189f` | hub_consolidation | Hub group | Groupe de moyeu |
 | `Sa5262b` | hub_consolidation | If the Hub Controller leaves the hardware setup, its codes are defined anew on the Main Controller side. Create an MC draft from an HC code on its detail page (Actions); this report shows how far each has come. Nothing is renumbered. | Si le contrôleur de moyeu quitte la configuration matérielle, ses codes sont redéfinis du côté du contrôleur principal. Créez un brouillon MC à partir d'un code HC sur sa page de détail (Actions) ; ce rapport montre l'avancement de chacun. Rien n'est renuméroté. |
-| `Sdd6555` | hub_consolidation, legacy_mapping, st_preview | Legacy no. | N° hérité |
+| `Sdd6555` | hub_consolidation, legacy_mapping, list | Legacy no. | N° hérité |
 | `S845a2b` | hub_consolidation | No Hub Controller codes yet. | Aucun code de contrôleur de moyeu pour l'instant. |
 | `S138665` | hub_consolidation | Open deprecation requests | Ouvrir les demandes d'obsolescence |
 | `Sc8df93` | hub_consolidation | Open deprecation requests for all replaced Hub codes of this group? | Ouvrir des demandes d'obsolescence pour tous les codes de moyeu remplacés de ce groupe ? |
@@ -2461,7 +2539,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sded18c` | language | approved by | approuvé par |
 | `Sedd46e` | language | Check against the interface | Comparer avec l'interface |
 | `S5a013c` | language | missing | manquant |
-| `S2c924e` | language, workbench | Note | Note |
+| `S2c924e` | language, row, workbench | Note | Note |
 | `S2f09d0` | language | Note on %(x)s | Note sur %(x)s |
 | `S75bf99` | language | proposed by | proposé par |
 | `Sc68e32` | language | Save translations | Enregistrer les traductions |
@@ -2469,14 +2547,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S542818` | language | Terms of the language | Termes de la langue |
 | `Sae9e5d` | language | Translation of %(x)s | Traduction de %(x)s |
 | `S863fd0` | language | Your own proposal: another person approves it. | Votre propre proposition : une autre personne l'approuve. |
-| `Sf9d469` | legacy_mapping | All controllers | Tous les contrôleurs |
+| `Sf9d469` | legacy_mapping, list | All controllers | Tous les contrôleurs |
 | `Se61c2f` | legacy_mapping | Any number state | Tout état de numéro |
 | `S7c4f77` | legacy_mapping | issued | attribués |
 | `Sfd5ec0` | legacy_mapping, menu, new | Legacy mapping | Correspondance ancien-nouveau |
 | `S81f567` | legacy_mapping | Legacy number to new identifier | Ancien numéro vers nouvel identifiant |
 | `S64b267` | legacy_mapping | legacy number, identifier or name | ancien numéro, identifiant ou nom |
 | `S60fe6c` | legacy_mapping | new codes without a legacy number (n/a) | nouveaux codes sans ancien numéro (n/a) |
-| `Sf26140` | legacy_mapping, st_preview | New identifier | Nouvel identifiant |
 | `Sf573c8` | legacy_mapping | no number yet | pas encore de numéro |
 | `S7877c5` | legacy_mapping | No status code carries a legacy number yet. | Aucun code de statut ne porte encore d'ancien numéro. |
 | `Sb7baa1` | legacy_mapping | Number | Numéro |
@@ -2485,10 +2562,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S8b0b7c` | legacy_mapping | with a legacy number | avec un ancien numéro |
 | `Seba07b` | list | A change set groups the change requests that ship with one controller software release, so reviewers see the whole package. Each request is still decided on its own. | Un lot de modifications regroupe les demandes de modification livrées avec une même version du logiciel du contrôleur, afin que les relecteurs voient l'ensemble du paquet. Chaque demande reste décidée individuellement. |
 | `Sc5fe02` | list | any | tous |
+| `S55201a` | list | Any status | Tout statut |
 | `Sef5415` | list | Apply columns | Appliquer les colonnes |
+| `Sffb569` | list | Ask for approval of the ticked rows | Demander l'approbation des lignes cochées |
 | `S162a45` | list, menu | Change Sets | Lots de modifications |
 | `S9e895f` | list | Change sets | Lots de modifications |
 | `Scf723c` | list | Columns | Colonnes |
+| `S2ddaf9` | list, upload | Compare a workbook | Comparer un classeur |
 | `Seb0fd2` | list | Delete all my Drafts of this filter | Supprimer tous mes brouillons de ce filtre |
 | `S36f212` | list | Delete ALL of your own Drafts that match this filter, on every page? | Supprimer TOUS vos propres brouillons qui correspondent à ce filtre, sur toutes les pages ? |
 | `Sc554a1` | list | Delete selected Drafts | Supprimer les brouillons sélectionnés |
@@ -2498,12 +2578,18 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S44d25b` | list | Items | Éléments |
 | `S033df3` | list | Lifecycle | Cycle de vie |
 | `Sb4cad6` | list | Link to this view | Lien vers cette vue |
+| `Sbdb4e1` | list | Load the initial mapping | Charger la correspondance initiale |
+| `Se07018` | list | Make the request | Faire la demande |
 | `Se248d5` | list, new | New change set | Nouveau lot de modifications |
 | `Se75aa1` | list, new | New Release | Nouvelle version |
+| `S9bb526` | list, row | New row | Nouvelle ligne |
 | `Se5076c` | list | No change sets yet. | Aucun lot de modifications pour l'instant. |
 | `Sd32c03` | list | No releases yet. | Aucune version pour l'instant. |
+| `Sb5b22c` | list | No row matches. | Aucune ligne ne correspond. |
 | `Sc3af43` | list | No saved searches yet. | Aucune recherche enregistrée. |
 | `S0cb400` | list | No status codes match these filters. | Aucun code de statut ne correspond à ces filtres. |
+| `S260f7a` | list, row | Node | Nœud |
+| `S08250b` | list | number, title or group | numéro, titre ou groupe |
 | `Sf7194e` | list | Requests | Demandes |
 | `S37a530` | list | result | résultat |
 | `Scdf7e9` | list | results | résultats |
@@ -2512,10 +2598,14 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sff86e9` | list | Save the current filters as | Enregistrer les filtres actuels sous |
 | `Sed1d84` | list | Saved searches | Recherches enregistrées |
 | `S859822` | list, mine | Select | Sélectionner |
+| `S45b553` | list | Select all rows | Sélectionner toutes les lignes |
 | `S7f5583` | list, menu | Status Codes | Codes de statut |
 | `S20bff1` | list | Status codes | Codes de statut |
+| `S3a1066` | list | The mapping is empty. | La correspondance est vide. |
+| `S27d95b` | list | The rows stay as they are. Once the StCd Owner, the Chief Engineer and an Administrator approve, they count as approved numbers. | Les lignes restent telles quelles. Dès que le responsable StCd, l'ingénieur en chef et un administrateur approuvent, elles comptent comme numéros approuvés. |
 | `Se90eb0` | list | Turbine Platform | Plateforme d'éolienne |
 | `S86b1e7` | list | Typos are tolerated: "convertor" still finds "converter". | Les fautes de frappe sont tolérées : « convertor » trouve quand même « converter ». |
+| `Sb0c551` | list | Which legacy status code becomes which new one, with what the program files do not carry: the English title, the type, the up/down counter, the access levels, cause and directive. A row changes only by a request that the StCd Owner, the Chief Engineer and an Administrator all approve. | Quel ancien code d'état devient quel nouveau, avec ce que les fichiers de programme ne contiennent pas : titre anglais, type, compteur/décompteur, niveaux d'accès, cause et consigne. Une ligne ne change que par une demande que le responsable StCd, l'ingénieur en chef et un administrateur approuvent tous. |
 | `Sf7c400` | login | Log in | Se connecter |
 | `S175835` | login | or | ou |
 | `S8be3c9` | login, users | Password | Mot de passe |
@@ -2677,6 +2767,23 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S8cb56e` | message: lookup_admin_service | range_end must be greater than range_start | range_end doit être supérieur à range_start |
 | `Se3a971` | message: lookup_admin_service | sub_range_end must be greater than sub_range_start | sub_range_end doit être supérieur à sub_range_start |
 | `S1404e3` | message: lookup_service | functional_system_group query parameter is required for functional-subgroups | Le paramètre de requête functional_system_group est requis pour functional-subgroups |
+| `Sf28681` | message: mapping_service | Give the reason for the change; the three approvers read it first. | Indiquez la raison de la modification ; les trois approbateurs la lisent en premier. |
+| `S062788` | message: mapping_service | Give the request a title of at most 120 characters. | Donnez à la demande un titre de 120 caractères au plus. |
+| `S2ea56f` | message: mapping_service | Mapping change not found | Modification de la correspondance introuvable |
+| `S2c9363` | message: mapping_service | Mapping row not found | Ligne de la correspondance introuvable |
+| `S2d5693` | message: mapping_service | Only the person who made the request can withdraw it. | Seule la personne qui a fait la demande peut la retirer. |
+| `S682269` | message: mapping_service | Only the StCd Owner, the Chief Engineer and an Administrator decide on the mapping. | Seuls le responsable StCd, l'ingénieur en chef et un administrateur décident de la correspondance. |
+| `S5e0f66` | message: mapping_service | Say why you reject the request. | Dites pourquoi vous rejetez la demande. |
+| `S3d5cfc` | message: mapping_service | The comment is longer than 1000 characters. | Le commentaire dépasse 1000 caractères. |
+| `S82b817` | message: mapping_service | The decision must be APPROVE or REJECT. | La décision doit être APPROVE ou REJECT. |
+| `S9ec08a` | message: mapping_service | The file is not a readable .xlsx workbook. | Le fichier n'est pas un classeur .xlsx lisible. |
+| `S3831f7` | message: mapping_service | The reason is longer than 2000 characters. | La raison dépasse 2000 caractères. |
+| `Sa5de7d` | message: mapping_service | The request contains no row. | La demande ne contient aucune ligne. |
+| `S2116e4` | message: mapping_service | The request is already closed. | La demande est déjà clôturée. |
+| `S8518e7` | message: mapping_service | The role has decided already. | Le rôle a déjà décidé. |
+| `S2a15d7` | message: mapping_service | The workbook is larger than 5 MB. | Le classeur dépasse 5 Mo. |
+| `S8eb912` | message: mapping_service | The workbook unpacks to more than 80 MB. | Le classeur se décompresse en plus de 80 Mo. |
+| `S6c1d08` | message: mapping_service | Your role may not propose a change of the mapping. | Votre rôle ne peut pas proposer de modification de la correspondance. |
 | `S4ada2b` | message: notification_service | Notification not found | Notification introuvable |
 | `Sd92b89` | message: notification_service | This notification belongs to someone else. | Cette notification appartient à quelqu'un d'autre. |
 | `Sb0cd00` | message: numbering_service | Identifier override must match StCd-NNNNN (five digits). | Un identifiant de remplacement doit respecter StCd-NNNNN (cinq chiffres). |
@@ -2708,8 +2815,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S9671fb` | message: settings_service | must be true or false | doit être true ou false |
 | `S5166bb` | message: st_import_service | A staged file changed after the preview. Upload again. | Un fichier préparé a changé après l'aperçu. Téléversez-le à nouveau. |
 | `Saa4de2` | message: st_import_service | controller must be auto, MC or HC | controller doit être auto, MC ou HC |
-| `Sa30251` | message: st_import_service | default_category must be ERROR, WARNING or INFO | default_category doit être ERROR, WARNING ou INFO |
-| `Sfe694a` | message: st_import_service | hc_proposal must be 1 or 2 | hc_proposal doit être 1 ou 2 |
 | `S58bec3` | message: st_import_service | No StCd program files found. Upload .st files or a ZIP of them. | Aucun fichier de programme StCd trouvé. Téléversez des fichiers .st ou un ZIP de ceux-ci. |
 | `Sd9c5b0` | message: st_import_service | Nothing selected: tick at least one program that is ready. | Rien de sélectionné : cochez au moins un programme prêt. |
 | `S5dbbd0` | message: st_import_service | The code is no longer an open Draft; preview the files again. | Le code n'est plus un brouillon ouvert ; affichez à nouveau l'aperçu des fichiers. |
@@ -2856,6 +2961,23 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S05fc94` | role badge | Engineer | Ingénieur |
 | `S3c0e8a` | role badge | StCd Owner | Responsable StCd |
 | `Sdbad9f` | role badge | Viewer | Lecteur |
+| `S7f2e4b` | row | Access levels | Niveaux d'accès |
+| `S08f985` | row | Cause | Cause |
+| `S164e0b` | row | Directive | Consigne |
+| `S283474` | row | New number | Nouveau numéro |
+| `Sfa6fdd` | row | No request yet. The row is as it was loaded. | Aucune demande pour l'instant. La ligne est telle qu'elle a été chargée. |
+| `Sf790fc` | row | Nothing is changed here directly: the form makes a request, and the row changes after the StCd Owner, the Chief Engineer and an Administrator have approved it. | Rien n'est modifié directement ici : le formulaire fait une demande, et la ligne change après l'approbation du responsable StCd, de l'ingénieur en chef et d'un administrateur. |
+| `S9d728f` | row | Request approval of the number | Demander l'approbation du numéro |
+| `Sc8978f` | row | Request rejection of the number | Demander le rejet du numéro |
+| `Sc644eb` | row | Request that this number is never used? | Demander que ce numéro ne soit jamais utilisé ? |
+| `Sb25913` | row | Request the new row | Demander la nouvelle ligne |
+| `Sb04301` | row | Request this change | Demander cette modification |
+| `Sae91b6` | row | Requests for this row | Demandes pour cette ligne |
+| `Sd59701` | row | Reset delay (parameter) | Temporisation de retombée (paramètre) |
+| `Sfd64cd` | row | Set delay (parameter) | Temporisation d'activation (paramètre) |
+| `S9c0444` | row | The three approvers read the reason first. | Les trois approbateurs lisent d'abord la raison. |
+| `Sc84745` | row | Title (English) | Titre (anglais) |
+| `S711eea` | row | Up/down counter | Compteur/décompteur |
 | `S913aba` | settings | Save settings | Enregistrer les paramètres |
 | `Sb68734` | software_versions | Added | Ajoutés |
 | `S172415` | software_versions | added | ajoutés |
@@ -2869,28 +2991,19 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd97d1e` | software_versions | Show | Afficher |
 | `S42ea2e` | software_versions | Software Versions | Versions du logiciel |
 | `S3bd89c` | software_versions | Which codes exist in which software version | Quels codes existent dans quelle version du logiciel |
-| `S16e5d4` | st_new, st_preview | Alarm type | Type d'alarme |
-| `S726d7a` | st_new | as above | comme ci-dessus |
-| `S9477fd` | st_new, st_preview | choose | choisir |
 | `Sb149ca` | st_new | Detect: a number from 10000 up is a Hub Controller program | Détecter : un numéro à partir de 10000 est un programme du contrôleur de moyeu |
 | `S7d06d0` | st_new | Every imported program becomes an ordinary Draft with the number it carries reserved. It still needs Cross-Domain Sign-Off, dual review and Chief Engineer approval before Release, and all Drafts of one import share a change set. | Chaque programme importé devient un brouillon ordinaire dont le numéro qu'il porte est réservé. Il exige encore la validation inter-domaines, la double relecture et l'approbation de l'ingénieur en chef avant publication, et tous les brouillons d'un même import partagent un lot de modifications. |
-| `Sbda77c` | st_new | Every program names an alarm type. A type left at "as above" gets the category chosen above; the next page lets you set the category of single programs or of all ticked ones. | Chaque programme indique un type d'alarme. Un type laissé sur « comme ci-dessus » reçoit la catégorie choisie plus haut ; la page suivante permet de définir la catégorie de programmes isolés ou de tous ceux qui sont cochés. |
 | `S3b9e43` | st_new | Hub Controller (legacy numbers, mapped to the new ones) | Contrôleur de moyeu (anciens numéros, mis en correspondance avec les nouveaux) |
 | `Sd7333f` | st_new | Import status codes from .st files | Importer des codes de statut depuis des fichiers .st |
-| `S6640a6` | st_new | New number of Hub Controller programs | Nouveau numéro des programmes du contrôleur de moyeu |
 | `Sc0eff1` | st_new | Or a whole folder | Ou un dossier entier |
 | `S94ddc1` | st_new | Program files (.st) or a ZIP | Fichiers de programme (.st) ou un ZIP |
-| `Sd99e2a` | st_new | Proposal 1: five-digit numbers (11000 and up) | Proposition 1 : numéros à cinq chiffres (à partir de 11000) |
-| `S2744b0` | st_new | Proposal 2: inside the Main Controller scheme | Proposition 2 : dans le schéma du contrôleur principal |
 | `S67640d` | st_new | Read files and preview | Lire les fichiers et afficher l'aperçu |
-| `S0af4fc` | st_new | Status category by alarm type (optional) | Catégorie de statut par type d'alarme (facultatif) |
-| `S234237` | st_new | Status category of the new codes | Catégorie de statut des nouveaux codes |
-| `S61fc52` | st_new | The program files do not carry a category and none is assumed: choose one here, by alarm type below, or for each program in the preview. A program without a category is not imported. | Les fichiers de programme ne contiennent pas de catégorie et aucune n'est supposée : choisissez-en une ici, par type d'alarme ci-dessous, ou pour chaque programme dans l'aperçu. Un programme sans catégorie n'est pas importé. |
+| `Saa9df6` | st_new | The title, the type and the access levels of every program come from the mapping, never from the files. A program whose number is not in the mapping is blocked. | Le titre, le type et les niveaux d'accès de chaque programme viennent de la correspondance, jamais des fichiers. Un programme dont le numéro n'est pas dans la correspondance est bloqué. |
 | `S8f4c21` | st_new | Turbine platforms | Plateformes d'éolienne |
 | `S9ad4d4` | st_new | Upload the generated StCd_<n>.st programs — several files at once, a whole folder, or one ZIP. Nothing is created yet: the next page lists every program so you can tick the ones to import. | Téléversez les programmes StCd_<n>.st générés — plusieurs fichiers à la fois, un dossier entier ou un seul ZIP. Rien n'est encore créé : la page suivante liste chaque programme pour que vous cochiez ceux à importer. |
+| `S16e5d4` | st_preview | Alarm type | Type d'alarme |
 | `S2693e5` | st_preview | All Drafts of this import join one change set, so they can be reviewed and decided together. | Tous les brouillons de cet import rejoignent un même lot de modifications, afin d'être relus et décidés ensemble. |
 | `Scbc694` | st_preview | already in the catalogue | déjà dans le catalogue |
-| `Sc00673` | st_preview | Apply to the ticked programs | Appliquer aux programmes cochés |
 | `Sdf88b8` | st_preview | blocked | bloqués |
 | `S6f7703` | st_preview | Changed and withdrawn programs are not ticked: tick the ones you want to update, revise or restore. | Les programmes modifiés et retirés ne sont pas cochés : cochez ceux que vous voulez mettre à jour, réviser ou rétablir. |
 | `S78bb8b` | st_preview | Create Drafts for the ticked programs | Créer des brouillons pour les programmes cochés |
@@ -2908,8 +3021,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se58289` | st_preview | Programs found in the uploaded files | Programmes trouvés dans les fichiers téléversés |
 | `S75c053` | st_preview, workbench | ready | prêts |
 | `S0723bf` | st_preview | Select all programs that are ready | Sélectionner tous les programmes prêts |
-| `Sae12bc` | st_preview, workbench | Status category | Catégorie de statut |
-| `Sd7a322` | st_preview | Status category of the ticked programs | Catégorie de statut des programmes cochés |
+| `S9a2439` | st_preview | Type (from the mapping) | Type (de la correspondance) |
 | `S1a767a` | st_preview | updates the open Draft | met à jour le brouillon ouvert |
 | `S02499f` | st_preview | withdrawn | retirés |
 | `Sf0c3cf` | st_preview | without a legacy number | sans ancien numéro |
@@ -2972,6 +3084,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S2fd88e` | translations | Copy from previous revision | Copier depuis la révision précédente |
 | `Se522f0` | translations | Save draft translation | Enregistrer la traduction en brouillon |
 | `Scb0b87` | translations | source language text of revision | texte source de la révision |
+| `S01209c` | upload | Also ask for approval of the unchanged rows that are only proposed | Demander aussi l'approbation des lignes inchangées qui ne sont que proposées |
+| `Sddf8d9` | upload | Compare and make the request | Comparer et faire la demande |
+| `S028ebe` | upload | Download the current mapping | Télécharger la correspondance actuelle |
+| `S23bfbf` | upload | The workbook has problems. Nothing was requested. | Le classeur pose des problèmes. Rien n'a été demandé. |
+| `S24d49d` | upload | Title of the request | Titre de la demande |
+| `S88809a` | upload | Upload the corrected mapping as a workbook with the sheets MC and HC (download the current one as a model). Every new row and every row that differs becomes one request; rows the workbook does not mention stay as they are. The request takes effect only after the StCd Owner, the Chief Engineer and an Administrator have approved it. | Chargez la correspondance corrigée sous forme de classeur avec les feuilles MC et HC (téléchargez l'actuelle comme modèle). Chaque ligne nouvelle et chaque ligne différente devient une demande ; les lignes que le classeur ne mentionne pas restent inchangées. La demande ne prend effet qu'après l'approbation du responsable StCd, de l'ingénieur en chef et d'un administrateur. |
+| `S09efdf` | upload | Workbook (.xlsx) | Classeur (.xlsx) |
 | `S359a3b` | user_detail | Back to users | Retour aux utilisateurs |
 | `Sf6fdbe` | user_detail, users | Delete | Supprimer |
 | `S9afe6c` | user_detail | Delete user | Supprimer l'utilisateur |
@@ -3031,6 +3150,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sa58dac` | workbench | Set values on the Drafts | Définir des valeurs sur les brouillons |
 | `Sa443bb` | workbench | Sign off the Drafts | Valider les brouillons |
 | `S53f47f` | workbench | Sign-off pending | Validation en attente |
+| `Sae12bc` | workbench | Status category | Catégorie de statut |
 | `Sdc416e` | workbench | Step | Étape |
 | `Sf7710d` | workbench | Submit for review | Soumettre pour relecture |
 | `Sa45adc` | workbench | Submit the Drafts | Soumettre les brouillons |
@@ -3043,7 +3163,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 
 ### 9.4 IN हिन्दी 🇮🇳 — Hindi
 
-1295 of 1296 strings translated; direction left to right.
+1355 of 1356 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -3054,13 +3174,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S141763` | _macros | Confirm with your password | अपने पासवर्ड से पुष्टि करें |
 | `Sc326a4` | _macros, detail, form | Field | फ़ील्ड |
 | `S0a0f8a` | _macros | Field differences | फ़ील्ड अंतर |
-| `Sbc9819` | _macros | Next | अगला |
+| `Sbc9819` | _macros, list | Next | अगला |
 | `S27cea7` | _macros | No field differences. | कोई फ़ील्ड अंतर नहीं। |
 | `S464e43` | _macros | on track | समय पर |
 | `Sba2fff` | _macros, dashboard, success_metrics | overdue | विलंबित |
-| `S600584` | _macros | Pages | पृष्ठ |
+| `S600584` | _macros, list | Pages | पृष्ठ |
 | `S810099` | _macros | Please check | कृपया जाँचें |
-| `S50f942` | _macros | Previous | पिछला |
+| `S50f942` | _macros, list | Previous | पिछला |
 | `S83fd6e` | _macros, stalled | red after | इसके बाद लाल |
 | `S57e8a7` | _macros, success_metrics | slow | धीमा |
 | `S15198e` | _macros | Waiting since | प्रतीक्षा में, तब से |
@@ -3091,10 +3211,10 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S06b6ac` | approval_queue, builder, detail | Identifier | पहचानकर्ता |
 | `S8e70d2` | approval_queue | Nothing is awaiting your approval. | आपके अनुमोदन की प्रतीक्षा में कुछ नहीं है। |
 | `Sa74f16` | approval_queue, detail, review_queue | Reviewer | समीक्षक |
-| `S768e0c` | approval_queue, builder, detail | Title | शीर्षक |
+| `S768e0c` | approval_queue, builder, change | Title | शीर्षक |
 | `S33d306` | approval_queue, detail, mine | Waiting | प्रतीक्षा |
 | `S2cbacd` | audit_log | %(n)s total | कुल %(n)s |
-| `S97c89a` | audit_log | Action | कार्रवाई |
+| `S97c89a` | audit_log, change | Action | कार्रवाई |
 | `Scbd19b` | audit_log | Actor | कर्ता |
 | `S811bdf` | audit_log | Actor ID | कर्ता आईडी |
 | `S8c85b1` | audit_log | after: | बाद में: |
@@ -3105,7 +3225,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sc7fb31` | audit_log | Entity | इकाई |
 | `S04d694` | audit_log | Entity ID | इकाई आईडी |
 | `Sbb4e99` | audit_log | Entity Type | इकाई प्रकार |
-| `Sd7decf` | audit_log, index, language | Filter | फ़िल्टर करें |
+| `Sd7decf` | audit_log, changes, index | Filter | फ़िल्टर करें |
 | `S3f6605` | audit_log, delegations, software_versions | From | से |
 | `S0061b5` | audit_log | No matching audit entries. | कोई मेल खाती ऑडिट प्रविष्टि नहीं। |
 | `S01f79f` | audit_log | Scoped view: showing only actions you performed. | सीमित दृश्य: केवल आपकी की गई कार्रवाइयाँ दिखाई जा रही हैं। |
@@ -3124,7 +3244,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sbe504f` | base | Skip to main content | मुख्य सामग्री पर जाएँ |
 | `S1b9aeb` | base, dashboard | unread | अपठित |
 | `S2da600` | base, export, export_center | Version | संस्करण |
-| `S12625b` | base | waiting | प्रतीक्षारत |
+| `S12625b` | base, change | waiting | प्रतीक्षारत |
 | `S5a4692` | base | You are covering for a colleague | आप एक सहकर्मी की जगह काम कर रहे हैं |
 | `S8e9c15` | builder | Candidate revisions | उम्मीदवार संशोधन |
 | `Sdf2aa0` | builder | Functional Group / Subgroup | कार्यात्मक समूह / उपसमूह |
@@ -3155,13 +3275,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S4105cf` | catalogue_health | exhausted | समाप्त |
 | `S57e8be` | catalogue_health, connections | Finding | निष्कर्ष |
 | `S1150a1` | catalogue_health | Gaps | रिक्त स्थान |
-| `S171a06` | catalogue_health, export, withdrawn_codes | Group | समूह |
-| `Sb4aadc` | catalogue_health, legacy_mapping | Hub Controller | हब नियंत्रक |
+| `S171a06` | catalogue_health, export, list | Group | समूह |
+| `Sb4aadc` | catalogue_health, legacy_mapping, list | Hub Controller | हब नियंत्रक |
 | `S8ae1c3` | catalogue_health | Left | शेष |
 | `S12c0f1` | catalogue_health | left | शेष |
 | `Sa7b60b` | catalogue_health | Left % | शेष % |
 | `S36a883` | catalogue_health | low | कम |
-| `S1b123c` | catalogue_health, legacy_mapping, st_new | Main Controller | मुख्य नियंत्रक |
+| `S1b123c` | catalogue_health, legacy_mapping, list | Main Controller | मुख्य नियंत्रक |
 | `S92185d` | catalogue_health, index | Missing | अनुपलब्ध |
 | `S57282a` | catalogue_health | Missing expected data | अपेक्षित डेटा अनुपलब्ध |
 | `Sb8e95b` | catalogue_health | None found. | कुछ नहीं मिला। |
@@ -3178,6 +3298,31 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S75a804` | catalogue_health | subgroup(s) are running out of numbers: | उपसमूह में संख्याएँ खत्म हो रही हैं: |
 | `S5fec4f` | catalogue_health | Unused numbers inside a band | बैंड के भीतर अप्रयुक्त संख्याएँ |
 | `S02c0e4` | catalogue_health | Used | उपयोग हुए |
+| `S84f219` | change | All three, each by a different person who did not make the request. | तीनों, हर एक अलग व्यक्ति से जिसने अनुरोध नहीं किया। |
+| `S477aeb` | change, upload | and more | और अधिक |
+| `Sdeb9d0` | change, changes | Approvals | अनुमोदन |
+| `S7b2c7f` | change, detail, language | Approve | अनुमोदित करें |
+| `S8aa57d` | change, detail | Changes | परिवर्तन |
+| `S3fe5e1` | change | Comment (required to reject) | टिप्पणी (अस्वीकार करने के लिए आवश्यक) |
+| `Sb48001` | change | Mapping change | मैपिंग का बदलाव |
+| `Sd7c1d0` | change, changes, list | Mapping changes | मैपिंग के बदलाव |
+| `Sf26140` | change, legacy_mapping, list | New identifier | नया पहचानकर्ता |
+| `Sf219cc` | change, list, row | Reason | कारण |
+| `S2b03b5` | change, detail | Reject | अस्वीकार करें |
+| `S5108c2` | change, changes | Requested by | अनुरोधकर्ता |
+| `S52d0b3` | change, changes, detail | Rows | पंक्तियाँ |
+| `S6c30d2` | change, dry_run, list | rows | पंक्तियाँ |
+| `Sfabd38` | change | These rows changed after the request was made; it cannot be applied. Withdraw it and make it again: | ये पंक्तियाँ अनुरोध के बाद बदल गईं; उसे लागू नहीं किया जा सकता। उसे वापस लें और फिर से करें: |
+| `S47e564` | change, detail | Withdraw | वापस लें |
+| `S30d359` | change | Withdraw this request? | यह अनुरोध वापस लें? |
+| `S88c173` | change | You made this request; another person must decide. | यह अनुरोध आपने किया है; किसी दूसरे व्यक्ति को निर्णय लेना होगा। |
+| `S04e02f` | change | Your role has decided already. | आपकी भूमिका निर्णय ले चुकी है। |
+| `Sc7274c` | changes | Any state | कोई भी अवस्था |
+| `S2a560c` | changes | Every change of the mapping is a request. It takes effect when the StCd Owner, the Chief Engineer and an Administrator have each approved it; one rejection closes it. | मैपिंग का हर बदलाव एक अनुरोध है। यह तब लागू होता है जब StCd स्वामी, मुख्य अभियंता और एक प्रशासक हर एक उसे अनुमोदित कर दें; एक अस्वीकृति उसे बंद कर देती है। |
+| `Sdef2eb` | changes, list, menu | Mapping | मैपिंग |
+| `Se03e43` | changes | No request yet. | अभी कोई अनुरोध नहीं। |
+| `S5fc0e0` | changes | request(s) wait for your decision. | अनुरोध आपके निर्णय की प्रतीक्षा में हैं। |
+| `Sa72502` | changes, detail, export | State | स्थिति |
 | `S97fd13` | check | Back to the terms | शब्दों पर वापस जाएँ |
 | `S1bc9e5` | check | English string | अंग्रेज़ी पाठ |
 | `S5d54b3` | check | Every string uses the translated terms. | हर पाठ अनूदित शब्दों का उपयोग करता है। |
@@ -3258,7 +3403,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S9b0b4c` | detail | also the files without an access level (all columns) | बिना पहुँच स्तर वाली फ़ाइलें भी (सभी कॉलम) |
 | `Sf24c44` | detail | Any %(code)s Engineer | कोई भी %(code)s अभियंता |
 | `Sb99a01` | detail | Applies to software versions | सॉफ़्टवेयर संस्करणों पर लागू |
-| `S7b2c7f` | detail, language | Approve | अनुमोदित करें |
 | `Sde38bf` | detail | Approve selected | चयनित अनुमोदित करें |
 | `Scf2999` | detail | Approving confirms these values; any change you make here is applied and audited. Rejecting ignores them. | अनुमोदन इन मानों की पुष्टि करता है; आप यहाँ जो भी बदलाव करते हैं वह लागू और ऑडिट होता है। अस्वीकृति इन्हें अनदेखा करती है। |
 | `Sf7f2d5` | detail | Archive (requires 180-day retention elapsed) | संग्रहित करें (180 दिन की प्रतिधारण अवधि बीतनी चाहिए) |
@@ -3279,7 +3423,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S4572f4` | detail | Change request | परिवर्तन अनुरोध |
 | `S3295be` | detail, workbench | Change requests in this set | इस समुच्चय के परिवर्तन अनुरोध |
 | `S4d8006` | detail | Change set | परिवर्तन समुच्चय |
-| `S8aa57d` | detail | Changes | परिवर्तन |
 | `S3d14ea` | detail, export | Changes of this release only | केवल इस रिलीज़ के बदलाव |
 | `Sbd95c0` | detail | Checklist confirmed at sign-off | साइन-ऑफ के समय पुष्ट चेकलिस्ट |
 | `S074d62` | detail, role badge | Chief Engineer | मुख्य अभियंता |
@@ -3297,7 +3440,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S7671b5` | detail | Confirm or override Audience Access | लक्षित समूह पहुँच की पुष्टि करें या अधिलेखित करें |
 | `S6512ee` | detail | Connection | संबंध |
 | `S4f9be0` | detail | Content | सामग्री |
-| `Sa36a5f` | detail, legacy_mapping, st_new | Controller | नियंत्रक |
+| `Sa36a5f` | detail, legacy_mapping, list | Controller | नियंत्रक |
 | `Scd293f` | detail | Converter Reactive Power Program | कन्वर्टर रिएक्टिव पावर प्रोग्राम |
 | `S3998a7` | detail | Copies the descriptive fields into a new Draft in a Main Controller group (a new number is allocated at submit; this code's identifier is kept as the legacy reference). | वर्णनात्मक फ़ील्ड को मुख्य नियंत्रक समूह में एक नए मसौदे में कॉपी करता है (जमा करते समय नया नंबर मिलता है; इस कोड का पहचानकर्ता पुराने संदर्भ के रूप में रखा जाता है)। |
 | `S54b051` | detail | Copy this code for another turbine platform. The copy is a new Draft that links back here and goes through the normal review. | इस कोड को किसी अन्य टर्बाइन प्लेटफ़ॉर्म के लिए कॉपी करें। प्रति एक नया मसौदा है जो यहाँ वापस जुड़ता है और सामान्य समीक्षा से गुज़रता है। |
@@ -3431,7 +3574,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sf5ca9d` | detail | Recorded exports | दर्ज निर्यात |
 | `Sa3f757` | detail | Reinstate to Released | जारी में पुनर्स्थापित करें |
 | `S3238ca` | detail | Reinstatement reason | पुनर्स्थापना का कारण |
-| `S2b03b5` | detail | Reject | अस्वीकार करें |
 | `S27fb5c` | detail | Reject selected | चयनित अस्वीकार करें |
 | `S045c2c` | detail | Related codes | संबंधित कोड |
 | `S33a5a7` | detail | Relation | संबंध |
@@ -3449,7 +3591,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S4c1aa6` | detail | Repeated-Error Escalation | बार-बार आने वाली त्रुटि का वृद्धिकरण |
 | `S4aed03` | detail | Request | अनुरोध करें |
 | `Sf3421a` | detail | Request a Sign-Off | साइन-ऑफ का अनुरोध करें |
-| `Sc26bf6` | detail, mine | Requested | अनुरोधित |
+| `Sc26bf6` | detail, mine, row | Requested | अनुरोधित |
 | `S2706ed` | detail | Required by | इनके लिए आवश्यक |
 | `S619e87` | detail, form | Reset Delay | रीसेट विलंब |
 | `S026ab2` | detail | resolved | हल किया गया |
@@ -3459,7 +3601,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S3beb9a` | detail | Revision | संशोधन |
 | `Sa72973` | detail | Revision Fields | संशोधन फ़ील्ड |
 | `Sfc1d6a` | detail | row(s) imported as Drafts | पंक्ति(याँ) मसौदों के रूप में आयात हुईं |
-| `S52d0b3` | detail, reconciliation, user_detail | Rows | पंक्तियाँ |
 | `Sd0edfb` | detail | Sales | बिक्री |
 | `S241bf5` | detail, workbench | Sample number | नमूना क्रमांक |
 | `Sda38c6` | detail | Save planned dates | नियोजित तिथियाँ सहेजें |
@@ -3478,11 +3619,10 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sece2ac` | detail, form | Slot | स्लॉट |
 | `Sff44d2` | detail | Software Version | सॉफ़्टवेयर संस्करण |
 | `S169bf7` | detail, export, software_versions | Software version | सॉफ़्टवेयर संस्करण |
-| `S6da13a` | detail, fleet_feedback | Source | स्रोत |
+| `S6da13a` | detail, fleet_feedback, row | Source | स्रोत |
 | `Sd3c56b` | detail, export_profiles | source language | स्रोत भाषा |
 | `Sb3883f` | detail | Standards | मानक |
 | `Sfaa9e7` | detail, reconciliation | Started | प्रारंभ |
-| `Sa72502` | detail, export, hub_consolidation | State | स्थिति |
 | `Se246b6` | detail, form, list | Status Category | स्थिति श्रेणी |
 | `S779953` | detail, form | Status Code for Repeated Error | बार-बार आने वाली त्रुटि के लिए स्थिति कोड |
 | `S98a377` | detail | Still a Draft. | अभी भी मसौदा है। |
@@ -3501,7 +3641,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Seaf576` | detail, form | Trigger Snapshot | स्नैपशॉट ट्रिगर करें |
 | `S285ec8` | detail, form | Troubleshooting | समस्या निवारण |
 | `S71bba4` | detail | Turbine Operator Package | टर्बाइन ऑपरेटर पैकेज |
-| `S3deb74` | detail, mine, review_queue | Type | प्रकार |
+| `S3deb74` | detail, list, mine | Type | प्रकार |
 | `Sab631e` | detail | Type %(id)s to confirm | पुष्टि के लिए %(id)s टाइप करें |
 | `Sb5e264` | detail | Type the identifier to confirm | पुष्टि के लिए पहचानकर्ता टाइप करें |
 | `S835f8a` | detail | Umrichterprogramm GSC | कन्वर्टर प्रोग्राम GSC |
@@ -3520,7 +3660,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S51ecc5` | detail | What happens next | आगे क्या होता है |
 | `Sf323c0` | detail | Where used | कहाँ उपयोग हुआ |
 | `S7d5316` | detail | Who | कौन |
-| `S47e564` | detail | Withdraw | वापस लें |
 | `S51a998` | detail | Withdraw this change request? | इस परिवर्तन अनुरोध को वापस लें? |
 | `S93ef7c` | detail, workbench | Workbench | कार्यक्षेत्र |
 | `S95a2a4` | detail, form | Write level | लिखने का स्तर |
@@ -3540,7 +3679,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sec0298` | dry_run | Result per row | प्रति पंक्ति परिणाम |
 | `S9bf7a8` | dry_run | Row | पंक्ति |
 | `S3ff0b0` | dry_run | row(s) have problems. Nothing has been created. | पंक्ति(यों) में समस्याएँ हैं। कुछ नहीं बनाया गया। |
-| `S6c30d2` | dry_run | rows | पंक्तियाँ |
 | `S8012ff` | dry_run | unchanged | अपरिवर्तित |
 | `S83d655` | dry_run, st_preview | warning(s) | चेतावनी(याँ) |
 | `S9ddad9` | dry_run | would be created | बनाई जातीं |
@@ -3682,6 +3820,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S285edc` | help and messages | %(ok)s of %(n)s: %(what)s. | %(ok)s / %(n)s: %(what)s। |
 | `Sb08e6c` | help and messages | A Reviewer and an Administrator each sign off (in any order). If either rejects, it goes back to the author. | एक समीक्षक और एक प्रशासक प्रत्येक साइन ऑफ करते हैं (किसी भी क्रम में)। यदि कोई अस्वीकार करे, तो वह लेखक के पास लौट जाता है। |
 | `S2f1bed` | help and messages | An Administrator includes the revision in a Release and publishes it; then it is Released. | एक प्रशासक संशोधन को रिलीज़ में शामिल कर प्रकाशित करता है; तब वह जारी हो जाता है। |
+| `S9477fd` | help and messages | choose | चुनें |
 | `S1308dc` | help and messages | defective codes sent back | दोषपूर्ण कोड वापस भेजे गए |
 | `Se2bbd9` | help and messages | Drafts saved | मसौदे सहेजे गए |
 | `S0ddfa5` | help and messages | Drafts signed off | मसौदों का साइन-ऑफ हुआ |
@@ -3693,7 +3832,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sce489f` | help and messages | The author gets any required cross-domain sign-offs, then submits the change request for review. | लेखक आवश्यक अंतर-डोमेन साइन-ऑफ लेता है, फिर परिवर्तन अनुरोध को समीक्षा के लिए जमा करता है। |
 | `S1cdbdd` | help and messages | The Chief Engineer approves or rejects. Approval makes the revision Approved (or Deprecated for a deprecation request). | मुख्य अभियंता अनुमोदित या अस्वीकृत करता है। अनुमोदन से संशोधन अनुमोदित (या अप्रचलन अनुरोध के लिए अप्रचलित) हो जाता है। |
 | `S2d6ac0` | help and messages | The package is being built. Reload this page to follow its progress. | पैकेज बन रहा है। प्रगति देखने के लिए यह पेज फिर लोड करें। |
-| `Sde7a5b` | help and messages | The program files do not carry a category; you can change it in each Draft. | प्रोग्राम फ़ाइलों में श्रेणी नहीं होती; आप उसे हर मसौदे में बदल सकते हैं। |
 | `Scff3a3` | help and messages | User deleted; its name and address are erased, what it did stays attributable. | उपयोगकर्ता हटा दिया गया; उसका नाम और पता मिटा दिया गया है, उसने जो किया वह अब भी आरोपित रहता है। |
 | `Secfb3f` | hub_consolidation | Deprecate replaced Hub codes | प्रतिस्थापित हब कोड अप्रचलित घोषित करें |
 | `S0e7766` | hub_consolidation, language | draft | मसौदा |
@@ -3704,7 +3842,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sc50c53` | hub_consolidation | Hub Controller to Main Controller consolidation | हब नियंत्रक से मुख्य नियंत्रक में एकीकरण |
 | `Scd189f` | hub_consolidation | Hub group | हब समूह |
 | `Sa5262b` | hub_consolidation | If the Hub Controller leaves the hardware setup, its codes are defined anew on the Main Controller side. Create an MC draft from an HC code on its detail page (Actions); this report shows how far each has come. Nothing is renumbered. | यदि हब नियंत्रक हार्डवेयर सेटअप से हट जाता है, तो उसके कोड मुख्य नियंत्रक की ओर नए सिरे से परिभाषित किए जाते हैं। उसके विवरण पृष्ठ (कार्रवाइयाँ) पर HC कोड से MC मसौदा बनाएँ; यह रिपोर्ट दिखाती है कि हर एक कहाँ तक पहुँचा है। कुछ भी पुनः क्रमांकित नहीं होता। |
-| `Sdd6555` | hub_consolidation, legacy_mapping, st_preview | Legacy no. | पुराना क्र. |
+| `Sdd6555` | hub_consolidation, legacy_mapping, list | Legacy no. | पुराना क्र. |
 | `S845a2b` | hub_consolidation | No Hub Controller codes yet. | अभी तक कोई हब नियंत्रक कोड नहीं। |
 | `S138665` | hub_consolidation | Open deprecation requests | अप्रचलन अनुरोध खोलें |
 | `Sc8df93` | hub_consolidation | Open deprecation requests for all replaced Hub codes of this group? | इस समूह के सभी प्रतिस्थापित हब कोड के लिए अप्रचलन अनुरोध खोलें? |
@@ -3763,7 +3901,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sded18c` | language | approved by | अनुमोदक |
 | `Sedd46e` | language | Check against the interface | इंटरफ़ेस से मिलान करें |
 | `S5a013c` | language | missing | अनुपलब्ध |
-| `S2c924e` | language, workbench | Note | टिप्पणी |
+| `S2c924e` | language, row, workbench | Note | टिप्पणी |
 | `S2f09d0` | language | Note on %(x)s | %(x)s पर टिप्पणी |
 | `S75bf99` | language | proposed by | प्रस्तावक |
 | `Sc68e32` | language | Save translations | अनुवाद सहेजें |
@@ -3771,14 +3909,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S542818` | language | Terms of the language | भाषा के शब्द |
 | `Sae9e5d` | language | Translation of %(x)s | %(x)s का अनुवाद |
 | `S863fd0` | language | Your own proposal: another person approves it. | आपका अपना प्रस्ताव: कोई और व्यक्ति उसे अनुमोदित करता है। |
-| `Sf9d469` | legacy_mapping | All controllers | सभी नियंत्रक |
+| `Sf9d469` | legacy_mapping, list | All controllers | सभी नियंत्रक |
 | `Se61c2f` | legacy_mapping | Any number state | कोई भी नंबर स्थिति |
 | `S7c4f77` | legacy_mapping | issued | जारी |
 | `Sfd5ec0` | legacy_mapping, menu, new | Legacy mapping | पुराने-नए की मैपिंग |
 | `S81f567` | legacy_mapping | Legacy number to new identifier | पुराना नंबर → नया पहचानकर्ता |
 | `S64b267` | legacy_mapping | legacy number, identifier or name | पुराना नंबर, पहचानकर्ता या नाम |
 | `S60fe6c` | legacy_mapping | new codes without a legacy number (n/a) | पुराने नंबर के बिना नए कोड (n/a) |
-| `Sf26140` | legacy_mapping, st_preview | New identifier | नया पहचानकर्ता |
 | `Sf573c8` | legacy_mapping | no number yet | अभी नंबर नहीं |
 | `S7877c5` | legacy_mapping | No status code carries a legacy number yet. | अभी किसी स्थिति कोड पर पुराना नंबर नहीं है। |
 | `Sb7baa1` | legacy_mapping | Number | संख्या |
@@ -3787,10 +3924,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S8b0b7c` | legacy_mapping | with a legacy number | पुराने नंबर के साथ |
 | `Seba07b` | list | A change set groups the change requests that ship with one controller software release, so reviewers see the whole package. Each request is still decided on its own. | परिवर्तन समुच्चय उन परिवर्तन अनुरोधों को एक साथ रखता है जो एक नियंत्रक सॉफ़्टवेयर रिलीज़ के साथ जाते हैं, ताकि समीक्षक पूरा पैकेज देखें। हर अनुरोध पर फिर भी अलग से निर्णय होता है। |
 | `Sc5fe02` | list | any | कोई भी |
+| `S55201a` | list | Any status | कोई भी स्थिति |
 | `Sef5415` | list | Apply columns | स्तंभ लागू करें |
+| `Sffb569` | list | Ask for approval of the ticked rows | चिह्नित पंक्तियों के अनुमोदन का अनुरोध करें |
 | `S162a45` | list, menu | Change Sets | परिवर्तन समूह |
 | `S9e895f` | list | Change sets | परिवर्तन समूह |
 | `Scf723c` | list | Columns | स्तंभ |
+| `S2ddaf9` | list, upload | Compare a workbook | कार्यपुस्तिका की तुलना करें |
 | `Seb0fd2` | list | Delete all my Drafts of this filter | इस फ़िल्टर के मेरे सभी मसौदे हटाएँ |
 | `S36f212` | list | Delete ALL of your own Drafts that match this filter, on every page? | इस फ़िल्टर से मेल खाने वाले अपने सभी मसौदे, हर पृष्ठ पर, हटा दें? |
 | `Sc554a1` | list | Delete selected Drafts | चयनित मसौदे हटाएँ |
@@ -3800,12 +3940,18 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S44d25b` | list | Items | आइटम |
 | `S033df3` | list | Lifecycle | जीवनचक्र |
 | `Sb4cad6` | list | Link to this view | इस दृश्य का लिंक |
+| `Sbdb4e1` | list | Load the initial mapping | प्रारंभिक मैपिंग लोड करें |
+| `Se07018` | list | Make the request | अनुरोध करें |
 | `Se248d5` | list, new | New change set | नया परिवर्तन समूह |
 | `Se75aa1` | list, new | New Release | नई रिलीज़ |
+| `S9bb526` | list, row | New row | नई पंक्ति |
 | `Se5076c` | list | No change sets yet. | अभी कोई परिवर्तन समूह नहीं। |
 | `Sd32c03` | list | No releases yet. | अभी कोई रिलीज़ नहीं। |
+| `Sb5b22c` | list | No row matches. | कोई पंक्ति मेल नहीं खाती। |
 | `Sc3af43` | list | No saved searches yet. | अभी कोई सहेजी गई खोज नहीं। |
 | `S0cb400` | list | No status codes match these filters. | इन फ़िल्टरों से कोई स्थिति कोड मेल नहीं खाता। |
+| `S260f7a` | list, row | Node | नोड |
+| `S08250b` | list | number, title or group | नंबर, शीर्षक या समूह |
 | `Sf7194e` | list | Requests | अनुरोध |
 | `S37a530` | list | result | परिणाम |
 | `Scdf7e9` | list | results | परिणाम |
@@ -3814,10 +3960,14 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sff86e9` | list | Save the current filters as | वर्तमान फ़िल्टर इस नाम से सहेजें |
 | `Sed1d84` | list | Saved searches | सहेजी गई खोजें |
 | `S859822` | list, mine | Select | चुनें |
+| `S45b553` | list | Select all rows | सभी पंक्तियाँ चुनें |
 | `S7f5583` | list, menu | Status Codes | स्थिति कोड |
 | `S20bff1` | list | Status codes | स्थिति कोड |
+| `S3a1066` | list | The mapping is empty. | मैपिंग खाली है। |
+| `S27d95b` | list | The rows stay as they are. Once the StCd Owner, the Chief Engineer and an Administrator approve, they count as approved numbers. | पंक्तियाँ जैसी हैं वैसी ही रहती हैं। StCd स्वामी, मुख्य अभियंता और एक प्रशासक के अनुमोदन के बाद वे अनुमोदित नंबर मानी जाती हैं। |
 | `Se90eb0` | list | Turbine Platform | टर्बाइन प्लेटफ़ॉर्म |
 | `S86b1e7` | list | Typos are tolerated: "convertor" still finds "converter". | टाइपो सहन किए जाते हैं: "convertor" फिर भी "converter" ढूँढ लेता है। |
+| `Sb0c551` | list | Which legacy status code becomes which new one, with what the program files do not carry: the English title, the type, the up/down counter, the access levels, cause and directive. A row changes only by a request that the StCd Owner, the Chief Engineer and an Administrator all approve. | कौन-सा पुराना स्टेटस कोड कौन-सा नया बनता है, उन जानकारियों के साथ जो प्रोग्राम फ़ाइलों में नहीं होतीं: अंग्रेज़ी शीर्षक, प्रकार, ऊपर/नीचे काउंटर, एक्सेस स्तर, कारण और निर्देश। पंक्ति केवल ऐसे अनुरोध से बदलती है जिसे StCd स्वामी, मुख्य अभियंता और एक प्रशासक सभी अनुमोदित करें। |
 | `Sf7c400` | login | Log in | लॉग इन करें |
 | `S175835` | login | or | या |
 | `S8be3c9` | login, users | Password | पासवर्ड |
@@ -3979,6 +4129,23 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S8cb56e` | message: lookup_admin_service | range_end must be greater than range_start | range_end, range_start से बड़ा होना चाहिए |
 | `Se3a971` | message: lookup_admin_service | sub_range_end must be greater than sub_range_start | sub_range_end, sub_range_start से बड़ा होना चाहिए |
 | `S1404e3` | message: lookup_service | functional_system_group query parameter is required for functional-subgroups | functional-subgroups के लिए functional_system_group क्वेरी पैरामीटर आवश्यक है |
+| `Sf28681` | message: mapping_service | Give the reason for the change; the three approvers read it first. | बदलाव का कारण बताइए; तीनों अनुमोदक उसे पहले पढ़ते हैं। |
+| `S062788` | message: mapping_service | Give the request a title of at most 120 characters. | अनुरोध को अधिकतम 120 अक्षरों का शीर्षक दीजिए। |
+| `S2ea56f` | message: mapping_service | Mapping change not found | मैपिंग का बदलाव नहीं मिला |
+| `S2c9363` | message: mapping_service | Mapping row not found | मैपिंग की पंक्ति नहीं मिली |
+| `S2d5693` | message: mapping_service | Only the person who made the request can withdraw it. | अनुरोध करने वाला व्यक्ति ही उसे वापस ले सकता है। |
+| `S682269` | message: mapping_service | Only the StCd Owner, the Chief Engineer and an Administrator decide on the mapping. | मैपिंग पर केवल StCd स्वामी, मुख्य अभियंता और एक प्रशासक निर्णय लेते हैं। |
+| `S5e0f66` | message: mapping_service | Say why you reject the request. | बताइए कि आप अनुरोध को क्यों अस्वीकार करते हैं। |
+| `S3d5cfc` | message: mapping_service | The comment is longer than 1000 characters. | टिप्पणी 1000 अक्षरों से लंबी है। |
+| `S82b817` | message: mapping_service | The decision must be APPROVE or REJECT. | निर्णय APPROVE या REJECT होना चाहिए। |
+| `S9ec08a` | message: mapping_service | The file is not a readable .xlsx workbook. | फ़ाइल पढ़ने योग्य .xlsx कार्यपुस्तिका नहीं है। |
+| `S3831f7` | message: mapping_service | The reason is longer than 2000 characters. | कारण 2000 अक्षरों से लंबा है। |
+| `Sa5de7d` | message: mapping_service | The request contains no row. | अनुरोध में कोई पंक्ति नहीं है। |
+| `S2116e4` | message: mapping_service | The request is already closed. | अनुरोध पहले ही बंद हो चुका है। |
+| `S8518e7` | message: mapping_service | The role has decided already. | इस भूमिका ने पहले ही निर्णय ले लिया है। |
+| `S2a15d7` | message: mapping_service | The workbook is larger than 5 MB. | कार्यपुस्तिका 5 MB से बड़ी है। |
+| `S8eb912` | message: mapping_service | The workbook unpacks to more than 80 MB. | कार्यपुस्तिका खुलने पर 80 MB से बड़ी हो जाती है। |
+| `S6c1d08` | message: mapping_service | Your role may not propose a change of the mapping. | आपकी भूमिका मैपिंग में बदलाव प्रस्तावित नहीं कर सकती। |
 | `S4ada2b` | message: notification_service | Notification not found | सूचना नहीं मिली |
 | `Sd92b89` | message: notification_service | This notification belongs to someone else. | यह सूचना किसी और की है। |
 | `Sb0cd00` | message: numbering_service | Identifier override must match StCd-NNNNN (five digits). | अधिलेखित पहचानकर्ता StCd-NNNNN (पाँच अंक) से मेल खाना चाहिए। |
@@ -4010,8 +4177,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S9671fb` | message: settings_service | must be true or false | true या false होना चाहिए |
 | `S5166bb` | message: st_import_service | A staged file changed after the preview. Upload again. | पूर्वावलोकन के बाद एक स्टेज की गई फ़ाइल बदल गई। फिर से अपलोड करें। |
 | `Saa4de2` | message: st_import_service | controller must be auto, MC or HC | controller auto, MC या HC होना चाहिए |
-| `Sa30251` | message: st_import_service | default_category must be ERROR, WARNING or INFO | default_category ERROR, WARNING या INFO होनी चाहिए |
-| `Sfe694a` | message: st_import_service | hc_proposal must be 1 or 2 | hc_proposal 1 या 2 होना चाहिए |
 | `S58bec3` | message: st_import_service | No StCd program files found. Upload .st files or a ZIP of them. | कोई StCd प्रोग्राम फ़ाइल नहीं मिली। .st फ़ाइलें या उनका ZIP अपलोड करें। |
 | `Sd9c5b0` | message: st_import_service | Nothing selected: tick at least one program that is ready. | कुछ चुना नहीं गया: कम से कम एक तैयार प्रोग्राम पर निशान लगाएँ। |
 | `S5dbbd0` | message: st_import_service | The code is no longer an open Draft; preview the files again. | कोड अब खुला मसौदा नहीं है; फ़ाइलों का पूर्वावलोकन फिर से देखें। |
@@ -4158,6 +4323,23 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S05fc94` | role badge | Engineer | अभियंता |
 | `S3c0e8a` | role badge | StCd Owner | StCd स्वामी |
 | `Sdbad9f` | role badge | Viewer | दर्शक |
+| `S7f2e4b` | row | Access levels | एक्सेस स्तर |
+| `S08f985` | row | Cause | कारण |
+| `S164e0b` | row | Directive | निर्देश |
+| `S283474` | row | New number | नया नंबर |
+| `Sfa6fdd` | row | No request yet. The row is as it was loaded. | अभी कोई अनुरोध नहीं। पंक्ति वैसी ही है जैसी लोड हुई थी। |
+| `Sf790fc` | row | Nothing is changed here directly: the form makes a request, and the row changes after the StCd Owner, the Chief Engineer and an Administrator have approved it. | यहाँ सीधे कुछ नहीं बदलता: फ़ॉर्म एक अनुरोध बनाता है, और StCd स्वामी, मुख्य अभियंता और एक प्रशासक के अनुमोदन के बाद पंक्ति बदलती है। |
+| `S9d728f` | row | Request approval of the number | नंबर के अनुमोदन का अनुरोध करें |
+| `Sc8978f` | row | Request rejection of the number | नंबर की अस्वीकृति का अनुरोध करें |
+| `Sc644eb` | row | Request that this number is never used? | अनुरोध करें कि यह नंबर कभी उपयोग न हो? |
+| `Sb25913` | row | Request the new row | नई पंक्ति का अनुरोध करें |
+| `Sb04301` | row | Request this change | इस बदलाव का अनुरोध करें |
+| `Sae91b6` | row | Requests for this row | इस पंक्ति के अनुरोध |
+| `Sd59701` | row | Reset delay (parameter) | रीसेट विलंब (पैरामीटर) |
+| `Sfd64cd` | row | Set delay (parameter) | सेट विलंब (पैरामीटर) |
+| `S9c0444` | row | The three approvers read the reason first. | तीनों अनुमोदक पहले कारण पढ़ते हैं। |
+| `Sc84745` | row | Title (English) | शीर्षक (अंग्रेज़ी) |
+| `S711eea` | row | Up/down counter | ऊपर/नीचे काउंटर |
 | `S913aba` | settings | Save settings | सेटिंग सहेजें |
 | `Sb68734` | software_versions | Added | जोड़े गए |
 | `S172415` | software_versions | added | जोड़े गए |
@@ -4171,28 +4353,19 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd97d1e` | software_versions | Show | दिखाएँ |
 | `S42ea2e` | software_versions | Software Versions | सॉफ़्टवेयर संस्करण |
 | `S3bd89c` | software_versions | Which codes exist in which software version | कौन-से कोड किस सॉफ़्टवेयर संस्करण में हैं |
-| `S16e5d4` | st_new, st_preview | Alarm type | अलार्म प्रकार |
-| `S726d7a` | st_new | as above | ऊपर के अनुसार |
-| `S9477fd` | st_new, st_preview | choose | चुनें |
 | `Sb149ca` | st_new | Detect: a number from 10000 up is a Hub Controller program | पहचानें: 10000 से ऊपर की संख्या हब नियंत्रक प्रोग्राम है |
 | `S7d06d0` | st_new | Every imported program becomes an ordinary Draft with the number it carries reserved. It still needs Cross-Domain Sign-Off, dual review and Chief Engineer approval before Release, and all Drafts of one import share a change set. | हर आयात किया गया प्रोग्राम एक सामान्य मसौदा बनता है जिसमें उसका अपना नंबर आरक्षित रहता है। रिलीज़ से पहले उसे अंतर-डोमेन साइन-ऑफ, दोहरी समीक्षा और मुख्य अभियंता अनुमोदन फिर भी चाहिए, और एक आयात के सभी मसौदे एक परिवर्तन समुच्चय साझा करते हैं। |
-| `Sbda77c` | st_new | Every program names an alarm type. A type left at "as above" gets the category chosen above; the next page lets you set the category of single programs or of all ticked ones. | हर प्रोग्राम एक अलार्म प्रकार बताता है। "ऊपर के अनुसार" पर छोड़े गए प्रकार को ऊपर चुनी गई श्रेणी मिलती है; अगले पृष्ठ पर आप अलग-अलग प्रोग्रामों या सभी चिह्नित प्रोग्रामों की श्रेणी तय कर सकते हैं। |
 | `S3b9e43` | st_new | Hub Controller (legacy numbers, mapped to the new ones) | हब नियंत्रक (पुराने नंबर, नए नंबरों से मैप किए गए) |
 | `Sd7333f` | st_new | Import status codes from .st files | .st फ़ाइलों से स्थिति कोड आयात करें |
-| `S6640a6` | st_new | New number of Hub Controller programs | हब नियंत्रक प्रोग्रामों का नया नंबर |
 | `Sc0eff1` | st_new | Or a whole folder | या पूरा फ़ोल्डर |
 | `S94ddc1` | st_new | Program files (.st) or a ZIP | प्रोग्राम फ़ाइलें (.st) या एक ZIP |
-| `Sd99e2a` | st_new | Proposal 1: five-digit numbers (11000 and up) | प्रस्ताव 1: पाँच अंकों के नंबर (11000 से) |
-| `S2744b0` | st_new | Proposal 2: inside the Main Controller scheme | प्रस्ताव 2: मुख्य नियंत्रक योजना के भीतर |
 | `S67640d` | st_new | Read files and preview | फ़ाइलें पढ़ें और पूर्वावलोकन देखें |
-| `S0af4fc` | st_new | Status category by alarm type (optional) | अलार्म प्रकार के अनुसार स्थिति श्रेणी (वैकल्पिक) |
-| `S234237` | st_new | Status category of the new codes | नए कोड की स्थिति श्रेणी |
-| `S61fc52` | st_new | The program files do not carry a category and none is assumed: choose one here, by alarm type below, or for each program in the preview. A program without a category is not imported. | प्रोग्राम फ़ाइलों में कोई श्रेणी नहीं होती और कोई श्रेणी मानी नहीं जाती: यहाँ एक चुनें, नीचे अलार्म प्रकार के अनुसार चुनें, या पूर्वावलोकन में हर प्रोग्राम के लिए चुनें। बिना श्रेणी वाला प्रोग्राम आयात नहीं होता। |
+| `Saa9df6` | st_new | The title, the type and the access levels of every program come from the mapping, never from the files. A program whose number is not in the mapping is blocked. | हर प्रोग्राम का शीर्षक, प्रकार और एक्सेस स्तर मैपिंग से आते हैं, फ़ाइलों से कभी नहीं। जिस प्रोग्राम का नंबर मैपिंग में नहीं है वह अवरुद्ध है। |
 | `S8f4c21` | st_new | Turbine platforms | टर्बाइन प्लेटफ़ॉर्म |
 | `S9ad4d4` | st_new | Upload the generated StCd_<n>.st programs — several files at once, a whole folder, or one ZIP. Nothing is created yet: the next page lists every program so you can tick the ones to import. | बनाए गए StCd_<n>.st प्रोग्राम अपलोड करें — एक साथ कई फ़ाइलें, पूरा फ़ोल्डर या एक ZIP। अभी कुछ नहीं बनता: अगला पृष्ठ हर प्रोग्राम की सूची देता है ताकि आप आयात करने वालों पर निशान लगा सकें। |
+| `S16e5d4` | st_preview | Alarm type | अलार्म प्रकार |
 | `S2693e5` | st_preview | All Drafts of this import join one change set, so they can be reviewed and decided together. | इस आयात के सभी मसौदे एक परिवर्तन समुच्चय में जुड़ते हैं, ताकि उनकी साथ-साथ समीक्षा और निर्णय हो सके। |
 | `Scbc694` | st_preview | already in the catalogue | कैटलॉग में पहले से |
-| `Sc00673` | st_preview | Apply to the ticked programs | चिह्नित प्रोग्रामों पर लागू करें |
 | `Sdf88b8` | st_preview | blocked | अवरुद्ध |
 | `S6f7703` | st_preview | Changed and withdrawn programs are not ticked: tick the ones you want to update, revise or restore. | बदले हुए और वापस लिए गए प्रोग्राम चिह्नित नहीं होते: जिन्हें अद्यतन, संशोधित या बहाल करना चाहते हैं उन पर निशान लगाएँ। |
 | `S78bb8b` | st_preview | Create Drafts for the ticked programs | चिह्नित प्रोग्रामों के लिए मसौदे बनाएँ |
@@ -4210,8 +4383,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se58289` | st_preview | Programs found in the uploaded files | अपलोड की गई फ़ाइलों में मिले प्रोग्राम |
 | `S75c053` | st_preview, workbench | ready | तैयार |
 | `S0723bf` | st_preview | Select all programs that are ready | सभी तैयार प्रोग्राम चुनें |
-| `Sae12bc` | st_preview, workbench | Status category | स्थिति श्रेणी |
-| `Sd7a322` | st_preview | Status category of the ticked programs | चिह्नित प्रोग्रामों की स्थिति श्रेणी |
+| `S9a2439` | st_preview | Type (from the mapping) | प्रकार (मैपिंग से) |
 | `S1a767a` | st_preview | updates the open Draft | खुला मसौदा अद्यतन करता है |
 | `S02499f` | st_preview | withdrawn | वापस लिए गए |
 | `Sf0c3cf` | st_preview | without a legacy number | पुराने नंबर के बिना |
@@ -4274,6 +4446,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S2fd88e` | translations | Copy from previous revision | पिछले संशोधन से कॉपी करें |
 | `Se522f0` | translations | Save draft translation | मसौदा अनुवाद सहेजें |
 | `Scb0b87` | translations | source language text of revision | संशोधन का स्रोत भाषा पाठ |
+| `S01209c` | upload | Also ask for approval of the unchanged rows that are only proposed | केवल प्रस्तावित अपरिवर्तित पंक्तियों के अनुमोदन का भी अनुरोध करें |
+| `Sddf8d9` | upload | Compare and make the request | तुलना करें और अनुरोध करें |
+| `S028ebe` | upload | Download the current mapping | वर्तमान मैपिंग डाउनलोड करें |
+| `S23bfbf` | upload | The workbook has problems. Nothing was requested. | कार्यपुस्तिका में समस्याएँ हैं। कुछ भी अनुरोध नहीं किया गया। |
+| `S24d49d` | upload | Title of the request | अनुरोध का शीर्षक |
+| `S88809a` | upload | Upload the corrected mapping as a workbook with the sheets MC and HC (download the current one as a model). Every new row and every row that differs becomes one request; rows the workbook does not mention stay as they are. The request takes effect only after the StCd Owner, the Chief Engineer and an Administrator have approved it. | सुधारी हुई मैपिंग को MC और HC शीट वाली कार्यपुस्तिका के रूप में अपलोड करें (मॉडल के लिए वर्तमान मैपिंग डाउनलोड करें)। हर नई और हर भिन्न पंक्ति एक अनुरोध बनती है; जिन पंक्तियों का कार्यपुस्तिका में उल्लेख नहीं है वे जैसी हैं वैसी रहती हैं। अनुरोध तभी लागू होता है जब StCd स्वामी, मुख्य अभियंता और एक प्रशासक उसे अनुमोदित कर दें। |
+| `S09efdf` | upload | Workbook (.xlsx) | कार्यपुस्तिका (.xlsx) |
 | `S359a3b` | user_detail | Back to users | उपयोगकर्ताओं पर वापस जाएँ |
 | `Sf6fdbe` | user_detail, users | Delete | हटाएँ |
 | `S9afe6c` | user_detail | Delete user | उपयोगकर्ता हटाएँ |
@@ -4333,6 +4512,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sa58dac` | workbench | Set values on the Drafts | मसौदों पर मान सेट करें |
 | `Sa443bb` | workbench | Sign off the Drafts | मसौदों का साइन-ऑफ करें |
 | `S53f47f` | workbench | Sign-off pending | साइन-ऑफ लंबित |
+| `Sae12bc` | workbench | Status category | स्थिति श्रेणी |
 | `Sdc416e` | workbench | Step | चरण |
 | `Sf7710d` | workbench | Submit for review | समीक्षा के लिए जमा करें |
 | `Sa45adc` | workbench | Submit the Drafts | मसौदे जमा करें |
@@ -4345,7 +4525,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 
 ### 9.5 SA العربية 🇸🇦 — Arabic
 
-1295 of 1296 strings translated; direction right to left.
+1355 of 1356 strings translated; direction right to left.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -4356,13 +4536,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S141763` | _macros | Confirm with your password | أكّد بكلمة المرور |
 | `Sc326a4` | _macros, detail, form | Field | الحقل |
 | `S0a0f8a` | _macros | Field differences | فروق الحقول |
-| `Sbc9819` | _macros | Next | التالي |
+| `Sbc9819` | _macros, list | Next | التالي |
 | `S27cea7` | _macros | No field differences. | لا توجد فروق في الحقول. |
 | `S464e43` | _macros | on track | في الموعد |
 | `Sba2fff` | _macros, dashboard, success_metrics | overdue | متأخر |
-| `S600584` | _macros | Pages | الصفحات |
+| `S600584` | _macros, list | Pages | الصفحات |
 | `S810099` | _macros | Please check | يرجى التحقق |
-| `S50f942` | _macros | Previous | السابق |
+| `S50f942` | _macros, list | Previous | السابق |
 | `S83fd6e` | _macros, stalled | red after | أحمر بعد |
 | `S57e8a7` | _macros, success_metrics | slow | بطيء |
 | `S15198e` | _macros | Waiting since | في الانتظار منذ |
@@ -4393,10 +4573,10 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S06b6ac` | approval_queue, builder, detail | Identifier | المعرّف |
 | `S8e70d2` | approval_queue | Nothing is awaiting your approval. | لا شيء ينتظر موافقتك. |
 | `Sa74f16` | approval_queue, detail, review_queue | Reviewer | المراجع |
-| `S768e0c` | approval_queue, builder, detail | Title | العنوان |
+| `S768e0c` | approval_queue, builder, change | Title | العنوان |
 | `S33d306` | approval_queue, detail, mine | Waiting | الانتظار |
 | `S2cbacd` | audit_log | %(n)s total | الإجمالي %(n)s |
-| `S97c89a` | audit_log | Action | الإجراء |
+| `S97c89a` | audit_log, change | Action | الإجراء |
 | `Scbd19b` | audit_log | Actor | المنفّذ |
 | `S811bdf` | audit_log | Actor ID | معرّف المنفّذ |
 | `S8c85b1` | audit_log | after: | بعد: |
@@ -4407,7 +4587,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sc7fb31` | audit_log | Entity | الكيان |
 | `S04d694` | audit_log | Entity ID | معرّف الكيان |
 | `Sbb4e99` | audit_log | Entity Type | نوع الكيان |
-| `Sd7decf` | audit_log, index, language | Filter | تصفية |
+| `Sd7decf` | audit_log, changes, index | Filter | تصفية |
 | `S3f6605` | audit_log, delegations, software_versions | From | من |
 | `S0061b5` | audit_log | No matching audit entries. | لا توجد سجلات تدقيق مطابقة. |
 | `S01f79f` | audit_log | Scoped view: showing only actions you performed. | عرض مقيّد: تُعرض فقط الإجراءات التي نفّذتها أنت. |
@@ -4426,7 +4606,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sbe504f` | base | Skip to main content | انتقل إلى المحتوى الرئيسي |
 | `S1b9aeb` | base, dashboard | unread | غير مقروءة |
 | `S2da600` | base, export, export_center | Version | الإصدار |
-| `S12625b` | base | waiting | قيد الانتظار |
+| `S12625b` | base, change | waiting | قيد الانتظار |
 | `S5a4692` | base | You are covering for a colleague | أنت تنوب عن زميل |
 | `S8e9c15` | builder | Candidate revisions | المراجعات المرشحة |
 | `Sdf2aa0` | builder | Functional Group / Subgroup | المجموعة الوظيفية / المجموعة الفرعية |
@@ -4457,13 +4637,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S4105cf` | catalogue_health | exhausted | نفد |
 | `S57e8be` | catalogue_health, connections | Finding | النتيجة |
 | `S1150a1` | catalogue_health | Gaps | فجوات |
-| `S171a06` | catalogue_health, export, withdrawn_codes | Group | المجموعة |
-| `Sb4aadc` | catalogue_health, legacy_mapping | Hub Controller | وحدة تحكم المحور |
+| `S171a06` | catalogue_health, export, list | Group | المجموعة |
+| `Sb4aadc` | catalogue_health, legacy_mapping, list | Hub Controller | وحدة تحكم المحور |
 | `S8ae1c3` | catalogue_health | Left | المتبقي |
 | `S12c0f1` | catalogue_health | left | متبقٍ |
 | `Sa7b60b` | catalogue_health | Left % | المتبقي % |
 | `S36a883` | catalogue_health | low | منخفض |
-| `S1b123c` | catalogue_health, legacy_mapping, st_new | Main Controller | وحدة التحكم الرئيسية |
+| `S1b123c` | catalogue_health, legacy_mapping, list | Main Controller | وحدة التحكم الرئيسية |
 | `S92185d` | catalogue_health, index | Missing | مفقود |
 | `S57282a` | catalogue_health | Missing expected data | بيانات متوقعة مفقودة |
 | `Sb8e95b` | catalogue_health | None found. | لا شيء. |
@@ -4480,6 +4660,31 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S75a804` | catalogue_health | subgroup(s) are running out of numbers: | مجموعة فرعية/مجموعات فرعية توشك أرقامها على النفاد: |
 | `S5fec4f` | catalogue_health | Unused numbers inside a band | أرقام غير مستخدمة داخل نطاق |
 | `S02c0e4` | catalogue_health | Used | المستخدم |
+| `S84f219` | change | All three, each by a different person who did not make the request. | الثلاثة جميعاً، كلٌّ من شخص مختلف لم يقدّم الطلب. |
+| `S477aeb` | change, upload | and more | والمزيد |
+| `Sdeb9d0` | change, changes | Approvals | الموافقات |
+| `S7b2c7f` | change, detail, language | Approve | موافقة |
+| `S8aa57d` | change, detail | Changes | التغييرات |
+| `S3fe5e1` | change | Comment (required to reject) | تعليق (مطلوب عند الرفض) |
+| `Sb48001` | change | Mapping change | تغيير الربط |
+| `Sd7c1d0` | change, changes, list | Mapping changes | تغييرات الربط |
+| `Sf26140` | change, legacy_mapping, list | New identifier | المعرّف الجديد |
+| `Sf219cc` | change, list, row | Reason | السبب |
+| `S2b03b5` | change, detail | Reject | رفض |
+| `S5108c2` | change, changes | Requested by | مقدّم الطلب |
+| `S52d0b3` | change, changes, detail | Rows | الصفوف |
+| `S6c30d2` | change, dry_run, list | rows | صفوف |
+| `Sfabd38` | change | These rows changed after the request was made; it cannot be applied. Withdraw it and make it again: | تغيّرت هذه الصفوف بعد تقديم الطلب؛ ولا يمكن تطبيقه. اسحبه وقدّمه من جديد: |
+| `S47e564` | change, detail | Withdraw | سحب |
+| `S30d359` | change | Withdraw this request? | هل تسحب هذا الطلب؟ |
+| `S88c173` | change | You made this request; another person must decide. | أنت من قدّم هذا الطلب؛ يجب أن يقرر شخص آخر. |
+| `S04e02f` | change | Your role has decided already. | دورك قرّر بالفعل. |
+| `Sc7274c` | changes | Any state | أي حالة |
+| `S2a560c` | changes | Every change of the mapping is a request. It takes effect when the StCd Owner, the Chief Engineer and an Administrator have each approved it; one rejection closes it. | كل تغيير في الربط هو طلب. يسري عندما يوافق عليه كلٌّ من مالك StCd وكبير المهندسين ومسؤول؛ ويغلقه رفض واحد. |
+| `Sdef2eb` | changes, list, menu | Mapping | الربط |
+| `Se03e43` | changes | No request yet. | لا يوجد طلب بعد. |
+| `S5fc0e0` | changes | request(s) wait for your decision. | طلب/طلبات بانتظار قرارك. |
+| `Sa72502` | changes, detail, export | State | الحالة |
 | `S97fd13` | check | Back to the terms | العودة إلى المصطلحات |
 | `S1bc9e5` | check | English string | النص الإنجليزي |
 | `S5d54b3` | check | Every string uses the translated terms. | كل النصوص تستخدم المصطلحات المترجمة. |
@@ -4560,7 +4765,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S9b0b4c` | detail | also the files without an access level (all columns) | وأيضًا الملفات بلا مستوى وصول (كل الأعمدة) |
 | `Sf24c44` | detail | Any %(code)s Engineer | أي مهندس %(code)s |
 | `Sb99a01` | detail | Applies to software versions | ينطبق على إصدارات البرنامج |
-| `S7b2c7f` | detail, language | Approve | موافقة |
 | `Sde38bf` | detail | Approve selected | موافقة على المحدد |
 | `Scf2999` | detail | Approving confirms these values; any change you make here is applied and audited. Rejecting ignores them. | تؤكد الموافقة هذه القيم؛ وأي تغيير تجريه هنا يُطبَّق ويُدقَّق. أما الرفض فيتجاهلها. |
 | `Sf7f2d5` | detail | Archive (requires 180-day retention elapsed) | أرشفة (تتطلب انقضاء 180 يومًا من الاحتفاظ) |
@@ -4581,7 +4785,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S4572f4` | detail | Change request | طلب التغيير |
 | `S3295be` | detail, workbench | Change requests in this set | طلبات التغيير في هذه المجموعة |
 | `S4d8006` | detail | Change set | مجموعة تغييرات |
-| `S8aa57d` | detail | Changes | التغييرات |
 | `S3d14ea` | detail, export | Changes of this release only | تغييرات هذا الإصدار فقط |
 | `Sbd95c0` | detail | Checklist confirmed at sign-off | قائمة الفحص المؤكدة عند الاعتماد |
 | `S074d62` | detail, role badge | Chief Engineer | كبير المهندسين |
@@ -4599,7 +4802,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S7671b5` | detail | Confirm or override Audience Access | تأكيد أو تجاوز وصول الجمهور |
 | `S6512ee` | detail | Connection | الصلة |
 | `S4f9be0` | detail | Content | المحتوى |
-| `Sa36a5f` | detail, legacy_mapping, st_new | Controller | وحدة التحكم |
+| `Sa36a5f` | detail, legacy_mapping, list | Controller | وحدة التحكم |
 | `Scd293f` | detail | Converter Reactive Power Program | برنامج القدرة غير الفعالة للمحوّل |
 | `S3998a7` | detail | Copies the descriptive fields into a new Draft in a Main Controller group (a new number is allocated at submit; this code's identifier is kept as the legacy reference). | ينسخ الحقول الوصفية إلى مسودة جديدة في مجموعة وحدة التحكم الرئيسية (يُخصَّص رقم جديد عند التقديم؛ ويُحتفظ بمعرّف هذا الرمز كمرجع قديم). |
 | `S54b051` | detail | Copy this code for another turbine platform. The copy is a new Draft that links back here and goes through the normal review. | انسخ هذا الرمز لمنصة توربين أخرى. النسخة مسودة جديدة ترتبط بهذا الرمز وتمر بالمراجعة العادية. |
@@ -4733,7 +4936,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sf5ca9d` | detail | Recorded exports | عمليات التصدير المسجلة |
 | `Sa3f757` | detail | Reinstate to Released | إعادة إلى منشور |
 | `S3238ca` | detail | Reinstatement reason | سبب إعادة العمل |
-| `S2b03b5` | detail | Reject | رفض |
 | `S27fb5c` | detail | Reject selected | رفض المحدد |
 | `S045c2c` | detail | Related codes | الرموز ذات الصلة |
 | `S33a5a7` | detail | Relation | العلاقة |
@@ -4751,7 +4953,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S4c1aa6` | detail | Repeated-Error Escalation | تصعيد الأخطاء المتكررة |
 | `S4aed03` | detail | Request | طلب |
 | `Sf3421a` | detail | Request a Sign-Off | طلب اعتماد |
-| `Sc26bf6` | detail, mine | Requested | مطلوب |
+| `Sc26bf6` | detail, mine, row | Requested | مطلوب |
 | `S2706ed` | detail | Required by | مطلوب من |
 | `S619e87` | detail, form | Reset Delay | تأخير إعادة الضبط |
 | `S026ab2` | detail | resolved | تم الحل |
@@ -4761,7 +4963,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S3beb9a` | detail | Revision | المراجعة |
 | `Sa72973` | detail | Revision Fields | حقول التنقيح |
 | `Sfc1d6a` | detail | row(s) imported as Drafts | صف/صفوف استُوردت كمسودات |
-| `S52d0b3` | detail, reconciliation, user_detail | Rows | الصفوف |
 | `Sd0edfb` | detail | Sales | المبيعات |
 | `S241bf5` | detail, workbench | Sample number | رقم العيّنة |
 | `Sda38c6` | detail | Save planned dates | حفظ التواريخ المخطط لها |
@@ -4780,11 +4981,10 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sece2ac` | detail, form | Slot | الخانة |
 | `Sff44d2` | detail | Software Version | إصدار البرنامج |
 | `S169bf7` | detail, export, software_versions | Software version | إصدار البرنامج |
-| `S6da13a` | detail, fleet_feedback | Source | المصدر |
+| `S6da13a` | detail, fleet_feedback, row | Source | المصدر |
 | `Sd3c56b` | detail, export_profiles | source language | لغة المصدر |
 | `Sb3883f` | detail | Standards | المعايير |
 | `Sfaa9e7` | detail, reconciliation | Started | بدأ |
-| `Sa72502` | detail, export, hub_consolidation | State | الحالة |
 | `Se246b6` | detail, form, list | Status Category | فئة الحالة |
 | `S779953` | detail, form | Status Code for Repeated Error | رمز الحالة للخطأ المتكرر |
 | `S98a377` | detail | Still a Draft. | ما زال مسودة. |
@@ -4803,7 +5003,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Seaf576` | detail, form | Trigger Snapshot | تشغيل لقطة |
 | `S285ec8` | detail, form | Troubleshooting | استكشاف الأخطاء |
 | `S71bba4` | detail | Turbine Operator Package | حزمة مشغّل التوربين |
-| `S3deb74` | detail, mine, review_queue | Type | النوع |
+| `S3deb74` | detail, list, mine | Type | النوع |
 | `Sab631e` | detail | Type %(id)s to confirm | اكتب %(id)s للتأكيد |
 | `Sb5e264` | detail | Type the identifier to confirm | اكتب المعرّف للتأكيد |
 | `S835f8a` | detail | Umrichterprogramm GSC | برنامج المحوّل GSC |
@@ -4822,7 +5022,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S51ecc5` | detail | What happens next | ما الذي يحدث بعد ذلك |
 | `Sf323c0` | detail | Where used | أين يُستخدم |
 | `S7d5316` | detail | Who | من |
-| `S47e564` | detail | Withdraw | سحب |
 | `S51a998` | detail | Withdraw this change request? | سحب طلب التغيير هذا؟ |
 | `S93ef7c` | detail, workbench | Workbench | مساحة العمل |
 | `S95a2a4` | detail, form | Write level | مستوى الكتابة |
@@ -4842,7 +5041,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sec0298` | dry_run | Result per row | النتيجة لكل صف |
 | `S9bf7a8` | dry_run | Row | الصف |
 | `S3ff0b0` | dry_run | row(s) have problems. Nothing has been created. | صف/صفوف بها مشكلات. لم يُنشأ شيء. |
-| `S6c30d2` | dry_run | rows | صفوف |
 | `S8012ff` | dry_run | unchanged | دون تغيير |
 | `S83d655` | dry_run, st_preview | warning(s) | تحذير/تحذيرات |
 | `S9ddad9` | dry_run | would be created | سيتم إنشاؤها |
@@ -4984,6 +5182,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S285edc` | help and messages | %(ok)s of %(n)s: %(what)s. | %(ok)s من %(n)s: %(what)s. |
 | `Sb08e6c` | help and messages | A Reviewer and an Administrator each sign off (in any order). If either rejects, it goes back to the author. | يوقّع مراجع ومسؤول كلٌّ على حدة (بأي ترتيب). إن رفض أحدهما عاد إلى المؤلف. |
 | `S2f1bed` | help and messages | An Administrator includes the revision in a Release and publishes it; then it is Released. | يضمّن المسؤول المراجعة في إصدار وينشره؛ فتصبح منشورة. |
+| `S9477fd` | help and messages | choose | اختر |
 | `S1308dc` | help and messages | defective codes sent back | أُعيدت الرموز المعيبة |
 | `Se2bbd9` | help and messages | Drafts saved | حُفظت المسودات |
 | `S0ddfa5` | help and messages | Drafts signed off | اعتُمدت المسودات |
@@ -4995,7 +5194,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sce489f` | help and messages | The author gets any required cross-domain sign-offs, then submits the change request for review. | يحصل المؤلف على الاعتمادات متعددة المجالات المطلوبة ثم يقدّم طلب التغيير للمراجعة. |
 | `S1cdbdd` | help and messages | The Chief Engineer approves or rejects. Approval makes the revision Approved (or Deprecated for a deprecation request). | يوافق كبير المهندسين أو يرفض. تجعل الموافقة المراجعة معتمدة (أو متقادمة لطلب تقادم). |
 | `S2d6ac0` | help and messages | The package is being built. Reload this page to follow its progress. | جارٍ إنشاء الحزمة. أعد تحميل هذه الصفحة لمتابعة التقدم. |
-| `Sde7a5b` | help and messages | The program files do not carry a category; you can change it in each Draft. | لا تحمل ملفات البرامج فئة؛ ويمكنك تغييرها في كل مسودة. |
 | `Scff3a3` | help and messages | User deleted; its name and address are erased, what it did stays attributable. | تم حذف المستخدم؛ مُسح اسمه وعنوانه، وما فعله يبقى منسوباً إليه. |
 | `Secfb3f` | hub_consolidation | Deprecate replaced Hub codes | وسم رموز المحور المستبدلة كمتقادمة |
 | `S0e7766` | hub_consolidation, language | draft | مسودة |
@@ -5006,7 +5204,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sc50c53` | hub_consolidation | Hub Controller to Main Controller consolidation | دمج وحدة تحكم المحور في وحدة التحكم الرئيسية |
 | `Scd189f` | hub_consolidation | Hub group | مجموعة المحور |
 | `Sa5262b` | hub_consolidation | If the Hub Controller leaves the hardware setup, its codes are defined anew on the Main Controller side. Create an MC draft from an HC code on its detail page (Actions); this report shows how far each has come. Nothing is renumbered. | إذا خرجت وحدة تحكم المحور من إعداد العتاد فتُعرَّف رموزها من جديد في جانب وحدة التحكم الرئيسية. أنشئ مسودة MC من رمز HC في صفحة تفاصيله (الإجراءات)؛ ويبيّن هذا التقرير مدى تقدم كل منها. لا يُعاد ترقيم شيء. |
-| `Sdd6555` | hub_consolidation, legacy_mapping, st_preview | Legacy no. | الرقم القديم |
+| `Sdd6555` | hub_consolidation, legacy_mapping, list | Legacy no. | الرقم القديم |
 | `S845a2b` | hub_consolidation | No Hub Controller codes yet. | لا توجد رموز لوحدة تحكم المحور بعد. |
 | `S138665` | hub_consolidation | Open deprecation requests | فتح طلبات التقادم |
 | `Sc8df93` | hub_consolidation | Open deprecation requests for all replaced Hub codes of this group? | فتح طلبات تقادم لكل رموز المحور المستبدلة في هذه المجموعة؟ |
@@ -5065,7 +5263,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sded18c` | language | approved by | اعتمده |
 | `Sedd46e` | language | Check against the interface | مطابقة مع الواجهة |
 | `S5a013c` | language | missing | مفقود |
-| `S2c924e` | language, workbench | Note | ملاحظة |
+| `S2c924e` | language, row, workbench | Note | ملاحظة |
 | `S2f09d0` | language | Note on %(x)s | ملاحظة على %(x)s |
 | `S75bf99` | language | proposed by | اقترحه |
 | `Sc68e32` | language | Save translations | حفظ الترجمات |
@@ -5073,14 +5271,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S542818` | language | Terms of the language | مصطلحات اللغة |
 | `Sae9e5d` | language | Translation of %(x)s | ترجمة %(x)s |
 | `S863fd0` | language | Your own proposal: another person approves it. | اقتراحك أنت: يعتمده شخص آخر. |
-| `Sf9d469` | legacy_mapping | All controllers | كل وحدات التحكم |
+| `Sf9d469` | legacy_mapping, list | All controllers | كل وحدات التحكم |
 | `Se61c2f` | legacy_mapping | Any number state | أي حالة رقم |
 | `S7c4f77` | legacy_mapping | issued | صادرة |
 | `Sfd5ec0` | legacy_mapping, menu, new | Legacy mapping | ربط القديم بالجديد |
 | `S81f567` | legacy_mapping | Legacy number to new identifier | الرقم القديم إلى المعرّف الجديد |
 | `S64b267` | legacy_mapping | legacy number, identifier or name | الرقم القديم أو المعرّف أو الاسم |
 | `S60fe6c` | legacy_mapping | new codes without a legacy number (n/a) | رموز جديدة بلا رقم قديم (غير متاح) |
-| `Sf26140` | legacy_mapping, st_preview | New identifier | المعرّف الجديد |
 | `Sf573c8` | legacy_mapping | no number yet | لا رقم بعد |
 | `S7877c5` | legacy_mapping | No status code carries a legacy number yet. | لا يحمل أي رمز حالة رقمًا قديمًا بعد. |
 | `Sb7baa1` | legacy_mapping | Number | الرقم |
@@ -5089,10 +5286,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S8b0b7c` | legacy_mapping | with a legacy number | برقم قديم |
 | `Seba07b` | list | A change set groups the change requests that ship with one controller software release, so reviewers see the whole package. Each request is still decided on its own. | تجمع مجموعة التغييرات طلبات التغيير التي تصدر مع إصدار واحد من برنامج وحدة التحكم، ليرى المراجعون الحزمة كاملة. يبقى كل طلب مقرَّرًا بمفرده. |
 | `Sc5fe02` | list | any | أي |
+| `S55201a` | list | Any status | أي وضع |
 | `Sef5415` | list | Apply columns | تطبيق الأعمدة |
+| `Sffb569` | list | Ask for approval of the ticked rows | اطلب الموافقة على الصفوف المحددة |
 | `S162a45` | list, menu | Change Sets | مجموعات التغيير |
 | `S9e895f` | list | Change sets | مجموعات التغيير |
 | `Scf723c` | list | Columns | الأعمدة |
+| `S2ddaf9` | list, upload | Compare a workbook | مقارنة مصنف |
 | `Seb0fd2` | list | Delete all my Drafts of this filter | حذف كل مسوداتي في هذا المرشح |
 | `S36f212` | list | Delete ALL of your own Drafts that match this filter, on every page? | هل تريد حذف جميع مسوداتك التي تطابق هذا المرشح في كل الصفحات؟ |
 | `Sc554a1` | list | Delete selected Drafts | حذف المسودات المحددة |
@@ -5102,12 +5302,18 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S44d25b` | list | Items | العناصر |
 | `S033df3` | list | Lifecycle | دورة الحياة |
 | `Sb4cad6` | list | Link to this view | رابط لهذا العرض |
+| `Sbdb4e1` | list | Load the initial mapping | تحميل الربط الأولي |
+| `Se07018` | list | Make the request | قدّم الطلب |
 | `Se248d5` | list, new | New change set | مجموعة تغيير جديدة |
 | `Se75aa1` | list, new | New Release | إصدار جديد |
+| `S9bb526` | list, row | New row | صف جديد |
 | `Se5076c` | list | No change sets yet. | لا توجد مجموعات تغيير بعد. |
 | `Sd32c03` | list | No releases yet. | لا توجد إصدارات بعد. |
+| `Sb5b22c` | list | No row matches. | لا يوجد صف مطابق. |
 | `Sc3af43` | list | No saved searches yet. | لا توجد عمليات بحث محفوظة. |
 | `S0cb400` | list | No status codes match these filters. | لا توجد رموز حالة تطابق عوامل التصفية هذه. |
+| `S260f7a` | list, row | Node | عقدة |
+| `S08250b` | list | number, title or group | رقم أو عنوان أو مجموعة |
 | `Sf7194e` | list | Requests | الطلبات |
 | `S37a530` | list | result | نتيجة |
 | `Scdf7e9` | list | results | نتائج |
@@ -5116,10 +5322,14 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sff86e9` | list | Save the current filters as | حفظ عوامل التصفية الحالية باسم |
 | `Sed1d84` | list | Saved searches | عمليات البحث المحفوظة |
 | `S859822` | list, mine | Select | تحديد |
+| `S45b553` | list | Select all rows | تحديد كل الصفوف |
 | `S7f5583` | list, menu | Status Codes | رموز الحالة |
 | `S20bff1` | list | Status codes | رموز الحالة |
+| `S3a1066` | list | The mapping is empty. | الربط فارغ. |
+| `S27d95b` | list | The rows stay as they are. Once the StCd Owner, the Chief Engineer and an Administrator approve, they count as approved numbers. | تبقى الصفوف كما هي. وعندما يوافق مالك StCd وكبير المهندسين ومسؤول، تُعدّ أرقاماً معتمدة. |
 | `Se90eb0` | list | Turbine Platform | منصة التوربين |
 | `S86b1e7` | list | Typos are tolerated: "convertor" still finds "converter". | الأخطاء الطباعية مسموحة: "convertor" ما زال يجد "converter". |
+| `Sb0c551` | list | Which legacy status code becomes which new one, with what the program files do not carry: the English title, the type, the up/down counter, the access levels, cause and directive. A row changes only by a request that the StCd Owner, the Chief Engineer and an Administrator all approve. | أي رمز حالة قديم يصبح أي رمز جديد، مع ما لا تحتويه ملفات البرامج: العنوان الإنجليزي، والنوع، والعدّاد التصاعدي/التنازلي، ومستويات الوصول، والسبب، والتوجيه. لا يتغير الصف إلا بطلب يوافق عليه مالك StCd وكبير المهندسين ومسؤول جميعاً. |
 | `Sf7c400` | login | Log in | تسجيل الدخول |
 | `S175835` | login | or | أو |
 | `S8be3c9` | login, users | Password | كلمة المرور |
@@ -5281,6 +5491,23 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S8cb56e` | message: lookup_admin_service | range_end must be greater than range_start | يجب أن تكون range_end أكبر من range_start |
 | `Se3a971` | message: lookup_admin_service | sub_range_end must be greater than sub_range_start | يجب أن تكون sub_range_end أكبر من sub_range_start |
 | `S1404e3` | message: lookup_service | functional_system_group query parameter is required for functional-subgroups | معامل الاستعلام functional_system_group مطلوب لـ functional-subgroups |
+| `Sf28681` | message: mapping_service | Give the reason for the change; the three approvers read it first. | اذكر سبب التغيير؛ يقرؤه المعتمدون الثلاثة أولاً. |
+| `S062788` | message: mapping_service | Give the request a title of at most 120 characters. | أعطِ الطلب عنواناً لا يزيد على 120 حرفاً. |
+| `S2ea56f` | message: mapping_service | Mapping change not found | لم يُعثر على تغيير الربط |
+| `S2c9363` | message: mapping_service | Mapping row not found | لم يُعثر على صف الربط |
+| `S2d5693` | message: mapping_service | Only the person who made the request can withdraw it. | لا يستطيع سحب الطلب إلا الشخص الذي قدّمه. |
+| `S682269` | message: mapping_service | Only the StCd Owner, the Chief Engineer and an Administrator decide on the mapping. | يقرر في شأن الربط فقط مالك StCd وكبير المهندسين ومسؤول. |
+| `S5e0f66` | message: mapping_service | Say why you reject the request. | اذكر سبب رفضك للطلب. |
+| `S3d5cfc` | message: mapping_service | The comment is longer than 1000 characters. | التعليق أطول من 1000 حرف. |
+| `S82b817` | message: mapping_service | The decision must be APPROVE or REJECT. | يجب أن يكون القرار APPROVE أو REJECT. |
+| `S9ec08a` | message: mapping_service | The file is not a readable .xlsx workbook. | الملف ليس مصنف .xlsx قابلاً للقراءة. |
+| `S3831f7` | message: mapping_service | The reason is longer than 2000 characters. | السبب أطول من 2000 حرف. |
+| `Sa5de7d` | message: mapping_service | The request contains no row. | الطلب لا يحتوي على أي صف. |
+| `S2116e4` | message: mapping_service | The request is already closed. | الطلب مغلق بالفعل. |
+| `S8518e7` | message: mapping_service | The role has decided already. | هذا الدور قرّر بالفعل. |
+| `S2a15d7` | message: mapping_service | The workbook is larger than 5 MB. | المصنف أكبر من 5 ميجابايت. |
+| `S8eb912` | message: mapping_service | The workbook unpacks to more than 80 MB. | المصنف يتجاوز 80 ميجابايت بعد فك الضغط. |
+| `S6c1d08` | message: mapping_service | Your role may not propose a change of the mapping. | لا يجوز لدورك اقتراح تغيير في الربط. |
 | `S4ada2b` | message: notification_service | Notification not found | الإشعار غير موجود |
 | `Sd92b89` | message: notification_service | This notification belongs to someone else. | هذا الإشعار يخص شخصًا آخر. |
 | `Sb0cd00` | message: numbering_service | Identifier override must match StCd-NNNNN (five digits). | يجب أن يطابق المعرّف المتجاوَز الصيغة StCd-NNNNN (خمس خانات). |
@@ -5312,8 +5539,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S9671fb` | message: settings_service | must be true or false | يجب أن تكون true أو false |
 | `S5166bb` | message: st_import_service | A staged file changed after the preview. Upload again. | تغيّر ملف مُجهَّز بعد المعاينة. ارفعه مرة أخرى. |
 | `Saa4de2` | message: st_import_service | controller must be auto, MC or HC | يجب أن تكون controller إحدى auto أو MC أو HC |
-| `Sa30251` | message: st_import_service | default_category must be ERROR, WARNING or INFO | يجب أن تكون default_category إحدى ERROR أو WARNING أو INFO |
-| `Sfe694a` | message: st_import_service | hc_proposal must be 1 or 2 | يجب أن تكون hc_proposal 1 أو 2 |
 | `S58bec3` | message: st_import_service | No StCd program files found. Upload .st files or a ZIP of them. | لم يُعثر على ملفات برامج StCd. ارفع ملفات .st أو ملف ZIP منها. |
 | `Sd9c5b0` | message: st_import_service | Nothing selected: tick at least one program that is ready. | لم يُحدَّد شيء: حدّد برنامجًا جاهزًا واحدًا على الأقل. |
 | `S5dbbd0` | message: st_import_service | The code is no longer an open Draft; preview the files again. | لم يعد الرمز مسودة مفتوحة؛ اعرض معاينة الملفات مرة أخرى. |
@@ -5460,6 +5685,23 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S05fc94` | role badge | Engineer | مهندس |
 | `S3c0e8a` | role badge | StCd Owner | مالك StCd |
 | `Sdbad9f` | role badge | Viewer | مشاهد |
+| `S7f2e4b` | row | Access levels | مستويات الوصول |
+| `S08f985` | row | Cause | السبب |
+| `S164e0b` | row | Directive | التوجيه |
+| `S283474` | row | New number | رقم جديد |
+| `Sfa6fdd` | row | No request yet. The row is as it was loaded. | لا يوجد طلب بعد. الصف كما تم تحميله. |
+| `Sf790fc` | row | Nothing is changed here directly: the form makes a request, and the row changes after the StCd Owner, the Chief Engineer and an Administrator have approved it. | لا يتغير شيء هنا مباشرة: النموذج يقدّم طلباً، ويتغير الصف بعد موافقة مالك StCd وكبير المهندسين ومسؤول. |
+| `S9d728f` | row | Request approval of the number | اطلب الموافقة على الرقم |
+| `Sc8978f` | row | Request rejection of the number | اطلب رفض الرقم |
+| `Sc644eb` | row | Request that this number is never used? | هل تطلب ألا يُستخدم هذا الرقم أبداً؟ |
+| `Sb25913` | row | Request the new row | اطلب الصف الجديد |
+| `Sb04301` | row | Request this change | اطلب هذا التغيير |
+| `Sae91b6` | row | Requests for this row | طلبات هذا الصف |
+| `Sd59701` | row | Reset delay (parameter) | تأخير إعادة الضبط (معامل) |
+| `Sfd64cd` | row | Set delay (parameter) | تأخير الضبط (معامل) |
+| `S9c0444` | row | The three approvers read the reason first. | يقرأ المعتمدون الثلاثة السبب أولاً. |
+| `Sc84745` | row | Title (English) | العنوان (بالإنجليزية) |
+| `S711eea` | row | Up/down counter | عدّاد تصاعدي/تنازلي |
 | `S913aba` | settings | Save settings | حفظ الإعدادات |
 | `Sb68734` | software_versions | Added | المُضافة |
 | `S172415` | software_versions | added | أُضيفت |
@@ -5473,28 +5715,19 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd97d1e` | software_versions | Show | عرض |
 | `S42ea2e` | software_versions | Software Versions | إصدارات البرنامج |
 | `S3bd89c` | software_versions | Which codes exist in which software version | أي الرموز موجودة في أي إصدار برنامج |
-| `S16e5d4` | st_new, st_preview | Alarm type | نوع الإنذار |
-| `S726d7a` | st_new | as above | كما سبق |
-| `S9477fd` | st_new, st_preview | choose | اختر |
 | `Sb149ca` | st_new | Detect: a number from 10000 up is a Hub Controller program | اكتشاف: الرقم من 10000 فأكثر برنامج لوحدة تحكم المحور |
 | `S7d06d0` | st_new | Every imported program becomes an ordinary Draft with the number it carries reserved. It still needs Cross-Domain Sign-Off, dual review and Chief Engineer approval before Release, and all Drafts of one import share a change set. | يصبح كل برنامج مستورد مسودة عادية يُحجز له الرقم الذي يحمله. ما زال يتطلب اعتمادًا متعدد المجالات ومراجعة مزدوجة وموافقة كبير المهندسين قبل الإصدار، وتشترك كل مسودات استيراد واحد في مجموعة تغييرات. |
-| `Sbda77c` | st_new | Every program names an alarm type. A type left at "as above" gets the category chosen above; the next page lets you set the category of single programs or of all ticked ones. | يذكر كل برنامج نوع إنذار. النوع المتروك عند «كما سبق» يحصل على الفئة المختارة أعلاه؛ وفي الصفحة التالية يمكنك تعيين فئة برامج منفردة أو كل البرامج المحددة. |
 | `S3b9e43` | st_new | Hub Controller (legacy numbers, mapped to the new ones) | وحدة تحكم المحور (أرقام قديمة، مربوطة بالجديدة) |
 | `Sd7333f` | st_new | Import status codes from .st files | استيراد رموز الحالة من ملفات .st |
-| `S6640a6` | st_new | New number of Hub Controller programs | الرقم الجديد لبرامج وحدة تحكم المحور |
 | `Sc0eff1` | st_new | Or a whole folder | أو مجلد كامل |
 | `S94ddc1` | st_new | Program files (.st) or a ZIP | ملفات البرامج (.st) أو ملف ZIP |
-| `Sd99e2a` | st_new | Proposal 1: five-digit numbers (11000 and up) | الاقتراح 1: أرقام من خمس خانات (من 11000 فأكثر) |
-| `S2744b0` | st_new | Proposal 2: inside the Main Controller scheme | الاقتراح 2: ضمن مخطط وحدة التحكم الرئيسية |
 | `S67640d` | st_new | Read files and preview | قراءة الملفات والمعاينة |
-| `S0af4fc` | st_new | Status category by alarm type (optional) | فئة الحالة حسب نوع الإنذار (اختياري) |
-| `S234237` | st_new | Status category of the new codes | فئة الحالة للرموز الجديدة |
-| `S61fc52` | st_new | The program files do not carry a category and none is assumed: choose one here, by alarm type below, or for each program in the preview. A program without a category is not imported. | لا تحتوي ملفات البرامج على فئة ولا يتم افتراض أي فئة: اختر فئة هنا، أو حسب نوع الإنذار أدناه، أو لكل برنامج في المعاينة. لا يتم استيراد برنامج بدون فئة. |
+| `Saa9df6` | st_new | The title, the type and the access levels of every program come from the mapping, never from the files. A program whose number is not in the mapping is blocked. | عنوان كل برنامج ونوعه ومستويات الوصول فيه تأتي من الربط، وليس من الملفات أبداً. البرنامج الذي لا يوجد رقمه في الربط محجوب. |
 | `S8f4c21` | st_new | Turbine platforms | منصات التوربين |
 | `S9ad4d4` | st_new | Upload the generated StCd_<n>.st programs — several files at once, a whole folder, or one ZIP. Nothing is created yet: the next page lists every program so you can tick the ones to import. | ارفع برامج StCd_<n>.st المولَّدة — عدة ملفات دفعة واحدة أو مجلدًا كاملًا أو ملف ZIP واحدًا. لا يُنشأ شيء بعد: تسرد الصفحة التالية كل برنامج لتحدد ما تريد استيراده. |
+| `S16e5d4` | st_preview | Alarm type | نوع الإنذار |
 | `S2693e5` | st_preview | All Drafts of this import join one change set, so they can be reviewed and decided together. | تنضم كل مسودات هذا الاستيراد إلى مجموعة تغييرات واحدة، لتُراجَع وتُقرَّر معًا. |
 | `Scbc694` | st_preview | already in the catalogue | موجودة في الكتالوج |
-| `Sc00673` | st_preview | Apply to the ticked programs | تطبيق على البرامج المحددة |
 | `Sdf88b8` | st_preview | blocked | محظورة |
 | `S6f7703` | st_preview | Changed and withdrawn programs are not ticked: tick the ones you want to update, revise or restore. | لا تُحدَّد البرامج المتغيّرة والمسحوبة: حدّد ما تريد تحديثه أو تنقيحه أو استعادته. |
 | `S78bb8b` | st_preview | Create Drafts for the ticked programs | إنشاء مسودات للبرامج المحددة |
@@ -5512,8 +5745,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se58289` | st_preview | Programs found in the uploaded files | البرامج الموجودة في الملفات المرفوعة |
 | `S75c053` | st_preview, workbench | ready | جاهزة |
 | `S0723bf` | st_preview | Select all programs that are ready | تحديد كل البرامج الجاهزة |
-| `Sae12bc` | st_preview, workbench | Status category | فئة الحالة |
-| `Sd7a322` | st_preview | Status category of the ticked programs | فئة الحالة للبرامج المحددة |
+| `S9a2439` | st_preview | Type (from the mapping) | النوع (من الربط) |
 | `S1a767a` | st_preview | updates the open Draft | يحدّث المسودة المفتوحة |
 | `S02499f` | st_preview | withdrawn | مسحوبة |
 | `Sf0c3cf` | st_preview | without a legacy number | بلا رقم قديم |
@@ -5576,6 +5808,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S2fd88e` | translations | Copy from previous revision | نسخ من المراجعة السابقة |
 | `Se522f0` | translations | Save draft translation | حفظ مسودة الترجمة |
 | `Scb0b87` | translations | source language text of revision | نص لغة المصدر للمراجعة |
+| `S01209c` | upload | Also ask for approval of the unchanged rows that are only proposed | اطلب أيضاً الموافقة على الصفوف غير المعدّلة المقترحة فقط |
+| `Sddf8d9` | upload | Compare and make the request | قارن وقدّم الطلب |
+| `S028ebe` | upload | Download the current mapping | تنزيل الربط الحالي |
+| `S23bfbf` | upload | The workbook has problems. Nothing was requested. | في المصنف مشكلات. لم يُطلب شيء. |
+| `S24d49d` | upload | Title of the request | عنوان الطلب |
+| `S88809a` | upload | Upload the corrected mapping as a workbook with the sheets MC and HC (download the current one as a model). Every new row and every row that differs becomes one request; rows the workbook does not mention stay as they are. The request takes effect only after the StCd Owner, the Chief Engineer and an Administrator have approved it. | ارفع الربط المصحّح كمصنف يضم الورقتين MC وHC (نزّل الحالي كنموذج). كل صف جديد وكل صف مختلف يصبح طلباً واحداً؛ والصفوف التي لا يذكرها المصنف تبقى كما هي. لا يسري الطلب إلا بعد موافقة مالك StCd وكبير المهندسين ومسؤول. |
+| `S09efdf` | upload | Workbook (.xlsx) | مصنف (.xlsx) |
 | `S359a3b` | user_detail | Back to users | العودة إلى المستخدمين |
 | `Sf6fdbe` | user_detail, users | Delete | حذف |
 | `S9afe6c` | user_detail | Delete user | حذف المستخدم |
@@ -5635,6 +5874,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sa58dac` | workbench | Set values on the Drafts | تعيين قيم على المسودات |
 | `Sa443bb` | workbench | Sign off the Drafts | اعتماد المسودات |
 | `S53f47f` | workbench | Sign-off pending | اعتماد معلّق |
+| `Sae12bc` | workbench | Status category | فئة الحالة |
 | `Sdc416e` | workbench | Step | الخطوة |
 | `Sf7710d` | workbench | Submit for review | تقديم للمراجعة |
 | `Sa45adc` | workbench | Submit the Drafts | تقديم المسودات |
@@ -5647,7 +5887,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 
 ### 9.6 IN বাংলা 🇮🇳 — Bengali
 
-1295 of 1296 strings translated; direction left to right.
+1355 of 1356 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -5658,13 +5898,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S141763` | _macros | Confirm with your password | আপনার পাসওয়ার্ড দিয়ে নিশ্চিত করুন |
 | `Sc326a4` | _macros, detail, form | Field | ফিল্ড |
 | `S0a0f8a` | _macros | Field differences | ফিল্ডের পার্থক্য |
-| `Sbc9819` | _macros | Next | পরের |
+| `Sbc9819` | _macros, list | Next | পরের |
 | `S27cea7` | _macros | No field differences. | ফিল্ডের কোনো পার্থক্য নেই। |
 | `S464e43` | _macros | on track | সময়মতো |
 | `Sba2fff` | _macros, dashboard, success_metrics | overdue | বিলম্বিত |
-| `S600584` | _macros | Pages | পৃষ্ঠা |
+| `S600584` | _macros, list | Pages | পৃষ্ঠা |
 | `S810099` | _macros | Please check | অনুগ্রহ করে যাচাই করুন |
-| `S50f942` | _macros | Previous | আগের |
+| `S50f942` | _macros, list | Previous | আগের |
 | `S83fd6e` | _macros, stalled | red after | এর পরে লাল |
 | `S57e8a7` | _macros, success_metrics | slow | ধীর |
 | `S15198e` | _macros | Waiting since | অপেক্ষায়, থেকে |
@@ -5695,10 +5935,10 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S06b6ac` | approval_queue, builder, detail | Identifier | শনাক্তকারী |
 | `S8e70d2` | approval_queue | Nothing is awaiting your approval. | আপনার অনুমোদনের অপেক্ষায় কিছু নেই। |
 | `Sa74f16` | approval_queue, detail, review_queue | Reviewer | পর্যালোচক |
-| `S768e0c` | approval_queue, builder, detail | Title | শিরোনাম |
+| `S768e0c` | approval_queue, builder, change | Title | শিরোনাম |
 | `S33d306` | approval_queue, detail, mine | Waiting | অপেক্ষা |
 | `S2cbacd` | audit_log | %(n)s total | মোট %(n)s |
-| `S97c89a` | audit_log | Action | কার্যক্রম |
+| `S97c89a` | audit_log, change | Action | কার্যক্রম |
 | `Scbd19b` | audit_log | Actor | কর্তা |
 | `S811bdf` | audit_log | Actor ID | কর্তার আইডি |
 | `S8c85b1` | audit_log | after: | পরে: |
@@ -5709,7 +5949,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sc7fb31` | audit_log | Entity | সত্তা |
 | `S04d694` | audit_log | Entity ID | সত্তার আইডি |
 | `Sbb4e99` | audit_log | Entity Type | সত্তার ধরন |
-| `Sd7decf` | audit_log, index, language | Filter | ফিল্টার |
+| `Sd7decf` | audit_log, changes, index | Filter | ফিল্টার |
 | `S3f6605` | audit_log, delegations, software_versions | From | থেকে |
 | `S0061b5` | audit_log | No matching audit entries. | মিলে যাওয়া কোনো অডিট এন্ট্রি নেই। |
 | `S01f79f` | audit_log | Scoped view: showing only actions you performed. | সীমিত দৃশ্য: শুধু আপনার নিজের কাজগুলো দেখানো হচ্ছে। |
@@ -5728,7 +5968,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sbe504f` | base | Skip to main content | মূল বিষয়বস্তুতে যান |
 | `S1b9aeb` | base, dashboard | unread | অপঠিত |
 | `S2da600` | base, export, export_center | Version | সংস্করণ |
-| `S12625b` | base | waiting | অপেক্ষমাণ |
+| `S12625b` | base, change | waiting | অপেক্ষমাণ |
 | `S5a4692` | base | You are covering for a colleague | আপনি একজন সহকর্মীর জায়গায় কাজ করছেন |
 | `S8e9c15` | builder | Candidate revisions | প্রার্থী সংশোধন |
 | `Sdf2aa0` | builder | Functional Group / Subgroup | কার্যকরী গ্রুপ / উপগ্রুপ |
@@ -5759,13 +5999,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S4105cf` | catalogue_health | exhausted | নিঃশেষিত |
 | `S57e8be` | catalogue_health, connections | Finding | পর্যবেক্ষণ |
 | `S1150a1` | catalogue_health | Gaps | ফাঁক |
-| `S171a06` | catalogue_health, export, withdrawn_codes | Group | গ্রুপ |
-| `Sb4aadc` | catalogue_health, legacy_mapping | Hub Controller | হাব নিয়ন্ত্রক |
+| `S171a06` | catalogue_health, export, list | Group | গ্রুপ |
+| `Sb4aadc` | catalogue_health, legacy_mapping, list | Hub Controller | হাব নিয়ন্ত্রক |
 | `S8ae1c3` | catalogue_health | Left | বাকি |
 | `S12c0f1` | catalogue_health | left | বাকি |
 | `Sa7b60b` | catalogue_health | Left % | বাকি % |
 | `S36a883` | catalogue_health | low | কম |
-| `S1b123c` | catalogue_health, legacy_mapping, st_new | Main Controller | প্রধান নিয়ন্ত্রক |
+| `S1b123c` | catalogue_health, legacy_mapping, list | Main Controller | প্রধান নিয়ন্ত্রক |
 | `S92185d` | catalogue_health, index | Missing | অনুপস্থিত |
 | `S57282a` | catalogue_health | Missing expected data | প্রত্যাশিত ডেটা অনুপস্থিত |
 | `Sb8e95b` | catalogue_health | None found. | কিছু পাওয়া যায়নি। |
@@ -5782,6 +6022,31 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S75a804` | catalogue_health | subgroup(s) are running out of numbers: | উপগ্রুপের সংখ্যা ফুরিয়ে আসছে: |
 | `S5fec4f` | catalogue_health | Unused numbers inside a band | ব্যান্ডের ভেতরে অব্যবহৃত নম্বর |
 | `S02c0e4` | catalogue_health | Used | ব্যবহৃত |
+| `S84f219` | change | All three, each by a different person who did not make the request. | তিনটিই, প্রতিটি আলাদা ব্যক্তির দ্বারা, যিনি অনুরোধ করেননি। |
+| `S477aeb` | change, upload | and more | এবং আরও |
+| `Sdeb9d0` | change, changes | Approvals | অনুমোদন |
+| `S7b2c7f` | change, detail, language | Approve | অনুমোদন করুন |
+| `S8aa57d` | change, detail | Changes | পরিবর্তন |
+| `S3fe5e1` | change | Comment (required to reject) | মন্তব্য (প্রত্যাখ্যানের জন্য আবশ্যক) |
+| `Sb48001` | change | Mapping change | ম্যাপিংয়ের পরিবর্তন |
+| `Sd7c1d0` | change, changes, list | Mapping changes | ম্যাপিংয়ের পরিবর্তনসমূহ |
+| `Sf26140` | change, legacy_mapping, list | New identifier | নতুন শনাক্তকারী |
+| `Sf219cc` | change, list, row | Reason | কারণ |
+| `S2b03b5` | change, detail | Reject | প্রত্যাখ্যান করুন |
+| `S5108c2` | change, changes | Requested by | অনুরোধকারী |
+| `S52d0b3` | change, changes, detail | Rows | সারি |
+| `S6c30d2` | change, dry_run, list | rows | সারি |
+| `Sfabd38` | change | These rows changed after the request was made; it cannot be applied. Withdraw it and make it again: | অনুরোধের পর এই সারিগুলো বদলে গেছে; এটি প্রয়োগ করা যাবে না। এটি প্রত্যাহার করে আবার করুন: |
+| `S47e564` | change, detail | Withdraw | প্রত্যাহার |
+| `S30d359` | change | Withdraw this request? | এই অনুরোধ প্রত্যাহার করবেন? |
+| `S88c173` | change | You made this request; another person must decide. | এই অনুরোধ আপনি করেছেন; অন্য একজনকে সিদ্ধান্ত নিতে হবে। |
+| `S04e02f` | change | Your role has decided already. | আপনার ভূমিকা ইতিমধ্যে সিদ্ধান্ত নিয়েছে। |
+| `Sc7274c` | changes | Any state | যেকোনো অবস্থা |
+| `S2a560c` | changes | Every change of the mapping is a request. It takes effect when the StCd Owner, the Chief Engineer and an Administrator have each approved it; one rejection closes it. | ম্যাপিংয়ের প্রতিটি পরিবর্তন একটি অনুরোধ। StCd মালিক, প্রধান প্রকৌশলী ও একজন প্রশাসক প্রত্যেকে অনুমোদন করলে এটি কার্যকর হয়; একটি প্রত্যাখ্যান এটি বন্ধ করে দেয়। |
+| `Sdef2eb` | changes, list, menu | Mapping | ম্যাপিং |
+| `Se03e43` | changes | No request yet. | এখনও কোনো অনুরোধ নেই। |
+| `S5fc0e0` | changes | request(s) wait for your decision. | অনুরোধ আপনার সিদ্ধান্তের অপেক্ষায় আছে। |
+| `Sa72502` | changes, detail, export | State | অবস্থা |
 | `S97fd13` | check | Back to the terms | পদগুলোতে ফিরে যান |
 | `S1bc9e5` | check | English string | ইংরেজি পাঠ্য |
 | `S5d54b3` | check | Every string uses the translated terms. | প্রতিটি পাঠ্য অনূদিত পদ ব্যবহার করে। |
@@ -5862,7 +6127,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S9b0b4c` | detail | also the files without an access level (all columns) | অ্যাক্সেস স্তর ছাড়া ফাইলও (সব কলাম) |
 | `Sf24c44` | detail | Any %(code)s Engineer | যেকোনো %(code)s প্রকৌশলী |
 | `Sb99a01` | detail | Applies to software versions | সফটওয়্যার সংস্করণে প্রযোজ্য |
-| `S7b2c7f` | detail, language | Approve | অনুমোদন করুন |
 | `Sde38bf` | detail | Approve selected | বাছাইগুলো অনুমোদন করুন |
 | `Scf2999` | detail | Approving confirms these values; any change you make here is applied and audited. Rejecting ignores them. | অনুমোদন এই মানগুলো নিশ্চিত করে; আপনি এখানে যা বদলান তা প্রয়োগ ও অডিট হয়। প্রত্যাখ্যান সেগুলো উপেক্ষা করে। |
 | `Sf7f2d5` | detail | Archive (requires 180-day retention elapsed) | সংরক্ষণাগারে রাখুন (১৮০ দিনের সংরক্ষণ কাল পার হওয়া লাগে) |
@@ -5883,7 +6147,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S4572f4` | detail | Change request | পরিবর্তন অনুরোধ |
 | `S3295be` | detail, workbench | Change requests in this set | এই সেটের পরিবর্তন অনুরোধ |
 | `S4d8006` | detail | Change set | পরিবর্তন সেট |
-| `S8aa57d` | detail | Changes | পরিবর্তন |
 | `S3d14ea` | detail, export | Changes of this release only | শুধু এই রিলিজের পরিবর্তন |
 | `Sbd95c0` | detail | Checklist confirmed at sign-off | সাইন-অফের সময় নিশ্চিত চেকলিস্ট |
 | `S074d62` | detail, role badge | Chief Engineer | প্রধান প্রকৌশলী |
@@ -5901,7 +6164,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S7671b5` | detail | Confirm or override Audience Access | লক্ষ্য গোষ্ঠীর অ্যাক্সেস নিশ্চিত বা অগ্রাহ্য করুন |
 | `S6512ee` | detail | Connection | সংযোগ |
 | `S4f9be0` | detail | Content | বিষয়বস্তু |
-| `Sa36a5f` | detail, legacy_mapping, st_new | Controller | নিয়ন্ত্রক |
+| `Sa36a5f` | detail, legacy_mapping, list | Controller | নিয়ন্ত্রক |
 | `Scd293f` | detail | Converter Reactive Power Program | কনভার্টার রিঅ্যাক্টিভ পাওয়ার প্রোগ্রাম |
 | `S3998a7` | detail | Copies the descriptive fields into a new Draft in a Main Controller group (a new number is allocated at submit; this code's identifier is kept as the legacy reference). | বর্ণনামূলক ফিল্ড প্রধান নিয়ন্ত্রক গ্রুপের একটি নতুন খসড়ায় কপি করে (জমার সময় নতুন নম্বর দেওয়া হয়; এই কোডের শনাক্তকারী পুরোনো রেফারেন্স হিসেবে রাখা হয়)। |
 | `S54b051` | detail | Copy this code for another turbine platform. The copy is a new Draft that links back here and goes through the normal review. | এই কোডটি অন্য টারবাইন প্ল্যাটফর্মের জন্য কপি করুন। কপি একটি নতুন খসড়া যা এখানে ফিরে যুক্ত হয় এবং সাধারণ পর্যালোচনা পার করে। |
@@ -6035,7 +6298,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sf5ca9d` | detail | Recorded exports | নথিভুক্ত রপ্তানি |
 | `Sa3f757` | detail | Reinstate to Released | প্রকাশিতে পুনঃস্থাপন করুন |
 | `S3238ca` | detail | Reinstatement reason | পুনঃস্থাপনের কারণ |
-| `S2b03b5` | detail | Reject | প্রত্যাখ্যান করুন |
 | `S27fb5c` | detail | Reject selected | বাছাইগুলো প্রত্যাখ্যান করুন |
 | `S045c2c` | detail | Related codes | সম্পর্কিত কোড |
 | `S33a5a7` | detail | Relation | সম্পর্ক |
@@ -6053,7 +6315,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S4c1aa6` | detail | Repeated-Error Escalation | পুনরাবৃত্ত ত্রুটির এস্কালেশন |
 | `S4aed03` | detail | Request | অনুরোধ |
 | `Sf3421a` | detail | Request a Sign-Off | সাইন-অফের অনুরোধ করুন |
-| `Sc26bf6` | detail, mine | Requested | অনুরোধকৃত |
+| `Sc26bf6` | detail, mine, row | Requested | অনুরোধকৃত |
 | `S2706ed` | detail | Required by | যাদের জন্য প্রয়োজনীয় |
 | `S619e87` | detail, form | Reset Delay | রিসেট বিলম্ব |
 | `S026ab2` | detail | resolved | সমাধান হয়েছে |
@@ -6063,7 +6325,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S3beb9a` | detail | Revision | সংশোধন |
 | `Sa72973` | detail | Revision Fields | সংশোধনের ফিল্ড |
 | `Sfc1d6a` | detail | row(s) imported as Drafts | সারি খসড়া হিসেবে আমদানি হয়েছে |
-| `S52d0b3` | detail, reconciliation, user_detail | Rows | সারি |
 | `Sd0edfb` | detail | Sales | বিক্রয় |
 | `S241bf5` | detail, workbench | Sample number | নমুনা নম্বর |
 | `Sda38c6` | detail | Save planned dates | পরিকল্পিত তারিখ সংরক্ষণ করুন |
@@ -6082,11 +6343,10 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sece2ac` | detail, form | Slot | স্লট |
 | `Sff44d2` | detail | Software Version | সফটওয়্যার সংস্করণ |
 | `S169bf7` | detail, export, software_versions | Software version | সফটওয়্যার সংস্করণ |
-| `S6da13a` | detail, fleet_feedback | Source | উৎস |
+| `S6da13a` | detail, fleet_feedback, row | Source | উৎস |
 | `Sd3c56b` | detail, export_profiles | source language | উৎস ভাষা |
 | `Sb3883f` | detail | Standards | মান |
 | `Sfaa9e7` | detail, reconciliation | Started | শুরু হয়েছে |
-| `Sa72502` | detail, export, hub_consolidation | State | অবস্থা |
 | `Se246b6` | detail, form, list | Status Category | স্ট্যাটাস বিভাগ |
 | `S779953` | detail, form | Status Code for Repeated Error | পুনরাবৃত্ত ত্রুটির জন্য স্ট্যাটাস কোড |
 | `S98a377` | detail | Still a Draft. | এখনো খসড়া। |
@@ -6105,7 +6365,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Seaf576` | detail, form | Trigger Snapshot | স্ন্যাপশট ট্রিগার করুন |
 | `S285ec8` | detail, form | Troubleshooting | সমস্যা সমাধান |
 | `S71bba4` | detail | Turbine Operator Package | টারবাইন অপারেটর প্যাকেজ |
-| `S3deb74` | detail, mine, review_queue | Type | ধরন |
+| `S3deb74` | detail, list, mine | Type | ধরন |
 | `Sab631e` | detail | Type %(id)s to confirm | নিশ্চিত করতে %(id)s টাইপ করুন |
 | `Sb5e264` | detail | Type the identifier to confirm | নিশ্চিত করতে শনাক্তকারী টাইপ করুন |
 | `S835f8a` | detail | Umrichterprogramm GSC | কনভার্টার প্রোগ্রাম GSC |
@@ -6124,7 +6384,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S51ecc5` | detail | What happens next | এরপর কী হয় |
 | `Sf323c0` | detail | Where used | কোথায় ব্যবহৃত |
 | `S7d5316` | detail | Who | কে |
-| `S47e564` | detail | Withdraw | প্রত্যাহার |
 | `S51a998` | detail | Withdraw this change request? | এই পরিবর্তন অনুরোধ প্রত্যাহার করবেন? |
 | `S93ef7c` | detail, workbench | Workbench | কর্মক্ষেত্র |
 | `S95a2a4` | detail, form | Write level | লেখার স্তর |
@@ -6144,7 +6403,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sec0298` | dry_run | Result per row | সারি অনুযায়ী ফলাফল |
 | `S9bf7a8` | dry_run | Row | সারি |
 | `S3ff0b0` | dry_run | row(s) have problems. Nothing has been created. | সারিতে সমস্যা আছে। কিছু তৈরি হয়নি। |
-| `S6c30d2` | dry_run | rows | সারি |
 | `S8012ff` | dry_run | unchanged | অপরিবর্তিত |
 | `S83d655` | dry_run, st_preview | warning(s) | সতর্কতা |
 | `S9ddad9` | dry_run | would be created | তৈরি হতো |
@@ -6286,6 +6544,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S285edc` | help and messages | %(ok)s of %(n)s: %(what)s. | %(ok)s / %(n)s: %(what)s। |
 | `Sb08e6c` | help and messages | A Reviewer and an Administrator each sign off (in any order). If either rejects, it goes back to the author. | একজন পর্যালোচক ও একজন প্রশাসক প্রত্যেকে সাইন অফ করেন (যেকোনো ক্রমে)। কেউ প্রত্যাখ্যান করলে এটি লেখকের কাছে ফিরে যায়। |
 | `S2f1bed` | help and messages | An Administrator includes the revision in a Release and publishes it; then it is Released. | একজন প্রশাসক সংশোধনটি একটি রিলিজে অন্তর্ভুক্ত করে প্রকাশ করেন; তখন এটি প্রকাশিত হয়। |
+| `S9477fd` | help and messages | choose | বেছে নিন |
 | `S1308dc` | help and messages | defective codes sent back | ত্রুটিপূর্ণ কোড ফেরত পাঠানো হয়েছে |
 | `Se2bbd9` | help and messages | Drafts saved | খসড়া সংরক্ষিত হয়েছে |
 | `S0ddfa5` | help and messages | Drafts signed off | খসড়ার সাইন-অফ হয়েছে |
@@ -6297,7 +6556,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sce489f` | help and messages | The author gets any required cross-domain sign-offs, then submits the change request for review. | লেখক প্রয়োজনীয় আন্তঃডোমেইন সাইন-অফ নেন, তারপর পরিবর্তন অনুরোধ পর্যালোচনার জন্য জমা দেন। |
 | `S1cdbdd` | help and messages | The Chief Engineer approves or rejects. Approval makes the revision Approved (or Deprecated for a deprecation request). | প্রধান প্রকৌশলী অনুমোদন বা প্রত্যাখ্যান করেন। অনুমোদন সংশোধনকে অনুমোদিত (বা অপ্রচলন অনুরোধে অপ্রচলিত) করে। |
 | `S2d6ac0` | help and messages | The package is being built. Reload this page to follow its progress. | প্যাকেজ তৈরি হচ্ছে। অগ্রগতি দেখতে এই পেজ আবার লোড করুন। |
-| `Sde7a5b` | help and messages | The program files do not carry a category; you can change it in each Draft. | প্রোগ্রাম ফাইলে বিভাগ থাকে না; আপনি প্রতিটি খসড়ায় তা বদলাতে পারেন। |
 | `Scff3a3` | help and messages | User deleted; its name and address are erased, what it did stays attributable. | ব্যবহারকারী মুছে ফেলা হয়েছে; তার নাম ও ঠিকানা মুছে ফেলা হয়েছে, সে যা করেছে তা আরোপযোগ্য থাকে। |
 | `Secfb3f` | hub_consolidation | Deprecate replaced Hub codes | প্রতিস্থাপিত হাব কোড অপ্রচলিত ঘোষণা করুন |
 | `S0e7766` | hub_consolidation, language | draft | খসড়া |
@@ -6308,7 +6566,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sc50c53` | hub_consolidation | Hub Controller to Main Controller consolidation | হাব নিয়ন্ত্রক থেকে প্রধান নিয়ন্ত্রকে একীকরণ |
 | `Scd189f` | hub_consolidation | Hub group | হাব গ্রুপ |
 | `Sa5262b` | hub_consolidation | If the Hub Controller leaves the hardware setup, its codes are defined anew on the Main Controller side. Create an MC draft from an HC code on its detail page (Actions); this report shows how far each has come. Nothing is renumbered. | হাব নিয়ন্ত্রক হার্ডওয়্যার কনফিগারেশন থেকে বাদ গেলে তার কোডগুলো প্রধান নিয়ন্ত্রকের দিকে নতুন করে সংজ্ঞায়িত হয়। HC কোডের বিবরণ পৃষ্ঠায় (কার্যক্রম) তা থেকে MC খসড়া তৈরি করুন; এই প্রতিবেদন দেখায় প্রতিটি কতদূর এগিয়েছে। কিছুই পুনর্নম্বর হয় না। |
-| `Sdd6555` | hub_consolidation, legacy_mapping, st_preview | Legacy no. | পুরোনো নং |
+| `Sdd6555` | hub_consolidation, legacy_mapping, list | Legacy no. | পুরোনো নং |
 | `S845a2b` | hub_consolidation | No Hub Controller codes yet. | এখনো কোনো হাব নিয়ন্ত্রক কোড নেই। |
 | `S138665` | hub_consolidation | Open deprecation requests | অপ্রচলন অনুরোধ খুলুন |
 | `Sc8df93` | hub_consolidation | Open deprecation requests for all replaced Hub codes of this group? | এই গ্রুপের সব প্রতিস্থাপিত হাব কোডের জন্য অপ্রচলন অনুরোধ খুলবেন? |
@@ -6367,7 +6625,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sded18c` | language | approved by | অনুমোদক |
 | `Sedd46e` | language | Check against the interface | ইন্টারফেসের সঙ্গে মিলিয়ে দেখুন |
 | `S5a013c` | language | missing | অনুপস্থিত |
-| `S2c924e` | language, workbench | Note | নোট |
+| `S2c924e` | language, row, workbench | Note | নোট |
 | `S2f09d0` | language | Note on %(x)s | %(x)s সম্পর্কে নোট |
 | `S75bf99` | language | proposed by | প্রস্তাবক |
 | `Sc68e32` | language | Save translations | অনুবাদ সংরক্ষণ করুন |
@@ -6375,14 +6633,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S542818` | language | Terms of the language | ভাষার পদ |
 | `Sae9e5d` | language | Translation of %(x)s | %(x)s-এর অনুবাদ |
 | `S863fd0` | language | Your own proposal: another person approves it. | আপনার নিজের প্রস্তাব: অন্য একজন এটি অনুমোদন করেন। |
-| `Sf9d469` | legacy_mapping | All controllers | সব নিয়ন্ত্রক |
+| `Sf9d469` | legacy_mapping, list | All controllers | সব নিয়ন্ত্রক |
 | `Se61c2f` | legacy_mapping | Any number state | যেকোনো নম্বরের অবস্থা |
 | `S7c4f77` | legacy_mapping | issued | প্রদত্ত |
 | `Sfd5ec0` | legacy_mapping, menu, new | Legacy mapping | পুরোনো-নতুন ম্যাপিং |
 | `S81f567` | legacy_mapping | Legacy number to new identifier | পুরোনো নম্বর থেকে নতুন শনাক্তকারী |
 | `S64b267` | legacy_mapping | legacy number, identifier or name | পুরোনো নম্বর, শনাক্তকারী বা নাম |
 | `S60fe6c` | legacy_mapping | new codes without a legacy number (n/a) | পুরোনো নম্বর ছাড়া নতুন কোড (প্রযোজ্য নয়) |
-| `Sf26140` | legacy_mapping, st_preview | New identifier | নতুন শনাক্তকারী |
 | `Sf573c8` | legacy_mapping | no number yet | এখনো নম্বর নেই |
 | `S7877c5` | legacy_mapping | No status code carries a legacy number yet. | কোনো স্ট্যাটাস কোডে এখনো পুরোনো নম্বর নেই। |
 | `Sb7baa1` | legacy_mapping | Number | নম্বর |
@@ -6391,10 +6648,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S8b0b7c` | legacy_mapping | with a legacy number | পুরোনো নম্বরসহ |
 | `Seba07b` | list | A change set groups the change requests that ship with one controller software release, so reviewers see the whole package. Each request is still decided on its own. | পরিবর্তন সেট সেই পরিবর্তন অনুরোধগুলোকে একত্র করে যা নিয়ন্ত্রক সফটওয়্যারের একটি রিলিজের সঙ্গে যায়, যাতে পর্যালোচকরা পুরো প্যাকেজ দেখেন। প্রতিটি অনুরোধের সিদ্ধান্ত তবু আলাদাভাবে হয়। |
 | `Sc5fe02` | list | any | যেকোনো |
+| `S55201a` | list | Any status | যেকোনো স্থিতি |
 | `Sef5415` | list | Apply columns | কলাম প্রয়োগ করুন |
+| `Sffb569` | list | Ask for approval of the ticked rows | চিহ্নিত সারির অনুমোদন চান |
 | `S9e895f` | list | Change sets | পরিবর্তন সেট |
 | `S162a45` | list, menu | Change Sets | পরিবর্তন সেট |
 | `Scf723c` | list | Columns | কলাম |
+| `S2ddaf9` | list, upload | Compare a workbook | ওয়ার্কবুক তুলনা করুন |
 | `Seb0fd2` | list | Delete all my Drafts of this filter | এই ফিল্টারের আমার সব খসড়া মুছুন |
 | `S36f212` | list | Delete ALL of your own Drafts that match this filter, on every page? | এই ফিল্টারের সাথে মেলে এমন আপনার নিজের সব খসড়া, সব পাতায়, মুছে ফেলবেন? |
 | `Sc554a1` | list | Delete selected Drafts | বাছাই করা খসড়া মুছুন |
@@ -6404,12 +6664,18 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S44d25b` | list | Items | আইটেম |
 | `S033df3` | list | Lifecycle | জীবনচক্র |
 | `Sb4cad6` | list | Link to this view | এই দৃশ্যের লিঙ্ক |
+| `Sbdb4e1` | list | Load the initial mapping | প্রাথমিক ম্যাপিং লোড করুন |
+| `Se07018` | list | Make the request | অনুরোধ করুন |
 | `Se248d5` | list, new | New change set | নতুন পরিবর্তন সেট |
 | `Se75aa1` | list, new | New Release | নতুন রিলিজ |
+| `S9bb526` | list, row | New row | নতুন সারি |
 | `Se5076c` | list | No change sets yet. | এখনো কোনো পরিবর্তন সেট নেই। |
 | `Sd32c03` | list | No releases yet. | এখনো কোনো রিলিজ নেই। |
+| `Sb5b22c` | list | No row matches. | কোনো সারি মেলেনি। |
 | `Sc3af43` | list | No saved searches yet. | এখনো কোনো সংরক্ষিত অনুসন্ধান নেই। |
 | `S0cb400` | list | No status codes match these filters. | এই ফিল্টারে কোনো স্ট্যাটাস কোড মেলেনি। |
+| `S260f7a` | list, row | Node | নোড |
+| `S08250b` | list | number, title or group | নম্বর, শিরোনাম বা গ্রুপ |
 | `Sf7194e` | list | Requests | অনুরোধ |
 | `S37a530` | list | result | ফলাফল |
 | `Scdf7e9` | list | results | ফলাফল |
@@ -6418,10 +6684,14 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sff86e9` | list | Save the current filters as | বর্তমান ফিল্টার এই নামে সংরক্ষণ করুন |
 | `Sed1d84` | list | Saved searches | সংরক্ষিত অনুসন্ধান |
 | `S859822` | list, mine | Select | বাছুন |
+| `S45b553` | list | Select all rows | সব সারি নির্বাচন করুন |
 | `S7f5583` | list, menu | Status Codes | স্ট্যাটাস কোড |
 | `S20bff1` | list | Status codes | স্ট্যাটাস কোড |
+| `S3a1066` | list | The mapping is empty. | ম্যাপিং খালি। |
+| `S27d95b` | list | The rows stay as they are. Once the StCd Owner, the Chief Engineer and an Administrator approve, they count as approved numbers. | সারিগুলো যেমন আছে তেমনই থাকে। StCd মালিক, প্রধান প্রকৌশলী ও একজন প্রশাসক অনুমোদন করলে সেগুলো অনুমোদিত নম্বর বলে গণ্য হয়। |
 | `Se90eb0` | list | Turbine Platform | টারবাইন প্ল্যাটফর্ম |
 | `S86b1e7` | list | Typos are tolerated: "convertor" still finds "converter". | টাইপো সহ্য করা হয়: "convertor" তবু "converter" খুঁজে পায়। |
+| `Sb0c551` | list | Which legacy status code becomes which new one, with what the program files do not carry: the English title, the type, the up/down counter, the access levels, cause and directive. A row changes only by a request that the StCd Owner, the Chief Engineer and an Administrator all approve. | কোন পুরোনো স্ট্যাটাস কোড কোন নতুনটি হয়, প্রোগ্রাম ফাইলে যা থাকে না তার সঙ্গে: ইংরেজি শিরোনাম, ধরন, আপ/ডাউন কাউন্টার, অ্যাক্সেস স্তর, কারণ ও নির্দেশ। StCd মালিক, প্রধান প্রকৌশলী ও একজন প্রশাসক সবাই অনুমোদন করলেই কেবল একটি অনুরোধে সারি বদলায়। |
 | `Sf7c400` | login | Log in | লগ ইন |
 | `S175835` | login | or | অথবা |
 | `S8be3c9` | login, users | Password | পাসওয়ার্ড |
@@ -6583,6 +6853,23 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S8cb56e` | message: lookup_admin_service | range_end must be greater than range_start | range_end অবশ্যই range_start-এর চেয়ে বড় হতে হবে |
 | `Se3a971` | message: lookup_admin_service | sub_range_end must be greater than sub_range_start | sub_range_end অবশ্যই sub_range_start-এর চেয়ে বড় হতে হবে |
 | `S1404e3` | message: lookup_service | functional_system_group query parameter is required for functional-subgroups | functional-subgroups-এর জন্য functional_system_group কোয়েরি প্যারামিটার আবশ্যক |
+| `Sf28681` | message: mapping_service | Give the reason for the change; the three approvers read it first. | পরিবর্তনের কারণ লিখুন; তিন অনুমোদনকারী এটি আগে পড়েন। |
+| `S062788` | message: mapping_service | Give the request a title of at most 120 characters. | অনুরোধকে সর্বোচ্চ ১২০ অক্ষরের একটি শিরোনাম দিন। |
+| `S2ea56f` | message: mapping_service | Mapping change not found | ম্যাপিংয়ের পরিবর্তন পাওয়া যায়নি |
+| `S2c9363` | message: mapping_service | Mapping row not found | ম্যাপিংয়ের সারি পাওয়া যায়নি |
+| `S2d5693` | message: mapping_service | Only the person who made the request can withdraw it. | যিনি অনুরোধ করেছেন শুধু তিনিই তা প্রত্যাহার করতে পারেন। |
+| `S682269` | message: mapping_service | Only the StCd Owner, the Chief Engineer and an Administrator decide on the mapping. | ম্যাপিংয়ের বিষয়ে শুধু StCd মালিক, প্রধান প্রকৌশলী ও একজন প্রশাসক সিদ্ধান্ত নেন। |
+| `S5e0f66` | message: mapping_service | Say why you reject the request. | অনুরোধ কেন প্রত্যাখ্যান করছেন তা বলুন। |
+| `S3d5cfc` | message: mapping_service | The comment is longer than 1000 characters. | মন্তব্য ১০০০ অক্ষরের বেশি লম্বা। |
+| `S82b817` | message: mapping_service | The decision must be APPROVE or REJECT. | সিদ্ধান্ত অবশ্যই APPROVE বা REJECT হতে হবে। |
+| `S9ec08a` | message: mapping_service | The file is not a readable .xlsx workbook. | ফাইলটি পড়ার মতো .xlsx ওয়ার্কবুক নয়। |
+| `S3831f7` | message: mapping_service | The reason is longer than 2000 characters. | কারণ ২০০০ অক্ষরের বেশি লম্বা। |
+| `Sa5de7d` | message: mapping_service | The request contains no row. | অনুরোধে কোনো সারি নেই। |
+| `S2116e4` | message: mapping_service | The request is already closed. | অনুরোধ ইতিমধ্যে বন্ধ হয়েছে। |
+| `S8518e7` | message: mapping_service | The role has decided already. | এই ভূমিকা ইতিমধ্যে সিদ্ধান্ত নিয়েছে। |
+| `S2a15d7` | message: mapping_service | The workbook is larger than 5 MB. | ওয়ার্কবুক ৫ MB-এর চেয়ে বড়। |
+| `S8eb912` | message: mapping_service | The workbook unpacks to more than 80 MB. | ওয়ার্কবুক খুললে ৮০ MB-এর বেশি হয়। |
+| `S6c1d08` | message: mapping_service | Your role may not propose a change of the mapping. | আপনার ভূমিকা ম্যাপিংয়ের পরিবর্তন প্রস্তাব করতে পারে না। |
 | `S4ada2b` | message: notification_service | Notification not found | বিজ্ঞপ্তি পাওয়া যায়নি |
 | `Sd92b89` | message: notification_service | This notification belongs to someone else. | এই বিজ্ঞপ্তি অন্য কারও। |
 | `Sb0cd00` | message: numbering_service | Identifier override must match StCd-NNNNN (five digits). | অগ্রাহ্য করা শনাক্তকারী StCd-NNNNN (পাঁচ অঙ্ক) এর সঙ্গে মিলতে হবে। |
@@ -6614,8 +6901,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S9671fb` | message: settings_service | must be true or false | অবশ্যই true বা false হতে হবে |
 | `S5166bb` | message: st_import_service | A staged file changed after the preview. Upload again. | প্রিভিউয়ের পর একটি স্টেজ করা ফাইল বদলে গেছে। আবার আপলোড করুন। |
 | `Saa4de2` | message: st_import_service | controller must be auto, MC or HC | controller অবশ্যই auto, MC বা HC হতে হবে |
-| `Sa30251` | message: st_import_service | default_category must be ERROR, WARNING or INFO | default_category অবশ্যই ERROR, WARNING বা INFO হতে হবে |
-| `Sfe694a` | message: st_import_service | hc_proposal must be 1 or 2 | hc_proposal অবশ্যই ১ বা ২ হতে হবে |
 | `S58bec3` | message: st_import_service | No StCd program files found. Upload .st files or a ZIP of them. | কোনো StCd প্রোগ্রাম ফাইল পাওয়া যায়নি। .st ফাইল বা সেগুলোর ZIP আপলোড করুন। |
 | `Sd9c5b0` | message: st_import_service | Nothing selected: tick at least one program that is ready. | কিছু বাছা হয়নি: অন্তত একটি প্রস্তুত প্রোগ্রামে টিক দিন। |
 | `S5dbbd0` | message: st_import_service | The code is no longer an open Draft; preview the files again. | কোডটি আর খোলা খসড়া নয়; ফাইলগুলোর প্রিভিউ আবার দেখুন। |
@@ -6762,6 +7047,23 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S05fc94` | role badge | Engineer | প্রকৌশলী |
 | `S3c0e8a` | role badge | StCd Owner | StCd মালিক |
 | `Sdbad9f` | role badge | Viewer | দর্শক |
+| `S7f2e4b` | row | Access levels | অ্যাক্সেস স্তর |
+| `S08f985` | row | Cause | কারণ |
+| `S164e0b` | row | Directive | নির্দেশ |
+| `S283474` | row | New number | নতুন নম্বর |
+| `Sfa6fdd` | row | No request yet. The row is as it was loaded. | এখনও কোনো অনুরোধ নেই। সারিটি যেমন লোড হয়েছিল তেমনই আছে। |
+| `Sf790fc` | row | Nothing is changed here directly: the form makes a request, and the row changes after the StCd Owner, the Chief Engineer and an Administrator have approved it. | এখানে সরাসরি কিছু বদলায় না: ফর্ম একটি অনুরোধ তৈরি করে, আর StCd মালিক, প্রধান প্রকৌশলী ও একজন প্রশাসক অনুমোদন করার পর সারি বদলায়। |
+| `S9d728f` | row | Request approval of the number | নম্বরের অনুমোদন চান |
+| `Sc8978f` | row | Request rejection of the number | নম্বরের প্রত্যাখ্যান চান |
+| `Sc644eb` | row | Request that this number is never used? | এই নম্বর যেন কখনো ব্যবহার না হয় সেই অনুরোধ করবেন? |
+| `Sb25913` | row | Request the new row | নতুন সারির অনুরোধ করুন |
+| `Sb04301` | row | Request this change | এই পরিবর্তনের অনুরোধ করুন |
+| `Sae91b6` | row | Requests for this row | এই সারির অনুরোধ |
+| `Sd59701` | row | Reset delay (parameter) | রিসেট বিলম্ব (প্যারামিটার) |
+| `Sfd64cd` | row | Set delay (parameter) | সেট বিলম্ব (প্যারামিটার) |
+| `S9c0444` | row | The three approvers read the reason first. | তিন অনুমোদনকারী আগে কারণ পড়েন। |
+| `Sc84745` | row | Title (English) | শিরোনাম (ইংরেজি) |
+| `S711eea` | row | Up/down counter | আপ/ডাউন কাউন্টার |
 | `S913aba` | settings | Save settings | সেটিংস সংরক্ষণ করুন |
 | `Sb68734` | software_versions | Added | যোগ হয়েছে |
 | `S172415` | software_versions | added | যোগ হয়েছে |
@@ -6775,28 +7077,19 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd97d1e` | software_versions | Show | দেখান |
 | `S42ea2e` | software_versions | Software Versions | সফটওয়্যার সংস্করণ |
 | `S3bd89c` | software_versions | Which codes exist in which software version | কোন কোড কোন সফটওয়্যার সংস্করণে আছে |
-| `S16e5d4` | st_new, st_preview | Alarm type | অ্যালার্মের ধরন |
-| `S726d7a` | st_new | as above | উপরের মতো |
-| `S9477fd` | st_new, st_preview | choose | বেছে নিন |
 | `Sb149ca` | st_new | Detect: a number from 10000 up is a Hub Controller program | শনাক্ত করুন: ১০০০০ থেকে উপরের নম্বর হাব নিয়ন্ত্রক প্রোগ্রাম |
 | `S7d06d0` | st_new | Every imported program becomes an ordinary Draft with the number it carries reserved. It still needs Cross-Domain Sign-Off, dual review and Chief Engineer approval before Release, and all Drafts of one import share a change set. | প্রতিটি আমদানি করা প্রোগ্রাম একটি সাধারণ খসড়া হয় যার বহন করা নম্বর সংরক্ষিত থাকে। রিলিজের আগে এতে তবু আন্তঃডোমেইন সাইন-অফ, দ্বিগুণ পর্যালোচনা ও প্রধান প্রকৌশলীর অনুমোদন লাগে, এবং এক আমদানির সব খসড়া একটি পরিবর্তন সেট ভাগ করে। |
-| `Sbda77c` | st_new | Every program names an alarm type. A type left at "as above" gets the category chosen above; the next page lets you set the category of single programs or of all ticked ones. | প্রতিটি প্রোগ্রাম একটি অ্যালার্মের ধরন জানায়। "উপরের মতো" রাখা ধরন উপরে বাছা বিভাগ পায়; পরের পাতায় আপনি আলাদা প্রোগ্রামের বা টিক দেওয়া সবগুলোর বিভাগ ঠিক করতে পারবেন। |
 | `S3b9e43` | st_new | Hub Controller (legacy numbers, mapped to the new ones) | হাব নিয়ন্ত্রক (পুরোনো নম্বর, নতুনগুলোর সঙ্গে ম্যাপ করা) |
 | `Sd7333f` | st_new | Import status codes from .st files | .st ফাইল থেকে স্ট্যাটাস কোড আমদানি করুন |
-| `S6640a6` | st_new | New number of Hub Controller programs | হাব নিয়ন্ত্রক প্রোগ্রামের নতুন নম্বর |
 | `Sc0eff1` | st_new | Or a whole folder | অথবা পুরো ফোল্ডার |
 | `S94ddc1` | st_new | Program files (.st) or a ZIP | প্রোগ্রাম ফাইল (.st) বা একটি ZIP |
-| `Sd99e2a` | st_new | Proposal 1: five-digit numbers (11000 and up) | প্রস্তাব ১: পাঁচ অঙ্কের নম্বর (১১০০০ থেকে) |
-| `S2744b0` | st_new | Proposal 2: inside the Main Controller scheme | প্রস্তাব ২: প্রধান নিয়ন্ত্রক পরিকল্পনার ভেতরে |
 | `S67640d` | st_new | Read files and preview | ফাইল পড়ুন ও প্রিভিউ দেখুন |
-| `S0af4fc` | st_new | Status category by alarm type (optional) | অ্যালার্মের ধরন অনুযায়ী স্ট্যাটাস বিভাগ (ঐচ্ছিক) |
-| `S234237` | st_new | Status category of the new codes | নতুন কোডের স্ট্যাটাস বিভাগ |
-| `S61fc52` | st_new | The program files do not carry a category and none is assumed: choose one here, by alarm type below, or for each program in the preview. A program without a category is not imported. | প্রোগ্রাম ফাইলে কোনো বিভাগ থাকে না এবং কোনোটি ধরে নেওয়া হয় না: এখানে একটি বেছে নিন, নিচে অ্যালার্মের ধরন অনুযায়ী বাছুন, অথবা প্রিভিউতে প্রতিটি প্রোগ্রামের জন্য বাছুন। বিভাগ ছাড়া প্রোগ্রাম আমদানি হয় না। |
+| `Saa9df6` | st_new | The title, the type and the access levels of every program come from the mapping, never from the files. A program whose number is not in the mapping is blocked. | প্রতিটি প্রোগ্রামের শিরোনাম, ধরন ও অ্যাক্সেস স্তর ম্যাপিং থেকে আসে, ফাইল থেকে কখনো নয়। যে প্রোগ্রামের নম্বর ম্যাপিংয়ে নেই সেটি বাধাপ্রাপ্ত। |
 | `S8f4c21` | st_new | Turbine platforms | টারবাইন প্ল্যাটফর্ম |
 | `S9ad4d4` | st_new | Upload the generated StCd_<n>.st programs — several files at once, a whole folder, or one ZIP. Nothing is created yet: the next page lists every program so you can tick the ones to import. | তৈরি করা StCd_<n>.st প্রোগ্রাম আপলোড করুন — একসঙ্গে কয়েকটি ফাইল, পুরো ফোল্ডার বা একটি ZIP। এখনো কিছু তৈরি হয় না: পরের পৃষ্ঠা প্রতিটি প্রোগ্রাম তালিকাভুক্ত করে, যাতে আপনি আমদানির জন্য টিক দিতে পারেন। |
+| `S16e5d4` | st_preview | Alarm type | অ্যালার্মের ধরন |
 | `S2693e5` | st_preview | All Drafts of this import join one change set, so they can be reviewed and decided together. | এই আমদানির সব খসড়া একটি পরিবর্তন সেটে যোগ দেয়, যাতে একসঙ্গে পর্যালোচনা ও সিদ্ধান্ত হতে পারে। |
 | `Scbc694` | st_preview | already in the catalogue | ইতিমধ্যে ক্যাটালগে |
-| `Sc00673` | st_preview | Apply to the ticked programs | টিক দেওয়া প্রোগ্রামে প্রয়োগ করুন |
 | `Sdf88b8` | st_preview | blocked | অবরুদ্ধ |
 | `S6f7703` | st_preview | Changed and withdrawn programs are not ticked: tick the ones you want to update, revise or restore. | পরিবর্তিত ও প্রত্যাহৃত প্রোগ্রামে টিক দেওয়া থাকে না: যেগুলো হালনাগাদ, সংশোধন বা পুনরুদ্ধার করতে চান সেগুলোতে টিক দিন। |
 | `S78bb8b` | st_preview | Create Drafts for the ticked programs | টিক দেওয়া প্রোগ্রামের জন্য খসড়া তৈরি করুন |
@@ -6814,8 +7107,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se58289` | st_preview | Programs found in the uploaded files | আপলোড করা ফাইলে পাওয়া প্রোগ্রাম |
 | `S75c053` | st_preview, workbench | ready | প্রস্তুত |
 | `S0723bf` | st_preview | Select all programs that are ready | সব প্রস্তুত প্রোগ্রাম বাছুন |
-| `Sae12bc` | st_preview, workbench | Status category | স্ট্যাটাস বিভাগ |
-| `Sd7a322` | st_preview | Status category of the ticked programs | টিক দেওয়া প্রোগ্রামের স্ট্যাটাস বিভাগ |
+| `S9a2439` | st_preview | Type (from the mapping) | ধরন (ম্যাপিং থেকে) |
 | `S1a767a` | st_preview | updates the open Draft | খোলা খসড়া হালনাগাদ করে |
 | `S02499f` | st_preview | withdrawn | প্রত্যাহৃত |
 | `Sf0c3cf` | st_preview | without a legacy number | পুরোনো নম্বর ছাড়া |
@@ -6878,6 +7170,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S2fd88e` | translations | Copy from previous revision | আগের সংশোধন থেকে কপি করুন |
 | `Se522f0` | translations | Save draft translation | খসড়া অনুবাদ সংরক্ষণ করুন |
 | `Scb0b87` | translations | source language text of revision | সংশোধনের উৎস ভাষার পাঠ্য |
+| `S01209c` | upload | Also ask for approval of the unchanged rows that are only proposed | শুধু প্রস্তাবিত অপরিবর্তিত সারির অনুমোদনও চান |
+| `Sddf8d9` | upload | Compare and make the request | তুলনা করুন ও অনুরোধ করুন |
+| `S028ebe` | upload | Download the current mapping | বর্তমান ম্যাপিং ডাউনলোড করুন |
+| `S23bfbf` | upload | The workbook has problems. Nothing was requested. | ওয়ার্কবুকে সমস্যা আছে। কিছুই অনুরোধ করা হয়নি। |
+| `S24d49d` | upload | Title of the request | অনুরোধের শিরোনাম |
+| `S88809a` | upload | Upload the corrected mapping as a workbook with the sheets MC and HC (download the current one as a model). Every new row and every row that differs becomes one request; rows the workbook does not mention stay as they are. The request takes effect only after the StCd Owner, the Chief Engineer and an Administrator have approved it. | সংশোধিত ম্যাপিংটি MC ও HC শিটসহ ওয়ার্কবুক হিসেবে আপলোড করুন (মডেল হিসেবে বর্তমানটি ডাউনলোড করুন)। প্রতিটি নতুন ও প্রতিটি ভিন্ন সারি একটি অনুরোধ হয়; ওয়ার্কবুকে উল্লেখ নেই এমন সারি অপরিবর্তিত থাকে। StCd মালিক, প্রধান প্রকৌশলী ও একজন প্রশাসক অনুমোদন করার পরই অনুরোধ কার্যকর হয়। |
+| `S09efdf` | upload | Workbook (.xlsx) | ওয়ার্কবুক (.xlsx) |
 | `S359a3b` | user_detail | Back to users | ব্যবহারকারীদের কাছে ফিরে যান |
 | `Sf6fdbe` | user_detail, users | Delete | মুছুন |
 | `S9afe6c` | user_detail | Delete user | ব্যবহারকারী মুছুন |
@@ -6937,6 +7236,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sa58dac` | workbench | Set values on the Drafts | খসড়াগুলোতে মান সেট করুন |
 | `Sa443bb` | workbench | Sign off the Drafts | খসড়াগুলোর সাইন-অফ করুন |
 | `S53f47f` | workbench | Sign-off pending | সাইন-অফ মুলতুবি |
+| `Sae12bc` | workbench | Status category | স্ট্যাটাস বিভাগ |
 | `Sdc416e` | workbench | Step | ধাপ |
 | `Sf7710d` | workbench | Submit for review | পর্যালোচনার জন্য জমা দিন |
 | `Sa45adc` | workbench | Submit the Drafts | খসড়া জমা দিন |
@@ -6949,7 +7249,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 
 ### 9.7 IN मराठी 🇮🇳 — Marathi
 
-1295 of 1296 strings translated; direction left to right.
+1355 of 1356 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -6960,13 +7260,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S141763` | _macros | Confirm with your password | तुमच्या पासवर्डने खात्री करा |
 | `Sc326a4` | _macros, detail, form | Field | फील्ड |
 | `S0a0f8a` | _macros | Field differences | फील्डमधील फरक |
-| `Sbc9819` | _macros | Next | पुढील |
+| `Sbc9819` | _macros, list | Next | पुढील |
 | `S27cea7` | _macros | No field differences. | फील्डमध्ये कोणताही फरक नाही. |
 | `S464e43` | _macros | on track | वेळेवर |
 | `Sba2fff` | _macros, dashboard, success_metrics | overdue | विलंबित |
-| `S600584` | _macros | Pages | पृष्ठे |
+| `S600584` | _macros, list | Pages | पृष्ठे |
 | `S810099` | _macros | Please check | कृपया तपासा |
-| `S50f942` | _macros | Previous | मागील |
+| `S50f942` | _macros, list | Previous | मागील |
 | `S83fd6e` | _macros, stalled | red after | यानंतर लाल |
 | `S57e8a7` | _macros, success_metrics | slow | मंद |
 | `S15198e` | _macros | Waiting since | प्रतीक्षेत, पासून |
@@ -6997,10 +7297,10 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S06b6ac` | approval_queue, builder, detail | Identifier | ओळखकर्ता |
 | `S8e70d2` | approval_queue | Nothing is awaiting your approval. | तुमच्या मंजुरीच्या प्रतीक्षेत काही नाही. |
 | `Sa74f16` | approval_queue, detail, review_queue | Reviewer | पुनरावलोकक |
-| `S768e0c` | approval_queue, builder, detail | Title | शीर्षक |
+| `S768e0c` | approval_queue, builder, change | Title | शीर्षक |
 | `S33d306` | approval_queue, detail, mine | Waiting | प्रतीक्षा |
 | `S2cbacd` | audit_log | %(n)s total | एकूण %(n)s |
-| `S97c89a` | audit_log | Action | कृती |
+| `S97c89a` | audit_log, change | Action | कृती |
 | `Scbd19b` | audit_log | Actor | कर्ता |
 | `S811bdf` | audit_log | Actor ID | कर्ता आयडी |
 | `S8c85b1` | audit_log | after: | नंतर: |
@@ -7011,7 +7311,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sc7fb31` | audit_log | Entity | घटक |
 | `S04d694` | audit_log | Entity ID | घटक आयडी |
 | `Sbb4e99` | audit_log | Entity Type | घटक प्रकार |
-| `Sd7decf` | audit_log, index, language | Filter | फिल्टर |
+| `Sd7decf` | audit_log, changes, index | Filter | फिल्टर |
 | `S3f6605` | audit_log, delegations, software_versions | From | पासून |
 | `S0061b5` | audit_log | No matching audit entries. | जुळणारी कोणतीही ऑडिट नोंद नाही. |
 | `S01f79f` | audit_log | Scoped view: showing only actions you performed. | मर्यादित दृश्य: फक्त तुम्ही केलेल्या कृती दाखवल्या आहेत. |
@@ -7030,7 +7330,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sbe504f` | base | Skip to main content | मुख्य मजकुराकडे जा |
 | `S1b9aeb` | base, dashboard | unread | न वाचलेले |
 | `S2da600` | base, export, export_center | Version | आवृत्ती |
-| `S12625b` | base | waiting | प्रतीक्षेत |
+| `S12625b` | base, change | waiting | प्रतीक्षेत |
 | `S5a4692` | base | You are covering for a colleague | तुम्ही सहकाऱ्याच्या जागी काम करत आहात |
 | `S8e9c15` | builder | Candidate revisions | उमेदवार सुधारणा |
 | `Sdf2aa0` | builder | Functional Group / Subgroup | कार्यात्मक गट / उपगट |
@@ -7061,13 +7361,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S4105cf` | catalogue_health | exhausted | संपले |
 | `S57e8be` | catalogue_health, connections | Finding | निष्कर्ष |
 | `S1150a1` | catalogue_health | Gaps | फटी |
-| `S171a06` | catalogue_health, export, withdrawn_codes | Group | गट |
-| `Sb4aadc` | catalogue_health, legacy_mapping | Hub Controller | हब नियंत्रक |
+| `S171a06` | catalogue_health, export, list | Group | गट |
+| `Sb4aadc` | catalogue_health, legacy_mapping, list | Hub Controller | हब नियंत्रक |
 | `S8ae1c3` | catalogue_health | Left | उरलेले |
 | `S12c0f1` | catalogue_health | left | उरलेले |
 | `Sa7b60b` | catalogue_health | Left % | उरलेले % |
 | `S36a883` | catalogue_health | low | कमी |
-| `S1b123c` | catalogue_health, legacy_mapping, st_new | Main Controller | मुख्य नियंत्रक |
+| `S1b123c` | catalogue_health, legacy_mapping, list | Main Controller | मुख्य नियंत्रक |
 | `S92185d` | catalogue_health, index | Missing | गहाळ |
 | `S57282a` | catalogue_health | Missing expected data | अपेक्षित डेटा गहाळ |
 | `Sb8e95b` | catalogue_health | None found. | काहीही आढळले नाही. |
@@ -7084,6 +7384,31 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S75a804` | catalogue_health | subgroup(s) are running out of numbers: | उपगटांचे क्रमांक संपत आहेत: |
 | `S5fec4f` | catalogue_health | Unused numbers inside a band | पट्ट्यातील न वापरलेले क्रमांक |
 | `S02c0e4` | catalogue_health | Used | वापरलेले |
+| `S84f219` | change | All three, each by a different person who did not make the request. | तिन्ही, प्रत्येक वेगळ्या व्यक्तीकडून, ज्याने विनंती केलेली नाही. |
+| `S477aeb` | change, upload | and more | आणि आणखी |
+| `Sdeb9d0` | change, changes | Approvals | मंजुरी |
+| `S7b2c7f` | change, detail, language | Approve | मंजूर करा |
+| `S8aa57d` | change, detail | Changes | बदल |
+| `S3fe5e1` | change | Comment (required to reject) | टिप्पणी (नाकारण्यासाठी आवश्यक) |
+| `Sb48001` | change | Mapping change | मॅपिंगचा बदल |
+| `Sd7c1d0` | change, changes, list | Mapping changes | मॅपिंगचे बदल |
+| `Sf26140` | change, legacy_mapping, list | New identifier | नवीन ओळखकर्ता |
+| `Sf219cc` | change, list, row | Reason | कारण |
+| `S2b03b5` | change, detail | Reject | नाकारा |
+| `S5108c2` | change, changes | Requested by | विनंती करणारा |
+| `S52d0b3` | change, changes, detail | Rows | ओळी |
+| `S6c30d2` | change, dry_run, list | rows | ओळी |
+| `Sfabd38` | change | These rows changed after the request was made; it cannot be applied. Withdraw it and make it again: | विनंती केल्यानंतर या ओळी बदलल्या; ती लागू करता येत नाही. ती मागे घ्या आणि पुन्हा करा: |
+| `S47e564` | change, detail | Withdraw | मागे घ्या |
+| `S30d359` | change | Withdraw this request? | ही विनंती मागे घ्यायची? |
+| `S88c173` | change | You made this request; another person must decide. | ही विनंती तुम्ही केली आहे; दुसऱ्या व्यक्तीने निर्णय घेतला पाहिजे. |
+| `S04e02f` | change | Your role has decided already. | तुमच्या भूमिकेने आधीच निर्णय घेतला आहे. |
+| `Sc7274c` | changes | Any state | कोणतीही अवस्था |
+| `S2a560c` | changes | Every change of the mapping is a request. It takes effect when the StCd Owner, the Chief Engineer and an Administrator have each approved it; one rejection closes it. | मॅपिंगमधील प्रत्येक बदल ही एक विनंती आहे. StCd मालक, मुख्य अभियंता आणि एक प्रशासक यांनी प्रत्येकाने मंजूर केल्यावर ती लागू होते; एक नकार तिला बंद करतो. |
+| `Sdef2eb` | changes, list, menu | Mapping | मॅपिंग |
+| `Se03e43` | changes | No request yet. | अजून कोणतीही विनंती नाही. |
+| `S5fc0e0` | changes | request(s) wait for your decision. | विनंत्या तुमच्या निर्णयाची वाट पाहत आहेत. |
+| `Sa72502` | changes, detail, export | State | स्थिती |
 | `S97fd13` | check | Back to the terms | संज्ञांकडे परत |
 | `S1bc9e5` | check | English string | इंग्रजी मजकूर |
 | `S5d54b3` | check | Every string uses the translated terms. | प्रत्येक मजकूर भाषांतरित संज्ञा वापरतो. |
@@ -7164,7 +7489,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S9b0b4c` | detail | also the files without an access level (all columns) | अॅक्सेस स्तर नसलेल्या फाइलसुद्धा (सर्व स्तंभ) |
 | `Sf24c44` | detail | Any %(code)s Engineer | कोणताही %(code)s अभियंता |
 | `Sb99a01` | detail | Applies to software versions | सॉफ्टवेअर आवृत्त्यांना लागू |
-| `S7b2c7f` | detail, language | Approve | मंजूर करा |
 | `Sde38bf` | detail | Approve selected | निवडलेले मंजूर करा |
 | `Scf2999` | detail | Approving confirms these values; any change you make here is applied and audited. Rejecting ignores them. | मंजुरी या मूल्यांची पुष्टी करते; तुम्ही येथे केलेला कोणताही बदल लागू होतो आणि ऑडिट होतो. नाकारणे त्यांना दुर्लक्षित करते. |
 | `Sf7f2d5` | detail | Archive (requires 180-day retention elapsed) | संग्रहित करा (१८० दिवसांचा धारणा कालावधी संपलेला असावा) |
@@ -7185,7 +7509,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S4572f4` | detail | Change request | बदल विनंती |
 | `S3295be` | detail, workbench | Change requests in this set | या संचातील बदल विनंत्या |
 | `S4d8006` | detail | Change set | बदल संच |
-| `S8aa57d` | detail | Changes | बदल |
 | `S3d14ea` | detail, export | Changes of this release only | फक्त या रिलीजमधील बदल |
 | `Sbd95c0` | detail | Checklist confirmed at sign-off | साइन-ऑफच्या वेळी पुष्टी केलेली चेकलिस्ट |
 | `S074d62` | detail, role badge | Chief Engineer | मुख्य अभियंता |
@@ -7203,7 +7526,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S7671b5` | detail | Confirm or override Audience Access | लक्ष्य गट प्रवेशाची पुष्टी किंवा अधिलिखित करा |
 | `S6512ee` | detail | Connection | संबंध |
 | `S4f9be0` | detail | Content | आशय |
-| `Sa36a5f` | detail, legacy_mapping, st_new | Controller | नियंत्रक |
+| `Sa36a5f` | detail, legacy_mapping, list | Controller | नियंत्रक |
 | `Scd293f` | detail | Converter Reactive Power Program | कन्व्हर्टर रिअ‍ॅक्टिव्ह पॉवर प्रोग्राम |
 | `S3998a7` | detail | Copies the descriptive fields into a new Draft in a Main Controller group (a new number is allocated at submit; this code's identifier is kept as the legacy reference). | वर्णनात्मक फील्ड मुख्य नियंत्रक गटातील नवीन मसुद्यात कॉपी करते (सादर करताना नवीन क्रमांक दिला जातो; या कोडचा ओळखकर्ता जुना संदर्भ म्हणून ठेवला जातो). |
 | `S54b051` | detail | Copy this code for another turbine platform. The copy is a new Draft that links back here and goes through the normal review. | हा कोड दुसऱ्या टर्बाइन प्लॅटफॉर्मसाठी कॉपी करा. प्रत ही नवीन मसुदा आहे जी इथे परत जोडते आणि सामान्य पुनरावलोकनातून जाते. |
@@ -7337,7 +7660,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sf5ca9d` | detail | Recorded exports | नोंदवलेल्या निर्यात |
 | `Sa3f757` | detail | Reinstate to Released | प्रकाशितवर पुनर्स्थापित करा |
 | `S3238ca` | detail | Reinstatement reason | पुनर्स्थापनेचे कारण |
-| `S2b03b5` | detail | Reject | नाकारा |
 | `S27fb5c` | detail | Reject selected | निवडलेले नाकारा |
 | `S045c2c` | detail | Related codes | संबंधित कोड |
 | `S33a5a7` | detail | Relation | संबंध |
@@ -7355,7 +7677,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S4c1aa6` | detail | Repeated-Error Escalation | वारंवार येणाऱ्या त्रुटींची वाढ |
 | `S4aed03` | detail | Request | विनंती |
 | `Sf3421a` | detail | Request a Sign-Off | साइन-ऑफची विनंती करा |
-| `Sc26bf6` | detail, mine | Requested | विनंती केलेले |
+| `Sc26bf6` | detail, mine, row | Requested | विनंती केलेले |
 | `S2706ed` | detail | Required by | यांना आवश्यक |
 | `S619e87` | detail, form | Reset Delay | रीसेट विलंब |
 | `S026ab2` | detail | resolved | निराकरण झाले |
@@ -7365,7 +7687,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S3beb9a` | detail | Revision | सुधारणा |
 | `Sa72973` | detail | Revision Fields | सुधारणा फील्ड |
 | `Sfc1d6a` | detail | row(s) imported as Drafts | ओळी मसुदे म्हणून आयात झाल्या |
-| `S52d0b3` | detail, reconciliation, user_detail | Rows | ओळी |
 | `Sd0edfb` | detail | Sales | विक्री |
 | `S241bf5` | detail, workbench | Sample number | नमुना क्रमांक |
 | `Sda38c6` | detail | Save planned dates | नियोजित तारखा जतन करा |
@@ -7384,11 +7705,10 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sece2ac` | detail, form | Slot | स्लॉट |
 | `Sff44d2` | detail | Software Version | सॉफ्टवेअर आवृत्ती |
 | `S169bf7` | detail, export, software_versions | Software version | सॉफ्टवेअर आवृत्ती |
-| `S6da13a` | detail, fleet_feedback | Source | स्रोत |
+| `S6da13a` | detail, fleet_feedback, row | Source | स्रोत |
 | `Sd3c56b` | detail, export_profiles | source language | स्रोत भाषा |
 | `Sb3883f` | detail | Standards | मानके |
 | `Sfaa9e7` | detail, reconciliation | Started | सुरू झाले |
-| `Sa72502` | detail, export, hub_consolidation | State | स्थिती |
 | `Se246b6` | detail, form, list | Status Category | स्थिती वर्ग |
 | `S779953` | detail, form | Status Code for Repeated Error | वारंवार येणाऱ्या त्रुटीसाठी स्थिती कोड |
 | `S98a377` | detail | Still a Draft. | अजूनही मसुदा आहे. |
@@ -7407,7 +7727,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Seaf576` | detail, form | Trigger Snapshot | स्नॅपशॉट सुरू करा |
 | `S285ec8` | detail, form | Troubleshooting | समस्या निवारण |
 | `S71bba4` | detail | Turbine Operator Package | टर्बाइन ऑपरेटर पॅकेज |
-| `S3deb74` | detail, mine, review_queue | Type | प्रकार |
+| `S3deb74` | detail, list, mine | Type | प्रकार |
 | `Sab631e` | detail | Type %(id)s to confirm | खात्रीसाठी %(id)s टाइप करा |
 | `Sb5e264` | detail | Type the identifier to confirm | खात्रीसाठी ओळखकर्ता टाइप करा |
 | `S835f8a` | detail | Umrichterprogramm GSC | कन्व्हर्टर प्रोग्राम GSC |
@@ -7426,7 +7746,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S51ecc5` | detail | What happens next | पुढे काय होते |
 | `Sf323c0` | detail | Where used | कुठे वापरले |
 | `S7d5316` | detail | Who | कोण |
-| `S47e564` | detail | Withdraw | मागे घ्या |
 | `S51a998` | detail | Withdraw this change request? | ही बदल विनंती मागे घ्यायची? |
 | `S93ef7c` | detail, workbench | Workbench | कार्यक्षेत्र |
 | `S95a2a4` | detail, form | Write level | लेखन पातळी |
@@ -7446,7 +7765,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sec0298` | dry_run | Result per row | ओळीनुसार निकाल |
 | `S9bf7a8` | dry_run | Row | ओळ |
 | `S3ff0b0` | dry_run | row(s) have problems. Nothing has been created. | ओळींमध्ये समस्या आहेत. काहीही तयार झालेले नाही. |
-| `S6c30d2` | dry_run | rows | ओळी |
 | `S8012ff` | dry_run | unchanged | अपरिवर्तित |
 | `S83d655` | dry_run, st_preview | warning(s) | इशारा |
 | `S9ddad9` | dry_run | would be created | तयार झाल्या असत्या |
@@ -7588,6 +7906,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S285edc` | help and messages | %(ok)s of %(n)s: %(what)s. | %(ok)s / %(n)s: %(what)s. |
 | `Sb08e6c` | help and messages | A Reviewer and an Administrator each sign off (in any order). If either rejects, it goes back to the author. | एक पुनरावलोकक आणि एक प्रशासक प्रत्येकी साइन ऑफ करतात (कोणत्याही क्रमाने). कोणीही नाकारल्यास ती लेखकाकडे परत जाते. |
 | `S2f1bed` | help and messages | An Administrator includes the revision in a Release and publishes it; then it is Released. | प्रशासक सुधारणा प्रकाशनात समाविष्ट करून प्रकाशित करतो; तेव्हा ती प्रकाशित होते. |
+| `S9477fd` | help and messages | choose | निवडा |
 | `S1308dc` | help and messages | defective codes sent back | दोषपूर्ण कोड परत पाठवले |
 | `Se2bbd9` | help and messages | Drafts saved | मसुदे जतन केले |
 | `S0ddfa5` | help and messages | Drafts signed off | मसुद्यांचा साइन-ऑफ झाला |
@@ -7599,7 +7918,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sce489f` | help and messages | The author gets any required cross-domain sign-offs, then submits the change request for review. | लेखक आवश्यक आंतर-क्षेत्र साइन-ऑफ मिळवतो, मग बदल विनंती पुनरावलोकनासाठी सादर करतो. |
 | `S1cdbdd` | help and messages | The Chief Engineer approves or rejects. Approval makes the revision Approved (or Deprecated for a deprecation request). | मुख्य अभियंता मंजूर किंवा नाकारतो. मंजुरीमुळे सुधारणा मंजूर होते (किंवा कालबाह्यता विनंतीसाठी कालबाह्य). |
 | `S2d6ac0` | help and messages | The package is being built. Reload this page to follow its progress. | पॅकेज तयार होत आहे. प्रगती पाहण्यासाठी हे पेज पुन्हा लोड करा. |
-| `Sde7a5b` | help and messages | The program files do not carry a category; you can change it in each Draft. | प्रोग्राम फाइलमध्ये वर्ग नसतो; तुम्ही प्रत्येक मसुद्यात तो बदलू शकता. |
 | `Scff3a3` | help and messages | User deleted; its name and address are erased, what it did stays attributable. | वापरकर्ता हटवला; त्याचे नाव आणि पत्ता पुसला आहे, त्याने जे केले ते श्रेय देता येण्याजोगे राहते. |
 | `Secfb3f` | hub_consolidation | Deprecate replaced Hub codes | बदललेले हब कोड कालबाह्य घोषित करा |
 | `S0e7766` | hub_consolidation, language | draft | मसुदा |
@@ -7610,7 +7928,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sc50c53` | hub_consolidation | Hub Controller to Main Controller consolidation | हब नियंत्रकाचे मुख्य नियंत्रकात एकत्रीकरण |
 | `Scd189f` | hub_consolidation | Hub group | हब गट |
 | `Sa5262b` | hub_consolidation | If the Hub Controller leaves the hardware setup, its codes are defined anew on the Main Controller side. Create an MC draft from an HC code on its detail page (Actions); this report shows how far each has come. Nothing is renumbered. | हब नियंत्रक हार्डवेअर रचनेतून बाहेर पडल्यास त्याचे कोड मुख्य नियंत्रकाच्या बाजूला नव्याने व्याख्यित होतात. HC कोडच्या तपशील पृष्ठावर (कृती) त्यातून MC मसुदा तयार करा; हा अहवाल प्रत्येक कुठवर पोहोचला ते दाखवतो. काहीही पुन्हा क्रमांकित होत नाही. |
-| `Sdd6555` | hub_consolidation, legacy_mapping, st_preview | Legacy no. | जुना क्र. |
+| `Sdd6555` | hub_consolidation, legacy_mapping, list | Legacy no. | जुना क्र. |
 | `S845a2b` | hub_consolidation | No Hub Controller codes yet. | अद्याप हब नियंत्रक कोड नाहीत. |
 | `S138665` | hub_consolidation | Open deprecation requests | कालबाह्यता विनंत्या उघडा |
 | `Sc8df93` | hub_consolidation | Open deprecation requests for all replaced Hub codes of this group? | या गटातील सर्व बदललेल्या हब कोडसाठी कालबाह्यता विनंत्या उघडायच्या? |
@@ -7669,7 +7987,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sded18c` | language | approved by | मंजूर करणारा |
 | `Sedd46e` | language | Check against the interface | इंटरफेसशी जुळवून पहा |
 | `S5a013c` | language | missing | गहाळ |
-| `S2c924e` | language, workbench | Note | टीप |
+| `S2c924e` | language, row, workbench | Note | टीप |
 | `S2f09d0` | language | Note on %(x)s | %(x)s वर टीप |
 | `S75bf99` | language | proposed by | प्रस्तावक |
 | `Sc68e32` | language | Save translations | भाषांतरे जतन करा |
@@ -7677,14 +7995,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S542818` | language | Terms of the language | भाषेच्या संज्ञा |
 | `Sae9e5d` | language | Translation of %(x)s | %(x)s चे भाषांतर |
 | `S863fd0` | language | Your own proposal: another person approves it. | तुमचा स्वतःचा प्रस्ताव: दुसरी व्यक्ती तो मंजूर करते. |
-| `Sf9d469` | legacy_mapping | All controllers | सर्व नियंत्रक |
+| `Sf9d469` | legacy_mapping, list | All controllers | सर्व नियंत्रक |
 | `Se61c2f` | legacy_mapping | Any number state | कोणतीही क्रमांक स्थिती |
 | `S7c4f77` | legacy_mapping | issued | दिलेले |
 | `Sfd5ec0` | legacy_mapping, menu, new | Legacy mapping | जुने-नवे मॅपिंग |
 | `S81f567` | legacy_mapping | Legacy number to new identifier | जुना क्रमांक ते नवीन ओळखकर्ता |
 | `S64b267` | legacy_mapping | legacy number, identifier or name | जुना क्रमांक, ओळखकर्ता किंवा नाव |
 | `S60fe6c` | legacy_mapping | new codes without a legacy number (n/a) | जुन्या क्रमांकाशिवाय नवीन कोड (लागू नाही) |
-| `Sf26140` | legacy_mapping, st_preview | New identifier | नवीन ओळखकर्ता |
 | `Sf573c8` | legacy_mapping | no number yet | अद्याप क्रमांक नाही |
 | `S7877c5` | legacy_mapping | No status code carries a legacy number yet. | अद्याप कोणत्याही स्थिती कोडवर जुना क्रमांक नाही. |
 | `Sb7baa1` | legacy_mapping | Number | क्रमांक |
@@ -7693,10 +8010,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S8b0b7c` | legacy_mapping | with a legacy number | जुन्या क्रमांकासह |
 | `Seba07b` | list | A change set groups the change requests that ship with one controller software release, so reviewers see the whole package. Each request is still decided on its own. | बदल संच अशा बदल विनंत्या एकत्र आणतो ज्या नियंत्रक सॉफ्टवेअरच्या एका प्रकाशनासोबत जातात, जेणेकरून पुनरावलोककांना संपूर्ण पॅकेज दिसते. प्रत्येक विनंतीवर तरीही स्वतंत्रपणे निर्णय होतो. |
 | `Sc5fe02` | list | any | कोणतेही |
+| `S55201a` | list | Any status | कोणतीही स्थिती |
 | `Sef5415` | list | Apply columns | स्तंभ लागू करा |
+| `Sffb569` | list | Ask for approval of the ticked rows | निवडलेल्या ओळींच्या मंजुरीची विनंती करा |
 | `S9e895f` | list | Change sets | बदल संच |
 | `S162a45` | list, menu | Change Sets | बदल संच |
 | `Scf723c` | list | Columns | स्तंभ |
+| `S2ddaf9` | list, upload | Compare a workbook | वर्कबुकची तुलना करा |
 | `Seb0fd2` | list | Delete all my Drafts of this filter | या फिल्टरचे माझे सर्व मसुदे हटवा |
 | `S36f212` | list | Delete ALL of your own Drafts that match this filter, on every page? | या फिल्टरशी जुळणारे तुमचे सर्व मसुदे, सर्व पानांवर, हटवायचे? |
 | `Sc554a1` | list | Delete selected Drafts | निवडलेले मसुदे हटवा |
@@ -7706,12 +8026,18 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S44d25b` | list | Items | घटक |
 | `S033df3` | list | Lifecycle | जीवनचक्र |
 | `Sb4cad6` | list | Link to this view | या दृश्याचा दुवा |
+| `Sbdb4e1` | list | Load the initial mapping | सुरुवातीचे मॅपिंग लोड करा |
+| `Se07018` | list | Make the request | विनंती करा |
 | `Se248d5` | list, new | New change set | नवीन बदल संच |
 | `Se75aa1` | list, new | New Release | नवीन प्रकाशन |
+| `S9bb526` | list, row | New row | नवीन ओळ |
 | `Se5076c` | list | No change sets yet. | अद्याप कोणतेही बदल संच नाहीत. |
 | `Sd32c03` | list | No releases yet. | अद्याप कोणतीही प्रकाशने नाहीत. |
+| `Sb5b22c` | list | No row matches. | कोणतीही ओळ जुळत नाही. |
 | `Sc3af43` | list | No saved searches yet. | अद्याप जतन केलेले शोध नाहीत. |
 | `S0cb400` | list | No status codes match these filters. | या फिल्टरशी कोणताही स्थिती कोड जुळत नाही. |
+| `S260f7a` | list, row | Node | नोड |
+| `S08250b` | list | number, title or group | क्रमांक, शीर्षक किंवा गट |
 | `Sf7194e` | list | Requests | विनंत्या |
 | `S37a530` | list | result | निकाल |
 | `Scdf7e9` | list | results | निकाल |
@@ -7720,10 +8046,14 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sff86e9` | list | Save the current filters as | सध्याचे फिल्टर या नावाने जतन करा |
 | `Sed1d84` | list | Saved searches | जतन केलेले शोध |
 | `S859822` | list, mine | Select | निवडा |
+| `S45b553` | list | Select all rows | सर्व ओळी निवडा |
 | `S7f5583` | list, menu | Status Codes | स्थिती कोड |
 | `S20bff1` | list | Status codes | स्थिती कोड |
+| `S3a1066` | list | The mapping is empty. | मॅपिंग रिकामे आहे. |
+| `S27d95b` | list | The rows stay as they are. Once the StCd Owner, the Chief Engineer and an Administrator approve, they count as approved numbers. | ओळी आहेत तशाच राहतात. StCd मालक, मुख्य अभियंता आणि एक प्रशासक मंजूर करतील तेव्हा त्या मंजूर क्रमांक मानल्या जातात. |
 | `Se90eb0` | list | Turbine Platform | टर्बाइन प्लॅटफॉर्म |
 | `S86b1e7` | list | Typos are tolerated: "convertor" still finds "converter". | टायपो सहन केले जातात: "convertor" तरीही "converter" शोधतो. |
+| `Sb0c551` | list | Which legacy status code becomes which new one, with what the program files do not carry: the English title, the type, the up/down counter, the access levels, cause and directive. A row changes only by a request that the StCd Owner, the Chief Engineer and an Administrator all approve. | कोणता जुना स्टेटस कोड कोणता नवा होतो, प्रोग्राम फाइल्समध्ये नसलेल्या माहितीसह: इंग्रजी शीर्षक, प्रकार, वर/खाली काउंटर, प्रवेश स्तर, कारण आणि सूचना. StCd मालक, मुख्य अभियंता आणि एक प्रशासक सर्वांनी मंजूर केलेल्या विनंतीनेच ओळ बदलते. |
 | `Sf7c400` | login | Log in | लॉग इन |
 | `S175835` | login | or | किंवा |
 | `S8be3c9` | login, users | Password | पासवर्ड |
@@ -7885,6 +8215,23 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S8cb56e` | message: lookup_admin_service | range_end must be greater than range_start | range_end हे range_start पेक्षा मोठे असावे |
 | `Se3a971` | message: lookup_admin_service | sub_range_end must be greater than sub_range_start | sub_range_end हे sub_range_start पेक्षा मोठे असावे |
 | `S1404e3` | message: lookup_service | functional_system_group query parameter is required for functional-subgroups | functional-subgroups साठी functional_system_group क्वेरी पॅरामीटर आवश्यक आहे |
+| `Sf28681` | message: mapping_service | Give the reason for the change; the three approvers read it first. | बदलाचे कारण सांगा; तिन्ही मंजुरी देणारे ते आधी वाचतात. |
+| `S062788` | message: mapping_service | Give the request a title of at most 120 characters. | विनंतीला जास्तीत जास्त 120 अक्षरांचे शीर्षक द्या. |
+| `S2ea56f` | message: mapping_service | Mapping change not found | मॅपिंगचा बदल सापडला नाही |
+| `S2c9363` | message: mapping_service | Mapping row not found | मॅपिंगची ओळ सापडली नाही |
+| `S2d5693` | message: mapping_service | Only the person who made the request can withdraw it. | विनंती करणारी व्यक्तीच ती मागे घेऊ शकते. |
+| `S682269` | message: mapping_service | Only the StCd Owner, the Chief Engineer and an Administrator decide on the mapping. | मॅपिंगवर फक्त StCd मालक, मुख्य अभियंता आणि एक प्रशासक निर्णय घेतात. |
+| `S5e0f66` | message: mapping_service | Say why you reject the request. | तुम्ही विनंती का नाकारता ते सांगा. |
+| `S3d5cfc` | message: mapping_service | The comment is longer than 1000 characters. | टिप्पणी 1000 अक्षरांपेक्षा मोठी आहे. |
+| `S82b817` | message: mapping_service | The decision must be APPROVE or REJECT. | निर्णय APPROVE किंवा REJECT असला पाहिजे. |
+| `S9ec08a` | message: mapping_service | The file is not a readable .xlsx workbook. | फाइल वाचता येण्याजोगे .xlsx वर्कबुक नाही. |
+| `S3831f7` | message: mapping_service | The reason is longer than 2000 characters. | कारण 2000 अक्षरांपेक्षा मोठे आहे. |
+| `Sa5de7d` | message: mapping_service | The request contains no row. | विनंतीमध्ये एकही ओळ नाही. |
+| `S2116e4` | message: mapping_service | The request is already closed. | विनंती आधीच बंद झाली आहे. |
+| `S8518e7` | message: mapping_service | The role has decided already. | या भूमिकेने आधीच निर्णय घेतला आहे. |
+| `S2a15d7` | message: mapping_service | The workbook is larger than 5 MB. | वर्कबुक 5 MB पेक्षा मोठे आहे. |
+| `S8eb912` | message: mapping_service | The workbook unpacks to more than 80 MB. | वर्कबुक उघडल्यावर 80 MB पेक्षा मोठे होते. |
+| `S6c1d08` | message: mapping_service | Your role may not propose a change of the mapping. | तुमची भूमिका मॅपिंगमध्ये बदल सुचवू शकत नाही. |
 | `S4ada2b` | message: notification_service | Notification not found | सूचना सापडली नाही |
 | `Sd92b89` | message: notification_service | This notification belongs to someone else. | ही सूचना दुसऱ्या कोणाची आहे. |
 | `Sb0cd00` | message: numbering_service | Identifier override must match StCd-NNNNN (five digits). | अधिलिखित ओळखकर्ता StCd-NNNNN (पाच अंक) शी जुळला पाहिजे. |
@@ -7916,8 +8263,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S9671fb` | message: settings_service | must be true or false | true किंवा false असावे |
 | `S5166bb` | message: st_import_service | A staged file changed after the preview. Upload again. | पूर्वावलोकनानंतर एक स्टेज केलेली फाइल बदलली. पुन्हा अपलोड करा. |
 | `Saa4de2` | message: st_import_service | controller must be auto, MC or HC | controller हे auto, MC किंवा HC असावे |
-| `Sa30251` | message: st_import_service | default_category must be ERROR, WARNING or INFO | default_category ही ERROR, WARNING किंवा INFO असावी |
-| `Sfe694a` | message: st_import_service | hc_proposal must be 1 or 2 | hc_proposal हे १ किंवा २ असावे |
 | `S58bec3` | message: st_import_service | No StCd program files found. Upload .st files or a ZIP of them. | कोणत्याही StCd प्रोग्राम फाइल सापडल्या नाहीत. .st फाइल किंवा त्यांचा ZIP अपलोड करा. |
 | `Sd9c5b0` | message: st_import_service | Nothing selected: tick at least one program that is ready. | काहीही निवडलेले नाही: किमान एक तयार प्रोग्राम निवडा. |
 | `S5dbbd0` | message: st_import_service | The code is no longer an open Draft; preview the files again. | कोड आता खुला मसुदा नाही; फाइलचे पूर्वावलोकन पुन्हा पहा. |
@@ -8064,6 +8409,23 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S05fc94` | role badge | Engineer | अभियंता |
 | `S3c0e8a` | role badge | StCd Owner | StCd मालक |
 | `Sdbad9f` | role badge | Viewer | दर्शक |
+| `S7f2e4b` | row | Access levels | प्रवेश स्तर |
+| `S08f985` | row | Cause | कारण |
+| `S164e0b` | row | Directive | सूचना |
+| `S283474` | row | New number | नवीन क्रमांक |
+| `Sfa6fdd` | row | No request yet. The row is as it was loaded. | अजून कोणतीही विनंती नाही. ओळ लोड केल्याप्रमाणेच आहे. |
+| `Sf790fc` | row | Nothing is changed here directly: the form makes a request, and the row changes after the StCd Owner, the Chief Engineer and an Administrator have approved it. | येथे थेट काहीही बदलत नाही: फॉर्म एक विनंती करतो, आणि StCd मालक, मुख्य अभियंता व एक प्रशासक यांच्या मंजुरीनंतर ओळ बदलते. |
+| `S9d728f` | row | Request approval of the number | क्रमांकाच्या मंजुरीची विनंती करा |
+| `Sc8978f` | row | Request rejection of the number | क्रमांक नाकारण्याची विनंती करा |
+| `Sc644eb` | row | Request that this number is never used? | हा क्रमांक कधीही वापरला जाऊ नये अशी विनंती करायची? |
+| `Sb25913` | row | Request the new row | नवीन ओळीची विनंती करा |
+| `Sb04301` | row | Request this change | या बदलाची विनंती करा |
+| `Sae91b6` | row | Requests for this row | या ओळीच्या विनंत्या |
+| `Sd59701` | row | Reset delay (parameter) | रीसेट विलंब (पॅरामीटर) |
+| `Sfd64cd` | row | Set delay (parameter) | सेट विलंब (पॅरामीटर) |
+| `S9c0444` | row | The three approvers read the reason first. | तिन्ही मंजुरी देणारे आधी कारण वाचतात. |
+| `Sc84745` | row | Title (English) | शीर्षक (इंग्रजी) |
+| `S711eea` | row | Up/down counter | वर/खाली काउंटर |
 | `S913aba` | settings | Save settings | सेटिंग्ज जतन करा |
 | `Sb68734` | software_versions | Added | जोडलेले |
 | `S172415` | software_versions | added | जोडले |
@@ -8077,28 +8439,19 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd97d1e` | software_versions | Show | दाखवा |
 | `S42ea2e` | software_versions | Software Versions | सॉफ्टवेअर आवृत्त्या |
 | `S3bd89c` | software_versions | Which codes exist in which software version | कोणता कोड कोणत्या सॉफ्टवेअर आवृत्तीत आहे |
-| `S16e5d4` | st_new, st_preview | Alarm type | अलार्मचा प्रकार |
-| `S726d7a` | st_new | as above | वरीलप्रमाणे |
-| `S9477fd` | st_new, st_preview | choose | निवडा |
 | `Sb149ca` | st_new | Detect: a number from 10000 up is a Hub Controller program | ओळखा: १०००० पासून पुढील क्रमांक हब नियंत्रक प्रोग्राम आहे |
 | `S7d06d0` | st_new | Every imported program becomes an ordinary Draft with the number it carries reserved. It still needs Cross-Domain Sign-Off, dual review and Chief Engineer approval before Release, and all Drafts of one import share a change set. | प्रत्येक आयात केलेला प्रोग्राम सामान्य मसुदा बनतो ज्यात त्याचा स्वतःचा क्रमांक आरक्षित असतो. प्रकाशनापूर्वी त्याला तरीही आंतर-क्षेत्र साइन-ऑफ, दुहेरी पुनरावलोकन आणि मुख्य अभियंत्याची मंजुरी लागते, आणि एका आयातीचे सर्व मसुदे एक बदल संच वाटून घेतात. |
-| `Sbda77c` | st_new | Every program names an alarm type. A type left at "as above" gets the category chosen above; the next page lets you set the category of single programs or of all ticked ones. | प्रत्येक प्रोग्राम एक अलार्म प्रकार सांगतो. "वरीलप्रमाणे" ठेवलेल्या प्रकाराला वर निवडलेला वर्ग मिळतो; पुढच्या पानावर तुम्ही एकेका प्रोग्रामचा किंवा खूण केलेल्या सर्वांचा वर्ग ठरवू शकता. |
 | `S3b9e43` | st_new | Hub Controller (legacy numbers, mapped to the new ones) | हब नियंत्रक (जुने क्रमांक, नव्यांशी नकाशित) |
 | `Sd7333f` | st_new | Import status codes from .st files | .st फाइलमधून स्थिती कोड आयात करा |
-| `S6640a6` | st_new | New number of Hub Controller programs | हब नियंत्रक प्रोग्रामचा नवीन क्रमांक |
 | `Sc0eff1` | st_new | Or a whole folder | किंवा संपूर्ण फोल्डर |
 | `S94ddc1` | st_new | Program files (.st) or a ZIP | प्रोग्राम फाइल (.st) किंवा एक ZIP |
-| `Sd99e2a` | st_new | Proposal 1: five-digit numbers (11000 and up) | प्रस्ताव १: पाच अंकी क्रमांक (११००० पासून) |
-| `S2744b0` | st_new | Proposal 2: inside the Main Controller scheme | प्रस्ताव २: मुख्य नियंत्रक योजनेच्या आत |
 | `S67640d` | st_new | Read files and preview | फाइल वाचा आणि पूर्वावलोकन पहा |
-| `S0af4fc` | st_new | Status category by alarm type (optional) | अलार्म प्रकारानुसार स्थिती वर्ग (ऐच्छिक) |
-| `S234237` | st_new | Status category of the new codes | नवीन कोडचा स्थिती वर्ग |
-| `S61fc52` | st_new | The program files do not carry a category and none is assumed: choose one here, by alarm type below, or for each program in the preview. A program without a category is not imported. | प्रोग्राम फाइलींमध्ये वर्ग नसतो आणि कोणताही गृहीत धरला जात नाही: येथे एक निवडा, खाली अलार्म प्रकारानुसार निवडा, किंवा पूर्वावलोकनात प्रत्येक प्रोग्रामसाठी निवडा. वर्ग नसलेला प्रोग्राम आयात होत नाही. |
+| `Saa9df6` | st_new | The title, the type and the access levels of every program come from the mapping, never from the files. A program whose number is not in the mapping is blocked. | प्रत्येक प्रोग्रामचे शीर्षक, प्रकार आणि प्रवेश स्तर मॅपिंगमधून येतात, फाइल्समधून कधीही नाही. ज्या प्रोग्रामचा क्रमांक मॅपिंगमध्ये नाही तो अडवला जातो. |
 | `S8f4c21` | st_new | Turbine platforms | टर्बाइन प्लॅटफॉर्म |
 | `S9ad4d4` | st_new | Upload the generated StCd_<n>.st programs — several files at once, a whole folder, or one ZIP. Nothing is created yet: the next page lists every program so you can tick the ones to import. | तयार केलेले StCd_<n>.st प्रोग्राम अपलोड करा — एकाच वेळी अनेक फाइल, संपूर्ण फोल्डर किंवा एक ZIP. अद्याप काहीही तयार होत नाही: पुढील पृष्ठ प्रत्येक प्रोग्राम सूचीबद्ध करते जेणेकरून तुम्ही आयात करायचे ते निवडू शकता. |
+| `S16e5d4` | st_preview | Alarm type | अलार्मचा प्रकार |
 | `S2693e5` | st_preview | All Drafts of this import join one change set, so they can be reviewed and decided together. | या आयातीचे सर्व मसुदे एका बदल संचात सामील होतात, जेणेकरून त्यांचे एकत्र पुनरावलोकन आणि निर्णय होऊ शकतो. |
 | `Scbc694` | st_preview | already in the catalogue | आधीच कॅटलॉगमध्ये |
-| `Sc00673` | st_preview | Apply to the ticked programs | खूण केलेल्या प्रोग्रामवर लागू करा |
 | `Sdf88b8` | st_preview | blocked | अवरोधित |
 | `S6f7703` | st_preview | Changed and withdrawn programs are not ticked: tick the ones you want to update, revise or restore. | बदललेले आणि मागे घेतलेले प्रोग्राम निवडलेले नसतात: जे अद्ययावत, सुधारित किंवा पुनर्संचयित करायचे आहेत त्यांना खूण करा. |
 | `S78bb8b` | st_preview | Create Drafts for the ticked programs | खूण केलेल्या प्रोग्रामसाठी मसुदे तयार करा |
@@ -8116,8 +8469,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se58289` | st_preview | Programs found in the uploaded files | अपलोड केलेल्या फाइलमध्ये सापडलेले प्रोग्राम |
 | `S75c053` | st_preview, workbench | ready | तयार |
 | `S0723bf` | st_preview | Select all programs that are ready | सर्व तयार प्रोग्राम निवडा |
-| `Sae12bc` | st_preview, workbench | Status category | स्थिती वर्ग |
-| `Sd7a322` | st_preview | Status category of the ticked programs | खूण केलेल्या प्रोग्रामचा स्थिती वर्ग |
+| `S9a2439` | st_preview | Type (from the mapping) | प्रकार (मॅपिंगमधून) |
 | `S1a767a` | st_preview | updates the open Draft | खुला मसुदा अद्ययावत करते |
 | `S02499f` | st_preview | withdrawn | मागे घेतलेले |
 | `Sf0c3cf` | st_preview | without a legacy number | जुन्या क्रमांकाशिवाय |
@@ -8180,6 +8532,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S2fd88e` | translations | Copy from previous revision | मागील सुधारणेतून कॉपी करा |
 | `Se522f0` | translations | Save draft translation | मसुदा भाषांतर जतन करा |
 | `Scb0b87` | translations | source language text of revision | सुधारणेचा स्रोत भाषा मजकूर |
+| `S01209c` | upload | Also ask for approval of the unchanged rows that are only proposed | फक्त प्रस्तावित असलेल्या न बदललेल्या ओळींच्या मंजुरीचीही विनंती करा |
+| `Sddf8d9` | upload | Compare and make the request | तुलना करा आणि विनंती करा |
+| `S028ebe` | upload | Download the current mapping | सध्याचे मॅपिंग डाउनलोड करा |
+| `S23bfbf` | upload | The workbook has problems. Nothing was requested. | वर्कबुकमध्ये समस्या आहेत. काहीही मागितले गेले नाही. |
+| `S24d49d` | upload | Title of the request | विनंतीचे शीर्षक |
+| `S88809a` | upload | Upload the corrected mapping as a workbook with the sheets MC and HC (download the current one as a model). Every new row and every row that differs becomes one request; rows the workbook does not mention stay as they are. The request takes effect only after the StCd Owner, the Chief Engineer and an Administrator have approved it. | दुरुस्त केलेले मॅपिंग MC आणि HC शीट्ससह वर्कबुक म्हणून अपलोड करा (नमुना म्हणून सध्याचे डाउनलोड करा). प्रत्येक नवीन आणि प्रत्येक वेगळी ओळ एक विनंती बनते; वर्कबुकमध्ये उल्लेख नसलेल्या ओळी तशाच राहतात. StCd मालक, मुख्य अभियंता आणि एक प्रशासक यांनी मंजूर केल्यावरच विनंती लागू होते. |
+| `S09efdf` | upload | Workbook (.xlsx) | वर्कबुक (.xlsx) |
 | `S359a3b` | user_detail | Back to users | वापरकर्त्यांकडे परत |
 | `Sf6fdbe` | user_detail, users | Delete | हटवा |
 | `S9afe6c` | user_detail | Delete user | वापरकर्ता हटवा |
@@ -8239,6 +8598,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sa58dac` | workbench | Set values on the Drafts | मसुद्यांवर मूल्ये सेट करा |
 | `Sa443bb` | workbench | Sign off the Drafts | मसुद्यांचा साइन-ऑफ करा |
 | `S53f47f` | workbench | Sign-off pending | साइन-ऑफ प्रलंबित |
+| `Sae12bc` | workbench | Status category | स्थिती वर्ग |
 | `Sdc416e` | workbench | Step | टप्पा |
 | `Sf7710d` | workbench | Submit for review | पुनरावलोकनासाठी सादर करा |
 | `Sa45adc` | workbench | Submit the Drafts | मसुदे सादर करा |
@@ -8251,7 +8611,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 
 ### 9.8 IN తెలుగు 🇮🇳 — Telugu
 
-1295 of 1296 strings translated; direction left to right.
+1355 of 1356 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -8262,13 +8622,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S141763` | _macros | Confirm with your password | మీ పాస్‌వర్డ్‌తో నిర్ధారించండి |
 | `Sc326a4` | _macros, detail, form | Field | ఫీల్డ్ |
 | `S0a0f8a` | _macros | Field differences | ఫీల్డ్ తేడాలు |
-| `Sbc9819` | _macros | Next | తదుపరి |
+| `Sbc9819` | _macros, list | Next | తదుపరి |
 | `S27cea7` | _macros | No field differences. | ఫీల్డ్ తేడాలు లేవు. |
 | `S464e43` | _macros | on track | సమయానికి |
 | `Sba2fff` | _macros, dashboard, success_metrics | overdue | గడువు దాటింది |
-| `S600584` | _macros | Pages | పేజీలు |
+| `S600584` | _macros, list | Pages | పేజీలు |
 | `S810099` | _macros | Please check | దయచేసి తనిఖీ చేయండి |
-| `S50f942` | _macros | Previous | మునుపటి |
+| `S50f942` | _macros, list | Previous | మునుపటి |
 | `S83fd6e` | _macros, stalled | red after | తర్వాత ఎరుపు |
 | `S57e8a7` | _macros, success_metrics | slow | నెమ్మదిగా |
 | `S15198e` | _macros | Waiting since | ఎదురుచూస్తోంది, నుండి |
@@ -8299,10 +8659,10 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S06b6ac` | approval_queue, builder, detail | Identifier | గుర్తింపు |
 | `S8e70d2` | approval_queue | Nothing is awaiting your approval. | మీ ఆమోదం కోసం ఏదీ వేచి లేదు. |
 | `Sa74f16` | approval_queue, detail, review_queue | Reviewer | సమీక్షకుడు |
-| `S768e0c` | approval_queue, builder, detail | Title | శీర్షిక |
+| `S768e0c` | approval_queue, builder, change | Title | శీర్షిక |
 | `S33d306` | approval_queue, detail, mine | Waiting | నిరీక్షణ |
 | `S2cbacd` | audit_log | %(n)s total | మొత్తం %(n)s |
-| `S97c89a` | audit_log | Action | చర్య |
+| `S97c89a` | audit_log, change | Action | చర్య |
 | `Scbd19b` | audit_log | Actor | కర్త |
 | `S811bdf` | audit_log | Actor ID | కర్త ఐడి |
 | `S8c85b1` | audit_log | after: | తర్వాత: |
@@ -8313,7 +8673,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sc7fb31` | audit_log | Entity | ఎంటిటీ |
 | `S04d694` | audit_log | Entity ID | ఎంటిటీ ఐడి |
 | `Sbb4e99` | audit_log | Entity Type | ఎంటిటీ రకం |
-| `Sd7decf` | audit_log, index, language | Filter | ఫిల్టర్ |
+| `Sd7decf` | audit_log, changes, index | Filter | ఫిల్టర్ |
 | `S3f6605` | audit_log, delegations, software_versions | From | నుండి |
 | `S0061b5` | audit_log | No matching audit entries. | సరిపోలే ఆడిట్ నమోదులు లేవు. |
 | `S01f79f` | audit_log | Scoped view: showing only actions you performed. | పరిమిత వీక్షణ: మీరు చేసిన చర్యలు మాత్రమే చూపబడుతున్నాయి. |
@@ -8332,7 +8692,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sbe504f` | base | Skip to main content | ప్రధాన కంటెంట్‌కు వెళ్లండి |
 | `S1b9aeb` | base, dashboard | unread | చదవనివి |
 | `S2da600` | base, export, export_center | Version | వెర్షన్ |
-| `S12625b` | base | waiting | వేచి ఉన్నవి |
+| `S12625b` | base, change | waiting | వేచి ఉన్నవి |
 | `S5a4692` | base | You are covering for a colleague | మీరు ఒక సహోద్యోగి స్థానంలో పనిచేస్తున్నారు |
 | `S8e9c15` | builder | Candidate revisions | అభ్యర్థి పునర్విమర్శలు |
 | `Sdf2aa0` | builder | Functional Group / Subgroup | ఫంక్షనల్ గ్రూప్ / సబ్‌గ్రూప్ |
@@ -8363,13 +8723,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S4105cf` | catalogue_health | exhausted | అయిపోయింది |
 | `S57e8be` | catalogue_health, connections | Finding | కనుగొన్నది |
 | `S1150a1` | catalogue_health | Gaps | ఖాళీలు |
-| `S171a06` | catalogue_health, export, withdrawn_codes | Group | గ్రూప్ |
-| `Sb4aadc` | catalogue_health, legacy_mapping | Hub Controller | హబ్ కంట్రోలర్ |
+| `S171a06` | catalogue_health, export, list | Group | గ్రూప్ |
+| `Sb4aadc` | catalogue_health, legacy_mapping, list | Hub Controller | హబ్ కంట్రోలర్ |
 | `S8ae1c3` | catalogue_health | Left | మిగిలినవి |
 | `S12c0f1` | catalogue_health | left | మిగిలినవి |
 | `Sa7b60b` | catalogue_health | Left % | మిగిలినవి % |
 | `S36a883` | catalogue_health | low | తక్కువ |
-| `S1b123c` | catalogue_health, legacy_mapping, st_new | Main Controller | ప్రధాన కంట్రోలర్ |
+| `S1b123c` | catalogue_health, legacy_mapping, list | Main Controller | ప్రధాన కంట్రోలర్ |
 | `S92185d` | catalogue_health, index | Missing | లేనివి |
 | `S57282a` | catalogue_health | Missing expected data | ఆశించిన డేటా లేదు |
 | `Sb8e95b` | catalogue_health | None found. | ఏదీ కనబడలేదు. |
@@ -8386,6 +8746,31 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S75a804` | catalogue_health | subgroup(s) are running out of numbers: | సబ్‌గ్రూప్‌లకు సంఖ్యలు అయిపోతున్నాయి: |
 | `S5fec4f` | catalogue_health | Unused numbers inside a band | బ్యాండ్‌లో వాడని సంఖ్యలు |
 | `S02c0e4` | catalogue_health | Used | వాడినవి |
+| `S84f219` | change | All three, each by a different person who did not make the request. | మూడూ, ప్రతిదీ అభ్యర్థన చేయని వేరే వ్యక్తి నుండి. |
+| `S477aeb` | change, upload | and more | ఇంకా |
+| `Sdeb9d0` | change, changes | Approvals | ఆమోదాలు |
+| `S7b2c7f` | change, detail, language | Approve | ఆమోదించండి |
+| `S8aa57d` | change, detail | Changes | మార్పులు |
+| `S3fe5e1` | change | Comment (required to reject) | వ్యాఖ్య (తిరస్కరించడానికి తప్పనిసరి) |
+| `Sb48001` | change | Mapping change | మ్యాపింగ్ మార్పు |
+| `Sd7c1d0` | change, changes, list | Mapping changes | మ్యాపింగ్ మార్పులు |
+| `Sf26140` | change, legacy_mapping, list | New identifier | కొత్త గుర్తింపు |
+| `Sf219cc` | change, list, row | Reason | కారణం |
+| `S2b03b5` | change, detail | Reject | తిరస్కరించండి |
+| `S5108c2` | change, changes | Requested by | అభ్యర్థించినవారు |
+| `S52d0b3` | change, changes, detail | Rows | వరుసలు |
+| `S6c30d2` | change, dry_run, list | rows | వరుసలు |
+| `Sfabd38` | change | These rows changed after the request was made; it cannot be applied. Withdraw it and make it again: | అభ్యర్థన తర్వాత ఈ వరుసలు మారాయి; దాన్ని అమలు చేయలేరు. దాన్ని ఉపసంహరించి మళ్లీ చేయండి: |
+| `S47e564` | change, detail | Withdraw | ఉపసంహరించండి |
+| `S30d359` | change | Withdraw this request? | ఈ అభ్యర్థనను ఉపసంహరించాలా? |
+| `S88c173` | change | You made this request; another person must decide. | ఈ అభ్యర్థనను మీరు చేశారు; మరొక వ్యక్తి నిర్ణయించాలి. |
+| `S04e02f` | change | Your role has decided already. | మీ పాత్ర ఇప్పటికే నిర్ణయించింది. |
+| `Sc7274c` | changes | Any state | ఏ స్థితి అయినా |
+| `S2a560c` | changes | Every change of the mapping is a request. It takes effect when the StCd Owner, the Chief Engineer and an Administrator have each approved it; one rejection closes it. | మ్యాపింగ్‌లో ప్రతి మార్పు ఒక అభ్యర్థన. StCd యజమాని, చీఫ్ ఇంజనీర్, ఒక నిర్వాహకుడు ప్రతి ఒక్కరూ ఆమోదిస్తే అది అమలవుతుంది; ఒక తిరస్కరణ దాన్ని మూసివేస్తుంది. |
+| `Sdef2eb` | changes, list, menu | Mapping | మ్యాపింగ్ |
+| `Se03e43` | changes | No request yet. | ఇంకా అభ్యర్థన లేదు. |
+| `S5fc0e0` | changes | request(s) wait for your decision. | అభ్యర్థనలు మీ నిర్ణయం కోసం వేచి ఉన్నాయి. |
+| `Sa72502` | changes, detail, export | State | స్థితి |
 | `S97fd13` | check | Back to the terms | పదాలకు తిరిగి వెళ్ళండి |
 | `S1bc9e5` | check | English string | ఆంగ్ల పాఠ్యం |
 | `S5d54b3` | check | Every string uses the translated terms. | ప్రతి పాఠ్యం అనువదించిన పదాలను ఉపయోగిస్తుంది. |
@@ -8466,7 +8851,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S9b0b4c` | detail | also the files without an access level (all columns) | యాక్సెస్ స్థాయి లేని ఫైళ్లు కూడా (అన్ని నిలువు వరుసలు) |
 | `Sf24c44` | detail | Any %(code)s Engineer | ఏదైనా %(code)s ఇంజనీర్ |
 | `Sb99a01` | detail | Applies to software versions | సాఫ్ట్‌వేర్ వెర్షన్లకు వర్తిస్తుంది |
-| `S7b2c7f` | detail, language | Approve | ఆమోదించండి |
 | `Sde38bf` | detail | Approve selected | ఎంచుకున్నవి ఆమోదించండి |
 | `Scf2999` | detail | Approving confirms these values; any change you make here is applied and audited. Rejecting ignores them. | ఆమోదం ఈ విలువలను నిర్ధారిస్తుంది; మీరు ఇక్కడ చేసే ఏ మార్పు అయినా వర్తింపజేయబడి ఆడిట్ చేయబడుతుంది. తిరస్కరణ వాటిని విస్మరిస్తుంది. |
 | `Sf7f2d5` | detail | Archive (requires 180-day retention elapsed) | ఆర్కైవ్ చేయండి (180 రోజుల నిలుపుదల గడవాలి) |
@@ -8487,7 +8871,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S4572f4` | detail | Change request | మార్పు అభ్యర్థన |
 | `S3295be` | detail, workbench | Change requests in this set | ఈ సమితిలోని మార్పు అభ్యర్థనలు |
 | `S4d8006` | detail | Change set | మార్పుల సమితి |
-| `S8aa57d` | detail | Changes | మార్పులు |
 | `S3d14ea` | detail, export | Changes of this release only | ఈ విడుదల మార్పులు మాత్రమే |
 | `Sbd95c0` | detail | Checklist confirmed at sign-off | సైన్-ఆఫ్ సమయంలో నిర్ధారించిన చెక్‌లిస్ట్ |
 | `S074d62` | detail, role badge | Chief Engineer | చీఫ్ ఇంజనీర్ |
@@ -8505,7 +8888,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S7671b5` | detail | Confirm or override Audience Access | లక్ష్య సమూహ ప్రాప్యతను నిర్ధారించండి లేదా ఓవర్‌రైడ్ చేయండి |
 | `S6512ee` | detail | Connection | అనుసంధానం |
 | `S4f9be0` | detail | Content | విషయం |
-| `Sa36a5f` | detail, legacy_mapping, st_new | Controller | కంట్రోలర్ |
+| `Sa36a5f` | detail, legacy_mapping, list | Controller | కంట్రోలర్ |
 | `Scd293f` | detail | Converter Reactive Power Program | కన్వర్టర్ రియాక్టివ్ పవర్ ప్రోగ్రామ్ |
 | `S3998a7` | detail | Copies the descriptive fields into a new Draft in a Main Controller group (a new number is allocated at submit; this code's identifier is kept as the legacy reference). | వివరణాత్మక ఫీల్డ్‌లను ప్రధాన కంట్రోలర్ గ్రూప్‌లోని కొత్త ముసాయిదాలోకి కాపీ చేస్తుంది (సమర్పణ సమయంలో కొత్త సంఖ్య కేటాయించబడుతుంది; ఈ కోడ్ గుర్తింపు పాత రిఫరెన్స్‌గా ఉంచబడుతుంది). |
 | `S54b051` | detail | Copy this code for another turbine platform. The copy is a new Draft that links back here and goes through the normal review. | ఈ కోడ్‌ను మరో టర్బైన్ ప్లాట్‌ఫారమ్ కోసం కాపీ చేయండి. కాపీ ఇక్కడికి తిరిగి లింక్ అయ్యే కొత్త ముసాయిదా మరియు సాధారణ సమీక్ష గుండా వెళ్తుంది. |
@@ -8639,7 +9022,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sf5ca9d` | detail | Recorded exports | నమోదు చేసిన ఎగుమతులు |
 | `Sa3f757` | detail | Reinstate to Released | విడుదల చేసినదిగా పునఃస్థాపించండి |
 | `S3238ca` | detail | Reinstatement reason | పునఃస్థాపన కారణం |
-| `S2b03b5` | detail | Reject | తిరస్కరించండి |
 | `S27fb5c` | detail | Reject selected | ఎంచుకున్నవి తిరస్కరించండి |
 | `S045c2c` | detail | Related codes | సంబంధిత కోడ్‌లు |
 | `S33a5a7` | detail | Relation | సంబంధం |
@@ -8657,7 +9039,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S4c1aa6` | detail | Repeated-Error Escalation | పునరావృత లోపాల ఎస్కలేషన్ |
 | `S4aed03` | detail | Request | అభ్యర్థన |
 | `Sf3421a` | detail | Request a Sign-Off | సైన్-ఆఫ్ అభ్యర్థించండి |
-| `Sc26bf6` | detail, mine | Requested | అభ్యర్థించినది |
+| `Sc26bf6` | detail, mine, row | Requested | అభ్యర్థించినది |
 | `S2706ed` | detail | Required by | వీటికి అవసరం |
 | `S619e87` | detail, form | Reset Delay | రీసెట్ ఆలస్యం |
 | `S026ab2` | detail | resolved | పరిష్కరించబడింది |
@@ -8667,7 +9049,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S3beb9a` | detail | Revision | పునర్విమర్శ |
 | `Sa72973` | detail | Revision Fields | పునర్విమర్శ ఫీల్డ్‌లు |
 | `Sfc1d6a` | detail | row(s) imported as Drafts | వరుసలు ముసాయిదాలుగా దిగుమతి అయ్యాయి |
-| `S52d0b3` | detail, reconciliation, user_detail | Rows | వరుసలు |
 | `Sd0edfb` | detail | Sales | అమ్మకాలు |
 | `S241bf5` | detail, workbench | Sample number | నమూనా సంఖ్య |
 | `Sda38c6` | detail | Save planned dates | ప్రణాళిక చేసిన తేదీలను సేవ్ చేయండి |
@@ -8686,11 +9067,10 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sece2ac` | detail, form | Slot | స్లాట్ |
 | `Sff44d2` | detail | Software Version | సాఫ్ట్‌వేర్ వెర్షన్ |
 | `S169bf7` | detail, export, software_versions | Software version | సాఫ్ట్‌వేర్ వెర్షన్ |
-| `S6da13a` | detail, fleet_feedback | Source | మూలం |
+| `S6da13a` | detail, fleet_feedback, row | Source | మూలం |
 | `Sd3c56b` | detail, export_profiles | source language | మూల భాష |
 | `Sb3883f` | detail | Standards | ప్రమాణాలు |
 | `Sfaa9e7` | detail, reconciliation | Started | ప్రారంభమైంది |
-| `Sa72502` | detail, export, hub_consolidation | State | స్థితి |
 | `Se246b6` | detail, form, list | Status Category | స్థితి వర్గం |
 | `S779953` | detail, form | Status Code for Repeated Error | పునరావృత లోపానికి స్థితి కోడ్ |
 | `S98a377` | detail | Still a Draft. | ఇంకా ముసాయిదాగానే ఉంది. |
@@ -8709,7 +9089,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Seaf576` | detail, form | Trigger Snapshot | స్నాప్‌షాట్ ట్రిగ్గర్ చేయండి |
 | `S285ec8` | detail, form | Troubleshooting | సమస్య పరిష్కారం |
 | `S71bba4` | detail | Turbine Operator Package | టర్బైన్ ఆపరేటర్ ప్యాకేజీ |
-| `S3deb74` | detail, mine, review_queue | Type | రకం |
+| `S3deb74` | detail, list, mine | Type | రకం |
 | `Sab631e` | detail | Type %(id)s to confirm | నిర్ధారించడానికి %(id)s టైప్ చేయండి |
 | `Sb5e264` | detail | Type the identifier to confirm | నిర్ధారించడానికి గుర్తింపును టైప్ చేయండి |
 | `S835f8a` | detail | Umrichterprogramm GSC | కన్వర్టర్ ప్రోగ్రామ్ GSC |
@@ -8728,7 +9108,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S51ecc5` | detail | What happens next | తర్వాత ఏం జరుగుతుంది |
 | `Sf323c0` | detail | Where used | ఎక్కడ ఉపయోగించబడింది |
 | `S7d5316` | detail | Who | ఎవరు |
-| `S47e564` | detail | Withdraw | ఉపసంహరించండి |
 | `S51a998` | detail | Withdraw this change request? | ఈ మార్పు అభ్యర్థనను ఉపసంహరించాలా? |
 | `S93ef7c` | detail, workbench | Workbench | వర్క్‌బెంచ్ |
 | `S95a2a4` | detail, form | Write level | రాసే స్థాయి |
@@ -8748,7 +9127,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sec0298` | dry_run | Result per row | వరుస వారీ ఫలితం |
 | `S9bf7a8` | dry_run | Row | వరుస |
 | `S3ff0b0` | dry_run | row(s) have problems. Nothing has been created. | వరుసలలో సమస్యలు ఉన్నాయి. ఏదీ సృష్టించబడలేదు. |
-| `S6c30d2` | dry_run | rows | వరుసలు |
 | `S8012ff` | dry_run | unchanged | మార్పు లేనివి |
 | `S83d655` | dry_run, st_preview | warning(s) | హెచ్చరికలు |
 | `S9ddad9` | dry_run | would be created | సృష్టించబడేవి |
@@ -8890,6 +9268,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S285edc` | help and messages | %(ok)s of %(n)s: %(what)s. | %(ok)s / %(n)s: %(what)s. |
 | `Sb08e6c` | help and messages | A Reviewer and an Administrator each sign off (in any order). If either rejects, it goes back to the author. | ఒక సమీక్షకుడు మరియు ఒక నిర్వాహకుడు ఒక్కొక్కరు సైన్ ఆఫ్ చేస్తారు (ఏ క్రమంలోనైనా). ఎవరైనా తిరస్కరిస్తే అది రచయితకు తిరిగి వెళ్తుంది. |
 | `S2f1bed` | help and messages | An Administrator includes the revision in a Release and publishes it; then it is Released. | నిర్వాహకుడు పునర్విమర్శను విడుదలలో చేర్చి ప్రచురిస్తారు; అప్పుడు అది విడుదల చేసినదవుతుంది. |
+| `S9477fd` | help and messages | choose | ఎంచుకోండి |
 | `S1308dc` | help and messages | defective codes sent back | లోపభూయిష్ట కోడ్‌లు వెనక్కి పంపబడ్డాయి |
 | `Se2bbd9` | help and messages | Drafts saved | ముసాయిదాలు సేవ్ చేయబడ్డాయి |
 | `S0ddfa5` | help and messages | Drafts signed off | ముసాయిదాలకు సైన్-ఆఫ్ ఇవ్వబడింది |
@@ -8901,7 +9280,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sce489f` | help and messages | The author gets any required cross-domain sign-offs, then submits the change request for review. | రచయిత అవసరమైన క్రాస్-డొమైన్ సైన్-ఆఫ్‌లు పొంది, తర్వాత మార్పు అభ్యర్థనను సమీక్ష కోసం సమర్పిస్తారు. |
 | `S1cdbdd` | help and messages | The Chief Engineer approves or rejects. Approval makes the revision Approved (or Deprecated for a deprecation request). | చీఫ్ ఇంజనీర్ ఆమోదిస్తారు లేదా తిరస్కరిస్తారు. ఆమోదం పునర్విమర్శను ఆమోదించినదిగా (లేదా వాడుకలో లేని అభ్యర్థనకు వాడుకలో లేనిదిగా) చేస్తుంది. |
 | `S2d6ac0` | help and messages | The package is being built. Reload this page to follow its progress. | ప్యాకేజీ రూపొందుతోంది. పురోగతిని చూడటానికి ఈ పేజీని మళ్లీ లోడ్ చేయండి. |
-| `Sde7a5b` | help and messages | The program files do not carry a category; you can change it in each Draft. | ప్రోగ్రామ్ ఫైళ్లకు వర్గం ఉండదు; మీరు ప్రతి ముసాయిదాలో దాన్ని మార్చవచ్చు. |
 | `Scff3a3` | help and messages | User deleted; its name and address are erased, what it did stays attributable. | వినియోగదారు తొలగించబడ్డారు; వారి పేరు, చిరునామా తుడిచివేయబడ్డాయి, వారు చేసినది ఆపాదించదగినదిగా ఉంటుంది. |
 | `Secfb3f` | hub_consolidation | Deprecate replaced Hub codes | ప్రత్యామ్నాయం ఉన్న హబ్ కోడ్‌లను వాడుకలో లేనివిగా ప్రకటించండి |
 | `S0e7766` | hub_consolidation, language | draft | ముసాయిదా |
@@ -8912,7 +9290,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sc50c53` | hub_consolidation | Hub Controller to Main Controller consolidation | హబ్ కంట్రోలర్ నుండి ప్రధాన కంట్రోలర్‌కు ఏకీకరణ |
 | `Scd189f` | hub_consolidation | Hub group | హబ్ గ్రూప్ |
 | `Sa5262b` | hub_consolidation | If the Hub Controller leaves the hardware setup, its codes are defined anew on the Main Controller side. Create an MC draft from an HC code on its detail page (Actions); this report shows how far each has come. Nothing is renumbered. | హబ్ కంట్రోలర్ హార్డ్‌వేర్ ఏర్పాటు నుండి తొలగితే, దాని కోడ్‌లు ప్రధాన కంట్రోలర్ వైపు కొత్తగా నిర్వచించబడతాయి. HC కోడ్ వివరాల పేజీలో (చర్యలు) దాని నుండి MC ముసాయిదా సృష్టించండి; ఈ నివేదిక ప్రతిదీ ఎంతవరకు వచ్చిందో చూపుతుంది. ఏదీ మళ్ళీ సంఖ్యీకరించబడదు. |
-| `Sdd6555` | hub_consolidation, legacy_mapping, st_preview | Legacy no. | పాత సం. |
+| `Sdd6555` | hub_consolidation, legacy_mapping, list | Legacy no. | పాత సం. |
 | `S845a2b` | hub_consolidation | No Hub Controller codes yet. | ఇంకా హబ్ కంట్రోలర్ కోడ్‌లు లేవు. |
 | `S138665` | hub_consolidation | Open deprecation requests | వాడుకలో లేని అభ్యర్థనలు తెరవండి |
 | `Sc8df93` | hub_consolidation | Open deprecation requests for all replaced Hub codes of this group? | ఈ గ్రూప్‌లోని ప్రత్యామ్నాయం ఉన్న అన్ని హబ్ కోడ్‌లకు వాడుకలో లేని అభ్యర్థనలు తెరవాలా? |
@@ -8971,7 +9349,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sded18c` | language | approved by | ఆమోదించినవారు |
 | `Sedd46e` | language | Check against the interface | ఇంటర్‌ఫేస్‌తో సరిపోల్చండి |
 | `S5a013c` | language | missing | లేనిది |
-| `S2c924e` | language, workbench | Note | గమనిక |
+| `S2c924e` | language, row, workbench | Note | గమనిక |
 | `S2f09d0` | language | Note on %(x)s | %(x)s గురించి గమనిక |
 | `S75bf99` | language | proposed by | ప్రతిపాదించినవారు |
 | `Sc68e32` | language | Save translations | అనువాదాలను సేవ్ చేయండి |
@@ -8979,14 +9357,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S542818` | language | Terms of the language | భాష పదాలు |
 | `Sae9e5d` | language | Translation of %(x)s | %(x)s అనువాదం |
 | `S863fd0` | language | Your own proposal: another person approves it. | మీ స్వంత ప్రతిపాదన: మరొకరు దాన్ని ఆమోదిస్తారు. |
-| `Sf9d469` | legacy_mapping | All controllers | అన్ని కంట్రోలర్లు |
+| `Sf9d469` | legacy_mapping, list | All controllers | అన్ని కంట్రోలర్లు |
 | `Se61c2f` | legacy_mapping | Any number state | ఏదైనా సంఖ్య స్థితి |
 | `S7c4f77` | legacy_mapping | issued | జారీ చేసినవి |
 | `Sfd5ec0` | legacy_mapping, menu, new | Legacy mapping | పాత-కొత్త మ్యాపింగ్ |
 | `S81f567` | legacy_mapping | Legacy number to new identifier | పాత సంఖ్య నుండి కొత్త గుర్తింపు |
 | `S64b267` | legacy_mapping | legacy number, identifier or name | పాత సంఖ్య, గుర్తింపు లేదా పేరు |
 | `S60fe6c` | legacy_mapping | new codes without a legacy number (n/a) | పాత సంఖ్య లేని కొత్త కోడ్‌లు (వర్తించదు) |
-| `Sf26140` | legacy_mapping, st_preview | New identifier | కొత్త గుర్తింపు |
 | `Sf573c8` | legacy_mapping | no number yet | ఇంకా సంఖ్య లేదు |
 | `S7877c5` | legacy_mapping | No status code carries a legacy number yet. | ఏ స్థితి కోడ్‌కూ ఇంకా పాత సంఖ్య లేదు. |
 | `Sb7baa1` | legacy_mapping | Number | సంఖ్య |
@@ -8995,10 +9372,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S8b0b7c` | legacy_mapping | with a legacy number | పాత సంఖ్యతో |
 | `Seba07b` | list | A change set groups the change requests that ship with one controller software release, so reviewers see the whole package. Each request is still decided on its own. | ఒక కంట్రోలర్ సాఫ్ట్‌వేర్ విడుదలతో పాటు వెళ్ళే మార్పు అభ్యర్థనలను మార్పుల సమితి సమూహపరుస్తుంది, తద్వారా సమీక్షకులు మొత్తం ప్యాకేజీని చూస్తారు. ప్రతి అభ్యర్థనపై ఇప్పటికీ విడిగానే నిర్ణయం జరుగుతుంది. |
 | `Sc5fe02` | list | any | ఏదైనా |
+| `S55201a` | list | Any status | ఏ హోదా అయినా |
 | `Sef5415` | list | Apply columns | నిలువు వరుసలు వర్తింపజేయండి |
+| `Sffb569` | list | Ask for approval of the ticked rows | గుర్తించిన వరుసల ఆమోదాన్ని కోరండి |
 | `S9e895f` | list | Change sets | మార్పుల సమితులు |
 | `S162a45` | list, menu | Change Sets | మార్పు సెట్‌లు |
 | `Scf723c` | list | Columns | నిలువు వరుసలు |
+| `S2ddaf9` | list, upload | Compare a workbook | వర్క్‌బుక్‌ను పోల్చండి |
 | `Seb0fd2` | list | Delete all my Drafts of this filter | ఈ ఫిల్టర్‌లోని నా అన్ని ముసాయిదాలను తొలగించండి |
 | `S36f212` | list | Delete ALL of your own Drafts that match this filter, on every page? | ఈ ఫిల్టర్‌కు సరిపోయే మీ అన్ని ముసాయిదాలను, అన్ని పేజీల్లో, తొలగించాలా? |
 | `Sc554a1` | list | Delete selected Drafts | ఎంచుకున్న ముసాయిదాలను తొలగించండి |
@@ -9008,12 +9388,18 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S44d25b` | list | Items | అంశాలు |
 | `S033df3` | list | Lifecycle | జీవనచక్రం |
 | `Sb4cad6` | list | Link to this view | ఈ వీక్షణకు లింక్ |
+| `Sbdb4e1` | list | Load the initial mapping | ప్రారంభ మ్యాపింగ్‌ను లోడ్ చేయండి |
+| `Se07018` | list | Make the request | అభ్యర్థన చేయండి |
 | `Se248d5` | list, new | New change set | కొత్త మార్పుల సమితి |
 | `Se75aa1` | list, new | New Release | కొత్త విడుదల |
+| `S9bb526` | list, row | New row | కొత్త వరుస |
 | `Se5076c` | list | No change sets yet. | ఇంకా మార్పుల సమితులు లేవు. |
 | `Sd32c03` | list | No releases yet. | ఇంకా విడుదలలు లేవు. |
+| `Sb5b22c` | list | No row matches. | ఏ వరుసా సరిపోలలేదు. |
 | `Sc3af43` | list | No saved searches yet. | ఇంకా సేవ్ చేసిన శోధనలు లేవు. |
 | `S0cb400` | list | No status codes match these filters. | ఈ ఫిల్టర్‌లకు ఏ స్థితి కోడ్‌లూ సరిపోలలేదు. |
+| `S260f7a` | list, row | Node | నోడ్ |
+| `S08250b` | list | number, title or group | సంఖ్య, శీర్షిక లేదా సమూహం |
 | `Sf7194e` | list | Requests | అభ్యర్థనలు |
 | `S37a530` | list | result | ఫలితం |
 | `Scdf7e9` | list | results | ఫలితాలు |
@@ -9022,10 +9408,14 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sff86e9` | list | Save the current filters as | ప్రస్తుత ఫిల్టర్‌లను ఈ పేరుతో సేవ్ చేయండి |
 | `Sed1d84` | list | Saved searches | సేవ్ చేసిన శోధనలు |
 | `S859822` | list, mine | Select | ఎంచుకోండి |
+| `S45b553` | list | Select all rows | అన్ని వరుసలను ఎంచుకోండి |
 | `S7f5583` | list, menu | Status Codes | స్థితి కోడ్‌లు |
 | `S20bff1` | list | Status codes | స్థితి కోడ్‌లు |
+| `S3a1066` | list | The mapping is empty. | మ్యాపింగ్ ఖాళీగా ఉంది. |
+| `S27d95b` | list | The rows stay as they are. Once the StCd Owner, the Chief Engineer and an Administrator approve, they count as approved numbers. | వరుసలు ఉన్నట్లే ఉంటాయి. StCd యజమాని, చీఫ్ ఇంజనీర్, ఒక నిర్వాహకుడు ఆమోదించిన తర్వాత అవి ఆమోదించిన సంఖ్యలుగా లెక్కించబడతాయి. |
 | `Se90eb0` | list | Turbine Platform | టర్బైన్ ప్లాట్‌ఫారమ్ |
 | `S86b1e7` | list | Typos are tolerated: "convertor" still finds "converter". | అచ్చు తప్పులు సహించబడతాయి: "convertor" ఇప్పటికీ "converter" ను కనుగొంటుంది. |
+| `Sb0c551` | list | Which legacy status code becomes which new one, with what the program files do not carry: the English title, the type, the up/down counter, the access levels, cause and directive. A row changes only by a request that the StCd Owner, the Chief Engineer and an Administrator all approve. | ఏ పాత స్టేటస్ కోడ్ ఏ కొత్తదవుతుంది, ప్రోగ్రామ్ ఫైళ్లలో లేని సమాచారంతో: ఇంగ్లీష్ శీర్షిక, రకం, అప్/డౌన్ కౌంటర్, యాక్సెస్ స్థాయిలు, కారణం, ఆదేశం. StCd యజమాని, చీఫ్ ఇంజనీర్, ఒక నిర్వాహకుడు అందరూ ఆమోదించిన అభ్యర్థనతోనే వరుస మారుతుంది. |
 | `Sf7c400` | login | Log in | లాగిన్ |
 | `S175835` | login | or | లేదా |
 | `S8be3c9` | login, users | Password | పాస్‌వర్డ్ |
@@ -9187,6 +9577,23 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S8cb56e` | message: lookup_admin_service | range_end must be greater than range_start | range_end తప్పనిసరిగా range_start కంటే పెద్దదిగా ఉండాలి |
 | `Se3a971` | message: lookup_admin_service | sub_range_end must be greater than sub_range_start | sub_range_end తప్పనిసరిగా sub_range_start కంటే పెద్దదిగా ఉండాలి |
 | `S1404e3` | message: lookup_service | functional_system_group query parameter is required for functional-subgroups | functional-subgroups కోసం functional_system_group క్వెరీ పారామీటర్ అవసరం |
+| `Sf28681` | message: mapping_service | Give the reason for the change; the three approvers read it first. | మార్పుకు కారణం చెప్పండి; ముగ్గురు ఆమోదకులు దాన్ని ముందు చదువుతారు. |
+| `S062788` | message: mapping_service | Give the request a title of at most 120 characters. | అభ్యర్థనకు గరిష్ఠంగా 120 అక్షరాల శీర్షిక ఇవ్వండి. |
+| `S2ea56f` | message: mapping_service | Mapping change not found | మ్యాపింగ్ మార్పు కనబడలేదు |
+| `S2c9363` | message: mapping_service | Mapping row not found | మ్యాపింగ్ వరుస కనబడలేదు |
+| `S2d5693` | message: mapping_service | Only the person who made the request can withdraw it. | అభ్యర్థన చేసిన వ్యక్తి మాత్రమే దాన్ని ఉపసంహరించగలరు. |
+| `S682269` | message: mapping_service | Only the StCd Owner, the Chief Engineer and an Administrator decide on the mapping. | మ్యాపింగ్‌పై StCd యజమాని, చీఫ్ ఇంజనీర్, ఒక నిర్వాహకుడు మాత్రమే నిర్ణయిస్తారు. |
+| `S5e0f66` | message: mapping_service | Say why you reject the request. | అభ్యర్థనను ఎందుకు తిరస్కరిస్తున్నారో చెప్పండి. |
+| `S3d5cfc` | message: mapping_service | The comment is longer than 1000 characters. | వ్యాఖ్య 1000 అక్షరాల కంటే పొడవుగా ఉంది. |
+| `S82b817` | message: mapping_service | The decision must be APPROVE or REJECT. | నిర్ణయం APPROVE లేదా REJECT అయి ఉండాలి. |
+| `S9ec08a` | message: mapping_service | The file is not a readable .xlsx workbook. | ఫైల్ చదవగలిగే .xlsx వర్క్‌బుక్ కాదు. |
+| `S3831f7` | message: mapping_service | The reason is longer than 2000 characters. | కారణం 2000 అక్షరాల కంటే పొడవుగా ఉంది. |
+| `Sa5de7d` | message: mapping_service | The request contains no row. | అభ్యర్థనలో ఒక్క వరుస కూడా లేదు. |
+| `S2116e4` | message: mapping_service | The request is already closed. | అభ్యర్థన ఇప్పటికే మూసివేయబడింది. |
+| `S8518e7` | message: mapping_service | The role has decided already. | ఈ పాత్ర ఇప్పటికే నిర్ణయించింది. |
+| `S2a15d7` | message: mapping_service | The workbook is larger than 5 MB. | వర్క్‌బుక్ 5 MB కంటే పెద్దది. |
+| `S8eb912` | message: mapping_service | The workbook unpacks to more than 80 MB. | వర్క్‌బుక్ విప్పితే 80 MB కంటే పెద్దదవుతుంది. |
+| `S6c1d08` | message: mapping_service | Your role may not propose a change of the mapping. | మీ పాత్ర మ్యాపింగ్ మార్పును ప్రతిపాదించలేదు. |
 | `S4ada2b` | message: notification_service | Notification not found | నోటిఫికేషన్ కనబడలేదు |
 | `Sd92b89` | message: notification_service | This notification belongs to someone else. | ఈ నోటిఫికేషన్ మరొకరికి చెందినది. |
 | `Sb0cd00` | message: numbering_service | Identifier override must match StCd-NNNNN (five digits). | ఓవర్‌రైడ్ చేసిన గుర్తింపు StCd-NNNNN (ఐదు అంకెలు)కు సరిపోలాలి. |
@@ -9218,8 +9625,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S9671fb` | message: settings_service | must be true or false | true లేదా false అయి ఉండాలి |
 | `S5166bb` | message: st_import_service | A staged file changed after the preview. Upload again. | ప్రివ్యూ తర్వాత స్టేజ్ చేసిన ఫైల్ మారింది. మళ్ళీ అప్‌లోడ్ చేయండి. |
 | `Saa4de2` | message: st_import_service | controller must be auto, MC or HC | controller auto, MC లేదా HC అయి ఉండాలి |
-| `Sa30251` | message: st_import_service | default_category must be ERROR, WARNING or INFO | default_category ERROR, WARNING లేదా INFO అయి ఉండాలి |
-| `Sfe694a` | message: st_import_service | hc_proposal must be 1 or 2 | hc_proposal 1 లేదా 2 అయి ఉండాలి |
 | `S58bec3` | message: st_import_service | No StCd program files found. Upload .st files or a ZIP of them. | StCd ప్రోగ్రామ్ ఫైళ్లు కనబడలేదు. .st ఫైళ్లు లేదా వాటి ZIP అప్‌లోడ్ చేయండి. |
 | `Sd9c5b0` | message: st_import_service | Nothing selected: tick at least one program that is ready. | ఏదీ ఎంచుకోలేదు: సిద్ధంగా ఉన్న కనీసం ఒక ప్రోగ్రామ్‌ను టిక్ చేయండి. |
 | `S5dbbd0` | message: st_import_service | The code is no longer an open Draft; preview the files again. | కోడ్ ఇక తెరిచిన ముసాయిదా కాదు; ఫైళ్ల ప్రివ్యూను మళ్ళీ చూడండి. |
@@ -9366,6 +9771,23 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S05fc94` | role badge | Engineer | ఇంజనీర్ |
 | `S3c0e8a` | role badge | StCd Owner | StCd యజమాని |
 | `Sdbad9f` | role badge | Viewer | వీక్షకుడు |
+| `S7f2e4b` | row | Access levels | యాక్సెస్ స్థాయిలు |
+| `S08f985` | row | Cause | కారణం |
+| `S164e0b` | row | Directive | ఆదేశం |
+| `S283474` | row | New number | కొత్త సంఖ్య |
+| `Sfa6fdd` | row | No request yet. The row is as it was loaded. | ఇంకా అభ్యర్థన లేదు. వరుస లోడ్ చేసినట్లే ఉంది. |
+| `Sf790fc` | row | Nothing is changed here directly: the form makes a request, and the row changes after the StCd Owner, the Chief Engineer and an Administrator have approved it. | ఇక్కడ నేరుగా ఏదీ మారదు: ఫారం ఒక అభ్యర్థన చేస్తుంది, StCd యజమాని, చీఫ్ ఇంజనీర్, ఒక నిర్వాహకుడు ఆమోదించిన తర్వాత వరుస మారుతుంది. |
+| `S9d728f` | row | Request approval of the number | సంఖ్య ఆమోదాన్ని కోరండి |
+| `Sc8978f` | row | Request rejection of the number | సంఖ్య తిరస్కరణను కోరండి |
+| `Sc644eb` | row | Request that this number is never used? | ఈ సంఖ్యను ఎప్పుడూ ఉపయోగించకూడదని కోరాలా? |
+| `Sb25913` | row | Request the new row | కొత్త వరుసను కోరండి |
+| `Sb04301` | row | Request this change | ఈ మార్పును కోరండి |
+| `Sae91b6` | row | Requests for this row | ఈ వరుస అభ్యర్థనలు |
+| `Sd59701` | row | Reset delay (parameter) | రీసెట్ ఆలస్యం (పారామీటర్) |
+| `Sfd64cd` | row | Set delay (parameter) | సెట్ ఆలస్యం (పారామీటర్) |
+| `S9c0444` | row | The three approvers read the reason first. | ముగ్గురు ఆమోదకులు ముందు కారణాన్ని చదువుతారు. |
+| `Sc84745` | row | Title (English) | శీర్షిక (ఇంగ్లీష్) |
+| `S711eea` | row | Up/down counter | అప్/డౌన్ కౌంటర్ |
 | `S913aba` | settings | Save settings | సెట్టింగ్‌లు సేవ్ చేయండి |
 | `Sb68734` | software_versions | Added | జోడించినవి |
 | `S172415` | software_versions | added | జోడించబడ్డాయి |
@@ -9379,28 +9801,19 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd97d1e` | software_versions | Show | చూపండి |
 | `S42ea2e` | software_versions | Software Versions | సాఫ్ట్‌వేర్ వెర్షన్లు |
 | `S3bd89c` | software_versions | Which codes exist in which software version | ఏ సాఫ్ట్‌వేర్ వెర్షన్‌లో ఏ కోడ్‌లు ఉన్నాయి |
-| `S16e5d4` | st_new, st_preview | Alarm type | అలారం రకం |
-| `S726d7a` | st_new | as above | పైన ఉన్నట్లు |
-| `S9477fd` | st_new, st_preview | choose | ఎంచుకోండి |
 | `Sb149ca` | st_new | Detect: a number from 10000 up is a Hub Controller program | గుర్తించండి: 10000 నుండి పైన ఉన్న సంఖ్య హబ్ కంట్రోలర్ ప్రోగ్రామ్ |
 | `S7d06d0` | st_new | Every imported program becomes an ordinary Draft with the number it carries reserved. It still needs Cross-Domain Sign-Off, dual review and Chief Engineer approval before Release, and all Drafts of one import share a change set. | దిగుమతి చేసిన ప్రతి ప్రోగ్రామ్ సాధారణ ముసాయిదా అవుతుంది, అది కలిగి ఉన్న సంఖ్య రిజర్వ్ అవుతుంది. విడుదలకు ముందు దీనికి ఇంకా క్రాస్-డొమైన్ సైన్-ఆఫ్, ద్వంద్వ సమీక్ష మరియు చీఫ్ ఇంజనీర్ ఆమోదం అవసరం, మరియు ఒక దిగుమతిలోని అన్ని ముసాయిదాలు ఒక మార్పుల సమితిని పంచుకుంటాయి. |
-| `Sbda77c` | st_new | Every program names an alarm type. A type left at "as above" gets the category chosen above; the next page lets you set the category of single programs or of all ticked ones. | ప్రతి ప్రోగ్రామ్ ఒక అలారం రకాన్ని పేర్కొంటుంది. "పైన ఉన్నట్లు" అని వదిలిన రకానికి పైన ఎంచుకున్న వర్గం వస్తుంది; తదుపరి పేజీలో ఒక్కో ప్రోగ్రామ్‌కు లేదా టిక్ చేసిన అన్నింటికీ వర్గాన్ని సెట్ చేయవచ్చు. |
 | `S3b9e43` | st_new | Hub Controller (legacy numbers, mapped to the new ones) | హబ్ కంట్రోలర్ (పాత సంఖ్యలు, కొత్తవాటికి మ్యాప్ చేయబడినవి) |
 | `Sd7333f` | st_new | Import status codes from .st files | .st ఫైళ్ల నుండి స్థితి కోడ్‌లను దిగుమతి చేయండి |
-| `S6640a6` | st_new | New number of Hub Controller programs | హబ్ కంట్రోలర్ ప్రోగ్రామ్‌ల కొత్త సంఖ్య |
 | `Sc0eff1` | st_new | Or a whole folder | లేదా మొత్తం ఫోల్డర్ |
 | `S94ddc1` | st_new | Program files (.st) or a ZIP | ప్రోగ్రామ్ ఫైళ్లు (.st) లేదా ఒక ZIP |
-| `Sd99e2a` | st_new | Proposal 1: five-digit numbers (11000 and up) | ప్రతిపాదన 1: ఐదు అంకెల సంఖ్యలు (11000 నుండి) |
-| `S2744b0` | st_new | Proposal 2: inside the Main Controller scheme | ప్రతిపాదన 2: ప్రధాన కంట్రోలర్ పథకం లోపల |
 | `S67640d` | st_new | Read files and preview | ఫైళ్లు చదివి ప్రివ్యూ చూడండి |
-| `S0af4fc` | st_new | Status category by alarm type (optional) | అలారం రకం ప్రకారం స్థితి వర్గం (ఐచ్ఛికం) |
-| `S234237` | st_new | Status category of the new codes | కొత్త కోడ్‌ల స్థితి వర్గం |
-| `S61fc52` | st_new | The program files do not carry a category and none is assumed: choose one here, by alarm type below, or for each program in the preview. A program without a category is not imported. | ప్రోగ్రామ్ ఫైళ్లలో వర్గం ఉండదు మరియు ఏదీ ఊహించబడదు: ఇక్కడ ఒకటి ఎంచుకోండి, క్రింద అలారం రకం ప్రకారం, లేదా ప్రివ్యూలో ప్రతి ప్రోగ్రామ్‌కు ఎంచుకోండి. వర్గం లేని ప్రోగ్రామ్ దిగుమతి కాదు. |
+| `Saa9df6` | st_new | The title, the type and the access levels of every program come from the mapping, never from the files. A program whose number is not in the mapping is blocked. | ప్రతి ప్రోగ్రామ్ శీర్షిక, రకం, యాక్సెస్ స్థాయిలు మ్యాపింగ్ నుండి వస్తాయి, ఫైళ్ల నుండి ఎప్పుడూ కాదు. సంఖ్య మ్యాపింగ్‌లో లేని ప్రోగ్రామ్ నిరోధించబడుతుంది. |
 | `S8f4c21` | st_new | Turbine platforms | టర్బైన్ ప్లాట్‌ఫారమ్‌లు |
 | `S9ad4d4` | st_new | Upload the generated StCd_<n>.st programs — several files at once, a whole folder, or one ZIP. Nothing is created yet: the next page lists every program so you can tick the ones to import. | సృష్టించిన StCd_<n>.st ప్రోగ్రామ్‌లను అప్‌లోడ్ చేయండి — ఒకేసారి అనేక ఫైళ్లు, మొత్తం ఫోల్డర్ లేదా ఒక ZIP. ఇంకా ఏదీ సృష్టించబడదు: తదుపరి పేజీ ప్రతి ప్రోగ్రామ్‌ను జాబితా చేస్తుంది, దిగుమతి చేయాల్సినవి టిక్ చేయడానికి. |
+| `S16e5d4` | st_preview | Alarm type | అలారం రకం |
 | `S2693e5` | st_preview | All Drafts of this import join one change set, so they can be reviewed and decided together. | ఈ దిగుమతిలోని అన్ని ముసాయిదాలు ఒక మార్పుల సమితిలో చేరతాయి, తద్వారా వాటిని కలిసి సమీక్షించి నిర్ణయించవచ్చు. |
 | `Scbc694` | st_preview | already in the catalogue | ఇప్పటికే కేటలాగ్‌లో |
-| `Sc00673` | st_preview | Apply to the ticked programs | టిక్ చేసిన ప్రోగ్రామ్‌లకు వర్తింపజేయండి |
 | `Sdf88b8` | st_preview | blocked | నిరోధించబడినవి |
 | `S6f7703` | st_preview | Changed and withdrawn programs are not ticked: tick the ones you want to update, revise or restore. | మార్చిన మరియు ఉపసంహరించిన ప్రోగ్రామ్‌లు టిక్ చేయబడవు: నవీకరించాలనుకున్న, సవరించాలనుకున్న లేదా పునరుద్ధరించాలనుకున్నవాటిని టిక్ చేయండి. |
 | `S78bb8b` | st_preview | Create Drafts for the ticked programs | టిక్ చేసిన ప్రోగ్రామ్‌లకు ముసాయిదాలు సృష్టించండి |
@@ -9418,8 +9831,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se58289` | st_preview | Programs found in the uploaded files | అప్‌లోడ్ చేసిన ఫైళ్లలో దొరికిన ప్రోగ్రామ్‌లు |
 | `S75c053` | st_preview, workbench | ready | సిద్ధం |
 | `S0723bf` | st_preview | Select all programs that are ready | సిద్ధంగా ఉన్న అన్ని ప్రోగ్రామ్‌లను ఎంచుకోండి |
-| `Sae12bc` | st_preview, workbench | Status category | స్థితి వర్గం |
-| `Sd7a322` | st_preview | Status category of the ticked programs | టిక్ చేసిన ప్రోగ్రామ్‌ల స్థితి వర్గం |
+| `S9a2439` | st_preview | Type (from the mapping) | రకం (మ్యాపింగ్ నుండి) |
 | `S1a767a` | st_preview | updates the open Draft | తెరిచిన ముసాయిదాను నవీకరిస్తుంది |
 | `S02499f` | st_preview | withdrawn | ఉపసంహరించినవి |
 | `Sf0c3cf` | st_preview | without a legacy number | పాత సంఖ్య లేనివి |
@@ -9482,6 +9894,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S2fd88e` | translations | Copy from previous revision | మునుపటి పునర్విమర్శ నుండి కాపీ చేయండి |
 | `Se522f0` | translations | Save draft translation | ముసాయిదా అనువాదాన్ని సేవ్ చేయండి |
 | `Scb0b87` | translations | source language text of revision | పునర్విమర్శ మూల భాష పాఠ్యం |
+| `S01209c` | upload | Also ask for approval of the unchanged rows that are only proposed | ప్రతిపాదించబడిన మార్పులేని వరుసల ఆమోదాన్ని కూడా కోరండి |
+| `Sddf8d9` | upload | Compare and make the request | పోల్చి అభ్యర్థన చేయండి |
+| `S028ebe` | upload | Download the current mapping | ప్రస్తుత మ్యాపింగ్‌ను డౌన్‌లోడ్ చేయండి |
+| `S23bfbf` | upload | The workbook has problems. Nothing was requested. | వర్క్‌బుక్‌లో సమస్యలు ఉన్నాయి. ఏదీ అభ్యర్థించబడలేదు. |
+| `S24d49d` | upload | Title of the request | అభ్యర్థన శీర్షిక |
+| `S88809a` | upload | Upload the corrected mapping as a workbook with the sheets MC and HC (download the current one as a model). Every new row and every row that differs becomes one request; rows the workbook does not mention stay as they are. The request takes effect only after the StCd Owner, the Chief Engineer and an Administrator have approved it. | సరిదిద్దిన మ్యాపింగ్‌ను MC, HC షీట్లతో వర్క్‌బుక్‌గా అప్‌లోడ్ చేయండి (నమూనాగా ప్రస్తుతదాన్ని డౌన్‌లోడ్ చేయండి). ప్రతి కొత్త, ప్రతి భిన్నమైన వరుస ఒక అభ్యర్థన అవుతుంది; వర్క్‌బుక్ ప్రస్తావించని వరుసలు అలాగే ఉంటాయి. StCd యజమాని, చీఫ్ ఇంజనీర్, ఒక నిర్వాహకుడు ఆమోదించిన తర్వాతే అభ్యర్థన అమలవుతుంది. |
+| `S09efdf` | upload | Workbook (.xlsx) | వర్క్‌బుక్ (.xlsx) |
 | `S359a3b` | user_detail | Back to users | వినియోగదారులకు తిరిగి వెళ్ళండి |
 | `Sf6fdbe` | user_detail, users | Delete | తొలగించండి |
 | `S9afe6c` | user_detail | Delete user | వినియోగదారుని తొలగించండి |
@@ -9541,6 +9960,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sa58dac` | workbench | Set values on the Drafts | ముసాయిదాలపై విలువలు సెట్ చేయండి |
 | `Sa443bb` | workbench | Sign off the Drafts | ముసాయిదాలకు సైన్-ఆఫ్ ఇవ్వండి |
 | `S53f47f` | workbench | Sign-off pending | సైన్-ఆఫ్ పెండింగ్ |
+| `Sae12bc` | workbench | Status category | స్థితి వర్గం |
 | `Sdc416e` | workbench | Step | దశ |
 | `Sf7710d` | workbench | Submit for review | సమీక్ష కోసం సమర్పించండి |
 | `Sa45adc` | workbench | Submit the Drafts | ముసాయిదాలను సమర్పించండి |
@@ -9553,7 +9973,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 
 ### 9.9 IN தமிழ் 🇮🇳 — Tamil
 
-1295 of 1296 strings translated; direction left to right.
+1355 of 1356 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -9564,13 +9984,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S141763` | _macros | Confirm with your password | உங்கள் கடவுச்சொல்லால் உறுதிப்படுத்தவும் |
 | `Sc326a4` | _macros, detail, form | Field | புலம் |
 | `S0a0f8a` | _macros | Field differences | புல வேறுபாடுகள் |
-| `Sbc9819` | _macros | Next | அடுத்த |
+| `Sbc9819` | _macros, list | Next | அடுத்த |
 | `S27cea7` | _macros | No field differences. | புல வேறுபாடுகள் இல்லை. |
 | `S464e43` | _macros | on track | சரியான நேரத்தில் |
 | `Sba2fff` | _macros, dashboard, success_metrics | overdue | தாமதம் |
-| `S600584` | _macros | Pages | பக்கங்கள் |
+| `S600584` | _macros, list | Pages | பக்கங்கள் |
 | `S810099` | _macros | Please check | தயவுசெய்து சரிபார்க்கவும் |
-| `S50f942` | _macros | Previous | முந்தைய |
+| `S50f942` | _macros, list | Previous | முந்தைய |
 | `S83fd6e` | _macros, stalled | red after | பிறகு சிவப்பு |
 | `S57e8a7` | _macros, success_metrics | slow | மெதுவாக |
 | `S15198e` | _macros | Waiting since | காத்திருப்பு, முதல் |
@@ -9601,10 +10021,10 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S06b6ac` | approval_queue, builder, detail | Identifier | அடையாளங்காட்டி |
 | `S8e70d2` | approval_queue | Nothing is awaiting your approval. | உங்கள் ஒப்புதலுக்காக எதுவும் காத்திருக்கவில்லை. |
 | `Sa74f16` | approval_queue, detail, review_queue | Reviewer | மதிப்பாய்வாளர் |
-| `S768e0c` | approval_queue, builder, detail | Title | தலைப்பு |
+| `S768e0c` | approval_queue, builder, change | Title | தலைப்பு |
 | `S33d306` | approval_queue, detail, mine | Waiting | காத்திருப்பு |
 | `S2cbacd` | audit_log | %(n)s total | மொத்தம் %(n)s |
-| `S97c89a` | audit_log | Action | செயல் |
+| `S97c89a` | audit_log, change | Action | செயல் |
 | `Scbd19b` | audit_log | Actor | செயல்படுத்துபவர் |
 | `S811bdf` | audit_log | Actor ID | செயல்படுத்துபவர் ஐடி |
 | `S8c85b1` | audit_log | after: | பின்: |
@@ -9615,7 +10035,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sc7fb31` | audit_log | Entity | உட்பொருள் |
 | `S04d694` | audit_log | Entity ID | உட்பொருள் ஐடி |
 | `Sbb4e99` | audit_log | Entity Type | உட்பொருள் வகை |
-| `Sd7decf` | audit_log, index, language | Filter | வடிகட்டு |
+| `Sd7decf` | audit_log, changes, index | Filter | வடிகட்டு |
 | `S3f6605` | audit_log, delegations, software_versions | From | முதல் |
 | `S0061b5` | audit_log | No matching audit entries. | பொருந்தும் தணிக்கைப் பதிவுகள் இல்லை. |
 | `S01f79f` | audit_log | Scoped view: showing only actions you performed. | வரையறுக்கப்பட்ட காட்சி: நீங்கள் செய்த செயல்கள் மட்டுமே காட்டப்படுகின்றன. |
@@ -9634,7 +10054,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sbe504f` | base | Skip to main content | முதன்மை உள்ளடக்கத்திற்குச் செல் |
 | `S1b9aeb` | base, dashboard | unread | படிக்காதவை |
 | `S2da600` | base, export, export_center | Version | பதிப்பு |
-| `S12625b` | base | waiting | காத்திருப்பவை |
+| `S12625b` | base, change | waiting | காத்திருப்பவை |
 | `S5a4692` | base | You are covering for a colleague | நீங்கள் ஒரு சக ஊழியருக்குப் பதிலாகச் செயல்படுகிறீர்கள் |
 | `S8e9c15` | builder | Candidate revisions | வேட்பாளர் திருத்தங்கள் |
 | `Sdf2aa0` | builder | Functional Group / Subgroup | செயல்பாட்டுக் குழு / துணைக் குழு |
@@ -9665,13 +10085,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S4105cf` | catalogue_health | exhausted | தீர்ந்தது |
 | `S57e8be` | catalogue_health, connections | Finding | கண்டுபிடிப்பு |
 | `S1150a1` | catalogue_health | Gaps | இடைவெளிகள் |
-| `S171a06` | catalogue_health, export, withdrawn_codes | Group | குழு |
-| `Sb4aadc` | catalogue_health, legacy_mapping | Hub Controller | ஹப் கட்டுப்படுத்தி |
+| `S171a06` | catalogue_health, export, list | Group | குழு |
+| `Sb4aadc` | catalogue_health, legacy_mapping, list | Hub Controller | ஹப் கட்டுப்படுத்தி |
 | `S8ae1c3` | catalogue_health | Left | மீதம் |
 | `S12c0f1` | catalogue_health | left | மீதி |
 | `Sa7b60b` | catalogue_health | Left % | மீதம் % |
 | `S36a883` | catalogue_health | low | குறைவு |
-| `S1b123c` | catalogue_health, legacy_mapping, st_new | Main Controller | முதன்மைக் கட்டுப்படுத்தி |
+| `S1b123c` | catalogue_health, legacy_mapping, list | Main Controller | முதன்மைக் கட்டுப்படுத்தி |
 | `S92185d` | catalogue_health, index | Missing | இல்லாதவை |
 | `S57282a` | catalogue_health | Missing expected data | எதிர்பார்க்கப்படும் தரவு இல்லை |
 | `Sb8e95b` | catalogue_health | None found. | எதுவும் கிடைக்கவில்லை. |
@@ -9688,6 +10108,31 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S75a804` | catalogue_health | subgroup(s) are running out of numbers: | துணைக் குழு(க்கள்) எண்கள் தீர்ந்து வருகின்றன: |
 | `S5fec4f` | catalogue_health | Unused numbers inside a band | பட்டைக்குள் பயன்படுத்தப்படாத எண்கள் |
 | `S02c0e4` | catalogue_health | Used | பயன்படுத்தியவை |
+| `S84f219` | change | All three, each by a different person who did not make the request. | மூன்றும், ஒவ்வொன்றும் கோரிக்கை வைக்காத வேறு ஒருவரால். |
+| `S477aeb` | change, upload | and more | மேலும் |
+| `Sdeb9d0` | change, changes | Approvals | ஒப்புதல்கள் |
+| `S7b2c7f` | change, detail, language | Approve | ஒப்புதல் அளி |
+| `S8aa57d` | change, detail | Changes | மாற்றங்கள் |
+| `S3fe5e1` | change | Comment (required to reject) | கருத்து (நிராகரிக்கத் தேவை) |
+| `Sb48001` | change | Mapping change | இணைப்பின் மாற்றம் |
+| `Sd7c1d0` | change, changes, list | Mapping changes | இணைப்பின் மாற்றங்கள் |
+| `Sf26140` | change, legacy_mapping, list | New identifier | புதிய அடையாளங்காட்டி |
+| `Sf219cc` | change, list, row | Reason | காரணம் |
+| `S2b03b5` | change, detail | Reject | நிராகரி |
+| `S5108c2` | change, changes | Requested by | கோரியவர் |
+| `S52d0b3` | change, changes, detail | Rows | வரிசைகள் |
+| `S6c30d2` | change, dry_run, list | rows | வரிசைகள் |
+| `Sfabd38` | change | These rows changed after the request was made; it cannot be applied. Withdraw it and make it again: | கோரிக்கைக்குப் பிறகு இந்த வரிசைகள் மாறின; அதைச் செயல்படுத்த முடியாது. அதைத் திரும்பப் பெற்று மீண்டும் வையுங்கள்: |
+| `S47e564` | change, detail | Withdraw | திரும்பப் பெறு |
+| `S30d359` | change | Withdraw this request? | இந்தக் கோரிக்கையைத் திரும்பப் பெறவா? |
+| `S88c173` | change | You made this request; another person must decide. | இந்தக் கோரிக்கையை நீங்கள் வைத்தீர்கள்; வேறொருவர் முடிவு செய்ய வேண்டும். |
+| `S04e02f` | change | Your role has decided already. | உங்கள் பங்கு ஏற்கனவே முடிவு செய்துவிட்டது. |
+| `Sc7274c` | changes | Any state | எந்த நிலையும் |
+| `S2a560c` | changes | Every change of the mapping is a request. It takes effect when the StCd Owner, the Chief Engineer and an Administrator have each approved it; one rejection closes it. | இணைப்பில் ஒவ்வொரு மாற்றமும் ஒரு கோரிக்கை. StCd உரிமையாளர், தலைமைப் பொறியாளர், ஒரு நிர்வாகி ஒவ்வொருவரும் ஒப்புதல் அளித்தால் அது நடைமுறைக்கு வரும்; ஒரு நிராகரிப்பு அதை மூடும். |
+| `Sdef2eb` | changes, list, menu | Mapping | இணைப்பு |
+| `Se03e43` | changes | No request yet. | இன்னும் கோரிக்கை இல்லை. |
+| `S5fc0e0` | changes | request(s) wait for your decision. | கோரிக்கைகள் உங்கள் முடிவுக்காகக் காத்திருக்கின்றன. |
+| `Sa72502` | changes, detail, export | State | நிலை |
 | `S97fd13` | check | Back to the terms | சொற்களுக்குத் திரும்பு |
 | `S1bc9e5` | check | English string | ஆங்கில உரை |
 | `S5d54b3` | check | Every string uses the translated terms. | ஒவ்வொரு உரையும் மொழிபெயர்க்கப்பட்ட சொற்களைப் பயன்படுத்துகிறது. |
@@ -9768,7 +10213,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S9b0b4c` | detail | also the files without an access level (all columns) | அணுகல் நிலை இல்லாத கோப்புகளும் (அனைத்து நெடுவரிசைகள்) |
 | `Sf24c44` | detail | Any %(code)s Engineer | ஏதேனும் %(code)s பொறியாளர் |
 | `Sb99a01` | detail | Applies to software versions | மென்பொருள் பதிப்புகளுக்குப் பொருந்தும் |
-| `S7b2c7f` | detail, language | Approve | ஒப்புதல் அளி |
 | `Sde38bf` | detail | Approve selected | தேர்ந்தெடுத்தவற்றை அங்கீகரி |
 | `Scf2999` | detail | Approving confirms these values; any change you make here is applied and audited. Rejecting ignores them. | ஒப்புதல் இந்த மதிப்புகளை உறுதிப்படுத்துகிறது; நீங்கள் இங்கே செய்யும் எந்த மாற்றமும் பயன்படுத்தப்பட்டு தணிக்கை செய்யப்படும். நிராகரிப்பு அவற்றைப் புறக்கணிக்கும். |
 | `Sf7f2d5` | detail | Archive (requires 180-day retention elapsed) | காப்பகப்படுத்து (180 நாள் தக்கவைப்பு கடந்திருக்க வேண்டும்) |
@@ -9789,7 +10233,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S4572f4` | detail | Change request | மாற்றக் கோரிக்கை |
 | `S3295be` | detail, workbench | Change requests in this set | இந்தத் தொகுப்பிலுள்ள மாற்றக் கோரிக்கைகள் |
 | `S4d8006` | detail | Change set | மாற்றத் தொகுப்பு |
-| `S8aa57d` | detail | Changes | மாற்றங்கள் |
 | `S3d14ea` | detail, export | Changes of this release only | இந்த வெளியீட்டின் மாற்றங்கள் மட்டும் |
 | `Sbd95c0` | detail | Checklist confirmed at sign-off | கையொப்பத்தின்போது உறுதிப்படுத்தப்பட்ட சரிபார்ப்புப் பட்டியல் |
 | `S074d62` | detail, role badge | Chief Engineer | தலைமைப் பொறியாளர் |
@@ -9807,7 +10250,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S7671b5` | detail | Confirm or override Audience Access | இலக்குப் பார்வையாளர் அணுகலை உறுதிப்படுத்து அல்லது மேலெழுது |
 | `S6512ee` | detail | Connection | இணைப்பு |
 | `S4f9be0` | detail | Content | உள்ளடக்கம் |
-| `Sa36a5f` | detail, legacy_mapping, st_new | Controller | கட்டுப்படுத்தி |
+| `Sa36a5f` | detail, legacy_mapping, list | Controller | கட்டுப்படுத்தி |
 | `Scd293f` | detail | Converter Reactive Power Program | மாற்றி எதிர்வினை மின்திறன் நிரல் |
 | `S3998a7` | detail | Copies the descriptive fields into a new Draft in a Main Controller group (a new number is allocated at submit; this code's identifier is kept as the legacy reference). | விளக்கப் புலங்களை முதன்மைக் கட்டுப்படுத்தி குழுவில் புதிய வரைவாக நகலெடுக்கிறது (சமர்ப்பிக்கும்போது புதிய எண் ஒதுக்கப்படும்; இந்தக் குறியீட்டின் அடையாளங்காட்டி பழைய குறிப்பாக வைக்கப்படும்). |
 | `S54b051` | detail | Copy this code for another turbine platform. The copy is a new Draft that links back here and goes through the normal review. | இந்தக் குறியீட்டை வேறொரு டர்பைன் தளத்துக்கு நகலெடுக்கவும். நகல் இங்கு திரும்ப இணைக்கும் புதிய வரைவு, சாதாரண மதிப்பாய்வைக் கடக்கும். |
@@ -9941,7 +10384,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sf5ca9d` | detail | Recorded exports | பதிவான ஏற்றுமதிகள் |
 | `Sa3f757` | detail | Reinstate to Released | வெளியிடப்பட்டதாக மீட்டெடு |
 | `S3238ca` | detail | Reinstatement reason | மீட்டெடுப்புக் காரணம் |
-| `S2b03b5` | detail | Reject | நிராகரி |
 | `S27fb5c` | detail | Reject selected | தேர்ந்தெடுத்தவற்றை நிராகரி |
 | `S045c2c` | detail | Related codes | தொடர்புடைய குறியீடுகள் |
 | `S33a5a7` | detail | Relation | உறவு |
@@ -9959,7 +10401,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S4c1aa6` | detail | Repeated-Error Escalation | மீண்டும் வரும் பிழைகளின் மேல்முறையீடு |
 | `S4aed03` | detail | Request | கோரிக்கை |
 | `Sf3421a` | detail | Request a Sign-Off | கையொப்பத்தைக் கோரு |
-| `Sc26bf6` | detail, mine | Requested | கோரப்பட்டது |
+| `Sc26bf6` | detail, mine, row | Requested | கோரப்பட்டது |
 | `S2706ed` | detail | Required by | இவற்றுக்குத் தேவை |
 | `S619e87` | detail, form | Reset Delay | மீட்டமை தாமதம் |
 | `S026ab2` | detail | resolved | தீர்க்கப்பட்டது |
@@ -9969,7 +10411,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S3beb9a` | detail | Revision | திருத்தம் |
 | `Sa72973` | detail | Revision Fields | திருத்தப் புலங்கள் |
 | `Sfc1d6a` | detail | row(s) imported as Drafts | வரிசை(கள்) வரைவுகளாக இறக்குமதியானது |
-| `S52d0b3` | detail, reconciliation, user_detail | Rows | வரிசைகள் |
 | `Sd0edfb` | detail | Sales | விற்பனை |
 | `S241bf5` | detail, workbench | Sample number | மாதிரி எண் |
 | `Sda38c6` | detail | Save planned dates | திட்டமிட்ட தேதிகளைச் சேமி |
@@ -9988,11 +10429,10 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sece2ac` | detail, form | Slot | ஸ்லாட் |
 | `Sff44d2` | detail | Software Version | மென்பொருள் பதிப்பு |
 | `S169bf7` | detail, export, software_versions | Software version | மென்பொருள் பதிப்பு |
-| `S6da13a` | detail, fleet_feedback | Source | மூலம் |
+| `S6da13a` | detail, fleet_feedback, row | Source | மூலம் |
 | `Sd3c56b` | detail, export_profiles | source language | மூல மொழி |
 | `Sb3883f` | detail | Standards | தரநிலைகள் |
 | `Sfaa9e7` | detail, reconciliation | Started | தொடங்கியது |
-| `Sa72502` | detail, export, hub_consolidation | State | நிலை |
 | `Se246b6` | detail, form, list | Status Category | நிலை வகை |
 | `S779953` | detail, form | Status Code for Repeated Error | மீண்டும் வரும் பிழைக்கான நிலைக் குறியீடு |
 | `S98a377` | detail | Still a Draft. | இன்னும் வரைவாகவே உள்ளது. |
@@ -10011,7 +10451,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Seaf576` | detail, form | Trigger Snapshot | ஸ்னாப்ஷாட்டைத் தூண்டு |
 | `S285ec8` | detail, form | Troubleshooting | சிக்கல் தீர்வு |
 | `S71bba4` | detail | Turbine Operator Package | டர்பைன் இயக்குநர் தொகுப்பு |
-| `S3deb74` | detail, mine, review_queue | Type | வகை |
+| `S3deb74` | detail, list, mine | Type | வகை |
 | `Sab631e` | detail | Type %(id)s to confirm | உறுதிப்படுத்த %(id)s ஐ உள்ளிடவும் |
 | `Sb5e264` | detail | Type the identifier to confirm | உறுதிப்படுத்த அடையாளங்காட்டியை உள்ளிடவும் |
 | `S835f8a` | detail | Umrichterprogramm GSC | மாற்றி நிரல் GSC |
@@ -10030,7 +10470,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S51ecc5` | detail | What happens next | அடுத்து என்ன நடக்கும் |
 | `Sf323c0` | detail | Where used | எங்கே பயன்படுத்தப்படுகிறது |
 | `S7d5316` | detail | Who | யார் |
-| `S47e564` | detail | Withdraw | திரும்பப் பெறு |
 | `S51a998` | detail | Withdraw this change request? | இந்த மாற்றக் கோரிக்கையைத் திரும்பப் பெறவா? |
 | `S93ef7c` | detail, workbench | Workbench | பணிமேசை |
 | `S95a2a4` | detail, form | Write level | எழுதும் நிலை |
@@ -10050,7 +10489,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sec0298` | dry_run | Result per row | வரிசைவாரி முடிவு |
 | `S9bf7a8` | dry_run | Row | வரிசை |
 | `S3ff0b0` | dry_run | row(s) have problems. Nothing has been created. | வரிசை(களில்) சிக்கல்கள் உள்ளன. எதுவும் உருவாக்கப்படவில்லை. |
-| `S6c30d2` | dry_run | rows | வரிசைகள் |
 | `S8012ff` | dry_run | unchanged | மாற்றமில்லை |
 | `S83d655` | dry_run, st_preview | warning(s) | எச்சரிக்கை(கள்) |
 | `S9ddad9` | dry_run | would be created | உருவாக்கப்பட்டிருக்கும் |
@@ -10192,6 +10630,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S285edc` | help and messages | %(ok)s of %(n)s: %(what)s. | %(ok)s / %(n)s: %(what)s. |
 | `Sb08e6c` | help and messages | A Reviewer and an Administrator each sign off (in any order). If either rejects, it goes back to the author. | ஒரு மதிப்பாய்வாளரும் ஒரு நிர்வாகியும் ஒவ்வொருவரும் கையொப்பமிடுகிறார்கள் (எந்த வரிசையிலும்). யாராவது நிராகரித்தால் அது ஆசிரியரிடம் திரும்பும். |
 | `S2f1bed` | help and messages | An Administrator includes the revision in a Release and publishes it; then it is Released. | நிர்வாகி திருத்தத்தை வெளியீட்டில் சேர்த்து வெளியிடுகிறார்; அப்போது அது வெளியிடப்பட்டதாகிறது. |
+| `S9477fd` | help and messages | choose | தேர்ந்தெடு |
 | `S1308dc` | help and messages | defective codes sent back | குறைபாடுள்ள குறியீடுகள் திருப்பி அனுப்பப்பட்டன |
 | `Se2bbd9` | help and messages | Drafts saved | வரைவுகள் சேமிக்கப்பட்டன |
 | `S0ddfa5` | help and messages | Drafts signed off | வரைவுகளுக்குக் கையொப்பமிடப்பட்டது |
@@ -10203,7 +10642,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sce489f` | help and messages | The author gets any required cross-domain sign-offs, then submits the change request for review. | ஆசிரியர் தேவையான துறைகள் கடந்த கையொப்பங்களைப் பெற்று, பின்னர் மாற்றக் கோரிக்கையை மதிப்பாய்வுக்குச் சமர்ப்பிக்கிறார். |
 | `S1cdbdd` | help and messages | The Chief Engineer approves or rejects. Approval makes the revision Approved (or Deprecated for a deprecation request). | தலைமைப் பொறியாளர் அங்கீகரிக்கிறார் அல்லது நிராகரிக்கிறார். அங்கீகாரம் திருத்தத்தை அங்கீகரிக்கப்பட்டதாக (அல்லது வழக்கொழிவுக் கோரிக்கைக்கு வழக்கொழிந்ததாக) மாற்றும். |
 | `S2d6ac0` | help and messages | The package is being built. Reload this page to follow its progress. | தொகுப்பு உருவாக்கப்படுகிறது. முன்னேற்றத்தைக் காண இந்தப் பக்கத்தை மீண்டும் ஏற்றவும். |
-| `Sde7a5b` | help and messages | The program files do not carry a category; you can change it in each Draft. | நிரல் கோப்புகளில் வகை இல்லை; ஒவ்வொரு வரைவிலும் அதை மாற்றலாம். |
 | `Scff3a3` | help and messages | User deleted; its name and address are erased, what it did stays attributable. | பயனர் நீக்கப்பட்டார்; அவர் பெயரும் முகவரியும் அழிக்கப்பட்டன, அவர் செய்தவை அவருக்குரியவையாகவே இருக்கும். |
 | `Secfb3f` | hub_consolidation | Deprecate replaced Hub codes | மாற்றப்பட்ட ஹப் குறியீடுகளை வழக்கொழிந்ததாக அறிவி |
 | `S0e7766` | hub_consolidation, language | draft | வரைவு |
@@ -10214,7 +10652,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sc50c53` | hub_consolidation | Hub Controller to Main Controller consolidation | ஹப் கட்டுப்படுத்தியிலிருந்து முதன்மைக் கட்டுப்படுத்திக்கு ஒருங்கிணைப்பு |
 | `Scd189f` | hub_consolidation | Hub group | ஹப் குழு |
 | `Sa5262b` | hub_consolidation | If the Hub Controller leaves the hardware setup, its codes are defined anew on the Main Controller side. Create an MC draft from an HC code on its detail page (Actions); this report shows how far each has come. Nothing is renumbered. | ஹப் கட்டுப்படுத்தி வன்பொருள் அமைப்பிலிருந்து நீங்கினால், அதன் குறியீடுகள் முதன்மைக் கட்டுப்படுத்தி பக்கத்தில் புதிதாக வரையறுக்கப்படும். HC குறியீட்டின் விவரப் பக்கத்தில் (செயல்கள்) அதிலிருந்து MC வரைவை உருவாக்குங்கள்; இந்த அறிக்கை ஒவ்வொன்றும் எவ்வளவு தூரம் வந்துள்ளது என்பதைக் காட்டும். எதுவும் மறுஎண்ணிடப்படாது. |
-| `Sdd6555` | hub_consolidation, legacy_mapping, st_preview | Legacy no. | பழைய எண் |
+| `Sdd6555` | hub_consolidation, legacy_mapping, list | Legacy no. | பழைய எண் |
 | `S845a2b` | hub_consolidation | No Hub Controller codes yet. | இன்னும் ஹப் கட்டுப்படுத்தி குறியீடுகள் இல்லை. |
 | `S138665` | hub_consolidation | Open deprecation requests | வழக்கொழிவுக் கோரிக்கைகளைத் திற |
 | `Sc8df93` | hub_consolidation | Open deprecation requests for all replaced Hub codes of this group? | இந்தக் குழுவின் மாற்றப்பட்ட அனைத்து ஹப் குறியீடுகளுக்கும் வழக்கொழிவுக் கோரிக்கைகளைத் திறக்கவா? |
@@ -10273,7 +10711,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sded18c` | language | approved by | அங்கீகரித்தவர் |
 | `Sedd46e` | language | Check against the interface | இடைமுகத்துடன் ஒப்பிடு |
 | `S5a013c` | language | missing | இல்லாதது |
-| `S2c924e` | language, workbench | Note | குறிப்பு |
+| `S2c924e` | language, row, workbench | Note | குறிப்பு |
 | `S2f09d0` | language | Note on %(x)s | %(x)s பற்றிய குறிப்பு |
 | `S75bf99` | language | proposed by | முன்மொழிந்தவர் |
 | `Sc68e32` | language | Save translations | மொழிபெயர்ப்புகளைச் சேமி |
@@ -10281,14 +10719,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S542818` | language | Terms of the language | மொழியின் சொற்கள் |
 | `Sae9e5d` | language | Translation of %(x)s | %(x)s இன் மொழிபெயர்ப்பு |
 | `S863fd0` | language | Your own proposal: another person approves it. | உங்கள் சொந்த முன்மொழிவு: இன்னொருவர் அதை அங்கீகரிக்கிறார். |
-| `Sf9d469` | legacy_mapping | All controllers | அனைத்துக் கட்டுப்படுத்திகள் |
+| `Sf9d469` | legacy_mapping, list | All controllers | அனைத்துக் கட்டுப்படுத்திகள் |
 | `Se61c2f` | legacy_mapping | Any number state | எந்த எண் நிலையும் |
 | `S7c4f77` | legacy_mapping | issued | வழங்கப்பட்டவை |
 | `Sfd5ec0` | legacy_mapping, menu, new | Legacy mapping | பழைய-புதிய இணைப்பு |
 | `S81f567` | legacy_mapping | Legacy number to new identifier | பழைய எண்ணிலிருந்து புதிய அடையாளங்காட்டிக்கு |
 | `S64b267` | legacy_mapping | legacy number, identifier or name | பழைய எண், அடையாளங்காட்டி அல்லது பெயர் |
 | `S60fe6c` | legacy_mapping | new codes without a legacy number (n/a) | பழைய எண் இல்லாத புதிய குறியீடுகள் (பொருந்தாது) |
-| `Sf26140` | legacy_mapping, st_preview | New identifier | புதிய அடையாளங்காட்டி |
 | `Sf573c8` | legacy_mapping | no number yet | இன்னும் எண் இல்லை |
 | `S7877c5` | legacy_mapping | No status code carries a legacy number yet. | எந்த நிலைக் குறியீட்டுக்கும் இன்னும் பழைய எண் இல்லை. |
 | `Sb7baa1` | legacy_mapping | Number | எண் |
@@ -10297,10 +10734,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S8b0b7c` | legacy_mapping | with a legacy number | பழைய எண்ணுடன் |
 | `Seba07b` | list | A change set groups the change requests that ship with one controller software release, so reviewers see the whole package. Each request is still decided on its own. | மாற்றத் தொகுப்பு, கட்டுப்படுத்தி மென்பொருளின் ஒரு வெளியீட்டுடன் செல்லும் மாற்றக் கோரிக்கைகளைத் தொகுக்கிறது, மதிப்பாய்வாளர்கள் முழுத் தொகுப்பையும் காண. ஒவ்வொரு கோரிக்கையும் இன்னும் தனித்தனியாகவே முடிவு செய்யப்படுகிறது. |
 | `Sc5fe02` | list | any | ஏதேனும் |
+| `S55201a` | list | Any status | எந்த நிலைமையும் |
 | `Sef5415` | list | Apply columns | நெடுவரிசைகளைப் பயன்படுத்து |
+| `Sffb569` | list | Ask for approval of the ticked rows | குறித்த வரிசைகளின் ஒப்புதலைக் கோரு |
 | `S9e895f` | list | Change sets | மாற்றத் தொகுப்புகள் |
 | `S162a45` | list, menu | Change Sets | மாற்றத் தொகுப்புகள் |
 | `Scf723c` | list | Columns | நெடுவரிசைகள் |
+| `S2ddaf9` | list, upload | Compare a workbook | பணிப்புத்தகத்தை ஒப்பிடு |
 | `Seb0fd2` | list | Delete all my Drafts of this filter | இந்த வடிகட்டியில் உள்ள என் அனைத்து வரைவுகளையும் நீக்கு |
 | `S36f212` | list | Delete ALL of your own Drafts that match this filter, on every page? | இந்த வடிகட்டிக்குப் பொருந்தும் உங்கள் அனைத்து வரைவுகளையும், எல்லாப் பக்கங்களிலும், நீக்கவா? |
 | `Sc554a1` | list | Delete selected Drafts | தேர்ந்தெடுத்த வரைவுகளை நீக்கு |
@@ -10310,12 +10750,18 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S44d25b` | list | Items | உருப்படிகள் |
 | `S033df3` | list | Lifecycle | வாழ்க்கைச் சுழற்சி |
 | `Sb4cad6` | list | Link to this view | இந்தக் காட்சிக்கான இணைப்பு |
+| `Sbdb4e1` | list | Load the initial mapping | ஆரம்ப இணைப்பை ஏற்று |
+| `Se07018` | list | Make the request | கோரிக்கை வை |
 | `Se248d5` | list, new | New change set | புதிய மாற்றத் தொகுப்பு |
 | `Se75aa1` | list, new | New Release | புதிய வெளியீடு |
+| `S9bb526` | list, row | New row | புதிய வரிசை |
 | `Se5076c` | list | No change sets yet. | இன்னும் மாற்றத் தொகுப்புகள் இல்லை. |
 | `Sd32c03` | list | No releases yet. | இன்னும் வெளியீடுகள் இல்லை. |
+| `Sb5b22c` | list | No row matches. | எந்த வரிசையும் பொருந்தவில்லை. |
 | `Sc3af43` | list | No saved searches yet. | இன்னும் சேமித்த தேடல்கள் இல்லை. |
 | `S0cb400` | list | No status codes match these filters. | இந்த வடிகட்டிகளுக்கு எந்த நிலைக் குறியீடும் பொருந்தவில்லை. |
+| `S260f7a` | list, row | Node | முனை |
+| `S08250b` | list | number, title or group | எண், தலைப்பு அல்லது குழு |
 | `Sf7194e` | list | Requests | கோரிக்கைகள் |
 | `S37a530` | list | result | முடிவு |
 | `Scdf7e9` | list | results | முடிவுகள் |
@@ -10324,10 +10770,14 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sff86e9` | list | Save the current filters as | தற்போதைய வடிகட்டிகளை இந்தப் பெயரில் சேமி |
 | `Sed1d84` | list | Saved searches | சேமித்த தேடல்கள் |
 | `S859822` | list, mine | Select | தேர்ந்தெடு |
+| `S45b553` | list | Select all rows | எல்லா வரிசைகளையும் தேர்ந்தெடு |
 | `S7f5583` | list, menu | Status Codes | நிலைக் குறியீடுகள் |
 | `S20bff1` | list | Status codes | நிலைக் குறியீடுகள் |
+| `S3a1066` | list | The mapping is empty. | இணைப்பு காலியாக உள்ளது. |
+| `S27d95b` | list | The rows stay as they are. Once the StCd Owner, the Chief Engineer and an Administrator approve, they count as approved numbers. | வரிசைகள் உள்ளபடியே இருக்கும். StCd உரிமையாளர், தலைமைப் பொறியாளர், ஒரு நிர்வாகி ஒப்புதல் அளித்ததும் அவை ஒப்புதல் பெற்ற எண்களாகக் கருதப்படும். |
 | `Se90eb0` | list | Turbine Platform | டர்பைன் தளம் |
 | `S86b1e7` | list | Typos are tolerated: "convertor" still finds "converter". | எழுத்துப் பிழைகள் பொறுத்துக்கொள்ளப்படும்: "convertor" இன்னும் "converter" ஐக் கண்டுபிடிக்கும். |
+| `Sb0c551` | list | Which legacy status code becomes which new one, with what the program files do not carry: the English title, the type, the up/down counter, the access levels, cause and directive. A row changes only by a request that the StCd Owner, the Chief Engineer and an Administrator all approve. | எந்தப் பழைய நிலைக் குறியீடு எந்தப் புதியதாகிறது, நிரல் கோப்புகளில் இல்லாதவற்றுடன்: ஆங்கிலத் தலைப்பு, வகை, மேல்/கீழ் எண்ணி, அணுகல் நிலைகள், காரணம், அறிவுறுத்தல். StCd உரிமையாளர், தலைமைப் பொறியாளர், ஒரு நிர்வாகி அனைவரும் ஒப்புதல் அளிக்கும் கோரிக்கையால் மட்டுமே வரிசை மாறும். |
 | `Sf7c400` | login | Log in | உள்நுழை |
 | `S175835` | login | or | அல்லது |
 | `S8be3c9` | login, users | Password | கடவுச்சொல் |
@@ -10489,6 +10939,23 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S8cb56e` | message: lookup_admin_service | range_end must be greater than range_start | range_end, range_start ஐ விடப் பெரிதாக இருக்க வேண்டும் |
 | `Se3a971` | message: lookup_admin_service | sub_range_end must be greater than sub_range_start | sub_range_end, sub_range_start ஐ விடப் பெரிதாக இருக்க வேண்டும் |
 | `S1404e3` | message: lookup_service | functional_system_group query parameter is required for functional-subgroups | functional-subgroups க்கு functional_system_group வினவல் அளவுரு தேவை |
+| `Sf28681` | message: mapping_service | Give the reason for the change; the three approvers read it first. | மாற்றத்தின் காரணத்தைக் கூறுங்கள்; மூன்று ஒப்புதலாளர்களும் அதை முதலில் படிப்பார்கள். |
+| `S062788` | message: mapping_service | Give the request a title of at most 120 characters. | கோரிக்கைக்கு அதிகபட்சம் 120 எழுத்துகளில் தலைப்பு கொடுங்கள். |
+| `S2ea56f` | message: mapping_service | Mapping change not found | இணைப்பின் மாற்றம் கிடைக்கவில்லை |
+| `S2c9363` | message: mapping_service | Mapping row not found | இணைப்பின் வரிசை கிடைக்கவில்லை |
+| `S2d5693` | message: mapping_service | Only the person who made the request can withdraw it. | கோரிக்கை வைத்தவர் மட்டுமே அதைத் திரும்பப் பெற முடியும். |
+| `S682269` | message: mapping_service | Only the StCd Owner, the Chief Engineer and an Administrator decide on the mapping. | இணைப்பு குறித்து StCd உரிமையாளர், தலைமைப் பொறியாளர், ஒரு நிர்வாகி மட்டுமே முடிவு செய்வார்கள். |
+| `S5e0f66` | message: mapping_service | Say why you reject the request. | கோரிக்கையை ஏன் நிராகரிக்கிறீர்கள் என்று கூறுங்கள். |
+| `S3d5cfc` | message: mapping_service | The comment is longer than 1000 characters. | கருத்து 1000 எழுத்துகளுக்கு மேல் நீளமாக உள்ளது. |
+| `S82b817` | message: mapping_service | The decision must be APPROVE or REJECT. | முடிவு APPROVE அல்லது REJECT ஆக இருக்க வேண்டும். |
+| `S9ec08a` | message: mapping_service | The file is not a readable .xlsx workbook. | கோப்பு படிக்கக்கூடிய .xlsx பணிப்புத்தகம் அல்ல. |
+| `S3831f7` | message: mapping_service | The reason is longer than 2000 characters. | காரணம் 2000 எழுத்துகளுக்கு மேல் நீளமாக உள்ளது. |
+| `Sa5de7d` | message: mapping_service | The request contains no row. | கோரிக்கையில் ஒரு வரிசையும் இல்லை. |
+| `S2116e4` | message: mapping_service | The request is already closed. | கோரிக்கை ஏற்கனவே மூடப்பட்டுள்ளது. |
+| `S8518e7` | message: mapping_service | The role has decided already. | இந்தப் பங்கு ஏற்கனவே முடிவு செய்துவிட்டது. |
+| `S2a15d7` | message: mapping_service | The workbook is larger than 5 MB. | பணிப்புத்தகம் 5 MB-ஐ விடப் பெரியது. |
+| `S8eb912` | message: mapping_service | The workbook unpacks to more than 80 MB. | பணிப்புத்தகம் விரிக்கப்பட்டால் 80 MB-ஐ விடப் பெரியதாகிறது. |
+| `S6c1d08` | message: mapping_service | Your role may not propose a change of the mapping. | உங்கள் பங்கு இணைப்பில் மாற்றத்தை முன்மொழிய முடியாது. |
 | `S4ada2b` | message: notification_service | Notification not found | அறிவிப்பு கிடைக்கவில்லை |
 | `Sd92b89` | message: notification_service | This notification belongs to someone else. | இந்த அறிவிப்பு வேறொருவருக்குச் சொந்தமானது. |
 | `Sb0cd00` | message: numbering_service | Identifier override must match StCd-NNNNN (five digits). | மேலெழுதிய அடையாளங்காட்டி StCd-NNNNN (ஐந்து இலக்கங்கள்) உடன் பொருந்த வேண்டும். |
@@ -10520,8 +10987,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S9671fb` | message: settings_service | must be true or false | true அல்லது false ஆக இருக்க வேண்டும் |
 | `S5166bb` | message: st_import_service | A staged file changed after the preview. Upload again. | முன்னோட்டத்துக்குப் பின் ஒரு தயாரிக்கப்பட்ட கோப்பு மாறியது. மீண்டும் பதிவேற்றுங்கள். |
 | `Saa4de2` | message: st_import_service | controller must be auto, MC or HC | controller auto, MC அல்லது HC ஆக இருக்க வேண்டும் |
-| `Sa30251` | message: st_import_service | default_category must be ERROR, WARNING or INFO | default_category ERROR, WARNING அல்லது INFO ஆக இருக்க வேண்டும் |
-| `Sfe694a` | message: st_import_service | hc_proposal must be 1 or 2 | hc_proposal 1 அல்லது 2 ஆக இருக்க வேண்டும் |
 | `S58bec3` | message: st_import_service | No StCd program files found. Upload .st files or a ZIP of them. | StCd நிரல் கோப்புகள் எதுவும் கிடைக்கவில்லை. .st கோப்புகள் அல்லது அவற்றின் ZIP ஐப் பதிவேற்றுங்கள். |
 | `Sd9c5b0` | message: st_import_service | Nothing selected: tick at least one program that is ready. | எதுவும் தேர்ந்தெடுக்கப்படவில்லை: தயாராக உள்ள குறைந்தது ஒரு நிரலைக் குறிக்கவும். |
 | `S5dbbd0` | message: st_import_service | The code is no longer an open Draft; preview the files again. | குறியீடு இனி திறந்த வரைவு அல்ல; கோப்புகளின் முன்னோட்டத்தை மீண்டும் காணுங்கள். |
@@ -10668,6 +11133,23 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S05fc94` | role badge | Engineer | பொறியாளர் |
 | `S3c0e8a` | role badge | StCd Owner | StCd உரிமையாளர் |
 | `Sdbad9f` | role badge | Viewer | பார்வையாளர் |
+| `S7f2e4b` | row | Access levels | அணுகல் நிலைகள் |
+| `S08f985` | row | Cause | காரணம் |
+| `S164e0b` | row | Directive | அறிவுறுத்தல் |
+| `S283474` | row | New number | புதிய எண் |
+| `Sfa6fdd` | row | No request yet. The row is as it was loaded. | இன்னும் கோரிக்கை இல்லை. வரிசை ஏற்றப்பட்டபடியே உள்ளது. |
+| `Sf790fc` | row | Nothing is changed here directly: the form makes a request, and the row changes after the StCd Owner, the Chief Engineer and an Administrator have approved it. | இங்கே நேரடியாக எதுவும் மாறாது: படிவம் ஒரு கோரிக்கையை உருவாக்குகிறது; StCd உரிமையாளர், தலைமைப் பொறியாளர், ஒரு நிர்வாகி ஒப்புதல் அளித்த பிறகு வரிசை மாறும். |
+| `S9d728f` | row | Request approval of the number | எண்ணின் ஒப்புதலைக் கோரு |
+| `Sc8978f` | row | Request rejection of the number | எண்ணின் நிராகரிப்பைக் கோரு |
+| `Sc644eb` | row | Request that this number is never used? | இந்த எண் ஒருபோதும் பயன்படுத்தப்படக் கூடாது எனக் கோரவா? |
+| `Sb25913` | row | Request the new row | புதிய வரிசையைக் கோரு |
+| `Sb04301` | row | Request this change | இந்த மாற்றத்தைக் கோரு |
+| `Sae91b6` | row | Requests for this row | இந்த வரிசையின் கோரிக்கைகள் |
+| `Sd59701` | row | Reset delay (parameter) | மீட்டமைப்பு தாமதம் (அளவுரு) |
+| `Sfd64cd` | row | Set delay (parameter) | அமைப்பு தாமதம் (அளவுரு) |
+| `S9c0444` | row | The three approvers read the reason first. | மூன்று ஒப்புதலாளர்களும் முதலில் காரணத்தைப் படிப்பார்கள். |
+| `Sc84745` | row | Title (English) | தலைப்பு (ஆங்கிலம்) |
+| `S711eea` | row | Up/down counter | மேல்/கீழ் எண்ணி |
 | `S913aba` | settings | Save settings | அமைப்புகளைச் சேமிக்கவும் |
 | `Sb68734` | software_versions | Added | சேர்க்கப்பட்டவை |
 | `S172415` | software_versions | added | சேர்க்கப்பட்டவை |
@@ -10681,28 +11163,19 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd97d1e` | software_versions | Show | காட்டு |
 | `S42ea2e` | software_versions | Software Versions | மென்பொருள் பதிப்புகள் |
 | `S3bd89c` | software_versions | Which codes exist in which software version | எந்த மென்பொருள் பதிப்பில் எந்தக் குறியீடுகள் உள்ளன |
-| `S16e5d4` | st_new, st_preview | Alarm type | அலாரம் வகை |
-| `S726d7a` | st_new | as above | மேலே உள்ளபடி |
-| `S9477fd` | st_new, st_preview | choose | தேர்ந்தெடு |
 | `Sb149ca` | st_new | Detect: a number from 10000 up is a Hub Controller program | கண்டறி: 10000 முதல் மேலுள்ள எண் ஹப் கட்டுப்படுத்தி நிரல் |
 | `S7d06d0` | st_new | Every imported program becomes an ordinary Draft with the number it carries reserved. It still needs Cross-Domain Sign-Off, dual review and Chief Engineer approval before Release, and all Drafts of one import share a change set. | இறக்குமதி செய்த ஒவ்வொரு நிரலும் அது கொண்டுள்ள எண் ஒதுக்கப்பட்ட சாதாரண வரைவாகிறது. வெளியீட்டுக்கு முன் அதற்கு இன்னும் துறைகள் கடந்த கையொப்பம், இரட்டை மதிப்பாய்வு, தலைமைப் பொறியாளர் ஒப்புதல் தேவை; ஒரு இறக்குமதியின் அனைத்து வரைவுகளும் ஒரு மாற்றத் தொகுப்பைப் பகிர்கின்றன. |
-| `Sbda77c` | st_new | Every program names an alarm type. A type left at "as above" gets the category chosen above; the next page lets you set the category of single programs or of all ticked ones. | ஒவ்வொரு நிரலும் ஒரு அலாரம் வகையைக் குறிப்பிடுகிறது. "மேலே உள்ளபடி" என விடப்பட்ட வகை மேலே தேர்ந்த வகையைப் பெறும்; அடுத்த பக்கத்தில் தனித்தனி நிரல்களுக்கோ குறிக்கப்பட்ட அனைத்திற்குமோ வகையை அமைக்கலாம். |
 | `S3b9e43` | st_new | Hub Controller (legacy numbers, mapped to the new ones) | ஹப் கட்டுப்படுத்தி (பழைய எண்கள், புதியவற்றுடன் இணைக்கப்பட்டவை) |
 | `Sd7333f` | st_new | Import status codes from .st files | .st கோப்புகளிலிருந்து நிலைக் குறியீடுகளை இறக்குமதி செய் |
-| `S6640a6` | st_new | New number of Hub Controller programs | ஹப் கட்டுப்படுத்தி நிரல்களின் புதிய எண் |
 | `Sc0eff1` | st_new | Or a whole folder | அல்லது முழுக் கோப்புறை |
 | `S94ddc1` | st_new | Program files (.st) or a ZIP | நிரல் கோப்புகள் (.st) அல்லது ஒரு ZIP |
-| `Sd99e2a` | st_new | Proposal 1: five-digit numbers (11000 and up) | முன்மொழிவு 1: ஐந்து இலக்க எண்கள் (11000 முதல்) |
-| `S2744b0` | st_new | Proposal 2: inside the Main Controller scheme | முன்மொழிவு 2: முதன்மைக் கட்டுப்படுத்தித் திட்டத்துக்குள் |
 | `S67640d` | st_new | Read files and preview | கோப்புகளைப் படித்து முன்னோட்டம் காண் |
-| `S0af4fc` | st_new | Status category by alarm type (optional) | அலாரம் வகைப்படி நிலை வகை (விருப்பம்) |
-| `S234237` | st_new | Status category of the new codes | புதிய குறியீடுகளின் நிலை வகை |
-| `S61fc52` | st_new | The program files do not carry a category and none is assumed: choose one here, by alarm type below, or for each program in the preview. A program without a category is not imported. | நிரல் கோப்புகளில் வகை இல்லை, எதுவும் ஊகிக்கப்படுவதில்லை: இங்கே ஒன்றைத் தேர்ந்தெடுக்கவும், கீழே அலாரம் வகைப்படி, அல்லது முன்னோட்டத்தில் ஒவ்வொரு நிரலுக்கும் தேர்ந்தெடுக்கவும். வகை இல்லாத நிரல் இறக்குமதி செய்யப்படாது. |
+| `Saa9df6` | st_new | The title, the type and the access levels of every program come from the mapping, never from the files. A program whose number is not in the mapping is blocked. | ஒவ்வொரு நிரலின் தலைப்பு, வகை, அணுகல் நிலைகள் இணைப்பிலிருந்து வரும், கோப்புகளிலிருந்து ஒருபோதும் இல்லை. எண் இணைப்பில் இல்லாத நிரல் தடுக்கப்படும். |
 | `S8f4c21` | st_new | Turbine platforms | டர்பைன் தளங்கள் |
 | `S9ad4d4` | st_new | Upload the generated StCd_<n>.st programs — several files at once, a whole folder, or one ZIP. Nothing is created yet: the next page lists every program so you can tick the ones to import. | உருவாக்கப்பட்ட StCd_<n>.st நிரல்களைப் பதிவேற்றுங்கள் — ஒரே நேரத்தில் பல கோப்புகள், முழுக் கோப்புறை அல்லது ஒரு ZIP. இன்னும் எதுவும் உருவாக்கப்படாது: அடுத்த பக்கம் ஒவ்வொரு நிரலையும் பட்டியலிடும், இறக்குமதிக்கானவற்றைக் குறிக்கலாம். |
+| `S16e5d4` | st_preview | Alarm type | அலாரம் வகை |
 | `S2693e5` | st_preview | All Drafts of this import join one change set, so they can be reviewed and decided together. | இந்த இறக்குமதியின் அனைத்து வரைவுகளும் ஒரு மாற்றத் தொகுப்பில் சேரும், அவற்றை ஒன்றாக மதிப்பாய்வு செய்து முடிவு செய்ய. |
 | `Scbc694` | st_preview | already in the catalogue | ஏற்கனவே பட்டியலில் |
-| `Sc00673` | st_preview | Apply to the ticked programs | குறிக்கப்பட்ட நிரல்களுக்குப் பயன்படுத்து |
 | `Sdf88b8` | st_preview | blocked | தடுக்கப்பட்டவை |
 | `S6f7703` | st_preview | Changed and withdrawn programs are not ticked: tick the ones you want to update, revise or restore. | மாறிய மற்றும் திரும்பப் பெற்ற நிரல்கள் குறிக்கப்படவில்லை: புதுப்பிக்க, திருத்த அல்லது மீட்க விரும்புவனவற்றைக் குறிக்கவும். |
 | `S78bb8b` | st_preview | Create Drafts for the ticked programs | குறிக்கப்பட்ட நிரல்களுக்கு வரைவுகளை உருவாக்கு |
@@ -10720,8 +11193,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se58289` | st_preview | Programs found in the uploaded files | பதிவேற்றிய கோப்புகளில் கண்ட நிரல்கள் |
 | `S75c053` | st_preview, workbench | ready | தயார் |
 | `S0723bf` | st_preview | Select all programs that are ready | தயாராக உள்ள அனைத்து நிரல்களையும் தேர்ந்தெடு |
-| `Sae12bc` | st_preview, workbench | Status category | நிலை வகை |
-| `Sd7a322` | st_preview | Status category of the ticked programs | குறிக்கப்பட்ட நிரல்களின் நிலை வகை |
+| `S9a2439` | st_preview | Type (from the mapping) | வகை (இணைப்பிலிருந்து) |
 | `S1a767a` | st_preview | updates the open Draft | திறந்த வரைவைப் புதுப்பிக்கிறது |
 | `S02499f` | st_preview | withdrawn | திரும்பப் பெற்றவை |
 | `Sf0c3cf` | st_preview | without a legacy number | பழைய எண் இல்லாதவை |
@@ -10784,6 +11256,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S2fd88e` | translations | Copy from previous revision | முந்தைய திருத்தத்திலிருந்து நகலெடு |
 | `Se522f0` | translations | Save draft translation | வரைவு மொழிபெயர்ப்பைச் சேமி |
 | `Scb0b87` | translations | source language text of revision | திருத்தத்தின் மூல மொழி உரை |
+| `S01209c` | upload | Also ask for approval of the unchanged rows that are only proposed | முன்மொழியப்பட்டு மட்டுமே உள்ள மாறாத வரிசைகளின் ஒப்புதலையும் கோரு |
+| `Sddf8d9` | upload | Compare and make the request | ஒப்பிட்டு கோரிக்கை வை |
+| `S028ebe` | upload | Download the current mapping | தற்போதைய இணைப்பைப் பதிவிறக்கு |
+| `S23bfbf` | upload | The workbook has problems. Nothing was requested. | பணிப்புத்தகத்தில் சிக்கல்கள் உள்ளன. எதுவும் கோரப்படவில்லை. |
+| `S24d49d` | upload | Title of the request | கோரிக்கையின் தலைப்பு |
+| `S88809a` | upload | Upload the corrected mapping as a workbook with the sheets MC and HC (download the current one as a model). Every new row and every row that differs becomes one request; rows the workbook does not mention stay as they are. The request takes effect only after the StCd Owner, the Chief Engineer and an Administrator have approved it. | திருத்திய இணைப்பை MC, HC தாள்களுடன் பணிப்புத்தகமாக ஏற்றுங்கள் (மாதிரிக்கு தற்போதையதைப் பதிவிறக்குங்கள்). ஒவ்வொரு புதிய, ஒவ்வொரு வேறுபடும் வரிசையும் ஒரு கோரிக்கையாகும்; பணிப்புத்தகம் குறிப்பிடாத வரிசைகள் மாறாமல் இருக்கும். StCd உரிமையாளர், தலைமைப் பொறியாளர், ஒரு நிர்வாகி ஒப்புதல் அளித்த பிறகே கோரிக்கை நடைமுறைக்கு வரும். |
+| `S09efdf` | upload | Workbook (.xlsx) | பணிப்புத்தகம் (.xlsx) |
 | `S359a3b` | user_detail | Back to users | பயனர்களுக்குத் திரும்பு |
 | `Sf6fdbe` | user_detail, users | Delete | நீக்கு |
 | `S9afe6c` | user_detail | Delete user | பயனரை நீக்கு |
@@ -10843,6 +11322,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sa58dac` | workbench | Set values on the Drafts | வரைவுகளில் மதிப்புகளை அமை |
 | `Sa443bb` | workbench | Sign off the Drafts | வரைவுகளுக்குக் கையொப்பமிடு |
 | `S53f47f` | workbench | Sign-off pending | கையொப்பம் நிலுவையில் |
+| `Sae12bc` | workbench | Status category | நிலை வகை |
 | `Sdc416e` | workbench | Step | படி |
 | `Sf7710d` | workbench | Submit for review | மதிப்பாய்வுக்குச் சமர்ப்பி |
 | `Sa45adc` | workbench | Submit the Drafts | வரைவுகளைச் சமர்ப்பி |
@@ -10855,7 +11335,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 
 ### 9.10 IN ગુજરાતી 🇮🇳 — Gujarati
 
-1295 of 1296 strings translated; direction left to right.
+1355 of 1356 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -10866,13 +11346,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S141763` | _macros | Confirm with your password | તમારા પાસવર્ડથી પુષ્ટિ કરો |
 | `Sc326a4` | _macros, detail, form | Field | ફીલ્ડ |
 | `S0a0f8a` | _macros | Field differences | ફીલ્ડ તફાવતો |
-| `Sbc9819` | _macros | Next | આગળનું |
+| `Sbc9819` | _macros, list | Next | આગળનું |
 | `S27cea7` | _macros | No field differences. | કોઈ ફીલ્ડ તફાવત નથી. |
 | `S464e43` | _macros | on track | સમયસર |
 | `Sba2fff` | _macros, dashboard, success_metrics | overdue | મુદત વીતી |
-| `S600584` | _macros | Pages | પૃષ્ઠો |
+| `S600584` | _macros, list | Pages | પૃષ્ઠો |
 | `S810099` | _macros | Please check | કૃપા કરીને તપાસો |
-| `S50f942` | _macros | Previous | પાછલું |
+| `S50f942` | _macros, list | Previous | પાછલું |
 | `S83fd6e` | _macros, stalled | red after | પછી લાલ |
 | `S57e8a7` | _macros, success_metrics | slow | ધીમું |
 | `S15198e` | _macros | Waiting since | રાહ જોઈ રહ્યું છે, થી |
@@ -10903,10 +11383,10 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S06b6ac` | approval_queue, builder, detail | Identifier | ઓળખકર્તા |
 | `S8e70d2` | approval_queue | Nothing is awaiting your approval. | તમારી મંજૂરીની રાહ જોતું કંઈ નથી. |
 | `Sa74f16` | approval_queue, detail, review_queue | Reviewer | સમીક્ષક |
-| `S768e0c` | approval_queue, builder, detail | Title | શીર્ષક |
+| `S768e0c` | approval_queue, builder, change | Title | શીર્ષક |
 | `S33d306` | approval_queue, detail, mine | Waiting | રાહ |
 | `S2cbacd` | audit_log | %(n)s total | કુલ %(n)s |
-| `S97c89a` | audit_log | Action | ક્રિયા |
+| `S97c89a` | audit_log, change | Action | ક્રિયા |
 | `Scbd19b` | audit_log | Actor | કર્તા |
 | `S811bdf` | audit_log | Actor ID | કર્તા ID |
 | `S8c85b1` | audit_log | after: | પછી: |
@@ -10917,7 +11397,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sc7fb31` | audit_log | Entity | એન્ટિટી |
 | `S04d694` | audit_log | Entity ID | એન્ટિટી ID |
 | `Sbb4e99` | audit_log | Entity Type | એન્ટિટી પ્રકાર |
-| `Sd7decf` | audit_log, index, language | Filter | ફિલ્ટર |
+| `Sd7decf` | audit_log, changes, index | Filter | ફિલ્ટર |
 | `S3f6605` | audit_log, delegations, software_versions | From | થી |
 | `S0061b5` | audit_log | No matching audit entries. | મેળ ખાતી કોઈ ઑડિટ નોંધ નથી. |
 | `S01f79f` | audit_log | Scoped view: showing only actions you performed. | મર્યાદિત દૃશ્ય: ફક્ત તમારી પોતાની ક્રિયાઓ બતાવાઈ છે. |
@@ -10936,7 +11416,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sbe504f` | base | Skip to main content | મુખ્ય સામગ્રી પર જાઓ |
 | `S1b9aeb` | base, dashboard | unread | વણવાંચેલા |
 | `S2da600` | base, export, export_center | Version | આવૃત્તિ |
-| `S12625b` | base | waiting | પ્રતીક્ષામાં |
+| `S12625b` | base, change | waiting | પ્રતીક્ષામાં |
 | `S5a4692` | base | You are covering for a colleague | તમે એક સહકર્મીની જગ્યાએ કામ કરી રહ્યા છો |
 | `S8e9c15` | builder | Candidate revisions | ઉમેદવાર સુધારા |
 | `Sdf2aa0` | builder | Functional Group / Subgroup | કાર્યાત્મક જૂથ / પેટાજૂથ |
@@ -10967,13 +11447,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S4105cf` | catalogue_health | exhausted | ખલાસ |
 | `S57e8be` | catalogue_health, connections | Finding | તારણ |
 | `S1150a1` | catalogue_health | Gaps | ખાલી જગ્યાઓ |
-| `S171a06` | catalogue_health, export, withdrawn_codes | Group | જૂથ |
-| `Sb4aadc` | catalogue_health, legacy_mapping | Hub Controller | હબ નિયંત્રક |
+| `S171a06` | catalogue_health, export, list | Group | જૂથ |
+| `Sb4aadc` | catalogue_health, legacy_mapping, list | Hub Controller | હબ નિયંત્રક |
 | `S8ae1c3` | catalogue_health | Left | બાકી |
 | `S12c0f1` | catalogue_health | left | બાકી |
 | `Sa7b60b` | catalogue_health | Left % | બાકી % |
 | `S36a883` | catalogue_health | low | ઓછું |
-| `S1b123c` | catalogue_health, legacy_mapping, st_new | Main Controller | મુખ્ય નિયંત્રક |
+| `S1b123c` | catalogue_health, legacy_mapping, list | Main Controller | મુખ્ય નિયંત્રક |
 | `S92185d` | catalogue_health, index | Missing | ખૂટે છે |
 | `S57282a` | catalogue_health | Missing expected data | અપેક્ષિત ડેટા ખૂટે છે |
 | `Sb8e95b` | catalogue_health | None found. | કંઈ મળ્યું નથી. |
@@ -10990,6 +11470,31 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S75a804` | catalogue_health | subgroup(s) are running out of numbers: | પેટાજૂથના નંબર ખૂટી રહ્યા છે: |
 | `S5fec4f` | catalogue_health | Unused numbers inside a band | પટ્ટાની અંદર ન વપરાયેલા નંબર |
 | `S02c0e4` | catalogue_health | Used | વપરાયેલ |
+| `S84f219` | change | All three, each by a different person who did not make the request. | ત્રણેય, દરેક અલગ વ્યક્તિ દ્વારા, જેણે વિનંતી કરી નથી. |
+| `S477aeb` | change, upload | and more | અને વધુ |
+| `Sdeb9d0` | change, changes | Approvals | મંજૂરીઓ |
+| `S7b2c7f` | change, detail, language | Approve | મંજૂર કરો |
+| `S8aa57d` | change, detail | Changes | ફેરફારો |
+| `S3fe5e1` | change | Comment (required to reject) | ટિપ્પણી (નામંજૂર કરવા માટે જરૂરી) |
+| `Sb48001` | change | Mapping change | મેપિંગનો ફેરફાર |
+| `Sd7c1d0` | change, changes, list | Mapping changes | મેપિંગના ફેરફારો |
+| `Sf26140` | change, legacy_mapping, list | New identifier | નવો ઓળખકર્તા |
+| `Sf219cc` | change, list, row | Reason | કારણ |
+| `S2b03b5` | change, detail | Reject | નામંજૂર કરો |
+| `S5108c2` | change, changes | Requested by | વિનંતી કરનાર |
+| `S52d0b3` | change, changes, detail | Rows | પંક્તિઓ |
+| `S6c30d2` | change, dry_run, list | rows | પંક્તિઓ |
+| `Sfabd38` | change | These rows changed after the request was made; it cannot be applied. Withdraw it and make it again: | વિનંતી પછી આ પંક્તિઓ બદલાઈ; તે લાગુ કરી શકાતી નથી. તેને પાછી ખેંચો અને ફરી કરો: |
+| `S47e564` | change, detail | Withdraw | પાછી ખેંચો |
+| `S30d359` | change | Withdraw this request? | આ વિનંતી પાછી ખેંચવી છે? |
+| `S88c173` | change | You made this request; another person must decide. | આ વિનંતી તમે કરી છે; બીજી વ્યક્તિએ નિર્ણય લેવો જોઈએ. |
+| `S04e02f` | change | Your role has decided already. | તમારી ભૂમિકાએ પહેલેથી નિર્ણય લીધો છે. |
+| `Sc7274c` | changes | Any state | કોઈપણ અવસ્થા |
+| `S2a560c` | changes | Every change of the mapping is a request. It takes effect when the StCd Owner, the Chief Engineer and an Administrator have each approved it; one rejection closes it. | મેપિંગમાં દરેક ફેરફાર એક વિનંતી છે. StCd માલિક, મુખ્ય ઇજનેર અને એક સંચાલક દરેક તેને મંજૂર કરે ત્યારે તે લાગુ થાય છે; એક નામંજૂરી તેને બંધ કરે છે. |
+| `Sdef2eb` | changes, list, menu | Mapping | મેપિંગ |
+| `Se03e43` | changes | No request yet. | હજુ કોઈ વિનંતી નથી. |
+| `S5fc0e0` | changes | request(s) wait for your decision. | વિનંતીઓ તમારા નિર્ણયની રાહ જુએ છે. |
+| `Sa72502` | changes, detail, export | State | સ્થિતિ |
 | `S97fd13` | check | Back to the terms | શબ્દો પર પાછા |
 | `S1bc9e5` | check | English string | અંગ્રેજી લખાણ |
 | `S5d54b3` | check | Every string uses the translated terms. | દરેક લખાણ અનુવાદિત શબ્દો વાપરે છે. |
@@ -11070,7 +11575,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S9b0b4c` | detail | also the files without an access level (all columns) | એક્સેસ સ્તર વગરની ફાઇલો પણ (બધા કૉલમ) |
 | `Sf24c44` | detail | Any %(code)s Engineer | કોઈપણ %(code)s ઇજનેર |
 | `Sb99a01` | detail | Applies to software versions | સૉફ્ટવેર આવૃત્તિઓને લાગુ |
-| `S7b2c7f` | detail, language | Approve | મંજૂર કરો |
 | `Sde38bf` | detail | Approve selected | પસંદ કરેલ મંજૂર કરો |
 | `Scf2999` | detail | Approving confirms these values; any change you make here is applied and audited. Rejecting ignores them. | મંજૂરી આ મૂલ્યોની પુષ્ટિ કરે છે; તમે અહીં જે ફેરફાર કરો તે લાગુ અને ઑડિટ થાય છે. નામંજૂરી તેમને અવગણે છે. |
 | `Sf7f2d5` | detail | Archive (requires 180-day retention elapsed) | આર્કાઇવ કરો (180 દિવસનો જાળવણી સમય વીતેલો હોવો જોઈએ) |
@@ -11091,7 +11595,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S4572f4` | detail | Change request | ફેરફાર વિનંતી |
 | `S3295be` | detail, workbench | Change requests in this set | આ સમૂહની ફેરફાર વિનંતીઓ |
 | `S4d8006` | detail | Change set | ફેરફાર સમૂહ |
-| `S8aa57d` | detail | Changes | ફેરફારો |
 | `S3d14ea` | detail, export | Changes of this release only | ફક્ત આ રિલીઝના ફેરફારો |
 | `Sbd95c0` | detail | Checklist confirmed at sign-off | સાઇન-ઑફ સમયે પુષ્ટિ થયેલ ચેકલિસ્ટ |
 | `S074d62` | detail, role badge | Chief Engineer | મુખ્ય ઇજનેર |
@@ -11109,7 +11612,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S7671b5` | detail | Confirm or override Audience Access | લક્ષિત જૂથ ઍક્સેસની પુષ્ટિ કરો અથવા અધિલેખિત કરો |
 | `S6512ee` | detail | Connection | જોડાણ |
 | `S4f9be0` | detail | Content | સામગ્રી |
-| `Sa36a5f` | detail, legacy_mapping, st_new | Controller | નિયંત્રક |
+| `Sa36a5f` | detail, legacy_mapping, list | Controller | નિયંત્રક |
 | `Scd293f` | detail | Converter Reactive Power Program | કન્વર્ટર રિએક્ટિવ પાવર પ્રોગ્રામ |
 | `S3998a7` | detail | Copies the descriptive fields into a new Draft in a Main Controller group (a new number is allocated at submit; this code's identifier is kept as the legacy reference). | વર્ણનાત્મક ફીલ્ડ મુખ્ય નિયંત્રક જૂથના નવા મુસદ્દામાં કૉપિ કરે છે (સબમિટ સમયે નવો નંબર અપાય છે; આ કોડનો ઓળખકર્તા જૂના સંદર્ભ તરીકે રખાય છે). |
 | `S54b051` | detail | Copy this code for another turbine platform. The copy is a new Draft that links back here and goes through the normal review. | આ કોડ બીજા ટર્બાઇન પ્લેટફોર્મ માટે કૉપિ કરો. નકલ એક નવો મુસદ્દો છે જે અહીં પાછો જોડાય છે અને સામાન્ય સમીક્ષામાંથી પસાર થાય છે. |
@@ -11243,7 +11746,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sf5ca9d` | detail | Recorded exports | નોંધાયેલ નિકાસ |
 | `Sa3f757` | detail | Reinstate to Released | પ્રકાશિત પર પુનઃસ્થાપિત કરો |
 | `S3238ca` | detail | Reinstatement reason | પુનઃસ્થાપનાનું કારણ |
-| `S2b03b5` | detail | Reject | નામંજૂર કરો |
 | `S27fb5c` | detail | Reject selected | પસંદ કરેલ નામંજૂર કરો |
 | `S045c2c` | detail | Related codes | સંબંધિત કોડ |
 | `S33a5a7` | detail | Relation | સંબંધ |
@@ -11261,7 +11763,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S4c1aa6` | detail | Repeated-Error Escalation | વારંવાર આવતી ભૂલોનું એસ્કેલેશન |
 | `S4aed03` | detail | Request | વિનંતી |
 | `Sf3421a` | detail | Request a Sign-Off | સાઇન-ઑફની વિનંતી કરો |
-| `Sc26bf6` | detail, mine | Requested | વિનંતી કરેલ |
+| `Sc26bf6` | detail, mine, row | Requested | વિનંતી કરેલ |
 | `S2706ed` | detail | Required by | આમના માટે જરૂરી |
 | `S619e87` | detail, form | Reset Delay | રીસેટ વિલંબ |
 | `S026ab2` | detail | resolved | ઉકેલાયું |
@@ -11271,7 +11773,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S3beb9a` | detail | Revision | સુધારો |
 | `Sa72973` | detail | Revision Fields | સુધારા ફીલ્ડ |
 | `Sfc1d6a` | detail | row(s) imported as Drafts | પંક્તિઓ મુસદ્દા તરીકે આયાત થઈ |
-| `S52d0b3` | detail, reconciliation, user_detail | Rows | પંક્તિઓ |
 | `Sd0edfb` | detail | Sales | વેચાણ |
 | `S241bf5` | detail, workbench | Sample number | નમૂના નંબર |
 | `Sda38c6` | detail | Save planned dates | આયોજિત તારીખો સાચવો |
@@ -11290,11 +11791,10 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sece2ac` | detail, form | Slot | સ્લોટ |
 | `Sff44d2` | detail | Software Version | સૉફ્ટવેર આવૃત્તિ |
 | `S169bf7` | detail, export, software_versions | Software version | સૉફ્ટવેર આવૃત્તિ |
-| `S6da13a` | detail, fleet_feedback | Source | સ્રોત |
+| `S6da13a` | detail, fleet_feedback, row | Source | સ્રોત |
 | `Sd3c56b` | detail, export_profiles | source language | સ્રોત ભાષા |
 | `Sb3883f` | detail | Standards | ધોરણો |
 | `Sfaa9e7` | detail, reconciliation | Started | શરૂ થયું |
-| `Sa72502` | detail, export, hub_consolidation | State | સ્થિતિ |
 | `Se246b6` | detail, form, list | Status Category | સ્ટેટસ શ્રેણી |
 | `S779953` | detail, form | Status Code for Repeated Error | વારંવાર આવતી ભૂલ માટે સ્ટેટસ કોડ |
 | `S98a377` | detail | Still a Draft. | હજુ મુસદ્દો છે. |
@@ -11313,7 +11813,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Seaf576` | detail, form | Trigger Snapshot | સ્નેપશોટ ટ્રિગર કરો |
 | `S285ec8` | detail, form | Troubleshooting | મુશ્કેલી નિવારણ |
 | `S71bba4` | detail | Turbine Operator Package | ટર્બાઇન ઓપરેટર પેકેજ |
-| `S3deb74` | detail, mine, review_queue | Type | પ્રકાર |
+| `S3deb74` | detail, list, mine | Type | પ્રકાર |
 | `Sab631e` | detail | Type %(id)s to confirm | પુષ્ટિ માટે %(id)s ટાઇપ કરો |
 | `Sb5e264` | detail | Type the identifier to confirm | પુષ્ટિ માટે ઓળખકર્તા ટાઇપ કરો |
 | `S835f8a` | detail | Umrichterprogramm GSC | કન્વર્ટર પ્રોગ્રામ GSC |
@@ -11332,7 +11832,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S51ecc5` | detail | What happens next | આગળ શું થાય છે |
 | `Sf323c0` | detail | Where used | ક્યાં વપરાય છે |
 | `S7d5316` | detail | Who | કોણ |
-| `S47e564` | detail | Withdraw | પાછી ખેંચો |
 | `S51a998` | detail | Withdraw this change request? | આ ફેરફાર વિનંતી પાછી ખેંચવી? |
 | `S93ef7c` | detail, workbench | Workbench | કાર્યક્ષેત્ર |
 | `S95a2a4` | detail, form | Write level | લખાણ સ્તર |
@@ -11352,7 +11851,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sec0298` | dry_run | Result per row | પંક્તિ પ્રમાણે પરિણામ |
 | `S9bf7a8` | dry_run | Row | પંક્તિ |
 | `S3ff0b0` | dry_run | row(s) have problems. Nothing has been created. | પંક્તિઓમાં સમસ્યાઓ છે. કંઈ બન્યું નથી. |
-| `S6c30d2` | dry_run | rows | પંક્તિઓ |
 | `S8012ff` | dry_run | unchanged | યથાવત્ |
 | `S83d655` | dry_run, st_preview | warning(s) | ચેતવણી |
 | `S9ddad9` | dry_run | would be created | બનાવાત |
@@ -11494,6 +11992,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S285edc` | help and messages | %(ok)s of %(n)s: %(what)s. | %(ok)s / %(n)s: %(what)s. |
 | `Sb08e6c` | help and messages | A Reviewer and an Administrator each sign off (in any order). If either rejects, it goes back to the author. | એક સમીક્ષક અને એક સંચાલક દરેક સાઇન ઑફ કરે છે (કોઈપણ ક્રમમાં). કોઈ નામંજૂર કરે તો તે લેખક પાસે પાછી જાય છે. |
 | `S2f1bed` | help and messages | An Administrator includes the revision in a Release and publishes it; then it is Released. | સંચાલક સુધારાને રિલીઝમાં સમાવી પ્રકાશિત કરે છે; ત્યારે તે પ્રકાશિત થાય છે. |
+| `S9477fd` | help and messages | choose | પસંદ કરો |
 | `S1308dc` | help and messages | defective codes sent back | ખામીયુક્ત કોડ પાછા મોકલ્યા |
 | `Se2bbd9` | help and messages | Drafts saved | મુસદ્દા સાચવ્યા |
 | `S0ddfa5` | help and messages | Drafts signed off | મુસદ્દાઓનું સાઇન-ઑફ થયું |
@@ -11505,7 +12004,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sce489f` | help and messages | The author gets any required cross-domain sign-offs, then submits the change request for review. | લેખક જરૂરી આંતર-ક્ષેત્ર સાઇન-ઑફ મેળવે છે, પછી ફેરફાર વિનંતી સમીક્ષા માટે સબમિટ કરે છે. |
 | `S1cdbdd` | help and messages | The Chief Engineer approves or rejects. Approval makes the revision Approved (or Deprecated for a deprecation request). | મુખ્ય ઇજનેર મંજૂર અથવા નામંજૂર કરે છે. મંજૂરી સુધારાને મંજૂર (અથવા અપ્રચલન વિનંતી માટે અપ્રચલિત) બનાવે છે. |
 | `S2d6ac0` | help and messages | The package is being built. Reload this page to follow its progress. | પેકેજ બની રહ્યું છે. પ્રગતિ જોવા માટે આ પેજ ફરી લોડ કરો. |
-| `Sde7a5b` | help and messages | The program files do not carry a category; you can change it in each Draft. | પ્રોગ્રામ ફાઇલો શ્રેણી ધરાવતી નથી; તમે દરેક મુસદ્દામાં તે બદલી શકો છો. |
 | `Scff3a3` | help and messages | User deleted; its name and address are erased, what it did stays attributable. | વપરાશકર્તા કાઢી નાખ્યો; તેનું નામ અને સરનામું ભૂંસાયા છે, તેણે જે કર્યું તે આરોપણીય રહે છે. |
 | `Secfb3f` | hub_consolidation | Deprecate replaced Hub codes | બદલાયેલા હબ કોડ અપ્રચલિત જાહેર કરો |
 | `S0e7766` | hub_consolidation, language | draft | મુસદ્દો |
@@ -11516,7 +12014,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sc50c53` | hub_consolidation | Hub Controller to Main Controller consolidation | હબ નિયંત્રકનું મુખ્ય નિયંત્રકમાં એકીકરણ |
 | `Scd189f` | hub_consolidation | Hub group | હબ જૂથ |
 | `Sa5262b` | hub_consolidation | If the Hub Controller leaves the hardware setup, its codes are defined anew on the Main Controller side. Create an MC draft from an HC code on its detail page (Actions); this report shows how far each has come. Nothing is renumbered. | હબ નિયંત્રક હાર્ડવેર ગોઠવણીમાંથી નીકળી જાય તો તેના કોડ મુખ્ય નિયંત્રકની બાજુએ નવેસરથી વ્યાખ્યાયિત થાય છે. HC કોડના વિગત પૃષ્ઠ પર (ક્રિયાઓ) તેમાંથી MC મુસદ્દો બનાવો; આ અહેવાલ દરેક ક્યાં સુધી પહોંચ્યો તે બતાવે છે. કંઈ ફરી નંબર થતું નથી. |
-| `Sdd6555` | hub_consolidation, legacy_mapping, st_preview | Legacy no. | જૂનો નં. |
+| `Sdd6555` | hub_consolidation, legacy_mapping, list | Legacy no. | જૂનો નં. |
 | `S845a2b` | hub_consolidation | No Hub Controller codes yet. | હજુ કોઈ હબ નિયંત્રક કોડ નથી. |
 | `S138665` | hub_consolidation | Open deprecation requests | અપ્રચલન વિનંતીઓ ખોલો |
 | `Sc8df93` | hub_consolidation | Open deprecation requests for all replaced Hub codes of this group? | આ જૂથના બધા બદલાયેલા હબ કોડ માટે અપ્રચલન વિનંતીઓ ખોલવી? |
@@ -11575,7 +12073,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sded18c` | language | approved by | મંજૂર કરનાર |
 | `Sedd46e` | language | Check against the interface | ઇન્ટરફેસ સાથે સરખાવો |
 | `S5a013c` | language | missing | ખૂટે છે |
-| `S2c924e` | language, workbench | Note | નોંધ |
+| `S2c924e` | language, row, workbench | Note | નોંધ |
 | `S2f09d0` | language | Note on %(x)s | %(x)s પર નોંધ |
 | `S75bf99` | language | proposed by | પ્રસ્તાવક |
 | `Sc68e32` | language | Save translations | અનુવાદો સાચવો |
@@ -11583,14 +12081,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S542818` | language | Terms of the language | ભાષાના શબ્દો |
 | `Sae9e5d` | language | Translation of %(x)s | %(x)s નો અનુવાદ |
 | `S863fd0` | language | Your own proposal: another person approves it. | તમારો પોતાનો પ્રસ્તાવ: બીજી વ્યક્તિ તેને મંજૂર કરે છે. |
-| `Sf9d469` | legacy_mapping | All controllers | બધા નિયંત્રકો |
+| `Sf9d469` | legacy_mapping, list | All controllers | બધા નિયંત્રકો |
 | `Se61c2f` | legacy_mapping | Any number state | કોઈપણ નંબર સ્થિતિ |
 | `S7c4f77` | legacy_mapping | issued | આપેલા |
 | `Sfd5ec0` | legacy_mapping, menu, new | Legacy mapping | જૂનું-નવું મેપિંગ |
 | `S81f567` | legacy_mapping | Legacy number to new identifier | જૂનો નંબર થી નવો ઓળખકર્તા |
 | `S64b267` | legacy_mapping | legacy number, identifier or name | જૂનો નંબર, ઓળખકર્તા અથવા નામ |
 | `S60fe6c` | legacy_mapping | new codes without a legacy number (n/a) | જૂના નંબર વગરના નવા કોડ (લાગુ નથી) |
-| `Sf26140` | legacy_mapping, st_preview | New identifier | નવો ઓળખકર્તા |
 | `Sf573c8` | legacy_mapping | no number yet | હજુ નંબર નથી |
 | `S7877c5` | legacy_mapping | No status code carries a legacy number yet. | કોઈ સ્ટેટસ કોડ પર હજુ જૂનો નંબર નથી. |
 | `Sb7baa1` | legacy_mapping | Number | નંબર |
@@ -11599,10 +12096,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S8b0b7c` | legacy_mapping | with a legacy number | જૂના નંબર સાથે |
 | `Seba07b` | list | A change set groups the change requests that ship with one controller software release, so reviewers see the whole package. Each request is still decided on its own. | ફેરફાર સમૂહ એવી ફેરફાર વિનંતીઓને ભેગી કરે છે જે નિયંત્રક સૉફ્ટવેરની એક રિલીઝ સાથે જાય છે, જેથી સમીક્ષકો આખું પેકેજ જુએ. દરેક વિનંતી પર હજુ અલગથી નિર્ણય થાય છે. |
 | `Sc5fe02` | list | any | કોઈપણ |
+| `S55201a` | list | Any status | કોઈપણ સ્થિતિ |
 | `Sef5415` | list | Apply columns | કૉલમ લાગુ કરો |
+| `Sffb569` | list | Ask for approval of the ticked rows | ટિક કરેલી પંક્તિઓની મંજૂરી માગો |
 | `S9e895f` | list | Change sets | ફેરફાર સમૂહો |
 | `S162a45` | list, menu | Change Sets | ફેરફાર સમૂહો |
 | `Scf723c` | list | Columns | કૉલમ |
+| `S2ddaf9` | list, upload | Compare a workbook | વર્કબુકની સરખામણી કરો |
 | `Seb0fd2` | list | Delete all my Drafts of this filter | આ ફિલ્ટરના મારા બધા મુસદ્દા કાઢી નાખો |
 | `S36f212` | list | Delete ALL of your own Drafts that match this filter, on every page? | આ ફિલ્ટર સાથે મેળ ખાતા તમારા પોતાના બધા મુસદ્દા, દરેક પાના પર, કાઢી નાખવા છે? |
 | `Sc554a1` | list | Delete selected Drafts | પસંદ કરેલા મુસદ્દા કાઢી નાખો |
@@ -11612,12 +12112,18 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S44d25b` | list | Items | બાબતો |
 | `S033df3` | list | Lifecycle | જીવનચક્ર |
 | `Sb4cad6` | list | Link to this view | આ દૃશ્યની લિંક |
+| `Sbdb4e1` | list | Load the initial mapping | પ્રારંભિક મેપિંગ લોડ કરો |
+| `Se07018` | list | Make the request | વિનંતી કરો |
 | `Se248d5` | list, new | New change set | નવો ફેરફાર સમૂહ |
 | `Se75aa1` | list, new | New Release | નવી રિલીઝ |
+| `S9bb526` | list, row | New row | નવી પંક્તિ |
 | `Se5076c` | list | No change sets yet. | હજુ કોઈ ફેરફાર સમૂહ નથી. |
 | `Sd32c03` | list | No releases yet. | હજુ કોઈ રિલીઝ નથી. |
+| `Sb5b22c` | list | No row matches. | કોઈ પંક્તિ મેળ ખાતી નથી. |
 | `Sc3af43` | list | No saved searches yet. | હજુ કોઈ સાચવેલી શોધ નથી. |
 | `S0cb400` | list | No status codes match these filters. | આ ફિલ્ટર સાથે કોઈ સ્ટેટસ કોડ મેળ ખાતો નથી. |
+| `S260f7a` | list, row | Node | નોડ |
+| `S08250b` | list | number, title or group | નંબર, શીર્ષક અથવા જૂથ |
 | `Sf7194e` | list | Requests | વિનંતીઓ |
 | `S37a530` | list | result | પરિણામ |
 | `Scdf7e9` | list | results | પરિણામો |
@@ -11626,10 +12132,14 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sff86e9` | list | Save the current filters as | વર્તમાન ફિલ્ટર આ નામે સાચવો |
 | `Sed1d84` | list | Saved searches | સાચવેલી શોધો |
 | `S859822` | list, mine | Select | પસંદ કરો |
+| `S45b553` | list | Select all rows | બધી પંક્તિઓ પસંદ કરો |
 | `S7f5583` | list, menu | Status Codes | સ્ટેટસ કોડ |
 | `S20bff1` | list | Status codes | સ્ટેટસ કોડ |
+| `S3a1066` | list | The mapping is empty. | મેપિંગ ખાલી છે. |
+| `S27d95b` | list | The rows stay as they are. Once the StCd Owner, the Chief Engineer and an Administrator approve, they count as approved numbers. | પંક્તિઓ છે તેવી જ રહે છે. StCd માલિક, મુખ્ય ઇજનેર અને એક સંચાલક મંજૂર કરે ત્યારે તે મંજૂર નંબર ગણાય છે. |
 | `Se90eb0` | list | Turbine Platform | ટર્બાઇન પ્લેટફોર્મ |
 | `S86b1e7` | list | Typos are tolerated: "convertor" still finds "converter". | જોડણીની ભૂલો સહન થાય છે: "convertor" હજુ "converter" શોધે છે. |
+| `Sb0c551` | list | Which legacy status code becomes which new one, with what the program files do not carry: the English title, the type, the up/down counter, the access levels, cause and directive. A row changes only by a request that the StCd Owner, the Chief Engineer and an Administrator all approve. | કયો જૂનો સ્ટેટસ કોડ કયો નવો બને છે, પ્રોગ્રામ ફાઇલોમાં ન હોય તેવી માહિતી સાથે: અંગ્રેજી શીર્ષક, પ્રકાર, ઉપર/નીચે કાઉન્ટર, ઍક્સેસ સ્તરો, કારણ અને સૂચના. StCd માલિક, મુખ્ય ઇજનેર અને એક સંચાલક બધા મંજૂર કરે તેવી વિનંતીથી જ પંક્તિ બદલાય છે. |
 | `Sf7c400` | login | Log in | લૉગ ઇન |
 | `S175835` | login | or | અથવા |
 | `S8be3c9` | login, users | Password | પાસવર્ડ |
@@ -11791,6 +12301,23 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S8cb56e` | message: lookup_admin_service | range_end must be greater than range_start | range_end, range_start કરતાં મોટું હોવું જોઈએ |
 | `Se3a971` | message: lookup_admin_service | sub_range_end must be greater than sub_range_start | sub_range_end, sub_range_start કરતાં મોટું હોવું જોઈએ |
 | `S1404e3` | message: lookup_service | functional_system_group query parameter is required for functional-subgroups | functional-subgroups માટે functional_system_group ક્વેરી પેરામીટર જરૂરી છે |
+| `Sf28681` | message: mapping_service | Give the reason for the change; the three approvers read it first. | ફેરફારનું કારણ જણાવો; ત્રણેય મંજૂર કરનારા તે પહેલા વાંચે છે. |
+| `S062788` | message: mapping_service | Give the request a title of at most 120 characters. | વિનંતીને વધુમાં વધુ 120 અક્ષરોનું શીર્ષક આપો. |
+| `S2ea56f` | message: mapping_service | Mapping change not found | મેપિંગનો ફેરફાર મળ્યો નથી |
+| `S2c9363` | message: mapping_service | Mapping row not found | મેપિંગની પંક્તિ મળી નથી |
+| `S2d5693` | message: mapping_service | Only the person who made the request can withdraw it. | વિનંતી કરનાર વ્યક્તિ જ તેને પાછી ખેંચી શકે છે. |
+| `S682269` | message: mapping_service | Only the StCd Owner, the Chief Engineer and an Administrator decide on the mapping. | મેપિંગ અંગે ફક્ત StCd માલિક, મુખ્ય ઇજનેર અને એક સંચાલક નિર્ણય લે છે. |
+| `S5e0f66` | message: mapping_service | Say why you reject the request. | વિનંતી કેમ નામંજૂર કરો છો તે જણાવો. |
+| `S3d5cfc` | message: mapping_service | The comment is longer than 1000 characters. | ટિપ્પણી 1000 અક્ષરોથી લાંબી છે. |
+| `S82b817` | message: mapping_service | The decision must be APPROVE or REJECT. | નિર્ણય APPROVE અથવા REJECT હોવો જોઈએ. |
+| `S9ec08a` | message: mapping_service | The file is not a readable .xlsx workbook. | ફાઇલ વાંચી શકાય તેવી .xlsx વર્કબુક નથી. |
+| `S3831f7` | message: mapping_service | The reason is longer than 2000 characters. | કારણ 2000 અક્ષરોથી લાંબું છે. |
+| `Sa5de7d` | message: mapping_service | The request contains no row. | વિનંતીમાં એક પણ પંક્તિ નથી. |
+| `S2116e4` | message: mapping_service | The request is already closed. | વિનંતી પહેલેથી બંધ છે. |
+| `S8518e7` | message: mapping_service | The role has decided already. | આ ભૂમિકાએ પહેલેથી નિર્ણય લીધો છે. |
+| `S2a15d7` | message: mapping_service | The workbook is larger than 5 MB. | વર્કબુક 5 MB કરતાં મોટી છે. |
+| `S8eb912` | message: mapping_service | The workbook unpacks to more than 80 MB. | વર્કબુક ખોલતાં 80 MB કરતાં મોટી થાય છે. |
+| `S6c1d08` | message: mapping_service | Your role may not propose a change of the mapping. | તમારી ભૂમિકા મેપિંગમાં ફેરફાર સૂચવી શકતી નથી. |
 | `S4ada2b` | message: notification_service | Notification not found | સૂચના મળી નથી |
 | `Sd92b89` | message: notification_service | This notification belongs to someone else. | આ સૂચના બીજા કોઈની છે. |
 | `Sb0cd00` | message: numbering_service | Identifier override must match StCd-NNNNN (five digits). | અધિલેખિત ઓળખકર્તા StCd-NNNNN (પાંચ અંક) સાથે મેળ ખાવો જોઈએ. |
@@ -11822,8 +12349,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S9671fb` | message: settings_service | must be true or false | true અથવા false હોવું જોઈએ |
 | `S5166bb` | message: st_import_service | A staged file changed after the preview. Upload again. | પૂર્વાવલોકન પછી એક સ્ટેજ કરેલી ફાઇલ બદલાઈ. ફરી અપલોડ કરો. |
 | `Saa4de2` | message: st_import_service | controller must be auto, MC or HC | controller auto, MC અથવા HC હોવું જોઈએ |
-| `Sa30251` | message: st_import_service | default_category must be ERROR, WARNING or INFO | default_category ERROR, WARNING અથવા INFO હોવી જોઈએ |
-| `Sfe694a` | message: st_import_service | hc_proposal must be 1 or 2 | hc_proposal 1 અથવા 2 હોવું જોઈએ |
 | `S58bec3` | message: st_import_service | No StCd program files found. Upload .st files or a ZIP of them. | કોઈ StCd પ્રોગ્રામ ફાઇલ મળી નથી. .st ફાઇલો અથવા તેમનું ZIP અપલોડ કરો. |
 | `Sd9c5b0` | message: st_import_service | Nothing selected: tick at least one program that is ready. | કંઈ પસંદ નથી: ઓછામાં ઓછા એક તૈયાર પ્રોગ્રામ પર ટિક કરો. |
 | `S5dbbd0` | message: st_import_service | The code is no longer an open Draft; preview the files again. | કોડ હવે ખુલ્લો મુસદ્દો નથી; ફાઇલોનું પૂર્વાવલોકન ફરી જુઓ. |
@@ -11970,6 +12495,23 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S05fc94` | role badge | Engineer | ઇજનેર |
 | `S3c0e8a` | role badge | StCd Owner | StCd માલિક |
 | `Sdbad9f` | role badge | Viewer | દર્શક |
+| `S7f2e4b` | row | Access levels | ઍક્સેસ સ્તરો |
+| `S08f985` | row | Cause | કારણ |
+| `S164e0b` | row | Directive | સૂચના |
+| `S283474` | row | New number | નવો નંબર |
+| `Sfa6fdd` | row | No request yet. The row is as it was loaded. | હજુ કોઈ વિનંતી નથી. પંક્તિ લોડ થઈ હતી તેવી જ છે. |
+| `Sf790fc` | row | Nothing is changed here directly: the form makes a request, and the row changes after the StCd Owner, the Chief Engineer and an Administrator have approved it. | અહીં સીધું કંઈ બદલાતું નથી: ફોર્મ એક વિનંતી કરે છે, અને StCd માલિક, મુખ્ય ઇજનેર અને એક સંચાલકની મંજૂરી પછી પંક્તિ બદલાય છે. |
+| `S9d728f` | row | Request approval of the number | નંબરની મંજૂરી માગો |
+| `Sc8978f` | row | Request rejection of the number | નંબરની નામંજૂરી માગો |
+| `Sc644eb` | row | Request that this number is never used? | આ નંબર ક્યારેય ન વપરાય તેવી વિનંતી કરવી છે? |
+| `Sb25913` | row | Request the new row | નવી પંક્તિ માગો |
+| `Sb04301` | row | Request this change | આ ફેરફાર માગો |
+| `Sae91b6` | row | Requests for this row | આ પંક્તિની વિનંતીઓ |
+| `Sd59701` | row | Reset delay (parameter) | રીસેટ વિલંબ (પેરામીટર) |
+| `Sfd64cd` | row | Set delay (parameter) | સેટ વિલંબ (પેરામીટર) |
+| `S9c0444` | row | The three approvers read the reason first. | ત્રણેય મંજૂર કરનારા પહેલા કારણ વાંચે છે. |
+| `Sc84745` | row | Title (English) | શીર્ષક (અંગ્રેજી) |
+| `S711eea` | row | Up/down counter | ઉપર/નીચે કાઉન્ટર |
 | `S913aba` | settings | Save settings | સેટિંગ્સ સાચવો |
 | `Sb68734` | software_versions | Added | ઉમેરાયેલ |
 | `S172415` | software_versions | added | ઉમેરાયા |
@@ -11983,28 +12525,19 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd97d1e` | software_versions | Show | બતાવો |
 | `S42ea2e` | software_versions | Software Versions | સૉફ્ટવેર આવૃત્તિઓ |
 | `S3bd89c` | software_versions | Which codes exist in which software version | કયો કોડ કઈ સૉફ્ટવેર આવૃત્તિમાં છે |
-| `S16e5d4` | st_new, st_preview | Alarm type | એલાર્મનો પ્રકાર |
-| `S726d7a` | st_new | as above | ઉપર મુજબ |
-| `S9477fd` | st_new, st_preview | choose | પસંદ કરો |
 | `Sb149ca` | st_new | Detect: a number from 10000 up is a Hub Controller program | શોધો: 10000 થી ઉપરનો નંબર હબ નિયંત્રક પ્રોગ્રામ છે |
 | `S7d06d0` | st_new | Every imported program becomes an ordinary Draft with the number it carries reserved. It still needs Cross-Domain Sign-Off, dual review and Chief Engineer approval before Release, and all Drafts of one import share a change set. | દરેક આયાત કરેલો પ્રોગ્રામ સામાન્ય મુસદ્દો બને છે જેમાં તે જે નંબર ધરાવે છે તે આરક્ષિત રહે છે. રિલીઝ પહેલાં તેને હજુ આંતર-ક્ષેત્ર સાઇન-ઑફ, બેવડી સમીક્ષા અને મુખ્ય ઇજનેરની મંજૂરી જોઈએ, અને એક આયાતના બધા મુસદ્દા એક ફેરફાર સમૂહ વહેંચે છે. |
-| `Sbda77c` | st_new | Every program names an alarm type. A type left at "as above" gets the category chosen above; the next page lets you set the category of single programs or of all ticked ones. | દરેક પ્રોગ્રામ એક એલાર્મ પ્રકાર જણાવે છે. "ઉપર મુજબ" પર રાખેલા પ્રકારને ઉપર પસંદ કરેલી શ્રેણી મળે છે; આગલા પાના પર તમે અલગ પ્રોગ્રામની અથવા બધા ટિક કરેલાની શ્રેણી નક્કી કરી શકો છો. |
 | `S3b9e43` | st_new | Hub Controller (legacy numbers, mapped to the new ones) | હબ નિયંત્રક (જૂના નંબર, નવા સાથે મેપ કરેલા) |
 | `Sd7333f` | st_new | Import status codes from .st files | .st ફાઇલોમાંથી સ્ટેટસ કોડ આયાત કરો |
-| `S6640a6` | st_new | New number of Hub Controller programs | હબ નિયંત્રક પ્રોગ્રામનો નવો નંબર |
 | `Sc0eff1` | st_new | Or a whole folder | અથવા આખું ફોલ્ડર |
 | `S94ddc1` | st_new | Program files (.st) or a ZIP | પ્રોગ્રામ ફાઇલો (.st) અથવા એક ZIP |
-| `Sd99e2a` | st_new | Proposal 1: five-digit numbers (11000 and up) | પ્રસ્તાવ 1: પાંચ અંકના નંબર (11000 થી) |
-| `S2744b0` | st_new | Proposal 2: inside the Main Controller scheme | પ્રસ્તાવ 2: મુખ્ય નિયંત્રક યોજનાની અંદર |
 | `S67640d` | st_new | Read files and preview | ફાઇલો વાંચો અને પૂર્વાવલોકન જુઓ |
-| `S0af4fc` | st_new | Status category by alarm type (optional) | એલાર્મ પ્રકાર મુજબ સ્ટેટસ શ્રેણી (વૈકલ્પિક) |
-| `S234237` | st_new | Status category of the new codes | નવા કોડની સ્ટેટસ શ્રેણી |
-| `S61fc52` | st_new | The program files do not carry a category and none is assumed: choose one here, by alarm type below, or for each program in the preview. A program without a category is not imported. | પ્રોગ્રામ ફાઇલોમાં શ્રેણી હોતી નથી અને કોઈ માની લેવાતી નથી: અહીં એક પસંદ કરો, નીચે એલાર્મ પ્રકાર પ્રમાણે, અથવા પ્રીવ્યૂમાં દરેક પ્રોગ્રામ માટે પસંદ કરો. શ્રેણી વગરનો પ્રોગ્રામ આયાત થતો નથી. |
+| `Saa9df6` | st_new | The title, the type and the access levels of every program come from the mapping, never from the files. A program whose number is not in the mapping is blocked. | દરેક પ્રોગ્રામનું શીર્ષક, પ્રકાર અને ઍક્સેસ સ્તરો મેપિંગમાંથી આવે છે, ફાઇલોમાંથી ક્યારેય નહીં. જે પ્રોગ્રામનો નંબર મેપિંગમાં નથી તે અવરોધિત છે. |
 | `S8f4c21` | st_new | Turbine platforms | ટર્બાઇન પ્લેટફોર્મ |
 | `S9ad4d4` | st_new | Upload the generated StCd_<n>.st programs — several files at once, a whole folder, or one ZIP. Nothing is created yet: the next page lists every program so you can tick the ones to import. | જનરેટ કરેલા StCd_<n>.st પ્રોગ્રામ અપલોડ કરો — એકસાથે ઘણી ફાઇલો, આખું ફોલ્ડર અથવા એક ZIP. હજુ કંઈ બનતું નથી: આગલું પૃષ્ઠ દરેક પ્રોગ્રામ યાદીમાં બતાવે છે જેથી તમે આયાત કરવાના પર ટિક કરી શકો. |
+| `S16e5d4` | st_preview | Alarm type | એલાર્મનો પ્રકાર |
 | `S2693e5` | st_preview | All Drafts of this import join one change set, so they can be reviewed and decided together. | આ આયાતના બધા મુસદ્દા એક ફેરફાર સમૂહમાં જોડાય છે, જેથી તેમની સાથે સમીક્ષા અને નિર્ણય થઈ શકે. |
 | `Scbc694` | st_preview | already in the catalogue | પહેલેથી કૅટલૉગમાં |
-| `Sc00673` | st_preview | Apply to the ticked programs | ટિક કરેલા પ્રોગ્રામ પર લાગુ કરો |
 | `Sdf88b8` | st_preview | blocked | અવરોધિત |
 | `S6f7703` | st_preview | Changed and withdrawn programs are not ticked: tick the ones you want to update, revise or restore. | બદલાયેલા અને પાછા ખેંચાયેલા પ્રોગ્રામ ટિક થતા નથી: જેને અદ્યતન, સુધારવા કે પુનઃસ્થાપિત કરવા માગો તેના પર ટિક કરો. |
 | `S78bb8b` | st_preview | Create Drafts for the ticked programs | ટિક કરેલા પ્રોગ્રામ માટે મુસદ્દા બનાવો |
@@ -12022,8 +12555,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se58289` | st_preview | Programs found in the uploaded files | અપલોડ કરેલી ફાઇલોમાં મળેલા પ્રોગ્રામ |
 | `S75c053` | st_preview, workbench | ready | તૈયાર |
 | `S0723bf` | st_preview | Select all programs that are ready | બધા તૈયાર પ્રોગ્રામ પસંદ કરો |
-| `Sae12bc` | st_preview, workbench | Status category | સ્ટેટસ શ્રેણી |
-| `Sd7a322` | st_preview | Status category of the ticked programs | ટિક કરેલા પ્રોગ્રામની સ્ટેટસ શ્રેણી |
+| `S9a2439` | st_preview | Type (from the mapping) | પ્રકાર (મેપિંગમાંથી) |
 | `S1a767a` | st_preview | updates the open Draft | ખુલ્લો મુસદ્દો અદ્યતન કરે છે |
 | `S02499f` | st_preview | withdrawn | પાછા ખેંચાયેલા |
 | `Sf0c3cf` | st_preview | without a legacy number | જૂના નંબર વગરના |
@@ -12086,6 +12618,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S2fd88e` | translations | Copy from previous revision | પાછલા સુધારામાંથી કૉપિ કરો |
 | `Se522f0` | translations | Save draft translation | મુસદ્દા અનુવાદ સાચવો |
 | `Scb0b87` | translations | source language text of revision | સુધારાના સ્રોત ભાષા લખાણ |
+| `S01209c` | upload | Also ask for approval of the unchanged rows that are only proposed | ફક્ત પ્રસ્તાવિત, બદલાયા વગરની પંક્તિઓની મંજૂરી પણ માગો |
+| `Sddf8d9` | upload | Compare and make the request | સરખાવો અને વિનંતી કરો |
+| `S028ebe` | upload | Download the current mapping | હાલનું મેપિંગ ડાઉનલોડ કરો |
+| `S23bfbf` | upload | The workbook has problems. Nothing was requested. | વર્કબુકમાં સમસ્યાઓ છે. કંઈ માગવામાં આવ્યું નથી. |
+| `S24d49d` | upload | Title of the request | વિનંતીનું શીર્ષક |
+| `S88809a` | upload | Upload the corrected mapping as a workbook with the sheets MC and HC (download the current one as a model). Every new row and every row that differs becomes one request; rows the workbook does not mention stay as they are. The request takes effect only after the StCd Owner, the Chief Engineer and an Administrator have approved it. | સુધારેલું મેપિંગ MC અને HC શીટ સાથેની વર્કબુક તરીકે અપલોડ કરો (નમૂના તરીકે હાલનું ડાઉનલોડ કરો). દરેક નવી અને દરેક અલગ પંક્તિ એક વિનંતી બને છે; વર્કબુકમાં ઉલ્લેખ ન હોય તેવી પંક્તિઓ યથાવત રહે છે. StCd માલિક, મુખ્ય ઇજનેર અને એક સંચાલક મંજૂર કરે પછી જ વિનંતી લાગુ થાય છે. |
+| `S09efdf` | upload | Workbook (.xlsx) | વર્કબુક (.xlsx) |
 | `S359a3b` | user_detail | Back to users | વપરાશકર્તાઓ પર પાછા |
 | `Sf6fdbe` | user_detail, users | Delete | કાઢી નાખો |
 | `S9afe6c` | user_detail | Delete user | વપરાશકર્તા કાઢી નાખો |
@@ -12145,6 +12684,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sa58dac` | workbench | Set values on the Drafts | મુસદ્દાઓ પર મૂલ્યો સેટ કરો |
 | `Sa443bb` | workbench | Sign off the Drafts | મુસદ્દાઓનું સાઇન-ઑફ કરો |
 | `S53f47f` | workbench | Sign-off pending | સાઇન-ઑફ બાકી |
+| `Sae12bc` | workbench | Status category | સ્ટેટસ શ્રેણી |
 | `Sdc416e` | workbench | Step | પગલું |
 | `Sf7710d` | workbench | Submit for review | સમીક્ષા માટે સબમિટ કરો |
 | `Sa45adc` | workbench | Submit the Drafts | મુસદ્દા સબમિટ કરો |
@@ -12157,7 +12697,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 
 ### 9.11 PK اردو 🇵🇰 — Urdu
 
-1295 of 1296 strings translated; direction right to left.
+1355 of 1356 strings translated; direction right to left.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -12168,13 +12708,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S141763` | _macros | Confirm with your password | اپنے پاس ورڈ سے تصدیق کریں |
 | `Sc326a4` | _macros, detail, form | Field | فیلڈ |
 | `S0a0f8a` | _macros | Field differences | فیلڈ کے فرق |
-| `Sbc9819` | _macros | Next | اگلا |
+| `Sbc9819` | _macros, list | Next | اگلا |
 | `S27cea7` | _macros | No field differences. | فیلڈ میں کوئی فرق نہیں۔ |
 | `S464e43` | _macros | on track | وقت پر |
 | `Sba2fff` | _macros, dashboard, success_metrics | overdue | مقررہ وقت گزر گیا |
-| `S600584` | _macros | Pages | صفحات |
+| `S600584` | _macros, list | Pages | صفحات |
 | `S810099` | _macros | Please check | براہِ کرم جانچیں |
-| `S50f942` | _macros | Previous | پچھلا |
+| `S50f942` | _macros, list | Previous | پچھلا |
 | `S83fd6e` | _macros, stalled | red after | اس کے بعد سرخ |
 | `S57e8a7` | _macros, success_metrics | slow | سست |
 | `S15198e` | _macros | Waiting since | انتظار میں، سے |
@@ -12205,10 +12745,10 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S06b6ac` | approval_queue, builder, detail | Identifier | شناخت کنندہ |
 | `S8e70d2` | approval_queue | Nothing is awaiting your approval. | آپ کی منظوری کا کوئی منتظر نہیں۔ |
 | `Sa74f16` | approval_queue, detail, review_queue | Reviewer | جائزہ کار |
-| `S768e0c` | approval_queue, builder, detail | Title | عنوان |
+| `S768e0c` | approval_queue, builder, change | Title | عنوان |
 | `S33d306` | approval_queue, detail, mine | Waiting | انتظار |
 | `S2cbacd` | audit_log | %(n)s total | کل %(n)s |
-| `S97c89a` | audit_log | Action | اقدام |
+| `S97c89a` | audit_log, change | Action | اقدام |
 | `Scbd19b` | audit_log | Actor | عمل کنندہ |
 | `S811bdf` | audit_log | Actor ID | عمل کنندہ کی شناخت |
 | `S8c85b1` | audit_log | after: | بعد میں: |
@@ -12219,7 +12759,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sc7fb31` | audit_log | Entity | ہستی |
 | `S04d694` | audit_log | Entity ID | ہستی کی شناخت |
 | `Sbb4e99` | audit_log | Entity Type | ہستی کی قسم |
-| `Sd7decf` | audit_log, index, language | Filter | فلٹر |
+| `Sd7decf` | audit_log, changes, index | Filter | فلٹر |
 | `S3f6605` | audit_log, delegations, software_versions | From | سے |
 | `S0061b5` | audit_log | No matching audit entries. | کوئی مطابقت رکھنے والا آڈٹ اندراج نہیں۔ |
 | `S01f79f` | audit_log | Scoped view: showing only actions you performed. | محدود منظر: صرف آپ کے اپنے اقدامات دکھائے جا رہے ہیں۔ |
@@ -12238,7 +12778,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sbe504f` | base | Skip to main content | مرکزی مواد پر جائیں |
 | `S1b9aeb` | base, dashboard | unread | غیر پڑھے ہوئے |
 | `S2da600` | base, export, export_center | Version | ورژن |
-| `S12625b` | base | waiting | زیرِ انتظار |
+| `S12625b` | base, change | waiting | زیرِ انتظار |
 | `S5a4692` | base | You are covering for a colleague | آپ ایک ساتھی کی جگہ کام کر رہے ہیں |
 | `S8e9c15` | builder | Candidate revisions | امیدوار ترامیم |
 | `Sdf2aa0` | builder | Functional Group / Subgroup | فنکشنل گروپ / ذیلی گروپ |
@@ -12269,13 +12809,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S4105cf` | catalogue_health | exhausted | ختم |
 | `S57e8be` | catalogue_health, connections | Finding | نتیجہ |
 | `S1150a1` | catalogue_health | Gaps | خلا |
-| `S171a06` | catalogue_health, export, withdrawn_codes | Group | گروپ |
-| `Sb4aadc` | catalogue_health, legacy_mapping | Hub Controller | ہب کنٹرولر |
+| `S171a06` | catalogue_health, export, list | Group | گروپ |
+| `Sb4aadc` | catalogue_health, legacy_mapping, list | Hub Controller | ہب کنٹرولر |
 | `S8ae1c3` | catalogue_health | Left | باقی |
 | `S12c0f1` | catalogue_health | left | باقی |
 | `Sa7b60b` | catalogue_health | Left % | باقی % |
 | `S36a883` | catalogue_health | low | کم |
-| `S1b123c` | catalogue_health, legacy_mapping, st_new | Main Controller | مرکزی کنٹرولر |
+| `S1b123c` | catalogue_health, legacy_mapping, list | Main Controller | مرکزی کنٹرولر |
 | `S92185d` | catalogue_health, index | Missing | غائب |
 | `S57282a` | catalogue_health | Missing expected data | متوقع ڈیٹا غائب |
 | `Sb8e95b` | catalogue_health | None found. | کچھ نہیں ملا۔ |
@@ -12292,6 +12832,31 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S75a804` | catalogue_health | subgroup(s) are running out of numbers: | ذیلی گروپ کے نمبر ختم ہو رہے ہیں: |
 | `S5fec4f` | catalogue_health | Unused numbers inside a band | پٹی کے اندر غیر استعمال شدہ نمبر |
 | `S02c0e4` | catalogue_health | Used | استعمال شدہ |
+| `S84f219` | change | All three, each by a different person who did not make the request. | تینوں، ہر ایک الگ شخص کی طرف سے جس نے درخواست نہیں کی۔ |
+| `S477aeb` | change, upload | and more | اور مزید |
+| `Sdeb9d0` | change, changes | Approvals | منظوریاں |
+| `S7b2c7f` | change, detail, language | Approve | منظور کریں |
+| `S8aa57d` | change, detail | Changes | تبدیلیاں |
+| `S3fe5e1` | change | Comment (required to reject) | تبصرہ (مسترد کرنے کے لیے ضروری) |
+| `Sb48001` | change | Mapping change | میپنگ کی تبدیلی |
+| `Sd7c1d0` | change, changes, list | Mapping changes | میپنگ کی تبدیلیاں |
+| `Sf26140` | change, legacy_mapping, list | New identifier | نیا شناخت کنندہ |
+| `Sf219cc` | change, list, row | Reason | وجہ |
+| `S2b03b5` | change, detail | Reject | مسترد کریں |
+| `S5108c2` | change, changes | Requested by | درخواست کنندہ |
+| `S52d0b3` | change, changes, detail | Rows | سطریں |
+| `S6c30d2` | change, dry_run, list | rows | سطریں |
+| `Sfabd38` | change | These rows changed after the request was made; it cannot be applied. Withdraw it and make it again: | درخواست کے بعد یہ سطریں بدل گئیں؛ اسے نافذ نہیں کیا جا سکتا۔ اسے واپس لیں اور دوبارہ کریں: |
+| `S47e564` | change, detail | Withdraw | واپس لیں |
+| `S30d359` | change | Withdraw this request? | یہ درخواست واپس لیں؟ |
+| `S88c173` | change | You made this request; another person must decide. | یہ درخواست آپ نے کی ہے؛ کسی دوسرے شخص کو فیصلہ کرنا ہوگا۔ |
+| `S04e02f` | change | Your role has decided already. | آپ کا کردار پہلے ہی فیصلہ کر چکا ہے۔ |
+| `Sc7274c` | changes | Any state | کوئی بھی کیفیت |
+| `S2a560c` | changes | Every change of the mapping is a request. It takes effect when the StCd Owner, the Chief Engineer and an Administrator have each approved it; one rejection closes it. | میپنگ کی ہر تبدیلی ایک درخواست ہے۔ یہ اس وقت نافذ ہوتی ہے جب StCd مالک، چیف انجینئر اور ایک منتظم ہر ایک اسے منظور کر لیں؛ ایک مسترد کرنا اسے بند کر دیتا ہے۔ |
+| `Sdef2eb` | changes, list, menu | Mapping | میپنگ |
+| `Se03e43` | changes | No request yet. | ابھی کوئی درخواست نہیں۔ |
+| `S5fc0e0` | changes | request(s) wait for your decision. | درخواستیں آپ کے فیصلے کی منتظر ہیں۔ |
+| `Sa72502` | changes, detail, export | State | حالت |
 | `S97fd13` | check | Back to the terms | اصطلاحات پر واپس |
 | `S1bc9e5` | check | English string | انگریزی متن |
 | `S5d54b3` | check | Every string uses the translated terms. | ہر متن ترجمہ شدہ اصطلاحات استعمال کرتا ہے۔ |
@@ -12372,7 +12937,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S9b0b4c` | detail | also the files without an access level (all columns) | رسائی سطح کے بغیر فائلیں بھی (تمام کالم) |
 | `Sf24c44` | detail | Any %(code)s Engineer | کوئی بھی %(code)s انجینئر |
 | `Sb99a01` | detail | Applies to software versions | سافٹ ویئر ورژنز پر لاگو |
-| `S7b2c7f` | detail, language | Approve | منظور کریں |
 | `Sde38bf` | detail | Approve selected | منتخب شدہ منظور کریں |
 | `Scf2999` | detail | Approving confirms these values; any change you make here is applied and audited. Rejecting ignores them. | منظوری ان قدروں کی تصدیق کرتی ہے؛ آپ یہاں جو بھی تبدیلی کریں وہ لاگو اور آڈٹ ہوتی ہے۔ مسترد کرنا انہیں نظر انداز کرتا ہے۔ |
 | `Sf7f2d5` | detail | Archive (requires 180-day retention elapsed) | آرکائیو کریں (180 دن کی برقراری گزرنا ضروری ہے) |
@@ -12393,7 +12957,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S4572f4` | detail | Change request | تبدیلی کی درخواست |
 | `S3295be` | detail, workbench | Change requests in this set | اس مجموعے کی تبدیلی کی درخواستیں |
 | `S4d8006` | detail | Change set | تبدیلیوں کا مجموعہ |
-| `S8aa57d` | detail | Changes | تبدیلیاں |
 | `S3d14ea` | detail, export | Changes of this release only | صرف اس ریلیز کی تبدیلیاں |
 | `Sbd95c0` | detail | Checklist confirmed at sign-off | سائن آف کے وقت تصدیق شدہ چیک لسٹ |
 | `S074d62` | detail, role badge | Chief Engineer | چیف انجینئر |
@@ -12411,7 +12974,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S7671b5` | detail | Confirm or override Audience Access | ہدف گروہ تک رسائی کی تصدیق یا اوور رائیڈ کریں |
 | `S6512ee` | detail | Connection | تعلق |
 | `S4f9be0` | detail | Content | مواد |
-| `Sa36a5f` | detail, legacy_mapping, st_new | Controller | کنٹرولر |
+| `Sa36a5f` | detail, legacy_mapping, list | Controller | کنٹرولر |
 | `Scd293f` | detail | Converter Reactive Power Program | کنورٹر ری ایکٹو پاور پروگرام |
 | `S3998a7` | detail | Copies the descriptive fields into a new Draft in a Main Controller group (a new number is allocated at submit; this code's identifier is kept as the legacy reference). | وضاحتی فیلڈز کو مرکزی کنٹرولر گروپ کے نئے مسودے میں کاپی کرتا ہے (جمع کراتے وقت نیا نمبر دیا جاتا ہے؛ اس کوڈ کی شناخت پرانے حوالے کے طور پر رکھی جاتی ہے)۔ |
 | `S54b051` | detail | Copy this code for another turbine platform. The copy is a new Draft that links back here and goes through the normal review. | اس کوڈ کو کسی دوسرے ٹربائن پلیٹ فارم کے لیے کاپی کریں۔ کاپی ایک نیا مسودہ ہے جو یہاں واپس جڑتا ہے اور عام جائزے سے گزرتا ہے۔ |
@@ -12545,7 +13108,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sf5ca9d` | detail | Recorded exports | درج شدہ برآمدات |
 | `Sa3f757` | detail | Reinstate to Released | جاری شدہ پر بحال کریں |
 | `S3238ca` | detail | Reinstatement reason | بحالی کی وجہ |
-| `S2b03b5` | detail | Reject | مسترد کریں |
 | `S27fb5c` | detail | Reject selected | منتخب شدہ مسترد کریں |
 | `S045c2c` | detail | Related codes | متعلقہ کوڈ |
 | `S33a5a7` | detail | Relation | تعلق |
@@ -12563,7 +13125,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S4c1aa6` | detail | Repeated-Error Escalation | بار بار آنے والی خرابیوں کا اضافہ |
 | `S4aed03` | detail | Request | درخواست |
 | `Sf3421a` | detail | Request a Sign-Off | سائن آف کی درخواست کریں |
-| `Sc26bf6` | detail, mine | Requested | درخواست شدہ |
+| `Sc26bf6` | detail, mine, row | Requested | درخواست شدہ |
 | `S2706ed` | detail | Required by | ان کے لیے درکار |
 | `S619e87` | detail, form | Reset Delay | ری سیٹ تاخیر |
 | `S026ab2` | detail | resolved | حل شدہ |
@@ -12573,7 +13135,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S3beb9a` | detail | Revision | ترمیم |
 | `Sa72973` | detail | Revision Fields | ترمیم کے فیلڈز |
 | `Sfc1d6a` | detail | row(s) imported as Drafts | سطریں مسودوں کے طور پر درآمد ہوئیں |
-| `S52d0b3` | detail, reconciliation, user_detail | Rows | سطریں |
 | `Sd0edfb` | detail | Sales | سیلز |
 | `S241bf5` | detail, workbench | Sample number | نمونہ نمبر |
 | `Sda38c6` | detail | Save planned dates | منصوبہ بند تاریخیں محفوظ کریں |
@@ -12592,11 +13153,10 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sece2ac` | detail, form | Slot | سلاٹ |
 | `Sff44d2` | detail | Software Version | سافٹ ویئر ورژن |
 | `S169bf7` | detail, export, software_versions | Software version | سافٹ ویئر ورژن |
-| `S6da13a` | detail, fleet_feedback | Source | ماخذ |
+| `S6da13a` | detail, fleet_feedback, row | Source | ماخذ |
 | `Sd3c56b` | detail, export_profiles | source language | ماخذ زبان |
 | `Sb3883f` | detail | Standards | معیارات |
 | `Sfaa9e7` | detail, reconciliation | Started | شروع ہوا |
-| `Sa72502` | detail, export, hub_consolidation | State | حالت |
 | `Se246b6` | detail, form, list | Status Category | اسٹیٹس زمرہ |
 | `S779953` | detail, form | Status Code for Repeated Error | بار بار آنے والی خرابی کے لیے اسٹیٹس کوڈ |
 | `S98a377` | detail | Still a Draft. | ابھی مسودہ ہے۔ |
@@ -12615,7 +13175,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Seaf576` | detail, form | Trigger Snapshot | اسنیپ شاٹ شروع کریں |
 | `S285ec8` | detail, form | Troubleshooting | مسئلے کا حل |
 | `S71bba4` | detail | Turbine Operator Package | ٹربائن آپریٹر پیکیج |
-| `S3deb74` | detail, mine, review_queue | Type | قسم |
+| `S3deb74` | detail, list, mine | Type | قسم |
 | `Sab631e` | detail | Type %(id)s to confirm | تصدیق کے لیے %(id)s ٹائپ کریں |
 | `Sb5e264` | detail | Type the identifier to confirm | تصدیق کے لیے شناخت کنندہ ٹائپ کریں |
 | `S835f8a` | detail | Umrichterprogramm GSC | کنورٹر پروگرام GSC |
@@ -12634,7 +13194,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S51ecc5` | detail | What happens next | آگے کیا ہوتا ہے |
 | `Sf323c0` | detail | Where used | کہاں استعمال ہوا |
 | `S7d5316` | detail | Who | کون |
-| `S47e564` | detail | Withdraw | واپس لیں |
 | `S51a998` | detail | Withdraw this change request? | کیا یہ تبدیلی کی درخواست واپس لینی ہے؟ |
 | `S93ef7c` | detail, workbench | Workbench | ورک بنچ |
 | `S95a2a4` | detail, form | Write level | لکھنے کی سطح |
@@ -12654,7 +13213,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sec0298` | dry_run | Result per row | سطر وار نتیجہ |
 | `S9bf7a8` | dry_run | Row | سطر |
 | `S3ff0b0` | dry_run | row(s) have problems. Nothing has been created. | سطروں میں مسائل ہیں۔ کچھ نہیں بنایا گیا۔ |
-| `S6c30d2` | dry_run | rows | سطریں |
 | `S8012ff` | dry_run | unchanged | بلا تبدیلی |
 | `S83d655` | dry_run, st_preview | warning(s) | انتباہ |
 | `S9ddad9` | dry_run | would be created | بنائی جاتیں |
@@ -12796,6 +13354,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S285edc` | help and messages | %(ok)s of %(n)s: %(what)s. | %(ok)s / %(n)s: %(what)s۔ |
 | `Sb08e6c` | help and messages | A Reviewer and an Administrator each sign off (in any order). If either rejects, it goes back to the author. | ایک جائزہ کار اور ایک منتظم ہر ایک سائن آف کرتا ہے (کسی بھی ترتیب سے)۔ اگر کوئی مسترد کرے تو وہ مصنف کے پاس واپس جاتی ہے۔ |
 | `S2f1bed` | help and messages | An Administrator includes the revision in a Release and publishes it; then it is Released. | منتظم ترمیم کو ریلیز میں شامل کر کے شائع کرتا ہے؛ تب وہ جاری شدہ ہو جاتی ہے۔ |
+| `S9477fd` | help and messages | choose | منتخب کریں |
 | `S1308dc` | help and messages | defective codes sent back | نقص والے کوڈ واپس بھیج دیے گئے |
 | `Se2bbd9` | help and messages | Drafts saved | مسودے محفوظ ہو گئے |
 | `S0ddfa5` | help and messages | Drafts signed off | مسودوں کا سائن آف ہو گیا |
@@ -12807,7 +13366,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sce489f` | help and messages | The author gets any required cross-domain sign-offs, then submits the change request for review. | مصنف مطلوبہ بین الشعبہ سائن آف حاصل کرتا ہے، پھر تبدیلی کی درخواست جائزے کے لیے جمع کراتا ہے۔ |
 | `S1cdbdd` | help and messages | The Chief Engineer approves or rejects. Approval makes the revision Approved (or Deprecated for a deprecation request). | چیف انجینئر منظور یا مسترد کرتا ہے۔ منظوری ترمیم کو منظور شدہ (یا متروکیت کی درخواست کے لیے متروک) بنا دیتی ہے۔ |
 | `S2d6ac0` | help and messages | The package is being built. Reload this page to follow its progress. | پیکیج بن رہا ہے۔ پیش رفت دیکھنے کے لیے یہ صفحہ دوبارہ لوڈ کریں۔ |
-| `Sde7a5b` | help and messages | The program files do not carry a category; you can change it in each Draft. | پروگرام فائلوں میں زمرہ نہیں ہوتا؛ آپ اسے ہر مسودے میں بدل سکتے ہیں۔ |
 | `Scff3a3` | help and messages | User deleted; its name and address are erased, what it did stays attributable. | صارف حذف ہو گیا؛ اس کا نام اور پتا مٹا دیا گیا، جو اس نے کیا وہ اسی کے نام رہتا ہے۔ |
 | `Secfb3f` | hub_consolidation | Deprecate replaced Hub codes | تبدیل شدہ ہب کوڈ کو متروک قرار دیں |
 | `S0e7766` | hub_consolidation, language | draft | مسودہ |
@@ -12818,7 +13376,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sc50c53` | hub_consolidation | Hub Controller to Main Controller consolidation | ہب کنٹرولر کا مرکزی کنٹرولر میں انضمام |
 | `Scd189f` | hub_consolidation | Hub group | ہب گروپ |
 | `Sa5262b` | hub_consolidation | If the Hub Controller leaves the hardware setup, its codes are defined anew on the Main Controller side. Create an MC draft from an HC code on its detail page (Actions); this report shows how far each has come. Nothing is renumbered. | اگر ہب کنٹرولر ہارڈ ویئر کی ترتیب سے نکل جائے تو اس کے کوڈ مرکزی کنٹرولر کی طرف نئے سرے سے متعین ہوتے ہیں۔ HC کوڈ کے تفصیلی صفحے پر (اقدامات) اس سے MC مسودہ بنائیں؛ یہ رپورٹ دکھاتی ہے کہ ہر ایک کہاں تک پہنچا۔ کچھ بھی دوبارہ نمبر نہیں ہوتا۔ |
-| `Sdd6555` | hub_consolidation, legacy_mapping, st_preview | Legacy no. | پرانا نمبر |
+| `Sdd6555` | hub_consolidation, legacy_mapping, list | Legacy no. | پرانا نمبر |
 | `S845a2b` | hub_consolidation | No Hub Controller codes yet. | ابھی کوئی ہب کنٹرولر کوڈ نہیں۔ |
 | `S138665` | hub_consolidation | Open deprecation requests | متروکیت کی درخواستیں کھولیں |
 | `Sc8df93` | hub_consolidation | Open deprecation requests for all replaced Hub codes of this group? | کیا اس گروپ کے تمام تبدیل شدہ ہب کوڈ کے لیے متروکیت کی درخواستیں کھولنی ہیں؟ |
@@ -12877,7 +13435,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sded18c` | language | approved by | منظور کنندہ |
 | `Sedd46e` | language | Check against the interface | انٹرفیس سے ملا کر دیکھیں |
 | `S5a013c` | language | missing | غائب |
-| `S2c924e` | language, workbench | Note | نوٹ |
+| `S2c924e` | language, row, workbench | Note | نوٹ |
 | `S2f09d0` | language | Note on %(x)s | %(x)s پر نوٹ |
 | `S75bf99` | language | proposed by | تجویز کنندہ |
 | `Sc68e32` | language | Save translations | تراجم محفوظ کریں |
@@ -12885,14 +13443,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S542818` | language | Terms of the language | زبان کی اصطلاحات |
 | `Sae9e5d` | language | Translation of %(x)s | %(x)s کا ترجمہ |
 | `S863fd0` | language | Your own proposal: another person approves it. | آپ کی اپنی تجویز: کوئی اور شخص اسے منظور کرتا ہے۔ |
-| `Sf9d469` | legacy_mapping | All controllers | تمام کنٹرولر |
+| `Sf9d469` | legacy_mapping, list | All controllers | تمام کنٹرولر |
 | `Se61c2f` | legacy_mapping | Any number state | نمبر کی کوئی بھی حالت |
 | `S7c4f77` | legacy_mapping | issued | جاری شدہ |
 | `Sfd5ec0` | legacy_mapping, menu, new | Legacy mapping | پرانے-نئے کی میپنگ |
 | `S81f567` | legacy_mapping | Legacy number to new identifier | پرانا نمبر سے نیا شناخت کنندہ |
 | `S64b267` | legacy_mapping | legacy number, identifier or name | پرانا نمبر، شناخت کنندہ یا نام |
 | `S60fe6c` | legacy_mapping | new codes without a legacy number (n/a) | پرانے نمبر کے بغیر نئے کوڈ (لاگو نہیں) |
-| `Sf26140` | legacy_mapping, st_preview | New identifier | نیا شناخت کنندہ |
 | `Sf573c8` | legacy_mapping | no number yet | ابھی نمبر نہیں |
 | `S7877c5` | legacy_mapping | No status code carries a legacy number yet. | ابھی کسی اسٹیٹس کوڈ پر پرانا نمبر نہیں۔ |
 | `Sb7baa1` | legacy_mapping | Number | نمبر |
@@ -12901,10 +13458,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S8b0b7c` | legacy_mapping | with a legacy number | پرانے نمبر کے ساتھ |
 | `Seba07b` | list | A change set groups the change requests that ship with one controller software release, so reviewers see the whole package. Each request is still decided on its own. | تبدیلیوں کا مجموعہ ان تبدیلی کی درخواستوں کو یکجا کرتا ہے جو کنٹرولر سافٹ ویئر کی ایک ریلیز کے ساتھ جاتی ہیں، تاکہ جائزہ کار پورا پیکیج دیکھیں۔ ہر درخواست پر پھر بھی الگ فیصلہ ہوتا ہے۔ |
 | `Sc5fe02` | list | any | کوئی بھی |
+| `S55201a` | list | Any status | کوئی بھی حالت |
 | `Sef5415` | list | Apply columns | کالم لاگو کریں |
+| `Sffb569` | list | Ask for approval of the ticked rows | نشان زدہ سطروں کی منظوری مانگیں |
 | `S9e895f` | list | Change sets | تبدیلیوں کے مجموعے |
 | `S162a45` | list, menu | Change Sets | تبدیلی سیٹس |
 | `Scf723c` | list | Columns | کالم |
+| `S2ddaf9` | list, upload | Compare a workbook | ورک بک کا موازنہ کریں |
 | `Seb0fd2` | list | Delete all my Drafts of this filter | اس فلٹر کے میرے تمام مسودے حذف کریں |
 | `S36f212` | list | Delete ALL of your own Drafts that match this filter, on every page? | اس فلٹر سے ملتے آپ کے تمام اپنے مسودے، ہر صفحے پر، حذف کریں؟ |
 | `Sc554a1` | list | Delete selected Drafts | منتخب مسودے حذف کریں |
@@ -12914,12 +13474,18 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S44d25b` | list | Items | اشیاء |
 | `S033df3` | list | Lifecycle | زندگی کا دور |
 | `Sb4cad6` | list | Link to this view | اس منظر کا لنک |
+| `Sbdb4e1` | list | Load the initial mapping | ابتدائی میپنگ لوڈ کریں |
+| `Se07018` | list | Make the request | درخواست کریں |
 | `Se248d5` | list, new | New change set | نیا تبدیلیوں کا مجموعہ |
 | `Se75aa1` | list, new | New Release | نئی ریلیز |
+| `S9bb526` | list, row | New row | نئی سطر |
 | `Se5076c` | list | No change sets yet. | ابھی کوئی تبدیلیوں کا مجموعہ نہیں۔ |
 | `Sd32c03` | list | No releases yet. | ابھی کوئی ریلیز نہیں۔ |
+| `Sb5b22c` | list | No row matches. | کوئی سطر مطابقت نہیں رکھتی۔ |
 | `Sc3af43` | list | No saved searches yet. | ابھی کوئی محفوظ شدہ تلاش نہیں۔ |
 | `S0cb400` | list | No status codes match these filters. | ان فلٹرز سے کوئی اسٹیٹس کوڈ مطابقت نہیں رکھتا۔ |
+| `S260f7a` | list, row | Node | نوڈ |
+| `S08250b` | list | number, title or group | نمبر، عنوان یا گروپ |
 | `Sf7194e` | list | Requests | درخواستیں |
 | `S37a530` | list | result | نتیجہ |
 | `Scdf7e9` | list | results | نتائج |
@@ -12928,10 +13494,14 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sff86e9` | list | Save the current filters as | موجودہ فلٹر اس نام سے محفوظ کریں |
 | `Sed1d84` | list | Saved searches | محفوظ شدہ تلاشیں |
 | `S859822` | list, mine | Select | منتخب کریں |
+| `S45b553` | list | Select all rows | تمام سطریں منتخب کریں |
 | `S7f5583` | list, menu | Status Codes | اسٹیٹس کوڈز |
 | `S20bff1` | list | Status codes | اسٹیٹس کوڈز |
+| `S3a1066` | list | The mapping is empty. | میپنگ خالی ہے۔ |
+| `S27d95b` | list | The rows stay as they are. Once the StCd Owner, the Chief Engineer and an Administrator approve, they count as approved numbers. | سطریں جیسی ہیں ویسی ہی رہتی ہیں۔ StCd مالک، چیف انجینئر اور ایک منتظم کے منظور کرنے پر وہ منظور شدہ نمبر شمار ہوتی ہیں۔ |
 | `Se90eb0` | list | Turbine Platform | ٹربائن پلیٹ فارم |
 | `S86b1e7` | list | Typos are tolerated: "convertor" still finds "converter". | ٹائپ کی غلطیاں برداشت کی جاتی ہیں: "convertor" پھر بھی "converter" ڈھونڈ لیتا ہے۔ |
+| `Sb0c551` | list | Which legacy status code becomes which new one, with what the program files do not carry: the English title, the type, the up/down counter, the access levels, cause and directive. A row changes only by a request that the StCd Owner, the Chief Engineer and an Administrator all approve. | کون سا پرانا اسٹیٹس کوڈ کون سا نیا بنتا ہے، اس کے ساتھ جو پروگرام فائلوں میں نہیں ہوتا: انگریزی عنوان، قسم، اوپر/نیچے کاؤنٹر، رسائی کی سطحیں، وجہ اور ہدایت۔ سطر صرف ایسی درخواست سے بدلتی ہے جسے StCd مالک، چیف انجینئر اور ایک منتظم سب منظور کریں۔ |
 | `Sf7c400` | login | Log in | لاگ ان |
 | `S175835` | login | or | یا |
 | `S8be3c9` | login, users | Password | پاس ورڈ |
@@ -13093,6 +13663,23 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S8cb56e` | message: lookup_admin_service | range_end must be greater than range_start | range_end، range_start سے بڑا ہونا چاہیے |
 | `Se3a971` | message: lookup_admin_service | sub_range_end must be greater than sub_range_start | sub_range_end، sub_range_start سے بڑا ہونا چاہیے |
 | `S1404e3` | message: lookup_service | functional_system_group query parameter is required for functional-subgroups | functional-subgroups کے لیے functional_system_group کوئری پیرامیٹر ضروری ہے |
+| `Sf28681` | message: mapping_service | Give the reason for the change; the three approvers read it first. | تبدیلی کی وجہ بتائیں؛ تینوں منظور کنندگان اسے پہلے پڑھتے ہیں۔ |
+| `S062788` | message: mapping_service | Give the request a title of at most 120 characters. | درخواست کو زیادہ سے زیادہ 120 حروف کا عنوان دیں۔ |
+| `S2ea56f` | message: mapping_service | Mapping change not found | میپنگ کی تبدیلی نہیں ملی |
+| `S2c9363` | message: mapping_service | Mapping row not found | میپنگ کی سطر نہیں ملی |
+| `S2d5693` | message: mapping_service | Only the person who made the request can withdraw it. | صرف درخواست کرنے والا شخص ہی اسے واپس لے سکتا ہے۔ |
+| `S682269` | message: mapping_service | Only the StCd Owner, the Chief Engineer and an Administrator decide on the mapping. | میپنگ کا فیصلہ صرف StCd مالک، چیف انجینئر اور ایک منتظم کرتے ہیں۔ |
+| `S5e0f66` | message: mapping_service | Say why you reject the request. | بتائیں کہ آپ درخواست کیوں مسترد کرتے ہیں۔ |
+| `S3d5cfc` | message: mapping_service | The comment is longer than 1000 characters. | تبصرہ 1000 حروف سے لمبا ہے۔ |
+| `S82b817` | message: mapping_service | The decision must be APPROVE or REJECT. | فیصلہ APPROVE یا REJECT ہونا چاہیے۔ |
+| `S9ec08a` | message: mapping_service | The file is not a readable .xlsx workbook. | فائل پڑھنے کے قابل .xlsx ورک بک نہیں ہے۔ |
+| `S3831f7` | message: mapping_service | The reason is longer than 2000 characters. | وجہ 2000 حروف سے لمبی ہے۔ |
+| `Sa5de7d` | message: mapping_service | The request contains no row. | درخواست میں کوئی سطر نہیں ہے۔ |
+| `S2116e4` | message: mapping_service | The request is already closed. | درخواست پہلے ہی بند ہو چکی ہے۔ |
+| `S8518e7` | message: mapping_service | The role has decided already. | اس کردار نے پہلے ہی فیصلہ کر دیا ہے۔ |
+| `S2a15d7` | message: mapping_service | The workbook is larger than 5 MB. | ورک بک 5 MB سے بڑی ہے۔ |
+| `S8eb912` | message: mapping_service | The workbook unpacks to more than 80 MB. | ورک بک کھلنے پر 80 MB سے بڑی ہو جاتی ہے۔ |
+| `S6c1d08` | message: mapping_service | Your role may not propose a change of the mapping. | آپ کا کردار میپنگ میں تبدیلی تجویز نہیں کر سکتا۔ |
 | `S4ada2b` | message: notification_service | Notification not found | اطلاع نہیں ملی |
 | `Sd92b89` | message: notification_service | This notification belongs to someone else. | یہ اطلاع کسی اور کی ہے۔ |
 | `Sb0cd00` | message: numbering_service | Identifier override must match StCd-NNNNN (five digits). | اوور رائیڈ شناخت کنندہ StCd-NNNNN (پانچ ہندسے) سے مطابقت رکھنا چاہیے۔ |
@@ -13124,8 +13711,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S9671fb` | message: settings_service | must be true or false | true یا false ہونا چاہیے |
 | `S5166bb` | message: st_import_service | A staged file changed after the preview. Upload again. | پیش منظر کے بعد ایک تیار شدہ فائل بدل گئی۔ دوبارہ اپ لوڈ کریں۔ |
 | `Saa4de2` | message: st_import_service | controller must be auto, MC or HC | controller auto، MC یا HC ہونا چاہیے |
-| `Sa30251` | message: st_import_service | default_category must be ERROR, WARNING or INFO | default_category ERROR، WARNING یا INFO ہونی چاہیے |
-| `Sfe694a` | message: st_import_service | hc_proposal must be 1 or 2 | hc_proposal 1 یا 2 ہونا چاہیے |
 | `S58bec3` | message: st_import_service | No StCd program files found. Upload .st files or a ZIP of them. | کوئی StCd پروگرام فائل نہیں ملی۔ .st فائلیں یا ان کا ZIP اپ لوڈ کریں۔ |
 | `Sd9c5b0` | message: st_import_service | Nothing selected: tick at least one program that is ready. | کچھ منتخب نہیں: کم از کم ایک تیار پروگرام پر نشان لگائیں۔ |
 | `S5dbbd0` | message: st_import_service | The code is no longer an open Draft; preview the files again. | کوڈ اب کھلا مسودہ نہیں؛ فائلوں کا پیش منظر دوبارہ دیکھیں۔ |
@@ -13272,6 +13857,23 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S05fc94` | role badge | Engineer | انجینئر |
 | `S3c0e8a` | role badge | StCd Owner | StCd مالک |
 | `Sdbad9f` | role badge | Viewer | ناظر |
+| `S7f2e4b` | row | Access levels | رسائی کی سطحیں |
+| `S08f985` | row | Cause | وجہ |
+| `S164e0b` | row | Directive | ہدایت |
+| `S283474` | row | New number | نیا نمبر |
+| `Sfa6fdd` | row | No request yet. The row is as it was loaded. | ابھی کوئی درخواست نہیں۔ سطر ویسی ہی ہے جیسی لوڈ ہوئی تھی۔ |
+| `Sf790fc` | row | Nothing is changed here directly: the form makes a request, and the row changes after the StCd Owner, the Chief Engineer and an Administrator have approved it. | یہاں براہ راست کچھ نہیں بدلتا: فارم ایک درخواست بناتا ہے، اور StCd مالک، چیف انجینئر اور ایک منتظم کی منظوری کے بعد سطر بدلتی ہے۔ |
+| `S9d728f` | row | Request approval of the number | نمبر کی منظوری مانگیں |
+| `Sc8978f` | row | Request rejection of the number | نمبر کو مسترد کرنے کی درخواست کریں |
+| `Sc644eb` | row | Request that this number is never used? | درخواست کریں کہ یہ نمبر کبھی استعمال نہ ہو؟ |
+| `Sb25913` | row | Request the new row | نئی سطر کی درخواست کریں |
+| `Sb04301` | row | Request this change | اس تبدیلی کی درخواست کریں |
+| `Sae91b6` | row | Requests for this row | اس سطر کی درخواستیں |
+| `Sd59701` | row | Reset delay (parameter) | ری سیٹ تاخیر (پیرامیٹر) |
+| `Sfd64cd` | row | Set delay (parameter) | سیٹ تاخیر (پیرامیٹر) |
+| `S9c0444` | row | The three approvers read the reason first. | تینوں منظور کنندگان پہلے وجہ پڑھتے ہیں۔ |
+| `Sc84745` | row | Title (English) | عنوان (انگریزی) |
+| `S711eea` | row | Up/down counter | اوپر/نیچے کاؤنٹر |
 | `S913aba` | settings | Save settings | ترتیبات محفوظ کریں |
 | `Sb68734` | software_versions | Added | شامل شدہ |
 | `S172415` | software_versions | added | شامل ہوئے |
@@ -13285,28 +13887,19 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd97d1e` | software_versions | Show | دکھائیں |
 | `S42ea2e` | software_versions | Software Versions | سافٹ ویئر ورژن |
 | `S3bd89c` | software_versions | Which codes exist in which software version | کون سے کوڈ کس سافٹ ویئر ورژن میں ہیں |
-| `S16e5d4` | st_new, st_preview | Alarm type | الارم کی قسم |
-| `S726d7a` | st_new | as above | اوپر کی طرح |
-| `S9477fd` | st_new, st_preview | choose | منتخب کریں |
 | `Sb149ca` | st_new | Detect: a number from 10000 up is a Hub Controller program | شناخت کریں: 10000 سے اوپر کا نمبر ہب کنٹرولر پروگرام ہے |
 | `S7d06d0` | st_new | Every imported program becomes an ordinary Draft with the number it carries reserved. It still needs Cross-Domain Sign-Off, dual review and Chief Engineer approval before Release, and all Drafts of one import share a change set. | ہر درآمد شدہ پروگرام عام مسودہ بنتا ہے جس میں اس کا اپنا نمبر مخصوص رہتا ہے۔ ریلیز سے پہلے اسے پھر بھی بین الشعبہ سائن آف، دوہرا جائزہ اور چیف انجینئر کی منظوری درکار ہے، اور ایک درآمد کے تمام مسودے ایک تبدیلیوں کا مجموعہ بانٹتے ہیں۔ |
-| `Sbda77c` | st_new | Every program names an alarm type. A type left at "as above" gets the category chosen above; the next page lets you set the category of single programs or of all ticked ones. | ہر پروگرام ایک الارم کی قسم بتاتا ہے۔ "اوپر کی طرح" چھوڑی گئی قسم کو اوپر منتخب کردہ زمرہ ملتا ہے؛ اگلے صفحے پر آپ الگ الگ پروگراموں یا تمام نشان زد پروگراموں کا زمرہ طے کر سکتے ہیں۔ |
 | `S3b9e43` | st_new | Hub Controller (legacy numbers, mapped to the new ones) | ہب کنٹرولر (پرانے نمبر، نئے سے نقشہ بند) |
 | `Sd7333f` | st_new | Import status codes from .st files | .st فائلوں سے اسٹیٹس کوڈ درآمد کریں |
-| `S6640a6` | st_new | New number of Hub Controller programs | ہب کنٹرولر پروگراموں کا نیا نمبر |
 | `Sc0eff1` | st_new | Or a whole folder | یا پورا فولڈر |
 | `S94ddc1` | st_new | Program files (.st) or a ZIP | پروگرام فائلیں (.st) یا ایک ZIP |
-| `Sd99e2a` | st_new | Proposal 1: five-digit numbers (11000 and up) | تجویز 1: پانچ ہندسوں کے نمبر (11000 سے) |
-| `S2744b0` | st_new | Proposal 2: inside the Main Controller scheme | تجویز 2: مرکزی کنٹرولر کی اسکیم کے اندر |
 | `S67640d` | st_new | Read files and preview | فائلیں پڑھیں اور پیش منظر دیکھیں |
-| `S0af4fc` | st_new | Status category by alarm type (optional) | الارم کی قسم کے مطابق اسٹیٹس زمرہ (اختیاری) |
-| `S234237` | st_new | Status category of the new codes | نئے کوڈ کا اسٹیٹس زمرہ |
-| `S61fc52` | st_new | The program files do not carry a category and none is assumed: choose one here, by alarm type below, or for each program in the preview. A program without a category is not imported. | پروگرام فائلوں میں زمرہ نہیں ہوتا اور کوئی فرض نہیں کیا جاتا: یہاں ایک منتخب کریں، نیچے الارم کی قسم کے مطابق، یا پیش نظارہ میں ہر پروگرام کے لیے۔ بغیر زمرے کے پروگرام درآمد نہیں ہوتا۔ |
+| `Saa9df6` | st_new | The title, the type and the access levels of every program come from the mapping, never from the files. A program whose number is not in the mapping is blocked. | ہر پروگرام کا عنوان، قسم اور رسائی کی سطحیں میپنگ سے آتی ہیں، فائلوں سے کبھی نہیں۔ جس پروگرام کا نمبر میپنگ میں نہیں وہ روکا جاتا ہے۔ |
 | `S8f4c21` | st_new | Turbine platforms | ٹربائن پلیٹ فارم |
 | `S9ad4d4` | st_new | Upload the generated StCd_<n>.st programs — several files at once, a whole folder, or one ZIP. Nothing is created yet: the next page lists every program so you can tick the ones to import. | تیار کردہ StCd_<n>.st پروگرام اپ لوڈ کریں — ایک ساتھ کئی فائلیں، پورا فولڈر یا ایک ZIP۔ ابھی کچھ نہیں بنتا: اگلا صفحہ ہر پروگرام کی فہرست دیتا ہے تاکہ آپ درآمد کرنے والوں پر نشان لگا سکیں۔ |
+| `S16e5d4` | st_preview | Alarm type | الارم کی قسم |
 | `S2693e5` | st_preview | All Drafts of this import join one change set, so they can be reviewed and decided together. | اس درآمد کے تمام مسودے ایک تبدیلیوں کے مجموعے میں شامل ہوتے ہیں، تاکہ ان کا اکٹھے جائزہ اور فیصلہ ہو سکے۔ |
 | `Scbc694` | st_preview | already in the catalogue | پہلے سے فہرست میں |
-| `Sc00673` | st_preview | Apply to the ticked programs | نشان زد پروگراموں پر لاگو کریں |
 | `Sdf88b8` | st_preview | blocked | مسدود |
 | `S6f7703` | st_preview | Changed and withdrawn programs are not ticked: tick the ones you want to update, revise or restore. | تبدیل شدہ اور واپس لیے گئے پروگرام نشان زد نہیں ہوتے: جنہیں اپ ڈیٹ، نظرِ ثانی یا بحال کرنا چاہتے ہیں ان پر نشان لگائیں۔ |
 | `S78bb8b` | st_preview | Create Drafts for the ticked programs | نشان زد پروگراموں کے لیے مسودے بنائیں |
@@ -13324,8 +13917,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se58289` | st_preview | Programs found in the uploaded files | اپ لوڈ کی گئی فائلوں میں ملے پروگرام |
 | `S75c053` | st_preview, workbench | ready | تیار |
 | `S0723bf` | st_preview | Select all programs that are ready | تمام تیار پروگرام منتخب کریں |
-| `Sae12bc` | st_preview, workbench | Status category | اسٹیٹس زمرہ |
-| `Sd7a322` | st_preview | Status category of the ticked programs | نشان زد پروگراموں کا اسٹیٹس زمرہ |
+| `S9a2439` | st_preview | Type (from the mapping) | قسم (میپنگ سے) |
 | `S1a767a` | st_preview | updates the open Draft | کھلے مسودے کو اپ ڈیٹ کرتا ہے |
 | `S02499f` | st_preview | withdrawn | واپس لیے گئے |
 | `Sf0c3cf` | st_preview | without a legacy number | پرانے نمبر کے بغیر |
@@ -13388,6 +13980,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S2fd88e` | translations | Copy from previous revision | پچھلی ترمیم سے کاپی کریں |
 | `Se522f0` | translations | Save draft translation | مسودہ ترجمہ محفوظ کریں |
 | `Scb0b87` | translations | source language text of revision | ترمیم کا ماخذ زبان متن |
+| `S01209c` | upload | Also ask for approval of the unchanged rows that are only proposed | صرف تجویز شدہ غیر تبدیل شدہ سطروں کی منظوری بھی مانگیں |
+| `Sddf8d9` | upload | Compare and make the request | موازنہ کریں اور درخواست کریں |
+| `S028ebe` | upload | Download the current mapping | موجودہ میپنگ ڈاؤن لوڈ کریں |
+| `S23bfbf` | upload | The workbook has problems. Nothing was requested. | ورک بک میں مسائل ہیں۔ کچھ بھی درخواست نہیں کیا گیا۔ |
+| `S24d49d` | upload | Title of the request | درخواست کا عنوان |
+| `S88809a` | upload | Upload the corrected mapping as a workbook with the sheets MC and HC (download the current one as a model). Every new row and every row that differs becomes one request; rows the workbook does not mention stay as they are. The request takes effect only after the StCd Owner, the Chief Engineer and an Administrator have approved it. | درست کی ہوئی میپنگ کو MC اور HC شیٹس والی ورک بک کے طور پر اپ لوڈ کریں (نمونے کے لیے موجودہ ڈاؤن لوڈ کریں)۔ ہر نئی اور ہر مختلف سطر ایک درخواست بنتی ہے؛ جن سطروں کا ورک بک میں ذکر نہیں وہ جیسی ہیں ویسی رہتی ہیں۔ درخواست تب ہی نافذ ہوتی ہے جب StCd مالک، چیف انجینئر اور ایک منتظم اسے منظور کر لیں۔ |
+| `S09efdf` | upload | Workbook (.xlsx) | ورک بک (.xlsx) |
 | `S359a3b` | user_detail | Back to users | صارفین کی طرف واپس |
 | `Sf6fdbe` | user_detail, users | Delete | حذف کریں |
 | `S9afe6c` | user_detail | Delete user | صارف حذف کریں |
@@ -13447,6 +14046,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sa58dac` | workbench | Set values on the Drafts | مسودوں پر قدریں سیٹ کریں |
 | `Sa443bb` | workbench | Sign off the Drafts | مسودوں کا سائن آف کریں |
 | `S53f47f` | workbench | Sign-off pending | سائن آف زیر التوا |
+| `Sae12bc` | workbench | Status category | اسٹیٹس زمرہ |
 | `Sdc416e` | workbench | Step | مرحلہ |
 | `Sf7710d` | workbench | Submit for review | جائزے کے لیے جمع کرائیں |
 | `Sa45adc` | workbench | Submit the Drafts | مسودے جمع کرائیں |
@@ -13459,7 +14059,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 
 ### 9.12 IN ಕನ್ನಡ 🇮🇳 — Kannada
 
-1295 of 1296 strings translated; direction left to right.
+1355 of 1356 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -13470,13 +14070,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S141763` | _macros | Confirm with your password | ನಿಮ್ಮ ಪಾಸ್‌ವರ್ಡ್‌ನೊಂದಿಗೆ ದೃಢೀಕರಿಸಿ |
 | `Sc326a4` | _macros, detail, form | Field | ಕ್ಷೇತ್ರ |
 | `S0a0f8a` | _macros | Field differences | ಕ್ಷೇತ್ರದ ವ್ಯತ್ಯಾಸಗಳು |
-| `Sbc9819` | _macros | Next | ಮುಂದಿನದು |
+| `Sbc9819` | _macros, list | Next | ಮುಂದಿನದು |
 | `S27cea7` | _macros | No field differences. | ಕ್ಷೇತ್ರದಲ್ಲಿ ಯಾವುದೇ ವ್ಯತ್ಯಾಸವಿಲ್ಲ. |
 | `S464e43` | _macros | on track | ಸರಿಯಾದ ಸಮಯದಲ್ಲಿ |
 | `Sba2fff` | _macros, dashboard, success_metrics | overdue | ಗಡುವು ಮೀರಿದೆ |
-| `S600584` | _macros | Pages | ಪುಟಗಳು |
+| `S600584` | _macros, list | Pages | ಪುಟಗಳು |
 | `S810099` | _macros | Please check | ದಯವಿಟ್ಟು ಪರಿಶೀಲಿಸಿ |
-| `S50f942` | _macros | Previous | ಹಿಂದಿನದು |
+| `S50f942` | _macros, list | Previous | ಹಿಂದಿನದು |
 | `S83fd6e` | _macros, stalled | red after | ನಂತರ ಕೆಂಪು |
 | `S57e8a7` | _macros, success_metrics | slow | ನಿಧಾನ |
 | `S15198e` | _macros | Waiting since | ಇಂದಿನಿಂದ ಕಾಯುತ್ತಿದೆ |
@@ -13507,10 +14107,10 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S06b6ac` | approval_queue, builder, detail | Identifier | ಗುರುತು |
 | `S8e70d2` | approval_queue | Nothing is awaiting your approval. | ನಿಮ್ಮ ಅನುಮೋದನೆಗಾಗಿ ಯಾವುದೂ ಕಾಯುತ್ತಿಲ್ಲ. |
 | `Sa74f16` | approval_queue, detail, review_queue | Reviewer | ಪರಿಶೀಲಕ |
-| `S768e0c` | approval_queue, builder, detail | Title | ಶೀರ್ಷಿಕೆ |
+| `S768e0c` | approval_queue, builder, change | Title | ಶೀರ್ಷಿಕೆ |
 | `S33d306` | approval_queue, detail, mine | Waiting | ಕಾಯುವಿಕೆ |
 | `S2cbacd` | audit_log | %(n)s total | ಒಟ್ಟು %(n)s |
-| `S97c89a` | audit_log | Action | ಕ್ರಿಯೆ |
+| `S97c89a` | audit_log, change | Action | ಕ್ರಿಯೆ |
 | `Scbd19b` | audit_log | Actor | ಕರ್ತೃ |
 | `S811bdf` | audit_log | Actor ID | ಕರ್ತೃ ಗುರುತು |
 | `S8c85b1` | audit_log | after: | ನಂತರ: |
@@ -13521,7 +14121,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sc7fb31` | audit_log | Entity | ಘಟಕ |
 | `S04d694` | audit_log | Entity ID | ಘಟಕ ಗುರುತು |
 | `Sbb4e99` | audit_log | Entity Type | ಘಟಕದ ಪ್ರಕಾರ |
-| `Sd7decf` | audit_log, index, language | Filter | ಫಿಲ್ಟರ್ |
+| `Sd7decf` | audit_log, changes, index | Filter | ಫಿಲ್ಟರ್ |
 | `S3f6605` | audit_log, delegations, software_versions | From | ಇಂದ |
 | `S0061b5` | audit_log | No matching audit entries. | ಹೊಂದುವ ಲೆಕ್ಕಪರಿಶೋಧನಾ ದಾಖಲೆಗಳಿಲ್ಲ. |
 | `S01f79f` | audit_log | Scoped view: showing only actions you performed. | ಸೀಮಿತ ನೋಟ: ನೀವು ಮಾಡಿದ ಕ್ರಿಯೆಗಳನ್ನು ಮಾತ್ರ ತೋರಿಸಲಾಗುತ್ತಿದೆ. |
@@ -13540,7 +14140,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sbe504f` | base | Skip to main content | ಮುಖ್ಯ ವಿಷಯಕ್ಕೆ ಹೋಗಿ |
 | `S1b9aeb` | base, dashboard | unread | ಓದದಿರುವ |
 | `S2da600` | base, export, export_center | Version | ಆವೃತ್ತಿ |
-| `S12625b` | base | waiting | ಕಾಯುತ್ತಿವೆ |
+| `S12625b` | base, change | waiting | ಕಾಯುತ್ತಿವೆ |
 | `S5a4692` | base | You are covering for a colleague | ನೀವು ಸಹೋದ್ಯೋಗಿಯ ಬದಲಿಗೆ ಕೆಲಸ ಮಾಡುತ್ತಿದ್ದೀರಿ |
 | `S8e9c15` | builder | Candidate revisions | ಅಭ್ಯರ್ಥಿ ಪರಿಷ್ಕರಣೆಗಳು |
 | `Sdf2aa0` | builder | Functional Group / Subgroup | ಕ್ರಿಯಾತ್ಮಕ ಗುಂಪು / ಉಪಗುಂಪು |
@@ -13571,13 +14171,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S4105cf` | catalogue_health | exhausted | ಮುಗಿದಿದೆ |
 | `S57e8be` | catalogue_health, connections | Finding | ಕಂಡುಕೊಂಡದ್ದು |
 | `S1150a1` | catalogue_health | Gaps | ಅಂತರಗಳು |
-| `S171a06` | catalogue_health, export, withdrawn_codes | Group | ಗುಂಪು |
-| `Sb4aadc` | catalogue_health, legacy_mapping | Hub Controller | ಹಬ್ ನಿಯಂತ್ರಕ |
+| `S171a06` | catalogue_health, export, list | Group | ಗುಂಪು |
+| `Sb4aadc` | catalogue_health, legacy_mapping, list | Hub Controller | ಹಬ್ ನಿಯಂತ್ರಕ |
 | `S8ae1c3` | catalogue_health | Left | ಉಳಿದ |
 | `S12c0f1` | catalogue_health | left | ಉಳಿದಿದೆ |
 | `Sa7b60b` | catalogue_health | Left % | ಉಳಿದ % |
 | `S36a883` | catalogue_health | low | ಕಡಿಮೆ |
-| `S1b123c` | catalogue_health, legacy_mapping, st_new | Main Controller | ಮುಖ್ಯ ನಿಯಂತ್ರಕ |
+| `S1b123c` | catalogue_health, legacy_mapping, list | Main Controller | ಮುಖ್ಯ ನಿಯಂತ್ರಕ |
 | `S92185d` | catalogue_health, index | Missing | ಕಾಣೆಯಾಗಿದೆ |
 | `S57282a` | catalogue_health | Missing expected data | ನಿರೀಕ್ಷಿತ ಡೇಟಾ ಕಾಣೆಯಾಗಿದೆ |
 | `Sb8e95b` | catalogue_health | None found. | ಏನೂ ಸಿಗಲಿಲ್ಲ. |
@@ -13594,6 +14194,31 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S75a804` | catalogue_health | subgroup(s) are running out of numbers: | ಉಪಗುಂಪು(ಗಳಲ್ಲಿ) ಸಂಖ್ಯೆಗಳು ಮುಗಿಯುತ್ತಿವೆ: |
 | `S5fec4f` | catalogue_health | Unused numbers inside a band | ಪಟ್ಟಿಯೊಳಗೆ ಬಳಸದ ಸಂಖ್ಯೆಗಳು |
 | `S02c0e4` | catalogue_health | Used | ಬಳಸಿದ |
+| `S84f219` | change | All three, each by a different person who did not make the request. | ಮೂರೂ, ಪ್ರತಿಯೊಂದೂ ವಿನಂತಿ ಮಾಡದ ಬೇರೆ ವ್ಯಕ್ತಿಯಿಂದ. |
+| `S477aeb` | change, upload | and more | ಮತ್ತು ಇನ್ನಷ್ಟು |
+| `Sdeb9d0` | change, changes | Approvals | ಅನುಮೋದನೆಗಳು |
+| `S7b2c7f` | change, detail, language | Approve | ಅನುಮೋದಿಸಿ |
+| `S8aa57d` | change, detail | Changes | ಬದಲಾವಣೆಗಳು |
+| `S3fe5e1` | change | Comment (required to reject) | ಟಿಪ್ಪಣಿ (ತಿರಸ್ಕರಿಸಲು ಅಗತ್ಯ) |
+| `Sb48001` | change | Mapping change | ಮ್ಯಾಪಿಂಗ್ ಬದಲಾವಣೆ |
+| `Sd7c1d0` | change, changes, list | Mapping changes | ಮ್ಯಾಪಿಂಗ್ ಬದಲಾವಣೆಗಳು |
+| `Sf26140` | change, legacy_mapping, list | New identifier | ಹೊಸ ಗುರುತು |
+| `Sf219cc` | change, list, row | Reason | ಕಾರಣ |
+| `S2b03b5` | change, detail | Reject | ತಿರಸ್ಕರಿಸಿ |
+| `S5108c2` | change, changes | Requested by | ವಿನಂತಿಸಿದವರು |
+| `S52d0b3` | change, changes, detail | Rows | ಸಾಲುಗಳು |
+| `S6c30d2` | change, dry_run, list | rows | ಸಾಲುಗಳು |
+| `Sfabd38` | change | These rows changed after the request was made; it cannot be applied. Withdraw it and make it again: | ವಿನಂತಿಯ ನಂತರ ಈ ಸಾಲುಗಳು ಬದಲಾದವು; ಅದನ್ನು ಅನ್ವಯಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ. ಅದನ್ನು ಹಿಂಪಡೆದು ಮತ್ತೆ ಮಾಡಿ: |
+| `S47e564` | change, detail | Withdraw | ಹಿಂಪಡೆಯಿರಿ |
+| `S30d359` | change | Withdraw this request? | ಈ ವಿನಂತಿಯನ್ನು ಹಿಂಪಡೆಯಬೇಕೇ? |
+| `S88c173` | change | You made this request; another person must decide. | ಈ ವಿನಂತಿಯನ್ನು ನೀವು ಮಾಡಿದ್ದೀರಿ; ಬೇರೊಬ್ಬ ವ್ಯಕ್ತಿ ನಿರ್ಧರಿಸಬೇಕು. |
+| `S04e02f` | change | Your role has decided already. | ನಿಮ್ಮ ಪಾತ್ರ ಈಗಾಗಲೇ ನಿರ್ಧರಿಸಿದೆ. |
+| `Sc7274c` | changes | Any state | ಯಾವುದೇ ಸ್ಥಿತಿ |
+| `S2a560c` | changes | Every change of the mapping is a request. It takes effect when the StCd Owner, the Chief Engineer and an Administrator have each approved it; one rejection closes it. | ಮ್ಯಾಪಿಂಗ್‌ನ ಪ್ರತಿ ಬದಲಾವಣೆಯೂ ಒಂದು ವಿನಂತಿ. StCd ಮಾಲೀಕ, ಮುಖ್ಯ ಎಂಜಿನಿಯರ್ ಮತ್ತು ಒಬ್ಬ ನಿರ್ವಾಹಕ ಪ್ರತಿಯೊಬ್ಬರೂ ಅನುಮೋದಿಸಿದಾಗ ಅದು ಜಾರಿಗೆ ಬರುತ್ತದೆ; ಒಂದು ತಿರಸ್ಕಾರ ಅದನ್ನು ಮುಚ್ಚುತ್ತದೆ. |
+| `Sdef2eb` | changes, list, menu | Mapping | ಮ್ಯಾಪಿಂಗ್ |
+| `Se03e43` | changes | No request yet. | ಇನ್ನೂ ವಿನಂತಿ ಇಲ್ಲ. |
+| `S5fc0e0` | changes | request(s) wait for your decision. | ವಿನಂತಿಗಳು ನಿಮ್ಮ ನಿರ್ಧಾರಕ್ಕಾಗಿ ಕಾಯುತ್ತಿವೆ. |
+| `Sa72502` | changes, detail, export | State | ಸ್ಥಿತಿ |
 | `S97fd13` | check | Back to the terms | ಪದಗಳಿಗೆ ಹಿಂತಿರುಗಿ |
 | `S1bc9e5` | check | English string | ಇಂಗ್ಲಿಷ್ ಪಠ್ಯ |
 | `S5d54b3` | check | Every string uses the translated terms. | ಪ್ರತಿ ಪಠ್ಯವೂ ಅನುವಾದಿತ ಪದಗಳನ್ನು ಬಳಸುತ್ತದೆ. |
@@ -13674,7 +14299,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S9b0b4c` | detail | also the files without an access level (all columns) | ಪ್ರವೇಶ ಹಂತ ಇಲ್ಲದ ಫೈಲ್‌ಗಳೂ (ಎಲ್ಲಾ ಕಾಲಮ್‌ಗಳು) |
 | `Sf24c44` | detail | Any %(code)s Engineer | ಯಾವುದೇ %(code)s ಎಂಜಿನಿಯರ್ |
 | `Sb99a01` | detail | Applies to software versions | ಸಾಫ್ಟ್‌ವೇರ್ ಆವೃತ್ತಿಗಳಿಗೆ ಅನ್ವಯ |
-| `S7b2c7f` | detail, language | Approve | ಅನುಮೋದಿಸಿ |
 | `Sde38bf` | detail | Approve selected | ಆಯ್ದದ್ದನ್ನು ಅನುಮೋದಿಸಿ |
 | `Scf2999` | detail | Approving confirms these values; any change you make here is applied and audited. Rejecting ignores them. | ಅನುಮೋದನೆಯು ಈ ಮೌಲ್ಯಗಳನ್ನು ದೃಢೀಕರಿಸುತ್ತದೆ; ನೀವು ಇಲ್ಲಿ ಮಾಡುವ ಯಾವುದೇ ಬದಲಾವಣೆ ಅನ್ವಯವಾಗುತ್ತದೆ ಮತ್ತು ಲೆಕ್ಕಪರಿಶೋಧನೆಗೊಳ್ಳುತ್ತದೆ. ತಿರಸ್ಕಾರವು ಅವುಗಳನ್ನು ನಿರ್ಲಕ್ಷಿಸುತ್ತದೆ. |
 | `Sf7f2d5` | detail | Archive (requires 180-day retention elapsed) | ಆರ್ಕೈವ್ ಮಾಡಿ (180 ದಿನಗಳ ಉಳಿಸಿಕೊಳ್ಳುವಿಕೆ ಕಳೆದಿರಬೇಕು) |
@@ -13695,7 +14319,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S4572f4` | detail | Change request | ಬದಲಾವಣೆ ವಿನಂತಿ |
 | `S3295be` | detail, workbench | Change requests in this set | ಈ ಸಮೂಹದ ಬದಲಾವಣೆ ವಿನಂತಿಗಳು |
 | `S4d8006` | detail | Change set | ಬದಲಾವಣೆ ಸಮೂಹ |
-| `S8aa57d` | detail | Changes | ಬದಲಾವಣೆಗಳು |
 | `S3d14ea` | detail, export | Changes of this release only | ಈ ಬಿಡುಗಡೆಯ ಬದಲಾವಣೆಗಳು ಮಾತ್ರ |
 | `Sbd95c0` | detail | Checklist confirmed at sign-off | ಸಹಿಯ ಸಮಯದಲ್ಲಿ ದೃಢೀಕರಿಸಿದ ಪರಿಶೀಲನಾಪಟ್ಟಿ |
 | `S074d62` | detail, role badge | Chief Engineer | ಮುಖ್ಯ ಎಂಜಿನಿಯರ್ |
@@ -13713,7 +14336,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S7671b5` | detail | Confirm or override Audience Access | ಉದ್ದೇಶಿತ ಬಳಕೆದಾರರ ಪ್ರವೇಶವನ್ನು ದೃಢೀಕರಿಸಿ ಅಥವಾ ಅತಿಕ್ರಮಿಸಿ |
 | `S6512ee` | detail | Connection | ಸಂಪರ್ಕ |
 | `S4f9be0` | detail | Content | ವಿಷಯ |
-| `Sa36a5f` | detail, legacy_mapping, st_new | Controller | ನಿಯಂತ್ರಕ |
+| `Sa36a5f` | detail, legacy_mapping, list | Controller | ನಿಯಂತ್ರಕ |
 | `Scd293f` | detail | Converter Reactive Power Program | ಕನ್ವರ್ಟರ್ ರಿಯಾಕ್ಟಿವ್ ಪವರ್ ಪ್ರೋಗ್ರಾಂ |
 | `S3998a7` | detail | Copies the descriptive fields into a new Draft in a Main Controller group (a new number is allocated at submit; this code's identifier is kept as the legacy reference). | ವಿವರಣಾತ್ಮಕ ಕ್ಷೇತ್ರಗಳನ್ನು ಮುಖ್ಯ ನಿಯಂತ್ರಕ ಗುಂಪಿನ ಹೊಸ ಕರಡಿಗೆ ನಕಲಿಸುತ್ತದೆ (ಸಲ್ಲಿಸುವಾಗ ಹೊಸ ಸಂಖ್ಯೆ ನೀಡಲಾಗುತ್ತದೆ; ಈ ಕೋಡ್‌ನ ಗುರುತನ್ನು ಹಳೆಯ ಉಲ್ಲೇಖವಾಗಿ ಇಡಲಾಗುತ್ತದೆ). |
 | `S54b051` | detail | Copy this code for another turbine platform. The copy is a new Draft that links back here and goes through the normal review. | ಈ ಕೋಡ್ ಅನ್ನು ಬೇರೆ ಟರ್ಬೈನ್ ವೇದಿಕೆಗೆ ನಕಲಿಸಿ. ನಕಲು ಇಲ್ಲಿಗೆ ಮರಳಿ ಜೋಡಿಸುವ ಹೊಸ ಕರಡು ಮತ್ತು ಸಾಮಾನ್ಯ ಪರಿಶೀಲನೆಗೆ ಹೋಗುತ್ತದೆ. |
@@ -13847,7 +14470,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sf5ca9d` | detail | Recorded exports | ದಾಖಲಿತ ರಫ್ತುಗಳು |
 | `Sa3f757` | detail | Reinstate to Released | ಬಿಡುಗಡೆಯಾದದ್ದಕ್ಕೆ ಮರುಸ್ಥಾಪಿಸಿ |
 | `S3238ca` | detail | Reinstatement reason | ಮರುಸ್ಥಾಪನೆ ಕಾರಣ |
-| `S2b03b5` | detail | Reject | ತಿರಸ್ಕರಿಸಿ |
 | `S27fb5c` | detail | Reject selected | ಆಯ್ದದ್ದನ್ನು ತಿರಸ್ಕರಿಸಿ |
 | `S045c2c` | detail | Related codes | ಸಂಬಂಧಿತ ಕೋಡ್‌ಗಳು |
 | `S33a5a7` | detail | Relation | ಸಂಬಂಧ |
@@ -13865,7 +14487,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S4c1aa6` | detail | Repeated-Error Escalation | ಪುನರಾವರ್ತಿತ-ದೋಷ ಉಲ್ಬಣ |
 | `S4aed03` | detail | Request | ವಿನಂತಿ |
 | `Sf3421a` | detail | Request a Sign-Off | ಸಹಿಯನ್ನು ವಿನಂತಿಸಿ |
-| `Sc26bf6` | detail, mine | Requested | ವಿನಂತಿಸಲಾಗಿದೆ |
+| `Sc26bf6` | detail, mine, row | Requested | ವಿನಂತಿಸಲಾಗಿದೆ |
 | `S2706ed` | detail | Required by | ಇವುಗಳಿಗೆ ಅಗತ್ಯ |
 | `S619e87` | detail, form | Reset Delay | ರೀಸೆಟ್ ವಿಳಂಬ |
 | `S026ab2` | detail | resolved | ಪರಿಹರಿಸಲಾಗಿದೆ |
@@ -13875,7 +14497,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S3beb9a` | detail | Revision | ಪರಿಷ್ಕರಣೆ |
 | `Sa72973` | detail | Revision Fields | ಪರಿಷ್ಕರಣೆ ಕ್ಷೇತ್ರಗಳು |
 | `Sfc1d6a` | detail | row(s) imported as Drafts | ಸಾಲು(ಗಳು) ಕರಡುಗಳಾಗಿ ಆಮದಾಗಿವೆ |
-| `S52d0b3` | detail, reconciliation, user_detail | Rows | ಸಾಲುಗಳು |
 | `Sd0edfb` | detail | Sales | ಮಾರಾಟ |
 | `S241bf5` | detail, workbench | Sample number | ಮಾದರಿ ಸಂಖ್ಯೆ |
 | `Sda38c6` | detail | Save planned dates | ಯೋಜಿತ ದಿನಾಂಕಗಳನ್ನು ಉಳಿಸಿ |
@@ -13894,11 +14515,10 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sece2ac` | detail, form | Slot | ಸ್ಲಾಟ್ |
 | `Sff44d2` | detail | Software Version | ಸಾಫ್ಟ್‌ವೇರ್ ಆವೃತ್ತಿ |
 | `S169bf7` | detail, export, software_versions | Software version | ಸಾಫ್ಟ್‌ವೇರ್ ಆವೃತ್ತಿ |
-| `S6da13a` | detail, fleet_feedback | Source | ಮೂಲ |
+| `S6da13a` | detail, fleet_feedback, row | Source | ಮೂಲ |
 | `Sd3c56b` | detail, export_profiles | source language | ಮೂಲ ಭಾಷೆ |
 | `Sb3883f` | detail | Standards | ಮಾನದಂಡಗಳು |
 | `Sfaa9e7` | detail, reconciliation | Started | ಪ್ರಾರಂಭವಾಯಿತು |
-| `Sa72502` | detail, export, hub_consolidation | State | ಸ್ಥಿತಿ |
 | `Se246b6` | detail, form, list | Status Category | ಸ್ಥಿತಿ ವರ್ಗ |
 | `S779953` | detail, form | Status Code for Repeated Error | ಪುನರಾವರ್ತಿತ ದೋಷಕ್ಕಾಗಿ ಸ್ಥಿತಿ ಕೋಡ್ |
 | `S98a377` | detail | Still a Draft. | ಇನ್ನೂ ಕರಡು. |
@@ -13917,7 +14537,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Seaf576` | detail, form | Trigger Snapshot | ಸ್ನ್ಯಾಪ್‌ಶಾಟ್ ಪ್ರಚೋದಿಸಿ |
 | `S285ec8` | detail, form | Troubleshooting | ದೋಷ ನಿವಾರಣೆ |
 | `S71bba4` | detail | Turbine Operator Package | ಟರ್ಬೈನ್ ಆಪರೇಟರ್ ಪ್ಯಾಕೇಜ್ |
-| `S3deb74` | detail, mine, review_queue | Type | ಪ್ರಕಾರ |
+| `S3deb74` | detail, list, mine | Type | ಪ್ರಕಾರ |
 | `Sab631e` | detail | Type %(id)s to confirm | ದೃಢೀಕರಿಸಲು %(id)s ಟೈಪ್ ಮಾಡಿ |
 | `Sb5e264` | detail | Type the identifier to confirm | ದೃಢೀಕರಿಸಲು ಗುರುತನ್ನು ಟೈಪ್ ಮಾಡಿ |
 | `S835f8a` | detail | Umrichterprogramm GSC | ಕನ್ವರ್ಟರ್ ಪ್ರೋಗ್ರಾಂ GSC |
@@ -13936,7 +14556,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S51ecc5` | detail | What happens next | ಮುಂದೆ ಏನಾಗುತ್ತದೆ |
 | `Sf323c0` | detail | Where used | ಎಲ್ಲಿ ಬಳಸಲಾಗಿದೆ |
 | `S7d5316` | detail | Who | ಯಾರು |
-| `S47e564` | detail | Withdraw | ಹಿಂಪಡೆಯಿರಿ |
 | `S51a998` | detail | Withdraw this change request? | ಈ ಬದಲಾವಣೆ ವಿನಂತಿಯನ್ನು ಹಿಂಪಡೆಯಬೇಕೇ? |
 | `S93ef7c` | detail, workbench | Workbench | ವರ್ಕ್‌ಬೆಂಚ್ |
 | `S95a2a4` | detail, form | Write level | ಬರೆಯುವ ಮಟ್ಟ |
@@ -13956,7 +14575,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sec0298` | dry_run | Result per row | ಪ್ರತಿ ಸಾಲಿನ ಫಲಿತಾಂಶ |
 | `S9bf7a8` | dry_run | Row | ಸಾಲು |
 | `S3ff0b0` | dry_run | row(s) have problems. Nothing has been created. | ಸಾಲು(ಗಳು)ಗಳಲ್ಲಿ ಸಮಸ್ಯೆಗಳಿವೆ. ಏನೂ ರಚಿಸಲಾಗಿಲ್ಲ. |
-| `S6c30d2` | dry_run | rows | ಸಾಲುಗಳು |
 | `S8012ff` | dry_run | unchanged | ಬದಲಾಗದ |
 | `S83d655` | dry_run, st_preview | warning(s) | ಎಚ್ಚರಿಕೆ(ಗಳು) |
 | `S9ddad9` | dry_run | would be created | ರಚಿಸಲಾಗುತ್ತಿತ್ತು |
@@ -14098,6 +14716,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S285edc` | help and messages | %(ok)s of %(n)s: %(what)s. | %(ok)s / %(n)s: %(what)s. |
 | `Sb08e6c` | help and messages | A Reviewer and an Administrator each sign off (in any order). If either rejects, it goes back to the author. | ಒಬ್ಬ ಪರಿಶೀಲಕ ಮತ್ತು ಒಬ್ಬ ನಿರ್ವಾಹಕ ಪ್ರತಿಯೊಬ್ಬರೂ ಸಹಿ ಮಾಡುತ್ತಾರೆ (ಯಾವುದೇ ಕ್ರಮದಲ್ಲಿ). ಯಾರಾದರೂ ತಿರಸ್ಕರಿಸಿದರೆ ಅದು ಲೇಖಕರಿಗೆ ಹಿಂತಿರುಗುತ್ತದೆ. |
 | `S2f1bed` | help and messages | An Administrator includes the revision in a Release and publishes it; then it is Released. | ನಿರ್ವಾಹಕರು ಪರಿಷ್ಕರಣೆಯನ್ನು ಬಿಡುಗಡೆಗೆ ಸೇರಿಸಿ ಪ್ರಕಟಿಸುತ್ತಾರೆ; ನಂತರ ಅದು ಬಿಡುಗಡೆಯಾದದ್ದು. |
+| `S9477fd` | help and messages | choose | ಆಯ್ಕೆಮಾಡಿ |
 | `S1308dc` | help and messages | defective codes sent back | ದೋಷಯುಕ್ತ ಕೋಡ್‌ಗಳನ್ನು ಹಿಂದಕ್ಕೆ ಕಳುಹಿಸಲಾಗಿದೆ |
 | `Se2bbd9` | help and messages | Drafts saved | ಕರಡುಗಳನ್ನು ಉಳಿಸಲಾಗಿದೆ |
 | `S0ddfa5` | help and messages | Drafts signed off | ಕರಡುಗಳಿಗೆ ಸಹಿ ಮಾಡಲಾಗಿದೆ |
@@ -14109,7 +14728,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sce489f` | help and messages | The author gets any required cross-domain sign-offs, then submits the change request for review. | ಲೇಖಕರು ಅಗತ್ಯ ಅಂತರ-ಡೊಮೇನ್ ಸಹಿಗಳನ್ನು ಪಡೆದು, ನಂತರ ಬದಲಾವಣೆ ವಿನಂತಿಯನ್ನು ಪರಿಶೀಲನೆಗೆ ಸಲ್ಲಿಸುತ್ತಾರೆ. |
 | `S1cdbdd` | help and messages | The Chief Engineer approves or rejects. Approval makes the revision Approved (or Deprecated for a deprecation request). | ಮುಖ್ಯ ಎಂಜಿನಿಯರ್ ಅನುಮೋದಿಸುತ್ತಾರೆ ಅಥವಾ ತಿರಸ್ಕರಿಸುತ್ತಾರೆ. ಅನುಮೋದನೆಯು ಪರಿಷ್ಕರಣೆಯನ್ನು ಅನುಮೋದಿತ (ಅಥವಾ ಹಳತಾಗಿಸುವ ವಿನಂತಿಗೆ ಹಳತಾದ) ಮಾಡುತ್ತದೆ. |
 | `S2d6ac0` | help and messages | The package is being built. Reload this page to follow its progress. | ಪ್ಯಾಕೇಜ್ ರಚನೆಯಾಗುತ್ತಿದೆ. ಪ್ರಗತಿ ನೋಡಲು ಈ ಪುಟವನ್ನು ಮತ್ತೆ ಲೋಡ್ ಮಾಡಿ. |
-| `Sde7a5b` | help and messages | The program files do not carry a category; you can change it in each Draft. | ಪ್ರೋಗ್ರಾಂ ಫೈಲ್‌ಗಳು ವರ್ಗವನ್ನು ಹೊಂದಿರುವುದಿಲ್ಲ; ಪ್ರತಿ ಕರಡಿನಲ್ಲಿ ಅದನ್ನು ಬದಲಿಸಬಹುದು. |
 | `Scff3a3` | help and messages | User deleted; its name and address are erased, what it did stays attributable. | ಬಳಕೆದಾರರನ್ನು ಅಳಿಸಲಾಗಿದೆ; ಅವರ ಹೆಸರು ಮತ್ತು ವಿಳಾಸ ಅಳಿಸಲ್ಪಟ್ಟಿವೆ, ಅವರು ಮಾಡಿದ್ದು ಆರೋಪಿಸಬಹುದಾದಂತೆ ಉಳಿಯುತ್ತದೆ. |
 | `Secfb3f` | hub_consolidation | Deprecate replaced Hub codes | ಬದಲಾಯಿಸಿದ ಹಬ್ ಕೋಡ್‌ಗಳನ್ನು ಹಳತಾಗಿಸಿ |
 | `S0e7766` | hub_consolidation, language | draft | ಕರಡು |
@@ -14120,7 +14738,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sc50c53` | hub_consolidation | Hub Controller to Main Controller consolidation | ಹಬ್ ನಿಯಂತ್ರಕದಿಂದ ಮುಖ್ಯ ನಿಯಂತ್ರಕಕ್ಕೆ ಏಕೀಕರಣ |
 | `Scd189f` | hub_consolidation | Hub group | ಹಬ್ ಗುಂಪು |
 | `Sa5262b` | hub_consolidation | If the Hub Controller leaves the hardware setup, its codes are defined anew on the Main Controller side. Create an MC draft from an HC code on its detail page (Actions); this report shows how far each has come. Nothing is renumbered. | ಹಬ್ ನಿಯಂತ್ರಕ ಹಾರ್ಡ್‌ವೇರ್ ಸಂರಚನೆಯಿಂದ ಹೊರಹೋದರೆ, ಅದರ ಕೋಡ್‌ಗಳನ್ನು ಮುಖ್ಯ ನಿಯಂತ್ರಕ ಬದಿಯಲ್ಲಿ ಹೊಸದಾಗಿ ವ್ಯಾಖ್ಯಾನಿಸಲಾಗುತ್ತದೆ. HC ಕೋಡ್‌ನ ವಿವರ ಪುಟದಲ್ಲಿ (ಕ್ರಿಯೆಗಳು) ಅದರಿಂದ MC ಕರಡು ರಚಿಸಿ; ಪ್ರತಿಯೊಂದೂ ಎಷ್ಟು ದೂರ ಬಂದಿದೆ ಎಂದು ಈ ವರದಿ ತೋರಿಸುತ್ತದೆ. ಏನನ್ನೂ ಮರುಸಂಖ್ಯೆ ಮಾಡಲಾಗುವುದಿಲ್ಲ. |
-| `Sdd6555` | hub_consolidation, legacy_mapping, st_preview | Legacy no. | ಹಳೆಯ ಸಂ. |
+| `Sdd6555` | hub_consolidation, legacy_mapping, list | Legacy no. | ಹಳೆಯ ಸಂ. |
 | `S845a2b` | hub_consolidation | No Hub Controller codes yet. | ಇನ್ನೂ ಹಬ್ ನಿಯಂತ್ರಕ ಕೋಡ್‌ಗಳಿಲ್ಲ. |
 | `S138665` | hub_consolidation | Open deprecation requests | ಹಳತಾಗಿಸುವ ವಿನಂತಿಗಳನ್ನು ತೆರೆಯಿರಿ |
 | `Sc8df93` | hub_consolidation | Open deprecation requests for all replaced Hub codes of this group? | ಈ ಗುಂಪಿನ ಎಲ್ಲಾ ಬದಲಾಯಿಸಿದ ಹಬ್ ಕೋಡ್‌ಗಳಿಗೆ ಹಳತಾಗಿಸುವ ವಿನಂತಿಗಳನ್ನು ತೆರೆಯಬೇಕೇ? |
@@ -14179,7 +14797,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sded18c` | language | approved by | ಅನುಮೋದಿಸಿದವರು |
 | `Sedd46e` | language | Check against the interface | ಇಂಟರ್ಫೇಸ್ ವಿರುದ್ಧ ಪರಿಶೀಲಿಸಿ |
 | `S5a013c` | language | missing | ಕಾಣೆಯಾಗಿದೆ |
-| `S2c924e` | language, workbench | Note | ಟಿಪ್ಪಣಿ |
+| `S2c924e` | language, row, workbench | Note | ಟಿಪ್ಪಣಿ |
 | `S2f09d0` | language | Note on %(x)s | %(x)s ಕುರಿತು ಟಿಪ್ಪಣಿ |
 | `S75bf99` | language | proposed by | ಸೂಚಿಸಿದವರು |
 | `Sc68e32` | language | Save translations | ಅನುವಾದಗಳನ್ನು ಉಳಿಸಿ |
@@ -14187,14 +14805,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S542818` | language | Terms of the language | ಭಾಷೆಯ ಪದಗಳು |
 | `Sae9e5d` | language | Translation of %(x)s | %(x)s ನ ಅನುವಾದ |
 | `S863fd0` | language | Your own proposal: another person approves it. | ನಿಮ್ಮ ಸ್ವಂತ ಸೂಚನೆ: ಬೇರೊಬ್ಬರು ಅದನ್ನು ಅನುಮೋದಿಸುತ್ತಾರೆ. |
-| `Sf9d469` | legacy_mapping | All controllers | ಎಲ್ಲಾ ನಿಯಂತ್ರಕಗಳು |
+| `Sf9d469` | legacy_mapping, list | All controllers | ಎಲ್ಲಾ ನಿಯಂತ್ರಕಗಳು |
 | `Se61c2f` | legacy_mapping | Any number state | ಯಾವುದೇ ಸಂಖ್ಯೆ ಸ್ಥಿತಿ |
 | `S7c4f77` | legacy_mapping | issued | ನೀಡಲಾಗಿದೆ |
 | `Sfd5ec0` | legacy_mapping, menu, new | Legacy mapping | ಹಳೆಯ-ಹೊಸ ಮ್ಯಾಪಿಂಗ್ |
 | `S81f567` | legacy_mapping | Legacy number to new identifier | ಹಳೆಯ ಸಂಖ್ಯೆಯಿಂದ ಹೊಸ ಗುರುತಿಗೆ |
 | `S64b267` | legacy_mapping | legacy number, identifier or name | ಹಳೆಯ ಸಂಖ್ಯೆ, ಗುರುತು ಅಥವಾ ಹೆಸರು |
 | `S60fe6c` | legacy_mapping | new codes without a legacy number (n/a) | ಹಳೆಯ ಸಂಖ್ಯೆ ಇಲ್ಲದ ಹೊಸ ಕೋಡ್‌ಗಳು (ಅನ್ವಯಿಸದು) |
-| `Sf26140` | legacy_mapping, st_preview | New identifier | ಹೊಸ ಗುರುತು |
 | `Sf573c8` | legacy_mapping | no number yet | ಇನ್ನೂ ಸಂಖ್ಯೆ ಇಲ್ಲ |
 | `S7877c5` | legacy_mapping | No status code carries a legacy number yet. | ಇನ್ನೂ ಯಾವ ಸ್ಥಿತಿ ಕೋಡ್‌ಗೂ ಹಳೆಯ ಸಂಖ್ಯೆ ಇಲ್ಲ. |
 | `Sb7baa1` | legacy_mapping | Number | ಸಂಖ್ಯೆ |
@@ -14203,10 +14820,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S8b0b7c` | legacy_mapping | with a legacy number | ಹಳೆಯ ಸಂಖ್ಯೆಯೊಂದಿಗೆ |
 | `Seba07b` | list | A change set groups the change requests that ship with one controller software release, so reviewers see the whole package. Each request is still decided on its own. | ಬದಲಾವಣೆ ಸಮೂಹವು ಒಂದು ನಿಯಂತ್ರಕ ಸಾಫ್ಟ್‌ವೇರ್ ಬಿಡುಗಡೆಯೊಂದಿಗೆ ಹೋಗುವ ಬದಲಾವಣೆ ವಿನಂತಿಗಳನ್ನು ಗುಂಪುಮಾಡುತ್ತದೆ, ಇದರಿಂದ ಪರಿಶೀಲಕರು ಪೂರ್ಣ ಪ್ಯಾಕೇಜ್ ನೋಡಬಹುದು. ಪ್ರತಿ ವಿನಂತಿಯನ್ನು ಇನ್ನೂ ಪ್ರತ್ಯೇಕವಾಗಿ ನಿರ್ಧರಿಸಲಾಗುತ್ತದೆ. |
 | `Sc5fe02` | list | any | ಯಾವುದೇ |
+| `S55201a` | list | Any status | ಯಾವುದೇ ಅವಸ್ಥೆ |
 | `Sef5415` | list | Apply columns | ಕಾಲಮ್‌ಗಳನ್ನು ಅನ್ವಯಿಸಿ |
+| `Sffb569` | list | Ask for approval of the ticked rows | ಗುರುತಿಸಿದ ಸಾಲುಗಳ ಅನುಮೋದನೆಯನ್ನು ಕೇಳಿ |
 | `S9e895f` | list | Change sets | ಬದಲಾವಣೆ ಸಮೂಹಗಳು |
 | `S162a45` | list, menu | Change Sets | ಬದಲಾವಣೆ ಸೆಟ್‌ಗಳು |
 | `Scf723c` | list | Columns | ಕಾಲಮ್‌ಗಳು |
+| `S2ddaf9` | list, upload | Compare a workbook | ವರ್ಕ್‌ಬುಕ್ ಹೋಲಿಸಿ |
 | `Seb0fd2` | list | Delete all my Drafts of this filter | ಈ ಫಿಲ್ಟರ್‌ನ ನನ್ನ ಎಲ್ಲಾ ಕರಡುಗಳನ್ನು ಅಳಿಸಿ |
 | `S36f212` | list | Delete ALL of your own Drafts that match this filter, on every page? | ಈ ಫಿಲ್ಟರ್‌ಗೆ ಹೊಂದುವ ನಿಮ್ಮ ಎಲ್ಲಾ ಕರಡುಗಳನ್ನು, ಎಲ್ಲಾ ಪುಟಗಳಲ್ಲಿ, ಅಳಿಸಬೇಕೇ? |
 | `Sc554a1` | list | Delete selected Drafts | ಆಯ್ದ ಕರಡುಗಳನ್ನು ಅಳಿಸಿ |
@@ -14216,12 +14836,18 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S44d25b` | list | Items | ಅಂಶಗಳು |
 | `S033df3` | list | Lifecycle | ಜೀವನಚಕ್ರ |
 | `Sb4cad6` | list | Link to this view | ಈ ನೋಟಕ್ಕೆ ಲಿಂಕ್ |
+| `Sbdb4e1` | list | Load the initial mapping | ಆರಂಭಿಕ ಮ್ಯಾಪಿಂಗ್ ಲೋಡ್ ಮಾಡಿ |
+| `Se07018` | list | Make the request | ವಿನಂತಿ ಮಾಡಿ |
 | `Se248d5` | list, new | New change set | ಹೊಸ ಬದಲಾವಣೆ ಸಮೂಹ |
 | `Se75aa1` | list, new | New Release | ಹೊಸ ಬಿಡುಗಡೆ |
+| `S9bb526` | list, row | New row | ಹೊಸ ಸಾಲು |
 | `Se5076c` | list | No change sets yet. | ಇನ್ನೂ ಬದಲಾವಣೆ ಸಮೂಹಗಳಿಲ್ಲ. |
 | `Sd32c03` | list | No releases yet. | ಇನ್ನೂ ಬಿಡುಗಡೆಗಳಿಲ್ಲ. |
+| `Sb5b22c` | list | No row matches. | ಯಾವ ಸಾಲೂ ಹೊಂದುವುದಿಲ್ಲ. |
 | `Sc3af43` | list | No saved searches yet. | ಇನ್ನೂ ಉಳಿಸಿದ ಹುಡುಕಾಟಗಳಿಲ್ಲ. |
 | `S0cb400` | list | No status codes match these filters. | ಈ ಫಿಲ್ಟರ್‌ಗಳಿಗೆ ಯಾವುದೇ ಸ್ಥಿತಿ ಕೋಡ್ ಹೊಂದುವುದಿಲ್ಲ. |
+| `S260f7a` | list, row | Node | ನೋಡ್ |
+| `S08250b` | list | number, title or group | ಸಂಖ್ಯೆ, ಶೀರ್ಷಿಕೆ ಅಥವಾ ಗುಂಪು |
 | `Sf7194e` | list | Requests | ವಿನಂತಿಗಳು |
 | `S37a530` | list | result | ಫಲಿತಾಂಶ |
 | `Scdf7e9` | list | results | ಫಲಿತಾಂಶಗಳು |
@@ -14230,10 +14856,14 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sff86e9` | list | Save the current filters as | ಪ್ರಸ್ತುತ ಫಿಲ್ಟರ್‌ಗಳನ್ನು ಈ ಹೆಸರಿನಲ್ಲಿ ಉಳಿಸಿ |
 | `Sed1d84` | list | Saved searches | ಉಳಿಸಿದ ಹುಡುಕಾಟಗಳು |
 | `S859822` | list, mine | Select | ಆಯ್ಕೆಮಾಡಿ |
+| `S45b553` | list | Select all rows | ಎಲ್ಲ ಸಾಲುಗಳನ್ನು ಆಯ್ಕೆಮಾಡಿ |
 | `S7f5583` | list, menu | Status Codes | ಸ್ಥಿತಿ ಕೋಡ್‌ಗಳು |
 | `S20bff1` | list | Status codes | ಸ್ಥಿತಿ ಕೋಡ್‌ಗಳು |
+| `S3a1066` | list | The mapping is empty. | ಮ್ಯಾಪಿಂಗ್ ಖಾಲಿಯಾಗಿದೆ. |
+| `S27d95b` | list | The rows stay as they are. Once the StCd Owner, the Chief Engineer and an Administrator approve, they count as approved numbers. | ಸಾಲುಗಳು ಇದ್ದಂತೆಯೇ ಇರುತ್ತವೆ. StCd ಮಾಲೀಕ, ಮುಖ್ಯ ಎಂಜಿನಿಯರ್ ಮತ್ತು ಒಬ್ಬ ನಿರ್ವಾಹಕ ಅನುಮೋದಿಸಿದಾಗ ಅವು ಅನುಮೋದಿತ ಸಂಖ್ಯೆಗಳೆಂದು ಪರಿಗಣಿಸಲ್ಪಡುತ್ತವೆ. |
 | `Se90eb0` | list | Turbine Platform | ಟರ್ಬೈನ್ ವೇದಿಕೆ |
 | `S86b1e7` | list | Typos are tolerated: "convertor" still finds "converter". | ಟೈಪಿಂಗ್ ದೋಷಗಳನ್ನು ಸಹಿಸಲಾಗುತ್ತದೆ: "convertor" ಇನ್ನೂ "converter" ಅನ್ನು ಕಂಡುಹಿಡಿಯುತ್ತದೆ. |
+| `Sb0c551` | list | Which legacy status code becomes which new one, with what the program files do not carry: the English title, the type, the up/down counter, the access levels, cause and directive. A row changes only by a request that the StCd Owner, the Chief Engineer and an Administrator all approve. | ಯಾವ ಹಳೆಯ ಸ್ಟೇಟಸ್ ಕೋಡ್ ಯಾವ ಹೊಸದಾಗುತ್ತದೆ, ಪ್ರೋಗ್ರಾಂ ಫೈಲ್‌ಗಳಲ್ಲಿ ಇಲ್ಲದ ಮಾಹಿತಿಯೊಂದಿಗೆ: ಇಂಗ್ಲಿಷ್ ಶೀರ್ಷಿಕೆ, ಪ್ರಕಾರ, ಮೇಲೆ/ಕೆಳಗೆ ಕೌಂಟರ್, ಪ್ರವೇಶ ಮಟ್ಟಗಳು, ಕಾರಣ ಮತ್ತು ನಿರ್ದೇಶನ. StCd ಮಾಲೀಕ, ಮುಖ್ಯ ಎಂಜಿನಿಯರ್ ಮತ್ತು ಒಬ್ಬ ನಿರ್ವಾಹಕ ಎಲ್ಲರೂ ಅನುಮೋದಿಸಿದ ವಿನಂತಿಯಿಂದ ಮಾತ್ರ ಸಾಲು ಬದಲಾಗುತ್ತದೆ. |
 | `Sf7c400` | login | Log in | ಲಾಗ್ ಇನ್ |
 | `S175835` | login | or | ಅಥವಾ |
 | `S8be3c9` | login, users | Password | ಪಾಸ್‌ವರ್ಡ್ |
@@ -14395,6 +15025,23 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S8cb56e` | message: lookup_admin_service | range_end must be greater than range_start | range_end, range_start ಗಿಂತ ದೊಡ್ಡದಾಗಿರಬೇಕು |
 | `Se3a971` | message: lookup_admin_service | sub_range_end must be greater than sub_range_start | sub_range_end, sub_range_start ಗಿಂತ ದೊಡ್ಡದಾಗಿರಬೇಕು |
 | `S1404e3` | message: lookup_service | functional_system_group query parameter is required for functional-subgroups | functional-subgroups ಗೆ functional_system_group ಕ್ವೆರಿ ಪ್ಯಾರಾಮೀಟರ್ ಅಗತ್ಯ |
+| `Sf28681` | message: mapping_service | Give the reason for the change; the three approvers read it first. | ಬದಲಾವಣೆಯ ಕಾರಣ ತಿಳಿಸಿ; ಮೂವರು ಅನುಮೋದಕರು ಅದನ್ನು ಮೊದಲು ಓದುತ್ತಾರೆ. |
+| `S062788` | message: mapping_service | Give the request a title of at most 120 characters. | ವಿನಂತಿಗೆ ಗರಿಷ್ಠ 120 ಅಕ್ಷರಗಳ ಶೀರ್ಷಿಕೆ ನೀಡಿ. |
+| `S2ea56f` | message: mapping_service | Mapping change not found | ಮ್ಯಾಪಿಂಗ್ ಬದಲಾವಣೆ ಸಿಗಲಿಲ್ಲ |
+| `S2c9363` | message: mapping_service | Mapping row not found | ಮ್ಯಾಪಿಂಗ್ ಸಾಲು ಸಿಗಲಿಲ್ಲ |
+| `S2d5693` | message: mapping_service | Only the person who made the request can withdraw it. | ವಿನಂತಿ ಮಾಡಿದ ವ್ಯಕ್ತಿ ಮಾತ್ರ ಅದನ್ನು ಹಿಂಪಡೆಯಬಹುದು. |
+| `S682269` | message: mapping_service | Only the StCd Owner, the Chief Engineer and an Administrator decide on the mapping. | ಮ್ಯಾಪಿಂಗ್ ಬಗ್ಗೆ StCd ಮಾಲೀಕ, ಮುಖ್ಯ ಎಂಜಿನಿಯರ್ ಮತ್ತು ಒಬ್ಬ ನಿರ್ವಾಹಕ ಮಾತ್ರ ನಿರ್ಧರಿಸುತ್ತಾರೆ. |
+| `S5e0f66` | message: mapping_service | Say why you reject the request. | ವಿನಂತಿಯನ್ನು ಏಕೆ ತಿರಸ್ಕರಿಸುತ್ತೀರಿ ಎಂದು ಹೇಳಿ. |
+| `S3d5cfc` | message: mapping_service | The comment is longer than 1000 characters. | ಟಿಪ್ಪಣಿ 1000 ಅಕ್ಷರಗಳಿಗಿಂತ ಉದ್ದವಾಗಿದೆ. |
+| `S82b817` | message: mapping_service | The decision must be APPROVE or REJECT. | ನಿರ್ಧಾರ APPROVE ಅಥವಾ REJECT ಆಗಿರಬೇಕು. |
+| `S9ec08a` | message: mapping_service | The file is not a readable .xlsx workbook. | ಫೈಲ್ ಓದಬಹುದಾದ .xlsx ವರ್ಕ್‌ಬುಕ್ ಅಲ್ಲ. |
+| `S3831f7` | message: mapping_service | The reason is longer than 2000 characters. | ಕಾರಣ 2000 ಅಕ್ಷರಗಳಿಗಿಂತ ಉದ್ದವಾಗಿದೆ. |
+| `Sa5de7d` | message: mapping_service | The request contains no row. | ವಿನಂತಿಯಲ್ಲಿ ಒಂದು ಸಾಲೂ ಇಲ್ಲ. |
+| `S2116e4` | message: mapping_service | The request is already closed. | ವಿನಂತಿ ಈಗಾಗಲೇ ಮುಚ್ಚಲಾಗಿದೆ. |
+| `S8518e7` | message: mapping_service | The role has decided already. | ಈ ಪಾತ್ರ ಈಗಾಗಲೇ ನಿರ್ಧರಿಸಿದೆ. |
+| `S2a15d7` | message: mapping_service | The workbook is larger than 5 MB. | ವರ್ಕ್‌ಬುಕ್ 5 MB ಗಿಂತ ದೊಡ್ಡದಾಗಿದೆ. |
+| `S8eb912` | message: mapping_service | The workbook unpacks to more than 80 MB. | ವರ್ಕ್‌ಬುಕ್ ತೆರೆದಾಗ 80 MB ಗಿಂತ ದೊಡ್ಡದಾಗುತ್ತದೆ. |
+| `S6c1d08` | message: mapping_service | Your role may not propose a change of the mapping. | ನಿಮ್ಮ ಪಾತ್ರ ಮ್ಯಾಪಿಂಗ್ ಬದಲಾವಣೆಯನ್ನು ಪ್ರಸ್ತಾಪಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ. |
 | `S4ada2b` | message: notification_service | Notification not found | ಸೂಚನೆ ಸಿಗಲಿಲ್ಲ |
 | `Sd92b89` | message: notification_service | This notification belongs to someone else. | ಈ ಸೂಚನೆ ಬೇರೊಬ್ಬರಿಗೆ ಸೇರಿದ್ದು. |
 | `Sb0cd00` | message: numbering_service | Identifier override must match StCd-NNNNN (five digits). | ಅತಿಕ್ರಮಿಸುವ ಗುರುತು StCd-NNNNN (ಐದು ಅಂಕೆಗಳು) ಗೆ ಹೊಂದಬೇಕು. |
@@ -14426,8 +15073,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S9671fb` | message: settings_service | must be true or false | true ಅಥವಾ false ಆಗಿರಬೇಕು |
 | `S5166bb` | message: st_import_service | A staged file changed after the preview. Upload again. | ಪೂರ್ವವೀಕ್ಷಣೆಯ ನಂತರ ಒಂದು ಸಿದ್ಧಪಡಿಸಿದ ಫೈಲ್ ಬದಲಾಗಿದೆ. ಮತ್ತೆ ಅಪ್‌ಲೋಡ್ ಮಾಡಿ. |
 | `Saa4de2` | message: st_import_service | controller must be auto, MC or HC | controller auto, MC ಅಥವಾ HC ಆಗಿರಬೇಕು |
-| `Sa30251` | message: st_import_service | default_category must be ERROR, WARNING or INFO | default_category ERROR, WARNING ಅಥವಾ INFO ಆಗಿರಬೇಕು |
-| `Sfe694a` | message: st_import_service | hc_proposal must be 1 or 2 | hc_proposal 1 ಅಥವಾ 2 ಆಗಿರಬೇಕು |
 | `S58bec3` | message: st_import_service | No StCd program files found. Upload .st files or a ZIP of them. | ಯಾವುದೇ StCd ಪ್ರೋಗ್ರಾಂ ಫೈಲ್‌ಗಳು ಸಿಗಲಿಲ್ಲ. .st ಫೈಲ್‌ಗಳು ಅಥವಾ ಅವುಗಳ ZIP ಅಪ್‌ಲೋಡ್ ಮಾಡಿ. |
 | `Sd9c5b0` | message: st_import_service | Nothing selected: tick at least one program that is ready. | ಏನೂ ಆಯ್ಕೆಯಾಗಿಲ್ಲ: ಕನಿಷ್ಠ ಒಂದು ಸಿದ್ಧ ಪ್ರೋಗ್ರಾಂ ಗುರುತಿಸಿ. |
 | `S5dbbd0` | message: st_import_service | The code is no longer an open Draft; preview the files again. | ಕೋಡ್ ಇನ್ನು ತೆರೆದ ಕರಡಲ್ಲ; ಫೈಲ್‌ಗಳನ್ನು ಮತ್ತೆ ಪೂರ್ವವೀಕ್ಷಿಸಿ. |
@@ -14574,6 +15219,23 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S05fc94` | role badge | Engineer | ಎಂಜಿನಿಯರ್ |
 | `S3c0e8a` | role badge | StCd Owner | StCd ಮಾಲೀಕ |
 | `Sdbad9f` | role badge | Viewer | ವೀಕ್ಷಕ |
+| `S7f2e4b` | row | Access levels | ಪ್ರವೇಶ ಮಟ್ಟಗಳು |
+| `S08f985` | row | Cause | ಕಾರಣ |
+| `S164e0b` | row | Directive | ನಿರ್ದೇಶನ |
+| `S283474` | row | New number | ಹೊಸ ಸಂಖ್ಯೆ |
+| `Sfa6fdd` | row | No request yet. The row is as it was loaded. | ಇನ್ನೂ ವಿನಂತಿ ಇಲ್ಲ. ಸಾಲು ಲೋಡ್ ಆದಂತೆಯೇ ಇದೆ. |
+| `Sf790fc` | row | Nothing is changed here directly: the form makes a request, and the row changes after the StCd Owner, the Chief Engineer and an Administrator have approved it. | ಇಲ್ಲಿ ನೇರವಾಗಿ ಏನೂ ಬದಲಾಗುವುದಿಲ್ಲ: ಫಾರ್ಮ್ ಒಂದು ವಿನಂತಿ ಮಾಡುತ್ತದೆ, ಮತ್ತು StCd ಮಾಲೀಕ, ಮುಖ್ಯ ಎಂಜಿನಿಯರ್ ಹಾಗೂ ಒಬ್ಬ ನಿರ್ವಾಹಕ ಅನುಮೋದಿಸಿದ ನಂತರ ಸಾಲು ಬದಲಾಗುತ್ತದೆ. |
+| `S9d728f` | row | Request approval of the number | ಸಂಖ್ಯೆಯ ಅನುಮೋದನೆಯನ್ನು ಕೇಳಿ |
+| `Sc8978f` | row | Request rejection of the number | ಸಂಖ್ಯೆಯ ತಿರಸ್ಕಾರವನ್ನು ಕೇಳಿ |
+| `Sc644eb` | row | Request that this number is never used? | ಈ ಸಂಖ್ಯೆಯನ್ನು ಎಂದಿಗೂ ಬಳಸಬಾರದೆಂದು ಕೇಳಬೇಕೇ? |
+| `Sb25913` | row | Request the new row | ಹೊಸ ಸಾಲನ್ನು ಕೇಳಿ |
+| `Sb04301` | row | Request this change | ಈ ಬದಲಾವಣೆಯನ್ನು ಕೇಳಿ |
+| `Sae91b6` | row | Requests for this row | ಈ ಸಾಲಿನ ವಿನಂತಿಗಳು |
+| `Sd59701` | row | Reset delay (parameter) | ರೀಸೆಟ್ ವಿಳಂಬ (ಪ್ಯಾರಾಮೀಟರ್) |
+| `Sfd64cd` | row | Set delay (parameter) | ಸೆಟ್ ವಿಳಂಬ (ಪ್ಯಾರಾಮೀಟರ್) |
+| `S9c0444` | row | The three approvers read the reason first. | ಮೂವರು ಅನುಮೋದಕರು ಮೊದಲು ಕಾರಣವನ್ನು ಓದುತ್ತಾರೆ. |
+| `Sc84745` | row | Title (English) | ಶೀರ್ಷಿಕೆ (ಇಂಗ್ಲಿಷ್) |
+| `S711eea` | row | Up/down counter | ಮೇಲೆ/ಕೆಳಗೆ ಕೌಂಟರ್ |
 | `S913aba` | settings | Save settings | ಸೆಟ್ಟಿಂಗ್‌ಗಳನ್ನು ಉಳಿಸಿ |
 | `Sb68734` | software_versions | Added | ಸೇರಿಸಿದ |
 | `S172415` | software_versions | added | ಸೇರಿಸಲಾಗಿದೆ |
@@ -14587,28 +15249,19 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd97d1e` | software_versions | Show | ತೋರಿಸಿ |
 | `S42ea2e` | software_versions | Software Versions | ಸಾಫ್ಟ್‌ವೇರ್ ಆವೃತ್ತಿಗಳು |
 | `S3bd89c` | software_versions | Which codes exist in which software version | ಯಾವ ಕೋಡ್‌ಗಳು ಯಾವ ಸಾಫ್ಟ್‌ವೇರ್ ಆವೃತ್ತಿಯಲ್ಲಿವೆ |
-| `S16e5d4` | st_new, st_preview | Alarm type | ಅಲಾರಂ ಪ್ರಕಾರ |
-| `S726d7a` | st_new | as above | ಮೇಲಿನಂತೆ |
-| `S9477fd` | st_new, st_preview | choose | ಆಯ್ಕೆಮಾಡಿ |
 | `Sb149ca` | st_new | Detect: a number from 10000 up is a Hub Controller program | ಪತ್ತೆ: 10000 ರಿಂದ ಮೇಲಿನ ಸಂಖ್ಯೆ ಹಬ್ ನಿಯಂತ್ರಕ ಪ್ರೋಗ್ರಾಂ |
 | `S7d06d0` | st_new | Every imported program becomes an ordinary Draft with the number it carries reserved. It still needs Cross-Domain Sign-Off, dual review and Chief Engineer approval before Release, and all Drafts of one import share a change set. | ಆಮದಾದ ಪ್ರತಿ ಪ್ರೋಗ್ರಾಂ ತನ್ನ ಸಂಖ್ಯೆಯನ್ನು ಕಾಯ್ದಿರಿಸಿದ ಸಾಮಾನ್ಯ ಕರಡಾಗುತ್ತದೆ. ಬಿಡುಗಡೆಗೆ ಮೊದಲು ಅದಕ್ಕೆ ಇನ್ನೂ ಅಂತರ-ಡೊಮೇನ್ ಸಹಿ, ದ್ವಿಗುಣ ಪರಿಶೀಲನೆ ಮತ್ತು ಮುಖ್ಯ ಎಂಜಿನಿಯರ್ ಅನುಮೋದನೆ ಬೇಕು, ಮತ್ತು ಒಂದು ಆಮದಿನ ಎಲ್ಲಾ ಕರಡುಗಳು ಒಂದು ಬದಲಾವಣೆ ಸಮೂಹವನ್ನು ಹಂಚಿಕೊಳ್ಳುತ್ತವೆ. |
-| `Sbda77c` | st_new | Every program names an alarm type. A type left at "as above" gets the category chosen above; the next page lets you set the category of single programs or of all ticked ones. | ಪ್ರತಿ ಪ್ರೋಗ್ರಾಂ ಒಂದು ಅಲಾರಂ ಪ್ರಕಾರವನ್ನು ಹೇಳುತ್ತದೆ. "ಮೇಲಿನಂತೆ" ಇರುವ ಪ್ರಕಾರಕ್ಕೆ ಮೇಲೆ ಆರಿಸಿದ ವರ್ಗ ಸಿಗುತ್ತದೆ; ಮುಂದಿನ ಪುಟದಲ್ಲಿ ನೀವು ಒಂದೊಂದು ಪ್ರೋಗ್ರಾಂನ ಅಥವಾ ಗುರುತಿಸಿದ ಎಲ್ಲವುಗಳ ವರ್ಗವನ್ನು ಹೊಂದಿಸಬಹುದು. |
 | `S3b9e43` | st_new | Hub Controller (legacy numbers, mapped to the new ones) | ಹಬ್ ನಿಯಂತ್ರಕ (ಹಳೆಯ ಸಂಖ್ಯೆಗಳು, ಹೊಸದಕ್ಕೆ ನಕ್ಷೆ ಮಾಡಲಾಗಿದೆ) |
 | `Sd7333f` | st_new | Import status codes from .st files | .st ಫೈಲ್‌ಗಳಿಂದ ಸ್ಥಿತಿ ಕೋಡ್‌ಗಳನ್ನು ಆಮದು ಮಾಡಿ |
-| `S6640a6` | st_new | New number of Hub Controller programs | ಹಬ್ ನಿಯಂತ್ರಕ ಪ್ರೋಗ್ರಾಂಗಳ ಹೊಸ ಸಂಖ್ಯೆ |
 | `Sc0eff1` | st_new | Or a whole folder | ಅಥವಾ ಪೂರ್ಣ ಫೋಲ್ಡರ್ |
 | `S94ddc1` | st_new | Program files (.st) or a ZIP | ಪ್ರೋಗ್ರಾಂ ಫೈಲ್‌ಗಳು (.st) ಅಥವಾ ಒಂದು ZIP |
-| `Sd99e2a` | st_new | Proposal 1: five-digit numbers (11000 and up) | ಪ್ರಸ್ತಾವನೆ 1: ಐದು ಅಂಕಿಯ ಸಂಖ್ಯೆಗಳು (11000 ರಿಂದ) |
-| `S2744b0` | st_new | Proposal 2: inside the Main Controller scheme | ಪ್ರಸ್ತಾವನೆ 2: ಮುಖ್ಯ ನಿಯಂತ್ರಕ ಯೋಜನೆಯೊಳಗೆ |
 | `S67640d` | st_new | Read files and preview | ಫೈಲ್‌ಗಳನ್ನು ಓದಿ ಮತ್ತು ಪೂರ್ವವೀಕ್ಷಣೆ ನೋಡಿ |
-| `S0af4fc` | st_new | Status category by alarm type (optional) | ಅಲಾರಂ ಪ್ರಕಾರದ ಪ್ರಕಾರ ಸ್ಥಿತಿ ವರ್ಗ (ಐಚ್ಛಿಕ) |
-| `S234237` | st_new | Status category of the new codes | ಹೊಸ ಕೋಡ್‌ಗಳ ಸ್ಥಿತಿ ವರ್ಗ |
-| `S61fc52` | st_new | The program files do not carry a category and none is assumed: choose one here, by alarm type below, or for each program in the preview. A program without a category is not imported. | ಪ್ರೋಗ್ರಾಂ ಫೈಲ್‌ಗಳಲ್ಲಿ ವರ್ಗ ಇರುವುದಿಲ್ಲ ಮತ್ತು ಯಾವುದನ್ನೂ ಊಹಿಸಲಾಗುವುದಿಲ್ಲ: ಇಲ್ಲಿ ಒಂದನ್ನು ಆರಿಸಿ, ಕೆಳಗೆ ಅಲಾರಂ ಪ್ರಕಾರದ ಪ್ರಕಾರ, ಅಥವಾ ಪೂರ್ವವೀಕ್ಷಣೆಯಲ್ಲಿ ಪ್ರತಿ ಪ್ರೋಗ್ರಾಂಗೆ ಆರಿಸಿ. ವರ್ಗವಿಲ್ಲದ ಪ್ರೋಗ್ರಾಂ ಆಮದಾಗುವುದಿಲ್ಲ. |
+| `Saa9df6` | st_new | The title, the type and the access levels of every program come from the mapping, never from the files. A program whose number is not in the mapping is blocked. | ಪ್ರತಿ ಪ್ರೋಗ್ರಾಂನ ಶೀರ್ಷಿಕೆ, ಪ್ರಕಾರ ಮತ್ತು ಪ್ರವೇಶ ಮಟ್ಟಗಳು ಮ್ಯಾಪಿಂಗ್‌ನಿಂದ ಬರುತ್ತವೆ, ಫೈಲ್‌ಗಳಿಂದ ಎಂದಿಗೂ ಅಲ್ಲ. ಸಂಖ್ಯೆ ಮ್ಯಾಪಿಂಗ್‌ನಲ್ಲಿ ಇಲ್ಲದ ಪ್ರೋಗ್ರಾಂ ತಡೆಹಿಡಿಯಲ್ಪಡುತ್ತದೆ. |
 | `S8f4c21` | st_new | Turbine platforms | ಟರ್ಬೈನ್ ವೇದಿಕೆಗಳು |
 | `S9ad4d4` | st_new | Upload the generated StCd_<n>.st programs — several files at once, a whole folder, or one ZIP. Nothing is created yet: the next page lists every program so you can tick the ones to import. | ರಚಿಸಿದ StCd_<n>.st ಪ್ರೋಗ್ರಾಂಗಳನ್ನು ಅಪ್‌ಲೋಡ್ ಮಾಡಿ — ಒಮ್ಮೆಗೇ ಹಲವು ಫೈಲ್‌ಗಳು, ಪೂರ್ಣ ಫೋಲ್ಡರ್ ಅಥವಾ ಒಂದು ZIP. ಇನ್ನೂ ಏನೂ ರಚಿಸಲಾಗುವುದಿಲ್ಲ: ಮುಂದಿನ ಪುಟ ಪ್ರತಿ ಪ್ರೋಗ್ರಾಂ ಅನ್ನು ಪಟ್ಟಿಮಾಡುತ್ತದೆ, ಆಮದು ಮಾಡಬೇಕಾದವುಗಳನ್ನು ಗುರುತಿಸಬಹುದು. |
+| `S16e5d4` | st_preview | Alarm type | ಅಲಾರಂ ಪ್ರಕಾರ |
 | `S2693e5` | st_preview | All Drafts of this import join one change set, so they can be reviewed and decided together. | ಈ ಆಮದಿನ ಎಲ್ಲಾ ಕರಡುಗಳು ಒಂದು ಬದಲಾವಣೆ ಸಮೂಹವನ್ನು ಸೇರುತ್ತವೆ, ಇದರಿಂದ ಅವನ್ನು ಒಟ್ಟಿಗೆ ಪರಿಶೀಲಿಸಿ ನಿರ್ಧರಿಸಬಹುದು. |
 | `Scbc694` | st_preview | already in the catalogue | ಈಗಾಗಲೇ ಕ್ಯಾಟಲಾಗ್‌ನಲ್ಲಿದೆ |
-| `Sc00673` | st_preview | Apply to the ticked programs | ಗುರುತಿಸಿದ ಪ್ರೋಗ್ರಾಂಗಳಿಗೆ ಅನ್ವಯಿಸಿ |
 | `Sdf88b8` | st_preview | blocked | ನಿರ್ಬಂಧಿತ |
 | `S6f7703` | st_preview | Changed and withdrawn programs are not ticked: tick the ones you want to update, revise or restore. | ಬದಲಾದ ಮತ್ತು ಹಿಂಪಡೆದ ಪ್ರೋಗ್ರಾಂಗಳನ್ನು ಗುರುತಿಸಲಾಗಿಲ್ಲ: ನವೀಕರಿಸಲು, ಪರಿಷ್ಕರಿಸಲು ಅಥವಾ ಮರುಸ್ಥಾಪಿಸಲು ಬಯಸುವವನ್ನು ಗುರುತಿಸಿ. |
 | `S78bb8b` | st_preview | Create Drafts for the ticked programs | ಗುರುತಿಸಿದ ಪ್ರೋಗ್ರಾಂಗಳಿಗೆ ಕರಡುಗಳನ್ನು ರಚಿಸಿ |
@@ -14626,8 +15279,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se58289` | st_preview | Programs found in the uploaded files | ಅಪ್‌ಲೋಡ್ ಮಾಡಿದ ಫೈಲ್‌ಗಳಲ್ಲಿ ಸಿಕ್ಕ ಪ್ರೋಗ್ರಾಂಗಳು |
 | `S75c053` | st_preview, workbench | ready | ಸಿದ್ಧ |
 | `S0723bf` | st_preview | Select all programs that are ready | ಸಿದ್ಧವಿರುವ ಎಲ್ಲಾ ಪ್ರೋಗ್ರಾಂಗಳನ್ನು ಆಯ್ಕೆಮಾಡಿ |
-| `Sae12bc` | st_preview, workbench | Status category | ಸ್ಥಿತಿ ವರ್ಗ |
-| `Sd7a322` | st_preview | Status category of the ticked programs | ಗುರುತಿಸಿದ ಪ್ರೋಗ್ರಾಂಗಳ ಸ್ಥಿತಿ ವರ್ಗ |
+| `S9a2439` | st_preview | Type (from the mapping) | ಪ್ರಕಾರ (ಮ್ಯಾಪಿಂಗ್‌ನಿಂದ) |
 | `S1a767a` | st_preview | updates the open Draft | ತೆರೆದ ಕರಡನ್ನು ನವೀಕರಿಸುತ್ತದೆ |
 | `S02499f` | st_preview | withdrawn | ಹಿಂಪಡೆಯಲಾಗಿದೆ |
 | `Sf0c3cf` | st_preview | without a legacy number | ಹಳೆಯ ಸಂಖ್ಯೆ ಇಲ್ಲದೆ |
@@ -14690,6 +15342,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S2fd88e` | translations | Copy from previous revision | ಹಿಂದಿನ ಪರಿಷ್ಕರಣೆಯಿಂದ ನಕಲಿಸಿ |
 | `Se522f0` | translations | Save draft translation | ಕರಡು ಅನುವಾದ ಉಳಿಸಿ |
 | `Scb0b87` | translations | source language text of revision | ಪರಿಷ್ಕರಣೆಯ ಮೂಲ ಭಾಷೆ ಪಠ್ಯ |
+| `S01209c` | upload | Also ask for approval of the unchanged rows that are only proposed | ಪ್ರಸ್ತಾವಿತವಾಗಿರುವ ಬದಲಾಗದ ಸಾಲುಗಳ ಅನುಮೋದನೆಯನ್ನೂ ಕೇಳಿ |
+| `Sddf8d9` | upload | Compare and make the request | ಹೋಲಿಸಿ ಮತ್ತು ವಿನಂತಿ ಮಾಡಿ |
+| `S028ebe` | upload | Download the current mapping | ಪ್ರಸ್ತುತ ಮ್ಯಾಪಿಂಗ್ ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ |
+| `S23bfbf` | upload | The workbook has problems. Nothing was requested. | ವರ್ಕ್‌ಬುಕ್‌ನಲ್ಲಿ ಸಮಸ್ಯೆಗಳಿವೆ. ಏನನ್ನೂ ವಿನಂತಿಸಲಾಗಿಲ್ಲ. |
+| `S24d49d` | upload | Title of the request | ವಿನಂತಿಯ ಶೀರ್ಷಿಕೆ |
+| `S88809a` | upload | Upload the corrected mapping as a workbook with the sheets MC and HC (download the current one as a model). Every new row and every row that differs becomes one request; rows the workbook does not mention stay as they are. The request takes effect only after the StCd Owner, the Chief Engineer and an Administrator have approved it. | ತಿದ್ದಿದ ಮ್ಯಾಪಿಂಗ್ ಅನ್ನು MC ಮತ್ತು HC ಶೀಟ್‌ಗಳಿರುವ ವರ್ಕ್‌ಬುಕ್ ಆಗಿ ಅಪ್‌ಲೋಡ್ ಮಾಡಿ (ಮಾದರಿಗಾಗಿ ಪ್ರಸ್ತುತದನ್ನು ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ). ಪ್ರತಿ ಹೊಸ ಮತ್ತು ಪ್ರತಿ ಭಿನ್ನ ಸಾಲು ಒಂದು ವಿನಂತಿಯಾಗುತ್ತದೆ; ವರ್ಕ್‌ಬುಕ್ ಉಲ್ಲೇಖಿಸದ ಸಾಲುಗಳು ಹಾಗೆಯೇ ಉಳಿಯುತ್ತವೆ. StCd ಮಾಲೀಕ, ಮುಖ್ಯ ಎಂಜಿನಿಯರ್ ಮತ್ತು ಒಬ್ಬ ನಿರ್ವಾಹಕ ಅನುಮೋದಿಸಿದ ನಂತರವೇ ವಿನಂತಿ ಜಾರಿಗೆ ಬರುತ್ತದೆ. |
+| `S09efdf` | upload | Workbook (.xlsx) | ವರ್ಕ್‌ಬುಕ್ (.xlsx) |
 | `S359a3b` | user_detail | Back to users | ಬಳಕೆದಾರರ ಪಟ್ಟಿಗೆ ಹಿಂದಿರುಗಿ |
 | `Sf6fdbe` | user_detail, users | Delete | ಅಳಿಸಿ |
 | `S9afe6c` | user_detail | Delete user | ಬಳಕೆದಾರರನ್ನು ಅಳಿಸಿ |
@@ -14749,6 +15408,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sa58dac` | workbench | Set values on the Drafts | ಕರಡುಗಳಲ್ಲಿ ಮೌಲ್ಯಗಳನ್ನು ಸೆಟ್ ಮಾಡಿ |
 | `Sa443bb` | workbench | Sign off the Drafts | ಕರಡುಗಳಿಗೆ ಸಹಿ ಮಾಡಿ |
 | `S53f47f` | workbench | Sign-off pending | ಸಹಿ ಬಾಕಿ |
+| `Sae12bc` | workbench | Status category | ಸ್ಥಿತಿ ವರ್ಗ |
 | `Sdc416e` | workbench | Step | ಹಂತ |
 | `Sf7710d` | workbench | Submit for review | ಪರಿಶೀಲನೆಗೆ ಸಲ್ಲಿಸಿ |
 | `Sa45adc` | workbench | Submit the Drafts | ಕರಡುಗಳನ್ನು ಸಲ್ಲಿಸಿ |
@@ -14761,7 +15421,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 
 ### 9.13 IN ଓଡ଼ିଆ 🇮🇳 — Odia
 
-1295 of 1296 strings translated; direction left to right.
+1355 of 1356 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -14772,13 +15432,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S141763` | _macros | Confirm with your password | ଆପଣଙ୍କ ପାସୱାର୍ଡ ସହ ନିଶ୍ଚିତ କରନ୍ତୁ |
 | `Sc326a4` | _macros, detail, form | Field | କ୍ଷେତ୍ର |
 | `S0a0f8a` | _macros | Field differences | କ୍ଷେତ୍ର ପାର୍ଥକ୍ୟ |
-| `Sbc9819` | _macros | Next | ପରବର୍ତ୍ତୀ |
+| `Sbc9819` | _macros, list | Next | ପରବର୍ତ୍ତୀ |
 | `S27cea7` | _macros | No field differences. | କ୍ଷେତ୍ରରେ କୌଣସି ପାର୍ଥକ୍ୟ ନାହିଁ। |
 | `S464e43` | _macros | on track | ସମୟରେ |
 | `Sba2fff` | _macros, dashboard, success_metrics | overdue | ସମୟ ସୀମା ଅତିକ୍ରାନ୍ତ |
-| `S600584` | _macros | Pages | ପୃଷ୍ଠାଗୁଡ଼ିକ |
+| `S600584` | _macros, list | Pages | ପୃଷ୍ଠାଗୁଡ଼ିକ |
 | `S810099` | _macros | Please check | ଦୟାକରି ଯାଞ୍ଚ କରନ୍ତୁ |
-| `S50f942` | _macros | Previous | ପୂର୍ବବର୍ତ୍ତୀ |
+| `S50f942` | _macros, list | Previous | ପୂର୍ବବର୍ତ୍ତୀ |
 | `S83fd6e` | _macros, stalled | red after | ପରେ ଲାଲ |
 | `S57e8a7` | _macros, success_metrics | slow | ମନ୍ଥର |
 | `S15198e` | _macros | Waiting since | ଠାରୁ ଅପେକ୍ଷା କରୁଛି |
@@ -14809,10 +15469,10 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S06b6ac` | approval_queue, builder, detail | Identifier | ପରିଚୟକ |
 | `S8e70d2` | approval_queue | Nothing is awaiting your approval. | ଆପଣଙ୍କ ଅନୁମୋଦନ ପାଇଁ କିଛି ଅପେକ୍ଷା କରୁନାହିଁ। |
 | `Sa74f16` | approval_queue, detail, review_queue | Reviewer | ସମୀକ୍ଷକ |
-| `S768e0c` | approval_queue, builder, detail | Title | ଶୀର୍ଷକ |
+| `S768e0c` | approval_queue, builder, change | Title | ଶୀର୍ଷକ |
 | `S33d306` | approval_queue, detail, mine | Waiting | ଅପେକ୍ଷା |
 | `S2cbacd` | audit_log | %(n)s total | ମୋଟ %(n)s |
-| `S97c89a` | audit_log | Action | କାର୍ଯ୍ୟ |
+| `S97c89a` | audit_log, change | Action | କାର୍ଯ୍ୟ |
 | `Scbd19b` | audit_log | Actor | କର୍ତ୍ତା |
 | `S811bdf` | audit_log | Actor ID | କର୍ତ୍ତା ପରିଚୟ |
 | `S8c85b1` | audit_log | after: | ପରେ: |
@@ -14823,7 +15483,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sc7fb31` | audit_log | Entity | ସତ୍ତା |
 | `S04d694` | audit_log | Entity ID | ସତ୍ତା ପରିଚୟ |
 | `Sbb4e99` | audit_log | Entity Type | ସତ୍ତା ପ୍ରକାର |
-| `Sd7decf` | audit_log, index, language | Filter | ଫିଲ୍ଟର୍ |
+| `Sd7decf` | audit_log, changes, index | Filter | ଫିଲ୍ଟର୍ |
 | `S3f6605` | audit_log, delegations, software_versions | From | ଠାରୁ |
 | `S0061b5` | audit_log | No matching audit entries. | ମେଳ ଖାଉଥିବା ଅଡିଟ୍ ଏଣ୍ଟ୍ରି ନାହିଁ। |
 | `S01f79f` | audit_log | Scoped view: showing only actions you performed. | ସୀମିତ ଦୃଶ୍ୟ: କେବଳ ଆପଣ କରିଥିବା କାର୍ଯ୍ୟଗୁଡ଼ିକ ଦେଖାଯାଉଛି। |
@@ -14842,7 +15502,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sbe504f` | base | Skip to main content | ମୁଖ୍ୟ ବିଷୟବସ୍ତୁକୁ ଯାଆନ୍ତୁ |
 | `S1b9aeb` | base, dashboard | unread | ଅପଠିତ |
 | `S2da600` | base, export, export_center | Version | ସଂସ୍କରଣ |
-| `S12625b` | base | waiting | ଅପେକ୍ଷାରେ |
+| `S12625b` | base, change | waiting | ଅପେକ୍ଷାରେ |
 | `S5a4692` | base | You are covering for a colleague | ଆପଣ ଜଣେ ସହକର୍ମୀଙ୍କ ବଦଳରେ କାମ କରୁଛନ୍ତି |
 | `S8e9c15` | builder | Candidate revisions | ପ୍ରାର୍ଥୀ ସଂସ୍କରଣ |
 | `Sdf2aa0` | builder | Functional Group / Subgroup | କାର୍ଯ୍ୟକ୍ଷମ ଗୋଷ୍ଠୀ / ଉପଗୋଷ୍ଠୀ |
@@ -14873,13 +15533,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S4105cf` | catalogue_health | exhausted | ଶେଷ |
 | `S57e8be` | catalogue_health, connections | Finding | ଉପଲବ୍ଧି |
 | `S1150a1` | catalogue_health | Gaps | ଫାଙ୍କ |
-| `S171a06` | catalogue_health, export, withdrawn_codes | Group | ଗୋଷ୍ଠୀ |
-| `Sb4aadc` | catalogue_health, legacy_mapping | Hub Controller | ହବ୍ ନିୟନ୍ତ୍ରକ |
+| `S171a06` | catalogue_health, export, list | Group | ଗୋଷ୍ଠୀ |
+| `Sb4aadc` | catalogue_health, legacy_mapping, list | Hub Controller | ହବ୍ ନିୟନ୍ତ୍ରକ |
 | `S8ae1c3` | catalogue_health | Left | ବାକି |
 | `S12c0f1` | catalogue_health | left | ବାକି |
 | `Sa7b60b` | catalogue_health | Left % | ବାକି % |
 | `S36a883` | catalogue_health | low | କମ୍ |
-| `S1b123c` | catalogue_health, legacy_mapping, st_new | Main Controller | ମୁଖ୍ୟ ନିୟନ୍ତ୍ରକ |
+| `S1b123c` | catalogue_health, legacy_mapping, list | Main Controller | ମୁଖ୍ୟ ନିୟନ୍ତ୍ରକ |
 | `S92185d` | catalogue_health, index | Missing | ଅନୁପସ୍ଥିତ |
 | `S57282a` | catalogue_health | Missing expected data | ଆଶାକୃତ ତଥ୍ୟ ଅନୁପସ୍ଥିତ |
 | `Sb8e95b` | catalogue_health | None found. | କିଛି ମିଳିଲା ନାହିଁ। |
@@ -14896,6 +15556,31 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S75a804` | catalogue_health | subgroup(s) are running out of numbers: | ଉପଗୋଷ୍ଠୀରେ ସଂଖ୍ୟା ଶେଷ ହେଉଛି: |
 | `S5fec4f` | catalogue_health | Unused numbers inside a band | ପଟ୍ଟି ଭିତରେ ଅବ୍ୟବହୃତ ସଂଖ୍ୟା |
 | `S02c0e4` | catalogue_health | Used | ବ୍ୟବହୃତ |
+| `S84f219` | change | All three, each by a different person who did not make the request. | ତିନିଟି ଯାକ, ପ୍ରତ୍ୟେକ ଭିନ୍ନ ବ୍ୟକ୍ତିଙ୍କ ଦ୍ୱାରା, ଯିଏ ଅନୁରୋଧ କରିନାହାଁନ୍ତି। |
+| `S477aeb` | change, upload | and more | ଏବଂ ଅଧିକ |
+| `Sdeb9d0` | change, changes | Approvals | ଅନୁମୋଦନ |
+| `S7b2c7f` | change, detail, language | Approve | ଅନୁମୋଦନ କରନ୍ତୁ |
+| `S8aa57d` | change, detail | Changes | ପରିବର୍ତ୍ତନ |
+| `S3fe5e1` | change | Comment (required to reject) | ମନ୍ତବ୍ୟ (ପ୍ରତ୍ୟାଖ୍ୟାନ ପାଇଁ ଆବଶ୍ୟକ) |
+| `Sb48001` | change | Mapping change | ମ୍ୟାପିଂର ପରିବର୍ତ୍ତନ |
+| `Sd7c1d0` | change, changes, list | Mapping changes | ମ୍ୟାପିଂର ପରିବର୍ତ୍ତନଗୁଡ଼ିକ |
+| `Sf26140` | change, legacy_mapping, list | New identifier | ନୂଆ ପରିଚୟକ |
+| `Sf219cc` | change, list, row | Reason | କାରଣ |
+| `S2b03b5` | change, detail | Reject | ପ୍ରତ୍ୟାଖ୍ୟାନ କରନ୍ତୁ |
+| `S5108c2` | change, changes | Requested by | ଅନୁରୋଧକାରୀ |
+| `S52d0b3` | change, changes, detail | Rows | ଧାଡ଼ି |
+| `S6c30d2` | change, dry_run, list | rows | ଧାଡ଼ି |
+| `Sfabd38` | change | These rows changed after the request was made; it cannot be applied. Withdraw it and make it again: | ଅନୁରୋଧ ପରେ ଏହି ଧାଡ଼ିଗୁଡ଼ିକ ବଦଳିଗଲା; ଏହାକୁ ଲାଗୁ କରାଯାଇପାରିବ ନାହିଁ। ଏହାକୁ ପ୍ରତ୍ୟାହାର କରି ପୁଣି କରନ୍ତୁ: |
+| `S47e564` | change, detail | Withdraw | ପ୍ରତ୍ୟାହାର |
+| `S30d359` | change | Withdraw this request? | ଏହି ଅନୁରୋଧ ପ୍ରତ୍ୟାହାର କରିବେ? |
+| `S88c173` | change | You made this request; another person must decide. | ଏହି ଅନୁରୋଧ ଆପଣ କରିଛନ୍ତି; ଅନ୍ୟ ଜଣେ ବ୍ୟକ୍ତି ନିଷ୍ପତ୍ତି ନେବା ଉଚିତ। |
+| `S04e02f` | change | Your role has decided already. | ଆପଣଙ୍କ ଭୂମିକା ପୂର୍ବରୁ ନିଷ୍ପତ୍ତି ନେଇସାରିଛି। |
+| `Sc7274c` | changes | Any state | ଯେକୌଣସି ଅବସ୍ଥା |
+| `S2a560c` | changes | Every change of the mapping is a request. It takes effect when the StCd Owner, the Chief Engineer and an Administrator have each approved it; one rejection closes it. | ମ୍ୟାପିଂର ପ୍ରତ୍ୟେକ ପରିବର୍ତ୍ତନ ଏକ ଅନୁରୋଧ। StCd ମାଲିକ, ମୁଖ୍ୟ ଇଞ୍ଜିନିୟର ଓ ଜଣେ ପ୍ରଶାସକ ପ୍ରତ୍ୟେକେ ଅନୁମୋଦନ କଲେ ତାହା କାର୍ଯ୍ୟକାରୀ ହୁଏ; ଗୋଟିଏ ପ୍ରତ୍ୟାଖ୍ୟାନ ଏହାକୁ ବନ୍ଦ କରେ। |
+| `Sdef2eb` | changes, list, menu | Mapping | ମ୍ୟାପିଂ |
+| `Se03e43` | changes | No request yet. | ଏପର୍ଯ୍ୟନ୍ତ କୌଣସି ଅନୁରୋଧ ନାହିଁ। |
+| `S5fc0e0` | changes | request(s) wait for your decision. | ଅନୁରୋଧଗୁଡ଼ିକ ଆପଣଙ୍କ ନିଷ୍ପତ୍ତି ପାଇଁ ଅପେକ୍ଷା କରିଛି। |
+| `Sa72502` | changes, detail, export | State | ସ୍ଥିତି |
 | `S97fd13` | check | Back to the terms | ଶବ୍ଦକୁ ଫେରନ୍ତୁ |
 | `S1bc9e5` | check | English string | ଇଂରାଜୀ ପାଠ୍ୟ |
 | `S5d54b3` | check | Every string uses the translated terms. | ପ୍ରତ୍ୟେକ ପାଠ୍ୟ ଅନୁବାଦିତ ଶବ୍ଦ ବ୍ୟବହାର କରେ। |
@@ -14976,7 +15661,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S9b0b4c` | detail | also the files without an access level (all columns) | ପ୍ରବେଶ ସ୍ତର ନଥିବା ଫାଇଲ୍ ମଧ୍ୟ (ସମସ୍ତ ସ୍ତମ୍ଭ) |
 | `Sf24c44` | detail | Any %(code)s Engineer | ଯେକୌଣସି %(code)s ଇଞ୍ଜିନିୟର |
 | `Sb99a01` | detail | Applies to software versions | ସଫ୍ଟୱେର୍ ସଂସ୍କରଣ ପ୍ରତି ପ୍ରଯୁଜ୍ୟ |
-| `S7b2c7f` | detail, language | Approve | ଅନୁମୋଦନ କରନ୍ତୁ |
 | `Sde38bf` | detail | Approve selected | ବଛାଯାଇଥିବା ଅନୁମୋଦନ କରନ୍ତୁ |
 | `Scf2999` | detail | Approving confirms these values; any change you make here is applied and audited. Rejecting ignores them. | ଅନୁମୋଦନ ଏହି ମୂଲ୍ୟଗୁଡ଼ିକୁ ନିଶ୍ଚିତ କରେ; ଆପଣ ଏଠାରେ କରୁଥିବା ଯେକୌଣସି ପରିବର୍ତ୍ତନ ପ୍ରୟୋଗ ହୁଏ ଓ ଅଡିଟ୍ ହୁଏ। ପ୍ରତ୍ୟାଖ୍ୟାନ ସେଗୁଡ଼ିକୁ ଅଣଦେଖା କରେ। |
 | `Sf7f2d5` | detail | Archive (requires 180-day retention elapsed) | ଆର୍କାଇଭ୍ କରନ୍ତୁ (180 ଦିନର ଧାରଣ ସମୟ ଅତିକ୍ରାନ୍ତ ହେବା ଆବଶ୍ୟକ) |
@@ -14997,7 +15681,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S4572f4` | detail | Change request | ପରିବର୍ତ୍ତନ ଅନୁରୋଧ |
 | `S3295be` | detail, workbench | Change requests in this set | ଏହି ସମୂହର ପରିବର୍ତ୍ତନ ଅନୁରୋଧ |
 | `S4d8006` | detail | Change set | ପରିବର୍ତ୍ତନ ସମୂହ |
-| `S8aa57d` | detail | Changes | ପରିବର୍ତ୍ତନ |
 | `S3d14ea` | detail, export | Changes of this release only | କେବଳ ଏହି ରିଲିଜ୍‌ର ପରିବର୍ତ୍ତନ |
 | `Sbd95c0` | detail | Checklist confirmed at sign-off | ସ୍ୱାକ୍ଷର ସମୟରେ ନିଶ୍ଚିତ ଚେକ୍‌ଲିଷ୍ଟ |
 | `S074d62` | detail, role badge | Chief Engineer | ମୁଖ୍ୟ ଇଞ୍ଜିନିୟର |
@@ -15015,7 +15698,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S7671b5` | detail | Confirm or override Audience Access | ଲକ୍ଷ୍ୟ ଗୋଷ୍ଠୀ ପ୍ରବେଶ ନିଶ୍ଚିତ ବା ଅତିକ୍ରମ କରନ୍ତୁ |
 | `S6512ee` | detail | Connection | ସଂଯୋଗ |
 | `S4f9be0` | detail | Content | ବିଷୟବସ୍ତୁ |
-| `Sa36a5f` | detail, legacy_mapping, st_new | Controller | ନିୟନ୍ତ୍ରକ |
+| `Sa36a5f` | detail, legacy_mapping, list | Controller | ନିୟନ୍ତ୍ରକ |
 | `Scd293f` | detail | Converter Reactive Power Program | କନଭର୍ଟର୍ ରିଆକ୍ଟିଭ୍ ପାୱାର୍ ପ୍ରୋଗ୍ରାମ୍ |
 | `S3998a7` | detail | Copies the descriptive fields into a new Draft in a Main Controller group (a new number is allocated at submit; this code's identifier is kept as the legacy reference). | ବର୍ଣ୍ଣନାତ୍ମକ କ୍ଷେତ୍ର ମୁଖ୍ୟ ନିୟନ୍ତ୍ରକ ଗୋଷ୍ଠୀର ନୂଆ ଖସଡ଼ାକୁ ନକଲ କରେ (ଦାଖଲ ସମୟରେ ନୂଆ ସଂଖ୍ୟା ଦିଆଯାଏ; ଏହି କୋଡ୍‌ର ପରିଚୟକ ପୁରୁଣା ସନ୍ଦର୍ଭ ଭାବେ ରଖାଯାଏ)। |
 | `S54b051` | detail | Copy this code for another turbine platform. The copy is a new Draft that links back here and goes through the normal review. | ଏହି କୋଡ୍ ଅନ୍ୟ ଟର୍ବାଇନ୍ ପ୍ଲାଟଫର୍ମ ପାଇଁ ନକଲ କରନ୍ତୁ। ନକଲ ଏଠାକୁ ଫେରି ଯୋଡ଼ିହେଉଥିବା ନୂଆ ଖସଡ଼ା ଏବଂ ସାଧାରଣ ସମୀକ୍ଷା ଦେଇ ଯାଏ। |
@@ -15149,7 +15832,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sf5ca9d` | detail | Recorded exports | ରେକର୍ଡ ହୋଇଥିବା ରପ୍ତାନି |
 | `Sa3f757` | detail | Reinstate to Released | ମୁକ୍ତକୁ ପୁନଃସ୍ଥାପନ କରନ୍ତୁ |
 | `S3238ca` | detail | Reinstatement reason | ପୁନଃସ୍ଥାପନ କାରଣ |
-| `S2b03b5` | detail | Reject | ପ୍ରତ୍ୟାଖ୍ୟାନ କରନ୍ତୁ |
 | `S27fb5c` | detail | Reject selected | ବଛାଯାଇଥିବା ପ୍ରତ୍ୟାଖ୍ୟାନ କରନ୍ତୁ |
 | `S045c2c` | detail | Related codes | ସମ୍ବନ୍ଧିତ କୋଡ୍ |
 | `S33a5a7` | detail | Relation | ସମ୍ପର୍କ |
@@ -15167,7 +15849,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S4c1aa6` | detail | Repeated-Error Escalation | ପୁନରାବୃତ୍ତ-ତ୍ରୁଟି ଉତ୍କଟତା |
 | `S4aed03` | detail | Request | ଅନୁରୋଧ |
 | `Sf3421a` | detail | Request a Sign-Off | ସ୍ୱାକ୍ଷର ଅନୁରୋଧ କରନ୍ତୁ |
-| `Sc26bf6` | detail, mine | Requested | ଅନୁରୋଧିତ |
+| `Sc26bf6` | detail, mine, row | Requested | ଅନୁରୋଧିତ |
 | `S2706ed` | detail | Required by | ଏଗୁଡ଼ିକ ପାଇଁ ଆବଶ୍ୟକ |
 | `S619e87` | detail, form | Reset Delay | ରିସେଟ୍ ବିଳମ୍ବ |
 | `S026ab2` | detail | resolved | ସମାଧାନ ହୋଇଛି |
@@ -15177,7 +15859,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S3beb9a` | detail | Revision | ସଂସ୍କରଣ |
 | `Sa72973` | detail | Revision Fields | ସଂସ୍କରଣ କ୍ଷେତ୍ର |
 | `Sfc1d6a` | detail | row(s) imported as Drafts | ଧାଡ଼ି ଖସଡ଼ା ଭାବେ ଆମଦାନି ହୋଇଛି |
-| `S52d0b3` | detail, reconciliation, user_detail | Rows | ଧାଡ଼ି |
 | `Sd0edfb` | detail | Sales | ବିକ୍ରୟ |
 | `S241bf5` | detail, workbench | Sample number | ନମୁନା ନମ୍ବର |
 | `Sda38c6` | detail | Save planned dates | ଯୋଜନାବଦ୍ଧ ତାରିଖ ସଞ୍ଚୟ କରନ୍ତୁ |
@@ -15196,11 +15877,10 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sece2ac` | detail, form | Slot | ସ୍ଲଟ୍ |
 | `Sff44d2` | detail | Software Version | ସଫ୍ଟୱେର୍ ସଂସ୍କରଣ |
 | `S169bf7` | detail, export, software_versions | Software version | ସଫ୍ଟୱେର୍ ସଂସ୍କରଣ |
-| `S6da13a` | detail, fleet_feedback | Source | ଉତ୍ସ |
+| `S6da13a` | detail, fleet_feedback, row | Source | ଉତ୍ସ |
 | `Sd3c56b` | detail, export_profiles | source language | ଉତ୍ସ ଭାଷା |
 | `Sb3883f` | detail | Standards | ମାନକ |
 | `Sfaa9e7` | detail, reconciliation | Started | ଆରମ୍ଭ ହେଲା |
-| `Sa72502` | detail, export, hub_consolidation | State | ସ୍ଥିତି |
 | `Se246b6` | detail, form, list | Status Category | ସ୍ଥିତି ବର୍ଗ |
 | `S779953` | detail, form | Status Code for Repeated Error | ପୁନରାବୃତ୍ତ ତ୍ରୁଟି ପାଇଁ ସ୍ଥିତି କୋଡ୍ |
 | `S98a377` | detail | Still a Draft. | ଏପର୍ଯ୍ୟନ୍ତ ଖସଡ଼ା। |
@@ -15219,7 +15899,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Seaf576` | detail, form | Trigger Snapshot | ସ୍ନାପ୍‌ଶଟ୍ ଟ୍ରିଗର୍ କରନ୍ତୁ |
 | `S285ec8` | detail, form | Troubleshooting | ତ୍ରୁଟି ନିବାରଣ |
 | `S71bba4` | detail | Turbine Operator Package | ଟର୍ବାଇନ୍ ଅପରେଟର୍ ପ୍ୟାକେଜ୍ |
-| `S3deb74` | detail, mine, review_queue | Type | ପ୍ରକାର |
+| `S3deb74` | detail, list, mine | Type | ପ୍ରକାର |
 | `Sab631e` | detail | Type %(id)s to confirm | ନିଶ୍ଚିତ କରିବାକୁ %(id)s ଟାଇପ୍ କରନ୍ତୁ |
 | `Sb5e264` | detail | Type the identifier to confirm | ନିଶ୍ଚିତ କରିବାକୁ ପରିଚୟକ ଟାଇପ୍ କରନ୍ତୁ |
 | `S835f8a` | detail | Umrichterprogramm GSC | କନଭର୍ଟର୍ ପ୍ରୋଗ୍ରାମ୍ GSC |
@@ -15238,7 +15918,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S51ecc5` | detail | What happens next | ପରେ କ’ଣ ହୁଏ |
 | `Sf323c0` | detail | Where used | କେଉଁଠାରେ ବ୍ୟବହୃତ |
 | `S7d5316` | detail | Who | କିଏ |
-| `S47e564` | detail | Withdraw | ପ୍ରତ୍ୟାହାର |
 | `S51a998` | detail | Withdraw this change request? | ଏହି ପରିବର୍ତ୍ତନ ଅନୁରୋଧ ପ୍ରତ୍ୟାହାର କରିବେ? |
 | `S93ef7c` | detail, workbench | Workbench | ୱାର୍କବେଞ୍ଚ |
 | `S95a2a4` | detail, form | Write level | ଲେଖିବା ସ୍ତର |
@@ -15258,7 +15937,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sec0298` | dry_run | Result per row | ପ୍ରତି ଧାଡ଼ି ଫଳାଫଳ |
 | `S9bf7a8` | dry_run | Row | ଧାଡ଼ି |
 | `S3ff0b0` | dry_run | row(s) have problems. Nothing has been created. | ଧାଡ଼ିରେ ସମସ୍ୟା ଅଛି। କିଛି ତିଆରି ହୋଇନାହିଁ। |
-| `S6c30d2` | dry_run | rows | ଧାଡ଼ି |
 | `S8012ff` | dry_run | unchanged | ଅପରିବର୍ତ୍ତିତ |
 | `S83d655` | dry_run, st_preview | warning(s) | ଚେତାବନୀ |
 | `S9ddad9` | dry_run | would be created | ତିଆରି ହୁଅନ୍ତା |
@@ -15400,6 +16078,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S285edc` | help and messages | %(ok)s of %(n)s: %(what)s. | %(ok)s / %(n)s: %(what)s। |
 | `Sb08e6c` | help and messages | A Reviewer and an Administrator each sign off (in any order). If either rejects, it goes back to the author. | ଜଣେ ସମୀକ୍ଷକ ଓ ଜଣେ ପ୍ରଶାସକ ପ୍ରତ୍ୟେକେ ସ୍ୱାକ୍ଷର କରନ୍ତି (ଯେକୌଣସି କ୍ରମରେ)। ଯେକେହି ପ୍ରତ୍ୟାଖ୍ୟାନ କଲେ ଏହା ଲେଖକଙ୍କ ନିକଟକୁ ଫେରେ। |
 | `S2f1bed` | help and messages | An Administrator includes the revision in a Release and publishes it; then it is Released. | ପ୍ରଶାସକ ସଂସ୍କରଣକୁ ରିଲିଜ୍‌ରେ ଅନ୍ତର୍ଭୁକ୍ତ କରି ପ୍ରକାଶ କରନ୍ତି; ତା’ପରେ ଏହା ମୁକ୍ତ ହୁଏ। |
+| `S9477fd` | help and messages | choose | ବାଛନ୍ତୁ |
 | `S1308dc` | help and messages | defective codes sent back | ତ୍ରୁଟିପୂର୍ଣ୍ଣ କୋଡ୍ ଫେରାଇ ପଠାଗଲା |
 | `Se2bbd9` | help and messages | Drafts saved | ଖସଡ଼ା ସଞ୍ଚିତ ହେଲା |
 | `S0ddfa5` | help and messages | Drafts signed off | ଖସଡ଼ାର ସ୍ୱାକ୍ଷର ହେଲା |
@@ -15411,7 +16090,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sce489f` | help and messages | The author gets any required cross-domain sign-offs, then submits the change request for review. | ଲେଖକ ଆବଶ୍ୟକ ଆନ୍ତଃ-ଡୋମେନ୍ ସ୍ୱାକ୍ଷର ପାଆନ୍ତି, ତା’ପରେ ପରିବର୍ତ୍ତନ ଅନୁରୋଧ ସମୀକ୍ଷା ପାଇଁ ଦାଖଲ କରନ୍ତି। |
 | `S1cdbdd` | help and messages | The Chief Engineer approves or rejects. Approval makes the revision Approved (or Deprecated for a deprecation request). | ମୁଖ୍ୟ ଇଞ୍ଜିନିୟର ଅନୁମୋଦନ ବା ପ୍ରତ୍ୟାଖ୍ୟାନ କରନ୍ତି। ଅନୁମୋଦନ ସଂସ୍କରଣକୁ ଅନୁମୋଦିତ (ବା ପ୍ରଚଳନ ବନ୍ଦ ଅନୁରୋଧ ପାଇଁ ପ୍ରଚଳନ ବନ୍ଦ) କରେ। |
 | `S2d6ac0` | help and messages | The package is being built. Reload this page to follow its progress. | ପ୍ୟାକେଜ୍ ତିଆରି ହେଉଛି। ଅଗ୍ରଗତି ଦେଖିବାକୁ ଏହି ପୃଷ୍ଠା ପୁଣି ଲୋଡ୍ କରନ୍ତୁ। |
-| `Sde7a5b` | help and messages | The program files do not carry a category; you can change it in each Draft. | ପ୍ରୋଗ୍ରାମ୍ ଫାଇଲ୍ ବର୍ଗ ବହନ କରେ ନାହିଁ; ପ୍ରତ୍ୟେକ ଖସଡ଼ାରେ ଆପଣ ଏହାକୁ ବଦଳାଇପାରିବେ। |
 | `Scff3a3` | help and messages | User deleted; its name and address are erased, what it did stays attributable. | ଉପଯୋଗକର୍ତ୍ତା ଲିଭାଯାଇଛି; ତାଙ୍କ ନାମ ଓ ଠିକଣା ମାଡ଼ି ଦିଆଯାଇଛି, ସେ ଯାହା କରିଛନ୍ତି ତାହା ଚିହ୍ନଟଯୋଗ୍ୟ ରହେ। |
 | `Secfb3f` | hub_consolidation | Deprecate replaced Hub codes | ବଦଳାଯାଇଥିବା ହବ୍ କୋଡ୍ ପ୍ରଚଳନ ବନ୍ଦ କରନ୍ତୁ |
 | `S0e7766` | hub_consolidation, language | draft | ଖସଡ଼ା |
@@ -15422,7 +16100,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sc50c53` | hub_consolidation | Hub Controller to Main Controller consolidation | ହବ୍ ନିୟନ୍ତ୍ରକରୁ ମୁଖ୍ୟ ନିୟନ୍ତ୍ରକକୁ ଏକୀକରଣ |
 | `Scd189f` | hub_consolidation | Hub group | ହବ୍ ଗୋଷ୍ଠୀ |
 | `Sa5262b` | hub_consolidation | If the Hub Controller leaves the hardware setup, its codes are defined anew on the Main Controller side. Create an MC draft from an HC code on its detail page (Actions); this report shows how far each has come. Nothing is renumbered. | ହବ୍ ନିୟନ୍ତ୍ରକ ହାର୍ଡୱେର୍ ବିନ୍ୟାସରୁ ବାହାରିଗଲେ, ତା’ର କୋଡ୍ ମୁଖ୍ୟ ନିୟନ୍ତ୍ରକ ପକ୍ଷରେ ନୂଆ ଭାବେ ନିର୍ଦ୍ଧାରିତ ହୁଏ। HC କୋଡ୍‌ର ବିବରଣୀ ପୃଷ୍ଠାରେ (କାର୍ଯ୍ୟ) ତାହାଠାରୁ MC ଖସଡ଼ା ତିଆରି କରନ୍ତୁ; ପ୍ରତ୍ୟେକଟି କେତେ ଦୂର ଆସିଛି ଏହି ରିପୋର୍ଟ ଦେଖାଏ। କିଛି ପୁନଃସଂଖ୍ୟିତ ହୁଏ ନାହିଁ। |
-| `Sdd6555` | hub_consolidation, legacy_mapping, st_preview | Legacy no. | ପୁରୁଣା ସଂ. |
+| `Sdd6555` | hub_consolidation, legacy_mapping, list | Legacy no. | ପୁରୁଣା ସଂ. |
 | `S845a2b` | hub_consolidation | No Hub Controller codes yet. | ଏପର୍ଯ୍ୟନ୍ତ ହବ୍ ନିୟନ୍ତ୍ରକ କୋଡ୍ ନାହିଁ। |
 | `S138665` | hub_consolidation | Open deprecation requests | ପ୍ରଚଳନ ବନ୍ଦ ଅନୁରୋଧ ଖୋଲନ୍ତୁ |
 | `Sc8df93` | hub_consolidation | Open deprecation requests for all replaced Hub codes of this group? | ଏହି ଗୋଷ୍ଠୀର ସମସ୍ତ ବଦଳାଯାଇଥିବା ହବ୍ କୋଡ୍ ପାଇଁ ପ୍ରଚଳନ ବନ୍ଦ ଅନୁରୋଧ ଖୋଲିବେ? |
@@ -15481,7 +16159,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sded18c` | language | approved by | ଅନୁମୋଦକ |
 | `Sedd46e` | language | Check against the interface | ଇଣ୍ଟରଫେସ୍ ସହ ଯାଞ୍ଚ କରନ୍ତୁ |
 | `S5a013c` | language | missing | ଅନୁପସ୍ଥିତ |
-| `S2c924e` | language, workbench | Note | ଟିପ୍ପଣୀ |
+| `S2c924e` | language, row, workbench | Note | ଟିପ୍ପଣୀ |
 | `S2f09d0` | language | Note on %(x)s | %(x)s ଉପରେ ଟିପ୍ପଣୀ |
 | `S75bf99` | language | proposed by | ପ୍ରସ୍ତାବକ |
 | `Sc68e32` | language | Save translations | ଅନୁବାଦ ସଞ୍ଚୟ କରନ୍ତୁ |
@@ -15489,14 +16167,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S542818` | language | Terms of the language | ଭାଷାର ଶବ୍ଦ |
 | `Sae9e5d` | language | Translation of %(x)s | %(x)s ର ଅନୁବାଦ |
 | `S863fd0` | language | Your own proposal: another person approves it. | ଆପଣଙ୍କ ନିଜ ପ୍ରସ୍ତାବ: ଅନ୍ୟ କେହି ଏହାକୁ ଅନୁମୋଦନ କରନ୍ତି। |
-| `Sf9d469` | legacy_mapping | All controllers | ସମସ୍ତ ନିୟନ୍ତ୍ରକ |
+| `Sf9d469` | legacy_mapping, list | All controllers | ସମସ୍ତ ନିୟନ୍ତ୍ରକ |
 | `Se61c2f` | legacy_mapping | Any number state | ଯେକୌଣସି ସଂଖ୍ୟା ସ୍ଥିତି |
 | `S7c4f77` | legacy_mapping | issued | ପ୍ରଦତ୍ତ |
 | `Sfd5ec0` | legacy_mapping, menu, new | Legacy mapping | ପୁରୁଣା-ନୂଆ ମ୍ୟାପିଂ |
 | `S81f567` | legacy_mapping | Legacy number to new identifier | ପୁରୁଣା ସଂଖ୍ୟାରୁ ନୂଆ ପରିଚୟକକୁ |
 | `S64b267` | legacy_mapping | legacy number, identifier or name | ପୁରୁଣା ସଂଖ୍ୟା, ପରିଚୟକ ବା ନାମ |
 | `S60fe6c` | legacy_mapping | new codes without a legacy number (n/a) | ପୁରୁଣା ସଂଖ୍ୟା ବିନା ନୂଆ କୋଡ୍ (ପ୍ରଯୁଜ୍ୟ ନୁହେଁ) |
-| `Sf26140` | legacy_mapping, st_preview | New identifier | ନୂଆ ପରିଚୟକ |
 | `Sf573c8` | legacy_mapping | no number yet | ଏପର୍ଯ୍ୟନ୍ତ ସଂଖ୍ୟା ନାହିଁ |
 | `S7877c5` | legacy_mapping | No status code carries a legacy number yet. | ଏପର୍ଯ୍ୟନ୍ତ କୌଣସି ସ୍ଥିତି କୋଡ୍‌ରେ ପୁରୁଣା ସଂଖ୍ୟା ନାହିଁ। |
 | `Sb7baa1` | legacy_mapping | Number | ସଂଖ୍ୟା |
@@ -15505,10 +16182,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S8b0b7c` | legacy_mapping | with a legacy number | ପୁରୁଣା ସଂଖ୍ୟା ସହ |
 | `Seba07b` | list | A change set groups the change requests that ship with one controller software release, so reviewers see the whole package. Each request is still decided on its own. | ପରିବର୍ତ୍ତନ ସମୂହ ଗୋଟିଏ କଣ୍ଟ୍ରୋଲର୍ ସଫ୍ଟୱେର୍ ରିଲିଜ୍ ସହ ଯାଉଥିବା ପରିବର୍ତ୍ତନ ଅନୁରୋଧକୁ ଗୋଷ୍ଠୀଭୁକ୍ତ କରେ, ଯାହା ଦ୍ୱାରା ସମୀକ୍ଷକ ପୂର୍ଣ୍ଣ ପ୍ୟାକେଜ୍ ଦେଖନ୍ତି। ପ୍ରତ୍ୟେକ ଅନୁରୋଧ ଉପରେ ଏବେ ବି ଅଲଗା ନିଷ୍ପତ୍ତି ହୁଏ। |
 | `Sc5fe02` | list | any | ଯେକୌଣସି |
+| `S55201a` | list | Any status | ଯେକୌଣସି ସ୍ଥିତି |
 | `Sef5415` | list | Apply columns | ସ୍ତମ୍ଭ ପ୍ରୟୋଗ କରନ୍ତୁ |
+| `Sffb569` | list | Ask for approval of the ticked rows | ଚିହ୍ନିତ ଧାଡ଼ିର ଅନୁମୋଦନ ମାଗନ୍ତୁ |
 | `S9e895f` | list | Change sets | ପରିବର୍ତ୍ତନ ସମୂହ |
 | `S162a45` | list, menu | Change Sets | ପରିବର୍ତ୍ତନ ସେଟ୍ |
 | `Scf723c` | list | Columns | ସ୍ତମ୍ଭ |
+| `S2ddaf9` | list, upload | Compare a workbook | ୱାର୍କବୁକ୍ ତୁଳନା କରନ୍ତୁ |
 | `Seb0fd2` | list | Delete all my Drafts of this filter | ଏହି ଫିଲ୍ଟର୍‌ର ମୋର ସମସ୍ତ ଖସଡ଼ା ବିଲୋପ କରନ୍ତୁ |
 | `S36f212` | list | Delete ALL of your own Drafts that match this filter, on every page? | ଏହି ଫିଲ୍ଟର୍‌ ସହ ମେଳ ଖାଉଥିବା ଆପଣଙ୍କ ସମସ୍ତ ଖସଡ଼ା, ସବୁ ପୃଷ୍ଠାରେ, ବିଲୋପ କରିବେ? |
 | `Sc554a1` | list | Delete selected Drafts | ବଛାଯାଇଥିବା ଖସଡ଼ା ବିଲୋପ କରନ୍ତୁ |
@@ -15518,12 +16198,18 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S44d25b` | list | Items | ବିନ୍ଦୁ |
 | `S033df3` | list | Lifecycle | ଜୀବନଚକ୍ର |
 | `Sb4cad6` | list | Link to this view | ଏହି ଦୃଶ୍ୟକୁ ଲିଙ୍କ୍ |
+| `Sbdb4e1` | list | Load the initial mapping | ପ୍ରାରମ୍ଭିକ ମ୍ୟାପିଂ ଲୋଡ୍ କରନ୍ତୁ |
+| `Se07018` | list | Make the request | ଅନୁରୋଧ କରନ୍ତୁ |
 | `Se248d5` | list, new | New change set | ନୂଆ ପରିବର୍ତ୍ତନ ସମୂହ |
 | `Se75aa1` | list, new | New Release | ନୂଆ ରିଲିଜ୍ |
+| `S9bb526` | list, row | New row | ନୂଆ ଧାଡ଼ି |
 | `Se5076c` | list | No change sets yet. | ଏପର୍ଯ୍ୟନ୍ତ ପରିବର୍ତ୍ତନ ସମୂହ ନାହିଁ। |
 | `Sd32c03` | list | No releases yet. | ଏପର୍ଯ୍ୟନ୍ତ ରିଲିଜ୍ ନାହିଁ। |
+| `Sb5b22c` | list | No row matches. | କୌଣସି ଧାଡ଼ି ମେଳ ଖାଉନାହିଁ। |
 | `Sc3af43` | list | No saved searches yet. | ଏପର୍ଯ୍ୟନ୍ତ ସଞ୍ଚିତ ସନ୍ଧାନ ନାହିଁ। |
 | `S0cb400` | list | No status codes match these filters. | ଏହି ଫିଲ୍ଟର୍‌ ସହ କୌଣସି ସ୍ଥିତି କୋଡ୍ ମେଳ ଖାଏ ନାହିଁ। |
+| `S260f7a` | list, row | Node | ନୋଡ୍ |
+| `S08250b` | list | number, title or group | ସଂଖ୍ୟା, ଶୀର୍ଷକ କିମ୍ବା ଗୋଷ୍ଠୀ |
 | `Sf7194e` | list | Requests | ଅନୁରୋଧ |
 | `S37a530` | list | result | ଫଳାଫଳ |
 | `Scdf7e9` | list | results | ଫଳାଫଳ |
@@ -15532,10 +16218,14 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sff86e9` | list | Save the current filters as | ବର୍ତ୍ତମାନ ଫିଲ୍ଟର୍‌କୁ ଏହି ନାମରେ ସଞ୍ଚୟ କରନ୍ତୁ |
 | `Sed1d84` | list | Saved searches | ସଞ୍ଚିତ ସନ୍ଧାନ |
 | `S859822` | list, mine | Select | ବାଛନ୍ତୁ |
+| `S45b553` | list | Select all rows | ସମସ୍ତ ଧାଡ଼ି ବାଛନ୍ତୁ |
 | `S7f5583` | list, menu | Status Codes | ଅବସ୍ଥା କୋଡ୍ |
 | `S20bff1` | list | Status codes | ଅବସ୍ଥା କୋଡ୍ |
+| `S3a1066` | list | The mapping is empty. | ମ୍ୟାପିଂ ଖାଲି ଅଛି। |
+| `S27d95b` | list | The rows stay as they are. Once the StCd Owner, the Chief Engineer and an Administrator approve, they count as approved numbers. | ଧାଡ଼ିଗୁଡ଼ିକ ଯେପରି ଅଛି ସେପରି ରହେ। StCd ମାଲିକ, ମୁଖ୍ୟ ଇଞ୍ଜିନିୟର ଓ ଜଣେ ପ୍ରଶାସକ ଅନୁମୋଦନ କଲେ ସେଗୁଡ଼ିକ ଅନୁମୋଦିତ ସଂଖ୍ୟା ଗଣାଯାଏ। |
 | `Se90eb0` | list | Turbine Platform | ଟର୍ବାଇନ୍ ପ୍ଲାଟଫର୍ମ |
 | `S86b1e7` | list | Typos are tolerated: "convertor" still finds "converter". | ଟାଇପିଂ ଭୁଲ ସହ୍ୟ କରାଯାଏ: "convertor" ଏବେ ବି "converter" ଖୋଜିପାଏ। |
+| `Sb0c551` | list | Which legacy status code becomes which new one, with what the program files do not carry: the English title, the type, the up/down counter, the access levels, cause and directive. A row changes only by a request that the StCd Owner, the Chief Engineer and an Administrator all approve. | କେଉଁ ପୁରୁଣା ଷ୍ଟାଟସ୍ କୋଡ୍ କେଉଁ ନୂଆ ହୁଏ, ପ୍ରୋଗ୍ରାମ୍ ଫାଇଲରେ ନଥିବା ସୂଚନା ସହିତ: ଇଂରାଜୀ ଶୀର୍ଷକ, ପ୍ରକାର, ଉପର/ତଳ କାଉଣ୍ଟର, ପ୍ରବେଶ ସ୍ତର, କାରଣ ଓ ନିର୍ଦ୍ଦେଶ। StCd ମାଲିକ, ମୁଖ୍ୟ ଇଞ୍ଜିନିୟର ଓ ଜଣେ ପ୍ରଶାସକ ସମସ୍ତେ ଅନୁମୋଦନ କରିଥିବା ଅନୁରୋଧରେ ହିଁ ଧାଡ଼ି ବଦଳେ। |
 | `Sf7c400` | login | Log in | ଲଗ୍ ଇନ୍ |
 | `S175835` | login | or | ବା |
 | `S8be3c9` | login, users | Password | ପାସୱାର୍ଡ |
@@ -15697,6 +16387,23 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S8cb56e` | message: lookup_admin_service | range_end must be greater than range_start | range_end, range_start ଠାରୁ ବଡ଼ ହେବା ଉଚିତ |
 | `Se3a971` | message: lookup_admin_service | sub_range_end must be greater than sub_range_start | sub_range_end, sub_range_start ଠାରୁ ବଡ଼ ହେବା ଉଚିତ |
 | `S1404e3` | message: lookup_service | functional_system_group query parameter is required for functional-subgroups | functional-subgroups ପାଇଁ functional_system_group କ୍ୱେରୀ ପାରାମିଟର ଆବଶ୍ୟକ |
+| `Sf28681` | message: mapping_service | Give the reason for the change; the three approvers read it first. | ପରିବର୍ତ୍ତନର କାରଣ କୁହନ୍ତୁ; ତିନି ଅନୁମୋଦକ ଏହାକୁ ପ୍ରଥମେ ପଢ଼ନ୍ତି। |
+| `S062788` | message: mapping_service | Give the request a title of at most 120 characters. | ଅନୁରୋଧକୁ ସର୍ବାଧିକ 120 ଅକ୍ଷରର ଶୀର୍ଷକ ଦିଅନ୍ତୁ। |
+| `S2ea56f` | message: mapping_service | Mapping change not found | ମ୍ୟାପିଂର ପରିବର୍ତ୍ତନ ମିଳିଲା ନାହିଁ |
+| `S2c9363` | message: mapping_service | Mapping row not found | ମ୍ୟାପିଂର ଧାଡ଼ି ମିଳିଲା ନାହିଁ |
+| `S2d5693` | message: mapping_service | Only the person who made the request can withdraw it. | ଅନୁରୋଧ କରିଥିବା ବ୍ୟକ୍ତି ହିଁ ଏହାକୁ ପ୍ରତ୍ୟାହାର କରିପାରିବେ। |
+| `S682269` | message: mapping_service | Only the StCd Owner, the Chief Engineer and an Administrator decide on the mapping. | ମ୍ୟାପିଂ ଉପରେ କେବଳ StCd ମାଲିକ, ମୁଖ୍ୟ ଇଞ୍ଜିନିୟର ଓ ଜଣେ ପ୍ରଶାସକ ନିଷ୍ପତ୍ତି ନିଅନ୍ତି। |
+| `S5e0f66` | message: mapping_service | Say why you reject the request. | ଆପଣ ଅନୁରୋଧକୁ କାହିଁକି ପ୍ରତ୍ୟାଖ୍ୟାନ କରୁଛନ୍ତି କୁହନ୍ତୁ। |
+| `S3d5cfc` | message: mapping_service | The comment is longer than 1000 characters. | ମନ୍ତବ୍ୟ 1000 ଅକ୍ଷରଠାରୁ ଲମ୍ବା। |
+| `S82b817` | message: mapping_service | The decision must be APPROVE or REJECT. | ନିଷ୍ପତ୍ତି APPROVE କିମ୍ବା REJECT ହେବା ଉଚିତ। |
+| `S9ec08a` | message: mapping_service | The file is not a readable .xlsx workbook. | ଫାଇଲ୍ ପଢ଼ିହେବା ଭଳି .xlsx ୱାର୍କବୁକ୍ ନୁହେଁ। |
+| `S3831f7` | message: mapping_service | The reason is longer than 2000 characters. | କାରଣ 2000 ଅକ୍ଷରଠାରୁ ଲମ୍ବା। |
+| `Sa5de7d` | message: mapping_service | The request contains no row. | ଅନୁରୋଧରେ କୌଣସି ଧାଡ଼ି ନାହିଁ। |
+| `S2116e4` | message: mapping_service | The request is already closed. | ଅନୁରୋଧ ପୂର୍ବରୁ ବନ୍ଦ ହୋଇସାରିଛି। |
+| `S8518e7` | message: mapping_service | The role has decided already. | ଏହି ଭୂମିକା ପୂର୍ବରୁ ନିଷ୍ପତ୍ତି ନେଇସାରିଛି। |
+| `S2a15d7` | message: mapping_service | The workbook is larger than 5 MB. | ୱାର୍କବୁକ୍ 5 MB ଠାରୁ ବଡ଼। |
+| `S8eb912` | message: mapping_service | The workbook unpacks to more than 80 MB. | ୱାର୍କବୁକ୍ ଖୋଲିଲେ 80 MB ଠାରୁ ବଡ଼ ହୁଏ। |
+| `S6c1d08` | message: mapping_service | Your role may not propose a change of the mapping. | ଆପଣଙ୍କ ଭୂମିକା ମ୍ୟାପିଂର ପରିବର୍ତ୍ତନ ପ୍ରସ୍ତାବ କରିପାରିବ ନାହିଁ। |
 | `S4ada2b` | message: notification_service | Notification not found | ବିଜ୍ଞପ୍ତି ମିଳିଲା ନାହିଁ |
 | `Sd92b89` | message: notification_service | This notification belongs to someone else. | ଏହି ବିଜ୍ଞପ୍ତି ଅନ୍ୟ କାହାର। |
 | `Sb0cd00` | message: numbering_service | Identifier override must match StCd-NNNNN (five digits). | ଅତିକ୍ରମ ପରିଚୟକ StCd-NNNNN (ପାଞ୍ଚ ଅଙ୍କ) ସହ ମେଳ ଖାଇବା ଉଚିତ। |
@@ -15728,8 +16435,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S9671fb` | message: settings_service | must be true or false | true ବା false ହେବା ଉଚିତ |
 | `S5166bb` | message: st_import_service | A staged file changed after the preview. Upload again. | ପୂର୍ବାବଲୋକନ ପରେ ଏକ ପ୍ରସ୍ତୁତ ଫାଇଲ୍ ବଦଳିଛି। ପୁଣି ଅପଲୋଡ୍ କରନ୍ତୁ। |
 | `Saa4de2` | message: st_import_service | controller must be auto, MC or HC | controller auto, MC ବା HC ହେବା ଉଚିତ |
-| `Sa30251` | message: st_import_service | default_category must be ERROR, WARNING or INFO | default_category ERROR, WARNING ବା INFO ହେବା ଉଚିତ |
-| `Sfe694a` | message: st_import_service | hc_proposal must be 1 or 2 | hc_proposal 1 ବା 2 ହେବା ଉଚିତ |
 | `S58bec3` | message: st_import_service | No StCd program files found. Upload .st files or a ZIP of them. | କୌଣସି StCd ପ୍ରୋଗ୍ରାମ୍ ଫାଇଲ୍ ମିଳିଲା ନାହିଁ। .st ଫାଇଲ୍ ବା ସେଗୁଡ଼ିକର ZIP ଅପଲୋଡ୍ କରନ୍ତୁ। |
 | `Sd9c5b0` | message: st_import_service | Nothing selected: tick at least one program that is ready. | କିଛି ବଛାଯାଇନାହିଁ: ଅନ୍ତତଃ ଗୋଟିଏ ପ୍ରସ୍ତୁତ ପ୍ରୋଗ୍ରାମ୍ ଚିହ୍ନିତ କରନ୍ତୁ। |
 | `S5dbbd0` | message: st_import_service | The code is no longer an open Draft; preview the files again. | କୋଡ୍ ଆଉ ଖୋଲା ଖସଡ଼ା ନୁହେଁ; ଫାଇଲ୍ ପୁଣି ପୂର୍ବାବଲୋକନ କରନ୍ତୁ। |
@@ -15876,6 +16581,23 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S05fc94` | role badge | Engineer | ଇଞ୍ଜିନିୟର |
 | `S3c0e8a` | role badge | StCd Owner | StCd ମାଲିକ |
 | `Sdbad9f` | role badge | Viewer | ଦର୍ଶକ |
+| `S7f2e4b` | row | Access levels | ପ୍ରବେଶ ସ୍ତର |
+| `S08f985` | row | Cause | କାରଣ |
+| `S164e0b` | row | Directive | ନିର୍ଦ୍ଦେଶ |
+| `S283474` | row | New number | ନୂଆ ସଂଖ୍ୟା |
+| `Sfa6fdd` | row | No request yet. The row is as it was loaded. | ଏପର୍ଯ୍ୟନ୍ତ କୌଣସି ଅନୁରୋଧ ନାହିଁ। ଧାଡ଼ି ଲୋଡ୍ ହୋଇଥିବା ପରି ଅଛି। |
+| `Sf790fc` | row | Nothing is changed here directly: the form makes a request, and the row changes after the StCd Owner, the Chief Engineer and an Administrator have approved it. | ଏଠାରେ ସିଧାସଳଖ କିଛି ବଦଳେ ନାହିଁ: ଫର୍ମ ଏକ ଅନୁରୋଧ କରେ, ଏବଂ StCd ମାଲିକ, ମୁଖ୍ୟ ଇଞ୍ଜିନିୟର ଓ ଜଣେ ପ୍ରଶାସକ ଅନୁମୋଦନ କଲା ପରେ ଧାଡ଼ି ବଦଳେ। |
+| `S9d728f` | row | Request approval of the number | ସଂଖ୍ୟାର ଅନୁମୋଦନ ମାଗନ୍ତୁ |
+| `Sc8978f` | row | Request rejection of the number | ସଂଖ୍ୟାର ପ୍ରତ୍ୟାଖ୍ୟାନ ମାଗନ୍ତୁ |
+| `Sc644eb` | row | Request that this number is never used? | ଏହି ସଂଖ୍ୟା କେବେ ବ୍ୟବହାର ନହେବା ପାଇଁ ଅନୁରୋଧ କରିବେ? |
+| `Sb25913` | row | Request the new row | ନୂଆ ଧାଡ଼ି ମାଗନ୍ତୁ |
+| `Sb04301` | row | Request this change | ଏହି ପରିବର୍ତ୍ତନ ମାଗନ୍ତୁ |
+| `Sae91b6` | row | Requests for this row | ଏହି ଧାଡ଼ିର ଅନୁରୋଧ |
+| `Sd59701` | row | Reset delay (parameter) | ରିସେଟ୍ ବିଳମ୍ବ (ପାରାମିଟର) |
+| `Sfd64cd` | row | Set delay (parameter) | ସେଟ୍ ବିଳମ୍ବ (ପାରାମିଟର) |
+| `S9c0444` | row | The three approvers read the reason first. | ତିନି ଅନୁମୋଦକ ପ୍ରଥମେ କାରଣ ପଢ଼ନ୍ତି। |
+| `Sc84745` | row | Title (English) | ଶୀର୍ଷକ (ଇଂରାଜୀ) |
+| `S711eea` | row | Up/down counter | ଉପର/ତଳ କାଉଣ୍ଟର |
 | `S913aba` | settings | Save settings | ସେଟିଂସ୍ ସଞ୍ଚୟ କରନ୍ତୁ |
 | `Sb68734` | software_versions | Added | ଯୋଡ଼ା ହୋଇଥିବା |
 | `S172415` | software_versions | added | ଯୋଡ଼ାଗଲା |
@@ -15889,28 +16611,19 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd97d1e` | software_versions | Show | ଦେଖାନ୍ତୁ |
 | `S42ea2e` | software_versions | Software Versions | ସଫ୍ଟୱେର୍ ସଂସ୍କରଣ |
 | `S3bd89c` | software_versions | Which codes exist in which software version | କେଉଁ କୋଡ୍ କେଉଁ ସଫ୍ଟୱେର୍ ସଂସ୍କରଣରେ ଅଛି |
-| `S16e5d4` | st_new, st_preview | Alarm type | ଆଲାର୍ମ ପ୍ରକାର |
-| `S726d7a` | st_new | as above | ଉପରେ ପରି |
-| `S9477fd` | st_new, st_preview | choose | ବାଛନ୍ତୁ |
 | `Sb149ca` | st_new | Detect: a number from 10000 up is a Hub Controller program | ଚିହ୍ନଟ: 10000 ରୁ ଉପରର ସଂଖ୍ୟା ହବ୍ ନିୟନ୍ତ୍ରକ ପ୍ରୋଗ୍ରାମ୍ |
 | `S7d06d0` | st_new | Every imported program becomes an ordinary Draft with the number it carries reserved. It still needs Cross-Domain Sign-Off, dual review and Chief Engineer approval before Release, and all Drafts of one import share a change set. | ପ୍ରତ୍ୟେକ ଆମଦାନି ହୋଇଥିବା ପ୍ରୋଗ୍ରାମ୍ ନିଜ ସଂଖ୍ୟା ସଂରକ୍ଷିତ ଥିବା ସାଧାରଣ ଖସଡ଼ା ହୁଏ। ରିଲିଜ୍ ପୂର୍ବରୁ ଏହା ପାଇଁ ଏବେ ବି ଆନ୍ତଃ-ଡୋମେନ୍ ସ୍ୱାକ୍ଷର, ଦ୍ୱିଗୁଣ ସମୀକ୍ଷା ଓ ମୁଖ୍ୟ ଇଞ୍ଜିନିୟର ଅନୁମୋଦନ ଦରକାର, ଏବଂ ଗୋଟିଏ ଆମଦାନିର ସମସ୍ତ ଖସଡ଼ା ଗୋଟିଏ ପରିବର୍ତ୍ତନ ସମୂହ ଅଂଶୀଦାର କରେ। |
-| `Sbda77c` | st_new | Every program names an alarm type. A type left at "as above" gets the category chosen above; the next page lets you set the category of single programs or of all ticked ones. | ପ୍ରତ୍ୟେକ ପ୍ରୋଗ୍ରାମ୍ ଏକ ଆଲାର୍ମ ପ୍ରକାର କହେ। "ଉପରେ ପରି" ରହିଥିବା ପ୍ରକାରକୁ ଉପରେ ବଛାଯାଇଥିବା ବର୍ଗ ମିଳେ; ପରବର୍ତ୍ତୀ ପୃଷ୍ଠାରେ ଆପଣ ଏକ ଏକ ପ୍ରୋଗ୍ରାମ୍ର କିମ୍ବା ସମସ୍ତ ଚିହ୍ନିତର ବର୍ଗ ସ୍ଥିର କରିପାରିବେ। |
 | `S3b9e43` | st_new | Hub Controller (legacy numbers, mapped to the new ones) | ହବ୍ ନିୟନ୍ତ୍ରକ (ପୁରୁଣା ସଂଖ୍ୟା, ନୂଆ ସହ ମାନଚିତ୍ରିତ) |
 | `Sd7333f` | st_new | Import status codes from .st files | .st ଫାଇଲ୍‌ରୁ ସ୍ଥିତି କୋଡ୍ ଆମଦାନି କରନ୍ତୁ |
-| `S6640a6` | st_new | New number of Hub Controller programs | ହବ୍ ନିୟନ୍ତ୍ରକ ପ୍ରୋଗ୍ରାମ୍‌ର ନୂଆ ସଂଖ୍ୟା |
 | `Sc0eff1` | st_new | Or a whole folder | ବା ପୂର୍ଣ୍ଣ ଫୋଲ୍ଡର୍ |
 | `S94ddc1` | st_new | Program files (.st) or a ZIP | ପ୍ରୋଗ୍ରାମ୍ ଫାଇଲ୍ (.st) ବା ଗୋଟିଏ ZIP |
-| `Sd99e2a` | st_new | Proposal 1: five-digit numbers (11000 and up) | ପ୍ରସ୍ତାବ 1: ପାଞ୍ଚ ଅଙ୍କର ସଂଖ୍ୟା (11000 ରୁ) |
-| `S2744b0` | st_new | Proposal 2: inside the Main Controller scheme | ପ୍ରସ୍ତାବ 2: ମୁଖ୍ୟ ନିୟନ୍ତ୍ରକ ଯୋଜନା ଭିତରେ |
 | `S67640d` | st_new | Read files and preview | ଫାଇଲ୍ ପଢ଼ନ୍ତୁ ଓ ପୂର୍ବାବଲୋକନ ଦେଖନ୍ତୁ |
-| `S0af4fc` | st_new | Status category by alarm type (optional) | ଆଲାର୍ମ ପ୍ରକାର ଅନୁସାରେ ସ୍ଥିତି ବର୍ଗ (ଇଚ୍ଛାଧୀନ) |
-| `S234237` | st_new | Status category of the new codes | ନୂଆ କୋଡ୍‌ର ସ୍ଥିତି ବର୍ଗ |
-| `S61fc52` | st_new | The program files do not carry a category and none is assumed: choose one here, by alarm type below, or for each program in the preview. A program without a category is not imported. | ପ୍ରୋଗ୍ରାମ୍ ଫାଇଲରେ ବର୍ଗ ନଥାଏ ଏବଂ କୌଣସି ବର୍ଗ ଧରାଯାଏ ନାହିଁ: ଏଠାରେ ଗୋଟିଏ ବାଛନ୍ତୁ, ତଳେ ଆଲାର୍ମ ପ୍ରକାର ଅନୁସାରେ, କିମ୍ବା ପୂର୍ବଦୃଶ୍ୟରେ ପ୍ରତ୍ୟେକ ପ୍ରୋଗ୍ରାମ୍ ପାଇଁ ବାଛନ୍ତୁ। ବର୍ଗ ବିନା ପ୍ରୋଗ୍ରାମ୍ ଆମଦାନି ହୁଏ ନାହିଁ। |
+| `Saa9df6` | st_new | The title, the type and the access levels of every program come from the mapping, never from the files. A program whose number is not in the mapping is blocked. | ପ୍ରତ୍ୟେକ ପ୍ରୋଗ୍ରାମ୍‌ର ଶୀର୍ଷକ, ପ୍ରକାର ଓ ପ୍ରବେଶ ସ୍ତର ମ୍ୟାପିଂରୁ ଆସେ, ଫାଇଲରୁ କେବେ ନୁହେଁ। ଯେଉଁ ପ୍ରୋଗ୍ରାମ୍‌ର ସଂଖ୍ୟା ମ୍ୟାପିଂରେ ନାହିଁ ତାହା ଅବରୋଧିତ। |
 | `S8f4c21` | st_new | Turbine platforms | ଟର୍ବାଇନ୍ ପ୍ଲାଟଫର୍ମ |
 | `S9ad4d4` | st_new | Upload the generated StCd_<n>.st programs — several files at once, a whole folder, or one ZIP. Nothing is created yet: the next page lists every program so you can tick the ones to import. | ପ୍ରସ୍ତୁତ StCd_<n>.st ପ୍ରୋଗ୍ରାମ୍ ଅପଲୋଡ୍ କରନ୍ତୁ — ଥରକେ ଅନେକ ଫାଇଲ୍, ପୂର୍ଣ୍ଣ ଫୋଲ୍ଡର୍ ବା ଗୋଟିଏ ZIP। ଏପର୍ଯ୍ୟନ୍ତ କିଛି ତିଆରି ହୁଏ ନାହିଁ: ପରବର୍ତ୍ତୀ ପୃଷ୍ଠା ପ୍ରତ୍ୟେକ ପ୍ରୋଗ୍ରାମ୍ ତାଲିକାଭୁକ୍ତ କରେ ଯାହା ଦ୍ୱାରା ଆମଦାନି ହେବାକୁ ଥିବାଗୁଡ଼ିକୁ ଚିହ୍ନିତ କରିପାରିବେ। |
+| `S16e5d4` | st_preview | Alarm type | ଆଲାର୍ମ ପ୍ରକାର |
 | `S2693e5` | st_preview | All Drafts of this import join one change set, so they can be reviewed and decided together. | ଏହି ଆମଦାନିର ସମସ୍ତ ଖସଡ଼ା ଗୋଟିଏ ପରିବର୍ତ୍ତନ ସମୂହରେ ଯୋଗ ଦିଏ, ଯାହା ଦ୍ୱାରା ସେଗୁଡ଼ିକୁ ଏକାଠି ସମୀକ୍ଷା ଓ ନିଷ୍ପତ୍ତି କରାଯାଇପାରିବ। |
 | `Scbc694` | st_preview | already in the catalogue | ପୂର୍ବରୁ କ୍ୟାଟାଲଗ୍‌ରେ |
-| `Sc00673` | st_preview | Apply to the ticked programs | ଚିହ୍ନିତ ପ୍ରୋଗ୍ରାମ୍‌ରେ ଲାଗୁ କରନ୍ତୁ |
 | `Sdf88b8` | st_preview | blocked | ଅବରୁଦ୍ଧ |
 | `S6f7703` | st_preview | Changed and withdrawn programs are not ticked: tick the ones you want to update, revise or restore. | ବଦଳିଥିବା ଓ ପ୍ରତ୍ୟାହୃତ ପ୍ରୋଗ୍ରାମ୍ ଚିହ୍ନିତ ନୁହେଁ: ଅଦ୍ୟତନ, ସଂଶୋଧନ ବା ପୁନଃସ୍ଥାପନ କରିବାକୁ ଚାହୁଁଥିବାଗୁଡ଼ିକୁ ଚିହ୍ନିତ କରନ୍ତୁ। |
 | `S78bb8b` | st_preview | Create Drafts for the ticked programs | ଚିହ୍ନିତ ପ୍ରୋଗ୍ରାମ୍ ପାଇଁ ଖସଡ଼ା ତିଆରି କରନ୍ତୁ |
@@ -15928,8 +16641,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se58289` | st_preview | Programs found in the uploaded files | ଅପଲୋଡ୍ ହୋଇଥିବା ଫାଇଲରେ ମିଳିଥିବା ପ୍ରୋଗ୍ରାମ୍ |
 | `S75c053` | st_preview, workbench | ready | ପ୍ରସ୍ତୁତ |
 | `S0723bf` | st_preview | Select all programs that are ready | ପ୍ରସ୍ତୁତ ଥିବା ସମସ୍ତ ପ୍ରୋଗ୍ରାମ୍ ବାଛନ୍ତୁ |
-| `Sae12bc` | st_preview, workbench | Status category | ସ୍ଥିତି ବର୍ଗ |
-| `Sd7a322` | st_preview | Status category of the ticked programs | ଚିହ୍ନିତ ପ୍ରୋଗ୍ରାମ୍‌ର ସ୍ଥିତି ବର୍ଗ |
+| `S9a2439` | st_preview | Type (from the mapping) | ପ୍ରକାର (ମ୍ୟାପିଂରୁ) |
 | `S1a767a` | st_preview | updates the open Draft | ଖୋଲା ଖସଡ଼ା ଅଦ୍ୟତନ କରେ |
 | `S02499f` | st_preview | withdrawn | ପ୍ରତ୍ୟାହୃତ |
 | `Sf0c3cf` | st_preview | without a legacy number | ପୁରୁଣା ସଂଖ୍ୟା ବିନା |
@@ -15992,6 +16704,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S2fd88e` | translations | Copy from previous revision | ପୂର୍ବ ସଂସ୍କରଣରୁ ନକଲ କରନ୍ତୁ |
 | `Se522f0` | translations | Save draft translation | ଖସଡ଼ା ଅନୁବାଦ ସଞ୍ଚୟ କରନ୍ତୁ |
 | `Scb0b87` | translations | source language text of revision | ସଂସ୍କରଣର ଉତ୍ସ ଭାଷା ପାଠ୍ୟ |
+| `S01209c` | upload | Also ask for approval of the unchanged rows that are only proposed | କେବଳ ପ୍ରସ୍ତାବିତ ଅପରିବର୍ତ୍ତିତ ଧାଡ଼ିର ଅନୁମୋଦନ ମଧ୍ୟ ମାଗନ୍ତୁ |
+| `Sddf8d9` | upload | Compare and make the request | ତୁଳନା କରି ଅନୁରୋଧ କରନ୍ତୁ |
+| `S028ebe` | upload | Download the current mapping | ବର୍ତ୍ତମାନର ମ୍ୟାପିଂ ଡାଉନଲୋଡ୍ କରନ୍ତୁ |
+| `S23bfbf` | upload | The workbook has problems. Nothing was requested. | ୱାର୍କବୁକ୍‌ରେ ସମସ୍ୟା ଅଛି। କିଛି ଅନୁରୋଧ କରାଯାଇନାହିଁ। |
+| `S24d49d` | upload | Title of the request | ଅନୁରୋଧର ଶୀର୍ଷକ |
+| `S88809a` | upload | Upload the corrected mapping as a workbook with the sheets MC and HC (download the current one as a model). Every new row and every row that differs becomes one request; rows the workbook does not mention stay as they are. The request takes effect only after the StCd Owner, the Chief Engineer and an Administrator have approved it. | ସଂଶୋଧିତ ମ୍ୟାପିଂକୁ MC ଓ HC ସିଟ୍ ସହିତ ୱାର୍କବୁକ୍ ଭାବେ ଅପଲୋଡ୍ କରନ୍ତୁ (ନମୁନା ପାଇଁ ବର୍ତ୍ତମାନରଟି ଡାଉନଲୋଡ୍ କରନ୍ତୁ)। ପ୍ରତ୍ୟେକ ନୂଆ ଓ ପ୍ରତ୍ୟେକ ଭିନ୍ନ ଧାଡ଼ି ଏକ ଅନୁରୋଧ ହୁଏ; ୱାର୍କବୁକ୍ ଉଲ୍ଲେଖ ନକରିଥିବା ଧାଡ଼ି ଅପରିବର୍ତ୍ତିତ ରହେ। StCd ମାଲିକ, ମୁଖ୍ୟ ଇଞ୍ଜିନିୟର ଓ ଜଣେ ପ୍ରଶାସକ ଅନୁମୋଦନ କଲା ପରେ ହିଁ ଅନୁରୋଧ କାର୍ଯ୍ୟକାରୀ ହୁଏ। |
+| `S09efdf` | upload | Workbook (.xlsx) | ୱାର୍କବୁକ୍ (.xlsx) |
 | `S359a3b` | user_detail | Back to users | ଉପଯୋଗକର୍ତ୍ତା ତାଲିକାକୁ ଫେରନ୍ତୁ |
 | `Sf6fdbe` | user_detail, users | Delete | ଲିଭାନ୍ତୁ |
 | `S9afe6c` | user_detail | Delete user | ଉପଯୋଗକର୍ତ୍ତା ଲିଭାନ୍ତୁ |
@@ -16051,6 +16770,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sa58dac` | workbench | Set values on the Drafts | ଖସଡ଼ାରେ ମୂଲ୍ୟ ସେଟ୍ କରନ୍ତୁ |
 | `Sa443bb` | workbench | Sign off the Drafts | ଖସଡ଼ାର ସ୍ୱାକ୍ଷର କରନ୍ତୁ |
 | `S53f47f` | workbench | Sign-off pending | ସ୍ୱାକ୍ଷର ବାକି |
+| `Sae12bc` | workbench | Status category | ସ୍ଥିତି ବର୍ଗ |
 | `Sdc416e` | workbench | Step | ପଦକ୍ଷେପ |
 | `Sf7710d` | workbench | Submit for review | ସମୀକ୍ଷା ପାଇଁ ଦାଖଲ କରନ୍ତୁ |
 | `Sa45adc` | workbench | Submit the Drafts | ଖସଡ଼ା ଦାଖଲ କରନ୍ତୁ |
@@ -16063,7 +16783,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 
 ### 9.14 IN മലയാളം 🇮🇳 — Malayalam
 
-1295 of 1296 strings translated; direction left to right.
+1355 of 1356 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -16074,13 +16794,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S141763` | _macros | Confirm with your password | നിങ്ങളുടെ പാസ്‌വേഡ് ഉപയോഗിച്ച് സ്ഥിരീകരിക്കുക |
 | `Sc326a4` | _macros, detail, form | Field | ഫീൽഡ് |
 | `S0a0f8a` | _macros | Field differences | ഫീൽഡ് വ്യത്യാസങ്ങൾ |
-| `Sbc9819` | _macros | Next | അടുത്തത് |
+| `Sbc9819` | _macros, list | Next | അടുത്തത് |
 | `S27cea7` | _macros | No field differences. | ഫീൽഡ് വ്യത്യാസങ്ങളില്ല. |
 | `S464e43` | _macros | on track | സമയത്ത് |
 | `Sba2fff` | _macros, dashboard, success_metrics | overdue | സമയപരിധി കഴിഞ്ഞു |
-| `S600584` | _macros | Pages | പേജുകൾ |
+| `S600584` | _macros, list | Pages | പേജുകൾ |
 | `S810099` | _macros | Please check | ദയവായി പരിശോധിക്കുക |
-| `S50f942` | _macros | Previous | മുമ്പത്തേത് |
+| `S50f942` | _macros, list | Previous | മുമ്പത്തേത് |
 | `S83fd6e` | _macros, stalled | red after | ശേഷം ചുവപ്പ് |
 | `S57e8a7` | _macros, success_metrics | slow | മന്ദഗതി |
 | `S15198e` | _macros | Waiting since | മുതൽ കാത്തിരിക്കുന്നു |
@@ -16111,10 +16831,10 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S06b6ac` | approval_queue, builder, detail | Identifier | ഐഡന്റിഫയർ |
 | `S8e70d2` | approval_queue | Nothing is awaiting your approval. | നിങ്ങളുടെ അംഗീകാരത്തിനായി ഒന്നും കാത്തിരിക്കുന്നില്ല. |
 | `Sa74f16` | approval_queue, detail, review_queue | Reviewer | അവലോകകൻ |
-| `S768e0c` | approval_queue, builder, detail | Title | ശീർഷകം |
+| `S768e0c` | approval_queue, builder, change | Title | ശീർഷകം |
 | `S33d306` | approval_queue, detail, mine | Waiting | കാത്തിരിപ്പ് |
 | `S2cbacd` | audit_log | %(n)s total | ആകെ %(n)s |
-| `S97c89a` | audit_log | Action | പ്രവർത്തനം |
+| `S97c89a` | audit_log, change | Action | പ്രവർത്തനം |
 | `Scbd19b` | audit_log | Actor | കർത്താവ് |
 | `S811bdf` | audit_log | Actor ID | കർത്താവിന്റെ ഐഡി |
 | `S8c85b1` | audit_log | after: | ശേഷം: |
@@ -16125,7 +16845,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sc7fb31` | audit_log | Entity | എന്റിറ്റി |
 | `S04d694` | audit_log | Entity ID | എന്റിറ്റി ഐഡി |
 | `Sbb4e99` | audit_log | Entity Type | എന്റിറ്റി തരം |
-| `Sd7decf` | audit_log, index, language | Filter | ഫിൽട്ടർ |
+| `Sd7decf` | audit_log, changes, index | Filter | ഫിൽട്ടർ |
 | `S3f6605` | audit_log, delegations, software_versions | From | മുതൽ |
 | `S0061b5` | audit_log | No matching audit entries. | പൊരുത്തപ്പെടുന്ന ഓഡിറ്റ് രേഖകളില്ല. |
 | `S01f79f` | audit_log | Scoped view: showing only actions you performed. | പരിമിത കാഴ്ച: നിങ്ങൾ ചെയ്ത പ്രവർത്തനങ്ങൾ മാത്രം കാണിക്കുന്നു. |
@@ -16144,7 +16864,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sbe504f` | base | Skip to main content | പ്രധാന ഉള്ളടക്കത്തിലേക്ക് പോകുക |
 | `S1b9aeb` | base, dashboard | unread | വായിക്കാത്തവ |
 | `S2da600` | base, export, export_center | Version | പതിപ്പ് |
-| `S12625b` | base | waiting | കാത്തിരിക്കുന്നു |
+| `S12625b` | base, change | waiting | കാത്തിരിക്കുന്നു |
 | `S5a4692` | base | You are covering for a colleague | നിങ്ങൾ ഒരു സഹപ്രവർത്തകനു പകരം പ്രവർത്തിക്കുന്നു |
 | `S8e9c15` | builder | Candidate revisions | സ്ഥാനാർത്ഥി റിവിഷനുകൾ |
 | `Sdf2aa0` | builder | Functional Group / Subgroup | ഫങ്ഷണൽ ഗ്രൂപ്പ് / ഉപഗ്രൂപ്പ് |
@@ -16175,13 +16895,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S4105cf` | catalogue_health | exhausted | തീർന്നു |
 | `S57e8be` | catalogue_health, connections | Finding | കണ്ടെത്തൽ |
 | `S1150a1` | catalogue_health | Gaps | വിടവുകൾ |
-| `S171a06` | catalogue_health, export, withdrawn_codes | Group | ഗ്രൂപ്പ് |
-| `Sb4aadc` | catalogue_health, legacy_mapping | Hub Controller | ഹബ് കൺട്രോളർ |
+| `S171a06` | catalogue_health, export, list | Group | ഗ്രൂപ്പ് |
+| `Sb4aadc` | catalogue_health, legacy_mapping, list | Hub Controller | ഹബ് കൺട്രോളർ |
 | `S8ae1c3` | catalogue_health | Left | ബാക്കി |
 | `S12c0f1` | catalogue_health | left | ബാക്കി |
 | `Sa7b60b` | catalogue_health | Left % | ബാക്കി % |
 | `S36a883` | catalogue_health | low | കുറവ് |
-| `S1b123c` | catalogue_health, legacy_mapping, st_new | Main Controller | മെയിൻ കൺട്രോളർ |
+| `S1b123c` | catalogue_health, legacy_mapping, list | Main Controller | മെയിൻ കൺട്രോളർ |
 | `S92185d` | catalogue_health, index | Missing | കാണാനില്ല |
 | `S57282a` | catalogue_health | Missing expected data | പ്രതീക്ഷിച്ച ഡാറ്റ കാണാനില്ല |
 | `Sb8e95b` | catalogue_health | None found. | ഒന്നും കണ്ടെത്തിയില്ല. |
@@ -16198,6 +16918,31 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S75a804` | catalogue_health | subgroup(s) are running out of numbers: | ഉപഗ്രൂപ്പ്(കളിൽ) നമ്പറുകൾ തീരുന്നു: |
 | `S5fec4f` | catalogue_health | Unused numbers inside a band | ബാൻഡിനുള്ളിൽ ഉപയോഗിക്കാത്ത നമ്പറുകൾ |
 | `S02c0e4` | catalogue_health | Used | ഉപയോഗിച്ചത് |
+| `S84f219` | change | All three, each by a different person who did not make the request. | മൂന്നും, ഓരോന്നും അഭ്യർത്ഥന നടത്താത്ത വ്യത്യസ്ത വ്യക്തിയാൽ. |
+| `S477aeb` | change, upload | and more | കൂടാതെ കൂടുതൽ |
+| `Sdeb9d0` | change, changes | Approvals | അംഗീകാരങ്ങൾ |
+| `S7b2c7f` | change, detail, language | Approve | അംഗീകരിക്കുക |
+| `S8aa57d` | change, detail | Changes | മാറ്റങ്ങൾ |
+| `S3fe5e1` | change | Comment (required to reject) | അഭിപ്രായം (നിരസിക്കാൻ ആവശ്യമാണ്) |
+| `Sb48001` | change | Mapping change | മാപ്പിംഗിന്റെ മാറ്റം |
+| `Sd7c1d0` | change, changes, list | Mapping changes | മാപ്പിംഗിന്റെ മാറ്റങ്ങൾ |
+| `Sf26140` | change, legacy_mapping, list | New identifier | പുതിയ ഐഡന്റിഫയർ |
+| `Sf219cc` | change, list, row | Reason | കാരണം |
+| `S2b03b5` | change, detail | Reject | നിരസിക്കുക |
+| `S5108c2` | change, changes | Requested by | അഭ്യർത്ഥിച്ചത് |
+| `S52d0b3` | change, changes, detail | Rows | വരികൾ |
+| `S6c30d2` | change, dry_run, list | rows | വരികൾ |
+| `Sfabd38` | change | These rows changed after the request was made; it cannot be applied. Withdraw it and make it again: | അഭ്യർത്ഥനയ്ക്കു ശേഷം ഈ വരികൾ മാറി; അത് പ്രയോഗിക്കാൻ കഴിയില്ല. അത് പിൻവലിച്ച് വീണ്ടും നടത്തുക: |
+| `S47e564` | change, detail | Withdraw | പിൻവലിക്കുക |
+| `S30d359` | change | Withdraw this request? | ഈ അഭ്യർത്ഥന പിൻവലിക്കണോ? |
+| `S88c173` | change | You made this request; another person must decide. | ഈ അഭ്യർത്ഥന നിങ്ങൾ നടത്തിയതാണ്; മറ്റൊരാൾ തീരുമാനിക്കണം. |
+| `S04e02f` | change | Your role has decided already. | നിങ്ങളുടെ റോൾ ഇതിനകം തീരുമാനിച്ചു. |
+| `Sc7274c` | changes | Any state | ഏത് അവസ്ഥയും |
+| `S2a560c` | changes | Every change of the mapping is a request. It takes effect when the StCd Owner, the Chief Engineer and an Administrator have each approved it; one rejection closes it. | മാപ്പിംഗിലെ ഓരോ മാറ്റവും ഒരു അഭ്യർത്ഥനയാണ്. StCd ഉടമ, ചീഫ് എൻജിനീയർ, ഒരു അഡ്മിനിസ്ട്രേറ്റർ എന്നിവർ ഓരോരുത്തരും അംഗീകരിക്കുമ്പോൾ അത് പ്രാബല്യത്തിൽ വരും; ഒരു നിരസിക്കൽ അതിനെ അടയ്ക്കും. |
+| `Sdef2eb` | changes, list, menu | Mapping | മാപ്പിംഗ് |
+| `Se03e43` | changes | No request yet. | ഇതുവരെ അഭ്യർത്ഥന ഇല്ല. |
+| `S5fc0e0` | changes | request(s) wait for your decision. | അഭ്യർത്ഥനകൾ നിങ്ങളുടെ തീരുമാനത്തിനായി കാത്തിരിക്കുന്നു. |
+| `Sa72502` | changes, detail, export | State | നില |
 | `S97fd13` | check | Back to the terms | പദങ്ങളിലേക്ക് മടങ്ങുക |
 | `S1bc9e5` | check | English string | ഇംഗ്ലീഷ് വാചകം |
 | `S5d54b3` | check | Every string uses the translated terms. | ഓരോ വാചകവും വിവർത്തനം ചെയ്ത പദങ്ങൾ ഉപയോഗിക്കുന്നു. |
@@ -16278,7 +17023,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S9b0b4c` | detail | also the files without an access level (all columns) | ആക്‌സസ് തലമില്ലാത്ത ഫയലുകളും (എല്ലാ നിരകളും) |
 | `Sf24c44` | detail | Any %(code)s Engineer | ഏതെങ്കിലും %(code)s എൻജിനീയർ |
 | `Sb99a01` | detail | Applies to software versions | സോഫ്റ്റ്‌വെയർ പതിപ്പുകൾക്ക് ബാധകം |
-| `S7b2c7f` | detail, language | Approve | അംഗീകരിക്കുക |
 | `Sde38bf` | detail | Approve selected | തിരഞ്ഞെടുത്തവ അംഗീകരിക്കുക |
 | `Scf2999` | detail | Approving confirms these values; any change you make here is applied and audited. Rejecting ignores them. | അംഗീകാരം ഈ മൂല്യങ്ങളെ സ്ഥിരീകരിക്കുന്നു; ഇവിടെ നിങ്ങൾ വരുത്തുന്ന ഏത് മാറ്റവും പ്രയോഗിക്കുകയും ഓഡിറ്റ് ചെയ്യുകയും ചെയ്യും. നിരസിക്കൽ അവയെ അവഗണിക്കുന്നു. |
 | `Sf7f2d5` | detail | Archive (requires 180-day retention elapsed) | ആർക്കൈവ് ചെയ്യുക (180 ദിവസത്തെ നിലനിർത്തൽ കഴിഞ്ഞിരിക്കണം) |
@@ -16299,7 +17043,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S4572f4` | detail | Change request | മാറ്റ അഭ്യർത്ഥന |
 | `S3295be` | detail, workbench | Change requests in this set | ഈ സമൂഹത്തിലെ മാറ്റ അഭ്യർത്ഥനകൾ |
 | `S4d8006` | detail | Change set | മാറ്റ സമൂഹം |
-| `S8aa57d` | detail | Changes | മാറ്റങ്ങൾ |
 | `S3d14ea` | detail, export | Changes of this release only | ഈ റിലീസിലെ മാറ്റങ്ങൾ മാത്രം |
 | `Sbd95c0` | detail | Checklist confirmed at sign-off | സൈൻ-ഓഫ് സമയത്ത് സ്ഥിരീകരിച്ച ചെക്ക്‌ലിസ്റ്റ് |
 | `S074d62` | detail, role badge | Chief Engineer | ചീഫ് എൻജിനീയർ |
@@ -16317,7 +17060,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S7671b5` | detail | Confirm or override Audience Access | ലക്ഷ്യ ഗ്രൂപ്പ് പ്രവേശനം സ്ഥിരീകരിക്കുക അല്ലെങ്കിൽ അസാധുവാക്കുക |
 | `S6512ee` | detail | Connection | ബന്ധം |
 | `S4f9be0` | detail | Content | ഉള്ളടക്കം |
-| `Sa36a5f` | detail, legacy_mapping, st_new | Controller | കൺട്രോളർ |
+| `Sa36a5f` | detail, legacy_mapping, list | Controller | കൺട്രോളർ |
 | `Scd293f` | detail | Converter Reactive Power Program | കൺവെർട്ടർ റിയാക്ടീവ് പവർ പ്രോഗ്രാം |
 | `S3998a7` | detail | Copies the descriptive fields into a new Draft in a Main Controller group (a new number is allocated at submit; this code's identifier is kept as the legacy reference). | വിവരണ ഫീൽഡുകൾ മെയിൻ കൺട്രോളർ ഗ്രൂപ്പിലെ പുതിയ കരടിലേക്ക് പകർത്തുന്നു (സമർപ്പിക്കുമ്പോൾ പുതിയ നമ്പർ നൽകും; ഈ കോഡിന്റെ ഐഡന്റിഫയർ പഴയ റഫറൻസായി സൂക്ഷിക്കും). |
 | `S54b051` | detail | Copy this code for another turbine platform. The copy is a new Draft that links back here and goes through the normal review. | ഈ കോഡ് മറ്റൊരു ടർബൈൻ പ്ലാറ്റ്ഫോമിനായി പകർത്തുക. പകർപ്പ് ഇവിടേക്ക് തിരികെ ബന്ധിപ്പിക്കുന്ന പുതിയ കരടാണ്, സാധാരണ അവലോകനത്തിലൂടെ കടന്നുപോകുന്നു. |
@@ -16451,7 +17194,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sf5ca9d` | detail | Recorded exports | രേഖപ്പെടുത്തിയ എക്സ്പോർട്ടുകൾ |
 | `Sa3f757` | detail | Reinstate to Released | റിലീസ് ചെയ്തതിലേക്ക് പുനഃസ്ഥാപിക്കുക |
 | `S3238ca` | detail | Reinstatement reason | പുനഃസ്ഥാപന കാരണം |
-| `S2b03b5` | detail | Reject | നിരസിക്കുക |
 | `S27fb5c` | detail | Reject selected | തിരഞ്ഞെടുത്തവ നിരസിക്കുക |
 | `S045c2c` | detail | Related codes | ബന്ധപ്പെട്ട കോഡുകൾ |
 | `S33a5a7` | detail | Relation | ബന്ധം |
@@ -16469,7 +17211,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S4c1aa6` | detail | Repeated-Error Escalation | ആവർത്തിച്ചുള്ള-പിശക് വർദ്ധന |
 | `S4aed03` | detail | Request | അഭ്യർത്ഥന |
 | `Sf3421a` | detail | Request a Sign-Off | സൈൻ-ഓഫ് അഭ്യർത്ഥിക്കുക |
-| `Sc26bf6` | detail, mine | Requested | അഭ്യർത്ഥിച്ചത് |
+| `Sc26bf6` | detail, mine, row | Requested | അഭ്യർത്ഥിച്ചത് |
 | `S2706ed` | detail | Required by | ഇവയ്ക്ക് ആവശ്യം |
 | `S619e87` | detail, form | Reset Delay | റീസെറ്റ് കാലതാമസം |
 | `S026ab2` | detail | resolved | പരിഹരിച്ചു |
@@ -16479,7 +17221,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S3beb9a` | detail | Revision | റിവിഷൻ |
 | `Sa72973` | detail | Revision Fields | റിവിഷൻ ഫീൽഡുകൾ |
 | `Sfc1d6a` | detail | row(s) imported as Drafts | വരികൾ കരടുകളായി ഇറക്കുമതി ചെയ്തു |
-| `S52d0b3` | detail, reconciliation, user_detail | Rows | വരികൾ |
 | `Sd0edfb` | detail | Sales | വിൽപ്പന |
 | `S241bf5` | detail, workbench | Sample number | സാമ്പിൾ നമ്പർ |
 | `Sda38c6` | detail | Save planned dates | ആസൂത്രിത തീയതികൾ സംരക്ഷിക്കുക |
@@ -16498,11 +17239,10 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sece2ac` | detail, form | Slot | സ്ലോട്ട് |
 | `Sff44d2` | detail | Software Version | സോഫ്റ്റ്‌വെയർ പതിപ്പ് |
 | `S169bf7` | detail, export, software_versions | Software version | സോഫ്റ്റ്‌വെയർ പതിപ്പ് |
-| `S6da13a` | detail, fleet_feedback | Source | ഉറവിടം |
+| `S6da13a` | detail, fleet_feedback, row | Source | ഉറവിടം |
 | `Sd3c56b` | detail, export_profiles | source language | ഉറവിട ഭാഷ |
 | `Sb3883f` | detail | Standards | മാനദണ്ഡങ്ങൾ |
 | `Sfaa9e7` | detail, reconciliation | Started | ആരംഭിച്ചു |
-| `Sa72502` | detail, export, hub_consolidation | State | നില |
 | `Se246b6` | detail, form, list | Status Category | സ്റ്റാറ്റസ് വിഭാഗം |
 | `S779953` | detail, form | Status Code for Repeated Error | ആവർത്തിച്ചുള്ള പിശകിനുള്ള സ്റ്റാറ്റസ് കോഡ് |
 | `S98a377` | detail | Still a Draft. | ഇപ്പോഴും കരട്. |
@@ -16521,7 +17261,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Seaf576` | detail, form | Trigger Snapshot | സ്നാപ്ഷോട്ട് ട്രിഗർ ചെയ്യുക |
 | `S285ec8` | detail, form | Troubleshooting | പ്രശ്നപരിഹാരം |
 | `S71bba4` | detail | Turbine Operator Package | ടർബൈൻ ഓപ്പറേറ്റർ പാക്കേജ് |
-| `S3deb74` | detail, mine, review_queue | Type | തരം |
+| `S3deb74` | detail, list, mine | Type | തരം |
 | `Sab631e` | detail | Type %(id)s to confirm | സ്ഥിരീകരിക്കാൻ %(id)s ടൈപ്പ് ചെയ്യുക |
 | `Sb5e264` | detail | Type the identifier to confirm | സ്ഥിരീകരിക്കാൻ ഐഡന്റിഫയർ ടൈപ്പ് ചെയ്യുക |
 | `S835f8a` | detail | Umrichterprogramm GSC | കൺവെർട്ടർ പ്രോഗ്രാം GSC |
@@ -16540,7 +17280,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S51ecc5` | detail | What happens next | അടുത്തതായി എന്ത് സംഭവിക്കും |
 | `Sf323c0` | detail | Where used | എവിടെ ഉപയോഗിക്കുന്നു |
 | `S7d5316` | detail | Who | ആര് |
-| `S47e564` | detail | Withdraw | പിൻവലിക്കുക |
 | `S51a998` | detail | Withdraw this change request? | ഈ മാറ്റ അഭ്യർത്ഥന പിൻവലിക്കണോ? |
 | `S93ef7c` | detail, workbench | Workbench | വർക്ക്ബെഞ്ച് |
 | `S95a2a4` | detail, form | Write level | എഴുത്ത് നില |
@@ -16560,7 +17299,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sec0298` | dry_run | Result per row | ഓരോ വരിയുടെയും ഫലം |
 | `S9bf7a8` | dry_run | Row | വരി |
 | `S3ff0b0` | dry_run | row(s) have problems. Nothing has been created. | വരികളിൽ പ്രശ്നങ്ങളുണ്ട്. ഒന്നും സൃഷ്ടിച്ചിട്ടില്ല. |
-| `S6c30d2` | dry_run | rows | വരികൾ |
 | `S8012ff` | dry_run | unchanged | മാറ്റമില്ലാത്തത് |
 | `S83d655` | dry_run, st_preview | warning(s) | മുന്നറിയിപ്പ്(കൾ) |
 | `S9ddad9` | dry_run | would be created | സൃഷ്ടിക്കപ്പെടുമായിരുന്നു |
@@ -16702,6 +17440,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S285edc` | help and messages | %(ok)s of %(n)s: %(what)s. | %(ok)s / %(n)s: %(what)s. |
 | `Sb08e6c` | help and messages | A Reviewer and an Administrator each sign off (in any order). If either rejects, it goes back to the author. | ഒരു അവലോകകനും ഒരു അഡ്മിനിസ്ട്രേറ്ററും ഓരോരുത്തരും സൈൻ ഓഫ് ചെയ്യുന്നു (ഏത് ക്രമത്തിലും). ആരെങ്കിലും നിരസിച്ചാൽ അത് രചയിതാവിലേക്ക് മടങ്ങുന്നു. |
 | `S2f1bed` | help and messages | An Administrator includes the revision in a Release and publishes it; then it is Released. | അഡ്മിനിസ്ട്രേറ്റർ റിവിഷൻ റിലീസിൽ ഉൾപ്പെടുത്തി പ്രസിദ്ധീകരിക്കുന്നു; അപ്പോൾ അത് റിലീസ് ചെയ്തതാകുന്നു. |
+| `S9477fd` | help and messages | choose | തിരഞ്ഞെടുക്കുക |
 | `S1308dc` | help and messages | defective codes sent back | തകരാറുള്ള കോഡുകൾ തിരികെ അയച്ചു |
 | `Se2bbd9` | help and messages | Drafts saved | കരടുകൾ സംരക്ഷിച്ചു |
 | `S0ddfa5` | help and messages | Drafts signed off | കരടുകൾക്ക് സൈൻ-ഓഫ് നൽകി |
@@ -16713,7 +17452,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sce489f` | help and messages | The author gets any required cross-domain sign-offs, then submits the change request for review. | രചയിതാവ് ആവശ്യമായ ക്രോസ്-ഡൊമെയ്ൻ സൈൻ-ഓഫുകൾ നേടുന്നു, തുടർന്ന് മാറ്റ അഭ്യർത്ഥന അവലോകനത്തിനായി സമർപ്പിക്കുന്നു. |
 | `S1cdbdd` | help and messages | The Chief Engineer approves or rejects. Approval makes the revision Approved (or Deprecated for a deprecation request). | ചീഫ് എൻജിനീയർ അംഗീകരിക്കുകയോ നിരസിക്കുകയോ ചെയ്യുന്നു. അംഗീകാരം റിവിഷനെ അംഗീകരിച്ചതാക്കുന്നു (കാലഹരണപ്പെടുത്തൽ അഭ്യർത്ഥനയ്ക്ക് കാലഹരണപ്പെട്ടതാക്കുന്നു). |
 | `S2d6ac0` | help and messages | The package is being built. Reload this page to follow its progress. | പാക്കേജ് ഉണ്ടാക്കുകയാണ്. പുരോഗതി കാണാൻ ഈ പേജ് വീണ്ടും ലോഡ് ചെയ്യുക. |
-| `Sde7a5b` | help and messages | The program files do not carry a category; you can change it in each Draft. | പ്രോഗ്രാം ഫയലുകളിൽ വിഭാഗമില്ല; ഓരോ കരടിലും നിങ്ങൾക്ക് മാറ്റാം. |
 | `Scff3a3` | help and messages | User deleted; its name and address are erased, what it did stays attributable. | ഉപയോക്താവിനെ ഇല്ലാതാക്കി; പേരും വിലാസവും മായ്ച്ചു, അവർ ചെയ്തത് ആരോപിക്കാവുന്നതായി തുടരും. |
 | `Secfb3f` | hub_consolidation | Deprecate replaced Hub codes | മാറ്റിസ്ഥാപിച്ച ഹബ് കോഡുകൾ കാലഹരണപ്പെടുത്തുക |
 | `S0e7766` | hub_consolidation, language | draft | കരട് |
@@ -16724,7 +17462,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sc50c53` | hub_consolidation | Hub Controller to Main Controller consolidation | ഹബ് കൺട്രോളറിൽ നിന്ന് മെയിൻ കൺട്രോളറിലേക്കുള്ള ഏകീകരണം |
 | `Scd189f` | hub_consolidation | Hub group | ഹബ് ഗ്രൂപ്പ് |
 | `Sa5262b` | hub_consolidation | If the Hub Controller leaves the hardware setup, its codes are defined anew on the Main Controller side. Create an MC draft from an HC code on its detail page (Actions); this report shows how far each has come. Nothing is renumbered. | ഹബ് കൺട്രോളർ ഹാർഡ്‌വെയർ ക്രമീകരണത്തിൽ നിന്ന് ഒഴിവാകുകയാണെങ്കിൽ, അതിന്റെ കോഡുകൾ മെയിൻ കൺട്രോളർ വശത്ത് പുതുതായി നിർവചിക്കുന്നു. HC കോഡിന്റെ വിശദാംശ പേജിൽ (പ്രവർത്തനങ്ങൾ) നിന്ന് MC കരട് സൃഷ്ടിക്കുക; ഓരോന്നും എത്ര ദൂരം എത്തി എന്ന് ഈ റിപ്പോർട്ട് കാണിക്കുന്നു. ഒന്നും വീണ്ടും നമ്പർ ചെയ്യുന്നില്ല. |
-| `Sdd6555` | hub_consolidation, legacy_mapping, st_preview | Legacy no. | പഴയ നം. |
+| `Sdd6555` | hub_consolidation, legacy_mapping, list | Legacy no. | പഴയ നം. |
 | `S845a2b` | hub_consolidation | No Hub Controller codes yet. | ഇതുവരെ ഹബ് കൺട്രോളർ കോഡുകളില്ല. |
 | `S138665` | hub_consolidation | Open deprecation requests | കാലഹരണപ്പെടുത്തൽ അഭ്യർത്ഥനകൾ തുറക്കുക |
 | `Sc8df93` | hub_consolidation | Open deprecation requests for all replaced Hub codes of this group? | ഈ ഗ്രൂപ്പിലെ മാറ്റിസ്ഥാപിച്ച എല്ലാ ഹബ് കോഡുകൾക്കും കാലഹരണപ്പെടുത്തൽ അഭ്യർത്ഥനകൾ തുറക്കണോ? |
@@ -16783,7 +17521,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sded18c` | language | approved by | അംഗീകരിച്ചത് |
 | `Sedd46e` | language | Check against the interface | ഇന്റർഫേസുമായി പരിശോധിക്കുക |
 | `S5a013c` | language | missing | കാണാനില്ല |
-| `S2c924e` | language, workbench | Note | കുറിപ്പ് |
+| `S2c924e` | language, row, workbench | Note | കുറിപ്പ് |
 | `S2f09d0` | language | Note on %(x)s | %(x)s നെക്കുറിച്ചുള്ള കുറിപ്പ് |
 | `S75bf99` | language | proposed by | നിർദ്ദേശിച്ചത് |
 | `Sc68e32` | language | Save translations | വിവർത്തനങ്ങൾ സംരക്ഷിക്കുക |
@@ -16791,14 +17529,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S542818` | language | Terms of the language | ഭാഷയുടെ പദങ്ങൾ |
 | `Sae9e5d` | language | Translation of %(x)s | %(x)s ന്റെ വിവർത്തനം |
 | `S863fd0` | language | Your own proposal: another person approves it. | നിങ്ങളുടെ സ്വന്തം നിർദ്ദേശം: മറ്റൊരാൾ അത് അംഗീകരിക്കുന്നു. |
-| `Sf9d469` | legacy_mapping | All controllers | എല്ലാ കൺട്രോളറുകളും |
+| `Sf9d469` | legacy_mapping, list | All controllers | എല്ലാ കൺട്രോളറുകളും |
 | `Se61c2f` | legacy_mapping | Any number state | ഏത് നമ്പർ നിലയും |
 | `S7c4f77` | legacy_mapping | issued | നൽകിയത് |
 | `Sfd5ec0` | legacy_mapping, menu, new | Legacy mapping | പഴയത്-പുതിയത് മാപ്പിംഗ് |
 | `S81f567` | legacy_mapping | Legacy number to new identifier | പഴയ നമ്പറിൽ നിന്ന് പുതിയ ഐഡന്റിഫയറിലേക്ക് |
 | `S64b267` | legacy_mapping | legacy number, identifier or name | പഴയ നമ്പർ, ഐഡന്റിഫയർ അല്ലെങ്കിൽ പേര് |
 | `S60fe6c` | legacy_mapping | new codes without a legacy number (n/a) | പഴയ നമ്പർ ഇല്ലാത്ത പുതിയ കോഡുകൾ (ബാധകമല്ല) |
-| `Sf26140` | legacy_mapping, st_preview | New identifier | പുതിയ ഐഡന്റിഫയർ |
 | `Sf573c8` | legacy_mapping | no number yet | ഇതുവരെ നമ്പറില്ല |
 | `S7877c5` | legacy_mapping | No status code carries a legacy number yet. | ഇതുവരെ ഒരു സ്റ്റാറ്റസ് കോഡിനും പഴയ നമ്പറില്ല. |
 | `Sb7baa1` | legacy_mapping | Number | നമ്പർ |
@@ -16807,10 +17544,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S8b0b7c` | legacy_mapping | with a legacy number | പഴയ നമ്പർ ഉള്ളത് |
 | `Seba07b` | list | A change set groups the change requests that ship with one controller software release, so reviewers see the whole package. Each request is still decided on its own. | ഒരു കൺട്രോളർ സോഫ്റ്റ്‌വെയർ റിലീസിനൊപ്പം പോകുന്ന മാറ്റ അഭ്യർത്ഥനകളെ മാറ്റ സമൂഹം ഗ്രൂപ്പ് ചെയ്യുന്നു, അതിനാൽ അവലോകകർക്ക് മുഴുവൻ പാക്കേജും കാണാം. ഓരോ അഭ്യർത്ഥനയിലും ഇപ്പോഴും വെവ്വേറെ തീരുമാനമാണ്. |
 | `Sc5fe02` | list | any | ഏതും |
+| `S55201a` | list | Any status | ഏത് നിലയും |
 | `Sef5415` | list | Apply columns | കോളങ്ങൾ പ്രയോഗിക്കുക |
+| `Sffb569` | list | Ask for approval of the ticked rows | ടിക്ക് ചെയ്ത വരികളുടെ അംഗീകാരം ആവശ്യപ്പെടുക |
 | `S9e895f` | list | Change sets | മാറ്റ സമൂഹങ്ങൾ |
 | `S162a45` | list, menu | Change Sets | മാറ്റ സെറ്റുകൾ |
 | `Scf723c` | list | Columns | കോളങ്ങൾ |
+| `S2ddaf9` | list, upload | Compare a workbook | വർക്ക്ബുക്ക് താരതമ്യം ചെയ്യുക |
 | `Seb0fd2` | list | Delete all my Drafts of this filter | ഈ ഫിൽട്ടറിലെ എന്റെ എല്ലാ കരടുകളും ഇല്ലാതാക്കുക |
 | `S36f212` | list | Delete ALL of your own Drafts that match this filter, on every page? | ഈ ഫിൽട്ടറുമായി ചേരുന്ന നിങ്ങളുടെ എല്ലാ കരടുകളും, എല്ലാ പേജുകളിലും, ഇല്ലാതാക്കണോ? |
 | `Sc554a1` | list | Delete selected Drafts | തിരഞ്ഞെടുത്ത കരടുകൾ ഇല്ലാതാക്കുക |
@@ -16820,12 +17560,18 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S44d25b` | list | Items | ഇനങ്ങൾ |
 | `S033df3` | list | Lifecycle | ജീവിതചക്രം |
 | `Sb4cad6` | list | Link to this view | ഈ കാഴ്ചയിലേക്കുള്ള ലിങ്ക് |
+| `Sbdb4e1` | list | Load the initial mapping | പ്രാരംഭ മാപ്പിംഗ് ലോഡ് ചെയ്യുക |
+| `Se07018` | list | Make the request | അഭ്യർത്ഥന നടത്തുക |
 | `Se248d5` | list, new | New change set | പുതിയ മാറ്റ സമൂഹം |
 | `Se75aa1` | list, new | New Release | പുതിയ റിലീസ് |
+| `S9bb526` | list, row | New row | പുതിയ വരി |
 | `Se5076c` | list | No change sets yet. | ഇതുവരെ മാറ്റ സമൂഹങ്ങളില്ല. |
 | `Sd32c03` | list | No releases yet. | ഇതുവരെ റിലീസുകളില്ല. |
+| `Sb5b22c` | list | No row matches. | ഒരു വരിയും യോജിക്കുന്നില്ല. |
 | `Sc3af43` | list | No saved searches yet. | ഇതുവരെ സംരക്ഷിച്ച തിരയലുകളില്ല. |
 | `S0cb400` | list | No status codes match these filters. | ഈ ഫിൽട്ടറുകളുമായി ഒരു സ്റ്റാറ്റസ് കോഡും പൊരുത്തപ്പെടുന്നില്ല. |
+| `S260f7a` | list, row | Node | നോഡ് |
+| `S08250b` | list | number, title or group | നമ്പർ, തലക്കെട്ട് അല്ലെങ്കിൽ ഗ്രൂപ്പ് |
 | `Sf7194e` | list | Requests | അഭ്യർത്ഥനകൾ |
 | `S37a530` | list | result | ഫലം |
 | `Scdf7e9` | list | results | ഫലങ്ങൾ |
@@ -16834,10 +17580,14 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sff86e9` | list | Save the current filters as | നിലവിലെ ഫിൽട്ടറുകൾ ഈ പേരിൽ സംരക്ഷിക്കുക |
 | `Sed1d84` | list | Saved searches | സംരക്ഷിച്ച തിരയലുകൾ |
 | `S859822` | list, mine | Select | തിരഞ്ഞെടുക്കുക |
+| `S45b553` | list | Select all rows | എല്ലാ വരികളും തിരഞ്ഞെടുക്കുക |
 | `S7f5583` | list, menu | Status Codes | സ്റ്റാറ്റസ് കോഡുകൾ |
 | `S20bff1` | list | Status codes | സ്റ്റാറ്റസ് കോഡുകൾ |
+| `S3a1066` | list | The mapping is empty. | മാപ്പിംഗ് ശൂന്യമാണ്. |
+| `S27d95b` | list | The rows stay as they are. Once the StCd Owner, the Chief Engineer and an Administrator approve, they count as approved numbers. | വരികൾ ഉള്ളതുപോലെ തുടരും. StCd ഉടമ, ചീഫ് എൻജിനീയർ, ഒരു അഡ്മിനിസ്ട്രേറ്റർ എന്നിവർ അംഗീകരിക്കുമ്പോൾ അവ അംഗീകൃത നമ്പറുകളായി കണക്കാക്കപ്പെടും. |
 | `Se90eb0` | list | Turbine Platform | ടർബൈൻ പ്ലാറ്റ്ഫോം |
 | `S86b1e7` | list | Typos are tolerated: "convertor" still finds "converter". | ടൈപ്പിംഗ് പിശകുകൾ സഹിക്കും: "convertor" ഇപ്പോഴും "converter" കണ്ടെത്തും. |
+| `Sb0c551` | list | Which legacy status code becomes which new one, with what the program files do not carry: the English title, the type, the up/down counter, the access levels, cause and directive. A row changes only by a request that the StCd Owner, the Chief Engineer and an Administrator all approve. | ഏത് പഴയ സ്റ്റാറ്റസ് കോഡ് ഏത് പുതിയതാകുന്നു, പ്രോഗ്രാം ഫയലുകളിൽ ഇല്ലാത്ത വിവരങ്ങളോടെ: ഇംഗ്ലീഷ് തലക്കെട്ട്, തരം, അപ്/ഡൗൺ കൗണ്ടർ, ആക്സസ് തലങ്ങൾ, കാരണം, നിർദ്ദേശം. StCd ഉടമ, ചീഫ് എൻജിനീയർ, ഒരു അഡ്മിനിസ്ട്രേറ്റർ എല്ലാവരും അംഗീകരിക്കുന്ന അഭ്യർത്ഥനയിലൂടെ മാത്രമേ വരി മാറൂ. |
 | `Sf7c400` | login | Log in | ലോഗിൻ |
 | `S175835` | login | or | അല്ലെങ്കിൽ |
 | `S8be3c9` | login, users | Password | പാസ്‌വേഡ് |
@@ -16999,6 +17749,23 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S8cb56e` | message: lookup_admin_service | range_end must be greater than range_start | range_end, range_start നേക്കാൾ വലുതായിരിക്കണം |
 | `Se3a971` | message: lookup_admin_service | sub_range_end must be greater than sub_range_start | sub_range_end, sub_range_start നേക്കാൾ വലുതായിരിക്കണം |
 | `S1404e3` | message: lookup_service | functional_system_group query parameter is required for functional-subgroups | functional-subgroups ന് functional_system_group ക്വറി പാരാമീറ്റർ ആവശ്യമാണ് |
+| `Sf28681` | message: mapping_service | Give the reason for the change; the three approvers read it first. | മാറ്റത്തിന്റെ കാരണം പറയുക; മൂന്ന് അംഗീകാരകരും അത് ആദ്യം വായിക്കുന്നു. |
+| `S062788` | message: mapping_service | Give the request a title of at most 120 characters. | അഭ്യർത്ഥനയ്ക്ക് പരമാവധി 120 അക്ഷരങ്ങളുള്ള തലക്കെട്ട് നൽകുക. |
+| `S2ea56f` | message: mapping_service | Mapping change not found | മാപ്പിംഗിന്റെ മാറ്റം കണ്ടെത്തിയില്ല |
+| `S2c9363` | message: mapping_service | Mapping row not found | മാപ്പിംഗിന്റെ വരി കണ്ടെത്തിയില്ല |
+| `S2d5693` | message: mapping_service | Only the person who made the request can withdraw it. | അഭ്യർത്ഥന നടത്തിയ വ്യക്തിക്കു മാത്രമേ അത് പിൻവലിക്കാൻ കഴിയൂ. |
+| `S682269` | message: mapping_service | Only the StCd Owner, the Chief Engineer and an Administrator decide on the mapping. | മാപ്പിംഗിനെക്കുറിച്ച് StCd ഉടമ, ചീഫ് എൻജിനീയർ, ഒരു അഡ്മിനിസ്ട്രേറ്റർ എന്നിവർ മാത്രം തീരുമാനിക്കുന്നു. |
+| `S5e0f66` | message: mapping_service | Say why you reject the request. | അഭ്യർത്ഥന എന്തുകൊണ്ട് നിരസിക്കുന്നു എന്ന് പറയുക. |
+| `S3d5cfc` | message: mapping_service | The comment is longer than 1000 characters. | അഭിപ്രായം 1000 അക്ഷരങ്ങളിൽ കൂടുതലാണ്. |
+| `S82b817` | message: mapping_service | The decision must be APPROVE or REJECT. | തീരുമാനം APPROVE അല്ലെങ്കിൽ REJECT ആയിരിക്കണം. |
+| `S9ec08a` | message: mapping_service | The file is not a readable .xlsx workbook. | ഫയൽ വായിക്കാവുന്ന .xlsx വർക്ക്ബുക്ക് അല്ല. |
+| `S3831f7` | message: mapping_service | The reason is longer than 2000 characters. | കാരണം 2000 അക്ഷരങ്ങളിൽ കൂടുതലാണ്. |
+| `Sa5de7d` | message: mapping_service | The request contains no row. | അഭ്യർത്ഥനയിൽ ഒരു വരിയും ഇല്ല. |
+| `S2116e4` | message: mapping_service | The request is already closed. | അഭ്യർത്ഥന ഇതിനകം അടച്ചു. |
+| `S8518e7` | message: mapping_service | The role has decided already. | ഈ റോൾ ഇതിനകം തീരുമാനിച്ചു. |
+| `S2a15d7` | message: mapping_service | The workbook is larger than 5 MB. | വർക്ക്ബുക്ക് 5 MB-യിൽ വലുതാണ്. |
+| `S8eb912` | message: mapping_service | The workbook unpacks to more than 80 MB. | വർക്ക്ബുക്ക് തുറക്കുമ്പോൾ 80 MB-യിൽ വലുതാകുന്നു. |
+| `S6c1d08` | message: mapping_service | Your role may not propose a change of the mapping. | നിങ്ങളുടെ റോളിന് മാപ്പിംഗിൽ മാറ്റം നിർദ്ദേശിക്കാൻ കഴിയില്ല. |
 | `S4ada2b` | message: notification_service | Notification not found | അറിയിപ്പ് കണ്ടെത്തിയില്ല |
 | `Sd92b89` | message: notification_service | This notification belongs to someone else. | ഈ അറിയിപ്പ് മറ്റൊരാളുടേതാണ്. |
 | `Sb0cd00` | message: numbering_service | Identifier override must match StCd-NNNNN (five digits). | അസാധുവാക്കുന്ന ഐഡന്റിഫയർ StCd-NNNNN (അഞ്ച് അക്കം) യുമായി പൊരുത്തപ്പെടണം. |
@@ -17030,8 +17797,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S9671fb` | message: settings_service | must be true or false | true അല്ലെങ്കിൽ false ആയിരിക്കണം |
 | `S5166bb` | message: st_import_service | A staged file changed after the preview. Upload again. | പ്രിവ്യൂവിന് ശേഷം ഒരു സജ്ജമാക്കിയ ഫയൽ മാറി. വീണ്ടും അപ്‌ലോഡ് ചെയ്യുക. |
 | `Saa4de2` | message: st_import_service | controller must be auto, MC or HC | controller auto, MC അല്ലെങ്കിൽ HC ആയിരിക്കണം |
-| `Sa30251` | message: st_import_service | default_category must be ERROR, WARNING or INFO | default_category ERROR, WARNING അല്ലെങ്കിൽ INFO ആയിരിക്കണം |
-| `Sfe694a` | message: st_import_service | hc_proposal must be 1 or 2 | hc_proposal 1 അല്ലെങ്കിൽ 2 ആയിരിക്കണം |
 | `S58bec3` | message: st_import_service | No StCd program files found. Upload .st files or a ZIP of them. | StCd പ്രോഗ്രാം ഫയലുകളൊന്നും കണ്ടെത്തിയില്ല. .st ഫയലുകളോ അവയുടെ ZIP ഓ അപ്‌ലോഡ് ചെയ്യുക. |
 | `Sd9c5b0` | message: st_import_service | Nothing selected: tick at least one program that is ready. | ഒന്നും തിരഞ്ഞെടുത്തിട്ടില്ല: തയ്യാറായ ഒരു പ്രോഗ്രാമെങ്കിലും ടിക്ക് ചെയ്യുക. |
 | `S5dbbd0` | message: st_import_service | The code is no longer an open Draft; preview the files again. | കോഡ് ഇനി തുറന്ന കരടല്ല; ഫയലുകൾ വീണ്ടും പ്രിവ്യൂ ചെയ്യുക. |
@@ -17178,6 +17943,23 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S05fc94` | role badge | Engineer | എൻജിനീയർ |
 | `S3c0e8a` | role badge | StCd Owner | StCd ഉടമ |
 | `Sdbad9f` | role badge | Viewer | കാഴ്ചക്കാരൻ |
+| `S7f2e4b` | row | Access levels | ആക്സസ് തലങ്ങൾ |
+| `S08f985` | row | Cause | കാരണം |
+| `S164e0b` | row | Directive | നിർദ്ദേശം |
+| `S283474` | row | New number | പുതിയ നമ്പർ |
+| `Sfa6fdd` | row | No request yet. The row is as it was loaded. | ഇതുവരെ അഭ്യർത്ഥന ഇല്ല. വരി ലോഡ് ചെയ്തതുപോലെ തന്നെയാണ്. |
+| `Sf790fc` | row | Nothing is changed here directly: the form makes a request, and the row changes after the StCd Owner, the Chief Engineer and an Administrator have approved it. | ഇവിടെ നേരിട്ട് ഒന്നും മാറുന്നില്ല: ഫോം ഒരു അഭ്യർത്ഥന ഉണ്ടാക്കുന്നു, StCd ഉടമ, ചീഫ് എൻജിനീയർ, ഒരു അഡ്മിനിസ്ട്രേറ്റർ എന്നിവർ അംഗീകരിച്ച ശേഷം വരി മാറുന്നു. |
+| `S9d728f` | row | Request approval of the number | നമ്പറിന്റെ അംഗീകാരം ആവശ്യപ്പെടുക |
+| `Sc8978f` | row | Request rejection of the number | നമ്പർ നിരസിക്കാൻ ആവശ്യപ്പെടുക |
+| `Sc644eb` | row | Request that this number is never used? | ഈ നമ്പർ ഒരിക്കലും ഉപയോഗിക്കരുതെന്ന് ആവശ്യപ്പെടണോ? |
+| `Sb25913` | row | Request the new row | പുതിയ വരി ആവശ്യപ്പെടുക |
+| `Sb04301` | row | Request this change | ഈ മാറ്റം ആവശ്യപ്പെടുക |
+| `Sae91b6` | row | Requests for this row | ഈ വരിയുടെ അഭ്യർത്ഥനകൾ |
+| `Sd59701` | row | Reset delay (parameter) | റീസെറ്റ് കാലതാമസം (പാരാമീറ്റർ) |
+| `Sfd64cd` | row | Set delay (parameter) | സെറ്റ് കാലതാമസം (പാരാമീറ്റർ) |
+| `S9c0444` | row | The three approvers read the reason first. | മൂന്ന് അംഗീകാരകരും ആദ്യം കാരണം വായിക്കുന്നു. |
+| `Sc84745` | row | Title (English) | തലക്കെട്ട് (ഇംഗ്ലീഷ്) |
+| `S711eea` | row | Up/down counter | അപ്/ഡൗൺ കൗണ്ടർ |
 | `S913aba` | settings | Save settings | ക്രമീകരണങ്ങൾ സംരക്ഷിക്കുക |
 | `Sb68734` | software_versions | Added | ചേർത്തവ |
 | `S172415` | software_versions | added | ചേർത്തു |
@@ -17191,28 +17973,19 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd97d1e` | software_versions | Show | കാണിക്കുക |
 | `S42ea2e` | software_versions | Software Versions | സോഫ്റ്റ്‌വെയർ പതിപ്പുകൾ |
 | `S3bd89c` | software_versions | Which codes exist in which software version | ഏത് കോഡുകൾ ഏത് സോഫ്റ്റ്‌വെയർ പതിപ്പിൽ ഉണ്ട് |
-| `S16e5d4` | st_new, st_preview | Alarm type | അലാറം തരം |
-| `S726d7a` | st_new | as above | മുകളിലെ പോലെ |
-| `S9477fd` | st_new, st_preview | choose | തിരഞ്ഞെടുക്കുക |
 | `Sb149ca` | st_new | Detect: a number from 10000 up is a Hub Controller program | കണ്ടെത്തൽ: 10000 മുതൽ മുകളിലുള്ള നമ്പർ ഹബ് കൺട്രോളർ പ്രോഗ്രാമാണ് |
 | `S7d06d0` | st_new | Every imported program becomes an ordinary Draft with the number it carries reserved. It still needs Cross-Domain Sign-Off, dual review and Chief Engineer approval before Release, and all Drafts of one import share a change set. | ഇറക്കുമതി ചെയ്ത ഓരോ പ്രോഗ്രാമും അതിന്റെ നമ്പർ റിസർവ് ചെയ്ത സാധാരണ കരടാകുന്നു. റിലീസിന് മുമ്പ് ഇതിന് ഇപ്പോഴും ക്രോസ്-ഡൊമെയ്ൻ സൈൻ-ഓഫ്, ഇരട്ട അവലോകനം, ചീഫ് എൻജിനീയറുടെ അംഗീകാരം എന്നിവ വേണം, ഒരു ഇറക്കുമതിയിലെ എല്ലാ കരടുകളും ഒരു മാറ്റ സമൂഹം പങ്കിടുന്നു. |
-| `Sbda77c` | st_new | Every program names an alarm type. A type left at "as above" gets the category chosen above; the next page lets you set the category of single programs or of all ticked ones. | ഓരോ പ്രോഗ്രാമും ഒരു അലാറം തരം പറയുന്നു. "മുകളിലെ പോലെ" എന്ന് വിട്ട തരത്തിന് മുകളിൽ തിരഞ്ഞെടുത്ത വിഭാഗം ലഭിക്കും; അടുത്ത പേജിൽ ഓരോ പ്രോഗ്രാമിന്റെയോ ടിക്ക് ചെയ്ത എല്ലാറ്റിന്റെയോ വിഭാഗം സജ്ജമാക്കാം. |
 | `S3b9e43` | st_new | Hub Controller (legacy numbers, mapped to the new ones) | ഹബ് കൺട്രോളർ (പഴയ നമ്പറുകൾ, പുതിയവയുമായി മാപ്പ് ചെയ്തത്) |
 | `Sd7333f` | st_new | Import status codes from .st files | .st ഫയലുകളിൽ നിന്ന് സ്റ്റാറ്റസ് കോഡുകൾ ഇറക്കുമതി ചെയ്യുക |
-| `S6640a6` | st_new | New number of Hub Controller programs | ഹബ് കൺട്രോളർ പ്രോഗ്രാമുകളുടെ പുതിയ നമ്പർ |
 | `Sc0eff1` | st_new | Or a whole folder | അല്ലെങ്കിൽ മുഴുവൻ ഫോൾഡർ |
 | `S94ddc1` | st_new | Program files (.st) or a ZIP | പ്രോഗ്രാം ഫയലുകൾ (.st) അല്ലെങ്കിൽ ഒരു ZIP |
-| `Sd99e2a` | st_new | Proposal 1: five-digit numbers (11000 and up) | നിർദ്ദേശം 1: അഞ്ചക്ക നമ്പറുകൾ (11000 മുതൽ) |
-| `S2744b0` | st_new | Proposal 2: inside the Main Controller scheme | നിർദ്ദേശം 2: മെയിൻ കൺട്രോളർ പദ്ധതിക്കുള്ളിൽ |
 | `S67640d` | st_new | Read files and preview | ഫയലുകൾ വായിച്ച് പ്രിവ്യൂ കാണുക |
-| `S0af4fc` | st_new | Status category by alarm type (optional) | അലാറം തരം അനുസരിച്ച് സ്റ്റാറ്റസ് വിഭാഗം (ഓപ്ഷണൽ) |
-| `S234237` | st_new | Status category of the new codes | പുതിയ കോഡുകളുടെ സ്റ്റാറ്റസ് വിഭാഗം |
-| `S61fc52` | st_new | The program files do not carry a category and none is assumed: choose one here, by alarm type below, or for each program in the preview. A program without a category is not imported. | പ്രോഗ്രാം ഫയലുകളിൽ വിഭാഗം ഇല്ല, ഒന്നും ഊഹിക്കപ്പെടുന്നുമില്ല: ഇവിടെ ഒന്ന് തിരഞ്ഞെടുക്കുക, താഴെ അലാറം തരം അനുസരിച്ച്, അല്ലെങ്കിൽ പ്രിവ്യൂവിൽ ഓരോ പ്രോഗ്രാമിനും. വിഭാഗമില്ലാത്ത പ്രോഗ്രാം ഇറക്കുമതി ചെയ്യില്ല. |
+| `Saa9df6` | st_new | The title, the type and the access levels of every program come from the mapping, never from the files. A program whose number is not in the mapping is blocked. | ഓരോ പ്രോഗ്രാമിന്റെയും തലക്കെട്ട്, തരം, ആക്സസ് തലങ്ങൾ എന്നിവ മാപ്പിംഗിൽ നിന്നാണ് വരുന്നത്, ഫയലുകളിൽ നിന്ന് ഒരിക്കലുമല്ല. നമ്പർ മാപ്പിംഗിൽ ഇല്ലാത്ത പ്രോഗ്രാം തടയപ്പെടും. |
 | `S8f4c21` | st_new | Turbine platforms | ടർബൈൻ പ്ലാറ്റ്ഫോമുകൾ |
 | `S9ad4d4` | st_new | Upload the generated StCd_<n>.st programs — several files at once, a whole folder, or one ZIP. Nothing is created yet: the next page lists every program so you can tick the ones to import. | സൃഷ്ടിച്ച StCd_<n>.st പ്രോഗ്രാമുകൾ അപ്‌ലോഡ് ചെയ്യുക — ഒരേസമയം പല ഫയലുകൾ, ഒരു മുഴുവൻ ഫോൾഡർ അല്ലെങ്കിൽ ഒരു ZIP. ഇതുവരെ ഒന്നും സൃഷ്ടിക്കുന്നില്ല: അടുത്ത പേജ് ഓരോ പ്രോഗ്രാമും പട്ടികപ്പെടുത്തുന്നു, ഇറക്കുമതി ചെയ്യേണ്ടവ ടിക്ക് ചെയ്യാം. |
+| `S16e5d4` | st_preview | Alarm type | അലാറം തരം |
 | `S2693e5` | st_preview | All Drafts of this import join one change set, so they can be reviewed and decided together. | ഈ ഇറക്കുമതിയിലെ എല്ലാ കരടുകളും ഒരു മാറ്റ സമൂഹത്തിൽ ചേരുന്നു, അതിനാൽ അവ ഒരുമിച്ച് അവലോകനം ചെയ്ത് തീരുമാനിക്കാം. |
 | `Scbc694` | st_preview | already in the catalogue | ഇതിനകം കാറ്റലോഗിൽ |
-| `Sc00673` | st_preview | Apply to the ticked programs | ടിക്ക് ചെയ്ത പ്രോഗ്രാമുകൾക്ക് പ്രയോഗിക്കുക |
 | `Sdf88b8` | st_preview | blocked | തടഞ്ഞത് |
 | `S6f7703` | st_preview | Changed and withdrawn programs are not ticked: tick the ones you want to update, revise or restore. | മാറിയതും പിൻവലിച്ചതുമായ പ്രോഗ്രാമുകൾ ടിക്ക് ചെയ്തിട്ടില്ല: അപ്‌ഡേറ്റ്, പുതുക്കൽ അല്ലെങ്കിൽ പുനഃസ്ഥാപനം വേണ്ടവ ടിക്ക് ചെയ്യുക. |
 | `S78bb8b` | st_preview | Create Drafts for the ticked programs | ടിക്ക് ചെയ്ത പ്രോഗ്രാമുകൾക്കായി കരടുകൾ സൃഷ്ടിക്കുക |
@@ -17230,8 +18003,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se58289` | st_preview | Programs found in the uploaded files | അപ്‌ലോഡ് ചെയ്ത ഫയലുകളിൽ കണ്ടെത്തിയ പ്രോഗ്രാമുകൾ |
 | `S75c053` | st_preview, workbench | ready | തയ്യാർ |
 | `S0723bf` | st_preview | Select all programs that are ready | തയ്യാറായ എല്ലാ പ്രോഗ്രാമുകളും തിരഞ്ഞെടുക്കുക |
-| `Sae12bc` | st_preview, workbench | Status category | സ്റ്റാറ്റസ് വിഭാഗം |
-| `Sd7a322` | st_preview | Status category of the ticked programs | ടിക്ക് ചെയ്ത പ്രോഗ്രാമുകളുടെ സ്റ്റാറ്റസ് വിഭാഗം |
+| `S9a2439` | st_preview | Type (from the mapping) | തരം (മാപ്പിംഗിൽ നിന്ന്) |
 | `S1a767a` | st_preview | updates the open Draft | തുറന്ന കരട് അപ്‌ഡേറ്റ് ചെയ്യുന്നു |
 | `S02499f` | st_preview | withdrawn | പിൻവലിച്ചത് |
 | `Sf0c3cf` | st_preview | without a legacy number | പഴയ നമ്പർ ഇല്ലാതെ |
@@ -17294,6 +18066,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S2fd88e` | translations | Copy from previous revision | മുൻ റിവിഷനിൽ നിന്ന് പകർത്തുക |
 | `Se522f0` | translations | Save draft translation | കരട് വിവർത്തനം സംരക്ഷിക്കുക |
 | `Scb0b87` | translations | source language text of revision | റിവിഷന്റെ ഉറവിട ഭാഷാ വാചകം |
+| `S01209c` | upload | Also ask for approval of the unchanged rows that are only proposed | നിർദ്ദേശിക്കപ്പെട്ടതു മാത്രമായ മാറ്റമില്ലാത്ത വരികളുടെ അംഗീകാരവും ആവശ്യപ്പെടുക |
+| `Sddf8d9` | upload | Compare and make the request | താരതമ്യം ചെയ്ത് അഭ്യർത്ഥിക്കുക |
+| `S028ebe` | upload | Download the current mapping | നിലവിലെ മാപ്പിംഗ് ഡൗൺലോഡ് ചെയ്യുക |
+| `S23bfbf` | upload | The workbook has problems. Nothing was requested. | വർക്ക്ബുക്കിൽ പ്രശ്നങ്ങളുണ്ട്. ഒന്നും അഭ്യർത്ഥിച്ചിട്ടില്ല. |
+| `S24d49d` | upload | Title of the request | അഭ്യർത്ഥനയുടെ തലക്കെട്ട് |
+| `S88809a` | upload | Upload the corrected mapping as a workbook with the sheets MC and HC (download the current one as a model). Every new row and every row that differs becomes one request; rows the workbook does not mention stay as they are. The request takes effect only after the StCd Owner, the Chief Engineer and an Administrator have approved it. | തിരുത്തിയ മാപ്പിംഗ് MC, HC ഷീറ്റുകളുള്ള വർക്ക്ബുക്കായി അപ്‌ലോഡ് ചെയ്യുക (മാതൃകയായി നിലവിലുള്ളത് ഡൗൺലോഡ് ചെയ്യുക). ഓരോ പുതിയ, ഓരോ വ്യത്യസ്ത വരിയും ഒരു അഭ്യർത്ഥനയാകും; വർക്ക്ബുക്ക് പരാമർശിക്കാത്ത വരികൾ മാറ്റമില്ലാതെ തുടരും. StCd ഉടമ, ചീഫ് എൻജിനീയർ, ഒരു അഡ്മിനിസ്ട്രേറ്റർ എന്നിവർ അംഗീകരിച്ച ശേഷം മാത്രമേ അഭ്യർത്ഥന പ്രാബല്യത്തിൽ വരൂ. |
+| `S09efdf` | upload | Workbook (.xlsx) | വർക്ക്ബുക്ക് (.xlsx) |
 | `S359a3b` | user_detail | Back to users | ഉപയോക്താക്കളിലേക്ക് മടങ്ങുക |
 | `Sf6fdbe` | user_detail, users | Delete | ഇല്ലാതാക്കുക |
 | `S9afe6c` | user_detail | Delete user | ഉപയോക്താവിനെ ഇല്ലാതാക്കുക |
@@ -17353,6 +18132,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sa58dac` | workbench | Set values on the Drafts | കരടുകളിൽ മൂല്യങ്ങൾ സെറ്റ് ചെയ്യുക |
 | `Sa443bb` | workbench | Sign off the Drafts | കരടുകൾക്ക് സൈൻ-ഓഫ് നൽകുക |
 | `S53f47f` | workbench | Sign-off pending | സൈൻ-ഓഫ് ബാക്കി |
+| `Sae12bc` | workbench | Status category | സ്റ്റാറ്റസ് വിഭാഗം |
 | `Sdc416e` | workbench | Step | ഘട്ടം |
 | `Sf7710d` | workbench | Submit for review | അവലോകനത്തിനായി സമർപ്പിക്കുക |
 | `Sa45adc` | workbench | Submit the Drafts | കരടുകൾ സമർപ്പിക്കുക |
@@ -17365,7 +18145,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 
 ### 9.15 IN ਪੰਜਾਬੀ 🇮🇳 — Punjabi
 
-1295 of 1296 strings translated; direction left to right.
+1355 of 1356 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -17376,13 +18156,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S141763` | _macros | Confirm with your password | ਆਪਣੇ ਪਾਸਵਰਡ ਨਾਲ ਪੁਸ਼ਟੀ ਕਰੋ |
 | `Sc326a4` | _macros, detail, form | Field | ਖੇਤਰ |
 | `S0a0f8a` | _macros | Field differences | ਖੇਤਰ ਦੇ ਅੰਤਰ |
-| `Sbc9819` | _macros | Next | ਅਗਲਾ |
+| `Sbc9819` | _macros, list | Next | ਅਗਲਾ |
 | `S27cea7` | _macros | No field differences. | ਖੇਤਰ ਵਿੱਚ ਕੋਈ ਅੰਤਰ ਨਹੀਂ। |
 | `S464e43` | _macros | on track | ਸਮੇਂ ਸਿਰ |
 | `Sba2fff` | _macros, dashboard, success_metrics | overdue | ਮਿਆਦ ਲੰਘ ਗਈ |
-| `S600584` | _macros | Pages | ਸਫ਼ੇ |
+| `S600584` | _macros, list | Pages | ਸਫ਼ੇ |
 | `S810099` | _macros | Please check | ਕਿਰਪਾ ਕਰਕੇ ਜਾਂਚ ਕਰੋ |
-| `S50f942` | _macros | Previous | ਪਿਛਲਾ |
+| `S50f942` | _macros, list | Previous | ਪਿਛਲਾ |
 | `S83fd6e` | _macros, stalled | red after | ਬਾਅਦ ਲਾਲ |
 | `S57e8a7` | _macros, success_metrics | slow | ਹੌਲੀ |
 | `S15198e` | _macros | Waiting since | ਤੋਂ ਉਡੀਕ ਵਿੱਚ |
@@ -17413,10 +18193,10 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S06b6ac` | approval_queue, builder, detail | Identifier | ਪਛਾਣਕਰਤਾ |
 | `S8e70d2` | approval_queue | Nothing is awaiting your approval. | ਤੁਹਾਡੀ ਮਨਜ਼ੂਰੀ ਲਈ ਕੁਝ ਵੀ ਉਡੀਕ ਵਿੱਚ ਨਹੀਂ। |
 | `Sa74f16` | approval_queue, detail, review_queue | Reviewer | ਸਮੀਖਿਅਕ |
-| `S768e0c` | approval_queue, builder, detail | Title | ਸਿਰਲੇਖ |
+| `S768e0c` | approval_queue, builder, change | Title | ਸਿਰਲੇਖ |
 | `S33d306` | approval_queue, detail, mine | Waiting | ਉਡੀਕ |
 | `S2cbacd` | audit_log | %(n)s total | ਕੁੱਲ %(n)s |
-| `S97c89a` | audit_log | Action | ਕਾਰਜ |
+| `S97c89a` | audit_log, change | Action | ਕਾਰਜ |
 | `Scbd19b` | audit_log | Actor | ਕਰਤਾ |
 | `S811bdf` | audit_log | Actor ID | ਕਰਤਾ ਪਛਾਣ |
 | `S8c85b1` | audit_log | after: | ਬਾਅਦ: |
@@ -17427,7 +18207,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sc7fb31` | audit_log | Entity | ਇਕਾਈ |
 | `S04d694` | audit_log | Entity ID | ਇਕਾਈ ਪਛਾਣ |
 | `Sbb4e99` | audit_log | Entity Type | ਇਕਾਈ ਦੀ ਕਿਸਮ |
-| `Sd7decf` | audit_log, index, language | Filter | ਫਿਲਟਰ |
+| `Sd7decf` | audit_log, changes, index | Filter | ਫਿਲਟਰ |
 | `S3f6605` | audit_log, delegations, software_versions | From | ਤੋਂ |
 | `S0061b5` | audit_log | No matching audit entries. | ਕੋਈ ਮੇਲ ਖਾਂਦੀ ਆਡਿਟ ਐਂਟਰੀ ਨਹੀਂ। |
 | `S01f79f` | audit_log | Scoped view: showing only actions you performed. | ਸੀਮਤ ਦ੍ਰਿਸ਼: ਸਿਰਫ਼ ਤੁਹਾਡੇ ਕੀਤੇ ਕਾਰਜ ਦਿਖਾਏ ਜਾ ਰਹੇ ਹਨ। |
@@ -17446,7 +18226,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sbe504f` | base | Skip to main content | ਮੁੱਖ ਸਮੱਗਰੀ 'ਤੇ ਜਾਓ |
 | `S1b9aeb` | base, dashboard | unread | ਨਾ-ਪੜ੍ਹੇ |
 | `S2da600` | base, export, export_center | Version | ਸੰਸਕਰਣ |
-| `S12625b` | base | waiting | ਉਡੀਕ ਵਿੱਚ |
+| `S12625b` | base, change | waiting | ਉਡੀਕ ਵਿੱਚ |
 | `S5a4692` | base | You are covering for a colleague | ਤੁਸੀਂ ਇੱਕ ਸਾਥੀ ਦੀ ਥਾਂ ਕੰਮ ਕਰ ਰਹੇ ਹੋ |
 | `S8e9c15` | builder | Candidate revisions | ਉਮੀਦਵਾਰ ਸੋਧਾਂ |
 | `Sdf2aa0` | builder | Functional Group / Subgroup | ਕਾਰਜਸ਼ੀਲ ਸਮੂਹ / ਉਪ-ਸਮੂਹ |
@@ -17477,13 +18257,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S4105cf` | catalogue_health | exhausted | ਮੁੱਕ ਗਏ |
 | `S57e8be` | catalogue_health, connections | Finding | ਖੋਜ |
 | `S1150a1` | catalogue_health | Gaps | ਖਾਲੀ ਥਾਵਾਂ |
-| `S171a06` | catalogue_health, export, withdrawn_codes | Group | ਸਮੂਹ |
-| `Sb4aadc` | catalogue_health, legacy_mapping | Hub Controller | ਹੱਬ ਕੰਟਰੋਲਰ |
+| `S171a06` | catalogue_health, export, list | Group | ਸਮੂਹ |
+| `Sb4aadc` | catalogue_health, legacy_mapping, list | Hub Controller | ਹੱਬ ਕੰਟਰੋਲਰ |
 | `S8ae1c3` | catalogue_health | Left | ਬਾਕੀ |
 | `S12c0f1` | catalogue_health | left | ਬਾਕੀ |
 | `Sa7b60b` | catalogue_health | Left % | ਬਾਕੀ % |
 | `S36a883` | catalogue_health | low | ਘੱਟ |
-| `S1b123c` | catalogue_health, legacy_mapping, st_new | Main Controller | ਮੁੱਖ ਕੰਟਰੋਲਰ |
+| `S1b123c` | catalogue_health, legacy_mapping, list | Main Controller | ਮੁੱਖ ਕੰਟਰੋਲਰ |
 | `S92185d` | catalogue_health, index | Missing | ਗੁੰਮ |
 | `S57282a` | catalogue_health | Missing expected data | ਉਮੀਦ ਕੀਤਾ ਡੇਟਾ ਗੁੰਮ |
 | `Sb8e95b` | catalogue_health | None found. | ਕੁਝ ਨਹੀਂ ਮਿਲਿਆ। |
@@ -17500,6 +18280,31 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S75a804` | catalogue_health | subgroup(s) are running out of numbers: | ਉਪ-ਸਮੂਹਾਂ ਵਿੱਚ ਨੰਬਰ ਮੁੱਕ ਰਹੇ ਹਨ: |
 | `S5fec4f` | catalogue_health | Unused numbers inside a band | ਪੱਟੀ ਅੰਦਰ ਅਣਵਰਤੇ ਨੰਬਰ |
 | `S02c0e4` | catalogue_health | Used | ਵਰਤੇ |
+| `S84f219` | change | All three, each by a different person who did not make the request. | ਤਿੰਨੋਂ, ਹਰ ਇੱਕ ਵੱਖਰੇ ਵਿਅਕਤੀ ਵੱਲੋਂ, ਜਿਸ ਨੇ ਬੇਨਤੀ ਨਹੀਂ ਕੀਤੀ। |
+| `S477aeb` | change, upload | and more | ਅਤੇ ਹੋਰ |
+| `Sdeb9d0` | change, changes | Approvals | ਮਨਜ਼ੂਰੀਆਂ |
+| `S7b2c7f` | change, detail, language | Approve | ਮਨਜ਼ੂਰ ਕਰੋ |
+| `S8aa57d` | change, detail | Changes | ਤਬਦੀਲੀਆਂ |
+| `S3fe5e1` | change | Comment (required to reject) | ਟਿੱਪਣੀ (ਰੱਦ ਕਰਨ ਲਈ ਲੋੜੀਂਦੀ) |
+| `Sb48001` | change | Mapping change | ਮੈਪਿੰਗ ਦੀ ਤਬਦੀਲੀ |
+| `Sd7c1d0` | change, changes, list | Mapping changes | ਮੈਪਿੰਗ ਦੀਆਂ ਤਬਦੀਲੀਆਂ |
+| `Sf26140` | change, legacy_mapping, list | New identifier | ਨਵਾਂ ਪਛਾਣਕਰਤਾ |
+| `Sf219cc` | change, list, row | Reason | ਕਾਰਨ |
+| `S2b03b5` | change, detail | Reject | ਰੱਦ ਕਰੋ |
+| `S5108c2` | change, changes | Requested by | ਬੇਨਤੀ ਕਰਨ ਵਾਲਾ |
+| `S52d0b3` | change, changes, detail | Rows | ਕਤਾਰਾਂ |
+| `S6c30d2` | change, dry_run, list | rows | ਕਤਾਰਾਂ |
+| `Sfabd38` | change | These rows changed after the request was made; it cannot be applied. Withdraw it and make it again: | ਬੇਨਤੀ ਤੋਂ ਬਾਅਦ ਇਹ ਕਤਾਰਾਂ ਬਦਲ ਗਈਆਂ; ਇਹ ਲਾਗੂ ਨਹੀਂ ਹੋ ਸਕਦੀ। ਇਸ ਨੂੰ ਵਾਪਸ ਲਓ ਅਤੇ ਦੁਬਾਰਾ ਕਰੋ: |
+| `S47e564` | change, detail | Withdraw | ਵਾਪਸ ਲਓ |
+| `S30d359` | change | Withdraw this request? | ਇਹ ਬੇਨਤੀ ਵਾਪਸ ਲੈਣੀ ਹੈ? |
+| `S88c173` | change | You made this request; another person must decide. | ਇਹ ਬੇਨਤੀ ਤੁਸੀਂ ਕੀਤੀ ਹੈ; ਕਿਸੇ ਹੋਰ ਵਿਅਕਤੀ ਨੂੰ ਫ਼ੈਸਲਾ ਕਰਨਾ ਪਵੇਗਾ। |
+| `S04e02f` | change | Your role has decided already. | ਤੁਹਾਡੀ ਭੂਮਿਕਾ ਪਹਿਲਾਂ ਹੀ ਫ਼ੈਸਲਾ ਕਰ ਚੁੱਕੀ ਹੈ। |
+| `Sc7274c` | changes | Any state | ਕੋਈ ਵੀ ਅਵਸਥਾ |
+| `S2a560c` | changes | Every change of the mapping is a request. It takes effect when the StCd Owner, the Chief Engineer and an Administrator have each approved it; one rejection closes it. | ਮੈਪਿੰਗ ਦੀ ਹਰ ਤਬਦੀਲੀ ਇੱਕ ਬੇਨਤੀ ਹੈ। ਜਦੋਂ StCd ਮਾਲਕ, ਮੁੱਖ ਇੰਜੀਨੀਅਰ ਅਤੇ ਇੱਕ ਪ੍ਰਸ਼ਾਸਕ ਹਰ ਇੱਕ ਇਸ ਨੂੰ ਮਨਜ਼ੂਰ ਕਰਦਾ ਹੈ ਤਾਂ ਇਹ ਲਾਗੂ ਹੁੰਦੀ ਹੈ; ਇੱਕ ਰੱਦ ਇਸ ਨੂੰ ਬੰਦ ਕਰ ਦਿੰਦਾ ਹੈ। |
+| `Sdef2eb` | changes, list, menu | Mapping | ਮੈਪਿੰਗ |
+| `Se03e43` | changes | No request yet. | ਹਾਲੇ ਕੋਈ ਬੇਨਤੀ ਨਹੀਂ। |
+| `S5fc0e0` | changes | request(s) wait for your decision. | ਬੇਨਤੀਆਂ ਤੁਹਾਡੇ ਫ਼ੈਸਲੇ ਦੀ ਉਡੀਕ ਵਿੱਚ ਹਨ। |
+| `Sa72502` | changes, detail, export | State | ਸਥਿਤੀ |
 | `S97fd13` | check | Back to the terms | ਸ਼ਬਦਾਂ ਕੋਲ ਵਾਪਸ |
 | `S1bc9e5` | check | English string | ਅੰਗਰੇਜ਼ੀ ਪਾਠ |
 | `S5d54b3` | check | Every string uses the translated terms. | ਹਰ ਪਾਠ ਅਨੁਵਾਦ ਕੀਤੇ ਸ਼ਬਦ ਵਰਤਦਾ ਹੈ। |
@@ -17580,7 +18385,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S9b0b4c` | detail | also the files without an access level (all columns) | ਪਹੁੰਚ ਪੱਧਰ ਤੋਂ ਬਿਨਾਂ ਫਾਈਲਾਂ ਵੀ (ਸਾਰੇ ਕਾਲਮ) |
 | `Sf24c44` | detail | Any %(code)s Engineer | ਕੋਈ ਵੀ %(code)s ਇੰਜੀਨੀਅਰ |
 | `Sb99a01` | detail | Applies to software versions | ਸਾਫਟਵੇਅਰ ਸੰਸਕਰਣਾਂ ਉੱਤੇ ਲਾਗੂ |
-| `S7b2c7f` | detail, language | Approve | ਮਨਜ਼ੂਰ ਕਰੋ |
 | `Sde38bf` | detail | Approve selected | ਚੁਣੇ ਹੋਏ ਮਨਜ਼ੂਰ ਕਰੋ |
 | `Scf2999` | detail | Approving confirms these values; any change you make here is applied and audited. Rejecting ignores them. | ਮਨਜ਼ੂਰੀ ਇਨ੍ਹਾਂ ਮੁੱਲਾਂ ਦੀ ਪੁਸ਼ਟੀ ਕਰਦੀ ਹੈ; ਤੁਸੀਂ ਇੱਥੇ ਜੋ ਵੀ ਤਬਦੀਲੀ ਕਰੋਗੇ ਉਹ ਲਾਗੂ ਹੋਵੇਗੀ ਅਤੇ ਆਡਿਟ ਹੋਵੇਗੀ। ਰੱਦ ਕਰਨਾ ਇਨ੍ਹਾਂ ਨੂੰ ਅਣਡਿੱਠ ਕਰਦਾ ਹੈ। |
 | `Sf7f2d5` | detail | Archive (requires 180-day retention elapsed) | ਆਰਕਾਈਵ ਕਰੋ (180 ਦਿਨਾਂ ਦੀ ਰੱਖ-ਰਖਾਅ ਮਿਆਦ ਲੰਘਣੀ ਜ਼ਰੂਰੀ) |
@@ -17601,7 +18405,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S4572f4` | detail | Change request | ਤਬਦੀਲੀ ਬੇਨਤੀ |
 | `S3295be` | detail, workbench | Change requests in this set | ਇਸ ਸਮੂਹ ਦੀਆਂ ਤਬਦੀਲੀ ਬੇਨਤੀਆਂ |
 | `S4d8006` | detail | Change set | ਤਬਦੀਲੀ ਸਮੂਹ |
-| `S8aa57d` | detail | Changes | ਤਬਦੀਲੀਆਂ |
 | `S3d14ea` | detail, export | Changes of this release only | ਸਿਰਫ਼ ਇਸ ਰਿਲੀਜ਼ ਦੀਆਂ ਤਬਦੀਲੀਆਂ |
 | `Sbd95c0` | detail | Checklist confirmed at sign-off | ਦਸਤਖ਼ਤ ਵੇਲੇ ਪੁਸ਼ਟੀ ਕੀਤੀ ਚੈੱਕਲਿਸਟ |
 | `S074d62` | detail, role badge | Chief Engineer | ਮੁੱਖ ਇੰਜੀਨੀਅਰ |
@@ -17619,7 +18422,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S7671b5` | detail | Confirm or override Audience Access | ਨਿਸ਼ਾਨਾ ਸਮੂਹ ਪਹੁੰਚ ਦੀ ਪੁਸ਼ਟੀ ਜਾਂ ਓਵਰਰਾਈਡ ਕਰੋ |
 | `S6512ee` | detail | Connection | ਸੰਬੰਧ |
 | `S4f9be0` | detail | Content | ਸਮੱਗਰੀ |
-| `Sa36a5f` | detail, legacy_mapping, st_new | Controller | ਕੰਟਰੋਲਰ |
+| `Sa36a5f` | detail, legacy_mapping, list | Controller | ਕੰਟਰੋਲਰ |
 | `Scd293f` | detail | Converter Reactive Power Program | ਕਨਵਰਟਰ ਰਿਐਕਟਿਵ ਪਾਵਰ ਪ੍ਰੋਗਰਾਮ |
 | `S3998a7` | detail | Copies the descriptive fields into a new Draft in a Main Controller group (a new number is allocated at submit; this code's identifier is kept as the legacy reference). | ਵਰਣਨਾਤਮਕ ਖੇਤਰਾਂ ਨੂੰ ਮੁੱਖ ਕੰਟਰੋਲਰ ਸਮੂਹ ਦੇ ਨਵੇਂ ਖਰੜੇ ਵਿੱਚ ਕਾਪੀ ਕਰਦਾ ਹੈ (ਜਮ੍ਹਾਂ ਕਰਨ ਵੇਲੇ ਨਵਾਂ ਨੰਬਰ ਦਿੱਤਾ ਜਾਂਦਾ ਹੈ; ਇਸ ਕੋਡ ਦੀ ਪਛਾਣ ਪੁਰਾਣੇ ਹਵਾਲੇ ਵਜੋਂ ਰੱਖੀ ਜਾਂਦੀ ਹੈ)। |
 | `S54b051` | detail | Copy this code for another turbine platform. The copy is a new Draft that links back here and goes through the normal review. | ਇਸ ਕੋਡ ਨੂੰ ਕਿਸੇ ਹੋਰ ਟਰਬਾਈਨ ਪਲੇਟਫਾਰਮ ਲਈ ਕਾਪੀ ਕਰੋ। ਕਾਪੀ ਇੱਕ ਨਵਾਂ ਖਰੜਾ ਹੈ ਜੋ ਇੱਥੇ ਵਾਪਸ ਜੁੜਦਾ ਹੈ ਅਤੇ ਆਮ ਸਮੀਖਿਆ ਵਿੱਚੋਂ ਲੰਘਦਾ ਹੈ। |
@@ -17753,7 +18556,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sf5ca9d` | detail | Recorded exports | ਦਰਜ ਐਕਸਪੋਰਟ |
 | `Sa3f757` | detail | Reinstate to Released | ਜਾਰੀ ਵਿੱਚ ਬਹਾਲ ਕਰੋ |
 | `S3238ca` | detail | Reinstatement reason | ਬਹਾਲੀ ਦਾ ਕਾਰਨ |
-| `S2b03b5` | detail | Reject | ਰੱਦ ਕਰੋ |
 | `S27fb5c` | detail | Reject selected | ਚੁਣੇ ਹੋਏ ਰੱਦ ਕਰੋ |
 | `S045c2c` | detail | Related codes | ਸੰਬੰਧਿਤ ਕੋਡ |
 | `S33a5a7` | detail | Relation | ਸੰਬੰਧ |
@@ -17771,7 +18573,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S4c1aa6` | detail | Repeated-Error Escalation | ਦੁਹਰਾਈ ਗਲਤੀ ਵਾਧਾ |
 | `S4aed03` | detail | Request | ਬੇਨਤੀ |
 | `Sf3421a` | detail | Request a Sign-Off | ਦਸਤਖ਼ਤ ਦੀ ਬੇਨਤੀ ਕਰੋ |
-| `Sc26bf6` | detail, mine | Requested | ਬੇਨਤੀ ਕੀਤੀ |
+| `Sc26bf6` | detail, mine, row | Requested | ਬੇਨਤੀ ਕੀਤੀ |
 | `S2706ed` | detail | Required by | ਇਨ੍ਹਾਂ ਲਈ ਲੋੜੀਂਦਾ |
 | `S619e87` | detail, form | Reset Delay | ਰੀਸੈੱਟ ਦੇਰੀ |
 | `S026ab2` | detail | resolved | ਹੱਲ ਹੋਇਆ |
@@ -17781,7 +18583,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S3beb9a` | detail | Revision | ਸੋਧ |
 | `Sa72973` | detail | Revision Fields | ਸੋਧ ਖੇਤਰ |
 | `Sfc1d6a` | detail | row(s) imported as Drafts | ਕਤਾਰਾਂ ਖਰੜਿਆਂ ਵਜੋਂ ਦਰਾਮਦ ਹੋਈਆਂ |
-| `S52d0b3` | detail, reconciliation, user_detail | Rows | ਕਤਾਰਾਂ |
 | `Sd0edfb` | detail | Sales | ਵਿਕਰੀ |
 | `S241bf5` | detail, workbench | Sample number | ਨਮੂਨਾ ਨੰਬਰ |
 | `Sda38c6` | detail | Save planned dates | ਯੋਜਨਾਬੱਧ ਮਿਤੀਆਂ ਸੁਰੱਖਿਅਤ ਕਰੋ |
@@ -17800,11 +18601,10 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sece2ac` | detail, form | Slot | ਸਲਾਟ |
 | `Sff44d2` | detail | Software Version | ਸਾਫਟਵੇਅਰ ਸੰਸਕਰਣ |
 | `S169bf7` | detail, export, software_versions | Software version | ਸਾਫਟਵੇਅਰ ਸੰਸਕਰਣ |
-| `S6da13a` | detail, fleet_feedback | Source | ਸਰੋਤ |
+| `S6da13a` | detail, fleet_feedback, row | Source | ਸਰੋਤ |
 | `Sd3c56b` | detail, export_profiles | source language | ਸਰੋਤ ਭਾਸ਼ਾ |
 | `Sb3883f` | detail | Standards | ਮਿਆਰ |
 | `Sfaa9e7` | detail, reconciliation | Started | ਸ਼ੁਰੂ ਹੋਇਆ |
-| `Sa72502` | detail, export, hub_consolidation | State | ਸਥਿਤੀ |
 | `Se246b6` | detail, form, list | Status Category | ਸਥਿਤੀ ਸ਼੍ਰੇਣੀ |
 | `S779953` | detail, form | Status Code for Repeated Error | ਦੁਹਰਾਈ ਗਲਤੀ ਲਈ ਸਥਿਤੀ ਕੋਡ |
 | `S98a377` | detail | Still a Draft. | ਅਜੇ ਵੀ ਖਰੜਾ। |
@@ -17823,7 +18623,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Seaf576` | detail, form | Trigger Snapshot | ਸਨੈਪਸ਼ਾਟ ਚਾਲੂ ਕਰੋ |
 | `S285ec8` | detail, form | Troubleshooting | ਨੁਕਸ ਨਿਵਾਰਨ |
 | `S71bba4` | detail | Turbine Operator Package | ਟਰਬਾਈਨ ਆਪਰੇਟਰ ਪੈਕੇਜ |
-| `S3deb74` | detail, mine, review_queue | Type | ਕਿਸਮ |
+| `S3deb74` | detail, list, mine | Type | ਕਿਸਮ |
 | `Sab631e` | detail | Type %(id)s to confirm | ਪੁਸ਼ਟੀ ਲਈ %(id)s ਟਾਈਪ ਕਰੋ |
 | `Sb5e264` | detail | Type the identifier to confirm | ਪੁਸ਼ਟੀ ਲਈ ਪਛਾਣਕਰਤਾ ਟਾਈਪ ਕਰੋ |
 | `S835f8a` | detail | Umrichterprogramm GSC | ਕਨਵਰਟਰ ਪ੍ਰੋਗਰਾਮ GSC |
@@ -17842,7 +18642,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S51ecc5` | detail | What happens next | ਅੱਗੇ ਕੀ ਹੁੰਦਾ ਹੈ |
 | `Sf323c0` | detail | Where used | ਕਿੱਥੇ ਵਰਤਿਆ ਗਿਆ |
 | `S7d5316` | detail | Who | ਕਿਸਨੇ |
-| `S47e564` | detail | Withdraw | ਵਾਪਸ ਲਓ |
 | `S51a998` | detail | Withdraw this change request? | ਕੀ ਇਹ ਤਬਦੀਲੀ ਬੇਨਤੀ ਵਾਪਸ ਲੈਣੀ ਹੈ? |
 | `S93ef7c` | detail, workbench | Workbench | ਵਰਕਬੈਂਚ |
 | `S95a2a4` | detail, form | Write level | ਲਿਖਣ ਦਾ ਪੱਧਰ |
@@ -17862,7 +18661,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sec0298` | dry_run | Result per row | ਹਰ ਕਤਾਰ ਦਾ ਨਤੀਜਾ |
 | `S9bf7a8` | dry_run | Row | ਕਤਾਰ |
 | `S3ff0b0` | dry_run | row(s) have problems. Nothing has been created. | ਕਤਾਰਾਂ ਵਿੱਚ ਸਮੱਸਿਆਵਾਂ ਹਨ। ਕੁਝ ਨਹੀਂ ਬਣਾਇਆ ਗਿਆ। |
-| `S6c30d2` | dry_run | rows | ਕਤਾਰਾਂ |
 | `S8012ff` | dry_run | unchanged | ਬਿਨਾਂ ਬਦਲਾਅ |
 | `S83d655` | dry_run, st_preview | warning(s) | ਚੇਤਾਵਨੀ(ਆਂ) |
 | `S9ddad9` | dry_run | would be created | ਬਣਾਈਆਂ ਜਾਂਦੀਆਂ |
@@ -18004,6 +18802,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S285edc` | help and messages | %(ok)s of %(n)s: %(what)s. | %(ok)s / %(n)s: %(what)s। |
 | `Sb08e6c` | help and messages | A Reviewer and an Administrator each sign off (in any order). If either rejects, it goes back to the author. | ਇੱਕ ਸਮੀਖਿਅਕ ਅਤੇ ਇੱਕ ਪ੍ਰਸ਼ਾਸਕ ਹਰ ਇੱਕ ਦਸਤਖ਼ਤ ਕਰਦਾ ਹੈ (ਕਿਸੇ ਵੀ ਕ੍ਰਮ ਵਿੱਚ)। ਜੇ ਕੋਈ ਰੱਦ ਕਰੇ ਤਾਂ ਇਹ ਲੇਖਕ ਕੋਲ ਵਾਪਸ ਜਾਂਦੀ ਹੈ। |
 | `S2f1bed` | help and messages | An Administrator includes the revision in a Release and publishes it; then it is Released. | ਪ੍ਰਸ਼ਾਸਕ ਸੋਧ ਨੂੰ ਰਿਲੀਜ਼ ਵਿੱਚ ਸ਼ਾਮਲ ਕਰਕੇ ਪ੍ਰਕਾਸ਼ਿਤ ਕਰਦਾ ਹੈ; ਫਿਰ ਇਹ ਜਾਰੀ ਹੋ ਜਾਂਦੀ ਹੈ। |
+| `S9477fd` | help and messages | choose | ਚੁਣੋ |
 | `S1308dc` | help and messages | defective codes sent back | ਨੁਕਸ ਵਾਲੇ ਕੋਡ ਵਾਪਸ ਭੇਜ ਦਿੱਤੇ ਗਏ |
 | `Se2bbd9` | help and messages | Drafts saved | ਖਰੜੇ ਸੁਰੱਖਿਅਤ ਹੋ ਗਏ |
 | `S0ddfa5` | help and messages | Drafts signed off | ਖਰੜਿਆਂ ਦਾ ਸਾਈਨ-ਆਫ਼ ਹੋ ਗਿਆ |
@@ -18015,7 +18814,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sce489f` | help and messages | The author gets any required cross-domain sign-offs, then submits the change request for review. | ਲੇਖਕ ਲੋੜੀਂਦੇ ਅੰਤਰ-ਡੋਮੇਨ ਦਸਤਖ਼ਤ ਲੈਂਦਾ ਹੈ, ਫਿਰ ਤਬਦੀਲੀ ਬੇਨਤੀ ਸਮੀਖਿਆ ਲਈ ਜਮ੍ਹਾਂ ਕਰਦਾ ਹੈ। |
 | `S1cdbdd` | help and messages | The Chief Engineer approves or rejects. Approval makes the revision Approved (or Deprecated for a deprecation request). | ਮੁੱਖ ਇੰਜੀਨੀਅਰ ਮਨਜ਼ੂਰ ਜਾਂ ਰੱਦ ਕਰਦਾ ਹੈ। ਮਨਜ਼ੂਰੀ ਸੋਧ ਨੂੰ ਮਨਜ਼ੂਰ (ਜਾਂ ਬੰਦ ਕਰਨ ਦੀ ਬੇਨਤੀ ਲਈ ਬੰਦ) ਬਣਾ ਦਿੰਦੀ ਹੈ। |
 | `S2d6ac0` | help and messages | The package is being built. Reload this page to follow its progress. | ਪੈਕੇਜ ਬਣ ਰਿਹਾ ਹੈ। ਪ੍ਰਗਤੀ ਦੇਖਣ ਲਈ ਇਹ ਸਫ਼ਾ ਮੁੜ ਲੋਡ ਕਰੋ। |
-| `Sde7a5b` | help and messages | The program files do not carry a category; you can change it in each Draft. | ਪ੍ਰੋਗਰਾਮ ਫਾਈਲਾਂ ਵਿੱਚ ਸ਼੍ਰੇਣੀ ਨਹੀਂ ਹੁੰਦੀ; ਤੁਸੀਂ ਹਰ ਖਰੜੇ ਵਿੱਚ ਇਸਨੂੰ ਬਦਲ ਸਕਦੇ ਹੋ। |
 | `Scff3a3` | help and messages | User deleted; its name and address are erased, what it did stays attributable. | ਵਰਤੋਂਕਾਰ ਮਿਟਾਇਆ ਗਿਆ; ਉਸਦਾ ਨਾਮ ਅਤੇ ਪਤਾ ਮਿਟਾ ਦਿੱਤੇ ਗਏ, ਜੋ ਉਸਨੇ ਕੀਤਾ ਉਹ ਪਛਾਣਯੋਗ ਰਹਿੰਦਾ ਹੈ। |
 | `Secfb3f` | hub_consolidation | Deprecate replaced Hub codes | ਬਦਲੇ ਗਏ ਹੱਬ ਕੋਡ ਬੰਦ ਕਰੋ |
 | `S0e7766` | hub_consolidation, language | draft | ਖਰੜਾ |
@@ -18026,7 +18824,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sc50c53` | hub_consolidation | Hub Controller to Main Controller consolidation | ਹੱਬ ਕੰਟਰੋਲਰ ਤੋਂ ਮੁੱਖ ਕੰਟਰੋਲਰ ਵਿੱਚ ਏਕੀਕਰਨ |
 | `Scd189f` | hub_consolidation | Hub group | ਹੱਬ ਸਮੂਹ |
 | `Sa5262b` | hub_consolidation | If the Hub Controller leaves the hardware setup, its codes are defined anew on the Main Controller side. Create an MC draft from an HC code on its detail page (Actions); this report shows how far each has come. Nothing is renumbered. | ਜੇ ਹੱਬ ਕੰਟਰੋਲਰ ਹਾਰਡਵੇਅਰ ਸੰਰਚਨਾ ਵਿੱਚੋਂ ਨਿਕਲ ਜਾਵੇ, ਤਾਂ ਇਸਦੇ ਕੋਡ ਮੁੱਖ ਕੰਟਰੋਲਰ ਵਾਲੇ ਪਾਸੇ ਨਵੇਂ ਸਿਰਿਓਂ ਪਰਿਭਾਸ਼ਿਤ ਹੁੰਦੇ ਹਨ। HC ਕੋਡ ਦੇ ਵੇਰਵਾ ਸਫ਼ੇ (ਕਾਰਜ) ਤੋਂ ਇਸ ਤੋਂ MC ਖਰੜਾ ਬਣਾਓ; ਇਹ ਰਿਪੋਰਟ ਦਿਖਾਉਂਦੀ ਹੈ ਕਿ ਹਰ ਇੱਕ ਕਿੱਥੋਂ ਤੱਕ ਪਹੁੰਚਿਆ। ਕੁਝ ਵੀ ਦੁਬਾਰਾ ਨੰਬਰ ਨਹੀਂ ਹੁੰਦਾ। |
-| `Sdd6555` | hub_consolidation, legacy_mapping, st_preview | Legacy no. | ਪੁਰਾਣਾ ਨੰ. |
+| `Sdd6555` | hub_consolidation, legacy_mapping, list | Legacy no. | ਪੁਰਾਣਾ ਨੰ. |
 | `S845a2b` | hub_consolidation | No Hub Controller codes yet. | ਅਜੇ ਕੋਈ ਹੱਬ ਕੰਟਰੋਲਰ ਕੋਡ ਨਹੀਂ। |
 | `S138665` | hub_consolidation | Open deprecation requests | ਬੰਦ ਕਰਨ ਦੀਆਂ ਬੇਨਤੀਆਂ ਖੋਲ੍ਹੋ |
 | `Sc8df93` | hub_consolidation | Open deprecation requests for all replaced Hub codes of this group? | ਕੀ ਇਸ ਸਮੂਹ ਦੇ ਸਾਰੇ ਬਦਲੇ ਹੱਬ ਕੋਡਾਂ ਲਈ ਬੰਦ ਕਰਨ ਦੀਆਂ ਬੇਨਤੀਆਂ ਖੋਲ੍ਹਣੀਆਂ ਹਨ? |
@@ -18085,7 +18883,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sded18c` | language | approved by | ਮਨਜ਼ੂਰ ਕਰਨ ਵਾਲਾ |
 | `Sedd46e` | language | Check against the interface | ਇੰਟਰਫੇਸ ਨਾਲ ਮਿਲਾ ਕੇ ਵੇਖੋ |
 | `S5a013c` | language | missing | ਗੁੰਮ |
-| `S2c924e` | language, workbench | Note | ਨੋਟ |
+| `S2c924e` | language, row, workbench | Note | ਨੋਟ |
 | `S2f09d0` | language | Note on %(x)s | %(x)s ਬਾਰੇ ਨੋਟ |
 | `S75bf99` | language | proposed by | ਸੁਝਾਉਣ ਵਾਲਾ |
 | `Sc68e32` | language | Save translations | ਅਨੁਵਾਦ ਸੁਰੱਖਿਅਤ ਕਰੋ |
@@ -18093,14 +18891,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S542818` | language | Terms of the language | ਭਾਸ਼ਾ ਦੇ ਸ਼ਬਦ |
 | `Sae9e5d` | language | Translation of %(x)s | %(x)s ਦਾ ਅਨੁਵਾਦ |
 | `S863fd0` | language | Your own proposal: another person approves it. | ਤੁਹਾਡਾ ਆਪਣਾ ਸੁਝਾਅ: ਕੋਈ ਹੋਰ ਇਸਨੂੰ ਮਨਜ਼ੂਰ ਕਰਦਾ ਹੈ। |
-| `Sf9d469` | legacy_mapping | All controllers | ਸਾਰੇ ਕੰਟਰੋਲਰ |
+| `Sf9d469` | legacy_mapping, list | All controllers | ਸਾਰੇ ਕੰਟਰੋਲਰ |
 | `Se61c2f` | legacy_mapping | Any number state | ਕੋਈ ਵੀ ਨੰਬਰ ਅਵਸਥਾ |
 | `S7c4f77` | legacy_mapping | issued | ਜਾਰੀ ਕੀਤਾ |
 | `Sfd5ec0` | legacy_mapping, menu, new | Legacy mapping | ਪੁਰਾਣੇ-ਨਵੇਂ ਦੀ ਮੈਪਿੰਗ |
 | `S81f567` | legacy_mapping | Legacy number to new identifier | ਪੁਰਾਣੇ ਨੰਬਰ ਤੋਂ ਨਵੇਂ ਪਛਾਣਕਰਤਾ ਤੱਕ |
 | `S64b267` | legacy_mapping | legacy number, identifier or name | ਪੁਰਾਣਾ ਨੰਬਰ, ਪਛਾਣਕਰਤਾ ਜਾਂ ਨਾਮ |
 | `S60fe6c` | legacy_mapping | new codes without a legacy number (n/a) | ਪੁਰਾਣੇ ਨੰਬਰ ਤੋਂ ਬਿਨਾਂ ਨਵੇਂ ਕੋਡ (ਲਾਗੂ ਨਹੀਂ) |
-| `Sf26140` | legacy_mapping, st_preview | New identifier | ਨਵਾਂ ਪਛਾਣਕਰਤਾ |
 | `Sf573c8` | legacy_mapping | no number yet | ਅਜੇ ਨੰਬਰ ਨਹੀਂ |
 | `S7877c5` | legacy_mapping | No status code carries a legacy number yet. | ਅਜੇ ਕਿਸੇ ਸਥਿਤੀ ਕੋਡ ਉੱਤੇ ਪੁਰਾਣਾ ਨੰਬਰ ਨਹੀਂ। |
 | `Sb7baa1` | legacy_mapping | Number | ਨੰਬਰ |
@@ -18109,10 +18906,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S8b0b7c` | legacy_mapping | with a legacy number | ਪੁਰਾਣੇ ਨੰਬਰ ਸਮੇਤ |
 | `Seba07b` | list | A change set groups the change requests that ship with one controller software release, so reviewers see the whole package. Each request is still decided on its own. | ਤਬਦੀਲੀ ਸਮੂਹ ਇੱਕ ਕੰਟਰੋਲਰ ਸਾਫਟਵੇਅਰ ਰਿਲੀਜ਼ ਨਾਲ ਜਾਣ ਵਾਲੀਆਂ ਤਬਦੀਲੀ ਬੇਨਤੀਆਂ ਨੂੰ ਇਕੱਠਾ ਕਰਦਾ ਹੈ, ਤਾਂ ਜੋ ਸਮੀਖਿਅਕ ਪੂਰਾ ਪੈਕੇਜ ਵੇਖਣ। ਹਰ ਬੇਨਤੀ ਉੱਤੇ ਅਜੇ ਵੀ ਵੱਖਰਾ ਫ਼ੈਸਲਾ ਹੁੰਦਾ ਹੈ। |
 | `Sc5fe02` | list | any | ਕੋਈ ਵੀ |
+| `S55201a` | list | Any status | ਕੋਈ ਵੀ ਸਥਿਤੀ |
 | `Sef5415` | list | Apply columns | ਕਾਲਮ ਲਾਗੂ ਕਰੋ |
+| `Sffb569` | list | Ask for approval of the ticked rows | ਨਿਸ਼ਾਨਬੱਧ ਕਤਾਰਾਂ ਦੀ ਮਨਜ਼ੂਰੀ ਮੰਗੋ |
 | `S9e895f` | list | Change sets | ਤਬਦੀਲੀ ਸਮੂਹ |
 | `S162a45` | list, menu | Change Sets | ਤਬਦੀਲੀ ਸੈੱਟ |
 | `Scf723c` | list | Columns | ਕਾਲਮ |
+| `S2ddaf9` | list, upload | Compare a workbook | ਵਰਕਬੁੱਕ ਦੀ ਤੁਲਨਾ ਕਰੋ |
 | `Seb0fd2` | list | Delete all my Drafts of this filter | ਇਸ ਫਿਲਟਰ ਦੇ ਮੇਰੇ ਸਾਰੇ ਖਰੜੇ ਮਿਟਾਓ |
 | `S36f212` | list | Delete ALL of your own Drafts that match this filter, on every page? | ਇਸ ਫਿਲਟਰ ਨਾਲ ਮੇਲ ਖਾਂਦੇ ਤੁਹਾਡੇ ਸਾਰੇ ਖਰੜੇ, ਹਰ ਸਫ਼ੇ 'ਤੇ, ਮਿਟਾਉਣੇ ਹਨ? |
 | `Sc554a1` | list | Delete selected Drafts | ਚੁਣੇ ਹੋਏ ਖਰੜੇ ਮਿਟਾਓ |
@@ -18122,12 +18922,18 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S44d25b` | list | Items | ਆਈਟਮਾਂ |
 | `S033df3` | list | Lifecycle | ਜੀਵਨ-ਚੱਕਰ |
 | `Sb4cad6` | list | Link to this view | ਇਸ ਦ੍ਰਿਸ਼ ਦਾ ਲਿੰਕ |
+| `Sbdb4e1` | list | Load the initial mapping | ਸ਼ੁਰੂਆਤੀ ਮੈਪਿੰਗ ਲੋਡ ਕਰੋ |
+| `Se07018` | list | Make the request | ਬੇਨਤੀ ਕਰੋ |
 | `Se248d5` | list, new | New change set | ਨਵਾਂ ਤਬਦੀਲੀ ਸਮੂਹ |
 | `Se75aa1` | list, new | New Release | ਨਵੀਂ ਰਿਲੀਜ਼ |
+| `S9bb526` | list, row | New row | ਨਵੀਂ ਕਤਾਰ |
 | `Se5076c` | list | No change sets yet. | ਅਜੇ ਕੋਈ ਤਬਦੀਲੀ ਸਮੂਹ ਨਹੀਂ। |
 | `Sd32c03` | list | No releases yet. | ਅਜੇ ਕੋਈ ਰਿਲੀਜ਼ ਨਹੀਂ। |
+| `Sb5b22c` | list | No row matches. | ਕੋਈ ਕਤਾਰ ਮੇਲ ਨਹੀਂ ਖਾਂਦੀ। |
 | `Sc3af43` | list | No saved searches yet. | ਅਜੇ ਕੋਈ ਸੁਰੱਖਿਅਤ ਖੋਜ ਨਹੀਂ। |
 | `S0cb400` | list | No status codes match these filters. | ਇਨ੍ਹਾਂ ਫਿਲਟਰਾਂ ਨਾਲ ਕੋਈ ਸਥਿਤੀ ਕੋਡ ਮੇਲ ਨਹੀਂ ਖਾਂਦਾ। |
+| `S260f7a` | list, row | Node | ਨੋਡ |
+| `S08250b` | list | number, title or group | ਨੰਬਰ, ਸਿਰਲੇਖ ਜਾਂ ਸਮੂਹ |
 | `Sf7194e` | list | Requests | ਬੇਨਤੀਆਂ |
 | `S37a530` | list | result | ਨਤੀਜਾ |
 | `Scdf7e9` | list | results | ਨਤੀਜੇ |
@@ -18136,10 +18942,14 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sff86e9` | list | Save the current filters as | ਮੌਜੂਦਾ ਫਿਲਟਰ ਇਸ ਨਾਮ ਨਾਲ ਸੁਰੱਖਿਅਤ ਕਰੋ |
 | `Sed1d84` | list | Saved searches | ਸੁਰੱਖਿਅਤ ਖੋਜਾਂ |
 | `S859822` | list, mine | Select | ਚੁਣੋ |
+| `S45b553` | list | Select all rows | ਸਾਰੀਆਂ ਕਤਾਰਾਂ ਚੁਣੋ |
 | `S7f5583` | list, menu | Status Codes | ਸਥਿਤੀ ਕੋਡ |
 | `S20bff1` | list | Status codes | ਸਥਿਤੀ ਕੋਡ |
+| `S3a1066` | list | The mapping is empty. | ਮੈਪਿੰਗ ਖਾਲੀ ਹੈ। |
+| `S27d95b` | list | The rows stay as they are. Once the StCd Owner, the Chief Engineer and an Administrator approve, they count as approved numbers. | ਕਤਾਰਾਂ ਜਿਵੇਂ ਹਨ ਉਵੇਂ ਹੀ ਰਹਿੰਦੀਆਂ ਹਨ। ਜਦੋਂ StCd ਮਾਲਕ, ਮੁੱਖ ਇੰਜੀਨੀਅਰ ਅਤੇ ਇੱਕ ਪ੍ਰਸ਼ਾਸਕ ਮਨਜ਼ੂਰ ਕਰਦੇ ਹਨ ਤਾਂ ਉਹ ਮਨਜ਼ੂਰ ਨੰਬਰ ਗਿਣੀਆਂ ਜਾਂਦੀਆਂ ਹਨ। |
 | `Se90eb0` | list | Turbine Platform | ਟਰਬਾਈਨ ਪਲੇਟਫਾਰਮ |
 | `S86b1e7` | list | Typos are tolerated: "convertor" still finds "converter". | ਟਾਈਪਿੰਗ ਦੀਆਂ ਗਲਤੀਆਂ ਸਹਾਰ ਲਈਆਂ ਜਾਂਦੀਆਂ ਹਨ: "convertor" ਫਿਰ ਵੀ "converter" ਲੱਭ ਲੈਂਦਾ ਹੈ। |
+| `Sb0c551` | list | Which legacy status code becomes which new one, with what the program files do not carry: the English title, the type, the up/down counter, the access levels, cause and directive. A row changes only by a request that the StCd Owner, the Chief Engineer and an Administrator all approve. | ਕਿਹੜਾ ਪੁਰਾਣਾ ਸਟੇਟਸ ਕੋਡ ਕਿਹੜਾ ਨਵਾਂ ਬਣਦਾ ਹੈ, ਉਸ ਜਾਣਕਾਰੀ ਨਾਲ ਜੋ ਪ੍ਰੋਗਰਾਮ ਫ਼ਾਈਲਾਂ ਵਿੱਚ ਨਹੀਂ ਹੁੰਦੀ: ਅੰਗਰੇਜ਼ੀ ਸਿਰਲੇਖ, ਕਿਸਮ, ਉੱਪਰ/ਹੇਠਾਂ ਕਾਊਂਟਰ, ਪਹੁੰਚ ਪੱਧਰ, ਕਾਰਨ ਅਤੇ ਹਦਾਇਤ। ਕਤਾਰ ਸਿਰਫ਼ ਉਸ ਬੇਨਤੀ ਨਾਲ ਬਦਲਦੀ ਹੈ ਜਿਸ ਨੂੰ StCd ਮਾਲਕ, ਮੁੱਖ ਇੰਜੀਨੀਅਰ ਅਤੇ ਇੱਕ ਪ੍ਰਸ਼ਾਸਕ ਸਾਰੇ ਮਨਜ਼ੂਰ ਕਰਨ। |
 | `Sf7c400` | login | Log in | ਲਾਗ ਇਨ |
 | `S175835` | login | or | ਜਾਂ |
 | `S8be3c9` | login, users | Password | ਪਾਸਵਰਡ |
@@ -18301,6 +19111,23 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S8cb56e` | message: lookup_admin_service | range_end must be greater than range_start | range_end, range_start ਤੋਂ ਵੱਡਾ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ |
 | `Se3a971` | message: lookup_admin_service | sub_range_end must be greater than sub_range_start | sub_range_end, sub_range_start ਤੋਂ ਵੱਡਾ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ |
 | `S1404e3` | message: lookup_service | functional_system_group query parameter is required for functional-subgroups | functional-subgroups ਲਈ functional_system_group ਕੁਐਰੀ ਪੈਰਾਮੀਟਰ ਲੋੜੀਂਦਾ ਹੈ |
+| `Sf28681` | message: mapping_service | Give the reason for the change; the three approvers read it first. | ਤਬਦੀਲੀ ਦਾ ਕਾਰਨ ਦੱਸੋ; ਤਿੰਨੋਂ ਮਨਜ਼ੂਰ ਕਰਨ ਵਾਲੇ ਇਸ ਨੂੰ ਪਹਿਲਾਂ ਪੜ੍ਹਦੇ ਹਨ। |
+| `S062788` | message: mapping_service | Give the request a title of at most 120 characters. | ਬੇਨਤੀ ਨੂੰ ਵੱਧ ਤੋਂ ਵੱਧ 120 ਅੱਖਰਾਂ ਦਾ ਸਿਰਲੇਖ ਦਿਓ। |
+| `S2ea56f` | message: mapping_service | Mapping change not found | ਮੈਪਿੰਗ ਦੀ ਤਬਦੀਲੀ ਨਹੀਂ ਮਿਲੀ |
+| `S2c9363` | message: mapping_service | Mapping row not found | ਮੈਪਿੰਗ ਦੀ ਕਤਾਰ ਨਹੀਂ ਮਿਲੀ |
+| `S2d5693` | message: mapping_service | Only the person who made the request can withdraw it. | ਬੇਨਤੀ ਕਰਨ ਵਾਲਾ ਵਿਅਕਤੀ ਹੀ ਇਸ ਨੂੰ ਵਾਪਸ ਲੈ ਸਕਦਾ ਹੈ। |
+| `S682269` | message: mapping_service | Only the StCd Owner, the Chief Engineer and an Administrator decide on the mapping. | ਮੈਪਿੰਗ ਬਾਰੇ ਸਿਰਫ਼ StCd ਮਾਲਕ, ਮੁੱਖ ਇੰਜੀਨੀਅਰ ਅਤੇ ਇੱਕ ਪ੍ਰਸ਼ਾਸਕ ਫ਼ੈਸਲਾ ਕਰਦੇ ਹਨ। |
+| `S5e0f66` | message: mapping_service | Say why you reject the request. | ਦੱਸੋ ਕਿ ਤੁਸੀਂ ਬੇਨਤੀ ਕਿਉਂ ਰੱਦ ਕਰਦੇ ਹੋ। |
+| `S3d5cfc` | message: mapping_service | The comment is longer than 1000 characters. | ਟਿੱਪਣੀ 1000 ਅੱਖਰਾਂ ਤੋਂ ਲੰਬੀ ਹੈ। |
+| `S82b817` | message: mapping_service | The decision must be APPROVE or REJECT. | ਫ਼ੈਸਲਾ APPROVE ਜਾਂ REJECT ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ। |
+| `S9ec08a` | message: mapping_service | The file is not a readable .xlsx workbook. | ਫ਼ਾਈਲ ਪੜ੍ਹਨਯੋਗ .xlsx ਵਰਕਬੁੱਕ ਨਹੀਂ ਹੈ। |
+| `S3831f7` | message: mapping_service | The reason is longer than 2000 characters. | ਕਾਰਨ 2000 ਅੱਖਰਾਂ ਤੋਂ ਲੰਬਾ ਹੈ। |
+| `Sa5de7d` | message: mapping_service | The request contains no row. | ਬੇਨਤੀ ਵਿੱਚ ਕੋਈ ਕਤਾਰ ਨਹੀਂ ਹੈ। |
+| `S2116e4` | message: mapping_service | The request is already closed. | ਬੇਨਤੀ ਪਹਿਲਾਂ ਹੀ ਬੰਦ ਹੋ ਚੁੱਕੀ ਹੈ। |
+| `S8518e7` | message: mapping_service | The role has decided already. | ਇਸ ਭੂਮਿਕਾ ਨੇ ਪਹਿਲਾਂ ਹੀ ਫ਼ੈਸਲਾ ਕਰ ਦਿੱਤਾ ਹੈ। |
+| `S2a15d7` | message: mapping_service | The workbook is larger than 5 MB. | ਵਰਕਬੁੱਕ 5 MB ਤੋਂ ਵੱਡੀ ਹੈ। |
+| `S8eb912` | message: mapping_service | The workbook unpacks to more than 80 MB. | ਵਰਕਬੁੱਕ ਖੋਲ੍ਹਣ 'ਤੇ 80 MB ਤੋਂ ਵੱਡੀ ਹੋ ਜਾਂਦੀ ਹੈ। |
+| `S6c1d08` | message: mapping_service | Your role may not propose a change of the mapping. | ਤੁਹਾਡੀ ਭੂਮਿਕਾ ਮੈਪਿੰਗ ਵਿੱਚ ਤਬਦੀਲੀ ਦਾ ਪ੍ਰਸਤਾਵ ਨਹੀਂ ਦੇ ਸਕਦੀ। |
 | `S4ada2b` | message: notification_service | Notification not found | ਸੂਚਨਾ ਨਹੀਂ ਮਿਲੀ |
 | `Sd92b89` | message: notification_service | This notification belongs to someone else. | ਇਹ ਸੂਚਨਾ ਕਿਸੇ ਹੋਰ ਦੀ ਹੈ। |
 | `Sb0cd00` | message: numbering_service | Identifier override must match StCd-NNNNN (five digits). | ਓਵਰਰਾਈਡ ਪਛਾਣਕਰਤਾ StCd-NNNNN (ਪੰਜ ਅੰਕ) ਨਾਲ ਮੇਲ ਖਾਣਾ ਚਾਹੀਦਾ ਹੈ। |
@@ -18332,8 +19159,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S9671fb` | message: settings_service | must be true or false | true ਜਾਂ false ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ |
 | `S5166bb` | message: st_import_service | A staged file changed after the preview. Upload again. | ਪੂਰਵ-ਝਲਕ ਤੋਂ ਬਾਅਦ ਇੱਕ ਤਿਆਰ ਫਾਈਲ ਬਦਲ ਗਈ। ਦੁਬਾਰਾ ਅੱਪਲੋਡ ਕਰੋ। |
 | `Saa4de2` | message: st_import_service | controller must be auto, MC or HC | controller auto, MC ਜਾਂ HC ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ |
-| `Sa30251` | message: st_import_service | default_category must be ERROR, WARNING or INFO | default_category ERROR, WARNING ਜਾਂ INFO ਹੋਣੀ ਚਾਹੀਦੀ ਹੈ |
-| `Sfe694a` | message: st_import_service | hc_proposal must be 1 or 2 | hc_proposal 1 ਜਾਂ 2 ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ |
 | `S58bec3` | message: st_import_service | No StCd program files found. Upload .st files or a ZIP of them. | ਕੋਈ StCd ਪ੍ਰੋਗਰਾਮ ਫਾਈਲ ਨਹੀਂ ਮਿਲੀ। .st ਫਾਈਲਾਂ ਜਾਂ ਉਨ੍ਹਾਂ ਦਾ ZIP ਅੱਪਲੋਡ ਕਰੋ। |
 | `Sd9c5b0` | message: st_import_service | Nothing selected: tick at least one program that is ready. | ਕੁਝ ਚੁਣਿਆ ਨਹੀਂ: ਘੱਟੋ-ਘੱਟ ਇੱਕ ਤਿਆਰ ਪ੍ਰੋਗਰਾਮ ਉੱਤੇ ਨਿਸ਼ਾਨ ਲਾਓ। |
 | `S5dbbd0` | message: st_import_service | The code is no longer an open Draft; preview the files again. | ਕੋਡ ਹੁਣ ਖੁੱਲ੍ਹਾ ਖਰੜਾ ਨਹੀਂ; ਫਾਈਲਾਂ ਦੀ ਪੂਰਵ-ਝਲਕ ਦੁਬਾਰਾ ਵੇਖੋ। |
@@ -18480,6 +19305,23 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S05fc94` | role badge | Engineer | ਇੰਜੀਨੀਅਰ |
 | `S3c0e8a` | role badge | StCd Owner | StCd ਮਾਲਕ |
 | `Sdbad9f` | role badge | Viewer | ਦਰਸ਼ਕ |
+| `S7f2e4b` | row | Access levels | ਪਹੁੰਚ ਪੱਧਰ |
+| `S08f985` | row | Cause | ਕਾਰਨ |
+| `S164e0b` | row | Directive | ਹਦਾਇਤ |
+| `S283474` | row | New number | ਨਵਾਂ ਨੰਬਰ |
+| `Sfa6fdd` | row | No request yet. The row is as it was loaded. | ਹਾਲੇ ਕੋਈ ਬੇਨਤੀ ਨਹੀਂ। ਕਤਾਰ ਉਵੇਂ ਹੀ ਹੈ ਜਿਵੇਂ ਲੋਡ ਹੋਈ ਸੀ। |
+| `Sf790fc` | row | Nothing is changed here directly: the form makes a request, and the row changes after the StCd Owner, the Chief Engineer and an Administrator have approved it. | ਇੱਥੇ ਸਿੱਧਾ ਕੁਝ ਨਹੀਂ ਬਦਲਦਾ: ਫਾਰਮ ਇੱਕ ਬੇਨਤੀ ਕਰਦਾ ਹੈ, ਅਤੇ StCd ਮਾਲਕ, ਮੁੱਖ ਇੰਜੀਨੀਅਰ ਤੇ ਇੱਕ ਪ੍ਰਸ਼ਾਸਕ ਦੀ ਮਨਜ਼ੂਰੀ ਤੋਂ ਬਾਅਦ ਕਤਾਰ ਬਦਲਦੀ ਹੈ। |
+| `S9d728f` | row | Request approval of the number | ਨੰਬਰ ਦੀ ਮਨਜ਼ੂਰੀ ਮੰਗੋ |
+| `Sc8978f` | row | Request rejection of the number | ਨੰਬਰ ਨੂੰ ਰੱਦ ਕਰਨ ਦੀ ਬੇਨਤੀ ਕਰੋ |
+| `Sc644eb` | row | Request that this number is never used? | ਬੇਨਤੀ ਕਰਨੀ ਹੈ ਕਿ ਇਹ ਨੰਬਰ ਕਦੇ ਨਾ ਵਰਤਿਆ ਜਾਵੇ? |
+| `Sb25913` | row | Request the new row | ਨਵੀਂ ਕਤਾਰ ਦੀ ਬੇਨਤੀ ਕਰੋ |
+| `Sb04301` | row | Request this change | ਇਸ ਤਬਦੀਲੀ ਦੀ ਬੇਨਤੀ ਕਰੋ |
+| `Sae91b6` | row | Requests for this row | ਇਸ ਕਤਾਰ ਦੀਆਂ ਬੇਨਤੀਆਂ |
+| `Sd59701` | row | Reset delay (parameter) | ਰੀਸੈੱਟ ਦੇਰੀ (ਪੈਰਾਮੀਟਰ) |
+| `Sfd64cd` | row | Set delay (parameter) | ਸੈੱਟ ਦੇਰੀ (ਪੈਰਾਮੀਟਰ) |
+| `S9c0444` | row | The three approvers read the reason first. | ਤਿੰਨੋਂ ਮਨਜ਼ੂਰ ਕਰਨ ਵਾਲੇ ਪਹਿਲਾਂ ਕਾਰਨ ਪੜ੍ਹਦੇ ਹਨ। |
+| `Sc84745` | row | Title (English) | ਸਿਰਲੇਖ (ਅੰਗਰੇਜ਼ੀ) |
+| `S711eea` | row | Up/down counter | ਉੱਪਰ/ਹੇਠਾਂ ਕਾਊਂਟਰ |
 | `S913aba` | settings | Save settings | ਸੈਟਿੰਗਾਂ ਸੁਰੱਖਿਅਤ ਕਰੋ |
 | `Sb68734` | software_versions | Added | ਜੋੜੇ |
 | `S172415` | software_versions | added | ਜੋੜੇ ਗਏ |
@@ -18493,28 +19335,19 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd97d1e` | software_versions | Show | ਦਿਖਾਓ |
 | `S42ea2e` | software_versions | Software Versions | ਸਾਫਟਵੇਅਰ ਸੰਸਕਰਣ |
 | `S3bd89c` | software_versions | Which codes exist in which software version | ਕਿਹੜੇ ਕੋਡ ਕਿਹੜੇ ਸਾਫਟਵੇਅਰ ਸੰਸਕਰਣ ਵਿੱਚ ਹਨ |
-| `S16e5d4` | st_new, st_preview | Alarm type | ਅਲਾਰਮ ਦੀ ਕਿਸਮ |
-| `S726d7a` | st_new | as above | ਉੱਪਰ ਵਾਂਗ |
-| `S9477fd` | st_new, st_preview | choose | ਚੁਣੋ |
 | `Sb149ca` | st_new | Detect: a number from 10000 up is a Hub Controller program | ਪਛਾਣੋ: 10000 ਤੋਂ ਉੱਪਰ ਦਾ ਨੰਬਰ ਹੱਬ ਕੰਟਰੋਲਰ ਪ੍ਰੋਗਰਾਮ ਹੈ |
 | `S7d06d0` | st_new | Every imported program becomes an ordinary Draft with the number it carries reserved. It still needs Cross-Domain Sign-Off, dual review and Chief Engineer approval before Release, and all Drafts of one import share a change set. | ਹਰ ਦਰਾਮਦ ਪ੍ਰੋਗਰਾਮ ਆਮ ਖਰੜਾ ਬਣਦਾ ਹੈ ਜਿਸਦਾ ਆਪਣਾ ਨੰਬਰ ਰਾਖਵਾਂ ਰਹਿੰਦਾ ਹੈ। ਰਿਲੀਜ਼ ਤੋਂ ਪਹਿਲਾਂ ਇਸਨੂੰ ਅਜੇ ਵੀ ਅੰਤਰ-ਡੋਮੇਨ ਦਸਤਖ਼ਤ, ਦੋਹਰੀ ਸਮੀਖਿਆ ਅਤੇ ਮੁੱਖ ਇੰਜੀਨੀਅਰ ਦੀ ਮਨਜ਼ੂਰੀ ਚਾਹੀਦੀ ਹੈ, ਅਤੇ ਇੱਕ ਦਰਾਮਦ ਦੇ ਸਾਰੇ ਖਰੜੇ ਇੱਕ ਤਬਦੀਲੀ ਸਮੂਹ ਸਾਂਝਾ ਕਰਦੇ ਹਨ। |
-| `Sbda77c` | st_new | Every program names an alarm type. A type left at "as above" gets the category chosen above; the next page lets you set the category of single programs or of all ticked ones. | ਹਰ ਪ੍ਰੋਗਰਾਮ ਇੱਕ ਅਲਾਰਮ ਕਿਸਮ ਦੱਸਦਾ ਹੈ। "ਉੱਪਰ ਵਾਂਗ" ਛੱਡੀ ਕਿਸਮ ਨੂੰ ਉੱਪਰ ਚੁਣੀ ਸ਼੍ਰੇਣੀ ਮਿਲਦੀ ਹੈ; ਅਗਲੇ ਸਫ਼ੇ 'ਤੇ ਤੁਸੀਂ ਇੱਕ-ਇੱਕ ਪ੍ਰੋਗਰਾਮ ਜਾਂ ਸਾਰੇ ਨਿਸ਼ਾਨ ਲੱਗਿਆਂ ਦੀ ਸ਼੍ਰੇਣੀ ਤੈਅ ਕਰ ਸਕਦੇ ਹੋ। |
 | `S3b9e43` | st_new | Hub Controller (legacy numbers, mapped to the new ones) | ਹੱਬ ਕੰਟਰੋਲਰ (ਪੁਰਾਣੇ ਨੰਬਰ, ਨਵਿਆਂ ਨਾਲ ਮੈਪ ਕੀਤੇ) |
 | `Sd7333f` | st_new | Import status codes from .st files | .st ਫਾਈਲਾਂ ਤੋਂ ਸਥਿਤੀ ਕੋਡ ਦਰਾਮਦ ਕਰੋ |
-| `S6640a6` | st_new | New number of Hub Controller programs | ਹੱਬ ਕੰਟਰੋਲਰ ਪ੍ਰੋਗਰਾਮਾਂ ਦਾ ਨਵਾਂ ਨੰਬਰ |
 | `Sc0eff1` | st_new | Or a whole folder | ਜਾਂ ਪੂਰਾ ਫੋਲਡਰ |
 | `S94ddc1` | st_new | Program files (.st) or a ZIP | ਪ੍ਰੋਗਰਾਮ ਫਾਈਲਾਂ (.st) ਜਾਂ ਇੱਕ ZIP |
-| `Sd99e2a` | st_new | Proposal 1: five-digit numbers (11000 and up) | ਤਜਵੀਜ਼ 1: ਪੰਜ ਅੰਕਾਂ ਦੇ ਨੰਬਰ (11000 ਤੋਂ) |
-| `S2744b0` | st_new | Proposal 2: inside the Main Controller scheme | ਤਜਵੀਜ਼ 2: ਮੁੱਖ ਕੰਟਰੋਲਰ ਸਕੀਮ ਦੇ ਅੰਦਰ |
 | `S67640d` | st_new | Read files and preview | ਫਾਈਲਾਂ ਪੜ੍ਹੋ ਅਤੇ ਪੂਰਵ-ਝਲਕ ਵੇਖੋ |
-| `S0af4fc` | st_new | Status category by alarm type (optional) | ਅਲਾਰਮ ਕਿਸਮ ਅਨੁਸਾਰ ਸਥਿਤੀ ਸ਼੍ਰੇਣੀ (ਵਿਕਲਪਿਕ) |
-| `S234237` | st_new | Status category of the new codes | ਨਵੇਂ ਕੋਡਾਂ ਦੀ ਸਥਿਤੀ ਸ਼੍ਰੇਣੀ |
-| `S61fc52` | st_new | The program files do not carry a category and none is assumed: choose one here, by alarm type below, or for each program in the preview. A program without a category is not imported. | ਪ੍ਰੋਗਰਾਮ ਫ਼ਾਈਲਾਂ ਵਿੱਚ ਸ਼੍ਰੇਣੀ ਨਹੀਂ ਹੁੰਦੀ ਅਤੇ ਕੋਈ ਮੰਨੀ ਨਹੀਂ ਜਾਂਦੀ: ਇੱਥੇ ਇੱਕ ਚੁਣੋ, ਹੇਠਾਂ ਅਲਾਰਮ ਕਿਸਮ ਅਨੁਸਾਰ, ਜਾਂ ਝਲਕ ਵਿੱਚ ਹਰ ਪ੍ਰੋਗਰਾਮ ਲਈ ਚੁਣੋ। ਸ਼੍ਰੇਣੀ ਤੋਂ ਬਿਨਾਂ ਪ੍ਰੋਗਰਾਮ ਆਯਾਤ ਨਹੀਂ ਹੁੰਦਾ। |
+| `Saa9df6` | st_new | The title, the type and the access levels of every program come from the mapping, never from the files. A program whose number is not in the mapping is blocked. | ਹਰ ਪ੍ਰੋਗਰਾਮ ਦਾ ਸਿਰਲੇਖ, ਕਿਸਮ ਅਤੇ ਪਹੁੰਚ ਪੱਧਰ ਮੈਪਿੰਗ ਤੋਂ ਆਉਂਦੇ ਹਨ, ਫ਼ਾਈਲਾਂ ਤੋਂ ਕਦੇ ਨਹੀਂ। ਜਿਸ ਪ੍ਰੋਗਰਾਮ ਦਾ ਨੰਬਰ ਮੈਪਿੰਗ ਵਿੱਚ ਨਹੀਂ ਉਹ ਰੋਕਿਆ ਜਾਂਦਾ ਹੈ। |
 | `S8f4c21` | st_new | Turbine platforms | ਟਰਬਾਈਨ ਪਲੇਟਫਾਰਮ |
 | `S9ad4d4` | st_new | Upload the generated StCd_<n>.st programs — several files at once, a whole folder, or one ZIP. Nothing is created yet: the next page lists every program so you can tick the ones to import. | ਤਿਆਰ ਕੀਤੇ StCd_<n>.st ਪ੍ਰੋਗਰਾਮ ਅੱਪਲੋਡ ਕਰੋ — ਇੱਕੋ ਵਾਰ ਕਈ ਫਾਈਲਾਂ, ਪੂਰਾ ਫੋਲਡਰ ਜਾਂ ਇੱਕ ZIP। ਅਜੇ ਕੁਝ ਨਹੀਂ ਬਣਦਾ: ਅਗਲਾ ਸਫ਼ਾ ਹਰ ਪ੍ਰੋਗਰਾਮ ਦੀ ਸੂਚੀ ਦਿੰਦਾ ਹੈ ਤਾਂ ਜੋ ਤੁਸੀਂ ਦਰਾਮਦ ਕਰਨ ਵਾਲਿਆਂ ਉੱਤੇ ਨਿਸ਼ਾਨ ਲਾ ਸਕੋ। |
+| `S16e5d4` | st_preview | Alarm type | ਅਲਾਰਮ ਦੀ ਕਿਸਮ |
 | `S2693e5` | st_preview | All Drafts of this import join one change set, so they can be reviewed and decided together. | ਇਸ ਦਰਾਮਦ ਦੇ ਸਾਰੇ ਖਰੜੇ ਇੱਕ ਤਬਦੀਲੀ ਸਮੂਹ ਵਿੱਚ ਸ਼ਾਮਲ ਹੁੰਦੇ ਹਨ, ਤਾਂ ਜੋ ਉਨ੍ਹਾਂ ਦੀ ਇਕੱਠਿਆਂ ਸਮੀਖਿਆ ਅਤੇ ਫ਼ੈਸਲਾ ਹੋ ਸਕੇ। |
 | `Scbc694` | st_preview | already in the catalogue | ਪਹਿਲਾਂ ਹੀ ਕੈਟਾਲਾਗ ਵਿੱਚ |
-| `Sc00673` | st_preview | Apply to the ticked programs | ਨਿਸ਼ਾਨ ਲੱਗੇ ਪ੍ਰੋਗਰਾਮਾਂ 'ਤੇ ਲਾਗੂ ਕਰੋ |
 | `Sdf88b8` | st_preview | blocked | ਰੋਕੇ ਗਏ |
 | `S6f7703` | st_preview | Changed and withdrawn programs are not ticked: tick the ones you want to update, revise or restore. | ਬਦਲੇ ਅਤੇ ਵਾਪਸ ਲਏ ਪ੍ਰੋਗਰਾਮਾਂ ਉੱਤੇ ਨਿਸ਼ਾਨ ਨਹੀਂ ਹੁੰਦਾ: ਜਿਨ੍ਹਾਂ ਨੂੰ ਅੱਪਡੇਟ, ਸੋਧ ਜਾਂ ਬਹਾਲ ਕਰਨਾ ਹੈ ਉਨ੍ਹਾਂ ਉੱਤੇ ਨਿਸ਼ਾਨ ਲਾਓ। |
 | `S78bb8b` | st_preview | Create Drafts for the ticked programs | ਨਿਸ਼ਾਨ ਲੱਗੇ ਪ੍ਰੋਗਰਾਮਾਂ ਲਈ ਖਰੜੇ ਬਣਾਓ |
@@ -18532,8 +19365,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se58289` | st_preview | Programs found in the uploaded files | ਅੱਪਲੋਡ ਕੀਤੀਆਂ ਫਾਈਲਾਂ ਵਿੱਚ ਮਿਲੇ ਪ੍ਰੋਗਰਾਮ |
 | `S75c053` | st_preview, workbench | ready | ਤਿਆਰ |
 | `S0723bf` | st_preview | Select all programs that are ready | ਸਾਰੇ ਤਿਆਰ ਪ੍ਰੋਗਰਾਮ ਚੁਣੋ |
-| `Sae12bc` | st_preview, workbench | Status category | ਸਥਿਤੀ ਸ਼੍ਰੇਣੀ |
-| `Sd7a322` | st_preview | Status category of the ticked programs | ਨਿਸ਼ਾਨ ਲੱਗੇ ਪ੍ਰੋਗਰਾਮਾਂ ਦੀ ਸਥਿਤੀ ਸ਼੍ਰੇਣੀ |
+| `S9a2439` | st_preview | Type (from the mapping) | ਕਿਸਮ (ਮੈਪਿੰਗ ਤੋਂ) |
 | `S1a767a` | st_preview | updates the open Draft | ਖੁੱਲ੍ਹੇ ਖਰੜੇ ਨੂੰ ਅੱਪਡੇਟ ਕਰਦਾ ਹੈ |
 | `S02499f` | st_preview | withdrawn | ਵਾਪਸ ਲਏ |
 | `Sf0c3cf` | st_preview | without a legacy number | ਪੁਰਾਣੇ ਨੰਬਰ ਤੋਂ ਬਿਨਾਂ |
@@ -18596,6 +19428,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S2fd88e` | translations | Copy from previous revision | ਪਿਛਲੀ ਸੋਧ ਤੋਂ ਕਾਪੀ ਕਰੋ |
 | `Se522f0` | translations | Save draft translation | ਖਰੜਾ ਅਨੁਵਾਦ ਸੁਰੱਖਿਅਤ ਕਰੋ |
 | `Scb0b87` | translations | source language text of revision | ਸੋਧ ਦਾ ਸਰੋਤ ਭਾਸ਼ਾ ਪਾਠ |
+| `S01209c` | upload | Also ask for approval of the unchanged rows that are only proposed | ਸਿਰਫ਼ ਪ੍ਰਸਤਾਵਿਤ ਨਾ ਬਦਲੀਆਂ ਕਤਾਰਾਂ ਦੀ ਮਨਜ਼ੂਰੀ ਵੀ ਮੰਗੋ |
+| `Sddf8d9` | upload | Compare and make the request | ਤੁਲਨਾ ਕਰੋ ਅਤੇ ਬੇਨਤੀ ਕਰੋ |
+| `S028ebe` | upload | Download the current mapping | ਮੌਜੂਦਾ ਮੈਪਿੰਗ ਡਾਊਨਲੋਡ ਕਰੋ |
+| `S23bfbf` | upload | The workbook has problems. Nothing was requested. | ਵਰਕਬੁੱਕ ਵਿੱਚ ਸਮੱਸਿਆਵਾਂ ਹਨ। ਕੁਝ ਵੀ ਨਹੀਂ ਮੰਗਿਆ ਗਿਆ। |
+| `S24d49d` | upload | Title of the request | ਬੇਨਤੀ ਦਾ ਸਿਰਲੇਖ |
+| `S88809a` | upload | Upload the corrected mapping as a workbook with the sheets MC and HC (download the current one as a model). Every new row and every row that differs becomes one request; rows the workbook does not mention stay as they are. The request takes effect only after the StCd Owner, the Chief Engineer and an Administrator have approved it. | ਸੋਧੀ ਹੋਈ ਮੈਪਿੰਗ ਨੂੰ MC ਅਤੇ HC ਸ਼ੀਟਾਂ ਵਾਲੀ ਵਰਕਬੁੱਕ ਵਜੋਂ ਅੱਪਲੋਡ ਕਰੋ (ਨਮੂਨੇ ਲਈ ਮੌਜੂਦਾ ਡਾਊਨਲੋਡ ਕਰੋ)। ਹਰ ਨਵੀਂ ਅਤੇ ਹਰ ਵੱਖਰੀ ਕਤਾਰ ਇੱਕ ਬੇਨਤੀ ਬਣਦੀ ਹੈ; ਜਿਨ੍ਹਾਂ ਕਤਾਰਾਂ ਦਾ ਵਰਕਬੁੱਕ ਜ਼ਿਕਰ ਨਹੀਂ ਕਰਦੀ ਉਹ ਜਿਉਂ ਦੀਆਂ ਤਿਉਂ ਰਹਿੰਦੀਆਂ ਹਨ। ਬੇਨਤੀ StCd ਮਾਲਕ, ਮੁੱਖ ਇੰਜੀਨੀਅਰ ਅਤੇ ਇੱਕ ਪ੍ਰਸ਼ਾਸਕ ਦੀ ਮਨਜ਼ੂਰੀ ਤੋਂ ਬਾਅਦ ਹੀ ਲਾਗੂ ਹੁੰਦੀ ਹੈ। |
+| `S09efdf` | upload | Workbook (.xlsx) | ਵਰਕਬੁੱਕ (.xlsx) |
 | `S359a3b` | user_detail | Back to users | ਵਰਤੋਂਕਾਰਾਂ ਕੋਲ ਵਾਪਸ |
 | `Sf6fdbe` | user_detail, users | Delete | ਮਿਟਾਓ |
 | `S9afe6c` | user_detail | Delete user | ਵਰਤੋਂਕਾਰ ਮਿਟਾਓ |
@@ -18655,6 +19494,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sa58dac` | workbench | Set values on the Drafts | ਖਰੜਿਆਂ ਉੱਤੇ ਮੁੱਲ ਸੈੱਟ ਕਰੋ |
 | `Sa443bb` | workbench | Sign off the Drafts | ਖਰੜਿਆਂ ਦਾ ਸਾਈਨ-ਆਫ਼ ਕਰੋ |
 | `S53f47f` | workbench | Sign-off pending | ਸਾਈਨ-ਆਫ਼ ਬਾਕੀ |
+| `Sae12bc` | workbench | Status category | ਸਥਿਤੀ ਸ਼੍ਰੇਣੀ |
 | `Sdc416e` | workbench | Step | ਪੜਾਅ |
 | `Sf7710d` | workbench | Submit for review | ਸਮੀਖਿਆ ਲਈ ਜਮ੍ਹਾਂ ਕਰੋ |
 | `Sa45adc` | workbench | Submit the Drafts | ਖਰੜੇ ਜਮ੍ਹਾਂ ਕਰੋ |
@@ -18667,7 +19507,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 
 ### 9.16 ES Español 🇪🇸 — Spanish
 
-1295 of 1296 strings translated; direction left to right.
+1355 of 1356 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -18678,13 +19518,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S141763` | _macros | Confirm with your password | Confirme con su contraseña |
 | `Sc326a4` | _macros, detail, form | Field | Campo |
 | `S0a0f8a` | _macros | Field differences | Diferencias de campos |
-| `Sbc9819` | _macros | Next | Siguiente |
+| `Sbc9819` | _macros, list | Next | Siguiente |
 | `S27cea7` | _macros | No field differences. | Sin diferencias de campos. |
 | `S464e43` | _macros | on track | en plazo |
 | `Sba2fff` | _macros, dashboard, success_metrics | overdue | vencidas |
-| `S600584` | _macros | Pages | Páginas |
+| `S600584` | _macros, list | Pages | Páginas |
 | `S810099` | _macros | Please check | Compruebe |
-| `S50f942` | _macros | Previous | Anterior |
+| `S50f942` | _macros, list | Previous | Anterior |
 | `S83fd6e` | _macros, stalled | red after | rojo después de |
 | `S57e8a7` | _macros, success_metrics | slow | lento |
 | `S15198e` | _macros | Waiting since | En espera desde |
@@ -18715,10 +19555,10 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S06b6ac` | approval_queue, builder, detail | Identifier | Identificador |
 | `S8e70d2` | approval_queue | Nothing is awaiting your approval. | Nada espera su aprobación. |
 | `Sa74f16` | approval_queue, detail, review_queue | Reviewer | Revisor |
-| `S768e0c` | approval_queue, builder, detail | Title | Título |
+| `S768e0c` | approval_queue, builder, change | Title | Título |
 | `S33d306` | approval_queue, detail, mine | Waiting | Espera |
 | `S2cbacd` | audit_log | %(n)s total | %(n)s en total |
-| `S97c89a` | audit_log | Action | Acción |
+| `S97c89a` | audit_log, change | Action | Acción |
 | `Scbd19b` | audit_log | Actor | Actor |
 | `S811bdf` | audit_log | Actor ID | ID del actor |
 | `S8c85b1` | audit_log | after: | después: |
@@ -18729,7 +19569,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sc7fb31` | audit_log | Entity | Entidad |
 | `S04d694` | audit_log | Entity ID | ID de entidad |
 | `Sbb4e99` | audit_log | Entity Type | Tipo de entidad |
-| `Sd7decf` | audit_log, index, language | Filter | Filtrar |
+| `Sd7decf` | audit_log, changes, index | Filter | Filtrar |
 | `S3f6605` | audit_log, delegations, software_versions | From | Desde |
 | `S0061b5` | audit_log | No matching audit entries. | No hay entradas de auditoría coincidentes. |
 | `S01f79f` | audit_log | Scoped view: showing only actions you performed. | Vista restringida: solo se muestran sus propias acciones. |
@@ -18748,7 +19588,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sbe504f` | base | Skip to main content | Saltar al contenido principal |
 | `S1b9aeb` | base, dashboard | unread | sin leer |
 | `S2da600` | base, export, export_center | Version | Versión |
-| `S12625b` | base | waiting | en espera |
+| `S12625b` | base, change | waiting | en espera |
 | `S5a4692` | base | You are covering for a colleague | Está sustituyendo a un compañero |
 | `S8e9c15` | builder | Candidate revisions | Revisiones candidatas |
 | `Sdf2aa0` | builder | Functional Group / Subgroup | Grupo funcional / subgrupo |
@@ -18779,13 +19619,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S4105cf` | catalogue_health | exhausted | agotado |
 | `S57e8be` | catalogue_health, connections | Finding | Hallazgo |
 | `S1150a1` | catalogue_health | Gaps | Huecos |
-| `S171a06` | catalogue_health, export, withdrawn_codes | Group | Grupo |
-| `Sb4aadc` | catalogue_health, legacy_mapping | Hub Controller | Controlador del buje |
+| `S171a06` | catalogue_health, export, list | Group | Grupo |
+| `Sb4aadc` | catalogue_health, legacy_mapping, list | Hub Controller | Controlador del buje |
 | `S8ae1c3` | catalogue_health | Left | Restantes |
 | `S12c0f1` | catalogue_health | left | restantes |
 | `Sa7b60b` | catalogue_health | Left % | Restantes % |
 | `S36a883` | catalogue_health | low | bajo |
-| `S1b123c` | catalogue_health, legacy_mapping, st_new | Main Controller | Controlador principal |
+| `S1b123c` | catalogue_health, legacy_mapping, list | Main Controller | Controlador principal |
 | `S92185d` | catalogue_health, index | Missing | Falta |
 | `S57282a` | catalogue_health | Missing expected data | Datos esperados que faltan |
 | `Sb8e95b` | catalogue_health | None found. | No se encontró nada. |
@@ -18802,6 +19642,31 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S75a804` | catalogue_health | subgroup(s) are running out of numbers: | subgrupo(s) se están quedando sin números: |
 | `S5fec4f` | catalogue_health | Unused numbers inside a band | Números sin usar dentro de una banda |
 | `S02c0e4` | catalogue_health | Used | Usados |
+| `S84f219` | change | All three, each by a different person who did not make the request. | Las tres, cada una de una persona distinta que no hizo la solicitud. |
+| `S477aeb` | change, upload | and more | y más |
+| `Sdeb9d0` | change, changes | Approvals | Aprobaciones |
+| `S7b2c7f` | change, detail, language | Approve | Aprobar |
+| `S8aa57d` | change, detail | Changes | Cambios |
+| `S3fe5e1` | change | Comment (required to reject) | Comentario (obligatorio para rechazar) |
+| `Sb48001` | change | Mapping change | Cambio de la correspondencia |
+| `Sd7c1d0` | change, changes, list | Mapping changes | Cambios de la correspondencia |
+| `Sf26140` | change, legacy_mapping, list | New identifier | Nuevo identificador |
+| `Sf219cc` | change, list, row | Reason | Motivo |
+| `S2b03b5` | change, detail | Reject | Rechazar |
+| `S5108c2` | change, changes | Requested by | Solicitado por |
+| `S52d0b3` | change, changes, detail | Rows | Filas |
+| `S6c30d2` | change, dry_run, list | rows | filas |
+| `Sfabd38` | change | These rows changed after the request was made; it cannot be applied. Withdraw it and make it again: | Estas filas cambiaron después de la solicitud; no puede aplicarse. Retírela y hágala de nuevo: |
+| `S47e564` | change, detail | Withdraw | Retirar |
+| `S30d359` | change | Withdraw this request? | ¿Retirar esta solicitud? |
+| `S88c173` | change | You made this request; another person must decide. | Usted hizo esta solicitud; otra persona debe decidir. |
+| `S04e02f` | change | Your role has decided already. | Su rol ya ha decidido. |
+| `Sc7274c` | changes | Any state | Cualquier estado |
+| `S2a560c` | changes | Every change of the mapping is a request. It takes effect when the StCd Owner, the Chief Engineer and an Administrator have each approved it; one rejection closes it. | Cada cambio de la correspondencia es una solicitud. Surte efecto cuando el propietario de StCd, el ingeniero jefe y un administrador la han aprobado cada uno; un rechazo la cierra. |
+| `Sdef2eb` | changes, list, menu | Mapping | Correspondencia |
+| `Se03e43` | changes | No request yet. | Aún no hay solicitudes. |
+| `S5fc0e0` | changes | request(s) wait for your decision. | solicitud(es) esperan su decisión. |
+| `Sa72502` | changes, detail, export | State | Estado |
 | `S97fd13` | check | Back to the terms | Volver a los términos |
 | `S1bc9e5` | check | English string | Texto en inglés |
 | `S5d54b3` | check | Every string uses the translated terms. | Todos los textos usan los términos traducidos. |
@@ -18882,7 +19747,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S9b0b4c` | detail | also the files without an access level (all columns) | también los archivos sin nivel de acceso (todas las columnas) |
 | `Sf24c44` | detail | Any %(code)s Engineer | Cualquier ingeniero %(code)s |
 | `Sb99a01` | detail | Applies to software versions | Se aplica a versiones de software |
-| `S7b2c7f` | detail, language | Approve | Aprobar |
 | `Sde38bf` | detail | Approve selected | Aprobar lo seleccionado |
 | `Scf2999` | detail | Approving confirms these values; any change you make here is applied and audited. Rejecting ignores them. | Aprobar confirma estos valores; cualquier cambio que haga aquí se aplica y se audita. Rechazar los ignora. |
 | `Sf7f2d5` | detail | Archive (requires 180-day retention elapsed) | Archivar (exige que hayan pasado 180 días de conservación) |
@@ -18903,7 +19767,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S4572f4` | detail | Change request | Solicitud de cambio |
 | `S3295be` | detail, workbench | Change requests in this set | Solicitudes de cambio de este conjunto |
 | `S4d8006` | detail | Change set | Conjunto de cambios |
-| `S8aa57d` | detail | Changes | Cambios |
 | `S3d14ea` | detail, export | Changes of this release only | Solo los cambios de esta versión |
 | `Sbd95c0` | detail | Checklist confirmed at sign-off | Lista de comprobación confirmada en la conformidad |
 | `S074d62` | detail, role badge | Chief Engineer | Ingeniero jefe |
@@ -18921,7 +19784,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S7671b5` | detail | Confirm or override Audience Access | Confirmar o sobrescribir el acceso por destinatarios |
 | `S6512ee` | detail | Connection | Conexión |
 | `S4f9be0` | detail | Content | Contenido |
-| `Sa36a5f` | detail, legacy_mapping, st_new | Controller | Controlador |
+| `Sa36a5f` | detail, legacy_mapping, list | Controller | Controlador |
 | `Scd293f` | detail | Converter Reactive Power Program | Programa de potencia reactiva del convertidor |
 | `S3998a7` | detail | Copies the descriptive fields into a new Draft in a Main Controller group (a new number is allocated at submit; this code's identifier is kept as the legacy reference). | Copia los campos descriptivos a un nuevo borrador en un grupo del controlador principal (se asigna un número nuevo al enviar; el identificador de este código se conserva como referencia anterior). |
 | `S54b051` | detail | Copy this code for another turbine platform. The copy is a new Draft that links back here and goes through the normal review. | Copie este código para otra plataforma de aerogenerador. La copia es un nuevo borrador que remite a este y pasa la revisión normal. |
@@ -19055,7 +19918,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sf5ca9d` | detail | Recorded exports | Exportaciones registradas |
 | `Sa3f757` | detail | Reinstate to Released | Reponer a Publicado |
 | `S3238ca` | detail | Reinstatement reason | Motivo de la reposición |
-| `S2b03b5` | detail | Reject | Rechazar |
 | `S27fb5c` | detail | Reject selected | Rechazar lo seleccionado |
 | `S045c2c` | detail | Related codes | Códigos relacionados |
 | `S33a5a7` | detail | Relation | Relación |
@@ -19073,7 +19935,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S4c1aa6` | detail | Repeated-Error Escalation | Escalado de errores repetidos |
 | `S4aed03` | detail | Request | Solicitar |
 | `Sf3421a` | detail | Request a Sign-Off | Solicitar conformidad |
-| `Sc26bf6` | detail, mine | Requested | Solicitado |
+| `Sc26bf6` | detail, mine, row | Requested | Solicitado |
 | `S2706ed` | detail | Required by | Requerido por |
 | `S619e87` | detail, form | Reset Delay | Retardo de reposición |
 | `S026ab2` | detail | resolved | resuelto |
@@ -19083,7 +19945,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S3beb9a` | detail | Revision | Revisión |
 | `Sa72973` | detail | Revision Fields | Campos de la revisión |
 | `Sfc1d6a` | detail | row(s) imported as Drafts | fila(s) importadas como borradores |
-| `S52d0b3` | detail, reconciliation, user_detail | Rows | Filas |
 | `Sd0edfb` | detail | Sales | Ventas |
 | `S241bf5` | detail, workbench | Sample number | Número de muestra |
 | `Sda38c6` | detail | Save planned dates | Guardar fechas previstas |
@@ -19102,11 +19963,10 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sece2ac` | detail, form | Slot | Ranura |
 | `Sff44d2` | detail | Software Version | Versión del software |
 | `S169bf7` | detail, export, software_versions | Software version | Versión de software |
-| `S6da13a` | detail, fleet_feedback | Source | Origen |
+| `S6da13a` | detail, fleet_feedback, row | Source | Origen |
 | `Sd3c56b` | detail, export_profiles | source language | idioma de origen |
 | `Sb3883f` | detail | Standards | Normas |
 | `Sfaa9e7` | detail, reconciliation | Started | Iniciado |
-| `Sa72502` | detail, export, hub_consolidation | State | Estado |
 | `Se246b6` | detail, form, list | Status Category | Categoría de estado |
 | `S779953` | detail, form | Status Code for Repeated Error | Código de estado para error repetido |
 | `S98a377` | detail | Still a Draft. | Sigue siendo un borrador. |
@@ -19125,7 +19985,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Seaf576` | detail, form | Trigger Snapshot | Disparar instantánea |
 | `S285ec8` | detail, form | Troubleshooting | Resolución de problemas |
 | `S71bba4` | detail | Turbine Operator Package | Paquete del operador de turbina |
-| `S3deb74` | detail, mine, review_queue | Type | Tipo |
+| `S3deb74` | detail, list, mine | Type | Tipo |
 | `Sab631e` | detail | Type %(id)s to confirm | Escriba %(id)s para confirmar |
 | `Sb5e264` | detail | Type the identifier to confirm | Escriba el identificador para confirmar |
 | `S835f8a` | detail | Umrichterprogramm GSC | Programa del convertidor GSC |
@@ -19144,7 +20004,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S51ecc5` | detail | What happens next | Qué ocurre a continuación |
 | `Sf323c0` | detail | Where used | Dónde se usa |
 | `S7d5316` | detail | Who | Quién |
-| `S47e564` | detail | Withdraw | Retirar |
 | `S51a998` | detail | Withdraw this change request? | ¿Retirar esta solicitud de cambio? |
 | `S93ef7c` | detail, workbench | Workbench | Espacio de trabajo |
 | `S95a2a4` | detail, form | Write level | Nivel de escritura |
@@ -19164,7 +20023,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sec0298` | dry_run | Result per row | Resultado por fila |
 | `S9bf7a8` | dry_run | Row | Fila |
 | `S3ff0b0` | dry_run | row(s) have problems. Nothing has been created. | fila(s) tienen problemas. No se ha creado nada. |
-| `S6c30d2` | dry_run | rows | filas |
 | `S8012ff` | dry_run | unchanged | sin cambios |
 | `S83d655` | dry_run, st_preview | warning(s) | advertencia(s) |
 | `S9ddad9` | dry_run | would be created | se crearían |
@@ -19306,6 +20164,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S285edc` | help and messages | %(ok)s of %(n)s: %(what)s. | %(ok)s de %(n)s: %(what)s. |
 | `Sb08e6c` | help and messages | A Reviewer and an Administrator each sign off (in any order). If either rejects, it goes back to the author. | Un revisor y un administrador dan cada uno su conformidad (en cualquier orden). Si alguno rechaza, vuelve al autor. |
 | `S2f1bed` | help and messages | An Administrator includes the revision in a Release and publishes it; then it is Released. | Un administrador incluye la revisión en una versión y la publica; entonces pasa a Publicado. |
+| `S9477fd` | help and messages | choose | elegir |
 | `S1308dc` | help and messages | defective codes sent back | códigos defectuosos devueltos |
 | `Se2bbd9` | help and messages | Drafts saved | Borradores guardados |
 | `S0ddfa5` | help and messages | Drafts signed off | Borradores con conformidad |
@@ -19317,7 +20176,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sce489f` | help and messages | The author gets any required cross-domain sign-offs, then submits the change request for review. | El autor obtiene las conformidades entre ámbitos requeridas y luego envía la solicitud de cambio a revisión. |
 | `S1cdbdd` | help and messages | The Chief Engineer approves or rejects. Approval makes the revision Approved (or Deprecated for a deprecation request). | El ingeniero jefe aprueba o rechaza. La aprobación hace que la revisión pase a Aprobado (u Obsoleto en una solicitud de obsolescencia). |
 | `S2d6ac0` | help and messages | The package is being built. Reload this page to follow its progress. | El paquete se está creando. Recargue esta página para seguir el progreso. |
-| `Sde7a5b` | help and messages | The program files do not carry a category; you can change it in each Draft. | Los archivos de programa no llevan categoría; puede cambiarla en cada borrador. |
 | `Scff3a3` | help and messages | User deleted; its name and address are erased, what it did stays attributable. | Usuario eliminado; su nombre y dirección se borran, lo que hizo sigue siendo atribuible. |
 | `Secfb3f` | hub_consolidation | Deprecate replaced Hub codes | Declarar obsoletos los códigos del buje sustituidos |
 | `S0e7766` | hub_consolidation, language | draft | borrador |
@@ -19328,7 +20186,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sc50c53` | hub_consolidation | Hub Controller to Main Controller consolidation | Consolidación del controlador del buje en el controlador principal |
 | `Scd189f` | hub_consolidation | Hub group | Grupo del buje |
 | `Sa5262b` | hub_consolidation | If the Hub Controller leaves the hardware setup, its codes are defined anew on the Main Controller side. Create an MC draft from an HC code on its detail page (Actions); this report shows how far each has come. Nothing is renumbered. | Si el controlador del buje sale de la configuración de hardware, sus códigos se definen de nuevo en el lado del controlador principal. Cree un borrador MC desde un código HC en su página de detalle (Acciones); este informe muestra hasta dónde ha llegado cada uno. No se renumera nada. |
-| `Sdd6555` | hub_consolidation, legacy_mapping, st_preview | Legacy no. | N.º anterior |
+| `Sdd6555` | hub_consolidation, legacy_mapping, list | Legacy no. | N.º anterior |
 | `S845a2b` | hub_consolidation | No Hub Controller codes yet. | Aún no hay códigos del controlador del buje. |
 | `S138665` | hub_consolidation | Open deprecation requests | Abrir solicitudes de obsolescencia |
 | `Sc8df93` | hub_consolidation | Open deprecation requests for all replaced Hub codes of this group? | ¿Abrir solicitudes de obsolescencia para todos los códigos del buje sustituidos de este grupo? |
@@ -19387,7 +20245,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sded18c` | language | approved by | aprobado por |
 | `Sedd46e` | language | Check against the interface | Comparar con la interfaz |
 | `S5a013c` | language | missing | falta |
-| `S2c924e` | language, workbench | Note | Nota |
+| `S2c924e` | language, row, workbench | Note | Nota |
 | `S2f09d0` | language | Note on %(x)s | Nota sobre %(x)s |
 | `S75bf99` | language | proposed by | propuesto por |
 | `Sc68e32` | language | Save translations | Guardar traducciones |
@@ -19395,14 +20253,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S542818` | language | Terms of the language | Términos del idioma |
 | `Sae9e5d` | language | Translation of %(x)s | Traducción de %(x)s |
 | `S863fd0` | language | Your own proposal: another person approves it. | Su propia propuesta: la aprueba otra persona. |
-| `Sf9d469` | legacy_mapping | All controllers | Todos los controladores |
+| `Sf9d469` | legacy_mapping, list | All controllers | Todos los controladores |
 | `Se61c2f` | legacy_mapping | Any number state | Cualquier estado de número |
 | `S7c4f77` | legacy_mapping | issued | emitidos |
 | `Sfd5ec0` | legacy_mapping, menu, new | Legacy mapping | Correspondencia antiguo-nuevo |
 | `S81f567` | legacy_mapping | Legacy number to new identifier | Número anterior a nuevo identificador |
 | `S64b267` | legacy_mapping | legacy number, identifier or name | número anterior, identificador o nombre |
 | `S60fe6c` | legacy_mapping | new codes without a legacy number (n/a) | códigos nuevos sin número anterior (n/d) |
-| `Sf26140` | legacy_mapping, st_preview | New identifier | Nuevo identificador |
 | `Sf573c8` | legacy_mapping | no number yet | aún sin número |
 | `S7877c5` | legacy_mapping | No status code carries a legacy number yet. | Ningún código de estado lleva aún un número anterior. |
 | `Sb7baa1` | legacy_mapping | Number | Número |
@@ -19411,10 +20268,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S8b0b7c` | legacy_mapping | with a legacy number | con número anterior |
 | `Seba07b` | list | A change set groups the change requests that ship with one controller software release, so reviewers see the whole package. Each request is still decided on its own. | Un conjunto de cambios agrupa las solicitudes de cambio que salen con una versión del software del controlador, para que los revisores vean todo el paquete. Cada solicitud sigue decidiéndose por separado. |
 | `Sc5fe02` | list | any | cualquiera |
+| `S55201a` | list | Any status | Cualquier estatus |
 | `Sef5415` | list | Apply columns | Aplicar columnas |
+| `Sffb569` | list | Ask for approval of the ticked rows | Pedir la aprobación de las filas marcadas |
 | `S162a45` | list, menu | Change Sets | Conjuntos de cambios |
 | `S9e895f` | list | Change sets | Conjuntos de cambios |
 | `Scf723c` | list | Columns | Columnas |
+| `S2ddaf9` | list, upload | Compare a workbook | Comparar un libro |
 | `Seb0fd2` | list | Delete all my Drafts of this filter | Eliminar todos mis borradores de este filtro |
 | `S36f212` | list | Delete ALL of your own Drafts that match this filter, on every page? | ¿Eliminar TODOS sus propios borradores que coincidan con este filtro, en todas las páginas? |
 | `Sc554a1` | list | Delete selected Drafts | Eliminar los borradores seleccionados |
@@ -19424,12 +20284,18 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S44d25b` | list | Items | Elementos |
 | `S033df3` | list | Lifecycle | Ciclo de vida |
 | `Sb4cad6` | list | Link to this view | Enlace a esta vista |
+| `Sbdb4e1` | list | Load the initial mapping | Cargar la correspondencia inicial |
+| `Se07018` | list | Make the request | Hacer la solicitud |
 | `Se248d5` | list, new | New change set | Nuevo conjunto de cambios |
 | `Se75aa1` | list, new | New Release | Nueva versión |
+| `S9bb526` | list, row | New row | Fila nueva |
 | `Se5076c` | list | No change sets yet. | Todavía no hay conjuntos de cambios. |
 | `Sd32c03` | list | No releases yet. | Todavía no hay versiones. |
+| `Sb5b22c` | list | No row matches. | Ninguna fila coincide. |
 | `Sc3af43` | list | No saved searches yet. | Todavía no hay búsquedas guardadas. |
 | `S0cb400` | list | No status codes match these filters. | Ningún código de estado coincide con estos filtros. |
+| `S260f7a` | list, row | Node | Nodo |
+| `S08250b` | list | number, title or group | número, título o grupo |
 | `Sf7194e` | list | Requests | Solicitudes |
 | `S37a530` | list | result | resultado |
 | `Scdf7e9` | list | results | resultados |
@@ -19438,10 +20304,14 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sff86e9` | list | Save the current filters as | Guardar los filtros actuales como |
 | `Sed1d84` | list | Saved searches | Búsquedas guardadas |
 | `S859822` | list, mine | Select | Seleccionar |
+| `S45b553` | list | Select all rows | Seleccionar todas las filas |
 | `S7f5583` | list, menu | Status Codes | Códigos de estado |
 | `S20bff1` | list | Status codes | Códigos de estado |
+| `S3a1066` | list | The mapping is empty. | La correspondencia está vacía. |
+| `S27d95b` | list | The rows stay as they are. Once the StCd Owner, the Chief Engineer and an Administrator approve, they count as approved numbers. | Las filas quedan como están. Cuando el propietario de StCd, el ingeniero jefe y un administrador aprueben, cuentan como números aprobados. |
 | `Se90eb0` | list | Turbine Platform | Plataforma de turbina |
 | `S86b1e7` | list | Typos are tolerated: "convertor" still finds "converter". | Se toleran errores tipográficos: «convertor» sigue encontrando «converter». |
+| `Sb0c551` | list | Which legacy status code becomes which new one, with what the program files do not carry: the English title, the type, the up/down counter, the access levels, cause and directive. A row changes only by a request that the StCd Owner, the Chief Engineer and an Administrator all approve. | Qué código de estado antiguo pasa a ser cuál nuevo, con lo que los archivos de programa no contienen: título en inglés, tipo, contador ascendente/descendente, niveles de acceso, causa e instrucción. Una fila solo cambia con una solicitud que el propietario de StCd, el ingeniero jefe y un administrador aprueban todos. |
 | `Sf7c400` | login | Log in | Iniciar sesión |
 | `S175835` | login | or | o |
 | `S8be3c9` | login, users | Password | Contraseña |
@@ -19603,6 +20473,23 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S8cb56e` | message: lookup_admin_service | range_end must be greater than range_start | range_end debe ser mayor que range_start |
 | `Se3a971` | message: lookup_admin_service | sub_range_end must be greater than sub_range_start | sub_range_end debe ser mayor que sub_range_start |
 | `S1404e3` | message: lookup_service | functional_system_group query parameter is required for functional-subgroups | El parámetro de consulta functional_system_group es obligatorio para functional-subgroups |
+| `Sf28681` | message: mapping_service | Give the reason for the change; the three approvers read it first. | Indique el motivo del cambio; los tres aprobadores lo leen primero. |
+| `S062788` | message: mapping_service | Give the request a title of at most 120 characters. | Dé a la solicitud un título de 120 caracteres como máximo. |
+| `S2ea56f` | message: mapping_service | Mapping change not found | Cambio de la correspondencia no encontrado |
+| `S2c9363` | message: mapping_service | Mapping row not found | Fila de la correspondencia no encontrada |
+| `S2d5693` | message: mapping_service | Only the person who made the request can withdraw it. | Solo la persona que hizo la solicitud puede retirarla. |
+| `S682269` | message: mapping_service | Only the StCd Owner, the Chief Engineer and an Administrator decide on the mapping. | Solo el propietario de StCd, el ingeniero jefe y un administrador deciden sobre la correspondencia. |
+| `S5e0f66` | message: mapping_service | Say why you reject the request. | Diga por qué rechaza la solicitud. |
+| `S3d5cfc` | message: mapping_service | The comment is longer than 1000 characters. | El comentario supera los 1000 caracteres. |
+| `S82b817` | message: mapping_service | The decision must be APPROVE or REJECT. | La decisión debe ser APPROVE o REJECT. |
+| `S9ec08a` | message: mapping_service | The file is not a readable .xlsx workbook. | El archivo no es un libro .xlsx legible. |
+| `S3831f7` | message: mapping_service | The reason is longer than 2000 characters. | El motivo supera los 2000 caracteres. |
+| `Sa5de7d` | message: mapping_service | The request contains no row. | La solicitud no contiene ninguna fila. |
+| `S2116e4` | message: mapping_service | The request is already closed. | La solicitud ya está cerrada. |
+| `S8518e7` | message: mapping_service | The role has decided already. | El rol ya ha decidido. |
+| `S2a15d7` | message: mapping_service | The workbook is larger than 5 MB. | El libro supera los 5 MB. |
+| `S8eb912` | message: mapping_service | The workbook unpacks to more than 80 MB. | El libro se descomprime a más de 80 MB. |
+| `S6c1d08` | message: mapping_service | Your role may not propose a change of the mapping. | Su rol no puede proponer un cambio de la correspondencia. |
 | `S4ada2b` | message: notification_service | Notification not found | Notificación no encontrada |
 | `Sd92b89` | message: notification_service | This notification belongs to someone else. | Esta notificación pertenece a otra persona. |
 | `Sb0cd00` | message: numbering_service | Identifier override must match StCd-NNNNN (five digits). | Un identificador sobrescrito debe ajustarse a StCd-NNNNN (cinco cifras). |
@@ -19634,8 +20521,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S9671fb` | message: settings_service | must be true or false | debe ser true o false |
 | `S5166bb` | message: st_import_service | A staged file changed after the preview. Upload again. | Un archivo preparado cambió después de la vista previa. Súbalo de nuevo. |
 | `Saa4de2` | message: st_import_service | controller must be auto, MC or HC | controller debe ser auto, MC o HC |
-| `Sa30251` | message: st_import_service | default_category must be ERROR, WARNING or INFO | default_category debe ser ERROR, WARNING o INFO |
-| `Sfe694a` | message: st_import_service | hc_proposal must be 1 or 2 | hc_proposal debe ser 1 o 2 |
 | `S58bec3` | message: st_import_service | No StCd program files found. Upload .st files or a ZIP of them. | No se encontraron archivos de programa StCd. Suba archivos .st o un ZIP con ellos. |
 | `Sd9c5b0` | message: st_import_service | Nothing selected: tick at least one program that is ready. | Nada seleccionado: marque al menos un programa que esté listo. |
 | `S5dbbd0` | message: st_import_service | The code is no longer an open Draft; preview the files again. | El código ya no es un borrador abierto; vuelva a previsualizar los archivos. |
@@ -19782,6 +20667,23 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S05fc94` | role badge | Engineer | Ingeniero |
 | `S3c0e8a` | role badge | StCd Owner | Propietario de StCd |
 | `Sdbad9f` | role badge | Viewer | Lector |
+| `S7f2e4b` | row | Access levels | Niveles de acceso |
+| `S08f985` | row | Cause | Causa |
+| `S164e0b` | row | Directive | Instrucción |
+| `S283474` | row | New number | Número nuevo |
+| `Sfa6fdd` | row | No request yet. The row is as it was loaded. | Aún no hay solicitudes. La fila está como se cargó. |
+| `Sf790fc` | row | Nothing is changed here directly: the form makes a request, and the row changes after the StCd Owner, the Chief Engineer and an Administrator have approved it. | Aquí no se cambia nada directamente: el formulario hace una solicitud y la fila cambia cuando el propietario de StCd, el ingeniero jefe y un administrador la han aprobado. |
+| `S9d728f` | row | Request approval of the number | Pedir la aprobación del número |
+| `Sc8978f` | row | Request rejection of the number | Pedir el rechazo del número |
+| `Sc644eb` | row | Request that this number is never used? | ¿Pedir que este número no se use nunca? |
+| `Sb25913` | row | Request the new row | Pedir la fila nueva |
+| `Sb04301` | row | Request this change | Pedir este cambio |
+| `Sae91b6` | row | Requests for this row | Solicitudes de esta fila |
+| `Sd59701` | row | Reset delay (parameter) | Retardo de reposición (parámetro) |
+| `Sfd64cd` | row | Set delay (parameter) | Retardo de activación (parámetro) |
+| `S9c0444` | row | The three approvers read the reason first. | Los tres aprobadores leen primero el motivo. |
+| `Sc84745` | row | Title (English) | Título (inglés) |
+| `S711eea` | row | Up/down counter | Contador ascendente/descendente |
 | `S913aba` | settings | Save settings | Guardar ajustes |
 | `Sb68734` | software_versions | Added | Añadidos |
 | `S172415` | software_versions | added | añadidos |
@@ -19795,28 +20697,19 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd97d1e` | software_versions | Show | Mostrar |
 | `S42ea2e` | software_versions | Software Versions | Versiones de software |
 | `S3bd89c` | software_versions | Which codes exist in which software version | Qué códigos existen en qué versión de software |
-| `S16e5d4` | st_new, st_preview | Alarm type | Tipo de alarma |
-| `S726d7a` | st_new | as above | como arriba |
-| `S9477fd` | st_new, st_preview | choose | elegir |
 | `Sb149ca` | st_new | Detect: a number from 10000 up is a Hub Controller program | Detectar: un número a partir de 10000 es un programa del controlador del buje |
 | `S7d06d0` | st_new | Every imported program becomes an ordinary Draft with the number it carries reserved. It still needs Cross-Domain Sign-Off, dual review and Chief Engineer approval before Release, and all Drafts of one import share a change set. | Cada programa importado se convierte en un borrador ordinario con el número que lleva reservado. Aún necesita conformidad entre ámbitos, doble revisión y aprobación del ingeniero jefe antes de publicarse, y todos los borradores de una importación comparten un conjunto de cambios. |
-| `Sbda77c` | st_new | Every program names an alarm type. A type left at "as above" gets the category chosen above; the next page lets you set the category of single programs or of all ticked ones. | Cada programa indica un tipo de alarma. Un tipo que se deja en «como arriba» recibe la categoría elegida arriba; en la página siguiente puede fijar la categoría de programas sueltos o de todos los marcados. |
 | `S3b9e43` | st_new | Hub Controller (legacy numbers, mapped to the new ones) | Controlador del buje (números anteriores, asignados a los nuevos) |
 | `Sd7333f` | st_new | Import status codes from .st files | Importar códigos de estado desde archivos .st |
-| `S6640a6` | st_new | New number of Hub Controller programs | Nuevo número de los programas del controlador del buje |
 | `Sc0eff1` | st_new | Or a whole folder | O una carpeta entera |
 | `S94ddc1` | st_new | Program files (.st) or a ZIP | Archivos de programa (.st) o un ZIP |
-| `Sd99e2a` | st_new | Proposal 1: five-digit numbers (11000 and up) | Propuesta 1: números de cinco cifras (desde 11000) |
-| `S2744b0` | st_new | Proposal 2: inside the Main Controller scheme | Propuesta 2: dentro del esquema del controlador principal |
 | `S67640d` | st_new | Read files and preview | Leer archivos y mostrar vista previa |
-| `S0af4fc` | st_new | Status category by alarm type (optional) | Categoría de estado por tipo de alarma (opcional) |
-| `S234237` | st_new | Status category of the new codes | Categoría de estado de los códigos nuevos |
-| `S61fc52` | st_new | The program files do not carry a category and none is assumed: choose one here, by alarm type below, or for each program in the preview. A program without a category is not imported. | Los archivos de programa no contienen categoría y no se supone ninguna: elija una aquí, por tipo de alarma abajo o para cada programa en la vista previa. Un programa sin categoría no se importa. |
+| `Saa9df6` | st_new | The title, the type and the access levels of every program come from the mapping, never from the files. A program whose number is not in the mapping is blocked. | El título, el tipo y los niveles de acceso de cada programa vienen de la correspondencia, nunca de los archivos. Un programa cuyo número no está en la correspondencia queda bloqueado. |
 | `S8f4c21` | st_new | Turbine platforms | Plataformas de aerogenerador |
 | `S9ad4d4` | st_new | Upload the generated StCd_<n>.st programs — several files at once, a whole folder, or one ZIP. Nothing is created yet: the next page lists every program so you can tick the ones to import. | Suba los programas StCd_<n>.st generados: varios archivos a la vez, una carpeta entera o un ZIP. Aún no se crea nada: la página siguiente lista cada programa para que marque los que desea importar. |
+| `S16e5d4` | st_preview | Alarm type | Tipo de alarma |
 | `S2693e5` | st_preview | All Drafts of this import join one change set, so they can be reviewed and decided together. | Todos los borradores de esta importación se unen a un conjunto de cambios, para revisarse y decidirse juntos. |
 | `Scbc694` | st_preview | already in the catalogue | ya en el catálogo |
-| `Sc00673` | st_preview | Apply to the ticked programs | Aplicar a los programas marcados |
 | `Sdf88b8` | st_preview | blocked | bloqueados |
 | `S6f7703` | st_preview | Changed and withdrawn programs are not ticked: tick the ones you want to update, revise or restore. | Los programas modificados y retirados no se marcan: marque los que desee actualizar, revisar o restaurar. |
 | `S78bb8b` | st_preview | Create Drafts for the ticked programs | Crear borradores para los programas marcados |
@@ -19834,8 +20727,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se58289` | st_preview | Programs found in the uploaded files | Programas encontrados en los archivos subidos |
 | `S75c053` | st_preview, workbench | ready | listos |
 | `S0723bf` | st_preview | Select all programs that are ready | Seleccionar todos los programas listos |
-| `Sae12bc` | st_preview, workbench | Status category | Categoría de estado |
-| `Sd7a322` | st_preview | Status category of the ticked programs | Categoría de estado de los programas marcados |
+| `S9a2439` | st_preview | Type (from the mapping) | Tipo (de la correspondencia) |
 | `S1a767a` | st_preview | updates the open Draft | actualiza el borrador abierto |
 | `S02499f` | st_preview | withdrawn | retirados |
 | `Sf0c3cf` | st_preview | without a legacy number | sin número anterior |
@@ -19898,6 +20790,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S2fd88e` | translations | Copy from previous revision | Copiar de la revisión anterior |
 | `Se522f0` | translations | Save draft translation | Guardar traducción en borrador |
 | `Scb0b87` | translations | source language text of revision | texto del idioma de origen de la revisión |
+| `S01209c` | upload | Also ask for approval of the unchanged rows that are only proposed | Pedir también la aprobación de las filas sin cambios que solo están propuestas |
+| `Sddf8d9` | upload | Compare and make the request | Comparar y hacer la solicitud |
+| `S028ebe` | upload | Download the current mapping | Descargar la correspondencia actual |
+| `S23bfbf` | upload | The workbook has problems. Nothing was requested. | El libro tiene problemas. No se pidió nada. |
+| `S24d49d` | upload | Title of the request | Título de la solicitud |
+| `S88809a` | upload | Upload the corrected mapping as a workbook with the sheets MC and HC (download the current one as a model). Every new row and every row that differs becomes one request; rows the workbook does not mention stay as they are. The request takes effect only after the StCd Owner, the Chief Engineer and an Administrator have approved it. | Suba la correspondencia corregida como libro con las hojas MC y HC (descargue la actual como modelo). Cada fila nueva y cada fila distinta se convierte en una solicitud; las filas que el libro no menciona quedan igual. La solicitud surte efecto solo cuando el propietario de StCd, el ingeniero jefe y un administrador la han aprobado. |
+| `S09efdf` | upload | Workbook (.xlsx) | Libro (.xlsx) |
 | `S359a3b` | user_detail | Back to users | Volver a los usuarios |
 | `Sf6fdbe` | user_detail, users | Delete | Eliminar |
 | `S9afe6c` | user_detail | Delete user | Eliminar usuario |
@@ -19957,6 +20856,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sa58dac` | workbench | Set values on the Drafts | Establecer valores en los borradores |
 | `Sa443bb` | workbench | Sign off the Drafts | Dar conformidad a los borradores |
 | `S53f47f` | workbench | Sign-off pending | Conformidad pendiente |
+| `Sae12bc` | workbench | Status category | Categoría de estado |
 | `Sdc416e` | workbench | Step | Paso |
 | `Sf7710d` | workbench | Submit for review | Enviar a revisión |
 | `Sa45adc` | workbench | Submit the Drafts | Enviar los borradores |
@@ -19969,7 +20869,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 
 ### 9.17 IT Italiano 🇮🇹 — Italian
 
-1295 of 1296 strings translated; direction left to right.
+1355 of 1356 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -19980,13 +20880,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S141763` | _macros | Confirm with your password | Confermare con la propria password |
 | `Sc326a4` | _macros, detail, form | Field | Campo |
 | `S0a0f8a` | _macros | Field differences | Differenze dei campi |
-| `Sbc9819` | _macros | Next | Successivo |
+| `Sbc9819` | _macros, list | Next | Successivo |
 | `S27cea7` | _macros | No field differences. | Nessuna differenza nei campi. |
 | `S464e43` | _macros | on track | nei tempi |
 | `Sba2fff` | _macros, dashboard, success_metrics | overdue | in ritardo |
-| `S600584` | _macros | Pages | Pagine |
+| `S600584` | _macros, list | Pages | Pagine |
 | `S810099` | _macros | Please check | Verificare |
-| `S50f942` | _macros | Previous | Precedente |
+| `S50f942` | _macros, list | Previous | Precedente |
 | `S83fd6e` | _macros, stalled | red after | rosso dopo |
 | `S57e8a7` | _macros, success_metrics | slow | lento |
 | `S15198e` | _macros | Waiting since | In attesa da |
@@ -20017,10 +20917,10 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S06b6ac` | approval_queue, builder, detail | Identifier | Identificativo |
 | `S8e70d2` | approval_queue | Nothing is awaiting your approval. | Nulla attende la sua approvazione. |
 | `Sa74f16` | approval_queue, detail, review_queue | Reviewer | Revisore |
-| `S768e0c` | approval_queue, builder, detail | Title | Titolo |
+| `S768e0c` | approval_queue, builder, change | Title | Titolo |
 | `S33d306` | approval_queue, detail, mine | Waiting | Attesa |
 | `S2cbacd` | audit_log | %(n)s total | %(n)s in totale |
-| `S97c89a` | audit_log | Action | Azione |
+| `S97c89a` | audit_log, change | Action | Azione |
 | `Scbd19b` | audit_log | Actor | Attore |
 | `S811bdf` | audit_log | Actor ID | ID dell'attore |
 | `S8c85b1` | audit_log | after: | dopo: |
@@ -20031,7 +20931,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sc7fb31` | audit_log | Entity | Entità |
 | `S04d694` | audit_log | Entity ID | ID entità |
 | `Sbb4e99` | audit_log | Entity Type | Tipo di entità |
-| `Sd7decf` | audit_log, index, language | Filter | Filtra |
+| `Sd7decf` | audit_log, changes, index | Filter | Filtra |
 | `S3f6605` | audit_log, delegations, software_versions | From | Da |
 | `S0061b5` | audit_log | No matching audit entries. | Nessuna voce di audit corrispondente. |
 | `S01f79f` | audit_log | Scoped view: showing only actions you performed. | Vista limitata: vengono mostrate solo le azioni eseguite da lei. |
@@ -20050,7 +20950,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sbe504f` | base | Skip to main content | Vai al contenuto principale |
 | `S1b9aeb` | base, dashboard | unread | non letti |
 | `S2da600` | base, export, export_center | Version | Versione |
-| `S12625b` | base | waiting | in attesa |
+| `S12625b` | base, change | waiting | in attesa |
 | `S5a4692` | base | You are covering for a colleague | Stai sostituendo un collega |
 | `S8e9c15` | builder | Candidate revisions | Revisioni candidate |
 | `Sdf2aa0` | builder | Functional Group / Subgroup | Gruppo funzionale / sottogruppo |
@@ -20081,13 +20981,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S4105cf` | catalogue_health | exhausted | esaurito |
 | `S57e8be` | catalogue_health, connections | Finding | Riscontro |
 | `S1150a1` | catalogue_health | Gaps | Vuoti |
-| `S171a06` | catalogue_health, export, withdrawn_codes | Group | Gruppo |
-| `Sb4aadc` | catalogue_health, legacy_mapping | Hub Controller | Controllore del mozzo |
+| `S171a06` | catalogue_health, export, list | Group | Gruppo |
+| `Sb4aadc` | catalogue_health, legacy_mapping, list | Hub Controller | Controllore del mozzo |
 | `S8ae1c3` | catalogue_health | Left | Rimasti |
 | `S12c0f1` | catalogue_health | left | rimasti |
 | `Sa7b60b` | catalogue_health | Left % | Rimasti % |
 | `S36a883` | catalogue_health | low | basso |
-| `S1b123c` | catalogue_health, legacy_mapping, st_new | Main Controller | Controllore principale |
+| `S1b123c` | catalogue_health, legacy_mapping, list | Main Controller | Controllore principale |
 | `S92185d` | catalogue_health, index | Missing | Mancante |
 | `S57282a` | catalogue_health | Missing expected data | Dati previsti mancanti |
 | `Sb8e95b` | catalogue_health | None found. | Nessuno trovato. |
@@ -20104,6 +21004,31 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S75a804` | catalogue_health | subgroup(s) are running out of numbers: | sottogruppo/i stanno finendo i numeri: |
 | `S5fec4f` | catalogue_health | Unused numbers inside a band | Numeri inutilizzati all'interno di una banda |
 | `S02c0e4` | catalogue_health | Used | Usati |
+| `S84f219` | change | All three, each by a different person who did not make the request. | Tutte e tre, ciascuna da una persona diversa che non ha fatto la richiesta. |
+| `S477aeb` | change, upload | and more | e altro |
+| `Sdeb9d0` | change, changes | Approvals | Approvazioni |
+| `S7b2c7f` | change, detail, language | Approve | Approva |
+| `S8aa57d` | change, detail | Changes | Modifiche |
+| `S3fe5e1` | change | Comment (required to reject) | Commento (obbligatorio per rifiutare) |
+| `Sb48001` | change | Mapping change | Modifica della corrispondenza |
+| `Sd7c1d0` | change, changes, list | Mapping changes | Modifiche della corrispondenza |
+| `Sf26140` | change, legacy_mapping, list | New identifier | Nuovo identificativo |
+| `Sf219cc` | change, list, row | Reason | Motivo |
+| `S2b03b5` | change, detail | Reject | Rifiuta |
+| `S5108c2` | change, changes | Requested by | Richiesto da |
+| `S52d0b3` | change, changes, detail | Rows | Righe |
+| `S6c30d2` | change, dry_run, list | rows | righe |
+| `Sfabd38` | change | These rows changed after the request was made; it cannot be applied. Withdraw it and make it again: | Queste righe sono cambiate dopo la richiesta; non può essere applicata. Ritirala e falla di nuovo: |
+| `S47e564` | change, detail | Withdraw | Ritira |
+| `S30d359` | change | Withdraw this request? | Ritirare questa richiesta? |
+| `S88c173` | change | You made this request; another person must decide. | Hai fatto tu questa richiesta; deve decidere un'altra persona. |
+| `S04e02f` | change | Your role has decided already. | Il tuo ruolo ha già deciso. |
+| `Sc7274c` | changes | Any state | Qualsiasi stato |
+| `S2a560c` | changes | Every change of the mapping is a request. It takes effect when the StCd Owner, the Chief Engineer and an Administrator have each approved it; one rejection closes it. | Ogni modifica della corrispondenza è una richiesta. Ha effetto quando il responsabile StCd, il capo ingegnere e un amministratore l'hanno approvata ciascuno; un rifiuto la chiude. |
+| `Sdef2eb` | changes, list, menu | Mapping | Corrispondenza |
+| `Se03e43` | changes | No request yet. | Ancora nessuna richiesta. |
+| `S5fc0e0` | changes | request(s) wait for your decision. | richiesta/e attendono la tua decisione. |
+| `Sa72502` | changes, detail, export | State | Stato |
 | `S97fd13` | check | Back to the terms | Torna ai termini |
 | `S1bc9e5` | check | English string | Testo inglese |
 | `S5d54b3` | check | Every string uses the translated terms. | Tutti i testi usano i termini tradotti. |
@@ -20184,7 +21109,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S9b0b4c` | detail | also the files without an access level (all columns) | anche i file senza livello di accesso (tutte le colonne) |
 | `Sf24c44` | detail | Any %(code)s Engineer | Qualsiasi ingegnere %(code)s |
 | `Sb99a01` | detail | Applies to software versions | Si applica alle versioni software |
-| `S7b2c7f` | detail, language | Approve | Approva |
 | `Sde38bf` | detail | Approve selected | Approva selezionate |
 | `Scf2999` | detail | Approving confirms these values; any change you make here is applied and audited. Rejecting ignores them. | L'approvazione conferma questi valori; ogni modifica fatta qui viene applicata e sottoposta ad audit. Il rifiuto li ignora. |
 | `Sf7f2d5` | detail | Archive (requires 180-day retention elapsed) | Archivia (richiede che siano trascorsi 180 giorni di conservazione) |
@@ -20205,7 +21129,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S4572f4` | detail | Change request | Richiesta di modifica |
 | `S3295be` | detail, workbench | Change requests in this set | Richieste di modifica in questo set |
 | `S4d8006` | detail | Change set | Set di modifiche |
-| `S8aa57d` | detail | Changes | Modifiche |
 | `S3d14ea` | detail, export | Changes of this release only | Solo le modifiche di questa versione |
 | `Sbd95c0` | detail | Checklist confirmed at sign-off | Lista di controllo confermata al benestare |
 | `S074d62` | detail, role badge | Chief Engineer | Capo ingegnere |
@@ -20223,7 +21146,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S7671b5` | detail | Confirm or override Audience Access | Conferma o sovrascrivi l'accesso per destinatari |
 | `S6512ee` | detail | Connection | Collegamento |
 | `S4f9be0` | detail | Content | Contenuto |
-| `Sa36a5f` | detail, legacy_mapping, st_new | Controller | Controller |
+| `Sa36a5f` | detail, legacy_mapping, list | Controller | Controller |
 | `Scd293f` | detail | Converter Reactive Power Program | Programma di potenza reattiva del convertitore |
 | `S3998a7` | detail | Copies the descriptive fields into a new Draft in a Main Controller group (a new number is allocated at submit; this code's identifier is kept as the legacy reference). | Copia i campi descrittivi in una nuova bozza in un gruppo del controllore principale (un nuovo numero viene assegnato all'invio; l'identificativo di questo codice è mantenuto come riferimento precedente). |
 | `S54b051` | detail | Copy this code for another turbine platform. The copy is a new Draft that links back here and goes through the normal review. | Copi questo codice per un'altra piattaforma di turbina. La copia è una nuova bozza che rimanda a questo codice e segue la normale revisione. |
@@ -20357,7 +21280,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sf5ca9d` | detail | Recorded exports | Esportazioni registrate |
 | `Sa3f757` | detail | Reinstate to Released | Ripristina a Rilasciato |
 | `S3238ca` | detail | Reinstatement reason | Motivo del ripristino |
-| `S2b03b5` | detail | Reject | Rifiuta |
 | `S27fb5c` | detail | Reject selected | Rifiuta selezionate |
 | `S045c2c` | detail | Related codes | Codici correlati |
 | `S33a5a7` | detail | Relation | Relazione |
@@ -20375,7 +21297,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S4c1aa6` | detail | Repeated-Error Escalation | Escalation degli errori ripetuti |
 | `S4aed03` | detail | Request | Richiedi |
 | `Sf3421a` | detail | Request a Sign-Off | Richiedi un benestare |
-| `Sc26bf6` | detail, mine | Requested | Richiesto |
+| `Sc26bf6` | detail, mine, row | Requested | Richiesto |
 | `S2706ed` | detail | Required by | Richiesto da |
 | `S619e87` | detail, form | Reset Delay | Ritardo di ripristino |
 | `S026ab2` | detail | resolved | risolto |
@@ -20385,7 +21307,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S3beb9a` | detail | Revision | Revisione |
 | `Sa72973` | detail | Revision Fields | Campi della revisione |
 | `Sfc1d6a` | detail | row(s) imported as Drafts | riga/righe importate come bozze |
-| `S52d0b3` | detail, reconciliation, user_detail | Rows | Righe |
 | `Sd0edfb` | detail | Sales | Vendite |
 | `S241bf5` | detail, workbench | Sample number | Numero del campione |
 | `Sda38c6` | detail | Save planned dates | Salva date pianificate |
@@ -20404,11 +21325,10 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sece2ac` | detail, form | Slot | Slot |
 | `Sff44d2` | detail | Software Version | Versione del software |
 | `S169bf7` | detail, export, software_versions | Software version | Versione software |
-| `S6da13a` | detail, fleet_feedback | Source | Origine |
+| `S6da13a` | detail, fleet_feedback, row | Source | Origine |
 | `Sd3c56b` | detail, export_profiles | source language | lingua di origine |
 | `Sb3883f` | detail | Standards | Norme |
 | `Sfaa9e7` | detail, reconciliation | Started | Avviato |
-| `Sa72502` | detail, export, hub_consolidation | State | Stato |
 | `Se246b6` | detail, form, list | Status Category | Categoria di stato |
 | `S779953` | detail, form | Status Code for Repeated Error | Codice di stato per errore ripetuto |
 | `S98a377` | detail | Still a Draft. | È ancora una bozza. |
@@ -20427,7 +21347,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Seaf576` | detail, form | Trigger Snapshot | Attiva snapshot |
 | `S285ec8` | detail, form | Troubleshooting | Risoluzione dei problemi |
 | `S71bba4` | detail | Turbine Operator Package | Pacchetto operatore turbina |
-| `S3deb74` | detail, mine, review_queue | Type | Tipo |
+| `S3deb74` | detail, list, mine | Type | Tipo |
 | `Sab631e` | detail | Type %(id)s to confirm | Digiti %(id)s per confermare |
 | `Sb5e264` | detail | Type the identifier to confirm | Digiti l'identificativo per confermare |
 | `S835f8a` | detail | Umrichterprogramm GSC | Programma del convertitore GSC |
@@ -20446,7 +21366,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S51ecc5` | detail | What happens next | Che cosa succede dopo |
 | `Sf323c0` | detail | Where used | Dove è usato |
 | `S7d5316` | detail | Who | Chi |
-| `S47e564` | detail | Withdraw | Ritira |
 | `S51a998` | detail | Withdraw this change request? | Ritirare questa richiesta di modifica? |
 | `S93ef7c` | detail, workbench | Workbench | Area di lavoro |
 | `S95a2a4` | detail, form | Write level | Livello di scrittura |
@@ -20466,7 +21385,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sec0298` | dry_run | Result per row | Risultato per riga |
 | `S9bf7a8` | dry_run | Row | Riga |
 | `S3ff0b0` | dry_run | row(s) have problems. Nothing has been created. | riga/righe hanno problemi. Non è stato creato nulla. |
-| `S6c30d2` | dry_run | rows | righe |
 | `S8012ff` | dry_run | unchanged | invariate |
 | `S83d655` | dry_run, st_preview | warning(s) | avviso/i |
 | `S9ddad9` | dry_run | would be created | verrebbero create |
@@ -20608,6 +21526,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S285edc` | help and messages | %(ok)s of %(n)s: %(what)s. | %(ok)s su %(n)s: %(what)s. |
 | `Sb08e6c` | help and messages | A Reviewer and an Administrator each sign off (in any order). If either rejects, it goes back to the author. | Un revisore e un amministratore danno ciascuno il benestare (in qualsiasi ordine). Se uno dei due rifiuta, la richiesta torna all'autore. |
 | `S2f1bed` | help and messages | An Administrator includes the revision in a Release and publishes it; then it is Released. | Un amministratore include la revisione in un rilascio e lo pubblica; allora diventa Rilasciata. |
+| `S9477fd` | help and messages | choose | scegliere |
 | `S1308dc` | help and messages | defective codes sent back | codici difettosi rimandati indietro |
 | `Se2bbd9` | help and messages | Drafts saved | Bozze salvate |
 | `S0ddfa5` | help and messages | Drafts signed off | Bozze con benestare |
@@ -20619,7 +21538,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sce489f` | help and messages | The author gets any required cross-domain sign-offs, then submits the change request for review. | L'autore ottiene i benestare interdisciplinari richiesti, poi invia la richiesta di modifica in revisione. |
 | `S1cdbdd` | help and messages | The Chief Engineer approves or rejects. Approval makes the revision Approved (or Deprecated for a deprecation request). | Il capo ingegnere approva o rifiuta. L'approvazione porta la revisione ad Approvato (oppure a Obsoleto per una richiesta di obsolescenza). |
 | `S2d6ac0` | help and messages | The package is being built. Reload this page to follow its progress. | Il pacchetto è in costruzione. Ricarica questa pagina per seguirne l'avanzamento. |
-| `Sde7a5b` | help and messages | The program files do not carry a category; you can change it in each Draft. | I file di programma non riportano una categoria; può cambiarla in ogni bozza. |
 | `Scff3a3` | help and messages | User deleted; its name and address are erased, what it did stays attributable. | Utente eliminato; nome e indirizzo sono cancellati, ciò che ha fatto resta attribuibile. |
 | `Secfb3f` | hub_consolidation | Deprecate replaced Hub codes | Dichiara obsoleti i codici del mozzo sostituiti |
 | `S0e7766` | hub_consolidation, language | draft | bozza |
@@ -20630,7 +21548,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sc50c53` | hub_consolidation | Hub Controller to Main Controller consolidation | Consolidamento del controllore del mozzo nel controllore principale |
 | `Scd189f` | hub_consolidation | Hub group | Gruppo del mozzo |
 | `Sa5262b` | hub_consolidation | If the Hub Controller leaves the hardware setup, its codes are defined anew on the Main Controller side. Create an MC draft from an HC code on its detail page (Actions); this report shows how far each has come. Nothing is renumbered. | Se il controllore del mozzo esce dalla configurazione hardware, i suoi codici vengono definiti di nuovo sul lato del controllore principale. Crei una bozza MC da un codice HC nella sua pagina di dettaglio (Azioni); questo rapporto mostra a che punto è ciascuno. Nulla viene rinumerato. |
-| `Sdd6555` | hub_consolidation, legacy_mapping, st_preview | Legacy no. | N. precedente |
+| `Sdd6555` | hub_consolidation, legacy_mapping, list | Legacy no. | N. precedente |
 | `S845a2b` | hub_consolidation | No Hub Controller codes yet. | Ancora nessun codice del controllore del mozzo. |
 | `S138665` | hub_consolidation | Open deprecation requests | Apri richieste di obsolescenza |
 | `Sc8df93` | hub_consolidation | Open deprecation requests for all replaced Hub codes of this group? | Aprire richieste di obsolescenza per tutti i codici del mozzo sostituiti di questo gruppo? |
@@ -20689,7 +21607,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sded18c` | language | approved by | approvato da |
 | `Sedd46e` | language | Check against the interface | Confronta con l'interfaccia |
 | `S5a013c` | language | missing | mancante |
-| `S2c924e` | language, workbench | Note | Nota |
+| `S2c924e` | language, row, workbench | Note | Nota |
 | `S2f09d0` | language | Note on %(x)s | Nota su %(x)s |
 | `S75bf99` | language | proposed by | proposto da |
 | `Sc68e32` | language | Save translations | Salva traduzioni |
@@ -20697,14 +21615,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S542818` | language | Terms of the language | Termini della lingua |
 | `Sae9e5d` | language | Translation of %(x)s | Traduzione di %(x)s |
 | `S863fd0` | language | Your own proposal: another person approves it. | La sua proposta: la approva un'altra persona. |
-| `Sf9d469` | legacy_mapping | All controllers | Tutti i controllori |
+| `Sf9d469` | legacy_mapping, list | All controllers | Tutti i controllori |
 | `Se61c2f` | legacy_mapping | Any number state | Qualsiasi stato del numero |
 | `S7c4f77` | legacy_mapping | issued | assegnati |
 | `Sfd5ec0` | legacy_mapping, menu, new | Legacy mapping | Corrispondenza vecchio-nuovo |
 | `S81f567` | legacy_mapping | Legacy number to new identifier | Numero precedente → nuovo identificativo |
 | `S64b267` | legacy_mapping | legacy number, identifier or name | numero precedente, identificativo o nome |
 | `S60fe6c` | legacy_mapping | new codes without a legacy number (n/a) | nuovi codici senza numero precedente (n/d) |
-| `Sf26140` | legacy_mapping, st_preview | New identifier | Nuovo identificativo |
 | `Sf573c8` | legacy_mapping | no number yet | ancora senza numero |
 | `S7877c5` | legacy_mapping | No status code carries a legacy number yet. | Nessun codice di stato ha ancora un numero precedente. |
 | `Sb7baa1` | legacy_mapping | Number | Numero |
@@ -20713,10 +21630,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S8b0b7c` | legacy_mapping | with a legacy number | con un numero precedente |
 | `Seba07b` | list | A change set groups the change requests that ship with one controller software release, so reviewers see the whole package. Each request is still decided on its own. | Un set di modifiche raggruppa le richieste di modifica che escono con un rilascio del software del controllore, così i revisori vedono l'intero pacchetto. Ogni richiesta resta decisa singolarmente. |
 | `Sc5fe02` | list | any | qualsiasi |
+| `S55201a` | list | Any status | Qualsiasi stato di avanzamento |
 | `Sef5415` | list | Apply columns | Applica colonne |
+| `Sffb569` | list | Ask for approval of the ticked rows | Chiedere l'approvazione delle righe selezionate |
 | `S162a45` | list, menu | Change Sets | Set di modifiche |
 | `S9e895f` | list | Change sets | Set di modifiche |
 | `Scf723c` | list | Columns | Colonne |
+| `S2ddaf9` | list, upload | Compare a workbook | Confronta una cartella di lavoro |
 | `Seb0fd2` | list | Delete all my Drafts of this filter | Elimina tutte le mie bozze di questo filtro |
 | `S36f212` | list | Delete ALL of your own Drafts that match this filter, on every page? | Eliminare TUTTE le proprie bozze che corrispondono a questo filtro, in tutte le pagine? |
 | `Sc554a1` | list | Delete selected Drafts | Elimina le bozze selezionate |
@@ -20726,12 +21646,18 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S44d25b` | list | Items | Elementi |
 | `S033df3` | list | Lifecycle | Ciclo di vita |
 | `Sb4cad6` | list | Link to this view | Link a questa vista |
+| `Sbdb4e1` | list | Load the initial mapping | Carica la corrispondenza iniziale |
+| `Se07018` | list | Make the request | Fai la richiesta |
 | `Se248d5` | list, new | New change set | Nuovo set di modifiche |
 | `Se75aa1` | list, new | New Release | Nuovo rilascio |
+| `S9bb526` | list, row | New row | Nuova riga |
 | `Se5076c` | list | No change sets yet. | Nessun set di modifiche per ora. |
 | `Sd32c03` | list | No releases yet. | Nessun rilascio per ora. |
+| `Sb5b22c` | list | No row matches. | Nessuna riga corrisponde. |
 | `Sc3af43` | list | No saved searches yet. | Nessuna ricerca salvata per ora. |
 | `S0cb400` | list | No status codes match these filters. | Nessun codice di stato corrisponde a questi filtri. |
+| `S260f7a` | list, row | Node | Nodo |
+| `S08250b` | list | number, title or group | numero, titolo o gruppo |
 | `Sf7194e` | list | Requests | Richieste |
 | `S37a530` | list | result | risultato |
 | `Scdf7e9` | list | results | risultati |
@@ -20740,10 +21666,14 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sff86e9` | list | Save the current filters as | Salva i filtri attuali come |
 | `Sed1d84` | list | Saved searches | Ricerche salvate |
 | `S859822` | list, mine | Select | Seleziona |
+| `S45b553` | list | Select all rows | Seleziona tutte le righe |
 | `S7f5583` | list, menu | Status Codes | Codici di stato |
 | `S20bff1` | list | Status codes | Codici di stato |
+| `S3a1066` | list | The mapping is empty. | La corrispondenza è vuota. |
+| `S27d95b` | list | The rows stay as they are. Once the StCd Owner, the Chief Engineer and an Administrator approve, they count as approved numbers. | Le righe restano come sono. Quando il responsabile StCd, il capo ingegnere e un amministratore approvano, valgono come numeri approvati. |
 | `Se90eb0` | list | Turbine Platform | Piattaforma della turbina |
 | `S86b1e7` | list | Typos are tolerated: "convertor" still finds "converter". | Gli errori di battitura sono tollerati: «convertor» trova comunque «converter». |
+| `Sb0c551` | list | Which legacy status code becomes which new one, with what the program files do not carry: the English title, the type, the up/down counter, the access levels, cause and directive. A row changes only by a request that the StCd Owner, the Chief Engineer and an Administrator all approve. | Quale vecchio codice di stato diventa quale nuovo, con ciò che i file di programma non contengono: titolo inglese, tipo, contatore avanti/indietro, livelli di accesso, causa e disposizione. Una riga cambia solo con una richiesta che il responsabile StCd, il capo ingegnere e un amministratore approvano tutti. |
 | `Sf7c400` | login | Log in | Accedi |
 | `S175835` | login | or | oppure |
 | `S8be3c9` | login, users | Password | Password |
@@ -20905,6 +21835,23 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S8cb56e` | message: lookup_admin_service | range_end must be greater than range_start | range_end deve essere maggiore di range_start |
 | `Se3a971` | message: lookup_admin_service | sub_range_end must be greater than sub_range_start | sub_range_end deve essere maggiore di sub_range_start |
 | `S1404e3` | message: lookup_service | functional_system_group query parameter is required for functional-subgroups | Il parametro di query functional_system_group è obbligatorio per functional-subgroups |
+| `Sf28681` | message: mapping_service | Give the reason for the change; the three approvers read it first. | Indica il motivo della modifica; i tre approvatori lo leggono per primo. |
+| `S062788` | message: mapping_service | Give the request a title of at most 120 characters. | Dai alla richiesta un titolo di al massimo 120 caratteri. |
+| `S2ea56f` | message: mapping_service | Mapping change not found | Modifica della corrispondenza non trovata |
+| `S2c9363` | message: mapping_service | Mapping row not found | Riga della corrispondenza non trovata |
+| `S2d5693` | message: mapping_service | Only the person who made the request can withdraw it. | Solo la persona che ha fatto la richiesta può ritirarla. |
+| `S682269` | message: mapping_service | Only the StCd Owner, the Chief Engineer and an Administrator decide on the mapping. | Solo il responsabile StCd, il capo ingegnere e un amministratore decidono sulla corrispondenza. |
+| `S5e0f66` | message: mapping_service | Say why you reject the request. | Spiega perché rifiuti la richiesta. |
+| `S3d5cfc` | message: mapping_service | The comment is longer than 1000 characters. | Il commento supera i 1000 caratteri. |
+| `S82b817` | message: mapping_service | The decision must be APPROVE or REJECT. | La decisione deve essere APPROVE o REJECT. |
+| `S9ec08a` | message: mapping_service | The file is not a readable .xlsx workbook. | Il file non è una cartella di lavoro .xlsx leggibile. |
+| `S3831f7` | message: mapping_service | The reason is longer than 2000 characters. | Il motivo supera i 2000 caratteri. |
+| `Sa5de7d` | message: mapping_service | The request contains no row. | La richiesta non contiene nessuna riga. |
+| `S2116e4` | message: mapping_service | The request is already closed. | La richiesta è già chiusa. |
+| `S8518e7` | message: mapping_service | The role has decided already. | Il ruolo ha già deciso. |
+| `S2a15d7` | message: mapping_service | The workbook is larger than 5 MB. | La cartella di lavoro supera i 5 MB. |
+| `S8eb912` | message: mapping_service | The workbook unpacks to more than 80 MB. | La cartella di lavoro si decomprime in più di 80 MB. |
+| `S6c1d08` | message: mapping_service | Your role may not propose a change of the mapping. | Il tuo ruolo non può proporre una modifica della corrispondenza. |
 | `S4ada2b` | message: notification_service | Notification not found | Notifica non trovata |
 | `Sd92b89` | message: notification_service | This notification belongs to someone else. | Questa notifica appartiene a qualcun altro. |
 | `Sb0cd00` | message: numbering_service | Identifier override must match StCd-NNNNN (five digits). | Un identificativo sovrascritto deve rispettare StCd-NNNNN (cinque cifre). |
@@ -20936,8 +21883,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S9671fb` | message: settings_service | must be true or false | deve essere true o false |
 | `S5166bb` | message: st_import_service | A staged file changed after the preview. Upload again. | Un file preparato è cambiato dopo l'anteprima. Lo carichi di nuovo. |
 | `Saa4de2` | message: st_import_service | controller must be auto, MC or HC | controller deve essere auto, MC o HC |
-| `Sa30251` | message: st_import_service | default_category must be ERROR, WARNING or INFO | default_category deve essere ERROR, WARNING o INFO |
-| `Sfe694a` | message: st_import_service | hc_proposal must be 1 or 2 | hc_proposal deve essere 1 o 2 |
 | `S58bec3` | message: st_import_service | No StCd program files found. Upload .st files or a ZIP of them. | Nessun file di programma StCd trovato. Carichi file .st o uno ZIP di essi. |
 | `Sd9c5b0` | message: st_import_service | Nothing selected: tick at least one program that is ready. | Nulla di selezionato: selezioni almeno un programma pronto. |
 | `S5dbbd0` | message: st_import_service | The code is no longer an open Draft; preview the files again. | Il codice non è più una bozza aperta; mostri di nuovo l'anteprima dei file. |
@@ -21084,6 +22029,23 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S05fc94` | role badge | Engineer | Ingegnere |
 | `S3c0e8a` | role badge | StCd Owner | Responsabile StCd |
 | `Sdbad9f` | role badge | Viewer | Osservatore |
+| `S7f2e4b` | row | Access levels | Livelli di accesso |
+| `S08f985` | row | Cause | Causa |
+| `S164e0b` | row | Directive | Disposizione |
+| `S283474` | row | New number | Nuovo numero |
+| `Sfa6fdd` | row | No request yet. The row is as it was loaded. | Ancora nessuna richiesta. La riga è come è stata caricata. |
+| `Sf790fc` | row | Nothing is changed here directly: the form makes a request, and the row changes after the StCd Owner, the Chief Engineer and an Administrator have approved it. | Qui non si modifica nulla direttamente: il modulo fa una richiesta e la riga cambia dopo l'approvazione del responsabile StCd, del capo ingegnere e di un amministratore. |
+| `S9d728f` | row | Request approval of the number | Chiedere l'approvazione del numero |
+| `Sc8978f` | row | Request rejection of the number | Chiedere il rifiuto del numero |
+| `Sc644eb` | row | Request that this number is never used? | Chiedere che questo numero non sia mai usato? |
+| `Sb25913` | row | Request the new row | Chiedere la nuova riga |
+| `Sb04301` | row | Request this change | Chiedere questa modifica |
+| `Sae91b6` | row | Requests for this row | Richieste per questa riga |
+| `Sd59701` | row | Reset delay (parameter) | Ritardo di ripristino (parametro) |
+| `Sfd64cd` | row | Set delay (parameter) | Ritardo di attivazione (parametro) |
+| `S9c0444` | row | The three approvers read the reason first. | I tre approvatori leggono prima il motivo. |
+| `Sc84745` | row | Title (English) | Titolo (inglese) |
+| `S711eea` | row | Up/down counter | Contatore avanti/indietro |
 | `S913aba` | settings | Save settings | Salva impostazioni |
 | `Sb68734` | software_versions | Added | Aggiunti |
 | `S172415` | software_versions | added | aggiunti |
@@ -21097,28 +22059,19 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd97d1e` | software_versions | Show | Mostra |
 | `S42ea2e` | software_versions | Software Versions | Versioni software |
 | `S3bd89c` | software_versions | Which codes exist in which software version | Quali codici esistono in quale versione software |
-| `S16e5d4` | st_new, st_preview | Alarm type | Tipo di allarme |
-| `S726d7a` | st_new | as above | come sopra |
-| `S9477fd` | st_new, st_preview | choose | scegliere |
 | `Sb149ca` | st_new | Detect: a number from 10000 up is a Hub Controller program | Rileva: un numero da 10000 in su è un programma del controllore del mozzo |
 | `S7d06d0` | st_new | Every imported program becomes an ordinary Draft with the number it carries reserved. It still needs Cross-Domain Sign-Off, dual review and Chief Engineer approval before Release, and all Drafts of one import share a change set. | Ogni programma importato diventa una bozza ordinaria con il numero che porta riservato. Richiede ancora benestare interdisciplinare, doppia revisione e approvazione del capo ingegnere prima del rilascio, e tutte le bozze di un'importazione condividono un set di modifiche. |
-| `Sbda77c` | st_new | Every program names an alarm type. A type left at "as above" gets the category chosen above; the next page lets you set the category of single programs or of all ticked ones. | Ogni programma indica un tipo di allarme. Un tipo lasciato su «come sopra» riceve la categoria scelta sopra; nella pagina successiva si può impostare la categoria di singoli programmi o di tutti quelli selezionati. |
 | `S3b9e43` | st_new | Hub Controller (legacy numbers, mapped to the new ones) | Controllore del mozzo (numeri precedenti, associati ai nuovi) |
 | `Sd7333f` | st_new | Import status codes from .st files | Importa codici di stato da file .st |
-| `S6640a6` | st_new | New number of Hub Controller programs | Nuovo numero dei programmi del controllore del mozzo |
 | `Sc0eff1` | st_new | Or a whole folder | Oppure un'intera cartella |
 | `S94ddc1` | st_new | Program files (.st) or a ZIP | File di programma (.st) o un ZIP |
-| `Sd99e2a` | st_new | Proposal 1: five-digit numbers (11000 and up) | Proposta 1: numeri a cinque cifre (da 11000) |
-| `S2744b0` | st_new | Proposal 2: inside the Main Controller scheme | Proposta 2: all'interno dello schema del controllore principale |
 | `S67640d` | st_new | Read files and preview | Leggi i file e mostra l'anteprima |
-| `S0af4fc` | st_new | Status category by alarm type (optional) | Categoria di stato per tipo di allarme (facoltativo) |
-| `S234237` | st_new | Status category of the new codes | Categoria di stato dei nuovi codici |
-| `S61fc52` | st_new | The program files do not carry a category and none is assumed: choose one here, by alarm type below, or for each program in the preview. A program without a category is not imported. | I file di programma non contengono una categoria e nessuna viene presunta: sceglietene una qui, per tipo di allarme qui sotto o per ogni programma nell'anteprima. Un programma senza categoria non viene importato. |
+| `Saa9df6` | st_new | The title, the type and the access levels of every program come from the mapping, never from the files. A program whose number is not in the mapping is blocked. | Il titolo, il tipo e i livelli di accesso di ogni programma vengono dalla corrispondenza, mai dai file. Un programma il cui numero non è nella corrispondenza è bloccato. |
 | `S8f4c21` | st_new | Turbine platforms | Piattaforme di turbina |
 | `S9ad4d4` | st_new | Upload the generated StCd_<n>.st programs — several files at once, a whole folder, or one ZIP. Nothing is created yet: the next page lists every program so you can tick the ones to import. | Carichi i programmi StCd_<n>.st generati: più file insieme, un'intera cartella o un unico ZIP. Non viene ancora creato nulla: la pagina successiva elenca ogni programma così potrà selezionare quelli da importare. |
+| `S16e5d4` | st_preview | Alarm type | Tipo di allarme |
 | `S2693e5` | st_preview | All Drafts of this import join one change set, so they can be reviewed and decided together. | Tutte le bozze di questa importazione entrano in un unico set di modifiche, così possono essere riviste e decise insieme. |
 | `Scbc694` | st_preview | already in the catalogue | già nel catalogo |
-| `Sc00673` | st_preview | Apply to the ticked programs | Applica ai programmi selezionati |
 | `Sdf88b8` | st_preview | blocked | bloccati |
 | `S6f7703` | st_preview | Changed and withdrawn programs are not ticked: tick the ones you want to update, revise or restore. | I programmi modificati e ritirati non sono selezionati: selezioni quelli che vuole aggiornare, rivedere o ripristinare. |
 | `S78bb8b` | st_preview | Create Drafts for the ticked programs | Crea bozze per i programmi selezionati |
@@ -21136,8 +22089,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se58289` | st_preview | Programs found in the uploaded files | Programmi trovati nei file caricati |
 | `S75c053` | st_preview, workbench | ready | pronti |
 | `S0723bf` | st_preview | Select all programs that are ready | Seleziona tutti i programmi pronti |
-| `Sae12bc` | st_preview, workbench | Status category | Categoria di stato |
-| `Sd7a322` | st_preview | Status category of the ticked programs | Categoria di stato dei programmi selezionati |
+| `S9a2439` | st_preview | Type (from the mapping) | Tipo (dalla corrispondenza) |
 | `S1a767a` | st_preview | updates the open Draft | aggiorna la bozza aperta |
 | `S02499f` | st_preview | withdrawn | ritirati |
 | `Sf0c3cf` | st_preview | without a legacy number | senza numero precedente |
@@ -21200,6 +22152,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S2fd88e` | translations | Copy from previous revision | Copia dalla revisione precedente |
 | `Se522f0` | translations | Save draft translation | Salva traduzione in bozza |
 | `Scb0b87` | translations | source language text of revision | testo nella lingua di origine della revisione |
+| `S01209c` | upload | Also ask for approval of the unchanged rows that are only proposed | Chiedere anche l'approvazione delle righe invariate che sono solo proposte |
+| `Sddf8d9` | upload | Compare and make the request | Confronta e fai la richiesta |
+| `S028ebe` | upload | Download the current mapping | Scarica la corrispondenza attuale |
+| `S23bfbf` | upload | The workbook has problems. Nothing was requested. | La cartella di lavoro ha dei problemi. Non è stato richiesto nulla. |
+| `S24d49d` | upload | Title of the request | Titolo della richiesta |
+| `S88809a` | upload | Upload the corrected mapping as a workbook with the sheets MC and HC (download the current one as a model). Every new row and every row that differs becomes one request; rows the workbook does not mention stay as they are. The request takes effect only after the StCd Owner, the Chief Engineer and an Administrator have approved it. | Carica la corrispondenza corretta come cartella di lavoro con i fogli MC e HC (scarica quella attuale come modello). Ogni riga nuova e ogni riga diversa diventa una richiesta; le righe che la cartella non menziona restano invariate. La richiesta ha effetto solo dopo l'approvazione del responsabile StCd, del capo ingegnere e di un amministratore. |
+| `S09efdf` | upload | Workbook (.xlsx) | Cartella di lavoro (.xlsx) |
 | `S359a3b` | user_detail | Back to users | Torna agli utenti |
 | `Sf6fdbe` | user_detail, users | Delete | Elimina |
 | `S9afe6c` | user_detail | Delete user | Elimina utente |
@@ -21259,6 +22218,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sa58dac` | workbench | Set values on the Drafts | Imposta valori sulle bozze |
 | `Sa443bb` | workbench | Sign off the Drafts | Dai il benestare alle bozze |
 | `S53f47f` | workbench | Sign-off pending | Benestare in attesa |
+| `Sae12bc` | workbench | Status category | Categoria di stato |
 | `Sdc416e` | workbench | Step | Passo |
 | `Sf7710d` | workbench | Submit for review | Invia in revisione |
 | `Sa45adc` | workbench | Submit the Drafts | Invia le bozze |
@@ -21271,7 +22231,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 
 ### 9.18 DK Dansk 🇩🇰 — Danish
 
-1295 of 1296 strings translated; direction left to right.
+1355 of 1356 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -21282,13 +22242,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S141763` | _macros | Confirm with your password | Bekræft med din adgangskode |
 | `Sc326a4` | _macros, detail, form | Field | Felt |
 | `S0a0f8a` | _macros | Field differences | Feltforskelle |
-| `Sbc9819` | _macros | Next | Næste |
+| `Sbc9819` | _macros, list | Next | Næste |
 | `S27cea7` | _macros | No field differences. | Ingen feltforskelle. |
 | `S464e43` | _macros | on track | i rute |
 | `Sba2fff` | _macros, dashboard, success_metrics | overdue | forsinkede |
-| `S600584` | _macros | Pages | Sider |
+| `S600584` | _macros, list | Pages | Sider |
 | `S810099` | _macros | Please check | Kontroller venligst |
-| `S50f942` | _macros | Previous | Forrige |
+| `S50f942` | _macros, list | Previous | Forrige |
 | `S83fd6e` | _macros, stalled | red after | rød efter |
 | `S57e8a7` | _macros, success_metrics | slow | langsom |
 | `S15198e` | _macros | Waiting since | Venter siden |
@@ -21319,10 +22279,10 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S06b6ac` | approval_queue, builder, detail | Identifier | Identifikator |
 | `S8e70d2` | approval_queue | Nothing is awaiting your approval. | Intet venter på din godkendelse. |
 | `Sa74f16` | approval_queue, detail, review_queue | Reviewer | Reviewer |
-| `S768e0c` | approval_queue, builder, detail | Title | Titel |
+| `S768e0c` | approval_queue, builder, change | Title | Titel |
 | `S33d306` | approval_queue, detail, mine | Waiting | Venter |
 | `S2cbacd` | audit_log | %(n)s total | %(n)s i alt |
-| `S97c89a` | audit_log | Action | Handling |
+| `S97c89a` | audit_log, change | Action | Handling |
 | `Scbd19b` | audit_log | Actor | Aktør |
 | `S811bdf` | audit_log | Actor ID | Aktør-id |
 | `S8c85b1` | audit_log | after: | efter: |
@@ -21333,7 +22293,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sc7fb31` | audit_log | Entity | Entitet |
 | `S04d694` | audit_log | Entity ID | Entitets-id |
 | `Sbb4e99` | audit_log | Entity Type | Entitetstype |
-| `Sd7decf` | audit_log, index, language | Filter | Filtrér |
+| `Sd7decf` | audit_log, changes, index | Filter | Filtrér |
 | `S3f6605` | audit_log, delegations, software_versions | From | Fra |
 | `S0061b5` | audit_log | No matching audit entries. | Ingen matchende auditposter. |
 | `S01f79f` | audit_log | Scoped view: showing only actions you performed. | Begrænset visning: kun dine egne handlinger vises. |
@@ -21352,7 +22312,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sbe504f` | base | Skip to main content | Gå til hovedindholdet |
 | `S1b9aeb` | base, dashboard | unread | ulæste |
 | `S2da600` | base, export, export_center | Version | Version |
-| `S12625b` | base | waiting | afventer |
+| `S12625b` | base, change | waiting | afventer |
 | `S5a4692` | base | You are covering for a colleague | Du vikarierer for en kollega |
 | `S8e9c15` | builder | Candidate revisions | Kandidatrevisioner |
 | `Sdf2aa0` | builder | Functional Group / Subgroup | Funktionel gruppe / undergruppe |
@@ -21383,13 +22343,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S4105cf` | catalogue_health | exhausted | opbrugt |
 | `S57e8be` | catalogue_health, connections | Finding | Fund |
 | `S1150a1` | catalogue_health | Gaps | Huller |
-| `S171a06` | catalogue_health, export, withdrawn_codes | Group | Gruppe |
-| `Sb4aadc` | catalogue_health, legacy_mapping | Hub Controller | Navstyring |
+| `S171a06` | catalogue_health, export, list | Group | Gruppe |
+| `Sb4aadc` | catalogue_health, legacy_mapping, list | Hub Controller | Navstyring |
 | `S8ae1c3` | catalogue_health | Left | Tilbage |
 | `S12c0f1` | catalogue_health | left | tilbage |
 | `Sa7b60b` | catalogue_health | Left % | Tilbage % |
 | `S36a883` | catalogue_health | low | lav |
-| `S1b123c` | catalogue_health, legacy_mapping, st_new | Main Controller | Hovedstyring |
+| `S1b123c` | catalogue_health, legacy_mapping, list | Main Controller | Hovedstyring |
 | `S92185d` | catalogue_health, index | Missing | Mangler |
 | `S57282a` | catalogue_health | Missing expected data | Manglende forventede data |
 | `Sb8e95b` | catalogue_health | None found. | Ingen fundet. |
@@ -21406,6 +22366,31 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S75a804` | catalogue_health | subgroup(s) are running out of numbers: | undergruppe(r) er ved at løbe tør for numre: |
 | `S5fec4f` | catalogue_health | Unused numbers inside a band | Ubrugte numre inden for et bånd |
 | `S02c0e4` | catalogue_health | Used | Brugt |
+| `S84f219` | change | All three, each by a different person who did not make the request. | Alle tre, hver af en forskellig person, som ikke har stillet anmodningen. |
+| `S477aeb` | change, upload | and more | og flere |
+| `Sdeb9d0` | change, changes | Approvals | Godkendelser |
+| `S7b2c7f` | change, detail, language | Approve | Godkend |
+| `S8aa57d` | change, detail | Changes | Ændringer |
+| `S3fe5e1` | change | Comment (required to reject) | Kommentar (påkrævet ved afvisning) |
+| `Sb48001` | change | Mapping change | Ændring af koblingen |
+| `Sd7c1d0` | change, changes, list | Mapping changes | Ændringer af koblingen |
+| `Sf26140` | change, legacy_mapping, list | New identifier | Ny identifikator |
+| `Sf219cc` | change, list, row | Reason | Grund |
+| `S2b03b5` | change, detail | Reject | Afvis |
+| `S5108c2` | change, changes | Requested by | Anmodet af |
+| `S52d0b3` | change, changes, detail | Rows | Rækker |
+| `S6c30d2` | change, dry_run, list | rows | rækker |
+| `Sfabd38` | change | These rows changed after the request was made; it cannot be applied. Withdraw it and make it again: | Disse rækker er ændret efter anmodningen; den kan ikke anvendes. Træk den tilbage, og stil den igen: |
+| `S47e564` | change, detail | Withdraw | Træk tilbage |
+| `S30d359` | change | Withdraw this request? | Træk denne anmodning tilbage? |
+| `S88c173` | change | You made this request; another person must decide. | Du har stillet denne anmodning; en anden person skal afgøre den. |
+| `S04e02f` | change | Your role has decided already. | Din rolle har allerede afgjort den. |
+| `Sc7274c` | changes | Any state | Enhver tilstand |
+| `S2a560c` | changes | Every change of the mapping is a request. It takes effect when the StCd Owner, the Chief Engineer and an Administrator have each approved it; one rejection closes it. | Hver ændring af koblingen er en anmodning. Den træder i kraft, når StCd-ejeren, chefingeniøren og en administrator hver har godkendt den; én afvisning lukker den. |
+| `Sdef2eb` | changes, list, menu | Mapping | Kobling |
+| `Se03e43` | changes | No request yet. | Ingen anmodning endnu. |
+| `S5fc0e0` | changes | request(s) wait for your decision. | anmodning(er) venter på din afgørelse. |
+| `Sa72502` | changes, detail, export | State | Tilstand |
 | `S97fd13` | check | Back to the terms | Tilbage til begreberne |
 | `S1bc9e5` | check | English string | Engelsk tekst |
 | `S5d54b3` | check | Every string uses the translated terms. | Alle tekster bruger de oversatte begreber. |
@@ -21486,7 +22471,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S9b0b4c` | detail | also the files without an access level (all columns) | også filerne uden adgangsniveau (alle kolonner) |
 | `Sf24c44` | detail | Any %(code)s Engineer | Enhver %(code)s-ingeniør |
 | `Sb99a01` | detail | Applies to software versions | Gælder for softwareversioner |
-| `S7b2c7f` | detail, language | Approve | Godkend |
 | `Sde38bf` | detail | Approve selected | Godkend valgte |
 | `Scf2999` | detail | Approving confirms these values; any change you make here is applied and audited. Rejecting ignores them. | Godkendelse bekræfter disse værdier; enhver ændring, du foretager her, anvendes og auditeres. Afvisning ignorerer dem. |
 | `Sf7f2d5` | detail | Archive (requires 180-day retention elapsed) | Arkivér (kræver, at 180 dages opbevaring er gået) |
@@ -21507,7 +22491,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S4572f4` | detail | Change request | Ændringsanmodning |
 | `S3295be` | detail, workbench | Change requests in this set | Ændringsanmodninger i dette sæt |
 | `S4d8006` | detail | Change set | Ændringssæt |
-| `S8aa57d` | detail | Changes | Ændringer |
 | `S3d14ea` | detail, export | Changes of this release only | Kun ændringerne i denne udgave |
 | `Sbd95c0` | detail | Checklist confirmed at sign-off | Tjeklisten bekræftet ved underskrift |
 | `S074d62` | detail, role badge | Chief Engineer | Chefingeniør |
@@ -21525,7 +22508,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S7671b5` | detail | Confirm or override Audience Access | Bekræft eller overstyr målgruppeadgang |
 | `S6512ee` | detail | Connection | Forbindelse |
 | `S4f9be0` | detail | Content | Indhold |
-| `Sa36a5f` | detail, legacy_mapping, st_new | Controller | Controller |
+| `Sa36a5f` | detail, legacy_mapping, list | Controller | Controller |
 | `Scd293f` | detail | Converter Reactive Power Program | Program for konverterens reaktive effekt |
 | `S3998a7` | detail | Copies the descriptive fields into a new Draft in a Main Controller group (a new number is allocated at submit; this code's identifier is kept as the legacy reference). | Kopierer de beskrivende felter til en ny kladde i en hovedstyringsgruppe (et nyt nummer tildeles ved indsendelse; denne kodes identifikator bevares som gammel reference). |
 | `S54b051` | detail | Copy this code for another turbine platform. The copy is a new Draft that links back here and goes through the normal review. | Kopiér denne kode til en anden turbineplatform. Kopien er en ny kladde, der henviser hertil og går gennem den normale gennemgang. |
@@ -21659,7 +22642,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sf5ca9d` | detail | Recorded exports | Registrerede eksporter |
 | `Sa3f757` | detail | Reinstate to Released | Genindsæt som Udgivet |
 | `S3238ca` | detail | Reinstatement reason | Årsag til genindsættelse |
-| `S2b03b5` | detail | Reject | Afvis |
 | `S27fb5c` | detail | Reject selected | Afvis valgte |
 | `S045c2c` | detail | Related codes | Relaterede koder |
 | `S33a5a7` | detail | Relation | Relation |
@@ -21677,7 +22659,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S4c1aa6` | detail | Repeated-Error Escalation | Eskalering af gentagne fejl |
 | `S4aed03` | detail | Request | Anmod |
 | `Sf3421a` | detail | Request a Sign-Off | Anmod om underskrift |
-| `Sc26bf6` | detail, mine | Requested | Anmodet |
+| `Sc26bf6` | detail, mine, row | Requested | Anmodet |
 | `S2706ed` | detail | Required by | Krævet af |
 | `S619e87` | detail, form | Reset Delay | Nulstillingsforsinkelse |
 | `S026ab2` | detail | resolved | løst |
@@ -21687,7 +22669,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S3beb9a` | detail | Revision | Revision |
 | `Sa72973` | detail | Revision Fields | Revisionsfelter |
 | `Sfc1d6a` | detail | row(s) imported as Drafts | række(r) importeret som kladder |
-| `S52d0b3` | detail, reconciliation, user_detail | Rows | Rækker |
 | `Sd0edfb` | detail | Sales | Salg |
 | `S241bf5` | detail, workbench | Sample number | Stikprøvenummer |
 | `Sda38c6` | detail | Save planned dates | Gem planlagte datoer |
@@ -21706,11 +22687,10 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sece2ac` | detail, form | Slot | Plads |
 | `Sff44d2` | detail | Software Version | Softwareversion |
 | `S169bf7` | detail, export, software_versions | Software version | Softwareversion |
-| `S6da13a` | detail, fleet_feedback | Source | Kilde |
+| `S6da13a` | detail, fleet_feedback, row | Source | Kilde |
 | `Sd3c56b` | detail, export_profiles | source language | kildesprog |
 | `Sb3883f` | detail | Standards | Standarder |
 | `Sfaa9e7` | detail, reconciliation | Started | Startet |
-| `Sa72502` | detail, export, hub_consolidation | State | Tilstand |
 | `Se246b6` | detail, form, list | Status Category | Statuskategori |
 | `S779953` | detail, form | Status Code for Repeated Error | Statuskode for gentagen fejl |
 | `S98a377` | detail | Still a Draft. | Stadig en kladde. |
@@ -21729,7 +22709,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Seaf576` | detail, form | Trigger Snapshot | Udløs snapshot |
 | `S285ec8` | detail, form | Troubleshooting | Fejlfinding |
 | `S71bba4` | detail | Turbine Operator Package | Turbineoperatørpakke |
-| `S3deb74` | detail, mine, review_queue | Type | Type |
+| `S3deb74` | detail, list, mine | Type | Type |
 | `Sab631e` | detail | Type %(id)s to confirm | Skriv %(id)s for at bekræfte |
 | `Sb5e264` | detail | Type the identifier to confirm | Skriv identifikatoren for at bekræfte |
 | `S835f8a` | detail | Umrichterprogramm GSC | Konverterprogram GSC |
@@ -21748,7 +22728,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S51ecc5` | detail | What happens next | Hvad sker der derefter |
 | `Sf323c0` | detail | Where used | Hvor den bruges |
 | `S7d5316` | detail | Who | Hvem |
-| `S47e564` | detail | Withdraw | Træk tilbage |
 | `S51a998` | detail | Withdraw this change request? | Træk denne ændringsanmodning tilbage? |
 | `S93ef7c` | detail, workbench | Workbench | Arbejdsbord |
 | `S95a2a4` | detail, form | Write level | Skriveniveau |
@@ -21768,7 +22747,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sec0298` | dry_run | Result per row | Resultat pr. række |
 | `S9bf7a8` | dry_run | Row | Række |
 | `S3ff0b0` | dry_run | row(s) have problems. Nothing has been created. | række(r) har problemer. Intet er oprettet. |
-| `S6c30d2` | dry_run | rows | rækker |
 | `S8012ff` | dry_run | unchanged | uændret |
 | `S83d655` | dry_run, st_preview | warning(s) | advarsel/advarsler |
 | `S9ddad9` | dry_run | would be created | ville blive oprettet |
@@ -21910,6 +22888,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S285edc` | help and messages | %(ok)s of %(n)s: %(what)s. | %(ok)s af %(n)s: %(what)s. |
 | `Sb08e6c` | help and messages | A Reviewer and an Administrator each sign off (in any order). If either rejects, it goes back to the author. | En reviewer og en administrator underskriver hver (i vilkårlig rækkefølge). Afviser en af dem, går den tilbage til forfatteren. |
 | `S2f1bed` | help and messages | An Administrator includes the revision in a Release and publishes it; then it is Released. | En administrator medtager revisionen i en udgivelse og udgiver den; derefter er den Udgivet. |
+| `S9477fd` | help and messages | choose | vælg |
 | `S1308dc` | help and messages | defective codes sent back | mangelfulde koder sendt tilbage |
 | `Se2bbd9` | help and messages | Drafts saved | Kladder gemt |
 | `S0ddfa5` | help and messages | Drafts signed off | Kladder godkendt |
@@ -21921,7 +22900,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sce489f` | help and messages | The author gets any required cross-domain sign-offs, then submits the change request for review. | Forfatteren indhenter de nødvendige tværfaglige underskrifter og indsender derefter ændringsanmodningen til gennemgang. |
 | `S1cdbdd` | help and messages | The Chief Engineer approves or rejects. Approval makes the revision Approved (or Deprecated for a deprecation request). | Chefingeniøren godkender eller afviser. Godkendelsen gør revisionen Godkendt (eller Forældet ved en forældelsesanmodning). |
 | `S2d6ac0` | help and messages | The package is being built. Reload this page to follow its progress. | Pakken oprettes. Genindlæs siden for at følge fremdriften. |
-| `Sde7a5b` | help and messages | The program files do not carry a category; you can change it in each Draft. | Programfilerne har ingen kategori; du kan ændre den i hver kladde. |
 | `Scff3a3` | help and messages | User deleted; its name and address are erased, what it did stays attributable. | Bruger slettet; navn og adresse er slettet, det brugeren har gjort, kan stadig henføres. |
 | `Secfb3f` | hub_consolidation | Deprecate replaced Hub codes | Erklær erstattede navkoder forældede |
 | `S0e7766` | hub_consolidation, language | draft | kladde |
@@ -21932,7 +22910,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sc50c53` | hub_consolidation | Hub Controller to Main Controller consolidation | Konsolidering af navstyringen i hovedstyringen |
 | `Scd189f` | hub_consolidation | Hub group | Navgruppe |
 | `Sa5262b` | hub_consolidation | If the Hub Controller leaves the hardware setup, its codes are defined anew on the Main Controller side. Create an MC draft from an HC code on its detail page (Actions); this report shows how far each has come. Nothing is renumbered. | Hvis navstyringen forlader hardwareopsætningen, defineres dens koder på ny på hovedstyringens side. Opret en MC-kladde fra en HC-kode på dens detaljeside (Handlinger); denne rapport viser, hvor langt hver er nået. Intet omnummereres. |
-| `Sdd6555` | hub_consolidation, legacy_mapping, st_preview | Legacy no. | Gammelt nr. |
+| `Sdd6555` | hub_consolidation, legacy_mapping, list | Legacy no. | Gammelt nr. |
 | `S845a2b` | hub_consolidation | No Hub Controller codes yet. | Endnu ingen navstyringskoder. |
 | `S138665` | hub_consolidation | Open deprecation requests | Åbn forældelsesanmodninger |
 | `Sc8df93` | hub_consolidation | Open deprecation requests for all replaced Hub codes of this group? | Åbn forældelsesanmodninger for alle erstattede navkoder i denne gruppe? |
@@ -21991,7 +22969,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sded18c` | language | approved by | godkendt af |
 | `Sedd46e` | language | Check against the interface | Sammenlign med grænsefladen |
 | `S5a013c` | language | missing | mangler |
-| `S2c924e` | language, workbench | Note | Note |
+| `S2c924e` | language, row, workbench | Note | Note |
 | `S2f09d0` | language | Note on %(x)s | Note til %(x)s |
 | `S75bf99` | language | proposed by | foreslået af |
 | `Sc68e32` | language | Save translations | Gem oversættelser |
@@ -21999,14 +22977,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S542818` | language | Terms of the language | Sprogets begreber |
 | `Sae9e5d` | language | Translation of %(x)s | Oversættelse af %(x)s |
 | `S863fd0` | language | Your own proposal: another person approves it. | Dit eget forslag: en anden godkender det. |
-| `Sf9d469` | legacy_mapping | All controllers | Alle styringer |
+| `Sf9d469` | legacy_mapping, list | All controllers | Alle styringer |
 | `Se61c2f` | legacy_mapping | Any number state | Enhver nummertilstand |
 | `S7c4f77` | legacy_mapping | issued | udstedt |
 | `Sfd5ec0` | legacy_mapping, menu, new | Legacy mapping | Gammel-ny-kobling |
 | `S81f567` | legacy_mapping | Legacy number to new identifier | Gammelt nummer til ny identifikator |
 | `S64b267` | legacy_mapping | legacy number, identifier or name | gammelt nummer, identifikator eller navn |
 | `S60fe6c` | legacy_mapping | new codes without a legacy number (n/a) | nye koder uden gammelt nummer (n/a) |
-| `Sf26140` | legacy_mapping, st_preview | New identifier | Ny identifikator |
 | `Sf573c8` | legacy_mapping | no number yet | endnu intet nummer |
 | `S7877c5` | legacy_mapping | No status code carries a legacy number yet. | Ingen statuskode har endnu et gammelt nummer. |
 | `Sb7baa1` | legacy_mapping | Number | Nummer |
@@ -22015,10 +22992,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S8b0b7c` | legacy_mapping | with a legacy number | med et gammelt nummer |
 | `Seba07b` | list | A change set groups the change requests that ship with one controller software release, so reviewers see the whole package. Each request is still decided on its own. | Et ændringssæt samler de ændringsanmodninger, der leveres med én udgivelse af styringssoftwaren, så reviewerne ser hele pakken. Hver anmodning afgøres stadig for sig. |
 | `Sc5fe02` | list | any | alle |
+| `S55201a` | list | Any status | Enhver status |
 | `Sef5415` | list | Apply columns | Anvend kolonner |
+| `Sffb569` | list | Ask for approval of the ticked rows | Bed om godkendelse af de markerede rækker |
 | `S162a45` | list, menu | Change Sets | Ændringssæt |
 | `S9e895f` | list | Change sets | Ændringssæt |
 | `Scf723c` | list | Columns | Kolonner |
+| `S2ddaf9` | list, upload | Compare a workbook | Sammenlign en projektmappe |
 | `Seb0fd2` | list | Delete all my Drafts of this filter | Slet alle mine kladder i dette filter |
 | `S36f212` | list | Delete ALL of your own Drafts that match this filter, on every page? | Slet ALLE dine egne kladder, der passer til dette filter, på alle sider? |
 | `Sc554a1` | list | Delete selected Drafts | Slet valgte kladder |
@@ -22028,12 +23008,18 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S44d25b` | list | Items | Elementer |
 | `S033df3` | list | Lifecycle | Livscyklus |
 | `Sb4cad6` | list | Link to this view | Link til denne visning |
+| `Sbdb4e1` | list | Load the initial mapping | Indlæs den oprindelige kobling |
+| `Se07018` | list | Make the request | Stil anmodningen |
 | `Se248d5` | list, new | New change set | Nyt ændringssæt |
 | `Se75aa1` | list, new | New Release | Ny udgivelse |
+| `S9bb526` | list, row | New row | Ny række |
 | `Se5076c` | list | No change sets yet. | Ingen ændringssæt endnu. |
 | `Sd32c03` | list | No releases yet. | Ingen udgivelser endnu. |
+| `Sb5b22c` | list | No row matches. | Ingen række passer. |
 | `Sc3af43` | list | No saved searches yet. | Ingen gemte søgninger endnu. |
 | `S0cb400` | list | No status codes match these filters. | Ingen statuskoder matcher disse filtre. |
+| `S260f7a` | list, row | Node | Knude |
+| `S08250b` | list | number, title or group | nummer, titel eller gruppe |
 | `Sf7194e` | list | Requests | Anmodninger |
 | `S37a530` | list | result | resultat |
 | `Scdf7e9` | list | results | resultater |
@@ -22042,10 +23028,14 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sff86e9` | list | Save the current filters as | Gem de aktuelle filtre som |
 | `Sed1d84` | list | Saved searches | Gemte søgninger |
 | `S859822` | list, mine | Select | Vælg |
+| `S45b553` | list | Select all rows | Vælg alle rækker |
 | `S7f5583` | list, menu | Status Codes | Statuskoder |
 | `S20bff1` | list | Status codes | Statuskoder |
+| `S3a1066` | list | The mapping is empty. | Koblingen er tom. |
+| `S27d95b` | list | The rows stay as they are. Once the StCd Owner, the Chief Engineer and an Administrator approve, they count as approved numbers. | Rækkerne forbliver, som de er. Når StCd-ejeren, chefingeniøren og en administrator godkender, tæller de som godkendte numre. |
 | `Se90eb0` | list | Turbine Platform | Turbineplatform |
 | `S86b1e7` | list | Typos are tolerated: "convertor" still finds "converter". | Tastefejl tolereres: »convertor« finder stadig »converter«. |
+| `Sb0c551` | list | Which legacy status code becomes which new one, with what the program files do not carry: the English title, the type, the up/down counter, the access levels, cause and directive. A row changes only by a request that the StCd Owner, the Chief Engineer and an Administrator all approve. | Hvilken gammel statuskode der bliver til hvilken ny, med det, programfilerne ikke indeholder: engelsk titel, type, op/ned-tæller, adgangsniveauer, årsag og anvisning. En række ændres kun ved en anmodning, som StCd-ejeren, chefingeniøren og en administrator alle godkender. |
 | `Sf7c400` | login | Log in | Log ind |
 | `S175835` | login | or | eller |
 | `S8be3c9` | login, users | Password | Adgangskode |
@@ -22207,6 +23197,23 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S8cb56e` | message: lookup_admin_service | range_end must be greater than range_start | range_end skal være større end range_start |
 | `Se3a971` | message: lookup_admin_service | sub_range_end must be greater than sub_range_start | sub_range_end skal være større end sub_range_start |
 | `S1404e3` | message: lookup_service | functional_system_group query parameter is required for functional-subgroups | Forespørgselsparameteren functional_system_group er påkrævet for functional-subgroups |
+| `Sf28681` | message: mapping_service | Give the reason for the change; the three approvers read it first. | Angiv grunden til ændringen; de tre godkendere læser den først. |
+| `S062788` | message: mapping_service | Give the request a title of at most 120 characters. | Giv anmodningen en titel på højst 120 tegn. |
+| `S2ea56f` | message: mapping_service | Mapping change not found | Ændring af koblingen blev ikke fundet |
+| `S2c9363` | message: mapping_service | Mapping row not found | Rækken i koblingen blev ikke fundet |
+| `S2d5693` | message: mapping_service | Only the person who made the request can withdraw it. | Kun den, der stillede anmodningen, kan trække den tilbage. |
+| `S682269` | message: mapping_service | Only the StCd Owner, the Chief Engineer and an Administrator decide on the mapping. | Kun StCd-ejeren, chefingeniøren og en administrator afgør koblingen. |
+| `S5e0f66` | message: mapping_service | Say why you reject the request. | Sig, hvorfor du afviser anmodningen. |
+| `S3d5cfc` | message: mapping_service | The comment is longer than 1000 characters. | Kommentaren er længere end 1000 tegn. |
+| `S82b817` | message: mapping_service | The decision must be APPROVE or REJECT. | Beslutningen skal være APPROVE eller REJECT. |
+| `S9ec08a` | message: mapping_service | The file is not a readable .xlsx workbook. | Filen er ikke en læsbar .xlsx-projektmappe. |
+| `S3831f7` | message: mapping_service | The reason is longer than 2000 characters. | Grunden er længere end 2000 tegn. |
+| `Sa5de7d` | message: mapping_service | The request contains no row. | Anmodningen indeholder ingen række. |
+| `S2116e4` | message: mapping_service | The request is already closed. | Anmodningen er allerede lukket. |
+| `S8518e7` | message: mapping_service | The role has decided already. | Rollen har allerede afgjort den. |
+| `S2a15d7` | message: mapping_service | The workbook is larger than 5 MB. | Projektmappen er større end 5 MB. |
+| `S8eb912` | message: mapping_service | The workbook unpacks to more than 80 MB. | Projektmappen pakkes ud til mere end 80 MB. |
+| `S6c1d08` | message: mapping_service | Your role may not propose a change of the mapping. | Din rolle må ikke foreslå en ændring af koblingen. |
 | `S4ada2b` | message: notification_service | Notification not found | Meddelelse ikke fundet |
 | `Sd92b89` | message: notification_service | This notification belongs to someone else. | Denne meddelelse tilhører en anden. |
 | `Sb0cd00` | message: numbering_service | Identifier override must match StCd-NNNNN (five digits). | En overstyret identifikator skal følge StCd-NNNNN (fem cifre). |
@@ -22238,8 +23245,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S9671fb` | message: settings_service | must be true or false | skal være true eller false |
 | `S5166bb` | message: st_import_service | A staged file changed after the preview. Upload again. | En klargjort fil er ændret efter forhåndsvisningen. Upload igen. |
 | `Saa4de2` | message: st_import_service | controller must be auto, MC or HC | controller skal være auto, MC eller HC |
-| `Sa30251` | message: st_import_service | default_category must be ERROR, WARNING or INFO | default_category skal være ERROR, WARNING eller INFO |
-| `Sfe694a` | message: st_import_service | hc_proposal must be 1 or 2 | hc_proposal skal være 1 eller 2 |
 | `S58bec3` | message: st_import_service | No StCd program files found. Upload .st files or a ZIP of them. | Ingen StCd-programfiler fundet. Upload .st-filer eller en ZIP med dem. |
 | `Sd9c5b0` | message: st_import_service | Nothing selected: tick at least one program that is ready. | Intet valgt: afkryds mindst ét program, der er klar. |
 | `S5dbbd0` | message: st_import_service | The code is no longer an open Draft; preview the files again. | Koden er ikke længere en åben kladde; vis forhåndsvisningen af filerne igen. |
@@ -22386,6 +23391,23 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S05fc94` | role badge | Engineer | Ingeniør |
 | `S3c0e8a` | role badge | StCd Owner | StCd-ejer |
 | `Sdbad9f` | role badge | Viewer | Læser |
+| `S7f2e4b` | row | Access levels | Adgangsniveauer |
+| `S08f985` | row | Cause | Årsag |
+| `S164e0b` | row | Directive | Anvisning |
+| `S283474` | row | New number | Nyt nummer |
+| `Sfa6fdd` | row | No request yet. The row is as it was loaded. | Ingen anmodning endnu. Rækken er, som den blev indlæst. |
+| `Sf790fc` | row | Nothing is changed here directly: the form makes a request, and the row changes after the StCd Owner, the Chief Engineer and an Administrator have approved it. | Her ændres intet direkte: Formularen stiller en anmodning, og rækken ændres, når StCd-ejeren, chefingeniøren og en administrator har godkendt den. |
+| `S9d728f` | row | Request approval of the number | Bed om godkendelse af nummeret |
+| `Sc8978f` | row | Request rejection of the number | Bed om afvisning af nummeret |
+| `Sc644eb` | row | Request that this number is never used? | Bed om, at dette nummer aldrig bruges? |
+| `Sb25913` | row | Request the new row | Bed om den nye række |
+| `Sb04301` | row | Request this change | Bed om denne ændring |
+| `Sae91b6` | row | Requests for this row | Anmodninger for denne række |
+| `Sd59701` | row | Reset delay (parameter) | Nulstillingsforsinkelse (parameter) |
+| `Sfd64cd` | row | Set delay (parameter) | Indstillingsforsinkelse (parameter) |
+| `S9c0444` | row | The three approvers read the reason first. | De tre godkendere læser først grunden. |
+| `Sc84745` | row | Title (English) | Titel (engelsk) |
+| `S711eea` | row | Up/down counter | Op/ned-tæller |
 | `S913aba` | settings | Save settings | Gem indstillinger |
 | `Sb68734` | software_versions | Added | Tilføjet |
 | `S172415` | software_versions | added | tilføjet |
@@ -22399,28 +23421,19 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd97d1e` | software_versions | Show | Vis |
 | `S42ea2e` | software_versions | Software Versions | Softwareversioner |
 | `S3bd89c` | software_versions | Which codes exist in which software version | Hvilke koder der findes i hvilken softwareversion |
-| `S16e5d4` | st_new, st_preview | Alarm type | Alarmtype |
-| `S726d7a` | st_new | as above | som ovenfor |
-| `S9477fd` | st_new, st_preview | choose | vælg |
 | `Sb149ca` | st_new | Detect: a number from 10000 up is a Hub Controller program | Registrér: et nummer fra 10000 og op er et navstyringsprogram |
 | `S7d06d0` | st_new | Every imported program becomes an ordinary Draft with the number it carries reserved. It still needs Cross-Domain Sign-Off, dual review and Chief Engineer approval before Release, and all Drafts of one import share a change set. | Hvert importeret program bliver en almindelig kladde med det nummer, det bærer, reserveret. Den kræver stadig tværfaglig underskrift, dobbelt gennemgang og chefingeniørens godkendelse før udgivelse, og alle kladder fra én import deler et ændringssæt. |
-| `Sbda77c` | st_new | Every program names an alarm type. A type left at "as above" gets the category chosen above; the next page lets you set the category of single programs or of all ticked ones. | Hvert program angiver en alarmtype. En type, der står på "som ovenfor", får den kategori, der er valgt ovenfor; på næste side kan du sætte kategorien for enkelte programmer eller for alle afkrydsede. |
 | `S3b9e43` | st_new | Hub Controller (legacy numbers, mapped to the new ones) | Navstyring (gamle numre, afbildet til de nye) |
 | `Sd7333f` | st_new | Import status codes from .st files | Importér statuskoder fra .st-filer |
-| `S6640a6` | st_new | New number of Hub Controller programs | Nyt nummer til navstyringsprogrammer |
 | `Sc0eff1` | st_new | Or a whole folder | Eller en hel mappe |
 | `S94ddc1` | st_new | Program files (.st) or a ZIP | Programfiler (.st) eller en ZIP |
-| `Sd99e2a` | st_new | Proposal 1: five-digit numbers (11000 and up) | Forslag 1: femcifrede numre (fra 11000) |
-| `S2744b0` | st_new | Proposal 2: inside the Main Controller scheme | Forslag 2: inden for hovedstyringens skema |
 | `S67640d` | st_new | Read files and preview | Læs filer og vis forhåndsvisning |
-| `S0af4fc` | st_new | Status category by alarm type (optional) | Statuskategori efter alarmtype (valgfri) |
-| `S234237` | st_new | Status category of the new codes | Statuskategori for de nye koder |
-| `S61fc52` | st_new | The program files do not carry a category and none is assumed: choose one here, by alarm type below, or for each program in the preview. A program without a category is not imported. | Programfilerne indeholder ingen kategori, og der antages ingen: vælg én her, efter alarmtype nedenfor eller for hvert program i forhåndsvisningen. Et program uden kategori importeres ikke. |
+| `Saa9df6` | st_new | The title, the type and the access levels of every program come from the mapping, never from the files. A program whose number is not in the mapping is blocked. | Titel, type og adgangsniveauer for hvert program kommer fra koblingen, aldrig fra filerne. Et program, hvis nummer ikke står i koblingen, er spærret. |
 | `S8f4c21` | st_new | Turbine platforms | Turbineplatforme |
 | `S9ad4d4` | st_new | Upload the generated StCd_<n>.st programs — several files at once, a whole folder, or one ZIP. Nothing is created yet: the next page lists every program so you can tick the ones to import. | Upload de genererede StCd_<n>.st-programmer — flere filer ad gangen, en hel mappe eller én ZIP. Intet oprettes endnu: næste side viser hvert program, så du kan afkrydse dem, der skal importeres. |
+| `S16e5d4` | st_preview | Alarm type | Alarmtype |
 | `S2693e5` | st_preview | All Drafts of this import join one change set, so they can be reviewed and decided together. | Alle kladder fra denne import kommer i ét ændringssæt, så de kan gennemgås og afgøres sammen. |
 | `Scbc694` | st_preview | already in the catalogue | allerede i kataloget |
-| `Sc00673` | st_preview | Apply to the ticked programs | Anvend på de afkrydsede programmer |
 | `Sdf88b8` | st_preview | blocked | blokeret |
 | `S6f7703` | st_preview | Changed and withdrawn programs are not ticked: tick the ones you want to update, revise or restore. | Ændrede og tilbagetrukne programmer er ikke afkrydset: afkryds dem, du vil opdatere, revidere eller genskabe. |
 | `S78bb8b` | st_preview | Create Drafts for the ticked programs | Opret kladder for de afkrydsede programmer |
@@ -22438,8 +23451,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se58289` | st_preview | Programs found in the uploaded files | Programmer fundet i de uploadede filer |
 | `S75c053` | st_preview, workbench | ready | klar |
 | `S0723bf` | st_preview | Select all programs that are ready | Vælg alle programmer, der er klar |
-| `Sae12bc` | st_preview, workbench | Status category | Statuskategori |
-| `Sd7a322` | st_preview | Status category of the ticked programs | Statuskategori for de afkrydsede programmer |
+| `S9a2439` | st_preview | Type (from the mapping) | Type (fra koblingen) |
 | `S1a767a` | st_preview | updates the open Draft | opdaterer den åbne kladde |
 | `S02499f` | st_preview | withdrawn | trukket tilbage |
 | `Sf0c3cf` | st_preview | without a legacy number | uden gammelt nummer |
@@ -22502,6 +23514,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S2fd88e` | translations | Copy from previous revision | Kopiér fra forrige revision |
 | `Se522f0` | translations | Save draft translation | Gem oversættelseskladde |
 | `Scb0b87` | translations | source language text of revision | kildesprogstekst for revisionen |
+| `S01209c` | upload | Also ask for approval of the unchanged rows that are only proposed | Bed også om godkendelse af de uændrede rækker, der kun er foreslået |
+| `Sddf8d9` | upload | Compare and make the request | Sammenlign og stil anmodningen |
+| `S028ebe` | upload | Download the current mapping | Hent den aktuelle kobling |
+| `S23bfbf` | upload | The workbook has problems. Nothing was requested. | Projektmappen har problemer. Intet blev anmodet om. |
+| `S24d49d` | upload | Title of the request | Anmodningens titel |
+| `S88809a` | upload | Upload the corrected mapping as a workbook with the sheets MC and HC (download the current one as a model). Every new row and every row that differs becomes one request; rows the workbook does not mention stay as they are. The request takes effect only after the StCd Owner, the Chief Engineer and an Administrator have approved it. | Upload den rettede kobling som projektmappe med arkene MC og HC (hent den aktuelle som model). Hver ny og hver afvigende række bliver til én anmodning; rækker, som projektmappen ikke nævner, forbliver uændrede. Anmodningen træder først i kraft, når StCd-ejeren, chefingeniøren og en administrator har godkendt den. |
+| `S09efdf` | upload | Workbook (.xlsx) | Projektmappe (.xlsx) |
 | `S359a3b` | user_detail | Back to users | Tilbage til brugere |
 | `Sf6fdbe` | user_detail, users | Delete | Slet |
 | `S9afe6c` | user_detail | Delete user | Slet bruger |
@@ -22561,6 +23580,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sa58dac` | workbench | Set values on the Drafts | Sæt værdier på kladderne |
 | `Sa443bb` | workbench | Sign off the Drafts | Godkend kladderne |
 | `S53f47f` | workbench | Sign-off pending | Godkendelse afventer |
+| `Sae12bc` | workbench | Status category | Statuskategori |
 | `Sdc416e` | workbench | Step | Trin |
 | `Sf7710d` | workbench | Submit for review | Indsend til gennemgang |
 | `Sa45adc` | workbench | Submit the Drafts | Indsend kladderne |
@@ -22573,7 +23593,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 
 ### 9.19 GE ქართული 🇬🇪 — Georgian
 
-1295 of 1296 strings translated; direction left to right.
+1355 of 1356 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -22584,13 +23604,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S141763` | _macros | Confirm with your password | დაადასტურეთ პაროლით |
 | `Sc326a4` | _macros, detail, form | Field | ველი |
 | `S0a0f8a` | _macros | Field differences | ველების სხვაობა |
-| `Sbc9819` | _macros | Next | შემდეგი |
+| `Sbc9819` | _macros, list | Next | შემდეგი |
 | `S27cea7` | _macros | No field differences. | ველებში სხვაობა არ არის. |
 | `S464e43` | _macros | on track | გრაფიკის მიხედვით |
 | `Sba2fff` | _macros, dashboard, success_metrics | overdue | ვადაგადაცილებული |
-| `S600584` | _macros | Pages | გვერდები |
+| `S600584` | _macros, list | Pages | გვერდები |
 | `S810099` | _macros | Please check | გთხოვთ, შეამოწმოთ |
-| `S50f942` | _macros | Previous | წინა |
+| `S50f942` | _macros, list | Previous | წინა |
 | `S83fd6e` | _macros, stalled | red after | წითელი შემდეგ |
 | `S57e8a7` | _macros, success_metrics | slow | ნელი |
 | `S15198e` | _macros | Waiting since | ელოდება |
@@ -22621,10 +23641,10 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S06b6ac` | approval_queue, builder, detail | Identifier | იდენტიფიკატორი |
 | `S8e70d2` | approval_queue | Nothing is awaiting your approval. | არაფერი ელოდება თქვენს დამტკიცებას. |
 | `Sa74f16` | approval_queue, detail, review_queue | Reviewer | მიმომხილველი |
-| `S768e0c` | approval_queue, builder, detail | Title | სათაური |
+| `S768e0c` | approval_queue, builder, change | Title | სათაური |
 | `S33d306` | approval_queue, detail, mine | Waiting | ლოდინი |
 | `S2cbacd` | audit_log | %(n)s total | სულ %(n)s |
-| `S97c89a` | audit_log | Action | მოქმედება |
+| `S97c89a` | audit_log, change | Action | მოქმედება |
 | `Scbd19b` | audit_log | Actor | შემსრულებელი |
 | `S811bdf` | audit_log | Actor ID | შემსრულებლის ID |
 | `S8c85b1` | audit_log | after: | შემდეგ: |
@@ -22635,7 +23655,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sc7fb31` | audit_log | Entity | ობიექტი |
 | `S04d694` | audit_log | Entity ID | ობიექტის ID |
 | `Sbb4e99` | audit_log | Entity Type | ობიექტის ტიპი |
-| `Sd7decf` | audit_log, index, language | Filter | ფილტრი |
+| `Sd7decf` | audit_log, changes, index | Filter | ფილტრი |
 | `S3f6605` | audit_log, delegations, software_versions | From | დან |
 | `S0061b5` | audit_log | No matching audit entries. | შესაბამისი აუდიტის ჩანაწერები არ არის. |
 | `S01f79f` | audit_log | Scoped view: showing only actions you performed. | შეზღუდული ხედი: ნაჩვენებია მხოლოდ თქვენი მოქმედებები. |
@@ -22654,7 +23674,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sbe504f` | base | Skip to main content | ძირითად შინაარსზე გადასვლა |
 | `S1b9aeb` | base, dashboard | unread | წაუკითხავი |
 | `S2da600` | base, export, export_center | Version | ვერსია |
-| `S12625b` | base | waiting | მოლოდინში |
+| `S12625b` | base, change | waiting | მოლოდინში |
 | `S5a4692` | base | You are covering for a colleague | თქვენ კოლეგას ცვლით |
 | `S8e9c15` | builder | Candidate revisions | კანდიდატი რევიზიები |
 | `Sdf2aa0` | builder | Functional Group / Subgroup | ფუნქციური ჯგუფი / ქვეჯგუფი |
@@ -22685,13 +23705,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S4105cf` | catalogue_health | exhausted | ამოწურულია |
 | `S57e8be` | catalogue_health, connections | Finding | დასკვნა |
 | `S1150a1` | catalogue_health | Gaps | ხვრელები |
-| `S171a06` | catalogue_health, export, withdrawn_codes | Group | ჯგუფი |
-| `Sb4aadc` | catalogue_health, legacy_mapping | Hub Controller | კერის კონტროლერი |
+| `S171a06` | catalogue_health, export, list | Group | ჯგუფი |
+| `Sb4aadc` | catalogue_health, legacy_mapping, list | Hub Controller | კერის კონტროლერი |
 | `S8ae1c3` | catalogue_health | Left | დარჩენილი |
 | `S12c0f1` | catalogue_health | left | დარჩენილი |
 | `Sa7b60b` | catalogue_health | Left % | დარჩენილი % |
 | `S36a883` | catalogue_health | low | დაბალი |
-| `S1b123c` | catalogue_health, legacy_mapping, st_new | Main Controller | მთავარი კონტროლერი |
+| `S1b123c` | catalogue_health, legacy_mapping, list | Main Controller | მთავარი კონტროლერი |
 | `S92185d` | catalogue_health, index | Missing | აკლია |
 | `S57282a` | catalogue_health | Missing expected data | მოსალოდნელი მონაცემები აკლია |
 | `Sb8e95b` | catalogue_health | None found. | ვერაფერი მოიძებნა. |
@@ -22708,6 +23728,31 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S75a804` | catalogue_health | subgroup(s) are running out of numbers: | ქვეჯგუფს ნომრები ელევა: |
 | `S5fec4f` | catalogue_health | Unused numbers inside a band | გამოუყენებელი ნომრები ზოლის შიგნით |
 | `S02c0e4` | catalogue_health | Used | გამოყენებული |
+| `S84f219` | change | All three, each by a different person who did not make the request. | სამივე, თითოეული სხვადასხვა პირის მიერ, ვინც მოთხოვნა არ გააკეთა. |
+| `S477aeb` | change, upload | and more | და სხვა |
+| `Sdeb9d0` | change, changes | Approvals | დამტკიცებები |
+| `S7b2c7f` | change, detail, language | Approve | დამტკიცება |
+| `S8aa57d` | change, detail | Changes | ცვლილებები |
+| `S3fe5e1` | change | Comment (required to reject) | კომენტარი (უარყოფისთვის აუცილებელია) |
+| `Sb48001` | change | Mapping change | შესაბამისობის ცვლილება |
+| `Sd7c1d0` | change, changes, list | Mapping changes | შესაბამისობის ცვლილებები |
+| `Sf26140` | change, legacy_mapping, list | New identifier | ახალი იდენტიფიკატორი |
+| `Sf219cc` | change, list, row | Reason | მიზეზი |
+| `S2b03b5` | change, detail | Reject | უარყოფა |
+| `S5108c2` | change, changes | Requested by | მომთხოვნი |
+| `S52d0b3` | change, changes, detail | Rows | სტრიქონები |
+| `S6c30d2` | change, dry_run, list | rows | სტრიქონები |
+| `Sfabd38` | change | These rows changed after the request was made; it cannot be applied. Withdraw it and make it again: | ეს სტრიქონები მოთხოვნის შემდეგ შეიცვალა; მისი გამოყენება შეუძლებელია. გამოითხოვეთ და თავიდან გააკეთეთ: |
+| `S47e564` | change, detail | Withdraw | გამოთხოვა |
+| `S30d359` | change | Withdraw this request? | გამოვითხოვოთ ეს მოთხოვნა? |
+| `S88c173` | change | You made this request; another person must decide. | ეს მოთხოვნა თქვენ გააკეთეთ; გადაწყვეტილება სხვა პირმა უნდა მიიღოს. |
+| `S04e02f` | change | Your role has decided already. | თქვენმა როლმა უკვე მიიღო გადაწყვეტილება. |
+| `Sc7274c` | changes | Any state | ნებისმიერი მდგომარეობა |
+| `S2a560c` | changes | Every change of the mapping is a request. It takes effect when the StCd Owner, the Chief Engineer and an Administrator have each approved it; one rejection closes it. | შესაბამისობის ყოველი ცვლილება მოთხოვნაა. ის ძალაში შედის, როცა StCd-ის მფლობელი, მთავარი ინჟინერი და ერთი ადმინისტრატორი თითოეული დაამტკიცებს; ერთი უარყოფა მას ხურავს. |
+| `Sdef2eb` | changes, list, menu | Mapping | შესაბამისობა |
+| `Se03e43` | changes | No request yet. | მოთხოვნა ჯერ არ არის. |
+| `S5fc0e0` | changes | request(s) wait for your decision. | მოთხოვნა/მოთხოვნები თქვენს გადაწყვეტილებას ელოდება. |
+| `Sa72502` | changes, detail, export | State | მდგომარეობა |
 | `S97fd13` | check | Back to the terms | უკან ტერმინებზე |
 | `S1bc9e5` | check | English string | ინგლისური ტექსტი |
 | `S5d54b3` | check | Every string uses the translated terms. | ყველა ტექსტი ნათარგმნ ტერმინებს იყენებს. |
@@ -22788,7 +23833,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S9b0b4c` | detail | also the files without an access level (all columns) | ასევე ფაილები წვდომის დონის გარეშე (ყველა სვეტი) |
 | `Sf24c44` | detail | Any %(code)s Engineer | ნებისმიერი %(code)s ინჟინერი |
 | `Sb99a01` | detail | Applies to software versions | ვრცელდება პროგრამის ვერსიებზე |
-| `S7b2c7f` | detail, language | Approve | დამტკიცება |
 | `Sde38bf` | detail | Approve selected | მონიშნულების დამტკიცება |
 | `Scf2999` | detail | Approving confirms these values; any change you make here is applied and audited. Rejecting ignores them. | დამტკიცება ამ მნიშვნელობებს ადასტურებს; აქ შეტანილი ნებისმიერი ცვლილება გამოიყენება და აუდიტდება. უარყოფა მათ უგულებელყოფს. |
 | `Sf7f2d5` | detail | Archive (requires 180-day retention elapsed) | დაარქივება (საჭიროა 180 დღის შენახვის გასვლა) |
@@ -22809,7 +23853,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S4572f4` | detail | Change request | ცვლილების მოთხოვნა |
 | `S3295be` | detail, workbench | Change requests in this set | ცვლილების მოთხოვნები ამ ნაკრებში |
 | `S4d8006` | detail | Change set | ცვლილებების ნაკრები |
-| `S8aa57d` | detail | Changes | ცვლილებები |
 | `S3d14ea` | detail, export | Changes of this release only | მხოლოდ ამ რელიზის ცვლილებები |
 | `Sbd95c0` | detail | Checklist confirmed at sign-off | საკონტროლო სია, დადასტურებული ხელმოწერისას |
 | `S074d62` | detail, role badge | Chief Engineer | მთავარი ინჟინერი |
@@ -22827,7 +23870,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S7671b5` | detail | Confirm or override Audience Access | სამიზნე ჯგუფის წვდომის დადასტურება ან გადაფარვა |
 | `S6512ee` | detail | Connection | კავშირი |
 | `S4f9be0` | detail | Content | შინაარსი |
-| `Sa36a5f` | detail, legacy_mapping, st_new | Controller | კონტროლერი |
+| `Sa36a5f` | detail, legacy_mapping, list | Controller | კონტროლერი |
 | `Scd293f` | detail | Converter Reactive Power Program | გარდამქმნელის რეაქტიული სიმძლავრის პროგრამა |
 | `S3998a7` | detail | Copies the descriptive fields into a new Draft in a Main Controller group (a new number is allocated at submit; this code's identifier is kept as the legacy reference). | აკოპირებს აღწერით ველებს ახალ დრაფტში მთავარი კონტროლერის ჯგუფში (ახალი ნომერი ენიჭება წარდგენისას; ამ კოდის იდენტიფიკატორი ინახება ძველ მითითებად). |
 | `S54b051` | detail | Copy this code for another turbine platform. The copy is a new Draft that links back here and goes through the normal review. | დააკოპირეთ ეს კოდი სხვა ტურბინის პლატფორმისთვის. ასლი ახალი დრაფტია, რომელიც აქ ბრუნდება და ჩვეულებრივ განხილვას გადის. |
@@ -22961,7 +24004,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sf5ca9d` | detail | Recorded exports | ჩაწერილი ექსპორტები |
 | `Sa3f757` | detail | Reinstate to Released | გამოშვებულად აღდგენა |
 | `S3238ca` | detail | Reinstatement reason | აღდგენის მიზეზი |
-| `S2b03b5` | detail | Reject | უარყოფა |
 | `S27fb5c` | detail | Reject selected | მონიშნულების უარყოფა |
 | `S045c2c` | detail | Related codes | დაკავშირებული კოდები |
 | `S33a5a7` | detail | Relation | კავშირი |
@@ -22979,7 +24021,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S4c1aa6` | detail | Repeated-Error Escalation | განმეორებადი შეცდომების ესკალაცია |
 | `S4aed03` | detail | Request | მოთხოვნა |
 | `Sf3421a` | detail | Request a Sign-Off | ხელმოწერის მოთხოვნა |
-| `Sc26bf6` | detail, mine | Requested | მოთხოვნილია |
+| `Sc26bf6` | detail, mine, row | Requested | მოთხოვნილია |
 | `S2706ed` | detail | Required by | საჭიროა ამისთვის |
 | `S619e87` | detail, form | Reset Delay | გადატვირთვის დაყოვნება |
 | `S026ab2` | detail | resolved | გადაწყვეტილია |
@@ -22989,7 +24031,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S3beb9a` | detail | Revision | რევიზია |
 | `Sa72973` | detail | Revision Fields | რევიზიის ველები |
 | `Sfc1d6a` | detail | row(s) imported as Drafts | სტრიქონი დრაფტებად შემოვიდა |
-| `S52d0b3` | detail, reconciliation, user_detail | Rows | სტრიქონები |
 | `Sd0edfb` | detail | Sales | გაყიდვები |
 | `S241bf5` | detail, workbench | Sample number | ნიმუშის ნომერი |
 | `Sda38c6` | detail | Save planned dates | დაგეგმილი თარიღების შენახვა |
@@ -23008,11 +24049,10 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sece2ac` | detail, form | Slot | სლოტი |
 | `Sff44d2` | detail | Software Version | პროგრამის ვერსია |
 | `S169bf7` | detail, export, software_versions | Software version | პროგრამის ვერსია |
-| `S6da13a` | detail, fleet_feedback | Source | წყარო |
+| `S6da13a` | detail, fleet_feedback, row | Source | წყარო |
 | `Sd3c56b` | detail, export_profiles | source language | წყარო ენა |
 | `Sb3883f` | detail | Standards | სტანდარტები |
 | `Sfaa9e7` | detail, reconciliation | Started | დაწყებულია |
-| `Sa72502` | detail, export, hub_consolidation | State | მდგომარეობა |
 | `Se246b6` | detail, form, list | Status Category | სტატუსის კატეგორია |
 | `S779953` | detail, form | Status Code for Repeated Error | სტატუსის კოდი განმეორებადი შეცდომისთვის |
 | `S98a377` | detail | Still a Draft. | ჯერ კიდევ დრაფტია. |
@@ -23031,7 +24071,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Seaf576` | detail, form | Trigger Snapshot | სნეფშოტის გააქტიურება |
 | `S285ec8` | detail, form | Troubleshooting | პრობლემების გადაჭრა |
 | `S71bba4` | detail | Turbine Operator Package | ტურბინის ოპერატორის პაკეტი |
-| `S3deb74` | detail, mine, review_queue | Type | ტიპი |
+| `S3deb74` | detail, list, mine | Type | ტიპი |
 | `Sab631e` | detail | Type %(id)s to confirm | დასადასტურებლად ჩაწერეთ %(id)s |
 | `Sb5e264` | detail | Type the identifier to confirm | დასადასტურებლად ჩაწერეთ იდენტიფიკატორი |
 | `S835f8a` | detail | Umrichterprogramm GSC | გარდამქმნელის პროგრამა GSC |
@@ -23050,7 +24090,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S51ecc5` | detail | What happens next | რა ხდება შემდეგ |
 | `Sf323c0` | detail | Where used | სად გამოიყენება |
 | `S7d5316` | detail | Who | ვინ |
-| `S47e564` | detail | Withdraw | გამოთხოვა |
 | `S51a998` | detail | Withdraw this change request? | გამოითხოვოს ეს ცვლილების მოთხოვნა? |
 | `S93ef7c` | detail, workbench | Workbench | სამუშაო მაგიდა |
 | `S95a2a4` | detail, form | Write level | ჩაწერის დონე |
@@ -23070,7 +24109,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sec0298` | dry_run | Result per row | შედეგი სტრიქონების მიხედვით |
 | `S9bf7a8` | dry_run | Row | სტრიქონი |
 | `S3ff0b0` | dry_run | row(s) have problems. Nothing has been created. | სტრიქონს აქვს პრობლემები. არაფერი შექმნილა. |
-| `S6c30d2` | dry_run | rows | სტრიქონები |
 | `S8012ff` | dry_run | unchanged | უცვლელი |
 | `S83d655` | dry_run, st_preview | warning(s) | გაფრთხილება |
 | `S9ddad9` | dry_run | would be created | შეიქმნებოდა |
@@ -23212,6 +24250,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S285edc` | help and messages | %(ok)s of %(n)s: %(what)s. | %(ok)s / %(n)s: %(what)s. |
 | `Sb08e6c` | help and messages | A Reviewer and an Administrator each sign off (in any order). If either rejects, it goes back to the author. | მიმომხილველი და ადმინისტრატორი თითოეული ცალ-ცალკე აწერს ხელს (ნებისმიერი თანმიმდევრობით). თუ რომელიმე უარყოფს, ის ავტორს უბრუნდება. |
 | `S2f1bed` | help and messages | An Administrator includes the revision in a Release and publishes it; then it is Released. | ადმინისტრატორი რევიზიას რელიზში რთავს და აქვეყნებს; შემდეგ ის გამოშვებულია. |
+| `S9477fd` | help and messages | choose | აირჩიეთ |
 | `S1308dc` | help and messages | defective codes sent back | დეფექტური კოდები უკან დაბრუნდა |
 | `Se2bbd9` | help and messages | Drafts saved | დრაფტები შენახულია |
 | `S0ddfa5` | help and messages | Drafts signed off | დრაფტებს ხელი მოეწერა |
@@ -23223,7 +24262,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sce489f` | help and messages | The author gets any required cross-domain sign-offs, then submits the change request for review. | ავტორი იღებს საჭირო ჯვარედინი სფეროების ხელმოწერებს, შემდეგ კი ცვლილების მოთხოვნას განხილვაზე წარადგენს. |
 | `S1cdbdd` | help and messages | The Chief Engineer approves or rejects. Approval makes the revision Approved (or Deprecated for a deprecation request). | მთავარი ინჟინერი ამტკიცებს ან უარყოფს. დამტკიცება რევიზიას დამტკიცებულად აქცევს (ან მოძველებულად მოძველების მოთხოვნისას). |
 | `S2d6ac0` | help and messages | The package is being built. Reload this page to follow its progress. | პაკეტი იქმნება. პროგრესის სანახავად გადატვირთეთ ეს გვერდი. |
-| `Sde7a5b` | help and messages | The program files do not carry a category; you can change it in each Draft. | პროგრამის ფაილები კატეგორიას არ შეიცავს; შეგიძლიათ შეცვალოთ თითოეულ დრაფტში. |
 | `Scff3a3` | help and messages | User deleted; its name and address are erased, what it did stays attributable. | მომხმარებელი წაიშალა; მისი სახელი და მისამართი წაშლილია, მისი ქმედებები კვლავ მიეკუთვნება. |
 | `Secfb3f` | hub_consolidation | Deprecate replaced Hub codes | შეცვლილი კერის კოდების მოძველებულად გამოცხადება |
 | `S0e7766` | hub_consolidation, language | draft | დრაფტი |
@@ -23234,7 +24272,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sc50c53` | hub_consolidation | Hub Controller to Main Controller consolidation | კერის კონტროლერის გაერთიანება მთავარ კონტროლერში |
 | `Scd189f` | hub_consolidation | Hub group | კერის ჯგუფი |
 | `Sa5262b` | hub_consolidation | If the Hub Controller leaves the hardware setup, its codes are defined anew on the Main Controller side. Create an MC draft from an HC code on its detail page (Actions); this report shows how far each has come. Nothing is renumbered. | თუ კერის კონტროლერი აპარატურული კონფიგურაციიდან გადის, მისი კოდები თავიდან განისაზღვრება მთავარი კონტროლერის მხარეს. შექმენით MC დრაფტი HC კოდიდან მის დეტალურ გვერდზე (მოქმედებები); ეს ანგარიში აჩვენებს, სად არის თითოეული. არაფერი გადანომრება. |
-| `Sdd6555` | hub_consolidation, legacy_mapping, st_preview | Legacy no. | ძველი № |
+| `Sdd6555` | hub_consolidation, legacy_mapping, list | Legacy no. | ძველი № |
 | `S845a2b` | hub_consolidation | No Hub Controller codes yet. | კერის კონტროლერის კოდები ჯერ არ არის. |
 | `S138665` | hub_consolidation | Open deprecation requests | მოძველების მოთხოვნების გახსნა |
 | `Sc8df93` | hub_consolidation | Open deprecation requests for all replaced Hub codes of this group? | გაიხსნას მოძველების მოთხოვნები ამ ჯგუფის ყველა შეცვლილი კერის კოდისთვის? |
@@ -23293,7 +24331,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sded18c` | language | approved by | დამტკიცებულია: |
 | `Sedd46e` | language | Check against the interface | ინტერფეისთან შედარება |
 | `S5a013c` | language | missing | აკლია |
-| `S2c924e` | language, workbench | Note | შენიშვნა |
+| `S2c924e` | language, row, workbench | Note | შენიშვნა |
 | `S2f09d0` | language | Note on %(x)s | შენიშვნა %(x)s-ზე |
 | `S75bf99` | language | proposed by | შემოთავაზებულია: |
 | `Sc68e32` | language | Save translations | თარგმანების შენახვა |
@@ -23301,14 +24339,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S542818` | language | Terms of the language | ენის ტერმინები |
 | `Sae9e5d` | language | Translation of %(x)s | %(x)s-ის თარგმანი |
 | `S863fd0` | language | Your own proposal: another person approves it. | თქვენი საკუთარი წინადადება: მას სხვა პირი ამტკიცებს. |
-| `Sf9d469` | legacy_mapping | All controllers | ყველა კონტროლერი |
+| `Sf9d469` | legacy_mapping, list | All controllers | ყველა კონტროლერი |
 | `Se61c2f` | legacy_mapping | Any number state | ნომრის ნებისმიერი მდგომარეობა |
 | `S7c4f77` | legacy_mapping | issued | გაცემულია |
 | `Sfd5ec0` | legacy_mapping, menu, new | Legacy mapping | ძველი-ახალის შესაბამისობა |
 | `S81f567` | legacy_mapping | Legacy number to new identifier | ძველი ნომერი ახალ იდენტიფიკატორზე |
 | `S64b267` | legacy_mapping | legacy number, identifier or name | ძველი ნომერი, იდენტიფიკატორი ან სახელი |
 | `S60fe6c` | legacy_mapping | new codes without a legacy number (n/a) | ახალი კოდები ძველი ნომრის გარეშე (არ არის) |
-| `Sf26140` | legacy_mapping, st_preview | New identifier | ახალი იდენტიფიკატორი |
 | `Sf573c8` | legacy_mapping | no number yet | ჯერ ნომერი არ აქვს |
 | `S7877c5` | legacy_mapping | No status code carries a legacy number yet. | არც ერთ სტატუსის კოდს ჯერ ძველი ნომერი არ აქვს. |
 | `Sb7baa1` | legacy_mapping | Number | ნომერი |
@@ -23317,10 +24354,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S8b0b7c` | legacy_mapping | with a legacy number | ძველი ნომრით |
 | `Seba07b` | list | A change set groups the change requests that ship with one controller software release, so reviewers see the whole package. Each request is still decided on its own. | ცვლილებების ნაკრები აერთიანებს ცვლილების მოთხოვნებს, რომლებიც კონტროლერის პროგრამის ერთ გამოშვებასთან ერთად გადის, რათა მიმომხილველებმა მთელი პაკეტი ნახონ. ყოველი მოთხოვნა მაინც ცალ-ცალკე წყდება. |
 | `Sc5fe02` | list | any | ნებისმიერი |
+| `S55201a` | list | Any status | ნებისმიერი სტატუსი |
 | `Sef5415` | list | Apply columns | სვეტების გამოყენება |
+| `Sffb569` | list | Ask for approval of the ticked rows | მოითხოვეთ მონიშნული სტრიქონების დამტკიცება |
 | `S162a45` | list, menu | Change Sets | ცვლილებების ჯგუფები |
 | `S9e895f` | list | Change sets | ცვლილებების ჯგუფები |
 | `Scf723c` | list | Columns | სვეტები |
+| `S2ddaf9` | list, upload | Compare a workbook | სამუშაო წიგნის შედარება |
 | `Seb0fd2` | list | Delete all my Drafts of this filter | ამ ფილტრის ჩემი ყველა დრაფტის წაშლა |
 | `S36f212` | list | Delete ALL of your own Drafts that match this filter, on every page? | წაიშალოს თქვენი ყველა დრაფტი, რომელიც ამ ფილტრს შეესაბამება, ყველა გვერდზე? |
 | `Sc554a1` | list | Delete selected Drafts | არჩეული დრაფტების წაშლა |
@@ -23330,12 +24370,18 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S44d25b` | list | Items | ელემენტები |
 | `S033df3` | list | Lifecycle | სასიცოცხლო ციკლი |
 | `Sb4cad6` | list | Link to this view | ბმული ამ ხედზე |
+| `Sbdb4e1` | list | Load the initial mapping | საწყისი შესაბამისობის ჩატვირთვა |
+| `Se07018` | list | Make the request | მოთხოვნის გაკეთება |
 | `Se248d5` | list, new | New change set | ახალი ცვლილებების ჯგუფი |
 | `Se75aa1` | list, new | New Release | ახალი რელიზი |
+| `S9bb526` | list, row | New row | ახალი სტრიქონი |
 | `Se5076c` | list | No change sets yet. | ცვლილებების ჯგუფები ჯერ არ არის. |
 | `Sd32c03` | list | No releases yet. | რელიზები ჯერ არ არის. |
+| `Sb5b22c` | list | No row matches. | არცერთი სტრიქონი არ ემთხვევა. |
 | `Sc3af43` | list | No saved searches yet. | შენახული ძიებები ჯერ არ არის. |
 | `S0cb400` | list | No status codes match these filters. | ამ ფილტრებს არცერთი სტატუსის კოდი არ შეესაბამება. |
+| `S260f7a` | list, row | Node | კვანძი |
+| `S08250b` | list | number, title or group | ნომერი, სათაური ან ჯგუფი |
 | `Sf7194e` | list | Requests | მოთხოვნები |
 | `S37a530` | list | result | შედეგი |
 | `Scdf7e9` | list | results | შედეგი |
@@ -23344,10 +24390,14 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sff86e9` | list | Save the current filters as | მიმდინარე ფილტრების შენახვა სახელით |
 | `Sed1d84` | list | Saved searches | შენახული ძიებები |
 | `S859822` | list, mine | Select | არჩევა |
+| `S45b553` | list | Select all rows | ყველა სტრიქონის არჩევა |
 | `S7f5583` | list, menu | Status Codes | სტატუსის კოდები |
 | `S20bff1` | list | Status codes | სტატუსის კოდები |
+| `S3a1066` | list | The mapping is empty. | შესაბამისობა ცარიელია. |
+| `S27d95b` | list | The rows stay as they are. Once the StCd Owner, the Chief Engineer and an Administrator approve, they count as approved numbers. | სტრიქონები უცვლელი რჩება. როცა StCd-ის მფლობელი, მთავარი ინჟინერი და ერთი ადმინისტრატორი დაამტკიცებს, ისინი დამტკიცებულ ნომრებად ითვლება. |
 | `Se90eb0` | list | Turbine Platform | ტურბინის პლატფორმა |
 | `S86b1e7` | list | Typos are tolerated: "convertor" still finds "converter". | ბეჭდვის შეცდომები ითმინება: „convertor“ მაინც პოულობს „converter“-ს. |
+| `Sb0c551` | list | Which legacy status code becomes which new one, with what the program files do not carry: the English title, the type, the up/down counter, the access levels, cause and directive. A row changes only by a request that the StCd Owner, the Chief Engineer and an Administrator all approve. | რომელი ძველი სტატუსის კოდი რომელ ახალად იქცევა, იმ ინფორმაციით, რომელსაც პროგრამის ფაილები არ შეიცავს: ინგლისური სათაური, ტიპი, მომატება/მოკლების მრიცხველი, წვდომის დონეები, მიზეზი და მითითება. სტრიქონი იცვლება მხოლოდ იმ მოთხოვნით, რომელსაც StCd-ის მფლობელი, მთავარი ინჟინერი და ერთი ადმინისტრატორი ყველა ამტკიცებს. |
 | `Sf7c400` | login | Log in | შესვლა |
 | `S175835` | login | or | ან |
 | `S8be3c9` | login, users | Password | პაროლი |
@@ -23509,6 +24559,23 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S8cb56e` | message: lookup_admin_service | range_end must be greater than range_start | range_end უნდა იყოს range_start-ზე დიდი |
 | `Se3a971` | message: lookup_admin_service | sub_range_end must be greater than sub_range_start | sub_range_end უნდა იყოს sub_range_start-ზე დიდი |
 | `S1404e3` | message: lookup_service | functional_system_group query parameter is required for functional-subgroups | მოთხოვნის პარამეტრი functional_system_group სავალდებულოა functional-subgroups-ისთვის |
+| `Sf28681` | message: mapping_service | Give the reason for the change; the three approvers read it first. | მიუთითეთ ცვლილების მიზეზი; სამი დამმტკიცებელი მას პირველად კითხულობს. |
+| `S062788` | message: mapping_service | Give the request a title of at most 120 characters. | მიანიჭეთ მოთხოვნას არაუმეტეს 120 სიმბოლოს სათაური. |
+| `S2ea56f` | message: mapping_service | Mapping change not found | შესაბამისობის ცვლილება ვერ მოიძებნა |
+| `S2c9363` | message: mapping_service | Mapping row not found | შესაბამისობის სტრიქონი ვერ მოიძებნა |
+| `S2d5693` | message: mapping_service | Only the person who made the request can withdraw it. | მოთხოვნის გამოთხოვა მხოლოდ მის ავტორს შეუძლია. |
+| `S682269` | message: mapping_service | Only the StCd Owner, the Chief Engineer and an Administrator decide on the mapping. | შესაბამისობაზე გადაწყვეტილებას იღებენ მხოლოდ StCd-ის მფლობელი, მთავარი ინჟინერი და ერთი ადმინისტრატორი. |
+| `S5e0f66` | message: mapping_service | Say why you reject the request. | მიუთითეთ, რატომ უარყოფთ მოთხოვნას. |
+| `S3d5cfc` | message: mapping_service | The comment is longer than 1000 characters. | კომენტარი 1000 სიმბოლოზე გრძელია. |
+| `S82b817` | message: mapping_service | The decision must be APPROVE or REJECT. | გადაწყვეტილება უნდა იყოს APPROVE ან REJECT. |
+| `S9ec08a` | message: mapping_service | The file is not a readable .xlsx workbook. | ფაილი არ არის წასაკითხი .xlsx სამუშაო წიგნი. |
+| `S3831f7` | message: mapping_service | The reason is longer than 2000 characters. | მიზეზი 2000 სიმბოლოზე გრძელია. |
+| `Sa5de7d` | message: mapping_service | The request contains no row. | მოთხოვნა არცერთ სტრიქონს არ შეიცავს. |
+| `S2116e4` | message: mapping_service | The request is already closed. | მოთხოვნა უკვე დახურულია. |
+| `S8518e7` | message: mapping_service | The role has decided already. | ამ როლმა უკვე მიიღო გადაწყვეტილება. |
+| `S2a15d7` | message: mapping_service | The workbook is larger than 5 MB. | სამუშაო წიგნი 5 მბ-ზე დიდია. |
+| `S8eb912` | message: mapping_service | The workbook unpacks to more than 80 MB. | სამუშაო წიგნი გახსნისას 80 მბ-ზე დიდი ხდება. |
+| `S6c1d08` | message: mapping_service | Your role may not propose a change of the mapping. | თქვენს როლს არ შეუძლია შესაბამისობის ცვლილების შეთავაზება. |
 | `S4ada2b` | message: notification_service | Notification not found | შეტყობინება ვერ მოიძებნა |
 | `Sd92b89` | message: notification_service | This notification belongs to someone else. | ეს შეტყობინება სხვას ეკუთვნის. |
 | `Sb0cd00` | message: numbering_service | Identifier override must match StCd-NNNNN (five digits). | გადაფარული იდენტიფიკატორი უნდა შეესაბამებოდეს StCd-NNNNN-ს (ხუთი ციფრი). |
@@ -23540,8 +24607,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S9671fb` | message: settings_service | must be true or false | უნდა იყოს true ან false |
 | `S5166bb` | message: st_import_service | A staged file changed after the preview. Upload again. | მომზადებული ფაილი წინასწარი ნახვის შემდეგ შეიცვალა. ატვირთეთ ხელახლა. |
 | `Saa4de2` | message: st_import_service | controller must be auto, MC or HC | controller უნდა იყოს auto, MC ან HC |
-| `Sa30251` | message: st_import_service | default_category must be ERROR, WARNING or INFO | default_category უნდა იყოს ERROR, WARNING ან INFO |
-| `Sfe694a` | message: st_import_service | hc_proposal must be 1 or 2 | hc_proposal უნდა იყოს 1 ან 2 |
 | `S58bec3` | message: st_import_service | No StCd program files found. Upload .st files or a ZIP of them. | StCd პროგრამის ფაილები ვერ მოიძებნა. ატვირთეთ .st ფაილები ან მათი ZIP. |
 | `Sd9c5b0` | message: st_import_service | Nothing selected: tick at least one program that is ready. | არაფერია მონიშნული: მონიშნეთ მინიმუმ ერთი მზა პროგრამა. |
 | `S5dbbd0` | message: st_import_service | The code is no longer an open Draft; preview the files again. | კოდი აღარ არის ღია დრაფტი; ფაილების წინასწარი ნახვა ხელახლა გახსენით. |
@@ -23688,6 +24753,23 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S05fc94` | role badge | Engineer | ინჟინერი |
 | `S3c0e8a` | role badge | StCd Owner | StCd-ის მფლობელი |
 | `Sdbad9f` | role badge | Viewer | მაყურებელი |
+| `S7f2e4b` | row | Access levels | წვდომის დონეები |
+| `S08f985` | row | Cause | მიზეზი |
+| `S164e0b` | row | Directive | მითითება |
+| `S283474` | row | New number | ახალი ნომერი |
+| `Sfa6fdd` | row | No request yet. The row is as it was loaded. | მოთხოვნა ჯერ არ არის. სტრიქონი ისეთივეა, როგორც ჩაიტვირთა. |
+| `Sf790fc` | row | Nothing is changed here directly: the form makes a request, and the row changes after the StCd Owner, the Chief Engineer and an Administrator have approved it. | აქ პირდაპირ არაფერი იცვლება: ფორმა აკეთებს მოთხოვნას, ხოლო სტრიქონი იცვლება მას შემდეგ, რაც StCd-ის მფლობელი, მთავარი ინჟინერი და ერთი ადმინისტრატორი დაამტკიცებს. |
+| `S9d728f` | row | Request approval of the number | მოითხოვეთ ნომრის დამტკიცება |
+| `Sc8978f` | row | Request rejection of the number | მოითხოვეთ ნომრის უარყოფა |
+| `Sc644eb` | row | Request that this number is never used? | მოვითხოვოთ, რომ ეს ნომერი არასოდეს გამოვიყენოთ? |
+| `Sb25913` | row | Request the new row | მოითხოვეთ ახალი სტრიქონი |
+| `Sb04301` | row | Request this change | მოითხოვეთ ეს ცვლილება |
+| `Sae91b6` | row | Requests for this row | ამ სტრიქონის მოთხოვნები |
+| `Sd59701` | row | Reset delay (parameter) | გადატვირთვის დაყოვნება (პარამეტრი) |
+| `Sfd64cd` | row | Set delay (parameter) | დაყენების დაყოვნება (პარამეტრი) |
+| `S9c0444` | row | The three approvers read the reason first. | სამი დამმტკიცებელი პირველად მიზეზს კითხულობს. |
+| `Sc84745` | row | Title (English) | სათაური (ინგლისური) |
+| `S711eea` | row | Up/down counter | მომატება/მოკლების მრიცხველი |
 | `S913aba` | settings | Save settings | პარამეტრების შენახვა |
 | `Sb68734` | software_versions | Added | დამატებული |
 | `S172415` | software_versions | added | დამატებულია |
@@ -23701,28 +24783,19 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd97d1e` | software_versions | Show | ჩვენება |
 | `S42ea2e` | software_versions | Software Versions | პროგრამის ვერსიები |
 | `S3bd89c` | software_versions | Which codes exist in which software version | რომელი კოდი რომელ პროგრამის ვერსიაშია |
-| `S16e5d4` | st_new, st_preview | Alarm type | განგაშის ტიპი |
-| `S726d7a` | st_new | as above | ზემოთ მითითებულის მიხედვით |
-| `S9477fd` | st_new, st_preview | choose | აირჩიეთ |
 | `Sb149ca` | st_new | Detect: a number from 10000 up is a Hub Controller program | ამოცნობა: 10000-დან ზემოთ ნომერი კერის კონტროლერის პროგრამაა |
 | `S7d06d0` | st_new | Every imported program becomes an ordinary Draft with the number it carries reserved. It still needs Cross-Domain Sign-Off, dual review and Chief Engineer approval before Release, and all Drafts of one import share a change set. | ყოველი შემოტანილი პროგრამა ჩვეულებრივი დრაფტი ხდება, მასში არსებული ნომრის დაჯავშნით. რელიზამდე მას მაინც სჭირდება ჯვარედინი სფეროების ხელმოწერა, ორმაგი განხილვა და მთავარი ინჟინრის დამტკიცება, ერთი იმპორტის ყველა დრაფტი კი ერთ ცვლილებების ნაკრებს იზიარებს. |
-| `Sbda77c` | st_new | Every program names an alarm type. A type left at "as above" gets the category chosen above; the next page lets you set the category of single programs or of all ticked ones. | თითოეული პროგრამა განგაშის ტიპს ასახელებს. ტიპი, რომელიც „ზემოთ მითითებულის მიხედვით“ რჩება, იღებს ზემოთ არჩეულ კატეგორიას; შემდეგ გვერდზე შეგიძლიათ დააყენოთ ცალკეული ან ყველა მონიშნული პროგრამის კატეგორია. |
 | `S3b9e43` | st_new | Hub Controller (legacy numbers, mapped to the new ones) | კერის კონტროლერი (ძველი ნომრები, ახალთან დაკავშირებული) |
 | `Sd7333f` | st_new | Import status codes from .st files | სტატუსის კოდების იმპორტი .st ფაილებიდან |
-| `S6640a6` | st_new | New number of Hub Controller programs | კერის კონტროლერის პროგრამების ახალი ნომერი |
 | `Sc0eff1` | st_new | Or a whole folder | ან მთელი საქაღალდე |
 | `S94ddc1` | st_new | Program files (.st) or a ZIP | პროგრამის ფაილები (.st) ან ZIP |
-| `Sd99e2a` | st_new | Proposal 1: five-digit numbers (11000 and up) | წინადადება 1: ხუთნიშნა ნომრები (11000-დან) |
-| `S2744b0` | st_new | Proposal 2: inside the Main Controller scheme | წინადადება 2: მთავარი კონტროლერის სქემაში |
 | `S67640d` | st_new | Read files and preview | ფაილების წაკითხვა და წინასწარი ნახვა |
-| `S0af4fc` | st_new | Status category by alarm type (optional) | სტატუსის კატეგორია განგაშის ტიპის მიხედვით (არასავალდებულო) |
-| `S234237` | st_new | Status category of the new codes | ახალი კოდების სტატუსის კატეგორია |
-| `S61fc52` | st_new | The program files do not carry a category and none is assumed: choose one here, by alarm type below, or for each program in the preview. A program without a category is not imported. | პროგრამის ფაილები კატეგორიას არ შეიცავს და არცერთი არ მიიღება ვარაუდით: აირჩიეთ აქ, ქვემოთ განგაშის ტიპის მიხედვით ან გადახედვაში თითოეული პროგრამისთვის. კატეგორიის გარეშე პროგრამა არ შემოიტანება. |
+| `Saa9df6` | st_new | The title, the type and the access levels of every program come from the mapping, never from the files. A program whose number is not in the mapping is blocked. | თითოეული პროგრამის სათაური, ტიპი და წვდომის დონეები შესაბამისობიდან მოდის და არასოდეს ფაილებიდან. პროგრამა, რომლის ნომერი შესაბამისობაში არ არის, დაბლოკილია. |
 | `S8f4c21` | st_new | Turbine platforms | ტურბინის პლატფორმები |
 | `S9ad4d4` | st_new | Upload the generated StCd_<n>.st programs — several files at once, a whole folder, or one ZIP. Nothing is created yet: the next page lists every program so you can tick the ones to import. | ატვირთეთ გენერირებული StCd_<n>.st პროგრამები — რამდენიმე ფაილი ერთად, მთელი საქაღალდე ან ერთი ZIP. ჯერ არაფერი იქმნება: შემდეგი გვერდი ჩამოთვლის თითოეულ პროგრამას, რათა მონიშნოთ იმპორტისთვის საჭირო. |
+| `S16e5d4` | st_preview | Alarm type | განგაშის ტიპი |
 | `S2693e5` | st_preview | All Drafts of this import join one change set, so they can be reviewed and decided together. | ამ იმპორტის ყველა დრაფტი ერთ ცვლილებების ნაკრებს უერთდება, რათა ერთად განიხილონ და გადაწყვიტონ. |
 | `Scbc694` | st_preview | already in the catalogue | უკვე კატალოგშია |
-| `Sc00673` | st_preview | Apply to the ticked programs | მონიშნულ პროგრამებზე გამოყენება |
 | `Sdf88b8` | st_preview | blocked | დაბლოკილი |
 | `S6f7703` | st_preview | Changed and withdrawn programs are not ticked: tick the ones you want to update, revise or restore. | შეცვლილი და გამოთხოვილი პროგრამები არ არის მონიშნული: მონიშნეთ ისინი, რომლებიც გსურთ განაახლოთ, გადასინჯოთ ან აღადგინოთ. |
 | `S78bb8b` | st_preview | Create Drafts for the ticked programs | დრაფტების შექმნა მონიშნული პროგრამებისთვის |
@@ -23740,8 +24813,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Se58289` | st_preview | Programs found in the uploaded files | ატვირთულ ფაილებში ნაპოვნი პროგრამები |
 | `S75c053` | st_preview, workbench | ready | მზადაა |
 | `S0723bf` | st_preview | Select all programs that are ready | ყველა მზა პროგრამის მონიშვნა |
-| `Sae12bc` | st_preview, workbench | Status category | სტატუსის კატეგორია |
-| `Sd7a322` | st_preview | Status category of the ticked programs | მონიშნული პროგრამების სტატუსის კატეგორია |
+| `S9a2439` | st_preview | Type (from the mapping) | ტიპი (შესაბამისობიდან) |
 | `S1a767a` | st_preview | updates the open Draft | ანახლებს ღია დრაფტს |
 | `S02499f` | st_preview | withdrawn | გამოთხოვილი |
 | `Sf0c3cf` | st_preview | without a legacy number | ძველი ნომრის გარეშე |
@@ -23804,6 +24876,13 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S2fd88e` | translations | Copy from previous revision | წინა რევიზიიდან კოპირება |
 | `Se522f0` | translations | Save draft translation | თარგმანის დრაფტის შენახვა |
 | `Scb0b87` | translations | source language text of revision | რევიზიის წყარო ენის ტექსტი |
+| `S01209c` | upload | Also ask for approval of the unchanged rows that are only proposed | მოითხოვეთ აგრეთვე მხოლოდ შემოთავაზებული უცვლელი სტრიქონების დამტკიცება |
+| `Sddf8d9` | upload | Compare and make the request | შეადარეთ და გააკეთეთ მოთხოვნა |
+| `S028ebe` | upload | Download the current mapping | მიმდინარე შესაბამისობის ჩამოტვირთვა |
+| `S23bfbf` | upload | The workbook has problems. Nothing was requested. | სამუშაო წიგნში პრობლემებია. არაფერი მოთხოვნილა. |
+| `S24d49d` | upload | Title of the request | მოთხოვნის სათაური |
+| `S88809a` | upload | Upload the corrected mapping as a workbook with the sheets MC and HC (download the current one as a model). Every new row and every row that differs becomes one request; rows the workbook does not mention stay as they are. The request takes effect only after the StCd Owner, the Chief Engineer and an Administrator have approved it. | ატვირთეთ შესწორებული შესაბამისობა MC და HC ფურცლებიანი სამუშაო წიგნის სახით (მოდელად ჩამოტვირთეთ მიმდინარე). ყოველი ახალი და ყოველი განსხვავებული სტრიქონი ერთ მოთხოვნად იქცევა; სტრიქონები, რომლებსაც სამუშაო წიგნი არ ახსენებს, უცვლელი რჩება. მოთხოვნა ძალაში შედის მხოლოდ მას შემდეგ, რაც StCd-ის მფლობელი, მთავარი ინჟინერი და ერთი ადმინისტრატორი დაამტკიცებს. |
+| `S09efdf` | upload | Workbook (.xlsx) | სამუშაო წიგნი (.xlsx) |
 | `S359a3b` | user_detail | Back to users | უკან მომხმარებლებთან |
 | `Sf6fdbe` | user_detail, users | Delete | წაშლა |
 | `S9afe6c` | user_detail | Delete user | მომხმარებლის წაშლა |
@@ -23863,6 +24942,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sa58dac` | workbench | Set values on the Drafts | დრაფტებზე მნიშვნელობების დაყენება |
 | `Sa443bb` | workbench | Sign off the Drafts | დრაფტების ხელმოწერა |
 | `S53f47f` | workbench | Sign-off pending | ხელმოწერა მოლოდინშია |
+| `Sae12bc` | workbench | Status category | სტატუსის კატეგორია |
 | `Sdc416e` | workbench | Step | ეტაპი |
 | `Sf7710d` | workbench | Submit for review | განხილვაზე წარდგენა |
 | `Sa45adc` | workbench | Submit the Drafts | დრაფტების წარდგენა |
@@ -23911,10 +24991,11 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S01e5e5` | A token needs a name of 1-80 characters. | message: integration_service | 18 of 18 |
 | `S737d81` | A translation is saved as a draft and approved by someone else - a light review, not the three-decision cycle. Exports in a language use approved translations only. | translations | 18 of 18 |
 | `Sfc61c5` | A webhook needs a name of 1-80 characters. | message: integration_service | 18 of 18 |
+| `S7f2e4b` | Access levels | row | 18 of 18 |
 | `S85dfa3` | Account | base | 18 of 18 |
 | `S49b424` | Account is locked. Try again later. | message: auth_service | 18 of 18 |
 | `Se32707` | Account Settings | account_settings | 18 of 18 |
-| `S97c89a` | Action | audit_log | 18 of 18 |
+| `S97c89a` | Action | audit_log, change | 18 of 18 |
 | `Sc3cd63` | Actions | detail, user_detail, users | 18 of 18 |
 | `S92ef08` | Activate | review_checklist | 18 of 18 |
 | `Sa733b8` | Active | export_profiles, index, lookups, review_checklist | 18 of 18 |
@@ -23947,11 +25028,11 @@ Every string of the interface with the templates that use it. A native speaker a
 | `Sff9f1f` | Age | success_metrics | 18 of 18 |
 | `Sf03c0a` | ago | operations | 18 of 18 |
 | `S25f8c5` | Alarm | detail, export, form | 18 of 18 |
-| `S16e5d4` | Alarm type | st_new, st_preview | 18 of 18 |
+| `S16e5d4` | Alarm type | st_preview | 18 of 18 |
 | `Sd87c44` | all | connections, detail, export, hub_consolidation | 18 of 18 |
 | `S22e640` | all categories | index, language | 18 of 18 |
 | `S484388` | all columns | detail, export_center | 18 of 18 |
-| `Sf9d469` | All controllers | legacy_mapping | 18 of 18 |
+| `Sf9d469` | All controllers | legacy_mapping, list | 18 of 18 |
 | `S2693e5` | All Drafts of this import join one change set, so they can be reviewed and decided together. | st_preview | 18 of 18 |
 | `Sdf42bb` | all groups | new, review_checklist | 18 of 18 |
 | `S56488c` | All languages | language | 18 of 18 |
@@ -23959,29 +25040,34 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S66d6c2` | All Released Status Codes | export_center | 18 of 18 |
 | `S432284` | All required sign-offs are in, but this is still a Draft — the Reviewer and Administrator only see it after you choose Submit for Review below. | detail | 18 of 18 |
 | `S5d4358` | All rows are clean. | dry_run | 18 of 18 |
+| `S84f219` | All three, each by a different person who did not make the request. | change | 18 of 18 |
 | `Scbc694` | already in the catalogue | st_preview | 18 of 18 |
+| `S01209c` | Also ask for approval of the unchanged rows that are only proposed | upload | 18 of 18 |
 | `S9b0b4c` | also the files without an access level (all columns) | detail | 18 of 18 |
 | `S9eb13d` | amber after | _macros | 18 of 18 |
 | `S2f1bed` | An Administrator includes the revision in a Release and publishes it; then it is Released. | help and messages | 18 of 18 |
 | `Sa2ca0f` | An archived revision cannot be changed. | message: status_code_service | 18 of 18 |
 | `S506d0b` | An audience export is built from Released data only; it cannot be combined with the unapproved working set. | message: export_service | 18 of 18 |
 | `Sa57433` | An open Draft/Review/PendingApproval revision already exists (BR-003). | message: status_code_service | 18 of 18 |
+| `S477aeb` | and more | change, upload | 18 of 18 |
 | `S0b6108` | Anemometer Heating Program | status code fields | 18 of 18 |
 | `Sc5fe02` | any | list | 18 of 18 |
 | `Sf24c44` | Any %(code)s Engineer | detail | 18 of 18 |
 | `Se61c2f` | Any number state | legacy_mapping | 18 of 18 |
+| `Sc7274c` | Any state | changes | 18 of 18 |
 | `Sf00fe5` | any state | language | 18 of 18 |
+| `S55201a` | Any status | list | 18 of 18 |
 | `Sc82c65` | API tokens | integrations | 18 of 18 |
 | `S407cf2` | Applies from software version (optional) | form | 18 of 18 |
 | `S0c9d31` | Applies to | review_checklist | 18 of 18 |
 | `Sb99a01` | Applies to software versions | detail | 18 of 18 |
 | `Sa30242` | Applies up to software version (optional) | form | 18 of 18 |
 | `Sef5415` | Apply columns | list | 18 of 18 |
-| `Sc00673` | Apply to the ticked programs | st_preview | 18 of 18 |
 | `S8cc047` | Approval | success_metrics | 18 of 18 |
 | `Sc452ad` | Approval Queue | approval_queue, menu | 18 of 18 |
 | `S8e9c89` | approval: amber after | stalled | 18 of 18 |
-| `S7b2c7f` | Approve | detail, language | 18 of 18 |
+| `Sdeb9d0` | Approvals | change, changes | 18 of 18 |
+| `S7b2c7f` | Approve | change, detail, language | 18 of 18 |
 | `S4d93b4` | Approve all drafts of others | language | 18 of 18 |
 | `Sbd6fb2` | Approve every draft of this language that you did not propose yourself? | language | 18 of 18 |
 | `Sde38bf` | Approve selected | detail | 18 of 18 |
@@ -23993,7 +25079,7 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S754eae` | approved or released codes checked | catalogue_health | 18 of 18 |
 | `Scf2999` | Approving confirms these values; any change you make here is applied and audited. Rejecting ignores them. | detail | 18 of 18 |
 | `Sf7f2d5` | Archive (requires 180-day retention elapsed) | detail | 18 of 18 |
-| `S726d7a` | as above | st_new | 18 of 18 |
+| `Sffb569` | Ask for approval of the ticked rows | list | 18 of 18 |
 | `S244492` | Assign | stalled | 18 of 18 |
 | `S5d71d2` | Assign least-loaded Reviewer | detail | 18 of 18 |
 | `Se29915` | Assign Reviewer | detail | 18 of 18 |
@@ -24055,6 +25141,7 @@ Every string of the interface with the templates that use it. A native speaker a
 | `Sa28e96` | Catalogue Health | catalogue_health, menu | 18 of 18 |
 | `S25d185` | Catalogue health | catalogue_health | 18 of 18 |
 | `Sa3c686` | Category | export, index, language | 18 of 18 |
+| `S08f985` | Cause | row | 18 of 18 |
 | `S3e00c3` | Causes and the codes they suppress | connections | 18 of 18 |
 | `Se7bab1` | Chain of causes | detail | 18 of 18 |
 | `S49289d` | Change Password | account_settings | 18 of 18 |
@@ -24072,7 +25159,7 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S37c6c5` | changed | software_versions, st_preview | 18 of 18 |
 | `Scb5424` | Changed | software_versions | 18 of 18 |
 | `S6f7703` | Changed and withdrawn programs are not ticked: tick the ones you want to update, revise or restore. | st_preview | 18 of 18 |
-| `S8aa57d` | Changes | detail | 18 of 18 |
+| `S8aa57d` | Changes | change, detail | 18 of 18 |
 | `S3d14ea` | Changes of this release only | detail, export | 18 of 18 |
 | `S4825bc` | Changing the English text reopens every approved translation of the term. | index | 18 of 18 |
 | `S4b5e84` | Check | index | 18 of 18 |
@@ -24085,7 +25172,7 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S33dbd7` | checklist_confirmed must be a list of checklist item ids. | message: field_review_service | 18 of 18 |
 | `S074d62` | Chief Engineer | detail, role badge | 18 of 18 |
 | `S03695d` | Chief Engineer decision | detail, workbench | 18 of 18 |
-| `S9477fd` | choose | st_new, st_preview | 18 of 18 |
+| `S9477fd` | choose | help and messages | 18 of 18 |
 | `S1ae983` | Choose a category. | message: terminology_service | 18 of 18 |
 | `S08fb99` | Choose an active user. | message: translation_review_service | 18 of 18 |
 | `Sbdd594` | Choose at least one access level or the unfiltered files. | message: package_service | 18 of 18 |
@@ -24111,11 +25198,14 @@ Every string of the interface with the templates that use it. A native speaker a
 | `Sf27073` | Columns (one per line: field \| header label) | export_profiles | 18 of 18 |
 | `S153d7a` | Comment | detail | 18 of 18 |
 | `S611578` | Comment (required for rejection) | detail, workbench | 18 of 18 |
+| `S3fe5e1` | Comment (required to reject) | change | 18 of 18 |
 | `Sfa63c7` | Comment for %(x)s | review | 18 of 18 |
 | `S3d8204` | Comment not found | message: field_review_service | 18 of 18 |
 | `Sc38432` | Comment on this field | detail | 18 of 18 |
 | `Sfce06e` | Comments | detail | 18 of 18 |
 | `S8d105c` | Compare | detail, reconciliation | 18 of 18 |
+| `S2ddaf9` | Compare a workbook | list, upload | 18 of 18 |
+| `Sddf8d9` | Compare and make the request | upload | 18 of 18 |
 | `Sc9a03b` | Compare Revisions | detail | 18 of 18 |
 | `Sac0d4a` | Compare with (what changed) | software_versions | 18 of 18 |
 | `Sf0a8d6` | Compare with the legacy master list | reconciliation | 18 of 18 |
@@ -24129,7 +25219,7 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S4f9be0` | Content | detail | 18 of 18 |
 | `S437f95` | Content digest (SHA-256 of the data rows) | export | 18 of 18 |
 | `S4bb9a3` | content must be 'baseline' or 'delta'. | message: export_service | 18 of 18 |
-| `Sa36a5f` | Controller | detail, legacy_mapping, st_new, st_preview | 18 of 18 |
+| `Sa36a5f` | Controller | detail, legacy_mapping, list, row | 18 of 18 |
 | `Saa4de2` | controller must be auto, MC or HC | message: st_import_service | 18 of 18 |
 | `S382b49` | Controller software versions this Release is for (optional) | new | 18 of 18 |
 | `Scd293f` | Converter Reactive Power Program | detail | 18 of 18 |
@@ -24181,7 +25271,6 @@ Every string of the interface with the templates that use it. A native speaker a
 | `Sc51568` | Decisions & Comments | detail | 18 of 18 |
 | `S7505d6` | default | export, settings | 18 of 18 |
 | `Sa8ec52` | Default audience | export_profiles | 18 of 18 |
-| `Sa30251` | default_category must be ERROR, WARNING or INFO | message: st_import_service | 18 of 18 |
 | `Se91aff` | Defect | workbench | 18 of 18 |
 | `S1308dc` | defective codes sent back | help and messages | 18 of 18 |
 | `S710ea3` | Delegation | delegations, menu | 18 of 18 |
@@ -24213,6 +25302,7 @@ Every string of the interface with the templates that use it. A native speaker a
 | `Sb149ca` | Detect: a number from 10000 up is a Hub Controller program | st_new | 18 of 18 |
 | `S4c17aa` | Development | detail | 18 of 18 |
 | `S441564` | differs in | st_preview | 18 of 18 |
+| `S164e0b` | Directive | row | 18 of 18 |
 | `S552a2b` | Documented reason | detail | 18 of 18 |
 | `S9b1091` | Domain | detail, mine | 18 of 18 |
 | `S16fbbf` | Domain sign-off | workbench | 18 of 18 |
@@ -24222,6 +25312,7 @@ Every string of the interface with the templates that use it. A native speaker a
 | `Sa479c9` | Download | detail | 18 of 18 |
 | `S056839` | Download Error Report | detail | 18 of 18 |
 | `S9468a1` | Download Full Database Backup | export_center | 18 of 18 |
+| `S028ebe` | Download the current mapping | upload | 18 of 18 |
 | `S0e7766` | draft | hub_consolidation, language | 18 of 18 |
 | `S23d33e` | Draft | detail, index | 18 of 18 |
 | `S250750` | Draft CRs of mine blocked on a domain sign-off | dashboard | 18 of 18 |
@@ -24259,12 +25350,12 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S78586c` | Escalates to %(code)s, which is deprecated or archived. | connections | 18 of 18 |
 | `Sc5497b` | Events | integrations | 18 of 18 |
 | `Sefd55c` | Every audit entry carries a hash of its predecessor; a removed, reordered or edited entry breaks the chain. | operations | 18 of 18 |
+| `S2a560c` | Every change of the mapping is a request. It takes effect when the StCd Owner, the Chief Engineer and an Administrator have each approved it; one rejection closes it. | changes | 18 of 18 |
 | `Sd24ec2` | Every comment and decision on every change request of this status code, oldest first. Comments of withdrawn requests are kept in the Audit Log (action WITHDRAW). | detail | 18 of 18 |
 | `Scc432e` | Every current status code in any lifecycle state, including unapproved Drafts. Every row and the file name carry a "Not for distribution — unapproved data" notice. | export_center | 18 of 18 |
 | `S4e7cfe` | Every Hub code is deprecated - the group can be deactivated under Lookups. | hub_consolidation | 18 of 18 |
 | `S7d06d0` | Every imported program becomes an ordinary Draft with the number it carries reserved. It still needs Cross-Domain Sign-Off, dual review and Chief Engineer approval before Release, and all Drafts of one import share a change set. | st_new | 18 of 18 |
 | `S873802` | Every item must be confirmed to approve; rejecting needs no confirmation. | detail | 18 of 18 |
-| `Sbda77c` | Every program names an alarm type. A type left at "as above" gets the category chosen above; the next page lets you set the category of single programs or of all ticked ones. | st_new | 18 of 18 |
 | `S2bac4d` | Every request is still decided on its own: it gets its own check that you did not write or already sign it, its own comment and its own audit entry. Requests you may not decide are reported and skipped. | detail | 18 of 18 |
 | `S2e7908` | Every row is valid. Nothing has been created yet. | dry_run | 18 of 18 |
 | `Sae0114` | Every row that passes validation becomes an ordinary Draft, subject to the full Cross-Domain Sign-Off, dual-review, and Chief Engineer approval cycle before it can be Released — import is a faster data-entry path, never a governance bypass. | new | 18 of 18 |
@@ -24307,7 +25398,7 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S32ac07` | File (.csv/.xlsx with status_code_identifier, occurrences) | fleet_feedback | 18 of 18 |
 | `S4bc4cc` | file(s) | st_preview | 18 of 18 |
 | `S6ce6c5` | Files | detail | 18 of 18 |
-| `Sd7decf` | Filter | audit_log, index, language, legacy_mapping | 18 of 18 |
+| `Sd7decf` | Filter | audit_log, changes, index, language | 18 of 18 |
 | `S759686` | Filter status codes | list | 18 of 18 |
 | `S962725` | Filter the list | st_preview | 18 of 18 |
 | `S57e8be` | Finding | catalogue_health, connections | 18 of 18 |
@@ -24346,10 +25437,11 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S6a0014` | Generator Bearing Lubrication Program | status code fields | 18 of 18 |
 | `S7f38cc` | Generator Fan Program | status code fields | 18 of 18 |
 | `Sf292a7` | Generator Heating Program | status code fields | 18 of 18 |
+| `Sf28681` | Give the reason for the change; the three approvers read it first. | message: mapping_service | 18 of 18 |
+| `S062788` | Give the request a title of at most 120 characters. | message: mapping_service | 18 of 18 |
 | `S636c41` | Grid Operator | detail | 18 of 18 |
-| `S171a06` | Group | catalogue_health, export, withdrawn_codes | 18 of 18 |
+| `S171a06` | Group | catalogue_health, export, list, row | 18 of 18 |
 | `S8cd536` | Group / Subgroup | st_preview | 18 of 18 |
-| `Sfe694a` | hc_proposal must be 1 or 2 | message: st_import_service | 18 of 18 |
 | `Sac7f67` | headers only | new | 18 of 18 |
 | `Sc47ae1` | Help | help, menu | 18 of 18 |
 | `S90ccd6` | History | detail | 18 of 18 |
@@ -24357,7 +25449,7 @@ Every string of the interface with the templates that use it. A native speaker a
 | `Sb17ab7` | Hub code | hub_consolidation | 18 of 18 |
 | `S036d00` | Hub codes and their replacements | hub_consolidation | 18 of 18 |
 | `S2fa8ef` | Hub Consolidation | hub_consolidation, menu | 18 of 18 |
-| `Sb4aadc` | Hub Controller | catalogue_health, legacy_mapping | 18 of 18 |
+| `Sb4aadc` | Hub Controller | catalogue_health, legacy_mapping, list | 18 of 18 |
 | `S0dfe7b` | Hub controller | connections, detail | 18 of 18 |
 | `S3b9e43` | Hub Controller (legacy numbers, mapped to the new ones) | st_new | 18 of 18 |
 | `Sfec8b7` | Hub Controller group | detail | 18 of 18 |
@@ -24426,7 +25518,7 @@ Every string of the interface with the templates that use it. A native speaker a
 | `Sa7b60b` | Left % | catalogue_health | 18 of 18 |
 | `S82ba98` | Legacy library migration progress | reconciliation | 18 of 18 |
 | `Sfd5ec0` | Legacy mapping | legacy_mapping, menu, new, st_new | 18 of 18 |
-| `Sdd6555` | Legacy no. | hub_consolidation, legacy_mapping, st_preview | 18 of 18 |
+| `Sdd6555` | Legacy no. | hub_consolidation, legacy_mapping, list, row | 18 of 18 |
 | `S81f567` | Legacy number to new identifier | legacy_mapping | 18 of 18 |
 | `S64b267` | legacy number, identifier or name | legacy_mapping | 18 of 18 |
 | `S693272` | Legacy Reference Number | detail, withdrawn_codes | 18 of 18 |
@@ -24439,6 +25531,7 @@ Every string of the interface with the templates that use it. A native speaker a
 | `Sb4cad6` | Link to this view | list | 18 of 18 |
 | `Sdde41f` | Listed in manifest | export_verify | 18 of 18 |
 | `Sfbee55` | live codes | fleet_feedback | 18 of 18 |
+| `Sbdb4e1` | Load the initial mapping | list | 18 of 18 |
 | `S43d5c5` | Loadless Spinning Permitted | detail, form | 18 of 18 |
 | `Sf7c400` | Log in | login | 18 of 18 |
 | `S6e78c9` | Log out | base | 18 of 18 |
@@ -24449,17 +25542,23 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S1df823` | loop | connections | 18 of 18 |
 | `S36a883` | low | catalogue_health | 18 of 18 |
 | `Sa24877` | Lower-case letters, digits and hyphens; it never changes. | index | 18 of 18 |
-| `S1b123c` | Main Controller | catalogue_health, legacy_mapping, st_new | 18 of 18 |
+| `S1b123c` | Main Controller | catalogue_health, legacy_mapping, list, st_new | 18 of 18 |
 | `Sc3f827` | Main controller | connections, detail | 18 of 18 |
 | `S578b78` | Main Controller group | detail | 18 of 18 |
 | `Sa7512d` | Main Controller only | detail, form | 18 of 18 |
 | `Sefd197` | Main navigation | base | 18 of 18 |
+| `Se07018` | Make the request | list | 18 of 18 |
 | `Seb9a6d` | Manage translations | detail | 18 of 18 |
 | `Sc5beef` | manifest | detail | 18 of 18 |
 | `S45ea95` | Manifest signature | export_verify | 18 of 18 |
 | `Sc6ff17` | MANIFEST.json (optional) | export_center | 18 of 18 |
 | `Se21075` | Manual Operation | status code fields | 18 of 18 |
 | `S6d59f4` | Manual Reset Program | detail | 18 of 18 |
+| `Sdef2eb` | Mapping | changes, list, menu, row | 18 of 18 |
+| `Sb48001` | Mapping change | change | 18 of 18 |
+| `S2ea56f` | Mapping change not found | message: mapping_service | 18 of 18 |
+| `Sd7c1d0` | Mapping changes | change, changes, list, menu | 18 of 18 |
+| `S2c9363` | Mapping row not found | message: mapping_service | 18 of 18 |
 | `S1b8316` | Mark all as read | notifications | 18 of 18 |
 | `Sc1ee86` | Mark as read | notifications | 18 of 18 |
 | `Sf9896c` | Mark resolved | detail, form | 18 of 18 |
@@ -24498,18 +25597,19 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S31a335` | new code | detail | 18 of 18 |
 | `S60fe6c` | new codes without a legacy number (n/a) | legacy_mapping | 18 of 18 |
 | `S7d97d2` | New delegation | delegations | 18 of 18 |
-| `Sf26140` | New identifier | legacy_mapping, st_preview | 18 of 18 |
-| `S6640a6` | New number of Hub Controller programs | st_new | 18 of 18 |
+| `Sf26140` | New identifier | change, legacy_mapping, list, st_preview | 18 of 18 |
+| `S283474` | New number | row | 18 of 18 |
 | `Sd850ee` | New password | account_settings | 18 of 18 |
 | `Sf8723d` | New password (12+ chars) | users | 18 of 18 |
 | `Sbcf8f1` | New password for %(x)s | users | 18 of 18 |
 | `Sca36da` | New profile | export_profiles | 18 of 18 |
 | `Se75aa1` | New Release | list, new | 18 of 18 |
+| `S9bb526` | New row | list, row | 18 of 18 |
 | `Sdbb388` | New Sandbox Code | menu | 18 of 18 |
 | `S2d3840` | New Sandbox Status Code | form | 18 of 18 |
 | `Sd85719` | New Status Code | base, form, list, menu | 18 of 18 |
 | `S05c749` | New Subsystem | lookups | 18 of 18 |
-| `Sbc9819` | Next | _macros | 18 of 18 |
+| `Sbc9819` | Next | _macros, list | 18 of 18 |
 | `S816c52` | No | detail, export_verify, form, list | 18 of 18 |
 | `S70d3f5` | No active account matches this Windows identity. | message: auth_service | 18 of 18 |
 | `S06fc8d` | No active Engineer holds the %(code)s domain yet. An Administrator must tag an Engineer with it (Administration → Users) before a sign-off can be requested. | detail | 18 of 18 |
@@ -24540,7 +25640,10 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S08f84b` | No record of this exact file | export_verify | 18 of 18 |
 | `S0fa9cd` | No Released codes yet. | success_metrics | 18 of 18 |
 | `Sd32c03` | No releases yet. | list | 18 of 18 |
+| `Se03e43` | No request yet. | changes | 18 of 18 |
+| `Sfa6fdd` | No request yet. The row is as it was loaded. | row | 18 of 18 |
 | `Sf60067` | No Reviewer is available to assign. | message: change_request_service | 18 of 18 |
+| `Sb5b22c` | No row matches. | list | 18 of 18 |
 | `Sc3af43` | No saved searches yet. | list | 18 of 18 |
 | `Sa9d47a` | No source language is configured. | message: translation_service | 18 of 18 |
 | `S7877c5` | No status code carries a legacy number yet. | legacy_mapping | 18 of 18 |
@@ -24554,6 +25657,7 @@ Every string of the interface with the templates that use it. A native speaker a
 | `Sdfeb06` | No withdrawn codes. | withdrawn_codes | 18 of 18 |
 | `S4bddd5` | Nobody can review it until it is submitted. | detail | 18 of 18 |
 | `Se0a567` | Nobody decides on their own proposal; another Administrator or StCd Owner does. | message: translation_review_service | 18 of 18 |
+| `S260f7a` | Node | list, row | 18 of 18 |
 | `S2d8f60` | node value | detail | 18 of 18 |
 | `S71f8e7` | none | detail, form | 18 of 18 |
 | `Sb8e95b` | None found. | catalogue_health | 18 of 18 |
@@ -24571,10 +25675,11 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S4467d4` | Not yet published | detail | 18 of 18 |
 | `Sd9b345` | not yet published | export | 18 of 18 |
 | `S23402a` | Not yet submitted. | detail | 18 of 18 |
-| `S2c924e` | Note | language, workbench | 18 of 18 |
+| `S2c924e` | Note | language, row, workbench | 18 of 18 |
 | `S2f09d0` | Note on %(x)s | language | 18 of 18 |
 | `Sb23ab5` | Nothing is awaiting Review sign-off. | review_queue | 18 of 18 |
 | `S8e70d2` | Nothing is awaiting your approval. | approval_queue | 18 of 18 |
+| `Sf790fc` | Nothing is changed here directly: the form makes a request, and the row changes after the StCd Owner, the Chief Engineer and an Administrator have approved it. | row | 18 of 18 |
 | `Sc5e8fc` | Nothing is stalled. | stalled | 18 of 18 |
 | `Sd9c5b0` | Nothing selected: tick at least one program that is ready. | message: st_import_service | 18 of 18 |
 | `Sf4e488` | Nothing selected: tick at least one withdrawn code. | message: status_code_service | 18 of 18 |
@@ -24585,6 +25690,7 @@ Every string of the interface with the templates that use it. A native speaker a
 | `Scd7430` | Number of Times Repeated | detail, form | 18 of 18 |
 | `Sf949fb` | Number ranges running out | dashboard | 18 of 18 |
 | `S8e20aa` | number, name, file ... | st_preview | 18 of 18 |
+| `S08250b` | number, title or group | list | 18 of 18 |
 | `S58c916` | Number-range capacity | catalogue_health | 18 of 18 |
 | `S7b4cb2` | Numbers are never reused, so a gap is lost capacity - listed for information. | catalogue_health | 18 of 18 |
 | `S152225` | Numeric levels of the generated program (0 to 255): read 1 = readable, 50 = no access. | form | 18 of 18 |
@@ -24622,6 +25728,8 @@ Every string of the interface with the templates that use it. A native speaker a
 | `Se0e01e` | Only the delegator or an Administrator may create a delegation. | message: delegation_service | 18 of 18 |
 | `Sdfaf0a` | Only the delegator or an Administrator may revoke a delegation. | message: delegation_service | 18 of 18 |
 | `S2ca27e` | Only the originating Engineer may request a domain sign-off. | message: domain_signoff_service | 18 of 18 |
+| `S2d5693` | Only the person who made the request can withdraw it. | message: mapping_service | 18 of 18 |
+| `S682269` | Only the StCd Owner, the Chief Engineer and an Administrator decide on the mapping. | message: mapping_service | 18 of 18 |
 | `S6b9417` | Only the uploader or an Administrator may remove evidence. | message: attachment_service | 18 of 18 |
 | `Sbc3c59` | Only the values you choose are changed, on the Drafts you wrote (an Administrator: any Draft). | workbench | 18 of 18 |
 | `S12aa03` | only translated codes | detail | 18 of 18 |
@@ -24654,7 +25762,7 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S4d1a47` | Package: all languages and access levels | detail | 18 of 18 |
 | `Sc49bd0` | Packages of this Release | detail | 18 of 18 |
 | `Sa5d386` | Page %(page)s of %(total)s | export | 18 of 18 |
-| `S600584` | Pages | _macros | 18 of 18 |
+| `S600584` | Pages | _macros, list | 18 of 18 |
 | `Sfa38ca` | Part of a loop of suppressions: each code is suppressed by another one of the loop. | connections | 18 of 18 |
 | `S92223f` | Passed: no defect in the sample. Use sample number %(id)s below. | workbench | 18 of 18 |
 | `S8be3c9` | Password | login, users | 18 of 18 |
@@ -24688,7 +25796,7 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S25c604` | portrait | export_profiles | 18 of 18 |
 | `S90eceb` | Prefix | integrations | 18 of 18 |
 | `S6daf16` | Preview: status codes from .st files | st_preview | 18 of 18 |
-| `S50f942` | Previous | _macros | 18 of 18 |
+| `S50f942` | Previous | _macros, list | 18 of 18 |
 | `Sfe5310` | Probable inconsistencies | catalogue_health | 18 of 18 |
 | `S044f10` | Problems and warnings | dry_run, st_preview | 18 of 18 |
 | `S141f0c` | Processing in the background... | detail | 18 of 18 |
@@ -24699,8 +25807,6 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S39c8c4` | Program References — Advanced, controller firmware programs | form | 18 of 18 |
 | `S15a21a` | program(s) | st_preview | 18 of 18 |
 | `Se58289` | Programs found in the uploaded files | st_preview | 18 of 18 |
-| `Sd99e2a` | Proposal 1: five-digit numbers (11000 and up) | st_new | 18 of 18 |
-| `S2744b0` | Proposal 2: inside the Main Controller scheme | st_new | 18 of 18 |
 | `Sc9cdc6` | Proposal for %(x)s | review | 18 of 18 |
 | `Seef5e0` | Proposal not found | message: translation_review_service | 18 of 18 |
 | `S70cbd1` | Proposed | detail | 18 of 18 |
@@ -24725,6 +25831,7 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S6a9c56` | Read level | detail, form | 18 of 18 |
 | `S75c053` | ready | st_preview, workbench | 18 of 18 |
 | `S6275ab` | Ready to submit | workbench | 18 of 18 |
+| `Sf219cc` | Reason | change, list, row, upload | 18 of 18 |
 | `S55843f` | Reassign | stalled | 18 of 18 |
 | `Sca5d2f` | Recent import jobs | reconciliation | 18 of 18 |
 | `Sf5ca9d` | Recorded exports | detail | 18 of 18 |
@@ -24733,7 +25840,7 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S298d36` | Reference number in the separate escalation code pool — not a CSCM Tool status code. | form | 18 of 18 |
 | `Sa3f757` | Reinstate to Released | detail | 18 of 18 |
 | `S3238ca` | Reinstatement reason | detail | 18 of 18 |
-| `S2b03b5` | Reject | detail | 18 of 18 |
+| `S2b03b5` | Reject | change, detail | 18 of 18 |
 | `S27fb5c` | Reject selected | detail | 18 of 18 |
 | `Se1e74d` | Reject the batch | workbench | 18 of 18 |
 | `S685e8f` | Rejection requires a comment. | message: change_request_service | 18 of 18 |
@@ -24768,13 +25875,22 @@ Every string of the interface with the templates that use it. A native speaker a
 | `Sc385e3` | Replacement | hub_consolidation | 18 of 18 |
 | `S4aed03` | Request | detail | 18 of 18 |
 | `Sf3421a` | Request a Sign-Off | detail | 18 of 18 |
-| `Sc26bf6` | Requested | detail, mine | 18 of 18 |
+| `S9d728f` | Request approval of the number | row | 18 of 18 |
+| `Sc8978f` | Request rejection of the number | row | 18 of 18 |
+| `Sc644eb` | Request that this number is never used? | row | 18 of 18 |
+| `Sb25913` | Request the new row | row | 18 of 18 |
+| `Sb04301` | Request this change | row | 18 of 18 |
+| `S5fc0e0` | request(s) wait for your decision. | changes | 18 of 18 |
+| `Sc26bf6` | Requested | detail, mine, row | 18 of 18 |
+| `S5108c2` | Requested by | change, changes | 18 of 18 |
 | `Sf7194e` | Requests | list | 18 of 18 |
+| `Sae91b6` | Requests for this row | row | 18 of 18 |
 | `S950eaf` | Requests waiting longer than the configured thresholds. Review: amber after | stalled | 18 of 18 |
 | `S2706ed` | Required by | detail | 18 of 18 |
 | `Sc3fed1` | reserved | legacy_mapping | 18 of 18 |
 | `S619e87` | Reset Delay | detail, form | 18 of 18 |
 | `S2e8fd6` | Reset delay | export | 18 of 18 |
+| `Sd59701` | Reset delay (parameter) | row | 18 of 18 |
 | `S3fb75e` | Reset Password | users | 18 of 18 |
 | `S026ab2` | resolved | detail | 18 of 18 |
 | `S5faa59` | Result | dry_run | 18 of 18 |
@@ -24808,8 +25924,8 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S9bf7a8` | Row | dry_run | 18 of 18 |
 | `S3ff0b0` | row(s) have problems. Nothing has been created. | dry_run | 18 of 18 |
 | `Sfc1d6a` | row(s) imported as Drafts | detail | 18 of 18 |
-| `S52d0b3` | Rows | detail, reconciliation, user_detail | 18 of 18 |
-| `S6c30d2` | rows | dry_run | 18 of 18 |
+| `S52d0b3` | Rows | change, changes, detail, reconciliation | 18 of 18 |
+| `S6c30d2` | rows | change, dry_run, list | 18 of 18 |
 | `Sd0edfb` | Sales | detail | 18 of 18 |
 | `S58fabf` | Sample | workbench | 18 of 18 |
 | `S6a26de` | Sample %(id)s drawn: %(n)s of %(total)s codes to inspect. | help and messages | 18 of 18 |
@@ -24839,6 +25955,7 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S6a6d41` | Saving again keeps your entries and replaces the stored values. | form | 18 of 18 |
 | `S38db0c` | Say what the term means, so that a translator who does not know the product can choose the right word. | index | 18 of 18 |
 | `S809383` | Say why in the note. | message: terminology_service | 18 of 18 |
+| `S5e0f66` | Say why you reject the request. | message: mapping_service | 18 of 18 |
 | `S4651a3` | Scope | export | 18 of 18 |
 | `S13c61c` | Scope Filter | detail | 18 of 18 |
 | `S154964` | Scope: Functional System Group (optional) | new | 18 of 18 |
@@ -24858,6 +25975,7 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S535bd8` | Select a Functional System Group first | detail, form | 18 of 18 |
 | `S913aff` | Select all | builder, detail, list, mine | 18 of 18 |
 | `S0723bf` | Select all programs that are ready | st_preview | 18 of 18 |
+| `S45b553` | Select all rows | list | 18 of 18 |
 | `S85e466` | Select the Approved, non-sandbox revisions to include, then Save. Publishing is immutable — a correction requires a new Release. | builder | 18 of 18 |
 | `S0aa2a5` | Send back | language | 18 of 18 |
 | `S3ae55b` | Send the defective codes back | workbench | 18 of 18 |
@@ -24866,6 +25984,7 @@ Every string of the interface with the templates that use it. A native speaker a
 | `Scf4cc3` | Service Partner | detail | 18 of 18 |
 | `S3871fb` | Set Delay | detail, form | 18 of 18 |
 | `S89fdd5` | Set delay | export | 18 of 18 |
+| `Sfd64cd` | Set delay (parameter) | row | 18 of 18 |
 | `Se90e7c` | Set on the Drafts | workbench | 18 of 18 |
 | `Sc761ae` | Set role | user_detail, users | 18 of 18 |
 | `Sa58dac` | Set values on the Drafts | workbench | 18 of 18 |
@@ -24893,7 +26012,7 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S169bf7` | Software version | detail, export, software_versions | 18 of 18 |
 | `S932745` | Software Version (optional) | form | 18 of 18 |
 | `S42ea2e` | Software Versions | software_versions | 18 of 18 |
-| `S6da13a` | Source | detail, fleet_feedback | 18 of 18 |
+| `S6da13a` | Source | detail, fleet_feedback, row | 18 of 18 |
 | `S828d33` | source | export | 18 of 18 |
 | `Sd3c56b` | source language | detail, export_profiles | 18 of 18 |
 | `Scb0b87` | source language text of revision | translations | 18 of 18 |
@@ -24906,14 +26025,11 @@ Every string of the interface with the templates that use it. A native speaker a
 | `Sb3883f` | Standards | detail | 18 of 18 |
 | `Sd22e9f` | Start from the template: | new | 18 of 18 |
 | `Sfaa9e7` | Started | detail, reconciliation | 18 of 18 |
-| `Sa72502` | State | detail, export, hub_consolidation, language | 18 of 18 |
+| `Sa72502` | State | changes, detail, export, hub_consolidation | 18 of 18 |
 | `Sbae7d5` | Status | catalogue_health, detail, list, reconciliation | 18 of 18 |
 | `S82b5dd` | Status & Timing | form | 18 of 18 |
 | `Se246b6` | Status Category | detail, form, list | 18 of 18 |
-| `Sae12bc` | Status category | st_preview, workbench | 18 of 18 |
-| `S0af4fc` | Status category by alarm type (optional) | st_new | 18 of 18 |
-| `S234237` | Status category of the new codes | st_new | 18 of 18 |
-| `Sd7a322` | Status category of the ticked programs | st_preview | 18 of 18 |
+| `Sae12bc` | Status category | workbench | 18 of 18 |
 | `Sfcbb29` | Status code | export | 18 of 18 |
 | `S98c645` | Status code catalogue | export | 18 of 18 |
 | `S779953` | Status Code for Repeated Error | detail, form | 18 of 18 |
@@ -24977,16 +26093,20 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S1cdbdd` | The Chief Engineer approves or rejects. Approval makes the revision Approved (or Deprecated for a deprecation request). | help and messages | 18 of 18 |
 | `S991055` | The code is lower-case letters, digits and hyphens (2 to 80). | message: terminology_service | 18 of 18 |
 | `S5dbbd0` | The code is no longer an open Draft; preview the files again. | message: st_import_service | 18 of 18 |
+| `S3d5cfc` | The comment is longer than 1000 characters. | message: mapping_service | 18 of 18 |
 | `Sf9e374` | The CR is not part of this change set | message: change_set_service | 18 of 18 |
 | `S94bc64` | The current set of every Released status code, independent of any single Release. | export_center | 18 of 18 |
+| `S82b817` | The decision must be APPROVE or REJECT. | message: mapping_service | 18 of 18 |
 | `Sad32d5` | The delegate must be an active user who is not a Viewer. | message: delegation_service | 18 of 18 |
 | `Sbd1189` | The delegation period has already ended. | message: delegation_service | 18 of 18 |
 | `Se87c1f` | The digest of the file itself is listed in the accompanying manifest (MANIFEST.json); verify it with `flask verify-export`. | export | 18 of 18 |
 | `S969b52` | The e-mail address of the account is the user principal name; a name with a Windows domain in front needs WINDOWS_AUTH_EMAIL_DOMAIN or a matching user name. | login_windows | 18 of 18 |
 | `S69e5f6` | The existing code has no current revision. | message: import_service | 18 of 18 |
 | `S6d8e34` | The file is empty. | message: attachment_service | 18 of 18 |
+| `S9ec08a` | The file is not a readable .xlsx workbook. | message: mapping_service | 18 of 18 |
 | `S3b0e31` | The file needs the columns status_code_identifier and occurrences. | message: occurrence_service | 18 of 18 |
 | `S689b33` | The full manual is docs/23-user-manual.md in the project folder; the glossary below is the same one the tooltips use. | help | 18 of 18 |
+| `S3a1066` | The mapping is empty. | list | 18 of 18 |
 | `S3bc283` | The package file is no longer on the server. | message: package_service | 18 of 18 |
 | `S2d6ac0` | The package is being built. Reload this page to follow its progress. | help and messages | 18 of 18 |
 | `S310622` | The package is not ready. | message: package_service | 18 of 18 |
@@ -24994,9 +26114,12 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S9a1b35` | The pre-migration status code number, if any — for traceability only, never the governed StCd identifier. | form | 18 of 18 |
 | `S65168f` | The preview has expired or is unknown. Upload the files again. | message: st_import_service | 18 of 18 |
 | `S8b51cc` | The preview has expired. Upload the files again. | message: st_import_service | 18 of 18 |
-| `S61fc52` | The program files do not carry a category and none is assumed: choose one here, by alarm type below, or for each program in the preview. A program without a category is not imported. | st_new | 18 of 18 |
-| `Sde7a5b` | The program files do not carry a category; you can change it in each Draft. | help and messages | 18 of 18 |
+| `S3831f7` | The reason is longer than 2000 characters. | message: mapping_service | 18 of 18 |
+| `Sa5de7d` | The request contains no row. | message: mapping_service | 18 of 18 |
+| `S2116e4` | The request is already closed. | message: mapping_service | 18 of 18 |
 | `S043693` | The Reviewer has already signed off this CR. | message: change_request_service | 18 of 18 |
+| `S8518e7` | The role has decided already. | message: mapping_service | 18 of 18 |
+| `S27d95b` | The rows stay as they are. Once the StCd Owner, the Chief Engineer and an Administrator approve, they count as approved numbers. | list | 18 of 18 |
 | `S5baa27` | The sample has defects, so the batch cannot be decided as it is. Send the defective codes back (the note is the reason), then draw a new sample of what is left. | workbench | 18 of 18 |
 | `Sd6b132` | The sheet has no 'Review' tab; download the sheet from this page. | message: translation_review_service | 18 of 18 |
 | `Sf60096` | The sheet is larger than 5 MB. | message: translation_review_service | 18 of 18 |
@@ -25004,6 +26127,8 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S09e10b` | The stored file is missing | message: attachment_service | 18 of 18 |
 | `S05975b` | The targets the business case promises, measured from the timestamps the tool already keeps. Business days are Monday to Friday. | success_metrics | 18 of 18 |
 | `Se0baa4` | The technical nomenclature: the words of the controller and of the workflow (Status Code, Hub Controller, Set delay, Draft ...) in every language. It is kept apart from the interface translations. A technical colleague proposes a translation, a second person approves it; the interface and the manuals then use the same word everywhere. | index | 18 of 18 |
+| `S9c0444` | The three approvers read the reason first. | row | 18 of 18 |
+| `Saa9df6` | The title, the type and the access levels of every program come from the mapping, never from the files. A program whose number is not in the mapping is blocked. | st_new | 18 of 18 |
 | `S7f38d7` | The translated description must be 1-4000 characters. | message: translation_service | 18 of 18 |
 | `S1363ee` | The translated remedy text must be at most 4000 characters. | message: translation_service | 18 of 18 |
 | `S02b245` | The translated title must be 1-120 characters. | message: translation_service | 18 of 18 |
@@ -25011,9 +26136,13 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S3f60bb` | The webhook target must be on the internal network (a private or loopback address). | message: integration_service | 18 of 18 |
 | `S9e4b4a` | The webhook URL must be an http(s) URL. | message: integration_service | 18 of 18 |
 | `S1b0006` | The Windows sign-in is not enabled (AUTH_MODE). | message: auth_service | 18 of 18 |
+| `S23bfbf` | The workbook has problems. Nothing was requested. | upload | 18 of 18 |
+| `S2a15d7` | The workbook is larger than 5 MB. | message: mapping_service | 18 of 18 |
+| `S8eb912` | The workbook unpacks to more than 80 MB. | message: mapping_service | 18 of 18 |
 | `Sa797e3` | Theme | _theme | 18 of 18 |
 | `S3d5194` | There is no translation to approve. | message: translation_service | 18 of 18 |
 | `Sa5f3f8` | These files contain the complete baseline: every status code that is valid as of this Release, not only the ones it changed. | detail | 18 of 18 |
+| `Sfabd38` | These rows changed after the request was made; it cannot be applied. Withdraw it and make it again: | change | 18 of 18 |
 | `S44c2c4` | These rows point at the account. They are history that must stay attributable, so the account can be deactivated but not deleted. | user_detail | 18 of 18 |
 | `S091814` | This change request has reached a terminal decision state | detail | 18 of 18 |
 | `S8fcbfc` | This CR already has the maximum number of attachments. | message: attachment_service | 18 of 18 |
@@ -25038,7 +26167,9 @@ Every string of the interface with the templates that use it. A native speaker a
 | `Sd4d429` | This term is never translated. | message: terminology_service | 18 of 18 |
 | `Se831d9` | This translation is approved already. | message: terminology_service | 18 of 18 |
 | `S19f8ab` | Tick the codes an action is for; with none ticked an action covers every code it applies to. | workbench | 18 of 18 |
-| `S768e0c` | Title | approval_queue, builder, detail, export | 18 of 18 |
+| `S768e0c` | Title | approval_queue, builder, change, changes | 18 of 18 |
+| `Sc84745` | Title (English) | row | 18 of 18 |
+| `S24d49d` | Title of the request | upload | 18 of 18 |
 | `Sae79ea` | To | audit_log, software_versions | 18 of 18 |
 | `S6bd377` | to look at | check | 18 of 18 |
 | `Sb55f1f` | To revision | detail | 18 of 18 |
@@ -25058,8 +26189,9 @@ Every string of the interface with the templates that use it. A native speaker a
 | `Se90eb0` | Turbine Platform | list | 18 of 18 |
 | `Sa6dac4` | Turbine Platform (at least one required before Submit for Review) | form | 18 of 18 |
 | `S8f4c21` | Turbine platforms | st_new | 18 of 18 |
-| `S3deb74` | Type | detail, mine, review_queue | 18 of 18 |
+| `S3deb74` | Type | detail, list, mine, review_queue | 18 of 18 |
 | `Sab631e` | Type %(id)s to confirm | detail | 18 of 18 |
+| `S9a2439` | Type (from the mapping) | st_preview | 18 of 18 |
 | `Sb5e264` | Type the identifier to confirm | detail | 18 of 18 |
 | `S86b1e7` | Typos are tolerated: "convertor" still finds "converter". | list | 18 of 18 |
 | `S835f8a` | Umrichterprogramm GSC | detail | 18 of 18 |
@@ -25074,12 +26206,14 @@ Every string of the interface with the templates that use it. A native speaker a
 | `Sd5dcf0` | Until (inclusive) | delegations | 18 of 18 |
 | `S5fec4f` | Unused numbers inside a band | catalogue_health | 18 of 18 |
 | `S95389d` | up to date | operations | 18 of 18 |
+| `S711eea` | Up/down counter | row | 18 of 18 |
 | `S73ec5d` | Up/Down Counter | detail, form | 18 of 18 |
 | `S88128e` | Update mode needs the existing code. | message: import_service | 18 of 18 |
 | `S7d2a95` | Update: revise codes already imported (matched on the legacy number) | new | 18 of 18 |
 | `S1a767a` | updates the open Draft | st_preview | 18 of 18 |
 | `S5b23cf` | Upload a CSV or XLSX file — one row per status code, column headers matching the field names used elsewhere in CSCM Tool (Functional System Group/Subgroup and the audience-access fields by their code, e.g. "WCNV", "Converter", "SCADA User"). | new | 18 of 18 |
 | `Sf738c6` | Upload and Import | new | 18 of 18 |
+| `S88809a` | Upload the corrected mapping as a workbook with the sheets MC and HC (download the current one as a model). Every new row and every row that differs becomes one request; rows the workbook does not mention stay as they are. The request takes effect only after the StCd Owner, the Chief Engineer and an Administrator have approved it. | upload | 18 of 18 |
 | `S9ad4d4` | Upload the generated StCd_<n>.st programs — several files at once, a whole folder, or one ZIP. Nothing is created yet: the next page lists every program so you can tick the ones to import. | st_new | 18 of 18 |
 | `S80c494` | Uploaded | detail | 18 of 18 |
 | `S02c0e4` | Used | catalogue_health | 18 of 18 |
@@ -25112,7 +26246,7 @@ Every string of the interface with the templates that use it. A native speaker a
 | `Sbdc752` | Vocabulary | lookups | 18 of 18 |
 | `Sbcbc36` | vs. revision | detail | 18 of 18 |
 | `S33d306` | Waiting | approval_queue, detail, mine, review_queue | 18 of 18 |
-| `S12625b` | waiting | base | 18 of 18 |
+| `S12625b` | waiting | base, change | 18 of 18 |
 | `Saa2ee9` | Waiting for a decision | success_metrics | 18 of 18 |
 | `Sa3a4bd` | Waiting for cross-domain sign-off from: | detail | 18 of 18 |
 | `S15198e` | Waiting since | _macros | 18 of 18 |
@@ -25132,21 +26266,24 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S52fc2b` | Where repeated codes escalate to | connections | 18 of 18 |
 | `Sf323c0` | Where used | detail | 18 of 18 |
 | `S3bd89c` | Which codes exist in which software version | software_versions | 18 of 18 |
+| `Sb0c551` | Which legacy status code becomes which new one, with what the program files do not carry: the English title, the type, the up/down counter, the access levels, cause and directive. A row changes only by a request that the StCd Owner, the Chief Engineer and an Administrator all approve. | list | 18 of 18 |
 | `Sf57807` | Which new status code replaces which legacy number. The mapping runs from legacy to new only: the new library holds more codes than the old one, so a code without a legacy number is normal and there is no way back. | legacy_mapping | 18 of 18 |
 | `S7d5316` | Who | detail | 18 of 18 |
 | `S438073` | Windows identity | login_windows | 18 of 18 |
 | `S8b0b7c` | with a legacy number | legacy_mapping | 18 of 18 |
 | `S141dbd` | with instructions and lookup codes | new | 18 of 18 |
-| `S47e564` | Withdraw | detail | 18 of 18 |
+| `S47e564` | Withdraw | change, detail | 18 of 18 |
 | `Sa03f8a` | Withdraw selected | mine | 18 of 18 |
 | `Sa0d9d0` | Withdraw the ticked change requests? A withdrawn Draft is deleted; its number is only kept if it was already issued. | mine | 18 of 18 |
 | `S51a998` | Withdraw this change request? | detail | 18 of 18 |
+| `S30d359` | Withdraw this request? | change | 18 of 18 |
 | `S02499f` | withdrawn | st_preview | 18 of 18 |
 | `S9fa05a` | Withdrawn Codes | menu, withdrawn_codes | 18 of 18 |
 | `S87ec0b` | Withdrawn on | withdrawn_codes | 18 of 18 |
 | `Sf0c3cf` | without a legacy number | st_preview | 18 of 18 |
 | `Sbf45e2` | Work on many codes at once without weakening a step: every code still gets its own checks, its own audit entry and, for decisions, your password. A decision on more than %(above)s codes needs a sample inspection first: %(percent)s percent of the batch, at least %(minimum)s codes, spread over the subgroups. One defect in the sample stops the decision. | workbench | 18 of 18 |
 | `S93ef7c` | Workbench | detail, workbench | 18 of 18 |
+| `S09efdf` | Workbook (.xlsx) | upload | 18 of 18 |
 | `Sd7a484` | Workflow | menu | 18 of 18 |
 | `S57dda3` | Working-Set Export | export_center | 18 of 18 |
 | `S9ddad9` | would be created | dry_run | 18 of 18 |
@@ -25165,6 +26302,7 @@ Every string of the interface with the templates that use it. A native speaker a
 | `Sd54517` | You cannot delete your own account. | message: user_service, user_detail | 18 of 18 |
 | `S191b73` | You have no change requests yet. | mine | 18 of 18 |
 | `Sa94065` | You have no notices. | notifications | 18 of 18 |
+| `S88c173` | You made this request; another person must decide. | change | 18 of 18 |
 | `S23b0c3` | You sign in with Windows; your password is managed there. | account_settings | 18 of 18 |
 | `S4ab291` | Your account | account_settings | 18 of 18 |
 | `Se146d2` | Your account is not active. | message: auth_service | 18 of 18 |
@@ -25173,6 +26311,8 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S0b6c72` | Your entry | form | 18 of 18 |
 | `S863fd0` | Your own proposal: another person approves it. | language | 18 of 18 |
 | `S26d745` | Your password | user_detail, withdrawn_codes | 18 of 18 |
+| `S04e02f` | Your role has decided already. | change | 18 of 18 |
+| `S6c1d08` | Your role may not propose a change of the mapping. | message: mapping_service | 18 of 18 |
 | `S9ebce6` | Zero Load Operation | status code fields | 18 of 18 |
 | `S20cb4c` | ZIP with manifest | detail, export_center | 18 of 18 |
 

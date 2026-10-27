@@ -141,11 +141,13 @@ def test_the_audit_catalogue_lists_every_code_the_application_can_write():
         "BULK_EDIT",
         "BULK_SUBMIT",
         "BULK_DOMAIN_SIGNOFF",
+        "MAPPING_APPROVAL",
+        "MAPPING_REJECTION",
     }
     documented = set(re.findall(r"`([A-Z][A-Z_]{3,})`", _text(DOCS / "12-audit-compliance.md")))
     assert emitted - documented == set()
-    assert "Ninety-three action codes" in _text(DOCS / "22-software-description.md")
-    assert len(emitted) == 93
+    assert "One hundred and one action codes" in _text(DOCS / "22-software-description.md")
+    assert len(emitted) == 101
 
 
 # ------------------------------------------------------------------ requirement ids

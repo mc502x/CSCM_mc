@@ -1,0 +1,100 @@
+{% extends "base.html" %}
+{% block title %}{% if model %}StCd-{{ '%05d' % model.new_number }}{% else %}{{ _('New row') }}{% endif %} — {{ _('Mapping') }} — CSCM Tool{% endblock %}
+{% block content %}
+{% set badge = {'PROPOSED': 'DRAFT', 'FROM_PROGRAM': 'REVIEW', 'APPROVED': 'APPROVED', 'ISSUED': 'RELEASED', 'REJECTED': 'DEPRECATED'} %}
+{% set editable = (model is none) or can_request %}
+<div class="page-header">
+  <h1>{% if model %}StCd-{{ '%05d' % model.new_number }} <span class="badge badge--{{ badge[model.status] }}">{{ model.status }}</span>{% else %}{{ _('New row') }}{% endif %}</h1>
+  <div class="btn-row"><a class="btn" href="{{ url_for('ui.mapping_list') }}">{{ _('Mapping') }}</a></div>
+</div>
+
+<div class="card">
+  <p class="muted">{{ _('Nothing is changed here directly: the form makes a request, and the row changes after the StCd Owner, the Chief Engineer and an Administrator have approved it.') }}</p>
+  <form method="post">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    <input type="hidden" name="action" value="CHANGE">
+    <div class="form-row">
+      <div class="field">
+        <label for="family">{{ _('Controller') }}</label>
+        {% if model %}<input type="text" id="family" value="{{ row.family }}" disabled>
+        {% else %}<select id="family" name="family" required>{% for f in families %}<option value="{{ f }}"{% if row.family == f %} selected{% endif %}>{{ f }}</option>{% endfor %}</select>{% endif %}
+      </div>
+      <div class="field"><label for="legacy_number">{{ _('Legacy no.') }}</label><input type="text" inputmode="numeric" id="legacy_number" name="legacy_number" value="{{ row.legacy_number if row.legacy_number is not none else '' }}"{% if not editable %} disabled{% endif %}></div>
+      <div class="field"><label for="new_number">{{ _('New number') }}</label><input type="text" inputmode="numeric" id="new_number" name="new_number" value="{{ row.new_number or '' }}" required{% if not editable %} disabled{% endif %}></div>
+    </div>
+    <div class="field"><label for="description">{{ _('Title (English)') }}</label><input type="text" id="description" name="description" value="{{ row.description or '' }}" maxlength="120" required{% if not editable %} disabled{% endif %}></div>
+    <div class="form-row">
+      <div class="field"><label for="functional_group">{{ _('Group') }}</label><input type="text" id="functional_group" name="functional_group" value="{{ row.functional_group or '' }}" maxlength="80"{% if not editable %} disabled{% endif %}></div>
+      <div class="field"><label for="logical_node">{{ _('Node') }}</label><input type="text" id="logical_node" name="logical_node" value="{{ row.logical_node or '' }}" maxlength="12"{% if not editable %} disabled{% endif %}></div>
+      <div class="field">
+        <label for="status_type">{{ _('Type') }}</label>
+        <select id="status_type" name="status_type"{% if not editable %} disabled{% endif %}>
+          <option value="">—</option>
+          {% for t in types %}<option value="{{ t }}"{% if row.status_type == t %} selected{% endif %}>{{ t }}</option>{% endfor %}
+        </select>
+      </div>
+      <div class="field">
+        <label for="up_down_counter">{{ _('Up/down counter') }}</label>
+        <select id="up_down_counter" name="up_down_counter"{% if not editable %} disabled{% endif %}>
+          <option value="">—</option>
+          <option value="Yes"{% if row.up_down_counter == 1 %} selected{% endif %}>{{ _('Yes') }}</option>
+          <option value="No"{% if row.up_down_counter == 0 %} selected{% endif %}>{{ _('No') }}</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="field"><label for="parameter_set_delay">{{ _('Set delay (parameter)') }}</label><input type="text" id="parameter_set_delay" name="parameter_set_delay" value="{{ row.parameter_set_delay or '' }}" maxlength="40" placeholder="*5s"{% if not editable %} disabled{% endif %}></div>
+      <div class="field"><label for="parameter_reset_delay">{{ _('Reset delay (parameter)') }}</label><input type="text" id="parameter_reset_delay" name="parameter_reset_delay" value="{{ row.parameter_reset_delay or '' }}" maxlength="40" placeholder="*5s"{% if not editable %} disabled{% endif %}></div>
+    </div>
+    <fieldset class="field">
+      <legend>{{ _('Access levels') }}</legend>
+      <div class="form-row">
+        {% for name, options in levels.items() %}
+        <div class="field">
+          <label for="{{ name }}">{{ field_label(name)|capitalize }}</label>
+          <select id="{{ name }}" name="{{ name }}"{% if not editable %} disabled{% endif %}>
+            <option value="">—</option>
+            {% for label in options.values() %}<option value="{{ label }}"{% if row[name] == label %} selected{% endif %}>{{ label }}</option>{% endfor %}
+          </select>
+        </div>
+        {% endfor %}
+      </div>
+    </fieldset>
+    <div class="field"><label for="cause">{{ _('Cause') }}</label><textarea id="cause" name="cause" rows="3" maxlength="4000"{% if not editable %} disabled{% endif %}>{{ row.cause or '' }}</textarea></div>
+    <div class="field"><label for="directive">{{ _('Directive') }}</label><textarea id="directive" name="directive" rows="3" maxlength="4000"{% if not editable %} disabled{% endif %}>{{ row.directive or '' }}</textarea></div>
+    <div class="field"><label for="note">{{ _('Note') }}</label><textarea id="note" name="note" rows="2" maxlength="2000"{% if not editable %} disabled{% endif %}>{{ row.note or '' }}</textarea></div>
+    {% if model %}<div class="muted">{{ _('Source') }}: {{ model.source or '—' }} · {{ _('Version') }} {{ model.version }} · {{ model.updated_at }}</div>{% endif %}
+    {% if editable %}
+    <div class="field" style="max-width:640px;margin-top:12px">
+      <label for="reason">{{ _('Reason') }}</label>
+      <textarea id="reason" name="reason" rows="2" maxlength="2000" required></textarea>
+      <div class="hint">{{ _('The three approvers read the reason first.') }}</div>
+    </div>
+    <div class="btn-row">
+      <button class="btn btn--primary" type="submit">{% if model %}{{ _('Request this change') }}{% else %}{{ _('Request the new row') }}{% endif %}</button>
+      {% if model and model.status in ('PROPOSED', 'FROM_PROGRAM') %}<button class="btn" type="submit" name="action" value="CONFIRM" formnovalidate>{{ _('Request approval of the number') }}</button>{% endif %}
+      {% if model and model.status != 'REJECTED' and model.status != 'ISSUED' %}<button class="btn btn--outline" type="submit" name="action" value="REJECT" formnovalidate data-confirm="{{ _('Request that this number is never used?') }}">{{ _('Request rejection of the number') }}</button>{% endif %}
+    </div>
+    {% endif %}
+  </form>
+</div>
+
+{% if model %}
+<div class="card">
+  <h2>{{ _('Requests for this row') }}</h2>
+  {% if history %}
+  <table>
+    <caption class="visually-hidden">{{ _('Requests for this row') }}</caption>
+    <thead><tr><th scope="col">#</th><th scope="col">{{ _('Title') }}</th><th scope="col">{{ _('State') }}</th><th scope="col">{{ _('Requested') }}</th></tr></thead>
+    <tbody>
+      {% for c in history %}
+      <tr><td><a href="{{ url_for('ui.mapping_change', change_id=c.id) }}">{{ c.id }}</a></td><td>{{ c.title }}</td><td>{{ c.state }}</td><td>{{ c.requested_at }}</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% else %}
+  <div class="table-empty">{{ _('No request yet. The row is as it was loaded.') }}</div>
+  {% endif %}
+</div>
+{% endif %}
+{% endblock %}

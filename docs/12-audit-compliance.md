@@ -57,6 +57,11 @@ This document governs the **business audit trail** (`audit_log_entry`), the comp
 | `EXPORT_PROFILE_CREATE` / `EXPORT_PROFILE_UPDATE` *(v4)* | ExportProfile | Administrator changes an export profile (FR-100) | before/after columns, audience, language |
 | `TRANSLATION_SAVE` / `TRANSLATION_APPROVE` / `TRANSLATION_CARRY_OVER` *(v4)* | StatusCodeRevision | Translation workflow (FR-110) | language, status, translator / approver |
 | `DELEGATION_CREATE` / `DELEGATION_REVOKE` *(v4)* | Delegation | Out-of-office cover (FR-125) | delegator, delegate, role, dates |
+| `MAPPING_SEEDED` *(v4.17)* | StatusCodeMapping | The initial mapping was loaded from the workbook (FR-191) | rows, file |
+| `MAPPING_CHANGE_REQUESTED` / `MAPPING_CHANGE_WITHDRAWN` *(v4.17)* | MappingChange | A request to change the mapping was made, or withdrawn by its requester (FR-194, FR-195) | title, rows, origin |
+| `MAPPING_APPROVAL` / `MAPPING_REJECTION` *(v4.17)* | MappingChange | The StCd Owner, the Chief Engineer or an Administrator approved or rejected a request (BR-027) | role, decision, comment |
+| `MAPPING_CHANGE_APPLIED` / `MAPPING_CHANGE_REJECTED` *(v4.17)* | MappingChange | The third approval applied the request, or a rejection closed it (FR-194) | rows, or the rejecting role |
+| `MAPPING_ROW_ISSUED` *(v4.17)* | StatusCodeMapping | An import created a code with an approved number; the row is frozen (FR-192) | new number |
 | `CHANGE_SET_CREATE` / `CHANGE_SET_ADD_CR` / `CHANGE_SET_REMOVE_CR` / `CHANGE_SET_CLOSE` *(v4)* | ChangeSet | Change-set management (FR-124) | set, request, actor |
 | `FIELD_COMMENT` / `FIELD_COMMENT_RESOLVE` *(v4)* | ChangeRequest | Field-level comment and its resolution (FR-127) | field, text, author / resolver |
 | `CHECKLIST_ITEM_CREATE` / `CHECKLIST_ITEM_UPDATE` *(v4)* | ReviewChecklistItem | Administrator edits the review checklist (FR-128) | before/after |

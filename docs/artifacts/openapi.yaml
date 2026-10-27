@@ -21,6 +21,7 @@ tags:
   - name: ChangeRequests
   - name: DomainSignoffs
   - name: Import
+  - name: Mapping
   - name: Releases
   - name: Lookups
   - name: AuditLog
@@ -1636,9 +1637,6 @@ paths:
               properties:
                 files: { type: array, items: { type: string, format: binary }, description: "StCd_<n>.st files, or one .zip holding them" }
                 controller: { type: string, enum: [auto, MC, HC], default: auto, description: "auto: a file number from 10000 up is a Hub Controller program" }
-                hc_proposal: { type: integer, enum: [1, 2], default: 1, description: "Which new Hub number becomes the identifier: 1 = five-digit, 2 = inside the Main scheme" }
-                default_category: { type: string, enum: [ERROR, WARNING, INFO], description: "Optional. The files carry no status category and none is assumed (FR-189): this one is set on every Draft whose alarm type has no category of its own; a program without any category is refused when the import is confirmed" }
-                alarm_type_categories: { type: string, description: "FR-181: JSON object, alarm type -> category, e.g. {\"1\": \"ERROR\", \"2\": \"WARNING\"}; an unlisted type gets default_category" }
                 platforms: { type: string, description: "Turbine platform codes, comma separated (default: all active platforms)" }
       responses:
         '200':
@@ -1667,7 +1665,6 @@ paths:
               properties:
                 token: { type: string, description: "From the preview" }
                 selected: { type: array, nullable: true, items: { type: string }, description: "Item keys to import; omitted or null = every item that is ready" }
-                categories: { type: object, additionalProperties: { type: string, enum: [ERROR, WARNING, INFO] }, description: "FR-181: status category per item key; wins over the alarm type and the default" }
                 change_set_name: { type: string, description: "Default: ST import <job> (<date>)" }
                 async: { type: boolean, default: false, description: "Force background processing; more than IMPORT_ASYNC_ROW_THRESHOLD programs get it automatically" }
       responses:
@@ -1715,6 +1712,150 @@ paths:
       responses:
         '200': { description: File stream, content: { application/octet-stream: {} } }
         '422': { description: Invalid format }
+
+  /mapping:
+    get:
+      tags: [Mapping]
+      summary: >
+        The legacy -> new mapping (v4.17, FR-191): the rows with what the .st programs do not carry.
+        Filters `family`, `status`, `q`; 100 rows a page. Not for Viewers.
+      parameters:
+        - { name: family, in: query, schema: { type: string, enum: [MC, HC] } }
+        - { name: status, in: query, schema: { type: string, enum: [PROPOSED, FROM_PROGRAM, APPROVED, ISSUED, REJECTED] } }
+        - { name: q, in: query, schema: { type: string }, description: "Number, title, group or cause" }
+        - { name: page, in: query, schema: { type: integer, minimum: 1 } }
+      responses:
+        '200': { description: Rows, content: { application/json: { schema: { $ref: '#/components/schemas/MappingPage' } } } }
+        '422': { description: Invalid filter }
+
+  /mapping/export:
+    get:
+      tags: [Mapping]
+      summary: The mapping as a workbook with the sheets MC and HC - the layout the upload reads (FR-197)
+      parameters:
+        - { name: family, in: query, schema: { type: string, enum: [MC, HC] } }
+      responses:
+        '200': { description: XLSX workbook, content: { application/vnd.openxmlformats-officedocument.spreadsheetml.sheet: {} } }
+
+  /mapping/seed:
+    post:
+      tags: [Mapping]
+      summary: Load the initial mapping from the shipped workbook into an empty table (Administrator)
+      responses:
+        '200': { description: "Number of rows loaded; 0 when the table already had rows", content: { application/json: { schema: { type: object, properties: { loaded: { type: integer } } } } } }
+        '422': { $ref: '#/components/responses/ValidationError' }
+
+  /mapping/{mappingId}:
+    parameters: [{ name: mappingId, in: path, required: true, schema: { type: integer } }]
+    get:
+      tags: [Mapping]
+      summary: One row of the mapping
+      responses:
+        '200': { description: Row, content: { application/json: { schema: { $ref: '#/components/schemas/MappingRow' } } } }
+        '404': { description: Unknown row }
+
+  /mapping-changes:
+    get:
+      tags: [Mapping]
+      summary: The requests to change the mapping, newest first; filter `state`
+      parameters:
+        - { name: state, in: query, schema: { type: string, enum: [OPEN, APPLIED, REJECTED, WITHDRAWN] } }
+      responses:
+        '200': { description: Requests, content: { application/json: { schema: { type: object, properties: { changes: { type: array, items: { $ref: '#/components/schemas/MappingChange' } } } } } } }
+    post:
+      tags: [Mapping]
+      summary: >
+        Request a change of the mapping (FR-194, FR-195). Nothing changes before the StCd Owner, the Chief
+        Engineer and an Administrator have approved it. Every row is checked; one error refuses the whole request.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [title, reason, items]
+              properties:
+                title: { type: string, maxLength: 120 }
+                reason: { type: string, maxLength: 2000 }
+                items:
+                  type: array
+                  items:
+                    type: object
+                    required: [action]
+                    properties:
+                      action: { type: string, enum: [ADD, CHANGE, CONFIRM, REJECT], description: "ADD a new row; CHANGE fields of a row; CONFIRM = ask for the approval of the number as it is; REJECT = the number is never used" }
+                      mapping_id: { type: integer, description: "The stored row; not for ADD" }
+                      fields: { type: object, description: "The fields of the row (legacy_number, new_number, description, functional_group, logical_node, status_type, up_down_counter, parameter_set_delay, parameter_reset_delay, the eight ..._access fields, cause, directive, note, and family for ADD)" }
+      responses:
+        '201': { description: Requested, content: { application/json: { schema: { $ref: '#/components/schemas/MappingChange' } } } }
+        '403': { $ref: '#/components/responses/Forbidden' }
+        '422': { $ref: '#/components/responses/ValidationError' }
+
+  /mapping-changes/workbook:
+    post:
+      tags: [Mapping]
+      summary: >
+        Compare an uploaded workbook (sheets MC and HC) with the mapping and request one change with every
+        new and every differing row (FR-197). A wrong row refuses the whole file and names it.
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              required: [file, title, reason]
+              properties:
+                file: { type: string, format: binary }
+                title: { type: string, maxLength: 120 }
+                reason: { type: string, maxLength: 2000 }
+                confirm_unchanged: { type: string, enum: ["1"], description: "Also ask for the approval of unchanged rows that are only proposed" }
+      responses:
+        '201': { description: Requested, content: { application/json: { schema: { type: object, properties: { change: { $ref: '#/components/schemas/MappingChange' }, counts: { type: object }, unchanged: { type: integer } } } } } }
+        '422': { $ref: '#/components/responses/ValidationError' }
+
+  /mapping-changes/{changeId}:
+    parameters: [{ name: changeId, in: path, required: true, schema: { type: integer } }]
+    get:
+      tags: [Mapping]
+      summary: One request with its rows and the three approvals
+      responses:
+        '200': { description: Request, content: { application/json: { schema: { $ref: '#/components/schemas/MappingChange' } } } }
+        '404': { description: Unknown request }
+
+  /mapping-changes/{changeId}/decisions:
+    parameters: [{ name: changeId, in: path, required: true, schema: { type: integer } }]
+    post:
+      tags: [Mapping]
+      summary: >
+        Approve or reject (FR-194, BR-027). Only the StCd Owner, the Chief Engineer and an Administrator, each
+        once, none of them the requester; the password is asked again (I-17). One rejection closes the
+        request; the third approval applies it.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [decision, current_password]
+              properties:
+                decision: { type: string, enum: [APPROVE, REJECT] }
+                comment: { type: string, maxLength: 1000, description: "Required to reject" }
+                current_password: { type: string }
+      responses:
+        '200': { description: The request after the decision, content: { application/json: { schema: { $ref: '#/components/schemas/MappingChange' } } } }
+        '403': { $ref: '#/components/responses/Forbidden' }
+        '409': { description: Closed, or this role has decided already }
+        '422': { $ref: '#/components/responses/ValidationError' }
+
+  /mapping-changes/{changeId}/withdraw:
+    parameters: [{ name: changeId, in: path, required: true, schema: { type: integer } }]
+    post:
+      tags: [Mapping]
+      summary: The requester withdraws an open request
+      responses:
+        '200': { description: Withdrawn, content: { application/json: { schema: { $ref: '#/components/schemas/MappingChange' } } } }
+        '403': { $ref: '#/components/responses/Forbidden' }
+        '409': { description: Already closed }
 
   /export-profiles:
     get:
@@ -2428,6 +2569,78 @@ components:
         references: { type: object, additionalProperties: { type: integer }, description: "table.column -> rows that point at the account" }
         reference_total: { type: integer }
         deletable: { type: boolean, description: "true only when nothing but the account's own rows exist (BR-025)" }
+    MappingRow:
+      type: object
+      description: One row of the mapping - only what the .st programs do not carry (FR-191)
+      properties:
+        id: { type: integer }
+        identifier: { type: string, example: "StCd-01000" }
+        family: { type: string, enum: [MC, HC] }
+        legacy_number: { type: integer, nullable: true }
+        new_number: { type: integer }
+        description: { type: string, description: "The English title" }
+        functional_group: { type: string, nullable: true }
+        logical_node: { type: string, nullable: true }
+        status_type: { type: string, enum: [ERROR, WARNING, INFO], nullable: true }
+        up_down_counter: { type: integer, enum: [0, 1], nullable: true }
+        parameter_set_delay: { type: string, nullable: true, description: "The value of the parameter that sets the delay, e.g. *5s" }
+        parameter_reset_delay: { type: string, nullable: true }
+        development_access: { type: string, nullable: true }
+        sales_access: { type: string, nullable: true }
+        tcc_access: { type: string, nullable: true }
+        service_access: { type: string, nullable: true }
+        turbine_operator_package_access: { type: string, nullable: true }
+        grid_operator_access: { type: string, nullable: true }
+        service_partner_access: { type: string, nullable: true }
+        customer_access: { type: string, nullable: true }
+        cause: { type: string, nullable: true }
+        directive: { type: string, nullable: true }
+        note: { type: string, nullable: true }
+        status: { type: string, enum: [PROPOSED, FROM_PROGRAM, APPROVED, ISSUED, REJECTED] }
+        source: { type: string, nullable: true }
+        version: { type: integer }
+        updated_at: { type: string }
+    MappingPage:
+      type: object
+      properties:
+        summary: { type: object }
+        total: { type: integer }
+        page: { type: integer }
+        rows: { type: array, items: { $ref: '#/components/schemas/MappingRow' } }
+    MappingChange:
+      type: object
+      properties:
+        id: { type: integer }
+        title: { type: string }
+        reason: { type: string }
+        origin: { type: string, enum: [FORM, WORKBOOK, SELECTION] }
+        state: { type: string, enum: [OPEN, APPLIED, REJECTED, WITHDRAWN] }
+        requested_by: { type: string }
+        requested_at: { type: string }
+        closed_at: { type: string, nullable: true }
+        rows: { type: integer }
+        approvals:
+          type: array
+          description: Always three entries, one per role; decision is null while the role has not decided
+          items:
+            type: object
+            properties:
+              role: { type: string, enum: [STCD_OWNER, CHIEF_ENGINEER, ADMINISTRATOR] }
+              decision: { type: string, enum: [APPROVE, REJECT], nullable: true }
+              by: { type: string, nullable: true }
+              at: { type: string, nullable: true }
+              comment: { type: string, nullable: true }
+        items:
+          type: array
+          description: Only in the detail and after a request or a decision
+          items:
+            type: object
+            properties:
+              action: { type: string, enum: [ADD, CHANGE, CONFIRM, REJECT] }
+              mapping_id: { type: integer, nullable: true }
+              new_number: { type: integer }
+              changed_fields: { type: array, items: { type: string } }
+              after: { type: object }
     ImportJob:
       type: object
       properties:

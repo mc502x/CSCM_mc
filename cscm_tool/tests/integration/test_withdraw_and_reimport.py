@@ -31,6 +31,7 @@ from tests.helpers import (
     valid_payload,
 )
 
+pytestmark = pytest.mark.usefixtures("st_mapping")
 FIXTURES = Path(__file__).resolve().parents[1] / "fixtures" / "st"
 
 

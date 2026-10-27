@@ -33,6 +33,12 @@ from app.models.lookup import (  # noqa: F401
     LookupTurbinePlatform,
     Role,
 )
+from app.models.mapping import (  # noqa: F401
+    MappingApproval,
+    MappingChange,
+    MappingChangeItem,
+    StatusCodeMapping,
+)
 from app.models.operations import (  # noqa: F401
     ApiToken,
     AppSetting,

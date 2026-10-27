@@ -125,6 +125,8 @@ Invoke-Step "flask db upgrade (a backup of an existing database is taken first)"
         try { Invoke-Flask @("backup-db") } catch { Write-Warning "pre-upgrade backup failed: $_" }
     }
     Invoke-Flask @("db", "upgrade")
+    # the initial legacy -> new mapping, only into an empty table (FR-191)
+    try { Invoke-Flask @("mapping-seed") } catch { Write-Warning "the mapping was not loaded; an Administrator can load it from the Mapping page: $_" }
     # tell the StCd Owner what this version changed in the interface text or the nomenclature (FR-178)
     try { Invoke-Flask @("translation-impact") } catch { Write-Warning "translation-impact failed: $_" }
 }

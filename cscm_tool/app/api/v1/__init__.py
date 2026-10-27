@@ -15,6 +15,7 @@ from app.api.v1 import (  # noqa: E402,F401
     health_routes,
     import_routes,
     lookup_routes,
+    mapping_routes,
     operations_routes,
     package_routes,
     publication_routes,

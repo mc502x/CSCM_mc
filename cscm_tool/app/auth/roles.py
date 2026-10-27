@@ -9,8 +9,10 @@ change which roles" (BR-024) and "how is a role drawn".
 * **ADMINISTRATOR** - level 100, red. Creates users, assigns every role, owns the lookups and
   settings, builds and publishes Releases.
 * **STCD_OWNER** - level 80. Owns the status code library: reads everything and may change the role
-  of a user between VIEWER, ENGINEER and REVIEWER. Never creates users and has no say in
-  approvals, so ownership and sign-off stay with different people.
+  of a user between VIEWER, ENGINEER and REVIEWER. Never creates users and has no say in the
+  approval of status codes, so ownership and sign-off stay with different people - with one
+  exception: a change of the legacy -> new mapping needs the approval of the StCd Owner, the
+  Chief Engineer and an Administrator (BR-027).
 * **CHIEF_ENGINEER** - level 60. The final approval.
 * **REVIEWER** - level 40. Review sign-off.
 * **ENGINEER** - level 30. Writes status codes.

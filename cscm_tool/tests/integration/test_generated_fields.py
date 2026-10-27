@@ -21,6 +21,7 @@ from app.models.status_code import StatusCode, StatusCodeRevision
 from app.services import st_import_service
 from tests.helpers import decide, domain_sign, login_as, make_cast, submit, valid_payload
 
+pytestmark = pytest.mark.usefixtures("st_mapping")
 FIXTURES = Path(__file__).resolve().parents[1] / "fixtures" / "st"
 
 

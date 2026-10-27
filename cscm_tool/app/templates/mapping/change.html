@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% from "_macros.html" import field_diff, password_field %}
+{% block title %}{{ _('Mapping change') }} {{ change.id }} — CSCM Tool{% endblock %}
+{% block content %}
+<div class="page-header">
+  <h1>{{ change.title }} <span class="chip">{{ change.state }}</span></h1>
+  <div class="btn-row">
+    <a class="btn" href="{{ url_for('ui.mapping_changes') }}">{{ _('Mapping changes') }}</a>
+    {% if can_withdraw %}
+    <form method="post" action="{{ url_for('ui.mapping_withdraw', change_id=change.id) }}" class="inline-form" data-confirm="{{ _('Withdraw this request?') }}"><input type="hidden" name="csrf_token" value="{{ csrf_token() }}"><button class="btn btn--outline" type="submit">{{ _('Withdraw') }}</button></form>
+    {% endif %}
+  </div>
+</div>
+
+<div class="card">
+  <p>{{ _('Requested by') }} <strong>{{ change.requester.full_name }}</strong> · {{ change.requested_at }} · {{ change.items|length }} {{ _('rows') }}</p>
+  <p><strong>{{ _('Reason') }}:</strong> {{ change.reason }}</p>
+  {% if stale %}<div class="flash flash--error" role="alert">{{ _('These rows changed after the request was made; it cannot be applied. Withdraw it and make it again:') }} {{ stale[:10]|join(', ') }}</div>{% endif %}
+</div>
+
+<div class="card">
+  <h2>{{ _('Approvals') }}</h2>
+  <p class="muted">{{ _('All three, each by a different person who did not make the request.') }}</p>
+  <div class="form-row">
+    {% for role, a in slots.items() %}
+    <div class="field">
+      <strong>{{ role_label(role) }}</strong>
+      {% if a %}
+      <div>{{ a.decision }} · {{ a.user.full_name }}</div>
+      <div class="muted">{{ a.decided_at }}</div>
+      {% if a.comment %}<div>{{ a.comment }}</div>{% endif %}
+      {% else %}
+      <div class="muted">{{ _('waiting') }}</div>
+      {% endif %}
+    </div>
+    {% endfor %}
+  </div>
+  {% if can_decide %}
+  <form method="post" action="{{ url_for('ui.mapping_decide', change_id=change.id) }}" style="max-width:560px;margin-top:12px">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    <div class="field"><label for="comment">{{ _('Comment (required to reject)') }}</label><textarea id="comment" name="comment" rows="2" maxlength="1000"></textarea></div>
+    {{ password_field('current_password') }}
+    <div class="btn-row">
+      <button class="btn btn--primary" type="submit" name="decision" value="APPROVE">{{ _('Approve') }}</button>
+      <button class="btn btn--outline" type="submit" name="decision" value="REJECT">{{ _('Reject') }}</button>
+    </div>
+  </form>
+  {% elif why_not == 'own' %}
+  <div class="muted">{{ _('You made this request; another person must decide.') }}</div>
+  {% elif why_not == 'decided' %}
+  <div class="muted">{{ _('Your role has decided already.') }}</div>
+  {% endif %}
+</div>
+
+<div class="card">
+  <h2>{{ _('Rows') }}</h2>
+  <table>
+    <caption class="visually-hidden">{{ _('Rows') }}</caption>
+    <thead><tr><th scope="col">{{ _('Action') }}</th><th scope="col">{{ _('New identifier') }}</th><th scope="col">{{ _('Title') }}</th><th scope="col">{{ _('Changes') }}</th></tr></thead>
+    <tbody>
+      {% for e in entries %}
+      <tr>
+        <td>{{ e.item.action }}</td>
+        <td>{% if e.item.mapping_id %}<a href="{{ url_for('ui.mapping_row', mapping_id=e.item.mapping_id) }}">StCd-{{ '%05d' % e.after.new_number }}</a>{% else %}StCd-{{ '%05d' % e.after.new_number }}{% endif %}</td>
+        <td>{{ e.after.description }}</td>
+        <td>{% if e.item.action == 'ADD' %}{{ e.after.family }} · {{ e.after.status_type or '—' }} · {{ e.after.functional_group or '—' }}{% elif e.item.action in ('CONFIRM', 'REJECT') %}{{ e.item.action }}{% else %}{{ field_diff(e.changes) }}{% endif %}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% if more %}<div class="muted">{{ _('and more') }} ({{ more }})</div>{% endif %}
+</div>
+{% endblock %}

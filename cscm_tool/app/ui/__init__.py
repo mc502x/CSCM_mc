@@ -164,6 +164,7 @@ from app.ui import (  # noqa: E402,F401
     governance_views,
     import_views,
     insight_views,
+    mapping_views,
     publication_views,
     release_views,
     status_code_views,

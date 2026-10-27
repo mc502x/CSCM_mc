@@ -20,12 +20,20 @@ from app.models.change_request import ChangeRequest, ChangeSet
 from app.models.import_job import ImportJob, ImportSourceItem
 from app.models.status_code import StatusCode
 from app.services.numbering_service import NumberingService
-from tests.helpers import cr_id_for_revision, domain_sign, login_as, make_cast, submit
+from tests.helpers import (
+    add_mapping_row,
+    cr_id_for_revision,
+    domain_sign,
+    login_as,
+    make_cast,
+    submit,
+)
 
+pytestmark = pytest.mark.usefixtures("st_mapping")
 FIXTURES = Path(__file__).resolve().parents[1] / "fixtures" / "st"
 MC_FILES = ["StCd_1000.st", "StCd_1001.st", "StCd_1002.st"]
 HC_FILES = ["StCd_14000.st", "StCd_14005.st", "StCd_14025.st"]
-WORKBOOK = Path(__file__).resolve().parents[3] / "docs" / "artifacts" / "hc-numbering-proposal.xlsx"
+SEED_WORKBOOK = Path(__file__).resolve().parents[2] / "seed_data" / "legacy_mapping.xlsx"
 
 
 def _read(name: str) -> bytes:
@@ -79,26 +87,25 @@ def test_the_reader_takes_the_attributes_of_a_main_controller_program():
     assert len(code.user_groups) == 15
 
 
-def test_a_hub_program_keeps_its_legacy_number_and_gets_the_new_one_from_the_table():
-    mapping = stcd.load_bundled_mapping()
-    for proposal, expected in ((1, "StCd-12501"), (2, None)):
-        (code,), _ = stcd.parse_bytes(_read("StCd_14000.st"), "StCd_14000.st", hc=True)
-        stcd.apply_mapping(code, mapping, proposal)
-        assert code.legacy_number == 14000 and code.controller == "HC"
-        assert code.identifier == (expected or f"StCd-{mapping[14000][1]:05d}")
+def test_a_hub_program_keeps_its_legacy_number_and_gets_the_new_one_from_the_mapping():
+    (code,), _ = stcd.parse_bytes(_read("StCd_14000.st"), "StCd_14000.st", hc=True)
+    stcd.apply_mapping(code, {14000: 12501})
+    assert code.legacy_number == 14000 and code.controller == "HC"
+    assert code.identifier == "StCd-12501"
     # a variable instead of a time literal is kept as text, with no milliseconds
     assert code.set_delay == "StCd14000SetDelayGpTi" and code.set_delay_ms is None
 
 
-def test_a_legacy_hub_number_missing_from_the_table_leaves_no_identifier():
+def test_a_legacy_hub_number_missing_from_the_mapping_leaves_no_identifier():
     (code,), _ = stcd.parse_bytes(_read("StCd_14000.st"), "x.st", hc=True)
-    stcd.apply_mapping(code, {}, 1)
-    assert code.identifier == "" and "not in the mapping table" in code.warnings[0]
+    stcd.apply_mapping(code, {})
+    assert code.identifier == "" and "not in the mapping" in code.warnings[0]
 
 
-@pytest.mark.skipif(not WORKBOOK.exists(), reason="numbering workbook not in this checkout")
-def test_the_bundled_hub_table_equals_the_workbook():
-    assert stcd.load_bundled_mapping() == stcd.load_mapping(WORKBOOK)
+def test_the_command_line_reads_the_hub_numbers_of_the_seed_workbook():
+    hub = stcd.load_mapping(SEED_WORKBOOK)
+    assert hub and all(isinstance(k, int) and isinstance(v, int) for k, v in hub.items())
+    assert len(set(hub.values())) == len(hub)  # one new number per legacy number
 
 
 def test_a_file_without_programs_or_too_large_is_refused_cleanly():
@@ -128,17 +135,22 @@ def test_the_preview_lists_every_program_and_creates_nothing(app, client, engine
         assert db.session.query(ImportJob).count() == 0
 
 
-def test_proposal_two_places_the_hub_programs_inside_the_main_scheme(client, engineer):
-    items = _by_program(_preview(client, HC_FILES, hc_proposal="2").get_json())
-    mapping = stcd.load_bundled_mapping()
-    assert items[("HC", 14000)]["identifier"] == f"StCd-{mapping[14000][1]:05d}"
+def test_the_new_number_of_a_hub_program_is_the_one_of_its_mapping_row(app, client, engineer):
+    from app.models.mapping import StatusCodeMapping
+
+    with app.app_context():
+        row = db.session.query(StatusCodeMapping).filter_by(legacy_number=14000).one()
+        row.new_number = 12599  # the owner moved the row inside the Hub range
+        db.session.commit()
+    items = _by_program(_preview(client, HC_FILES).get_json())
+    assert items[("HC", 14000)]["identifier"] == "StCd-12599"
 
 
 def test_the_controller_can_be_forced_for_a_file(client, engineer):
     forced = _preview(client, ["StCd_1000.st"], controller="HC").get_json()
     item = forced["items"][0]
     assert item["controller"] == "HC" and item["state"] == "blocked"
-    assert "mapping table" in item["issues"][0]["message"]
+    assert "not in the mapping" in item["issues"][0]["message"]
 
 
 def test_a_zip_and_loose_files_are_read_alike_and_other_files_are_noted(client, engineer):
@@ -228,13 +240,16 @@ def job_dir(app, job_id):
     return Path(app.instance_path) / "imports" / str(job_id)
 
 
-def test_the_draft_carries_the_attributes_of_the_program(app, client, engineer):
-    preview = _preview(client, ["StCd_1000.st"], default_category="WARNING").get_json()
+def test_the_draft_carries_the_attributes_of_the_program_and_the_mapping(app, client, engineer):
+    preview = _preview(client, ["StCd_1000.st"]).get_json()
     _confirm(client, preview["token"])
     with app.app_context():
         revision = db.session.query(StatusCode).one().revisions[0]
-        assert revision.title == "Umrichter nicht bereit"
-        assert revision.status_category == "WARNING" and revision.available_group == 20
+        assert revision.title == "Converter not ready"  # the English title of the mapping
+        assert "Umrichter nicht bereit" in revision.description  # the name in the program
+        assert (
+            revision.status_category == "ERROR" and revision.available_group == 20
+        )  # type: mapping
         assert (revision.set_delay, revision.reset_delay) == ("10ms", "2min")
         assert revision.number_of_times_repeated == 4 and revision.repeated_over_the_course == "1d"
         assert revision.status_code_for_repeated_error == 9085
@@ -289,6 +304,8 @@ def test_a_used_prg_idx_is_a_warning_and_is_not_stored_twice(app, client, engine
         "StCdArUi[Idx] := 1000", "StCdArUi[Idx] := 1050"
     )
     text = text.replace("StCd: 3000,", "StCd: 3999,")
+    with app.app_context():
+        add_mapping_row(1050, legacy_number=3999, description="Converter not ready too")
     again = client.post(
         "/api/v1/imports/st/preview",
         data={

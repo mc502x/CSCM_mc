@@ -1,6 +1,6 @@
 # 09. API Specification — CSCM Tool
 
-Full machine-readable contract: [artifacts/openapi.yaml](artifacts/openapi.yaml) (OpenAPI 3.0.3, **v4.0.0**, 161 operations — field set corrected 2026-09-17 against a real export of the live status code library, extended 2026-10-23 by the improvement pack). A test (`test_openapi_conformance`) fails when the code and this contract differ, and the endpoint table in §7 is generated from the code (`scripts/gen_api_summary.py`). This document explains the conventions that apply across every endpoint.
+Full machine-readable contract: [artifacts/openapi.yaml](artifacts/openapi.yaml) (OpenAPI 3.0.3, **v4.0.0**, 171 operations — field set corrected 2026-09-17 against a real export of the live status code library, extended 2026-10-23 by the improvement pack). A test (`test_openapi_conformance`) fails when the code and this contract differ, and the endpoint table in §7 is generated from the code (`scripts/gen_api_summary.py`). This document explains the conventions that apply across every endpoint.
 
 ## 1. Versioning
 
@@ -197,6 +197,16 @@ Generated from `docs/artifacts/openapi.yaml` and the access declared on each rou
 | GET | `/status-codes/{statusCodeId}/import-source` | Where an imported status code came from - file, SHA-256, program and every attribute parsed from it, including those without a catalogue... | Working roles (not Viewer) |
 | GET | `/legacy-mapping` | Legacy number -> new identifier for every code that carries a legacy number (v4.2) | Working roles (not Viewer) |
 | GET | `/legacy-mapping/export` | The legacy -> new mapping as CSV (default) or XLSX, with the filters of the list (v4.2) | Working roles (not Viewer) |
+| GET | `/mapping` | The legacy -> new mapping (v4.17, FR-191): the rows with what the .st programs do not carry | Working roles (not Viewer) and StCd Owner (read only) |
+| GET | `/mapping/export` | The mapping as a workbook with the sheets MC and HC - the layout the upload reads (FR-197) | Working roles (not Viewer) and StCd Owner (read only) |
+| POST | `/mapping/seed` | Load the initial mapping from the shipped workbook into an empty table (Administrator) | Administrator |
+| GET | `/mapping/{mappingId}` | One row of the mapping | Working roles (not Viewer) and StCd Owner (read only) |
+| GET | `/mapping-changes` | The requests to change the mapping, newest first; filter `state` | Working roles (not Viewer) and StCd Owner (read only) |
+| POST | `/mapping-changes` | Request a change of the mapping (FR-194, FR-195) | Working roles (not Viewer) and StCd Owner (read only) |
+| POST | `/mapping-changes/workbook` | Compare an uploaded workbook (sheets MC and HC) with the mapping and request one change with every new and every differing row (FR-197) | Working roles (not Viewer) and StCd Owner (read only) |
+| GET | `/mapping-changes/{changeId}` | One request with its rows and the three approvals | Working roles (not Viewer) and StCd Owner (read only) |
+| POST | `/mapping-changes/{changeId}/decisions` | Approve or reject (FR-194, BR-027) | Administrator, StCd Owner, Chief Engineer |
+| POST | `/mapping-changes/{changeId}/withdraw` | The requester withdraws an open request | Working roles (not Viewer) and StCd Owner (read only) |
 | GET | `/export-profiles` | Export profiles - Administrator-managed column sets (I-02). include_inactive=true is honoured for Administrators | Any signed-in user |
 | POST | `/export-profiles` | Create an export profile (Administrator) | Administrator |
 | PATCH | `/export-profiles/{profileId}` | Change or deactivate an export profile (Administrator) | Administrator |

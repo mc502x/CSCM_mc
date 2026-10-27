@@ -29,38 +29,7 @@
         <option value="HC">{{ _('Hub Controller (legacy numbers, mapped to the new ones)') }}</option>
       </select>
     </div>
-    <div class="field">
-      <label for="hc_proposal">{{ _('New number of Hub Controller programs') }}</label>
-      <select id="hc_proposal" name="hc_proposal">
-        <option value="1">{{ _('Proposal 1: five-digit numbers (11000 and up)') }}</option>
-        <option value="2">{{ _('Proposal 2: inside the Main Controller scheme') }}</option>
-      </select>
-    </div>
-    <div class="field">
-      <label for="default_category">{{ _('Status category of the new codes') }}</label>
-      <select id="default_category" name="default_category">
-        <option value="" selected>({{ _('choose') }})</option>
-        <option value="ERROR">ERROR</option>
-        <option value="WARNING">WARNING</option>
-        <option value="INFO">INFO</option>
-      </select>
-      <div class="hint">{{ _('The program files do not carry a category and none is assumed: choose one here, by alarm type below, or for each program in the preview. A program without a category is not imported.') }}</div>
-    </div>
-    <fieldset class="field">
-      <legend>{{ _('Status category by alarm type (optional)') }}</legend>
-      {% for n in (1, 2, 3) %}
-      <div class="form-row">
-        <label for="alarm_type_{{ n }}">{{ _('Alarm type') }} {{ n }}</label>
-        <select id="alarm_type_{{ n }}" name="alarm_type_{{ n }}">
-          <option value="">({{ _('as above') }})</option>
-          <option value="ERROR">ERROR</option>
-          <option value="WARNING">WARNING</option>
-          <option value="INFO">INFO</option>
-        </select>
-      </div>
-      {% endfor %}
-      <div class="hint">{{ _('Every program names an alarm type. A type left at "as above" gets the category chosen above; the next page lets you set the category of single programs or of all ticked ones.') }}</div>
-    </fieldset>
+    <div class="hint" style="margin-bottom:12px">{{ _('The title, the type and the access levels of every program come from the mapping, never from the files. A program whose number is not in the mapping is blocked.') }} <a href="{{ url_for('ui.mapping_list') }}">{{ _('Mapping') }}</a></div>
     <fieldset class="field">
       <legend>{{ _('Turbine platforms') }}</legend>
       {% for p in platforms %}

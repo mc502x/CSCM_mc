@@ -4,7 +4,7 @@ Conventions: **Required** = enforced not-null at both UI and API before the enti
 
 **Resolved in v4 — software version (decision D-01):** the legacy tool scopes the whole table by a software version (`SW_1_1_1_4.2MW`). The governed model is now the ordered vocabulary `lookup_controller_software_version`, an inclusive from/to **range per revision** (`applies_from_version_id`, `applies_to_version_id`, either end open) and the set of versions a **Release targets** (`release_target_version`); see §2 and §6. The free-text `software_version` column stays for legacy rows and is informational only.
 
-**v4 (2026-10-23):** the tables and fields added by the improvement pack are marked *(v4)*; §13 lists every new table. `docs/artifacts/schema.sql` is the executable definition (61 tables, 14 triggers) and a test fails if a fresh database and an upgraded one differ.
+**v4 (2026-10-23):** the tables and fields added by the improvement pack are marked *(v4)*; §13 lists every new table. `docs/artifacts/schema.sql` is the executable definition (65 tables, 14 triggers) and a test fails if a fresh database and an upgraded one differ.
 
 **v4.1 (2026-10-23) — fields read from the generated controller programs:** 14 generated `StCd_*.st` programs (Main Controller 1000–1010, Hub Controller 14000, 14005 and 14025) were compared field by field with the status code workbooks (Main and Hub, Customer and Service exports, the 4XM "Rise0B" workbook and the Hub numbering workbook). Everything the workbooks contain matched the generated programs for all 14 codes, with one exception (`ROTOR_BREAK`, §2f). They also showed what the workbooks do not carry: the block identification `PrgIdx_GUi` (§1), further subsystem programs and Hub programs (§2c.1), the operating-mode mask and other per-code parameters (§2f), and the numeric user-group levels (§2d). Fields added from this comparison are marked *(v4.1)*; migration `c9e2a4b6d815` brings an older database up to them, and the existing library has no values for them until they are imported from the generated programs. **Since v4.9 the application stores, shows, copies, compares and exports all of them and the program import fills them (FR-168); the controller rule of §2f is enforced for the new fields.**
 
@@ -231,6 +231,23 @@ Shape as in the prior revision (05-governance-handbook.md §7–§8 for the dual
 
 **Governance note:** every row that successfully validates becomes a normal Draft `StatusCode`/`StatusCodeRevision`/`ChangeRequest` triple, exactly as if an Engineer had typed it in by hand — it still must pass Cross-Domain Sign-Off (if applicable), both Review sign-offs, and Chief Engineer approval before it can be Released. Import is a faster data-entry path, not a governance bypass (confirmed 2026-09-17; see 05-governance-handbook.md §6b).
 
+## 5b. The mapping and its approvals *(v4.17)*
+
+Docs: 03-srs.md FR-191 … FR-198, BR-027. The tables are in `docs/artifacts/schema.sql` (v4.17) and `app/models/mapping.py`; the logic is `app/services/mapping_service.py`.
+
+| Table | Content |
+|---|---|
+| `status_code_mapping` | One row per **new number** (`new_number` unique): `family` (`MC`/`HC`), `legacy_number` (unique per family, empty for a code without a predecessor), `description` (the English title, 1…120), `functional_group`, `logical_node`, `status_type` (`ERROR`/`WARNING`/`INFO`), `up_down_counter`, `parameter_set_delay` / `parameter_reset_delay` (a time with unit, `*` marks a parameter value: `*5s`), the eight `..._access` columns (the label of the named level), `cause`, `directive`, `note`, `status`, `source`, `version` (+1 at every applied change), `created_at`, `updated_at` |
+| `mapping_change` | A request: `title`, `reason`, `origin` (`FORM`, `WORKBOOK`, `SELECTION`), `requested_by`, `requested_at`, `state` (`OPEN`, `APPLIED`, `REJECTED`, `WITHDRAWN`), `closed_at` |
+| `mapping_change_item` | One row of a request: `action` (`ADD`, `CHANGE`, `CONFIRM`, `REJECT`), `mapping_id` (none for ADD), `base_version` (the version the request was made on), `before_json`, `after_json` |
+| `mapping_approval` | The decisions: `role_code` (`STCD_OWNER`, `CHIEF_ENGINEER`, `ADMINISTRATOR`), `user_id`, `decision`, `comment`, `decided_at`; unique per request and role and per request and person |
+
+**Status.** `PROPOSED` - loaded or in the plan, not approved; `FROM_PROGRAM` - the pair is carried by a generated program; `APPROVED` - the three roles approved it; `ISSUED` - a code of the catalogue carries the number (set by the import; the numbers of the row are frozen); `REJECTED` - never to be used (the row keeps its numbers, so they are not given twice).
+
+**What is not in the mapping.** Everything the programs carry: trigger snapshot, alarm, delays that are times, repeats, the subsystem programs, the numbers of the user groups, `PrgIdx_GUi`. The workbook columns for planning (priority, estimation, comment) are not carried over. The row `source` says where it came from: a workbook name and row, or `mapping change <n>`.
+
+**The workbook** (`seed_data/legacy_mapping.xlsx`, and the export): the sheets `MC` and `HC` with the columns `legacy_number`, `new_number`, `description`, `functional_group`, `logical_node`, `type`, `up_down_counter`, `parameter_set_delay`, `parameter_reset_delay`, `development`, `sales`, `tcc`, `service`, `turbine_operator_package`, `grid_operator`, `service_partner`, `customer`, `cause`, `directive`, `note`, `status`, `source`; further sheets (README, HC_groups, Glossary, Approvals, Lists) are for people.
+
 ## 5a. Status code import from generated programs *(v4.2)*
 
 Docs: 03-srs.md §1.16, 05-governance-handbook.md §6b. The reader (`app/importers/stcd.py`) scans the text of each `PROGRAM StCd_<n>`; it never runs or compiles anything.
@@ -239,7 +256,7 @@ Docs: 03-srs.md §1.16, 05-governance-handbook.md §6b. The reader (`app/importe
 
 | Program (file) | Catalogue field | Note |
 |---|---|---|
-| header `StCd: <legacy>, '<name>'` | `legacy_reference_number`, `title` | Main Controller only; a Hub program's legacy number is its file number |
+| header `StCd: <legacy>, '<name>'` | `legacy_reference_number`; the name goes into the comment | Main Controller only; a Hub program's legacy number is its file number. The **title** is the English description of the mapping row (§5b); the German name is compared with it through the glossary (FR-193) |
 | `StCdArUi[Idx]` | `reserved_identifier` | Main: the current number |
 | `AvailabilityGroupArUs` | `available_group` | required |
 | `AlarmArBo` | `alarm_flag` | |
@@ -250,11 +267,11 @@ Docs: 03-srs.md §1.16, 05-governance-handbook.md §6b. The reader (`app/importe
 | other StCd programs named in the set condition | `related_status_codes` | Hub: legacy numbers translated to new ones |
 | `PrgIdx_GUi` | `prg_idx` | stored only when free and 1–65535, otherwise a warning |
 | everything else (user-group levels, remaining subsystem programs, operating-mode mask, …) | `import_source_item.parsed_json` | kept for the catalogue columns that wire them later (21-improvement-ideas.md) |
-| *not in the file* | `status_category` (the uploader's choice - a default, per alarm type or per program; **none is assumed**, a program without one is not imported), `description` (generated: file, legacy number, the list of what the program does not give, set condition), turbine platforms (the uploader's choice), the eight audience-access values (*v4.16.1*: proposed from the user-group numbers of the program where exactly one named level carries exactly those numbers, FR-190; otherwise empty and listed in the comment) | |
+| *not in the file* | `title`, `status_category` (the type), `up_down_counter`, the eight audience-access values, `remedy_text` (cause and directive) and the value of a delay that is set by a parameter: **from the mapping row (§5b), nowhere else** (FR-192); a program without a row, or with a row without a type, is blocked. `description` (generated: file, legacy number, name in the program, where the mapping and the program differ, the list of what neither gives, set condition), turbine platforms (the uploader's choice) | |
 
 **Provenance.** `import_source_item` holds one row per imported program: the file name, its SHA-256, program number and line, the controller and every parsed attribute as JSON. The files themselves are kept under `instance/imports/<job>/`.
 
-**Legacy → new mapping.** There is no table of its own: the mapping is `status_code.legacy_reference_number` read with the Functional System Group's `controller_type` (`MAIN` → Main Controller, `HUB` → Hub Controller) and the identifier the code holds (`status_code_identifier`, or `reserved_identifier` while it is a Draft). A legacy number is unique per controller (the import blocks a second code with the same one). The direction is legacy → new only: the new library holds more codes than the old one, so a code without a legacy number is normal ("n/a") and nothing maps back (FR-048u).
+**Legacy → new mapping.** Since v4.17 the mapping has tables of its own (§5b) and is the source of the pair; the catalogue view *Legacy mapping* is still the pair as the codes of the catalogue hold it: `status_code.legacy_reference_number` read with the Functional System Group's `controller_type` (`MAIN` → Main Controller, `HUB` → Hub Controller) and the identifier the code holds (`status_code_identifier`, or `reserved_identifier` while it is a Draft). A legacy number is unique per controller (the import blocks a second code with the same one). The direction is legacy → new only: the new library holds more codes than the old one, so a code without a legacy number is normal ("n/a") and nothing maps back (FR-048u).
 
 **Guards.** The service checks the reservation first; the database backs it with the unique index `ux_status_code_reserved_identifier` and the triggers `trg_identifier_matches_reservation` (a reserved code can only be issued its own number), `trg_reservation_not_issued_elsewhere` (a reservation cannot be made for an identifier already issued) and `trg_identifier_not_reserved_elsewhere` (no code can be issued a number another code reserves).
 

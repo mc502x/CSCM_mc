@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %}{{ _('Compare a workbook') }} — {{ _('Mapping') }} — CSCM Tool{% endblock %}
+{% block content %}
+<div class="page-header">
+  <h1>{{ _('Compare a workbook') }}</h1>
+  <div class="btn-row"><a class="btn" href="{{ url_for('ui.mapping_list') }}">{{ _('Mapping') }}</a></div>
+</div>
+
+{% if report %}
+<div class="card">
+  <div class="flash flash--error" role="alert"><strong>{{ _('The workbook has problems. Nothing was requested.') }}</strong></div>
+  <ul class="plain-list">
+    {% for p in report.problems[:100] %}<li>{{ p }}</li>{% endfor %}
+  </ul>
+  {% if report.problems|length > 100 %}<div class="muted">{{ _('and more') }} ({{ report.problems|length - 100 }})</div>{% endif %}
+</div>
+{% endif %}
+
+<div class="card" style="max-width:720px">
+  <p class="muted">{{ _('Upload the corrected mapping as a workbook with the sheets MC and HC (download the current one as a model). Every new row and every row that differs becomes one request; rows the workbook does not mention stay as they are. The request takes effect only after the StCd Owner, the Chief Engineer and an Administrator have approved it.') }}</p>
+  <form method="post" enctype="multipart/form-data">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    <div class="field"><label for="file">{{ _('Workbook (.xlsx)') }}</label><input type="file" id="file" name="file" accept=".xlsx" required></div>
+    <div class="field"><label for="title">{{ _('Title of the request') }}</label><input type="text" id="title" name="title" maxlength="120"></div>
+    <div class="field"><label for="reason">{{ _('Reason') }}</label><textarea id="reason" name="reason" rows="2" maxlength="2000" required></textarea></div>
+    <div class="field"><label><input type="checkbox" name="confirm_unchanged" value="1"> {{ _('Also ask for approval of the unchanged rows that are only proposed') }}</label></div>
+    <div class="btn-row">
+      <button class="btn btn--primary" type="submit">{{ _('Compare and make the request') }}</button>
+      <a class="btn" href="{{ url_for('ui.mapping_export') }}">{{ _('Download the current mapping') }}</a>
+    </div>
+  </form>
+</div>
+{% endblock %}

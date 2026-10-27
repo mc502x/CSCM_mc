@@ -27,7 +27,6 @@ by name are kept under `other`."""
 
 from __future__ import annotations
 
-import csv
 import hashlib
 import io
 import re
@@ -95,12 +94,6 @@ class StatusCode:
     file: str = ""
     line: int = 0
     prg_idx: int | None = None
-    proposal_1: int | None = None
-    proposal_2: int | None = None
-    logical_node: str = ""
-    hc_subgroup: str = ""
-    mapping_description: str = ""
-    mapping_note: str = ""
     repeat_code: int | None = None
     repeat_code_legacy: int | None = None
     max_repeats: int | None = None
@@ -329,61 +322,38 @@ def parse_bytes(
 
 
 # ------------------------------------------------------------------ legacy Hub numbers
-def load_mapping(source: Path | bytes) -> dict[int, tuple]:
-    """Legacy HC number -> (proposal 1, proposal 2, node, subgroup, description, note), from
-    the sheet "Mapping" of the numbering workbook."""
+def load_mapping(source: Path | bytes) -> dict[int, int]:
+    """Legacy HC number -> new number, from the sheet "HC" of the mapping workbook
+    (seed_data/legacy_mapping.xlsx). The application reads the mapping from its database
+    (app/services/mapping_service.py); this reader serves the command line."""
     from openpyxl import load_workbook
 
     handle = io.BytesIO(source) if isinstance(source, bytes) else source
     wb = load_workbook(handle, read_only=True, data_only=True)
     try:
-        rows = wb["Mapping"].iter_rows(min_row=2, max_col=7, values_only=True)
-        return {r[0]: r[1:] for r in rows if isinstance(r[0], int)}
+        rows = wb["HC"].iter_rows(values_only=True)
+        header = [str(c).strip() if c is not None else "" for c in next(rows)]
+        legacy, new = header.index("legacy_number"), header.index("new_number")
+        return {
+            int(r[legacy]): int(r[new])
+            for r in rows
+            if r[legacy] is not None and r[new] is not None
+        }
     finally:
         wb.close()
 
 
-BUNDLED_MAPPING = Path(__file__).resolve().parent / "data" / "hc_numbering_mapping.csv"
-
-
-def load_bundled_mapping() -> dict[int, tuple]:
-    """The same table as `load_mapping`, from the copy shipped with the application
-    (data/hc_numbering_mapping.csv; a test keeps it equal to the workbook in docs/artifacts)."""
-    mapping: dict[int, tuple] = {}
-    with BUNDLED_MAPPING.open(newline="", encoding="utf-8") as handle:
-        for row in csv.DictReader(handle):
-            mapping[int(row["legacy_number"])] = (
-                int(row["proposal_1"]),
-                int(row["proposal_2"]),
-                row["logical_node"] or None,
-                row["hc_subgroup"] or None,
-                row["description"] or None,
-                row["note"] or None,
-            )
-    return mapping
-
-
-def apply_mapping(code: StatusCode, mapping: dict[int, tuple], proposal: int) -> None:
-    """Turns the legacy number of an HC code into its new number from the mapping table. A code
-    without an entry keeps an empty identifier and a warning."""
+def apply_mapping(code: StatusCode, mapping: dict[int, int]) -> None:
+    """Turns the legacy number of an HC code into its new number. A code without an entry keeps an
+    empty identifier and a warning: a number is never given automatically."""
     legacy = code.number
     code.legacy_number = legacy
-    entry = mapping.get(legacy)
-    if entry is None:
-        code.warnings.append(f"legacy HC number {legacy} is not in the mapping table")
-        code.identifier = ""
-        return
-    (
-        code.proposal_1,
-        code.proposal_2,
-        code.logical_node,
-        code.hc_subgroup,
-        code.mapping_description,
-        code.mapping_note,
-    ) = (entry[0], entry[1], entry[2] or "", entry[3] or "", entry[4] or "", entry[5] or "")
-    new_number = code.proposal_1 if proposal == 1 else code.proposal_2
-    if not isinstance(new_number, int):
-        code.warnings.append(f"the mapping has no new number for proposal {proposal}")
+    new_number = mapping.get(legacy)
+    if new_number is None:
+        code.warnings.append(
+            f"legacy HC number {legacy} is not in the mapping; "
+            "it needs a row in the mapping (three approvals) before it can be imported"
+        )
         code.identifier = ""
         return
     code.number = new_number

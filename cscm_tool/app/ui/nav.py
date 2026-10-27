@@ -120,6 +120,19 @@ MENU: tuple[Group, ...] = (
                 "ui.legacy_mapping", "Legacy mapping", roles=WORKING, active=("ui.legacy_mapping",)
             ),
             Item(
+                "ui.mapping_list",
+                "Mapping",
+                roles=WORKING,
+                active=("ui.mapping_list", "ui.mapping_row", "ui.mapping_new", "ui.mapping_upload"),
+            ),
+            Item(
+                "ui.mapping_changes",
+                "Mapping changes",
+                roles=WORKING,
+                active=("ui.mapping_change",),
+                count="mapping_waiting",
+            ),
+            Item(
                 "ui.hub_consolidation",
                 "Hub Consolidation",
                 roles=WORKING,
@@ -284,7 +297,7 @@ def is_active(item: Item, endpoint: str) -> bool:
 
 
 # the counts that mean "something waits for you" (a group closed by the user still shows them)
-WAITING = ("review_queue", "approval_queue", "stalled", "withdrawn")
+WAITING = ("review_queue", "approval_queue", "stalled", "withdrawn", "mapping_waiting")
 
 
 def visible_menu(user, endpoint: str, flags: dict, counts: dict) -> list[dict]:
@@ -370,6 +383,10 @@ def nav_counts(user) -> dict[str, int]:
                 .scalar()
                 or 0
             )
+        if user.role_code in ("STCD_OWNER", "CHIEF_ENGINEER", "ADMINISTRATOR"):
+            from app.services.mapping_service import MappingService
+
+            counts["mapping_waiting"] = MappingService.awaiting(user)
         if user.role_code == "ADMINISTRATOR":
             from app.services.sla_service import SlaService
 

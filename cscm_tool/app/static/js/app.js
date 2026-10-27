@@ -77,15 +77,6 @@ document.addEventListener('DOMContentLoaded', function () {
       if (!window.confirm(text)) e.preventDefault();
     });
   });
-  document.querySelectorAll('button[data-bulk-category]').forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      var value = document.getElementById(btn.getAttribute('data-bulk-category')).value;
-      document.querySelectorAll('input.' + btn.getAttribute('data-rows') + ':checked').forEach(function (box) {
-        var select = box.closest('tr').querySelector('select.st-cat');
-        if (select) select.value = value;
-      });
-    });
-  });
   document.querySelectorAll('tr[data-href]').forEach(function (row) {
     row.addEventListener('click', function (e) {
       if (e.target.closest('input, button, label, select, a')) return;

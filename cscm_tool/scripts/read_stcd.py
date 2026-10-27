@@ -2,7 +2,7 @@
 
     python scripts/read_stcd.py mc_dir/ --hc hc_dir/ --format xlsx -o stcd.xlsx
     python scripts/read_stcd.py StCd_1000.st --hc StCd_14000.st --format json -o stcd.json
-    python scripts/read_stcd.py --hc hc_dir/ --controller hc --proposal 1
+    python scripts/read_stcd.py --hc hc_dir/ --controller hc
 
 Each file is one `PROGRAM StCd_<n>` written by StatuscodeGeneratorEuros. Per program the script
 reads:
@@ -18,9 +18,8 @@ reads:
 
 Main controller (MC) numbers in the files are the current ones; the old number is only in the
 header. The numbers in Hub controller (HC) files are the legacy HC numbers: they are looked up in
-the Mapping sheet of docs/artifacts/hc-numbering-proposal.xlsx (`--mapping`), and `--proposal`
-selects which new number becomes the identifier (1 = five-digit, 2 = inside the MC scheme, the
-concept of docs/25-hc-integration-concept.md). Paths given with `--hc` are HC; the other paths
+the sheet HC of the mapping workbook seed_data/legacy_mapping.xlsx (`--mapping`; the application
+keeps the mapping in its database, docs/03-srs.md FR-191). Paths given with `--hc` are HC; the other paths
 count as HC only from `--hc-from` upwards, which cannot tell a four-digit legacy number from an
 MC one, so pass HC files with `--hc`. Files are read as UTF-8, then CP1252 (the generator's
 encoding). Directories are searched recursively for SUFFIXES. Attributes the script does not
@@ -52,7 +51,7 @@ from app.importers.stcd import (  # noqa: E402
     parse_text,
 )
 
-MAPPING = Path(__file__).resolve().parents[2] / "docs" / "artifacts" / "hc-numbering-proposal.xlsx"
+MAPPING = Path(__file__).resolve().parents[1] / "seed_data" / "legacy_mapping.xlsx"
 
 
 def _read(path: Path) -> str:
@@ -63,15 +62,28 @@ def _files(paths: list[Path]) -> list[Path]:
     out: list[Path] = []
     for path in paths:
         if path.is_dir():
-            out += sorted(p for p in path.rglob("*") if p.is_file() and p.suffix.lower() in SUFFIXES)
+            out += sorted(
+                p for p in path.rglob("*") if p.is_file() and p.suffix.lower() in SUFFIXES
+            )
         else:
             out.append(path)
     return out
 
 
-_FIRST = ["identifier", "controller", "legacy_number", "proposal_1", "proposal_2", "hc_subgroup",
-          "logical_node", "name", "mapping_description", "mapping_note", "source_database", "alarm",
-          "alarm_type", "set_condition", "set_delay", "set_delay_ms", "reset_delay", "reset_delay_ms"]
+_FIRST = [
+    "identifier",
+    "controller",
+    "legacy_number",
+    "name",
+    "source_database",
+    "alarm",
+    "alarm_type",
+    "set_condition",
+    "set_delay",
+    "set_delay_ms",
+    "reset_delay",
+    "reset_delay_ms",
+]
 
 
 def _flat(code: StatusCode) -> dict[str, object]:
@@ -129,19 +141,43 @@ def _write_xlsx(rows: list[StatusCode], path: Path) -> None:
     wb = Workbook()
     sheet(wb.active, columns, [[r.get(c) for c in columns] for r in flat])
     wb.active.title = "Status codes"
-    groups = [[r.identifier, r.controller, r.legacy_number, g, lv.get("read"), lv.get("write")]
-              for r in rows for g, lv in r.user_groups.items()]
-    sheet(wb.create_sheet("User groups"),
-          ["identifier", "controller", "legacy_number", "user_group", "read", "write"], groups)
+    groups = [
+        [r.identifier, r.controller, r.legacy_number, g, lv.get("read"), lv.get("write")]
+        for r in rows
+        for g, lv in r.user_groups.items()
+    ]
+    sheet(
+        wb.create_sheet("User groups"),
+        ["identifier", "controller", "legacy_number", "user_group", "read", "write"],
+        groups,
+    )
     wb.save(path)
 
 
 def _table(rows: list[StatusCode]) -> str:
-    head = ("StCd", "Ctrl", "Legacy", "Name", "Alarm", "Set delay", "Reset delay", "Repeat", "Source")
+    head = (
+        "StCd",
+        "Ctrl",
+        "Legacy",
+        "Name",
+        "Alarm",
+        "Set delay",
+        "Reset delay",
+        "Repeat",
+        "Source",
+    )
     body = [
-        (r.identifier, r.controller, str(r.legacy_number or ""), r.name,
-         "" if r.alarm_type is None else str(r.alarm_type), r.set_delay, r.reset_delay,
-         "" if r.repeat_code is None else str(r.repeat_code), r.source_database)
+        (
+            r.identifier,
+            r.controller,
+            str(r.legacy_number or ""),
+            r.name,
+            "" if r.alarm_type is None else str(r.alarm_type),
+            r.set_delay,
+            r.reset_delay,
+            "" if r.repeat_code is None else str(r.repeat_code),
+            r.source_database,
+        )
         for r in rows
     ]
     widths = [max(len(c) for c in col) for col in zip(head, *body)]
@@ -154,16 +190,26 @@ def _table(rows: list[StatusCode]) -> str:
 def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(description="Read status code definitions from StCd_*.st files.")
     ap.add_argument("paths", nargs="*", type=Path, help="MC files or directories")
-    ap.add_argument("--hc", nargs="+", type=Path, default=[], metavar="PATH",
-                    help="files or directories holding Hub controller programs (legacy numbers)")
+    ap.add_argument(
+        "--hc",
+        nargs="+",
+        type=Path,
+        default=[],
+        metavar="PATH",
+        help="files or directories holding Hub controller programs (legacy numbers)",
+    )
     ap.add_argument("--format", choices=("table", "json", "csv", "xlsx"), default="table")
     ap.add_argument("-o", "--output", type=Path, help="write to this file instead of stdout")
     ap.add_argument("--controller", choices=("all", "mc", "hc"), default="all")
-    ap.add_argument("--hc-from", type=int, default=HC_FROM,
-                    help=f"first number of a non---hc path counted as HC (default {HC_FROM})")
-    ap.add_argument("--mapping", type=Path, default=MAPPING, help="legacy HC number mapping workbook")
-    ap.add_argument("--proposal", type=int, choices=(1, 2), default=2,
-                    help="new HC number to use: 1 = five-digit, 2 = inside the MC scheme (default)")
+    ap.add_argument(
+        "--hc-from",
+        type=int,
+        default=HC_FROM,
+        help=f"first number of a non---hc path counted as HC (default {HC_FROM})",
+    )
+    ap.add_argument(
+        "--mapping", type=Path, default=MAPPING, help="legacy HC number mapping workbook"
+    )
     args = ap.parse_args(argv)
 
     inputs = [(p, None) for p in _files(args.paths)] + [(p, True) for p in _files(args.hc)]
@@ -185,19 +231,22 @@ def main(argv: list[str] | None = None) -> int:
             print(f"{path}: no PROGRAM StCd_<n> found", file=sys.stderr)
         rows += found
 
-    mapping: dict[int, tuple] = {}
+    mapping: dict[int, int] = {}
     try:
         mapping = load_mapping(args.mapping)
-    except (OSError, KeyError, ImportError) as exc:
+    except (OSError, KeyError, ValueError, ImportError) as exc:
         if any(r.controller == "HC" for r in rows):
             print(f"mapping {args.mapping}: {exc}", file=sys.stderr)
             return 2
     for r in rows:
         if r.controller == "HC":
-            apply_mapping(r, mapping, args.proposal)
+            apply_mapping(r, mapping)
         elif r.number in mapping:
-            print(f"{r.file}: {r.number} is also a legacy HC number; pass the file with --hc "
-                  "if it is a Hub controller program", file=sys.stderr)
+            print(
+                f"{r.file}: {r.number} is also a legacy HC number; pass the file with --hc "
+                "if it is a Hub controller program",
+                file=sys.stderr,
+            )
 
     for r in rows:
         for warning in r.warnings:

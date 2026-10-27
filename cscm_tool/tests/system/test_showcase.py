@@ -31,7 +31,13 @@ def showcase():
 def images(showcase, tmp_path_factory):
     """A plain picture for every screenshot the decks name, and the logo."""
     folder = tmp_path_factory.mktemp("pictures")
-    ids = {"released_code": 1, "pending_cr": 1, "change_set": 1, "open_release": 1}
+    ids = {
+        "released_code": 1,
+        "pending_cr": 1,
+        "change_set": 1,
+        "open_release": 1,
+        "mapping_change": 1,
+    }
     found = {}
     for shot in showcase.decks.shots(ids):
         path = folder / f"{shot.name}.png"
@@ -56,7 +62,7 @@ def test_both_decks_are_built_from_the_screenshots_and_every_picture_is_describe
     facts = showcase.decks.gather("9.9.9", "2026-01-01")
     assert facts.version == "9.9.9" and facts.tests != "n/a" and facts.requirements != "n/a"
     assert facts.coverage.endswith("%") and facts.delivered
-    for build, count in ((showcase.decks.management, 11), (showcase.decks.team, 23)):
+    for build, count in ((showcase.decks.management, 11), (showcase.decks.team, 24)):
         slides = build(facts, images)
         showcase.deck.check_all(slides)  # every text fits its box
         assert len(slides) == count
@@ -102,7 +108,9 @@ def test_the_demo_has_its_data_and_the_application_has_no_demo_routes(showcase):
         signed_in = client.get("/_show/as/admin?next=/status-codes", follow_redirects=True)
         page = signed_in.get_data(as_text=True)
         assert signed_in.status_code == 200 and "Converter grid undervoltage trip" in page
-        assert {"change_set", "release", "released_code", "pending_cr"} <= set(demo.ids)
+        assert {"change_set", "release", "released_code", "pending_cr", "mapping_change"} <= set(
+            demo.ids
+        )
         dark = client.get("/_show/theme/dark?next=/login")
         assert dark.status_code == 302
         script = client.get("/static/js/theme.js").get_data(as_text=True)

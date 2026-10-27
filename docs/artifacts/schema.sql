@@ -79,6 +79,9 @@
 --     section 3, docs/03-srs.md FR-156, BR-024)
 --   - lookup_language: French, Hindi and Georgian added; v4.4 adds Arabic (written right to left); every
 --     name reads <country letters> <name> <flag emoji>; user.ui_language accepts the six codes
+-- v4.17 changes: the legacy -> new status code mapping kept in the database and changed only with the three
+--     approvals of the StCd Owner, the Chief Engineer and an Administrator (status_code_mapping, mapping_change,
+--     mapping_change_item, mapping_approval)
 -- v4.13 changes: the sample inspection of a bulk decision (bulk_sample, bulk_sample_item)
 -- v4.9.2 changes: status_code.deleted_at (a withdrawn code is erased in place, never removed; the delete
 --     trigger is strict again)
@@ -1308,3 +1311,84 @@ CREATE TABLE bulk_sample_item (
 );
 
 CREATE INDEX ix_bulk_sample_set ON bulk_sample (change_set_id, step, status);
+
+
+-- v4.17: the legacy -> new status code mapping (FR-191..FR-198). It holds only what the generated .st programs do not
+-- carry: the English title, the type, the up/down counter, the named access levels, cause and directive and the
+-- legacy -> new pair itself. The initial content is the workbook seed_data/legacy_mapping.xlsx (flask mapping-seed);
+-- every later change is a mapping_change with the three approvals of mapping_approval.
+CREATE TABLE status_code_mapping (
+    id                  INTEGER PRIMARY KEY,
+    family              TEXT NOT NULL CHECK (family IN ('MC','HC')),
+    legacy_number       INTEGER CHECK (legacy_number IS NULL OR legacy_number >= 0),
+    new_number          INTEGER NOT NULL CHECK (new_number BETWEEN 1 AND 99999),
+    description         TEXT NOT NULL CHECK (length(description) BETWEEN 1 AND 120),
+    functional_group    TEXT CHECK (functional_group IS NULL OR length(functional_group) <= 80),
+    logical_node        TEXT CHECK (logical_node IS NULL OR length(logical_node) <= 12),
+    status_type         TEXT CHECK (status_type IS NULL OR status_type IN ('ERROR','WARNING','INFO')),
+    up_down_counter     INTEGER CHECK (up_down_counter IS NULL OR up_down_counter IN (0,1)),
+    parameter_set_delay   TEXT CHECK (parameter_set_delay IS NULL OR length(parameter_set_delay) <= 40),
+    parameter_reset_delay TEXT CHECK (parameter_reset_delay IS NULL OR length(parameter_reset_delay) <= 40),
+    development_access  TEXT,
+    sales_access        TEXT,
+    tcc_access          TEXT,
+    service_access      TEXT,
+    turbine_operator_package_access TEXT,
+    grid_operator_access TEXT,
+    service_partner_access TEXT,
+    customer_access     TEXT,
+    cause               TEXT CHECK (cause IS NULL OR length(cause) <= 4000),
+    directive           TEXT CHECK (directive IS NULL OR length(directive) <= 4000),
+    note                TEXT CHECK (note IS NULL OR length(note) <= 2000),
+    status              TEXT NOT NULL DEFAULT 'PROPOSED' CHECK (status IN ('PROPOSED','FROM_PROGRAM','APPROVED','ISSUED','REJECTED')),
+    source              TEXT CHECK (source IS NULL OR length(source) <= 200),
+    version             INTEGER NOT NULL DEFAULT 1 CHECK (version >= 1),
+    created_at          TEXT NOT NULL DEFAULT (strftime('%Y-%m-%dT%H:%M:%fZ','now')),
+    updated_at          TEXT NOT NULL DEFAULT (strftime('%Y-%m-%dT%H:%M:%fZ','now')),
+    UNIQUE (new_number),
+    UNIQUE (family, legacy_number)
+);
+
+-- one request to change the mapping: one or several rows, decided as a whole by the three roles
+CREATE TABLE mapping_change (
+    id                  INTEGER PRIMARY KEY,
+    title               TEXT NOT NULL CHECK (length(title) BETWEEN 1 AND 120),
+    reason              TEXT NOT NULL CHECK (length(reason) BETWEEN 1 AND 2000),
+    origin              TEXT NOT NULL DEFAULT 'FORM' CHECK (origin IN ('FORM','WORKBOOK','SELECTION')),
+    requested_by        INTEGER NOT NULL REFERENCES user(id),
+    requested_at        TEXT NOT NULL DEFAULT (strftime('%Y-%m-%dT%H:%M:%fZ','now')),
+    state               TEXT NOT NULL DEFAULT 'OPEN' CHECK (state IN ('OPEN','APPLIED','REJECTED','WITHDRAWN')),
+    closed_at           TEXT,
+    CHECK ((state = 'OPEN') = (closed_at IS NULL))
+);
+
+CREATE TABLE mapping_change_item (
+    id                  INTEGER PRIMARY KEY,
+    change_id           INTEGER NOT NULL REFERENCES mapping_change(id),
+    mapping_id          INTEGER REFERENCES status_code_mapping(id),
+    action              TEXT NOT NULL CHECK (action IN ('ADD','CHANGE','CONFIRM','REJECT')),
+    base_version        INTEGER,
+    before_json         TEXT,
+    after_json          TEXT NOT NULL,
+    CHECK ((action = 'ADD') = (mapping_id IS NULL)),
+    CHECK ((action = 'ADD') = (base_version IS NULL))
+);
+
+-- the three approvals: StCd Owner, Chief Engineer and one Administrator, each a different person who is not
+-- the requester; one rejection closes the request
+CREATE TABLE mapping_approval (
+    id                  INTEGER PRIMARY KEY,
+    change_id           INTEGER NOT NULL REFERENCES mapping_change(id),
+    role_code           TEXT NOT NULL CHECK (role_code IN ('STCD_OWNER','CHIEF_ENGINEER','ADMINISTRATOR')),
+    user_id             INTEGER NOT NULL REFERENCES user(id),
+    decision            TEXT NOT NULL CHECK (decision IN ('APPROVE','REJECT')),
+    comment             TEXT CHECK (comment IS NULL OR length(comment) <= 1000),
+    decided_at          TEXT NOT NULL DEFAULT (strftime('%Y-%m-%dT%H:%M:%fZ','now')),
+    UNIQUE (change_id, role_code),
+    UNIQUE (change_id, user_id)
+);
+
+CREATE INDEX ix_mapping_item_change ON mapping_change_item (change_id);
+CREATE INDEX ix_mapping_item_row ON mapping_change_item (mapping_id);
+CREATE INDEX ix_mapping_change_state ON mapping_change (state);
+CREATE INDEX ix_mapping_status ON status_code_mapping (family, status);

@@ -18,6 +18,7 @@ from app.utils import utcnow_iso
 from tests.helpers import login_as, make_cast
 from tests.integration.test_st_import import _confirm, _preview
 
+pytestmark = pytest.mark.usefixtures("st_mapping")
 FIXTURES = Path(__file__).resolve().parents[1] / "fixtures" / "st"
 
 

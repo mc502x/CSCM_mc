@@ -143,9 +143,6 @@ def import_reconciliation():
 def _st_options() -> dict:
     return {
         "controller": request.form.get("controller"),
-        "hc_proposal": request.form.get("hc_proposal"),
-        "default_category": request.form.get("default_category"),
-        "alarm_type_categories": {str(n): request.form.get(f"alarm_type_{n}") for n in (1, 2, 3)},
         "platforms": request.form.getlist("platforms"),
     }
 
@@ -179,9 +176,6 @@ def st_import_confirm():
             current_user,
             request.form.getlist("selected"),
             change_set_name=request.form.get("change_set_name"),
-            categories={
-                key[4:]: value for key, value in request.form.items() if key.startswith("cat:")
-            },
         )
     except (DomainError, ValueError) as exc:
         flash(_(str(exc)), "error")

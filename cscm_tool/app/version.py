@@ -3,4 +3,4 @@
 pyproject.toml equal to it. Raise it with every release, together with the git tag `v<VERSION>`.
 The REST contract has its own version (docs/artifacts/openapi.yaml `info.version`)."""
 
-VERSION = "4.16.1"
+VERSION = "4.17.0"

@@ -108,6 +108,8 @@ else
     flask_as_service backup-db || echo "    WARNING: pre-upgrade backup failed; continuing is your decision" >&2
   fi
   flask_as_service db upgrade -d "$APP/migrations"
+  # the initial legacy -> new mapping, only into an empty table (FR-191)
+  flask_as_service mapping-seed || echo "    WARNING: the mapping was not loaded; an Administrator can load it from the Mapping page" >&2
   # tell the StCd Owner what this version changed in the interface text or the nomenclature (FR-178)
   flask_as_service translation-impact || echo "    WARNING: translation-impact failed; see the Notices of the StCd Owner" >&2
 fi

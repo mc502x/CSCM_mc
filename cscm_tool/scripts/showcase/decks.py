@@ -97,6 +97,8 @@ def shots(ids: dict) -> list[Shot]:
             "workbench_dark", f"/change-sets/{ids['change_set']}/workbench", "engineer", dark=True
         ),
         Shot("st_form", "/imports/st", "engineer"),
+        Shot("mapping", "/mapping", "engineer", **tall),
+        Shot("mapping_change", f"/mapping-changes/{ids['mapping_change']}", "admin"),
         Shot("st_preview", "/_show/st-preview", "engineer"),
         Shot("connections", "/status-codes/connections", "admin"),
         Shot("releases", "/releases", "admin"),
@@ -852,15 +854,30 @@ def team(facts: Facts, images: dict[str, Path]) -> list[Slide]:
         "Importing from controller programs",
         (
             "st_form",
-            "Upload files, a folder or a ZIP. Choose a category for each alarm type.",
+            "Upload files, a folder or a ZIP. The title, type and access levels come from the mapping.",
             "The upload form of the import",
         ),
         (
             "st_preview",
-            "Every program is a row with its new number, alarm type and a category you can change.",
+            "Every program is a row with its new number, its type from the mapping, and what is wrong with it.",
             "The preview of the import",
         ),
         "The import creates Drafts only. They still need every decision before release.",
+    )
+
+    b.two_shots(
+        "The mapping and its three approvals",
+        (
+            "mapping",
+            "Which legacy code becomes which new one, with the title, type and access levels the programs do not carry.",
+            "The mapping table",
+        ),
+        (
+            "mapping_change",
+            "A change takes effect only when the StCd Owner, the Chief Engineer and an Administrator have approved it.",
+            "A request with two of its three approvals",
+        ),
+        "Nothing in the mapping changes by itself: a request, a reason, three different people, and every step in the audit log.",
     )
 
     b.shot_slide(

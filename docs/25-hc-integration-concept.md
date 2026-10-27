@@ -40,7 +40,7 @@ Both HC blocks start at the **500 range** of their group. Order and block sizes 
 | Names | HC subgroups are labelled "HC …" because three names collide with MC subgroups (Control System, Rotor, System). |
 | Legacy numbers | The old HC numbers (35 of them are four-digit and overlap MC numbers; 7 are below 1000, one is `0`) go into `legacy_reference_number`, which is not unique. |
 | Load | Import the 267 codes through the existing library import as Drafts (full governance still applies), using the mapping sheet. |
-| Importer *(v4.2)* | Hub Controller programs (`StCd_<legacy>.st`) can be imported directly: the legacy number in the file is translated to the new one through this mapping sheet (shipped as `app/importers/data/hc_numbering_mapping.csv`; proposal 1 is the default, proposal 2 is selectable per upload), the legacy number is kept as `legacy_reference_number`, and the Draft reserves the new number (03-srs.md FR-048s, 06-data-dictionary.md §5a). |
+| Importer *(v4.2)* | Hub Controller programs (`StCd_<legacy>.st`) can be imported directly: the legacy number in the file is translated to the new one through the Hub rows of the mapping (v4.17, kept in the database and changed only with three approvals, 03-srs.md FR-191 … FR-198; the new numbers are in the Hub range), the legacy number is kept as `legacy_reference_number`, and the Draft reserves the new number (03-srs.md FR-048s, 06-data-dictionary.md §5a). |
 
 ## 4. When the Hub Controller is removed (assumption A-008)
 1. Deactivate the ten HC subgroups (a lookup change; data is kept, numbers are never reused).

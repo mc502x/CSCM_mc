@@ -229,3 +229,12 @@ def languages_open(app):
 
         db.session.add(AppSetting(key="languages.beta_marker", value="0", updated_at=utcnow_iso()))
         db.session.commit()
+
+
+@pytest.fixture()
+def st_mapping(app):
+    """The mapping rows of the six programs in tests/fixtures/st (the .st import needs the mapping)."""
+    from tests.helpers import seed_st_mapping
+
+    with app.app_context():
+        seed_st_mapping()

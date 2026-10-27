@@ -1,0 +1,104 @@
+{% extends "base.html" %}
+{% block title %}{{ _('Mapping') }} — CSCM Tool{% endblock %}
+{% block content %}
+{% set s = summary %}
+{% set badge = {'PROPOSED': 'DRAFT', 'FROM_PROGRAM': 'REVIEW', 'APPROVED': 'APPROVED', 'ISSUED': 'RELEASED', 'REJECTED': 'DEPRECATED'} %}
+<div class="page-header">
+  <h1>{{ _('Mapping') }}</h1>
+  <div class="btn-row">
+    <a class="btn" href="{{ url_for('ui.mapping_changes') }}">{{ _('Mapping changes') }}{% if s.open_changes %} ({{ s.open_changes }}){% endif %}</a>
+    {% if can_request %}
+    <a class="btn btn--primary" href="{{ url_for('ui.mapping_new') }}">{{ _('New row') }}</a>
+    <a class="btn" href="{{ url_for('ui.mapping_upload') }}">{{ _('Compare a workbook') }}</a>
+    {% endif %}
+    <a class="btn" href="{{ url_for('ui.mapping_export', family=filters.family) }}">XLSX</a>
+  </div>
+</div>
+
+<div class="card">
+  <p class="muted">{{ _('Which legacy status code becomes which new one, with what the program files do not carry: the English title, the type, the up/down counter, the access levels, cause and directive. A row changes only by a request that the StCd Owner, the Chief Engineer and an Administrator all approve.') }}</p>
+  <p>
+    <span class="chip">{{ s.total }} {{ _('rows') }}</span>
+    <span class="chip">{{ s.by_family.MC }} {{ _('Main Controller') }}</span>
+    <span class="chip">{{ s.by_family.HC }} {{ _('Hub Controller') }}</span>
+    {% for st in statuses %}{% if s.by_status[st] %}<span class="chip">{{ s.by_status[st] }} {{ st }}</span>{% endif %}{% endfor %}
+  </p>
+  {% if not s.total %}
+  <div class="flash flash--info" role="status">
+    {{ _('The mapping is empty.') }}
+    {% if current_user.role_code == 'ADMINISTRATOR' %}
+    <form method="post" action="{{ url_for('ui.mapping_seed') }}" class="inline-form"><input type="hidden" name="csrf_token" value="{{ csrf_token() }}"><button class="btn" type="submit">{{ _('Load the initial mapping') }}</button></form>
+    {% endif %}
+  </div>
+  {% endif %}
+  <form method="get" class="btn-row">
+    <label for="q" class="visually-hidden">{{ _('Search') }}</label>
+    <input type="search" id="q" name="q" value="{{ filters.q }}" placeholder="{{ _('number, title or group') }}">
+    <label for="family" class="visually-hidden">{{ _('Controller') }}</label>
+    <select id="family" name="family">
+      <option value="">{{ _('All controllers') }}</option>
+      <option value="MC"{% if filters.family == 'MC' %} selected{% endif %}>{{ _('Main Controller') }}</option>
+      <option value="HC"{% if filters.family == 'HC' %} selected{% endif %}>{{ _('Hub Controller') }}</option>
+    </select>
+    <label for="status" class="visually-hidden">{{ _('Status') }}</label>
+    <select id="status" name="status">
+      <option value="">{{ _('Any status') }}</option>
+      {% for st in statuses %}<option value="{{ st }}"{% if filters.status == st %} selected{% endif %}>{{ st }}</option>{% endfor %}
+    </select>
+    <button class="btn" type="submit">{{ _('Filter') }}</button>
+  </form>
+
+  <form method="post" action="{{ url_for('ui.mapping_select') }}">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    <table>
+      <caption class="visually-hidden">{{ _('Mapping') }}</caption>
+      <thead><tr>
+        {% if can_request %}<th scope="col"><input type="checkbox" data-check-all="map-row-check" aria-label="{{ _('Select all rows') }}"></th>{% endif %}
+        <th scope="col">{{ _('Controller') }}</th>
+        <th scope="col">{{ _('Legacy no.') }}</th>
+        <th scope="col">{{ _('New identifier') }}</th>
+        <th scope="col">{{ _('Title') }}</th>
+        <th scope="col">{{ _('Group') }}</th>
+        <th scope="col">{{ _('Node') }}</th>
+        <th scope="col">{{ _('Type') }}</th>
+        <th scope="col">{{ _('Status') }}</th>
+      </tr></thead>
+      <tbody>
+        {% for r in rows %}
+        <tr data-href="{{ url_for('ui.mapping_row', mapping_id=r.id) }}">
+          {% if can_request %}<td><input type="checkbox" class="map-row-check" name="ids" value="{{ r.id }}" aria-label="{{ _('Select') }} StCd-{{ '%05d' % r.new_number }}"></td>{% endif %}
+          <td>{{ r.family }}</td>
+          <td>{% if r.legacy_number is not none %}{{ r.legacy_number }}{% else %}<span class="muted">n/a</span>{% endif %}</td>
+          <td><a href="{{ url_for('ui.mapping_row', mapping_id=r.id) }}">StCd-{{ '%05d' % r.new_number }}</a></td>
+          <td>{{ r.description }}</td>
+          <td>{{ r.functional_group or '—' }}</td>
+          <td>{{ r.logical_node or '—' }}</td>
+          <td>{{ r.status_type or '—' }}</td>
+          <td><span class="badge badge--{{ badge[r.status] }}">{{ r.status }}</span></td>
+        </tr>
+        {% else %}
+        <tr><td colspan="9" class="table-empty">{{ _('No row matches.') }}</td></tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    {% if pages > 1 %}
+    <nav class="pager" aria-label="{{ _('Pages') }}">
+      {% if page > 1 %}<a href="{{ page_url(page - 1) }}">&laquo; {{ _('Previous') }}</a>{% endif %}
+      <span>{{ page }} / {{ pages }}</span>
+      {% if page < pages %}<a href="{{ page_url(page + 1) }}">{{ _('Next') }} &raquo;</a>{% endif %}
+    </nav>
+    {% endif %}
+    {% if can_request and rows %}
+    <div class="card" style="max-width:560px;margin-top:12px">
+      <h2>{{ _('Ask for approval of the ticked rows') }}</h2>
+      <div class="field">
+        <label for="reason">{{ _('Reason') }}</label>
+        <textarea id="reason" name="reason" rows="2" maxlength="2000" required></textarea>
+        <div class="hint">{{ _('The rows stay as they are. Once the StCd Owner, the Chief Engineer and an Administrator approve, they count as approved numbers.') }}</div>
+      </div>
+      <button class="btn btn--primary" type="submit">{{ _('Make the request') }}</button>
+    </div>
+    {% endif %}
+  </form>
+</div>
+{% endblock %}

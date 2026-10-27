@@ -1,8 +1,9 @@
 """The import assumes no value (FR-189): a value is read from the program, chosen by the user, or - when
 the program gives a variable instead of a time - the name of that variable; what the program does not
-give is listed in the comment of the Draft; no status category is ever assumed.
+give is listed in the comment of the Draft; the type, the title and the access levels come from the
+mapping and nowhere else (FR-192), and a program the mapping does not know is not imported.
 
-TC-053. Requirements: FR-189, FR-048o, BR-023.
+TC-053. Requirements: FR-189, FR-190, FR-192, FR-048o, BR-023.
 """
 
 import io
@@ -14,6 +15,7 @@ from app.extensions import db
 from app.models.status_code import StatusCode
 from tests.helpers import login_as, make_cast, valid_payload
 
+pytestmark = pytest.mark.usefixtures("st_mapping")
 FIXTURES = Path(__file__).resolve().parents[1] / "fixtures" / "st"
 
 
@@ -69,8 +71,9 @@ def test_a_program_that_gives_everything_lists_only_what_no_program_carries(app,
     set_delay, reset_delay, comment, _category = _import(app, client, "StCd_1000.st")
     assert (set_delay, reset_delay) == ("10ms", "2min")
     assert "variable" not in comment and "no timer" not in comment
-    assert "up/down counter" in comment  # no program carries it: entered as No and said so
-    assert "alarm" not in comment.split("entered as No:")[1].split(";")[0]  # the file gives it
+    assert "up/down counter" not in comment  # no program carries it: the mapping does
+    assert "entered as No" not in comment  # the alarm and the snapshot are in the file
+    assert "Name in the program: Umrichter nicht bereit" in comment
 
 
 def test_the_preview_warns_with_the_name_of_the_parameter(client, cast):
@@ -81,42 +84,27 @@ def test_the_preview_warns_with_the_name_of_the_parameter(client, cast):
     assert "0ms is entered" not in warnings
 
 
-def test_no_category_is_assumed(app, client, cast):
-    login_as(client, cast["engineer"])
-    preview = _preview(client, ["StCd_1000.st", "StCd_1001.st"])  # nothing chosen
-    assert preview["options"]["default_category"] is None
-    assert [i["category"] for i in preview["items"]] == [None, None]
-    assert all("No status category is chosen" in " ".join(i["warnings"]) for i in preview["items"])
-    refused = client.post("/api/v1/imports/st", json={"token": preview["token"]})
-    assert refused.status_code == 422 and "none is assumed" in refused.get_json()["message"]
+def test_a_program_the_mapping_does_not_know_is_blocked_and_never_imported(app, client, cast):
+    from app.models.mapping import StatusCodeMapping
+
     with app.app_context():
-        assert db.session.query(StatusCode).count() == 0  # nothing was created
-    keys = [i["key"] for i in preview["items"]]
-    chosen = client.post(
-        "/api/v1/imports/st",
-        json={"token": preview["token"], "categories": {keys[0]: "INFO", keys[1]: "WARNING"}},
+        db.session.query(StatusCodeMapping).filter_by(new_number=1001).delete()
+        db.session.commit()
+    login_as(client, cast["engineer"])
+    preview = _preview(client, ["StCd_1000.st", "StCd_1001.st"])
+    states = {i["program_number"]: i["state"] for i in preview["items"]}
+    assert states == {1000: "ready", 1001: "blocked"}
+    blocked = preview["items"][1]
+    assert "StCd-01001" in blocked["issues"][0]["message"]
+    assert "is not in the mapping" in blocked["issues"][0]["message"]
+    refused = client.post(
+        "/api/v1/imports/st", json={"token": preview["token"], "selected": [blocked["key"]]}
     )
-    assert chosen.status_code == 202, chosen.get_json()
+    assert refused.status_code == 422
+    done = client.post("/api/v1/imports/st", json={"token": preview["token"]})
+    assert done.status_code == 202 and done.get_json()["created_count"] == 1
     with app.app_context():
-        found = {
-            c.revisions[0].title: c.revisions[0].status_category
-            for c in db.session.query(StatusCode).all()
-        }
-        assert sorted(found.values()) == ["INFO", "WARNING"]
-
-
-def test_the_preview_page_asks_for_a_category_instead_of_assuming_one(client, cast):
-    login_as(client, cast["engineer"])
-    form = client.get("/imports/st").get_data(as_text=True)
-    assert '<option value="" selected>(choose)</option>' in form
-    assert 'id="default_category"' in form and "none is assumed" in form
-    page = client.post(
-        "/imports/st",
-        data={"files": [(io.BytesIO((FIXTURES / "StCd_1000.st").read_bytes()), "StCd_1000.st")]},
-        content_type="multipart/form-data",
-    ).get_data(as_text=True)
-    assert '<option value="" selected>(choose)</option>' in page  # the row has none chosen
-    assert "checked" not in page.split('class="st-row-check"')[1].split(">")[0]  # not ticked
+        assert db.session.query(StatusCode).count() == 1
 
 
 def test_a_delay_may_be_the_name_of_a_parameter_but_not_a_malformed_time(client, cast, wcnv_ids):
@@ -163,7 +151,13 @@ def _slots(revision):
     ]
 
 
-def test_the_user_group_numbers_of_the_file_become_the_named_access_levels(app, client, cast):
+def _row(new_number):
+    from app.models.mapping import StatusCodeMapping
+
+    return db.session.query(StatusCodeMapping).filter_by(new_number=new_number).one()
+
+
+def test_the_named_access_levels_come_from_the_mapping(app, client, cast):
     login_as(client, cast["engineer"])
     levels, comment, numbers = _access(app, client, "StCd_14000.st")
     assert levels == {
@@ -176,40 +170,47 @@ def test_the_user_group_numbers_of_the_file_become_the_named_access_levels(app, 
         "service_partner_access": "Covert",
         "customer_access": "See only",
     }
-    assert "Access levels, proposed from the user-group numbers of the program:" in comment
-    assert "Development = See only (read 1, write 50)" in comment
-    assert "Turbine Operator Package = Covert (read 50, write 50)" in comment
-    assert "fits no named level" not in comment
+    assert "Mapping and program differ" not in comment
+    assert "access levels not in the mapping" not in comment
     assert numbers[1] == (1, 50) and numbers[5] == (50, 50)  # the numbers themselves are kept
 
 
-def test_a_level_that_no_single_named_level_carries_stays_empty_and_is_listed(app, client, cast):
+def test_a_level_the_mapping_leaves_empty_stays_empty_and_is_listed(app, client, cast):
+    with app.app_context():
+        _row(1000).sales_access = None
+        _row(1000).tcc_access = None
+        db.session.commit()
     login_as(client, cast["engineer"])
     levels, comment, numbers = _access(app, client, "StCd_1000.st")
-    assert levels["turbine_operator_package_access"] == "Preventive Maintenance"  # 1 / 10
-    assert levels["service_partner_access"] == "Ext. Service Provider"  # 1 / 15
-    assert levels["customer_access"] == "See only" and levels["grid_operator_access"] == "Covert"
-    # Development 1/5, Sales 1/10, TCC 1/10 and Service 1/20 are carried by no named level:
-    for audience in ("development_access", "sales_access", "tcc_access", "service_access"):
-        assert levels[audience] is None
-    assert "Development access: read 1 / write 5 fits no named level" in comment
-    assert "Service access: read 1 / write 20 fits no named level" in comment
-    assert numbers[1] == (1, 5) and numbers[4] == (1, 20)  # the numbers are kept all the same
+    assert levels["sales_access"] is None and levels["tcc_access"] is None
+    assert levels["development_access"] == "Department"
+    assert "access levels not in the mapping: Sales, TCC" in comment
+    assert numbers[2] == (1, 10)  # the numbers of the program are kept all the same
 
 
-def test_a_pair_of_numbers_that_fits_two_named_levels_is_not_guessed(app):
-    from app.importers import stcd
-    from app.services import st_import_service as service
+def test_a_level_whose_numbers_differ_from_the_program_is_named_and_warned_about(app, client, cast):
+    with app.app_context():
+        _row(1000).development_access = "See only"  # 1 / 50 - the program gives 1 / 5
+        db.session.commit()
+    login_as(client, cast["engineer"])
+    preview = _preview(client, ["StCd_1000.st"])
+    warnings = " ".join(preview["items"][0]["warnings"])
+    assert "Development access: the mapping says See only (read 1 / write 50)" in warnings
+    assert "the program has read 1 / write 5" in warnings
+    done = client.post("/api/v1/imports/st", json={"token": preview["token"]})
+    assert done.status_code == 202
+    with app.app_context():
+        revision = db.session.query(StatusCode).one().revisions[0]
+        assert revision.development_access.label == "See only"  # the mapping names the level
+        assert "Mapping and program differ: Development access" in revision.description
+        assert dict(_slots(revision))[1].write_level == 5  # the program's own number
 
-    code = stcd.StatusCode(identifier="StCd-01000", number=1000, controller="MC")
-    code.user_groups = {2: {"read": 1, "write": 10}}
-    audiences = {"sales_access": [(1, "Sales", 1, 10), (2, "Dealer", 1, 10)]}
-    translated: list[str] = []
-    unresolved: list[str] = []
-    found = service._translate_access(code, audiences, translated, unresolved)
-    assert found == {} and translated == []
-    assert any(
-        "Sales access: read 1 / write 10 fits more than one level (Sales, Dealer)" in u
-        for u in unresolved
-    )
-    assert any("access levels not in the program:" in u for u in unresolved)  # the other seven
+
+def test_a_level_that_is_no_longer_active_is_not_guessed(app, client, cast):
+    with app.app_context():
+        _row(1000).customer_access = "A level that was removed"
+        db.session.commit()
+    login_as(client, cast["engineer"])
+    levels, comment, _numbers = _access(app, client, "StCd_1000.st")
+    assert levels["customer_access"] is None
+    assert "Customer access: the mapping names 'A level that was removed'" in comment

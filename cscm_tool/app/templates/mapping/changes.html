@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block title %}{{ _('Mapping changes') }} — CSCM Tool{% endblock %}
+{% block content %}
+<div class="page-header">
+  <h1>{{ _('Mapping changes') }}</h1>
+  <div class="btn-row"><a class="btn" href="{{ url_for('ui.mapping_list') }}">{{ _('Mapping') }}</a></div>
+</div>
+
+<div class="card">
+  <p class="muted">{{ _('Every change of the mapping is a request. It takes effect when the StCd Owner, the Chief Engineer and an Administrator have each approved it; one rejection closes it.') }}</p>
+  {% if waiting %}<div class="flash flash--info" role="status">{{ waiting }} {{ _('request(s) wait for your decision.') }}</div>{% endif %}
+  <form method="get" class="btn-row">
+    <label for="state" class="visually-hidden">{{ _('State') }}</label>
+    <select id="state" name="state" data-autosubmit>
+      <option value="">{{ _('Any state') }}</option>
+      {% for st in ('OPEN', 'APPLIED', 'REJECTED', 'WITHDRAWN') %}<option value="{{ st }}"{% if state == st %} selected{% endif %}>{{ st }}</option>{% endfor %}
+    </select>
+    <noscript><button class="btn" type="submit">{{ _('Filter') }}</button></noscript>
+  </form>
+  <table>
+    <caption class="visually-hidden">{{ _('Mapping changes') }}</caption>
+    <thead><tr>
+      <th scope="col">#</th>
+      <th scope="col">{{ _('Title') }}</th>
+      <th scope="col">{{ _('Rows') }}</th>
+      <th scope="col">{{ _('Requested by') }}</th>
+      <th scope="col">{{ _('State') }}</th>
+      <th scope="col">{{ _('Approvals') }}</th>
+    </tr></thead>
+    <tbody>
+      {% for c in changes %}
+      <tr data-href="{{ url_for('ui.mapping_change', change_id=c.id) }}">
+        <td><a href="{{ url_for('ui.mapping_change', change_id=c.id) }}">{{ c.id }}</a></td>
+        <td>{{ c.title }}</td>
+        <td>{{ c.items|length }}</td>
+        <td>{{ c.requester.full_name }}<div class="muted">{{ c.requested_at }}</div></td>
+        <td>{{ c.state }}</td>
+        <td>{% for role, a in decisions[c.id].items() %}<span class="chip" title="{{ role_label(role) }}">{{ role_label(role) }}: {% if a %}{{ a.decision }}{% else %}…{% endif %}</span>{% endfor %}</td>
+      </tr>
+      {% else %}
+      <tr><td colspan="6" class="table-empty">{{ _('No request yet.') }}</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}

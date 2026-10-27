@@ -109,3 +109,85 @@ def release_revisions(client, cast, revision_ids, label="v1"):
     )
     assert client.post(f"/api/v1/releases/{release['id']}/publish").status_code == 200
     return release["id"]
+
+
+# The mapping rows of the six programs in tests/fixtures/st (the titles read as the English version of
+# the German names, so the glossary check is silent); the Hub numbers are the ones of the former
+# numbering proposal 1.
+_MAPPED_LEVELS_MC = {
+    "development_access": "Department",
+    "sales_access": "Sales",
+    "tcc_access": "Telenotdienst",
+    "service_access": "Service and Maintenance",
+    "turbine_operator_package_access": "Preventive Maintenance",
+    "grid_operator_access": "Covert",
+    "service_partner_access": "Ext. Service Provider",
+    "customer_access": "See only",
+}
+_MAPPED_LEVELS_HC = {
+    "development_access": "See only",
+    "sales_access": "See only",
+    "tcc_access": "See only",
+    "service_access": "See only",
+    "turbine_operator_package_access": "Covert",
+    "grid_operator_access": "Covert",
+    "service_partner_access": "Covert",
+    "customer_access": "See only",
+}
+ST_MAPPING = [
+    # family, legacy, new, English title, group, node, type, up/down
+    ("MC", 3000, 1000, "Converter not ready", "Converter", "WCNV", "ERROR", 0),
+    ("MC", 3005, 1001, "Conv. fuse tripped", "Converter", "WCNV", "WARNING", 0),
+    ("MC", 3010, 1002, "Converter communication fault", "Converter", "WCNV", "INFO", 1),
+    ("HC", 14000, 12501, "Rotor overspeed", "Rotor", "WROT", "ERROR", 0),
+    ("HC", 14005, 12502, "Rotor overspeed test", "Rotor", "WROT", "INFO", 0),
+    ("HC", 14025, 12503, "Stop speed setpoint angle check", "Rotor", "WROT", "WARNING", 1),
+]
+
+
+def seed_st_mapping(status="APPROVED", **per_number):
+    """Inserts the six mapping rows; `per_number={1000: {"status_type": None}}` changes a row."""
+    from app.models.mapping import StatusCodeMapping
+    from app.utils import utcnow_iso
+
+    now = utcnow_iso()
+    for family, legacy, new, title, group, node, kind, counter in ST_MAPPING:
+        row = {
+            "family": family,
+            "legacy_number": legacy,
+            "new_number": new,
+            "description": title,
+            "functional_group": group,
+            "logical_node": node,
+            "status_type": kind,
+            "up_down_counter": counter,
+            "status": status,
+            "source": "test fixture",
+            **(_MAPPED_LEVELS_MC if family == "MC" else _MAPPED_LEVELS_HC),
+        }
+        row.update(per_number.get(new, {}))
+        db.session.add(StatusCodeMapping(created_at=now, updated_at=now, version=1, **row))
+    db.session.commit()
+
+
+def add_mapping_row(new_number, legacy_number=None, family="MC", **fields):
+    """One more mapping row (approved, complete) for a program the test makes up."""
+    from app.models.mapping import StatusCodeMapping
+    from app.utils import utcnow_iso
+
+    now = utcnow_iso()
+    row = {
+        "family": family,
+        "legacy_number": legacy_number,
+        "new_number": new_number,
+        "description": "Made up test code",
+        "functional_group": "Converter",
+        "logical_node": "WCNV",
+        "status_type": "ERROR",
+        "up_down_counter": 0,
+        "status": "APPROVED",
+        "source": "test",
+    }
+    row.update(fields)
+    db.session.add(StatusCodeMapping(created_at=now, updated_at=now, version=1, **row))
+    db.session.commit()

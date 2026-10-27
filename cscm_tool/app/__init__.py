@@ -135,10 +135,15 @@ def create_app(config_name: str | None = None, overrides: dict | None = None) ->
     app.register_blueprint(api_v1_bp, url_prefix="/api/v1")
     app.register_blueprint(ui_bp)
 
-    from app.cli import register_cli_commands, register_operations_commands
+    from app.cli import (
+        register_cli_commands,
+        register_mapping_commands,
+        register_operations_commands,
+    )
 
     register_cli_commands(app)
     register_operations_commands(app)
+    register_mapping_commands(app)
 
     from app.errors import register_error_handlers
 

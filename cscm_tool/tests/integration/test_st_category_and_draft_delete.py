@@ -1,7 +1,7 @@
-"""The status category per program of a .st import, and the bulk delete of Drafts on the Status
-Codes list (FR-181, FR-182).
+"""The status category of a .st import is the type of the mapping row (FR-181 superseded by FR-192:
+nothing is chosen at the import), and the bulk delete of Drafts on the Status Codes list (FR-182).
 
-TC-053, TC-070. Requirements: FR-181, FR-182, FR-026, FR-159.
+TC-053, TC-070. Requirements: FR-181, FR-182, FR-192, FR-026, FR-159.
 """
 
 import io
@@ -13,6 +13,7 @@ from app.extensions import db
 from app.models.status_code import StatusCode
 from tests.helpers import cr_id_for_revision, login_as, make_cast, valid_payload
 
+pytestmark = pytest.mark.usefixtures("st_mapping")
 FIXTURES = Path(__file__).resolve().parents[1] / "fixtures" / "st"
 MC_FILES = ["StCd_1000.st", "StCd_1001.st", "StCd_1002.st"]  # alarm types 1, 2, 1
 
@@ -41,77 +42,64 @@ def _categories(app):
 
 
 # ------------------------------------------------------------------------------ category
-def test_the_alarm_type_of_a_program_sets_its_category(app, client, cast):
+def test_the_type_of_a_program_is_the_type_of_its_mapping_row(app, client, cast):
+    login_as(client, cast["engineer"])
+    preview = _preview(client)
+    by_program = {i["program_number"]: i for i in preview["items"]}
+    assert [by_program[n]["alarm_type"] for n in (1000, 1001, 1002)] == [1, 2, 1]
+    # the alarm type of the program has nothing to do with the type: that is the mapping's
+    assert [by_program[n]["category"] for n in (1000, 1001, 1002)] == ["ERROR", "WARNING", "INFO"]
+    assert client.post("/api/v1/imports/st", json={"token": preview["token"]}).status_code == 202
+    assert sorted(_categories(app).values()) == ["ERROR", "INFO", "WARNING"]
+
+
+def test_a_category_chosen_in_the_request_changes_nothing(app, client, cast):
     login_as(client, cast["engineer"])
     preview = _preview(
         client,
         default_category="INFO",
-        alarm_type_categories='{"1": "ERROR", "2": "WARNING"}',
+        alarm_type_categories='{"1": "WARNING"}',
     )
-    by_program = {i["program_number"]: i for i in preview["items"]}
-    assert [by_program[n]["alarm_type"] for n in (1000, 1001, 1002)] == [1, 2, 1]
-    assert [by_program[n]["category"] for n in (1000, 1001, 1002)] == ["ERROR", "WARNING", "ERROR"]
-    assert client.post("/api/v1/imports/st", json={"token": preview["token"]}).status_code == 202
-    assert sorted(_categories(app).values()) == ["ERROR", "ERROR", "WARNING"]
-
-
-def test_a_type_without_a_choice_gets_the_default_category(client, cast):
-    login_as(client, cast["engineer"])
-    preview = _preview(client, default_category="WARNING", alarm_type_categories='{"1": "ERROR"}')
-    assert {i["program_number"]: i["category"] for i in preview["items"]} == {
-        1000: "ERROR",
-        1001: "WARNING",
-        1002: "ERROR",
+    assert preview["options"] == {
+        "controller": "auto",
+        "platforms": preview["options"]["platforms"],
     }
-
-
-def test_a_category_chosen_for_one_program_wins(app, client, cast):
-    login_as(client, cast["engineer"])
-    preview = _preview(client, default_category="ERROR")
     key = next(i["key"] for i in preview["items"] if i["program_number"] == 1001)
     response = client.post(
         "/api/v1/imports/st", json={"token": preview["token"], "categories": {key: "info"}}
     )
     assert response.status_code == 202, response.get_json()
-    assert sorted(_categories(app).values()) == ["ERROR", "ERROR", "INFO"]
+    assert sorted(_categories(app).values()) == ["ERROR", "INFO", "WARNING"]
 
 
-def test_an_unknown_category_is_refused(client, cast):
+def test_a_row_without_a_type_blocks_the_program(app, client, cast):
+    from app.models.mapping import StatusCodeMapping
+
+    with app.app_context():
+        db.session.query(StatusCodeMapping).filter_by(new_number=1001).one().status_type = None
+        db.session.commit()
     login_as(client, cast["engineer"])
-    data = {
-        "files": [(io.BytesIO((FIXTURES / "StCd_1000.st").read_bytes()), "StCd_1000.st")],
-        "alarm_type_categories": '{"1": "FATAL"}',
-    }
-    bad = client.post("/api/v1/imports/st/preview", data=data, content_type="multipart/form-data")
-    assert bad.status_code in (400, 422)
-    broken = _preview(client, ["StCd_1000.st"])
-    refused = client.post(
-        "/api/v1/imports/st",
-        json={"token": broken["token"], "categories": {broken["items"][0]["key"]: "FATAL"}},
-    )
-    assert refused.status_code in (400, 422)
+    items = {i["program_number"]: i for i in _preview(client)["items"]}
+    assert items[1001]["state"] == "blocked" and items[1000]["state"] == "ready"
+    assert "has no type" in items[1001]["issues"][0]["message"]
 
 
-def test_the_preview_page_lets_the_user_set_the_category_per_program(app, client, cast):
+def test_the_pages_have_no_category_controls_any_more(app, client, cast):
     login_as(client, cast["engineer"])
     form = client.get("/imports/st").get_data(as_text=True)
-    assert 'name="alarm_type_1"' in form and 'name="alarm_type_3"' in form
-    data = {
-        "files": [(io.BytesIO((FIXTURES / n).read_bytes()), n) for n in MC_FILES],
-        "default_category": "ERROR",
-        "alarm_type_1": "",
-        "alarm_type_2": "WARNING",
-    }
-    page = client.post("/imports/st", data=data, content_type="multipart/form-data")
-    html = page.get_data(as_text=True)
-    assert html.count('class="st-cat"') == 3 and "data-bulk-category" in html
-    assert html.count("selected>WARNING") == 1
+    assert 'name="alarm_type_1"' not in form and 'id="default_category"' not in form
+    assert "come from the mapping" in form
+    data = {"files": [(io.BytesIO((FIXTURES / n).read_bytes()), n) for n in MC_FILES]}
+    html = client.post("/imports/st", data=data, content_type="multipart/form-data").get_data(
+        as_text=True
+    )
+    assert 'class="st-cat"' not in html and "data-bulk-category" not in html
+    assert "Type (from the mapping)" in html
     token = html.split('name="token" value="')[1].split('"')[0]
-    keys = [part.split('"')[0] for part in html.split('name="cat:')[1:]]
-    chosen = {f"cat:{k}": "INFO" for k in keys[:2]}
-    done = client.post("/imports/st/confirm", data={"token": token, "selected": keys, **chosen})
+    keys = [part.split('"')[0] for part in html.split('name="selected" value="')[1:]]
+    done = client.post("/imports/st/confirm", data={"token": token, "selected": keys})
     assert done.status_code == 302
-    assert sorted(_categories(app).values()) == ["ERROR", "INFO", "INFO"]
+    assert sorted(_categories(app).values()) == ["ERROR", "INFO", "WARNING"]
 
 
 # ------------------------------------------------------------------------------ delete Drafts
