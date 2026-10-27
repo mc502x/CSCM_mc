@@ -39,11 +39,12 @@
     <div class="field">
       <label for="default_category">{{ _('Status category of the new codes') }}</label>
       <select id="default_category" name="default_category">
+        <option value="" selected>({{ _('choose') }})</option>
         <option value="ERROR">ERROR</option>
         <option value="WARNING">WARNING</option>
         <option value="INFO">INFO</option>
       </select>
-      <div class="hint">{{ _('The program files do not carry a category; you can change it in each Draft.') }}</div>
+      <div class="hint">{{ _('The program files do not carry a category and none is assumed: choose one here, by alarm type below, or for each program in the preview. A program without a category is not imported.') }}</div>
     </div>
     <fieldset class="field">
       <legend>{{ _('Status category by alarm type (optional)') }}</legend>

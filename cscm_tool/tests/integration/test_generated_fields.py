@@ -34,7 +34,7 @@ def _read(name):
 
 
 def _import(client, name):
-    data = {"files": [(io.BytesIO(_read(name)), name)]}
+    data = {"files": [(io.BytesIO(_read(name)), name)], "default_category": "ERROR"}
     preview = client.post(
         "/api/v1/imports/st/preview", data=data, content_type="multipart/form-data"
     ).get_json()

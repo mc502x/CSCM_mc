@@ -220,6 +220,7 @@ The concept and the eleven open items for checking the translations by native sp
 | **Release documents as PDF**: full documentation, software description, user manual and test report, each with the version in its file name | v4.15.0 | FR-185 |
 | **Design showcase decks** (management, team) from real screenshots, and the identity of every title page: long name, owner line, logo | v4.16.0 | FR-186, FR-187 |
 | **Hand-over to the team repository**: audited clean export, code owners, pipeline for GitHub, contribution guide | v4.16.0 | FR-188 |
+| **No assumed values in the `.st` import**: a variable stays its name, what the program lacks is listed in the comment, no status category is preselected; the user-group numbers become named access levels where exactly one level fits | v4.16.1 | FR-189, FR-190 |
 
 **New ideas from the review of the release process** (not built):
 

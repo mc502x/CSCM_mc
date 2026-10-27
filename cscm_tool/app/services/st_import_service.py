@@ -73,7 +73,7 @@ from app.services.change_set_service import ChangeSetService
 from app.services.import_service import ImportService, Issue, RowResult, changed_fields
 from app.services.numbering_service import NumberingService
 from app.services.status_code_service import StatusCodeService, ValidationFailed
-from app.services.validation import validate_revision_fields
+from app.services.validation import NO_VALUE, validate_revision_fields
 from app.utils import utcnow_iso
 
 STAGING_HOURS = 24
@@ -167,15 +167,27 @@ def format_window(seconds: int | None) -> str | None:
     return f"{seconds}s"
 
 
-def _description(code: stcd.StatusCode) -> str:
+def _description(code: stcd.StatusCode, unresolved: list[str], translated: list[str]) -> str:
+    """The comment of the Draft. What the program does not give is listed (FR-189), before the set
+    condition, so that a long condition can never cut it off."""
     program = code.number if code.controller == "MC" else code.legacy_number
     parts = [f"Imported from {Path(code.file).name} (program StCd_{program})."]
     if code.legacy_number is not None:
         parts.append(f"Legacy {code.controller} number {code.legacy_number}.")
+    if translated:
+        parts.append(
+            "Access levels, proposed from the user-group numbers of the program: "
+            + "; ".join(translated)
+            + "."
+        )
+    if unresolved:
+        parts.append("Not resolved by the import: " + "; ".join(unresolved) + ".")
+    head = " ".join(parts)
     if code.set_condition:
-        parts.append(f"Set condition: {code.set_condition}")
-    text_ = " ".join(parts)
-    return text_[:_DESCRIPTION_LIMIT]
+        room = _DESCRIPTION_LIMIT - len(head) - len(" Set condition: ")
+        if room > 0:
+            return head + " Set condition: " + code.set_condition[:room]
+    return head[:_DESCRIPTION_LIMIT]
 
 
 def _identifier_number(identifier: str) -> int:
@@ -262,8 +274,10 @@ def _clean_options(options: dict | None) -> dict[str, Any]:
         raise ValueError("hc_proposal must be 1 or 2") from exc
     if proposal not in (1, 2):
         raise ValueError("hc_proposal must be 1 or 2")
-    category = str(options.get("default_category") or "ERROR").upper()
-    if category not in CATEGORIES:
+    # FR-189: no category is assumed. The files carry none; the user chooses a default, a category
+    # per alarm type or one per program, and a program without any of them is not imported.
+    category = str(options.get("default_category") or "").upper()
+    if category and category not in CATEGORIES:
         raise ValueError("default_category must be ERROR, WARNING or INFO")
     by_alarm_type = _clean_categories(options.get("alarm_type_categories"), "alarm type")
     by_program = _clean_categories(options.get("categories"), "program")
@@ -278,7 +292,7 @@ def _clean_options(options: dict | None) -> dict[str, Any]:
     return {
         "controller": controller,
         "hc_proposal": proposal,
-        "default_category": category,
+        "default_category": category or None,
         "alarm_type_categories": by_alarm_type,
         "categories": by_program,
         "platforms": platforms,
@@ -303,16 +317,33 @@ def _clean_categories(raw: Any, what: str) -> dict[str, str]:
     return cleaned
 
 
-def _category_of(code: stcd.StatusCode, key: str, options: dict) -> str:
-    """Per program (the user's choice), else by the program's alarm type, else the default."""
+def _category_of(code: stcd.StatusCode, key: str, options: dict) -> str | None:
+    """Per program (the user's choice), else by the program's alarm type, else the default; None
+    when the user has chosen none of them (the program is then not imported until they do)."""
     return (
         options.get("categories", {}).get(key)
         or options.get("alarm_type_categories", {}).get(str(code.alarm_type))
-        or options["default_category"]
+        or options.get("default_category")
+        or None
     )
 
 
 # ------------------------------------------------------------------------------ evaluation
+def _load_audiences() -> dict[str, list[tuple[int, str, int, int]]]:
+    """Per audience field: the named access levels that have numbers, as (id, label, read, write).
+    The numbers are the defaults of docs/06-data-dictionary.md section 9d.9."""
+    out: dict[str, list[tuple[int, str, int, int]]] = {}
+    for field_name, (_slot, table) in status_code_fields.AUDIENCE_SLOTS.items():
+        statement = (
+            "SELECT id, label, default_read_level, default_write_level FROM "  # nosec B608
+            + table
+            + " WHERE is_active = 1 AND default_read_level IS NOT NULL"
+            " AND default_write_level IS NOT NULL ORDER BY sort_order, id"
+        )
+        out[field_name] = [(r[0], r[1], r[2], r[3]) for r in db.session.execute(text(statement))]
+    return out
+
+
 class _Catalogue:
     """What the catalogue already holds, loaded once per evaluation."""
 
@@ -351,6 +382,7 @@ class _Catalogue:
                 )
             ).all()
         }
+        self.audiences = _load_audiences()
         self.groups = {g.id: g for g in db.session.query(LookupFunctionalSystemGroup)}
         self.subgroups = {s.id: s for s in db.session.query(LookupFunctionalSubgroup)}
 
@@ -510,10 +542,17 @@ def _evaluate_one(
     else:
         warnings.append("The program has no PrgIdx_GUi; enter it before the code can be released.")
 
-    data = _to_data(code, options, group, subgroup, view, mapping)
+    data = _to_data(code, options, group, subgroup, view, mapping, catalogue.audiences)
     item.data = data
     for error in validate_revision_fields(data):
+        if error["field"] == "status_category" and view["category"] is None:
+            continue  # not an error of the program: the user has not chosen one yet
         problem(error["field"], error["message"])
+    if view["category"] is None:
+        warnings.append(
+            "No status category is chosen. Choose one for this program, by alarm type or as the "
+            "default; the program cannot be imported without."
+        )
     if code.availability_group is None:
         problem("available_group", "The program has no availability group.")
 
@@ -543,8 +582,14 @@ def _evaluate_existing(
     group = catalogue.groups[status_code.functional_system_group_id]
     subgroup = catalogue.subgroups[status_code.functional_subgroup_id]
     # the delay warnings of a program that already exists are not repeated on the screen
-    data = _to_data(code, options, group, subgroup, {**view, "warnings": []}, mapping)
+    data = _to_data(
+        code, options, group, subgroup, {**view, "warnings": []}, mapping, catalogue.audiences
+    )
+    view["category"] = data.get("status_category")
     current = StatusCodeService._repo.get_current_revision(code_id)
+    if current is not None and data.get("status_category") is None:
+        # no category chosen: the code keeps the one it has, it is not compared with an assumption
+        data["status_category"] = view["category"] = current.status_category
     item.status_code_id = code_id
     if current is None:
         # the change request was withdrawn: the code row is still there (its number is kept)
@@ -583,6 +628,73 @@ def _evaluate_existing(
     view["state"], view["action"] = "changed", item.action
 
 
+_AUDIENCE_NAMES = {
+    "development_access": "Development",
+    "sales_access": "Sales",
+    "tcc_access": "TCC",
+    "service_access": "Service",
+    "turbine_operator_package_access": "Turbine Operator Package",
+    "grid_operator_access": "Grid Operator",
+    "service_partner_access": "Service Partner",
+    "customer_access": "Customer",
+}
+
+
+def _translate_access(
+    code: stcd.StatusCode,
+    audiences: dict[str, list[tuple[int, str, int, int]]],
+    translated: list[str],
+    unresolved: list[str],
+) -> dict[str, int]:
+    """The user-group levels of the program (a read and a write number for each audience) as the
+    named access level of that audience - only where exactly one named level carries exactly these
+    numbers. Anything else stays empty and is listed in the comment (FR-189); the numbers
+    themselves are always kept with the Draft. The names are proposals until the Administrator
+    confirms them at the review sign-off."""
+    found: dict[str, int] = {}
+    absent: list[str] = []
+    for field_name, (slot, _table) in status_code_fields.AUDIENCE_SLOTS.items():
+        label = _AUDIENCE_NAMES[field_name]
+        levels = code.user_groups.get(slot) or {}
+        if "read" not in levels or "write" not in levels:
+            absent.append(label)
+            continue
+        read, write = levels["read"], levels["write"]
+        matches = [m for m in audiences.get(field_name, []) if m[2] == read and m[3] == write]
+        if len(matches) == 1:
+            found[field_name] = matches[0][0]
+            translated.append(f"{label} = {matches[0][1]} (read {read}, write {write})")
+        elif matches:
+            names = ", ".join(m[1] for m in matches)
+            unresolved.append(
+                f"{label} access: read {read} / write {write} fits more than one level ({names})"
+            )
+        else:
+            unresolved.append(f"{label} access: read {read} / write {write} fits no named level")
+    if absent:
+        unresolved.append("access levels not in the program: " + ", ".join(absent))
+    return found
+
+
+def _delay(label: str, raw: str, ms: int | None, unresolved: list[str], warnings: list[str]) -> str:
+    """The delay as the program gives it: a time, else the name of the variable that sets it, else
+    the statement that the program has no timer. Never an assumed time."""
+    if ms is not None:
+        return format_delay(ms) or NO_VALUE
+    if raw:
+        unresolved.append(
+            f"{label} = {raw} (a variable or parameter; its value is not in the program)"
+        )
+        warnings.append(
+            f"The {label} is the parameter {raw}; the name is entered, "
+            "look the value up before release."
+        )
+        return raw
+    unresolved.append(f"{label}: the program has no timer")
+    warnings.append(f'The program has no timer for the {label}; "{NO_VALUE}" is entered.')
+    return NO_VALUE
+
+
 def _to_data(
     code: stcd.StatusCode,
     options: dict[str, Any],
@@ -590,21 +702,39 @@ def _to_data(
     subgroup: LookupFunctionalSubgroup,
     view: dict[str, Any],
     mapping: dict[int, tuple],
+    audiences: dict[str, list[tuple[int, str, int, int]]],
 ) -> dict[str, Any]:
     warnings: list[str] = view["warnings"]
     view["category"] = _category_of(code, view["key"], options)
-    set_delay = format_delay(code.set_delay_ms)
-    reset_delay = format_delay(code.reset_delay_ms)
-    for label, raw, value in (
-        ("set", code.set_delay, set_delay),
-        ("reset", code.reset_delay, reset_delay),
-    ):
-        if value is None:
-            warnings.append(
-                f"The {label} delay is "
-                + (f"the parameter {raw}" if raw else "not set")
-                + "; 0ms is entered, correct it in the Draft."
-            )
+    # FR-189: nothing is assumed. A value is read from the program, chosen by the user, or - when
+    # the program gives a variable instead of a value - the name of that variable. What the program
+    # does not give at all is listed in the comment of the Draft (description).
+    unresolved: list[str] = []
+    translated: list[str] = []
+    access = _translate_access(code, audiences, translated, unresolved)
+    set_delay = _delay("set delay", code.set_delay, code.set_delay_ms, unresolved, warnings)
+    reset_delay = _delay("reset delay", code.reset_delay, code.reset_delay_ms, unresolved, warnings)
+    not_given_no: list[str] = []
+    if code.alarm is None:
+        not_given_no.append("alarm")
+    if code.snapshot is None:
+        not_given_no.append("trigger snapshot")
+    if "ZeroLoadPrg_ArBo" not in code.other:
+        not_given_no.append("loadless spinning permitted")
+    not_given_no.append("up/down counter")  # no program carries it
+    unresolved.append("not in the program, entered as No: " + ", ".join(not_given_no))
+    missing_programs = [
+        status_code_fields.LABELS.get(target, target.replace("_", " "))
+        for source, target in _PROGRAM_FIELDS.items()
+        if source not in code.programs
+    ] + [
+        status_code_fields.LABELS[target]
+        for source, target in _EXTRA_PROGRAM_FIELDS.items()
+        if source not in code.programs
+        and status_code_fields.applies_to(target, group.controller_type)
+    ]
+    if missing_programs:
+        unresolved.append("not in the program, entered as 0: " + ", ".join(missing_programs))
 
     related = []
     for number in code.depends_on:
@@ -618,13 +748,13 @@ def _to_data(
         "functional_subgroup": subgroup.id,
         "turbine_platforms": list(options["platforms"]),
         "title": code.name[:120],
-        "description": _description(code),
+        "description": _description(code, unresolved, translated),
         "software_version": None,
         "status_category": view["category"],
         "available_group": code.availability_group,
-        "alarm_flag": bool(code.alarm),
-        "set_delay": set_delay or "0ms",
-        "reset_delay": reset_delay or "0ms",
+        "alarm_flag": bool(code.alarm),  # None = not in the program, listed above
+        "set_delay": set_delay,
+        "reset_delay": reset_delay,
         "up_down_counter": False,
         "trigger_snapshot": bool(code.snapshot),
         "loadless_spinning_permitted": bool(code.other.get("ZeroLoadPrg_ArBo")),
@@ -651,7 +781,7 @@ def _to_data(
         data.setdefault(field_name, 0)
     data.update(_generated_fields(code, group.controller_type, warnings))
     for field_name in _ACCESS_FIELDS:
-        data[field_name] = None
+        data[field_name] = access.get(field_name)
     if not code.name:
         warnings.append("The program has no name in its header comment.")
     return data
@@ -851,6 +981,14 @@ class StImportService:
                 )
         if not chosen:
             raise ValueError("Nothing selected: tick at least one program that is ready.")
+        uncategorised = [i.view["key"] for i in chosen if i.view["category"] is None]
+        if uncategorised:
+            raise ValueError(
+                "These programs have no status category: "
+                + ", ".join(uncategorised[:5])
+                + ". The files carry none and none is assumed: choose a category for each program, "
+                "by alarm type or as the default, and try again."
+            )
 
         job = ImportJob(
             requested_by=actor.id,

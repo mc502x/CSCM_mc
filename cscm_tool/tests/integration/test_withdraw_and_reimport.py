@@ -44,7 +44,10 @@ def _read(name):
 
 
 def _preview(client, files):
-    data = {"files": [(io.BytesIO(content), name) for name, content in files]}
+    data = {
+        "files": [(io.BytesIO(content), name) for name, content in files],
+        "default_category": "ERROR",
+    }
     response = client.post(
         "/api/v1/imports/st/preview", data=data, content_type="multipart/form-data"
     )

@@ -33,7 +33,7 @@ def _read(name: str) -> bytes:
 
 
 def _upload(names, **fields):
-    data = {"files": [(io.BytesIO(_read(n)), n) for n in names]}
+    data = {"files": [(io.BytesIO(_read(n)), n) for n in names], "default_category": "ERROR"}
     data.update(fields)
     return data
 
@@ -149,7 +149,7 @@ def test_a_zip_and_loose_files_are_read_alike_and_other_files_are_noted(client, 
         archive.writestr("export/readme.docx", b"not a program")
     response = client.post(
         "/api/v1/imports/st/preview",
-        data={"files": [(io.BytesIO(buffer.getvalue()), "all.zip")]},
+        data={"files": [(io.BytesIO(buffer.getvalue()), "all.zip")], "default_category": "ERROR"},
         content_type="multipart/form-data",
     )
     assert response.status_code == 200
@@ -161,7 +161,8 @@ def test_a_number_defined_twice_in_one_upload_blocks_the_second(client, engineer
         "files": [
             (io.BytesIO(_read("StCd_1000.st")), "a/StCd_1000.st"),
             (io.BytesIO(_read("StCd_1000.st")), "b/StCd_1000.st"),
-        ]
+        ],
+        "default_category": "ERROR",
     }
     preview = client.post(
         "/api/v1/imports/st/preview", data=data, content_type="multipart/form-data"
@@ -269,7 +270,10 @@ def test_a_legacy_number_that_belongs_to_another_code_blocks_the_program(client,
     text = text.replace("StCdArUi[Idx] := 1000", "StCdArUi[Idx] := 1050")
     again = client.post(
         "/api/v1/imports/st/preview",
-        data={"files": [(io.BytesIO(text.encode("cp1252")), "StCd_1050.st")]},
+        data={
+            "files": [(io.BytesIO(text.encode("cp1252")), "StCd_1050.st")],
+            "default_category": "ERROR",
+        },
         content_type="multipart/form-data",
     ).get_json()
     item = again["items"][0]
@@ -287,7 +291,10 @@ def test_a_used_prg_idx_is_a_warning_and_is_not_stored_twice(app, client, engine
     text = text.replace("StCd: 3000,", "StCd: 3999,")
     again = client.post(
         "/api/v1/imports/st/preview",
-        data={"files": [(io.BytesIO(text.encode("cp1252")), "StCd_1050.st")]},
+        data={
+            "files": [(io.BytesIO(text.encode("cp1252")), "StCd_1050.st")],
+            "default_category": "ERROR",
+        },
         content_type="multipart/form-data",
     ).get_json()
     item = again["items"][0]

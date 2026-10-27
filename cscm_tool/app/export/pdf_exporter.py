@@ -18,7 +18,7 @@ no font installation and no internet. Plain Latin cells skip the shaping engine 
 import functools
 import logging
 from pathlib import Path
-from typing import Any
+from typing import Any, cast
 
 from fpdf import FPDF
 from fpdf.enums import MethodReturnValue
@@ -294,7 +294,10 @@ def _title_page(
 def _lines(pdf: _CataloguePdf, width: float, text: str) -> tuple[list[str], bool]:
     """The wrapped lines of a cell (measured in the font its text needs) and its direction."""
     rtl = pdf.use(text, FONT_SIZE)
-    lines = pdf.multi_cell(width, LINE_HEIGHT, text, dry_run=True, output=MethodReturnValue.LINES)
+    lines = cast(
+        "list[str]",
+        pdf.multi_cell(width, LINE_HEIGHT, text, dry_run=True, output=MethodReturnValue.LINES),
+    )
     return lines, rtl
 
 

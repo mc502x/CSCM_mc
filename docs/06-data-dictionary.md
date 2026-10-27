@@ -46,8 +46,8 @@ Conventions: **Required** = enforced not-null at both UI and API before the enti
 | `software_version` | Firmware/software version this revision is associated with | TEXT | No (see note) | `NULL` | `^\d+\.\d+(\.\d+)?$` when present | — | `1.1.1.4.2MW` |
 | `available_group` | Availability-accounting code (corrected 2026-09-17: real data is a numeric code, not a four-letter A–D group) | INTEGER | Yes | — | must appear in `lookup_available_group`'s currently-observed set (soft-validated — see note below) | observed: 1,2,4,5,6,9,11–16,18,20–25,27,28,30,32 (labels TBD, see §9c) | `27` |
 | `alarm_flag` | Whether the condition raises an operator-facing alarm (corrected 2026-09-17: real data is a plain boolean, not a four-value Alarm Behaviour enum) | INTEGER (bool) | Yes | `0` | — | `0`, `1` | `1` |
-| `set_delay` | Debounce delay before the condition is set/raised, as free text with unit (corrected 2026-09-17: real data is not a plain seconds integer) | TEXT | Yes | — | `^\*?\d+(\.\d+)?\s?(ms\|s\|min\|MIN\|h\|d)$` | — | `10ms`, `*500ms`, `2min` |
-| `reset_delay` | Minimum time the condition must be clear before it resets | TEXT | Yes | — | same pattern as `set_delay` | — | `2min`, `*0 ms` |
+| `set_delay` | Debounce delay before the condition is set/raised, as free text with unit (corrected 2026-09-17: real data is not a plain seconds integer); *(v4.16.1)* it may also be the **name of the parameter** that sets it, or `not in the program`, when an imported program gives no time (FR-189) - the time must be looked up before release | TEXT | Yes | — | `^\*?\d+(\.\d+)?\s?(ms\|s\|min\|MIN\|h\|d)$` | — | `10ms`, `*500ms`, `2min` |
+| `reset_delay` | Minimum time the condition must be clear before it resets | TEXT | Yes | — | same as `set_delay` | — | `2min`, `*0 ms` |
 | `up_down_counter` | Whether this status uses an up/down occurrence counter rather than a simple set/clear (new field, 2026-09-17) | INTEGER (bool) | Yes | `0` | — | `0`, `1` | `0` |
 | `trigger_snapshot` | Whether occurrence of this status triggers a diagnostic data snapshot (new field, 2026-09-17) | INTEGER (bool) | Yes | `0` | — | `0`, `1` | `1` |
 | `loadless_spinning_permitted` | Whether loadless rotor spinning is permitted while this status is active (new field, 2026-09-17) | INTEGER (bool) | Yes | `0` | — | `0`, `1` | `1` |
@@ -243,14 +243,14 @@ Docs: 03-srs.md §1.16, 05-governance-handbook.md §6b. The reader (`app/importe
 | `StCdArUi[Idx]` | `reserved_identifier` | Main: the current number |
 | `AvailabilityGroupArUs` | `available_group` | required |
 | `AlarmArBo` | `alarm_flag` | |
-| `SetTimer(PT := …)`, `ResetTimer(PT := …)` | `set_delay`, `reset_delay` | `T#10ms` → `10ms`, `T#120000ms` → `2min`; a variable (`StCd14000SetDelayGpTi`) or no timer → `0ms` with a warning |
+| `SetTimer(PT := …)`, `ResetTimer(PT := …)` | `set_delay`, `reset_delay` | `T#10ms` → `10ms`, `T#120000ms` → `2min`; a variable (`StCd14000SetDelayGpTi`) → the **name of the variable** is entered and listed in the comment of the Draft, with a warning; no timer → `not in the program` (FR-189, no value is assumed) |
 | `MaxRepeatNbArBy`, `RepeatTimeArDw`, `RepeatStCdArUi` | `number_of_times_repeated`, `repeated_over_the_course` (`86400` s → `1d`), `status_code_for_repeated_error` | |
 | `StCdWithSnap_Bo`, `ZeroLoadOperation_ArBo` | `trigger_snapshot`, `loadless_spinning_permitted` | |
 | `AzimutPrgArUs`, `ManResetPrgArUs`, `AutoResetPrgArUs`, `QConverterPrgArUs`, `BrakePrgArUs`, `ConverterGSCPrgArUs`, `ConverterMSCPrgArUs`, `YawLubPrgArUs` | `yaw_program`, `manual_reset_program`, `auto_reset_program`, `converter_reactive_power_program`, `brake_program`, `umrichterprogramm_gsc`, `umrichterprogramm_msc`, `yaw_bearing_lubrication_program` | |
 | other StCd programs named in the set condition | `related_status_codes` | Hub: legacy numbers translated to new ones |
 | `PrgIdx_GUi` | `prg_idx` | stored only when free and 1–65535, otherwise a warning |
 | everything else (user-group levels, remaining subsystem programs, operating-mode mask, …) | `import_source_item.parsed_json` | kept for the catalogue columns that wire them later (21-improvement-ideas.md) |
-| *not in the file* | `status_category` (the uploader's choice for the batch), `description` (generated: file, legacy number, set condition), turbine platforms (the uploader's choice), the eight audience-access values (left empty) | |
+| *not in the file* | `status_category` (the uploader's choice - a default, per alarm type or per program; **none is assumed**, a program without one is not imported), `description` (generated: file, legacy number, the list of what the program does not give, set condition), turbine platforms (the uploader's choice), the eight audience-access values (*v4.16.1*: proposed from the user-group numbers of the program where exactly one named level carries exactly those numbers, FR-190; otherwise empty and listed in the comment) | |
 
 **Provenance.** `import_source_item` holds one row per imported program: the file name, its SHA-256, program number and line, the controller and every parsed attribute as JSON. The files themselves are kept under `instance/imports/<job>/`.
 

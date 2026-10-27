@@ -231,6 +231,8 @@ Also: `record_property` measurements are now carried into the report (`junit_fam
 | FR-186 | ✅ | `test_showcase::test_a_text_that_does_not_fit_stops_the_build`, `…both_decks_are_built_from_the_screenshots_and_every_picture_is_described`, `…the_decks_are_written_as_powerpoint_files`, `…the_demo_has_its_data_and_the_application_has_no_demo_routes`, `…the_browser_is_found_or_named` |
 | FR-187 | ✅ | `test_branding::test_the_owner_the_long_name_and_the_logo_are_written_once`, `…the_guide_names_the_same_owner`, `…the_logo_files_exist_and_are_drawn`, `…the_menu_bar_and_the_login_page_show_the_logo`, `…every_title_page_carries_the_identity` |
 | FR-188 | ✅ | `test_handover::test_a_clean_tree_passes_the_audit`, `…every_kind_of_finding_stops_the_handover`, `…the_export_is_one_commit_by_the_named_author_with_the_tag`, `…a_tag_that_does_not_exist_and_a_push_without_confirmation_are_refused`, `…the_repository_carries_its_team_files` |
+| FR-189 | ✅ | `test_st_no_assumptions::test_a_delay_that_is_a_variable_stays_the_name_of_the_variable`, `…a_delay_the_program_does_not_have_says_so`, `…a_program_that_gives_everything_lists_only_what_no_program_carries`, `…the_preview_warns_with_the_name_of_the_parameter`, `…no_category_is_assumed`, `…the_preview_page_asks_for_a_category_instead_of_assuming_one`, `…a_delay_may_be_the_name_of_a_parameter_but_not_a_malformed_time` |
+| FR-190 | ✅ | `test_st_no_assumptions::test_the_user_group_numbers_of_the_file_become_the_named_access_levels`, `…a_level_that_no_single_named_level_carries_stays_empty_and_is_listed`, `…a_pair_of_numbers_that_fits_two_named_levels_is_not_guessed` |
 
 ## 4. Business rules, security, non-functional
 

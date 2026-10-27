@@ -58,7 +58,7 @@
       <tbody>
         {% for i in preview['items'] %}
         <tr>
-          <td><input type="checkbox" class="st-row-check" name="selected" value="{{ i.key }}" aria-label="{{ _('Import') }} {{ i.identifier or i.file }}"{% if i.state not in ('ready', 'changed', 'restorable') %} disabled{% elif i.state == 'ready' %} checked{% endif %}></td>
+          <td><input type="checkbox" class="st-row-check" name="selected" value="{{ i.key }}" aria-label="{{ _('Import') }} {{ i.identifier or i.file }}"{% if i.state not in ('ready', 'changed', 'restorable') %} disabled{% elif i.state == 'ready' and i.category %} checked{% endif %}></td>
           <td>{{ i.identifier or '—' }}</td>
           <td>{% if i.legacy_number is not none %}{{ i.legacy_number }}{% else %}<span class="muted">n/a</span>{% endif %}</td>
           <td>{{ i.controller }}</td>
@@ -68,6 +68,7 @@
           <td>
             {% if i.state in ('ready', 'changed', 'restorable') %}
             <select class="st-cat" name="cat:{{ i.key }}" aria-label="{{ _('Status category') }} {{ i.identifier or i.file }}">
+              {% if not i.category %}<option value="" selected>({{ _('choose') }})</option>{% endif %}
               {% for c in ('ERROR', 'WARNING', 'INFO') %}<option value="{{ c }}"{% if c == i.category %} selected{% endif %}>{{ c }}</option>{% endfor %}
             </select>
             {% else %}{{ i.category or '—' }}{% endif %}

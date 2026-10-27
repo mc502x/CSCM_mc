@@ -266,31 +266,31 @@ A notice is sent once per change and person; a failing notice never undoes the c
 
 <!-- translations:start -->
 
-The interface has **1294 strings** (every text a template wraps in `_()`, the role names and the help texts). English is the source; the other languages are listed below. A string without a translation is shown in English.
+The interface has **1296 strings** (every text a template wraps in `_()`, the role names and the help texts). English is the source; the other languages are listed below. A string without a translation is shown in English.
 
 ### 9.1 Coverage
 
 | Language | Code | Direction | Translated | Share | Pre-check confidence | Fingerprint |
 |---|---|---|---|---|---|---|
 | GB English 🇬🇧 | `en` | ltr | source | — | — | — |
-| DE Deutsch 🇩🇪 (German) | `de` | ltr | 1294 | 100 % | <span style="background:#7fc561;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>94 %</b></span> | `bc4fbe1e645f` |
-| FR Français 🇫🇷 (French) | `fr` | ltr | 1293 | 99 % | <span style="background:#7fc561;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>95 %</b></span> | `c3154822a629` |
-| IN हिन्दी 🇮🇳 (Hindi) | `hi` | ltr | 1293 | 99 % | <span style="background:#9ccf5c;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>88 %</b></span> | `2dac26700732` |
-| SA العربية 🇸🇦 (Arabic) | `ar` | rtl | 1293 | 99 % | <span style="background:#9ccf5c;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>88 %</b></span> | `13f0f9a2d163` |
-| IN বাংলা 🇮🇳 (Bengali) | `bn` | ltr | 1293 | 99 % | <span style="background:#9ccf5c;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>87 %</b></span> | `2cecd8026685` |
-| IN मराठी 🇮🇳 (Marathi) | `mr` | ltr | 1293 | 99 % | <span style="background:#9ccf5c;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>86 %</b></span> | `04b2c9b8186b` |
-| IN తెలుగు 🇮🇳 (Telugu) | `te` | ltr | 1293 | 99 % | <span style="background:#9ccf5c;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>85 %</b></span> | `7d2fc0e85603` |
-| IN தமிழ் 🇮🇳 (Tamil) | `ta` | ltr | 1293 | 99 % | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>84 %</b></span> | `43690ff4265f` |
-| IN ગુજરાતી 🇮🇳 (Gujarati) | `gu` | ltr | 1293 | 99 % | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>84 %</b></span> | `1c7a2e589192` |
-| PK اردو 🇵🇰 (Urdu) | `ur` | rtl | 1293 | 99 % | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>85 %</b></span> | `b5258c824eee` |
-| IN ಕನ್ನಡ 🇮🇳 (Kannada) | `kn` | ltr | 1293 | 99 % | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>84 %</b></span> | `ee6e429c33d4` |
-| IN ଓଡ଼ିଆ 🇮🇳 (Odia) | `or` | ltr | 1293 | 99 % | <span style="background:#d9e050;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>78 %</b></span> | `79b0df331cf6` |
-| IN മലയാളം 🇮🇳 (Malayalam) | `ml` | ltr | 1293 | 99 % | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>83 %</b></span> | `07f4103b94d4` |
-| IN ਪੰਜਾਬੀ 🇮🇳 (Punjabi) | `pa` | ltr | 1293 | 99 % | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>83 %</b></span> | `344e5b818900` |
-| ES Español 🇪🇸 (Spanish) | `es` | ltr | 1293 | 99 % | <span style="background:#7fc561;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>94 %</b></span> | `7ae90d7a4464` |
-| IT Italiano 🇮🇹 (Italian) | `it` | ltr | 1293 | 99 % | <span style="background:#7fc561;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>94 %</b></span> | `f2274f4c40cd` |
-| DK Dansk 🇩🇰 (Danish) | `da` | ltr | 1293 | 99 % | <span style="background:#7fc561;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>92 %</b></span> | `c8f0711c5c27` |
-| GE ქართული 🇬🇪 (Georgian) | `ka` | ltr | 1293 | 99 % | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>83 %</b></span> | `5430d2c64c98` |
+| DE Deutsch 🇩🇪 (German) | `de` | ltr | 1296 | 100 % | <span style="background:#7fc561;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>94 %</b></span> | `6a148cab7364` |
+| FR Français 🇫🇷 (French) | `fr` | ltr | 1295 | 99 % | <span style="background:#7fc561;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>95 %</b></span> | `2e671f70e690` |
+| IN हिन्दी 🇮🇳 (Hindi) | `hi` | ltr | 1295 | 99 % | <span style="background:#9ccf5c;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>88 %</b></span> | `9221a446f11a` |
+| SA العربية 🇸🇦 (Arabic) | `ar` | rtl | 1295 | 99 % | <span style="background:#9ccf5c;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>88 %</b></span> | `c3d0649cdcb8` |
+| IN বাংলা 🇮🇳 (Bengali) | `bn` | ltr | 1295 | 99 % | <span style="background:#9ccf5c;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>87 %</b></span> | `94729a31f708` |
+| IN मराठी 🇮🇳 (Marathi) | `mr` | ltr | 1295 | 99 % | <span style="background:#9ccf5c;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>86 %</b></span> | `f4d1a2fa4efc` |
+| IN తెలుగు 🇮🇳 (Telugu) | `te` | ltr | 1295 | 99 % | <span style="background:#9ccf5c;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>85 %</b></span> | `0ca4499fa478` |
+| IN தமிழ் 🇮🇳 (Tamil) | `ta` | ltr | 1295 | 99 % | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>84 %</b></span> | `9d87de7de0f3` |
+| IN ગુજરાતી 🇮🇳 (Gujarati) | `gu` | ltr | 1295 | 99 % | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>84 %</b></span> | `cd145cec57ed` |
+| PK اردو 🇵🇰 (Urdu) | `ur` | rtl | 1295 | 99 % | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>85 %</b></span> | `1cb668d916e1` |
+| IN ಕನ್ನಡ 🇮🇳 (Kannada) | `kn` | ltr | 1295 | 99 % | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>84 %</b></span> | `c61367d9637e` |
+| IN ଓଡ଼ିଆ 🇮🇳 (Odia) | `or` | ltr | 1295 | 99 % | <span style="background:#d9e050;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>78 %</b></span> | `8c277190636b` |
+| IN മലയാളം 🇮🇳 (Malayalam) | `ml` | ltr | 1295 | 99 % | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>83 %</b></span> | `afe41c7fae6b` |
+| IN ਪੰਜਾਬੀ 🇮🇳 (Punjabi) | `pa` | ltr | 1295 | 99 % | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>83 %</b></span> | `f3049206c0f3` |
+| ES Español 🇪🇸 (Spanish) | `es` | ltr | 1295 | 99 % | <span style="background:#7fc561;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>94 %</b></span> | `5a98a4233e19` |
+| IT Italiano 🇮🇹 (Italian) | `it` | ltr | 1295 | 99 % | <span style="background:#7fc561;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>94 %</b></span> | `5b588b294560` |
+| DK Dansk 🇩🇰 (Danish) | `da` | ltr | 1295 | 99 % | <span style="background:#7fc561;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>92 %</b></span> | `404944ab31e2` |
+| GE ქართული 🇬🇪 (Georgian) | `ka` | ltr | 1295 | 99 % | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>82 %</b></span> | `29b6734f7c74` |
 
 The pre-check confidence is the estimate of section 8c - the share of strings a native speaker is expected to accept unchanged, by an AI checker and not by a native speaker; red is 50 % or less, green above 95 %.
 
@@ -317,7 +317,7 @@ The fingerprint is a short hash of the language's catalogue as shipped in the co
 | ES Español 🇪🇸 | 0 | 6 | 6 | 4 | <span style="background:#7fc561;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>94 %</b></span> |
 | IT Italiano 🇮🇹 | 0 | 5 | 5 | 4 | <span style="background:#7fc561;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>94 %</b></span> |
 | DK Dansk 🇩🇰 | 1 | 3 | 6 | 6 | <span style="background:#7fc561;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>92 %</b></span> |
-| GE ქართული 🇬🇪 | 0 | 7 | 4 | 15 | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>83 %</b></span> |
+| GE ქართული 🇬🇪 | 0 | 7 | 4 | 15 | <span style="background:#bcd957;color:#1b1b1b;padding:1px 8px;border-radius:9px"><b>82 %</b></span> |
 
 The wrong and awkward counts are findings in the sample of 160 strings, the same strings in every language. The strings that were flagged, for the native speaker to look at first:
 
@@ -438,7 +438,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 
 ### 9.2 DE Deutsch 🇩🇪 — German
 
-1294 of 1294 strings translated; direction left to right.
+1296 of 1296 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -1089,6 +1089,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sce489f` | help and messages | The author gets any required cross-domain sign-offs, then submits the change request for review. | Der Autor holt die erforderlichen fachübergreifenden Freigaben ein und reicht den Änderungsantrag dann zur Prüfung ein. |
 | `S1cdbdd` | help and messages | The Chief Engineer approves or rejects. Approval makes the revision Approved (or Deprecated for a deprecation request). | Der Chefingenieur genehmigt oder lehnt ab. Die Genehmigung macht die Revision freigegeben (bei einem Außerbetriebnahme-Antrag: außer Betrieb). |
 | `S2d6ac0` | help and messages | The package is being built. Reload this page to follow its progress. | Das Paket wird erstellt. Laden Sie diese Seite neu, um den Fortschritt zu sehen. |
+| `Sde7a5b` | help and messages | The program files do not carry a category; you can change it in each Draft. | Die Programmdateien enthalten keine Kategorie; Sie können sie in jedem Entwurf ändern. |
 | `Scff3a3` | help and messages | User deleted; its name and address are erased, what it did stays attributable. | Benutzer gelöscht; Name und Adresse sind gelöscht, was er getan hat, bleibt zuordenbar. |
 | `Secfb3f` | hub_consolidation | Deprecate replaced Hub codes | Ersetzte Hub-Codes außer Betrieb nehmen |
 | `S0e7766` | hub_consolidation, language | draft | Entwurf |
@@ -1568,6 +1569,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S3bd89c` | software_versions | Which codes exist in which software version | Welche Codes in welcher Software-Version existieren |
 | `S16e5d4` | st_new, st_preview | Alarm type | Alarmtyp |
 | `S726d7a` | st_new | as above | wie oben |
+| `S9477fd` | st_new, st_preview | choose | wählen |
 | `Sb149ca` | st_new | Detect: a number from 10000 up is a Hub Controller program | Erkennen: Eine Nummer ab 10000 ist ein Programm der Nabensteuerung |
 | `S7d06d0` | st_new | Every imported program becomes an ordinary Draft with the number it carries reserved. It still needs Cross-Domain Sign-Off, dual review and Chief Engineer approval before Release, and all Drafts of one import share a change set. | Jedes importierte Programm wird ein gewöhnlicher Entwurf, dessen Nummer reserviert ist. Er braucht vor der Veröffentlichung weiterhin die fachübergreifende Freigabe, die doppelte Prüfung und die Genehmigung des Chefingenieurs; alle Entwürfe eines Imports gehören zu einem Änderungspaket. |
 | `Sbda77c` | st_new | Every program names an alarm type. A type left at "as above" gets the category chosen above; the next page lets you set the category of single programs or of all ticked ones. | Jedes Programm nennt einen Alarmtyp. Ein Typ mit „wie oben“ erhält die oben gewählte Kategorie; auf der nächsten Seite können Sie die Kategorie einzelner oder aller markierten Programme setzen. |
@@ -1581,7 +1583,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S67640d` | st_new | Read files and preview | Dateien lesen und Vorschau anzeigen |
 | `S0af4fc` | st_new | Status category by alarm type (optional) | Statuskategorie nach Alarmtyp (optional) |
 | `S234237` | st_new | Status category of the new codes | Statuskategorie der neuen Codes |
-| `Sde7a5b` | st_new | The program files do not carry a category; you can change it in each Draft. | Die Programmdateien enthalten keine Kategorie; Sie können sie in jedem Entwurf ändern. |
+| `S61fc52` | st_new | The program files do not carry a category and none is assumed: choose one here, by alarm type below, or for each program in the preview. A program without a category is not imported. | Die Programmdateien enthalten keine Kategorie, und es wird keine angenommen: Wählen Sie hier eine, unten je Alarmtyp oder in der Vorschau für jedes Programm. Ein Programm ohne Kategorie wird nicht importiert. |
 | `S8f4c21` | st_new | Turbine platforms | Turbinenplattformen |
 | `S9ad4d4` | st_new | Upload the generated StCd_<n>.st programs — several files at once, a whole folder, or one ZIP. Nothing is created yet: the next page lists every program so you can tick the ones to import. | Laden Sie die erzeugten StCd_<n>.st-Programme hoch — mehrere Dateien auf einmal, einen ganzen Ordner oder ein ZIP. Es wird noch nichts angelegt: Die nächste Seite listet jedes Programm auf, damit Sie die zu importierenden ankreuzen können. |
 | `S2693e5` | st_preview | All Drafts of this import join one change set, so they can be reviewed and decided together. | Alle Entwürfe dieses Imports kommen in ein Änderungspaket, damit sie gemeinsam geprüft und entschieden werden können. |
@@ -1739,7 +1741,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 
 ### 9.3 FR Français 🇫🇷 — French
 
-1293 of 1294 strings translated; direction left to right.
+1295 of 1296 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -2389,6 +2391,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sce489f` | help and messages | The author gets any required cross-domain sign-offs, then submits the change request for review. | L'auteur obtient les validations inter-domaines requises, puis soumet la demande de modification pour relecture. |
 | `S1cdbdd` | help and messages | The Chief Engineer approves or rejects. Approval makes the revision Approved (or Deprecated for a deprecation request). | L'ingénieur en chef approuve ou rejette. L'approbation fait passer la révision à Approuvé (ou Obsolète pour une demande d'obsolescence). |
 | `S2d6ac0` | help and messages | The package is being built. Reload this page to follow its progress. | Le paquet est en cours de création. Rechargez cette page pour suivre sa progression. |
+| `Sde7a5b` | help and messages | The program files do not carry a category; you can change it in each Draft. | Les fichiers de programme ne portent pas de catégorie ; vous pouvez la modifier dans chaque brouillon. |
 | `Scff3a3` | help and messages | User deleted; its name and address are erased, what it did stays attributable. | Utilisateur supprimé ; son nom et son adresse sont effacés, ce qu'il a fait reste attribuable. |
 | `Secfb3f` | hub_consolidation | Deprecate replaced Hub codes | Déclarer obsolètes les codes de moyeu remplacés |
 | `S0e7766` | hub_consolidation, language | draft | brouillon |
@@ -2868,6 +2871,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S3bd89c` | software_versions | Which codes exist in which software version | Quels codes existent dans quelle version du logiciel |
 | `S16e5d4` | st_new, st_preview | Alarm type | Type d'alarme |
 | `S726d7a` | st_new | as above | comme ci-dessus |
+| `S9477fd` | st_new, st_preview | choose | choisir |
 | `Sb149ca` | st_new | Detect: a number from 10000 up is a Hub Controller program | Détecter : un numéro à partir de 10000 est un programme du contrôleur de moyeu |
 | `S7d06d0` | st_new | Every imported program becomes an ordinary Draft with the number it carries reserved. It still needs Cross-Domain Sign-Off, dual review and Chief Engineer approval before Release, and all Drafts of one import share a change set. | Chaque programme importé devient un brouillon ordinaire dont le numéro qu'il porte est réservé. Il exige encore la validation inter-domaines, la double relecture et l'approbation de l'ingénieur en chef avant publication, et tous les brouillons d'un même import partagent un lot de modifications. |
 | `Sbda77c` | st_new | Every program names an alarm type. A type left at "as above" gets the category chosen above; the next page lets you set the category of single programs or of all ticked ones. | Chaque programme indique un type d'alarme. Un type laissé sur « comme ci-dessus » reçoit la catégorie choisie plus haut ; la page suivante permet de définir la catégorie de programmes isolés ou de tous ceux qui sont cochés. |
@@ -2881,7 +2885,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S67640d` | st_new | Read files and preview | Lire les fichiers et afficher l'aperçu |
 | `S0af4fc` | st_new | Status category by alarm type (optional) | Catégorie de statut par type d'alarme (facultatif) |
 | `S234237` | st_new | Status category of the new codes | Catégorie de statut des nouveaux codes |
-| `Sde7a5b` | st_new | The program files do not carry a category; you can change it in each Draft. | Les fichiers de programme ne portent pas de catégorie ; vous pouvez la modifier dans chaque brouillon. |
+| `S61fc52` | st_new | The program files do not carry a category and none is assumed: choose one here, by alarm type below, or for each program in the preview. A program without a category is not imported. | Les fichiers de programme ne contiennent pas de catégorie et aucune n'est supposée : choisissez-en une ici, par type d'alarme ci-dessous, ou pour chaque programme dans l'aperçu. Un programme sans catégorie n'est pas importé. |
 | `S8f4c21` | st_new | Turbine platforms | Plateformes d'éolienne |
 | `S9ad4d4` | st_new | Upload the generated StCd_<n>.st programs — several files at once, a whole folder, or one ZIP. Nothing is created yet: the next page lists every program so you can tick the ones to import. | Téléversez les programmes StCd_<n>.st générés — plusieurs fichiers à la fois, un dossier entier ou un seul ZIP. Rien n'est encore créé : la page suivante liste chaque programme pour que vous cochiez ceux à importer. |
 | `S2693e5` | st_preview | All Drafts of this import join one change set, so they can be reviewed and decided together. | Tous les brouillons de cet import rejoignent un même lot de modifications, afin d'être relus et décidés ensemble. |
@@ -3039,7 +3043,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 
 ### 9.4 IN हिन्दी 🇮🇳 — Hindi
 
-1293 of 1294 strings translated; direction left to right.
+1295 of 1296 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -3689,6 +3693,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sce489f` | help and messages | The author gets any required cross-domain sign-offs, then submits the change request for review. | लेखक आवश्यक अंतर-डोमेन साइन-ऑफ लेता है, फिर परिवर्तन अनुरोध को समीक्षा के लिए जमा करता है। |
 | `S1cdbdd` | help and messages | The Chief Engineer approves or rejects. Approval makes the revision Approved (or Deprecated for a deprecation request). | मुख्य अभियंता अनुमोदित या अस्वीकृत करता है। अनुमोदन से संशोधन अनुमोदित (या अप्रचलन अनुरोध के लिए अप्रचलित) हो जाता है। |
 | `S2d6ac0` | help and messages | The package is being built. Reload this page to follow its progress. | पैकेज बन रहा है। प्रगति देखने के लिए यह पेज फिर लोड करें। |
+| `Sde7a5b` | help and messages | The program files do not carry a category; you can change it in each Draft. | प्रोग्राम फ़ाइलों में श्रेणी नहीं होती; आप उसे हर मसौदे में बदल सकते हैं। |
 | `Scff3a3` | help and messages | User deleted; its name and address are erased, what it did stays attributable. | उपयोगकर्ता हटा दिया गया; उसका नाम और पता मिटा दिया गया है, उसने जो किया वह अब भी आरोपित रहता है। |
 | `Secfb3f` | hub_consolidation | Deprecate replaced Hub codes | प्रतिस्थापित हब कोड अप्रचलित घोषित करें |
 | `S0e7766` | hub_consolidation, language | draft | मसौदा |
@@ -4168,6 +4173,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S3bd89c` | software_versions | Which codes exist in which software version | कौन-से कोड किस सॉफ़्टवेयर संस्करण में हैं |
 | `S16e5d4` | st_new, st_preview | Alarm type | अलार्म प्रकार |
 | `S726d7a` | st_new | as above | ऊपर के अनुसार |
+| `S9477fd` | st_new, st_preview | choose | चुनें |
 | `Sb149ca` | st_new | Detect: a number from 10000 up is a Hub Controller program | पहचानें: 10000 से ऊपर की संख्या हब नियंत्रक प्रोग्राम है |
 | `S7d06d0` | st_new | Every imported program becomes an ordinary Draft with the number it carries reserved. It still needs Cross-Domain Sign-Off, dual review and Chief Engineer approval before Release, and all Drafts of one import share a change set. | हर आयात किया गया प्रोग्राम एक सामान्य मसौदा बनता है जिसमें उसका अपना नंबर आरक्षित रहता है। रिलीज़ से पहले उसे अंतर-डोमेन साइन-ऑफ, दोहरी समीक्षा और मुख्य अभियंता अनुमोदन फिर भी चाहिए, और एक आयात के सभी मसौदे एक परिवर्तन समुच्चय साझा करते हैं। |
 | `Sbda77c` | st_new | Every program names an alarm type. A type left at "as above" gets the category chosen above; the next page lets you set the category of single programs or of all ticked ones. | हर प्रोग्राम एक अलार्म प्रकार बताता है। "ऊपर के अनुसार" पर छोड़े गए प्रकार को ऊपर चुनी गई श्रेणी मिलती है; अगले पृष्ठ पर आप अलग-अलग प्रोग्रामों या सभी चिह्नित प्रोग्रामों की श्रेणी तय कर सकते हैं। |
@@ -4181,7 +4187,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S67640d` | st_new | Read files and preview | फ़ाइलें पढ़ें और पूर्वावलोकन देखें |
 | `S0af4fc` | st_new | Status category by alarm type (optional) | अलार्म प्रकार के अनुसार स्थिति श्रेणी (वैकल्पिक) |
 | `S234237` | st_new | Status category of the new codes | नए कोड की स्थिति श्रेणी |
-| `Sde7a5b` | st_new | The program files do not carry a category; you can change it in each Draft. | प्रोग्राम फ़ाइलों में श्रेणी नहीं होती; आप उसे हर मसौदे में बदल सकते हैं। |
+| `S61fc52` | st_new | The program files do not carry a category and none is assumed: choose one here, by alarm type below, or for each program in the preview. A program without a category is not imported. | प्रोग्राम फ़ाइलों में कोई श्रेणी नहीं होती और कोई श्रेणी मानी नहीं जाती: यहाँ एक चुनें, नीचे अलार्म प्रकार के अनुसार चुनें, या पूर्वावलोकन में हर प्रोग्राम के लिए चुनें। बिना श्रेणी वाला प्रोग्राम आयात नहीं होता। |
 | `S8f4c21` | st_new | Turbine platforms | टर्बाइन प्लेटफ़ॉर्म |
 | `S9ad4d4` | st_new | Upload the generated StCd_<n>.st programs — several files at once, a whole folder, or one ZIP. Nothing is created yet: the next page lists every program so you can tick the ones to import. | बनाए गए StCd_<n>.st प्रोग्राम अपलोड करें — एक साथ कई फ़ाइलें, पूरा फ़ोल्डर या एक ZIP। अभी कुछ नहीं बनता: अगला पृष्ठ हर प्रोग्राम की सूची देता है ताकि आप आयात करने वालों पर निशान लगा सकें। |
 | `S2693e5` | st_preview | All Drafts of this import join one change set, so they can be reviewed and decided together. | इस आयात के सभी मसौदे एक परिवर्तन समुच्चय में जुड़ते हैं, ताकि उनकी साथ-साथ समीक्षा और निर्णय हो सके। |
@@ -4339,7 +4345,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 
 ### 9.5 SA العربية 🇸🇦 — Arabic
 
-1293 of 1294 strings translated; direction right to left.
+1295 of 1296 strings translated; direction right to left.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -4989,6 +4995,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sce489f` | help and messages | The author gets any required cross-domain sign-offs, then submits the change request for review. | يحصل المؤلف على الاعتمادات متعددة المجالات المطلوبة ثم يقدّم طلب التغيير للمراجعة. |
 | `S1cdbdd` | help and messages | The Chief Engineer approves or rejects. Approval makes the revision Approved (or Deprecated for a deprecation request). | يوافق كبير المهندسين أو يرفض. تجعل الموافقة المراجعة معتمدة (أو متقادمة لطلب تقادم). |
 | `S2d6ac0` | help and messages | The package is being built. Reload this page to follow its progress. | جارٍ إنشاء الحزمة. أعد تحميل هذه الصفحة لمتابعة التقدم. |
+| `Sde7a5b` | help and messages | The program files do not carry a category; you can change it in each Draft. | لا تحمل ملفات البرامج فئة؛ ويمكنك تغييرها في كل مسودة. |
 | `Scff3a3` | help and messages | User deleted; its name and address are erased, what it did stays attributable. | تم حذف المستخدم؛ مُسح اسمه وعنوانه، وما فعله يبقى منسوباً إليه. |
 | `Secfb3f` | hub_consolidation | Deprecate replaced Hub codes | وسم رموز المحور المستبدلة كمتقادمة |
 | `S0e7766` | hub_consolidation, language | draft | مسودة |
@@ -5468,6 +5475,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S3bd89c` | software_versions | Which codes exist in which software version | أي الرموز موجودة في أي إصدار برنامج |
 | `S16e5d4` | st_new, st_preview | Alarm type | نوع الإنذار |
 | `S726d7a` | st_new | as above | كما سبق |
+| `S9477fd` | st_new, st_preview | choose | اختر |
 | `Sb149ca` | st_new | Detect: a number from 10000 up is a Hub Controller program | اكتشاف: الرقم من 10000 فأكثر برنامج لوحدة تحكم المحور |
 | `S7d06d0` | st_new | Every imported program becomes an ordinary Draft with the number it carries reserved. It still needs Cross-Domain Sign-Off, dual review and Chief Engineer approval before Release, and all Drafts of one import share a change set. | يصبح كل برنامج مستورد مسودة عادية يُحجز له الرقم الذي يحمله. ما زال يتطلب اعتمادًا متعدد المجالات ومراجعة مزدوجة وموافقة كبير المهندسين قبل الإصدار، وتشترك كل مسودات استيراد واحد في مجموعة تغييرات. |
 | `Sbda77c` | st_new | Every program names an alarm type. A type left at "as above" gets the category chosen above; the next page lets you set the category of single programs or of all ticked ones. | يذكر كل برنامج نوع إنذار. النوع المتروك عند «كما سبق» يحصل على الفئة المختارة أعلاه؛ وفي الصفحة التالية يمكنك تعيين فئة برامج منفردة أو كل البرامج المحددة. |
@@ -5481,7 +5489,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S67640d` | st_new | Read files and preview | قراءة الملفات والمعاينة |
 | `S0af4fc` | st_new | Status category by alarm type (optional) | فئة الحالة حسب نوع الإنذار (اختياري) |
 | `S234237` | st_new | Status category of the new codes | فئة الحالة للرموز الجديدة |
-| `Sde7a5b` | st_new | The program files do not carry a category; you can change it in each Draft. | لا تحمل ملفات البرامج فئة؛ ويمكنك تغييرها في كل مسودة. |
+| `S61fc52` | st_new | The program files do not carry a category and none is assumed: choose one here, by alarm type below, or for each program in the preview. A program without a category is not imported. | لا تحتوي ملفات البرامج على فئة ولا يتم افتراض أي فئة: اختر فئة هنا، أو حسب نوع الإنذار أدناه، أو لكل برنامج في المعاينة. لا يتم استيراد برنامج بدون فئة. |
 | `S8f4c21` | st_new | Turbine platforms | منصات التوربين |
 | `S9ad4d4` | st_new | Upload the generated StCd_<n>.st programs — several files at once, a whole folder, or one ZIP. Nothing is created yet: the next page lists every program so you can tick the ones to import. | ارفع برامج StCd_<n>.st المولَّدة — عدة ملفات دفعة واحدة أو مجلدًا كاملًا أو ملف ZIP واحدًا. لا يُنشأ شيء بعد: تسرد الصفحة التالية كل برنامج لتحدد ما تريد استيراده. |
 | `S2693e5` | st_preview | All Drafts of this import join one change set, so they can be reviewed and decided together. | تنضم كل مسودات هذا الاستيراد إلى مجموعة تغييرات واحدة، لتُراجَع وتُقرَّر معًا. |
@@ -5639,7 +5647,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 
 ### 9.6 IN বাংলা 🇮🇳 — Bengali
 
-1293 of 1294 strings translated; direction left to right.
+1295 of 1296 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -6289,6 +6297,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sce489f` | help and messages | The author gets any required cross-domain sign-offs, then submits the change request for review. | লেখক প্রয়োজনীয় আন্তঃডোমেইন সাইন-অফ নেন, তারপর পরিবর্তন অনুরোধ পর্যালোচনার জন্য জমা দেন। |
 | `S1cdbdd` | help and messages | The Chief Engineer approves or rejects. Approval makes the revision Approved (or Deprecated for a deprecation request). | প্রধান প্রকৌশলী অনুমোদন বা প্রত্যাখ্যান করেন। অনুমোদন সংশোধনকে অনুমোদিত (বা অপ্রচলন অনুরোধে অপ্রচলিত) করে। |
 | `S2d6ac0` | help and messages | The package is being built. Reload this page to follow its progress. | প্যাকেজ তৈরি হচ্ছে। অগ্রগতি দেখতে এই পেজ আবার লোড করুন। |
+| `Sde7a5b` | help and messages | The program files do not carry a category; you can change it in each Draft. | প্রোগ্রাম ফাইলে বিভাগ থাকে না; আপনি প্রতিটি খসড়ায় তা বদলাতে পারেন। |
 | `Scff3a3` | help and messages | User deleted; its name and address are erased, what it did stays attributable. | ব্যবহারকারী মুছে ফেলা হয়েছে; তার নাম ও ঠিকানা মুছে ফেলা হয়েছে, সে যা করেছে তা আরোপযোগ্য থাকে। |
 | `Secfb3f` | hub_consolidation | Deprecate replaced Hub codes | প্রতিস্থাপিত হাব কোড অপ্রচলিত ঘোষণা করুন |
 | `S0e7766` | hub_consolidation, language | draft | খসড়া |
@@ -6768,6 +6777,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S3bd89c` | software_versions | Which codes exist in which software version | কোন কোড কোন সফটওয়্যার সংস্করণে আছে |
 | `S16e5d4` | st_new, st_preview | Alarm type | অ্যালার্মের ধরন |
 | `S726d7a` | st_new | as above | উপরের মতো |
+| `S9477fd` | st_new, st_preview | choose | বেছে নিন |
 | `Sb149ca` | st_new | Detect: a number from 10000 up is a Hub Controller program | শনাক্ত করুন: ১০০০০ থেকে উপরের নম্বর হাব নিয়ন্ত্রক প্রোগ্রাম |
 | `S7d06d0` | st_new | Every imported program becomes an ordinary Draft with the number it carries reserved. It still needs Cross-Domain Sign-Off, dual review and Chief Engineer approval before Release, and all Drafts of one import share a change set. | প্রতিটি আমদানি করা প্রোগ্রাম একটি সাধারণ খসড়া হয় যার বহন করা নম্বর সংরক্ষিত থাকে। রিলিজের আগে এতে তবু আন্তঃডোমেইন সাইন-অফ, দ্বিগুণ পর্যালোচনা ও প্রধান প্রকৌশলীর অনুমোদন লাগে, এবং এক আমদানির সব খসড়া একটি পরিবর্তন সেট ভাগ করে। |
 | `Sbda77c` | st_new | Every program names an alarm type. A type left at "as above" gets the category chosen above; the next page lets you set the category of single programs or of all ticked ones. | প্রতিটি প্রোগ্রাম একটি অ্যালার্মের ধরন জানায়। "উপরের মতো" রাখা ধরন উপরে বাছা বিভাগ পায়; পরের পাতায় আপনি আলাদা প্রোগ্রামের বা টিক দেওয়া সবগুলোর বিভাগ ঠিক করতে পারবেন। |
@@ -6781,7 +6791,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S67640d` | st_new | Read files and preview | ফাইল পড়ুন ও প্রিভিউ দেখুন |
 | `S0af4fc` | st_new | Status category by alarm type (optional) | অ্যালার্মের ধরন অনুযায়ী স্ট্যাটাস বিভাগ (ঐচ্ছিক) |
 | `S234237` | st_new | Status category of the new codes | নতুন কোডের স্ট্যাটাস বিভাগ |
-| `Sde7a5b` | st_new | The program files do not carry a category; you can change it in each Draft. | প্রোগ্রাম ফাইলে বিভাগ থাকে না; আপনি প্রতিটি খসড়ায় তা বদলাতে পারেন। |
+| `S61fc52` | st_new | The program files do not carry a category and none is assumed: choose one here, by alarm type below, or for each program in the preview. A program without a category is not imported. | প্রোগ্রাম ফাইলে কোনো বিভাগ থাকে না এবং কোনোটি ধরে নেওয়া হয় না: এখানে একটি বেছে নিন, নিচে অ্যালার্মের ধরন অনুযায়ী বাছুন, অথবা প্রিভিউতে প্রতিটি প্রোগ্রামের জন্য বাছুন। বিভাগ ছাড়া প্রোগ্রাম আমদানি হয় না। |
 | `S8f4c21` | st_new | Turbine platforms | টারবাইন প্ল্যাটফর্ম |
 | `S9ad4d4` | st_new | Upload the generated StCd_<n>.st programs — several files at once, a whole folder, or one ZIP. Nothing is created yet: the next page lists every program so you can tick the ones to import. | তৈরি করা StCd_<n>.st প্রোগ্রাম আপলোড করুন — একসঙ্গে কয়েকটি ফাইল, পুরো ফোল্ডার বা একটি ZIP। এখনো কিছু তৈরি হয় না: পরের পৃষ্ঠা প্রতিটি প্রোগ্রাম তালিকাভুক্ত করে, যাতে আপনি আমদানির জন্য টিক দিতে পারেন। |
 | `S2693e5` | st_preview | All Drafts of this import join one change set, so they can be reviewed and decided together. | এই আমদানির সব খসড়া একটি পরিবর্তন সেটে যোগ দেয়, যাতে একসঙ্গে পর্যালোচনা ও সিদ্ধান্ত হতে পারে। |
@@ -6939,7 +6949,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 
 ### 9.7 IN मराठी 🇮🇳 — Marathi
 
-1293 of 1294 strings translated; direction left to right.
+1295 of 1296 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -7589,6 +7599,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sce489f` | help and messages | The author gets any required cross-domain sign-offs, then submits the change request for review. | लेखक आवश्यक आंतर-क्षेत्र साइन-ऑफ मिळवतो, मग बदल विनंती पुनरावलोकनासाठी सादर करतो. |
 | `S1cdbdd` | help and messages | The Chief Engineer approves or rejects. Approval makes the revision Approved (or Deprecated for a deprecation request). | मुख्य अभियंता मंजूर किंवा नाकारतो. मंजुरीमुळे सुधारणा मंजूर होते (किंवा कालबाह्यता विनंतीसाठी कालबाह्य). |
 | `S2d6ac0` | help and messages | The package is being built. Reload this page to follow its progress. | पॅकेज तयार होत आहे. प्रगती पाहण्यासाठी हे पेज पुन्हा लोड करा. |
+| `Sde7a5b` | help and messages | The program files do not carry a category; you can change it in each Draft. | प्रोग्राम फाइलमध्ये वर्ग नसतो; तुम्ही प्रत्येक मसुद्यात तो बदलू शकता. |
 | `Scff3a3` | help and messages | User deleted; its name and address are erased, what it did stays attributable. | वापरकर्ता हटवला; त्याचे नाव आणि पत्ता पुसला आहे, त्याने जे केले ते श्रेय देता येण्याजोगे राहते. |
 | `Secfb3f` | hub_consolidation | Deprecate replaced Hub codes | बदललेले हब कोड कालबाह्य घोषित करा |
 | `S0e7766` | hub_consolidation, language | draft | मसुदा |
@@ -8068,6 +8079,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S3bd89c` | software_versions | Which codes exist in which software version | कोणता कोड कोणत्या सॉफ्टवेअर आवृत्तीत आहे |
 | `S16e5d4` | st_new, st_preview | Alarm type | अलार्मचा प्रकार |
 | `S726d7a` | st_new | as above | वरीलप्रमाणे |
+| `S9477fd` | st_new, st_preview | choose | निवडा |
 | `Sb149ca` | st_new | Detect: a number from 10000 up is a Hub Controller program | ओळखा: १०००० पासून पुढील क्रमांक हब नियंत्रक प्रोग्राम आहे |
 | `S7d06d0` | st_new | Every imported program becomes an ordinary Draft with the number it carries reserved. It still needs Cross-Domain Sign-Off, dual review and Chief Engineer approval before Release, and all Drafts of one import share a change set. | प्रत्येक आयात केलेला प्रोग्राम सामान्य मसुदा बनतो ज्यात त्याचा स्वतःचा क्रमांक आरक्षित असतो. प्रकाशनापूर्वी त्याला तरीही आंतर-क्षेत्र साइन-ऑफ, दुहेरी पुनरावलोकन आणि मुख्य अभियंत्याची मंजुरी लागते, आणि एका आयातीचे सर्व मसुदे एक बदल संच वाटून घेतात. |
 | `Sbda77c` | st_new | Every program names an alarm type. A type left at "as above" gets the category chosen above; the next page lets you set the category of single programs or of all ticked ones. | प्रत्येक प्रोग्राम एक अलार्म प्रकार सांगतो. "वरीलप्रमाणे" ठेवलेल्या प्रकाराला वर निवडलेला वर्ग मिळतो; पुढच्या पानावर तुम्ही एकेका प्रोग्रामचा किंवा खूण केलेल्या सर्वांचा वर्ग ठरवू शकता. |
@@ -8081,7 +8093,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S67640d` | st_new | Read files and preview | फाइल वाचा आणि पूर्वावलोकन पहा |
 | `S0af4fc` | st_new | Status category by alarm type (optional) | अलार्म प्रकारानुसार स्थिती वर्ग (ऐच्छिक) |
 | `S234237` | st_new | Status category of the new codes | नवीन कोडचा स्थिती वर्ग |
-| `Sde7a5b` | st_new | The program files do not carry a category; you can change it in each Draft. | प्रोग्राम फाइलमध्ये वर्ग नसतो; तुम्ही प्रत्येक मसुद्यात तो बदलू शकता. |
+| `S61fc52` | st_new | The program files do not carry a category and none is assumed: choose one here, by alarm type below, or for each program in the preview. A program without a category is not imported. | प्रोग्राम फाइलींमध्ये वर्ग नसतो आणि कोणताही गृहीत धरला जात नाही: येथे एक निवडा, खाली अलार्म प्रकारानुसार निवडा, किंवा पूर्वावलोकनात प्रत्येक प्रोग्रामसाठी निवडा. वर्ग नसलेला प्रोग्राम आयात होत नाही. |
 | `S8f4c21` | st_new | Turbine platforms | टर्बाइन प्लॅटफॉर्म |
 | `S9ad4d4` | st_new | Upload the generated StCd_<n>.st programs — several files at once, a whole folder, or one ZIP. Nothing is created yet: the next page lists every program so you can tick the ones to import. | तयार केलेले StCd_<n>.st प्रोग्राम अपलोड करा — एकाच वेळी अनेक फाइल, संपूर्ण फोल्डर किंवा एक ZIP. अद्याप काहीही तयार होत नाही: पुढील पृष्ठ प्रत्येक प्रोग्राम सूचीबद्ध करते जेणेकरून तुम्ही आयात करायचे ते निवडू शकता. |
 | `S2693e5` | st_preview | All Drafts of this import join one change set, so they can be reviewed and decided together. | या आयातीचे सर्व मसुदे एका बदल संचात सामील होतात, जेणेकरून त्यांचे एकत्र पुनरावलोकन आणि निर्णय होऊ शकतो. |
@@ -8239,7 +8251,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 
 ### 9.8 IN తెలుగు 🇮🇳 — Telugu
 
-1293 of 1294 strings translated; direction left to right.
+1295 of 1296 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -8889,6 +8901,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sce489f` | help and messages | The author gets any required cross-domain sign-offs, then submits the change request for review. | రచయిత అవసరమైన క్రాస్-డొమైన్ సైన్-ఆఫ్‌లు పొంది, తర్వాత మార్పు అభ్యర్థనను సమీక్ష కోసం సమర్పిస్తారు. |
 | `S1cdbdd` | help and messages | The Chief Engineer approves or rejects. Approval makes the revision Approved (or Deprecated for a deprecation request). | చీఫ్ ఇంజనీర్ ఆమోదిస్తారు లేదా తిరస్కరిస్తారు. ఆమోదం పునర్విమర్శను ఆమోదించినదిగా (లేదా వాడుకలో లేని అభ్యర్థనకు వాడుకలో లేనిదిగా) చేస్తుంది. |
 | `S2d6ac0` | help and messages | The package is being built. Reload this page to follow its progress. | ప్యాకేజీ రూపొందుతోంది. పురోగతిని చూడటానికి ఈ పేజీని మళ్లీ లోడ్ చేయండి. |
+| `Sde7a5b` | help and messages | The program files do not carry a category; you can change it in each Draft. | ప్రోగ్రామ్ ఫైళ్లకు వర్గం ఉండదు; మీరు ప్రతి ముసాయిదాలో దాన్ని మార్చవచ్చు. |
 | `Scff3a3` | help and messages | User deleted; its name and address are erased, what it did stays attributable. | వినియోగదారు తొలగించబడ్డారు; వారి పేరు, చిరునామా తుడిచివేయబడ్డాయి, వారు చేసినది ఆపాదించదగినదిగా ఉంటుంది. |
 | `Secfb3f` | hub_consolidation | Deprecate replaced Hub codes | ప్రత్యామ్నాయం ఉన్న హబ్ కోడ్‌లను వాడుకలో లేనివిగా ప్రకటించండి |
 | `S0e7766` | hub_consolidation, language | draft | ముసాయిదా |
@@ -9368,6 +9381,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S3bd89c` | software_versions | Which codes exist in which software version | ఏ సాఫ్ట్‌వేర్ వెర్షన్‌లో ఏ కోడ్‌లు ఉన్నాయి |
 | `S16e5d4` | st_new, st_preview | Alarm type | అలారం రకం |
 | `S726d7a` | st_new | as above | పైన ఉన్నట్లు |
+| `S9477fd` | st_new, st_preview | choose | ఎంచుకోండి |
 | `Sb149ca` | st_new | Detect: a number from 10000 up is a Hub Controller program | గుర్తించండి: 10000 నుండి పైన ఉన్న సంఖ్య హబ్ కంట్రోలర్ ప్రోగ్రామ్ |
 | `S7d06d0` | st_new | Every imported program becomes an ordinary Draft with the number it carries reserved. It still needs Cross-Domain Sign-Off, dual review and Chief Engineer approval before Release, and all Drafts of one import share a change set. | దిగుమతి చేసిన ప్రతి ప్రోగ్రామ్ సాధారణ ముసాయిదా అవుతుంది, అది కలిగి ఉన్న సంఖ్య రిజర్వ్ అవుతుంది. విడుదలకు ముందు దీనికి ఇంకా క్రాస్-డొమైన్ సైన్-ఆఫ్, ద్వంద్వ సమీక్ష మరియు చీఫ్ ఇంజనీర్ ఆమోదం అవసరం, మరియు ఒక దిగుమతిలోని అన్ని ముసాయిదాలు ఒక మార్పుల సమితిని పంచుకుంటాయి. |
 | `Sbda77c` | st_new | Every program names an alarm type. A type left at "as above" gets the category chosen above; the next page lets you set the category of single programs or of all ticked ones. | ప్రతి ప్రోగ్రామ్ ఒక అలారం రకాన్ని పేర్కొంటుంది. "పైన ఉన్నట్లు" అని వదిలిన రకానికి పైన ఎంచుకున్న వర్గం వస్తుంది; తదుపరి పేజీలో ఒక్కో ప్రోగ్రామ్‌కు లేదా టిక్ చేసిన అన్నింటికీ వర్గాన్ని సెట్ చేయవచ్చు. |
@@ -9381,7 +9395,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S67640d` | st_new | Read files and preview | ఫైళ్లు చదివి ప్రివ్యూ చూడండి |
 | `S0af4fc` | st_new | Status category by alarm type (optional) | అలారం రకం ప్రకారం స్థితి వర్గం (ఐచ్ఛికం) |
 | `S234237` | st_new | Status category of the new codes | కొత్త కోడ్‌ల స్థితి వర్గం |
-| `Sde7a5b` | st_new | The program files do not carry a category; you can change it in each Draft. | ప్రోగ్రామ్ ఫైళ్లకు వర్గం ఉండదు; మీరు ప్రతి ముసాయిదాలో దాన్ని మార్చవచ్చు. |
+| `S61fc52` | st_new | The program files do not carry a category and none is assumed: choose one here, by alarm type below, or for each program in the preview. A program without a category is not imported. | ప్రోగ్రామ్ ఫైళ్లలో వర్గం ఉండదు మరియు ఏదీ ఊహించబడదు: ఇక్కడ ఒకటి ఎంచుకోండి, క్రింద అలారం రకం ప్రకారం, లేదా ప్రివ్యూలో ప్రతి ప్రోగ్రామ్‌కు ఎంచుకోండి. వర్గం లేని ప్రోగ్రామ్ దిగుమతి కాదు. |
 | `S8f4c21` | st_new | Turbine platforms | టర్బైన్ ప్లాట్‌ఫారమ్‌లు |
 | `S9ad4d4` | st_new | Upload the generated StCd_<n>.st programs — several files at once, a whole folder, or one ZIP. Nothing is created yet: the next page lists every program so you can tick the ones to import. | సృష్టించిన StCd_<n>.st ప్రోగ్రామ్‌లను అప్‌లోడ్ చేయండి — ఒకేసారి అనేక ఫైళ్లు, మొత్తం ఫోల్డర్ లేదా ఒక ZIP. ఇంకా ఏదీ సృష్టించబడదు: తదుపరి పేజీ ప్రతి ప్రోగ్రామ్‌ను జాబితా చేస్తుంది, దిగుమతి చేయాల్సినవి టిక్ చేయడానికి. |
 | `S2693e5` | st_preview | All Drafts of this import join one change set, so they can be reviewed and decided together. | ఈ దిగుమతిలోని అన్ని ముసాయిదాలు ఒక మార్పుల సమితిలో చేరతాయి, తద్వారా వాటిని కలిసి సమీక్షించి నిర్ణయించవచ్చు. |
@@ -9539,7 +9553,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 
 ### 9.9 IN தமிழ் 🇮🇳 — Tamil
 
-1293 of 1294 strings translated; direction left to right.
+1295 of 1296 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -10189,6 +10203,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sce489f` | help and messages | The author gets any required cross-domain sign-offs, then submits the change request for review. | ஆசிரியர் தேவையான துறைகள் கடந்த கையொப்பங்களைப் பெற்று, பின்னர் மாற்றக் கோரிக்கையை மதிப்பாய்வுக்குச் சமர்ப்பிக்கிறார். |
 | `S1cdbdd` | help and messages | The Chief Engineer approves or rejects. Approval makes the revision Approved (or Deprecated for a deprecation request). | தலைமைப் பொறியாளர் அங்கீகரிக்கிறார் அல்லது நிராகரிக்கிறார். அங்கீகாரம் திருத்தத்தை அங்கீகரிக்கப்பட்டதாக (அல்லது வழக்கொழிவுக் கோரிக்கைக்கு வழக்கொழிந்ததாக) மாற்றும். |
 | `S2d6ac0` | help and messages | The package is being built. Reload this page to follow its progress. | தொகுப்பு உருவாக்கப்படுகிறது. முன்னேற்றத்தைக் காண இந்தப் பக்கத்தை மீண்டும் ஏற்றவும். |
+| `Sde7a5b` | help and messages | The program files do not carry a category; you can change it in each Draft. | நிரல் கோப்புகளில் வகை இல்லை; ஒவ்வொரு வரைவிலும் அதை மாற்றலாம். |
 | `Scff3a3` | help and messages | User deleted; its name and address are erased, what it did stays attributable. | பயனர் நீக்கப்பட்டார்; அவர் பெயரும் முகவரியும் அழிக்கப்பட்டன, அவர் செய்தவை அவருக்குரியவையாகவே இருக்கும். |
 | `Secfb3f` | hub_consolidation | Deprecate replaced Hub codes | மாற்றப்பட்ட ஹப் குறியீடுகளை வழக்கொழிந்ததாக அறிவி |
 | `S0e7766` | hub_consolidation, language | draft | வரைவு |
@@ -10668,6 +10683,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S3bd89c` | software_versions | Which codes exist in which software version | எந்த மென்பொருள் பதிப்பில் எந்தக் குறியீடுகள் உள்ளன |
 | `S16e5d4` | st_new, st_preview | Alarm type | அலாரம் வகை |
 | `S726d7a` | st_new | as above | மேலே உள்ளபடி |
+| `S9477fd` | st_new, st_preview | choose | தேர்ந்தெடு |
 | `Sb149ca` | st_new | Detect: a number from 10000 up is a Hub Controller program | கண்டறி: 10000 முதல் மேலுள்ள எண் ஹப் கட்டுப்படுத்தி நிரல் |
 | `S7d06d0` | st_new | Every imported program becomes an ordinary Draft with the number it carries reserved. It still needs Cross-Domain Sign-Off, dual review and Chief Engineer approval before Release, and all Drafts of one import share a change set. | இறக்குமதி செய்த ஒவ்வொரு நிரலும் அது கொண்டுள்ள எண் ஒதுக்கப்பட்ட சாதாரண வரைவாகிறது. வெளியீட்டுக்கு முன் அதற்கு இன்னும் துறைகள் கடந்த கையொப்பம், இரட்டை மதிப்பாய்வு, தலைமைப் பொறியாளர் ஒப்புதல் தேவை; ஒரு இறக்குமதியின் அனைத்து வரைவுகளும் ஒரு மாற்றத் தொகுப்பைப் பகிர்கின்றன. |
 | `Sbda77c` | st_new | Every program names an alarm type. A type left at "as above" gets the category chosen above; the next page lets you set the category of single programs or of all ticked ones. | ஒவ்வொரு நிரலும் ஒரு அலாரம் வகையைக் குறிப்பிடுகிறது. "மேலே உள்ளபடி" என விடப்பட்ட வகை மேலே தேர்ந்த வகையைப் பெறும்; அடுத்த பக்கத்தில் தனித்தனி நிரல்களுக்கோ குறிக்கப்பட்ட அனைத்திற்குமோ வகையை அமைக்கலாம். |
@@ -10681,7 +10697,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S67640d` | st_new | Read files and preview | கோப்புகளைப் படித்து முன்னோட்டம் காண் |
 | `S0af4fc` | st_new | Status category by alarm type (optional) | அலாரம் வகைப்படி நிலை வகை (விருப்பம்) |
 | `S234237` | st_new | Status category of the new codes | புதிய குறியீடுகளின் நிலை வகை |
-| `Sde7a5b` | st_new | The program files do not carry a category; you can change it in each Draft. | நிரல் கோப்புகளில் வகை இல்லை; ஒவ்வொரு வரைவிலும் அதை மாற்றலாம். |
+| `S61fc52` | st_new | The program files do not carry a category and none is assumed: choose one here, by alarm type below, or for each program in the preview. A program without a category is not imported. | நிரல் கோப்புகளில் வகை இல்லை, எதுவும் ஊகிக்கப்படுவதில்லை: இங்கே ஒன்றைத் தேர்ந்தெடுக்கவும், கீழே அலாரம் வகைப்படி, அல்லது முன்னோட்டத்தில் ஒவ்வொரு நிரலுக்கும் தேர்ந்தெடுக்கவும். வகை இல்லாத நிரல் இறக்குமதி செய்யப்படாது. |
 | `S8f4c21` | st_new | Turbine platforms | டர்பைன் தளங்கள் |
 | `S9ad4d4` | st_new | Upload the generated StCd_<n>.st programs — several files at once, a whole folder, or one ZIP. Nothing is created yet: the next page lists every program so you can tick the ones to import. | உருவாக்கப்பட்ட StCd_<n>.st நிரல்களைப் பதிவேற்றுங்கள் — ஒரே நேரத்தில் பல கோப்புகள், முழுக் கோப்புறை அல்லது ஒரு ZIP. இன்னும் எதுவும் உருவாக்கப்படாது: அடுத்த பக்கம் ஒவ்வொரு நிரலையும் பட்டியலிடும், இறக்குமதிக்கானவற்றைக் குறிக்கலாம். |
 | `S2693e5` | st_preview | All Drafts of this import join one change set, so they can be reviewed and decided together. | இந்த இறக்குமதியின் அனைத்து வரைவுகளும் ஒரு மாற்றத் தொகுப்பில் சேரும், அவற்றை ஒன்றாக மதிப்பாய்வு செய்து முடிவு செய்ய. |
@@ -10839,7 +10855,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 
 ### 9.10 IN ગુજરાતી 🇮🇳 — Gujarati
 
-1293 of 1294 strings translated; direction left to right.
+1295 of 1296 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -11489,6 +11505,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sce489f` | help and messages | The author gets any required cross-domain sign-offs, then submits the change request for review. | લેખક જરૂરી આંતર-ક્ષેત્ર સાઇન-ઑફ મેળવે છે, પછી ફેરફાર વિનંતી સમીક્ષા માટે સબમિટ કરે છે. |
 | `S1cdbdd` | help and messages | The Chief Engineer approves or rejects. Approval makes the revision Approved (or Deprecated for a deprecation request). | મુખ્ય ઇજનેર મંજૂર અથવા નામંજૂર કરે છે. મંજૂરી સુધારાને મંજૂર (અથવા અપ્રચલન વિનંતી માટે અપ્રચલિત) બનાવે છે. |
 | `S2d6ac0` | help and messages | The package is being built. Reload this page to follow its progress. | પેકેજ બની રહ્યું છે. પ્રગતિ જોવા માટે આ પેજ ફરી લોડ કરો. |
+| `Sde7a5b` | help and messages | The program files do not carry a category; you can change it in each Draft. | પ્રોગ્રામ ફાઇલો શ્રેણી ધરાવતી નથી; તમે દરેક મુસદ્દામાં તે બદલી શકો છો. |
 | `Scff3a3` | help and messages | User deleted; its name and address are erased, what it did stays attributable. | વપરાશકર્તા કાઢી નાખ્યો; તેનું નામ અને સરનામું ભૂંસાયા છે, તેણે જે કર્યું તે આરોપણીય રહે છે. |
 | `Secfb3f` | hub_consolidation | Deprecate replaced Hub codes | બદલાયેલા હબ કોડ અપ્રચલિત જાહેર કરો |
 | `S0e7766` | hub_consolidation, language | draft | મુસદ્દો |
@@ -11968,6 +11985,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S3bd89c` | software_versions | Which codes exist in which software version | કયો કોડ કઈ સૉફ્ટવેર આવૃત્તિમાં છે |
 | `S16e5d4` | st_new, st_preview | Alarm type | એલાર્મનો પ્રકાર |
 | `S726d7a` | st_new | as above | ઉપર મુજબ |
+| `S9477fd` | st_new, st_preview | choose | પસંદ કરો |
 | `Sb149ca` | st_new | Detect: a number from 10000 up is a Hub Controller program | શોધો: 10000 થી ઉપરનો નંબર હબ નિયંત્રક પ્રોગ્રામ છે |
 | `S7d06d0` | st_new | Every imported program becomes an ordinary Draft with the number it carries reserved. It still needs Cross-Domain Sign-Off, dual review and Chief Engineer approval before Release, and all Drafts of one import share a change set. | દરેક આયાત કરેલો પ્રોગ્રામ સામાન્ય મુસદ્દો બને છે જેમાં તે જે નંબર ધરાવે છે તે આરક્ષિત રહે છે. રિલીઝ પહેલાં તેને હજુ આંતર-ક્ષેત્ર સાઇન-ઑફ, બેવડી સમીક્ષા અને મુખ્ય ઇજનેરની મંજૂરી જોઈએ, અને એક આયાતના બધા મુસદ્દા એક ફેરફાર સમૂહ વહેંચે છે. |
 | `Sbda77c` | st_new | Every program names an alarm type. A type left at "as above" gets the category chosen above; the next page lets you set the category of single programs or of all ticked ones. | દરેક પ્રોગ્રામ એક એલાર્મ પ્રકાર જણાવે છે. "ઉપર મુજબ" પર રાખેલા પ્રકારને ઉપર પસંદ કરેલી શ્રેણી મળે છે; આગલા પાના પર તમે અલગ પ્રોગ્રામની અથવા બધા ટિક કરેલાની શ્રેણી નક્કી કરી શકો છો. |
@@ -11981,7 +11999,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S67640d` | st_new | Read files and preview | ફાઇલો વાંચો અને પૂર્વાવલોકન જુઓ |
 | `S0af4fc` | st_new | Status category by alarm type (optional) | એલાર્મ પ્રકાર મુજબ સ્ટેટસ શ્રેણી (વૈકલ્પિક) |
 | `S234237` | st_new | Status category of the new codes | નવા કોડની સ્ટેટસ શ્રેણી |
-| `Sde7a5b` | st_new | The program files do not carry a category; you can change it in each Draft. | પ્રોગ્રામ ફાઇલો શ્રેણી ધરાવતી નથી; તમે દરેક મુસદ્દામાં તે બદલી શકો છો. |
+| `S61fc52` | st_new | The program files do not carry a category and none is assumed: choose one here, by alarm type below, or for each program in the preview. A program without a category is not imported. | પ્રોગ્રામ ફાઇલોમાં શ્રેણી હોતી નથી અને કોઈ માની લેવાતી નથી: અહીં એક પસંદ કરો, નીચે એલાર્મ પ્રકાર પ્રમાણે, અથવા પ્રીવ્યૂમાં દરેક પ્રોગ્રામ માટે પસંદ કરો. શ્રેણી વગરનો પ્રોગ્રામ આયાત થતો નથી. |
 | `S8f4c21` | st_new | Turbine platforms | ટર્બાઇન પ્લેટફોર્મ |
 | `S9ad4d4` | st_new | Upload the generated StCd_<n>.st programs — several files at once, a whole folder, or one ZIP. Nothing is created yet: the next page lists every program so you can tick the ones to import. | જનરેટ કરેલા StCd_<n>.st પ્રોગ્રામ અપલોડ કરો — એકસાથે ઘણી ફાઇલો, આખું ફોલ્ડર અથવા એક ZIP. હજુ કંઈ બનતું નથી: આગલું પૃષ્ઠ દરેક પ્રોગ્રામ યાદીમાં બતાવે છે જેથી તમે આયાત કરવાના પર ટિક કરી શકો. |
 | `S2693e5` | st_preview | All Drafts of this import join one change set, so they can be reviewed and decided together. | આ આયાતના બધા મુસદ્દા એક ફેરફાર સમૂહમાં જોડાય છે, જેથી તેમની સાથે સમીક્ષા અને નિર્ણય થઈ શકે. |
@@ -12139,7 +12157,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 
 ### 9.11 PK اردو 🇵🇰 — Urdu
 
-1293 of 1294 strings translated; direction right to left.
+1295 of 1296 strings translated; direction right to left.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -12789,6 +12807,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sce489f` | help and messages | The author gets any required cross-domain sign-offs, then submits the change request for review. | مصنف مطلوبہ بین الشعبہ سائن آف حاصل کرتا ہے، پھر تبدیلی کی درخواست جائزے کے لیے جمع کراتا ہے۔ |
 | `S1cdbdd` | help and messages | The Chief Engineer approves or rejects. Approval makes the revision Approved (or Deprecated for a deprecation request). | چیف انجینئر منظور یا مسترد کرتا ہے۔ منظوری ترمیم کو منظور شدہ (یا متروکیت کی درخواست کے لیے متروک) بنا دیتی ہے۔ |
 | `S2d6ac0` | help and messages | The package is being built. Reload this page to follow its progress. | پیکیج بن رہا ہے۔ پیش رفت دیکھنے کے لیے یہ صفحہ دوبارہ لوڈ کریں۔ |
+| `Sde7a5b` | help and messages | The program files do not carry a category; you can change it in each Draft. | پروگرام فائلوں میں زمرہ نہیں ہوتا؛ آپ اسے ہر مسودے میں بدل سکتے ہیں۔ |
 | `Scff3a3` | help and messages | User deleted; its name and address are erased, what it did stays attributable. | صارف حذف ہو گیا؛ اس کا نام اور پتا مٹا دیا گیا، جو اس نے کیا وہ اسی کے نام رہتا ہے۔ |
 | `Secfb3f` | hub_consolidation | Deprecate replaced Hub codes | تبدیل شدہ ہب کوڈ کو متروک قرار دیں |
 | `S0e7766` | hub_consolidation, language | draft | مسودہ |
@@ -13268,6 +13287,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S3bd89c` | software_versions | Which codes exist in which software version | کون سے کوڈ کس سافٹ ویئر ورژن میں ہیں |
 | `S16e5d4` | st_new, st_preview | Alarm type | الارم کی قسم |
 | `S726d7a` | st_new | as above | اوپر کی طرح |
+| `S9477fd` | st_new, st_preview | choose | منتخب کریں |
 | `Sb149ca` | st_new | Detect: a number from 10000 up is a Hub Controller program | شناخت کریں: 10000 سے اوپر کا نمبر ہب کنٹرولر پروگرام ہے |
 | `S7d06d0` | st_new | Every imported program becomes an ordinary Draft with the number it carries reserved. It still needs Cross-Domain Sign-Off, dual review and Chief Engineer approval before Release, and all Drafts of one import share a change set. | ہر درآمد شدہ پروگرام عام مسودہ بنتا ہے جس میں اس کا اپنا نمبر مخصوص رہتا ہے۔ ریلیز سے پہلے اسے پھر بھی بین الشعبہ سائن آف، دوہرا جائزہ اور چیف انجینئر کی منظوری درکار ہے، اور ایک درآمد کے تمام مسودے ایک تبدیلیوں کا مجموعہ بانٹتے ہیں۔ |
 | `Sbda77c` | st_new | Every program names an alarm type. A type left at "as above" gets the category chosen above; the next page lets you set the category of single programs or of all ticked ones. | ہر پروگرام ایک الارم کی قسم بتاتا ہے۔ "اوپر کی طرح" چھوڑی گئی قسم کو اوپر منتخب کردہ زمرہ ملتا ہے؛ اگلے صفحے پر آپ الگ الگ پروگراموں یا تمام نشان زد پروگراموں کا زمرہ طے کر سکتے ہیں۔ |
@@ -13281,7 +13301,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S67640d` | st_new | Read files and preview | فائلیں پڑھیں اور پیش منظر دیکھیں |
 | `S0af4fc` | st_new | Status category by alarm type (optional) | الارم کی قسم کے مطابق اسٹیٹس زمرہ (اختیاری) |
 | `S234237` | st_new | Status category of the new codes | نئے کوڈ کا اسٹیٹس زمرہ |
-| `Sde7a5b` | st_new | The program files do not carry a category; you can change it in each Draft. | پروگرام فائلوں میں زمرہ نہیں ہوتا؛ آپ اسے ہر مسودے میں بدل سکتے ہیں۔ |
+| `S61fc52` | st_new | The program files do not carry a category and none is assumed: choose one here, by alarm type below, or for each program in the preview. A program without a category is not imported. | پروگرام فائلوں میں زمرہ نہیں ہوتا اور کوئی فرض نہیں کیا جاتا: یہاں ایک منتخب کریں، نیچے الارم کی قسم کے مطابق، یا پیش نظارہ میں ہر پروگرام کے لیے۔ بغیر زمرے کے پروگرام درآمد نہیں ہوتا۔ |
 | `S8f4c21` | st_new | Turbine platforms | ٹربائن پلیٹ فارم |
 | `S9ad4d4` | st_new | Upload the generated StCd_<n>.st programs — several files at once, a whole folder, or one ZIP. Nothing is created yet: the next page lists every program so you can tick the ones to import. | تیار کردہ StCd_<n>.st پروگرام اپ لوڈ کریں — ایک ساتھ کئی فائلیں، پورا فولڈر یا ایک ZIP۔ ابھی کچھ نہیں بنتا: اگلا صفحہ ہر پروگرام کی فہرست دیتا ہے تاکہ آپ درآمد کرنے والوں پر نشان لگا سکیں۔ |
 | `S2693e5` | st_preview | All Drafts of this import join one change set, so they can be reviewed and decided together. | اس درآمد کے تمام مسودے ایک تبدیلیوں کے مجموعے میں شامل ہوتے ہیں، تاکہ ان کا اکٹھے جائزہ اور فیصلہ ہو سکے۔ |
@@ -13439,7 +13459,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 
 ### 9.12 IN ಕನ್ನಡ 🇮🇳 — Kannada
 
-1293 of 1294 strings translated; direction left to right.
+1295 of 1296 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -14089,6 +14109,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sce489f` | help and messages | The author gets any required cross-domain sign-offs, then submits the change request for review. | ಲೇಖಕರು ಅಗತ್ಯ ಅಂತರ-ಡೊಮೇನ್ ಸಹಿಗಳನ್ನು ಪಡೆದು, ನಂತರ ಬದಲಾವಣೆ ವಿನಂತಿಯನ್ನು ಪರಿಶೀಲನೆಗೆ ಸಲ್ಲಿಸುತ್ತಾರೆ. |
 | `S1cdbdd` | help and messages | The Chief Engineer approves or rejects. Approval makes the revision Approved (or Deprecated for a deprecation request). | ಮುಖ್ಯ ಎಂಜಿನಿಯರ್ ಅನುಮೋದಿಸುತ್ತಾರೆ ಅಥವಾ ತಿರಸ್ಕರಿಸುತ್ತಾರೆ. ಅನುಮೋದನೆಯು ಪರಿಷ್ಕರಣೆಯನ್ನು ಅನುಮೋದಿತ (ಅಥವಾ ಹಳತಾಗಿಸುವ ವಿನಂತಿಗೆ ಹಳತಾದ) ಮಾಡುತ್ತದೆ. |
 | `S2d6ac0` | help and messages | The package is being built. Reload this page to follow its progress. | ಪ್ಯಾಕೇಜ್ ರಚನೆಯಾಗುತ್ತಿದೆ. ಪ್ರಗತಿ ನೋಡಲು ಈ ಪುಟವನ್ನು ಮತ್ತೆ ಲೋಡ್ ಮಾಡಿ. |
+| `Sde7a5b` | help and messages | The program files do not carry a category; you can change it in each Draft. | ಪ್ರೋಗ್ರಾಂ ಫೈಲ್‌ಗಳು ವರ್ಗವನ್ನು ಹೊಂದಿರುವುದಿಲ್ಲ; ಪ್ರತಿ ಕರಡಿನಲ್ಲಿ ಅದನ್ನು ಬದಲಿಸಬಹುದು. |
 | `Scff3a3` | help and messages | User deleted; its name and address are erased, what it did stays attributable. | ಬಳಕೆದಾರರನ್ನು ಅಳಿಸಲಾಗಿದೆ; ಅವರ ಹೆಸರು ಮತ್ತು ವಿಳಾಸ ಅಳಿಸಲ್ಪಟ್ಟಿವೆ, ಅವರು ಮಾಡಿದ್ದು ಆರೋಪಿಸಬಹುದಾದಂತೆ ಉಳಿಯುತ್ತದೆ. |
 | `Secfb3f` | hub_consolidation | Deprecate replaced Hub codes | ಬದಲಾಯಿಸಿದ ಹಬ್ ಕೋಡ್‌ಗಳನ್ನು ಹಳತಾಗಿಸಿ |
 | `S0e7766` | hub_consolidation, language | draft | ಕರಡು |
@@ -14568,6 +14589,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S3bd89c` | software_versions | Which codes exist in which software version | ಯಾವ ಕೋಡ್‌ಗಳು ಯಾವ ಸಾಫ್ಟ್‌ವೇರ್ ಆವೃತ್ತಿಯಲ್ಲಿವೆ |
 | `S16e5d4` | st_new, st_preview | Alarm type | ಅಲಾರಂ ಪ್ರಕಾರ |
 | `S726d7a` | st_new | as above | ಮೇಲಿನಂತೆ |
+| `S9477fd` | st_new, st_preview | choose | ಆಯ್ಕೆಮಾಡಿ |
 | `Sb149ca` | st_new | Detect: a number from 10000 up is a Hub Controller program | ಪತ್ತೆ: 10000 ರಿಂದ ಮೇಲಿನ ಸಂಖ್ಯೆ ಹಬ್ ನಿಯಂತ್ರಕ ಪ್ರೋಗ್ರಾಂ |
 | `S7d06d0` | st_new | Every imported program becomes an ordinary Draft with the number it carries reserved. It still needs Cross-Domain Sign-Off, dual review and Chief Engineer approval before Release, and all Drafts of one import share a change set. | ಆಮದಾದ ಪ್ರತಿ ಪ್ರೋಗ್ರಾಂ ತನ್ನ ಸಂಖ್ಯೆಯನ್ನು ಕಾಯ್ದಿರಿಸಿದ ಸಾಮಾನ್ಯ ಕರಡಾಗುತ್ತದೆ. ಬಿಡುಗಡೆಗೆ ಮೊದಲು ಅದಕ್ಕೆ ಇನ್ನೂ ಅಂತರ-ಡೊಮೇನ್ ಸಹಿ, ದ್ವಿಗುಣ ಪರಿಶೀಲನೆ ಮತ್ತು ಮುಖ್ಯ ಎಂಜಿನಿಯರ್ ಅನುಮೋದನೆ ಬೇಕು, ಮತ್ತು ಒಂದು ಆಮದಿನ ಎಲ್ಲಾ ಕರಡುಗಳು ಒಂದು ಬದಲಾವಣೆ ಸಮೂಹವನ್ನು ಹಂಚಿಕೊಳ್ಳುತ್ತವೆ. |
 | `Sbda77c` | st_new | Every program names an alarm type. A type left at "as above" gets the category chosen above; the next page lets you set the category of single programs or of all ticked ones. | ಪ್ರತಿ ಪ್ರೋಗ್ರಾಂ ಒಂದು ಅಲಾರಂ ಪ್ರಕಾರವನ್ನು ಹೇಳುತ್ತದೆ. "ಮೇಲಿನಂತೆ" ಇರುವ ಪ್ರಕಾರಕ್ಕೆ ಮೇಲೆ ಆರಿಸಿದ ವರ್ಗ ಸಿಗುತ್ತದೆ; ಮುಂದಿನ ಪುಟದಲ್ಲಿ ನೀವು ಒಂದೊಂದು ಪ್ರೋಗ್ರಾಂನ ಅಥವಾ ಗುರುತಿಸಿದ ಎಲ್ಲವುಗಳ ವರ್ಗವನ್ನು ಹೊಂದಿಸಬಹುದು. |
@@ -14581,7 +14603,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S67640d` | st_new | Read files and preview | ಫೈಲ್‌ಗಳನ್ನು ಓದಿ ಮತ್ತು ಪೂರ್ವವೀಕ್ಷಣೆ ನೋಡಿ |
 | `S0af4fc` | st_new | Status category by alarm type (optional) | ಅಲಾರಂ ಪ್ರಕಾರದ ಪ್ರಕಾರ ಸ್ಥಿತಿ ವರ್ಗ (ಐಚ್ಛಿಕ) |
 | `S234237` | st_new | Status category of the new codes | ಹೊಸ ಕೋಡ್‌ಗಳ ಸ್ಥಿತಿ ವರ್ಗ |
-| `Sde7a5b` | st_new | The program files do not carry a category; you can change it in each Draft. | ಪ್ರೋಗ್ರಾಂ ಫೈಲ್‌ಗಳು ವರ್ಗವನ್ನು ಹೊಂದಿರುವುದಿಲ್ಲ; ಪ್ರತಿ ಕರಡಿನಲ್ಲಿ ಅದನ್ನು ಬದಲಿಸಬಹುದು. |
+| `S61fc52` | st_new | The program files do not carry a category and none is assumed: choose one here, by alarm type below, or for each program in the preview. A program without a category is not imported. | ಪ್ರೋಗ್ರಾಂ ಫೈಲ್‌ಗಳಲ್ಲಿ ವರ್ಗ ಇರುವುದಿಲ್ಲ ಮತ್ತು ಯಾವುದನ್ನೂ ಊಹಿಸಲಾಗುವುದಿಲ್ಲ: ಇಲ್ಲಿ ಒಂದನ್ನು ಆರಿಸಿ, ಕೆಳಗೆ ಅಲಾರಂ ಪ್ರಕಾರದ ಪ್ರಕಾರ, ಅಥವಾ ಪೂರ್ವವೀಕ್ಷಣೆಯಲ್ಲಿ ಪ್ರತಿ ಪ್ರೋಗ್ರಾಂಗೆ ಆರಿಸಿ. ವರ್ಗವಿಲ್ಲದ ಪ್ರೋಗ್ರಾಂ ಆಮದಾಗುವುದಿಲ್ಲ. |
 | `S8f4c21` | st_new | Turbine platforms | ಟರ್ಬೈನ್ ವೇದಿಕೆಗಳು |
 | `S9ad4d4` | st_new | Upload the generated StCd_<n>.st programs — several files at once, a whole folder, or one ZIP. Nothing is created yet: the next page lists every program so you can tick the ones to import. | ರಚಿಸಿದ StCd_<n>.st ಪ್ರೋಗ್ರಾಂಗಳನ್ನು ಅಪ್‌ಲೋಡ್ ಮಾಡಿ — ಒಮ್ಮೆಗೇ ಹಲವು ಫೈಲ್‌ಗಳು, ಪೂರ್ಣ ಫೋಲ್ಡರ್ ಅಥವಾ ಒಂದು ZIP. ಇನ್ನೂ ಏನೂ ರಚಿಸಲಾಗುವುದಿಲ್ಲ: ಮುಂದಿನ ಪುಟ ಪ್ರತಿ ಪ್ರೋಗ್ರಾಂ ಅನ್ನು ಪಟ್ಟಿಮಾಡುತ್ತದೆ, ಆಮದು ಮಾಡಬೇಕಾದವುಗಳನ್ನು ಗುರುತಿಸಬಹುದು. |
 | `S2693e5` | st_preview | All Drafts of this import join one change set, so they can be reviewed and decided together. | ಈ ಆಮದಿನ ಎಲ್ಲಾ ಕರಡುಗಳು ಒಂದು ಬದಲಾವಣೆ ಸಮೂಹವನ್ನು ಸೇರುತ್ತವೆ, ಇದರಿಂದ ಅವನ್ನು ಒಟ್ಟಿಗೆ ಪರಿಶೀಲಿಸಿ ನಿರ್ಧರಿಸಬಹುದು. |
@@ -14739,7 +14761,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 
 ### 9.13 IN ଓଡ଼ିଆ 🇮🇳 — Odia
 
-1293 of 1294 strings translated; direction left to right.
+1295 of 1296 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -15389,6 +15411,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sce489f` | help and messages | The author gets any required cross-domain sign-offs, then submits the change request for review. | ଲେଖକ ଆବଶ୍ୟକ ଆନ୍ତଃ-ଡୋମେନ୍ ସ୍ୱାକ୍ଷର ପାଆନ୍ତି, ତା’ପରେ ପରିବର୍ତ୍ତନ ଅନୁରୋଧ ସମୀକ୍ଷା ପାଇଁ ଦାଖଲ କରନ୍ତି। |
 | `S1cdbdd` | help and messages | The Chief Engineer approves or rejects. Approval makes the revision Approved (or Deprecated for a deprecation request). | ମୁଖ୍ୟ ଇଞ୍ଜିନିୟର ଅନୁମୋଦନ ବା ପ୍ରତ୍ୟାଖ୍ୟାନ କରନ୍ତି। ଅନୁମୋଦନ ସଂସ୍କରଣକୁ ଅନୁମୋଦିତ (ବା ପ୍ରଚଳନ ବନ୍ଦ ଅନୁରୋଧ ପାଇଁ ପ୍ରଚଳନ ବନ୍ଦ) କରେ। |
 | `S2d6ac0` | help and messages | The package is being built. Reload this page to follow its progress. | ପ୍ୟାକେଜ୍ ତିଆରି ହେଉଛି। ଅଗ୍ରଗତି ଦେଖିବାକୁ ଏହି ପୃଷ୍ଠା ପୁଣି ଲୋଡ୍ କରନ୍ତୁ। |
+| `Sde7a5b` | help and messages | The program files do not carry a category; you can change it in each Draft. | ପ୍ରୋଗ୍ରାମ୍ ଫାଇଲ୍ ବର୍ଗ ବହନ କରେ ନାହିଁ; ପ୍ରତ୍ୟେକ ଖସଡ଼ାରେ ଆପଣ ଏହାକୁ ବଦଳାଇପାରିବେ। |
 | `Scff3a3` | help and messages | User deleted; its name and address are erased, what it did stays attributable. | ଉପଯୋଗକର୍ତ୍ତା ଲିଭାଯାଇଛି; ତାଙ୍କ ନାମ ଓ ଠିକଣା ମାଡ଼ି ଦିଆଯାଇଛି, ସେ ଯାହା କରିଛନ୍ତି ତାହା ଚିହ୍ନଟଯୋଗ୍ୟ ରହେ। |
 | `Secfb3f` | hub_consolidation | Deprecate replaced Hub codes | ବଦଳାଯାଇଥିବା ହବ୍ କୋଡ୍ ପ୍ରଚଳନ ବନ୍ଦ କରନ୍ତୁ |
 | `S0e7766` | hub_consolidation, language | draft | ଖସଡ଼ା |
@@ -15868,6 +15891,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S3bd89c` | software_versions | Which codes exist in which software version | କେଉଁ କୋଡ୍ କେଉଁ ସଫ୍ଟୱେର୍ ସଂସ୍କରଣରେ ଅଛି |
 | `S16e5d4` | st_new, st_preview | Alarm type | ଆଲାର୍ମ ପ୍ରକାର |
 | `S726d7a` | st_new | as above | ଉପରେ ପରି |
+| `S9477fd` | st_new, st_preview | choose | ବାଛନ୍ତୁ |
 | `Sb149ca` | st_new | Detect: a number from 10000 up is a Hub Controller program | ଚିହ୍ନଟ: 10000 ରୁ ଉପରର ସଂଖ୍ୟା ହବ୍ ନିୟନ୍ତ୍ରକ ପ୍ରୋଗ୍ରାମ୍ |
 | `S7d06d0` | st_new | Every imported program becomes an ordinary Draft with the number it carries reserved. It still needs Cross-Domain Sign-Off, dual review and Chief Engineer approval before Release, and all Drafts of one import share a change set. | ପ୍ରତ୍ୟେକ ଆମଦାନି ହୋଇଥିବା ପ୍ରୋଗ୍ରାମ୍ ନିଜ ସଂଖ୍ୟା ସଂରକ୍ଷିତ ଥିବା ସାଧାରଣ ଖସଡ଼ା ହୁଏ। ରିଲିଜ୍ ପୂର୍ବରୁ ଏହା ପାଇଁ ଏବେ ବି ଆନ୍ତଃ-ଡୋମେନ୍ ସ୍ୱାକ୍ଷର, ଦ୍ୱିଗୁଣ ସମୀକ୍ଷା ଓ ମୁଖ୍ୟ ଇଞ୍ଜିନିୟର ଅନୁମୋଦନ ଦରକାର, ଏବଂ ଗୋଟିଏ ଆମଦାନିର ସମସ୍ତ ଖସଡ଼ା ଗୋଟିଏ ପରିବର୍ତ୍ତନ ସମୂହ ଅଂଶୀଦାର କରେ। |
 | `Sbda77c` | st_new | Every program names an alarm type. A type left at "as above" gets the category chosen above; the next page lets you set the category of single programs or of all ticked ones. | ପ୍ରତ୍ୟେକ ପ୍ରୋଗ୍ରାମ୍ ଏକ ଆଲାର୍ମ ପ୍ରକାର କହେ। "ଉପରେ ପରି" ରହିଥିବା ପ୍ରକାରକୁ ଉପରେ ବଛାଯାଇଥିବା ବର୍ଗ ମିଳେ; ପରବର୍ତ୍ତୀ ପୃଷ୍ଠାରେ ଆପଣ ଏକ ଏକ ପ୍ରୋଗ୍ରାମ୍ର କିମ୍ବା ସମସ୍ତ ଚିହ୍ନିତର ବର୍ଗ ସ୍ଥିର କରିପାରିବେ। |
@@ -15881,7 +15905,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S67640d` | st_new | Read files and preview | ଫାଇଲ୍ ପଢ଼ନ୍ତୁ ଓ ପୂର୍ବାବଲୋକନ ଦେଖନ୍ତୁ |
 | `S0af4fc` | st_new | Status category by alarm type (optional) | ଆଲାର୍ମ ପ୍ରକାର ଅନୁସାରେ ସ୍ଥିତି ବର୍ଗ (ଇଚ୍ଛାଧୀନ) |
 | `S234237` | st_new | Status category of the new codes | ନୂଆ କୋଡ୍‌ର ସ୍ଥିତି ବର୍ଗ |
-| `Sde7a5b` | st_new | The program files do not carry a category; you can change it in each Draft. | ପ୍ରୋଗ୍ରାମ୍ ଫାଇଲ୍ ବର୍ଗ ବହନ କରେ ନାହିଁ; ପ୍ରତ୍ୟେକ ଖସଡ଼ାରେ ଆପଣ ଏହାକୁ ବଦଳାଇପାରିବେ। |
+| `S61fc52` | st_new | The program files do not carry a category and none is assumed: choose one here, by alarm type below, or for each program in the preview. A program without a category is not imported. | ପ୍ରୋଗ୍ରାମ୍ ଫାଇଲରେ ବର୍ଗ ନଥାଏ ଏବଂ କୌଣସି ବର୍ଗ ଧରାଯାଏ ନାହିଁ: ଏଠାରେ ଗୋଟିଏ ବାଛନ୍ତୁ, ତଳେ ଆଲାର୍ମ ପ୍ରକାର ଅନୁସାରେ, କିମ୍ବା ପୂର୍ବଦୃଶ୍ୟରେ ପ୍ରତ୍ୟେକ ପ୍ରୋଗ୍ରାମ୍ ପାଇଁ ବାଛନ୍ତୁ। ବର୍ଗ ବିନା ପ୍ରୋଗ୍ରାମ୍ ଆମଦାନି ହୁଏ ନାହିଁ। |
 | `S8f4c21` | st_new | Turbine platforms | ଟର୍ବାଇନ୍ ପ୍ଲାଟଫର୍ମ |
 | `S9ad4d4` | st_new | Upload the generated StCd_<n>.st programs — several files at once, a whole folder, or one ZIP. Nothing is created yet: the next page lists every program so you can tick the ones to import. | ପ୍ରସ୍ତୁତ StCd_<n>.st ପ୍ରୋଗ୍ରାମ୍ ଅପଲୋଡ୍ କରନ୍ତୁ — ଥରକେ ଅନେକ ଫାଇଲ୍, ପୂର୍ଣ୍ଣ ଫୋଲ୍ଡର୍ ବା ଗୋଟିଏ ZIP। ଏପର୍ଯ୍ୟନ୍ତ କିଛି ତିଆରି ହୁଏ ନାହିଁ: ପରବର୍ତ୍ତୀ ପୃଷ୍ଠା ପ୍ରତ୍ୟେକ ପ୍ରୋଗ୍ରାମ୍ ତାଲିକାଭୁକ୍ତ କରେ ଯାହା ଦ୍ୱାରା ଆମଦାନି ହେବାକୁ ଥିବାଗୁଡ଼ିକୁ ଚିହ୍ନିତ କରିପାରିବେ। |
 | `S2693e5` | st_preview | All Drafts of this import join one change set, so they can be reviewed and decided together. | ଏହି ଆମଦାନିର ସମସ୍ତ ଖସଡ଼ା ଗୋଟିଏ ପରିବର୍ତ୍ତନ ସମୂହରେ ଯୋଗ ଦିଏ, ଯାହା ଦ୍ୱାରା ସେଗୁଡ଼ିକୁ ଏକାଠି ସମୀକ୍ଷା ଓ ନିଷ୍ପତ୍ତି କରାଯାଇପାରିବ। |
@@ -16039,7 +16063,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 
 ### 9.14 IN മലയാളം 🇮🇳 — Malayalam
 
-1293 of 1294 strings translated; direction left to right.
+1295 of 1296 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -16689,6 +16713,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sce489f` | help and messages | The author gets any required cross-domain sign-offs, then submits the change request for review. | രചയിതാവ് ആവശ്യമായ ക്രോസ്-ഡൊമെയ്ൻ സൈൻ-ഓഫുകൾ നേടുന്നു, തുടർന്ന് മാറ്റ അഭ്യർത്ഥന അവലോകനത്തിനായി സമർപ്പിക്കുന്നു. |
 | `S1cdbdd` | help and messages | The Chief Engineer approves or rejects. Approval makes the revision Approved (or Deprecated for a deprecation request). | ചീഫ് എൻജിനീയർ അംഗീകരിക്കുകയോ നിരസിക്കുകയോ ചെയ്യുന്നു. അംഗീകാരം റിവിഷനെ അംഗീകരിച്ചതാക്കുന്നു (കാലഹരണപ്പെടുത്തൽ അഭ്യർത്ഥനയ്ക്ക് കാലഹരണപ്പെട്ടതാക്കുന്നു). |
 | `S2d6ac0` | help and messages | The package is being built. Reload this page to follow its progress. | പാക്കേജ് ഉണ്ടാക്കുകയാണ്. പുരോഗതി കാണാൻ ഈ പേജ് വീണ്ടും ലോഡ് ചെയ്യുക. |
+| `Sde7a5b` | help and messages | The program files do not carry a category; you can change it in each Draft. | പ്രോഗ്രാം ഫയലുകളിൽ വിഭാഗമില്ല; ഓരോ കരടിലും നിങ്ങൾക്ക് മാറ്റാം. |
 | `Scff3a3` | help and messages | User deleted; its name and address are erased, what it did stays attributable. | ഉപയോക്താവിനെ ഇല്ലാതാക്കി; പേരും വിലാസവും മായ്ച്ചു, അവർ ചെയ്തത് ആരോപിക്കാവുന്നതായി തുടരും. |
 | `Secfb3f` | hub_consolidation | Deprecate replaced Hub codes | മാറ്റിസ്ഥാപിച്ച ഹബ് കോഡുകൾ കാലഹരണപ്പെടുത്തുക |
 | `S0e7766` | hub_consolidation, language | draft | കരട് |
@@ -17168,6 +17193,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S3bd89c` | software_versions | Which codes exist in which software version | ഏത് കോഡുകൾ ഏത് സോഫ്റ്റ്‌വെയർ പതിപ്പിൽ ഉണ്ട് |
 | `S16e5d4` | st_new, st_preview | Alarm type | അലാറം തരം |
 | `S726d7a` | st_new | as above | മുകളിലെ പോലെ |
+| `S9477fd` | st_new, st_preview | choose | തിരഞ്ഞെടുക്കുക |
 | `Sb149ca` | st_new | Detect: a number from 10000 up is a Hub Controller program | കണ്ടെത്തൽ: 10000 മുതൽ മുകളിലുള്ള നമ്പർ ഹബ് കൺട്രോളർ പ്രോഗ്രാമാണ് |
 | `S7d06d0` | st_new | Every imported program becomes an ordinary Draft with the number it carries reserved. It still needs Cross-Domain Sign-Off, dual review and Chief Engineer approval before Release, and all Drafts of one import share a change set. | ഇറക്കുമതി ചെയ്ത ഓരോ പ്രോഗ്രാമും അതിന്റെ നമ്പർ റിസർവ് ചെയ്ത സാധാരണ കരടാകുന്നു. റിലീസിന് മുമ്പ് ഇതിന് ഇപ്പോഴും ക്രോസ്-ഡൊമെയ്ൻ സൈൻ-ഓഫ്, ഇരട്ട അവലോകനം, ചീഫ് എൻജിനീയറുടെ അംഗീകാരം എന്നിവ വേണം, ഒരു ഇറക്കുമതിയിലെ എല്ലാ കരടുകളും ഒരു മാറ്റ സമൂഹം പങ്കിടുന്നു. |
 | `Sbda77c` | st_new | Every program names an alarm type. A type left at "as above" gets the category chosen above; the next page lets you set the category of single programs or of all ticked ones. | ഓരോ പ്രോഗ്രാമും ഒരു അലാറം തരം പറയുന്നു. "മുകളിലെ പോലെ" എന്ന് വിട്ട തരത്തിന് മുകളിൽ തിരഞ്ഞെടുത്ത വിഭാഗം ലഭിക്കും; അടുത്ത പേജിൽ ഓരോ പ്രോഗ്രാമിന്റെയോ ടിക്ക് ചെയ്ത എല്ലാറ്റിന്റെയോ വിഭാഗം സജ്ജമാക്കാം. |
@@ -17181,7 +17207,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S67640d` | st_new | Read files and preview | ഫയലുകൾ വായിച്ച് പ്രിവ്യൂ കാണുക |
 | `S0af4fc` | st_new | Status category by alarm type (optional) | അലാറം തരം അനുസരിച്ച് സ്റ്റാറ്റസ് വിഭാഗം (ഓപ്ഷണൽ) |
 | `S234237` | st_new | Status category of the new codes | പുതിയ കോഡുകളുടെ സ്റ്റാറ്റസ് വിഭാഗം |
-| `Sde7a5b` | st_new | The program files do not carry a category; you can change it in each Draft. | പ്രോഗ്രാം ഫയലുകളിൽ വിഭാഗമില്ല; ഓരോ കരടിലും നിങ്ങൾക്ക് മാറ്റാം. |
+| `S61fc52` | st_new | The program files do not carry a category and none is assumed: choose one here, by alarm type below, or for each program in the preview. A program without a category is not imported. | പ്രോഗ്രാം ഫയലുകളിൽ വിഭാഗം ഇല്ല, ഒന്നും ഊഹിക്കപ്പെടുന്നുമില്ല: ഇവിടെ ഒന്ന് തിരഞ്ഞെടുക്കുക, താഴെ അലാറം തരം അനുസരിച്ച്, അല്ലെങ്കിൽ പ്രിവ്യൂവിൽ ഓരോ പ്രോഗ്രാമിനും. വിഭാഗമില്ലാത്ത പ്രോഗ്രാം ഇറക്കുമതി ചെയ്യില്ല. |
 | `S8f4c21` | st_new | Turbine platforms | ടർബൈൻ പ്ലാറ്റ്ഫോമുകൾ |
 | `S9ad4d4` | st_new | Upload the generated StCd_<n>.st programs — several files at once, a whole folder, or one ZIP. Nothing is created yet: the next page lists every program so you can tick the ones to import. | സൃഷ്ടിച്ച StCd_<n>.st പ്രോഗ്രാമുകൾ അപ്‌ലോഡ് ചെയ്യുക — ഒരേസമയം പല ഫയലുകൾ, ഒരു മുഴുവൻ ഫോൾഡർ അല്ലെങ്കിൽ ഒരു ZIP. ഇതുവരെ ഒന്നും സൃഷ്ടിക്കുന്നില്ല: അടുത്ത പേജ് ഓരോ പ്രോഗ്രാമും പട്ടികപ്പെടുത്തുന്നു, ഇറക്കുമതി ചെയ്യേണ്ടവ ടിക്ക് ചെയ്യാം. |
 | `S2693e5` | st_preview | All Drafts of this import join one change set, so they can be reviewed and decided together. | ഈ ഇറക്കുമതിയിലെ എല്ലാ കരടുകളും ഒരു മാറ്റ സമൂഹത്തിൽ ചേരുന്നു, അതിനാൽ അവ ഒരുമിച്ച് അവലോകനം ചെയ്ത് തീരുമാനിക്കാം. |
@@ -17339,7 +17365,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 
 ### 9.15 IN ਪੰਜਾਬੀ 🇮🇳 — Punjabi
 
-1293 of 1294 strings translated; direction left to right.
+1295 of 1296 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -17989,6 +18015,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sce489f` | help and messages | The author gets any required cross-domain sign-offs, then submits the change request for review. | ਲੇਖਕ ਲੋੜੀਂਦੇ ਅੰਤਰ-ਡੋਮੇਨ ਦਸਤਖ਼ਤ ਲੈਂਦਾ ਹੈ, ਫਿਰ ਤਬਦੀਲੀ ਬੇਨਤੀ ਸਮੀਖਿਆ ਲਈ ਜਮ੍ਹਾਂ ਕਰਦਾ ਹੈ। |
 | `S1cdbdd` | help and messages | The Chief Engineer approves or rejects. Approval makes the revision Approved (or Deprecated for a deprecation request). | ਮੁੱਖ ਇੰਜੀਨੀਅਰ ਮਨਜ਼ੂਰ ਜਾਂ ਰੱਦ ਕਰਦਾ ਹੈ। ਮਨਜ਼ੂਰੀ ਸੋਧ ਨੂੰ ਮਨਜ਼ੂਰ (ਜਾਂ ਬੰਦ ਕਰਨ ਦੀ ਬੇਨਤੀ ਲਈ ਬੰਦ) ਬਣਾ ਦਿੰਦੀ ਹੈ। |
 | `S2d6ac0` | help and messages | The package is being built. Reload this page to follow its progress. | ਪੈਕੇਜ ਬਣ ਰਿਹਾ ਹੈ। ਪ੍ਰਗਤੀ ਦੇਖਣ ਲਈ ਇਹ ਸਫ਼ਾ ਮੁੜ ਲੋਡ ਕਰੋ। |
+| `Sde7a5b` | help and messages | The program files do not carry a category; you can change it in each Draft. | ਪ੍ਰੋਗਰਾਮ ਫਾਈਲਾਂ ਵਿੱਚ ਸ਼੍ਰੇਣੀ ਨਹੀਂ ਹੁੰਦੀ; ਤੁਸੀਂ ਹਰ ਖਰੜੇ ਵਿੱਚ ਇਸਨੂੰ ਬਦਲ ਸਕਦੇ ਹੋ। |
 | `Scff3a3` | help and messages | User deleted; its name and address are erased, what it did stays attributable. | ਵਰਤੋਂਕਾਰ ਮਿਟਾਇਆ ਗਿਆ; ਉਸਦਾ ਨਾਮ ਅਤੇ ਪਤਾ ਮਿਟਾ ਦਿੱਤੇ ਗਏ, ਜੋ ਉਸਨੇ ਕੀਤਾ ਉਹ ਪਛਾਣਯੋਗ ਰਹਿੰਦਾ ਹੈ। |
 | `Secfb3f` | hub_consolidation | Deprecate replaced Hub codes | ਬਦਲੇ ਗਏ ਹੱਬ ਕੋਡ ਬੰਦ ਕਰੋ |
 | `S0e7766` | hub_consolidation, language | draft | ਖਰੜਾ |
@@ -18468,6 +18495,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S3bd89c` | software_versions | Which codes exist in which software version | ਕਿਹੜੇ ਕੋਡ ਕਿਹੜੇ ਸਾਫਟਵੇਅਰ ਸੰਸਕਰਣ ਵਿੱਚ ਹਨ |
 | `S16e5d4` | st_new, st_preview | Alarm type | ਅਲਾਰਮ ਦੀ ਕਿਸਮ |
 | `S726d7a` | st_new | as above | ਉੱਪਰ ਵਾਂਗ |
+| `S9477fd` | st_new, st_preview | choose | ਚੁਣੋ |
 | `Sb149ca` | st_new | Detect: a number from 10000 up is a Hub Controller program | ਪਛਾਣੋ: 10000 ਤੋਂ ਉੱਪਰ ਦਾ ਨੰਬਰ ਹੱਬ ਕੰਟਰੋਲਰ ਪ੍ਰੋਗਰਾਮ ਹੈ |
 | `S7d06d0` | st_new | Every imported program becomes an ordinary Draft with the number it carries reserved. It still needs Cross-Domain Sign-Off, dual review and Chief Engineer approval before Release, and all Drafts of one import share a change set. | ਹਰ ਦਰਾਮਦ ਪ੍ਰੋਗਰਾਮ ਆਮ ਖਰੜਾ ਬਣਦਾ ਹੈ ਜਿਸਦਾ ਆਪਣਾ ਨੰਬਰ ਰਾਖਵਾਂ ਰਹਿੰਦਾ ਹੈ। ਰਿਲੀਜ਼ ਤੋਂ ਪਹਿਲਾਂ ਇਸਨੂੰ ਅਜੇ ਵੀ ਅੰਤਰ-ਡੋਮੇਨ ਦਸਤਖ਼ਤ, ਦੋਹਰੀ ਸਮੀਖਿਆ ਅਤੇ ਮੁੱਖ ਇੰਜੀਨੀਅਰ ਦੀ ਮਨਜ਼ੂਰੀ ਚਾਹੀਦੀ ਹੈ, ਅਤੇ ਇੱਕ ਦਰਾਮਦ ਦੇ ਸਾਰੇ ਖਰੜੇ ਇੱਕ ਤਬਦੀਲੀ ਸਮੂਹ ਸਾਂਝਾ ਕਰਦੇ ਹਨ। |
 | `Sbda77c` | st_new | Every program names an alarm type. A type left at "as above" gets the category chosen above; the next page lets you set the category of single programs or of all ticked ones. | ਹਰ ਪ੍ਰੋਗਰਾਮ ਇੱਕ ਅਲਾਰਮ ਕਿਸਮ ਦੱਸਦਾ ਹੈ। "ਉੱਪਰ ਵਾਂਗ" ਛੱਡੀ ਕਿਸਮ ਨੂੰ ਉੱਪਰ ਚੁਣੀ ਸ਼੍ਰੇਣੀ ਮਿਲਦੀ ਹੈ; ਅਗਲੇ ਸਫ਼ੇ 'ਤੇ ਤੁਸੀਂ ਇੱਕ-ਇੱਕ ਪ੍ਰੋਗਰਾਮ ਜਾਂ ਸਾਰੇ ਨਿਸ਼ਾਨ ਲੱਗਿਆਂ ਦੀ ਸ਼੍ਰੇਣੀ ਤੈਅ ਕਰ ਸਕਦੇ ਹੋ। |
@@ -18481,7 +18509,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S67640d` | st_new | Read files and preview | ਫਾਈਲਾਂ ਪੜ੍ਹੋ ਅਤੇ ਪੂਰਵ-ਝਲਕ ਵੇਖੋ |
 | `S0af4fc` | st_new | Status category by alarm type (optional) | ਅਲਾਰਮ ਕਿਸਮ ਅਨੁਸਾਰ ਸਥਿਤੀ ਸ਼੍ਰੇਣੀ (ਵਿਕਲਪਿਕ) |
 | `S234237` | st_new | Status category of the new codes | ਨਵੇਂ ਕੋਡਾਂ ਦੀ ਸਥਿਤੀ ਸ਼੍ਰੇਣੀ |
-| `Sde7a5b` | st_new | The program files do not carry a category; you can change it in each Draft. | ਪ੍ਰੋਗਰਾਮ ਫਾਈਲਾਂ ਵਿੱਚ ਸ਼੍ਰੇਣੀ ਨਹੀਂ ਹੁੰਦੀ; ਤੁਸੀਂ ਹਰ ਖਰੜੇ ਵਿੱਚ ਇਸਨੂੰ ਬਦਲ ਸਕਦੇ ਹੋ। |
+| `S61fc52` | st_new | The program files do not carry a category and none is assumed: choose one here, by alarm type below, or for each program in the preview. A program without a category is not imported. | ਪ੍ਰੋਗਰਾਮ ਫ਼ਾਈਲਾਂ ਵਿੱਚ ਸ਼੍ਰੇਣੀ ਨਹੀਂ ਹੁੰਦੀ ਅਤੇ ਕੋਈ ਮੰਨੀ ਨਹੀਂ ਜਾਂਦੀ: ਇੱਥੇ ਇੱਕ ਚੁਣੋ, ਹੇਠਾਂ ਅਲਾਰਮ ਕਿਸਮ ਅਨੁਸਾਰ, ਜਾਂ ਝਲਕ ਵਿੱਚ ਹਰ ਪ੍ਰੋਗਰਾਮ ਲਈ ਚੁਣੋ। ਸ਼੍ਰੇਣੀ ਤੋਂ ਬਿਨਾਂ ਪ੍ਰੋਗਰਾਮ ਆਯਾਤ ਨਹੀਂ ਹੁੰਦਾ। |
 | `S8f4c21` | st_new | Turbine platforms | ਟਰਬਾਈਨ ਪਲੇਟਫਾਰਮ |
 | `S9ad4d4` | st_new | Upload the generated StCd_<n>.st programs — several files at once, a whole folder, or one ZIP. Nothing is created yet: the next page lists every program so you can tick the ones to import. | ਤਿਆਰ ਕੀਤੇ StCd_<n>.st ਪ੍ਰੋਗਰਾਮ ਅੱਪਲੋਡ ਕਰੋ — ਇੱਕੋ ਵਾਰ ਕਈ ਫਾਈਲਾਂ, ਪੂਰਾ ਫੋਲਡਰ ਜਾਂ ਇੱਕ ZIP। ਅਜੇ ਕੁਝ ਨਹੀਂ ਬਣਦਾ: ਅਗਲਾ ਸਫ਼ਾ ਹਰ ਪ੍ਰੋਗਰਾਮ ਦੀ ਸੂਚੀ ਦਿੰਦਾ ਹੈ ਤਾਂ ਜੋ ਤੁਸੀਂ ਦਰਾਮਦ ਕਰਨ ਵਾਲਿਆਂ ਉੱਤੇ ਨਿਸ਼ਾਨ ਲਾ ਸਕੋ। |
 | `S2693e5` | st_preview | All Drafts of this import join one change set, so they can be reviewed and decided together. | ਇਸ ਦਰਾਮਦ ਦੇ ਸਾਰੇ ਖਰੜੇ ਇੱਕ ਤਬਦੀਲੀ ਸਮੂਹ ਵਿੱਚ ਸ਼ਾਮਲ ਹੁੰਦੇ ਹਨ, ਤਾਂ ਜੋ ਉਨ੍ਹਾਂ ਦੀ ਇਕੱਠਿਆਂ ਸਮੀਖਿਆ ਅਤੇ ਫ਼ੈਸਲਾ ਹੋ ਸਕੇ। |
@@ -18639,7 +18667,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 
 ### 9.16 ES Español 🇪🇸 — Spanish
 
-1293 of 1294 strings translated; direction left to right.
+1295 of 1296 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -19289,6 +19317,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sce489f` | help and messages | The author gets any required cross-domain sign-offs, then submits the change request for review. | El autor obtiene las conformidades entre ámbitos requeridas y luego envía la solicitud de cambio a revisión. |
 | `S1cdbdd` | help and messages | The Chief Engineer approves or rejects. Approval makes the revision Approved (or Deprecated for a deprecation request). | El ingeniero jefe aprueba o rechaza. La aprobación hace que la revisión pase a Aprobado (u Obsoleto en una solicitud de obsolescencia). |
 | `S2d6ac0` | help and messages | The package is being built. Reload this page to follow its progress. | El paquete se está creando. Recargue esta página para seguir el progreso. |
+| `Sde7a5b` | help and messages | The program files do not carry a category; you can change it in each Draft. | Los archivos de programa no llevan categoría; puede cambiarla en cada borrador. |
 | `Scff3a3` | help and messages | User deleted; its name and address are erased, what it did stays attributable. | Usuario eliminado; su nombre y dirección se borran, lo que hizo sigue siendo atribuible. |
 | `Secfb3f` | hub_consolidation | Deprecate replaced Hub codes | Declarar obsoletos los códigos del buje sustituidos |
 | `S0e7766` | hub_consolidation, language | draft | borrador |
@@ -19768,6 +19797,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S3bd89c` | software_versions | Which codes exist in which software version | Qué códigos existen en qué versión de software |
 | `S16e5d4` | st_new, st_preview | Alarm type | Tipo de alarma |
 | `S726d7a` | st_new | as above | como arriba |
+| `S9477fd` | st_new, st_preview | choose | elegir |
 | `Sb149ca` | st_new | Detect: a number from 10000 up is a Hub Controller program | Detectar: un número a partir de 10000 es un programa del controlador del buje |
 | `S7d06d0` | st_new | Every imported program becomes an ordinary Draft with the number it carries reserved. It still needs Cross-Domain Sign-Off, dual review and Chief Engineer approval before Release, and all Drafts of one import share a change set. | Cada programa importado se convierte en un borrador ordinario con el número que lleva reservado. Aún necesita conformidad entre ámbitos, doble revisión y aprobación del ingeniero jefe antes de publicarse, y todos los borradores de una importación comparten un conjunto de cambios. |
 | `Sbda77c` | st_new | Every program names an alarm type. A type left at "as above" gets the category chosen above; the next page lets you set the category of single programs or of all ticked ones. | Cada programa indica un tipo de alarma. Un tipo que se deja en «como arriba» recibe la categoría elegida arriba; en la página siguiente puede fijar la categoría de programas sueltos o de todos los marcados. |
@@ -19781,7 +19811,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S67640d` | st_new | Read files and preview | Leer archivos y mostrar vista previa |
 | `S0af4fc` | st_new | Status category by alarm type (optional) | Categoría de estado por tipo de alarma (opcional) |
 | `S234237` | st_new | Status category of the new codes | Categoría de estado de los códigos nuevos |
-| `Sde7a5b` | st_new | The program files do not carry a category; you can change it in each Draft. | Los archivos de programa no llevan categoría; puede cambiarla en cada borrador. |
+| `S61fc52` | st_new | The program files do not carry a category and none is assumed: choose one here, by alarm type below, or for each program in the preview. A program without a category is not imported. | Los archivos de programa no contienen categoría y no se supone ninguna: elija una aquí, por tipo de alarma abajo o para cada programa en la vista previa. Un programa sin categoría no se importa. |
 | `S8f4c21` | st_new | Turbine platforms | Plataformas de aerogenerador |
 | `S9ad4d4` | st_new | Upload the generated StCd_<n>.st programs — several files at once, a whole folder, or one ZIP. Nothing is created yet: the next page lists every program so you can tick the ones to import. | Suba los programas StCd_<n>.st generados: varios archivos a la vez, una carpeta entera o un ZIP. Aún no se crea nada: la página siguiente lista cada programa para que marque los que desea importar. |
 | `S2693e5` | st_preview | All Drafts of this import join one change set, so they can be reviewed and decided together. | Todos los borradores de esta importación se unen a un conjunto de cambios, para revisarse y decidirse juntos. |
@@ -19939,7 +19969,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 
 ### 9.17 IT Italiano 🇮🇹 — Italian
 
-1293 of 1294 strings translated; direction left to right.
+1295 of 1296 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -20589,6 +20619,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sce489f` | help and messages | The author gets any required cross-domain sign-offs, then submits the change request for review. | L'autore ottiene i benestare interdisciplinari richiesti, poi invia la richiesta di modifica in revisione. |
 | `S1cdbdd` | help and messages | The Chief Engineer approves or rejects. Approval makes the revision Approved (or Deprecated for a deprecation request). | Il capo ingegnere approva o rifiuta. L'approvazione porta la revisione ad Approvato (oppure a Obsoleto per una richiesta di obsolescenza). |
 | `S2d6ac0` | help and messages | The package is being built. Reload this page to follow its progress. | Il pacchetto è in costruzione. Ricarica questa pagina per seguirne l'avanzamento. |
+| `Sde7a5b` | help and messages | The program files do not carry a category; you can change it in each Draft. | I file di programma non riportano una categoria; può cambiarla in ogni bozza. |
 | `Scff3a3` | help and messages | User deleted; its name and address are erased, what it did stays attributable. | Utente eliminato; nome e indirizzo sono cancellati, ciò che ha fatto resta attribuibile. |
 | `Secfb3f` | hub_consolidation | Deprecate replaced Hub codes | Dichiara obsoleti i codici del mozzo sostituiti |
 | `S0e7766` | hub_consolidation, language | draft | bozza |
@@ -21068,6 +21099,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S3bd89c` | software_versions | Which codes exist in which software version | Quali codici esistono in quale versione software |
 | `S16e5d4` | st_new, st_preview | Alarm type | Tipo di allarme |
 | `S726d7a` | st_new | as above | come sopra |
+| `S9477fd` | st_new, st_preview | choose | scegliere |
 | `Sb149ca` | st_new | Detect: a number from 10000 up is a Hub Controller program | Rileva: un numero da 10000 in su è un programma del controllore del mozzo |
 | `S7d06d0` | st_new | Every imported program becomes an ordinary Draft with the number it carries reserved. It still needs Cross-Domain Sign-Off, dual review and Chief Engineer approval before Release, and all Drafts of one import share a change set. | Ogni programma importato diventa una bozza ordinaria con il numero che porta riservato. Richiede ancora benestare interdisciplinare, doppia revisione e approvazione del capo ingegnere prima del rilascio, e tutte le bozze di un'importazione condividono un set di modifiche. |
 | `Sbda77c` | st_new | Every program names an alarm type. A type left at "as above" gets the category chosen above; the next page lets you set the category of single programs or of all ticked ones. | Ogni programma indica un tipo di allarme. Un tipo lasciato su «come sopra» riceve la categoria scelta sopra; nella pagina successiva si può impostare la categoria di singoli programmi o di tutti quelli selezionati. |
@@ -21081,7 +21113,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S67640d` | st_new | Read files and preview | Leggi i file e mostra l'anteprima |
 | `S0af4fc` | st_new | Status category by alarm type (optional) | Categoria di stato per tipo di allarme (facoltativo) |
 | `S234237` | st_new | Status category of the new codes | Categoria di stato dei nuovi codici |
-| `Sde7a5b` | st_new | The program files do not carry a category; you can change it in each Draft. | I file di programma non riportano una categoria; può cambiarla in ogni bozza. |
+| `S61fc52` | st_new | The program files do not carry a category and none is assumed: choose one here, by alarm type below, or for each program in the preview. A program without a category is not imported. | I file di programma non contengono una categoria e nessuna viene presunta: sceglietene una qui, per tipo di allarme qui sotto o per ogni programma nell'anteprima. Un programma senza categoria non viene importato. |
 | `S8f4c21` | st_new | Turbine platforms | Piattaforme di turbina |
 | `S9ad4d4` | st_new | Upload the generated StCd_<n>.st programs — several files at once, a whole folder, or one ZIP. Nothing is created yet: the next page lists every program so you can tick the ones to import. | Carichi i programmi StCd_<n>.st generati: più file insieme, un'intera cartella o un unico ZIP. Non viene ancora creato nulla: la pagina successiva elenca ogni programma così potrà selezionare quelli da importare. |
 | `S2693e5` | st_preview | All Drafts of this import join one change set, so they can be reviewed and decided together. | Tutte le bozze di questa importazione entrano in un unico set di modifiche, così possono essere riviste e decise insieme. |
@@ -21239,7 +21271,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 
 ### 9.18 DK Dansk 🇩🇰 — Danish
 
-1293 of 1294 strings translated; direction left to right.
+1295 of 1296 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -21889,6 +21921,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sce489f` | help and messages | The author gets any required cross-domain sign-offs, then submits the change request for review. | Forfatteren indhenter de nødvendige tværfaglige underskrifter og indsender derefter ændringsanmodningen til gennemgang. |
 | `S1cdbdd` | help and messages | The Chief Engineer approves or rejects. Approval makes the revision Approved (or Deprecated for a deprecation request). | Chefingeniøren godkender eller afviser. Godkendelsen gør revisionen Godkendt (eller Forældet ved en forældelsesanmodning). |
 | `S2d6ac0` | help and messages | The package is being built. Reload this page to follow its progress. | Pakken oprettes. Genindlæs siden for at følge fremdriften. |
+| `Sde7a5b` | help and messages | The program files do not carry a category; you can change it in each Draft. | Programfilerne har ingen kategori; du kan ændre den i hver kladde. |
 | `Scff3a3` | help and messages | User deleted; its name and address are erased, what it did stays attributable. | Bruger slettet; navn og adresse er slettet, det brugeren har gjort, kan stadig henføres. |
 | `Secfb3f` | hub_consolidation | Deprecate replaced Hub codes | Erklær erstattede navkoder forældede |
 | `S0e7766` | hub_consolidation, language | draft | kladde |
@@ -22368,6 +22401,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S3bd89c` | software_versions | Which codes exist in which software version | Hvilke koder der findes i hvilken softwareversion |
 | `S16e5d4` | st_new, st_preview | Alarm type | Alarmtype |
 | `S726d7a` | st_new | as above | som ovenfor |
+| `S9477fd` | st_new, st_preview | choose | vælg |
 | `Sb149ca` | st_new | Detect: a number from 10000 up is a Hub Controller program | Registrér: et nummer fra 10000 og op er et navstyringsprogram |
 | `S7d06d0` | st_new | Every imported program becomes an ordinary Draft with the number it carries reserved. It still needs Cross-Domain Sign-Off, dual review and Chief Engineer approval before Release, and all Drafts of one import share a change set. | Hvert importeret program bliver en almindelig kladde med det nummer, det bærer, reserveret. Den kræver stadig tværfaglig underskrift, dobbelt gennemgang og chefingeniørens godkendelse før udgivelse, og alle kladder fra én import deler et ændringssæt. |
 | `Sbda77c` | st_new | Every program names an alarm type. A type left at "as above" gets the category chosen above; the next page lets you set the category of single programs or of all ticked ones. | Hvert program angiver en alarmtype. En type, der står på "som ovenfor", får den kategori, der er valgt ovenfor; på næste side kan du sætte kategorien for enkelte programmer eller for alle afkrydsede. |
@@ -22381,7 +22415,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S67640d` | st_new | Read files and preview | Læs filer og vis forhåndsvisning |
 | `S0af4fc` | st_new | Status category by alarm type (optional) | Statuskategori efter alarmtype (valgfri) |
 | `S234237` | st_new | Status category of the new codes | Statuskategori for de nye koder |
-| `Sde7a5b` | st_new | The program files do not carry a category; you can change it in each Draft. | Programfilerne har ingen kategori; du kan ændre den i hver kladde. |
+| `S61fc52` | st_new | The program files do not carry a category and none is assumed: choose one here, by alarm type below, or for each program in the preview. A program without a category is not imported. | Programfilerne indeholder ingen kategori, og der antages ingen: vælg én her, efter alarmtype nedenfor eller for hvert program i forhåndsvisningen. Et program uden kategori importeres ikke. |
 | `S8f4c21` | st_new | Turbine platforms | Turbineplatforme |
 | `S9ad4d4` | st_new | Upload the generated StCd_<n>.st programs — several files at once, a whole folder, or one ZIP. Nothing is created yet: the next page lists every program so you can tick the ones to import. | Upload de genererede StCd_<n>.st-programmer — flere filer ad gangen, en hel mappe eller én ZIP. Intet oprettes endnu: næste side viser hvert program, så du kan afkrydse dem, der skal importeres. |
 | `S2693e5` | st_preview | All Drafts of this import join one change set, so they can be reviewed and decided together. | Alle kladder fra denne import kommer i ét ændringssæt, så de kan gennemgås og afgøres sammen. |
@@ -22539,7 +22573,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 
 ### 9.19 GE ქართული 🇬🇪 — Georgian
 
-1293 of 1294 strings translated; direction left to right.
+1295 of 1296 strings translated; direction left to right.
 
 | Id | Screens | English | Translation |
 |---|---|---|---|
@@ -23189,6 +23223,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sce489f` | help and messages | The author gets any required cross-domain sign-offs, then submits the change request for review. | ავტორი იღებს საჭირო ჯვარედინი სფეროების ხელმოწერებს, შემდეგ კი ცვლილების მოთხოვნას განხილვაზე წარადგენს. |
 | `S1cdbdd` | help and messages | The Chief Engineer approves or rejects. Approval makes the revision Approved (or Deprecated for a deprecation request). | მთავარი ინჟინერი ამტკიცებს ან უარყოფს. დამტკიცება რევიზიას დამტკიცებულად აქცევს (ან მოძველებულად მოძველების მოთხოვნისას). |
 | `S2d6ac0` | help and messages | The package is being built. Reload this page to follow its progress. | პაკეტი იქმნება. პროგრესის სანახავად გადატვირთეთ ეს გვერდი. |
+| `Sde7a5b` | help and messages | The program files do not carry a category; you can change it in each Draft. | პროგრამის ფაილები კატეგორიას არ შეიცავს; შეგიძლიათ შეცვალოთ თითოეულ დრაფტში. |
 | `Scff3a3` | help and messages | User deleted; its name and address are erased, what it did stays attributable. | მომხმარებელი წაიშალა; მისი სახელი და მისამართი წაშლილია, მისი ქმედებები კვლავ მიეკუთვნება. |
 | `Secfb3f` | hub_consolidation | Deprecate replaced Hub codes | შეცვლილი კერის კოდების მოძველებულად გამოცხადება |
 | `S0e7766` | hub_consolidation, language | draft | დრაფტი |
@@ -23668,6 +23703,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S3bd89c` | software_versions | Which codes exist in which software version | რომელი კოდი რომელ პროგრამის ვერსიაშია |
 | `S16e5d4` | st_new, st_preview | Alarm type | განგაშის ტიპი |
 | `S726d7a` | st_new | as above | ზემოთ მითითებულის მიხედვით |
+| `S9477fd` | st_new, st_preview | choose | აირჩიეთ |
 | `Sb149ca` | st_new | Detect: a number from 10000 up is a Hub Controller program | ამოცნობა: 10000-დან ზემოთ ნომერი კერის კონტროლერის პროგრამაა |
 | `S7d06d0` | st_new | Every imported program becomes an ordinary Draft with the number it carries reserved. It still needs Cross-Domain Sign-Off, dual review and Chief Engineer approval before Release, and all Drafts of one import share a change set. | ყოველი შემოტანილი პროგრამა ჩვეულებრივი დრაფტი ხდება, მასში არსებული ნომრის დაჯავშნით. რელიზამდე მას მაინც სჭირდება ჯვარედინი სფეროების ხელმოწერა, ორმაგი განხილვა და მთავარი ინჟინრის დამტკიცება, ერთი იმპორტის ყველა დრაფტი კი ერთ ცვლილებების ნაკრებს იზიარებს. |
 | `Sbda77c` | st_new | Every program names an alarm type. A type left at "as above" gets the category chosen above; the next page lets you set the category of single programs or of all ticked ones. | თითოეული პროგრამა განგაშის ტიპს ასახელებს. ტიპი, რომელიც „ზემოთ მითითებულის მიხედვით“ რჩება, იღებს ზემოთ არჩეულ კატეგორიას; შემდეგ გვერდზე შეგიძლიათ დააყენოთ ცალკეული ან ყველა მონიშნული პროგრამის კატეგორია. |
@@ -23681,7 +23717,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S67640d` | st_new | Read files and preview | ფაილების წაკითხვა და წინასწარი ნახვა |
 | `S0af4fc` | st_new | Status category by alarm type (optional) | სტატუსის კატეგორია განგაშის ტიპის მიხედვით (არასავალდებულო) |
 | `S234237` | st_new | Status category of the new codes | ახალი კოდების სტატუსის კატეგორია |
-| `Sde7a5b` | st_new | The program files do not carry a category; you can change it in each Draft. | პროგრამის ფაილები კატეგორიას არ შეიცავს; შეგიძლიათ შეცვალოთ თითოეულ დრაფტში. |
+| `S61fc52` | st_new | The program files do not carry a category and none is assumed: choose one here, by alarm type below, or for each program in the preview. A program without a category is not imported. | პროგრამის ფაილები კატეგორიას არ შეიცავს და არცერთი არ მიიღება ვარაუდით: აირჩიეთ აქ, ქვემოთ განგაშის ტიპის მიხედვით ან გადახედვაში თითოეული პროგრამისთვის. კატეგორიის გარეშე პროგრამა არ შემოიტანება. |
 | `S8f4c21` | st_new | Turbine platforms | ტურბინის პლატფორმები |
 | `S9ad4d4` | st_new | Upload the generated StCd_<n>.st programs — several files at once, a whole folder, or one ZIP. Nothing is created yet: the next page lists every program so you can tick the ones to import. | ატვირთეთ გენერირებული StCd_<n>.st პროგრამები — რამდენიმე ფაილი ერთად, მთელი საქაღალდე ან ერთი ZIP. ჯერ არაფერი იქმნება: შემდეგი გვერდი ჩამოთვლის თითოეულ პროგრამას, რათა მონიშნოთ იმპორტისთვის საჭირო. |
 | `S2693e5` | st_preview | All Drafts of this import join one change set, so they can be reviewed and decided together. | ამ იმპორტის ყველა დრაფტი ერთ ცვლილებების ნაკრებს უერთდება, რათა ერთად განიხილონ და გადაწყვიტონ. |
@@ -24049,6 +24085,7 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S33dbd7` | checklist_confirmed must be a list of checklist item ids. | message: field_review_service | 18 of 18 |
 | `S074d62` | Chief Engineer | detail, role badge | 18 of 18 |
 | `S03695d` | Chief Engineer decision | detail, workbench | 18 of 18 |
+| `S9477fd` | choose | st_new, st_preview | 18 of 18 |
 | `S1ae983` | Choose a category. | message: terminology_service | 18 of 18 |
 | `S08fb99` | Choose an active user. | message: translation_review_service | 18 of 18 |
 | `Sbdd594` | Choose at least one access level or the unfiltered files. | message: package_service | 18 of 18 |
@@ -24957,7 +24994,8 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S9a1b35` | The pre-migration status code number, if any — for traceability only, never the governed StCd identifier. | form | 18 of 18 |
 | `S65168f` | The preview has expired or is unknown. Upload the files again. | message: st_import_service | 18 of 18 |
 | `S8b51cc` | The preview has expired. Upload the files again. | message: st_import_service | 18 of 18 |
-| `Sde7a5b` | The program files do not carry a category; you can change it in each Draft. | st_new | 18 of 18 |
+| `S61fc52` | The program files do not carry a category and none is assumed: choose one here, by alarm type below, or for each program in the preview. A program without a category is not imported. | st_new | 18 of 18 |
+| `Sde7a5b` | The program files do not carry a category; you can change it in each Draft. | help and messages | 18 of 18 |
 | `S043693` | The Reviewer has already signed off this CR. | message: change_request_service | 18 of 18 |
 | `S5baa27` | The sample has defects, so the batch cannot be decided as it is. Send the defective codes back (the note is the reason), then draw a new sample of what is left. | workbench | 18 of 18 |
 | `Sd6b132` | The sheet has no 'Review' tab; download the sheet from this page. | message: translation_review_service | 18 of 18 |

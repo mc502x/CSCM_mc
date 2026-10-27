@@ -20,6 +20,31 @@ import re
 from app import status_code_fields
 
 _DELAY_RE = re.compile(r"^\*?\d+(\.\d+)?\s?(ms|s|min|MIN|h|d)$")
+# FR-189: a delay that the program does not give as a time is never replaced by an assumed time. It
+# stays the name of the variable or parameter that sets it, or the statement that the program has no
+# timer; either way a person has to look the value up before the code is released.
+_PARAMETER_RE = re.compile(
+    r"^[A-Za-z_][A-Za-z0-9_]*(\.[A-Za-z_][A-Za-z0-9_]*)*(\[[A-Za-z0-9_]+\])?$"
+)
+NO_VALUE = "not in the program"
+
+
+def _is_parameter(value: str) -> bool:
+    """A controller identifier, not a plain word: it has a digit, an underscore, a dot or an index,
+    or lower and upper case letters mixed after the first letter (StCd14000SetDelayGpTi), and at
+    least six characters. A word such as 'soon', 'bad' or 'Fast' is a mistake, not a parameter."""
+    if len(value) < 6 or not _PARAMETER_RE.match(value):
+        return False
+    if any(c.isdigit() or c in "_.[" for c in value):
+        return True
+    rest = value[1:]
+    return any(c.islower() for c in rest) and any(c.isupper() for c in rest)
+
+
+def is_delay(value: str) -> bool:
+    return bool(_DELAY_RE.match(value)) or _is_parameter(value) or value == NO_VALUE
+
+
 _REPEAT_WINDOW_RE = re.compile(r"^\d+(\.\d+)?\s?(s|min|h|d)$")
 _STATUS_CATEGORIES = {"ERROR", "WARNING", "INFO"}
 _IDENTIFIER_RE = re.compile(r"^StCd-\d{5}$")
@@ -75,20 +100,22 @@ def validate_revision_fields(data: dict) -> list[dict]:
         )
 
     set_delay = data.get("set_delay") or ""
-    if not _DELAY_RE.match(set_delay):
+    if not is_delay(set_delay):
         errors.append(
             {
                 "field": "set_delay",
-                "message": "Set Delay must be a number with a unit, e.g. '10ms' or '2min'.",
+                "message": "Set Delay must be a number with a unit, e.g. '10ms' or '2min', "
+                "or the name of the parameter that sets it.",
             }
         )
 
     reset_delay = data.get("reset_delay") or ""
-    if not _DELAY_RE.match(reset_delay):
+    if not is_delay(reset_delay):
         errors.append(
             {
                 "field": "reset_delay",
-                "message": "Reset Delay must be a number with a unit, e.g. '10ms' or '2min'.",
+                "message": "Reset Delay must be a number with a unit, e.g. '10ms' or '2min', "
+                "or the name of the parameter that sets it.",
             }
         )
 

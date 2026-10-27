@@ -70,7 +70,7 @@ def test_latin_text_needs_no_script_font_and_arabic_is_told_from_urdu():
 def test_every_script_builds_a_pdf_with_its_font(registered):
     rows = [{"id": f"StCd-{i:05d}", "text": text} for i, text in enumerate(SAMPLES.values())]
     data = pdf.build_pdf(rows, columns=[("id", "ID"), ("text", "Text")])
-    assert data.startswith(b"%PDF") and len(data) > 100_000
+    assert data.startswith(b"%PDF") and len(data) > 40_000  # the script fonts are embedded
     assert set(SAMPLES) <= set(registered)  # one font per script, registered once each
     assert len(registered) == len(set(registered))
 

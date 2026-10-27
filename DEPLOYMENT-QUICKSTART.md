@@ -64,7 +64,7 @@ You do not need to "activate" the virtual environment: these commands use its Py
 
 ### 4. Check that it works
 
-1. `http://localhost:5001/api/v1/health` shows `{"status": "ok", "version": "4.16.0"}`; the same version is at the foot of the menu and of the login page.
+1. `http://localhost:5001/api/v1/health` shows `{"status": "ok", "version": "4.16.1"}`; the same version is at the foot of the menu and of the login page.
 2. `http://localhost:5001/api/v1/health/ready` reports database, schema, audit chain and backup state.
 3. Import the sample programs: *Import from .st files* → choose `cscm_tool/tests/fixtures/st/*.st` → preview → create Drafts.
 4. Run the automated tests (about 20 minutes for everything; `-m "not performance"` skips the load tests). Inside `cscm_tool`: `.venv\Scripts\python.exe -m pytest -m "not performance"` (Git Bash: `.venv/Scripts/python.exe`, Linux: `.venv/bin/python`).
