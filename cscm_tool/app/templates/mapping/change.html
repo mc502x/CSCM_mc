@@ -18,6 +18,7 @@
   {% if stale %}<div class="flash flash--error" role="alert">{{ _('These rows changed after the request was made; it cannot be applied. Withdraw it and make it again:') }} {{ stale[:10]|join(', ') }}</div>{% endif %}
 </div>
 
+{# the status of the three approvals is at the top; the decision itself is below the rows, so it is given after the changes have been read #}
 <div class="card">
   <h2>{{ _('Approvals') }}</h2>
   <p class="muted">{{ _('All three, each by a different person who did not make the request.') }}</p>
@@ -35,21 +36,6 @@
     </div>
     {% endfor %}
   </div>
-  {% if can_decide %}
-  <form method="post" action="{{ url_for('ui.mapping_decide', change_id=change.id) }}" style="max-width:560px;margin-top:12px">
-    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
-    <div class="field"><label for="comment">{{ _('Comment (required to reject)') }}</label><textarea id="comment" name="comment" rows="2" maxlength="1000"></textarea></div>
-    {{ password_field('current_password') }}
-    <div class="btn-row">
-      <button class="btn btn--primary" type="submit" name="decision" value="APPROVE">{{ _('Approve') }}</button>
-      <button class="btn btn--outline" type="submit" name="decision" value="REJECT">{{ _('Reject') }}</button>
-    </div>
-  </form>
-  {% elif why_not == 'own' %}
-  <div class="muted">{{ _('You made this request; another person must decide.') }}</div>
-  {% elif why_not == 'decided' %}
-  <div class="muted">{{ _('Your role has decided already.') }}</div>
-  {% endif %}
 </div>
 
 <div class="card">
@@ -70,4 +56,25 @@
   </table>
   {% if more %}<div class="muted">{{ _('and more') }} ({{ more }})</div>{% endif %}
 </div>
+
+{% if can_decide or why_not %}
+<div class="card" id="decision">
+  <h2>{{ _('Decision') }}</h2>
+  {% if can_decide %}
+  <form method="post" action="{{ url_for('ui.mapping_decide', change_id=change.id) }}" style="max-width:560px">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    <div class="field"><label for="comment">{{ _('Comment (required to reject)') }}</label><textarea id="comment" name="comment" rows="2" maxlength="1000"></textarea></div>
+    {{ password_field('current_password') }}
+    <div class="btn-row">
+      <button class="btn btn--primary" type="submit" name="decision" value="APPROVE">{{ _('Approve') }}</button>
+      <button class="btn btn--outline" type="submit" name="decision" value="REJECT">{{ _('Reject') }}</button>
+    </div>
+  </form>
+  {% elif why_not == 'own' %}
+  <div class="muted">{{ _('You made this request; another person must decide.') }}</div>
+  {% elif why_not == 'decided' %}
+  <div class="muted">{{ _('Your role has decided already.') }}</div>
+  {% endif %}
+</div>
+{% endif %}
 {% endblock %}
