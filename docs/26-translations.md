@@ -580,6 +580,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S7b2c7f` | change, detail, language | Approve | Genehmigen |
 | `S8aa57d` | change, detail | Changes | Änderungen |
 | `S3fe5e1` | change | Comment (required to reject) | Kommentar (zum Ablehnen erforderlich) |
+| `S7f59a1` | change, detail, workbench | Decision | Entscheidung |
 | `Sb48001` | change | Mapping change | Änderung der Zuordnung |
 | `Sd7c1d0` | change, changes, list | Mapping changes | Änderungen der Zuordnung |
 | `Sf26140` | change, legacy_mapping, list | New identifier | Neue Kennung |
@@ -732,7 +733,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S0e8574` | detail | Customer | Kunde |
 | `Scb307e` | detail | Decide the selected requests in one sitting | Die ausgewählten Anträge in einem Durchgang entscheiden |
 | `S319493` | detail | Decided by | Entschieden von |
-| `S7f59a1` | detail, workbench | Decision | Entscheidung |
 | `Sc51568` | detail | Decisions & Comments | Entscheidungen & Kommentare |
 | `Sa9ec7c` | detail | Delete Permanently | Endgültig löschen |
 | `S7d1c7a` | detail | Delete Release | Release löschen |
@@ -1237,6 +1237,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sed1d84` | list | Saved searches | Gespeicherte Suchen |
 | `S859822` | list, mine | Select | Auswählen |
 | `S45b553` | list | Select all rows | Alle Zeilen auswählen |
+| `S50a279` | list, mine | Show all | Alle anzeigen |
 | `S7f5583` | list, menu | Status Codes | Statuscodes |
 | `S20bff1` | list | Status codes | Statuscodes |
 | `S3a1066` | list | The mapping is empty. | Die Zuordnung ist leer. |
@@ -1522,7 +1523,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd72b71` | message: user_service | That e-mail address or username is already in use. | Diese E-Mail-Adresse oder dieser Benutzername wird bereits verwendet. |
 | `Sd54517` | message: user_service, user_detail | You cannot delete your own account. | Sie können Ihr eigenes Konto nicht löschen. |
 | `S6a8896` | mine | Review & sign off | Prüfen & freigeben |
-| `S50a279` | mine | Show all | Alle anzeigen |
 | `Se48471` | mine | Showing only Drafts created by Import Job #%(id)s. | Es werden nur Entwürfe angezeigt, die vom Importauftrag #%(id)s erzeugt wurden. |
 | `Sff9480` | mine | Sign-Off Requests For You | Freigabeanfragen an Sie |
 | `S2e0035` | mine | Submitted | Eingereicht |
@@ -1942,6 +1942,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S7b2c7f` | change, detail, language | Approve | Approuver |
 | `S8aa57d` | change, detail | Changes | Modifications |
 | `S3fe5e1` | change | Comment (required to reject) | Commentaire (obligatoire pour rejeter) |
+| `S7f59a1` | change, detail, workbench | Decision | Décision |
 | `Sb48001` | change | Mapping change | Modification de la correspondance |
 | `Sd7c1d0` | change, changes, list | Mapping changes | Modifications de la correspondance |
 | `Sf26140` | change, legacy_mapping, list | New identifier | Nouvel identifiant |
@@ -2094,7 +2095,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S0e8574` | detail | Customer | Client |
 | `Scb307e` | detail | Decide the selected requests in one sitting | Décider des demandes sélectionnées en une seule séance |
 | `S319493` | detail | Decided by | Décidé par |
-| `S7f59a1` | detail, workbench | Decision | Décision |
 | `Sc51568` | detail | Decisions & Comments | Décisions et commentaires |
 | `Sa9ec7c` | detail | Delete Permanently | Supprimer définitivement |
 | `S7d1c7a` | detail | Delete Release | Supprimer la version |
@@ -2599,6 +2599,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sed1d84` | list | Saved searches | Recherches enregistrées |
 | `S859822` | list, mine | Select | Sélectionner |
 | `S45b553` | list | Select all rows | Sélectionner toutes les lignes |
+| `S50a279` | list, mine | Show all | Tout afficher |
 | `S7f5583` | list, menu | Status Codes | Codes de statut |
 | `S20bff1` | list | Status codes | Codes de statut |
 | `S3a1066` | list | The mapping is empty. | La correspondance est vide. |
@@ -2884,7 +2885,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd72b71` | message: user_service | That e-mail address or username is already in use. | Cette adresse e-mail ou ce nom d'utilisateur est déjà utilisé. |
 | `Sd54517` | message: user_service, user_detail | You cannot delete your own account. | Vous ne pouvez pas supprimer votre propre compte. |
 | `S6a8896` | mine | Review & sign off | Relire et valider |
-| `S50a279` | mine | Show all | Tout afficher |
 | `Se48471` | mine | Showing only Drafts created by Import Job #%(id)s. | Seuls les brouillons créés par la tâche d'import n° %(id)s sont affichés. |
 | `Sff9480` | mine | Sign-Off Requests For You | Demandes de validation à votre intention |
 | `S2e0035` | mine | Submitted | Soumis |
@@ -3304,6 +3304,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S7b2c7f` | change, detail, language | Approve | अनुमोदित करें |
 | `S8aa57d` | change, detail | Changes | परिवर्तन |
 | `S3fe5e1` | change | Comment (required to reject) | टिप्पणी (अस्वीकार करने के लिए आवश्यक) |
+| `S7f59a1` | change, detail, workbench | Decision | निर्णय |
 | `Sb48001` | change | Mapping change | मैपिंग का बदलाव |
 | `Sd7c1d0` | change, changes, list | Mapping changes | मैपिंग के बदलाव |
 | `Sf26140` | change, legacy_mapping, list | New identifier | नया पहचानकर्ता |
@@ -3456,7 +3457,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S0e8574` | detail | Customer | ग्राहक |
 | `Scb307e` | detail | Decide the selected requests in one sitting | चयनित अनुरोधों पर एक ही बैठक में निर्णय लें |
 | `S319493` | detail | Decided by | निर्णय लेने वाला |
-| `S7f59a1` | detail, workbench | Decision | निर्णय |
 | `Sc51568` | detail | Decisions & Comments | निर्णय और टिप्पणियाँ |
 | `Sa9ec7c` | detail | Delete Permanently | स्थायी रूप से हटाएँ |
 | `S7d1c7a` | detail | Delete Release | रिलीज़ हटाएँ |
@@ -3961,6 +3961,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sed1d84` | list | Saved searches | सहेजी गई खोजें |
 | `S859822` | list, mine | Select | चुनें |
 | `S45b553` | list | Select all rows | सभी पंक्तियाँ चुनें |
+| `S50a279` | list, mine | Show all | सभी दिखाएँ |
 | `S7f5583` | list, menu | Status Codes | स्थिति कोड |
 | `S20bff1` | list | Status codes | स्थिति कोड |
 | `S3a1066` | list | The mapping is empty. | मैपिंग खाली है। |
@@ -4246,7 +4247,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd72b71` | message: user_service | That e-mail address or username is already in use. | यह ई-मेल पता या उपयोगकर्ता नाम पहले से उपयोग में है। |
 | `Sd54517` | message: user_service, user_detail | You cannot delete your own account. | आप अपना खाता नहीं हटा सकते। |
 | `S6a8896` | mine | Review & sign off | समीक्षा करें और साइन ऑफ करें |
-| `S50a279` | mine | Show all | सभी दिखाएँ |
 | `Se48471` | mine | Showing only Drafts created by Import Job #%(id)s. | केवल आयात कार्य #%(id)s से बने मसौदे दिखाए जा रहे हैं। |
 | `Sff9480` | mine | Sign-Off Requests For You | आपके लिए साइन-ऑफ अनुरोध |
 | `S2e0035` | mine | Submitted | जमा किया गया |
@@ -4666,6 +4666,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S7b2c7f` | change, detail, language | Approve | موافقة |
 | `S8aa57d` | change, detail | Changes | التغييرات |
 | `S3fe5e1` | change | Comment (required to reject) | تعليق (مطلوب عند الرفض) |
+| `S7f59a1` | change, detail, workbench | Decision | القرار |
 | `Sb48001` | change | Mapping change | تغيير الربط |
 | `Sd7c1d0` | change, changes, list | Mapping changes | تغييرات الربط |
 | `Sf26140` | change, legacy_mapping, list | New identifier | المعرّف الجديد |
@@ -4818,7 +4819,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S0e8574` | detail | Customer | العميل |
 | `Scb307e` | detail | Decide the selected requests in one sitting | البتّ في الطلبات المحددة في جلسة واحدة |
 | `S319493` | detail | Decided by | قرّر |
-| `S7f59a1` | detail, workbench | Decision | القرار |
 | `Sc51568` | detail | Decisions & Comments | القرارات والتعليقات |
 | `Sa9ec7c` | detail | Delete Permanently | حذف نهائي |
 | `S7d1c7a` | detail | Delete Release | حذف الإصدار |
@@ -5323,6 +5323,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sed1d84` | list | Saved searches | عمليات البحث المحفوظة |
 | `S859822` | list, mine | Select | تحديد |
 | `S45b553` | list | Select all rows | تحديد كل الصفوف |
+| `S50a279` | list, mine | Show all | عرض الكل |
 | `S7f5583` | list, menu | Status Codes | رموز الحالة |
 | `S20bff1` | list | Status codes | رموز الحالة |
 | `S3a1066` | list | The mapping is empty. | الربط فارغ. |
@@ -5608,7 +5609,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd72b71` | message: user_service | That e-mail address or username is already in use. | عنوان البريد الإلكتروني أو اسم المستخدم هذا مستخدم بالفعل. |
 | `Sd54517` | message: user_service, user_detail | You cannot delete your own account. | لا يمكنك حذف حسابك. |
 | `S6a8896` | mine | Review & sign off | مراجعة واعتماد |
-| `S50a279` | mine | Show all | عرض الكل |
 | `Se48471` | mine | Showing only Drafts created by Import Job #%(id)s. | تُعرض فقط المسودات التي أنشأتها مهمة الاستيراد #%(id)s. |
 | `Sff9480` | mine | Sign-Off Requests For You | طلبات اعتماد موجهة إليك |
 | `S2e0035` | mine | Submitted | قُدّم |
@@ -6028,6 +6028,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S7b2c7f` | change, detail, language | Approve | অনুমোদন করুন |
 | `S8aa57d` | change, detail | Changes | পরিবর্তন |
 | `S3fe5e1` | change | Comment (required to reject) | মন্তব্য (প্রত্যাখ্যানের জন্য আবশ্যক) |
+| `S7f59a1` | change, detail, workbench | Decision | সিদ্ধান্ত |
 | `Sb48001` | change | Mapping change | ম্যাপিংয়ের পরিবর্তন |
 | `Sd7c1d0` | change, changes, list | Mapping changes | ম্যাপিংয়ের পরিবর্তনসমূহ |
 | `Sf26140` | change, legacy_mapping, list | New identifier | নতুন শনাক্তকারী |
@@ -6180,7 +6181,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S0e8574` | detail | Customer | গ্রাহক |
 | `Scb307e` | detail | Decide the selected requests in one sitting | বাছাই করা অনুরোধগুলোর সিদ্ধান্ত এক বৈঠকে নিন |
 | `S319493` | detail | Decided by | সিদ্ধান্তদাতা |
-| `S7f59a1` | detail, workbench | Decision | সিদ্ধান্ত |
 | `Sc51568` | detail | Decisions & Comments | সিদ্ধান্ত ও মন্তব্য |
 | `Sa9ec7c` | detail | Delete Permanently | স্থায়ীভাবে মুছুন |
 | `S7d1c7a` | detail | Delete Release | রিলিজ মুছুন |
@@ -6685,6 +6685,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sed1d84` | list | Saved searches | সংরক্ষিত অনুসন্ধান |
 | `S859822` | list, mine | Select | বাছুন |
 | `S45b553` | list | Select all rows | সব সারি নির্বাচন করুন |
+| `S50a279` | list, mine | Show all | সব দেখান |
 | `S7f5583` | list, menu | Status Codes | স্ট্যাটাস কোড |
 | `S20bff1` | list | Status codes | স্ট্যাটাস কোড |
 | `S3a1066` | list | The mapping is empty. | ম্যাপিং খালি। |
@@ -6970,7 +6971,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd72b71` | message: user_service | That e-mail address or username is already in use. | এই ই-মেইল ঠিকানা বা ব্যবহারকারীর নাম ইতিমধ্যে ব্যবহৃত। |
 | `Sd54517` | message: user_service, user_detail | You cannot delete your own account. | আপনি আপনার নিজের অ্যাকাউন্ট মুছতে পারবেন না। |
 | `S6a8896` | mine | Review & sign off | পর্যালোচনা ও সাইন অফ |
-| `S50a279` | mine | Show all | সব দেখান |
 | `Se48471` | mine | Showing only Drafts created by Import Job #%(id)s. | শুধু আমদানি কাজ #%(id)s থেকে তৈরি খসড়া দেখানো হচ্ছে। |
 | `Sff9480` | mine | Sign-Off Requests For You | আপনার জন্য সাইন-অফ অনুরোধ |
 | `S2e0035` | mine | Submitted | জমা দেওয়া হয়েছে |
@@ -7390,6 +7390,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S7b2c7f` | change, detail, language | Approve | मंजूर करा |
 | `S8aa57d` | change, detail | Changes | बदल |
 | `S3fe5e1` | change | Comment (required to reject) | टिप्पणी (नाकारण्यासाठी आवश्यक) |
+| `S7f59a1` | change, detail, workbench | Decision | निर्णय |
 | `Sb48001` | change | Mapping change | मॅपिंगचा बदल |
 | `Sd7c1d0` | change, changes, list | Mapping changes | मॅपिंगचे बदल |
 | `Sf26140` | change, legacy_mapping, list | New identifier | नवीन ओळखकर्ता |
@@ -7542,7 +7543,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S0e8574` | detail | Customer | ग्राहक |
 | `Scb307e` | detail | Decide the selected requests in one sitting | निवडलेल्या विनंत्यांवर एकाच बैठकीत निर्णय घ्या |
 | `S319493` | detail | Decided by | निर्णय घेणारा |
-| `S7f59a1` | detail, workbench | Decision | निर्णय |
 | `Sc51568` | detail | Decisions & Comments | निर्णय आणि टिप्पण्या |
 | `Sa9ec7c` | detail | Delete Permanently | कायमचे हटवा |
 | `S7d1c7a` | detail | Delete Release | प्रकाशन हटवा |
@@ -8047,6 +8047,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sed1d84` | list | Saved searches | जतन केलेले शोध |
 | `S859822` | list, mine | Select | निवडा |
 | `S45b553` | list | Select all rows | सर्व ओळी निवडा |
+| `S50a279` | list, mine | Show all | सर्व दाखवा |
 | `S7f5583` | list, menu | Status Codes | स्थिती कोड |
 | `S20bff1` | list | Status codes | स्थिती कोड |
 | `S3a1066` | list | The mapping is empty. | मॅपिंग रिकामे आहे. |
@@ -8332,7 +8333,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd72b71` | message: user_service | That e-mail address or username is already in use. | हा ई-मेल पत्ता किंवा वापरकर्तानाव आधीच वापरात आहे. |
 | `Sd54517` | message: user_service, user_detail | You cannot delete your own account. | तुम्ही तुमचे स्वतःचे खाते हटवू शकत नाही. |
 | `S6a8896` | mine | Review & sign off | पुनरावलोकन करा आणि साइन ऑफ करा |
-| `S50a279` | mine | Show all | सर्व दाखवा |
 | `Se48471` | mine | Showing only Drafts created by Import Job #%(id)s. | फक्त आयात काम #%(id)s ने तयार केलेले मसुदे दाखवले आहेत. |
 | `Sff9480` | mine | Sign-Off Requests For You | तुमच्यासाठी साइन-ऑफ विनंत्या |
 | `S2e0035` | mine | Submitted | सादर केले |
@@ -8752,6 +8752,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S7b2c7f` | change, detail, language | Approve | ఆమోదించండి |
 | `S8aa57d` | change, detail | Changes | మార్పులు |
 | `S3fe5e1` | change | Comment (required to reject) | వ్యాఖ్య (తిరస్కరించడానికి తప్పనిసరి) |
+| `S7f59a1` | change, detail, workbench | Decision | నిర్ణయం |
 | `Sb48001` | change | Mapping change | మ్యాపింగ్ మార్పు |
 | `Sd7c1d0` | change, changes, list | Mapping changes | మ్యాపింగ్ మార్పులు |
 | `Sf26140` | change, legacy_mapping, list | New identifier | కొత్త గుర్తింపు |
@@ -8904,7 +8905,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S0e8574` | detail | Customer | కస్టమర్ |
 | `Scb307e` | detail | Decide the selected requests in one sitting | ఎంచుకున్న అభ్యర్థనలపై ఒకే సమావేశంలో నిర్ణయించండి |
 | `S319493` | detail | Decided by | నిర్ణయించినవారు |
-| `S7f59a1` | detail, workbench | Decision | నిర్ణయం |
 | `Sc51568` | detail | Decisions & Comments | నిర్ణయాలు మరియు వ్యాఖ్యలు |
 | `Sa9ec7c` | detail | Delete Permanently | శాశ్వతంగా తొలగించండి |
 | `S7d1c7a` | detail | Delete Release | విడుదలను తొలగించండి |
@@ -9409,6 +9409,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sed1d84` | list | Saved searches | సేవ్ చేసిన శోధనలు |
 | `S859822` | list, mine | Select | ఎంచుకోండి |
 | `S45b553` | list | Select all rows | అన్ని వరుసలను ఎంచుకోండి |
+| `S50a279` | list, mine | Show all | అన్నీ చూపండి |
 | `S7f5583` | list, menu | Status Codes | స్థితి కోడ్‌లు |
 | `S20bff1` | list | Status codes | స్థితి కోడ్‌లు |
 | `S3a1066` | list | The mapping is empty. | మ్యాపింగ్ ఖాళీగా ఉంది. |
@@ -9694,7 +9695,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd72b71` | message: user_service | That e-mail address or username is already in use. | ఈ ఈ-మెయిల్ చిరునామా లేదా వినియోగదారు పేరు ఇప్పటికే వాడుకలో ఉంది. |
 | `Sd54517` | message: user_service, user_detail | You cannot delete your own account. | మీరు మీ స్వంత ఖాతాను తొలగించలేరు. |
 | `S6a8896` | mine | Review & sign off | సమీక్షించి సైన్ ఆఫ్ చేయండి |
-| `S50a279` | mine | Show all | అన్నీ చూపండి |
 | `Se48471` | mine | Showing only Drafts created by Import Job #%(id)s. | దిగుమతి పని #%(id)s సృష్టించిన ముసాయిదాలు మాత్రమే చూపబడుతున్నాయి. |
 | `Sff9480` | mine | Sign-Off Requests For You | మీ కోసం సైన్-ఆఫ్ అభ్యర్థనలు |
 | `S2e0035` | mine | Submitted | సమర్పించబడింది |
@@ -10114,6 +10114,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S7b2c7f` | change, detail, language | Approve | ஒப்புதல் அளி |
 | `S8aa57d` | change, detail | Changes | மாற்றங்கள் |
 | `S3fe5e1` | change | Comment (required to reject) | கருத்து (நிராகரிக்கத் தேவை) |
+| `S7f59a1` | change, detail, workbench | Decision | முடிவு |
 | `Sb48001` | change | Mapping change | இணைப்பின் மாற்றம் |
 | `Sd7c1d0` | change, changes, list | Mapping changes | இணைப்பின் மாற்றங்கள் |
 | `Sf26140` | change, legacy_mapping, list | New identifier | புதிய அடையாளங்காட்டி |
@@ -10266,7 +10267,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S0e8574` | detail | Customer | வாடிக்கையாளர் |
 | `Scb307e` | detail | Decide the selected requests in one sitting | தேர்ந்தெடுத்த கோரிக்கைகளை ஒரே அமர்வில் முடிவு செய்யுங்கள் |
 | `S319493` | detail | Decided by | முடிவு செய்தவர் |
-| `S7f59a1` | detail, workbench | Decision | முடிவு |
 | `Sc51568` | detail | Decisions & Comments | முடிவுகளும் கருத்துகளும் |
 | `Sa9ec7c` | detail | Delete Permanently | நிரந்தரமாக நீக்கு |
 | `S7d1c7a` | detail | Delete Release | வெளியீட்டை நீக்கு |
@@ -10771,6 +10771,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sed1d84` | list | Saved searches | சேமித்த தேடல்கள் |
 | `S859822` | list, mine | Select | தேர்ந்தெடு |
 | `S45b553` | list | Select all rows | எல்லா வரிசைகளையும் தேர்ந்தெடு |
+| `S50a279` | list, mine | Show all | அனைத்தையும் காட்டு |
 | `S7f5583` | list, menu | Status Codes | நிலைக் குறியீடுகள் |
 | `S20bff1` | list | Status codes | நிலைக் குறியீடுகள் |
 | `S3a1066` | list | The mapping is empty. | இணைப்பு காலியாக உள்ளது. |
@@ -11056,7 +11057,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd72b71` | message: user_service | That e-mail address or username is already in use. | இந்த மின்னஞ்சல் முகவரி அல்லது பயனர் பெயர் ஏற்கனவே பயன்பாட்டில் உள்ளது. |
 | `Sd54517` | message: user_service, user_detail | You cannot delete your own account. | உங்கள் சொந்தக் கணக்கை நீக்க முடியாது. |
 | `S6a8896` | mine | Review & sign off | மதிப்பாய்வு செய்து கையொப்பமிடு |
-| `S50a279` | mine | Show all | அனைத்தையும் காட்டு |
 | `Se48471` | mine | Showing only Drafts created by Import Job #%(id)s. | இறக்குமதிப் பணி #%(id)s உருவாக்கிய வரைவுகள் மட்டும் காட்டப்படுகின்றன. |
 | `Sff9480` | mine | Sign-Off Requests For You | உங்களுக்கான கையொப்பக் கோரிக்கைகள் |
 | `S2e0035` | mine | Submitted | சமர்ப்பிக்கப்பட்டது |
@@ -11476,6 +11476,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S7b2c7f` | change, detail, language | Approve | મંજૂર કરો |
 | `S8aa57d` | change, detail | Changes | ફેરફારો |
 | `S3fe5e1` | change | Comment (required to reject) | ટિપ્પણી (નામંજૂર કરવા માટે જરૂરી) |
+| `S7f59a1` | change, detail, workbench | Decision | નિર્ણય |
 | `Sb48001` | change | Mapping change | મેપિંગનો ફેરફાર |
 | `Sd7c1d0` | change, changes, list | Mapping changes | મેપિંગના ફેરફારો |
 | `Sf26140` | change, legacy_mapping, list | New identifier | નવો ઓળખકર્તા |
@@ -11628,7 +11629,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S0e8574` | detail | Customer | ગ્રાહક |
 | `Scb307e` | detail | Decide the selected requests in one sitting | પસંદ કરેલ વિનંતીઓ પર એક જ બેઠકમાં નિર્ણય લો |
 | `S319493` | detail | Decided by | નિર્ણય લેનાર |
-| `S7f59a1` | detail, workbench | Decision | નિર્ણય |
 | `Sc51568` | detail | Decisions & Comments | નિર્ણયો અને ટિપ્પણીઓ |
 | `Sa9ec7c` | detail | Delete Permanently | કાયમ માટે કાઢી નાખો |
 | `S7d1c7a` | detail | Delete Release | રિલીઝ કાઢી નાખો |
@@ -12133,6 +12133,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sed1d84` | list | Saved searches | સાચવેલી શોધો |
 | `S859822` | list, mine | Select | પસંદ કરો |
 | `S45b553` | list | Select all rows | બધી પંક્તિઓ પસંદ કરો |
+| `S50a279` | list, mine | Show all | બધું બતાવો |
 | `S7f5583` | list, menu | Status Codes | સ્ટેટસ કોડ |
 | `S20bff1` | list | Status codes | સ્ટેટસ કોડ |
 | `S3a1066` | list | The mapping is empty. | મેપિંગ ખાલી છે. |
@@ -12418,7 +12419,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd72b71` | message: user_service | That e-mail address or username is already in use. | આ ઈ-મેલ સરનામું અથવા વપરાશકર્તા નામ પહેલેથી વપરાશમાં છે. |
 | `Sd54517` | message: user_service, user_detail | You cannot delete your own account. | તમે તમારું પોતાનું એકાઉન્ટ કાઢી શકતા નથી. |
 | `S6a8896` | mine | Review & sign off | સમીક્ષા કરો અને સાઇન ઑફ કરો |
-| `S50a279` | mine | Show all | બધું બતાવો |
 | `Se48471` | mine | Showing only Drafts created by Import Job #%(id)s. | ફક્ત આયાત કાર્ય #%(id)s એ બનાવેલા મુસદ્દા બતાવાયા છે. |
 | `Sff9480` | mine | Sign-Off Requests For You | તમારા માટે સાઇન-ઑફ વિનંતીઓ |
 | `S2e0035` | mine | Submitted | સબમિટ કર્યું |
@@ -12838,6 +12838,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S7b2c7f` | change, detail, language | Approve | منظور کریں |
 | `S8aa57d` | change, detail | Changes | تبدیلیاں |
 | `S3fe5e1` | change | Comment (required to reject) | تبصرہ (مسترد کرنے کے لیے ضروری) |
+| `S7f59a1` | change, detail, workbench | Decision | فیصلہ |
 | `Sb48001` | change | Mapping change | میپنگ کی تبدیلی |
 | `Sd7c1d0` | change, changes, list | Mapping changes | میپنگ کی تبدیلیاں |
 | `Sf26140` | change, legacy_mapping, list | New identifier | نیا شناخت کنندہ |
@@ -12990,7 +12991,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S0e8574` | detail | Customer | گاہک |
 | `Scb307e` | detail | Decide the selected requests in one sitting | منتخب درخواستوں پر ایک ہی نشست میں فیصلہ کریں |
 | `S319493` | detail | Decided by | فیصلہ کرنے والا |
-| `S7f59a1` | detail, workbench | Decision | فیصلہ |
 | `Sc51568` | detail | Decisions & Comments | فیصلے اور تبصرے |
 | `Sa9ec7c` | detail | Delete Permanently | مستقل طور پر حذف کریں |
 | `S7d1c7a` | detail | Delete Release | ریلیز حذف کریں |
@@ -13495,6 +13495,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sed1d84` | list | Saved searches | محفوظ شدہ تلاشیں |
 | `S859822` | list, mine | Select | منتخب کریں |
 | `S45b553` | list | Select all rows | تمام سطریں منتخب کریں |
+| `S50a279` | list, mine | Show all | سب دکھائیں |
 | `S7f5583` | list, menu | Status Codes | اسٹیٹس کوڈز |
 | `S20bff1` | list | Status codes | اسٹیٹس کوڈز |
 | `S3a1066` | list | The mapping is empty. | میپنگ خالی ہے۔ |
@@ -13780,7 +13781,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd72b71` | message: user_service | That e-mail address or username is already in use. | یہ ای میل پتا یا صارف نام پہلے سے استعمال میں ہے۔ |
 | `Sd54517` | message: user_service, user_detail | You cannot delete your own account. | آپ اپنا اکاؤنٹ حذف نہیں کر سکتے۔ |
 | `S6a8896` | mine | Review & sign off | جائزہ لیں اور سائن آف کریں |
-| `S50a279` | mine | Show all | سب دکھائیں |
 | `Se48471` | mine | Showing only Drafts created by Import Job #%(id)s. | صرف درآمدی کام #%(id)s کے بنائے ہوئے مسودے دکھائے جا رہے ہیں۔ |
 | `Sff9480` | mine | Sign-Off Requests For You | آپ کے لیے سائن آف کی درخواستیں |
 | `S2e0035` | mine | Submitted | جمع کرایا گیا |
@@ -14200,6 +14200,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S7b2c7f` | change, detail, language | Approve | ಅನುಮೋದಿಸಿ |
 | `S8aa57d` | change, detail | Changes | ಬದಲಾವಣೆಗಳು |
 | `S3fe5e1` | change | Comment (required to reject) | ಟಿಪ್ಪಣಿ (ತಿರಸ್ಕರಿಸಲು ಅಗತ್ಯ) |
+| `S7f59a1` | change, detail, workbench | Decision | ನಿರ್ಧಾರ |
 | `Sb48001` | change | Mapping change | ಮ್ಯಾಪಿಂಗ್ ಬದಲಾವಣೆ |
 | `Sd7c1d0` | change, changes, list | Mapping changes | ಮ್ಯಾಪಿಂಗ್ ಬದಲಾವಣೆಗಳು |
 | `Sf26140` | change, legacy_mapping, list | New identifier | ಹೊಸ ಗುರುತು |
@@ -14352,7 +14353,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S0e8574` | detail | Customer | ಗ್ರಾಹಕ |
 | `Scb307e` | detail | Decide the selected requests in one sitting | ಆಯ್ದ ವಿನಂತಿಗಳನ್ನು ಒಂದೇ ಬಾರಿಗೆ ನಿರ್ಧರಿಸಿ |
 | `S319493` | detail | Decided by | ನಿರ್ಧರಿಸಿದವರು |
-| `S7f59a1` | detail, workbench | Decision | ನಿರ್ಧಾರ |
 | `Sc51568` | detail | Decisions & Comments | ನಿರ್ಧಾರಗಳು ಮತ್ತು ಟಿಪ್ಪಣಿಗಳು |
 | `Sa9ec7c` | detail | Delete Permanently | ಶಾಶ್ವತವಾಗಿ ಅಳಿಸಿ |
 | `S7d1c7a` | detail | Delete Release | ಬಿಡುಗಡೆ ಅಳಿಸಿ |
@@ -14857,6 +14857,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sed1d84` | list | Saved searches | ಉಳಿಸಿದ ಹುಡುಕಾಟಗಳು |
 | `S859822` | list, mine | Select | ಆಯ್ಕೆಮಾಡಿ |
 | `S45b553` | list | Select all rows | ಎಲ್ಲ ಸಾಲುಗಳನ್ನು ಆಯ್ಕೆಮಾಡಿ |
+| `S50a279` | list, mine | Show all | ಎಲ್ಲವನ್ನೂ ತೋರಿಸಿ |
 | `S7f5583` | list, menu | Status Codes | ಸ್ಥಿತಿ ಕೋಡ್‌ಗಳು |
 | `S20bff1` | list | Status codes | ಸ್ಥಿತಿ ಕೋಡ್‌ಗಳು |
 | `S3a1066` | list | The mapping is empty. | ಮ್ಯಾಪಿಂಗ್ ಖಾಲಿಯಾಗಿದೆ. |
@@ -15142,7 +15143,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd72b71` | message: user_service | That e-mail address or username is already in use. | ಆ ಇ-ಮೇಲ್ ವಿಳಾಸ ಅಥವಾ ಬಳಕೆದಾರ ಹೆಸರು ಈಗಾಗಲೇ ಬಳಕೆಯಲ್ಲಿದೆ. |
 | `Sd54517` | message: user_service, user_detail | You cannot delete your own account. | ನಿಮ್ಮ ಸ್ವಂತ ಖಾತೆಯನ್ನು ಅಳಿಸಲಾಗದು. |
 | `S6a8896` | mine | Review & sign off | ಪರಿಶೀಲಿಸಿ ಮತ್ತು ಸಹಿ ಮಾಡಿ |
-| `S50a279` | mine | Show all | ಎಲ್ಲವನ್ನೂ ತೋರಿಸಿ |
 | `Se48471` | mine | Showing only Drafts created by Import Job #%(id)s. | ಆಮದು ಕೆಲಸ #%(id)s ರಚಿಸಿದ ಕರಡುಗಳನ್ನು ಮಾತ್ರ ತೋರಿಸಲಾಗುತ್ತಿದೆ. |
 | `Sff9480` | mine | Sign-Off Requests For You | ನಿಮಗಾಗಿ ಸಹಿ ವಿನಂತಿಗಳು |
 | `S2e0035` | mine | Submitted | ಸಲ್ಲಿಸಲಾಗಿದೆ |
@@ -15562,6 +15562,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S7b2c7f` | change, detail, language | Approve | ଅନୁମୋଦନ କରନ୍ତୁ |
 | `S8aa57d` | change, detail | Changes | ପରିବର୍ତ୍ତନ |
 | `S3fe5e1` | change | Comment (required to reject) | ମନ୍ତବ୍ୟ (ପ୍ରତ୍ୟାଖ୍ୟାନ ପାଇଁ ଆବଶ୍ୟକ) |
+| `S7f59a1` | change, detail, workbench | Decision | ନିଷ୍ପତ୍ତି |
 | `Sb48001` | change | Mapping change | ମ୍ୟାପିଂର ପରିବର୍ତ୍ତନ |
 | `Sd7c1d0` | change, changes, list | Mapping changes | ମ୍ୟାପିଂର ପରିବର୍ତ୍ତନଗୁଡ଼ିକ |
 | `Sf26140` | change, legacy_mapping, list | New identifier | ନୂଆ ପରିଚୟକ |
@@ -15714,7 +15715,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S0e8574` | detail | Customer | ଗ୍ରାହକ |
 | `Scb307e` | detail | Decide the selected requests in one sitting | ବଛାଯାଇଥିବା ଅନୁରୋଧ ଏକ ବୈଠକରେ ନିଷ୍ପତ୍ତି ନିଅନ୍ତୁ |
 | `S319493` | detail | Decided by | ନିଷ୍ପତ୍ତିକାରୀ |
-| `S7f59a1` | detail, workbench | Decision | ନିଷ୍ପତ୍ତି |
 | `Sc51568` | detail | Decisions & Comments | ନିଷ୍ପତ୍ତି ଓ ମନ୍ତବ୍ୟ |
 | `Sa9ec7c` | detail | Delete Permanently | ସ୍ଥାୟୀ ଭାବେ ଲିଭାନ୍ତୁ |
 | `S7d1c7a` | detail | Delete Release | ରିଲିଜ୍ ଲିଭାନ୍ତୁ |
@@ -16219,6 +16219,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sed1d84` | list | Saved searches | ସଞ୍ଚିତ ସନ୍ଧାନ |
 | `S859822` | list, mine | Select | ବାଛନ୍ତୁ |
 | `S45b553` | list | Select all rows | ସମସ୍ତ ଧାଡ଼ି ବାଛନ୍ତୁ |
+| `S50a279` | list, mine | Show all | ସବୁ ଦେଖାନ୍ତୁ |
 | `S7f5583` | list, menu | Status Codes | ଅବସ୍ଥା କୋଡ୍ |
 | `S20bff1` | list | Status codes | ଅବସ୍ଥା କୋଡ୍ |
 | `S3a1066` | list | The mapping is empty. | ମ୍ୟାପିଂ ଖାଲି ଅଛି। |
@@ -16504,7 +16505,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd72b71` | message: user_service | That e-mail address or username is already in use. | ସେହି ଇ-ମେଲ୍ ଠିକଣା ବା ଉପଯୋଗକର୍ତ୍ତା ନାମ ପୂର୍ବରୁ ବ୍ୟବହୃତ। |
 | `Sd54517` | message: user_service, user_detail | You cannot delete your own account. | ଆପଣ ନିଜ ଖାତା ଲିଭାଇପାରିବେ ନାହିଁ। |
 | `S6a8896` | mine | Review & sign off | ସମୀକ୍ଷା କରି ସ୍ୱାକ୍ଷର କରନ୍ତୁ |
-| `S50a279` | mine | Show all | ସବୁ ଦେଖାନ୍ତୁ |
 | `Se48471` | mine | Showing only Drafts created by Import Job #%(id)s. | ଆମଦାନି କାମ #%(id)s ଦ୍ୱାରା ତିଆରି ଖସଡ଼ା ମାତ୍ର ଦେଖାଯାଉଛି। |
 | `Sff9480` | mine | Sign-Off Requests For You | ଆପଣଙ୍କ ପାଇଁ ସ୍ୱାକ୍ଷର ଅନୁରୋଧ |
 | `S2e0035` | mine | Submitted | ଦାଖଲ ହୋଇଛି |
@@ -16924,6 +16924,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S7b2c7f` | change, detail, language | Approve | അംഗീകരിക്കുക |
 | `S8aa57d` | change, detail | Changes | മാറ്റങ്ങൾ |
 | `S3fe5e1` | change | Comment (required to reject) | അഭിപ്രായം (നിരസിക്കാൻ ആവശ്യമാണ്) |
+| `S7f59a1` | change, detail, workbench | Decision | തീരുമാനം |
 | `Sb48001` | change | Mapping change | മാപ്പിംഗിന്റെ മാറ്റം |
 | `Sd7c1d0` | change, changes, list | Mapping changes | മാപ്പിംഗിന്റെ മാറ്റങ്ങൾ |
 | `Sf26140` | change, legacy_mapping, list | New identifier | പുതിയ ഐഡന്റിഫയർ |
@@ -17076,7 +17077,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S0e8574` | detail | Customer | ഉപഭോക്താവ് |
 | `Scb307e` | detail | Decide the selected requests in one sitting | തിരഞ്ഞെടുത്ത അഭ്യർത്ഥനകളിൽ ഒറ്റ ഇരുപ്പിൽ തീരുമാനിക്കുക |
 | `S319493` | detail | Decided by | തീരുമാനിച്ചത് |
-| `S7f59a1` | detail, workbench | Decision | തീരുമാനം |
 | `Sc51568` | detail | Decisions & Comments | തീരുമാനങ്ങളും അഭിപ്രായങ്ങളും |
 | `Sa9ec7c` | detail | Delete Permanently | ശാശ്വതമായി ഇല്ലാതാക്കുക |
 | `S7d1c7a` | detail | Delete Release | റിലീസ് ഇല്ലാതാക്കുക |
@@ -17581,6 +17581,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sed1d84` | list | Saved searches | സംരക്ഷിച്ച തിരയലുകൾ |
 | `S859822` | list, mine | Select | തിരഞ്ഞെടുക്കുക |
 | `S45b553` | list | Select all rows | എല്ലാ വരികളും തിരഞ്ഞെടുക്കുക |
+| `S50a279` | list, mine | Show all | എല്ലാം കാണിക്കുക |
 | `S7f5583` | list, menu | Status Codes | സ്റ്റാറ്റസ് കോഡുകൾ |
 | `S20bff1` | list | Status codes | സ്റ്റാറ്റസ് കോഡുകൾ |
 | `S3a1066` | list | The mapping is empty. | മാപ്പിംഗ് ശൂന്യമാണ്. |
@@ -17866,7 +17867,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd72b71` | message: user_service | That e-mail address or username is already in use. | ആ ഇ-മെയിൽ വിലാസമോ ഉപയോക്തൃനാമമോ ഇതിനകം ഉപയോഗത്തിലാണ്. |
 | `Sd54517` | message: user_service, user_detail | You cannot delete your own account. | നിങ്ങളുടെ സ്വന്തം അക്കൗണ്ട് ഇല്ലാതാക്കാനാവില്ല. |
 | `S6a8896` | mine | Review & sign off | അവലോകനം ചെയ്ത് സൈൻ ഓഫ് ചെയ്യുക |
-| `S50a279` | mine | Show all | എല്ലാം കാണിക്കുക |
 | `Se48471` | mine | Showing only Drafts created by Import Job #%(id)s. | ഇറക്കുമതി ജോലി #%(id)s സൃഷ്ടിച്ച കരടുകൾ മാത്രം കാണിക്കുന്നു. |
 | `Sff9480` | mine | Sign-Off Requests For You | നിങ്ങൾക്കുള്ള സൈൻ-ഓഫ് അഭ്യർത്ഥനകൾ |
 | `S2e0035` | mine | Submitted | സമർപ്പിച്ചത് |
@@ -18286,6 +18286,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S7b2c7f` | change, detail, language | Approve | ਮਨਜ਼ੂਰ ਕਰੋ |
 | `S8aa57d` | change, detail | Changes | ਤਬਦੀਲੀਆਂ |
 | `S3fe5e1` | change | Comment (required to reject) | ਟਿੱਪਣੀ (ਰੱਦ ਕਰਨ ਲਈ ਲੋੜੀਂਦੀ) |
+| `S7f59a1` | change, detail, workbench | Decision | ਫ਼ੈਸਲਾ |
 | `Sb48001` | change | Mapping change | ਮੈਪਿੰਗ ਦੀ ਤਬਦੀਲੀ |
 | `Sd7c1d0` | change, changes, list | Mapping changes | ਮੈਪਿੰਗ ਦੀਆਂ ਤਬਦੀਲੀਆਂ |
 | `Sf26140` | change, legacy_mapping, list | New identifier | ਨਵਾਂ ਪਛਾਣਕਰਤਾ |
@@ -18438,7 +18439,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S0e8574` | detail | Customer | ਗਾਹਕ |
 | `Scb307e` | detail | Decide the selected requests in one sitting | ਚੁਣੀਆਂ ਬੇਨਤੀਆਂ ਉੱਤੇ ਇੱਕੋ ਬੈਠਕ ਵਿੱਚ ਫ਼ੈਸਲਾ ਕਰੋ |
 | `S319493` | detail | Decided by | ਫ਼ੈਸਲਾ ਕਰਤਾ |
-| `S7f59a1` | detail, workbench | Decision | ਫ਼ੈਸਲਾ |
 | `Sc51568` | detail | Decisions & Comments | ਫ਼ੈਸਲੇ ਅਤੇ ਟਿੱਪਣੀਆਂ |
 | `Sa9ec7c` | detail | Delete Permanently | ਸਦਾ ਲਈ ਮਿਟਾਓ |
 | `S7d1c7a` | detail | Delete Release | ਰਿਲੀਜ਼ ਮਿਟਾਓ |
@@ -18943,6 +18943,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sed1d84` | list | Saved searches | ਸੁਰੱਖਿਅਤ ਖੋਜਾਂ |
 | `S859822` | list, mine | Select | ਚੁਣੋ |
 | `S45b553` | list | Select all rows | ਸਾਰੀਆਂ ਕਤਾਰਾਂ ਚੁਣੋ |
+| `S50a279` | list, mine | Show all | ਸਭ ਦਿਖਾਓ |
 | `S7f5583` | list, menu | Status Codes | ਸਥਿਤੀ ਕੋਡ |
 | `S20bff1` | list | Status codes | ਸਥਿਤੀ ਕੋਡ |
 | `S3a1066` | list | The mapping is empty. | ਮੈਪਿੰਗ ਖਾਲੀ ਹੈ। |
@@ -19228,7 +19229,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd72b71` | message: user_service | That e-mail address or username is already in use. | ਇਹ ਈ-ਮੇਲ ਪਤਾ ਜਾਂ ਵਰਤੋਂਕਾਰ ਨਾਮ ਪਹਿਲਾਂ ਹੀ ਵਰਤੋਂ ਵਿੱਚ ਹੈ। |
 | `Sd54517` | message: user_service, user_detail | You cannot delete your own account. | ਤੁਸੀਂ ਆਪਣਾ ਖਾਤਾ ਨਹੀਂ ਮਿਟਾ ਸਕਦੇ। |
 | `S6a8896` | mine | Review & sign off | ਸਮੀਖਿਆ ਕਰੋ ਅਤੇ ਦਸਤਖ਼ਤ ਕਰੋ |
-| `S50a279` | mine | Show all | ਸਭ ਦਿਖਾਓ |
 | `Se48471` | mine | Showing only Drafts created by Import Job #%(id)s. | ਦਰਾਮਦ ਕੰਮ #%(id)s ਦੇ ਬਣਾਏ ਖਰੜੇ ਹੀ ਦਿਖਾਏ ਜਾ ਰਹੇ ਹਨ। |
 | `Sff9480` | mine | Sign-Off Requests For You | ਤੁਹਾਡੇ ਲਈ ਦਸਤਖ਼ਤ ਬੇਨਤੀਆਂ |
 | `S2e0035` | mine | Submitted | ਜਮ੍ਹਾਂ ਕੀਤਾ |
@@ -19648,6 +19648,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S7b2c7f` | change, detail, language | Approve | Aprobar |
 | `S8aa57d` | change, detail | Changes | Cambios |
 | `S3fe5e1` | change | Comment (required to reject) | Comentario (obligatorio para rechazar) |
+| `S7f59a1` | change, detail, workbench | Decision | Decisión |
 | `Sb48001` | change | Mapping change | Cambio de la correspondencia |
 | `Sd7c1d0` | change, changes, list | Mapping changes | Cambios de la correspondencia |
 | `Sf26140` | change, legacy_mapping, list | New identifier | Nuevo identificador |
@@ -19800,7 +19801,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S0e8574` | detail | Customer | Cliente |
 | `Scb307e` | detail | Decide the selected requests in one sitting | Decidir las solicitudes seleccionadas en una sola sesión |
 | `S319493` | detail | Decided by | Decidido por |
-| `S7f59a1` | detail, workbench | Decision | Decisión |
 | `Sc51568` | detail | Decisions & Comments | Decisiones y comentarios |
 | `Sa9ec7c` | detail | Delete Permanently | Eliminar definitivamente |
 | `S7d1c7a` | detail | Delete Release | Eliminar versión |
@@ -20305,6 +20305,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sed1d84` | list | Saved searches | Búsquedas guardadas |
 | `S859822` | list, mine | Select | Seleccionar |
 | `S45b553` | list | Select all rows | Seleccionar todas las filas |
+| `S50a279` | list, mine | Show all | Mostrar todo |
 | `S7f5583` | list, menu | Status Codes | Códigos de estado |
 | `S20bff1` | list | Status codes | Códigos de estado |
 | `S3a1066` | list | The mapping is empty. | La correspondencia está vacía. |
@@ -20590,7 +20591,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd72b71` | message: user_service | That e-mail address or username is already in use. | Esta dirección de correo o nombre de usuario ya está en uso. |
 | `Sd54517` | message: user_service, user_detail | You cannot delete your own account. | No puede eliminar su propia cuenta. |
 | `S6a8896` | mine | Review & sign off | Revisar y dar conformidad |
-| `S50a279` | mine | Show all | Mostrar todo |
 | `Se48471` | mine | Showing only Drafts created by Import Job #%(id)s. | Solo se muestran los borradores creados por la tarea de importación n.º %(id)s. |
 | `Sff9480` | mine | Sign-Off Requests For You | Solicitudes de conformidad para usted |
 | `S2e0035` | mine | Submitted | Enviado |
@@ -21010,6 +21010,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S7b2c7f` | change, detail, language | Approve | Approva |
 | `S8aa57d` | change, detail | Changes | Modifiche |
 | `S3fe5e1` | change | Comment (required to reject) | Commento (obbligatorio per rifiutare) |
+| `S7f59a1` | change, detail, workbench | Decision | Decisione |
 | `Sb48001` | change | Mapping change | Modifica della corrispondenza |
 | `Sd7c1d0` | change, changes, list | Mapping changes | Modifiche della corrispondenza |
 | `Sf26140` | change, legacy_mapping, list | New identifier | Nuovo identificativo |
@@ -21162,7 +21163,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S0e8574` | detail | Customer | Cliente |
 | `Scb307e` | detail | Decide the selected requests in one sitting | Decidi le richieste selezionate in un'unica seduta |
 | `S319493` | detail | Decided by | Deciso da |
-| `S7f59a1` | detail, workbench | Decision | Decisione |
 | `Sc51568` | detail | Decisions & Comments | Decisioni e commenti |
 | `Sa9ec7c` | detail | Delete Permanently | Elimina definitivamente |
 | `S7d1c7a` | detail | Delete Release | Elimina rilascio |
@@ -21667,6 +21667,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sed1d84` | list | Saved searches | Ricerche salvate |
 | `S859822` | list, mine | Select | Seleziona |
 | `S45b553` | list | Select all rows | Seleziona tutte le righe |
+| `S50a279` | list, mine | Show all | Mostra tutto |
 | `S7f5583` | list, menu | Status Codes | Codici di stato |
 | `S20bff1` | list | Status codes | Codici di stato |
 | `S3a1066` | list | The mapping is empty. | La corrispondenza è vuota. |
@@ -21952,7 +21953,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd72b71` | message: user_service | That e-mail address or username is already in use. | Questo indirizzo e-mail o nome utente è già in uso. |
 | `Sd54517` | message: user_service, user_detail | You cannot delete your own account. | Non può eliminare il proprio account. |
 | `S6a8896` | mine | Review & sign off | Rivedi e dai il benestare |
-| `S50a279` | mine | Show all | Mostra tutto |
 | `Se48471` | mine | Showing only Drafts created by Import Job #%(id)s. | Vengono mostrate solo le bozze create dall'attività di importazione n. %(id)s. |
 | `Sff9480` | mine | Sign-Off Requests For You | Richieste di benestare per lei |
 | `S2e0035` | mine | Submitted | Inviato |
@@ -22372,6 +22372,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S7b2c7f` | change, detail, language | Approve | Godkend |
 | `S8aa57d` | change, detail | Changes | Ændringer |
 | `S3fe5e1` | change | Comment (required to reject) | Kommentar (påkrævet ved afvisning) |
+| `S7f59a1` | change, detail, workbench | Decision | Beslutning |
 | `Sb48001` | change | Mapping change | Ændring af koblingen |
 | `Sd7c1d0` | change, changes, list | Mapping changes | Ændringer af koblingen |
 | `Sf26140` | change, legacy_mapping, list | New identifier | Ny identifikator |
@@ -22524,7 +22525,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S0e8574` | detail | Customer | Kunde |
 | `Scb307e` | detail | Decide the selected requests in one sitting | Beslut de valgte anmodninger i én omgang |
 | `S319493` | detail | Decided by | Besluttet af |
-| `S7f59a1` | detail, workbench | Decision | Beslutning |
 | `Sc51568` | detail | Decisions & Comments | Beslutninger og kommentarer |
 | `Sa9ec7c` | detail | Delete Permanently | Slet permanent |
 | `S7d1c7a` | detail | Delete Release | Slet udgivelse |
@@ -23029,6 +23029,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sed1d84` | list | Saved searches | Gemte søgninger |
 | `S859822` | list, mine | Select | Vælg |
 | `S45b553` | list | Select all rows | Vælg alle rækker |
+| `S50a279` | list, mine | Show all | Vis alle |
 | `S7f5583` | list, menu | Status Codes | Statuskoder |
 | `S20bff1` | list | Status codes | Statuskoder |
 | `S3a1066` | list | The mapping is empty. | Koblingen er tom. |
@@ -23314,7 +23315,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd72b71` | message: user_service | That e-mail address or username is already in use. | Denne e-mailadresse eller dette brugernavn er allerede i brug. |
 | `Sd54517` | message: user_service, user_detail | You cannot delete your own account. | Du kan ikke slette din egen konto. |
 | `S6a8896` | mine | Review & sign off | Gennemgå og underskriv |
-| `S50a279` | mine | Show all | Vis alle |
 | `Se48471` | mine | Showing only Drafts created by Import Job #%(id)s. | Kun kladder oprettet af importopgave nr. %(id)s vises. |
 | `Sff9480` | mine | Sign-Off Requests For You | Underskriftsanmodninger til dig |
 | `S2e0035` | mine | Submitted | Indsendt |
@@ -23734,6 +23734,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S7b2c7f` | change, detail, language | Approve | დამტკიცება |
 | `S8aa57d` | change, detail | Changes | ცვლილებები |
 | `S3fe5e1` | change | Comment (required to reject) | კომენტარი (უარყოფისთვის აუცილებელია) |
+| `S7f59a1` | change, detail, workbench | Decision | გადაწყვეტილება |
 | `Sb48001` | change | Mapping change | შესაბამისობის ცვლილება |
 | `Sd7c1d0` | change, changes, list | Mapping changes | შესაბამისობის ცვლილებები |
 | `Sf26140` | change, legacy_mapping, list | New identifier | ახალი იდენტიფიკატორი |
@@ -23886,7 +23887,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `S0e8574` | detail | Customer | მომხმარებელი |
 | `Scb307e` | detail | Decide the selected requests in one sitting | მონიშნული მოთხოვნების გადაწყვეტა ერთ ჯერზე |
 | `S319493` | detail | Decided by | გადაწყვიტა |
-| `S7f59a1` | detail, workbench | Decision | გადაწყვეტილება |
 | `Sc51568` | detail | Decisions & Comments | გადაწყვეტილებები და კომენტარები |
 | `Sa9ec7c` | detail | Delete Permanently | სამუდამოდ წაშლა |
 | `S7d1c7a` | detail | Delete Release | რელიზის წაშლა |
@@ -24391,6 +24391,7 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sed1d84` | list | Saved searches | შენახული ძიებები |
 | `S859822` | list, mine | Select | არჩევა |
 | `S45b553` | list | Select all rows | ყველა სტრიქონის არჩევა |
+| `S50a279` | list, mine | Show all | ყველას ჩვენება |
 | `S7f5583` | list, menu | Status Codes | სტატუსის კოდები |
 | `S20bff1` | list | Status codes | სტატუსის კოდები |
 | `S3a1066` | list | The mapping is empty. | შესაბამისობა ცარიელია. |
@@ -24676,7 +24677,6 @@ The wrong and awkward counts are findings in the sample of 160 strings, the same
 | `Sd72b71` | message: user_service | That e-mail address or username is already in use. | ეს ელფოსტის მისამართი ან მომხმარებლის სახელი უკვე გამოიყენება. |
 | `Sd54517` | message: user_service, user_detail | You cannot delete your own account. | თქვენს საკუთარ ანგარიშს ვერ წაშლით. |
 | `S6a8896` | mine | Review & sign off | განხილვა და ხელმოწერა |
-| `S50a279` | mine | Show all | ყველას ჩვენება |
 | `Se48471` | mine | Showing only Drafts created by Import Job #%(id)s. | ნაჩვენებია მხოლოდ იმპორტის დავალება #%(id)s-ით შექმნილი დრაფტები. |
 | `Sff9480` | mine | Sign-Off Requests For You | ხელმოწერის მოთხოვნები თქვენთვის |
 | `S2e0035` | mine | Submitted | წარდგენილია |
@@ -25266,7 +25266,7 @@ Every string of the interface with the templates that use it. A native speaker a
 | `S117313` | Decide the batch | workbench | 18 of 18 |
 | `Scb307e` | Decide the selected requests in one sitting | detail | 18 of 18 |
 | `S319493` | Decided by | detail | 18 of 18 |
-| `S7f59a1` | Decision | detail, workbench | 18 of 18 |
+| `S7f59a1` | Decision | change, detail, workbench | 18 of 18 |
 | `S1fd35e` | decision must be APPROVE or REJECT. | message: change_request_service | 18 of 18 |
 | `Sc51568` | Decisions & Comments | detail | 18 of 18 |
 | `S7505d6` | default | export, settings | 18 of 18 |
@@ -25991,7 +25991,7 @@ Every string of the interface with the templates that use it. A native speaker a
 | `Sc7f73b` | Settings | menu, settings | 18 of 18 |
 | `S79075b` | Shaped export | detail | 18 of 18 |
 | `Sd97d1e` | Show | software_versions | 18 of 18 |
-| `S50a279` | Show all | mine | 18 of 18 |
+| `S50a279` | Show all | list, mine | 18 of 18 |
 | `Se48471` | Showing only Drafts created by Import Job #%(id)s. | mine | 18 of 18 |
 | `S991f8c` | Sign in as this Windows user | login_windows | 18 of 18 |
 | `Sd876ad` | Sign in with Windows | login, login_windows | 18 of 18 |

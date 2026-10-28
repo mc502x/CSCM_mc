@@ -86,7 +86,10 @@
       {% if page > 1 %}<a href="{{ page_url(page - 1) }}">&laquo; {{ _('Previous') }}</a>{% endif %}
       <span>{{ page }} / {{ pages }}</span>
       {% if page < pages %}<a href="{{ page_url(page + 1) }}">{{ _('Next') }} &raquo;</a>{% endif %}
+      <a class="btn" href="{{ all_url }}">{{ _('Show all') }} ({{ total }})</a>
     </nav>
+    {% elif show_all and total > 100 %}
+    <nav class="pager" aria-label="{{ _('Pages') }}"><a href="{{ paged_url }}">{{ _('Pages') }}</a> <span>{{ total }} {{ _('rows') }}</span></nav>
     {% endif %}
     {% if can_request and rows %}
     <div class="card" style="max-width:560px;margin-top:12px">

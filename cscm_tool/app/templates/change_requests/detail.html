@@ -78,38 +78,6 @@
     </div>
     {% endfor %}
   </div>
-  {% if can_sign_domain %}
-  <form method="post" action="{{ url_for('ui.cr_domain_signoff', cr_id=cr.id) }}" class="btn-row">
-    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
-    <label for="sign_domain" class="visually-hidden">{{ _('Domain') }}</label>
-    <select id="sign_domain" name="engineering_domain">
-      {% for d in can_sign_domain %}<option value="{{ d }}">{{ d }}</option>{% endfor %}
-    </select>
-    <button class="btn btn--primary" type="submit">{{ _('Sign Off This Domain') }}</button>
-  </form>
-  {% endif %}
-  {% if pending_domains and cr.requested_by == current_user.id and revision.lifecycle_status == 'DRAFT' %}
-  <h3>{{ _('Request a Sign-Off') }}</h3>
-  {% for code in pending_domains %}
-  {% if not domain_holders[code] %}
-  <div class="flash flash--info">{{ _('No active Engineer holds the %(code)s domain yet. An Administrator must tag an Engineer with it (Administration → Users) before a sign-off can be requested.', code=code) }}</div>
-  {% else %}
-  <form method="post" action="{{ url_for('ui.cr_request_domain_signoff', cr_id=cr.id) }}" class="btn-row">
-    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
-    <input type="hidden" name="engineering_domain" value="{{ code }}">
-    <label for="target_{{ code }}">{{ code }}:</label>
-    <select id="target_{{ code }}" name="target_user_id">
-      <option value="">{{ _('Any %(code)s Engineer', code=code) }}</option>
-      {% for u in domain_holders[code] %}<option value="{{ u.id }}">{{ u.full_name }}</option>{% endfor %}
-    </select>
-    <button class="btn" type="submit">{{ _('Request') }}</button>
-  </form>
-  {% endif %}
-  {% endfor %}
-  {% if domain_requests %}
-  <div class="muted">{{ _('Requested') }}: {% for r in domain_requests %}{{ r.engineering_domain.code }}{% if r.target_user %} → {{ r.target_user.full_name }}{% endif %}{% if not loop.last %}, {% endif %}{% endfor %}</div>
-  {% endif %}
-  {% endif %}
   {% endif %}
 </div>
 
@@ -238,6 +206,41 @@
 
 <div class="card">
   <h2>{{ _('Actions') }}</h2>
+{# the status is at the top; what a person does about it is below the changes, in Actions #}
+  {% if required_domains %}
+  {% if can_sign_domain %}
+  <form method="post" action="{{ url_for('ui.cr_domain_signoff', cr_id=cr.id) }}" class="btn-row">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    <label for="sign_domain" class="visually-hidden">{{ _('Domain') }}</label>
+    <select id="sign_domain" name="engineering_domain">
+      {% for d in can_sign_domain %}<option value="{{ d }}">{{ d }}</option>{% endfor %}
+    </select>
+    <button class="btn btn--primary" type="submit">{{ _('Sign Off This Domain') }}</button>
+  </form>
+  {% endif %}
+  {% if pending_domains and cr.requested_by == current_user.id and revision.lifecycle_status == 'DRAFT' %}
+  <h3>{{ _('Request a Sign-Off') }}</h3>
+  {% for code in pending_domains %}
+  {% if not domain_holders[code] %}
+  <div class="flash flash--info">{{ _('No active Engineer holds the %(code)s domain yet. An Administrator must tag an Engineer with it (Administration → Users) before a sign-off can be requested.', code=code) }}</div>
+  {% else %}
+  <form method="post" action="{{ url_for('ui.cr_request_domain_signoff', cr_id=cr.id) }}" class="btn-row">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    <input type="hidden" name="engineering_domain" value="{{ code }}">
+    <label for="target_{{ code }}">{{ code }}:</label>
+    <select id="target_{{ code }}" name="target_user_id">
+      <option value="">{{ _('Any %(code)s Engineer', code=code) }}</option>
+      {% for u in domain_holders[code] %}<option value="{{ u.id }}">{{ u.full_name }}</option>{% endfor %}
+    </select>
+    <button class="btn" type="submit">{{ _('Request') }}</button>
+  </form>
+  {% endif %}
+  {% endfor %}
+  {% if domain_requests %}
+  <div class="muted">{{ _('Requested') }}: {% for r in domain_requests %}{{ r.engineering_domain.code }}{% if r.target_user %} → {{ r.target_user.full_name }}{% endif %}{% if not loop.last %}, {% endif %}{% endfor %}</div>
+  {% endif %}
+  {% endif %}
+  {% endif %}
 
   {% if revision.lifecycle_status == 'DRAFT' and cr.requested_by == current_user.id and cr.state != 'WITHDRAWN' %}
   <form method="post" action="{{ url_for('ui.cr_submit', cr_id=cr.id) }}" style="display:inline-block;margin-right:8px">

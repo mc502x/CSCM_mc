@@ -5,11 +5,13 @@ StCd Owner, the Chief Engineer and an Administrator all approve."""
 import json
 
 from flask import Response, jsonify, request
+from sqlalchemy.exc import OperationalError
 
 from app.api.v1 import api_v1_bp
 from app.api.v1._errors import error_response
 from app.auth.decorators import current_user, require_role
 from app.domain.errors import DomainError
+from app.extensions import db
 from app.models.mapping import StatusCodeMapping
 from app.services.mapping_service import (
     ACTIONS,
@@ -25,6 +27,24 @@ from app.services.mapping_service import (
 )
 
 _XLSX = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+
+
+@api_v1_bp.errorhandler(OperationalError)
+def _database_not_upgraded(exc: OperationalError):
+    message = str(exc.orig) if exc.orig is not None else str(exc)
+    if "no such table" not in message or "mapping" not in message:
+        raise exc
+    db.session.rollback()
+    return (
+        jsonify(
+            error="database_not_upgraded",
+            message=(
+                "The database has not been upgraded: run `flask db upgrade` "
+                "and `flask mapping-seed`."
+            ),
+        ),
+        503,
+    )
 
 
 def row_payload(model: StatusCodeMapping) -> dict:

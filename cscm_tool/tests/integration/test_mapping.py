@@ -561,3 +561,67 @@ def test_a_withdrawn_import_is_blocked_when_its_mapping_row_is_gone(app, client,
     ).get_json()
     item = again["items"][0]
     assert item["state"] == "blocked" and "is not in the mapping" in item["issues"][0]["message"]
+
+
+def test_show_all_puts_every_row_on_one_page_so_that_select_all_covers_them(
+    app, client, cast, st_mapping
+):
+    from app.models.mapping import StatusCodeMapping
+    from app.utils import utcnow_iso
+
+    with app.app_context():
+        now = utcnow_iso()
+        for n in range(2001, 2121):  # 120 more rows: 126 in all, more than a page of 100
+            db.session.add(
+                StatusCodeMapping(
+                    family="MC",
+                    new_number=n,
+                    description=f"Row {n}",
+                    status="APPROVED",
+                    created_at=now,
+                    updated_at=now,
+                )
+            )
+        db.session.commit()
+    login_as(client, cast["engineer"])
+    paged = client.get("/mapping").get_data(as_text=True)
+    assert paged.count('class="map-row-check"') == 100
+    assert "Show all (126)" in paged and "/mapping?all=1" in paged
+    everything = client.get("/mapping?all=1").get_data(as_text=True)
+    assert everything.count('class="map-row-check"') == 126
+    assert "Show all (" not in everything and "?all=1" not in everything.split("<tbody>")[1]
+    filtered = client.get("/mapping?all=1&family=HC").get_data(as_text=True)
+    assert filtered.count('class="map-row-check"') == 3  # the filter still applies
+
+
+def test_a_database_without_the_mapping_tables_says_what_to_run(app, client, cast):
+    from sqlalchemy import text
+
+    login_as(client, cast["engineer"])
+    with app.app_context():
+        for table in (
+            "mapping_approval",
+            "mapping_change_item",
+            "mapping_change",
+            "status_code_mapping",
+        ):
+            db.session.execute(text(f"DROP TABLE {table}"))  # nosec B608
+        db.session.commit()
+    page = client.get("/mapping")
+    assert page.status_code == 503
+    assert "flask db upgrade" in page.get_data(as_text=True)
+    api = client.get("/api/v1/mapping")
+    assert api.status_code == 503 and api.get_json()["error"] == "database_not_upgraded"
+    assert client.get("/").status_code == 200  # the rest of the tool keeps working
+
+
+def test_the_sign_off_of_a_domain_is_below_the_changes_and_the_status_above(
+    app, client, cast, wcnv_ids
+):
+    from tests.helpers import create_draft
+
+    revision, cr_id = create_draft(app, client, cast, wcnv_ids)
+    page = client.get(f"/change-requests/{cr_id}").get_data(as_text=True)
+    assert page.index("Sign-Off Status") < page.index("Changes") < page.index("Actions")
+    if "Sign Off This Domain" in page:
+        assert page.index("Sign Off This Domain") > page.index("Actions")

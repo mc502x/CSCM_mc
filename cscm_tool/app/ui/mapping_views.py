@@ -6,6 +6,7 @@ workbook) and the page where the StCd Owner, the Chief Engineer and an Administr
 import json
 
 from flask import Response, flash, redirect, render_template, request, url_for
+from sqlalchemy.exc import OperationalError
 
 from app.auth.decorators import current_user, require_role_web
 from app.auth.roles import role_info
@@ -30,8 +31,26 @@ from app.services.mapping_service import (
 from app.ui import ui_bp
 
 _ERRORS = (DomainError, ValueError)
+_MAPPING_TABLES = ("status_code_mapping", "mapping_change", "mapping_approval")
+
+
+def _is_missing_mapping_table(exc: OperationalError) -> bool:
+    message = str(exc.orig) if exc.orig is not None else str(exc)
+    return "no such table" in message and any(t in message for t in _MAPPING_TABLES)
+
+
+@ui_bp.errorhandler(OperationalError)
+def _database_not_upgraded(exc: OperationalError):
+    """A database that is still at an older schema: say what to run instead of a stack trace."""
+    if not _is_missing_mapping_table(exc):
+        raise exc
+    db.session.rollback()
+    return render_template("mapping/not_upgraded.html"), 503
+
+
 _XLSX = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
 PAGE_SIZE = 100
+SHOW_ALL_LIMIT = 5000  # one click shows every row; the table holds about 1,200
 SHOWN_ITEMS = 500
 
 
@@ -59,9 +78,11 @@ def _form_context(row: dict | None) -> dict:
     }
 
 
-def _page_url(page: int) -> str:
-    args: dict = {k: v for k, v in request.args.items() if k != "page"}
-    args["page"] = page
+def _page_url(page: int, **changes: str | None) -> str:
+    args: dict = {k: v for k, v in request.args.items() if k not in ("page", "all")}
+    if page > 1:
+        args["page"] = page
+    args.update({k: v for k, v in changes.items() if v is not None})
     return url_for("ui.mapping_list", **args)
 
 
@@ -70,20 +91,25 @@ def _page_url(page: int) -> str:
 def mapping_list():
     family = request.args.get("family") or ""
     status = request.args.get("status") or ""
-    page = max(1, request.args.get("page", 1, type=int) or 1)
+    show_all = request.args.get("all") == "1"
+    page = 1 if show_all else max(1, request.args.get("page", 1, type=int) or 1)
+    size = SHOW_ALL_LIMIT if show_all else PAGE_SIZE
     rows, total = MappingService.search(
         family if family in FAMILIES else None,
         status if status in STATUSES else None,
         request.args.get("q"),
         page,
-        PAGE_SIZE,
+        size,
     )
     return render_template(
         "mapping/list.html",
         rows=rows,
         total=total,
         page=page,
-        pages=max(1, (total + PAGE_SIZE - 1) // PAGE_SIZE),
+        pages=1 if show_all else max(1, (total + PAGE_SIZE - 1) // PAGE_SIZE),
+        show_all=show_all,
+        all_url=_page_url(1, all="1"),
+        paged_url=_page_url(1, all=None),
         page_url=_page_url,
         summary=MappingService.summary(),
         statuses=STATUSES,
