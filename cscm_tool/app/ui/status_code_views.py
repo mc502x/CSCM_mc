@@ -47,6 +47,7 @@ from app.services.saved_search_service import (
 from app.services.status_code_service import StatusCodeService, ValidationFailed
 from app.services.translation_service import TranslationService
 from app.ui import ui_bp
+from app.utils import join_multi, split_multi
 
 _ACCESS_VOCAB_FIELDS = {
     "development_access": "development-access",
@@ -185,9 +186,9 @@ def _list_filters(source) -> dict:
         "q": source.get("q") or None,
         "functional_system_group_id": source.get("functional_system_group", type=int),
         "functional_subgroup_id": source.get("functional_subgroup", type=int),
-        "turbine_platform_code": source.get("turbine_platform") or None,
-        "lifecycle_status": source.get("lifecycle_status") or None,
-        "status_category": source.get("status_category") or None,
+        "turbine_platform_code": join_multi(source.getlist("turbine_platform")),
+        "lifecycle_status": join_multi(source.getlist("lifecycle_status")),
+        "status_category": join_multi(source.getlist("status_category")),
         "is_sandbox": source.get("is_sandbox") == "true",
     }
 
@@ -223,10 +224,8 @@ def status_code_list():
     own_drafts = _own_drafts(items) if can_withdraw else {}
     columns = clean_definition({"columns": request.args.get("cols")})["columns"]
     filters = {
-        k: v
-        for k, v in request.args.items()
-        if k
-        in (
+        k: join_multi(request.args.getlist(k))
+        for k in (
             "q",
             "functional_system_group",
             "functional_subgroup",
@@ -236,8 +235,9 @@ def status_code_list():
             "sort",
             "is_sandbox",
         )
-        and v
+        if join_multi(request.args.getlist(k))
     }
+    platforms = LookupService.list_vocabulary("turbine-platforms")
     return render_template(
         "status_codes/list.html",
         items=[revision_payload(r) for r in items],
@@ -246,7 +246,27 @@ def status_code_list():
         total=total,
         page=page,
         groups=LookupService.list_vocabulary("functional-system-groups"),
-        platforms=LookupService.list_vocabulary("turbine-platforms"),
+        platforms=platforms,
+        options={
+            "platform": [(p.code, p.code) for p in platforms],  # type: ignore[attr-defined]
+            "lifecycle": [
+                (s, s.replace("_", " ").title())
+                for s in (
+                    "DRAFT",
+                    "REVIEW",
+                    "PENDING_APPROVAL",
+                    "APPROVED",
+                    "RELEASED",
+                    "DEPRECATED",
+                    "ARCHIVED",
+                )
+            ],
+            "category": [("ERROR", "Error"), ("WARNING", "Warning"), ("INFO", "Info")],
+        },
+        selected={
+            k: split_multi(request.args.getlist(k))
+            for k in ("turbine_platform", "lifecycle_status", "status_category")
+        },
         columns=columns,
         all_columns=COLUMNS,
         default_columns=DEFAULT_COLUMNS,
@@ -305,7 +325,9 @@ _KEEP = (
 def saved_search_create():
     definition = {
         "filters": {
-            k: v for k, v in request.form.items() if k not in ("csrf_token", "name", "cols") and v
+            k: join_multi(request.form.getlist(k))
+            for k in dict.fromkeys(request.form.keys())
+            if k not in ("csrf_token", "name", "cols") and join_multi(request.form.getlist(k))
         },
         "columns": request.form.get("cols"),
     }

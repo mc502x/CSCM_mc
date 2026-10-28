@@ -19,6 +19,7 @@ from openpyxl import Workbook
 from sqlalchemy import text
 
 from app.extensions import db
+from app.utils import split_multi
 
 _HEADERS = (
     "controller",
@@ -65,6 +66,8 @@ class LegacyMappingService:
             )
         ).all()
         needle = (query or "").strip().lower()
+        controllers = [c.upper() for c in split_multi(controller)]
+        states = split_multi(state)
         entries: list[dict[str, Any]] = []
         for (
             code_id,
@@ -78,10 +81,10 @@ class LegacyMappingService:
             life,
         ) in rows:
             kind = "HC" if controller_type == "HUB" else "MC"
-            if controller and controller.upper() != kind:
+            if controllers and kind not in controllers:
                 continue
             identifier_state = "issued" if issued else "reserved" if reserved else "pending"
-            if state and state != identifier_state:
+            if states and identifier_state not in states:
                 continue
             entry = {
                 "status_code_id": code_id,

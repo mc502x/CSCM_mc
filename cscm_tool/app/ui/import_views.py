@@ -24,6 +24,7 @@ from app.services.import_service import ImportService
 from app.services.legacy_mapping_service import LegacyMappingService
 from app.services.st_import_service import StImportService
 from app.ui import ui_bp
+from app.utils import split_multi
 
 _ROLES = ("ADMINISTRATOR", "ENGINEER")
 _XLSX = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
@@ -198,11 +199,11 @@ _MAPPING_ROLES = ("ADMINISTRATOR", "ENGINEER", "REVIEWER", "CHIEF_ENGINEER")
 
 
 def _mapping_filters() -> dict:
-    controller = (request.args.get("controller") or "").upper()
-    state = request.args.get("state") or ""
+    controllers = [c.upper() for c in split_multi(request.args.getlist("controller"))]
+    states = split_multi(request.args.getlist("state"))
     return {
-        "controller": controller if controller in ("MC", "HC") else "",
-        "state": state if state in ("issued", "reserved", "pending") else "",
+        "controller": ",".join(c for c in controllers if c in ("MC", "HC")),
+        "state": ",".join(s for s in states if s in ("issued", "reserved", "pending")),
         "q": (request.args.get("q") or "").strip(),
     }
 
@@ -218,6 +219,18 @@ def legacy_mapping():
         ),
         summary=LegacyMappingService.summary(),
         filters=filters,
+        selected={
+            "controller": split_multi(filters["controller"]),
+            "state": split_multi(filters["state"]),
+        },
+        options={
+            "controller": [("MC", _("Main Controller")), ("HC", _("Hub Controller"))],
+            "state": [
+                ("issued", _("issued")),
+                ("reserved", _("reserved")),
+                ("pending", _("no number yet")),
+            ],
+        },
     )
 
 

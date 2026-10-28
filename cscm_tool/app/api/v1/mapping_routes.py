@@ -25,6 +25,7 @@ from app.services.mapping_service import (
     differences,
     row_dict,
 )
+from app.utils import join_multi, split_multi
 
 _XLSX = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
 
@@ -97,11 +98,11 @@ def change_payload(change, items: bool = False) -> dict:
 @require_role(*VIEW_ROLES)
 def mapping_list():
     """Rows of the mapping. Filters: `family` (MC | HC), `status`, `q`; paged by `page`."""
-    family = request.args.get("family")
-    status = request.args.get("status")
-    if family and family not in FAMILIES:
+    family = join_multi(request.args.getlist("family"))
+    status = join_multi(request.args.getlist("status"))
+    if any(f not in FAMILIES for f in split_multi(family)):
         return jsonify(error="validation_error", message="family must be MC or HC"), 422
-    if status and status not in STATUSES:
+    if any(s not in STATUSES for s in split_multi(status)):
         return jsonify(error="validation_error", message="unknown status"), 422
     page = max(1, request.args.get("page", 1, type=int) or 1)
     rows, total = MappingService.search(family, status, request.args.get("q"), page, 100)
@@ -117,9 +118,9 @@ def mapping_list():
 @require_role(*VIEW_ROLES)
 def mapping_export():
     """The mapping as a workbook with the sheets MC and HC (the layout the upload reads)."""
-    family = request.args.get("family")
+    chosen = [f for f in split_multi(request.args.getlist("family")) if f in FAMILIES]
     return Response(
-        MappingService.export_xlsx(family if family in FAMILIES else None),
+        MappingService.export_xlsx(chosen[0] if len(chosen) == 1 else None),
         mimetype=_XLSX,
         headers={"Content-Disposition": "attachment; filename=legacy_mapping.xlsx"},
     )
@@ -167,7 +168,7 @@ def mapping_change_create():
 @api_v1_bp.get("/mapping-changes")
 @require_role(*VIEW_ROLES)
 def mapping_change_list():
-    state = request.args.get("state")
+    state = join_multi(request.args.getlist("state"))
     return jsonify(changes=[change_payload(c) for c in MappingService.changes(state)])
 
 

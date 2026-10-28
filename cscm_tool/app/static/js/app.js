@@ -77,6 +77,26 @@ document.addEventListener('DOMContentLoaded', function () {
       if (!window.confirm(text)) e.preventDefault();
     });
   });
+  document.querySelectorAll('details.multi-select').forEach(function (box) {
+    var summary = box.querySelector('summary');
+    box.addEventListener('change', function () {
+      var names = [];
+      box.querySelectorAll('input:checked').forEach(function (i) { names.push(i.parentNode.textContent.trim()); });
+      summary.textContent = names.length ? names.join(', ') : box.getAttribute('data-any');
+    });
+  });
+  document.addEventListener('click', function (e) {
+    document.querySelectorAll('details.multi-select[open]').forEach(function (d) {
+      if (!d.contains(e.target)) d.removeAttribute('open');
+    });
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Escape') return;
+    document.querySelectorAll('details.multi-select[open]').forEach(function (d) {
+      d.removeAttribute('open');
+      d.querySelector('summary').focus();
+    });
+  });
   document.querySelectorAll('tr[data-href]').forEach(function (row) {
     row.addEventListener('click', function (e) {
       if (e.target.closest('input, button, label, select, a')) return;

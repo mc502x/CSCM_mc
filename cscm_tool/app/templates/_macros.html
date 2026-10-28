@@ -64,3 +64,19 @@
 </nav>
 {% endif %}
 {% endmacro %}
+
+{# a filter that takes several values: a panel of tick boxes (HTML only; app.js keeps the summary current) #}
+{% macro multi_select(name, label, options, selected, any_text) %}
+{% set chosen = selected or [] %}
+<div class="field">
+  <span class="field-label" id="ms_{{ name }}_label">{{ label }}</span>
+  <details class="multi-select" data-any="{{ any_text }}">
+    <summary aria-labelledby="ms_{{ name }}_label">{% if chosen %}{% for value, text in options if value in chosen %}{{ text }}{% if not loop.last %}, {% endif %}{% endfor %}{% else %}{{ any_text }}{% endif %}</summary>
+    <div class="multi-select__panel" role="group" aria-labelledby="ms_{{ name }}_label">
+      {% for value, text in options %}
+      <label><input type="checkbox" name="{{ name }}" value="{{ value }}"{% if value in chosen %} checked{% endif %}> {{ text }}</label>
+      {% endfor %}
+    </div>
+  </details>
+</div>
+{% endmacro %}

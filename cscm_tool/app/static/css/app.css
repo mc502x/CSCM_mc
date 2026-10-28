@@ -510,3 +510,25 @@ html[dir="rtl"] .error-list { padding-left: 0; padding-right: 18px; }
 .brand-logo { vertical-align: middle; margin-inline-end: 10px; border-radius: 7px; }
 .login-logo { display: block; margin: 0 auto 12px; border-radius: 18px; }
 .login-card .login-title { text-align: center; }
+
+/* a filter with several values: a panel of tick boxes under a summary that looks like a select */
+.field-label { display: block; font-weight: 600; font-size: 13px; margin-bottom: 4px; }
+.multi-select { position: relative; min-width: 190px; max-width: 280px; }
+.multi-select > summary {
+  position: relative; list-style: none; cursor: pointer; min-height: 40px; box-sizing: border-box; padding: 9px 30px 9px 12px;
+  border: 1px solid var(--color-border); border-radius: var(--radius); font-size: 13px;
+  background: var(--color-surface); color: var(--color-text);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 280px;
+}
+.multi-select > summary::-webkit-details-marker { display: none; }
+.multi-select > summary::after { content: "\25BE"; position: absolute; right: 12px; top: 9px; }
+html[dir="rtl"] .multi-select > summary { padding: 9px 12px 9px 30px; }
+html[dir="rtl"] .multi-select > summary::after { right: auto; left: 12px; }
+.multi-select > summary:focus-visible { outline: none; border-color: var(--color-primary); box-shadow: 0 0 0 3px var(--focus-glow); }
+.multi-select[open] > summary { border-color: var(--color-primary); }
+.multi-select__panel {
+  position: absolute; z-index: 30; min-width: 100%; max-height: 320px; overflow-y: auto; margin-top: 2px; padding: 6px;
+  background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius); box-shadow: var(--shadow-card);
+}
+.multi-select__panel label { display: flex; align-items: center; gap: 8px; margin: 0; padding: 6px 8px; font-weight: 400; white-space: nowrap; cursor: pointer; }
+.multi-select__panel label:hover { background: var(--color-bg); }

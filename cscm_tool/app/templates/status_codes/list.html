@@ -31,29 +31,10 @@
         <option value="">({{ _('any') }})</option>
       </select>
     </div>
-    <div class="field">
-      <label for="turbine_platform">{{ _('Turbine Platform') }}</label>
-      <select id="turbine_platform" name="turbine_platform">
-        <option value="">({{ _('any') }})</option>
-        {% for p in platforms %}<option value="{{ p.code }}" {{ 'selected' if request.args.get('turbine_platform') == p.code }}>{{ p.code }}</option>{% endfor %}
-      </select>
-    </div>
-    <div class="field">
-      <label for="lifecycle_status">{{ _('Lifecycle') }}</label>
-      <select id="lifecycle_status" name="lifecycle_status">
-        <option value="">({{ _('any') }})</option>
-        {% for s in ['DRAFT','REVIEW','PENDING_APPROVAL','APPROVED','RELEASED','DEPRECATED','ARCHIVED'] %}
-        <option value="{{ s }}" {{ 'selected' if request.args.get('lifecycle_status') == s }}>{{ s.replace('_',' ')|title }}</option>
-        {% endfor %}
-      </select>
-    </div>
-    <div class="field">
-      <label for="status_category">{{ _('Status Category') }}</label>
-      <select id="status_category" name="status_category">
-        <option value="">({{ _('any') }})</option>
-        {% for s in ['ERROR','WARNING','INFO'] %}<option value="{{ s }}" {{ 'selected' if request.args.get('status_category') == s }}>{{ s|title }}</option>{% endfor %}
-      </select>
-    </div>
+    {% set any_text = '(' ~ _('any') ~ ')' %}
+    {{ macros.multi_select('turbine_platform', _('Turbine Platform'), options.platform, selected.turbine_platform, any_text) }}
+    {{ macros.multi_select('lifecycle_status', _('Lifecycle'), options.lifecycle, selected.lifecycle_status, any_text) }}
+    {{ macros.multi_select('status_category', _('Status Category'), options.category, selected.status_category, any_text) }}
     {% if current_user.role_code == 'ADMINISTRATOR' %}
     <div class="field">
       <label><input type="checkbox" name="is_sandbox" value="true" {{ 'checked' if request.args.get('is_sandbox') == 'true' }}> {{ _('Sandbox only') }}</label>

@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% import "_macros.html" as macros %}
 {% block title %}{{ _('Mapping changes') }} — CSCM Tool{% endblock %}
 {% block content %}
 <div class="page-header">
@@ -9,13 +10,9 @@
 <div class="card">
   <p class="muted">{{ _('Every change of the mapping is a request. It takes effect when the StCd Owner, the Chief Engineer and an Administrator have each approved it; one rejection closes it.') }}</p>
   {% if waiting %}<div class="flash flash--info" role="status">{{ waiting }} {{ _('request(s) wait for your decision.') }}</div>{% endif %}
-  <form method="get" class="btn-row">
-    <label for="state" class="visually-hidden">{{ _('State') }}</label>
-    <select id="state" name="state" data-autosubmit>
-      <option value="">{{ _('Any state') }}</option>
-      {% for st in ('OPEN', 'APPLIED', 'REJECTED', 'WITHDRAWN') %}<option value="{{ st }}"{% if state == st %} selected{% endif %}>{{ st }}</option>{% endfor %}
-    </select>
-    <noscript><button class="btn" type="submit">{{ _('Filter') }}</button></noscript>
+  <form method="get" class="form-row" style="align-items:end">
+    {{ macros.multi_select('state', _('State'), states, state, _('Any state')) }}
+    <div class="field"><button class="btn" type="submit">{{ _('Filter') }}</button></div>
   </form>
   <table>
     <caption class="visually-hidden">{{ _('Mapping changes') }}</caption>

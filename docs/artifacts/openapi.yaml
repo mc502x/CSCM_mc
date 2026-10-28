@@ -233,10 +233,16 @@ paths:
           schema: { type: string }
         - name: turbine_platform
           in: query
-          schema: { type: string, example: 3XM }
+          description: "Several values: repeat the parameter or give them comma-joined (any of them matches; FR-199)"
+          schema: { type: array, items: { type: string, example: 3XM } }
+          style: form
+          explode: true
         - name: lifecycle_status
           in: query
-          schema: { $ref: '#/components/schemas/LifecycleStatus' }
+          description: "Several values: repeat the parameter or give them comma-joined (any of them matches; FR-199)"
+          schema: { type: array, items: { $ref: '#/components/schemas/LifecycleStatus' } }
+          style: form
+          explode: true
         - name: is_sandbox
           in: query
           schema: { type: boolean, default: false }
@@ -245,7 +251,10 @@ paths:
           schema: { type: integer }
         - name: status_category
           in: query
-          schema: { type: string, enum: [ERROR, WARNING, INFO] }
+          description: "Several values: repeat the parameter or give them comma-joined (any of them matches; FR-199)"
+          schema: { type: array, items: { type: string, enum: [ERROR, WARNING, INFO] } }
+          style: form
+          explode: true
       responses:
         '200':
           content:
@@ -1693,9 +1702,9 @@ paths:
         Legacy to new only: the new library is larger than the old one, so there is no reverse
         lookup; `summary.new_without_legacy` counts the codes with no legacy number.
       parameters:
-        - { name: controller, in: query, schema: { type: string, enum: [MC, HC] } }
+        - { name: controller, in: query, description: "Several values: repeat the parameter or give them comma-joined (any of them matches; FR-199)", schema: { type: array, items: { type: string, enum: [MC, HC] } }, style: form, explode: true }
         - { name: q, in: query, schema: { type: string }, description: "Matches legacy number, identifier or title" }
-        - { name: state, in: query, schema: { type: string, enum: [issued, reserved, pending] }, description: "issued = identifier assigned; reserved = number held by an imported Draft; pending = no number yet" }
+        - { name: state, in: query, schema: { type: array, items: { type: string, enum: [issued, reserved, pending] } }, style: form, explode: true, description: "Several values: repeat the parameter or give them comma-joined (any of them matches; FR-199). issued = identifier assigned; reserved = number held by an imported Draft; pending = no number yet" }
       responses:
         '200': { description: Mapping, content: { application/json: { schema: { $ref: '#/components/schemas/LegacyMapping' } } } }
         '422': { description: Invalid filter }
@@ -1706,9 +1715,9 @@ paths:
       summary: The legacy -> new mapping as CSV (default) or XLSX, with the filters of the list (v4.2)
       parameters:
         - { name: format, in: query, schema: { type: string, enum: [csv, xlsx], default: csv } }
-        - { name: controller, in: query, schema: { type: string, enum: [MC, HC] } }
+        - { name: controller, in: query, description: "Several values: repeat the parameter or give them comma-joined (any of them matches; FR-199)", schema: { type: array, items: { type: string, enum: [MC, HC] } }, style: form, explode: true }
         - { name: q, in: query, schema: { type: string } }
-        - { name: state, in: query, schema: { type: string, enum: [issued, reserved, pending] } }
+        - { name: state, in: query, description: "Several values: repeat the parameter or give them comma-joined (any of them matches; FR-199)", schema: { type: array, items: { type: string, enum: [issued, reserved, pending] } }, style: form, explode: true }
       responses:
         '200': { description: File stream, content: { application/octet-stream: {} } }
         '422': { description: Invalid format }
@@ -1720,8 +1729,8 @@ paths:
         The legacy -> new mapping (v4.17, FR-191): the rows with what the .st programs do not carry.
         Filters `family`, `status`, `q`; 100 rows a page. Not for Viewers.
       parameters:
-        - { name: family, in: query, schema: { type: string, enum: [MC, HC] } }
-        - { name: status, in: query, schema: { type: string, enum: [PROPOSED, FROM_PROGRAM, APPROVED, ISSUED, REJECTED] } }
+        - { name: family, in: query, description: "Several values: repeat the parameter or give them comma-joined (any of them matches; FR-199)", schema: { type: array, items: { type: string, enum: [MC, HC] } }, style: form, explode: true }
+        - { name: status, in: query, description: "Several values: repeat the parameter or give them comma-joined (any of them matches; FR-199)", schema: { type: array, items: { type: string, enum: [PROPOSED, FROM_PROGRAM, APPROVED, ISSUED, REJECTED] } }, style: form, explode: true }
         - { name: q, in: query, schema: { type: string }, description: "Number, title, group or cause" }
         - { name: page, in: query, schema: { type: integer, minimum: 1 } }
       responses:
@@ -1759,7 +1768,7 @@ paths:
       tags: [Mapping]
       summary: The requests to change the mapping, newest first; filter `state`
       parameters:
-        - { name: state, in: query, schema: { type: string, enum: [OPEN, APPLIED, REJECTED, WITHDRAWN] } }
+        - { name: state, in: query, description: "Several values: repeat the parameter or give them comma-joined (any of them matches; FR-199)", schema: { type: array, items: { type: string, enum: [OPEN, APPLIED, REJECTED, WITHDRAWN] } }, style: form, explode: true }
       responses:
         '200': { description: Requests, content: { application/json: { schema: { type: object, properties: { changes: { type: array, items: { $ref: '#/components/schemas/MappingChange' } } } } } } }
     post:

@@ -10,6 +10,7 @@ from app.auth.decorators import current_user, require_role
 from app.domain.errors import DomainError
 from app.services.legacy_mapping_service import LegacyMappingService
 from app.services.st_import_service import StImportService
+from app.utils import join_multi, split_multi
 
 _IMPORT_ROLES = ("ADMINISTRATOR", "ENGINEER")
 # Titles and states of Drafts are not for Viewers (SEC-006), so the mapping is internal.
@@ -89,11 +90,11 @@ def legacy_mapping():
     reserved | pending). Legacy -> new only: the new library is larger than the old one, so
     there is no reverse lookup; `summary.new_without_legacy` counts the codes with no legacy
     number."""
-    controller = request.args.get("controller")
-    if controller and controller.upper() not in ("MC", "HC"):
+    controller = join_multi(request.args.getlist("controller"))
+    if any(c.upper() not in ("MC", "HC") for c in split_multi(controller)):
         return jsonify(error="validation_error", message="controller must be MC or HC"), 422
-    state = request.args.get("state")
-    if state and state not in ("issued", "reserved", "pending"):
+    state = join_multi(request.args.getlist("state"))
+    if any(s not in ("issued", "reserved", "pending") for s in split_multi(state)):
         return (
             jsonify(error="validation_error", message="state must be issued, reserved or pending"),
             422,
@@ -110,7 +111,9 @@ def legacy_mapping_export():
     if fmt not in ("csv", "xlsx"):
         return jsonify(error="validation_error", message="format must be csv or xlsx"), 422
     entries = LegacyMappingService.entries(
-        request.args.get("controller"), request.args.get("q"), request.args.get("state")
+        join_multi(request.args.getlist("controller")),
+        request.args.get("q"),
+        join_multi(request.args.getlist("state")),
     )
     if fmt == "xlsx":
         return Response(

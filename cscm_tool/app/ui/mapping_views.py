@@ -29,6 +29,7 @@ from app.services.mapping_service import (
     row_dict,
 )
 from app.ui import ui_bp
+from app.utils import join_multi, split_multi
 
 _ERRORS = (DomainError, ValueError)
 _MAPPING_TABLES = ("status_code_mapping", "mapping_change", "mapping_approval")
@@ -79,7 +80,7 @@ def _form_context(row: dict | None) -> dict:
 
 
 def _page_url(page: int, **changes: str | None) -> str:
-    args: dict = {k: v for k, v in request.args.items() if k not in ("page", "all")}
+    args: dict = {k: v for k, v in request.args.lists() if k not in ("page", "all")}
     if page > 1:
         args["page"] = page
     args.update({k: v for k, v in changes.items() if v is not None})
@@ -89,14 +90,14 @@ def _page_url(page: int, **changes: str | None) -> str:
 @ui_bp.route("/mapping")
 @require_role_web(*VIEW_ROLES)
 def mapping_list():
-    family = request.args.get("family") or ""
-    status = request.args.get("status") or ""
+    family = join_multi(request.args.getlist("family")) or ""
+    status = join_multi(request.args.getlist("status")) or ""
     show_all = request.args.get("all") == "1"
     page = 1 if show_all else max(1, request.args.get("page", 1, type=int) or 1)
     size = SHOW_ALL_LIMIT if show_all else PAGE_SIZE
     rows, total = MappingService.search(
-        family if family in FAMILIES else None,
-        status if status in STATUSES else None,
+        family,
+        status,
         request.args.get("q"),
         page,
         size,
@@ -112,8 +113,15 @@ def mapping_list():
         paged_url=_page_url(1, all=None),
         page_url=_page_url,
         summary=MappingService.summary(),
-        statuses=STATUSES,
-        filters={"family": family, "status": status, "q": request.args.get("q") or ""},
+        options={
+            "family": [("MC", _("Main Controller")), ("HC", _("Hub Controller"))],
+            "status": [(s, s) for s in STATUSES],
+        },
+        filters={
+            "family": [f for f in split_multi(family) if f in FAMILIES],
+            "status": [s for s in split_multi(status) if s in STATUSES],
+            "q": request.args.get("q") or "",
+        },
         can_request=current_user.role_code in REQUEST_ROLES,
     )
 
@@ -121,9 +129,9 @@ def mapping_list():
 @ui_bp.route("/mapping/export")
 @require_role_web(*VIEW_ROLES)
 def mapping_export():
-    family = request.args.get("family")
+    chosen = [f for f in split_multi(request.args.getlist("family")) if f in FAMILIES]
     return Response(
-        MappingService.export_xlsx(family if family in FAMILIES else None),
+        MappingService.export_xlsx(chosen[0] if len(chosen) == 1 else None),
         mimetype=_XLSX,
         headers={"Content-Disposition": "attachment; filename=legacy_mapping.xlsx"},
     )
@@ -275,12 +283,13 @@ def mapping_upload():
 @ui_bp.route("/mapping-changes")
 @require_role_web(*VIEW_ROLES)
 def mapping_changes():
-    state = request.args.get("state") or ""
-    changes = MappingService.changes(state or None)
+    state = join_multi(request.args.getlist("state")) or ""
+    changes = MappingService.changes(state)
     return render_template(
         "mapping/changes.html",
         changes=changes,
-        state=state,
+        states=[(s, s) for s in ("OPEN", "APPLIED", "REJECTED", "WITHDRAWN")],
+        state=split_multi(state),
         decisions={c.id: MappingService.who_decides(c) for c in changes},
         role_label=lambda code: role_info(code).label,
         waiting=MappingService.awaiting(current_user),

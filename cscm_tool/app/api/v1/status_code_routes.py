@@ -10,6 +10,7 @@ from app.auth.roles import OVERSIGHT_ROLES
 from app.domain.errors import DomainError, InvalidTransitionError, NotFoundError
 from app.services.revision_diff_service import RevisionDiffService
 from app.services.status_code_service import StatusCodeService, ValidationFailed
+from app.utils import join_multi
 
 
 def _validation_error_response(exc: ValidationFailed):
@@ -27,8 +28,9 @@ def list_status_codes():
         q=request.args.get("q"),
         functional_system_group_id=request.args.get("functional_system_group", type=int),
         functional_subgroup_id=request.args.get("functional_subgroup", type=int),
-        turbine_platform_code=request.args.get("turbine_platform"),
-        lifecycle_status=request.args.get("lifecycle_status"),
+        turbine_platform_code=join_multi(request.args.getlist("turbine_platform")),
+        lifecycle_status=join_multi(request.args.getlist("lifecycle_status")),
+        status_category=join_multi(request.args.getlist("status_category")),
         is_sandbox=request.args.get("is_sandbox", "false").lower() == "true",
         owner_id=request.args.get("owner_id", type=int),
         page=page,

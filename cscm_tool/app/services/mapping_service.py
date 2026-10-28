@@ -49,7 +49,7 @@ from app.models.user import User
 from app.services.audit_service import AuditService
 from app.services.numbering_service import NumberingService
 from app.services.validation import is_delay
-from app.utils import utcnow_iso
+from app.utils import split_multi, utcnow_iso
 
 SEED_WORKBOOK = Path(__file__).resolve().parents[2] / "seed_data" / "legacy_mapping.xlsx"
 
@@ -408,17 +408,20 @@ class MappingService:
 
     @staticmethod
     def search(
-        family: str | None = None,
-        status: str | None = None,
+        family: str | list[str] | None = None,
+        status: str | list[str] | None = None,
         query: str | None = None,
         page: int = 1,
         page_size: int = 100,
     ) -> tuple[list[StatusCodeMapping], int]:
+        """`family` and `status` take one value, several or a comma-joined string: any of them matches."""
         q = db.session.query(StatusCodeMapping)
-        if family in FAMILIES:
-            q = q.filter(StatusCodeMapping.family == family)
-        if status in STATUSES:
-            q = q.filter(StatusCodeMapping.status == status)
+        families = [f for f in split_multi(family) if f in FAMILIES]
+        statuses = [s for s in split_multi(status) if s in STATUSES]
+        if families:
+            q = q.filter(StatusCodeMapping.family.in_(families))
+        if statuses:
+            q = q.filter(StatusCodeMapping.status.in_(statuses))
         needle = (query or "").strip()
         if needle:
             like = "%" + needle.replace("\\", "\\\\").replace("%", "\\%").replace("_", "\\_") + "%"
@@ -462,10 +465,11 @@ class MappingService:
         }
 
     @staticmethod
-    def changes(state: str | None = None) -> list[MappingChange]:
+    def changes(state: str | list[str] | None = None) -> list[MappingChange]:
         q = db.session.query(MappingChange)
-        if state:
-            q = q.filter(MappingChange.state == state)
+        states = split_multi(state)
+        if states:
+            q = q.filter(MappingChange.state.in_(states))
         return q.order_by(MappingChange.id.desc()).all()
 
     @staticmethod

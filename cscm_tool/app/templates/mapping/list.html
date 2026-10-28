@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% import "_macros.html" as macros %}
 {% block title %}{{ _('Mapping') }} — CSCM Tool{% endblock %}
 {% block content %}
 {% set s = summary %}
@@ -21,7 +22,7 @@
     <span class="chip">{{ s.total }} {{ _('rows') }}</span>
     <span class="chip">{{ s.by_family.MC }} {{ _('Main Controller') }}</span>
     <span class="chip">{{ s.by_family.HC }} {{ _('Hub Controller') }}</span>
-    {% for st in statuses %}{% if s.by_status[st] %}<span class="chip">{{ s.by_status[st] }} {{ st }}</span>{% endif %}{% endfor %}
+    {% for st in options.status|map('first') %}{% if s.by_status[st] %}<span class="chip">{{ s.by_status[st] }} {{ st }}</span>{% endif %}{% endfor %}
   </p>
   {% if not s.total %}
   <div class="flash flash--info" role="status">
@@ -31,21 +32,14 @@
     {% endif %}
   </div>
   {% endif %}
-  <form method="get" class="btn-row">
-    <label for="q" class="visually-hidden">{{ _('Search') }}</label>
-    <input type="search" id="q" name="q" value="{{ filters.q }}" placeholder="{{ _('number, title or group') }}">
-    <label for="family" class="visually-hidden">{{ _('Controller') }}</label>
-    <select id="family" name="family">
-      <option value="">{{ _('All controllers') }}</option>
-      <option value="MC"{% if filters.family == 'MC' %} selected{% endif %}>{{ _('Main Controller') }}</option>
-      <option value="HC"{% if filters.family == 'HC' %} selected{% endif %}>{{ _('Hub Controller') }}</option>
-    </select>
-    <label for="status" class="visually-hidden">{{ _('Status') }}</label>
-    <select id="status" name="status">
-      <option value="">{{ _('Any status') }}</option>
-      {% for st in statuses %}<option value="{{ st }}"{% if filters.status == st %} selected{% endif %}>{{ st }}</option>{% endfor %}
-    </select>
-    <button class="btn" type="submit">{{ _('Filter') }}</button>
+  <form method="get" class="form-row" style="align-items:end">
+    <div class="field">
+      <label for="q">{{ _('Search') }}</label>
+      <input type="search" id="q" name="q" value="{{ filters.q }}" placeholder="{{ _('number, title or group') }}">
+    </div>
+    {{ macros.multi_select('family', _('Controller'), options.family, filters.family, _('All controllers')) }}
+    {{ macros.multi_select('status', _('Status'), options.status, filters.status, _('Any status')) }}
+    <div class="field"><button class="btn" type="submit">{{ _('Filter') }}</button></div>
   </form>
 
   <form method="post" action="{{ url_for('ui.mapping_select') }}">

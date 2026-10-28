@@ -11,6 +11,7 @@ from app.models.lookup import LookupTurbinePlatform
 from app.models.status_code import StatusCode, StatusCodeRevision, StatusCodeRevisionPlatform
 from app.repositories import fts
 from app.repositories.base import BaseRepository
+from app.utils import split_multi
 
 OPEN_LIFECYCLE_STATES = ("DRAFT", "REVIEW", "PENDING_APPROVAL")
 
@@ -89,9 +90,9 @@ class StatusCodeRepository(BaseRepository[StatusCode]):
         q: str | None = None,
         functional_system_group_id: int | None = None,
         functional_subgroup_id: int | None = None,
-        turbine_platform_code: str | None = None,
-        lifecycle_status: str | None = None,
-        status_category: str | None = None,
+        turbine_platform_code: str | list[str] | None = None,
+        lifecycle_status: str | list[str] | None = None,
+        status_category: str | list[str] | None = None,
         is_sandbox: bool = False,
         owner_id: int | None = None,
         visible_lifecycle_statuses: tuple[str, ...] | None = None,
@@ -101,6 +102,10 @@ class StatusCodeRepository(BaseRepository[StatusCode]):
         eager: bool = False,
     ) -> tuple[list[StatusCodeRevision], int]:
         use_fts = bool(q) and fts.available()
+        # a filter may name several values (a comma-joined string or a list): any of them matches
+        platform_codes = split_multi(turbine_platform_code)
+        lifecycle_values = split_multi(lifecycle_status)
+        category_values = split_multi(status_category)
 
         def build(expression: str | None):
             query = db.session.query(StatusCodeRevision).join(
@@ -154,22 +159,21 @@ class StatusCodeRepository(BaseRepository[StatusCode]):
                 )
             if functional_subgroup_id is not None:
                 query = query.filter(StatusCode.functional_subgroup_id == functional_subgroup_id)
-            if turbine_platform_code:
-                query = (
-                    query.join(
-                        StatusCodeRevisionPlatform,
-                        StatusCodeRevisionPlatform.status_code_revision_id == StatusCodeRevision.id,
-                    )
+            if platform_codes:
+                # a subquery, not a join: a revision on two chosen platforms is still one row
+                on_platform = (
+                    db.session.query(StatusCodeRevisionPlatform.status_code_revision_id)
                     .join(
                         LookupTurbinePlatform,
                         LookupTurbinePlatform.id == StatusCodeRevisionPlatform.turbine_platform_id,
                     )
-                    .filter(LookupTurbinePlatform.code == turbine_platform_code)
+                    .filter(LookupTurbinePlatform.code.in_(platform_codes))
                 )
-            if lifecycle_status:
-                query = query.filter(StatusCodeRevision.lifecycle_status == lifecycle_status)
-            if status_category:
-                query = query.filter(StatusCodeRevision.status_category == status_category)
+                query = query.filter(StatusCodeRevision.id.in_(on_platform))
+            if lifecycle_values:
+                query = query.filter(StatusCodeRevision.lifecycle_status.in_(lifecycle_values))
+            if category_values:
+                query = query.filter(StatusCodeRevision.status_category.in_(category_values))
             if owner_id is not None:
                 query = query.filter(StatusCodeRevision.owner_id == owner_id)
             return query, ranking
