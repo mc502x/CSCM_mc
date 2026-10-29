@@ -72,6 +72,12 @@ This glossary is a living document. Any change to terminology, roles, lifecycle 
 
 **Import Job** — A record of a CSV or XLSX status code library upload (new 2026-09-17). Every row that passes validation becomes an ordinary Draft Change Request subject to the full governance cycle — import is a faster data-entry path, never a bypass (05-governance-handbook.md §6b). Row failures are reported per-row and create nothing. Since v4 it also records its mode (`CREATE` or `UPDATE`), progress and warning counts, and runs in the background above a row threshold.
 
+**Mapping** *(v4.17)* — The table of legacy → new pairs with the facts the programs do not carry (English title, type, up/down counter, access levels, cause, directive), kept in the database. A row is `PROPOSED`, `APPROVED`, `ISSUED` or `REJECTED`. The `.st` import reads it; it changes only by a **mapping change**.
+
+**Mapping Change** *(v4.17)* — A request to add, change, confirm or reject rows of the mapping. It takes effect after the **three approvals** of the StCd Owner, the Chief Engineer and one Administrator (BR-027).
+
+**Logical Node** — The grouping of a code, named after the logical nodes of the wind turbine communication standard IEC 61400-25 (`WROT` rotor, `WCNV` converter, `WGEN` generator, `WTUR` turbine, `WNAC` nacelle, `WTOW` tower, `WTRF` transformer, `WTRM` transmission, `WYAW` yaw; `WPPD` is used for one Hub group). The match with the standard is to be confirmed by Controls Engineering.
+
 **Legacy Mapping** — Which new status code replaces which legacy number, for the Main Controller and the Hub Controller separately: the code's `legacy_reference_number` read with its controller type and its identifier (or the number it has reserved). It runs from legacy to new only — the new library holds more codes than the old one, so a code without a legacy number is normal (*n/a*) and nothing maps back (FR-048u).
 
 **Legacy Reference Number** — Free-text field on a Status Code preserving a pre-migration/source-system number (e.g. the old "Status Code Number" seen in the legacy tool) carried through library import, for traceability only — never mistaken for the governed StCd identifier (06-data-dictionary.md §1, §12).

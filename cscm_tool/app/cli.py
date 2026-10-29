@@ -74,6 +74,41 @@ def register_mapping_commands(app: Flask) -> None:
             click.echo("The mapping already has rows; nothing was loaded.")
 
 
+def register_corpus_command(app: Flask) -> None:
+    @app.cli.command("corpus-report")
+    @click.argument("folder", type=click.Path(exists=True, file_okay=False, path_type=Path))
+    @click.option("--user", default=None, help="Who runs it (default: the first Administrator).")
+    @click.option("--out", default=None, help="Write the report as a workbook (.xlsx).")
+    @click.option("--top", default=15, show_default=True, help="How many reasons to print.")
+    def corpus_report(folder: Path, user: str | None, out: str | None, top: int) -> None:
+        """What would the import do with every program under FOLDER? Creates nothing (I-68)."""
+        from app.auth.providers import AuthenticatedUser
+        from app.extensions import db
+        from app.models.user import User
+        from app.services.corpus_service import CorpusService
+
+        query = db.session.query(User).filter(User.is_active == 1, User.deleted_at.is_(None))
+        account = query.filter_by(username=user).first() if user else None
+        if account is None and not user:
+            account = next(
+                (u for u in query.order_by(User.id) if u.role.code == "ADMINISTRATOR"), None
+            )
+        if account is None:
+            raise click.ClickException("No such active user; give --user.")
+        result = CorpusService.run(folder, AuthenticatedUser.from_model(account))
+        click.echo(f"{result['files']} files, {result['programs']} programs")
+        for state, count in sorted(result["states"].items()):
+            click.echo(f"  {state:<11}{count}")
+        if result["file_errors"]:
+            click.echo(f"  {len(result['file_errors'])} files are not programs")
+        click.echo("Reasons (the most frequent first):")
+        for r in result["reasons"][:top]:
+            click.echo(f"  {r['programs']:>5}  {r['kind']:<6} {r['reason']}")
+        if out:
+            Path(out).write_bytes(CorpusService.workbook(result))
+            click.echo(f"Report written to {out}")
+
+
 def register_operations_commands(app: Flask) -> None:
     @app.cli.command("backup-db")
     @click.option("--dest", default=None, help="Backup directory (default: BACKUP_DIR).")

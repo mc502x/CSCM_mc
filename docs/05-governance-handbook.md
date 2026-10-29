@@ -186,3 +186,23 @@ If the Hub Controller leaves the hardware setup, its codes are defined anew on t
 ## 18. Integrity, Backup and Retention *(v4)*
 
 Each audit entry stores the hash of the previous one; an Administrator verifies the chain on demand and a scheduled job verifies it weekly, so an edited, removed, reordered or truncated entry is found (FR-151). Verified backups are taken nightly and each is proven restorable (FR-150); the readiness probe reports `degraded` when the newest verified backup is older than 36 hours. Audit entries older than seven years are archived, never deleted (BR-020). The restore drill is rehearsed quarterly (14-deployment-architecture.md §7).
+
+## 19. The Mapping and its Three Approvals *(v4.17)*
+
+The **mapping** is the table that says which legacy status code becomes which new one and holds what the generated programs do not carry: the English title, the type, the up/down counter, the access level of every audience, cause and directive, and the value of a parameter that sets a delay (03-srs.md FR-191, 06-data-dictionary.md §5b). The `.st` import takes these from the mapping and from nowhere else, so **a wrong row makes a wrong code**; that is why the mapping has its own, stricter rule.
+
+**The rule (BR-027).** A number of the mapping counts as approved only after the **StCd Owner**, the **Chief Engineer** and **one Administrator** have each approved it. They are three different people; none of them is the person who made the request; each confirms with the password again. A delegate cannot give the approval of a role. This is the only decision in which the StCd Owner takes part - elsewhere the owner of the library has no say in approvals (BR-024) - because the owner of the library must stand behind a number before it is used.
+
+**The process.**
+1. *Request.* Anybody who works with the library (Engineer, Reviewer, Chief Engineer, Administrator, StCd Owner) asks for a change of one row, of the ticked rows, or of the rows a corrected workbook differs in. The request has a title and a **reason** that the approvers read first. The actions are ADD (a new row), CHANGE (fields of a row), CONFIRM (approve the number as it is) and REJECT (the number is never used).
+2. *Checks.* Every row is checked before the request exists: numbers whole and unique, the number in a band of the right controller, a type and an up/down counter before a row can be approved, access levels that exist, a delay that is a time or the name of a parameter. One wrong row refuses the whole request and names the row.
+3. *Decision.* Each of the three roles approves or rejects once. A rejection needs a reason and closes the request. The third approval applies all rows in one transaction; they become `APPROVED`.
+4. *Afterwards.* A request can be withdrawn by its requester while it is open. A row that changed after the request was made makes the request unusable (it is withdrawn and made again). A number that a catalogue code holds is `ISSUED` and cannot be renumbered or rejected.
+
+**Statuses.** `PROPOSED` (loaded or planned, not approved) → `APPROVED` (the three roles approved it) → `ISSUED` (a code of the catalogue carries it); `REJECTED` (never to be used; the row keeps its numbers so they are not given twice).
+
+**What the import does with it.** A program whose number is not in the mapping, whose row is rejected or has no type, or whose header names another legacy number is blocked; a row that is only proposed is used with a warning. Nothing about a program is ever chosen at the import.
+
+**When an approver is absent.** There is no delegation of these approvals. Until deputies exist as a feature, the Administrator gives the deputy the role for the period (recorded in the audit log) and takes it back; the deputy must not be the requester or hold another of the three roles. Staff the three roles with a named deputy each *before* the pilot (27-product-review-and-roadmap.md D-3).
+
+**Evidence.** Every step writes an audit entry (`MAPPING_SEEDED`, `MAPPING_CHANGE_REQUESTED`, `MAPPING_APPROVAL`, `MAPPING_REJECTION`, `MAPPING_CHANGE_APPLIED`, `MAPPING_CHANGE_REJECTED`, `MAPPING_CHANGE_WITHDRAWN`, `MAPPING_ROW_ISSUED`); the three approvals with name, date and comment are shown on the request. Administration of the mapping is in 28-operations-runbook.md §8.

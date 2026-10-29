@@ -1,5 +1,7 @@
 # 25. Concept — Integrating Hub Controller Codes into the 4xxx / 9xxx Scheme
 
+> **Decided on 2026-10-27 (v4.17):** the Hub codes keep the Hub range of the **mapping** (five digits, 11000 and up; the *proposal 1* of this document). Moving them into the Main scheme (*proposal 2*, below) stays a possible later step, to be made as one systematic request approved by the StCd Owner, the Chief Engineer and an Administrator (idea I-75, `03-srs.md` FR-048s, FR-194). The text below is kept as the reasoning behind that choice.
+
 **Status:** proposal for decision (2026-10-22). Nothing in this document is implemented. Supporting data: [artifacts/hc-numbering-proposal.xlsx](artifacts/hc-numbering-proposal.xlsx) — old number, proposal 1 (5-digit), proposal 2 (this concept) for every Hub Controller code, plus the proposed bands and the existing Main Controller bands.
 
 **Inputs:** `HC Status Code Number.xlsx` (268 HC codes: 51 WTUR, 216 WROT, 1 WPPD), the current Main Controller (MC) taxonomy, assumption A-008 (`03-srs.md`: if the Hub Controller is removed from the hardware setup, its codes are defined anew on the MC side), and the decisions of 2026-10-22: MC identifiers are four digits; WPPD is obsolete (hidden).

@@ -137,6 +137,7 @@ def create_app(config_name: str | None = None, overrides: dict | None = None) ->
 
     from app.cli import (
         register_cli_commands,
+        register_corpus_command,
         register_mapping_commands,
         register_operations_commands,
     )
@@ -144,6 +145,7 @@ def create_app(config_name: str | None = None, overrides: dict | None = None) ->
     register_cli_commands(app)
     register_operations_commands(app)
     register_mapping_commands(app)
+    register_corpus_command(app)
 
     from app.errors import register_error_handlers
 

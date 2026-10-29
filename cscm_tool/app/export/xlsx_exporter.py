@@ -9,10 +9,13 @@ from typing import Any
 
 from openpyxl import Workbook
 
+from app.utils import xlsx_text
+
 _FORMULA_PREFIXES = ("=", "+", "-", "@")
 
 
 def _sanitize(value: Any) -> Any:
+    value = xlsx_text(value)
     if isinstance(value, str) and value.startswith(_FORMULA_PREFIXES):
         return "'" + value
     return value

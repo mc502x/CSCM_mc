@@ -77,7 +77,7 @@ from app.services.status_code_service import (
     revision_to_data,
 )
 from app.services.validation import split_identifier_list, validate_revision_fields
-from app.utils import utcnow_iso
+from app.utils import utcnow_iso, xlsx_text
 
 ALLOWED_EXTENSIONS = {"csv": "CSV", "xlsx": "XLSX"}
 
@@ -710,7 +710,7 @@ class ImportService:
             lookups.append([column])
             lookups.append(["code", "label", "note"])
             for entry in values:
-                lookups.append(entry)
+                lookups.append([xlsx_text(v) for v in entry])
             lookups.append([])
         buffer = io.BytesIO()
         workbook.save(buffer)

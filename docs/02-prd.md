@@ -97,6 +97,12 @@ Download an audience-scoped, language-specific profile export with its manifest 
 ### 5.13 Technical Publications builds the manuals of a Release *(v4.10)*
 Open a published Release, see how many codes it holds in total (the complete baseline, by controller and platform), export the baseline for one platform and controller in one language and access level, or build the package: one ZIP with every language for every access level, the release notes and a manifest that lists each file with its SHA-256. Anybody signed in may do this for a released Release; the working set and unpublished Releases are for the StCd Owner and the Administrator only.
 
+### 5.14 The StCd Owner, the Chief Engineer and an Administrator decide on the mapping *(v4.17)*
+
+1. An Engineer finds a program that the import blocks because its number is not in the mapping, or a title that is wrong. They ask for the row (or the correction) in *Mapping*, with a reason; or they upload a corrected workbook and the tool makes one request of everything that differs.
+2. The three approvers see the request in *Mapping changes* (the menu counts what waits for them), read the reason and the rows, and each approves or rejects with the password. The third approval applies the change.
+3. The Engineer imports again; the program is now ready, with the title, type and access levels of the approved row. The import never lets anybody choose these values.
+
 ## 6. Functional Scope
 
 **In scope (MVP):** status code CRUD via the governed three-decision-point Change Request workflow; Functional System Group **and mandatory** Subgroup classification and numbering (`StCd-XXXXX`, allocated at Draft→Review, not before); Administrator-created new subgroups, non-overlap validated; Turbine Platform multi-select; Cross-Domain Sign-Off; full attribute set per 06-data-dictionary.md (corrected 2026-09-17 against a real library export); seven-state lifecycle with enforced valid transitions; revision history and field-level diffing; role-based access control across five roles; sandbox status codes (create/delete, Administrator-only); CSV/XLSX library import producing governed Drafts (05-governance-handbook.md §6b); Release management (build, publish, lock, export); search/filter/sort; full audit trail; session-based authentication and internal user management; catalogue export (CSV/JSON/XLSX/PDF, role-scoped) and full-database export (Administrator-only); REST API covering all core resources, internal-network-only; OneTool shared design system for the visual shell (10-ui-ux-specification.md §0), with CSCM Tool retaining its own authentication.
@@ -111,7 +117,7 @@ Open a published Release, see how many codes it holds in total (the complete bas
 |---|---|
 | Cloud-hosted SSO (e.g. Azure AD) | Explicitly excluded by the no-cloud-infrastructure requirement; the future SSO path is on-premises Active Directory/ADFS only (16-mvp-roadmap.md, 11-security-architecture.md §2) |
 | Automated SCADA tag sync | Requires SCADA-side integration work outside CSCM Tool's control; v4 provides the pull interfaces (API tokens, change feed, webhooks, fleet-feedback import) on the internal network only |
-| Configurable/multi-stage approval chains | The fixed Reviewer→Administrator (parallel)→Chief Engineer model is sufficient for current governance need |
+| Configurable/multi-stage approval chains | The fixed Reviewer→Administrator (parallel)→Chief Engineer model is sufficient for current governance need. The one further chain, the three approvals of the mapping (StCd Owner, Chief Engineer, Administrator; v4.17, BR-027), is equally fixed |
 | *(removed 2026-09-17)* Bulk import was previously excluded here on principle | The business explicitly requested CSV/XLSX library import; it is now in scope (§6), on the condition that every imported row still passes the full governance cycle before Release (05-governance-handbook.md §6b) — the "codes are governed in CSCM Tool, not imported pre-approved" principle survives, the "no import mechanism at all" position does not |
 | Real-time collaborative editing | Not required; optimistic concurrency control (FR-090) is sufficient |
 | Public-cloud infrastructure of any kind | Hard deployment constraint (00-INDEX.md "Deployment Principle"); every environment is on-premises |
@@ -149,4 +155,6 @@ Open a published Release, see how many codes it holds in total (the complete bas
 | Cloud-infrastructure findings in any architecture review | 0 (standing check, 11-security-architecture.md §12) |
 | Verified backup younger than 36 h (readiness probe) | 100% of days |
 | Change requests past their red SLA threshold | < 5% of open requests |
+| Mapping requests decided (all three approvals) | ≤ 3 business days after the request *(v4.17)* |
+| Programs of a real corpus blocked by the mapping, after the first week of the pilot | ≤ 5 % *(27-product-review-and-roadmap.md §9.5)* |
 | Released codes with an approved German translation (once German manuals are in scope) | tracked on the translation worklist |

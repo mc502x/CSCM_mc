@@ -26,6 +26,8 @@ from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
 
+from flask import g, has_request_context
+
 from app.terminology_seed import terms
 from app.translation_catalogue import catalogue, screens, string_id
 
@@ -85,10 +87,16 @@ def glossary_hash() -> str:
 
 
 def state_now() -> dict[str, dict[str, str]]:
+    """The digest of every string of every language as shipped. The Translations page asked for it
+    once per language (eighteen times, seconds each); inside one request it is computed once."""
+    if has_request_context() and "state_now" in g:
+        return g.state_now
     known = screens()
     out: dict[str, dict[str, str]] = {}
     for language, table in catalogue().items():
         out[language] = {string_id(e): digest(e, table[e]) for e in sorted(known) if e in table}
+    if has_request_context():
+        g.state_now = out
     return out
 
 

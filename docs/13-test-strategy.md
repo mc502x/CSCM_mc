@@ -27,7 +27,7 @@ Minimum coverage target: 80% on `service/` and `validation/`. Required areas, up
 
 ## 4. System (API) Tests
 
-- Full request/response contract conformance against `artifacts/openapi.yaml` v4.0.0 (161 operations; every operation of the code is in the contract and every unauthenticated call is 401, except the documented public routes).
+- Full request/response contract conformance against `artifacts/openapi.yaml` v4.0.0 (171 operations; every operation of the code is in the contract and every unauthenticated call is 401, except the documented public routes).
 - Authorization matrix: six roles × every endpoint, including the three decision endpoints' segregation-of-duties checks and the sandbox-only-delete / Administrator-only-full-export restrictions.
 - Identifier lifecycle via API: `status_code_identifier` is `null` in every response while Draft; becomes non-null only after `POST .../submit`; `GET /status-codes/next-available` never reserves a number (two sequential calls without an intervening submit return the same preview).
 - Cross-Domain Sign-Off: a Submit attempt with an outstanding required domain returns 422 with a field error naming the missing domain; a matching-domain Engineer's `POST .../domain-signoffs` call from a non-matching domain returns 403.
@@ -140,6 +140,9 @@ Targets: p95 500ms search, p95 200ms single-record read, 5s CSV/JSON export, 15s
 | TC-076 | Integration | The mapping and its three approvals | The seed workbook loads once into an empty table, is consistent (unique numbers, the Hub rows in the Hub range, the four Rotor gaps numbered) and a bad one is refused as a whole; a new row takes effect only after the StCd Owner, the Chief Engineer and an Administrator have approved, two are not enough, one rejection (with a reason) closes the request, only the three roles decide and each once, the requester cannot decide, a decision asks for the password, the requester can withdraw, a Viewer neither reads nor proposes (`test_mapping`) | P1 |
 | TC-077 | Integration | What the import takes from the mapping | Cause and directive become the remedy text, the mapping gives the value of a delay the program sets with a parameter and a time in the program wins, the header legacy number must be the row's, a row that is only proposed is used with a warning, a rejected row or one of the other family is as good as none, a title that does not say what the German name says is flagged and never blocks, a code whose row is gone keeps its values (`test_st_mapping_rules`, `test_st_no_assumptions`, `test_st_category_and_draft_delete`) | P1 |
 | TC-078 | Integration | Checks of a request | Every wrong value is named and makes no request (type, counter, numbers, delays, access levels, completeness, the controller of the number range), numbers stay unique, a change, a confirmation and a rejection work on stored rows, a row changed in between makes the older request unusable, the numbers of an issued row cannot change (`test_mapping`) | P1 |
+| TC-083 | Integration | Corpus report | A folder of programs (with sub-folders and files that are not programs) is read like an upload, every program is classified, the reasons are grouped with numbers and names taken out, nothing is created, the workbook has the four sheets, `flask corpus-report` prints and writes it (`test_corpus_report`) | P2 |
+| TC-082 | System | Fuzz of the whole API | Every operation of the contract is called with generated valid and invalid paths, queries and bodies as an Administrator on a throw-away database, after proving that the session is really signed in; none may answer with a server error (`test_api_fuzz`, schemathesis) | P1 |
+| TC-081 | Integration | Input hardening | An identifier wider than the database is a 404 in the API and in the pages, a text with a control character is refused with 422 in JSON and in forms (passwords exempt), a control character that is stored anyway cannot break the XLSX template (`test_input_hardening`) | P1 |
 | TC-080 | Integration | Filters with several values | The helpers read lists, repeats and comma-joined strings; the mapping, its requests, the legacy mapping and the Status Codes list (lifecycle state, category, platform) take several values by repeated parameter and by comma-joined string, a wrong value is refused, the page shows the chosen boxes ticked and a summary of them, a saved search keeps several values and comes back ticked, a code on two chosen platforms is one row (`test_multi_select`) | P2 |
 | TC-079 | Integration | The workbook and the pages | The export is the layout the upload reads and compares as unchanged, a workbook makes one request with the new and the different rows, a wrong row names its place and requests nothing, a formula is never written, the pages show the mapping, the requests and the three places, the form posts make and decide requests, the menu counts the requests that wait, *Show all* gives one page with every row, an old database gets the page that names the two commands, the sign-off sits below the changes (`test_mapping`) | P2 |
 | TC-069 | Integration | Connections between status codes | A negated active flag in a set condition is a cause and a plain one a precondition, the real programs name their cause and repeat code, one code shows what it depends on and what depends on it with the chain of causes, the hierarchy puts the cause on top with the codes it suppresses below, escalation targets say which are outside the catalogue, what looks wrong is listed (unknown and deprecated causes, loops), Main and Hub are separated, the code page and the overview show the connections, a Viewer does not, the API returns both views and refuses a bad controller, the menu offers it to the working roles only, and an imported program brings its cause and repeat code (`test_connections`) | P1 |
@@ -174,10 +177,16 @@ Targets: p95 500ms search, p95 200ms single-record read, 5s CSV/JSON export, 15s
 | `system/test_docs_consistency.py` | 17 | TC-052 |
 | `system/test_translations_doc.py` | 8 | FR-161 |
 | `integration/test_email_and_windows_signin.py` | 16 | FR-162, FR-163, SEC-033 |
-| `integration/test_translation_review.py` | 14 | FR-164, AUD-077 |
+| `integration/test_translation_review.py` | 15 | FR-164, AUD-077 |
 | `integration/test_pdf_scripts.py` | 9 | FR-165, FR-157 |
 | `integration/test_terminology.py` | 13 | FR-166, BR-018, AUD-077, SEC-010 |
 | `system/test_windows_gateway.py` | 6 | FR-163, SEC-033 |
+| `integration/test_mapping.py` | 28 | FR-191, FR-194 … FR-197, BR-027 |
+| `integration/test_st_mapping_rules.py` | 11 | FR-192, FR-193 |
+| `integration/test_multi_select.py` | 7 | FR-199 |
+| `integration/test_input_hardening.py` | 5 | FR-200 |
+| `integration/test_corpus_report.py` | 5 | FR-201 |
+| `system/test_api_fuzz.py` | 2 | FR-200 |
 | `integration/test_generated_fields.py` | 12 | FR-168, FR-048o, FR-025, FR-032 |
 | `integration/test_menu.py` | 14 | FR-169, FR-170, SEC-010, NFR-010 |
 | `integration/test_export_language.py` | 4 | FR-171, FR-165, FR-110, FR-045 |

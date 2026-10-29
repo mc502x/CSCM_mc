@@ -39,3 +39,13 @@ def split_multi(value) -> list[str]:
 def join_multi(values) -> str | None:
     """The comma-joined form of split_multi (None when nothing is chosen)."""
     return ",".join(split_multi(values)) or None
+
+
+def xlsx_text(value):
+    """A cell value without the characters a worksheet cannot hold (control characters other than
+    tab, line feed and carriage return); anything else is returned as it is."""
+    if isinstance(value, str):
+        from openpyxl.cell.cell import ILLEGAL_CHARACTERS_RE
+
+        return ILLEGAL_CHARACTERS_RE.sub("", value)
+    return value

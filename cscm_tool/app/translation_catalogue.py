@@ -15,6 +15,7 @@ from __future__ import annotations
 
 import hashlib
 import io
+import time
 from collections import defaultdict
 from pathlib import Path
 
@@ -75,14 +76,42 @@ def string_id(english: str) -> str:
     return "S" + hashlib.sha1(english.encode("utf-8")).hexdigest()[:6]  # nosec B324 - not a secret
 
 
-def screens() -> dict[str, list[str]]:
-    """English string -> the templates that show it (role names and help texts have their own)."""
+_TEMPLATE_STRINGS: tuple[tuple, float, dict[str, frozenset[str]]] | None = None
+_TEMPLATE_RECHECK_SECONDS = (
+    5.0  # a file system call is slow on a network drive: look at most this often
+)
+
+
+def _template_strings() -> dict[str, frozenset[str]]:
+    """English string -> the templates that wrap it in `_()`. Reading the hundred templates costs
+    seconds and the Translations page asked for it 37 times per request; the result is kept until a
+    template changes (its modification time is part of the key, so a development server still
+    follows an edit within a few seconds)."""
+    global _TEMPLATE_STRINGS
+    now = time.monotonic()
+    if _TEMPLATE_STRINGS is not None and now - _TEMPLATE_STRINGS[1] < _TEMPLATE_RECHECK_SECONDS:
+        return _TEMPLATE_STRINGS[2]
+    paths = sorted(TEMPLATES.rglob("*.html"))
+    stamp = tuple((str(p), p.stat().st_mtime_ns) for p in paths)
+    if _TEMPLATE_STRINGS is not None and _TEMPLATE_STRINGS[0] == stamp:
+        _TEMPLATE_STRINGS = (stamp, now, _TEMPLATE_STRINGS[2])
+        return _TEMPLATE_STRINGS[2]
     found: dict[str, set[str]] = defaultdict(set)
-    for path in sorted(TEMPLATES.rglob("*.html")):
+    for path in paths:
         text = path.read_text(encoding="utf-8")
         for match in TEMPLATE_STRING_RE.finditer(text):
             english = (match.group(1) or match.group(2)).replace("\\'", "'").replace('\\"', '"')
             found[english].add(path.stem)
+    frozen = {k: frozenset(v) for k, v in found.items()}
+    _TEMPLATE_STRINGS = (stamp, now, frozen)
+    return frozen
+
+
+def screens() -> dict[str, list[str]]:
+    """English string -> the templates that show it (role names and help texts have their own)."""
+    found: dict[str, set[str]] = defaultdict(set)
+    for english, files in _template_strings().items():
+        found[english].update(files)
     for role in ROLES.values():
         found[role.label].add("role badge")
     for english in status_code_fields.LABELS.values():  # labels the templates take from the module
@@ -96,8 +125,8 @@ def screens() -> dict[str, list[str]]:
 
     for english in nav.LABELS:  # the menu is data
         found[english].add("menu")
-    for english, files in service_messages().items():
-        found[english].update(f"message: {f}" for f in files[:2])
+    for english, modules in service_messages().items():
+        found[english].update(f"message: {f}" for f in modules[:2])
     for english in DE:  # help text and other strings that are not template literals
         found.setdefault(english, {"help and messages"})
     return {k: sorted(v) for k, v in found.items()}

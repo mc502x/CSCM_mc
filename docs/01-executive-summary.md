@@ -8,6 +8,8 @@ Wind turbine Main Controller and Hub Controller software generate large, growing
 
 CSCM Tool inverts the current document-first workflow: status codes are created, cross-domain-completed, dual-reviewed, Chief-Engineer-approved, versioned, and released inside CSCM Tool first, and every downstream artifact (technical manuals, specifications, SCADA tag lists, future software repositories) is derived from CSCM Tool, not the other way around. It delivers authoritative data (one record per code, classified by Functional System Group, with one current approved state at any time), controlled change (every change to a status code goes through a seven-state lifecycle — Draft, Review, PendingApproval, Approved, Released, Deprecated, Archived — with named accountability at each of three distinct decision points: Reviewer, Administrator, and Chief Engineer), full history (every revision of every status code is retained and queryable), repeatable trustworthy exports (Approved/Released catalogues exported on demand, with full-database export reserved to the Administrator for disaster-recovery and migration purposes), and elimination of duplicate/conflicting codes through a numbering scheme tied directly to the turbine's functional subsystems rather than an arbitrary sequence.
 
+**The migration source of truth (v4.17).** The facts the generated controller programs do not carry - the English title, the type, the access levels, cause and directive - are kept in one governed table, the *mapping*, which changes only when the StCd Owner, the Chief Engineer and an Administrator all approve. The import of the programs reads it and chooses nothing itself (05-governance-handbook.md §19).
+
 ## 3. Expected Outcomes
 
 | Outcome | Description |

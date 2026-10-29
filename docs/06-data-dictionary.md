@@ -252,7 +252,7 @@ Docs: 03-srs.md FR-191 … FR-198, BR-027. The tables are in `docs/artifacts/sch
 
 Docs: 03-srs.md §1.16, 05-governance-handbook.md §6b. The reader (`app/importers/stcd.py`) scans the text of each `PROGRAM StCd_<n>`; it never runs or compiles anything.
 
-**What a program becomes.** The number the program carries becomes `status_code.reserved_identifier` (`StCd-` + five digits); the subgroup is the one whose band holds the number; the Drafts of one confirmation are collected in one `change_set` named on `import_job.change_set_id`. Hub Controller programs carry the *legacy* Hub number: it is stored as `legacy_reference_number`, and the new number comes from the numbering table (proposal 1, five digits, or proposal 2, inside the Main scheme).
+**What a program becomes.** The number the program carries becomes `status_code.reserved_identifier` (`StCd-` + five digits); the subgroup is the one whose band holds the number; the Drafts of one confirmation are collected in one `change_set` named on `import_job.change_set_id`. Hub Controller programs carry the *legacy* Hub number: it is stored as `legacy_reference_number`, and the new number comes from the Hub row of the mapping with that legacy number (§5b; five digits, in the Hub range).
 
 | Program (file) | Catalogue field | Note |
 |---|---|---|

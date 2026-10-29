@@ -1,5 +1,5 @@
 # ruff: noqa: E501  (docstring lines)
-"""S41 The mapping and its change requests (FR-191..FR-198): the table of the legacy -> new pairs with
+"""S51 - S55 The mapping and its change requests (FR-191..FR-198): the table of the legacy -> new pairs with
 what the programs do not carry, the request for a change (one row, the ticked rows, or a whole
 workbook) and the page where the StCd Owner, the Chief Engineer and an Administrator decide."""
 

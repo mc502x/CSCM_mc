@@ -109,8 +109,8 @@ def test_the_group_and_subgroup_counts_quoted_in_the_documents(schema_counts):
 def test_the_screen_count_matches_the_inventory():
     inventory = _text(DOCS / "10-ui-ux-specification.md")
     numbers = {int(n) for n in re.findall(r"^\| S(\d+) \|", inventory, re.M)}
-    assert numbers == set(range(1, 51))
-    assert "Fifty screens (S1–S50" in _text(DOCS / "22-software-description.md")
+    assert numbers == set(range(1, 56))
+    assert "Fifty-five screens (S1–S55" in _text(DOCS / "22-software-description.md")
 
 
 def test_the_audit_catalogue_lists_every_code_the_application_can_write():

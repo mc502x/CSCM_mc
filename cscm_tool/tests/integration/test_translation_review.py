@@ -416,3 +416,27 @@ def test_an_account_that_reviews_has_history_in_the_usage_report(client, cast):
     login_as(client, cast["admin"])
     usage = client.get(f"/api/v1/users/{cast['viewer'].id}/usage").get_json()
     assert usage["deletable"] is False and "language_reviewer.user_id" in usage["references"]
+
+
+def test_the_translations_page_does_not_scan_the_templates_once_per_language(
+    app, client, make_user, monkeypatch
+):
+    """The page needs the inventory of every string; it used to be rebuilt 37 times per request (6 s
+    on a network drive). The scan of the templates is kept for a few seconds and the digests for the
+    request, so a second visit reads no template at all."""
+    from pathlib import Path
+
+    from tests.helpers import login_as
+
+    login_as(client, make_user("ADMINISTRATOR"))
+    assert client.get("/translations").status_code == 200  # warms the scan
+    reads: list[Path] = []
+    real = Path.read_text
+
+    def counting(self, *args, **kwargs):
+        reads.append(self)
+        return real(self, *args, **kwargs)
+
+    monkeypatch.setattr(Path, "read_text", counting)
+    assert client.get("/translations").status_code == 200
+    assert [r for r in reads if r.suffix == ".html" and "templates" in r.parts] == []

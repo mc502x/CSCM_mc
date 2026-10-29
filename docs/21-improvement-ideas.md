@@ -76,6 +76,8 @@ All seven quick wins and the four-step sequencing of the original document are d
 
 # Part B — New improvement ideas (I-37 …)
 
+**Review of 2026-10-29 (v4.18.1).** I-66 … I-86 come from the product review in [27-product-review-and-roadmap.md](27-product-review-and-roadmap.md) (test gaps T-01 … T-14, design caveats D-1 … D-13, the next-level moves N-1 … N-7, Confluence and MasterDB, the approval path). I-67 (the operations runbook, document 28) and the tool of I-68 (`flask corpus-report`) are delivered.
+
 ## B.1 Priority at a glance
 
 | ID | Idea | Priority | Effort | Epic |
@@ -109,6 +111,26 @@ All seven quick wins and the four-step sequencing of the original document are d
 | I-63 | Re-import from the programs: show what changed against the catalogue (drift) and revise the codes | 🟠 MEDIUM | M | EPIC-14 |
 | I-64 | Wire the parsed user-group levels, the remaining subsystem programs and the operating-mode mask from `import_source_item` into catalogue columns — ✅ delivered in v4.9.1 (FR-168) | 🟠 MEDIUM | M | EPIC-14 |
 | I-65 | Per-program status category in the preview (derived from the alarm type, or set per program) — ✅ delivered in v4.13.2 (FR-181) | 🟢 LOW | S | EPIC-14 |
+| I-66 | Cache the translation inventory (Translations page) — ✅ delivered in v4.18.1: 6 s → 0.5 s | 🟢 LOW | S | EPIC-22 |
+| I-67 | Operations runbook — ✅ delivered in v4.18.1 as document 28 (routine, upgrade and rollback, chain failure, keys, accounts, mapping, corpus run); key *rotation* tooling is I-48 | 🔴 HIGH | S | EPIC-25 |
+| I-68 | Corpus run: report on a folder of real programs — ✅ tool delivered in v4.18.1 (`flask corpus-report`, TC-083); the run on the real files and the anonymised baseline are open | 🔴 HIGH | S | EPIC-14 |
+| I-69 | Browser (end-to-end) test suite with axe-core and screenshots | 🔴 HIGH | M | EPIC-13 |
+| I-70 | Deputies for the approval roles; recorded, dated, mapping-aware | 🔴 HIGH | M | EPIC-12 |
+| I-71 | Mapping and catalogue drift report; propagate a mapping change to existing codes as a change set | 🟠 MEDIUM | M | EPIC-14 |
+| I-72 | Sample inspection for large mapping requests | 🟠 MEDIUM | S | EPIC-04 |
+| I-73 | Access levels in the mapping by lookup code, not label | 🟠 MEDIUM | S | EPIC-14 |
+| I-74 | Approver page and e-mail digest | 🟠 MEDIUM | M | EPIC-19 |
+| I-76 | Integration outbox and worker; Confluence publisher (release pages, group tables) | 🟠 MEDIUM | M | new EPIC-28 |
+| I-77 | Documentation links and a live code card for Confluence | 🟢 LOW | S | EPIC-28 |
+| I-78 | MasterDB parity matrix, extract and reconciliation loop; SharePoint inventory | 🔴 HIGH | M | new EPIC-29 |
+| I-79 | Generator round trip: export in the generator's format, program writer, build drift check | 🟠 MEDIUM | L | EPIC-14 |
+| I-80 | Parameter registry and parameter releases | 🟠 MEDIUM | L | new EPIC-30 |
+| I-81 | IEC 61400-25 logical node and data object per code, exported (after the match is confirmed) | 🟢 LOW | S | EPIC-18 |
+| I-82 | Field intelligence: occurrence views, co-occurrence graph, regression per release | 🟠 MEDIUM | M | EPIC-23 |
+| I-83 | Local, human-in-the-loop authoring assistance | 🟢 LOW | M | EPIC-02 |
+| I-84 | Load test of 20 users and the imports; Windows installer test; DAST baseline | 🟠 MEDIUM | M | EPIC-13 |
+| I-85 | Storing the German program name as a field of the imported revision | 🟢 LOW | S | EPIC-14 |
+| I-86 | Grid edit of the mapping; "select all N matching"; row history and comments | 🟠 MEDIUM | M | EPIC-14 |
 
 ## B.2 🔴 HIGH priority
 
